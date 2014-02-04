@@ -51,8 +51,10 @@ Nella scheda Utente vanno inseriti:
 
 * Il nome scelto per il nuovo utente nel campo *Nome Utente*.
 * Il vero nome e cognome dell’utente nel campo *Nome Cognome*.
-* Il campo Groups serve ad aggiungere l’utente ad un gruppo; il gruppo va
-cercato digitando il nome nel campo, il sistema ricerca automaticamente
+* Il campo *Gruppi* serve ad aggiungere l’utente ad un gruppo.
+
+
+Il gruppo va cercato digitando il nome nel campo, il sistema ricerca automaticamente
 fra tutti i gruppi, man mano che che viene composto il nome; trovato il
 gruppo fare click sul pulsante aggiungi.
 
@@ -117,7 +119,7 @@ Cartelle condivise (Samba)
     condivise tramite Samba.
 
 
-Password nuovo utente.
+Password nuovo utente
 ----------------------
 
 Il nuovo utente creato sarà immediatamente visibile sulla tabella
@@ -126,17 +128,9 @@ che non potrà avere accesso al sistema fino a quando non viene cambiata
 la password.
 
 Per cambiare la password fare click sul pulsante modifica sulla colonna
-Azioni in corrispondenza della riga dell’utente. Verrà aperta la pagina
+*Azioni* in corrispondenza della riga dell’utente. Verrà aperta la pagina
 per la creazione dell’utente; fare click sul pulsante Cambia password. A
 questo punto verrà chiesta la nuova password.
-
-Il sistema è impostato per richiedere una password efficace in termini
-di sicurezza, perciò essa dovrà avere determinati requisiti per essere
-valida. Tipicamente dovrà essere lunga più di 7 caratteri contenere
-almeno un numero, un carattere maiuscolo e un carattere speciale. Fare
-click su salva per procedere al cambio della password.
-
-Permette di configurare per la prima volta, o modificare, la password dell'utente.
 
 La password deve soddisfare i seguenti requisiti:
 
@@ -150,20 +144,16 @@ La password deve soddisfare i seguenti requisiti:
 Modifica di un utente
 ---------------------
 
-Per modificare un utente fare click sul pulsante modifica nella colona
-Azioni. Verrà mostrata la pagina per la creazione dell’utente  dove sarà
-possibile modificare i dati Utente, i Dettagli e i servizi ad esso
-associati.
+Per modificare un utente fare click sul pulsante modifica nella colonna
+*Azioni*. Verrà mostrata la pagina per la creazione dell’utente dove sarà
+possibile modificare i dati esistenti.
 
 Eliminazione di un utente
 -------------------------
 
 Per eliminare un utente fare click sulla freccia adiacente il pulsante
 modifica sulla colonna azioni. Si apre un menù a tendina, fare click
-sulla voce elimina. Verrà chiesta la conferma, fare click sul pulsante
-elimina per eliminare definitivamente l’utente.
-
-Elimina l'utente. Tutti i dati dell'utente verranno cancellati.
+sulla voce *Elimina*. Tutti i dati dell'utente verranno cancellati.
 
 Blocca / Sblocca
 ----------------
@@ -227,7 +217,6 @@ Crea gli indirizzi email predefiniti
     *nome_gruppo@dominio*. Tali indirizzi email possono essere modificati
     nella sezione *Gestione -> Indirizzi email*.
     
-La creazione del gruppo sarà completa facendo click sul pulsante salva.
 
 
 Modifica di un gruppo
@@ -237,7 +226,7 @@ di utenti utilizzati per assegnare servizi e permessi di accesso agli
 utenti o come liste di distribuzione email.
 
 Per modificare un gruppo fare click sul pulsante modifica nella colonna
-Azioni. Verrà mostrata la pagina per la creazione del gruppo dove sarà
+*Azioni*. Verrà mostrata la pagina per la creazione del gruppo dove sarà
 possibile modificare sia i dati del Gruppo sia i Servizi ad esso
 associati.
 
