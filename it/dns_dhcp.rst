@@ -13,7 +13,7 @@ server si chiama *nethserver.nethesis.it*, un alias potrebbe essere
 alle richieste per il nome alias indicato.
 
 Crea / Modifica
----------------------
+---------------
 
 Consente la creazione di un nuovo alias per questo server.
 
@@ -53,7 +53,7 @@ Fine
     L'ultimo IP del range, verranno assegnati indirizzi compresi tra Inizio e Fine.
 
 Crea / Modifica
----------------------
+---------------
 
 Aggiunge una nuova assegnazione statica (reservation) al server DHCP.
 L'apparato con l'indirizzo MAC specificato riceverà sempre l'indirizzo
@@ -98,7 +98,7 @@ DNS secondario
     L'indirizzo del server secondario da contattare nel caso in cui il primario non risponda (opzionale).
 
 Crea / Modifica
----------------------
+---------------
 
 Fare clic su Crea per assegnare un nome host ad un indirizzo IP. Il
 server ritornerà l'IP configurato per le richieste del relativo nome
