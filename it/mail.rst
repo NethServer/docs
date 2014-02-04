@@ -1,96 +1,207 @@
-===============
-Indirizzi email
-===============
-
-Installazione
-=============
-
-Il modulo di gestione degli indirizzi email viene installato
-automaticamente con l’installazione del pacchetto mail server (vedi
-Capitolo Email)
-
-Gestione
-========
-
-Per gestire gli indirizzi email andare sulla sezione Gestione→ Indirizzi
-email.
-
-Si aprirà una pagina dove viene mostrata una tabella con tutti gli
-indirizzi email registrati su NethServer.
-
-Creare nuovo indirizzo email
-----------------------------
-
-Per creare un nuovo indirizzo email fare click sul pulsante crea nuovo.
-Si aprirà una pagina con i campi per inserire i dati.
-
-Occorre inserire un nome indirizzo e scegliere il dominio a cui
-apparterrà (se nel server ce ne sono registrati più di uno altrimenti
-sarà messo di default quello principale), ed una eventuale descrizione.
-
-Per ultimo scegliere a quale gruppo o utente apparterrà tale indirizzo e
-mettere la spunta su “solo per reti locali” su i messaggi di tale
-indirizzo non potranno uscire dalla LAN (es. indirizzi email destinati
-alla posta interna)
-
-Fare click sul pulsante salva.
-
-
-Crea l'associazione tra un nuovo indirizzo di posta elettronica ed un
-utente o a un gruppo già presente nel sistema.
-
-Indirizzo email
-    Specificare nel campo di testo solo la parte prima del carattere
-    **@**. Scegliere poi dal menù a tendina se l'indirizzo è per un
-    dominio specifico o per *tutti i domini* presenti nel sistema.
-Descrizione
-    Un campo di testo libero per registrare una qualsiasi annotazione.
-Account
-    Selezionare un utente o un gruppo tra quelli già presenti nel
-    sistema da associare all'indirizzo email.
-Solo reti locali
-    Abilitando questa opzione verrà bloccata la ricezione di messaggi
-    provenienti da mittenti esterni.
-
-Modificare un indirizzo email
------------------------------
-
-Per modificare un’indirizzo email fare click sul pulsante modifica nella
-colonna azioni. Si aprirà una pagina di creazione dove è possibile
-modificare l’utente o il gruppo a cui appartiene.
-
-Eliminare un indirizzo email
-----------------------------
-
-Per eliminare un indirizzo email fare click sulla freccia accanto al
-pulsante modifica nella colonna azioni. Verrà chiesta la conferma
-dell’operazione, fare click sul pulsante elimina per eliminare
-definitivamente l’indirizzo email.
-
-Elimina l'indirizzo di posta elettronica. Questo non influisce sui
-messaggi già recapitati all'utente o al gruppo associato all'indirizzo.
-Futuri messaggi destinati all'indirizzo saranno rifiutati.
-
-
-=====
-Email
-=====
+===========
+Server mail
+===========
 
 Nethserver ha la possibilità di svolgere la funzione di un potente e
 sofisticato mail server. Le pagine di configurazione e gestione sono
 molto semplici e intuitive.
 
-Per i nuovi utenti registrati su Nethserver sarà creato in automatico un
-indirizzo e-mail con il dominio introdotto in fase di installazione es.
-nuovo\_utente@miodominio.it *mailto:nuovo_utente@miodominio.it*
-(vedi paragrafo Dominio capitolo Installazione.) Ogni utente potrà
-sfruttare le potenzialità del mail server in particolare:
+Spedizione posta
+================
+
+NethServer è un mailserver in grado spedire e ricevere posta
+autonomamente, tramite il protocollo SMTP.
+
+In *Figura 1* è descritto il tragitto di una mail dal mittente al
+destinatario.
+
+
+.. figure:: ../_static/email_works.png
+
+   *Figura 1*: Schema di funzionamento del servizio e-mail. Tratto da `Wikipedia <http://www.wikipedia.org>`
+
+SMTP Relay
+----------
+
+Partendo dalla *Figura 1* poniamo il caso che smtp.a.org sia un
+NethServer, esso accetterà di spedire una mail proveniente da
+alice@a.org se almeno una delle seguenti condizioni è soddisfatta:
+
+*  il pc di Alice fa parte di una Rete Locale gestita da NethServer
+   (vedi "Reti Locali")
+*  l'indirizzo destinatario della mail fa parte di un dominio gestito da
+   NethServer, ad esempio lucia@\ **a.org** (vedi "Gestione Domini")
+*  il client di Alice utilizza l'autenticazione
+   (`SMTP-AUTH <http://en.wikipedia.org/wiki/SMTP-AUTH>`__) attraverso
+   lo username e password dell'utente *alice*
+
+Se smtp.a.org accetta di spedire la mail di Alice, viene definito SMTP
+relay di Alice.
+
+Modalità standard
+-----------------
+
+In tale modalità NethServer contatta direttamente il mailserver
+destinatario (mx.b.org) per consegnare l'e-mail, seguendo passo passo la
+procedura descritta in *Figura 1*
+
+Vantaggi
+^^^^^^^^
+
+*  Completa autonomia nella gestione della posta. Esclusione di
+   eventuali problemi dovuti al provider.
+*  Possibilità di ricostruire tutto il tragitto in *Figura 1* (tramite
+   i log) al fine di individuare eventuali errori.
+
+Server SMTP
+-----------
+
+In questa modalità NethServer non si occupa direttamente della
+spedizione, ma la consegna ad un mailserver esterno (generalmente quello
+del provider) che spedisce l'e-mail al suo posto.
+
+Il server SMTP (definito tecnicamente smarthost) accetterà e-mail da
+NethServer se:
+
+*  è stato configurato per fare da SMTP relay per l'indirizzo IP di
+   NethServer (normale configurazione per un provider)
+*  NethServer utilizza l'SMTP AUTH, autenticazione basata su username e
+   password (vedi "Configurazione distribuzione e-mail" e
+   "Autenticazione SMTP per provider internet")
+
+Vantaggi
+^^^^^^^^
+
+*  Possibilità di spedire posta anche se l'ip di NethServer è stato
+   inserito in una Blacklist (vedi prossimo paragrafo)
+
+.. note:: Si consiglia sempre l'utilizzo di NethServer in modalità Standard. Utilizzare il Mailserver Delegato solo se si necessità dei vantaggi descritti sopra.
+
+Inserimento dell'IP di NethServer nelle blacklist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+L'inserimento in queste liste è un problema molto comune, esistono vari
+tipi di blacklist e i vari provider e amministratori di mailserver ne
+usano diverse in maniera arbitraria (vedi anche `Controllare le
+blacklist <Antispam#Controllare_le_blacklist>`__).
+
+Come si finisce in queste liste?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*  Se dal proprio IP è stato spedito spam in passato
+*  Utilizzando una connessione dial-up o un ip dinamico (blacklist DUL)
+*  Se si ha un ip statico ma il reverse dns (il dns associato al nostro
+   ip) contiene stringhe del tipo: adsl, dsl, dynamic, ecc. (DUL)
+
+Soluzioni
+~~~~~~~~~
+
+Premesso che la soluzione immediata è quella di utilizzare come server
+SMTP il mailserver del provider (come descritto nel pannello
+"Distribuzione e-mail"), sarà possibile:
+
+*  in caso di IP dinamico, richiedere un ip statico al provider oppure
+   utilizzare il server SMTP del provider
+*  in caso di nome DNS generico, chiedere al provider di configurare un
+   reverse DNS uguale al record MX
+   (http://en.wikipedia.org/wiki/Forward-confirmed\_reverse\_DNS)
+
+Ricezione della posta
+=====================
+
+NethService è un potente e sofisticato server di posta elettronica. La
+configurazione consigliata permette di sfruttare completamente le
+potenzialità del server da parte dei client, in particolare:
 
 *  conservazione email sul server con relativo backup
 *  possibilità di inviare e ricevere email anche al di fuori della LAN
 *  uniformità di configurazione tra la webmail e il client di posta
    tradizionale
 *  utilizzo di un protocollo sicuro per l'invio e ricezione della mail
+
+
+IMAP e POP3
+-----------
+
+I 2 protocolli più diffusi per la gestione email sono IMAP e POP3,
+NethService li supporta entrambi, per cui c'è la possibilità di
+scegliere quello più adatto alle esigenze specifiche.
+
+POP3
+^^^^
+
+POP3 è il primo e più conosciuto protocollo email, è stato progettato
+per permettere il download delle email su un singolo client; l'email
+rimane nel server finchè non viene richiesta (e scaricata) dal client
+sulla macchina locale (se non espressamente specificato una volta
+scaricata l'email viene eliminata dal server).
+
+'''PRO: '''Accesso alle email anche quando il client è disconnesso dalla
+rete
+
+'''CONTRO: '''Il POP3 non è stato progettato per accedere alle email e
+gestirle da remoto: dato che le email risiedono nella macchina locale
+che le ha scaricate, accedervi da un altro computer può essere molto
+complicato, quando non impossibile.
+
+IMAP
+^^^^
+
+Il protocollo IMAP è stato pensato per permettere un accesso interattivo
+a caselle di posta multiple da client diversi. Le email vengono gestite
+nel mail server e lette dai vari client sfruttando la rete, ma non sono
+memorizzate nei client stessi bensì permanentemente immagazzinate e
+gestite sul server.
+
+'''PRO: '''E' possibile accedere a tutte le email (nuove e non) da ogni
+macchina connessa alla rete, inoltre anche il backup delle email è molto
+più agevole. Qualsiasi configurazione sul server (filtri di posta etc.)
+viene immediatamente replicata su tutti i client da cui si va a leggere
+la posta, tale caratteristica rende molto agevole anche l'eventuale
+sostituzione di un computer.
+
+'''CONTRO: '''Se non si è connessi alla rete non è possibile accedere ai
+messaggi di posta; questa limitazione può essere comunque aggirata
+configurando opportunamente il client per scaricare i messaggi
+desiderati (molto utile ad esempio nel caso di utenze con accessibilità
+limitata alla rete es: utenze mobili).
+
+Lato Server
+-----------
+
+NethService supporta due protocolli standard per la gestione della posta
+dal client: POP3 e IMAP. Entrambi i protocolli sono utilizzabili dalla
+LAN, ma non da Internet. I corrispondenti protocolli cifrati POP3S e
+IMAPS sono invece accessibili anche dall'esterno (Internet).
+
+Il protocollo consigliato per leggere la posta è IMAPS perché:
+
+*  la posta viene conservata sul server e viene copiata nel backup
+*  se il pc client viene sostituito, la posta è immediatamente
+   accessibile sul nuovo, senza dover compiere operazioni di ripristino,
+   oltre alla normale configurazione del programma client
+*  permette di *vedere* la propria email da più client in maniera
+   uniforme
+*  offre totale sicurezza rispetto agli standard non sicuri (POP3 e
+   IMAP)
+*  offre la possibilità di scaricare la posta anche dall'esterno
+*  le regole impostate nel client (eliminazione di email, filtraggio con
+   spostamento su cartelle specifiche, etc.) si riflettono
+   automaticamente in tutti i client, anche la webmail che risulta
+   sempre allineata al client di posta tradizionale
+
+L'invio della posta è sempre permesso dall'interno della LAN tramite
+protocollo SMTP, mentre per inviare posta dall'esterno (per esempio
+utenti mobili) è necessario utilizzare il protocollo sicuro SSMTP,
+pertanto può essere utile configurare già tutti i client per spedire la
+posta in SSMTP, evitando differenze di configurazione tra utenze
+appartenenti alla LAN e utenze mobili/remote.
+
+Lato Client
+-----------
+
+Nonostante sia possibile utilizzare qualsiasi client di posta elettronica con supporto IMAP, si consiglia l'utilizzo di  Mozilla Thunderbird che offre una completa implementazione delle funzionalità legate al protocollo IMAP.
+Mozilla Thunderbird è completamente gratuito e può essere scaricato in italiano dal sito http://www.mozilla.com/thunderbird/.
 
 Installazione
 =============
@@ -382,6 +493,88 @@ Archivi
 Lista personalizzata
     E' possibile definire un elenco di estensioni che verranno bloccate, per
     esempio doc, pdf, etc, (senza punto iniziale, doc e non .doc).
+
+
+
+
+===============
+Indirizzi email
+===============
+
+Per i nuovi utenti registrati su Nethserver sarà creato in automatico un
+indirizzo e-mail con il dominio introdotto in fase di installazione es.
+*mailto:nuovo_utente@miodominio.it*
+(vedi paragrafo Dominio capitolo Installazione.) 
+
+Installazione
+=============
+
+Il modulo di gestione degli indirizzi email viene installato
+automaticamente con l’installazione del pacchetto mail server (vedi
+Capitolo Email)
+
+Gestione
+========
+
+Per gestire gli indirizzi email andare sulla sezione Gestione→ Indirizzi
+email.
+
+Si aprirà una pagina dove viene mostrata una tabella con tutti gli
+indirizzi email registrati su NethServer.
+
+Creare nuovo indirizzo email
+----------------------------
+
+Per creare un nuovo indirizzo email fare click sul pulsante crea nuovo.
+Si aprirà una pagina con i campi per inserire i dati.
+
+Occorre inserire un nome indirizzo e scegliere il dominio a cui
+apparterrà (se nel server ce ne sono registrati più di uno altrimenti
+sarà messo di default quello principale), ed una eventuale descrizione.
+
+Per ultimo scegliere a quale gruppo o utente apparterrà tale indirizzo e
+mettere la spunta su “solo per reti locali” su i messaggi di tale
+indirizzo non potranno uscire dalla LAN (es. indirizzi email destinati
+alla posta interna)
+
+Fare click sul pulsante salva.
+
+
+Crea l'associazione tra un nuovo indirizzo di posta elettronica ed un
+utente o a un gruppo già presente nel sistema.
+
+Indirizzo email
+    Specificare nel campo di testo solo la parte prima del carattere
+    **@**. Scegliere poi dal menù a tendina se l'indirizzo è per un
+    dominio specifico o per *tutti i domini* presenti nel sistema.
+Descrizione
+    Un campo di testo libero per registrare una qualsiasi annotazione.
+Account
+    Selezionare un utente o un gruppo tra quelli già presenti nel
+    sistema da associare all'indirizzo email.
+Solo reti locali
+    Abilitando questa opzione verrà bloccata la ricezione di messaggi
+    provenienti da mittenti esterni.
+
+Modificare un indirizzo email
+-----------------------------
+
+Per modificare un’indirizzo email fare click sul pulsante modifica nella
+colonna azioni. Si aprirà una pagina di creazione dove è possibile
+modificare l’utente o il gruppo a cui appartiene.
+
+Eliminare un indirizzo email
+----------------------------
+
+Per eliminare un indirizzo email fare click sulla freccia accanto al
+pulsante modifica nella colonna azioni. Verrà chiesta la conferma
+dell’operazione, fare click sul pulsante elimina per eliminare
+definitivamente l’indirizzo email.
+
+Elimina l'indirizzo di posta elettronica. Questo non influisce sui
+messaggi già recapitati all'utente o al gruppo associato all'indirizzo.
+Futuri messaggi destinati all'indirizzo saranno rifiutati.
+
 
 
 
