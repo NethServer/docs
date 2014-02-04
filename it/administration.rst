@@ -73,7 +73,7 @@ Selezionare l’opzione Riavvia oppure Spegni e fare click sul pulsante ``Arrest
 E' obbligatorio arrestare il sistema prima di spegnere il server.
 L'esecuzione di queste funzioni richiede alcuni minuti.
 
-.. attention: Cliccando ``Arresta il sistema`` l'operazione inizierà immediatamente.
+.. warning:: Cliccando ``Arresta il sistema`` l'operazione inizierà immediatamente.
 
 Riavvia
     Riavvia il server terminando tutti i processi in esecuzione.
@@ -282,7 +282,7 @@ Utenti, scheda Dettagli.
 La variazione di questi dati sostituisce i valori di default per gli
 utenti che non hanno campi personalizzati.
 
-.. caution: Ogni modifica ai dati inseriti rigenera il certificato SSL.
+.. note:: Ogni modifica ai dati inseriti rigenera il certificato SSL.
 
 Azienda
     Inserire il nome dell'azienda.
