@@ -57,7 +57,7 @@ Server SMTP
 -----------
 
 In questa modalità NethServer non si occupa direttamente della
-spedizione, ma la consegna ad un mailserver esterno (generalmente quello
+spedizione della e-mail, ma la consegna ad un mailserver esterno (generalmente quello
 del provider) che spedisce l'e-mail al suo posto.
 
 Il server SMTP (definito tecnicamente smarthost) accetterà e-mail da
