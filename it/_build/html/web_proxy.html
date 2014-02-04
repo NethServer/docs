@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Proxy web &mdash; NethServer 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="NethServer 0 documentation" href="index.html" />
+    <link rel="next" title="Gateway" href="firewall.html" />
+    <link rel="prev" title="Server fax" href="fax_server.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="firewall.html" title="Gateway"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fax_server.html" title="Server fax"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="proxy-web">
+<h1>Proxy web<a class="headerlink" href="#proxy-web" title="Permalink to this headline">¶</a></h1>
+<p>Con l’avvento delle connessioni veloci tipo DSL la funzione del proxy
+web è cambiata. Prima era usato per velocizzare la navigazione creando
+una cache del traffico dati, ora questo servizio è tipicamente
+utilizzato per scansionare, filtrare e loggare il traffico degli utenti.</p>
+<p>Nethserver è in grado di svolgere la funzione di server-proxy &nbsp;con
+l’installazione dell’ apposito pacchetto; il proxy installato offre dei
+filtri molto efficaci e molto flessibili.</p>
+<div class="section" id="installazione">
+<h2>Installazione<a class="headerlink" href="#installazione" title="Permalink to this headline">¶</a></h2>
+<p>Per installare il
+pacchetto &nbsp;Proxy
+web fare click su &nbsp;Configurazione →Gestione pacchetti. Mettere la spunta
+su Proxy web e fare click sul pulsante Avanti. Verrano suggeriti dei
+pacchetti aggiuntivi da installare,&nbsp;selezionare quelli che si ritengono
+utili e confermare le modifiche al sistema facendo click sul pulsante
+Applica.</p>
+<p>Al termine dell’ installazione verrà mostrato in alto un messaggio che
+ci informa che l’operazione è stata completata correttamente.</p>
+</div>
+<div class="section" id="gestione-proxy-web">
+<h2>Gestione Proxy web<a class="headerlink" href="#gestione-proxy-web" title="Permalink to this headline">¶</a></h2>
+<p>Per configurare il server proxy fare click su Configurazione →Proxy web.</p>
+<p>Verrà aperta una pagina con quattro schede.</p>
+<p>Il Proxy Web lavora per ridurre l&#8217;utilizzo della banda facendo cache
+delle pagine visitate. E&#8217; trasparente ai web browser che utilizzano
+questo server come loro gateway.</p>
+<dl class="docutils">
+<dt>Abilitato</dt>
+<dd>Abilita il Proxy.</dd>
+<dt>Parent proxy</dt>
+<dd>Inserire l&#8217;IP e la porta del parent proxy. La sintassi corretta è
+Indirizzo_IP:porta .</dd>
+</dl>
+<div class="section" id="scheda-proxy">
+<h3>Scheda Proxy<a class="headerlink" href="#scheda-proxy" title="Permalink to this headline">¶</a></h3>
+<p>Nella scheda Proxy è possibile abilitare il servizio mettendo la spunta
+su Abilita proxy&nbsp;e si può &nbsp;scegliere la modalità con cui il servizio
+dovrà lavorare.</p>
+<p>Con l’opzione manuale sarà necessario configurare i browser dei client,
+con l’ opzione autenticato sarà necessario inserire le proprie
+credenziali sul browser prima della navigazione, con l’ opzione
+trasparente non c’è necessità di dichiararlo al browser, con l’opzione
+Trasparente con SSL non c’è necessità di dichiararlo al browser e si
+utilizzano i protocolli di rete cifrato.</p>
+<p>Nel caso si abbiano più server proxy a cascata (es.
+Squid3+Dansguardian+Squid) è possibile &nbsp;dichiarare l’ indirizzo IP del
+parent proxy successivo; facendo click su opzioni avanzate verrà
+mostrata un campo dove poter inserire l’indirizzo IP del parent proxy</p>
+</div>
+<div class="section" id="scheda-filtro">
+<h3>Scheda Filtro<a class="headerlink" href="#scheda-filtro" title="Permalink to this headline">¶</a></h3>
+<p>Nella scheda Filtro si gestisce il filtro contenuti per la navigazione
+degli utenti. Qui è possibile:</p>
+<ul class="simple">
+<li>Abilitare il filtro contenuti per il traffico degli utenti. Il filtro
+può essere impostato secondo due diverse modalità speculari con la
+prima si blocca tutto e si scelgono le categorie permesse con la
+seconda di permette tutto e si scelgono le categorie da bloccare.</li>
+<li>Abilitare l’opzione che blocca la navigazione per siti web che non
+hanno URL (es. <a class="reference external" href="http://www.google.it">www.sito.it</a>) ma indirizzi
+IP. Ciò è utile per bloccare tutti quei siti che vogliono aggirare il
+filtro contenuti del proxy, utilizzando direttamente un indirizzo IP</li>
+<li>Abilitare il filtro che blocca i siti con espessioni sul URL.</li>
+<li>Redigere una lista di estenzioni di file che verrano bloccati durante
+la navigazione.</li>
+<li>Impostare delle regole per amministrare il blocco o il permesso a
+determinati siti e indirizzi IP.</li>
+</ul>
+<p>Per far ciò fare click sul pulsante siti e IP permessi&nbsp;oppure siti e IP
+bloccati&nbsp;a seconda della regola che si vuole impostare, e inserire l’ IP
+bersaglio; è anche possibile bloccare/permettere un dominio o un URL,
+facendo click sulla freccia accanto al pulsante aggiungi IP, si apre un
+menù a tendina dove scegliere cosa bloccare/permettere.</p>
+<p>Una volta inserito il parametro, fare click sull’icona del dischetto
+sulla destra per salvare la regola.</p>
+<p>Il filtro contenuti serve per controllare la navigazione web ed
+impostare dei blocchi in base ad alcuni elementi quali parole chiave, ip
+interni, utenti interni, valutazione del contenuto della pagina web,
+estensioni dei file. Grazie a questo strumento è possibile ad esempio abilitare
+l&#8217;accesso solo su alcuni siti desiderati (ad esempio quelli di interesse
+aziendale) bloccando tutti gli altri.</p>
+<dl class="docutils">
+<dt>Modalità</dt>
+<dd>Abilitando il Filtro Web è possibile configurarlo nella modalità
+&#8220;Blocca tutto&#8221; e poi permettere le categorie selezionate, oppure
+&#8220;Permetti tutto&#8221; e poi bloccare le categorie selezionate.</dd>
+<dt>Blocca accesso con IP ai siti web</dt>
+<dd>Se abilitato, non è possibile accedere ai siti web usando un IP ma solo il nome host.</dd>
+<dt>Abilita filtro con espressioni su URL</dt>
+<dd>Se abilitato, gli URL sono scansionati alla ricerca di parole che ricadono nelle categorie selezionate.
+Ad esempio potrebbero essere bloccati gli url che contengono la parola <em>sesso</em>.</dd>
+<dt>Lista di estensioni file bloccate</dt>
+<dd>Inserire le estensioni che si vogliono bloccare, separate da virgola.</dd>
+<dt>Siti e IP bloccati</dt>
+<dd>Contiene la lista di siti sempre bloccati e la lista degli host della LAN che non possono navigare.</dd>
+<dt>Siti e IP permessi</dt>
+<dd>Contiene la lista dei siti sempre permessi e degli host della LAN che possono bypassare il filtro contenuti.</dd>
+</dl>
+</div>
+<div class="section" id="scheda-bypass-proxy-trasparente">
+<h3>Scheda Bypass proxy trasparente<a class="headerlink" href="#scheda-bypass-proxy-trasparente" title="Permalink to this headline">¶</a></h3>
+<p>Nella scheda Bypass proxy trasparente&nbsp;è possibile impostare degli
+indirizzi IP della rete che bypassano il proxy.</p>
+<p>Per far ciò fare click su crea nuovo&nbsp;ed inserire l’indirizzo IP
+sull’apposito campo. Fare click su salva per confermare.</p>
+<p>Configurare alcuni IP per bypassare il proxy trasparente ed accedere ad
+internet senza essere proxati</p>
+<p>Crea una nuova regola di bypass.</p>
+<dl class="docutils">
+<dt>Indirizzo IP</dt>
+<dd>Indirizzo IP dell&#8217;host che non sarà filtrato dal proxy.</dd>
+</dl>
+</div>
+<div class="section" id="scheda-antivirus">
+<h3>Scheda Antivirus<a class="headerlink" href="#scheda-antivirus" title="Permalink to this headline">¶</a></h3>
+<p>Nella scheda Antivirus è possibile abilitare o disabilitare l’antivirus
+ClamAV, fare click sul pulsante Salva&nbsp;per confermare l’impostazione
+scelta.</p>
+<p>Abilita / disabilita la scansione antivirus delle pagine web.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Proxy web</a><ul>
+<li><a class="reference internal" href="#installazione">Installazione</a></li>
+<li><a class="reference internal" href="#gestione-proxy-web">Gestione Proxy web</a><ul>
+<li><a class="reference internal" href="#scheda-proxy">Scheda Proxy</a></li>
+<li><a class="reference internal" href="#scheda-filtro">Scheda Filtro</a></li>
+<li><a class="reference internal" href="#scheda-bypass-proxy-trasparente">Scheda Bypass proxy trasparente</a></li>
+<li><a class="reference internal" href="#scheda-antivirus">Scheda Antivirus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fax_server.html"
+                        title="previous chapter">Server fax</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="firewall.html"
+                        title="next chapter">Gateway</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/web_proxy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="firewall.html" title="Gateway"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fax_server.html" title="Server fax"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

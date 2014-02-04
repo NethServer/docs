@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>UPS &mdash; NethServer 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="NethServer 0 documentation" href="index.html" />
+    <link rel="next" title="Server fax" href="fax_server.html" />
+    <link rel="prev" title="Server chat" href="chat.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fax_server.html" title="Server fax"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="chat.html" title="Server chat"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ups">
+<h1>UPS<a class="headerlink" href="#ups" title="Permalink to this headline">¶</a></h1>
+<p>NethServer supporta NUT (Network UPS Tools), un pacchetto di programmi
+che permette di monitorare e amministrare UPS, PDU e SCD</p>
+<div class="section" id="installazione">
+<h2>Installazione<a class="headerlink" href="#installazione" title="Permalink to this headline">¶</a></h2>
+<p>Per installare il
+pacchetto&nbsp;UPS
+web fare click su &nbsp;Configurazione →Gestione pacchetti. Mettere la spunta
+su&nbsp;Supporto UPS&nbsp;e fare click sul pulsante Avanti. Verrano suggeriti dei
+pacchetti aggiuntivi da installare,&nbsp;selezionare quelli che si ritengono
+utili e confermare le modifiche al sistema facendo click sul pulsante
+applica.</p>
+<p>Al termine dell’ installazione verrà mostrato in alto un messaggio che
+ci informa che l’operazione è stata completata correttamente.</p>
+</div>
+<div class="section" id="gestione-ups">
+<h2>Gestione UPS<a class="headerlink" href="#gestione-ups" title="Permalink to this headline">¶</a></h2>
+<p>Per configurare i programmi di gestione dell’UPS fare click su
+Configurazione →UPS.</p>
+<p>In questa pagina è possibile abilitare il pacchetto di programmi NUT
+scegliendo abilita. Si deve anche inserire la modalità di utilizzo del
+UPS a seconda che sia configurato master o slave.</p>
+<p>Se viene impostato master occorre fornire al sistema i drivers per il
+corretto funzionamento del dispositivo.</p>
+<p>Per installare i driver digitare il nome del dispositivo sul campo cerca
+driver per modello,&nbsp;verra aperto un menù a tendina dove è presente la
+lista dei modelli già supportati da NethServer scegliere il modello
+corrispondente all’UPS che si sta installando.</p>
+<p>Scegliere anche il tipo di collegamento all’ UPS tra seriale o USB</p>
+<p>Se viene impostato slave occorre fornire l’indirizzo IP del server
+master.</p>
+<p>La gestione di un gruppo di continuità (UPS - Uninterruptible Power
+Supply) collegato a NethServer è affidata a NUT (Network UPS Tools), che
+provvederà ad effettuare uno shutdown in caso di assenza di
+alimentazione. NUT supporta diversi modelli di gruppi di continuità,
+collegabili con apposito cavo seriale o USB.</p>
+<p>In questo pannello si effettuano le configurazioni di NUT, per
+visualizzarne il funzionamento occorre accedere alla Dashboard.</p>
+<dl class="docutils">
+<dt>Abilita NUT UPS</dt>
+<dd>Abilita o disabilita il servizio NUT.</dd>
+</dl>
+<div class="section" id="modalita">
+<h3>Modalità<a class="headerlink" href="#modalita" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Master</dt>
+<dd>Questa modalità va selezionata se l&#8217;UPS è collegato
+direttamente a NethServer tramite cavo seriale o USB.</dd>
+<dt>Cerca driver per modello</dt>
+<dd>Consente di cercare un driver compatibile con il proprio modello di UPS. Dopo aver selezionato il modello dall lista,
+il campo <em>Driver</em> verrà valorizzato con il nome del driver opportuno.</dd>
+<dt>Driver</dt>
+<dd>I driver da utilizzare per il modello di UPS collegato.</dd>
+<dt>Collegamento USB</dt>
+<dd>Selezionare questa opzione se l&#8217;UPS è collegato a NethServer tramite USB.</dd>
+<dt>Collegamento seriale</dt>
+<dd>Selezionare questa opzione se l&#8217;UPS è collegato a NethServer tramite cavo seriale.</dd>
+<dt>Slave</dt>
+<dd>Questa modalità deve essere utilizzata se l&#8217;UPS non è collegato
+direttamente a NethServer, ma ad un altro server con NUT configurato
+in modalità Master al quale NethServer si collegherà.</dd>
+<dt>Indirizzo server master</dt>
+<dd>Indirizzo IP o nome host del server master. Il client utilizzerà l&#8217;utente <em>UPS</em> per collegarsi al server master.
+Assicurarsi che tale utente sia configurato nel server master.</dd>
+<dt>Password</dt>
+<dd>La password da specificare qui è quella configurata sul server
+master per la connessione dello slave.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">UPS</a><ul>
+<li><a class="reference internal" href="#installazione">Installazione</a></li>
+<li><a class="reference internal" href="#gestione-ups">Gestione UPS</a><ul>
+<li><a class="reference internal" href="#modalita">Modalità</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chat.html"
+                        title="previous chapter">Server chat</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="fax_server.html"
+                        title="next chapter">Server fax</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ups.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fax_server.html" title="Server fax"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="chat.html" title="Server chat"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

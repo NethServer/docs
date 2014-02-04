@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gestione Account &mdash; NethServer 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="NethServer 0 documentation" href="index.html" />
+    <link rel="next" title="Indirizzi email" href="mail.html" />
+    <link rel="prev" title="Backup" href="backup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mail.html" title="Indirizzi email"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="backup.html" title="Backup"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gestione-account">
+<h1>Gestione Account<a class="headerlink" href="#gestione-account" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gruppi">
+<h2>Gruppi<a class="headerlink" href="#gruppi" title="Permalink to this headline">¶</a></h2>
+<p>Per gestire i gruppi all’ interno di NethServer andare sulla sezione
+Gestione→ Gruppi; all’interno di questa sezione si possono creare nuovi
+gruppi, oppure eliminare e modificare gruppi già esistenti. Ad ogni
+gruppo è possibile assegnare dei permessi di accesso per le varie
+applicazioni di Nethserver.</p>
+<div class="section" id="installazione">
+<h3>Installazione<a class="headerlink" href="#installazione" title="Permalink to this headline">¶</a></h3>
+<p>L’installazione delle funzionalità utenti e gruppi è manuale, ma avviene
+automaticamente quando viene installato un pacchetto che ha bisogno di
+questo modulo.</p>
+</div>
+<div class="section" id="creazione-nuovo-gruppo">
+<h3>Creazione nuovo gruppo<a class="headerlink" href="#creazione-nuovo-gruppo" title="Permalink to this headline">¶</a></h3>
+<p>Per creare un nuovo gruppo fare click sul pulsante crea nuovo&nbsp;che si
+trova a inizio pagina. Verrà aperta una nuova pagina dove ci sono due
+schede: Gruppo e Servizi.</p>
+<p>N.B.</p>
+<p>Il nome gruppo può contenere solo lettere minuscole, numeri, trattini,
+punti e trattino basso (_) e deve iniziare con una lettera minuscola</p>
+<div class="section" id="scheda-gruppo">
+<h4>Scheda gruppo<a class="headerlink" href="#scheda-gruppo" title="Permalink to this headline">¶</a></h4>
+<p>Nella scheda Gruppo vanno inseriti:</p>
+<p>Il nome scelto per il nuovo gruppo nel campo nome gruppo&nbsp;.</p>
+<p>Una descrizione delle caratteristiche del gruppo nel campo descrizione.</p>
+<p>Il campo membri serve ad aggiungere gli utenti al gruppo; l’utente va
+inserito digitando il suo nome nel campo, il sistema ricerca
+automaticamente fra tutti gli utenti, man mano che che viene composto il
+nome, trovato l’ utente fare click sul pulsante aggiungi.</p>
+<p>Sotto il campo verrà creata la tabella degli utenti appartenenti al
+gruppo.</p>
+<p>Per cancellare un membro dal gruppo fare click sulla “x” posta in
+corrispondenza dell’utente.</p>
+</div>
+<div class="section" id="scheda-servizi">
+<h4>Scheda Servizi<a class="headerlink" href="#scheda-servizi" title="Permalink to this headline">¶</a></h4>
+<p>Nella scheda Servizi è possibile selezionare i servizi che si vogliono
+assegnare al gruppo, mettere la spunta su quelli che gli si vogliono
+associare.</p>
+<p>La creazione del gruppo sarà completa facendo click sul pulsante salva.</p>
+<p>Il sistema crea di default il gruppo domadmins&nbsp;durante l’installazione
+del modulo.</p>
+</div>
+</div>
+<div class="section" id="modifica-di-un-gruppo">
+<h3>Modifica di un gruppo<a class="headerlink" href="#modifica-di-un-gruppo" title="Permalink to this headline">¶</a></h3>
+<p>Per modificare un gruppo fare click sul pulsante modifica&nbsp;nella colonna
+Azioni. Verrà mostrata la pagina per la creazione del gruppo dove sarà
+possibile modificare sia i dati del Gruppo sia i Servizi ad esso
+associati.</p>
+</div>
+<div class="section" id="eliminazione-di-un-gruppo">
+<h3>Eliminazione di un gruppo<a class="headerlink" href="#eliminazione-di-un-gruppo" title="Permalink to this headline">¶</a></h3>
+<p>Per eliminare un gruppo fare click sulla freccia adiacente al pulsante
+modifica. Si apre un menù a tendina, fare click sulla voce elimina.
+Verrà chiesta la conferma, fare click sul pulsante elimina&nbsp;per eliminare
+definitivamente il gruppo.</p>
+<p>Consente la creazione, la modifica o la rimozione di gruppi
+di utenti utilizzati per assegnare servizi e permessi di accesso agli
+utenti o come liste di distribuzione email.</p>
+</div>
+</div>
+<div class="section" id="crea-modifica">
+<h2>Crea / Modifica<a class="headerlink" href="#crea-modifica" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gruppo">
+<h3>Gruppo<a class="headerlink" href="#gruppo" title="Permalink to this headline">¶</a></h3>
+<p>Consente la creazione di un nuovo gruppo e l&#8217;associazione dei relativi
+membri.</p>
+<dl class="docutils">
+<dt>Nome gruppo</dt>
+<dd>Può contenere solo lettere minuscole, numeri,
+trattini, punti e trattino basso (underscore) e deve iniziare con
+una lettera minuscola. Per esempio &#8220;vendite&#8221;, &#8220;beta3&#8221; e &#8220;riv_net&#8221;
+sono nomi validi, mentre &#8220;3d&#8221;, &#8220;Ufficio Vendite&#8221; e &#8220;q&amp;a&#8221; non lo
+sono.</dd>
+<dt>Descrizione</dt>
+<dd>Inserire una breve descrizione del gruppo.</dd>
+<dt>Membri</dt>
+<dd>Consente di ricercare gli utenti presenti sul server. Gli utenti si
+associano al gruppo con il tasto <em>Aggiungi</em>. Per eliminare gli
+utenti elencati usare il pulsante <em>X</em>.</dd>
+</dl>
+</div>
+<div class="section" id="servizi">
+<h3>Servizi<a class="headerlink" href="#servizi" title="Permalink to this headline">¶</a></h3>
+<p>Abilita i servizi disponibili sul nuovo gruppo.</p>
+<dl class="docutils">
+<dt>Email</dt>
+<dd>Attiva la casella di posta per il gruppo.</dd>
+<dt>Invia copia del messaggio ai membri del gruppo</dt>
+<dd>Abilita il comportamento standard della lista di distribuzione: ogni
+e-mail inviata al gruppo verrà duplicata a ciascun utente membro.</dd>
+<dt>Consegna il messaggio in una cartella condivisa</dt>
+<dd>Ogni email inviata al gruppo verrà consegnata in una cartella IMAP
+condivisa visibile ai soli membri del gruppo.</dd>
+<dt>Crea gli indirizzi email predefiniti</dt>
+<dd>Crea automaticamente gli indirizzi email associati alla casella di
+posta del gruppo per tutti i domini definiti nel server, del tipo
+<em>nome_gruppo&#64;dominio</em>. Tali indirizzi email possono essere modificati
+nella sezione <em>Gestione -&gt; Indirizzi email</em>.</dd>
+<dt>Casella email</dt>
+<dd>Abilita la casella email per il gruppo.</dd>
+<dt>Invia copia del messaggio ai membri del gruppo</dt>
+<dd>Ogni messaggio destinato al gruppo verrà copiato e consegnato ad ogni membro del gruppo.</dd>
+<dt>Consegna il messaggio in una cartella condivisa</dt>
+<dd>I messaggi destinati al gruppo saranno consegnati in un&#8217;unica cartella condivisa in sola lettura tra i membri del gruppo.
+La sottoscrizione della cartella condivisa è automatica.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="elimina">
+<h2>Elimina<a class="headerlink" href="#elimina" title="Permalink to this headline">¶</a></h2>
+<p>Questa azione consente di rimuovere i gruppi definiti e le relative
+liste di distribuzione. Le caselle di posta condivise associate a questo gruppo verranno eliminate.</p>
+</div>
+<div class="section" id="utenti">
+<h2>Utenti<a class="headerlink" href="#utenti" title="Permalink to this headline">¶</a></h2>
+<p>Per gestire gli utenti all’ interno di NethServer andare sulla sezione
+Gestione→ Utenti.</p>
+<p>All’interno di questa sezione è possibile creare nuovi utenti del
+sistema oppure eliminare o modificare gli utenti già esistenti.</p>
+<p>L&#8217;utente di sistema è necessario per accedere a molti servizi erogati da
+NethServer (email, cartelle condivise etc.).</p>
+<p>Ogni utente è caratterizzato da una coppia di credenziali (utente e
+password). Un utente appena creato rimane bloccato finché non viene
+settata una password. Un utente bloccato non può utilizzare i servizi del
+server che richiedono autenticazione.</p>
+<div class="section" id="id1">
+<h3>Installazione<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>L’installazione delle funzionalità utenti e gruppi avviene
+automaticamente quando viene installato un pacchetto che dipende da
+questo modulo.</p>
+</div>
+<div class="section" id="creazione-nuovo-utente">
+<h3>Creazione nuovo utente<a class="headerlink" href="#creazione-nuovo-utente" title="Permalink to this headline">¶</a></h3>
+<p>Per creare un nuovo utente occorre fare click sul pulsante crea nuovo&nbsp;ad
+inizio pagina.</p>
+<p>Il nome utente può contenere solo lettere minuscole, numeri, trattini,
+punti e trattino basso (_) e deve iniziare con una lettera minuscola.</p>
+<p>Per scegliere il nome utente è consigliabile scegliere uno standard che
+rende tutti i nomi presenti su NethServer omogenei ad una precisa
+logica; (es. mrossi oppure mario_rossi se si crea un utente Mario Rossi
+e ciò vale per tutti gli altri utenti).</p>
+<p>Verra aperta una nuova pagina dove ci sono tre schede: Utente, Dettagli,
+Servizi</p>
+<div class="section" id="scheda-utenti">
+<h4>Scheda Utenti<a class="headerlink" href="#scheda-utenti" title="Permalink to this headline">¶</a></h4>
+<p>Nella scheda Utente vanno inseriti:</p>
+<p>Il nome scelto per il nuovo utente nel campo Nome Utente.</p>
+<p>Il vero nome &nbsp;e cognome dell’utente nel campo Nome Cognome.</p>
+<p>Il campo Groups serve ad aggiungere l’utente ad un gruppo; il gruppo va
+cercato digitando il nome nel campo, il sistema ricerca automaticamente
+fra tutti i gruppi, man mano che che viene composto il nome; trovato il
+gruppo fare click sul pulsante aggiungi.</p>
+<p>Sotto il campo verrà creata la tabella dei gruppi di cui l’utente è
+membro.</p>
+<p>Per cancellare l’ utente da un gruppo fare click sulla “x” posta in
+corrispondenza del gruppo.</p>
+<p>Informazioni di base sull&#8217;utente. Questi campi devono essere
+necessariamente compilati.</p>
+<dl class="docutils">
+<dt>Nome utente</dt>
+<dd>Il <em>Nome utente</em>, sarà utilizzato per accedere ai servizi. Può
+contenere solo lettere minuscole, numeri, trattini, punti e
+underscore (_) e deve iniziare con una lettera minuscola. Per
+esempio &#8220;luisa&#8221;, &#8220;mrossi&#8221; e &#8220;liu-jo&#8221; sono nomi utente validi, mentre
+&#8220;4amici&#8221;, &#8220;Franco Neri&#8221; e &#8220;aldo/sbaglio&#8221; non lo sono.</dd>
+<dt>Nome</dt>
+<dd>È il nome reale dell&#8217;utente. Per esempio &#8220;Mario&#8221;</dd>
+<dt>Cognome</dt>
+<dd>Il cognome dell&#8217;utente</dd>
+<dt>Gruppi</dt>
+<dd>Grazie alla barra di ricerca è possibile selezionare i gruppi ai
+quali aggiungere l&#8217;utente. L&#8217;utente può appartenere a più gruppi.</dd>
+</dl>
+</div>
+<div class="section" id="scheda-dettagli">
+<h4>Scheda Dettagli<a class="headerlink" href="#scheda-dettagli" title="Permalink to this headline">¶</a></h4>
+<p>Nella scheda Dettagli è possibile introdurre informazioni specifiche per
+l’utente come Società, Ufficio, Indirizzo, Città, Telefono.</p>
+<p>Questa sezione raccoglie le informazioni sull&#8217;organizzazione a cui
+appartiene l&#8217;utente e sono facoltative. I valori di default si possono
+specificare dalla voce del menù <em>Dati organizzazione</em>.</p>
+<p>Per i seguenti campi è possibile specificare un valore personalizzato,
+altrimenti vale l&#8217;impostazione effettuata dal modulo &#8220;Dati
+organizzazione&#8221;, disponibile solo per l&#8217;amministratore del sistema.</p>
+<ul class="simple">
+<li>Società</li>
+<li>Ufficio</li>
+<li>Indirizzo</li>
+<li>Città</li>
+<li>Telefono</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h4>Scheda Servizi<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Nella scheda Servizi è possibile selezionare i servizi di cui l’utente
+potrà usufruire fra quelli</p>
+<p>installati. Mettere la spunta su quelli da assegnare.</p>
+<p>La creazione dell’ utente sarà completa facendo click sul pulsante
+salva.</p>
+<dl class="docutils">
+<dt>Shell remota (SSH)</dt>
+<dd>Consente all&#8217;utente di accedere ad una shell sicura sul server.</dd>
+<dt>Casella email</dt>
+<dd>Abilita la casella email per l&#8217;utente.</dd>
+<dt>Inoltro messaggi</dt>
+<dd>Consente di inoltrare le email ricevute ad un indirizzo alternativo.</dd>
+<dt>Tieni una copia sul server</dt>
+<dd>Le email inoltrate saranno comunque salvate nella casella email dell&#8217;utente.</dd>
+<dt>Quota email personalizzata</dt>
+<dd>Permette di specificare un valore di quota diverso da quello di default.</dd>
+<dt>Personalizza tempo di permanenza delle email di spam.</dt>
+<dd>Le email di spam vengono eliminate ad intervalli regolari. Spuntando
+la casella è possibile stabilire per quanti giorni i messaggi
+classificati come spam arrivati a questo utente, verranno mantenuti
+nel sistema prima di essere eliminati.</dd>
+<dt>Indirizzi email</dt>
+<dd>Lista degli indirizzi email associati all&#8217;utente.</dd>
+<dt>Cartelle condivise (Samba)</dt>
+<dd>Concede all&#8217;utente l&#8217;autorizzazione ad accedere alle cartelle
+condivise tramite Samba.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="password-nuovo-utente">
+<h3>Password nuovo utente.<a class="headerlink" href="#password-nuovo-utente" title="Permalink to this headline">¶</a></h3>
+<p>Il nuovo utente creato sarà immediatamente visibile sulla tabella
+utenti; il suo nome è contraddistinto dall&#8217;icona #|image2|che indica
+che non potrà avere accesso al sistema fino a quando non viene cambiata
+la password.</p>
+<p>Per cambiare la password fare click sul pulsante modifica&nbsp;sulla colonna
+Azioni in corrispondenza della riga dell’utente. Verrà aperta la pagina
+per la creazione dell’utente; fare click sul pulsante Cambia password. A
+questo punto verrà chiesta la nuova password.</p>
+<p>Il sistema è impostato per richiedere una password efficace in termini
+di sicurezza, perciò essa dovrà avere determinati requisiti per essere
+valida. Tipicamente dovrà essere lunga più di 6 caratteri contenere
+almeno un numero, un carattere maiuscolo e un carattere speciale. Fare
+click su salva per procedere al cambio della password.</p>
+<p>Permette di configurare per la prima volta, o modificare, la password dell&#8217;utente.</p>
+<p>La password deve soddisfare i seguenti requisiti:</p>
+<blockquote>
+<div><ul class="simple">
+<li>deve contenere almeno 5 caratteri diversi</li>
+<li>non deve essere presente nei dizionari di parole comuni</li>
+<li>deve essere diversa dallo username</li>
+<li>non può avere ripetizioni di pattern formati da più 3 caratteri (ad esempio la password As1.$As1.$ non è valida)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="modifica-di-un-utente">
+<h3>Modifica di un utente<a class="headerlink" href="#modifica-di-un-utente" title="Permalink to this headline">¶</a></h3>
+<p>Per modificare un gruppo fare click sul pulsante modifica&nbsp;nella colona
+Azioni. Verrà mostrata la pagina per la creazione dell’utente &nbsp;dove sarà
+possibile modificare i dati Utente, i Dettagli e i servizi ad esso
+associati.</p>
+</div>
+<div class="section" id="eliminazione-di-un-utente">
+<h3>Eliminazione di un utente<a class="headerlink" href="#eliminazione-di-un-utente" title="Permalink to this headline">¶</a></h3>
+<p>Per eliminare un utente fare click sulla freccia adiacente il pulsante
+modifica&nbsp;sulla colonna azioni. Si apre un menù a tendina, fare click
+sulla voce elimina. Verrà chiesta la conferma, fare click sul pulsante
+elimina&nbsp;per eliminare definitivamente l’utente.</p>
+<p>Elimina l&#8217;utente. Tutti i dati dell&#8217;utente verranno cancellati.</p>
+</div>
+<div class="section" id="blocca-sblocca">
+<h3>Blocca / Sblocca<a class="headerlink" href="#blocca-sblocca" title="Permalink to this headline">¶</a></h3>
+<p>Consente di bloccare o sbloccare un utente. I dati dell&#8217;utente non
+verranno eliminati.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gestione Account</a><ul>
+<li><a class="reference internal" href="#gruppi">Gruppi</a><ul>
+<li><a class="reference internal" href="#installazione">Installazione</a></li>
+<li><a class="reference internal" href="#creazione-nuovo-gruppo">Creazione nuovo gruppo</a><ul>
+<li><a class="reference internal" href="#scheda-gruppo">Scheda gruppo</a></li>
+<li><a class="reference internal" href="#scheda-servizi">Scheda Servizi</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modifica-di-un-gruppo">Modifica di un gruppo</a></li>
+<li><a class="reference internal" href="#eliminazione-di-un-gruppo">Eliminazione di un gruppo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crea-modifica">Crea / Modifica</a><ul>
+<li><a class="reference internal" href="#gruppo">Gruppo</a></li>
+<li><a class="reference internal" href="#servizi">Servizi</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#elimina">Elimina</a></li>
+<li><a class="reference internal" href="#utenti">Utenti</a><ul>
+<li><a class="reference internal" href="#id1">Installazione</a></li>
+<li><a class="reference internal" href="#creazione-nuovo-utente">Creazione nuovo utente</a><ul>
+<li><a class="reference internal" href="#scheda-utenti">Scheda Utenti</a></li>
+<li><a class="reference internal" href="#scheda-dettagli">Scheda Dettagli</a></li>
+<li><a class="reference internal" href="#id2">Scheda Servizi</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#password-nuovo-utente">Password nuovo utente.</a></li>
+<li><a class="reference internal" href="#modifica-di-un-utente">Modifica di un utente</a></li>
+<li><a class="reference internal" href="#eliminazione-di-un-utente">Eliminazione di un utente</a></li>
+<li><a class="reference internal" href="#blocca-sblocca">Blocca / Sblocca</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="backup.html"
+                        title="previous chapter">Backup</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mail.html"
+                        title="next chapter">Indirizzi email</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/accounts.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mail.html" title="Indirizzi email"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="backup.html" title="Backup"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

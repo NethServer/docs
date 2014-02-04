@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Server fax &mdash; NethServer 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="NethServer 0 documentation" href="index.html" />
+    <link rel="next" title="Proxy web" href="web_proxy.html" />
+    <link rel="prev" title="UPS" href="ups.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="web_proxy.html" title="Proxy web"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ups.html" title="UPS"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="server-fax">
+<h1>Server fax<a class="headerlink" href="#server-fax" title="Permalink to this headline">¶</a></h1>
+<p>Il server fax permette di ricevere e inviare fax attraverso un modem
+fisico collegato direttamente a NethServer o attraverso un modem
+virtuale (modem IAX).</p>
+<p>Il modem deve supportare l&#8217;invio e la ricezione di fax preferibilmente in classe 1 o 1.0 (sono supportati anche le classi 2, 2.0 e 2.1).</p>
+<div class="section" id="generale">
+<h2>Generale<a class="headerlink" href="#generale" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Prefisso internazionale</dt>
+<dd>Il prefisso internazionale da anteporre al proprio numero di fax.</dd>
+<dt>Prefisso</dt>
+<dd>Il proprio prefisso telefonico.</dd>
+<dt>Numero fax</dt>
+<dd>Numero fax del mittente.</dd>
+<dt>Mittente (TSI)</dt>
+<dd>Il TSI viene stampato nell&#8217;intestazione del fax ricevente, generalmente nella prima riga in alto. E&#8217; possibile inserire il numero di fax oppure un nome di lunghezza massima pari a 20 caratteri (consigliato il nome dell&#8217;azienda). Sono consentiti solo caratteri alfanumerici.</dd>
+</dl>
+</div>
+<div class="section" id="modem">
+<h2>Modem<a class="headerlink" href="#modem" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Porta modem</dt>
+<dd><p class="first">Indica la porta fisica o virtuale a cui è collegato il modem fax</p>
+<ul class="last simple">
+<li>Device standard: consente di selezionare il device da una lista delle porte più comuni</li>
+<li>Device personalizzato: permette di indicare un device personalizzato da utilizzare come modem fax. <em>Deve corrispondere al nome di un device del sistema.</em></li>
+</ul>
+</dd>
+<dt>Modalità</dt>
+<dd><p class="first">Specifica la modalità di funzionamento del device selezionato. Le modalità disponibili sono:</p>
+<ul class="last simple">
+<li>Invia e ricevi: il modem sarà utilizzato per inviare e ricevere fax</li>
+<li>Solo ricezione: il modem sarà utilizzato esclusivamente per la ricezione di fax</li>
+<li>Solo invio: il modem sarà utilizzato esclusivamente per l&#8217;invio di fax</li>
+</ul>
+</dd>
+<dt>Prefisso centralino</dt>
+<dd>Se il modem fax è collegato ad un centralino, potrebbe essere necessario inserire un prefisso per &#8220;prendere la linea esterna&#8221;.
+Se il modem è direttamente collegato ad una linea, oppure il centralino non richiede prefisso, lasciare il campo vuoto.
+Se per chiamare si utilizza un centralino, inserire il prefisso da comporre.</dd>
+<dt>Attesa segnale di linea libera</dt>
+<dd><p class="first">Alcuni modem non sono in grado di riconoscere il tono di linea libera
+(in particolare se collegati a centralini) e non compongono il numero
+segnalando l&#8217;assenza di tono (errore &#8220;No Dial Tone&#8221;).</p>
+<p class="last">E&#8217; possibile configurare il modem per ignorare l&#8217;assenza di linea e
+comporre immediatamente il numero. L&#8217;impostazione raccomandata è
+&#8220;Abilitato&#8221;, si consiglia di disattivare <em>Attesa segnale di linea libera</em> solo in caso di problemi.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="notifiche-mail">
+<h2>Notifiche mail<a class="headerlink" href="#notifiche-mail" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Formato fax ricevuti</dt>
+<dd>Il server fax, come operazione predefinita, inoltra i fax ricevuti sotto
+forma di e-mail con allegato. E&#8217; necessario specificare l&#8217;indirizzo
+e-mail a cui si desidera inoltrare i fax, ed uno o più formati per
+l&#8217;allegato. Se non si desidera ricevere il fax in allegato, ma solo una
+notifica di ricezione, deselezionare tutti i formati.</dd>
+</dl>
+<p>Inoltra fax ricevuti a</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>Gruppo &#8220;faxmaster&#8221;</dt>
+<dd><p class="first last">Di default i fax ricevuti vengono inviati al <em>faxmaster</em>: se
+un utente deve ricevere i fax in arrivo deve essere aggiunto a tale
+gruppo.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Indirizzo mail esterno</dt>
+<dd><p class="first last">E&#8217; possibile indicare un indirizzo mail esterno nel caso si
+vogliano inviare i fax ricevuti ad indirizzi email esterni.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>Formato fax inviati</dt>
+<dd>Se richiesto dal client, il server inoltra una notifica d&#8217;invio sotto forma di e-mail con
+allegato. Scegliere il formato in cui si preferisce ricevere il fax
+allegato, se non si desidera ricevere il fax in allegato deselezionare
+tutti i formati.</dd>
+<dt>Aggiungi rapporto spedizione nella notifica di invio fax</dt>
+<dd>Se selezionato, aggiunge un rapporto di spedizione nella notifica di invio fax.</dd>
+</dl>
+</div>
+<div class="section" id="funzioni-aggiuntive">
+<h2>Funzioni aggiuntive<a class="headerlink" href="#funzioni-aggiuntive" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Visualizza fax inviati dai client</dt>
+<dd>I client fax consentono anche di visualizzare tutti i fax in arrivo. Se,
+per motivi di riservatezza, si desidera inibire la visione dei fax
+ricevuti, disabilitare questa opzione.</dd>
+<dt>Stampa automaticamente i fax ricevuti</dt>
+<dd>E&#8217; possibile stampare automaticamente tutti i fax ricevuti su una
+stampante configurata su NethServer compatibile PCL5. La stampante va
+selezionata tramite l&#8217;apposito menu a tendina.</dd>
+<dt>SambaFax</dt>
+<dd>Selezionando questa opzione il server fax può mettere a disposizione della
+rete locale una stampante virtuale, denominata &#8220;sambafax&#8221; che dovrà
+essere configurata sui client, selezionando il driver Apple LaserWriter
+16/600 PS. I documenti stampati sulla stampante di rete sambafax
+dovranno contenere esattamente la dicitura &#8220;Numero Fax:&#8221; seguita dal
+numero di fax del destinatario.</dd>
+<dt>Invia report giornaliero</dt>
+<dd>Invia un report giornaliero all&#8217;amministratore</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="modem-iax">
+<h1>Modem IAX<a class="headerlink" href="#modem-iax" title="Permalink to this headline">¶</a></h1>
+<p>Questa pagina consente di configurare dei modem IAX.</p>
+<p>Un modem IAX è un modem software che usa un canale IAX (normalmente
+viene fornito da un centralino Asterisk) invece che una linea telefonica
+tradizionale.</p>
+<div class="section" id="crea-modifica">
+<h2>Crea / Modifica<a class="headerlink" href="#crea-modifica" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Nome</dt>
+<dd>Nome del nuovo modem IAX che si intende creare.</dd>
+<dt>IP server</dt>
+<dd>Indirizzo IP del server sul quale il modem IAX si registra (es. IP del server Asterisk).</dd>
+<dt>Interno</dt>
+<dd>Interno IAX sul quale si desidera ricevere i FAX.</dd>
+<dt>Password</dt>
+<dd>Password dell&#8217;interno IAX definito precedentemente.</dd>
+<dt>Numero chiamante</dt>
+<dd>Numero chiamante mostrato nei FAX in uscita.</dd>
+<dt>Nome chiamante</dt>
+<dd>Nome chiamante mostrato nei FAX in uscita.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Server fax</a><ul>
+<li><a class="reference internal" href="#generale">Generale</a></li>
+<li><a class="reference internal" href="#modem">Modem</a></li>
+<li><a class="reference internal" href="#notifiche-mail">Notifiche mail</a></li>
+<li><a class="reference internal" href="#funzioni-aggiuntive">Funzioni aggiuntive</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modem-iax">Modem IAX</a><ul>
+<li><a class="reference internal" href="#crea-modifica">Crea / Modifica</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ups.html"
+                        title="previous chapter">UPS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="web_proxy.html"
+                        title="next chapter">Proxy web</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fax_server.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="web_proxy.html" title="Proxy web"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ups.html" title="UPS"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
