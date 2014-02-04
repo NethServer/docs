@@ -3,17 +3,37 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Documentazione NethServer
-=========================
+Manuale amministratore
+======================
 
-Indice:
+.. image:: ../_static/logo.png
+   :alt: NethServer
 
+.. rubric:: NethServer è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
+
+.. sidebar:: Contatti
+
+    * **Sito ufficiale**: `http://www.nethserver.org <http://www.nethserver.org>`_
+    * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
+    * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
+    * **Codice sorgente**: `http://code.nethserver.org <http://code.nethserver.org>`_
+
+Installazione
+-------------
+   
 .. toctree::
    :maxdepth: 2
 
    requirements
    installation
    packages
+
+Configurazione
+--------------
+
+.. toctree::
+   :maxdepth: 2
+
    administration
    date_time
    backup
