@@ -2,29 +2,33 @@
 Accesso a NethServer
 ====================
 
-NethServer viene gestito tramite interfaccia web quindi per accedere
-alle pagine di gestione si deve usare un programma per la navigazione in
-internet (es.  FireFox, IE oppure Chrome) su di un PC connesso alla
-stessa rete del server.
+NethServer viene configurato tramite una interfaccia web, per accedere
+alle pagine di gestione si utilizza un programma per la navigazione in
+internet (es. browser FireFox, Chrome, etc) su di un PC connesso alla
+stessa rete LAN del server.
 
-Sul campo degli indirizzi digitare:
+Nella barra degli indirizzi digitare:
 
-https://ip\_nethserver <https://192.168.1.x:980>/server-manager
+https://a.b.c.d:980 oppure https://server/server-manager
 
-dove ip\_nethserver è quello che è stato deciso al momento
-dell’installazione (vedi paragrafo Indirizzo IP)
+dove a.b.c.d è l'indirizzo IP che è stato impostato al momento
+dell’installazione (vedi paragrafo Indirizzo IP) oppure *server*
+è il nome assegnato al server (l'uso dell'URL *server-manager*
+richiede l'installazione dell'add-on web server).
 
-A causa dell’uso del protocollo di crittografia https per la
-comunicazione con il server  il browser ci avviserà che la connessione
-non è affidabile perché non ha un certificato valido. 
+A causa dell'uso del protocollo di cifratura HTTPS per la
+comunicazione con il server, il browser ci avviserà che la connessione
+non è affidabile perché il server non ha un certificato rilasciato da
+una autorità ufficiale.
 
-Per entrare nel server occorre perciò fare click sulla voce “sono
+E' necessario ignorare l'avviso, la procedura varia in base al
+browser utilizzato, per esempio sarà necessario fare clic sulla voce “sono
 consapevole dei rischi”, verrà così mostrato il pulsante Aggiungi
-Eccezione. Fare click su Aggiungi Eccezione, si aprirà un’ altra
+Eccezione. Fare clic su Aggiungi Eccezione, si aprirà un’ altra
 finestra dove si deve fare click sul pulsante Conferma eccezione di
 sicurezza.
 
-La connessione rimarrà sicura e criptata ma il certificato del tuo
+La connessione rimarrà sicura e cwcifratacriptata ma il certificato del 
 server non sarà ufficiale. Un certificato valido ha un costo di
 abbonamento annuale e non è indispensabile in questa situazione. Vedi
 figura TODO
@@ -38,10 +42,9 @@ La prima pagina dell’interfaccia web è quella di log in. Viene richiesto
 nome utente e password. Per configurare il server occorre accedere con
 diritti di amministratore quindi:
 
-nome utente: admin
+Nome utente: **admin**
 
-password: password\_di\_root (la quale, come già detto è sincronizzata
-con quella di admin.
+Password: **password_di_root** (inserita in fase di installazione)
 
 #|image1|
 
@@ -60,20 +63,17 @@ visualizzato un riepilogo dello stato del sistema e delle sue
 impostazioni.
 
 Vengono riportate la configurazione di rete, l’uso della memoria, l’uso
-del disco, informazioni sul carico ed uptime della macchina.
+del disco, informazioni sul carico ed uptime della macchina, etc.
 
 Arresto
 =======
-La macchina dove è installato Nethserver può essere riavviata o spenta andando su Amministrazione→ Arresto. Selezionare l’opzione Riavvia oppure Spegni e 
-fare click sul pulsante Arresta il sistema
+La macchina su cui è installato NethServer può essere riavviata o spenta dal menu Amministrazione→ Arresto.
+Selezionare l’opzione Riavvia oppure Spegni e fare click sul pulsante ``Arresta il sistema``.
 
-
-Consente di spegnere o riavviare il server.
 E' obbligatorio arrestare il sistema prima di spegnere il server.
 L'esecuzione di queste funzioni richiede alcuni minuti.
 
-ATTENZIONE! Cliccando ARRESTA IL SISTEMA l'operazione inizierà
-immediatamente.
+.. attention: Cliccando ``Arresta il sistema`` l'operazione inizierà immediatamente.
 
 Riavvia
     Riavvia il server terminando tutti i processi in esecuzione.
@@ -84,7 +84,7 @@ Spegni
 Visualizza Log
 ==============
 Come per ogni sistema Linux, Nethserver è molto ricco di file di log che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
-Per visualizzare i file di log fare click su Amministrazione→ Visualizza Log. Si apre una pagina con l’elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
+Per visualizzare i file di log fare clic su Amministrazione→ Visualizza Log. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
 
 Trova e mostra il contenuto dei file di log.
 
@@ -105,7 +105,7 @@ Visualizzazione singolo log
 ---------------------------
 
 Permette di consultare il contenuto più recente del log selezionato e di
-seguirne il popolamento in tempo reale.
+seguirne l'evoluzione in tempo reale.
 
 Chiudi
     Chiude la finestra relativa al log selezionato e torna alla pagina
@@ -138,7 +138,7 @@ particolari che non facciano uso del default gateway (ad esempio per
 raggiungere reti private collegate tramite linee dedicate o simili).
 
 E' possibile consentire l'accesso a computer su reti remote
-all'interfaccia web, inserendo le reti abilitate qui.
+all'interfaccia web, inserendo le reti abilitate in questa pagina.
 
 I computer abilitati potranno accedere all'interfaccia web in HTTPS.
 
@@ -150,10 +150,10 @@ Crea un nuovo instradamento verso una rete remota e/o permette ad una
 rete remota di accedere a tutti i servizi del server.
 
 Indirizzo di rete
-    L'indirizzo della rete verso cui stabilire il nuovo instradamento
+    L'indirizzo della rete verso cui stabilire il nuovo instradamento.
 
 Maschera di rete
-    La maschera della rete verso cui stabilire il nuovo instradamento
+    La maschera della rete verso cui stabilire il nuovo instradamento.
 
 Indirizzo del router
     Indirizzo del gateway da utilizzare per raggiungere la rete
@@ -183,7 +183,7 @@ Maschera di rete
 SSH
 ---
 
-Gestione dell'accesso SSH (Secure Shell)  al server.
+Gestione dell'accesso SSH (Secure Shell) al server.
 
 Abilitato / Disabilito
     Abilita / disabilita l'accesso SSH.
@@ -265,7 +265,7 @@ Statico
 
 DHCP
     La configurazione è attribuita dinamicamente (disponibile solo per interfacce
-    RED)
+    RED).
 
 
 
@@ -282,8 +282,7 @@ Utenti, scheda Dettagli.
 La variazione di questi dati sostituisce i valori di default per gli
 utenti che non hanno campi personalizzati.
 
-**ATTENZIONE**: ogni modifica ai dati inseriti rigenera il certificato
-SSL.
+.. caution: Ogni modifica ai dati inseriti rigenera il certificato SSL.
 
 Azienda
     Inserire il nome dell'azienda.
