@@ -19,10 +19,37 @@ Administrator Manual
     * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
 
 
-Please be patient, English documentation will come soon.
+Installation
+------------
 
 .. toctree::
    :maxdepth: 2
+
+   requirements
+   installation
+   packages
+
+Configuration
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   administration
+   date_time
+   backup
+   accounts
+   mail
+   shared_folder
+   samba
+   chat
+   ups
+   fax_server
+   web_proxy
+   firewall
+   bandiwidth_monitor
+   dns_dhcp
+   vpn
 
 
 
