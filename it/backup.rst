@@ -5,19 +5,21 @@ Backup
 L’attività di backup è fondamentale perchè in caso di malfunzionamenti o
 guasti del sistema ci assicura il salvataggio e la conservazione dei
 nostri dati.
+Il backup contiene tutti i dati, come le home degli utenti, le
+cartelle condivise, le email ma anche tutte le configurazioni di
+sistema. Viene eseguito quotidianamente e può essere completo o
+incrementale, in base al giorno della settimana e alla configurazione. I
+supporti disponibili per il backup sono: disco USB, condivisione Windows
+e condivisione NFS. 
 
 Installazione
 =============
 
-Per installare il
-pacchetto  Backup
-fare click su  Configurazione →Gestione pacchetti. Mettere la spunta su
-Backup e fare click sul pulsante Avanti. Verrano suggeriti dei pacchetti
+Per installare il pacchetto  Backup fare click su  Configurazione →Gestione pacchetti. 
+Mettere la spunta su Backup e fare click sul pulsante Avanti. Verrano suggeriti dei pacchetti
 aggiuntivi da installare, selezionare quelli che si ritengono utili e
 confermare le modifiche al sistema facendo click sul pulsante applica.
 
-Al termine dell’ installazione verrà mostrato in alto un messaggio che
-ci informa che l’operazione è stata completata correttamente.
 
 Gestione Backup
 ===============
@@ -34,16 +36,7 @@ Nella scheda Generale si può abilitare la funzione di backup mettendo la
 spunta su Abilita backup automatico. E’ possibile impostare l’ora in cui
 verra eseguito sul campo orario backup.
 
-Scegliere che tipologia di backup Nethserver deve eseguire tra full per
-il backup integrale del sistema o incrementale per il backup basato
-sull’aggiornamento delle modifiche ai file; in quest’ultimo caso si può
-impostare il giorno in cui viene effettuato il backup full scegliendolo
-dal menù a tendina.
-
-Si può impostare il tempo di conservazione dei vecchi backup, scegliendo
-il numero di giorni dal menù a tendina Elimina backup pià vecchi di.
-
-
+Scegliere che tipologia di backup Nethserver deve eseguire tra full ed incrementale ed impostare il tempo di conservazione.
 
 Abilita backup automatico
     L'opzione abilita o disabilita la procedura di backup. Di default è *abilitato*.
@@ -58,46 +51,17 @@ Incrementale
 Politica di conservazione
     Specifica il numero di giorni per i quali verranno conservati i backup.
 
+
 Scheda destinazione
 -------------------
-
-Nella scheda destinazione è possibile scegliere dove salvare i dati di
-backup fra tipi di supporto. Scegliere:
-
-*  Disco USB se si vuole salvare i dati di backup su un hard disk USB
-   installato sul server; in caso di più dischi in scegliere quale usare
-   dal menù a tendina Etichetta filesystem.
-
-*  Condivisione Windows (CIFS) nel caso si vuole salvare i dati su un
-   server windows remoto, il quale condivide cartelle in rete. In questo
-   caso specificare sul campo Server  l’indirizzo IP del server o il suo
-   nome sul campo Condivisione il percorso della cartella condivisa dove
-   si vogliono salvare i file, sui campi Utente e Password il nome
-   utente e la sua password.
-
-*  Condivisione NFS nel caso si vuole salvare i dati di backup su un
-   server remoto che condivide cartelle in rete. Inquesto caso
-   specificare nel campo Host il nome dell’ host e nel campo
-   Condivisione il percorso della cartella condivisa dove si vogliono
-   salvare i file.
-
-Il backup contiene tutti i dati, come le home degli utenti, le
-cartelle condivise, le email ma anche tutte le configurazioni di
-sistema. Viene eseguito quotidianamente e può essere completo o
-incrementale, in base al giorno della settimana e alla configurazione. I
-supporti disponibili per il backup sono: disco USB, condivisione Windows
-e condivisione NFS. Al termine del backup è possibile inviare via e-mail
-una notifica all'amministratore o ad un indirizzo personalizzato.
-
-
-Destinazione
-------------
+Selezionare la destinazione del backup.
 
 Disco USB
     Seleziona come destinazione del backup un disco USB. Il disco USB deve
-    essere formattato in filesystem supportato (ext2/3/4 o FAT, NTFS non è supportato) ed una label configurata.
-
+    essere formattato in filesystem supportato (ext2/3/4 o FAT, NTFS non è supportato) ed avere una label configurata.
+    
     * Etichetta filesystem: Vengono elencati i dischi USB collegati
+
 Condivisione Windows (CIFS)
     Seleziona come destinazione del backup una condivisione Windows (CIFS). L'autenticazione è obbligatoria.
 
@@ -114,6 +78,7 @@ Host
 
 Notifiche
 ---------
+Al termine del backup è possibile inviare via e-mail una notifica all'amministratore o ad un indirizzo personalizzato.
 
 In caso di errore
     Invia notifica solo in caso di fallimento del backup.
