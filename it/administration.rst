@@ -28,7 +28,7 @@ Eccezione. Fare clic su Aggiungi Eccezione, si aprirà un’ altra
 finestra dove si deve fare click sul pulsante Conferma eccezione di
 sicurezza.
 
-La connessione rimarrà sicura e cwcifratacriptata ma il certificato del 
+La connessione rimarrà sicura e cifrata, ma il certificato del 
 server non sarà ufficiale. Un certificato valido ha un costo di
 abbonamento annuale e non è indispensabile in questa situazione. Vedi
 figura TODO
