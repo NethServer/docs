@@ -27,14 +27,6 @@ Il Proxy Web lavora per ridurre l'utilizzo della banda facendo cache
 delle pagine visitate. E' trasparente ai web browser che utilizzano
 questo server come loro gateway.
 
-Abilitato
-    Abilita il Proxy.
-
-Parent proxy
-    Inserire l'IP e la porta del parent proxy. La sintassi corretta è
-    Indirizzo_IP:porta .
-
-
 Scheda Proxy
 ------------
 
@@ -42,11 +34,12 @@ Nella scheda Proxy è possibile abilitare il servizio mettendo la spunta
 su Abilita proxy e si può  scegliere la modalità con cui il servizio
 dovrà lavorare.
 
-Nel caso si abbiano più server proxy a cascata (es.
-Squid3+Dansguardian+Squid) è possibile  dichiarare l’ indirizzo IP del
-parent proxy successivo; facendo click su opzioni avanzate verrà
-mostrata un campo dove poter inserire l’indirizzo IP del parent proxy
+Abilitato
+    Abilita il Proxy.
 
+Parent proxy
+    Inserire l'IP e la porta del parent proxy. La sintassi corretta è
+    Indirizzo_IP:porta .
 
 Filtro
 -------------
