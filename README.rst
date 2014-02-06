@@ -71,6 +71,15 @@ Highligt important words ::
    
     This is and *important* word.
     
+Add notes with ::
+    
+    .. note:: Highlight this text
+
+Add warnings with ::
+
+    .. warning:: Warning text fragments
+
+
     
 You can find morre info about **RST Inline Markup** here: rst-cheatsheet_
 
