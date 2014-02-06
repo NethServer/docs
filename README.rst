@@ -70,6 +70,12 @@ A field description can also contain a bullet list ::
 Highligt important words ::
    
     This is and *important* word.
+    
+    
+You can find morre info about **RST Inline Markup** here: rst-cheatsheet_
+
+.. _rst-cheatsheet: https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
+ 
 
 Build documentation
 ===================
