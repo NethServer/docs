@@ -3,24 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Manuale amministratore
-======================
+Administrator Manual
+====================
 
-.. image:: ../_static/logo.png
-   :alt: NethServer
+.. image:: ../../_static/logo.png
+      :alt: NethServer
 
-.. rubric:: NethServer è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
+.. rubric:: NethServer is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible. 
 
-.. sidebar:: Contatti
+.. sidebar:: About
 
-    * **Sito ufficiale**: `http://www.nethserver.org <http://www.nethserver.org>`_
+    * **Official site**: `http://www.nethserver.org <http://www.nethserver.org>`_
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
-    * **Codice sorgente**: `http://code.nethserver.org <http://code.nethserver.org>`_
+    * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
 
-Installazione
--------------
-   
+
+Installation
+------------
+
 .. toctree::
    :maxdepth: 2
 
@@ -28,8 +29,8 @@ Installazione
    installation
    packages
 
-Configurazione
---------------
+Configuration
+-------------
 
 .. toctree::
    :maxdepth: 2
@@ -51,8 +52,9 @@ Configurazione
    vpn
 
 
-Indici e tabelle
-================
+
+Indices and tables
+==================
 
 * :ref:`genindex`
 * :ref:`modindex`
