@@ -33,7 +33,7 @@ alimentazione.
 
 
 Configurazione
---------
+--------------
 
 Abilita NUT UPS
     Abilita o disabilita il servizio NUT.

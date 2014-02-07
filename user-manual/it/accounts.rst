@@ -191,7 +191,7 @@ Membri
     associano al gruppo con il tasto *Aggiungi*. Per eliminare gli
     utenti elencati usare il pulsante *X*.
     Sotto il campo verrà creata la tabella degli utenti appartenenti al
-gruppo.
+    gruppo.
 
 
 
@@ -232,7 +232,7 @@ associati.
 
 
 Eliminazione di un Gruppo
----------------------
+-------------------------
 
 Questa azione consente di rimuovere i gruppi definiti e le relative
 liste di distribuzione. Le caselle di posta condivise associate a questo gruppo verranno eliminate.
