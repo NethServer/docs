@@ -2,6 +2,29 @@
 Installation
 =============
 
+Minimum requirements
+====================
+
+Minimum requirements for NethServer are:
+
+* 64bit CPU (x86_64)
+* 1GB of RAM
+* 8GB of disk space
+
+
+We recommend to use at least 2 disks to setup a RAID 1. 
+The RAID software will ensure data integrity in case of a disk failure.
+
+Hardware compatibility
+----------------------
+
+NethServer is compatibile with all certificate hardware by 
+Red Hat® Enterprise  Linux® (RHEL ®). See: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
+
+
+Installation types
+==================
+
 NethServer supports two installation modes. In short:
 
 **Installing from ISO**

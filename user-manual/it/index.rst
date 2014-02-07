@@ -28,7 +28,6 @@ Installazione
 .. toctree::
    :maxdepth: 2
 
-   requirements
    installation
    packages
 
