@@ -1,3 +1,4 @@
+==========================
 Creating inline help pages
 ==========================
 
@@ -74,8 +75,12 @@ forms, like *Create* and *Modify*, they can be merged together.
    effects.
 
 
-Creating documentation for plugins
-----------------------------------
+Creating herlp for plugin modules
+=================================
+
+Some NethServer modules have a plugin behavior which means
+the module will load all help documents inside a well known directory.
+Loaded files will be rendered as parts of the parent document.
 
 Inside the parent document, add an include directive like this:
 
