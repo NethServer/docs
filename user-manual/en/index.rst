@@ -54,6 +54,13 @@ Configuration
    dns_dhcp
    vpn
 
+Appendix
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   license
 
 
 Indices and tables
