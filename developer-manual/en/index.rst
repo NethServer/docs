@@ -28,6 +28,8 @@ Rules and conventions
    :maxdepth: 2
    
    introduction
+   development_process
+   rpm_rules
 
 Architecture
 ------------
@@ -47,6 +49,7 @@ Implementation
 
    random_url
    migration
+   certificate_management
 
 Appendix
 --------
