@@ -79,7 +79,7 @@ supporto USB prima di riavviare.
 
 
 Modalità unattended
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Al termine dell'installazione, il sistema sarà così configurato:
 
@@ -90,8 +90,29 @@ Al termine dell'installazione, il sistema sarà così configurato:
 * Lingua: en_US.UTF-8
 * Dischi: se sono presenti due o più dischi, verrà creato un RAID1 sui primi due dischi
 
+Opzioni installazione
+^^^^^^^^^^^^^^^^^^^^^
+
+E' possibile aggiungere parametri all'installazione automatica, premendo TAB e modificando la linea di comando.
+
+Per disabilitare il raid, aggiungere questa opzione: ::
+
+    raid=none
+
+Se si desidera selezionare i dischi su cui isntallare, usare: ::
+
+    disks=sdx,sdy
+
+Altre opzioni disponibili:
+
+* lang: lingua del sistema, default è en_US
+* keyboard: layout tastiera, default è us
+* timezone: fuso orario, default è UTC Greenwich
+* password: abilita la il crittografia del filesystem usando la password immessa
+
+
 Modalità interattiva
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 La modalità interattiva consente di effettuare poche e semplici scelte sulla configurazione del sistema:
 
