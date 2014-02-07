@@ -51,6 +51,18 @@ Implementation
    migration
    certificate_management
 
+Web interface
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   web_interface
+   create_interface_module
+   dashboard
+   inline_help
+
+
 Appendix
 --------
 
