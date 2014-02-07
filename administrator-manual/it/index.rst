@@ -18,7 +18,7 @@ Manuale amministratore
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Codice sorgente**: `http://code.nethserver.org <http://code.nethserver.org>`_
     * **Mailing list**: `nethserver@googlegroup.com` 
-    * **Archiovio ML**: `https://groups.google.com/d/forum/nethserver <https://groups.google.com/d/forum/nethserver>`_
+    * **Archivio ML**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver su freenode.net`
 
 

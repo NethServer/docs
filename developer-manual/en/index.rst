@@ -18,7 +18,7 @@ Developer Manual
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
     * **Mailing list**: `nethserver@googlegroup.com` 
-    * **ML archive**: `https://groups.google.com/d/forum/nethserver <https://groups.google.com/d/forum/nethserver>`_
+    * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`
 
 Rules and conventions
