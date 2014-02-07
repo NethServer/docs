@@ -6,7 +6,7 @@
 Administrator Manual
 ====================
 
-.. image:: ../_static/logo.png
+.. image:: ../../_static/logo.png
       :alt: NethServer
 
 .. rubric:: NethServer is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible. 
@@ -17,6 +17,9 @@ Administrator Manual
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
+    * **Mailing list**: `nethserver@googlegroup.com` 
+    * **ML archive**: `https://groups.google.com/d/forum/nethserver <https://groups.google.com/d/forum/nethserver>`_
+    * **IRC**: `#nethserver on freenode.net`
 
 
 Installation
@@ -51,6 +54,13 @@ Configuration
    dns_dhcp
    vpn
 
+Appendix
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   license
 
 
 Indices and tables

@@ -6,7 +6,7 @@
 Manuale amministratore
 ======================
 
-.. image:: ../_static/logo.png
+.. image:: ../../_static/logo.png
    :alt: NethServer
 
 .. rubric:: NethServer è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
@@ -17,6 +17,10 @@ Manuale amministratore
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Codice sorgente**: `http://code.nethserver.org <http://code.nethserver.org>`_
+    * **Mailing list**: `nethserver@googlegroup.com` 
+    * **Archiovio ML**: `https://groups.google.com/d/forum/nethserver <https://groups.google.com/d/forum/nethserver>`_
+    * **IRC**: `#nethserver su freenode.net`
+
 
 Installazione
 -------------
@@ -49,6 +53,14 @@ Configurazione
    bandiwidth_monitor
    dns_dhcp
    vpn
+
+Appendice
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   license
 
 
 Indici e tabelle

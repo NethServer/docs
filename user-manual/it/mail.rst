@@ -16,7 +16,7 @@ In *Figura 1* è descritto il tragitto di una mail dal mittente al
 destinatario.
 
 
-.. figure:: ../_static/email_works.png
+.. figure:: ../../_static/email_works.png
 
    *Figura 1*: Schema di funzionamento del servizio e-mail. Tratto da `Wikipedia <http://www.wikipedia.org>`
 
