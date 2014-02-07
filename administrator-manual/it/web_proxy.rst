@@ -54,7 +54,7 @@ Trasparente
 
 Trasparente SSL
     Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. Tutto il reaffico sulla porta 80 e 443 è rediretto verso proxy.
-Tutto il traffico SSL è decriptato all'interno del proxy e criptato di nuovo prima di essere inviato
+    Tutto il traffico SSL è decriptato all'interno del proxy e criptato di nuovo prima di essere inviato
     
 
 Opzioni Avanzate
