@@ -201,7 +201,44 @@ if required. Remember, each action script is always called with the
 event name as the first argument. The arguments listed in this table are
 provided as the second argument.
 
-*TODO*
+====================================== ====================================== ============================================================================
+Event                                  Arguments                               Description
+====================================== ====================================== ============================================================================
+certificate-update                                                            The server public key certificate has been updated
+fstab-update                                                                  Update /etc/fstab according fo fstab key and remount all fileystems
+group-create                           Group key                              Called when a group is created
+group-delete                           Group key                              Called when a group is deleted
+group-modify                           Group key                              Called when a group is modified
+group-create-pseudonyms                                                       Signalled when the automatic creation of group email address is required
+host-create                            Host key                               Called when a host is created 
+host-delete                            Host key                               Called when a host is deleted
+host-modify                            Host key                               Called when a host is modified
+hostname-modify                                                               Called when the SystemName or DomainName keys have been modified
+ibay-create                            Shared folder key                      Called when a shared folder is created
+ibay-delete                            Shared folder key                      Called when a shared folder is deleted
+ibay-modify                            Shared folder key                      Called when a shared folder is modified
+interface-update                                                              Called when a network interface configuration is updated in networks db
+logrotate-update                                                              Change default log retention and rotation policies
+network-create                         Network key                            Called when a local network is created
+network-modify                         Network key                            Called when a local network is modified
+network-delete                         Network key                            Called when a local network is deleted
+migration-import                       Path to migration directory            Import migration data from the given directory
+password-expired                       Username, expire date                  The given username password will expire on expiredate
+password-modify                        User key                               Called when a user password is modified
+password-policy-update                 User key                               Called when the system password policy has been changed
+pre-backup                                                                    The pre-backup event creates consistent system state for the backup
+post-backup                                                                   Called after backup end
+pseudonym-create                       Pseudonym key                          Called when a pseudonym is created
+pseudonym-delete                       Pseudonym key                          Called when a pseudonym is deleted
+pseudonym-modify                       Pseudonym key                          Called when a pseudonym is modified
+user-create                            User key                               Called when a user is created
+user-delete                            User key                               Called when a user is deleted
+user-modify                            User key                               Called when a user is modified
+user-create-pseudonyms                 User key                               Called when the automatic creation of user's email address(es) is required
+user-lock                              User key                               Called when a user account is locked
+user-unlock                            User key                               Called when a user account is unlocked
+system-initialization                                                         Initialize all system after installation
+====================================== ====================================== ============================================================================
 
 Handling deletions
 ^^^^^^^^^^^^^^^^^^
