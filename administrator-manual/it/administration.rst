@@ -30,10 +30,7 @@ sicurezza.
 
 La connessione rimarrà sicura e cifrata, ma il certificato del 
 server non sarà ufficiale. Un certificato valido ha un costo di
-abbonamento annuale e non è indispensabile in questa situazione. Vedi
-figura TODO
-
-#|image0|
+abbonamento annuale e non è indispensabile in questa situazione.
 
 Log in
 ======
@@ -43,10 +40,7 @@ nome utente e password. Per configurare il server occorre accedere con
 diritti di amministratore quindi:
 
 Nome utente: **admin**
-
 Password: **password_di_root** (inserita in fase di installazione)
-
-#|image1|
 
 =============================
 Amministrazione di Nethserver
