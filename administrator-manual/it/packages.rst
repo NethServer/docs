@@ -1,82 +1,34 @@
-=======================
-Installazione pacchetti
-=======================
-
-NethServer subito dopo l’installazione è privo di funzioni specifiche.
-La sua struttura modulare  permette una configurazione adatta alle
-esigenze personali o della propria azienda, perciò a seconda dei servizi
-che dovrà svolgere esso verrà configurato in maniera appropriata.
-
-Per aggiungere funzioni a NethServer occorre installare i pacchetti che
-ne caratterizzeranno il funzionamento (vedi Paragrafo Gestione
-Pacchetti).
-
-Per installare un pacchetto di  programmi entrare nella sezione
-Configurazione → Gestione Pacchetti.
-
-In questa sezione vi è la lista di tutti i pacchetti che si possono
-installare sul server.
-
-Per installare un pacchetto porre la spunta sulla voce corrispondente e
-fare click sul pulsante avanti  in fondo alla pagina.
-
-Insieme alla richiesta di conferma delle modifiche da apportare al
-sistema, vengono suggeriti dei pacchetti aggiuntivi, che estendono e/o
-completano le funzionalità dei pacchetti. In genere, è necessario
-installare anche i pacchetti suggeriti per fruire appieno delle
-funzionalità aggiuntive.
-
-Per procedere fare click sul pulsante applica. Il sistema scaricherà e
-installerà in modo automatico il/i pacchetto/i selezionato/i.
-
-N.B.
-
-Assicurarsi che il server possa uscire in internet in modo corretto
-altrimenti il sistema ci riporta un messaggio di errore in cui segnala
-l’impossibilità di scaricare il
-pacchetto.
-
-Al termine dell’ installazione verrà mostrato in alto un messaggio che
-ci informa che l’operazione è stata completata correttamente.
-
-N.B.
-
-Se il pacchetto richiesto necessita per una corretta funzionalità di
-altri programmi di NethServer, questi verranno installati in modo
-automatico dal sistema. Ad esempio se si installa un pacchetto che ha
-bisogno del modulo “utenti e gruppi”, questo verrà installato
-automaticamente.
-
+==================
 Gestione pacchetti
 ==================
 
-Aggiunge e rimuove i gruppi di pacchetti del sistema abilitando o
-disabilitando le funzionalità correlate.
+Dopo l’installazione NethServer è ancora privo di funzioni specifiche.
+Tramite il modulo *Gestione Pacchetti* è possibile 
 
-Gruppi
-------
+* aggiungere al sistema i *gruppi di pacchetti*, secondo le proprie
+  esigenze, tramite la scheda *Gruppi*,
 
-Elenco delle funzionalità attivabili. Ognuna può richiedere
-l'installazione di uno o più pacchetti RPM.
+* consultare l'elenco dei pacchetti già installati, tramite la scheda
+  *Pacchetti RPM*.
 
-Le funzionalità spuntate sono già state installate sul sistema.
+Un gruppo di pacchetti implementa una funzione specifica all'interno
+del sistema, come ad esempio *Mail server*, *Proxy web*, *Backup* o *VPN*.
 
-Per installare una delle funzionalità in elenco è sufficiente
-selezionarla e fare click sul tasto applica.
+Per installare un gruppo spuntare la voce corrispondente o, viceversa,
+per rimuovere un gruppo già installato togliere il segno di
+spunta; procedere quindi premendo il pulsante ``APPLICA``.
 
-Pacchetti RPM
--------------
+Nella schermata successiva viene richiesta conferma delle modifiche da
+apportare.  Inoltre, se i gruppi da installare prevedono dei pacchetti
+opzionali, è possibile selezionarli per aggiungerli all'elenco delle
+cose da installare.
 
-Elenco dei pacchetti RPM installati sul sistema. Ove supportato è
-possibile, cliccando sul nome del pacchetto, accedere alla pagina di
-documentazione dello sviluppatore.
+.. note:: L'installazione utilizza la rete per scaricare i pacchetti:
+          è necessario che sia configurata e attiva una connessione a
+          Internet.
 
-I pacchetti sono ordinati alfabeticamente e vengono indicati:
+Se i gruppi di pacchetti selezionati richiedono altri gruppi, questi
+verranno installati automaticamente. Ad esempio se si seleziona *File
+server* verrà installato anche *Utenti e gruppi*.
 
-Nome
-    Nome del pacchetto RPM.
-Versione
-    Versione del pacchetto installato.
-Release
-    Release del pacchetto installato.
 
