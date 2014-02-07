@@ -127,26 +127,26 @@ La modalità interattiva consente di effettuare poche e semplici scelte sulla co
 
 
 Lingua
-~~~~~~
+^^^^^^
 
 Selezionare in quale lingua si desidera utilizzare la modalità interattiva.
 La lingua selezionata sarà la lingua di default del sistema installato. 
 Inoltre saranno suggeriti i default per tastiera e fuso orario.
 
 Layout tasitera
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 La tastiera può avere layout (disposizione dei tasti) dipendentemente dalla lingua per cui è stata realizzata.
 Lasciare il valore suggerito o inserire un valore personalizzato.
 
 Fuso orario
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 La scelta del fuso orario consente di configurare data e ora del sistema.
 Lasciare il valore suggerito o inserire un valore personalizzato.
 
 RAID software
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 Il RAID (Redundant Array of Independent Disks) consente di combinare tutti i dischi installati nel sistema,
 al fine di ottenere tolleranza ai guasti ed un incremento delle performance.
@@ -161,14 +161,14 @@ Livelli disponibili:
   Numero minimo di dischi: 3
 
 Disco di spare
-''''''''''''''
+~~~~~~~~~~~~~~
 
 Se il numero dei dischi è maggiore del numero minimo richiesto dal livello raid selezionato,
 è possibile creare un disco di spare.
 Un disco di spare è un disco che viene aggiunto al RAID qualora si verifichi un guasto.
 
 Password amministratore di sistema
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 E' fortemente consigliato impostare una password di amministratore personalizzata.
 Una buona password deve:
@@ -178,7 +178,7 @@ Una buona password deve:
 * contenere simboli e numeri
 
 Filesystem cifrato
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Abilitando il filesystem cifrato, tutti i dati scritti sul disco verrano cifrati usando la crittografia
 simmetrica. In caso di furto, un malintenzionato non sarà in grado di leggere i dati a meno di 
@@ -189,13 +189,13 @@ E' possibile scegliere una password per la cifratura, altrimenti verrà utilizza
 .. note:: Sarà necessario inserire la password scelta ad ogni avvio del sistema.
 
 Interfacce di rete
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Selezionare l'interfaccia di rete che sarà utilizzata per accedere alla LAN.
 Questa interfaccia è detta anche *rete verde*.
 
 Configurazione di rete
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 Nome host e dominio (FQDN)
     Digitare il nome host e dominio con il quale opererà il server (es. server.mycompany.com).
