@@ -37,9 +37,34 @@ dovrà lavorare.
 Abilitato
     Abilita il Proxy.
 
+Modalità
+^^^^^^^^
+
+Manuale
+    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy
+
+
+Autenticato
+    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy, ma sono richiesti  lo username e la password prima di procedere con la navigazione. L'autenticazione è basata sugli utenti di NethServer.
+
+
+Trasparente
+    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. Tutto il reaffico sulla porta 80 è rediretto verso proxy.
+
+
+Trasparente SSL
+    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. Tutto il reaffico sulla porta 80 e 443 è rediretto verso proxy.
+Tutto il traffico SSL è decriptato all'interno del proxy e criptato di nuovo prima di essere inviato
+    
+
+Opzioni Avanzate
+^^^^^^^^^^^^^^^^
+
 Parent proxy
     Inserire l'IP e la porta del parent proxy. La sintassi corretta è
     Indirizzo_IP:porta .
+
+
 
 Filtro
 -------------
