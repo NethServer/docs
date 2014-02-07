@@ -47,6 +47,7 @@ Implementation
 .. toctree::
    :maxdepth: 2
 
+   network
    random_url
    migration
    certificate_management
