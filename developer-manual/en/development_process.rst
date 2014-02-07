@@ -81,14 +81,48 @@ More information:
 * http://fedoraproject.org/wiki/Bugs_and_feature_requests
 * http://fedoraproject.org/wiki/How_to_file_a_bug_report
 
-Role/Status table
------------------
+Issue status
+------------
 
-*TODO*
+Issues can have multiple states. Each state should be handled by a person who fit in the below roles.
+Of course, one person can wear one or more roles.
 
 See also the `workflow
 figure <https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow>`__
 on FedoraProject.org.
+
+Triager
+^^^^^^^
+
+The *triager* handles all issue in NEW state. He/she collects missing info, set NEEDINFO flag, set state to TRIAGED when having enough informations.
+He/she can also change the status to CLOSE and set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG.
+
+Developer
+^^^^^^^^^
+
+The *developer* takes a TRIAGED issue and put it ON_DEV setting the Assignee to himself/herself.
+He/she moves the issue from TRIAGED (or ON_QA) to ON_DEV state. 
+Developer write test cases, optionally annotate RPM changelog message for Packager.
+Finally push changes to SCM and change to MODIFIED resetting the Assignee.
+
+He/she can also change the status to CLOSE and set resolution: CANTFIX, WONTFIX, WORKSFORME, CURRENTRELEASE, NEXTRELEASE, UPSTREAM.
+
+Packager
+^^^^^^^^
+
+The *packager* pulls changes from SCM and build the package. 
+He/she puts the package in testing repository. Change state to ON_QA.
+When the package is VERIFIED from the QA team, packager will tag the package, build the tagged release and upload to updates/base repository. 
+Verify yum update works fine then push the tagged changelog in SCM. 
+Finally he/she sets state to CLOSED leaving  resolution field blank.
+
+QA team member
+^^^^^^^^^^^^^^
+
+The *QA team member* takes an unassigned issue ON_QA state and sets the Assignee to himself/herself. 
+He/she tests the package, and can also set NEEDINFO flag if test case is missing. When test is passed he/she sets state VERIFIED, 
+otherwise TRIAGED again without Assignee.
+
 
 Version numbering rules
 =======================
@@ -128,7 +162,7 @@ Activities
 ISO release
 -----------
 
-#. *An ISO release starts whenever a target version is reached* (see
+#. An ISO release starts whenever a target version is reached (see
    `Roadmap <http://dev.nethserver.org/projects/nethserver/roadmap)>`__
 #. search for all new RPMs in nethserver-dev repository and select
    stable packages ready for production
