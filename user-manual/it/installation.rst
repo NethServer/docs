@@ -2,163 +2,248 @@
 Installazione
 =============
 
-Download NethServer
-===================
+Sono supportati due modi per installare NethServer. In breve:
 
-NethServer può essere scaricato com file immagine di tipo ISO
-all'indirizzo:
+* **Installazione da ISO**
 
-`http://nethserver.nethesis.it/index.php?id=download <http://nethserver.nethesis.it/index.php?id=download>`__
+  * scaricare l'immagine ISO, 
+  * preparare un CD/DVD o una chiavetta USB avviabile
+  * seguire la procedura guidata
 
-Metodi di installazione
-=======================
+* **Installazione da YUM**
 
-Installazione da CD
--------------------
+  * installare CentOS Minimal
+  * configurare la rete
+  * eseguire l'installazione da rete
 
-Per installare NethServer da CD, occorre masterizzare il file immagine
-NethServer-versione.iso direttamente su un CD.
 
-Questo tipo di masterizzazione è diversa dalla semplice masterizzazione
-di file su CD, infatti richiede l'uso di funzioni dedicate presenti nei
-vari programmi di masterizzazione (es. "scrivi immagine" oppure
-"masterizza ISO").
+Installazione da ISO
+====================
 
-Creato il CD assicurarsi che nella macchina server l'unità ottica (CD o
-DVD) abbia priorità 1 nella lista boot priority presente nel BIOS. (Fare
-riferimento al manuale della scheda madre della macchina server)
+Il file ISO di NethServer si scarica dal sito ufficiale
+`www.nethserver.org`, dalla sezione *Download*.  
 
-Inserire il CD e avviare la macchina.
+Una volta scaricato, il file ISO può essere utilizzato per creare un
+*supporto avviabile*, come un CD, un DVD, o una chiavetta USB.
 
-Installazione da chiavetta USB
-------------------------------
+La creazione di un disco avviabile è diversa dalla semplice scrittura
+di un file su CD/DVD, e richiede l'uso di una funzione dedicata, di
+solito presente nei programmi per la creazione di CD/DVD (es. *scrivi
+immagine* oppure *masterizza ISO*).  Le istruzioni su come creare un
+CD/DVD avviabile a partire dall'immagine ISO sono facilmente
+reperibili su Internet o nella documentazione del proprio sistema
+operativo.
 
-Per installare NethServer da chiavetta USB occorre inserire il file
-immagine di NethServer su un supporto USB che sia Bootable, per far ciò
-vi sono specifici programmi che girano anche sotto windows ad esempio
-UNebootin
-(`http://unetbootin.sourceforge.net/ <http://unetbootin.sourceforge.net/>`__)
+In maniera simile, per preparare una chiavetta USB avviabile, la
+semplice copia del file sulla chiavetta non è sufficiente. Ci sono
+specifici programmi [#]_ che a partire dall'immagine ISO preparano la
+chiavetta USB.
 
-Creata la chiavetta USB bootable assicurarsi che nella macchina server
-nella lista boot priority il supporto USB sia al primo posto. (Fare
-riferimento al manuale della scheda madre della macchina server).
+In entrambi i casi, una volta preparato il supporto avviabile (CD,
+DVD, USB) con l'immagine ISO di NethServer, inserirlo e avviare la
+macchina.  Se non viene riconosciuto, fare riferimento alla
+documentazione del BIOS della scheda madre. Una problematica tipica è
+impostare la priorità dei dispositivi all'avvio in modo da tentare per
+primo il supporto con l'immagine ISO di NethServer.
 
-Inserire la chiavetta ed avviare la macchina.
+.. [#] Per esempio, http://unetbootin.sourceforge.net/ 
 
-Installazione guidata
----------------------
+All'avviò verrà mostrata un menù con i diversi tipi di installazione
+disponibili.
 
-Avviata la macchina ci verrà mostrata una finestra con le opzioni
-iniziali per eseguire l'installazione guidata.
+.. warning:: L'installazione eliminerà tutti i dati esistenti sui
+                dischi rigidi!
 
-Scegliendo la prima voce "NethServer install" più tasto Invio si avvierà
-l'installazione dei pacchetti in modo automatizzato.
+NethServer interactive install
+    Consente di selezionare la lingua, configurare il supporto RAID,
+    la rete, e il file system criptato.  Sarà descritta più nel
+    dettaglio in `Modalità interattiva`_.
 
-Alla fine viene chiesto il riavvio della macchina, ma prima di riavviare
-assicurarsi di aver rimosso il CD o il supporto USB.
+Other / NethServer unattended install 
+    Non richiede alcun tipo di intervento ed applica dove necessario i
+    parametri predefiniti.
 
-Inserimento dei parametri
--------------------------
+Standard CentOS installations
+    Utilizza le procedure di installazione standard di CentOS Minimal.
 
-Al successivo avvio NethServer richiede l'inserimento di alcuni
-parametri di configurazione tramite una procedura guidata (denominata
-console). Per muoversi all'interno della console non è possibile usare
-il mouse quindi per andare da un
-campo all'altro è necessario usare il tasto
-tab, per cancellare il tasto del, per selezionare il tasto Invio ed i
-tasti freccia per muovere il cursore all'interno dei
-campi.
+Tools
+    Avvia in modalità *rescue* (recupero), esecuzione del memory test
+    e strumenti di rilevazione dell'hardware.
+   
+Boot from local drive
+    Tenta l'avvio di un sistema già installato sul disco rigido.
 
-Password di root
-----------------
+Alla fine della procedura di installazione verrà chiesto di effettuare
+il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
+supporto USB prima di riavviare.
 
-Scegliere la password di root, spostarsi su next e premere tasto Invio.
 
-Su Nethserver, per comodità, la password di root è sincronizzata con
-quella di admin perciò è consigliabile scegliere una password sicura,
-tipicamente deve contenere un carattere maiuscolo un carattere speciale
-e un numero. In mancanza di tali caratteristiche il sistema ci avvisa
-che stiamo procedendo con insufficienti requisiti di sicurezza.
+Modalità unattended
+^^^^^^^^^^^^^^^^^^^
 
-La password viene richiesta due volte per avere la certezza di non aver
-fatto errori di battitura.
+Al termine dell'installazione, il sistema sarà così configurato:
 
-Dominio
--------
+* Credenziali: root/Nethesis,1234
+* Rete: DHCP abilitato su tutte le interfacce
+* Tastiera: us
+* Fuso orario: Greenwich
+* Lingua: en_US.UTF-8
+* Dischi: se sono presenti due o più dischi, verrà creato un RAID1 sui primi due dischi
 
-Digitare il dominio con il quale opererà il server (es. tuo-dominio.it).
+Modalità interattiva
+^^^^^^^^^^^^^^^^^^^^
 
-Spostarsi con il tasto tab su next e premere tasto Invio.
+La modalità interattiva consente di effettuare poche e semplici scelte sulla configurazione del sistema:
 
-N.B i nomi di dominio posso contenere solo lettere, numeri e il
-trattino.
+1. Lingua
+2. Layout tastiera
+3. Fuso orario
+4. RAID software
+5. Password amministratore di sistema
+6. Filesystem cifrato
+7. Interfacce di rete
+8. Configurazione di rete
 
-Nome del server
----------------
 
-Digitare il nome del server (per esempio la funzione del server, fax,
-mail, etc oppure un nome generico come server).
+Lingua
+~~~~~~
 
-Spostarsi con il tasto tab su next e premere tasto Invio.
+Selezionare in quale lingua si desidera utilizzare la modalità interattiva.
+La lingua selezionata sarà la lingua di default del sistema installato. 
+Inoltre saranno suggeriti i default per tastiera e fuso orario.
+
+Layout tasitera
+~~~~~~~~~~~~~~~
+
+La tastiera può avere layout (disposizione dei tasti) dipendentemente dalla lingua per cui è stata realizzata.
+Lasciare il valore suggerito o inserire un valore personalizzato.
+
+Fuso orario
+~~~~~~~~~~~
+
+La scelta del fuso orario consente di configurare data e ora del sistema.
+Lasciare il valore suggerito o inserire un valore personalizzato.
+
+RAID software
+~~~~~~~~~~~~~
+
+Il RAID (Redundant Array of Independent Disks) consente di combinare tutti i dischi installati nel sistema,
+al fine di ottenere tolleranza ai guasti ed un incremento delle performance.
+
+Questa schermata viene visualizzata se in fase di avvio sono stati rilevati due o più dischi.
+
+Livelli disponibili:
+
+* RAID 1: crea una copia esatta (mirror) di tutti i dati su due o più dischi. 
+  Numero minimo di dischi: 2
+* RAID 5:  usa una suddivisione dei dati a livello di blocco, distribuendo i dati di parità uniformemente tra tutti i dischi.
+  Numero minimo di dischi: 3
+
+Disco di spare
+''''''''''''''
+
+Se il numero dei dischi è maggiore del numero minimo richiesto dal livello raid selezionato,
+è possibile creare un disco di spare.
+Un disco di spare è un disco che viene aggiunto al RAID qualora si verifichi un guasto.
+
+Password amministratore di sistema
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+E' fortemente consigliato impostare una password di amministratore personalizzata.
+Una buona password deve:
+
+* essere lunga almeno 8 caratteri
+* contenere lettere maiuscole e minuscole
+* contenere simboli e numeri
+
+Filesystem cifrato
+~~~~~~~~~~~~~~~~~~
+
+Abilitando il filesystem cifrato, tutti i dati scritti sul disco verrano cifrati usando la crittografia
+simmetrica. In caso di furto, un malintenzionato non sarà in grado di leggere i dati a meno di 
+non possedere la chiave crittografica.
+
+E' possibile scegliere una password per la cifratura, altrimenti verrà utilizzata la password dell'amministratore.
+
+.. note:: Sarà necessario inserire la password scelta ad ogni avvio del sistema.
+
+Interfacce di rete
+~~~~~~~~~~~~~~~~~~
+
+Selezionare l'interfaccia di rete che sarà utilizzata per accedere alla LAN.
+Questa interfaccia è detta anche *rete verde*.
+
+Configurazione di rete
+~~~~~~~~~~~~~~~~~~~~~~
+
+Nome host e dominio (FQDN)
+    Digitare il nome host e dominio con il quale opererà il server (es. server.mycompany.com).
+    Si consiglia di scegliere il nome in funzione del ruole che avrà il server. Es: fax,
+    mail, ecc.
+    
+    *NB:* I nomi di dominio posso contenere solo lettere, numeri e il
+    trattino.
 
 Indirizzo IP
-------------
-
-Digitare un indirizzo IP privato (da RFC1918) da assegnare al server;
-nel caso si voglia installare la macchina in una rete già esistente
-occorrerà fornire un indirizzo IP libero, valido per per quella rete (in
-genere si tende ad usare il primo o l’ultimo host, per esempio
-192.168.7.1 o .254).
-
-Spostarsi con il tasto tab su next e premere il tasto Invio.
+    Digitare un indirizzo IP privato (da RFC1918) da assegnare al server;
+    nel caso si voglia installare la macchina in una rete già esistente
+    occorrerà fornire un indirizzo IP libero, valido per per quella rete (in
+    genere si tende ad usare il primo o l’ultimo host, per esempio
+    192.168.7.1 o .254).
 
 Netmask
--------
-
-Digitare la subnet mask di rete. Generalmente si lascia invariata quella
-suggerita dal sistema.
-
-Spostarsi con il tasto tab su next e  premere tasto invio.
+    Digitare la subnet mask di rete. Generalmente si lascia invariata quella
+    suggerita dal sistema.
 
 Gateway
--------
-
-Digitare l’indirizzo IP del gateway della rete su cui si sta installando
-il server.
-
-Spostarsi con il tasto tab su next e  premere tasto invio.
+    Digitare l’indirizzo IP del gateway della rete su cui si sta
+    installando il server.
 
 DNS
----
+    Digitare un DNS valido. Esempio: 8.8.8.8
 
-Digitare un DNS valido. Il sistema propone di default il DNS di Google
-(8.8.8.8)
-
-Spostarsi con il tasto tab su next e  premere tasto invio.
 
 Termine procedura installazione
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Immessi i parametri la procedura di installazione è terminata,
-NethServer sarà già operativo per essere configurato.
+Immessi i parametri la procedura avvierà l'installazione.
 
-Nel caso si abbia la necessità di tornare all’ interfaccia grafica di
-installazione per correggere qualche parametro si deve accedere al
-server tramite terminale come root e digitare il comando console seguito
-dal tasto invio.
+Alla fine della procedura di installazione verrà chiesto di effettuare
+il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
+supporto USB prima di riavviare.
 
 
-Installazione su CentOS via yum
--------------------------------
 
-E’ possibile installare NethServer su una installazione di CentOS della
-stessa versione, usando il comando yum per scaricare via rete i
-pacchetti software. Per esempio, per installare NethServer 6.5 si
+Installazione su CentOS
+=======================
+
+E’ possibile installare NethServer su una nuova installazione di CentOS
+usando il comando *yum* per scaricare via rete i
+pacchetti software. 
+
+Per esempio, per installare NethServer 6.5 si
 comincerà installando CentOS 6.5 sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
-per “trasformare” CentOS in NethServer. La documentazione si trova al
-seguente indirizzo:
+per trasformare CentOS in NethServer. 
 
-`http://nethserver.nethesis.it/index.php?id=download\_yum-installation <http://nethserver.nethesis.it/index.php?id=download_yum-installation>`__
+Abilitare i repository specifici di NethServer con il comando:
+
+::
+
+ yum localinstall -y  http://pulp.nethesis.it/nethserver/nethserver-release.rpm
+
+Per installare il sistema di base eseguire:
+
+::
+
+ nethserver-install
+
+Per installare i moduli aggiuntivi, passare il nome dei moduli come parametro allo script di installazione.
+Esempio:
+
+::
+
+  nethserver-install nethserver-mail nethserver-nut
 
 
+Al termine della procedura il sistema è pronto all'uso.
