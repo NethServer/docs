@@ -262,7 +262,7 @@ Enable NethServer repositories with this command:
 
 ::
 
-  yum localinstall http://pulp.nethesis.it/nethserver/nethserver-release.rpm
+  yum localinstall -y http://pulp.nethesis.it/nethserver/nethserver-release.rpm
 
 To install the base system, run:
 
@@ -274,6 +274,7 @@ To install additional modules, pass the name of the module as a parameter to the
 Example for mail and ups modules:
 
 ::
+
   nethserver-install nethserver-mail nethserver-nut
 
 
