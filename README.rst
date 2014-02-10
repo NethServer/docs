@@ -14,9 +14,11 @@ Inside each language directory there are some specials files:
 All other .rst files are chapters of the manual. 
 If you whish to add a new chapter, create a new file and add it to the index.rst file.
 
-Documentation can be read at: nethserver.readthedocs.org_
+Documentation available here:
 
-.. _nethserver.readthedocs.org: http://nethserver.readthedocs.org
+* Administrator manual (English and Italian): http://docs.nethserver.org
+* Developer manual (English only): http://docs.nethserver.org/projects/nethserver-devel
+
 .. _www.nethserver.org: http://www.nethserver.org
 
 How to contribute
