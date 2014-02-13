@@ -251,7 +251,7 @@ Install on CentOS
 =================
 
 It's possible to install NethServer on a fresh CentOS install
-using the command * yum * to download software packages.
+using the command *yum* to download software packages.
 
 For example, if you wishi to install NethServer 6.5, just start 
 with a CentOS 6.5 on your system (many VPS providers
