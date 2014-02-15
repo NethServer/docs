@@ -61,6 +61,7 @@ Web interface
    web_interface
    create_interface_module
    dashboard
+   customization
    inline_help
 
 
