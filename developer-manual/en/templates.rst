@@ -161,7 +161,7 @@ example, if your template generates a perl script, you would link
 and automatically get the ``#!/usr/bin/perl -w`` line and a comment
 containing the contents of the default template-begin file.
 
-.. note: You may also need a ``templates.metadata`` configuration file if your generated file needs to be executable.
+.. note:: You may also need a ``templates.metadata`` configuration file if your generated file needs to be executable.
 
 Template fragment ordering
 --------------------------
