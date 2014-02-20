@@ -95,10 +95,20 @@ Add warnings with ::
 
 
     
-You can find morre info about **RST Inline Markup** here: rst-cheatsheet_
+You can find mrre info about **RST Inline Markup** here: rst-cheatsheet_
 
 .. _rst-cheatsheet: https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
  
+
+Do not use *NethServer* name inside documentation. Anytime you need to add the product name, 
+use the product macro::
+
+  |product| has this amazing feature!
+
+Output will be::
+
+  NethServer has this amazing feature!
+
 
 Build documentation
 ===================
