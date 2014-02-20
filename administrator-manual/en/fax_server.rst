@@ -91,7 +91,7 @@ View faxes sent by the client
 
 Automatically print received faxes
     Automatically print all received faxes on a
-    PCL5 compatible printer configured on NethServer. The printer should be
+    PCL5 compatible printer configured on |product|. The printer should be
     selected using the appropriate drop down menu.
 
 SambaFax

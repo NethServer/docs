@@ -14,4 +14,4 @@ Port
     The port where to view the ntopng web interface.
 Password for 'admin' user
     Admin user password. This password is not related to
-    the NethServer admin password.
+    the |product| admin password.

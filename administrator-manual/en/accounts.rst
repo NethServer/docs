@@ -3,7 +3,7 @@ Users
 ======
 
 A system user is required to access many services provided by
-NethServer (email, shared folders, etc..).
+|product| (email, shared folders, etc..).
 
 Each user is characterized by a pair of credentials (user and
 password). A newly created user account remains locked until it has

@@ -45,7 +45,7 @@ Manuale
 
 
 Autenticato
-    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy, ma sono richiesti  lo username e la password prima di procedere con la navigazione. L'autenticazione è basata sugli utenti di NethServer.
+    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy, ma sono richiesti  lo username e la password prima di procedere con la navigazione. L'autenticazione è basata sugli utenti di |product|.
 
 
 Trasparente

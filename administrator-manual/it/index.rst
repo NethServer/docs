@@ -1,15 +1,12 @@
-.. NethServer documentation master file, created by
-   sphinx-quickstart on Sun Jan 19 10:47:03 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. NethServer documentation master file
 
 Manuale amministratore
 ======================
 
 .. image:: ../../_static/logo.png
-   :alt: NethServer
+   :alt: |product|
 
-.. rubric:: NethServer è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
+.. rubric:: |product| è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
 
 .. sidebar:: Contatti
 

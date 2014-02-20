@@ -5,7 +5,7 @@ Installazione
 Requisiti minimi
 ================
 
-La dotazione minima richiesta da  NethServer è un macchina con CPU a 64
+La dotazione minima richiesta da |product| è un macchina con CPU a 64
 bit, 1 GB di RAM e 8 GB di spazio su hard disk. Si consiglia l’uso di
 due hard disk in modo che venga garantita l’integrità dei dati
 attraverso il supporto automatico RAID1.
@@ -13,24 +13,24 @@ attraverso il supporto automatico RAID1.
 Compatibilità hardware
 ----------------------
 
-NethServer è compatibile con tutto l'hardware certificato per
+|product| è compatibile con tutto l'hardware certificato per
 Red Hat® Enterprise  Linux® (RHEL ®). Vedi: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
 
 Si richiede HW di classe server e non desktop, dato che garantisce
 maggiore compatibilità e qualità dei componenti.
 
 N.B. Un hardware dichiarato compatibile con Linux non è detto
-sia compatibile con RHEL/NethServer.
+sia compatibile con RHEL/|product|.
 
 RAID
 ----
 
-NethServer supporta sia configurazioni RAID hardware che
+|product| supporta sia configurazioni RAID hardware che
 software. Nel caso si scelga di implementare la
 configurazione RAID hardware assicurarsi che il controller sia presente
 nella lista dei controller supportati.
 
-NethServer di default prevede il RAID 1 software e supporta anche il
+|product| di default prevede il RAID 1 software e supporta anche il
 RAID 5.
 
 Si consiglia di usare il RAID software perché viene controllato di
@@ -40,7 +40,7 @@ anomalie.
 Tipi di installatzione
 ======================
 
-Sono supportati due modi per installare NethServer. In breve:
+Sono supportati due modi per installare |product|. In breve:
 
 * **Installazione da ISO**
 
@@ -58,7 +58,7 @@ Sono supportati due modi per installare NethServer. In breve:
 Installazione da ISO
 ====================
 
-Il file ISO di NethServer si scarica dal sito ufficiale
+Il file ISO di |product| si scarica dal sito ufficiale
 `www.nethserver.org`, dalla sezione *Download*.  
 
 Una volta scaricato, il file ISO può essere utilizzato per creare un
@@ -78,11 +78,11 @@ specifici programmi [#]_ che a partire dall'immagine ISO preparano la
 chiavetta USB.
 
 In entrambi i casi, una volta preparato il supporto avviabile (CD,
-DVD, USB) con l'immagine ISO di NethServer, inserirlo e avviare la
+DVD, USB) con l'immagine ISO di |product|, inserirlo e avviare la
 macchina.  Se non viene riconosciuto, fare riferimento alla
 documentazione del BIOS della scheda madre. Una problematica tipica è
 impostare la priorità dei dispositivi all'avvio in modo da tentare per
-primo il supporto con l'immagine ISO di NethServer.
+primo il supporto con l'immagine ISO di |product|.
 
 .. [#] Per esempio, http://unetbootin.sourceforge.net/ 
 
@@ -92,12 +92,12 @@ disponibili.
 .. warning:: L'installazione eliminerà tutti i dati esistenti sui
                 dischi rigidi!
 
-NethServer interactive install
+|product| interactive install
     Consente di selezionare la lingua, configurare il supporto RAID,
     la rete, e il file system criptato.  Sarà descritta più nel
     dettaglio in `Modalità interattiva`_.
 
-Other / NethServer unattended install 
+Other / |product| unattended install 
     Non richiede alcun tipo di intervento ed applica dove necessario i
     parametri predefiniti.
 
@@ -276,16 +276,16 @@ supporto USB prima di riavviare.
 Installazione su CentOS
 =======================
 
-E’ possibile installare NethServer su una nuova installazione di CentOS
+E’ possibile installare |product| su una nuova installazione di CentOS
 usando il comando *yum* per scaricare via rete i
 pacchetti software. 
 
-Per esempio, per installare NethServer 6.5 si
+Per esempio, per installare |product| 6.5 si
 comincerà installando CentOS 6.5 sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
-per trasformare CentOS in NethServer. 
+per trasformare CentOS in |product|. 
 
-Abilitare i repository specifici di NethServer con il comando:
+Abilitare i repository specifici di |product| con il comando:
 
 ::
 
@@ -306,3 +306,5 @@ Esempio:
 
 
 Al termine della procedura il sistema è pronto all'uso.
+
+

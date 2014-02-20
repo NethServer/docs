@@ -55,7 +55,7 @@ intende creare. Inserire il nuovo dominio ed eventualmente una sua
 descrizione sul campo dominio e descrizione .
 
 Scegliere l'opzione “Consegna localmente” se si vuole che le mail
-vengano consegnate alle caselle di posta residenti su NethServer.
+vengano consegnate alle caselle di posta residenti su |product|.
 
 Scegliere l’opzione “Passa ad un altro server” se la posta elettronica
 del dominio viene gestita da un altro mail server presente sulla rete;
@@ -129,7 +129,7 @@ Casella di posta
 
 Nella scheda Casella di posta si possono impostare i protocolli di
 accesso al mail server e decidere se vengono consentite connessioni non
-cifrate. NethServer
+cifrate. |product|
 supporta sia POP3 sia IMAP, i due protocolli più diffusi per la gestione
 email, ma è consigliato utilizzare il protocollo IMAP.
 
@@ -159,13 +159,13 @@ agli allegati muovere il cursore fino a raggiungere il valore
 desiderato.
 
 In caso di problemi temporanei (server del destinatario irraggiungibile, servizio email bloccato, etc),
-NethServer tenterà di inviare le mail a destinazione per un tempo predefinito ad intervalli regolari. 
+|product| tenterà di inviare le mail a destinazione per un tempo predefinito ad intervalli regolari. 
 E' possibile modificare il tempo di invio portando il cursore al valore desiderato.
 
 Invia tramite smarthost
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-NethServer può consegnare i messaggi in uscita direttamente a
+|product| può consegnare i messaggi in uscita direttamente a
 destinazione (raccomandato nella maggior parte dei casi) oppure
 consegnarli attraverso il server SMTP del provider (raccomandato in caso
 di connessione inaffidabile o ADSL di tipo residenziale, IP dinamico, IP
@@ -363,7 +363,7 @@ Gestione
 ========
 
 Accedendo alla pagina *Indirizzi email* del server-manager, verrà mostrata una
-tabella con l'elenco di tutti gli indirizzi email registrati su NethServer.
+tabella con l'elenco di tutti gli indirizzi email registrati su |product|.
 
 Creare nuovo indirizzo email
 ----------------------------

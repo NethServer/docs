@@ -78,7 +78,7 @@ DNS
 
 Il DNS (Domain Name System) si occupa della risoluzione dei nomi di
 dominio (es. www.nethesis.it) nei loro corrispettivi indirizzi numerici
-(es. 10.11.12.13) e viceversa. NethServer demanda la risoluzione dei
+(es. 10.11.12.13) e viceversa. |product| demanda la risoluzione dei
 nomi ai server DNS configurati, ma permette di specificare indirizzi
 arbitrari per nomi selezionati. Per esempio, è possibile configurare il
 sistema per rispondere alle richieste per l'IP del sito facebook.com con
@@ -89,7 +89,7 @@ Configura
 ---------
 
 Fare clic su Configura per immettere gli indirizzi dei server DNS che
-NethServer contatterà per la risoluzione dei nomi.
+|product| contatterà per la risoluzione dei nomi.
 
 DNS primario
     L'indirizzo del server principale da contattare per la risoluzione nomi (obbligatorio).

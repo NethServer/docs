@@ -8,19 +8,19 @@ I pannelli e gruppi vengono visualizzati automaticamente quando viene installato
 Utenti
 ======
 
-L'utente di sistema è necessario per accedere a molti servizi erogati da NethServer (email, cartelle condivise etc.).
+L'utente di sistema è necessario per accedere a molti servizi erogati da |product| (email, cartelle condivise etc.).
 Ogni utente è caratterizzato da una coppia di credenziali (utente e password). 
 Un utente appena creato rimane bloccato finchè non viene settata una password. 
-Un utente bloccato non può utilizzare i servizi di NethServer che richiedono autenticazione.
+Un utente bloccato non può utilizzare i servizi di |product| che richiedono autenticazione.
 
-Per gestire gli utenti all’ interno di NethServer andare sulla sezione
+Per gestire gli utenti all’ interno di |product| andare sulla sezione
 Gestione→ Utenti.
 
 All’interno di questa sezione è possibile creare nuovi utenti del
 sistema oppure eliminare o modificare gli utenti già esistenti.
 
 L'utente di sistema è necessario per accedere a molti servizi erogati da
-NethServer (email, cartelle condivise etc.).
+|product| (email, cartelle condivise etc.).
 
 Ogni utente è caratterizzato da una coppia di credenziali (utente e
 password). Un utente appena creato rimane bloccato finché non viene
@@ -39,7 +39,7 @@ punti e trattino basso (\_) e deve iniziare con una lettera minuscola.
 Per esempio "luisa", "mrossi" e "liu-jo" sono nomi utente validi, mentre "4amici", "Franco Neri" e "aldo/sbaglio" non lo sono.
 
 Per scegliere il nome utente è consigliabile scegliere uno standard che
-rende tutti i nomi presenti su NethServer omogenei ad una precisa
+rende tutti i nomi presenti su |product| omogenei ad una precisa
 logica; (es. mrossi oppure marior se si crea un utente Mario Rossi
 e ciò vale per tutti gli altri utenti).
 
@@ -165,7 +165,7 @@ verranno eliminati.
 Gruppi
 ======
 
-Per gestire i gruppi all’ interno di NethServer andare sulla sezione
+Per gestire i gruppi all’ interno di |product| andare sulla sezione
 Gestione→ Gruppi; all’interno di questa sezione si possono creare nuovi
 gruppi, oppure eliminare e modificare gruppi già esistenti. Ad ogni
 gruppo è possibile assegnare dei permessi di accesso per le varie

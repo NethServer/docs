@@ -2,7 +2,7 @@
 Gestione pacchetti
 ==================
 
-Dopo l’installazione NethServer è ancora privo di funzioni specifiche.
+Dopo l’installazione |product| è ancora privo di funzioni specifiche.
 Tramite il modulo *Gestione Pacchetti* è possibile 
 
 * aggiungere al sistema i *gruppi di pacchetti*, secondo le proprie

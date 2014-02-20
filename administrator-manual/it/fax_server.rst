@@ -3,7 +3,7 @@ Server fax
 ==========
 
 Il server fax permette di ricevere e inviare fax attraverso un modem
-fisico collegato direttamente a NethServer o attraverso un modem
+fisico collegato direttamente a |product| o attraverso un modem
 virtuale (modem IAX). 
 
 Il modem deve supportare l'invio e la ricezione di fax preferibilmente in classe 1 o 1.0 (sono supportati anche le classi 2, 2.0 e 2.1).
@@ -91,7 +91,7 @@ Visualizza fax inviati dai client
 
 Stampa automaticamente i fax ricevuti
     E' possibile stampare automaticamente tutti i fax ricevuti su una
-    stampante configurata su NethServer compatibile PCL5. La stampante va
+    stampante configurata su |product| compatibile PCL5. La stampante va
     selezionata tramite l'apposito menu a tendina.
 
 SambaFax

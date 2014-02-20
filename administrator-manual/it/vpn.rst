@@ -131,7 +131,7 @@ Modalità bridged
 
     Il server OpenVPN risponderà alle richieste DHCP provenienti dagli
     host remoti fornendo un indirizzo IP della LAN.  Se nella rete è
-    presente un server DHCP, o se NethServer è il server DHCP stesso,
+    presente un server DHCP, o se |product| è il server DHCP stesso,
     stabilire un intervallo di IP al di fuori di quello configurato
     per il DHCP.  Inoltre assicurasi che gli IP nell'intervallo
     selezionato non siano associati staticamente a nessun host della

@@ -14,4 +14,4 @@ Porta
     Porta su cui raggiungere l'interfaccia web di ntopng.
 Password per l'utente 'admin'
     Password dell'utente amministratore. Questa password non è legata in
-    alcun modo alla password di admin di NethServer.
+    alcun modo alla password di admin di |product|.

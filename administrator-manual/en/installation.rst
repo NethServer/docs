@@ -5,7 +5,7 @@ Installation
 Minimum requirements
 ====================
 
-Minimum requirements for NethServer are:
+Minimum requirements are:
 
 * 64bit CPU (x86_64)
 * 1GB of RAM
@@ -18,14 +18,14 @@ The RAID software will ensure data integrity in case of a disk failure.
 Hardware compatibility
 ----------------------
 
-NethServer is compatibile with all certificate hardware by 
+|product| is compatibile with all certificate hardware by 
 Red Hat® Enterprise  Linux® (RHEL ®). See: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
 
 
 Installation types
 ==================
 
-NethServer supports two installation modes. In short:
+|product| supports two installation modes. In short:
 
 **Installing from ISO**
 
@@ -42,7 +42,7 @@ NethServer supports two installation modes. In short:
 Installing from ISO
 ====================
 
-Download NethServer ISO file from official site
+Download |product| ISO file from official site
 'ww.nethserver.org`, inside *Download*. section  
 
 Downloaded ISO file can be used to create a
@@ -72,11 +72,11 @@ On startup a menu will display different types of installation:
 .. warning :: The installation will erase all existing data on hard drives!
 
 
-NethServer interactive install
+|product| interactive install
     It allows you to select the language, configure RAID support,
     network, and encrypted file system.  It will be described in depth in the next paragraph.
 
-Other / Unattended NethServer install 
+Other / Unattended |product| install 
     This installation mode does not require any kind of humant intervention: a set of default parameters will applied to the system.
 
 Standard CentOS installations
@@ -250,15 +250,15 @@ After parameters input, the procedure will start the installation.
 Install on CentOS
 =================
 
-It's possible to install NethServer on a fresh CentOS install
+It's possible to install |product| on a fresh CentOS install
 using the command *yum* to download software packages.
 
-For example, if you wishi to install NethServer 6.5, just start 
+For example, if you wishi to install |product| 6.5, just start 
 with a CentOS 6.5 on your system (many VPS providers
 offer CentOS pre-installed virtual machines), and then execute below commands
-to transform CentOS into NethServer. 
+to transform CentOS into |product|. 
 
-Enable NethServer repositories with this command:
+Enable |product| repositories with this command:
 
 ::
 

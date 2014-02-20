@@ -78,7 +78,7 @@ DNS
 
 The DNS (Domain Name System) is responsible for Domain Name Resolution
 (eg www.nethesis.it) into their corresponding numerical IP addresses
-(Eg. 10.11.12.13) and vice versa. NethServer delegates the resolution of
+(Eg. 10.11.12.13) and vice versa. |product| delegates the resolution of
 names to the configured DNS servers, but you can specify addresses
 for arbitrary selected names. For example, you can configure the
 system for responding to requests for facebook.com with the IP address 
@@ -89,7 +89,7 @@ Configure
 ---------
 
 Click Configure to enter the addresses of the DNS servers that
-NethServer will contact to resolve names.
+|product| will contact to resolve names.
 
 Primary DNS
     The address of the primary server to contact for resolving names (mandatory).

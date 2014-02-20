@@ -24,7 +24,7 @@ confermare le modifiche al sistema facendo click sul pulsante applica.
 Gestione Backup
 ===============
 
-Per gestire le attività di backup di NethServer andare sulla sezione
+Per gestire le attività di backup di |product| andare sulla sezione
 Configurazione→ Backup
 
 Si apre una pagina con tre schede

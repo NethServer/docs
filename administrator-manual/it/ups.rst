@@ -2,7 +2,7 @@
 UPS
 ====
 
-NethServer supporta NUT (Network UPS Tools), un pacchetto di programmi che permette di monitorare e amministrare UPS.
+|product| supporta NUT (Network UPS Tools), un pacchetto di programmi che permette di monitorare e amministrare UPS.
 
 Installazione
 =============
@@ -23,7 +23,7 @@ UPS a seconda che sia configurato master o slave.
 Se viene impostato *master* occorre indicare i driver da utilizzare ed il tipo di collegamento: seriale o USB
 Per scegliere il driver digitare il nome del dispositivo sul campo cerca
 driver per modello, verrà aperto un menù a tendina dove è presente la
-lista dei modelli già supportati da NethServer.
+lista dei modelli già supportati da |product|.
 
 Se viene impostato *slave* sarà necessario fornire l’indirizzo IP del server
 master.
@@ -40,7 +40,7 @@ Abilita NUT UPS
 
 Master
     Questa modalità va selezionata se l'UPS è collegato
-    direttamente a NethServer tramite cavo seriale o USB.
+    direttamente a |product| tramite cavo seriale o USB.
 
 Cerca driver per modello
     Consente di cercare un driver compatibile con il proprio modello di UPS. Dopo aver selezionato il modello dall lista, 
@@ -50,15 +50,15 @@ Driver
     I driver da utilizzare per il modello di UPS collegato.
 
 Collegamento USB
-    Selezionare questa opzione se l'UPS è collegato a NethServer tramite USB.
+    Selezionare questa opzione se l'UPS è collegato a |product| tramite USB.
 
 Collegamento seriale
-    Selezionare questa opzione se l'UPS è collegato a NethServer tramite cavo seriale.
+    Selezionare questa opzione se l'UPS è collegato a |product| tramite cavo seriale.
 
 Slave
     Questa modalità deve essere utilizzata se l'UPS non è collegato
-    direttamente a NethServer, ma ad un altro server con NUT configurato
-    in modalità Master al quale NethServer si collegherà.
+    direttamente a |product|, ma ad un altro server con NUT configurato
+    in modalità Master al quale |product| si collegherà.
 
 Indirizzo server master
     Indirizzo IP o nome host del server master. Il client utilizzerà l'utente *UPS* per collegarsi al server master.

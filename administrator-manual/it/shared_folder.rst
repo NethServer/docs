@@ -2,7 +2,7 @@
 Cartelle condivise
 ==================
 
-Le cartelle condivise sono uno strumento di NethServer che permette di
+Le cartelle condivise sono uno strumento di |product| che permette di
 condividere file fra gli utenti del server.
 
 Una cartella condivisa (conosciuta anche come i-bay) è una risorsa a

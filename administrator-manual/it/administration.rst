@@ -1,8 +1,8 @@
 ====================
-Accesso a NethServer
+Accesso a |product|
 ====================
 
-NethServer viene configurato tramite una interfaccia web, per accedere
+|product| viene configurato tramite una interfaccia web, per accedere
 alle pagine di gestione si utilizza un programma per la navigazione in
 internet (es. browser FireFox, Chrome, etc) su di un PC connesso alla
 stessa rete LAN del server.
@@ -61,7 +61,7 @@ del disco, informazioni sul carico ed uptime della macchina, etc.
 
 Arresto
 =======
-La macchina su cui è installato NethServer può essere riavviata o spenta dal menu Amministrazione→ Arresto.
+La macchina su cui è installato |product| può essere riavviata o spenta dal menu Amministrazione→ Arresto.
 Selezionare l’opzione Riavvia oppure Spegni e fare click sul pulsante ``Arresta il sistema``.
 
 E' obbligatorio arrestare il sistema prima di spegnere il server.

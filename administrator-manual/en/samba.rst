@@ -7,14 +7,14 @@ Manage the server role in a Windows network.
 Role
 ====
 
-Select the NethServer role within the network:
+Select the |product| role within the network:
 workstation, domain controller or Active Directory member.
 
 Workstation
-    Enabling this option NethServer will behave as a normal workstation.
+    Enabling this option |product| will behave as a normal workstation.
 
 Domain Controller
-    Enabling this option NethServer will be configured as a domain controller for the network.
+    Enabling this option |product| will be configured as a domain controller for the network.
 
 Domain
     The name of the domain.
@@ -36,7 +36,7 @@ Domain
 Active Directory authentication
 -------------------------------
 
-Enter the credentials to allow NethServer to become a member
+Enter the credentials to allow |product| to become a member
 of an Active Directory domain.
 
 Username
