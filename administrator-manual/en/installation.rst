@@ -13,13 +13,14 @@ Minimum requirements are:
 
 
 .. hint:: We recommend to use at least 2 disks to setup a RAID 1. 
-The RAID software will ensure data integrity in case of a disk failure.
+          The RAID software will ensure data integrity in case 
+          of a disk failure.
 
 Hardware compatibility
 ----------------------
 
-|product| is compatibile with all certificate hardware by 
-Red Hat® Enterprise  Linux® (RHEL ®). See: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
+|product| is compatibile with any hardware certified by 
+Red Hat® Enterprise Linux® (RHEL®), listed on `hardware.redhat.com <http://hardware.redhat.com/>`_
 
 
 Installation types
@@ -48,8 +49,7 @@ Download |product| ISO file from official site
 Downloaded ISO file can be used to create a
 *Bootable media* such as a CD, a DVD, or a USB stick.
 The creation of a bootable disk is different from writing
-files into CD/DVD, and it requires the use of a dedicated function, 
-usually present CD/DVD programs (eg *write* or *burn ISO image*).
+files into CD/DVD, and it requires the use of a dedicated function (e.g. *write* or *burn ISO image*).
 Instructions on how to create a bootable CD/DVD from the ISO are easily
 avaialble on the Internet or in the documentation of your system
 operating system.
