@@ -12,7 +12,7 @@ Minimum requirements are:
 * 8GB of disk space
 
 
-We recommend to use at least 2 disks to setup a RAID 1. 
+.. hint:: We recommend to use at least 2 disks to setup a RAID 1. 
 The RAID software will ensure data integrity in case of a disk failure.
 
 Hardware compatibility
@@ -43,20 +43,20 @@ Installing from ISO
 ====================
 
 Download |product| ISO file from official site
-'ww.nethserver.org`, inside *Download*. section  
+`www.nethserver.org`, inside *Download*. section  
 
 Downloaded ISO file can be used to create a
 *Bootable media* such as a CD, a DVD, or a USB stick.
 The creation of a bootable disk is different from writing
-files into CD / DVD, and it requires the use of a dedicated function, 
-usually present CD / DVD programs (eg *write* or *burn ISO image*).
-nstructions on how to create a bootable CD / DVD from the ISO are easily
+files into CD/DVD, and it requires the use of a dedicated function, 
+usually present CD/DVD programs (eg *write* or *burn ISO image*).
+Instructions on how to create a bootable CD/DVD from the ISO are easily
 avaialble on the Internet or in the documentation of your system
 operating system.
 
 
 A similar procedured applies for bootable USB stick.
-There are specific programs [#] _ which will convert downloaded ISO into bootable USB sticks.
+There are specific programs [#]_ which will convert downloaded ISO into bootable USB sticks.
 
 In both cases, you can now start the machine using the freshly backed media.
 If the machine will not start from the CD/DVD (or USB), please refer to the
@@ -109,7 +109,7 @@ After installation, the system will be configured as follows:
 Install options
 ^^^^^^^^^^^^^^^
 
-You can add extra paramaters to unattend installation by pressing TAB and editing the command line.
+You can add extra paramaters to unattended installation by pressing TAB and editing the bootloader command line.
 
 To disable raid, just add this option to the command line: ::
 
