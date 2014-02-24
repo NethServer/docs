@@ -26,13 +26,12 @@ How to contribute
 
 The easiest way to contribute is by forking and editing the repository 
 directly on GitHub:
+
 * Create a GitHub account if you don't already have it
 * Go to https://github.com/nethesis/nethserver-docs and fork the project
-* You can now edit any page using Github web interface and see a live 
-preview of the output
+* You can now edit any page using Github web interface and see a live preview of the output
 * When you're done, simply create a new pull request
-* A new automatic build is launched after the pull request is merged by 
-a developer
+* A new automatic build is launched after the pull request is merged by a developer
 
 You can also use the traditional way by cloning nethserver-docs 
 repository (https://github.com/nethesis/nethserver-docs ) to your 
