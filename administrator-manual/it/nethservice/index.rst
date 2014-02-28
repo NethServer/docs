@@ -30,6 +30,8 @@ Configurazione
 .. toctree::
    :maxdepth: 2
 
+   access
+   registration
    administration
    date_time
    backup

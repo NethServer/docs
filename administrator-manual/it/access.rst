@@ -41,8 +41,8 @@ La prima pagina dell’interfaccia web è quella di log in. Viene richiesto
 nome utente e password. Per configurare il server occorre accedere con
 diritti di amministratore quindi:
 
-Nome utente: **root**
-Password: **password_di_root** (inserita in fase di installazione)
+* Nome utente: **root**
+* Password: **password_di_root** (inserita in fase di installazione)
 
-Se è installato il modulo Directory, e l'utente admin è stato abilitato, è possibile utilizzarlo
+Se è installato il modulo Directory, è possibile abilitare l'utente admin ed utilizzarlo
 per accedere all'interfaccia web con gli stessi privilegi dell'utente root.
