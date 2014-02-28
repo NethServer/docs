@@ -44,7 +44,7 @@ Installing from ISO
 ====================
 
 Download |product| ISO file from official site
-`www.nethserver.org`, inside *Download*. section  
+|download_site|. 
 
 Downloaded ISO file can be used to create a
 *Bootable media* such as a CD, a DVD, or a USB stick.

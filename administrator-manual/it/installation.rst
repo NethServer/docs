@@ -59,7 +59,7 @@ Installazione da ISO
 ====================
 
 Il file ISO di |product| si scarica dal sito ufficiale
-`www.nethserver.org`, dalla sezione *Download*.  
+|download_site|.  
 
 Una volta scaricato, il file ISO può essere utilizzato per creare un
 *supporto avviabile*, come un CD, un DVD, o una chiavetta USB.
