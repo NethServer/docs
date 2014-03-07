@@ -57,6 +57,41 @@ different and may well benefit from being in a single script. Example:
 
 .. note:: Whenever possible, avoid to call events from within action scripts.
 
+Action code libraries
+---------------------
+
+To promote code reusability and components abstraction some Perl
+modules are available under
+:file:`/usr/share/perl5/vendor_perl/NethServer/` and
+:file:`/usr/share/perl5/vendor_perl/esmith/`. For instance,
+
+NethServer::Password
+
+  Secret generation and persistent storage, under
+  :file:`/var/lib/nethserver/secrets/`.
+
+NethServer::Service 
+  Service manager agnostic API. No matter if a service is managed by
+  systemd, Upstart or SysV init script: use this API to gain control
+  over it.
+
+NethServer::Directory
+  Access to LDAP, service accounts and ACL management, low-level user
+  and group management.
+
+NethServer::MailServer
+  Obtain accounts and mail addresses relations. Manage IMAP ACLs.
+
+esmith::templates
+    Template processing and expansion.
+
+esmith::events
+  Event execution and tracking.
+
+For more informations about a specific module, refer its
+:command:`perldoc` documentation.
+
+
 Events
 ======
 
