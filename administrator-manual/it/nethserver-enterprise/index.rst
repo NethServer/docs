@@ -21,6 +21,7 @@ Installazione
 .. toctree::
    :maxdepth: 2
 
+   release_notes
    installation
    packages
 

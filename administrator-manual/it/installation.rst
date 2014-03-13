@@ -1,3 +1,5 @@
+.. _installation:
+
 =============
 Installazione
 =============
@@ -230,7 +232,7 @@ Interfacce di rete
 ^^^^^^^^^^^^^^^^^^
 
 Selezionare l'interfaccia di rete che sarà utilizzata per accedere alla LAN.
-Questa interfaccia è detta anche *rete verde*.
+Questa interfaccia è detta anche *rete green*.
 
 Configurazione di rete
 ^^^^^^^^^^^^^^^^^^^^^^
