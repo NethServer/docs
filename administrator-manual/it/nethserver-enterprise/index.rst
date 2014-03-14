@@ -23,6 +23,7 @@ Installazione
 
    release_notes
    installation
+   migration
    packages
 
 Configurazione

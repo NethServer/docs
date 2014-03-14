@@ -27,6 +27,7 @@ Installation
 
    installation
    packages
+   migration
 
 Configuration
 -------------

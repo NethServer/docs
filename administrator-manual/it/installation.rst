@@ -15,7 +15,7 @@ attraverso il supporto automatico RAID1.
 Compatibilità hardware
 ----------------------
 
-|product| è compatibile con tutto l'hardware certificato per
+|product| è compatibile con tutto l':index:`hardware certificato` per
 Red Hat® Enterprise  Linux® (RHEL ®). Vedi: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
 
 Si richiede HW di classe server e non desktop, dato che garantisce
@@ -42,7 +42,7 @@ anomalie.
 Tipi di installatzione
 ======================
 
-Sono supportati due modi per installare |product|. In breve:
+Sono supportati due modi per :index:`installare` |product|. In breve:
 
 * **Installazione da ISO**
 
@@ -60,7 +60,7 @@ Sono supportati due modi per installare |product|. In breve:
 Installazione da ISO
 ====================
 
-Il file ISO di |product| si scarica dal sito ufficiale
+Il file :index:`ISO` di |product| si scarica dal sito ufficiale
 |download_site|.  
 
 Una volta scaricato, il file ISO può essere utilizzato per creare un
@@ -107,7 +107,7 @@ Standard CentOS installations
     Utilizza le procedure di installazione standard di CentOS Minimal.
 
 Tools
-    Avvia in modalità *rescue* (recupero), esecuzione del memory test
+    Avvia in modalità :dfn:`rescue` (recupero), esecuzione del memory test
     e strumenti di rilevazione dell'hardware.
    
 Boot from local drive
@@ -278,8 +278,8 @@ supporto USB prima di riavviare.
 Installazione su CentOS
 =======================
 
-E’ possibile installare |product| su una nuova installazione di CentOS
-usando il comando *yum* per scaricare via rete i
+E’ possibile installare |product| su una nuova installazione di :index:`CentOS`
+usando il comando :command:`yum` per scaricare via rete i
 pacchetti software. 
 
 Per esempio, per installare |product| 6.5 si
