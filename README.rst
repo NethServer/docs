@@ -112,12 +112,25 @@ The same applies to *download_site* macro.
 
 
 
-Use semantic markup when possible. Recommended markups are:
+Use semantic markup whenever possible. Recommended markups are:
 
 * guilabel
 * file
 * command
 * menuselection
+
+Remember to emphasize system object with *:dnf:*, only the first time you mention them inside a section.
+For example if you are naming a system user::
+
+ The :dfn:`admin` user is mighty powerful.
+
+Also take care of indexing important content. You must index a word only one time per section::
+ 
+ The :dfn:`admin` user is mighty powerful.
+ Remember to change the :index:`admin` password.
+
+The output will be a paragraph where the first *admin* word will be italic, the latter will use standard font
+but it will be indexed.
 
 See also: http://sphinx-doc.org/markup/inline.html
 
