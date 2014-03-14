@@ -5,18 +5,18 @@ Rete Windows
 Installazione
 =============
 
-Viene installato automanticamente quando si installa il pacchetto File
-Server (vedi capitolo Cartelle condivise)
+Viene installato automanticamente quando si installa il pacchetto :dfn:`File Server` (:index:`Samba`). 
+Si veda :ref:`shared-folder`.
 
-Impostazione Rete windows
-====================================
+Impostazione Rete Windows
+=========================
 
-Per gestire le impostazioni della rete windows entrare nella sezione Configurazione →Rete windows. Impostare il ruolo che deve avere il server nella rete windows scegliendo una tra le tre opzioni presenti.
+Per gestire le impostazioni della rete Windows entrare nella sezione :menuselection:`Configurazione → Rete Windows`. Impostare il ruolo che deve avere il server nella rete Windows scegliendo una tra le tre opzioni presenti.
 
 Workstation
 -----------
 
-Se viene assegnato il ruolo di workstation esso si comporterà come qualsiasi workstation della rete windows.
+Se viene assegnato il ruolo di workstation esso si comporterà come qualsiasi workstation della rete Windows.
 
 Controller di dominio
 ----------------------
@@ -30,7 +30,7 @@ Il ruolo di Membro di Active Directory viene selezionato quando sulla rete esist
 
 
 Ruolo
-====================================
+======
 
 Selezionare il ruolo che il sistema avrà all'interno della rete:
 workstation, controller di dominio o membro di Active Directory.

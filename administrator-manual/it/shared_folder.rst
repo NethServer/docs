@@ -1,3 +1,5 @@
+.. _shared-folder:
+
 ==================
 Cartelle condivise
 ==================

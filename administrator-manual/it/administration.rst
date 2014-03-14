@@ -8,7 +8,7 @@ Status
 Dashboard
 ---------
 
-La pagina mostrata di default dopo il log in è la Dashboard; qui viene
+La pagina mostrata di default dopo il log in è la index:`Dashboard`; qui viene
 visualizzato un riepilogo dello stato del sistema e delle sue
 impostazioni.
 
@@ -33,8 +33,8 @@ Spegni
 
 Visualizza Log
 ==============
-Come per ogni sistema Linux, Nethserver è molto ricco di file di log che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
-Per visualizzare i file di log fare clic su Amministrazione→ Visualizza Log. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
+Come per ogni sistema Linux, Nethserver è molto ricco di file di :index:`log` che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
+Per visualizzare i file di log fare clic su :menulabel:`Amministrazione → Visualizza Log`. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
 
 Trova e mostra il contenuto dei file di log.
 
@@ -133,7 +133,7 @@ Maschera di rete
 SSH
 ---
 
-Gestione dell'accesso SSH (Secure Shell) al server.
+Gestione dell'accesso :index:`SSH` (Secure Shell) al server.
 
 Abilitato / Disabilito
     Abilita / disabilita l'accesso SSH.
@@ -160,7 +160,7 @@ Consenti l'autenticazione mediante password
 Rete
 ====
 
-Cambia impostazioni delle interfacce di rete. Le interfacce di rete presenti nel sistema sono rilevate automaticamente.
+Cambia impostazioni delle :index:`interfacce di rete`. Le interfacce di rete presenti nel sistema sono rilevate automaticamente.
 
 Stato
 =====

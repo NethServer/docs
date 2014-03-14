@@ -2,9 +2,9 @@
 Server fax
 ==========
 
-Il server fax permette di ricevere e inviare fax attraverso un modem
-fisico collegato direttamente a |product| o attraverso un modem
-virtuale (modem IAX). 
+Il server :index:`fax` (:index:`HylaFAX`) permette di ricevere e inviare fax attraverso un modem
+fisico collegato direttamente a |product| o attraverso un :index:`modem virtuale`. 
+Si veda :ref:`iax-modem` per maggiori informazioni. 
 
 Il modem deve supportare l'invio e la ricezione di fax preferibilmente in classe 1 o 1.0 (sono supportati anche le classi 2, 2.0 e 2.1).
 
@@ -104,6 +104,8 @@ SambaFax
 
 Invia report giornaliero
     Invia un report giornaliero all'amministratore
+
+.. _iax-modem:
 
 =========
 Modem IAX
