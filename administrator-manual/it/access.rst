@@ -45,4 +45,4 @@ diritti di amministratore quindi:
 * Password: **password_di_root** (inserita in fase di installazione)
 
 Se è installato il modulo Directory, è possibile abilitare l'utente admin ed utilizzarlo
-per accedere all'interfaccia web con gli stessi privilegi dell'utente root.
+per accedere all'interfaccia web con gli stessi privilegi dell'utente root. Vedi :ref:`admin-user`.

@@ -238,6 +238,27 @@ Questa azione consente di rimuovere i gruppi definiti e le relative
 liste di distribuzione. Le caselle di posta condivise associate a questo gruppo verranno eliminate.
 
 
+.. _admin-user:
+
+Utente amministratore
+=====================
+
+Il modulo *Gestione Account* crea l'utente :index:`admin` che consente l'accesso all'interfaccia web con la stessa password dell'utente root.
+L'utente admin non ha accesso al sistema da linea di comando.
+Pur essendo due utenti distinti, la password di entrambi coincide ed è possibile modificarla dall'interfaccia web.
+
+In alcune occasioni, potrebbe essere utile differenziare le password di admin e di root, per esempio, per consentire ad un utente poco esperto 
+di utilizzare l'interfaccia web per svolgere le operazioni più comuni, inibendo però l'accesso alla linea comandi.
+
+Per dissociare la password di root da quella di admin eseguire il seguente comando::
+
+ config set AdminIsNotRoot enabled
+
+Successivamente cambiare la password di admin dal pannello :guilabel:`Utenti`. Non venendo più sincronizzate le password, 
+admin avrà la nuova password, mentre root manterrà la vecchia.
+
+Se si desidera modificare la password di root, andrà fatto da linea di comando tramite il comando :command:`passwd`.
+
 
 
 

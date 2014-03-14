@@ -21,4 +21,5 @@ L'installazione di software aggiuntivo dall'interfaccia web è permessa esclusiv
 L'utilizzo di :command:`yum` da linea di comando permette di aggirare questa limitazione. Pertanto si sconsiglia di consegnare la password di :dfn:`root` all'utente finale.
 
 Il modulo utenti consente di utilizzare l'utente :dfn:`admin` per accedere all'interfaccia web con privilegi amministrativi. 
-L'utente :dfn:`admin` potrà quindi configurare l'intero sistema ma non potrà installare software aggiuntivo.
+L'utente :dfn:`admin` potrà quindi configurare l'intero sistema ma non potrà installare software aggiuntivo. 
+Per maggiori informazioni, vedi :ref:`admin-user`.

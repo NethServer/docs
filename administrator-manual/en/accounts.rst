@@ -178,3 +178,24 @@ Delete
 This action removes the defined groups and their
 distribution lists. The shared mailboxes associated
 
+
+.. _admin-user:
+
+Administrator user
+==================
+
+The *Account Management* module creates the user :index:`admin` that allows access to the web interface with the same password for the root user.
+The admin user does not have access to the system from the command line.
+Despite being two separate users, the password of both coincide and can be changed from the web interface.
+
+On some occasions, it may be useful to differentiate the admin and root password, for example, to allow an inexperienced user
+to use the web interface to perform common tasks and inhibiting access to the command line.
+
+Avoid root and admin password synchronization by run the following command ::
+
+ config September AdminIsNotRoot enabled
+
+Then change the admin password from the panel :guilabel:`Users`. Without password synchronization,
+admin will have the new password, and root will keep keep the old one.
+
+If you want to change the root password, it should be done from the command line using :command:`passwd`.
