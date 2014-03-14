@@ -50,3 +50,9 @@ Configurazione
    vpn
 
 
+Indici
+======
+
+* :ref:`genindex`
+* :ref:`search`
+

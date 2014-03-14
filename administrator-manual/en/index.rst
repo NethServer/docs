@@ -60,10 +60,9 @@ Appendix
    license
 
 
-Indices and tables
-==================
+Indices
+=======
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
