@@ -41,13 +41,6 @@ Change Password
 
 Allows to set an initial password, or change the user's password.
 
-The password must meet the following requirements:
-
-* Must have at least 5 different characters
-* Must not be present in the dictionaries of common words
-* Must be different from your username
-* Can not have repetitions of patterns formed by 3 more characters (for example the password As1.$ AS1. $ is not valid)
-
 Lock / Unlock
 ----------------
 
@@ -199,3 +192,113 @@ Then change the admin password from the panel :guilabel:`Users`. Without passwor
 admin will have the new password, and root will keep keep the old one.
 
 If you want to change the root password, it should be done from the command line using :command:`passwd`.
+
+Password management
+===================
+
+The system provides the ability to set constraints on password :dfn: `complexity` and: dfn: `expiration`.
+
+Complexity
+-----------
+
+The: index `password` complexity is a set of minimum conditions that password must match to be accepted by the system: 
+You can choose between two different management policies about password complexity:
+
+* :dfn: `none`: there is no specific control over the password entered, but minimum length is 7 characters
+* :dfn: `strong`
+
+The :index:`strong` policy requires that the password must comply with the following rules:
+
+* Minimum length of 7 characters
+* Contain at least 1 number
+* Contain at least 1 uppercase character 
+* Contain at least 1 lowercase character
+* Contain at least 1 special character
+* At least 5 different characters
+* Must be not present in the dictionaries of common words 
+* Must be different from the username
+* Can not have repetitions of patterns formed by 3 or more characters (for example the password As1.$ AS1. $ is invalid)
+
+The default policy is: dfn: `strong`.
+
+To change the setting to none ::
+
+  config setprop PasswordStrength none Users
+
+To change the setting to strong ::
+
+  config setprop PasswordStrength Users strong
+
+Check the policy currently in use on the server ::
+
+  config GetProp PasswordStrength Users
+
+Expiration
+----------
+
+The: index `password expiration` is enabled by default to 6 months from the time when the password is set.
+The system will send an e-mail to inform the users when their password is about to expire.
+
+.. note:: The system will refer to the date of the last password change, 
+   whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired. 
+   In this case you need to change the user password.
+   For example, if the last password change was made in January, and the activation of the deadline in October, 
+   the system will assume the password changed in January is expired, and notify the user.
+
+If you wish to bypass the password expiration globally (also allow access for users with expired password) ::
+
+  config setprop PasswordStrength PassExpires no
+  event signal-password-policy-update
+
+To disable password expiration for a single user (replace username with the user) ::
+
+  db accounts setprop <username> PassExpires no
+  event signal-password-policy-update
+
+
+Below are the commands to view enabled policies.
+
+Maximum number of days for which you can keep the same password (default: 180) ::
+
+  config GetProp PasswordStrength MaxPassAge
+
+
+Minimum number of days for which you are forced to keep the same password (default 0) ::
+
+  config GetProp PasswordStrength MinPassAge
+
+
+Number of days on which the warning is sent by email (default: 7) ::
+
+  config GetProp PasswordStrength PassWarning
+
+
+To change the parameters replace the :command:`getprop` command with :command:`setprop`,  
+then add the desired value at end of the line. Finally apply new configurations::
+
+  event signal-password-policy-update
+
+
+
+For example, to change to 5 "Number of days on which the warning is sent by email" ::
+
+ config setprop PasswordStrength PassWarning 5
+ event signal-password-policy-update
+
+
+
+Effects of expired password
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or 
+or other computer if the machine is part of the domain. 
+
+
+Domain password
+----------------
+
+If the system is configured as a domain controller,users can change their password using the Windows tools.
+
+In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
+Windows performs preliminary checks and sends the password to the server where they are then evaluated 
+with enabled policies.

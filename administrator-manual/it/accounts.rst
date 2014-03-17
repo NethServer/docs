@@ -132,14 +132,6 @@ Per cambiare la password fare click sul pulsante modifica sulla colonna
 per la creazione dell’utente; fare click sul pulsante Cambia password. A
 questo punto verrà chiesta la nuova password.
 
-La password deve soddisfare i seguenti requisiti:
-
- * deve contenere almeno 5 caratteri diversi
- * non deve essere presente nei dizionari di parole comuni
- * deve essere diversa dallo username
- * non può avere ripetizioni di pattern formati da più 3 caratteri (ad esempio la password As1.$As1.$ non è valida)
-
-
 
 Modifica di un utente
 ---------------------
@@ -284,7 +276,7 @@ La policy :index:`strong` impone che la password debba rispettare le seguenti re
 * contenere almeno 1 carattere minuscolo
 * contenere almeno 1 carattere speciale
 * contenere almeno 5 caratteri diversi
-* deve essere presente nei dizionari di parole comuni 
+* non deve essere presente nei dizionari di parole comuni 
 * deve essere diversa dallo username
 * non può avere ripetizioni di pattern formati da più 3 caratteri (ad esempio la password As1.$As1.$ non è valida)
 
