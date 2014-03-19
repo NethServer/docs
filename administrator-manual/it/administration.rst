@@ -34,7 +34,7 @@ Spegni
 Visualizza Log
 ==============
 Come per ogni sistema Linux, Nethserver è molto ricco di file di :index:`log` che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
-Per visualizzare i file di log fare clic su :menulabel:`Amministrazione → Visualizza Log`. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
+Per visualizzare i file di log fare clic su :menuselection:`Amministrazione → Visualizza Log`. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
 
 Trova e mostra il contenuto dei file di log.
 
