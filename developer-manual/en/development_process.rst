@@ -48,7 +48,7 @@ A process for a new feature, can be something like this:
 * Create a wiki page with notes and thoughts (team contributions are welcome!)
 * When the wiki page is pretty “stable” and the whole thing is well
   outlined, a team member will create one or more new issues.
-  * If the wiki page is a feature design document, the feature can
+* If the wiki page is a feature design document, the feature can
   simply point to the wiki page
 * The wiki page should become a technical documentation of the
   feature, or a changelog for a new release
