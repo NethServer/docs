@@ -18,7 +18,7 @@ installation.
 
 .. NOTE:: 
     
-   Optional packages can be installed also *AFTER* the installation of
+   Optional packages can be installed also *after* the installation of
    the relative component: click the :guilabel:`Apply` button again
    and select them from the summary screen.
 

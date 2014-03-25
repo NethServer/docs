@@ -18,7 +18,7 @@ opzionali, da selezionare per l'installazione.
 
 .. NOTE:: 
 
-    I pacchetti opzionali possono essere installati anche *DOPO*
+    I pacchetti opzionali possono essere installati anche *dopo*
     l'installazione del componente relativo: cliccare di nuovo sul
     bottone :guilabel:`Applica` e selezionarli dalla schermata di
     riepilogo.
