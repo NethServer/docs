@@ -12,7 +12,7 @@ Administrator Manual
 
     * **Official site**: `http://www.nethserver.org <http://www.nethserver.org>`_
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
-    * **Twitter**: `@|product| <http://twitter.com/|product|>`_
+    * **Twitter**: `@NethServer <http://twitter.com/NethServer>`_
     * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
     * **Mailing list**: `nethserver@googlegroups.com` 
     * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
