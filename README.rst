@@ -12,7 +12,7 @@ Inside each language directory there are some specials files:
 * index.rst: document structure
 
 All other .rst files are chapters of the manual. 
-If you whish to add a new chapter, create a new file and add it to the index.rst file.
+If you wish to add a new chapter, create a new file and add it to the index.rst file.
 
 Documentation available here:
 
@@ -29,7 +29,7 @@ directly on GitHub:
 
 * Create a GitHub account if you don't already have it
 * Go to https://github.com/nethesis/nethserver-docs and fork the project
-* You can now edit any page using Github web interface and see a live preview of the output
+* You can now edit any page using GitHub web interface and see a live preview of the output
 * When you're done, simply create a new pull request
 * A new automatic build is launched after the pull request is merged by a developer
 
@@ -62,7 +62,7 @@ Next headers levels are::
     Fourth level
     ~~~~~~~~~~~~
 
-Use the \* character for unorderd list ::
+Use the \* character for unordered list ::
  
     * First element
     * Second element
@@ -80,7 +80,7 @@ A field description can also contain a bullet list ::
         * First element
         * Second element
 
-Highligt important words ::
+Highlight important words ::
    
     This is and *important* word.
     
@@ -94,12 +94,12 @@ Add warnings with ::
 
 
     
-You can find mrre info about **RST Inline Markup** here: rst-cheatsheet_
+You can find more info about **RST Inline Markup** here: rst-cheatsheet_
 
 .. _rst-cheatsheet: https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
  
 
-Do not use *NethServer* name inside documentation. Anytime you need to add the product name, 
+Do not use *NethServer* name inside documentation. Any time you need to add the product name, 
 use the *product* macro::
 
   |product| has this amazing feature!
@@ -112,14 +112,14 @@ The same applies to *download_site* macro.
 
 
 
-Use semantic markup whenever possible. Recommended markups are:
+Use semantic markup whenever possible. Recommended RST roles are:
 
 * guilabel
 * file
 * command
 * menuselection
 
-Remember to emphasize system object with *:dnf:*, only the first time you mention them inside a section.
+Remember to emphasize system object with *:dfn:*, only the first time you mention them inside a section.
 For example if you are naming a system user::
 
  The :dfn:`admin` user is mighty powerful.
@@ -140,7 +140,7 @@ Build documentation
 
 Whenever there are modifications, a build process will be launched from Read the Docs site.
 
-If you whish to build documentation locally on your machine, make sure to install all Sphinx packages.
+If you wish to build documentation locally on your machine, make sure to install all Sphinx packages.
 
 First clone the repository, enter language directory and type ::
 
