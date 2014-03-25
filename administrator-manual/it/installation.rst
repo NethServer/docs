@@ -39,7 +39,7 @@ Si consiglia di usare il RAID software perché viene controllato di
 default da un apposito software pre-configurato che segnala eventuali
 anomalie.
 
-Tipi di installatzione
+Tipi di installazione
 ======================
 
 Sono supportati due modi per :index:`installare` |product|. In breve:
@@ -123,32 +123,33 @@ Modalità unattended
 
 Al termine dell'installazione, il sistema sarà così configurato:
 
-* Credenziali: root/Nethesis,1234
+* Nome utente: :samp:`root`
+* Password: :samp:`Nethesis,1234`
 * Rete: DHCP abilitato su tutte le interfacce
-* Tastiera: us
-* Fuso orario: Greenwich
-* Lingua: en_US.UTF-8
+* Tastiera: :samp:`us`
+* Fuso orario: :samp:`Greenwich`
+* Lingua: :samp:`en_US.UTF-8`
 * Dischi: se sono presenti due o più dischi, verrà creato un RAID1 sui primi due dischi
 
 Opzioni installazione
 ^^^^^^^^^^^^^^^^^^^^^
 
-E' possibile aggiungere parametri all'installazione automatica, premendo TAB e modificando la linea di comando.
+E' possibile aggiungere parametri all'installazione automatica, premendo :kbd:`TAB` e modificando la linea di comando.
 
 Per disabilitare il raid, aggiungere questa opzione: ::
 
     raid=none
 
-Se si desidera selezionare i dischi su cui isntallare, usare: ::
+Se si desidera selezionare i dischi su cui installare, usare: ::
 
     disks=sdx,sdy
 
 Altre opzioni disponibili:
 
-* lang: lingua del sistema, default è en_US
-* keyboard: layout tastiera, default è us
-* timezone: fuso orario, default è UTC Greenwich
-* password: abilita la il crittografia del filesystem usando la password immessa
+* lang: lingua del sistema, default è :samp:`en_US`
+* keyboard: layout tastiera, default è :samp:`us`
+* timezone: fuso orario, default è :samp:`UTC Greenwich`
+* password: abilita la il crittografia del file system usando la password immessa
 
 
 Modalità interattiva
@@ -161,7 +162,7 @@ La modalità interattiva consente di effettuare poche e semplici scelte sulla co
 3. Fuso orario
 4. RAID software
 5. Password amministratore di sistema
-6. Filesystem cifrato
+6. File system cifrato
 7. Interfacce di rete
 8. Configurazione di rete
 
@@ -173,7 +174,7 @@ Selezionare in quale lingua si desidera utilizzare la modalità interattiva.
 La lingua selezionata sarà la lingua di default del sistema installato. 
 Inoltre saranno suggeriti i default per tastiera e fuso orario.
 
-Layout tasitera
+Layout tastiera
 ^^^^^^^^^^^^^^^
 
 La tastiera può avere layout (disposizione dei tasti) dipendentemente dalla lingua per cui è stata realizzata.
@@ -217,10 +218,10 @@ Una buona password deve:
 * contenere lettere maiuscole e minuscole
 * contenere simboli e numeri
 
-Filesystem cifrato
-^^^^^^^^^^^^^^^^^^
+File system cifrato
+^^^^^^^^^^^^^^^^^^^
 
-Abilitando il filesystem cifrato, tutti i dati scritti sul disco verrano cifrati usando la crittografia
+Abilitando il file system cifrato, tutti i dati scritti sul disco verrano cifrati usando la crittografia
 simmetrica. In caso di furto, un malintenzionato non sarà in grado di leggere i dati a meno di 
 non possedere la chiave crittografica.
 
@@ -239,7 +240,7 @@ Configurazione di rete
 
 Nome host e dominio (FQDN)
     Digitare il nome host e dominio con il quale opererà il server (es. server.mycompany.com).
-    Si consiglia di scegliere il nome in funzione del ruole che avrà il server. Es: fax,
+    Si consiglia di scegliere il nome in funzione del ruolo che avrà il server. Es: fax,
     mail, ecc.
     
     *NB:* I nomi di dominio posso contenere solo lettere, numeri e il

@@ -7,9 +7,9 @@ Minimum requirements
 
 Minimum requirements are:
 
-* 64bit CPU (x86_64)
-* 1GB of RAM
-* 8GB of disk space
+* 64 bit CPU (x86_64)
+* 1 GB of RAM
+* 8 GB of disk space
 
 
 .. hint:: We recommend to use at least 2 disks to setup a RAID 1. 
@@ -19,7 +19,7 @@ Minimum requirements are:
 Hardware compatibility
 ----------------------
 
-|product| is compatibile with any hardware certified by 
+|product| is compatible with any hardware certified by 
 Red Hat® Enterprise Linux® (RHEL®), listed on `hardware.redhat.com <http://hardware.redhat.com/>`_
 
 
@@ -51,11 +51,11 @@ Downloaded ISO file can be used to create a
 The creation of a bootable disk is different from writing
 files into CD/DVD, and it requires the use of a dedicated function (e.g. *write* or *burn ISO image*).
 Instructions on how to create a bootable CD/DVD from the ISO are easily
-avaialble on the Internet or in the documentation of your system
+available on the Internet or in the documentation of your system
 operating system.
 
 
-A similar procedured applies for bootable USB stick.
+A similar procedure applies for bootable USB stick.
 There are specific programs [#]_ which will convert downloaded ISO into bootable USB sticks.
 
 In both cases, you can now start the machine using the freshly backed media.
@@ -67,7 +67,7 @@ First boot device should be the CD/DVD reader (or USB stick).
 .. [#] For example, http://unetbootin.sourceforge.net/ 
 
 
-On startup a menu will display different types of installation:
+On start a menu will display different types of installation:
 
 .. warning :: The installation will erase all existing data on hard drives!
 
@@ -77,7 +77,7 @@ On startup a menu will display different types of installation:
     network, and encrypted file system.  It will be described in depth in the next paragraph.
 
 Other / Unattended |product| install 
-    This installation mode does not require any kind of humant intervention: a set of default parameters will applied to the system.
+    This installation mode does not require any kind of human intervention: a set of default parameters will applied to the system.
 
 Standard CentOS installations
     Use the standard CentOS installation procedure.
@@ -104,27 +104,27 @@ After installation, the system will be configured as follows:
 * Keyboard: us
 * Time zone: Greenwich
 * Language: en_US.UTF-8
-* Disks: if there are two or more disks, a RAID1 will be created on first two disks
+* Disks: if there are two or more disks, a RAID 1 will be created on first two disks
 
 Install options
 ^^^^^^^^^^^^^^^
 
-You can add extra paramaters to unattended installation by pressing TAB and editing the bootloader command line.
+You can add extra parameters to unattended installation by pressing TAB and editing the boot loader command line.
 
 To disable raid, just add this option to the command line: ::
 
     raid=none
 
-If you need to select installation hard dirves, use: ::
+If you need to select installation hard drives, use: ::
 
     disks=sdx,sdy
 
 Other available options:
 
 * lang: system language, default is en_US
-* keyboard: keybord layou, default is us
+* keyboard: keyboard layout, default is us
 * timezone: default is UTC Greenwich
-* password: enable filesystem encryption with given password
+* password: enable file system encryption with given password
 
 Interactive Mode
 ----------------
@@ -136,7 +136,7 @@ The interactive mode allows you to make a few simple choices on the system confi
 3. Time zone
 4. Software RAID
 5. System administrator password
-6. Encrypted filesystem
+6. Encrypted file system
 7. Network interfaces
 8. Network configuration
 
@@ -168,7 +168,7 @@ Software RAID
 RAID (Redundant Array of Independent Disks) allows you to combine all the disks
 in order to achieve fault tolerance and an increase in performance.
 
-This screen is displayed when two or more disks were detected at startup.
+This screen is displayed when two or more disks were detected at start.
 
 Available levels:
 
@@ -197,7 +197,7 @@ A good password is:
 * contain symbols and numbers
 
 
-Encrypted filesystem
+Encrypted file system
 ^^^^^^^^^^^^^^^^^^^^
 
 When enabling this option, all data written to the disk will be encrypted using symmetric encryption.
@@ -220,15 +220,15 @@ Network configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
 Host and Domain Name (FQDN)
-    Type the host name and domain in which the server will operate (eg server.mycompany.com).
+    Type the host name and domain in which the server will operate (e.g. :samp:`server.mycompany.com`).
 
     *Note:* Domain name can only contain letters, numbers and the dash.
 
 IP Address
-    Type a private IP address (from RFC1918) to be assigned to the server;
+    Type a private IP address (from RFC 1918) to be assigned to the server;
     if you want to install it in an existing network,
     you must provide a unused IP address valid for that network (in
-    general you can use the first or last host inside the network range. Eg:
+    general you can use the first or last host inside the network range, e.g.
     192.168.7.1 or 192.168.7.254).
 
 Netmask
@@ -253,8 +253,8 @@ Install on CentOS
 It's possible to install |product| on a fresh CentOS install
 using the command *yum* to download software packages.
 
-For example, if you wishi to install |product| 6.5, just start 
-with a CentOS 6.5 on your system (many VPS providers
+For example, if you wish to install |product| |version|, just start 
+with a CentOS |version| on your system (many VPS providers
 offer CentOS pre-installed virtual machines), and then execute below commands
 to transform CentOS into |product|. 
 
