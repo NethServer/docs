@@ -2,33 +2,43 @@
 Gestione pacchetti
 ==================
 
-Dopo l’installazione |product| è ancora privo di funzioni specifiche.
-Tramite il modulo *Gestione Pacchetti* è possibile 
+La vista principale mostra una lista di componenti software. Gli elementi
+spuntati rappresentano i componenti installati, mentre quelli non spuntati sono
+quelli disponibili. Si può filtrare la lista per categoria.
 
-* aggiungere al sistema i *gruppi di pacchetti*, secondo le proprie
-  esigenze, tramite la scheda *Gruppi*,
+.. NOTE::
 
-* consultare l'elenco dei pacchetti già installati, tramite la scheda
-  *Pacchetti RPM*.
+    Sia i componenti che le categorie sono definite dai metadati di YUM.
 
-Un gruppo di pacchetti implementa una funzione specifica all'interno
-del sistema, come ad esempio *Mail server*, *Proxy web*, *Backup* o *VPN*.
+Per installare o rimuovere i componenti software elencati, aggiungere
+o togliere il segno di spunta, quindi premere il pulsante
+:guilabel:`Applica`.  La schermata successiva riepiloga cosa sarà
+installato e rimosso. Inoltre, viene mostrata la lista di pacchetti
+opzionali, da selezionare per l'installazione.
 
-Per installare un gruppo spuntare la voce corrispondente o, viceversa,
-per rimuovere un gruppo già installato togliere il segno di
-spunta; procedere quindi premendo il pulsante ``APPLICA``.
+.. NOTE:: 
 
-Nella schermata successiva viene richiesta conferma delle modifiche da
-apportare.  Inoltre, se i gruppi da installare prevedono dei pacchetti
-opzionali, è possibile selezionarli per aggiungerli all'elenco delle
-cose da installare.
+    I pacchetti opzionali possono essere installati anche *DOPO*
+    l'installazione del componente relativo: cliccare di nuovo sul
+    bottone :guilabel:`Applica` e selezionarli dalla schermata di
+    riepilogo.
 
-.. note:: L'installazione utilizza la rete per scaricare i pacchetti:
-          è necessario che sia configurata e attiva una connessione a
-          Internet.
 
-Se i gruppi di pacchetti selezionati richiedono altri gruppi, questi
-verranno installati automaticamente. Ad esempio se si seleziona *File
-server* verrà installato anche *Utenti e gruppi*.
+Software installato
+===================
 
+Elenca i pacchetti RPM di |product| installati sul sistema. Dove
+supportato è possibile, cliccando sul nome del pacchetto, accedere
+alla pagina di documentazione dello sviluppatore.
+
+I pacchetti sono ordinati alfabeticamente e vengono indicati:
+
+Nome
+    Nome del pacchetto RPM.
+
+Versione
+    Versione del pacchetto installato.
+
+Release
+    Release del pacchetto installato.
 

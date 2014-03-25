@@ -1,27 +1,33 @@
-==================
+===============
 Package manager
+===============
+
+The main view shows a list of software components. Checked items represents
+installed components, while unchecked items are the available ones. You can
+filter the list by category.
+
+.. NOTE::
+
+    Both components and categories are defined by YUM metadata.
+
+To install or remove the listed software components, change the
+checkbox states then click the :guilabel:`Apply` button. The next
+screen summarizes what is going to be installed and removed. Also, a
+list of optional packages is shown, to be selected for
+installation.
+
+.. NOTE:: 
+    
+   Optional packages can be installed also *AFTER* the installation of
+   the relative component: click the :guilabel:`Apply` button again
+   and select them from the summary screen.
+
+Installed software
 ==================
 
-Add and remove groups of packages in the system by enabling or
-disabling related features.
-
-Groups
-======
-
-List of activated features. Each feature may require
-the installation of one or more RPM packages.
-
-Installed features are already checked.
-
-To install one of the features in the list simply
-select it and click the apply button.
-
-RPM packages
-=============
-
-List of RPM packages installed on your system. Where supported,
-it's possible to open the development page by clicking on the package name. 
-
+It lists |product| RPM packages installed on your system.  Where
+available, it is possible to open the development page by clicking on
+the package name.
 
 Packages are sorted alphabetically. Displayed fields are:
 
