@@ -110,8 +110,6 @@ Output will be::
 
 The same applies to *download_site* macro.
 
-
-
 Use semantic markup whenever possible. Recommended RST roles are:
 
 * guilabel
@@ -134,6 +132,9 @@ but it will be indexed.
 
 See also: http://sphinx-doc.org/markup/inline.html
 
+Use a spell checker program before submitting a pull request. For instance run ::
+
+  hunspell -d en_US <filename>
 
 Build documentation
 ===================
