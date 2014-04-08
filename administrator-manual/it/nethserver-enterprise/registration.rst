@@ -5,9 +5,9 @@ Registrazione
 |product| offre la possibilità di tenere sotto controllo i parametri critici di funzionamento tramite 
 il :index:`Centro Servizi` Nethesis, accessibile con la coppia utente/password all'indirizzo https://register.nethesis.it.
 Come prima operazione, per ogni |product| installato, è necessario effettuare la 
-:index:`registrazione` per permettere una corretta identificazione e comunicazione con la console web.
+registrazione per permettere una corretta identificazione nella comunicazione con la console web.
 
-Accedere all'interfaccia web del server (https://server:980), fare click su :guilabel:`Registra server` e seguire la procedura guidata:
+Accedere all'interfaccia web del server (https://server:980), fare click su :guilabel:`Gestione pacchetti` e seguire la procedura guidata:
 
 * Inserire le credenziali rivenditore utilizzate presso il sito https://register.nethesis.it
 * Selezionare un server esistente oppure scegliere la creazione di nuovo server
