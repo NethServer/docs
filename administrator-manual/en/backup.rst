@@ -43,7 +43,7 @@ Windows Share (CIFS)
     Select the backup destination, a Windows share (CIFS). Authentication is required.
 
     * Server: The IP address or FQDN of the target Windows server
-    * Share: the name of the sahre on the target Windows system
+    * Share: the name of the share on the target Windows system
     * User: username to use for authentication
     * Password: password to use for authentication.
 
