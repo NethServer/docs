@@ -262,7 +262,7 @@ Enable |product| repositories with this command:
 
 ::
 
-  yum localinstall -y http://pulp.nethesis.it/nethserver/nethserver-release.rpm
+  yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
 
 To install the base system, run:
 

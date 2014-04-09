@@ -292,7 +292,7 @@ Abilitare i repository specifici di |product| con il comando:
 
 ::
 
- yum localinstall -y  http://pulp.nethesis.it/nethserver/nethserver-release.rpm
+ yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
 
 Per installare il sistema di base eseguire:
 
