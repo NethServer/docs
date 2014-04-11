@@ -5,28 +5,35 @@ Rete Windows
 Installazione
 =============
 
-Viene installato automanticamente quando si installa il pacchetto :dfn:`File Server` (:index:`Samba`). 
-Si veda :ref:`shared-folder`.
+Viene installato automaticamente quando si installa il pacchetto
+:dfn:`File Server` (:index:`Samba`).  Si veda :ref:`shared-folder`.
 
 Impostazione Rete Windows
 =========================
 
-Per gestire le impostazioni della rete Windows entrare nella sezione :menuselection:`Configurazione → Rete Windows`. Impostare il ruolo che deve avere il server nella rete Windows scegliendo una tra le tre opzioni presenti.
+Per gestire le impostazioni della rete Windows entrare nella sezione
+:menuselection:`Rete Windows`. Impostare il ruolo che deve avere il
+server nella rete Windows scegliendo una tra le tre opzioni presenti.
 
 Workstation
 -----------
 
-Se viene assegnato il ruolo di workstation esso si comporterà come qualsiasi workstation della rete Windows.
+Se viene assegnato il ruolo di workstation esso si comporterà come
+qualsiasi workstation della rete Windows.
 
 Controller di dominio
 ----------------------
 
-Se viene assegnato il ruolo di Controller di dominio è possibile fare Join da parte di qualsiasi altra workstation Windows, come se fosse un vero e proprio Controllere di dominio Windows.
+Se viene assegnato il ruolo di Controller di dominio è possibile fare
+Join da parte di qualsiasi altra workstation Windows, come se fosse un
+vero e proprio Controllere di dominio Windows.
 
 Membro di Active Directory
 --------------------------
 
-Il ruolo di Membro di Active Directory viene selezionato quando sulla rete esiste un altro server Microsoft Windows come controller di dominio, e da quale si vogliono ereditare gli utenti/gruppi.
+Il ruolo di Membro di Active Directory viene selezionato quando sulla
+rete esiste un altro server Microsoft Windows come controller di
+dominio, e dal quale si vogliono ereditare gli utenti/gruppi.
 
 
 Ruolo
