@@ -1,27 +1,25 @@
 ====================
-Access to |product|
+Acceso al |producto|
 ====================
 
-|product| can be configured using a web interface. To access the web inteface
-you can use below addresses:
+|producto|puede ser configurado mediante una interfaz web. Para acceder a la inteface web puede utilizar las direcciones de abajo: 
 
-https://a.b.c.d:980 or https://server_name:980
+https://a.b.c.d:980 o https://server_name:980 
 
-where *a.b.c.d* and *server_name* respectively are the server IP address and name 
-configured during installation.
+donde *a.b.c.d* y *server_name* son, respectivamente, la dirección IP del servidor y el nombre 
+configurado durante la instalación. 
 
-If the web server add-on is installed, you can also access the web itnerface using this address:
+Si el complemento del servidor esta instalado, se puede acceder a la interface web utilizando esta dirección: 
 
- https://server_name/server-manager
+  https://server_name/server-manager 
 
-Login
-=====
+Inicio
+===== 
 
-The login page will gave you a trusted access to the web interface.
-Use following credentials:
+La página de inicio de sesión le dio una confianza de acceso a la interfaz web. 
+Utilice siguientes credenciales: 
 
-* User name: **root**
-* Password: **root_password** (chosen during installation process)
+* Nombre de usuario: **root**
+* Contraseña: **root_password** (elegido durante el proceso de instalación) 
 
-If the directory module is installed, and the admin user has been enabled, you can use it to access
-the web interface with same privileges as root user. See :ref:`admin-user`.
+Si se instala el módulo de directorio, y el usuario administrador ha sido activado, se puede utilizar para acceder a la interfaz web con los mismos privilegios que el usuario root. Ver: ref: `admin-user`.
