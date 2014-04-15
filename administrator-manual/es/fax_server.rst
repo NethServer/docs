@@ -1,24 +1,24 @@
-==========
-Fax Server
-==========
+=============== 
+servidor de fax 
+=============== 
 
-The fax server allows you to send and receive faxes via a modem
-connected directly to a server port (COM or USB) or through a 
-virtual IAX modem. 
+El servidor de fax le permite enviar y recibir faxes a través de un módem 
+conectado directamente a un puerto del servidor (COM o USB) oa través de un 
+modem IAX virtual. 
 
-The modem must support sending and receiving faxes preferably in class 1 or 1.0 (2, 2.0 and 2.1 classes are also supported).
+El módem debe ser compatible con el envío y la recepción de faxes de preferencia en la clase 1 o 1,0 (2, 2.0 y 2.1 clases también son compatibles). 
 
-General
-========
+general 
+======== 
 
-Country code
-    The international prefix to be prepended to your fax number.
-Prefix
-    Area code.
-Fax Number
-    Fax number of the sender.
-Sender (TSI)
-    The TSI is printed in the header of the recipient fax, usually in the top row. It's possible to enter the fax number or name of a total length of up to 20 characters (recommended your company name). Only alphanumeric characters are allowed.
+código del país 
+     El prefijo internacional que se antepone a su número de fax. 
+prefijo 
+     Código de área. 
+Número de fax 
+     El número de fax del remitente. 
+Remitente (TSI) 
+     La ETI se imprimirá en el encabezado del fax del destinatario, por lo general en la fila superior. Es posible introducir el número de fax o el nombre de una longitud total de hasta 20 caracteres (se recomienda el nombre de la empresa). Sólo se permiten caracteres alfanuméricos.
 
 
 Modem
