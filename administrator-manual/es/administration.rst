@@ -85,7 +85,7 @@ Perfil del usuario
 ==================
 
 Nombre 
-     Es el nombre del usuario, por ejemplo "Juan". 
+     Es el nombre del usuario, por ejemplo "John". 
 
 Apellido 
      El apellido del usuario, por ejemplo, "Smith". 
