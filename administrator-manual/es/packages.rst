@@ -1,26 +1,26 @@
-===============
-Package manager
-===============
+=================== 
+Gestor de paquetes 
+=================== 
 
-The main view shows a list of software components. Checked items represents
-installed components, while unchecked items are the available ones. You can
-filter the list by category.
+La vista principal muestra una lista de los componentes de software. Los elementos marcados representa a 
+componentes instalados, mientras que los elementos no marcados son los que están disponibles. Usted puede 
+filtrar la lista por categorías. 
 
-.. NOTE::
+.. NOTA::
 
-    Both components and categories are defined by YUM metadata.
+    Ambos componentes y categorías se definen con metadatos YUM.
 
-To install or remove the listed software components, change the
-checkbox states then click the :guilabel:`Apply` button. The next
-screen summarizes what is going to be installed and removed. Also, a
-list of optional packages is shown, to be selected for
-installation.
+Para instalar o quitar los componentes de software de la lista, cambie el 
+estados de casillas de verificación y entonces pulsa el: guilabel: botón 'Apply'. La próxima
+pantalla resume lo que va a ser instalado y eliminado. También, 
+se muestra la lista de paquetes opcionales, de ser seleccionados para 
+instalación.
 
-.. NOTE:: 
+.. NOTA:: 
     
-   Optional packages can be installed also *after* the installation of
-   the relative component: click the :guilabel:`Apply` button again
-   and select them from the summary screen.
+    Los paquetes opcionales se pueden instalar también *después* de la instalación de 
+    el componente relativo: haga clic en el: guilabel: botón 'Apply'de nuevo 
+    y seleccionarlos en la pantalla de resumen.
 
 Installed software
 ==================
