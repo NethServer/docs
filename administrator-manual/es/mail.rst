@@ -1,124 +1,123 @@
-=====
-Email
-=====
+===== 
+Email 
+===== 
 
-Configure the e-mail services
+Configure los servicios de correo electrónico 
 
-Domains
-=======
+Dominios 
+======= 
 
-The table contains the list of internet domain names for which the
-server will accept incoming email.
+La tabla contiene la lista de nombres de dominio de Internet para los que el 
+servidor acepta correo electrónico entrante. 
 
-Create / Modify
----------------
+Crear / Modificar 
+----------------- 
 
-Add a domain to the list of those configured for the email reception.
-
-
-Domain
-    The domain name, for example *nethesis.it*.
-
-Description
-    An optional field useful to the system administrator to take note
-    of domain information.
-
-Delivery locally
-    Select this option to configure the server to deliver
-    incoming mail addressed to the specified domain
-    in local folders.
-
-Forward to another server
-    If you select this option, incoming mail will
-    be forwarded to the specified server.
-
-Disclaimer (legal notice)
-    Automatically add a legal message (disclaimer)
-    to all outgoing emails (not addressed to the domain).
+Agregar un dominio a la lista de los configurados para la recepción de correo electrónico.
 
 
-Delete
--------
+Dominio 
+     El nombre de dominio, por ejemplo *nethesis.it*. 
 
-Remove the domain from those managed by the server. Any email
-intended for the domain will be rejected.
+Descripción 
+     Un campo opcional útil para el administrador del sistema a tomar nota de la información del dominio.
 
+Entrega local 
+     Seleccione esta opción para configurar el servidor para entregar 
+     el correo entrante dirigido al dominio especificado 
+     en las carpetas locales. 
 
-Filter
-======
+Reenviar a otro servidor 
+     Si selecciona esta opción, el correo entrante será 
+     se transmitirá al servidor especificado. 
 
-Configure the filtering options of the email (antivirus, antispam,
-forbidden attachments, etc).
-
-Antivirus
-    Enable virus scanning of emails in transit.
-
-Antispam
-    Enable antispam scanning of incoming emails.
-
-Prefix Spam
-    This prefix is added to the object underlying the recognized emails
-    as spam.
-
-Attachment Blocking
-    The email server will block emails that contain attachments of types
-    specified.
-
-Executable
-    The email server will block executable programs in email attachments.
-
-Archives
-    The email server will block emails with attachments containing archive files (zip,
-    rar, etc.).
-
-Custom List
-    Define a list of extensions that will be blocked,
-    such as doc, pdf, etc. (without starting dot, ie doc and not .doc).
+Disclaimer (aviso legal) 
+     Añadir automáticamente un mensaje legal (disclaimer) 
+     a todos los mensajes salientes (no dirigida al dominio). 
 
 
-Mailboxes
-================
+Borrar 
+------- 
 
-In this tab, you can configure some parameters related to the
-local mail folders.
-
-IMAP
-    Enable folder access through the IMAP protocol (recommended).
-
-POP3
-    Enable folder access through the POP3 protocol (not recommended).
-
-Allow unencrypted connections
-    Allows you to enable access to the folders using unencrypted protocols (not recommended).
-
-Disk space
-    Allows you to limit disk usage by email.
-    
-    * Unlimited: select not to impose limits
-    * Apply quota: limit maximum space of mail for each user to the value
-      indicated (email quota).
-
-Move to Folder * junkmail *
-    Email messages identified as spam are moved to each user folder
-    * Junkmail * instead of being delivered to the Inbox.
+Retire el dominio de los gestionados por el servidor. Cualquier correo electrónico 
+destinado para el dominio serán rechazadas.
 
 
-Messages
-========
+Filtro 
+====== 
 
-Configure the management of email messages.
+Configure las opciones de filtrado de correo electrónico (antivirus, antispam, 
+adjuntos prohibidos, etc.) 
 
-Accept message size to
-    Use the cursor to select the maximum size of a
-    single email message. The server will reject mail larger than the value
-    set, returning an explanatory error.
+Antivirus 
+     Habilitar la detección de virus de correos electrónicos en tránsito. 
 
-Retry sending for
-    Use the cursor to select the maximum time for which the server
-    try to send a message. When it reaches the maximum time
-    and the email has not yet been delivered, the sender will receive a
-    error and the message is removed from the send queue, the server will no
-    longer attempting to deliver it.
+Antispam 
+     Activar el análisis antispam de mensajes de correo electrónico entrantes. 
+
+Spam Prefijo 
+     Este prefijo se añade al objeto fundamental de los correos electrónicos reconocidos 
+     como spam. 
+
+Bloqueo de archivos adjuntos 
+     El servidor de correo electrónico bloquee mensajes de correo electrónico que contengan archivos adjuntos de tipos 
+     especificado.
+
+Ejecutable 
+     El servidor de correo electrónico bloqueará programas ejecutables en archivos adjuntos de correo electrónico. 
+
+Archivo 
+     El servidor de correo electrónico bloquee mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP, 
+     rar, etc.) 
+
+Lista personalizada 
+     Definir una lista de extensiones que serán bloqueados, 
+     tales como doc, pdf, etc (sin arrancar punto, es decir, doc y no. doc).
+
+
+Buzones 
+======== 
+
+En esta ficha, puede configurar algunos parámetros relacionados con la 
+carpetas de correo locales. 
+
+IMAP 
+     Habilitar el acceso a carpetas a través del protocolo IMAP (recomendado). 
+
+POP3 
+     Habilitar el acceso a carpetas a través del protocolo POP3 (no recomendado). 
+
+Permitir conexiones sin cifrar 
+     Permite habilitar el acceso a las carpetas que utilizan protocolos no encriptados (no recomendado). 
+
+Espacio en disco 
+     Le permite limitar el uso del disco por correo electrónico. 
+
+     * Unlimited: seleccione no imponer límites 
+     * Aplicar cuota: límite de espacio máximo de correo para cada usuario con el valor 
+       indicado (cuota de correo electrónico).
+
+Mover a la carpeta *junkmail* 
+     Mensajes de correo electrónico identificado como spam se mueven a cada carpeta de usuario 
+     *Junkmail* en lugar de ser entregado a la bandeja de entrada. 
+
+
+Mensajes 
+======== 
+
+Configurar la gestión de mensajes de correo electrónico. 
+
+Acepte el tamaño del mensaje a 
+     Utilice el cursor para seleccionar el tamaño máximo de un 
+     mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor 
+     establecer y devolverá un error explicativo. 
+
+Vuelva a intentar el envío de 
+     Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor 
+     tratar de enviar un mensaje. Cuando llega el tiempo máximo 
+     y el correo electrónico no ha sido entregado, el remitente recibirá un 
+     error y el mensaje se elimina de la cola de envío, el servidor no hay 
+     ya intentar entregarlo.
 
 Send using a smarthost
     The server will attempt to send emails directly to
