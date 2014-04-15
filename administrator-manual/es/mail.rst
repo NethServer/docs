@@ -108,11 +108,11 @@ Mensajes
 Configurar la gestión de mensajes de correo electrónico. 
 
 Acepte el tamaño del mensaje a 
-     Utilice el cursor para seleccionar el tamaño máximo de un 
-     mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor 
-     establecer y devolverá un error explicativo. 
+
+     Utilice el cursor para seleccionar el tamaño máximo de un  mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor establecer y devolverá un error explicativo. 
 
 Vuelva a intentar el envío de 
+
      Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor 
      tratar de enviar un mensaje. Cuando llega el tiempo máximo 
      y el correo electrónico no ha sido entregado, el remitente recibirá un 
