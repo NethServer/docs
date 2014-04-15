@@ -1,5 +1,5 @@
 =============== 
-servidor de fax 
+Servidor de fax 
 =============== 
 
 El servidor de fax le permite enviar y recibir faxes a través de un módem 
