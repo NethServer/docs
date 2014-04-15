@@ -1,284 +1,270 @@
 =============
-Installation
+Instalacion
 =============
 
-Minimum requirements
-====================
+Requerimientos minimos
+======================
 
-Minimum requirements are:
+Los requerimientos minimos son:
 
 * 64 bit CPU (x86_64)
-* 1 GB of RAM
-* 8 GB of disk space
+* 1 GB ode RAM
+* 8 GB de espacio del disco
 
 
-.. hint:: We recommend to use at least 2 disks to setup a RAID 1. 
-          The RAID software will ensure data integrity in case 
-          of a disk failure.
+.. hint:: Recomendamos el uso de al menos 2 discos para configurar un RAID 1. 
+          El programa RAID llevará a asegurar la integridad de los datos en caso           de un fallo de disco.
 
-Hardware compatibility
+Compatibilidad hardware
 ----------------------
 
-|product| is compatible with any hardware certified by 
-Red Hat® Enterprise Linux® (RHEL®), listed on `hardware.redhat.com <http://hardware.redhat.com/>`_
+|product| es compatible con cualquier hardware certificado por 
+Red Hat® Enterprise Linux® (RHEL®), escuchado en `hardware.redhat.com <http://hardware.redhat.com/>`_
 
 
-Installation types
+Tipos de instalacion
 ==================
 
-|product| supports two installation modes. In short:
+|product| es compatible con dos modos de instalación. En resumen:
 
-**Installing from ISO**
+**Instalacion desde ISO**
 
-  * Download the ISO image, 
-  * Prepare a CD / DVD or a bootable USB stick
-  * Follow the wizard
+  * Descargue la imagen ISO, 
+  * Preparar un  CD / DVD o una memoria USB de arranque.
+  * Siga el asistente
 
-**Installing from YUM**
+**Instalacion desde YUM**
 
-  * Install CentOS Minimal
-  * Configure the network
-  * Install from network
+  * Instale CentOS Minimal
+  * Configurar la red
+  * Instalar desde la red
 
-Installing from ISO
+Instalacion desde ISO
 ====================
 
-Download |product| ISO file from official site
+Descargar |product|el archivo  ISO desde el sitio oficial
 |download_site|. 
 
-Downloaded ISO file can be used to create a
-*Bootable media* such as a CD, a DVD, or a USB stick.
-The creation of a bootable disk is different from writing
-files into CD/DVD, and it requires the use of a dedicated function (e.g. *write* or *burn ISO image*).
-Instructions on how to create a bootable CD/DVD from the ISO are easily
-available on the Internet or in the documentation of your system
-operating system.
+El archivo ISO descargado se puede utilizar para crear una 
+*Dispositivo de arranque*, como un CD, un DVD o una memoria USB. 
+La creación de un disco de inicio es diferente de escribir
+archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, *escritura* o *Grabar imagen ISO*). 
+Las instrucciones sobre cómo crear un CD / DVD de la ISO es fácilmente 
+disponible en Internet o en la documentación de su sistema operativo. 
+
+Un procedimiento similar se aplica para la memoria USB de arranque. 
+Hay programas específicos [#]_ que convertirán lo descargado ISO en memorias USB de arranque. 
+
+En ambos casos, ahora se puede iniciar la máquina utilizando los medios de comunicación recientemente respaldado. 
+Si el equipo no arranca desde el CD / DVD (o USB), consulte la 
+documentación de la BIOS de la placa. Un problema típico es 
+la configuración de arranque de prioridad del dispositivo. 
+El primer dispositivo de arranque debe ser el lector de CD / DVD (o memoria USB).
 
 
-A similar procedure applies for bootable USB stick.
-There are specific programs [#]_ which will convert downloaded ISO into bootable USB sticks.
-
-In both cases, you can now start the machine using the freshly backed media.
-If the machine will not start from the CD/DVD (or USB), please refer to the
-documentation of the motherboard BIOS. A typical problem is
-how boot device priority is configured.
-First boot device should be the CD/DVD reader (or USB stick).
-
-.. [#] For example, http://unetbootin.sourceforge.net/ 
+.. [#] Por ejemplo, http://unetbootin.sourceforge.net/ 
 
 
-On start a menu will display different types of installation:
+En el arranque de un menú mostrará diferentes tipos de instalación: 
 
-.. warning :: The installation will erase all existing data on hard drives!
-
-
-|product| interactive install
-    It allows you to select the language, configure RAID support,
-    network, and encrypted file system.  It will be described in depth in the next paragraph.
-
-Other / Unattended |product| install 
-    This installation mode does not require any kind of human intervention: a set of default parameters will applied to the system.
-
-Standard CentOS installations
-    Use the standard CentOS installation procedure.
-
-Tools
-    Start the system in *rescue* (recovery) mode, execute a memory test or start the hardware detection tool.
-
-Boot from local drive
-    Attempts to boot a system that is already installed on the hard disk.
+.. warning :: La instalación borrará todos los datos existentes en los discos duros!
 
 
-At the end of the installation process you will be asked to 
-reboot the machine. Be sure to remove the CD or
-USB support before restarting.
+|product| instalacion interactiva
+    Le permite seleccionar el idioma, configurar el soporte RAID, 
+    red y sistema de ficheros cifrado. Se describe en profundidad en el siguiente párrafo. 
+
+Otros / desatendida |product| instalar 
+     Este modo de instalación no se requiere ningún tipo de intervención humana: un conjunto de parámetros por defecto serán aplicados al sistema. 
+
+Las instalaciones estándar de CentOS 
+     Utilice el procedimiento estándar de instalación de CentOS. 
+
+Instrumentos 
+     Inicie el sistema en modo de *rescate* (de recuperación), ejecuta una prueba de memoria o iniciar la herramienta de detección de hardware.
+ 
+Arrancar desde la unidad local 
+     Los intentos para arrancar un sistema que ya está instalado en el disco duro.
+
+Al final del proceso de instalación, se le pedirá que 
+reinicie la máquina. Asegúrese de retirar el CD o 
+Soporte USB antes de reiniciar. 
+
+Modo desantendido
+-----------------
+Después de la instalación, el sistema se configura de la siguiente manera: 
+
+* Credenciales: root / Nethesis 1234 
+* Red: DHCP habilitado en todas las interfaces 
+* Teclado: us 
+* Zona horaria: Greenwich 
+* Idioma: en_US.UTF-8 
+* Discos: si hay dos o más discos, RAID 1 se crearán en los dos primeros discos
 
 
-Unattended mode
----------------
+Instalar opciones
+^^^^^^^^^^^^^^^^^
+Puede agregar parámetros adicionales para instalación desatendida pulsando TAB y editando en la línea de comandos del gestor de arranque. 
 
-After installation, the system will be configured as follows:
-
-* Credentials: root / Nethesis 1234
-* Network: DHCP enabled on all interfaces
-* Keyboard: us
-* Time zone: Greenwich
-* Language: en_US.UTF-8
-* Disks: if there are two or more disks, a RAID 1 will be created on first two disks
-
-Install options
-^^^^^^^^^^^^^^^
-
-You can add extra parameters to unattended installation by pressing TAB and editing the boot loader command line.
-
-To disable raid, just add this option to the command line: ::
+Para desactivar la raid, sólo tiene que añadir esta opción a la línea de comandos: :: 
 
     raid=none
 
-If you need to select installation hard drives, use: ::
+Si usted necesita para seleccionar la instalación de discos duros, utilice: ::
 
     disks=sdx,sdy
 
-Other available options:
+Otras opciones disponibles: 
 
-* lang: system language, default is en_US
-* keyboard: keyboard layout, default is us
-* timezone: default is UTC Greenwich
-* password: enable file system encryption with given password
+* Lang: idioma del sistema, por omisión es en_US 
+* Teclado: distribución del teclado, por defecto es us 
+* Zona horaria: por defecto es UTC Greenwich 
+* Contraseña: habilitar el cifrado del sistema de archivos con la contraseña dada
 
-Interactive Mode
+
+Modo interactivo
 ----------------
 
-The interactive mode allows you to make a few simple choices on the system configuration:
+El modo interactivo le permite hacer algunas opciones simples de la configuración del sistema:
 
-1. Language 
-2. Keyboard layout
-3. Time zone
-4. Software RAID
-5. System administrator password
-6. Encrypted file system
-7. Network interfaces
-8. Network configuration
+1. Idioma 
+2. Disposición del teclado 
+3. Zona horaria 
+4. Software RAID 
+5. Contraseña del administrador del sistema 
+6. Sistema de archivos cifrados 
+7. Interfaces de red 
+8. Configuración de la red
 
-Language
-^^^^^^^^
-
-Select the language in which you want to use the interactive mode.
-Selected language will be the default language of installed system. 
-The system will also suggest default values for keyboard and time zone.
-
-
-Keyboard layout
-^^^^^^^^^^^^^^^
-
-A keyboard can have different layout depending on the language for which it was made.
-Leave the suggested value or enter a custom value.
+Idioma
+^^^^^^
+Seleccione el idioma en el que desea utilizar el modo interactivo. 
+El idioma seleccionado será el idioma predeterminado del sistema instalado. 
+El sistema también le sugerirá valores por defecto para el teclado y la zona horaria.
 
 
-Time zone
-^^^^^^^^^
+Distribucion del teclado
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-The choice of time zone allows you to configure the date and time of the system.
-Leave the suggested value or enter a custom value.
+Un teclado puede tener un diseño diferente en función del idioma para el que fue hecho. 
+Deje el valor sugerido o escriba un valor personalizado.
+
+
+Zona horaria
+^^^^^^^^^^^^
+La elección de la zona horaria permite configurar la fecha y la hora del sistema. Deje el valor sugerido o escriba un valor personalizado. 
 
 
 Software RAID
 ^^^^^^^^^^^^^
+RAID (matriz redundante de discos independientes) le permite combinar todos los discos con el fin de lograr la tolerancia a fallos y un aumento en el rendimiento. 
 
-RAID (Redundant Array of Independent Disks) allows you to combine all the disks
-in order to achieve fault tolerance and an increase in performance.
-
-This screen is displayed when two or more disks were detected at start.
-
-Available levels:
-
-* RAID 1: it creates an exact copy (mirror) of all the data on two or more disks. 
-  Minimum number of disks: 2
-
-* RAID 5: it uses a subdivision of the data at the block level, distributing the parity data evenly across all disks.
-  Minimum number of disks: 3
-
-Spare disk
-~~~~~~~~~~
-
-You can create a spare disk if disk number is greater than the minimum required by the selected level RAID,
-A spare disk will be added to the RAID in case a failure occurs.
+Esta pantalla aparece cuando se detectan dos o más discos en el arranque.
 
 
-System administrator password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Niveles disponibles:
 
-You are strongly advised to set a custom administrator password.
+* RAID 1: crea una copia exacta (espejo) de todos los datos en dos o más discos. 
+   Número mínimo de discos: 2 
 
-A good password is:
+* RAID 5: utiliza una subdivisión de los datos a nivel de bloque, distribuyendo los datos de paridad de manera uniforme en todos los discos. 
+   Número mínimo de discos: 3 
 
-* at least 8 characters long
-* contain uppercase and lowercase letters
-* contain symbols and numbers
+Disco de repuesto
+~~~~~~~~~~~~~~~~~
 
-
-Encrypted file system
-^^^^^^^^^^^^^^^^^^^^
-
-When enabling this option, all data written to the disk will be encrypted using symmetric encryption.
-In case of theft, an attacker will not be able to read the data without 
-the encryption key.
-
-It's possible to choose a password for the encryption, otherwise the system administrator password will be used.
-
-.. note :: You will need to enter the password at every system boot.
+Puede crear un disco de repuesto si el número de disco es mayor que el mínimo exigido por el nivel de RAID seleccionado, 
+Un disco de reserva se añadirá a la RAID en caso de que se produce un fallo. 
 
 
-Network interfaces
-^^^^^^^^^^^^^^^^^^
+Contraseña del administrador del sistema 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Select the network interface that will be used to access the LAN.
-This interface is also known as *green* interface.
+Se recomienda encarecidamente establecer una contraseña de administrador personalizado. 
+
+Una buena contraseña es:
+
+* al menos 8 caracteres de longitud
+* Contener letras mayúsculas y minúsculas 
+* Contener símbolos y números
 
 
-Network configuration
+Sistema de archivos cifrados
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Al habilitar esta opción, todos los datos escritos en el disco serán cifrados mediante cifrado simétrico. 
+En caso de robo, un atacante no será capaz de leer los datos sin 
+la clave de cifrado.
+
+Es posible elegir una contraseña para la encriptación, de lo contrario se utilizará la contraseña de administrador del sistema. 
+
+.. note ::  Usted tendrá que introducir la contraseña en cada inicio del sistema.
+
+
+Los interfaces de red
 ^^^^^^^^^^^^^^^^^^^^^
-
-Host and Domain Name (FQDN)
-    Type the host name and domain in which the server will operate (e.g. :samp:`server.mycompany.com`).
-
-    *Note:* Domain name can only contain letters, numbers and the dash.
-
-IP Address
-    Type a private IP address (from RFC 1918) to be assigned to the server;
-    if you want to install it in an existing network,
-    you must provide a unused IP address valid for that network (in
-    general you can use the first or last host inside the network range, e.g.
-    192.168.7.1 or 192.168.7.254).
-
-Netmask
-    Type the subnet mask of the network. You can safely leave the default value. 
-
-Gateway
-    Type the IP address of the gateway on which you are
-    installing the server.
-
-DNS
-    Type a valid DNS. Example: 8.8.8.8
-
-End of installation procedure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-After parameters input, the procedure will start the installation.
+Seleccione la interfaz de red que se utiliza para acceder a la LAN. 
+Esta interfaz también se conoce como interfaz *verde*.
 
 
-Install on CentOS
-=================
+Configuracion de la red
+^^^^^^^^^^^^^^^^^^^^^
+Host y el nombre de dominio (FQDN) 
+     Escriba el nombre de host y dominio en el que el servidor va a funcionar (por ejemplo: samp:`server.mycompany.com`).
 
-It's possible to install |product| on a fresh CentOS install
-using the command *yum* to download software packages.
+    *Nota:* El nombre de dominio sólo puede contener letras, números y el guión.
 
-For example, if you wish to install |product| |version|, just start 
-with a CentOS |version| on your system (many VPS providers
-offer CentOS pre-installed virtual machines), and then execute below commands
-to transform CentOS into |product|. 
+Dirección IP 
+     Escriba una dirección IP privada (por RFC 1918) que se asignará al servidor;     si quieres instalarlo en una red existente, usted debe proporcionar una dirección IP no utilizada válida para esa red (en general, se puede utilizar la primera o la última de acogida dentro del alcance de la red, por ejemplo, 192.168.7.1 o 192.168.7.254). 
 
-Enable |product| repositories with this command:
+Máscara de red 
+     Escriba la máscara de subred de la red. Puede dejar el valor por defecto. 
+
+Puerta de acceso 
+     Escriba la dirección IP de la puerta de enlace en el que está 
+     instalar el servidor. 
+
+DNS 
+     Escriba un DNS válido. Ejemplo: 8.8.8.8
+
+Fin del proceso de instalacion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Después de parámetros de entrada, el procedimiento iniciará la instalación.
+
+
+Instalar desde CentOS
+=====================
+
+Es posible instalar |product| en  CentOS 
+mediante el comando *yum* para descargar los paquetes de software
+
+Por ejemplo, si desea instalar |product| |version|, acaba de empezar 
+con CentOS |version| en su sistema (proveedores de muchos de VPS 
+ofrecen CentOS en máquinas virtuales pre-instalado), y luego ejecutar los comandos a continuación 
+transformar en CentOS |product|. 
+ 
+
+Habilitar |product| repositorios con el comando
 
 ::
 
   yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
 
-To install the base system, run:
+Para instalar el sistema base, ejecute
 
 ::
 
   nethserver-install
 
-To install additional modules, pass the name of the module as a parameter to the install script.
-Example for mail and ups modules:
+Para instalar módulos adicionales, pase el nombre del módulo como parámetro para el script de instalación. 
+Ejemplo para el correo y los módulos de UPS:
 
 ::
 
   nethserver-install nethserver-mail nethserver-nut
 
 
-At the end of the procedure the system is ready for use.
+Al final del procedimiento, el sistema esta listo para su uso.
 
 
 
