@@ -19,7 +19,7 @@ instalación.
 .. NOTA:: 
     
     Los paquetes opcionales se pueden instalar también *después* de la instalación de 
-    el componente relativo: haga clic en el: guilabel: botón 'Apply'de nuevo 
+    el componente relativo: haga clic en el:guilabel: botón'Apply'de nuevo 
     y seleccionarlos en la pantalla de resumen.
 
 Installed software
