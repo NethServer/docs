@@ -118,6 +118,7 @@ proporcionada por una centralita Asterisk) en lugar de una línea telefónica tr
 Crear / Modificar 
 ================== 
 
+
 Nombre 
      Nombre el nuevo módem IAX que está creando. 
 
