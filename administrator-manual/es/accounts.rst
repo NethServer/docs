@@ -1,304 +1,295 @@
 ======
-Users
+Usuarios
 ======
 
-A system user is required to access many services provided by
-|product| (email, shared folders, etc..).
+Se requiere un usuario del sistema para acceder a los muchos servicios prestados por |product| (correo electrónico, carpetas compartidas, etc.). 
 
-Each user is characterized by a pair of credentials (user and
-password). A newly created user account remains locked until it has
-set a password. A blocked user can not use the services of
-servers that require authentication.
+Cada usuario se caracteriza por un par de credenciales (usuario y 
+contraseña). Una cuenta de usuario recién creada permanece bloqueada hasta que se haya establecido una contraseña. Un usuario bloqueado no puede utilizar los servicios de servidores que requieren autenticación.
 
-Create / Modify
-===============
+Crear / Modificar 
+=============== 
 
-Allows you to create or modify user data The username cannot
-be changed after creation.
+Le permite crear o modificar los datos de usuario El nombre de usuario no puede 
+ser cambiado después de la creación. 
 
-User
-------
+Usuario 
+------ 
 
-Basic information about the user. These fields are
- required.
+Información básica sobre el usuario. Estos campos son obligatorios. 
 
-Username
-    The *Username* will be used to access the services. It can
-    contain only lowercase letters, numbers, dashes, dots, and
-    underscore (_) and must start with a lowercase letter. For
-    example, "luisa", "jsmith" and "liu-jo" is a valid user name, and
-    "4Friends", "Franco Blacks" and "aldo / mistake" are not.
-Name
-    It is the user's real name. For example, "John"
-Surname
-    The user's last name
-Groups
-    Using the search bar, you can select the groups to
-    which the user will be added. The user can belong to several groups.
+Nombre de usuario 
+     El *Nombre de usuario* se utiliza para acceder a los servicios. Puede 
+     contener letras solamente minúsculas, números, guiones, puntos y 
+     guión bajo (_) y debe comenzar con una letra minúscula. Por ejemplo,
+     "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido y 
+     "4friends", "Franco Blacks" y "aldo / error" no lo son. 
+Nombre 
+     Es el nombre real del usuario. Por ejemplo, "John"
+Apellido 
+     El apellido del usuario 
+Grupos 
+     Uso de la barra de búsqueda, puede seleccionar los grupos a los que se agregará el usuario. El usuario puede pertenecer a varios grupos. 
 
-Change Password
----------------
+Cambiar contraseña 
+--------------- 
 
-Allows to set an initial password, or change the user's password.
+Permite establecer una contraseña inicial, o cambiar la contraseña del usuario. 
 
-Lock / Unlock
-----------------
+Bloquear / Desbloquear 
+---------------- 
 
-Allows you to lock or unlock a user. User data 
-will not be deleted.
+Le permite bloquear o desbloquear a un usuario. Los datos del usuario 
+no se eliminarán. 
 
-Delete
--------
+Borrar 
+------- 
 
-Delete the user. All user data will be deleted.
+Eliminar el usuario. Se borrarán todos los datos del usuario.
 
-Details
+Detalles
 --------
 
-This section collects information on the organization to which
-the user belongs to and is optional. The default values can be
-specify the menu item *Data organization*.
+En este apartado se recoge información sobre la organización a la que 
+pertenece el usuario y es opcional. Los valores por defecto pueden ser 
+especificados en  el elemento de menú *Organización de datos*. 
 
-For the following fields, you can specify a custom value,
-otherwise it is the setting made by the module "Data
-organization, "available only to the system administrator.
+Durante los siguientes campos, puede especificar un valor personalizado, 
+de lo contrario, es el ajuste realizado por el módulo de "Organización de datos", disponible sólo para el administrador del sistema. 
 
-* Company
-* Office
-* Address
-* City
-* Phone
-
-
-Service
--------
-
-This section contains the list of services to which the user is
-enabled.
+* Empresa 
+* Oficina 
+* Dirección 
+* Ciudad 
+* Teléfono 
 
 
-Mail
+Servicio 
+------- 
+
+Esta sección contiene la lista de servicios a los que esta habilitado
+el usuario.
+
+
+Correo
 ^^^^
+Bandeja de entrada 
+     Habilitar el buzón para el usuario. 
 
-Inbox
-    Enable the mailbox for the user.
+Reenvío de mensajes 
+   Reenviar mensajes de correo electrónico recibidos a una dirección alternativa. 
+Guarde una copia en el servidor 
+     Email reenviado todavía se guarda en la bandeja de entrada del usuario. 
 
-Forwarding messages
-    Forward received emails to an alternative address.
+Cuota de correo electrónico personalizado 
+     Permite especificar un valor de dimensión distinta de la predeterminada. 
 
-Keep a copy on the server
-    Forwarded email will still be saved in the user's inbox.
+Personalizar el tiempo de retención de los mensajes de spam. 
+     Los correos electrónicos de spam se eliminan a intervalos regulares.
+     Marcando la casilla que puede establecer el número de días que los mensajes
+     del usuario  clasificado como spam, se mantendrán en el sistema
+     antes de ser eliminados. 
 
-Custom email quota
-    Allows you to specify a dimension value other than the default.
+Direcciones de correo electrónico 
+     Lista de las direcciones de correo electrónico asociadas con el usuario.
 
-Customize retention time of the spam emails.
-    The spam emails are deleted at regular intervals. Ticking the 
-    box you can set the number of days the user's messages
-    classified as spam, will be maintained
-    in the system before being deleted.
 
-Email addresses
-    List of email addresses associated with the user.
-
-Shared folders (Samba)
+Carpetas Compartidas (Samba)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Samba is the implementation of CIFS protocol, which allows the use of
-Windows shared folders.
+Samba es la aplicación del protocolo CIFS, que permite el uso de 
+carpetas compartidas de Windows. 
 
-Shared folders (Samba)
-    Grant user permission to access folders shared via Samba.
+Carpetas compartidas (Samba) 
+     Conceder permisos de usuario para tener acceso a las carpetas compartidas a      través de Samba. 
 
-Remote Shell (SSH)
+Shell Remota (SSH)
 ==================
 
-Remote Shell (SSH)
-    Allows the user to access a secure shell on the server.
+Shell Remota (SSH)
+   Permite al usuario acceder a una shell segura en el servidor.
 
 ======
-Groups
+Grupos
 ======
 
-Create, modify or remove groups of users
-used to assign user permissions and access to services
-or email distribution lists.
+Crear, modificar o eliminar grupos de usuarios 
+utilizado para asignar permisos de usuario y de acceso a los servicios 
+o listas de distribución de correo electrónico.
 
-Create / Modify
+Crear / Modificar
 ===============
 
-Group
+Grupo
 -------------
 
-Create a new group, adding members to the group.
+Crear un nuevo grupo, agregar miembros al grupo. 
 
 
-Group Name
-    May contain only lowercase letters, numbers,
-    hyphens, and underscores and must start with
-    a lowercase letter. For example, "sales", "beta3" and "rev_net"
-    are valid names, while "3d", "Sales Office" and "q & a" are
-    not.
-Description
-    Enter a brief description of the group.
-Membership
-    Allows you to search for users on the server. Users
-    can be added to the group with the * Add * button. To delete the
-    users listed use the button *X*.
+Nombre del grupo 
+     Solo puede contener letras minúsculas, números, 
+     guiones y guiones bajos y debe comenzar con 
+     una letra minúscula. Por ejemplo, "ventas", "beta3" y "rev_net" 
+     son nombres válidos, mientras que "3d", "Oficina de Ventas" y "Q & A" son 
+     no. 
+descripción 
+     Introduzca una breve descripción del grupo. 
+afiliación 
+     Le permite buscar usuarios en el servidor. Los usuarios pueden ser añadidos al grupo con el botón *Añadir*. Para borrar los usuarios listados usar el botón 
+*X*. 
+
 
 Services
 --------
+Habilitar servicios disponibles para el nuevo grupo. 
 
-Enable services available to the new group.
+Email 
+     Habilitar el buzón para el grupo.
 
-Email
-    Enable the mailbox for the group.
-Send a copy of the message to group members
-    Enable the standard behavior of the distribution list: each
-    e-mail sent to the group will be copied to every user's mailbox.
-Deliver the message in a shared folder
-    Any email sent to the group will be delivered to an IMAP folder
-    shared visible only to group members.
-Create pre-defined email addresses
-    Automatically create email addresses for the group
-    for all domains configured on the server, like
-    *Group_name @ domain*. These email addresses can be changed in
-    *Management section -> Email Addresses*.
+   
+Enviar una copia del mensaje a los miembros del grupo 
+     Habilitar el comportamiento estándar de la lista de distribución: cada 
+     e-mail enviado al grupo será copiado en el buzón de cada usuario. 
+Entregar el mensaje en una carpeta compartida 
+     Cualquier correo electrónico enviado al grupo será entregado a una carpeta
+     IMAP compartida visible sólo para los miembros del grupo. 
+Crear direcciones de correo electrónico predefinidas 
+     Creación automática de direcciones de correo electrónico para el grupo de 
+     todos los dominios configurados en el servidor, como *GROUP_NAME @ dominio*.     Estas direcciones de correo electrónico se pueden cambiar en 
+     *Sección de Gestión -> Direcciones de correo electrónico*.
 
-Delete
+Borrar
 ======
 
-This action removes the defined groups and their
-distribution lists. The shared mailboxes associated
+Esta acción elimina los grupos definidos y sus listas de distribución.
+Los buzones compartidos asociados.
 
 
 .. _admin-user:
 
-Administrator user
+Usuario Administrador
 ==================
 
-The :guilabel:`Users` module creates the user :dfn:`admin` that allows access to the web interface with the same password for the :dfn:`root` user.
-The :index:`admin` user does not have access to the system from the command line.
-Despite being two separate users, the password of both coincide and can be changed from the web interface.
+El:guilabel: `Usuarios` modulo crea el usuario: dfn: `administrador` que permite acceder a la interfaz web con la misma contraseña para la :dfn:`root` usuario. 
+El:index: usuario `administrador` no tiene acceso al sistema desde la línea de comandos. 
+A pesar de ser dos usuarios distintos, la contraseña de ambos coinciden y se puede cambiar desde la interfaz web. 
 
-On some occasions, it may be useful to differentiate the admin and root password, for example, to allow an inexperienced user
-to use the web interface to perform common tasks and inhibiting access to the command line.
+En algunas ocasiones, puede ser útil para diferenciar el administrador y la
+ contraseña de root, por ejemplo, para permitir que un usuario sin experiencia pueda utilizar la interfaz web para realizar tareas comunes y que impide el acceso a la línea de comandos. 
 
-Avoid :index:`root` and admin password synchronization by run the following command ::
+Evite: index: `root` y sincronización de contraseña de administrador por ejecutar el siguiente comando :: 
 
  config September AdminIsNotRoot enabled
 
-Then change the admin password from the panel :guilabel:`Users`. Without password synchronization,
-admin will have the new password, and root will keep keep the old one.
+A continuación, cambiar la contraseña de administrador del panel: guilabel: `Usuarios`. Sin sincronización de contraseñas, el administración tendrá la nueva      contraseña, y el root  se mantendra el anterior.
 
-If you want to change the root password, it should be done from the command line using :command:`passwd`.
+Si desea cambiar la contraseña de root, debe hacerse desde la línea de comandos usando: comando: `passwd`.
 
-Password management
+Gestion de contraseñas 
 ===================
 
-The system provides the ability to set constraints on password :dfn: `complexity` and: dfn: `expiration`.
+El sistema ofrece la posibilidad de establecer limitaciones a la contraseña: dfn: y complejidad: dfn:  `caducidad`.
 
-Complexity
+Complejidad
 -----------
 
-The: index `password` complexity is a set of minimum conditions that password must match to be accepted by the system: 
-You can choose between two different management policies about password complexity:
+El: indice `contraseña` es un conjunto de condiciones minimas que debe coincidir con la contraseña que tiene que ser aceptado por el sistema. 
+Usted puede elegir entre dos políticas de gestión diferentes sobre la complejidad de contraseña:
 
-* :dfn: `none`: there is no specific control over the password entered, but minimum length is 7 characters
-* :dfn: `strong`
+* :dfn: `nada`: no hay un control específico sobre la contraseña introducida, pero la longitud mínima es de 7 caracteres 
+* :dfn: `fuerte`
 
-The :index:`strong` policy requires that the password must comply with the following rules:
+El :indice:`fuerte` requiere que la contraseña debe cumplir con las siguientes reglas:
 
-* Minimum length of 7 characters
-* Contain at least 1 number
-* Contain at least 1 uppercase character 
-* Contain at least 1 lowercase character
-* Contain at least 1 special character
-* At least 5 different characters
-* Must be not present in the dictionaries of common words 
-* Must be different from the username
-* Can not have repetitions of patterns formed by 3 or more characters (for example the password As1.$ AS1. $ is invalid)
+* Longitud mínima de 7 caracteres 
+* Contener al menos 1 número 
+* Contener al menos 1 carácter en mayúscula 
+* Contener al menos 1 carácter en minúscula 
+* Contener al menos 1 carácter especial 
+* Por lo menos 5 caracteres diferentes 
+* Debe ser no está presente en los diccionarios de palabras comunes 
+* Debe ser diferente del nombre de usuario 
+* No se puede tener repeticiones de patrones formados por 3 o más caracteres (por ejemplo la  contraseña As1. $ AS1.$ es inválida) 
 
-The default policy is: dfn: `strong`.
+La política predeterminada es: dfn:`fuerte`.
 
-To change the setting to none ::
+Para cambiar el ajuste a ninguno ::
 
   config setprop PasswordStrength none Users
 
-To change the setting to strong ::
+Para cambiar el ajuste a la fuerte ::
 
   config setprop PasswordStrength Users strong
 
-Check the policy currently in use on the server ::
+Revise la política actualmente en uso en el servidor ::
 
   config GetProp PasswordStrength Users
 
 Expiration
 ----------
 
-The: index `password expiration` is enabled by default to 6 months from the time when the password is set.
-The system will send an e-mail to inform the users when their password is about to expire.
+El: indice `caducidad contraseña` está activada por defecto y 6 meses desde el momento en que se establece la contraseña. 
+El sistema le enviará un correo electrónico para informar a los usuarios cuando su contraseña está a punto de expirar. 
 
-.. note:: The system will refer to the date of the last password change, 
-   whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired. 
-   In this case you need to change the user password.
-   For example, if the last password change was made in January, and the activation of the deadline in October, 
-   the system will assume the password changed in January is expired, and notify the user.
+.. nota:: El sistema se referirá a la fecha del último cambio de contraseña, 
+       cualquiera que sea anterior más de 6 meses, el servidor enviará un correo        electrónico para indicar que la contraseña ha caducado.  
+       En este caso es necesario cambiar la contraseña de usuario. 
+       Por ejemplo, si el último cambio de contraseña se hizo en enero, y la activación de la fecha límite en octubre, el sistema asumirá la contraseña cambió en enero ha caducado, y notificar al usuario.
 
-If you wish to bypass the password expiration globally (also allow access for users with expired password) ::
+Si desea omitir la caducidad de las contraseñas a nivel mundial (también permitir el acceso a usuarios con contraseñas caducadas) :: 
 
   config setprop PasswordStrength PassExpires no
   event signal-password-policy-update
 
-To disable password expiration for a single user (replace username with the user) ::
+Para desactivar la caducidad de la contraseña para un usuario único (reemplace username con el usuario) ::
 
   db accounts setprop <username> PassExpires no
   event signal-password-policy-update
 
 
-Below are the commands to view enabled policies.
+A continuación se presentan los comandos para ver las directivas habilitadas. 
 
-Maximum number of days for which you can keep the same password (default: 180) ::
+El número máximo de días en que se puede mantener la misma contraseña (por defecto: 180) ::
 
   config GetProp PasswordStrength MaxPassAge
 
 
-Minimum number of days for which you are forced to keep the same password (default 0) ::
+
+
+Numero minimo de días en los que se ven obligados a mantener la misma contraseña (por defecto 0) ::
 
   config GetProp PasswordStrength MinPassAge
 
 
-Number of days on which the warning is sent by email (default: 7) ::
+Número de días en que el aviso se envió por correo electrónico (predeterminado: 7) ::
 
   config GetProp PasswordStrength PassWarning
 
 
-To change the parameters replace the :command:`getprop` command with :command:`setprop`,  
-then add the desired value at end of the line. Finally apply new configurations::
+Para cambiar los parámetros que reemplazan el: comando: `GetProp` comando con: comando: `setprop`, 
+a continuación, agregue el valor deseado en el extremo de la línea. Finalmente aplicar nuevas configuraciones ::
 
   event signal-password-policy-update
 
 
 
-For example, to change to 5 "Number of days on which the warning is sent by email" ::
+Por ejemplo, para cambiar al 5 "Número de días en que el aviso es enviado por correo electrónico" ::
 
  config setprop PasswordStrength PassWarning 5
  event signal-password-policy-update
 
 
 
-Effects of expired password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or 
-or other computer if the machine is part of the domain. 
+Efectos de la contraseña caducada 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Domain password
-----------------
+Después de caducidad de la contraseña, el usuario será capaz de leer y enviar correos electrónicos, pero ya no puede acceder a las carpetas e impresoras (Samba) compartidas o otro equipo si el equipo es parte del dominio.  
 
-If the system is configured as a domain controller,users can change their password using the Windows tools.
 
-In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
-Windows performs preliminary checks and sends the password to the server where they are then evaluated 
-with enabled policies.
+Contraseña de dominio
+---------------------
+
+Si el sistema está configurado como controlador de dominio, los usuarios pueden cambiar su contraseña utilizando las herramientas de Windows. 
+
+En este último caso no se puede establecer contraseñas más cortas que 6 *caracteres*, independientemente de las directivas de servidor. Windows realiza comprobaciones preliminares y envía la contraseña al servidor en el que se evalúan las políticas habilitadas.
