@@ -1,114 +1,106 @@
-==============
-Shared folders
-==============
+========================
+Las carpetas compartidas
+========================
 
-A shared folder is a resource on the system which can be
-accessed according to services installed on the system and permissions set
-by this module.
+Una carpeta compartida es un recurso en el sistema que se puede acceder de acuerdo a los servicios instalados en el sistema y los permisos establecidos por este módulo. 
 
-Create new / edit
------------------
 
-Depending on the services installed on your system you will see
-several tabs.
+Crear nueva / editar
+--------------------
+
+Dependiendo de los servicios instalados en el sistema, verá 
+varias pestañas. 
 
 General
 ^^^^^^^
 
-Name
-    The name of the shared folder. It can only contain lower case letters,
-    numbers, dots, dashes and underscores. The maximum length of the name is 12 characters.
+Nombre 
+     El nombre de la carpeta compartida. Sólo puede contener letras minúsculas, 
+     números, puntos, guiones y guiones bajos. La longitud máxima del nombre es de 12 caracteres. 
 
-Description
-    Optional field for a brief description of the shared folder.
+Descripción 
+     Campo opcional para una breve descripción de la carpeta compartida. 
 
-Group owner
-    The owning group of the shared folder, only members of the
-    group can access the folder.
+Propietario del grupo 
+     El grupo propietario de la carpeta compartida, sólo los miembros del 
+     grupo puede acceder a la carpeta. 
 
-Allow writing to the group owner
-    Allow write access to members of the owning group.
+Permitir escrito al propietario del grupo 
+     Permitir el acceso de escritura a los miembros del grupo propietario. 
 
-Allow read access to all
-    Read access to anyone who connects to the system, as well as
-    public networks.
+Permitir el acceso de lectura a todos 
+     Acceso de lectura a cualquiera que se conecte al sistema, así como 
+     redes públicas.
 
 ACL
 ^^^
 
-The Access Control List allows specifing access permissions to the
-shared folder for each users or groups, in addition to those of the
-group owner.
+La Lista de control de acceso permite acceder  a los permisos especificos de la 
+carpeta compartida para cada uno de los usuarios o grupos, además de aquellas del propietario del grupo. 
 
-Read
-    Allow or deny read access to the user or group selected.
+Leer 
+     Permitir o denegar el acceso de lectura al usuario o grupo seleccionado. 
 
-Write 
-    Allow or deny the access in writing to the user or group 
-    selected.
+Escribir 
+     Permitir o denegar el acceso de escritura para el usuario o grupo 
+     seleccionado.
 
 
-Delete
+Borrar
 ------
 
-Removes the folder and all its contents. *The action is not
-reversible!* The only way to recover the contents of a folder shared
-that as been removed is to restore a backup.
+Elimina la carpeta y todo su contenido. *La acción no es 
+reversible!* La única manera de recuperar el contenido de una carpeta compartida 
+que a medida que se han eliminado, para restaurar es una copia de seguridad.
 
-Reset permissions
------------------
+Restablecer los permisos
+------------------------
 
-Set the group owner and ACLs configured using this module
-on all files in the folder. The operation will be performed recursively on
-all files and subfolders in the shared folder.
+Establezca el propietario del grupo y las ACL configuradas usando este módulo 
+en todos los archivos de la carpeta. La operación se lleva a cabo de forma recursiva en todos los archivos y subcarpetas de la carpeta compartida.
 
 
-Web access 
-^^^^^^^^^^
+Acceso a la web 
+^^^^^^^^^^^^^^^
+Permite el acceso a la carpeta compartida desde la web. 
 
-Enables access to the shared folder from the web.
+Host virtual 
+     Te permite elegir que nombre de host se encuentra disponible en la carpeta compartida. La lista viene de la tarjeta de "Alias servidor" en el 
+     módulo "DNS y DHCP." 
 
-Virtual Host 
-    Allows you to choose which host name is available on the shared
-    folder. The list comes from the card "Server Alias" in the
-    module "DNS and DHCP."
+Dirección Web (URL) 
+     Define la dirección web en la que el recurso está disponible. 
 
-Web address (URL)
-    Defines the web address on which the resource is available. 
+Permitir el acceso sólo desde redes locales 
+     Si sólo se activa, restringe el acceso al recurso sólo para
+     redes locales. 
 
-Allow access only from local networks 
-    If only enabled, restricts access to the resource only to local
-    networks.
-
-Require a password 
-    The access to the resource from the web requires no
-    authentication. Enable this option to require a password: specify
-    it in the field below.
+Requerir una contraseña 
+     El acceso a los recursos de la web no requiere 
+     la autenticación. Active esta opción para solicitar una contraseña: especifique en el campo de abajo.
 
 
 Samba
 ^^^^^ 
+Samba ofrece compartir archivos e impresoras para clientes SMB / CIFS (compartir archivos e impresoras en Windows). 
 
-Samba provides file and printer sharing to client SMB/CIFS (Windows
-File and Printer Sharing).
+Habilitar Samba 
+      Permite el acceso como una "carpeta compartida" de Windows. 
 
-Enable Samba 
-     Enables access as a "shared folder" of Windows.
+Papelera de reciclaje de red 
+      Recopila los archivos eliminados por esta carpeta compartida, de modo similar a la papelera de reciclaje de Windows. 
 
-Network Recycle Bin 
-     Collects files deleted by this shared folder, so similar to the
-     Windows Recycle Bin.
+Mantener los archivos con el mismo nombre 
+      Si dos archivos con el mismo nombre, que siguen siendo distintos en la basura. por 
+      desactivar esta opción, el último sobrescribe el año anterior. 
 
-Keep files of the same name 
-     If two files of the same name, they remain distinct in trash. By
-     disabling this option, the last one overwrites the previous year.
+Acceso de invitados 
+      A *usuario invitado* es un usuario cuya identificación ha fallado porque 
+      no proporcionó credenciales o ha facilitado información incorrecta. Para 
+      usuarios o dispositivos que actúan de este modo, se pueden conceder la 
+      siguientes permisos: 
 
-Guest Access 
-     A *guest user* is a user whose identification is failed because
-     it did not provide credentials or has provided incorrect. For
-     users or devices that act in this mode, you can grant the
-     following permissions:
+      * Ninguno 
+      * Sólo lectura 
+      * Leer y escribir
 
-     * None 
-     * Read-only 
-     * Read and write
