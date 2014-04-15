@@ -6,6 +6,7 @@ ntopng es una poderosa herramienta que permite analizar en tiempo real
 el tráfico de red. Esto le permite evaluar el ancho de banda utilizado por 
 hosts individuales y para identificar los protocolos de red más utilizados. 
 
+
 Habilitar ntopng 
      Habilitación ntopng, todo el tráfico que pasa a través de las interfaces de red 
      se analizará. Puede causar una desaceleración de la red y una 
