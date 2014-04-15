@@ -3,8 +3,7 @@ Reserva
 ======== 
 
 La copia de seguridad contiene todos los datos, tales como los directorios principales de los usuarios, 
-carpetas compartidas, mensajes de correo electrónico, sino también todas las configuraciones 
-del sistema. Funciona todos los días y puede ser total o 
+carpetas compartidas, mensajes de correo electrónico, sino también todas las configuraciones del sistema. Funciona todos los días y puede ser total o 
 gradual, dependiendo del día de la semana y la configuración. la 
 medios disponibles para la copia de seguridad son: disco USB, recurso compartido de Windows 
 y NFS share. Al final del procedimiento de copia de seguridad, se enviará una notificación por correo electrónico 
