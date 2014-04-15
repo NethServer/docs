@@ -2,6 +2,7 @@
 #
 # NethServer documentation build configuration file, created by
 # sphinx-quickstart on Sun Jan 19 10:47:03 2014.
+
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
