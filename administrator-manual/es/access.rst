@@ -2,7 +2,7 @@
 Acceso al |product|
 ====================
 
-|product|puede ser configurado mediante una interfaz web. Para acceder a la inteface web puede utilizar las direcciones de abajo: 
+|product| puede ser configurado mediante una interfaz web. Para acceder a la inteface web puede utilizar las direcciones de abajo: 
 
 https://a.b.c.d:980 o https://server_name:980 
 
