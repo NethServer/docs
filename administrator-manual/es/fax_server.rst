@@ -8,12 +8,12 @@ modem IAX virtual.
 
 El módem debe ser compatible con el envío y la recepción de faxes de preferencia en la clase 1 o 1,0 (2, 2.0 y 2.1 clases también son compatibles). 
 
-general 
+General 
 ======== 
 
-código del país 
+Código del país 
      El prefijo internacional que se antepone a su número de fax. 
-prefijo 
+Prefijo 
      Código de área. 
 Número de fax 
      El número de fax del remitente. 
@@ -21,24 +21,24 @@ Remitente (TSI)
      La ETI se imprimirá en el encabezado del fax del destinatario, por lo general en la fila superior. Es posible introducir el número de fax o el nombre de una longitud total de hasta 20 caracteres (se recomienda el nombre de la empresa). Sólo se permiten caracteres alfanuméricos.
 
 
-Modem
-=====
+Módem 
+===== 
 
-Modem
-    The physical port (COM or USB) to which the modem is attached or virtual fax modem
+Módem 
+     El puerto físico (COM o USB) a la que el módem está conectado o un módem fax virtual 
 
-    * Device Standard: allows you to select the device from a list of common ports
-    * Custom Device: allows you to specify a custom device to be used as a fax modem. * Must be the name of a device in the system.*
-Mode
-    Specifies the operating mode of the selected device. The available modes are:
+     * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes 
+     * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. *Debe ser el nombre de un dispositivo en el sistema.* 
+Modo 
+     Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son: 
 
-    * Send and receive: the modem will be used to send and receive faxes
-    * Receive only: the modem will be used only for receiving faxes
-    * Send only: the modem will only be used for sending faxes
-PBX Prefix
-    If the fax modem is connected to a PABX, you may need to enter an access code to "get an outside line."
-    If the modem is directly connected to a line, or the PBX requires no code, leave the field empty.
-    If you are behind a PBX, enter the prefix to be dialed.
+     * Enviar y recibir: el módem se utiliza para enviar y recibir faxes 
+     * Recibir sólo: el módem sólo se utilizará para la recepción de faxes 
+     * Enviar sólo: el módem sólo se utilizará para el envío de faxes 
+PBX Prefijo 
+     Si el módem de fax está conectado a una centralita, puede que tenga que introducir un código de acceso a "obtener una línea externa." 
+     Si el módem está conectado directamente a una línea o el PBX requiere ningún código, deje el campo vacío. 
+     Si estás detrás de un PBX, introduzca el prefijo que se debe marcar.
 
 Wait for dial tone
     Some modems are not capable of recognizing a dial tone
