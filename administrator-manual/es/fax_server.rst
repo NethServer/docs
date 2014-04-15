@@ -40,99 +40,99 @@ PBX Prefijo
      Si el módem está conectado directamente a una línea o el PBX requiere ningún código, deje el campo vacío. 
      Si estás detrás de un PBX, introduzca el prefijo que se debe marcar.
 
-Wait for dial tone
-    Some modems are not capable of recognizing a dial tone
-    (especially if connected to a PBX) and do not dial the number
-    signalling the absence of tone (error "No Dial Tone").
+Esperar tono de marcación 
+     Algunos módems no son capaces de reconocer el tono de marcación 
+     (sobre todo si está conectado a un PBX) y no marcar el número 
+     señalando la ausencia de tono (de error "No hay tono de marcado"). 
 
-    To configure the modem to ignore the absence of line and
-    immediately dial the number select Disabled. The recommended setting is
-    "Enabled", you may want to disable * Wait for dial tone * only in case of problems.
-
-
-Email notifications
-===================
-
-Received faxes format
-    By default, the fax server forwards the received faxes as
-    emails with an attachment. Specify the email address
-    where faxes will be delivered, and one or more formats for
-    the attachment. To not receive the fax as attachment, but only a
-    notification of reception, deselect all formats.
-
-Forward received faxes to
-
-    * Group "faxmaster"
-        By default, the received faxes are sent to *faxmaster*: if
-        a user needs to receive incoming faxes should be added to this
-        group.
-    * External email
-        Input an external email address in case you
-        want to send received faxes to an email address not on this server.
-
-Sent faxes format
-    If requested by the client, the server sends an email notification with an
-    attachment. Choose the format in which you prefer to receive the fax.
-    Deselect all options if you do not want to receive the fax attached.
-    
-
-Add delivery notification
-    If selected, adds a delivery notification report in the sent fax email.
+     Para configurar el módem para que ignore la ausencia de la línea y 
+     marcar inmediatamente el número seleccionar Desactivado. La configuración recomendada es 
+     "Habilitado", es posible que desee desactivar * Espere el tono de marcación * sólo en caso de problemas. 
 
 
+Notificaciones por correo electrónico 
+=================== 
 
-Additional functions
-=====================
+Formato de los faxes recibidos 
+     De forma predeterminada, el servidor de fax envía los faxes recibidos como 
+     mensajes de correo electrónico con un archivo adjunto. Especifique la dirección de correo electrónico 
+     donde se entregarán los faxes, y uno o más formatos 
+     el archivo adjunto. Para no recibir el fax como archivo adjunto, pero sólo una 
+     notificación de recepción, anule la selección de todos los formatos.
 
-View faxes sent by the client
-    The fax clients also allow you to view all incoming faxes. If,
-    for reasons of confidentiality, you want to filter out faxes
-    received, disable this option.
+Faxes recibidos hacia Adelante 
 
-Automatically print received faxes
-    Automatically print all received faxes on a
-    PCL5 compatible printer configured on |product|. The printer should be
-    selected using the appropriate drop down menu.
+     * Grupo "faxmaster" 
+         Por defecto, los faxes recibidos se envían a *faxmaster*: si 
+         un usuario necesita para recibir los faxes entrantes, debe añadirse a esta 
+         grupo. 
+     * Correo electrónico externo 
+         Introduzca una dirección de correo electrónico externa en caso de que 
+         desea enviar los faxes recibidos a una dirección de correo electrónico no en este servidor. 
 
-SambaFax
-    By selecting this option, the fax server can make available to the
-    local area network a virtual printer named "sambafax" that will
-    be configured on the client, by selecting the Apple LaserWriter driver
-    16/600 PS. Documents printed on the network printer sambafax
-    must contain the exact phrase "Fax Number:" followed by the
-    fax number of the recipient.
-
-Send daily report
-    Send a daily report to the administrator
-
-=========
-IAX Modem
-=========
-
-This page allows you to configure IAX modems.
-
-An IAX modem is a software modem that uses an IAX channel (usually 
-provided by an Asterisk PBX) instead of a traditional telephone line.
+Formato de faxes enviados 
+     Si lo solicita el cliente, el servidor envía una notificación por correo electrónico con un 
+     archivo adjunto. Seleccione el formato en el que prefiere recibir el fax. 
+     Anule la selección de todas las opciones si no desea recibir el fax adjunto. 
 
 
-Create / Modify
-===============
+Añadir notificación de entrega 
+     Si se selecciona, se agrega un informe de notificación de entrega en el correo electrónico enviado por fax.
 
-Name
-    Name the new IAX modem that you are creating.
 
-Server IP
-    IP address of the server on which the IAX modem registers (eg IP address of the Asterisk server).
 
-Extension
-    IAX extension on which you want to receive faxes.
+Funciones adicionales 
+===================== 
 
-Password 
-    IAX extension password defined previously.
+Ver los faxes enviados por el cliente 
+     Los clientes de fax también le permiten ver todos los faxes entrantes. Si, 
+     por razones de confidencialidad, se desea filtrar faxes 
+     recibidos, desactive esta opción. 
 
-Caller ID
-    Caller ID (number) shown in the outgoing faxes.
+Imprimir automáticamente los faxes recibidos 
+     Imprimir automáticamente todos los faxes recibidos en un 
+     Impresora compatible con PCL5 configurado en |Product|. La impresora debe estar 
+     seleccionado con la caída adecuada en el menú desplegable. 
 
-Caller Name
-    Caller name shown in the outgoing faxes.
+SambaFax 
+     Al seleccionar esta opción, el servidor de fax puede poner a disposición del 
+     red de área local de una impresora virtual llamada "sambafax" que se 
+     configurarse en el cliente, seleccionando el controlador Apple LaserWriter 
+     16/600 PS. Documentos impresos en la impresora de red sambafax 
+     debe contener la frase exacta "Número de fax:" seguido del 
+     número de fax del destinatario.
+
+Enviar informe diario 
+     Enviar un informe diario al administrador 
+
+========= 
+IAX Modem 
+========= 
+
+Esta página le permite configurar los módems IAX. 
+
+Un módem IAX es un módem de software que utiliza un canal IAX (normalmente 
+proporcionada por una centralita Asterisk) en lugar de una línea telefónica tradicional. 
+
+
+Crear / Modificar 
+================== 
+
+Nombre 
+     Nombre el nuevo módem IAX que está creando. 
+
+Servidor IP 
+     Dirección IP del servidor en el que los registros de módem IAX (por ejemplo, la dirección IP del servidor Asterisk).
+
+Extensión 
+     IAX extensión en el que desea recibir los faxes. 
+
+Contraseña 
+     Define IAX contraseña de la extensión previamente. 
+
+Identificador de llamadas 
+     Identificador de llamadas(número) que se muestra en los faxes salientes. 
+
+Nombre del llamante 
+     Nombre del llamante se muestra en los faxes salientes.
 
