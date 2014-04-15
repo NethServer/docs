@@ -22,20 +22,20 @@ instalación.
     el componente relativo: haga clic en el:guilabel: botón'Apply'de nuevo 
     y seleccionarlos en la pantalla de resumen.
 
-Installed software
-==================
+Software instalado 
+================== 
 
-It lists |product| RPM packages installed on your system.  Where
-available, it is possible to open the development page by clicking on
-the package name.
+En él se enumeran |Product| paquetes RPM instalados en su sistema.Donde estan 
+disponibles, es posible abrir la página de la promoción haciendo clic en 
+el nombre del paquete. 
 
-Packages are sorted alphabetically. Displayed fields are:
+Los paquetes se ordenan alfabéticamente. Campos mostrados son: 
 
-Name
-    Name of the RPM package.
+Nombre 
+     Nombre del paquete RPM. 
 
-Version
-    Version of the installed package.
+Versión 
+     Versión del paquete instalado. 
 
-Release
-    Release of the installed package.
+Liberación 
+     Lanzamiento del paquete instalado.
