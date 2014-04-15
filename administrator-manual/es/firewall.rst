@@ -1,131 +1,130 @@
-============
-Port forward
-============
+================
+Puerto delantero
+================
 
-Use this panel to change firewall rules
-ie to open a specific port (or a range of ports) on the server
-and forward the traffic from a port to another. Port forwarding rules
-allow access to hosts on the local network from the Internet.
+Utilice este panel para cambiar las reglas del cortafuegos
+es decir, para abrir un puerto específico (o un rango de puertos) en el servidor
+y reenviar el tráfico de un puerto a otro. Las reglas de reenvío de puerto
+permiten el acceso a los hosts de la red local desde Internet.
 
-Create / Modify
-===============
+Crear / Modificar
+=================
 
-Source port
-    Insert the port open on the public IP.
+Puerto de origen 
+     Inserte el puerto abierto en la dirección IP pública. 
 
-Destination port
-    Insert the port on the internal host which will be destination of the traffic.
+Puerto de destino 
+     Introduzca el puerto en el host interno que será el destino del tráfico. 
 
-Destination host
-    IP address of the internal machine where traffic will be redirected.
+Host de destino 
+     Dirección IP de la máquina interna donde será redirigido tráfico. 
 
-Allow only
-    Allow traffic forward only from some networks/hosts source.
+Permitir sólo 
+     Permitir el tráfico hacia delante sólo de alguna fuente redes / hosts. 
 
-Description
-    Optional description of port forwarding rule.
+Descripción 
+     Descripción opcional de la regla de reenvío de puertos.
 
-Enable / Disable
+Activar / Desactivar
 ====================
 
-Port forwarding rules are enabled by default on
-creation. You can temporarily enable/disable them
-using this button
+Las reglas de reenvío de puerto están habilitadas de forma predeterminada en 
+creación. Puede activar temporalmente / desactivarlos 
+Con este botón 
 
-Yes
-    Enable the rule.
+sí 
+     Habilitar la regla. 
 
-No
-    Disable the rule.
+no 
+     Deshabilitar la regla. 
 
-Firewall check
-==================
+Verificacion del servidor de seguridad
+======================================
 
-Performs a general control over configured firewall rules. Useful for inconsistencies detection.
 
-====================
-Bandwidth management
-====================
+Realiza un control general sobre las reglas del cortafuegos configuradas. Útil para la detección de inconsistencias.
 
-The bandwidth manager allows you to change priorities to traffic
-going through the firewall (which must have at least two network interfaces).
+===========================
+Gestion de ancho de banda
+===========================
+
+El gestor de ancho de banda le permite cambiar las prioridades en el tráfico al
+pasar por el servidor de seguridad (que debe tener al menos dos interfaces de red).
 
 General
 ========
 
-Enables or disables bandwidth management.
+Activa o desactiva la gestión de ancho de banda. 
 
 
-Interface rules
+Reglas de interfaz
 ===============
 
-For each interface on which you want to manage the bandwidth priority is
-necessary to specify the maximum amount of bandwidth available in both
-outgoing and incoming directions. No data will be transmitted at a rate
-over to that configured. It's imperative to use actual values,
-preferably measured with speed tests, in particular for the band in
-upload (outgoing). The table shows the values configured on each
-interface, allowing you to modify the bandwidth limits.
+Para cada interfaz en la que desea administrar la prioridad de ancho de banda es 
+necesario especificar la cantidad máxima de ancho de banda disponible en 
+direcciones salientes y entrantes. Si no hay datos se transmiten a una velocidad configurada. Es imprescindible utilizar los valores reales, 
+medido preferiblemente con pruebas de velocidad, en particular para la banda en 
+cargar (saliente). La tabla muestra los valores configurados en cada 
+interfaz, lo que permite modificar los límites de ancho de banda. 
 
-Create / Modify
+Crear / Modificar
 ---------------
 
-Create a configuration for interface bandwidth limits.
+Crear una configuración de límites de ancho de banda de la interfaz. 
 
-Interface
-    Select the interface to which the limits of bandwidth applies.
-     In general, the bandwidth is limited only on the WAN interfaces.
+Interfaz 
+     Seleccione la interfaz a la que se aplica el límite de ancho de banda. 
+      En general, el ancho de banda está limitado sólo en las interfaces WAN. 
 
-Incoming bandwidth (kbps)
-    Set the amount of incoming bandwidth (download).
+Ancho de banda entrante (kbps) 
+     Ajuste la cantidad de ancho de banda entrante (descargar). 
 
-Outgoing bandwidth (kbps)
-    Set the amount of output bandwidth (upload).
+Ancho de banda de salida (kbps) 
+     Ajuste la cantidad de ancho de banda de salida (carga).
 
-Description
-    An optional note (for example: ADSL 1280/256).
+Descripcion
+    Una nota opcional (por ejemplo: ADSL 1280/256).
 
 
-Address rules
+Reglas de direcciones
 ==============
 
-The table shows the list of network addresses (IP or MAC) that have
-customized priority rules. For example, you may decide
-that traffic from a specific computer on the local network
-have a low priority or high compared to others.
+La tabla muestra la lista de direcciones de red (IP o MAC) que tienen 
+personalizada reglas de prioridad. Por ejemplo, usted puede decidir 
+que el tráfico de un equipo específico en la red local 
+tener una prioridad alta o baja en comparación con otros. 
 
 
-Create / Modify 
----------------
+Crear / Modificar 
+-----------------
 
-IP or MAC address
-    Enter the IP address or MAC address that identifies the computer.
+Dirección IP o MAC 
+     Introduzca la dirección IP o la dirección MAC que identifica el ordenador. 
 
-Description
-     An optional description to identify
-     clearly the purpose of the rule. For example: high priority for the
-     boss.
+descripción 
+      Una descripción opcional para identificar 
+      claramente el propósito de la regla. Por ejemplo: una alta prioridad para el jefe. 
 
-Port rules 
-==========
+Reglas de puerto
+================
 
-The table shows the list of TCP / UDP ports that have rules with
-customized priority. For example, you can specify that the
-traffic on a particular network service (from or to
-a particular port) has a low priority or high
-compared to normal network traffic.
+La tabla muestra la lista de puertos TCP / UDP que tienen reglas
+personalizadas prioridad. Por ejemplo, puede especificar que el 
+tráfico en un servicio de red en particular (desde o hacia 
+un puerto en particular) tiene una prioridad baja o alta 
+en comparación con el tráfico normal de la red.
 
 
-Create 
+Crear
 ------
 
-Port
-    Specify the port used by the network service.
+Puerto 
+     Especifique el puerto utilizado por el servicio de red. 
 
-Protocol
-    Enter the IP protocol.
+Protocolo 
+     Introduzca el protocolo IP. 
 
-Description
-    An optional description that 
-    clearly states the purpose of the rule. For example: background for
-    FTP service.
+Descripción 
+     Una descripción opcional que 
+     establece claramente la finalidad de la norma. Por ejemplo: Fondo para 
+     Servicio FTP.
