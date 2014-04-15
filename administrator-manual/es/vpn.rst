@@ -2,51 +2,48 @@
 VPN
 ===
 
-VPN supported configurations:
+VPN configuraciones admitidas:
 
-1. Connecting a remote terminal to the internal network
-   (Roadwarrior), based on L2TP/IPsec or OpenVPN.
+1. Conexión de un terminal remoto a la red interna 
+    (Roadwarrior), basado en L2TP/IPsec o OpenVPN. 
 
-2. Connecting two remote networks (net2net), based on OpenVPN.
+2. Conexión de dos redes remotas (net2net), basado en OpenVPN.
 
 
-Account
+Cuenta
+=======
+La ficha cuenta permite gestionar usuarios para las conexiones VPN al servidor local. Los usuarios pueden ser usuarios normales del sistema o dedicados exclusivamente al servicio VPN (sin servicios estándar como el correo electrónico).
+
+Crear nueva
+-----------
+
+Permitir la creación de un nuevo usuario. Para cada usuario, el sistema 
+crea un certificado x509. 
+
+VPN sólo 
+     El nombre que se utiliza para el acceso VPN. Puede contener sólo 
+     minúsculas, números, guiones, guiones bajos (_) y 
+     debe comenzar con una letra minúscula. Por ejemplo, "luisa", 
+     "jsmith" y "liu-jo" es un nombre de usuario válido, mientras que "4Friends" 
+     "Franco Blacks" y "aldo / error" no lo son. 
+
+Usuario del Sistema 
+     Habilitar el acceso VPN para un usuario ya existente en el sistema. 
+     El usuario puede seleccionar de la lista desplegable. 
+
+Red de control remoto 
+     Introduzca esta información sólo cuando se desea crear una VPN nt2net. 
+     Estos campos se utilizan por el servidor local para crear correctamente 
+     rutas a la red remota. 
+
+    * Dirección de red: la dirección de red de la red remota. Ejemplo: 10.0.0.0 
+    * Máscara de red: máscara de red de la red remota. Por ejemplo: 255.255.255.0
+    
+Cliente
 =======
 
-The account tab allows to manage users used for
-VPN connections to the local server. Users can be normal
-system users or dedicated exclusively to the VPN service (without standard services like email).
+El cliente VPN le permite conectarse al servidor a otro servidor VPN 
+con el fin de crear una VPN net2net. Actualmente sólo OpenVPN net2net son compatibles.
 
-Create new
-----------
-
-Allow the creation of a new user. For each user, the system
-creates a x509 certificate.
-
-VPN only
-    The name used for VPN access. It can contain only
-    lowercase letters, numbers, hyphens, underscores (_) and
-    must begin with a lowercase letter. For example "luisa",
-    "Jsmith" and "liu-jo" is a valid user name, while "4Friends"
-    "Franco Blacks" and "aldo / mistake" are not.
-
-System User
-    Enable VPN access for a user already existing in the system.
-    The user can be selected from the drop-down list.
-
-Remote network
-    Enter this information only when you want to create a nt2net VPN.
-    These fields are used by the local server to correctly create
-    routes to the remote network.
-
-    * Network Address: the network address of the remote network. Eg: 10.0.0.0 
-    * Netmask: Netmask of the remote network. Eg: 255.255.255.0
-
-
-Client
-======
-
-The VPN client allows you to connect the server to another VPN server
-in order to create a net2net VPN.  Currently only OpenVPN net2net are supported.
 
 
