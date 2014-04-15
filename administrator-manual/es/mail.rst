@@ -119,169 +119,169 @@ Vuelva a intentar el envío de
      error y el mensaje se elimina de la cola de envío, el servidor no hay 
      ya intentar entregarlo.
 
-Send using a smarthost
-    The server will attempt to send emails directly to
-    destination (recommended in most cases). Selecting
-    instead to sent through a smarthost, it will attempt to deliver them through the 
-    ISP's SMTP server (recommended in case of unreliable connection or
-    Residential ADSL, dynamic IP, etc).
+Enviar usando un host inteligente 
+     El servidor intentará enviar correos electrónicos directamente a 
+     destino (recomendado en la mayoría de los casos). Selección 
+     en lugar de enviar a través de un host inteligente, se intentará entregar a través de la 
+     El servidor SMTP del ISP (se recomienda en caso de conexión poco fiable o 
+     ADSL residencial, IP dinámica, etc.) 
 
-Host Name
-    The name of the mail server of the provider.
+Nombre de host 
+     El nombre del servidor de correo del proveedor. 
 
-Port
-    The port of the mail server of the provider.
+Puerto 
+     El puerto del servidor de correo del proveedor. 
 
-Username
-    If the provider's server requires authentication, specify the 
-    username.
+Nombre de usuario 
+     Si el servidor del proveedor requiere autenticación, especifique el 
+     nombre de usuario. 
 
-Password
-    The password required by the provider.
+Contraseña 
+     La contraseña requerida por el proveedor.
 
-Allow non-encrypted connection
-    Normally, if using an authenticated connection (with username and password),
-    an encrypted connection is required to protect the password. Selecting this option will
-    permit a non-secure connection to connect to the
-    provider (not recommended, use only if ISP has problems).
+Permitir conexión no cifrada 
+     Normalmente, si se utiliza una conexión autenticada (con nombre de usuario y contraseña), 
+     Se requiere una conexión cifrada para proteger la contraseña. Al seleccionar esta opción, se 
+     permitira una conexión no segura para conectarse al 
+     proveedor (no se recomienda, utilizar solamente si el ISP tiene problemas). 
 
-Queue Management
-================
+Gestión de Colas 
+================ 
 
-This tab allows you to manage the queue of emails in transit on the server.
-The table lists all the mail waiting to be delivered,
-and is normally empty. The following fields will be shown:
+Esta ficha le permite gestionar la cola de mensajes de correo electrónico en tránsito en el servidor. 
+La tabla recoge todo el correo en espera de ser entregado, 
+y está normalmente vacía. Los siguientes campos se mostrarán: 
 
-* Id: identifier of the message
-* Sender: from email address (who sent the message)
-* Size: The size in bytes of the email
-* Date: The date of creation of the email
-* Recipients: the list of recipients
-
-
-Delete
--------
-
-It's possible to delete an e-mail in the queue, for example, an email sent
-by mistake or too large.
-
-Remove all
--------------
-
-The button will delete all the emails in the queue.
-
-Try sending
--------------
-
-Normally, the server, in case of problems while sending the email,
-retries at regular intervals. Clicking Attempt to send, emails
-will be sent immediately.
-
-Update
---------
-
-Reload the list of emails in the queue.
-
-===============
-Email addresses
-===============
-
-Associate email address to users or groups of the system.
+* Id: identificador del mensaje 
+* Remitente: desde la dirección de correo electrónico (que envió el mensaje) 
+* Tamaño: El tamaño en bytes de la dirección de correo electrónico 
+* Fecha: La fecha de la creación del correo electrónico 
+* Destinatarios: la lista de destinatarios
 
 
-Create / Modify
-===================
+Borrar 
+------- 
 
-Create the association between a new email address and a
-user or group already present in the system.
+Es posible eliminar un e-mail en la cola, por ejemplo, un correo electrónico enviado 
+por error o demasiado grande. 
 
-Email
-    Specify in the text field only the part before **@** character.
-    Then choose from the drop-down menu if the address is for a
-    specific domain or for *all* domains in the system.
+Retire todo 
+------------- 
 
-Description
-    A free text field for recording any annotation.
+El botón se borrará todos los mensajes de correo electrónico en la cola. 
 
-Account
-    Select a user or a group among those already in the
-    system to be associated with the email address.
+Pruebe a enviar 
+--------------- 
 
-Only local networks
-    Enabling this option will block the reception of messages
-    from external senders.
+Normalmente, el servidor, en caso de problemas al enviar el correo electrónico, 
+reintenta en intervalos regulares. Al hacer clic en el intento de enviar mensajes de correo electrónico, 
+será enviado de inmediato. 
 
-Delete
-=======
+Actualización 
+-------------- 
 
-Delete the e-mail address. This does not affect
-messages already delivered to the user or group associated with the address.
-Future messages destined the address will be rejected.
+Actualizar la lista de mensajes de correo electrónico en la cola.
 
-========================
-External email addresses
-========================
+================================= 
+Direcciones de correo electrónico 
+================================= 
 
-External email addresses are mailboxes that
-are checked at regular intervals using the **POP3** or **IMAP4** protocol.
-Messages contained in the mailbox are downloaded and delivered to
-local users or groups, as per configuration in 
-this form.
-
-External addresses
-==================
-
-Configure the list of external addresses and the association with the user of the system.
-
-Create / Modify
----------------
-
-Create or edit an external address.
-
-Email
-    The external email address to check.
-
-Protocol
-    The protocol used to access the remote server. It can be *POP3* or *IMAP4* (recommended).
-
-Server Address
-    Host name or IP address of the remote server.
-
-Username
-    Username used for authentication to the remote system.
-
-Password
-    The password used to authenticate.
-
-Account
-    Select the user or group that will receive the downloaded messages. 
-
-Enable SSL
-    Enable encryption of the connection with the remote server.
-
-Delete messages downloaded
-    If enabled, downloaded messages will be deleted from the remote server (recommended). Leave disabled to keep
-    a copy on remote server.
-
-Delete
--------
-
-Deleting an account will *not* delete the messages already delivered.
+Dirección de correo electrónico asociado a los usuarios o grupos del sistema. 
 
 
-Download now
-------------
+Crear / Modificar 
+=================== 
 
-Immediately starts the download from all external addresses.
+Crear la asociación entre una nueva dirección de correo electrónico y un 
+usuario o grupo ya presente en el sistema. 
+
+Email 
+     Especifique en el campo de texto de sólo la parte antes **@** personaje. 
+     A continuación, seleccione en el menú desplegable, si la dirección es para un 
+     dominio específico o para *todos los dominios* en el sistema. 
+
+Descripción 
+     Un campo de texto libre para registrar cualquier anotación.
+
+Cuenta 
+     Seleccione un usuario o un grupo entre los que ya están en el 
+     sistema que se asociará a la dirección de correo electrónico. 
+
+Sólo las redes locales 
+     Al habilitar esta opción bloqueará la recepción de mensajes 
+     de los remitentes externos. 
+
+Borrar 
+======= 
+
+Elimine la dirección de correo electrónico. Esto no afecta a 
+mensajes que ya se entregan al usuario o grupo asociado con la dirección. 
+Los próximos mensajes destinados dirección será rechazada. 
+
+========================================== 
+Direcciones de correo electrónico externas 
+========================================== 
+
+Direcciones de correo electrónico externas son buzones que 
+se comprueba a intervalos regulares utilizando los protocolos **POP3** o **IMAP4**.
+Los mensajes contenidos en el buzón de correo se descargan y se entregan a 
+los usuarios o grupos locales, como por configuración en 
+este formulario. 
+
+Direcciones externas 
+==================== 
+
+Configure la lista de direcciones externas y la asociación con el usuario del sistema. 
+
+Crear / Modificar 
+------------------ 
+
+Crear o editar una dirección externa. 
+
+Email 
+     La dirección de correo electrónico externa para comprobar. 
+
+Protocolo 
+     El protocolo utilizado para acceder al servidor remoto. Puede ser *POP3* o *IMAP4* (recomendado).
+
+Dirección del servidor 
+     Nombre de host o dirección IP del servidor remoto. 
+
+Nombre de usuario 
+     Nombre de usuario utilizado para autenticarse en el sistema remoto. 
+
+Contraseña 
+     La contraseña utilizada para autenticar. 
+
+Cuenta 
+     Seleccione el usuario o grupo que recibirá los mensajes descargados. 
+
+Habilitar SSL 
+     Habilitar el cifrado de la conexión con el servidor remoto. 
+
+Eliminación de los mensajes descargados 
+     Si está activado, los mensajes descargados se eliminan del servidor remoto (recomendado). Deja disabilitados para mantener 
+     una copia en el servidor remoto.
+
+Borrar 
+------- 
+
+Eliminar una cuenta *no* eliminar los mensajes ya entregados. 
 
 
-General
-========
+Descargar ahora 
+--------------- 
 
-Enable
-    Allows you to enable or disable the Fetchmail daemon that
-    downloads emails from external addresses.
+Inmediatamente se inicia la descarga de todas las direcciones externas. 
 
-Check every
-    Frequency of checking for new messages on the external addresses.
-    It is recommended an interval of at least 15 minutes.
+
+General 
+======== 
+
+Permitir 
+     Le permite activar o desactivar el demonio de Fetchmail que 
+     Descargas correos electrónicos de direcciones externas. 
+
+Compruebe cada 
+     Frecuencia de comprobación de nuevos mensajes en las direcciones externas. 
+     Se recomienda un intervalo de al menos 15 minutos.
