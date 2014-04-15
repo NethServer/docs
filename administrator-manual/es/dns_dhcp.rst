@@ -43,77 +43,77 @@ Desabilitado
      la dirección de una manera automática por este servidor. Seleccione este 
      opción si hay otro servidor DHCP en su red local.
 
-Enabled
-    The server will issue IP addresses to computers on the local network (recommended).
+Activado 
+     El servidor emitirá direcciones IP a los equipos de la red local (recomendado). 
 
-Start
-    The first IP address in the range assigned to the clients on the LAN.
+Comienzo 
+     La primera dirección IP del rango asignado a los clientes en la LAN. 
 
-End
-    The last IP address of the range, addresses between Start and End will ge assigned to clients.
+Final 
+     La última dirección IP del rango, las direcciones entre inicio y fin se ge asignado a los clientes. 
 
-Create / Modify
----------------------
+Crear / Modificar 
+--------------------- 
 
-Adds a new static allocation (reservation) to the DHCP server.
-The device with the specified MAC address will always receive the
-specified IP Address.
+Agrega una nueva asignación estática (reserva) para el servidor DHCP. 
+El dispositivo con la dirección MAC especificada siempre recibirá la 
+Dirección IP especificada. 
 
-Host Name
-    The host name you want to assign to clients on the LAN with the specified
-    IP address.
+Nombre de host 
+     El nombre de host que desea asignar a los clientes en la LAN con la especificada 
+     Dirección IP.
 
-Description
-    An optional description to identify the system.
+Descripción 
+     Una descripción opcional para identificar el sistema. 
 
-IP Address
-    The IP address you want to assign.
+Dirección IP 
+     La dirección IP que desea asignar. 
 
-MAC Address
-    The MAC address of the network system (eg 11:22:33:44:55:66:77:88).
-
-
-DNS
-===
-
-The DNS (Domain Name System) is responsible for Domain Name Resolution
-(eg www.nethesis.it) into their corresponding numerical IP addresses
-(Eg. 10.11.12.13) and vice versa. |product| delegates the resolution of
-names to the configured DNS servers, but you can specify addresses
-for arbitrary selected names. For example, you can configure the
-system for responding to requests for facebook.com with the IP address 
-0.0.0.0, achieving the effect of making the Facebook site unreachable.
+MAC Address 
+     La dirección MAC del sistema de red (por ejemplo 11:22:33:44:55:66:77:88). 
 
 
-Configure
----------
+DNS 
+=== 
 
-Click Configure to enter the addresses of the DNS servers that
-|product| will contact to resolve names.
-
-Primary DNS
-    The address of the primary server to contact for resolving names (mandatory).
-
-Secondary DNS
-    The address of the secondary server to be contacted in case the primary is not responding (optional).
-
-Create / Modify
----------------------
-
-Click Create to assign a host name to an IP address. The
-server will return the IP address configured for requests of its name.
+El DNS (Domain Name System) es responsable de la resolución de nombres de dominio
+(por ejemplo www.nethesis.it) en sus direcciones IP numéricas correspondientes 
+(Ej. 10.11.12.13), y viceversa. |Product| delega la resolución de 
+nombres a los servidores DNS configurados, pero se puede especificar direcciones 
+para los nombres seleccionados arbitrarias. Por ejemplo, puede configurar el 
+sistema para responder a las solicitudes de facebook.com con la dirección IP 
+0.0.0.0, logrando el efecto de hacer que el sitio de Facebook inalcanzable.
 
 
-Host Name
-    The domain name, for example www.nethesis.it. It's possible to create
-    names for the local domain, which is useful for giving a mnemonic name to
-    devices configured with static IP or for any domain,
-    which take precedence over the provider's DNS server (see
-    facebook.com example above).
+Configure 
+--------- 
 
-IP Address
-    The IP address of the host name.
+Haga clic en Configurar para ingresar las direcciones de los servidores DNS que 
+|Product| se pondrá en contacto para resolver nombres. 
 
-Description
-    An optional comment for the host name (example:
-    "Block facebook" or "video server").
+DNS primario 
+     La dirección del servidor primario de contacto para la resolución de nombres (obligatorio). 
+
+DNS secundario 
+     La dirección del servidor secundario para ser contactado en caso de que el principal no está respondiendo (opcional). 
+
+Crear / Modificar 
+--------------------- 
+
+Haga clic en Crear para asignar un nombre de host a una dirección IP. la 
+servidor devolverá la dirección IP configurada para peticiones de su nombre.
+
+
+Nombre de host 
+     El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear 
+     nombres para el dominio local, que es útil para dar un nombre a mnemónico 
+     dispositivos configurados con IP estática o para cualquier dominio, 
+     que prevalecen sobre el servidor DNS del proveedor (véase 
+     facebook.com ejemplo anterior). 
+
+Dirección IP 
+     La dirección IP del nombre de host. 
+
+Descripción 
+     Un comentario opcional para el nombre de host (ejemplo: 
+     "Bloquear facebook" o "servidor de video").
