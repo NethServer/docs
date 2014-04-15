@@ -1,47 +1,48 @@
 ===============
-Windows network
+Red de Windows
 ===============
 
-Manage the server role in a Windows network.
+Gestione la función de servidor en una red Windows.
 
-Role
+Papel
 ====
 
-Select the |product| role within the network:
-workstation, domain controller or Active Directory member.
+Seleccione el |product| papel dentro de la red: 
+estación de trabajo, el controlador de dominio o miembro de Active Directory. 
 
-Workstation
-    Enabling this option |product| will behave as a normal workstation.
+Puesto de trabajo 
+     Al habilitar esta opción |product| se comportará como una estación de trabajo normal. 
 
-Domain Controller
-    Enabling this option |product| will be configured as a domain controller for the network.
+Controlador de dominio 
+     Al habilitar esta opción |product| se configurará como un controlador de dominio para la red. 
 
-Domain
-    The name of the domain.
+Dominio 
+     El nombre del dominio. 
 
-Enable roaming profiles
-    If enabled, the user profile is saved on the server. All user data will be always accessible,
-    regardless of the computer on which the user is logged in.
+Habilitar perfiles móviles 
+     Si está activado, el perfil de usuario se guarda en el servidor. Todos los datos de los usuarios estarán siempre accesibles, 
+     independientemente del equipo en el que el usuario ha iniciado la sesión 
 
-Active Directory member
-    The server becomes member of an existing Active Directory domain.
-    The domain administrator password is needed.
+Miembro de Active Directory 
+     El servidor se convierte en miembro de un dominio de Active Directory existente.
+Se necesita la contraseña del administrador de dominio. 
 
-Realm
-    Active Directory real, for example: mydomain.local
+Ambito 
+     Bienes de Active Directory, por ejemplo: mydomain.local 
 
-Domain
-    Name of the Active Directory domain.
+Dominio 
+     Nombre del dominio de Active Directory. 
 
-Active Directory authentication
--------------------------------
 
-Enter the credentials to allow |product| to become a member
-of an Active Directory domain.
+La autenticación de Active Directory 
+------------------------------------
 
-Username
-    Username of the Active Directory administrator.
+Introduzca las credenciales para permitir |product| para convertirse en un miembro de un dominio de Active Directory. 
 
-Password
-    Password of the Active Directory administrator.
+Nombre de usuario 
+     Nombre de usuario del administrador de Active Directory. 
+
+Contraseña 
+     Contraseña del administrador de Active Directory.
+
 
