@@ -2,47 +2,41 @@
 UPS
 ===
 
-The management of an uninterruptible power supply (UPS - Uninterruptible Power
-Supply) connected to |product| is assigned to NUT (Network UPS Tools), which
-will carry out a shutdown in case of absence of
-power. NUT supports different models of UPS,
-connected by serial cable or USB.
+La gestión de un sistema de alimentación ininterrumpida (UPS - Sistema de Alimentación Ininterrumpida) conectada a |product| se asigna a NUT (Herramientas de UPS de red), que llevarán a cabo un cierre en caso de falta de energía. NUT soporta diferentes modelos de UPS, conectados por un cable serie o USB. 
 
-In this panel you perform the configuration of NUT, to
-see UPS data, use the Dashboard.
+En este panel se realiza la configuración del NUT,para 
+ver datos del SAI, utilice el Panel de control. 
 
-Enable NUT UPS
-    Enable or disable the NUT service.
+Habilitar NUT UPS 
+     Activar o desactivar el servicio NUT.
 
-Mode
+Modo
 ========
 
-Master
-    This mode should be selected if the UPS is connected
-    to |product| directly via serial or USB cable.
+Maestro
+     Este modo debe seleccionarse si el SAI está conectado 
+     a |product| directamente a través de serie o cable USB. 
 
-Search drivers for model
-    Allows you to search for a driver compatible with your UPS model. After selecting the model from the list,
-    the *Driver* field will be filled out with the name of the appropriate driver.
+Buscar controladores para el modelo 
+     Le permite buscar un controlador compatible con tu modelo de UPS. Después de seleccionar el modelo de la lista,     
+ el *Driver* el campo se va a rellenar con el nombre del controlador adecuado. 
 
-Driver
-    The driver to be used for the model of UPS connected.
+Driver 
+     El driver que se utilizará para el modelo de UPS conectado. 
+    
+Conexión USB 
+     Seleccione esta opción si el SAI está conectado a través de USB. 
 
-USB Connection
-    Select this option if the UPS is connected via USB.
+Conexión en serie 
+     Seleccione esta opción si el SAI está conectado a través del cable serie |product|.
 
-Serial connection
-    Select this option if the UPS is connected via serial cable to |product|.
+Esclavo
+      Este modo se debe utilizar si el SAI no está conectado directamente a |product|, sino a otro servidor configurado con NUT en modo Master para que |product| sea conectado.
 
-Slave
-    This mode should be used if the UPS is not connected
-    directly to |product|, but to another server configured with NUT
-    in Master mode to which |product| will connect.
+Dirección del servidor maestro 
+     Dirección IP o nombre de host del servidor maestro. El cliente utilizará el usuario *UPS* para conectar con el servidor maestro. 
+     Asegúrese de que el usuario se configura en el servidor maestro.
 
-Address of the master server
-    IP address or host name of the master server. The client will use the user * UPS * to connect to the master server.
-    Make sure that the user is configured on the master server.
+Contraseña 
+     La contraseña que especifique aquí es la configurada en el servidor maestro para las conexiones de esclavos.
 
-Password
-    The password you specify here is the one configured on the master server
-    for slave connections.
