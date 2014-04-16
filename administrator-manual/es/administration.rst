@@ -64,18 +64,18 @@ Crear / Modificar
 Crea una nueva ruta a una red remota y / o permitir que un 
 red a distancia para acceder a los servicios del servidor. 
 
-Dirección de red 
-     Dirección de red para la nueva ruta. 
+Dirección de red
+     Dirección de red para la nueva ruta.
 
-Máscara de red 
-     Máscara de red para la nueva ruta. 
+Mascara de red
+     Máscara de red para la nueva ruta.
 
 Dirección del router
-   Dirección de la puerta de enlace utilizado para llegar a la red especificada, 
-     no se requiere este campo. 
+     Dirección de la puerta de enlace utilizado para llegar a la red especificada,
+     no se requiere este campo.
 
-Descripción 
-     Un campo de texto libre para registrar cualquier anotación. 
+Descripción
+    Un campo de texto libre para registrar cualquier anotación.
 
 Después de la creación de rutas, sólo se puede cambiar 
 dirección del router y la descripción. 
