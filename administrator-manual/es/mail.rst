@@ -15,26 +15,21 @@ Crear / Modificar
 
 Agregar un dominio a la lista de los configurados para la recepción de correo electrónico.
 
+Dominio
+    El nombre de dominio, por ejemplo *nethesis.it*.
 
-Dominio 
-     El nombre de dominio, por ejemplo *nethesis.it*. 
+Descripción
+    Un campo opcional útil para el administrador del sistema a tomar nota de la información del dominio.
 
-Descripción 
-     Un campo opcional útil para el administrador del sistema a tomar nota de la información del dominio.
+Entrega local
+    Seleccione esta opción para configurar el servidor para entregar el correo entrante dirigido al dominio especificado en las carpetas locales.
 
-Entrega local 
-     Seleccione esta opción para configurar el servidor para entregar 
-     el correo entrante dirigido al dominio especificado 
-     en las carpetas locales. 
+Reenviar a otro servidor
+    Si selecciona esta opción, el correo entrante será se transmitirá al servidor especificado.
 
-Reenviar a otro servidor 
-     Si selecciona esta opción, el correo entrante será 
-     se transmitirá al servidor especificado. 
-
-Disclaimer (aviso legal) 
-     Añadir automáticamente un mensaje legal (disclaimer) 
-     a todos los mensajes salientes (no dirigida al dominio). 
-
+Disclaimer (aviso legal)
+    Añadir automáticamente un mensaje legal (disclaimer)
+     a todos los mensajes salientes (no dirigida al dominio).
 
 Borrar 
 ------- 
