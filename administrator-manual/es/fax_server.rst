@@ -30,21 +30,18 @@ Modem
      * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes
      * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. Debe ser el nombre de un dispositivo en el sistema.
 
-Mode
+Modo
     Specifies the operating mode of the selected device. The available modes are:
 
     * Send and receive: the modem will be used to send and receive faxes
     * Receive only: the modem will be used only for receiving faxes
     * Send only: the modem will only be used for sending faxes
 
-
 Modo
      Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son:
 
      * Enviar y recibir: el módem se utiliza para enviar y recibir faxes
-
      * Recibir sólo: el módem sólo se utilizará para la recepción de faxes
-
      * Enviar sólo: el módem sólo se utilizará para el envío de faxes
 
 Prefijo PBX
