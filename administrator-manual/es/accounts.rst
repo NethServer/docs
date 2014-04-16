@@ -178,36 +178,36 @@ listas de distribución . Los buzones compartidos asociados
 Usuario Administrador
 =====================
 
-El : guilabel : `module ` Usuarios crea el usuario : dfn : ` administrador ` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root ' .
-El : index : user ` administrador ` no tiene acceso al sistema desde la línea de comandos .
+El : guilabel : `module` Usuarios crea el usuario : dfn : ` administrador ` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root`.
+El : index : user `administrador` no tiene acceso al sistema desde la línea de comandos .
 A pesar de ser dos usuarios distintos, la contraseña de ambos coinciden y se puede cambiar desde la interfaz web .
 
 En algunas ocasiones, puede ser útil para diferenciar el admin y la contraseña de root , por ejemplo, para permitir que un usuario sin experiencia
 utilizar la interfaz web para realizar tareas comunes y que impide el acceso a la línea de comandos.
 
-Evite : index : `root ' y sincronización de contraseña de administrador por ejecutar el siguiente comando ::
+Evite : index : `root` y sincronización de contraseña de administrador por ejecutar el siguiente comando ::
 
  config septiembre AdminIsNotRoot habilitado
 
-A continuación, cambiar la contraseña de administrador del panel : guilabel : `Usuarios ` . Sin sincronización de contraseñas ,
+A continuación, cambiar la contraseña de administrador del panel : guilabel : `Usuarios` . Sin sincronización de contraseñas ,
 administrador tendrá la nueva contraseña y, a raíz mantendrá a mantener el antiguo.
 
-Si desea cambiar la contraseña de root , debe hacerse desde la línea de comandos usando: comando: ` passwd ` .
+Si desea cambiar la contraseña de root , debe hacerse desde la línea de comandos usando: comando: `passwd` .
 
-gestión de contraseñas
-===================
+Gestión de contraseñas
+=======================
 
 El sistema ofrece la posibilidad de establecer limitaciones a la contraseña : dfn : ` ` y complejidad : dfn : ` ` caducidad .
 
-complejidad
------------
+Complejidad
+------------
 
 El : índice de complejidad de contraseña ` ` es un conjunto de condiciones mínimas que debe coincidir con la contraseña que ser aceptado por el sistema:
 Usted puede elegir entre dos políticas de gestión diferentes sobre la complejidad de contraseña :
 
-*: Dfn : ` no `: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
-*: Dfn : ` fuerte `
-El : index : ` fuerte ` política requiere que la contraseña debe cumplir con las siguientes reglas:
+* : Dfn : `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
+* : Dfn : `fuerte`
+El : index : `fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
 
 * Longitud mínima de 7 caracteres
 * Contener al menos 1 número
@@ -219,7 +219,7 @@ El : index : ` fuerte ` política requiere que la contraseña debe cumplir con l
 * Debe ser diferente del nombre de usuario
 * No se puede tener repeticiones de patrones formados por 3 o más caracteres ( por ejemplo, AS1 contraseña. $ AS1 . $ Es inválido )
 
-La política predeterminada es: dfn : ` fuerte ` .
+La política predeterminada es: dfn : `fuerte` .
 
 Para cambiar el ajuste a ninguno ::
 
@@ -233,13 +233,13 @@ Revise la política actualmente en uso en el servidor ::
 
   Usuarios config GetProp PasswordStrength
 
-vencimiento
-----------
+Vencimiento
+------------
 
 El : index ` ` caducidad de la contraseña está activada por defecto y 6 meses desde el momento en que se establece la contraseña.
 El sistema le enviará un correo electrónico para informar a los usuarios cuando su contraseña está a punto de expirar.
 
-.. Note :: El sistema se referirá a la fecha del último cambio de contraseña ,
+.. Nota :: El sistema se referirá a la fecha del último cambio de contraseña ,
    cualquiera que sea anterior más de 6 meses , el servidor enviará un correo electrónico para indicar que la contraseña ha caducado.
    En este caso es necesario cambiar la contraseña de usuario .
    Por ejemplo , si el último cambio de contraseña se hizo en enero, y la activación de la fecha límite en octubre,
@@ -287,17 +287,17 @@ Por ejemplo , para cambiar al 5 " Número de días en que el aviso es enviado po
 
 
 Efectos de la contraseña caducada
-^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
 Después de caducidad de la contraseña, el usuario será capaz de leer y enviar correos electrónicos, pero ya no puede acceder a las carpetas e impresoras (Samba) compartidos o 
 u otro equipo si la máquina es parte del dominio. 
 
 
-contraseña de dominio 
----------------- 
+Contraseña de dominio 
+---------------------- 
 
 Si el sistema está configurado como controlador de dominio, los usuarios pueden cambiar su contraseña utilizando las herramientas de Windows. 
 
-En este último caso no se puede establecer contraseñas más cortas que 6 * caracteres *, independientemente de las directivas de servidor. 
+En este último caso no se puede establecer contraseñas más cortas que 6 *caracteres*,independientemente de las directivas de servidor. 
 Windows realiza comprobaciones preliminares y envía la contraseña al servidor en el que se evalúan 
 con las políticas habilitadas.
