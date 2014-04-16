@@ -87,13 +87,13 @@ Configure
 --------- 
 
 Haga clic en Configurar para ingresar las direcciones de los servidores DNS que 
-|Product| se pondrá en contacto para resolver nombres. 
+|product| se pondrá en contacto para resolver nombres. 
 
-DNS primario 
-     La dirección del servidor primario de contacto para la resolución de nombres (obligatorio). 
+DNS primario
+    La dirección del servidor primario de contacto para la resolución de nombres (obligatorio).
 
-DNS secundario 
-     La dirección del servidor secundario para ser contactado en caso de que el principal no está respondiendo (opcional). 
+DNS secundario
+    La dirección del servidor secundario para ser contactado en caso de que el principal no está respondiendo (opcional). 
 
 Crear / Modificar 
 --------------------- 
@@ -101,17 +101,16 @@ Crear / Modificar
 Haga clic en Crear para asignar un nombre de host a una dirección IP. la 
 servidor devolverá la dirección IP configurada para peticiones de su nombre.
 
+Nombre de host
+    El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear
+     nombres para el dominio local, que es útil para dar un nombre a mnemónico
+     dispositivos configurados con IP estática o para cualquier dominio,
+     que prevalecen sobre el servidor DNS del proveedor (véase
+     facebook.com ejemplo anterior).
 
-Nombre de host 
-     El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear 
-     nombres para el dominio local, que es útil para dar un nombre a mnemónico 
-     dispositivos configurados con IP estática o para cualquier dominio, 
-     que prevalecen sobre el servidor DNS del proveedor (véase 
-     facebook.com ejemplo anterior). 
+Direccion IP
+    La dirección IP del nombre de host.
 
-Dirección IP 
-     La dirección IP del nombre de host. 
-
-Descripción 
-     Un comentario opcional para el nombre de host (ejemplo: 
+Descripcion
+    Un comentario opcional para el nombre de host (ejemplo:
      "Bloquear facebook" o "servidor de video").
