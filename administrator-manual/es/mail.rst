@@ -98,43 +98,31 @@ Mensajes
 
 Configurar la gestión de mensajes de correo electrónico. 
 
-Acepte el tamaño del mensaje a 
+Accepte el tamaño del mensaje a
+    Utilice el cursor para seleccionar el tamaño máximo de un  mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor establecer y devolverá un error explicativo.
 
-     Utilice el cursor para seleccionar el tamaño máximo de un  mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor establecer y devolverá un error explicativo. 
 
-Vuelva a intentar el envío de 
+Vuelva a intentar el envio
+    Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor tratar de enviar un mensaje. Cuando llega el tiempo máximo y el correo electrónico no ha sido entregado, el remitente recibirá un error y el mensaje se elimina de la cola de envío, el servidor no hay ya intentar entregarlo.
 
-     Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor 
-     tratar de enviar un mensaje. Cuando llega el tiempo máximo 
-     y el correo electrónico no ha sido entregado, el remitente recibirá un 
-     error y el mensaje se elimina de la cola de envío, el servidor no hay 
-     ya intentar entregarlo.
+Enviar usando un host inteligente
+    El servidor intentará enviar correos electrónicos directamente a destino (recomendado en la mayoría de los casos). Selección en lugar de enviar a través de un host inteligente, se intentará entregar a través del servidor SMTP del ISP (se recomienda en caso de conexión poco fiable o ADSL residencial, IP dinámica, etc.)
 
-Enviar usando un host inteligente 
-     El servidor intentará enviar correos electrónicos directamente a 
-     destino (recomendado en la mayoría de los casos). Selección 
-     en lugar de enviar a través de un host inteligente, se intentará entregar a través de la 
-     El servidor SMTP del ISP (se recomienda en caso de conexión poco fiable o 
-     ADSL residencial, IP dinámica, etc.) 
+Nombre de host
+    El nombre del servidor de correo del proveedor.
 
-Nombre de host 
-     El nombre del servidor de correo del proveedor. 
+Puerto
+    El puerto del servidor de correo del proveedor.
 
-Puerto 
-     El puerto del servidor de correo del proveedor. 
+Nombre de usuario
+    Si el servidor del proveedor requiere autenticación, especifique el nombre de usuario. 
 
-Nombre de usuario 
-     Si el servidor del proveedor requiere autenticación, especifique el 
-     nombre de usuario. 
+Contraseña
+    La contraseña requerida por el proveedor.
 
-Contraseña 
-     La contraseña requerida por el proveedor.
-
-Permitir conexión no cifrada 
-     Normalmente, si se utiliza una conexión autenticada (con nombre de usuario y contraseña), 
-     Se requiere una conexión cifrada para proteger la contraseña. Al seleccionar esta opción, se 
-     permitira una conexión no segura para conectarse al 
-     proveedor (no se recomienda, utilizar solamente si el ISP tiene problemas). 
+Permitir conexión no cifrada
+    Normalmente, si se utiliza una conexión autenticada (con nombre de usuario y contraseña),
+     Se requiere una conexión cifrada para proteger la contraseña. Al seleccionar esta opción, se permitira una conexión no segura para conectarse al proveedor (no se recomienda, utilizar solamente si el ISP tiene problemas). 
 
 Gestión de Colas 
 ================ 
