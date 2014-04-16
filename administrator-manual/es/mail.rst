@@ -73,25 +73,24 @@ Buzones
 En esta ficha, puede configurar algunos parámetros relacionados con la 
 carpetas de correo locales. 
 
-IMAP 
-     Habilitar el acceso a carpetas a través del protocolo IMAP (recomendado). 
+IMAP
+    Habilitar el acceso a carpetas a través del protocolo IMAP (recomendado).
 
-POP3 
-     Habilitar el acceso a carpetas a través del protocolo POP3 (no recomendado). 
+POP3
+    Habilitar el acceso a carpetas a través del protocolo POP3 (no recomendado).
 
-Permitir conexiones sin cifrar 
-     Permite habilitar el acceso a las carpetas que utilizan protocolos no encriptados (no recomendado). 
+Permitir conexions sin cifrar
+    Permite habilitar el acceso a las carpetas que utilizan protocolos no encriptados (no recomendado).
 
-Espacio en disco 
-     Le permite limitar el uso del disco por correo electrónico. 
+Espacio en disco
+    Le permite limitar el uso del disco por correo electrónico.
 
-     * Unlimited: seleccione no imponer límites 
-     * Aplicar cuota: límite de espacio máximo de correo para cada usuario con el valor 
-       indicado (cuota de correo electrónico).
+    * Ilimited: seleccione no imponer límites
+    * Aplicar cuota: límite de espacio máximo de correo para cada usuario con el valor indicado (cuota de correo electrónico).
 
-Mover a la carpeta *junkmail* 
-     Mensajes de correo electrónico identificado como spam se mueven a cada carpeta de usuario 
-     *Junkmail* en lugar de ser entregado a la bandeja de entrada. 
+
+Mover a la carpeta *junkmail*
+    Mensajes de correo electrónico identificado como spam se mueven a cada carpeta de usuario *Junkmail* en lugar de ser entregado a la bandeja de entrada.
 
 
 Mensajes 
