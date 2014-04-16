@@ -25,7 +25,7 @@ SSH
 
 Administrar el acceso al servidor Secure Shell (SSH). 
 
-Enable / Disable
+Activar/Desactivar
     Enable / disable SSH access.
 
 TCP port
