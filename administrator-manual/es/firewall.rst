@@ -76,7 +76,7 @@ Crear una configuración de límites de ancho de banda de la interfaz.
 
 Interfaz
     Seleccione la interfaz a la que se aplica el límite de ancho de banda.
-      En general, el ancho de banda está limitado sólo en las interfaces WAN.
+    En general, el ancho de banda está limitado sólo en las interfaces WAN.
 
 Ancho de banda entrante (kbps)
     Ajuste la cantidad de ancho de banda entrante (descargar).
@@ -100,12 +100,12 @@ tener una prioridad alta o baja en comparación con otros.
 Crear / Modificar 
 -----------------
 
-Dirección IP o MAC 
-     Introduzca la dirección IP o la dirección MAC que identifica el ordenador. 
+Dirección IP o MAC
+    Introduzca la dirección IP o la dirección MAC que identifica el ordenador.
 
-descripción 
-      Una descripción opcional para identificar 
-      claramente el propósito de la regla. Por ejemplo: una alta prioridad para el jefe. 
+Descripción
+     Una descripción opcional para identificar claramente el propósito de la regla. Por ejemplo: una alta prioridad para el jefe.
+ 
 
 Reglas de puerto
 ================
@@ -120,13 +120,11 @@ en comparación con el tráfico normal de la red.
 Crear
 ------
 
-Puerto 
-     Especifique el puerto utilizado por el servicio de red. 
+Puerto
+    Especifique el puerto utilizado por el servicio de red.
 
-Protocolo 
-     Introduzca el protocolo IP. 
+Protocolo
+    Introduzca el protocolo IP.
 
-Descripción 
-     Una descripción opcional que 
-     establece claramente la finalidad de la norma. Por ejemplo: Fondo para 
-     Servicio FTP.
+Descripción
+    Una descripción opcional que establece claramente la finalidad de la norma. Por ejemplo: Fondo para Servicio FTP.
