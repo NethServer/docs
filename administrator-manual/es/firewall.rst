@@ -32,11 +32,13 @@ Las reglas de reenvío de puerto están habilitadas de forma predeterminada en
 creación. Puede activar temporalmente / desactivarlos 
 Con este botón 
 
-sí 
-     Habilitar la regla. 
+Si
+    Habilitar la regla.
 
-no 
-     Deshabilitar la regla. 
+No
+    Deshabilitar la regla.
+
+ 
 
 Verificacion del servidor de seguridad
 ======================================
