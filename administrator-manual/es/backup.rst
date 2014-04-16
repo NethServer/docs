@@ -59,17 +59,17 @@ Host
 Notificaciones 
 =============== 
 
-En caso de error 
-     Enviar notificación, sólo en el caso de que falle el respaldo. 
+En caso de error
+    Enviar notificacion, solo en el caso de que falle el respaldo.
 
-Siempre 
-     Siempre envíe notificaciones, si tiene éxito o en caso de fallo.
+Siempre
+    Siempre envia notificaciones, si tiene exito o en caso de fallo.
 
-Nunca 
-     Usted no recibirá ninguna notificación. 
+Nunca
+    Usted no recibira ninguna notificacion.
 
-Enviar notificación al 
-     Recibirá la notificación por correo electrónico 
+Enviar notificacion al
+    Recibira la notificacion por correo electronico
 
-     * Administrador de Sistemas: notificación de la copia de seguridad se enviará al administrador del sistema (usuario admin) 
-     * Dirección personalizada: Se enviará la notificación de la copia de seguridad
+    * Administrador de Sistemas: notificacion de la copia de seguridad se enviara al administrador del sistema (usuario administrador)
+    * Direccion personalizada: Se enviara la notificacion de la copia de seguridad.
