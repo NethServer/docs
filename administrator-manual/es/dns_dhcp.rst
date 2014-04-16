@@ -38,19 +38,18 @@ Configure
 
 Configurar el servidor DHCP. 
 
-Desabilitado 
-     El servidor DHCP se desactivará y los clientes de LAN no recibirá 
-     la dirección de una manera automática por este servidor. Seleccione este 
-     opción si hay otro servidor DHCP en su red local.
+Desabilitado
+    El  servidor DHCP se desactivará y los clientes de LAN no recibirá la dirección de una manera automática por este servidor. Seleccione esta opción si hay otro servidor DHCP en su red local.
 
-Activado 
-     El servidor emitirá direcciones IP a los equipos de la red local (recomendado). 
+Activado
+    El servidor emitirá direcciones IP a los equipos de la red local (recomendado).
 
-Comienzo 
-     La primera dirección IP del rango asignado a los clientes en la LAN. 
+Comienzo
+    La primera dirección IP del rango asignado a los clientes en la LAN.
 
-Final 
-     La última dirección IP del rango, las direcciones entre inicio y fin se ge asignado a los clientes. 
+Final
+    La última dirección IP del rango, las direcciones entre inicio y fin se ge asignado a los clientes.
+ 
 
 Crear / Modificar 
 --------------------- 
