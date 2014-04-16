@@ -10,20 +10,20 @@ permiten el acceso a los hosts de la red local desde Internet.
 Crear / Modificar
 =================
 
-Puerto de origen 
-     Inserte el puerto abierto en la dirección IP pública. 
+Puerto de origen
+    Inserte el puerto abierto en la dirección IP pública.
 
-Puerto de destino 
-     Introduzca el puerto en el host interno que será el destino del tráfico. 
+Puerto de destino
+    Intoduzca el puerto en el host interno que será el destino del tráfico.
 
-Host de destino 
-     Dirección IP de la máquina interna donde será redirigido tráfico. 
+Host de destino
+    Dirección IP de la máquina interna donde será redirigido tráfico.
 
-Permitir sólo 
-     Permitir el tráfico hacia delante sólo de alguna fuente redes / hosts. 
+Permitir sólo
+    Permitir el tráfico hacia delante sólo de alguna fuente redes / hosts.
 
-Descripción 
-     Descripción opcional de la regla de reenvío de puertos.
+Descripción
+    Descripción opcional de la regla de reenvío de puertos.
 
 Activar / Desactivar
 ====================
