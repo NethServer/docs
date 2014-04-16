@@ -34,26 +34,27 @@ Destino
 ======== 
 
 Disco USB 
-     Seleccione el destino de copia de seguridad en una unidad USB. El mosto de disco USB 
-     ser formateado con un sistema de archivos compatible (ext2/3/4 o FAT, NTFS no se admite) y una etiqueta configurada. 
+    Seleccione el destino de copia de seguridad en una unidad USB. El disco USB debe se formateado con un sistema de archivos compatible (ext2/3/4 o FAT, NTFS no se admite) y una etiqueta configurada.
 
-     * Sistema de Archivos de etiquetas: Enumera los discos USB conectados 
+    * Sistema de Archivos de etiquetas: Enumera los disco USB conectados
 
-Compartido de Windows (CIFS) 
-     Seleccione el destino de copia de seguridad, una parte de Windows (CIFS). Es necesaria la autenticación.
+Compartido de Windows (CIFS)
+    Seleccione el destino de copia de seguridad, una parte de Windows (CIFS). Es necesaria la autenticación.
 
-     * Servidor: La dirección IP o el FQDN del servidor de Windows de destino. 
-     * Compartir: el nombre del recurso compartido en el sistema Windows de destino. 
-     * Nombre de usuario:que se utilizará para la autenticación. 
-     * Contraseña: contraseña que se utilizará para la autenticación. 
+    * Servidor: La direccion IP o el FQDN del servidor de Windows de destino.
+    * Compartir: El nombre del recurso compartido en el sistema Windows de destino.
+    * Usuario:El numero de usuario que se utilizara para la autenticacion
+    * Contraseña: contraseña que se utilizará para la autenticación.
 
-NFS Compartir 
-     Seleccione el destino de copia de seguridad en un recurso compartido NFS 
+Compartir NFS 
+    Seleccione el destino de copia de seguridad en un recurso compartido NFS
 
-Host 
-    La dirección IP o el FQDN del servidor NFS 
+Host
+   La direccion IP o el FQDN del servidor NFS
 
-    * Compartir: nombrar el objetivo compartido de NFS 
+   * Compartir: nombrar el objetivo compartido de NFS
+
+ 
 
 Notificaciones 
 =============== 
