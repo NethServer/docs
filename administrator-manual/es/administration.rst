@@ -26,41 +26,24 @@ SSH
 Administrar el acceso al servidor Secure Shell (SSH). 
 
 Activar/Desactivar
-    Enable / disable SSH access.
+    Activar/Desactivar el acceso SSH.
 
-TCP port
-    Enter the TCP port used for SSH access.
+Puerto TCP
+    Introduzca el puerto TCP utilizado para el acceso SSH.
 
-Accept connections from local networks
-    SSH access enabled only for connections from local networks.
+Aceptar conexiones de redes Locales
+    Acceso SSH habilitado sólo para conexiones de redes locales.
 
-Accept connections from any network
-    SSH access enabled for connections from any network.
+Aceptar conexiones desde cualquier red
+    Acceso SSH habilitado para las conexiones desde cualquier red.
 
-Activar / Desactivar 
-    
-     Activar / desactivar el acceso SSH. 
+Permitir el acceso para el usuario root
+    Permitir el acceso SSH para el usuario root (usuario administrador)
 
-Puerto TCP 
-    
-     Introduzca el puerto TCP utilizado para el acceso SSH. 
-
-Aceptar conexiones de redes locales 
-    
-     Acceso SSH habilitado sólo para conexiones de redes locales. 
-
-Aceptar conexiones desde cualquier red 
-    
-     Acceso SSH habilitado para las conexiones desde cualquier red. 
-
-Permitir el acceso para el usuario root 
-    
-     Permitir el acceso SSH para el usuario root (usuario administrador). 
-
-Permitir la autenticación de contraseña
-
-     Permite el acceso a través de SSH con autentificación de contraseña simple. 
-     Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica. 
+Permitir la autentificación de contraseña
+     Permite el acceso a través de SSH con autentificación de contraseña simple.
+     Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.
+ 
 
 ============== 
 Redes locales 
