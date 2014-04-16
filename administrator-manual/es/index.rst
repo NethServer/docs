@@ -10,6 +10,7 @@ Administrator Manual
 
 .. sidebar:: Acerca de:
 
+
     * **Sitio Oficial**: `http://www.nethserver.org <http://www.nethserver.org>`_
     * **Rastreador de errores**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@NethServer <http://twitter.com/NethServer>`_
