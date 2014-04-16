@@ -39,10 +39,10 @@ La autenticación de Active Directory
 
 Introduzca las credenciales para permitir |product| para convertirse en un miembro de un dominio de Active Directory. 
 
-Nombre de usuario 
-     Nombre de usuario del administrador de Active Directory. 
 
-Contraseña 
-     Contraseña del administrador de Active Directory.
+Nombre de usuario
+    Nombre de usuario del administrador de Active Directory.
 
+Contraseña
+    Contraseña del administrador de Active Directory.
 
