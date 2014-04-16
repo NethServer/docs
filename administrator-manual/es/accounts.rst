@@ -205,8 +205,8 @@ Complejidad
 El : índice de complejidad de contraseña ` ` es un conjunto de condiciones mínimas que debe coincidir con la contraseña que ser aceptado por el sistema:
 Usted puede elegir entre dos políticas de gestión diferentes sobre la complejidad de contraseña :
 
-* : Dfn : `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
-* : Dfn : `fuerte`
+* :Dfn : `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
+* :Dfn : `fuerte`
 El : index : `fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
 
 * Longitud mínima de 7 caracteres
