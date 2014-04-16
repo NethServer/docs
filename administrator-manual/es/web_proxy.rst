@@ -1,69 +1,69 @@
-=========
-Web proxy 
-=========
+========= 
+proxy Web 
+========= 
 
-Configure the web proxy with content filtering.
+Configure el proxy web con filtrado de contenido. 
 
-Proxy
-=====
+Apoderado 
+========= 
 
-The Web Proxy works to reduce bandwidth usage by caching
-the pages you visit. It's transparent to web browsers using
-this server as their gateway.
+La Web Proxy trabaja para reducir el uso de ancho de banda mediante el almacenamiento en caché 
+las páginas que visita. Es transparente para los navegadores web usando 
+este servidor como su puerta de enlace. 
 
-Enabled
-    Enable Proxy.
+Activado 
+     Habilitar Proxy. 
 
-Parent proxy
-    Enter the IP address and port of the parent proxy. The correct syntax is
-    IP_Address:port .
+Proxy padre 
+     Introduzca la dirección IP y el puerto del proxy padre. La sintaxis correcta es 
+     Dirección_IP: puerto.
 
-Filter
-======
+Filtro 
+====== 
 
-The content filter is used to control web browsing and
-site blocking using some variables such as keywords, ip
-address, internal users, or evaluating the content of the web page,
-or file extensions. With this tool it is possible for example to enable
-access only on some desired sites (such as those of interest
-company) while blocking all others.
+El filtro de contenidos se utiliza para controlar la navegación web y 
+sitio bloqueando el uso de algunas variables, como palabras clave, ip 
+dirección, los usuarios internos, o evaluar el contenido de la página web, 
+o extensiones de archivo. Con esta herramienta es posible por ejemplo para permitir 
+acceso sólo en algunos sitios deseados (tales como los de interés 
+empresa), mientras que el bloqueo de todos los demás. 
 
-Mode
-    Enabling the Web Filter you can configure mode
-    "Block All" and then allow the selected categories, or
-    "Allow all" and then block the selected categories.
+Modo 
+     Habilitación del Web Filter modo puede configurar 
+     "Bloquear todo" y luego permitir que las categorías seleccionadas, o 
+     "Permitir todos" y luego bloquear las categorías seleccionadas. 
 
-Block access to websites with IP
-    If enabled, you can not access websites using one IP but only the host name.
+Bloquear el acceso a sitios web con IP 
+     Si está habilitado, no se puede acceder a sitios web utilizando una dirección IP, pero sólo el nombre de host. 
 
-Enable URL filtering with expressions of
-    If enabled, the URLs are scanned for words that fall into the categories selected. 
-    For example may be blocked urls that contain the word *sex*.
+Habilitar el filtrado de URL con expresiones de 
+     Si está activado, las direcciones URL se analizan en busca de palabras que caen en las categorías seleccionadas. 
+     Por ejemplo se puede bloquear las URL que contengan la palabra *sexo*.
 
-List of blocked file extensions
-    Enter the extensions that you want to block, separated by commas
+Lista de extensiones de archivo bloqueadas 
+     Introduzca las extensiones que desee bloquear, separadas por comas 
 
-Banned sites and IP addresses
-    The list of banned sites and the list of hosts on the LAN that can not browse the Internet.
+Sitios prohibidos y direcciones IP 
+     La lista de sitios prohibidos y la lista de los hosts de la LAN que no puede navegar por Internet. 
 
-Sites and IP permissions
-    The list of sites and hosts on the LAN allowed to bypass the content filter.
+Sitios y permisos de propiedad intelectual 
+     La lista de los sitios y las máquinas de la LAN permite eludir el filtro de contenido. 
 
-Bypass transparent proxy
-========================
+Bypass proxy transparente 
+========================== 
 
-Set up some IP to bypass the transparent proxy and access
-Internet without being proxied.
+Establecer algunos IP para utilizar el servidor proxy transparente y de acceso 
+Internet sin ser proxy. 
 
-Create
-------
+Crear 
+------ 
 
-Create a new bypass rule.
+Crear una nueva regla de derivación. 
 
-IP Address
-    IP address of the host that will not be filtered by the proxy.
+Dirección IP 
+     Dirección IP de la máquina que no será filtrado por el proxy.
 
-Antivirus
-=========
+Antivirus 
+========= 
 
-Enable / disable virus scanning of web pages.
+Activar la exploración de virus/desactivar las páginas web.
