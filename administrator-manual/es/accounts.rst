@@ -73,7 +73,7 @@ el usuario.
 Correo
 ^^^^
 
-<<<<<<< HEAD
+
 Bandeja entrada
     Habilitar el buzón para el usuario.
 
@@ -110,7 +110,7 @@ Personalizar el tiempo de retencion de los mensajes de spam.
 
 Direcciones de correo electronico
     Lista de las direcciones de correo electronico asociadas con el usuario.
->>>>>>> be89fec4f43d49f4933849c8ecd9329527875bcb
+
 
 Carpetas Compartidas (Samba)
 ^^^^^^^^^^^^^^^^^^^^^^
