@@ -17,5 +17,5 @@ Horas y minutos
     Ajuste la hora local.
 
 Servidor NTP
-    Dirrección IP o nombre de host con el que desea sincronizar la hora de
+    Dirección IP o nombre de host con el que desea sincronizar la hora de
      el sistema.
