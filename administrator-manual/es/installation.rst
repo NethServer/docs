@@ -74,18 +74,18 @@ En el arranque de un menú mostrará diferentes tipos de instalación:
     Le permite seleccionar el idioma, configurar el soporte RAID, 
     red y sistema de ficheros cifrado. Se describe en profundidad en el siguiente párrafo. 
 
-Otros / desatendida |product| instalar 
-     Este modo de instalación no se requiere ningún tipo de intervención humana: un conjunto de parámetros por defecto serán aplicados al sistema. 
+Otros / desatendida |product| instalar
+    Este modo de instalación no se requiere ningún tipo de intervención humana: un conjunto de parámetros por defecto serán aplicados al sistema.
 
-Las instalaciones estándar de CentOS 
-     Utilice el procedimiento estándar de instalación de CentOS. 
+Las instalaciones estándar de CentOS
+    Utilice el procedimiento estándar de instalación de CentOS.
 
-Instrumentos 
-     Inicie el sistema en modo de *rescate* (de recuperación), ejecuta una prueba de memoria o iniciar la herramienta de detección de hardware.
+Instrumentos
+    Inicie el sistema en modo de *rescate* (de recuperación), ejecuta una prueba de memoria o iniciar la herramienta de detección de hardware.
+
+Arrancar desde la unidad local
+    Los intentos para arrancar un sistema que ya está instalado en el disco duro. 
  
-Arrancar desde la unidad local 
-     Los intentos para arrancar un sistema que ya está instalado en el disco duro.
-
 Al final del proceso de instalación, se le pedirá que 
 reinicie la máquina. Asegúrese de retirar el CD o 
 Soporte USB antes de reiniciar. 
