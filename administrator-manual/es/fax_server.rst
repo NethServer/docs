@@ -34,7 +34,9 @@ Modo
      Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son:
 
      * Enviar y recibir: el módem se utiliza para enviar y recibir faxes
+
      * Recibir sólo: el módem sólo se utilizará para la recepción de faxes
+
      * Enviar sólo: el módem sólo se utilizará para el envío de faxes
 
 Prefijo PBX
