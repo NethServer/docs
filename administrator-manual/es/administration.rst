@@ -195,16 +195,16 @@ Modo
     Indica qué método se utilizará para asignar la dirección IP a
     el adaptador de red. Los valores posibles son *Estático* y *DHCP*.
 
-Estático
+Estatico
     La configuración se reserva estáticamente.
 
-     * Dirección IP: dirección IP de la tarjeta de red
-     * Máscara de red: máscara de red de la tarjeta de red
-     * Puerta de enlace: Servidor de puerta de enlace predeterminada
+    * Dirección IP: dirección IP de la tarjeta de red
+    * Máscara de red: máscara de red de la tarjeta de red
+    * Puerta de enlace: Servidor de puerta de enlace predeterminada
 
-DHCP 
-     La configuración se asigna dinámicamente (sólo disponible para 
-     Interfaces de RED) 
+DHCP
+    La configuración se asigna dinámicamente (sólo disponible para Interfaces de RED)
+
 
 ============ 
 Ver registro 
