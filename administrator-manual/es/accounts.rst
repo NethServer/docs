@@ -178,8 +178,8 @@ listas de distribución . Los buzones compartidos asociados
 Usuario Administrador
 =====================
 
-El : guilabel : `module` Usuarios crea el usuario : dfn : ` administrador ` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root`.
-El : index : user `administrador` no tiene acceso al sistema desde la línea de comandos .
+El :guilabel: `Usuario` modulo  crea el usuario :dfn: `administrador` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root`.
+El :index: user `administrador` no tiene acceso al sistema desde la línea de comandos .
 A pesar de ser dos usuarios distintos, la contraseña de ambos coinciden y se puede cambiar desde la interfaz web .
 
 En algunas ocasiones, puede ser útil para diferenciar el admin y la contraseña de root , por ejemplo, para permitir que un usuario sin experiencia
