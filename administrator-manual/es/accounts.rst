@@ -15,8 +15,6 @@ ser cambiado después de la creación.
 
 Usuario 
 ------ 
-Informacion básica sobre el usuario. Estos campos son obligatorios.
-
 
 Información básica sobre el usuario. Estos campos son obligatorios. 
 
