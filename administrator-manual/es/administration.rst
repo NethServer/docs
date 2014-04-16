@@ -19,7 +19,7 @@ Dirección de red
 Máscara de red 
   Para permitir el acceso a un solo host, utilice como máscara de subred  255.255.255.255.
     
-=== 
+ 
 SSH 
 === 
 
