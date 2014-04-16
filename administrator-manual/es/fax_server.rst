@@ -24,34 +24,35 @@ Remitente (TSI)
 Módem 
 ===== 
 
-Módem 
-     El puerto físico (COM o USB) a la que el módem está conectado o un módem fax virtual 
+Modem
+     El puerto físico (COM o USB) a la que el módem está conectado o un módem fax virtual
 
-     * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes 
-     * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. *Debe ser el nombre de un dispositivo en el sistema.* 
-Modo 
-     Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son: 
+     * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes
+     * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. *Debe ser el nombre de un dispositivo en el sistema.*
 
-     * Enviar y recibir: el módem se utiliza para enviar y recibir faxes 
-     * Recibir sólo: el módem sólo se utilizará para la recepción de faxes 
-     * Enviar sólo: el módem sólo se utilizará para el envío de faxes 
-PBX Prefijo 
-     Si el módem de fax está conectado a una centralita, puede que tenga que introducir un código de acceso a "obtener una línea externa." 
-     Si el módem está conectado directamente a una línea o el PBX requiere ningún código, deje el campo vacío. 
+Modo
+     Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son:
+
+     * Enviar y recibir: el módem se utiliza para enviar y recibir faxes
+     * Recibir sólo: el módem sólo se utilizará para la recepción de faxes
+     * Enviar sólo: el módem sólo se utilizará para el envío de faxes
+
+Prefijo PBX
+     Si el módem de fax está conectado a una centralita, puede que tenga que introducir un código de acceso a "obtener una línea externa."
+     Si el módem está conectado directamente a una línea o el PBX requiere ningún código, deje el campo vacío.
      Si estás detrás de un PBX, introduzca el prefijo que se debe marcar.
 
-Esperar tono de marcación 
-     Algunos módems no son capaces de reconocer el tono de marcación 
-     (sobre todo si está conectado a un PBX) y no marcar el número 
-     señalando la ausencia de tono (de error "No hay tono de marcado"). 
+Esperar tono de marcación
+     Algunos módems no son capaces de reconocer el tono de marcación
+     (sobre todo si está conectado a un PBX) y no marcar el número
+     señalando la ausencia de tono (de error "No hay tono de marcado").
 
-     Para configurar el módem para que ignore la ausencia de la línea y 
-     marcar inmediatamente el número seleccionar Desactivado. La configuración recomendada es 
-     "Habilitado", es posible que desee desactivar * Espere el tono de marcación * sólo en caso de problemas. 
-
+     Para configurar el módem para que ignore la ausencia de la línea y
+     marcar inmediatamente el número seleccionar Desactivado. La configuración recomendada es
+     "Habilitado", es posible que desee desactivar * Espere el tono de marcación * sólo en caso de problemas.
 
 Notificaciones por correo electrónico 
-=================== 
+===================================== 
 
 Formato de los faxes recibidos 
      De forma predeterminada, el servidor de fax envía los faxes recibidos como 
