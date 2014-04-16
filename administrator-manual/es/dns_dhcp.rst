@@ -17,12 +17,12 @@ Crear / Modificar
 
 Permite crear un nuevo alias para este servidor. 
 
-Nombre de host 
-     El nombre de host que desea agregar o modificar. Puede contener sólo 
+Nombre del host
+    El nombre de host que desea agregar o modificar. Puede contener sólo
      letras, números y guiones y deben comenzar con una letra o un número.
 
-Descripción 
-     Una descripción opcional útil para identificar el alias. 
+Descripcion
+    Una descripción opcional útil para identificar el alias. 
 
 
 DHCP 
