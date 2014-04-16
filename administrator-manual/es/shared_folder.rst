@@ -100,7 +100,7 @@ Acceso de invitados
      usuarios o dispositivos que actúan de este modo, se pueden conceder la 
      siguientes permisos: 
 
-      * Ninguno 
-      * Sólo lectura 
-      * Leer y escribir
+      * Ninguno 
+      * Sólo lectura 
+      * Leer y escribir
 
