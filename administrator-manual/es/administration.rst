@@ -186,6 +186,7 @@ Dirección MAC
     cambiado.
 
 Papel
+
     El papel indica el destino de uso de la interfaz, por ejemplo:
      * Verde -> Negocios LAN
      * Red -> Internet, IP pública
