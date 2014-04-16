@@ -11,14 +11,14 @@ El módem debe ser compatible con el envío y la recepción de faxes de preferen
 General 
 ======== 
 
-Código del país 
-     El prefijo internacional que se antepone a su número de fax. 
-Prefijo 
-     Código de área. 
-Número de fax 
-     El número de fax del remitente. 
-Remitente (TSI) 
-     La ETI se imprimirá en el encabezado del fax del destinatario, por lo general en la fila superior. Es posible introducir el número de fax o el nombre de una longitud total de hasta 20 caracteres (se recomienda el nombre de la empresa). Sólo se permiten caracteres alfanuméricos.
+Codigo del país
+    El prefijo internacional que se antepone a su número de fax.
+Prefijo
+    Código de área.
+Númbero de fax
+    El número de fax del remitente.
+Remitente (TSI)
+    La ETI se imprimirá en el encabezado del fax del destinatario, por lo general en la fila superior. Es posible introducir el número de fax o el nombre de una longitud total de hasta 20 caracteres (se recomienda el nombre de la empresa). Sólo se permiten caracteres alfanuméricos.
 
 
 Módem 
