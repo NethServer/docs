@@ -15,8 +15,8 @@ General
 ^^^^^^^
 
 Nombre 
-     El nombre de la carpeta compartida. Sólo puede contener letras minúsculas, 
-     números, puntos, guiones y guiones bajos. La longitud máxima del nombre es de 12 caracteres. 
+     El nombre de la carpeta compartida. Sólo puede contener letras minúsculas, 
+     números, puntos, guiones y guiones bajos. La longitud máxima del nombre es de 12 caracteres. 
 
 Descripción 
      Campo opcional para una breve descripción de la carpeta compartida. 
