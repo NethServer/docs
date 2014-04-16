@@ -40,6 +40,8 @@ Cambiar contraseña
 -------------------
 
 Permite establecer una contraseña inicial , o cambiar la contraseña del usuario .
+
+ 
 Lock/Unlock 
 ------------ 
 
@@ -77,7 +79,7 @@ permitido.
 
 
 Correo 
-^ ^ ^ ^ 
+^^^^^^ 
 
 Bandeja de entrada 
      Habilitar el buzón para el usuario.
@@ -101,7 +103,7 @@ Direcciones de correo electrónico
      Lista de las direcciones de correo electrónico asociadas con el usuario.
 
 Las carpetas compartidas (Samba )
-^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Samba es la aplicación del protocolo CIFS , que permite el uso de
 Carpetas compartidas de Windows .
