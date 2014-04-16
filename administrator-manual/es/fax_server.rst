@@ -28,13 +28,15 @@ Modem
      El puerto físico (COM o USB) a la que el módem está conectado o un módem fax virtual
 
      * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes
-     * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. *Debe ser el nombre de un dispositivo en el sistema.*
+     * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. Debe ser el nombre de un dispositivo en el sistema.
 
 Modo
      Especifica el modo de funcionamiento del dispositivo seleccionado. Los modos disponibles son:
 
      * Enviar y recibir: el módem se utiliza para enviar y recibir faxes
+
      * Recibir sólo: el módem sólo se utilizará para la recepción de faxes
+
      * Enviar sólo: el módem sólo se utilizará para el envío de faxes
 
 Prefijo PBX
