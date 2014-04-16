@@ -207,7 +207,7 @@ Usted puede elegir entre dos políticas de gestión diferentes sobre la compleji
 
 * :dfn: `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
 * :dfn: `fuerte`
-El : index : `fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
+El :index: `fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
 
 * Longitud mínima de 7 caracteres
 * Contener al menos 1 número
@@ -223,7 +223,7 @@ La política predeterminada es: dfn : `fuerte` .
 
 Para cambiar el ajuste a ninguno ::
 
-  config setprop PasswordStrength Ninguno Usuarios
+  config setprop PasswordStrength none Usuarios
 
 Para cambiar el ajuste a la fuerte ::
 
@@ -236,14 +236,10 @@ Revise la política actualmente en uso en el servidor ::
 Vencimiento
 ------------
 
-El : index ` ` caducidad de la contraseña está activada por defecto y 6 meses desde el momento en que se establece la contraseña.
+El : index  caducidad de la contraseña está activada por defecto y 6 meses desde el momento en que se establece la contraseña.
 El sistema le enviará un correo electrónico para informar a los usuarios cuando su contraseña está a punto de expirar.
 
-.. Nota :: El sistema se referirá a la fecha del último cambio de contraseña ,
-   cualquiera que sea anterior más de 6 meses , el servidor enviará un correo electrónico para indicar que la contraseña ha caducado.
-   En este caso es necesario cambiar la contraseña de usuario .
-   Por ejemplo , si el último cambio de contraseña se hizo en enero, y la activación de la fecha límite en octubre,
-   el sistema asumirá la contraseña cambió en enero ha caducado , y notificar al usuario.
+.. Nota :: El sistema se referirá a la fecha del último cambio de contraseña ,cualquiera que sea anterior más de 6 meses , el servidor enviará un correo electrónico para indicar que la contraseña ha caducado.En este caso es necesario cambiar la contraseña de usuario .Por ejemplo , si el último cambio de contraseña se hizo en enero, y la activación de la fecha límite en octubre,el sistema asumirá la contraseña cambió en enero ha caducado , y notificar al usuario.
 
 Si desea omitir la caducidad de las contraseñas a nivel mundial (también permitir el acceso a usuarios con contraseñas caducadas ) ::
 config setprop PasswordStrength PassExpires no
