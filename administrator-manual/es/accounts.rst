@@ -268,7 +268,7 @@ Número de días en que el aviso se envió por correo electrónico ( predetermin
   config GetProp PasswordStrength PassWarning
 
 
-Para cambiar los parámetros reemplazan el : comando: ` GetProp ` comando con : comando: ` setprop ` ,
+Para cambiar los parámetros reemplazan el : comando: `GetProp` comando con : comando: `setprop` ,
 a continuación, agregue el valor deseado en el extremo de la línea. Finalmente aplicar nuevas configuraciones ::
 
   caso de la señal -password- - actualización de la política
