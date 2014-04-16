@@ -58,18 +58,17 @@ Agrega una nueva asignación estática (reserva) para el servidor DHCP.
 El dispositivo con la dirección MAC especificada siempre recibirá la 
 Dirección IP especificada. 
 
-Nombre de host 
-     El nombre de host que desea asignar a los clientes en la LAN con la especificada 
-     Dirección IP.
+Nombre del host
+    El nombre de host que desea asignar a los clientes en la LAN con la especificado Dirección IP.
 
-Descripción 
-     Una descripción opcional para identificar el sistema. 
+Descripcion
+    Una descripción opcional para identificar el sistema.
 
-Dirección IP 
-     La dirección IP que desea asignar. 
+Direccion IP 
+    La dirección IP que desea asignar.
 
-MAC Address 
-     La dirección MAC del sistema de red (por ejemplo 11:22:33:44:55:66:77:88). 
+Direccion MAC 
+    La dirección MAC del sistema de red (por ejemplo 11:22:33:44:55:66:77:88).
 
 
 DNS 
