@@ -70,29 +70,25 @@ el usuario.
 
 Correo
 ^^^^
-Bandeja de entrada 
-    
- Habilitar el buzón para el usuario. 
 
-Reenvío de mensajes 
- 
-  Reenviar mensajes de correo electrónico recibidos a una dirección alternativa. 
-Guarde una copia en el servidor 
-   
-  Email reenviado todavía se guarda en la bandeja de entrada del usuario. 
+Bandeja de entrada
 
-Cuota de correo electrónico personalizado 
- 
-    Permite especificar un valor de dimensión distinta de la predeterminada. 
+Habilitar el buzón para el grupo.
 
-Personalizar el tiempo de retención de los mensajes de spam. 
+Reenvio de mensajes
+    Reenviar mensajes de correo electronico recibidos a una direccion alternativa.
 
-     Los correos electrónicos de spam se eliminan a intervalos regulares. Marcando la casilla que puede establecer el número de días que los mensajes del usuario  clasificado como spam, se mantendrán en el sistema antes de ser eliminados. 
+Guarde una copia en el servidor
+   Email reenviado todavia se guarda en la bandeja de entrada del usuario.
 
-Direcciones de correo electrónico 
-    
- Lista de las direcciones de correo electrónico asociadas con el usuario.
+Cuota de correo electronico personalizado
+    Permite especificar un valor de dimension distanta de la predeterminada.
 
+Personalizar el tiempo de retencion de los mensajes de spam.
+    Los correos electronicos de spam se eliminan a intervalos regulares. Marcando la casilla se puede establecer el numero de dias que los mensajes del usuario clasifican como span, se mantendran en el sistema antes de ser eliminados.
+
+Direcciones de correo electronico
+    Lista de las direcciones de correo electronico asociadas con el usuario.
 
 Carpetas Compartidas (Samba)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -127,14 +123,15 @@ Crear un nuevo grupo, agregar miembros al grupo.
 
 
 Nombre del grupo 
-     Solo puede contener letras minúsculas, números, 
-     guiones y guiones bajos y debe comenzar con 
-     una letra minúscula. Por ejemplo, "ventas", "beta3" y "rev_net" 
-     son nombres válidos, mientras que "3d", "Oficina de Ventas" y "Q & A" son 
-     no. 
-descripción 
-     Introduzca una breve descripción del grupo. 
-afiliación 
+
+     Solo puede contener letras minúsculas, números,guiones y guiones bajos y debe comenzar con una letra minúscula. Por ejemplo, "ventas", "beta3" y "rev_net" son nombres válidos, mientras que "3d", "Oficina de Ventas" y "Q & A" son no. 
+
+Descripción 
+
+    Introduzca una breve descripción del grupo. 
+
+Afiliación
+ 
      Le permite buscar usuarios en el servidor. Los usuarios pueden ser añadidos al grupo con el botón *Añadir*. Para borrar los usuarios listados usar el botón 
 *X*. 
 
