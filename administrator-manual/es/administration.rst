@@ -83,18 +83,17 @@ dirección del router y la descripción.
 ==================
 Perfil del usuario 
 ==================
+Nombre
+    Es el nombre del usuario, por ejemplo "John".
 
-Nombre 
-     Es el nombre del usuario, por ejemplo "John". 
+Apellido
+     El apellido del usuario, por ejemplo, "Smith".
 
-Apellido 
-     El apellido del usuario, por ejemplo, "Smith". 
-
-Dirección de correo electrónico externa 
-     Dirección de correo electrónico del usuario de un proveedor de correo externo. 
-     Si se especifica, esta dirección es 
-     utilizado por el sistema en el proceso de recuperación y la renovación 
-     contraseña. 
+Dirección de correo electrónico externa
+     Dirección de correo electrónico del usuario de un proveedor de correo externo.
+     Si se especifica, esta dirección es
+     utilizado por el sistema en el proceso de recuperación y la renovación
+     contraseña.
 
 Puede especificar un valor personalizado para los campos siguientes, 
 de lo contrario los valores de módulo * Datos 
