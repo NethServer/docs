@@ -11,23 +11,24 @@ al administrador o a una dirección personalizada.
 
 General 
 ======== 
+General
+========
 
-Habilitar copia de seguridad automática 
-     Esta opción activa o desactiva el procedimiento de copia de seguridad. El valor predeterminado es *habilitado*.
+Habilitar copia de seguridad automatica
+    Esta opcion activa o desactiva el procedimiento de copia de seguridad.El valor predeterminado es *habilitado*.
 
-Horario de copia de seguridad 
-     El momento en el que la copia de seguridad se iniciará. Cambie el valor directamente en el campo. 
+Horario de copia de seguridad
+    El momento en el que la copia de seguridad se iniciara. Cambie el valor directamente en el campo.
 
-Completo 
-     Al seleccionar esta opción se ejecutará una copia de seguridad completa cada día de la semana
+Completo
+    Al seleccionar esta opcion se ejecutara una copia de seguridad completa cada dia de la semana.
 
-Incremental 
-     Al seleccionar esta opción se ejecutará una copia de seguridad completa en el día 
-     seleccionado a través del campo específico, mientras que el resto de 
-     semana se ejecutará una copia de seguridad incremental. 
+Incremental
+    Al seleccionar sta opcion se ejecutara una copia de seguridad completa en el dia seleccionado a traves del campo especifico, mientras que el resto de la semana se ejecutara una copia de seguridad incremental.
 
-Política de retención 
-     Introduzca el número de días en que se guardará la copia de seguridad. 
+Politica de retencion
+    Introduzca el numero de dias que se guardara la copia de seguridad.
+ 
 
 Destino 
 ======== 
