@@ -74,15 +74,15 @@ Crear / Modificar
 
 Crear una configuración de límites de ancho de banda de la interfaz. 
 
-Interfaz 
-     Seleccione la interfaz a la que se aplica el límite de ancho de banda. 
-      En general, el ancho de banda está limitado sólo en las interfaces WAN. 
+Interfaz
+    Seleccione la interfaz a la que se aplica el límite de ancho de banda.
+      En general, el ancho de banda está limitado sólo en las interfaces WAN.
 
-Ancho de banda entrante (kbps) 
-     Ajuste la cantidad de ancho de banda entrante (descargar). 
+Ancho de banda entrante (kbps)
+    Ajuste la cantidad de ancho de banda entrante (descargar).
 
-Ancho de banda de salida (kbps) 
-     Ajuste la cantidad de ancho de banda de salida (carga).
+Ancho de banda de salida (kbps)
+    Ajuste la cantidad de ancho de banda de salida (carga).
 
 Descripcion
     Una nota opcional (por ejemplo: ADSL 1280/256).
