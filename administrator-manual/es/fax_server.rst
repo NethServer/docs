@@ -27,7 +27,7 @@ Módem
 Modem
      El puerto físico (COM o USB) a la que el módem está conectado o un módem fax virtual
 
-     * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes
+     * Estándar de dispositivo: le permite seleccionar el dispositivo de una lista de los puertos comunes.
      * Dispositivo personalizado: permite especificar un dispositivo personalizado para ser utilizado como un módem fax. Debe ser el nombre de un dispositivo en el sistema.
 
 Modo
