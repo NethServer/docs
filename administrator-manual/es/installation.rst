@@ -80,7 +80,7 @@ Otros / desatendida |product| instalar
 Las instalaciones estándar de CentOS
     Utilice el procedimiento estándar de instalación de CentOS.
 
-Instrumentos
+Herramientas
     Inicie el sistema en modo de *rescate* (de recuperación), ejecuta una prueba de memoria o iniciar la herramienta de detección de hardware.
 
 Arrancar desde la unidad local
@@ -208,23 +208,23 @@ Esta interfaz también se conoce como interfaz *verde*.
 
 Configuracion de la red
 ^^^^^^^^^^^^^^^^^^^^^
-Host y el nombre de dominio (FQDN) 
-     Escriba el nombre de host y dominio en el que el servidor va a funcionar (por ejemplo: samp:`server.mycompany.com`).
+
+Host y el nombre de dominio (FQDN)
+    Escriba el nombre de host y dominio en el que el servidor va a funcionar (por ejemplo: samp:`server.mycompany.com`).
 
     *Nota:* El nombre de dominio sólo puede contener letras, números y el guión.
 
-Dirección IP 
-     Escriba una dirección IP privada (por RFC 1918) que se asignará al servidor;     si quieres instalarlo en una red existente, usted debe proporcionar una dirección IP no utilizada válida para esa red (en general, se puede utilizar la primera o la última de acogida dentro del alcance de la red, por ejemplo, 192.168.7.1 o 192.168.7.254). 
+Direccion IP
+    Escriba una dirección IP privada (por RFC 1918) que se asignará al servidor;     si quieres instalarlo en una red existente, usted debe proporcionar una dirección IP no utilizada válida para esa red (en general, se puede utilizar la primera o la última de acogida dentro del alcance de la red, por ejemplo, 192.168.7.1 o 192.168.7.254).
 
-Máscara de red 
-     Escriba la máscara de subred de la red. Puede dejar el valor por defecto. 
+Máscara de red
+    Escriba la máscara de subred de la red. Puede dejar el valor por defecto. 
 
-Puerta de acceso 
-     Escriba la dirección IP de la puerta de enlace en el que está 
-     instalar el servidor. 
+Puerta de acceso
+    Escriba la dirección IP de la puerta de enlace en el que está instalar el servidor.
 
-DNS 
-     Escriba un DNS válido. Ejemplo: 8.8.8.8
+DNS
+    Escriba un DNS válido. Ejemplo: 8.8.8.8
 
 Fin del proceso de instalacion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
