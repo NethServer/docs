@@ -25,6 +25,18 @@ SSH
 
 Administrar el acceso al servidor Secure Shell (SSH). 
 
+Enable / Disable
+    Enable / disable SSH access.
+
+TCP port
+    Enter the TCP port used for SSH access.
+
+Accept connections from local networks
+    SSH access enabled only for connections from local networks.
+
+Accept connections from any network
+    SSH access enabled for connections from any network.
+
 Activar / Desactivar 
     
      Activar / desactivar el acceso SSH. 
