@@ -22,4 +22,4 @@ Utilice siguientes credenciales:
 * Nombre de usuario: **root**
 * Contraseña: **root_password** (elegido durante el proceso de instalación) 
 
-Si se instala el módulo de directorio, y el usuario administrador ha sido activado, se puede utilizar para acceder a la interfaz web con los mismos privilegios que el usuario root. Ver: ref: `admin-user`.
+Si se instala el módulo de directorio, y el usuario administrador ha sido activado, se puede utilizar para acceder a la interfaz web con los mismos privilegios que el usuario root. Ver :ref:`admin-user`.
