@@ -116,7 +116,7 @@ Un módem IAX es un módem de software que utiliza un canal IAX (normalmente
 proporcionada por una centralita Asterisk) en lugar de una línea telefónica tradicional. 
 
 
-Crear / Modificar 
+Crear/Modificar 
 ================== 
 
 
