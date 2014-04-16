@@ -15,11 +15,14 @@ ser cambiado después de la creación.
 
 Usuario 
 ------ 
+<<<<<<< HEAD
 Informacion básica sobre el usuario. Estos campos son obligatorios.
  
 
 Nombre de usuario
     El *Nombre de usuario* se utiliza para acceder a los servicios. Puede contener letras solamente minúsculas, números, guiones, puntos y guión bajo (_) y debe comenzar con una letra minúscula. Por ejemplo, "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido y "4friends", "Franco Blacks" y "aldo / error" no lo son.
+=======
+>>>>>>> be89fec4f43d49f4933849c8ecd9329527875bcb
 
 Nombre
     Es el nombre real del usuario. Por ejemplo, "John"
@@ -71,6 +74,7 @@ el usuario.
 Correo
 ^^^^
 
+<<<<<<< HEAD
 Bandeja entrada
     Habilitar el buzón para el usuario.
 
@@ -88,6 +92,26 @@ Personalizar el tiempo de retencion de los mensajes de spam
 
 Direcciones de correo electrónico
     Lista de las direcciones de correo electrónico asociadas con el usuario.
+=======
+Bandeja de entrada
+
+Habilitar el buzón para el grupo.
+
+Reenvio de mensajes
+    Reenviar mensajes de correo electronico recibidos a una direccion alternativa.
+
+Guarde una copia en el servidor
+   Email reenviado todavia se guarda en la bandeja de entrada del usuario.
+
+Cuota de correo electronico personalizado
+    Permite especificar un valor de dimension distanta de la predeterminada.
+
+Personalizar el tiempo de retencion de los mensajes de spam.
+    Los correos electronicos de spam se eliminan a intervalos regulares. Marcando la casilla se puede establecer el numero de dias que los mensajes del usuario clasifican como span, se mantendran en el sistema antes de ser eliminados.
+
+Direcciones de correo electronico
+    Lista de las direcciones de correo electronico asociadas con el usuario.
+>>>>>>> be89fec4f43d49f4933849c8ecd9329527875bcb
 
 Carpetas Compartidas (Samba)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -122,14 +146,15 @@ Crear un nuevo grupo, agregar miembros al grupo.
 
 
 Nombre del grupo 
-     Solo puede contener letras minúsculas, números, 
-     guiones y guiones bajos y debe comenzar con 
-     una letra minúscula. Por ejemplo, "ventas", "beta3" y "rev_net" 
-     son nombres válidos, mientras que "3d", "Oficina de Ventas" y "Q & A" son 
-     no. 
-descripción 
-     Introduzca una breve descripción del grupo. 
-afiliación 
+
+     Solo puede contener letras minúsculas, números,guiones y guiones bajos y debe comenzar con una letra minúscula. Por ejemplo, "ventas", "beta3" y "rev_net" son nombres válidos, mientras que "3d", "Oficina de Ventas" y "Q & A" son no. 
+
+Descripción 
+
+    Introduzca una breve descripción del grupo. 
+
+Afiliación
+ 
      Le permite buscar usuarios en el servidor. Los usuarios pueden ser añadidos al grupo con el botón *Añadir*. Para borrar los usuarios listados usar el botón 
 *X*. 
 
