@@ -15,14 +15,13 @@ ser cambiado después de la creación.
 
 Usuario 
 ------ 
-<<<<<<< HEAD
+
 Informacion básica sobre el usuario. Estos campos son obligatorios.
  
 
 Nombre de usuario
     El *Nombre de usuario* se utiliza para acceder a los servicios. Puede contener letras solamente minúsculas, números, guiones, puntos y guión bajo (_) y debe comenzar con una letra minúscula. Por ejemplo, "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido y "4friends", "Franco Blacks" y "aldo / error" no lo son.
 =======
->>>>>>> be89fec4f43d49f4933849c8ecd9329527875bcb
 
 Nombre
     Es el nombre real del usuario. Por ejemplo, "John"
