@@ -1,6 +1,6 @@
-======
+========
 Usuarios
-======
+========
 
 Se requiere un usuario del sistema para acceder a muchos servicios prestados por
 | Producto | (correo electrónico, carpetas compartidas , etc .) .
@@ -10,43 +10,43 @@ contraseña). Una cuenta de usuario recién creada permanece bloqueado hasta que
 establecer una contraseña. Un usuario bloqueado no puede utilizar los servicios de
 servidores que requieren autenticación .
 
-Crear / Modificar
+Crear/Modificar
 ===============
 
 Le permite crear o modificar los datos de usuario El nombre de usuario no puede
 ser cambiado después de la creación.
 
-usuario
-------
+Usuario
+-------
 
 Información básica sobre el usuario. Estos campos son
- requerida .
+     requerida .
 
 Nombre de usuario
-    El * Nombre de usuario * se utiliza para acceder a los servicios. Se puede
-    contener letras solamente minúsculas , números, guiones , puntos y
-    guión bajo ( _ ) y debe comenzar con una letra minúscula . para
-    ejemplo, " luisa ", " jsmith " y " liu- jo" es un nombre de usuario válido y
-    " 4friends ", " Franco Blacks " y " aldo / error " no lo son.
-nombre
-    Es el nombre real del usuario. Por ejemplo, " John "
-apellido
-    El apellido del usuario
+     El * Nombre de usuario * se utiliza para acceder a los servicios. Se puede
+     contener letras solamente minúsculas , números, guiones , puntos y
+     guión bajo ( _ ) y debe comenzar con una letra minúscula . para
+     ejemplo, " luisa ", " jsmith " y " liu- jo" es un nombre de usuario válido y
+     " 4friends ", " Franco Blacks " y " aldo / error " no lo son.
+Nombre
+     Es el nombre real del usuario. Por ejemplo, " John "
+Apellido
+     El apellido del usuario
 Grupos
-    Uso de la barra de búsqueda , puede seleccionar los grupos a los
-    la que se agregará el usuario . El usuario puede pertenecer a varios grupos.
+     Uso de la barra de búsqueda , puede seleccionar los grupos a los
+     la que se agregará el usuario . El usuario puede pertenecer a varios grupos.
 
 Cambiar contraseña
----------------
+-------------------
 
 Permite establecer una contraseña inicial , o cambiar la contraseña del usuario .
-Lock / Unlock 
----------------- 
+Lock/Unlock 
+------------ 
 
 Le permite bloquear o desbloquear un usuario. Los datos del usuario 
 no se eliminarán. 
 
-borrar 
+Borrar 
 ------- 
 
 Eliminar el usuario. Se borrarán todos los datos del usuario. 
@@ -56,7 +56,7 @@ Detalles
 
 En este apartado se recoge información sobre la organización a la que 
 pertenece el usuario y es opcional. Los valores por defecto pueden ser 
-especificar el elemento de menú * Organización de datos *. 
+especificar el elemento de menú *Organización de datos*. 
 
 Durante los siguientes campos, puede especificar un valor personalizado, 
 de lo contrario, es el ajuste realizado por el módulo de datos "
@@ -69,35 +69,36 @@ organización ", disponible sólo para el administrador del sistema.
 * Teléfono 
 
 
-servicio 
-------- 
+Servicio 
+--------- 
 
 Esta sección contiene la lista de servicios a los que el usuario es 
 permitido. 
 
 
-correo 
+Correo 
 ^ ^ ^ ^ 
 
-bandeja de entrada 
-     Habilitar el buzón para el usuario.
+Bandeja de entrada 
+     Habilitar el buzón para el usuario.
+
 Reenvío de mensajes
-    Reenviar mensajes de correo electrónico recibidos a una dirección alternativa.
+     Reenviar mensajes de correo electrónico recibidos a una dirección alternativa.
 
 Guarde una copia en el servidor
-    Email reenviado todavía se guarda en la bandeja de entrada del usuario.
+     Email reenviado todavía se guarda en la bandeja de entrada del usuario.
 
 Cuota de correo electrónico personalizado
-    Permite especificar un valor de dimensión distinta de la predeterminada .
+     Permite especificar un valor de dimensión distinta de la predeterminada .
 
 Personalizar el tiempo de retención de los mensajes de spam .
-    Los correos electrónicos de spam se eliminan a intervalos regulares . Marcando la
-    caja que puede establecer el número de días que los mensajes del usuario
-    clasificado como spam , se mantendrán
-    en el sistema antes de ser eliminados .
+     Los correos electrónicos de spam se eliminan a intervalos regulares . Marcando la
+     caja que puede establecer el número de días que los mensajes del usuario
+     clasificado como spam , se mantendrán
+     en el sistema antes de ser eliminados .
 
-direcciones de correo electrónico
-    Lista de las direcciones de correo electrónico asociadas con el usuario.
+Direcciones de correo electrónico
+     Lista de las direcciones de correo electrónico asociadas con el usuario.
 
 Las carpetas compartidas (Samba )
 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
@@ -106,13 +107,13 @@ Samba es la aplicación del protocolo CIFS , que permite el uso de
 Carpetas compartidas de Windows .
 
 Las carpetas compartidas (Samba )
-    Conceder permisos de usuario para tener acceso a las carpetas compartidas a través de Samba .
+     Conceder permisos de usuario para tener acceso a las carpetas compartidas a través de Samba .
 
 Remote Shell (SSH )
 ==================
 
 Remote Shell (SSH )
-    Permite al usuario acceder a una shell segura en el servidor.
+     Permite al usuario acceder a una shell segura en el servidor.
 
 ======
 Grupos
@@ -122,48 +123,48 @@ Crear, modificar o eliminar grupos de usuarios
 utilizado para asignar permisos de usuario y de acceso a los servicios
 o listas de distribución de correo electrónico .
 
-Crear / Modificar
-===============
+Crear/Modificar
+================
 
-grupo
--------------
+Grupo
+------
 
 Crear un nuevo grupo, agregar miembros al grupo.
 
 
 Nombre del grupo
-    Solo puede contener letras minúsculas, números ,
-    guiones y guiones bajos y debe comenzar con
-    una letra minúscula . Por ejemplo, " ventas ", " beta3 " y " rev_net "
-    son nombres válidos , mientras que " 3d", " Oficina de Ventas " y " Q & A" son
-    no .
-descripción
-    Introduzca una breve descripción del grupo .
-afiliación
-    Le permite buscar usuarios en el servidor. Usuarios
-    puede ser añadido al grupo con el botón * Añadir * . Para eliminar el
-    usuarios listados usar el botón * X * .
+     Solo puede contener letras minúsculas, números ,
+     guiones y guiones bajos y debe comenzar con
+     una letra minúscula . Por ejemplo, " ventas ", " beta3 " y " rev_net "
+     son nombres válidos , mientras que " 3d", " Oficina de Ventas " y " Q & A" son
+     no .
+Descripción
+     Introduzca una breve descripción del grupo .
+Afiliación
+     Le permite buscar usuarios en el servidor. Usuarios
+     puede ser añadido al grupo con el botón * Añadir * . Para eliminar el
+     usuarios listados usar el botón * X * .
 
-servicios
---------
+Servicios
+----------
 
 Habilitar servicios disponibles para el nuevo grupo.
 
 Email
-    Habilitar el buzón para el grupo.
+     Habilitar el buzón para el grupo.
 Enviar una copia del mensaje a los miembros del grupo
-    Habilitar el comportamiento estándar de la lista de distribución : cada
-    e- mail enviado al grupo será copiado en el buzón de cada usuario .
+     Habilitar el comportamiento estándar de la lista de distribución : cada
+     e- mail enviado al grupo será copiado en el buzón de cada usuario .
 Entregar el mensaje en una carpeta compartida
-    Cualquier correo electrónico enviado al grupo será entregado a una carpeta IMAP
-    compartida visibles sólo para los miembros del grupo .
+     Cualquier correo electrónico enviado al grupo será entregado a una carpeta IMAP
+     compartida visibles sólo para los miembros del grupo .
 Crear direcciones de correo electrónico predefinidas
-    Creación automática de direcciones de correo electrónico para el grupo
-    para todos los dominios configurados en el servidor , como
-    * GROUP_NAME @ dominio * . Estas direcciones de correo electrónico se pueden cambiar en
-    * Sección de Gestión - > Direcciones de correo electrónico * .
+     Creación automática de direcciones de correo electrónico para el grupo
+     para todos los dominios configurados en el servidor , como
+     * GROUP_NAME @ dominio * . Estas direcciones de correo electrónico se pueden cambiar en
+     * Sección de Gestión - > Direcciones de correo electrónico * .
 
-borrar
+Borrar
 ======
 
 Esta acción elimina los grupos definidos y su
@@ -172,8 +173,8 @@ listas de distribución . Los buzones compartidos asociados
 
 .. _admin -User:
 
-usuario Administrador
-==================
+Usuario Administrador
+=====================
 
 El : guilabel : `module ` Usuarios crea el usuario : dfn : ` administrador ` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root ' .
 El : index : user ` administrador ` no tiene acceso al sistema desde la línea de comandos .
