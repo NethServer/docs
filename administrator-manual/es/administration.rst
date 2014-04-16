@@ -186,7 +186,6 @@ Dirección MAC
     cambiado.
 
 Papel
-
     El papel indica el destino de uso de la interfaz, por ejemplo:
      * Verde -> Negocios LAN
      * Red -> Internet, IP pública
@@ -220,9 +219,8 @@ Buscar en los archivos de registro
 Le permite navegar por todos los archivos de registro del servidor y hacer 
 búsquedas exhaustivas sobre ellos. 
 
-Encontrar 
-     Le permite buscar palabras y frases dentro de todos los 
-     los registros del servidor. 
+Encontrar
+    Le permite buscar palabras y frases dentro de todos los registros del servidor.
 
 Usted puede ir directamente a cada registro a través de los enlaces 
 que aparece en la página.
@@ -234,22 +232,22 @@ Mostrar solo registro
 Te permite navegar por el contenido del registro seleccionado y 
 seguir el flujo de texto en tiempo real. 
 
-Cerca 
-     Cierre la ventana del registro seleccionado y volver al 
-     la página principal. 
+Cerrar
+     Cierre la ventana del registro seleccionado y volver al
+     la página principal.
 
-Vacío 
-     Se le permite vaciar el contenido de la ventana de registro. los datos 
-     se eliminan solamente desde la ventana de la pantalla, no 
-     se hacen cambios en el contenido del registro. 
+Vacío
+     Se le permite vaciar el contenido de la ventana de registro. los datos
+     se eliminan solamente desde la ventana de la pantalla, no
+     se hacen cambios en el contenido del registro.
 
-Seguir 
-     Actualización en tiempo real de la ventana de la pantalla con el nuevo 
-     la información que se escribe en el registro. 
+Seguir
+    Actualización en tiempo real de la ventana de la pantalla con el nuevo
+    la información que se escribe en el registro.
 
 Parar
-     Detiene la actualización de la visualización de registros en tiempo real.
-   
+    Detiene la actualización de la visualización de registros en tiempo real.
+    
 ======== 
 Cerrar 
 ======== 
@@ -262,9 +260,10 @@ La ejecución de estas funciones lleva unos pocos minutos.
 ADVERTENCIA! Al hacer clic en APAGADO la operación del sistema se iniciará 
 inmediatamente. 
 
+Reanudar
+    Reinicie el servidor termine todos los procesos en ejecución.
 
-Reanudar 
-     Reinicie el servidor termine todos los procesos en ejecución. 
+Power-off
+    Apague el servidor después de completar todos los procesos en ejecución.
 
-Power-off 
-     Apague el servidor después de completar todos los procesos en ejecución.
+
