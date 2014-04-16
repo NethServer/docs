@@ -31,11 +31,11 @@ el nombre del paquete.
 
 Los paquetes se ordenan alfabéticamente. Campos mostrados son: 
 
-Nombre 
-     Nombre del paquete RPM. 
+Nombre
+    Nombre del paquete RPM.
 
-Versión 
-     Versión del paquete instalado. 
+Versión
+    Versión del paquete instalado.
 
-Liberación 
-     Lanzamiento del paquete instalado.
+Liberación
+    Lanzamiento del paquete instalado.
