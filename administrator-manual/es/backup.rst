@@ -34,41 +34,42 @@ Destino
 ======== 
 
 Disco USB 
-     Seleccione el destino de copia de seguridad en una unidad USB. El mosto de disco USB 
-     ser formateado con un sistema de archivos compatible (ext2/3/4 o FAT, NTFS no se admite) y una etiqueta configurada. 
+    Seleccione el destino de copia de seguridad en una unidad USB. El disco USB debe se formateado con un sistema de archivos compatible (ext2/3/4 o FAT, NTFS no se admite) y una etiqueta configurada.
 
-     * Sistema de Archivos de etiquetas: Enumera los discos USB conectados 
+    * Sistema de Archivos de etiquetas: Enumera los disco USB conectados
 
-Compartido de Windows (CIFS) 
-     Seleccione el destino de copia de seguridad, una parte de Windows (CIFS). Es necesaria la autenticación.
+Compartido de Windows (CIFS)
+    Seleccione el destino de copia de seguridad, una parte de Windows (CIFS). Es necesaria la autenticación.
 
-     * Servidor: La dirección IP o el FQDN del servidor de Windows de destino. 
-     * Compartir: el nombre del recurso compartido en el sistema Windows de destino. 
-     * Nombre de usuario:que se utilizará para la autenticación. 
-     * Contraseña: contraseña que se utilizará para la autenticación. 
+    * Servidor: La direccion IP o el FQDN del servidor de Windows de destino.
+    * Compartir: El nombre del recurso compartido en el sistema Windows de destino.
+    * Usuario:El numero de usuario que se utilizara para la autenticacion
+    * Contraseña: contraseña que se utilizará para la autenticación.
 
-NFS Compartir 
-     Seleccione el destino de copia de seguridad en un recurso compartido NFS 
+Compartir NFS 
+    Seleccione el destino de copia de seguridad en un recurso compartido NFS
 
-Host 
-    La dirección IP o el FQDN del servidor NFS 
+Host
+   La direccion IP o el FQDN del servidor NFS
 
-    * Compartir: nombrar el objetivo compartido de NFS 
+   * Compartir: nombrar el objetivo compartido de NFS
+
+ 
 
 Notificaciones 
 =============== 
 
-En caso de error 
-     Enviar notificación, sólo en el caso de que falle el respaldo. 
+En caso de error
+    Enviar notificacion, solo en el caso de que falle el respaldo.
 
-Siempre 
-     Siempre envíe notificaciones, si tiene éxito o en caso de fallo.
+Siempre
+    Siempre envia notificaciones, si tiene exito o en caso de fallo.
 
-Nunca 
-     Usted no recibirá ninguna notificación. 
+Nunca
+    Usted no recibira ninguna notificacion.
 
-Enviar notificación al 
-     Recibirá la notificación por correo electrónico 
+Enviar notificacion al
+    Recibira la notificacion por correo electronico
 
-     * Administrador de Sistemas: notificación de la copia de seguridad se enviará al administrador del sistema (usuario admin) 
-     * Dirección personalizada: Se enviará la notificación de la copia de seguridad
+    * Administrador de Sistemas: notificacion de la copia de seguridad se enviara al administrador del sistema (usuario administrador)
+    * Direccion personalizada: Se enviara la notificacion de la copia de seguridad.
