@@ -71,8 +71,7 @@ Mascara de red
      Máscara de red para la nueva ruta.
 
 Dirección del router
-     Dirección de la puerta de enlace utilizado para llegar a la red especificada,
-     no se requiere este campo.
+     Dirección de la puerta de enlace utilizado para llegar a la red especificada,no se requiere este campo.
 
 Descripción
     Un campo de texto libre para registrar cualquier anotación.
@@ -90,10 +89,8 @@ Apellido
      El apellido del usuario, por ejemplo, "Smith".
 
 Dirección de correo electrónico externa
-     Dirección de correo electrónico del usuario de un proveedor de correo externo.
-     Si se especifica, esta dirección es
-     utilizado por el sistema en el proceso de recuperación y la renovación
-     contraseña.
+
+     Dirección de correo electrónico del usuario de un proveedor de correo externo.Si se especifica, esta dirección es utilizado por el sistema en el proceso de recuperación y la renovación contraseña.
 
 Puede especificar un valor personalizado para los campos siguientes, 
 de lo contrario los valores de módulo * Datos 
@@ -111,14 +108,15 @@ Cambiar contraseña
 
 Cambiar contraseña actual con una nueva contraseña. 
 
-Contraseña actual 
-     Introduzca la contraseña actual. 
+Contraseña actual
+     Introduzca la contraseña actual.
 
-Nueva contraseña 
-     Introduzca la nueva contraseña. 
+Nueva contraseña
+    Introduzca la nueva contraseña.
 
-Repetir nueva contraseña 
-     Repetir nueva contraseña: debe coincidir con el archivo *Nueva contraseña*
+Repetir nueva contraseña
+    Repetir nueva contraseña: debe coincidir con el archivo *Nueva contraseña*
+
 
 ====================== 
 Organización detalles 
