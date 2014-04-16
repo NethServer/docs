@@ -41,8 +41,7 @@ Permitir el acceso para el usuario root
     Permitir el acceso SSH para el usuario root (usuario administrador)
 
 Permitir la autentificación de contraseña
-     Permite el acceso a través de SSH con autentificación de contraseña simple.
-     Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.
+     Permite el acceso a través de SSH con autentificación de contraseña simple.Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.
  
 
 ============== 
