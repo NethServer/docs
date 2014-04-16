@@ -19,11 +19,8 @@ Usuario
 Información básica sobre el usuario. Estos campos son obligatorios. 
 
 Nombre de usuario 
-     El *Nombre de usuario* se utiliza para acceder a los servicios. Puede 
-     contener letras solamente minúsculas, números, guiones, puntos y 
-     guión bajo (_) y debe comenzar con una letra minúscula. Por ejemplo,
-     "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido y 
-     "4friends", "Franco Blacks" y "aldo / error" no lo son. 
+ El *Nombre de usuario* se utiliza para acceder a los servicios. Puede contener letras solamente minúsculas, números, guiones, puntos y guión bajo (_) y debe comenzar con una letra minúscula. Por ejemplo, "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido y "4friends", "Franco Blacks" y "aldo / error" no lo son. 
+
 Nombre 
      Es el nombre real del usuario. Por ejemplo, "John"
 Apellido 
@@ -74,24 +71,27 @@ el usuario.
 Correo
 ^^^^
 Bandeja de entrada 
-     Habilitar el buzón para el usuario. 
+    
+ Habilitar el buzón para el usuario. 
 
 Reenvío de mensajes 
-   Reenviar mensajes de correo electrónico recibidos a una dirección alternativa. 
+ 
+  Reenviar mensajes de correo electrónico recibidos a una dirección alternativa. 
 Guarde una copia en el servidor 
-     Email reenviado todavía se guarda en la bandeja de entrada del usuario. 
+   
+  Email reenviado todavía se guarda en la bandeja de entrada del usuario. 
 
 Cuota de correo electrónico personalizado 
-     Permite especificar un valor de dimensión distinta de la predeterminada. 
+ 
+    Permite especificar un valor de dimensión distinta de la predeterminada. 
 
 Personalizar el tiempo de retención de los mensajes de spam. 
-     Los correos electrónicos de spam se eliminan a intervalos regulares.
-     Marcando la casilla que puede establecer el número de días que los mensajes
-     del usuario  clasificado como spam, se mantendrán en el sistema
-     antes de ser eliminados. 
+
+     Los correos electrónicos de spam se eliminan a intervalos regulares. Marcando la casilla que puede establecer el número de días que los mensajes del usuario  clasificado como spam, se mantendrán en el sistema antes de ser eliminados. 
 
 Direcciones de correo electrónico 
-     Lista de las direcciones de correo electrónico asociadas con el usuario.
+    
+ Lista de las direcciones de correo electrónico asociadas con el usuario.
 
 
 Carpetas Compartidas (Samba)
