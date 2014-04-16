@@ -18,8 +18,7 @@ Crear / Modificar
 Permite crear un nuevo alias para este servidor. 
 
 Nombre del host
-    El nombre de host que desea agregar o modificar. Puede contener sólo
-     letras, números y guiones y deben comenzar con una letra o un número.
+    El nombre de host que desea agregar o modificar. Puede contener sólo letras, números y guiones y deben comenzar con una letra o un número.
 
 Descripcion
     Una descripción opcional útil para identificar el alias. 
@@ -102,11 +101,7 @@ Haga clic en Crear para asignar un nombre de host a una dirección IP. la
 servidor devolverá la dirección IP configurada para peticiones de su nombre.
 
 Nombre de host
-    El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear
-     nombres para el dominio local, que es útil para dar un nombre a mnemónico
-     dispositivos configurados con IP estática o para cualquier dominio,
-     que prevalecen sobre el servidor DNS del proveedor (véase
-     facebook.com ejemplo anterior).
+    El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear nombres para el dominio local, que es útil para dar un nombre a mnemónico dispositivos configurados con IP estática o para cualquier dominio, que prevalecen sobre el servidor DNS del proveedor (véase facebook.com ejemplo anterior).
 
 Direccion IP
     La dirección IP del nombre de host.
