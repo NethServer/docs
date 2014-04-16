@@ -133,16 +133,17 @@ los usuarios que no disponen de campos personalizados.
 **ADVERTENCIA**:Cualquier cambio en los datos introducidos vuelve a crear los certificados SSL. 
 
 
-Empresa 
-     Introduzca el nombre de la empresa. 
-Ciudad 
-     Entrar en la ciudad de la empresa. 
-Oficina 
-     Introduzca el departamento u oficina, cuyos miembros tendrán acceso.
-Teléfono 
-     Introduzca el número de teléfono de la empresa. 
-Dirección 
-     Introduzca la dirección de la empresa. 
+Empresa
+    Introduzca el nombre de la empresa.
+Ciudad
+    Entrar en la ciudad de la empresa.
+Oficina
+    Introduzca el departamento u oficina, cuyos miembros tendrán acceso.
+Teléfono
+    Introduzca el número de teléfono de la empresa.
+Dirección
+    Introduzca la dirección de la empresa.
+
 
 ==== 
 Red 
@@ -154,21 +155,21 @@ Cambiar la configuración de las interfaces de red. Las interfaces de red del si
 Estado 
 ======= 
 
-Enlace 
-     Indica si el adaptador está conectado a cualquier dispositivo de red (por ejemplo, Ethernet 
-     cable conectado al interruptor). 
+Enlace
+    Indica si el adaptador está conectado a cualquier dispositivo de red (por ejemplo, Ethernet
+    cable conectado al interruptor).
 
-Modelo 
-     Modelo de la tarjeta de red utilizada.
+Modelo
+    Modelo de la tarjeta de red utilizada.
 
-Velocidad 
-     Indica la velocidad que la tarjeta de red ha negociado (expresada en Mb/s). 
+Velocidad
+    Indica la velocidad que la tarjeta de red ha negociado (expresada en Mb/s).
 
-Conductor 
-     El controlador utiliza el sistema para controlar la tarjeta. 
+Conductor
+    El controlador utiliza el sistema para controlar la tarjeta.
 
-Autobús 
-     Tarjeta de red física del bus (por ejemplo;PCI,USB).
+Bus
+     Tarjeta de red física del bus (por ejemplo;PCI,USB).
 
 ====== 
 Editar 
