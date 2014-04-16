@@ -174,20 +174,19 @@ Crear / Modificar
 Crear la asociación entre una nueva dirección de correo electrónico y un 
 usuario o grupo ya presente en el sistema. 
 
-Email 
-     Especifique en el campo de texto de sólo la parte antes **@** personaje. 
-     A continuación, seleccione en el menú desplegable, si la dirección es para un 
-     dominio específico o para *todos los dominios* en el sistema. 
+Correo
+    Especifique en el campo de texto de sólo la parte antes **@** personaje.
+     A continuación, seleccione en el menú desplegable, si la dirección es para un dominio específico o para *todos los dominios* en el sistema.
 
-Descripción 
-     Un campo de texto libre para registrar cualquier anotación.
+Descripción
+    Un campo de texto libre para registrar cualquier anotación.
 
-Cuenta 
-     Seleccione un usuario o un grupo entre los que ya están en el 
-     sistema que se asociará a la dirección de correo electrónico. 
+Cuenta
+    Seleccione un usuario o un grupo entre los que ya están en el
+     sistema que se asociará a la dirección de correo electrónico.
 
-Sólo las redes locales 
-     Al habilitar esta opción bloqueará la recepción de mensajes 
+Sólo las redes locales
+    Al habilitar esta opción bloqueará la recepción de mensajes
      de los remitentes externos. 
 
 Borrar 
@@ -217,30 +216,30 @@ Crear / Modificar
 
 Crear o editar una dirección externa. 
 
-Email 
-     La dirección de correo electrónico externa para comprobar. 
+Correo
+    La dirección de correo electrónico externa para comprobar.
 
-Protocolo 
-     El protocolo utilizado para acceder al servidor remoto. Puede ser *POP3* o *IMAP4* (recomendado).
+Protocolo
+    El protocolo utilizado para acceder al servidor remoto. Puede ser *POP3* o *IMAP4* (recomendado).
 
-Dirección del servidor 
-     Nombre de host o dirección IP del servidor remoto. 
+Dirección del servidor
+    Nombre de host o dirección IP del servidor remoto.
 
-Nombre de usuario 
-     Nombre de usuario utilizado para autenticarse en el sistema remoto. 
+Nombre de usuario
+    Nombre de usuario utilizado para autenticarse en el sistema remoto.
 
-Contraseña 
-     La contraseña utilizada para autenticar. 
+Contraseña
+    La contraseña utilizada para autenticar.
 
-Cuenta 
-     Seleccione el usuario o grupo que recibirá los mensajes descargados. 
+Cuenta
+    Seleccione el usuario o grupo que recibirá los mensajes descargados.
 
-Habilitar SSL 
-     Habilitar el cifrado de la conexión con el servidor remoto. 
+Habilitar SSL
+    Habilitar el cifrado de la conexión con el servidor remoto.
 
-Eliminación de los mensajes descargados 
-     Si está activado, los mensajes descargados se eliminan del servidor remoto (recomendado). Deja disabilitados para mantener 
-     una copia en el servidor remoto.
+Eliminación de los mensajes descargados
+    Si está activado, los mensajes descargados se eliminan del servidor remoto (recomendado). Deja disabilitados para mantener una copia en el servidor remoto.
+
 
 Borrar 
 ------- 
@@ -257,10 +256,8 @@ Inmediatamente se inicia la descarga de todas las direcciones externas.
 General 
 ======== 
 
-Permitir 
-     Le permite activar o desactivar el demonio de Fetchmail que 
-     Descargas correos electrónicos de direcciones externas. 
+Permitir
+    Le permite activar o desactivar el demonio de Fetchmail que descarga correos electrónicos de direcciones externas.
 
-Compruebe cada 
-     Frecuencia de comprobación de nuevos mensajes en las direcciones externas. 
-     Se recomienda un intervalo de al menos 15 minutos.
+Comprobacion
+    Frecuencia de comprobación de nuevos mensajes en las direcciones externas. Se recomienda un intervalo de al menos 15 minutos.
