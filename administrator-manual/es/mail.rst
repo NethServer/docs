@@ -44,29 +44,26 @@ Filtro
 Configure las opciones de filtrado de correo electrónico (antivirus, antispam, 
 adjuntos prohibidos, etc.) 
 
-Antivirus 
-     Habilitar la detección de virus de correos electrónicos en tránsito. 
+Antivirus
+    Habilitar la detección de virus de correos electrónicos en tránsito.
 
-Antispam 
-     Activar el análisis antispam de mensajes de correo electrónico entrantes. 
+Antispam
+    Activar el análisis antispam de mensajes de correo electrónico entrantes.
 
-Spam Prefijo 
-     Este prefijo se añade al objeto fundamental de los correos electrónicos reconocidos 
-     como spam. 
+Spam Prefijo
+    Este prefijo se añade al objeto fundamental de los correos electrónicos reconocidos como spam.
 
-Bloqueo de archivos adjuntos 
-     El servidor de correo electrónico bloquee mensajes de correo electrónico que contengan archivos adjuntos de tipos 
-     especificado.
+Bloqueo de archivos adjuntos
+    El servidor de correo electrónico bloquee mensajes de correo electrónico que contengan archivos adjuntos de tipos especificado.
 
-Ejecutable 
-     El servidor de correo electrónico bloqueará programas ejecutables en archivos adjuntos de correo electrónico. 
+Ejecutable
+    El servidor de correo electrónico bloqueará programas ejecutables en archivos adjuntos de correo electrónico.
 
-Archivo 
-     El servidor de correo electrónico bloquee mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP, 
-     rar, etc.) 
+Archivo
+    El servidor de correo electrónico bloquee mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP,rar, etc.)
 
-Lista personalizada 
-     Definir una lista de extensiones que serán bloqueados, 
+Lista personalizada
+    Definir una lista de extensiones que serán bloqueados,
      tales como doc, pdf, etc (sin arrancar punto, es decir, doc y no. doc).
 
 
