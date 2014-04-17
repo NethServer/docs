@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Instalacion &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Gestor de paquetes" href="packages.html" />
+    <link rel="prev" title="Administrator Manual" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="packages.html" title="Gestor de paquetes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Administrator Manual"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="instalacion">
+<h1>Instalacion<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requerimientos-minimos">
+<h2>Requerimientos minimos<a class="headerlink" href="#requerimientos-minimos" title="Permalink to this headline">¶</a></h2>
+<p>Los requerimientos minimos son:</p>
+<ul class="simple">
+<li>64 bit CPU (x86_64)</li>
+<li>1 GB de RAM</li>
+<li>8 GB de espacio del disco</li>
+</ul>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Recomendamos el uso de al menos 2 discos para configurar un RAID 1.
+El programa RAID llevará a asegurar la integridad de los datos en caso           de un fallo de disco.</p>
+</div>
+<div class="section" id="compatibilidad-hardware">
+<h3>Compatibilidad hardware<a class="headerlink" href="#compatibilidad-hardware" title="Permalink to this headline">¶</a></h3>
+<p>NethServer es compatible con cualquier hardware certificado por
+Red Hat® Enterprise Linux® (RHEL®), escuchado en <a class="reference external" href="http://hardware.redhat.com/">hardware.redhat.com</a></p>
+</div>
+</div>
+<div class="section" id="tipos-de-instalacion">
+<h2>Tipos de instalacion<a class="headerlink" href="#tipos-de-instalacion" title="Permalink to this headline">¶</a></h2>
+<p>NethServer es compatible con dos modos de instalación. En resumen:</p>
+<p><strong>Instalacion desde ISO</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Descargue la imagen ISO,</li>
+<li>Preparar un  CD / DVD o una memoria USB de arranque.</li>
+<li>Siga el asistente</li>
+</ul>
+</div></blockquote>
+<p><strong>Instalacion desde YUM</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Instale CentOS Minimal</li>
+<li>Configurar la red</li>
+<li>Instalar desde la red</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="instalacion-desde-iso">
+<h2>Instalacion desde ISO<a class="headerlink" href="#instalacion-desde-iso" title="Permalink to this headline">¶</a></h2>
+<p>Descargar NethServer el archivo  ISO desde el sitio oficial
+<a class="reference external" href="http://www.nethserver.org">http://www.nethserver.org</a>.</p>
+<p>El archivo ISO descargado se puede utilizar para crear una
+<em>Dispositivo de arranque</em>, como un CD, un DVD o una memoria USB.
+La creación de un disco de inicio es diferente de escribir
+archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, <em>escritura</em> o <em>Grabar imagen ISO</em>).
+Las instrucciones sobre cómo crear un CD / DVD de la ISO estan fácilmente
+disponibles en Internet o en la documentación de su sistema operativo.</p>
+<p>Un procedimiento similar se aplica para la memoria USB de arranque.
+Hay programas específicos <a class="footnote-reference" href="#id2" id="id1">[1]</a> que convertirán lo descargado ISO en memorias USB de arranque.</p>
+<p>En ambos casos, ahora se puede iniciar la máquina utilizando los medios de comunicación recientemente respaldados.
+Si el equipo no arranca desde el CD / DVD (o USB), consulte la
+documentación de la BIOS de la placa. Un problema típico es
+la configuración de arranque de prioridad del dispositivo.
+El primer dispositivo de arranque debe ser el lector de CD / DVD (o memoria USB).</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Por ejemplo, <a class="reference external" href="http://unetbootin.sourceforge.net/">http://unetbootin.sourceforge.net/</a></td></tr>
+</tbody>
+</table>
+<p>En el arranque de un menú mostrará diferentes tipos de instalación:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">La instalación borrará todos los datos existentes en los discos duros!</p>
+</div>
+<dl class="docutils">
+<dt>NethServer instalacion interactiva</dt>
+<dd>Le permite seleccionar el idioma, configurar el soporte RAID, red y sistema de ficheros cifrado. Se describe en profundidad en el siguiente párrafo.</dd>
+<dt>Otros / desatendida NethServer instalar</dt>
+<dd>Este modo de instalación no se requiere ningún tipo de intervención humana: un conjunto de parámetros por defecto serán aplicados al sistema.</dd>
+<dt>Las instalaciones estándar de CentOS</dt>
+<dd>Utilice el procedimiento estándar de instalación de CentOS.</dd>
+<dt>Herramientas</dt>
+<dd>Inicie el sistema en modo de <em>rescate</em> (de recuperación), ejecuta una prueba de memoria o iniciar la herramienta de detección de hardware.</dd>
+<dt>Arrancar desde la unidad local</dt>
+<dd>Los intentos para arrancar un sistema que ya está instalado en el disco duro.</dd>
+</dl>
+<p>Al final del proceso de instalación, se le pedirá que
+reinicie la máquina. Asegúrese de retirar el CD o
+Soporte USB antes de reiniciar.</p>
+<div class="section" id="modo-desantendido">
+<h3>Modo desantendido<a class="headerlink" href="#modo-desantendido" title="Permalink to this headline">¶</a></h3>
+<p>Después de la instalación, el sistema se configura de la siguiente manera:</p>
+<ul class="simple">
+<li>Credenciales: root / Nethesis 1234</li>
+<li>Red: DHCP habilitado en todas las interfaces</li>
+<li>Teclado: us</li>
+<li>Zona horaria: Greenwich</li>
+<li>Idioma: en_US.UTF-8</li>
+<li>Discos: si hay dos o más discos, RAID 1 se crearán en los dos primeros discos</li>
+</ul>
+<div class="section" id="instalar-opciones">
+<h4>Instalar opciones<a class="headerlink" href="#instalar-opciones" title="Permalink to this headline">¶</a></h4>
+<p>Puede agregar parámetros adicionales para instalación desatendida pulsando TAB y editando en la línea de comandos del gestor de arranque.</p>
+<p>Para desactivar la raid, sólo tiene que añadir esta opción a la línea de comandos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">raid</span><span class="o">=</span><span class="n">none</span>
+</pre></div>
+</div>
+<p>Si usted necesita para seleccionar la instalación de discos duros, utilice:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">disks</span><span class="o">=</span><span class="n">sdx</span><span class="p">,</span><span class="n">sdy</span>
+</pre></div>
+</div>
+<p>Otras opciones disponibles:</p>
+<ul class="simple">
+<li>Lang: idioma del sistema, por omisión es en_US</li>
+<li>Teclado: distribución del teclado, por defecto es us</li>
+<li>Zona horaria: por defecto es UTC Greenwich</li>
+<li>Contraseña: habilitar el cifrado del sistema de archivos con la contraseña dada</li>
+</ul>
+</div>
+</div>
+<div class="section" id="modo-interactivo">
+<h3>Modo interactivo<a class="headerlink" href="#modo-interactivo" title="Permalink to this headline">¶</a></h3>
+<p>El modo interactivo le permite hacer algunas opciones simples de la configuración del sistema:</p>
+<ol class="arabic simple">
+<li>Idioma</li>
+<li>Disposición del teclado</li>
+<li>Zona horaria</li>
+<li>Software RAID</li>
+<li>Contraseña del administrador del sistema</li>
+<li>Sistema de archivos cifrados</li>
+<li>Interfaces de red</li>
+<li>Configuración de la red</li>
+</ol>
+<div class="section" id="idioma">
+<h4>Idioma<a class="headerlink" href="#idioma" title="Permalink to this headline">¶</a></h4>
+<p>Seleccione el idioma en el que desea utilizar el modo interactivo.
+El idioma seleccionado será el idioma predeterminado del sistema instalado.
+El sistema también le sugerirá valores por defecto para el teclado y la zona horaria.</p>
+</div>
+<div class="section" id="distribucion-del-teclado">
+<h4>Distribucion del teclado<a class="headerlink" href="#distribucion-del-teclado" title="Permalink to this headline">¶</a></h4>
+<p>Un teclado puede tener un diseño diferente en función del idioma para el que fue hecho.
+Deje el valor sugerido o escriba un valor personalizado.</p>
+</div>
+<div class="section" id="zona-horaria">
+<h4>Zona horaria<a class="headerlink" href="#zona-horaria" title="Permalink to this headline">¶</a></h4>
+<p>La elección de la zona horaria permite configurar la fecha y la hora del sistema. Deje el valor sugerido o escriba un valor personalizado.</p>
+</div>
+<div class="section" id="software-raid">
+<h4>Software RAID<a class="headerlink" href="#software-raid" title="Permalink to this headline">¶</a></h4>
+<p>RAID (matriz redundante de discos independientes) le permite combinar todos los discos con el fin de lograr la tolerancia a fallos y un aumento en el rendimiento.</p>
+<p>Esta pantalla aparece cuando se detectan dos o más discos en el arranque.</p>
+<p>Niveles disponibles:</p>
+<ul class="simple">
+<li>RAID 1: crea una copia exacta (espejo) de todos los datos en dos o más discos.</li>
+</ul>
+<p>&nbsp;&nbsp; Número mínimo de discos: 2</p>
+<ul class="simple">
+<li>RAID 5: utiliza una subdivisión de los datos a nivel de bloque, distribuyendo los datos de paridad de manera uniforme en todos los discos.</li>
+</ul>
+<p>&nbsp;&nbsp; Número mínimo de discos: 3</p>
+<div class="section" id="disco-de-repuesto">
+<h5>Disco de repuesto<a class="headerlink" href="#disco-de-repuesto" title="Permalink to this headline">¶</a></h5>
+<p>Puede crear un disco de repuesto si el número de disco es mayor que el mínimo exigido por el nivel de RAID seleccionado,
+Un disco de reserva se añadirá a la RAID en caso de que se produce un fallo.</p>
+</div>
+</div>
+<div class="section" id="contrasena-del-administrador-del-sistema">
+<h4>Contraseña del administrador del sistema<a class="headerlink" href="#contrasena-del-administrador-del-sistema" title="Permalink to this headline">¶</a></h4>
+<p>Se recomienda encarecidamente establecer una contraseña de administrador personalizado.</p>
+<p>Una buena contraseña es:</p>
+<ul class="simple">
+<li>Al menos 8 caracteres de longitud</li>
+<li>Contener letras mayúsculas y minúsculas</li>
+<li>Contener símbolos y números</li>
+</ul>
+</div>
+<div class="section" id="sistema-de-archivos-cifrados">
+<h4>Sistema de archivos cifrados<a class="headerlink" href="#sistema-de-archivos-cifrados" title="Permalink to this headline">¶</a></h4>
+<p>Al habilitar esta opción, todos los datos escritos en el disco serán cifrados mediante cifrado simétrico.
+En caso de robo, un atacante no será capaz de leer los datos sin
+la clave de cifrado.</p>
+<p>Es posible elegir una contraseña para la encriptación, de lo contrario se utilizará la contraseña de administrador del sistema.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Usted tendrá que introducir la contraseña en cada inicio del sistema.</p>
+</div>
+</div>
+<div class="section" id="los-interfaces-de-red">
+<h4>Los interfaces de red<a class="headerlink" href="#los-interfaces-de-red" title="Permalink to this headline">¶</a></h4>
+<p>Seleccione la interfaz de red que se utiliza para acceder a la LAN.
+Esta interfaz también se conoce como interfaz <em>verde</em>.</p>
+</div>
+<div class="section" id="configuracion-de-la-red">
+<h4>Configuracion de la red<a class="headerlink" href="#configuracion-de-la-red" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Host y el nombre de dominio (FQDN)</dt>
+<dd><p class="first">Escriba el nombre de host y dominio en el que el servidor va a funcionar (por ejemplo: samp:<cite>server.mycompany.com</cite>).</p>
+<p class="last"><em>Nota:</em> El nombre de dominio sólo puede contener letras, números y el guión.</p>
+</dd>
+<dt>Direccion IP</dt>
+<dd>Escriba una dirección IP privada (por RFC 1918) que se asignará al servidor;     si quieres instalarlo en una red existente, usted debe proporcionar una dirección IP no utilizada válida para esa red (en general, se puede utilizar la primera o la última de acogida dentro del alcance de la red, por ejemplo, 192.168.7.1 o 192.168.7.254).</dd>
+<dt>Máscara de red</dt>
+<dd>Escriba la máscara de subred de la red. Puede dejar el valor por defecto.</dd>
+<dt>Puerta de acceso</dt>
+<dd>Escriba la dirección IP de la puerta de enlace en el que está instalar el servidor.</dd>
+<dt>DNS</dt>
+<dd>Escriba un DNS válido. Ejemplo: 8.8.8.8</dd>
+</dl>
+</div>
+<div class="section" id="fin-del-proceso-de-instalacion">
+<h4>Fin del proceso de instalacion<a class="headerlink" href="#fin-del-proceso-de-instalacion" title="Permalink to this headline">¶</a></h4>
+<p>Después de parámetros de entrada, el procedimiento iniciará la instalación.</p>
+</div>
+</div>
+</div>
+<div class="section" id="instalar-desde-centos">
+<h2>Instalar desde CentOS<a class="headerlink" href="#instalar-desde-centos" title="Permalink to this headline">¶</a></h2>
+<p>Es posible instalar NethServer en  CentOS
+mediante el comando <em>yum</em> para descargar los paquetes de software</p>
+<p>Por ejemplo, si desea instalar NethServer 6.5, acaba de empezar
+con CentOS 6.5 en su sistema (proveedores de muchos de VPS
+ofrecen CentOS en máquinas virtuales pre-instalado), y luego ejecutar los comandos a continuación
+transformar en CentOS NethServer.</p>
+<p>Habilitar NethServer repositorios con el comando</p>
+<div class="highlight-python"><pre>yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm</pre>
+</div>
+<p>Para instalar el sistema base, ejecute</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">nethserver</span><span class="o">-</span><span class="n">install</span>
+</pre></div>
+</div>
+<p>Para instalar módulos adicionales, pase el nombre del módulo como parámetro para el script de instalación.
+Ejemplo para el correo y los módulos de UPS:</p>
+<div class="highlight-python"><pre>nethserver-install nethserver-mail nethserver-nut</pre>
+</div>
+<p>Al final del procedimiento, el sistema esta listo para su uso.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Instalacion</a><ul>
+<li><a class="reference internal" href="#requerimientos-minimos">Requerimientos minimos</a><ul>
+<li><a class="reference internal" href="#compatibilidad-hardware">Compatibilidad hardware</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tipos-de-instalacion">Tipos de instalacion</a></li>
+<li><a class="reference internal" href="#instalacion-desde-iso">Instalacion desde ISO</a><ul>
+<li><a class="reference internal" href="#modo-desantendido">Modo desantendido</a><ul>
+<li><a class="reference internal" href="#instalar-opciones">Instalar opciones</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modo-interactivo">Modo interactivo</a><ul>
+<li><a class="reference internal" href="#idioma">Idioma</a></li>
+<li><a class="reference internal" href="#distribucion-del-teclado">Distribucion del teclado</a></li>
+<li><a class="reference internal" href="#zona-horaria">Zona horaria</a></li>
+<li><a class="reference internal" href="#software-raid">Software RAID</a><ul>
+<li><a class="reference internal" href="#disco-de-repuesto">Disco de repuesto</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contrasena-del-administrador-del-sistema">Contraseña del administrador del sistema</a></li>
+<li><a class="reference internal" href="#sistema-de-archivos-cifrados">Sistema de archivos cifrados</a></li>
+<li><a class="reference internal" href="#los-interfaces-de-red">Los interfaces de red</a></li>
+<li><a class="reference internal" href="#configuracion-de-la-red">Configuracion de la red</a></li>
+<li><a class="reference internal" href="#fin-del-proceso-de-instalacion">Fin del proceso de instalacion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#instalar-desde-centos">Instalar desde CentOS</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Administrator Manual</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="packages.html"
+                        title="next chapter">Gestor de paquetes</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/installation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="packages.html" title="Gestor de paquetes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Administrator Manual"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
