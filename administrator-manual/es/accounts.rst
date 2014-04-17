@@ -219,7 +219,7 @@ El :index:`fuerte` política requiere que la contraseña debe cumplir con las si
 * Debe ser diferente del nombre de usuario
 * No se puede tener repeticiones de patrones formados por 3 o más caracteres ( por ejemplo, AS1 contraseña. $ AS1 . $ Es inválido )
 
-La política predeterminada es: dfn : `fuerte` .
+La política predeterminada es: dfn :`fuerte` .
 
 Para cambiar el ajuste a ninguno ::
 
