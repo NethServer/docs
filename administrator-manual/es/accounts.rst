@@ -178,21 +178,20 @@ listas de distribución . Los buzones compartidos asociados
 Usuario Administrador
 =====================
 
-El :guilabel: `Usuario` modulo  crea el usuario :dfn: `administrador` que permite acceder a la interfaz web con la misma contraseña para la DFN : usuario `root`.
-El :index: user `administrador` no tiene acceso al sistema desde la línea de comandos .
-A pesar de ser dos usuarios distintos, la contraseña de ambos coinciden y se puede cambiar desde la interfaz web .
+The :guilabel:`Usuario` modulo  crea el usuario :dfn:`administrador` que permite acceder a la interfaz web con la misma contraseña para la :dfn:`root` usuario.
+El :index:`administrador` usuario no tiene acceso al sistema desde la línea de comandos. A pesar de ser dos usuarios distintos, la contraseña de ambos coinciden y se puede cambiar desde la interfaz web.
 
 En algunas ocasiones, puede ser útil para diferenciar el admin y la contraseña de root , por ejemplo, para permitir que un usuario sin experiencia
 utilizar la interfaz web para realizar tareas comunes y que impide el acceso a la línea de comandos.
 
-Evite : index : `root` y sincronización de contraseña de administrador por ejecutar el siguiente comando ::
+Evite :index:`root` y  sincronización de contraseña de administrador por ejecutar el siguiente comando ::
 
- config septiembre AdminIsNotRoot habilitado
+ config September AdminIsNotRoot enabled
 
-A continuación, cambiar la contraseña de administrador del panel : guilabel : `Usuarios` . Sin sincronización de contraseñas ,
-administrador tendrá la nueva contraseña y, a raíz mantendrá a mantener el antiguo.
+A continuación, cambiar la contraseña de administrador del panel :guilabel:`Usuarios`. Sin sincronización de contraseñas, administrador tendrá la nueva contraseña y, a raíz mantendrá a mantener el antiguo.
 
-Si desea cambiar la contraseña de root , debe hacerse desde la línea de comandos usando: comando: `passwd` .
+Si desea cambiar la contraseña de root , debe hacerse desde la línea de comandos usando :command:`passwd`.
+
 
 Gestión de contraseñas
 =======================
