@@ -207,7 +207,7 @@ Usted puede elegir entre dos políticas de gestión diferentes sobre la compleji
 
 * :dfn: `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
 * :dfn: `fuerte`
-El :index: `fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
+El :index:`fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
 
 * Longitud mínima de 7 caracteres
 * Contener al menos 1 número
