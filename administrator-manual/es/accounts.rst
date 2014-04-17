@@ -222,11 +222,11 @@ La política predeterminada es: dfn :`fuerte` .
 
 Para cambiar el ajuste a ninguno ::
 
-  config setprop PasswordStrength none Usuarios
+   config setprop PasswordStrength none Usuarios
 
 Para cambiar el ajuste a la fuerte ::
 
-  config setprop PasswordStrength Usuarios fuerte
+   config setprop PasswordStrength Usuarios fuerte
 
 Revise la política actualmente en uso en el servidor ::
 
