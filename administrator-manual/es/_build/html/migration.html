@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Migración de NethService/Servidor SME &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Acceso al NethServer" href="access.html" />
+    <link rel="prev" title="Gestor de paquetes" href="packages.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="access.html" title="Acceso al NethServer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="packages.html" title="Gestor de paquetes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="migracion-de-nethservice-servidor-sme">
+<h1>Migración de NethService/Servidor SME<a class="headerlink" href="#migracion-de-nethservice-servidor-sme" title="Permalink to this headline">¶</a></h1>
+<p><span class="target" id="index-0"></span>Migración es el proceso de convertir un servidor SME (o NethService) máquina en  NethServer.</p>
+<ol class="arabic">
+<li><p class="first">En el antiguo anfitrión, crear un archivo de copia de seguridad completa y moverlo a la nueva NethServer host.</p>
+</li>
+<li><p class="first">En el nuevo servidor, instalar todos los paquetes que cubren las mismas características de la anterior.</p>
+</li>
+<li><p class="first">Explotar el archivo de copia de seguridad completa en algún directorio (por ejemplo,
+<tt class="docutils literal"><span class="pre">/var/lib/migration</span></tt>)</p>
+</li>
+<li><p class="first">Señale el evento:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># signal-event migration-import /var/lib/migration</span>
+</pre></div>
+</div>
+<p>Este paso requerirá algún tiempo.</p>
+</li>
+<li><p class="first">Búsqua algún <tt class="docutils literal"><span class="pre">ERROR</span></tt> cadena en <tt class="docutils literal"><span class="pre">/var/log/messages</span></tt></p>
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="packages.html"
+                        title="previous chapter">Gestor de paquetes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="access.html"
+                        title="next chapter">Acceso al NethServer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/migration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="access.html" title="Acceso al NethServer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="packages.html" title="Gestor de paquetes"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Proxy Web &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Puerto delantero" href="firewall.html" />
+    <link rel="prev" title="Servidor de fax" href="fax_server.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="firewall.html" title="Puerto delantero"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fax_server.html" title="Servidor de fax"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="proxy-web">
+<h1>Proxy Web<a class="headerlink" href="#proxy-web" title="Permalink to this headline">¶</a></h1>
+<p>Configure el proxy web con filtrado de contenido.</p>
+<div class="section" id="apoderado">
+<h2>Apoderado<a class="headerlink" href="#apoderado" title="Permalink to this headline">¶</a></h2>
+<p>La Web Proxy trabaja para reducir el uso de ancho de banda mediante el almacenamiento en caché
+las páginas que visita. Es transparente para los navegadores web usando
+este servidor como su puerta de enlace.</p>
+<dl class="docutils">
+<dt>Activado</dt>
+<dd>Habilitar Proxy.</dd>
+<dt>Proxy padre</dt>
+<dd>Introduzca la dirección IP y el puerto del proxy padre. La sintaxis correcta es
+Dirección_IP: puerto.</dd>
+</dl>
+</div>
+<div class="section" id="filtro">
+<h2>Filtro<a class="headerlink" href="#filtro" title="Permalink to this headline">¶</a></h2>
+<p>El filtro de contenidos se utiliza para controlar la navegación web y
+sitio bloqueando el uso de algunas variables, como palabras clave, ip
+dirección, los usuarios internos, o evaluar el contenido de la página web,
+o extensiones de archivo. Con esta herramienta es posible por ejemplo para permitir
+acceso sólo en algunos sitios deseados (tales como los de interés
+empresa), mientras que el bloqueo de todos los demás.</p>
+<dl class="docutils">
+<dt>Modo</dt>
+<dd>Habilitación del Web Filter modo puede configurar
+&#8220;Bloquear todo&#8221; y luego permitir que las categorías seleccionadas, o
+&#8220;Permitir todos&#8221; y luego bloquear las categorías seleccionadas.</dd>
+<dt>Bloquear el acceso a sitios web con IP</dt>
+<dd>Si está habilitado, no se puede acceder a sitios web utilizando una dirección IP, pero sólo el nombre de host.</dd>
+<dt>Habilitar el filtrado de URL con expresiones de</dt>
+<dd>Si está activado, las direcciones URL se analizan en busca de palabras que caen en las categorías seleccionadas.
+Por ejemplo se puede bloquear las URL que contengan la palabra <em>sexo</em>.</dd>
+<dt>Lista de extensiones de archivo bloqueadas</dt>
+<dd>Introduzca las extensiones que desee bloquear, separadas por comas</dd>
+<dt>Sitios prohibidos y direcciones IP</dt>
+<dd>La lista de sitios prohibidos y la lista de los hosts de la LAN que no puede navegar por Internet.</dd>
+<dt>Sitios y permisos de propiedad intelectual</dt>
+<dd>La lista de los sitios y las máquinas de la LAN permite eludir el filtro de contenido.</dd>
+</dl>
+</div>
+<div class="section" id="bypass-proxy-transparente">
+<h2>Bypass proxy transparente<a class="headerlink" href="#bypass-proxy-transparente" title="Permalink to this headline">¶</a></h2>
+<p>Establecer algunos IP para utilizar el servidor proxy transparente y de acceso
+Internet sin ser proxy.</p>
+<div class="section" id="crear">
+<h3>Crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h3>
+<p>Crear una nueva regla de derivación.</p>
+<dl class="docutils">
+<dt>Dirección IP</dt>
+<dd>Dirección IP de la máquina que no será filtrado por el proxy.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="antivirus">
+<h2>Antivirus<a class="headerlink" href="#antivirus" title="Permalink to this headline">¶</a></h2>
+<p>Activar la exploración de virus/desactivar las páginas web.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Proxy Web</a><ul>
+<li><a class="reference internal" href="#apoderado">Apoderado</a></li>
+<li><a class="reference internal" href="#filtro">Filtro</a></li>
+<li><a class="reference internal" href="#bypass-proxy-transparente">Bypass proxy transparente</a><ul>
+<li><a class="reference internal" href="#crear">Crear</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#antivirus">Antivirus</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fax_server.html"
+                        title="previous chapter">Servidor de fax</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="firewall.html"
+                        title="next chapter">Puerto delantero</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/web_proxy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="firewall.html" title="Puerto delantero"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fax_server.html" title="Servidor de fax"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
