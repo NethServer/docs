@@ -3,7 +3,7 @@ Usuarios
 ========
 
 Se requiere un usuario del sistema para acceder a muchos servicios prestados por
-| Producto | (correo electrónico, carpetas compartidas , etc .) .
+|Product| (correo electrónico, carpetas compartidas , etc .) .
 
 Cada usuario se caracteriza por un par de credenciales ( usuario y
 contraseña). Una cuenta de usuario recién creada permanece bloqueado hasta que tenga
