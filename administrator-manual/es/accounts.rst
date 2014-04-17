@@ -230,7 +230,7 @@ Para cambiar el ajuste a la fuerte ::
 
 Revise la política actualmente en uso en el servidor ::
 
-  Usuarios config GetProp PasswordStrength
+   Usuarios config GetProp PasswordStrength
 
 Vencimiento
 ------------
@@ -246,38 +246,38 @@ config setprop PasswordStrength PassExpires no
 
 Para desactivar la caducidad de la contraseña para un usuario único ( reemplace username con el usuario ) ::
 
-  db cuentas setprop <username> PassExpires no
-  caso de la señal -password- - actualización de la política
+   db cuentas setprop <username> PassExpires no
+   caso de la señal -password- - actualización de la política
 
 
 A continuación se presentan los comandos para ver las directivas habilitadas .
 
 El número máximo de días en que se puede mantener la misma contraseña (por defecto: 180 ) ::
 
-  config GetProp PasswordStrength MaxPassAge
+   config GetProp PasswordStrength MaxPassAge
 
 
 Número mínimo de días en los que se ven obligados a mantener la misma contraseña (por defecto 0 ) ::
 
-  config GetProp PasswordStrength MinPassAge
+   config GetProp PasswordStrength MinPassAge
 
 
 Número de días en que el aviso se envió por correo electrónico ( predeterminado : 7) ::
 
-  config GetProp PasswordStrength PassWarning
+   config GetProp PasswordStrength PassWarning
 
 
-Para cambiar los parámetros reemplazan el : comando: `GetProp` comando con : comando: `setprop` ,
+Para cambiar los parámetros reemplazan el : comando:`GetProp` comando con : comando:`setprop` ,
 a continuación, agregue el valor deseado en el extremo de la línea. Finalmente aplicar nuevas configuraciones ::
 
-  caso de la señal -password- - actualización de la política
+   caso de la señal -password- - actualización de la política
 
 
 
 Por ejemplo , para cambiar al 5 " Número de días en que el aviso es enviado por correo electrónico " ::
 
- config setprop PasswordStrength PassWarning 5
- caso de la señal -password- - actualización de la política
+   config setprop PasswordStrength PassWarning 5
+   caso de la señal -password- - actualización de la política
 
 
 
