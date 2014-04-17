@@ -13,7 +13,7 @@ servidores que requieren autenticación .
 Crear/Modificar
 ===============
 
-Le permite crear o modificar los datos de usuario El nombre de usuario no puede
+Le permite crear o modificar los datos de usuario* El nombre de usuario * no puede
 ser cambiado después de la creación.
 
 Usuario
@@ -25,7 +25,7 @@ Información básica sobre el usuario. Estos campos son
 Nombre de usuario
      El * Nombre de usuario * se utiliza para acceder a los servicios. Se puede
      contener letras solamente minúsculas , números, guiones , puntos y
-     guión bajo ( _ ) y debe comenzar con una letra minúscula . para
+     guión bajo ( _ ) y debe comenzar con una letra minúscula . Por
      ejemplo, " luisa ", " jsmith " y " liu- jo" es un nombre de usuario válido y
      " 4friends ", " Franco Blacks " y " aldo / error " no lo son.
 Nombre
@@ -138,8 +138,7 @@ Nombre del grupo
      Solo puede contener letras minúsculas, números ,
      guiones y guiones bajos y debe comenzar con
      una letra minúscula . Por ejemplo, " ventas ", " beta3 " y " rev_net "
-     son nombres válidos , mientras que " 3d", " Oficina de Ventas " y " Q & A" son
-     no .
+     son nombres válidos , mientras que " 3d", " Oficina de Ventas " y " Q & A" no son .
 Descripción
      Introduzca una breve descripción del grupo .
 Afiliación
@@ -196,7 +195,7 @@ Si desea cambiar la contraseña de root , debe hacerse desde la línea de comand
 Gestión de contraseñas
 =======================
 
-El sistema ofrece la posibilidad de establecer limitaciones a la contraseña : dfn : ` ` y complejidad : dfn : ` ` caducidad .
+El sistema ofrece la posibilidad de establecer limitaciones a la contraseña :dfn:`complejidad` :dfn:`caducidad` .
 
 Complejidad
 ------------
