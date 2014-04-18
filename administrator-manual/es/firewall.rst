@@ -70,7 +70,7 @@ cargar (saliente). La tabla muestra los valores configurados en cada
 interfaz, lo que permite modificar los límites de ancho de banda. 
 
 Crear / Modificar
-------------------
+-----------------
 
 Crear una configuración de límites de ancho de banda de la interfaz. 
 
@@ -117,7 +117,7 @@ en comparación con el tráfico normal de la red.
 
 
 Crear
-------
+-----
 
 Puerto
     Especifique el puerto utilizado por el servicio de red.

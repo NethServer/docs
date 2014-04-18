@@ -1,6 +1,6 @@
-============ 
+=========== 
 DNS y DHCP 
-============ 
+=========== 
 
 Gestión de alias de servidor, nombres de host y el servidor DHCP. 
 
@@ -13,7 +13,7 @@ nombre del servidor es *nethserver.nethesis.it*, un alias puede ser
 para el nombre de alias. 
 
 Crear / Modificar 
---------------------- 
+----------------- 
 
 Permite crear un nuevo alias para este servidor. 
 
@@ -51,7 +51,7 @@ Final
  
 
 Crear / Modificar 
---------------------- 
+----------------- 
 
 Agrega una nueva asignación estática (reserva) para el servidor DHCP. 
 El dispositivo con la dirección MAC especificada siempre recibirá la 
@@ -95,7 +95,7 @@ DNS secundario
     La dirección del servidor secundario para ser contactado en caso de que el principal no está respondiendo (opcional). 
 
 Crear / Modificar 
---------------------- 
+----------------- 
 
 Haga clic en Crear para asignar un nombre de host a una dirección IP. la 
 servidor devolverá la dirección IP configurada para peticiones de su nombre.

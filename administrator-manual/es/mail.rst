@@ -7,8 +7,7 @@ Configure los servicios de correo electrónico
 Dominios 
 ======== 
 
-La tabla contiene la lista de nombres de dominio de Internet para los que el 
-servidor acepta correo electrónico entrante. 
+La tabla contiene la lista de nombres de dominio de Internet para los que el servidor acepta correo electrónico entrante. 
 
 Crear / Modificar 
 ----------------- 
@@ -62,13 +61,13 @@ Archivo
     El servidor de correo electrónico bloquee mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP,rar, etc.)
 
 Lista personalizada
-    Definir una lista de extensiones que serán bloqueados, tales como doc, pdf, etc (sin arrancar punto, es decir, doc y no. doc).
+    Definir una lista de extensiones que serán bloqueados,tales como doc, pdf, etc (sin arrancar punto, es decir, doc y no. doc).
+
 
 Buzones 
-======== 
+======= 
 
-En esta ficha, puede configurar algunos parámetros relacionados con la 
-carpetas de correo locales. 
+En esta ficha, puede configurar algunos parámetros relacionados con la carpetas de correo locales. 
 
 IMAP
     Habilitar el acceso a carpetas a través del protocolo IMAP (recomendado).
@@ -118,16 +117,11 @@ Contraseña
     La contraseña requerida por el proveedor.
 
 Permitir conexión no cifrada
-    Normalmente, si se utiliza una conexión autenticada (con nombre de usuario y contraseña),
-    Se requiere una conexión cifrada para proteger la contraseña. Al seleccionar esta opción,
-    se permitira una conexión no segura para conectarse al proveedor (no se recomienda, utilizar solamente si el ISP tiene problemas). 
+    Normalmente, si se utiliza una conexión autenticada (con nombre de usuario y contraseña). Se requiere una conexión cifrada para proteger la contraseña. Al seleccionar esta opción, se permitira una conexión no segura para conectarse al proveedor (no se recomienda, utilizar solamente si el ISP tiene problemas). 
 
 Gestión de Colas 
 ================ 
-
-Esta ficha le permite gestionar la cola de mensajes de correo electrónico en tránsito en el servidor. 
-La tabla recoge todo el correo en espera de ser entregado, 
-y está normalmente vacía. Los siguientes campos se mostrarán: 
+Esta ficha le permite gestionar la cola de mensajes de correo electrónico en tránsito en el servidor. La tabla recoge todo el correo en espera de ser entregado, y está normalmente vacía. Los siguientes campos se mostrarán: 
 
 * Id: identificador del mensaje 
 * Remitente: desde la dirección de correo electrónico (que envió el mensaje) 
@@ -173,20 +167,19 @@ Crear la asociación entre una nueva dirección de correo electrónico y un
 usuario o grupo ya presente en el sistema. 
 
 Correo
-    Especifique en el campo de texto de sólo la parte antes **@** personaje.
-    A continuación, seleccione en el menú desplegable, si la dirección es para un dominio 
-    específico o para *todos los dominios* en el sistema.
+    Especifique en el campo de texto de sólo la parte antes **@** personaje.A continuación, seleccione en el menú desplegable, si la dirección es para un dominio específico o para *todos los dominios* en el sistema.
 
 Descripción
     Un campo de texto libre para registrar cualquier anotación.
 
 Cuenta
-    Seleccione un usuario o un grupo entre los que ya están en el
-    sistema que se asociará a la dirección de correo electrónico.
+    Seleccione un usuario o un grupo entre los que ya están en elsistema que se asociará a la dirección de correo electrónico.
 
+Sólo las redes locales
+    Al habilitar esta opción bloqueará la recepción de mensajes de los remitentes externos. 
 
-Borrar
-======
+Borrar 
+======= 
 
 Elimine la dirección de correo electrónico. Esto no afecta a 
 mensajes que ya se entregan al usuario o grupo asociado con la dirección. 

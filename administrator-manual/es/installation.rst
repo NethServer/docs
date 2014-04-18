@@ -16,7 +16,7 @@ Los requerimientos minimos son:
           El programa RAID llevará a asegurar la integridad de los datos en caso           de un fallo de disco.
 
 Compatibilidad hardware
-------------------------
+-----------------------
 
 |product| es compatible con cualquier hardware certificado por 
 Red Hat® Enterprise Linux® (RHEL®), escuchado en `hardware.redhat.com <http://hardware.redhat.com/>`_
@@ -42,23 +42,15 @@ Tipos de instalacion
 Instalacion desde ISO
 =====================
 
-Descargar |product| el archivo  ISO desde el sitio oficial
-|download_site|. 
+Descargar |product| el archivo  ISO desde el sitio oficial |download_site|. 
 
-El archivo ISO descargado se puede utilizar para crear una 
-*Dispositivo de arranque*, como un CD, un DVD o una memoria USB. 
-La creación de un disco de inicio es diferente de escribir
-archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, *escritura* o *Grabar imagen ISO*). 
-Las instrucciones sobre cómo crear un CD / DVD de la ISO estan fácilmente 
-disponibles en Internet o en la documentación de su sistema operativo. 
+El archivo ISO descargado se puede utilizar para crear un *Dispositivo de arranque*, como un CD, un DVD o una memoria USB. La creación de un disco de inicio es diferente de escribir archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, *escritura* o *Grabar imagen ISO*). Las instrucciones sobre cómo crear un CD / DVD de la ISO estan fácilmente disponibles en Internet o en la documentación de su sistema operativo. 
 
 Un procedimiento similar se aplica para la memoria USB de arranque. 
 Hay programas específicos [#]_ que convertirán lo descargado ISO en memorias USB de arranque. 
 
 En ambos casos, ahora se puede iniciar la máquina utilizando los medios de comunicación recientemente respaldados. 
-Si el equipo no arranca desde el CD / DVD (o USB), consulte la 
-documentación de la BIOS de la placa. Un problema típico es 
-la configuración de arranque de prioridad del dispositivo. 
+Si el equipo no arranca desde el CD / DVD (o USB), consulte la documentación de la BIOS de la placa. Un problema típico es la configuración de arranque de prioridad del dispositivo. 
 El primer dispositivo de arranque debe ser el lector de CD / DVD (o memoria USB).
 
 
@@ -67,8 +59,7 @@ El primer dispositivo de arranque debe ser el lector de CD / DVD (o memoria USB)
 
 En el arranque de un menú mostrará diferentes tipos de instalación: 
 
-.. warning:: 
-   La instalación borrará todos los datos existentes en los discos duros!
+.. warning :: La instalación borrará todos los datos existentes en los discos duros!
 
 
 |product| instalacion interactiva
@@ -164,13 +155,12 @@ Esta pantalla aparece cuando se detectan dos o más discos en el arranque.
 
 Niveles disponibles:
 
-* RAID 1: crea una copia exacta (espejo) de todos los datos en dos o más discos.  Número mínimo de discos: 2 
+* RAID 1: crea una copia exacta (espejo) de todos los datos en dos o más discos. Número mínimo de discos: 2 
 
-* RAID 5: utiliza una subdivisión de los datos a nivel de bloque, distribuyendo los datos de paridad de manera uniforme 
-  en todos los discos.  Número mínimo de discos: 3 
+* RAID 5: utiliza una subdivisión de los datos a nivel de bloque, distribuyendo los datos de paridad de manera uniforme en todos los discos. Número mínimo de discos: 3 
 
 Disco de repuesto
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Puede crear un disco de repuesto si el número de disco es mayor que el mínimo exigido por el nivel de RAID seleccionado, 
 Un disco de reserva se añadirá a la RAID en caso de que se produce un fallo. 
@@ -206,7 +196,7 @@ Esta interfaz también se conoce como interfaz *verde*.
 
 
 Configuracion de la red
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Host y el nombre de dominio (FQDN)
     Escriba el nombre de host y dominio en el que el servidor va a funcionar (por ejemplo: samp:`server.mycompany.com`).

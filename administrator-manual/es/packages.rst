@@ -4,7 +4,7 @@ Gestor de paquetes
 
 La vista principal muestra una lista de los componentes de software. Los elementos marcados representa a componentes instalados, mientras que los elementos no marcados son los que están disponibles. Usted puede filtrar la lista por categorías. 
 
-.. note::
+.. NOTE::
 
     Ambos componentes y categorías se definen con metadatos YUM.
 
@@ -14,7 +14,7 @@ pantalla resume lo que va a ser instalado y eliminado. También,
 se muestra la lista de paquetes opcionales, de ser seleccionados para 
 instalación.
 
-.. note:: 
+.. NOTE:: 
 
  Los paquetes opcionales se pueden instalar también *despues* de la instalación de el componente relativo: haga clic en el :guilabel:`Apply` de nuevo y seleccionarlos en la pantalla de resumen.
     

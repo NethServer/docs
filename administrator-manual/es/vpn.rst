@@ -20,11 +20,11 @@ Permitir la creación de un nuevo usuario. Para cada usuario, el sistema
 crea un certificado x509. 
 
 VPN sólo 
-     El nombre que se utiliza para el acceso VPN. Puede contener sólo minúsculas, números, guiones, guiones bajos (_) y debe comenzar con una letra minúscula. Por ejemplo, "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido, mientras que "4Friends" 
-     "Franco Blacks" y "aldo / error" no lo son.
+     El nombre que se utiliza para el acceso VPN. Puede contener sólo minúsculas, números, guiones, guiones bajos (_) y debe comenzar con una letra minúscula. Por ejemplo, "luisa", "jsmith" y "liu-jo" es un nombre de usuario válido, mientras que "4Friends" "Franco Blacks" y "aldo / error" no lo son. 
 
 Usuario del Sistema 
-   Habilitar el acceso VPN para un usuario ya existente en el sistema.
+     Habilitar el acceso VPN para un usuario ya existente en el sistema. 
+     El usuario puede seleccionar de la lista desplegable. 
 
 Red de control remoto 
      Introduzca esta información sólo cuando se desea crear una VPN nt2net. 
