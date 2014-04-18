@@ -19,8 +19,7 @@ ser cambiado después de la creación.
 Usuario
 -------
 
-Información básica sobre el usuario. Estos campos son
-     requerida .
+Información básica sobre el usuario. Estos campos son requerida.
 
 Nombre de usuario
      El *Nombre de usuario* se utiliza para acceder a los servicios. Se puede
@@ -28,10 +27,13 @@ Nombre de usuario
      guión bajo ( _ ) y debe comenzar con una letra minúscula . Por
      ejemplo, " luisa ", " jsmith " y " liu- jo" es un nombre de usuario válido y
      " 4friends ", " Franco Blacks " y " aldo / error " no lo son.
+
 Nombre
      Es el nombre real del usuario. Por ejemplo, " John "
+
 Apellido
      El apellido del usuario
+
 Grupos
      Uso de la barra de búsqueda , puede seleccionar los grupos a los
      la que se agregará el usuario . El usuario puede pertenecer a varios grupos.
@@ -203,13 +205,14 @@ Complejidad
 El índice de complejidad de contraseña es un conjunto de condiciones mínimas que debe coincidir con la contraseña que ser aceptado por el sistema:
 Usted puede elegir entre dos políticas de gestión diferentes sobre la complejidad de contraseña :
 
-* :dfn: `no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
-* :dfn: `fuerte`
+* :dfn:`no`: no hay un control específico sobre la contraseña introducida , pero la longitud mínima es de 7 caracteres
+* :dfn:`fuerte` 
+
 El :index:`fuerte` política requiere que la contraseña debe cumplir con las siguientes reglas:
 
 * Longitud mínima de 7 caracteres
 * Contener al menos 1 número
-* Contener al menos 1 carácter en mayúscula
+* Contener al menos 1 caracter en mayuscula
 * Contener al menos 1 carácter en minúscula
 * Contener al menos 1 carácter especial
 * Por lo menos 5 caracteres diferentes
@@ -267,7 +270,7 @@ Número de días en que el aviso se envió por correo electrónico ( predetermin
    config GetProp PasswordStrength PassWarning
 
 Para cambiar los parámetros reemplazan el :command:`getprop` comando con :command:`setprop`,
-Para cambiar los parámetros reemplazan el :comando:`GetProp` comando con :comando:`setprop` ,
+Para cambiar los parámetros reemplazan el :command:`GetProp` comando con :command:`setprop` ,
 a continuación, agregue el valor deseado en el extremo de la línea. Finalmente aplicar nuevas configuraciones ::
 
    caso de la señal -password- - actualización de la política
