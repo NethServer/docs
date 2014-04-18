@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Puerto delantero &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Monitor de ancho de banda (ntopng)" href="bandiwidth_monitor.html" />
+    <link rel="prev" title="Proxy Web" href="web_proxy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bandiwidth_monitor.html" title="Monitor de ancho de banda (ntopng)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="web_proxy.html" title="Proxy Web"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="puerto-delantero">
+<h1>Puerto delantero<a class="headerlink" href="#puerto-delantero" title="Permalink to this headline">¶</a></h1>
+<p>Utilice este panel para cambiar las reglas del cortafuegos
+es decir, para abrir un puerto específico (o un rango de puertos) en el servidor
+y reenviar el tráfico de un puerto a otro. Las reglas de reenvío de puerto
+permiten el acceso a los hosts de la red local desde Internet.</p>
+<div class="section" id="crear-modificar">
+<h2>Crear / Modificar<a class="headerlink" href="#crear-modificar" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Puerto de origen</dt>
+<dd>Inserte el puerto abierto en la dirección IP pública.</dd>
+<dt>Puerto de destino</dt>
+<dd>Intoduzca el puerto en el host interno que será el destino del tráfico.</dd>
+<dt>Host de destino</dt>
+<dd>Dirección IP de la máquina interna donde será redirigido tráfico.</dd>
+<dt>Permitir sólo</dt>
+<dd>Permitir el tráfico hacia delante sólo de alguna fuente redes / hosts.</dd>
+<dt>Descripción</dt>
+<dd>Descripción opcional de la regla de reenvío de puertos.</dd>
+</dl>
+</div>
+<div class="section" id="activar-desactivar">
+<h2>Activar / Desactivar<a class="headerlink" href="#activar-desactivar" title="Permalink to this headline">¶</a></h2>
+<p>Las reglas de reenvío de puerto están habilitadas de forma predeterminada en
+creación. Puede activar temporalmente / desactivarlos
+Con este botón</p>
+<dl class="docutils">
+<dt>Si</dt>
+<dd>Habilitar la regla.</dd>
+<dt>No</dt>
+<dd>Deshabilitar la regla.</dd>
+</dl>
+</div>
+<div class="section" id="verificacion-del-servidor-de-seguridad">
+<h2>Verificacion del servidor de seguridad<a class="headerlink" href="#verificacion-del-servidor-de-seguridad" title="Permalink to this headline">¶</a></h2>
+<p>Realiza un control general sobre las reglas del cortafuegos configuradas. Útil para la detección de inconsistencias.</p>
+</div>
+</div>
+<div class="section" id="gestion-de-ancho-de-banda">
+<h1>Gestion de ancho de banda<a class="headerlink" href="#gestion-de-ancho-de-banda" title="Permalink to this headline">¶</a></h1>
+<p>El gestor de ancho de banda le permite cambiar las prioridades en el tráfico al
+pasar por el servidor de seguridad (que debe tener al menos dos interfaces de red).</p>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>Activa o desactiva la gestión de ancho de banda.</p>
+</div>
+<div class="section" id="reglas-de-interfaz">
+<h2>Reglas de interfaz<a class="headerlink" href="#reglas-de-interfaz" title="Permalink to this headline">¶</a></h2>
+<p>Para cada interfaz en la que desea administrar la prioridad de ancho de banda es
+necesario especificar la cantidad máxima de ancho de banda disponible en
+direcciones salientes y entrantes. Si no hay datos se transmiten a una velocidad configurada. Es imprescindible utilizar los valores reales,
+medido preferiblemente con pruebas de velocidad, en particular para la banda en
+cargar (saliente). La tabla muestra los valores configurados en cada
+interfaz, lo que permite modificar los límites de ancho de banda.</p>
+<div class="section" id="id1">
+<h3>Crear / Modificar<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Crear una configuración de límites de ancho de banda de la interfaz.</p>
+<dl class="docutils">
+<dt>Interfaz</dt>
+<dd>Seleccione la interfaz a la que se aplica el límite de ancho de banda. En general, el ancho de banda está limitado sólo en las interfaces WAN.</dd>
+<dt>Ancho de banda entrante (kbps)</dt>
+<dd>Ajuste la cantidad de ancho de banda entrante (descargar).</dd>
+<dt>Ancho de banda de salida (kbps)</dt>
+<dd>Ajuste la cantidad de ancho de banda de salida (carga).</dd>
+<dt>Descripcion</dt>
+<dd>Una nota opcional (por ejemplo: ADSL 1280/256).</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="reglas-de-direcciones">
+<h2>Reglas de direcciones<a class="headerlink" href="#reglas-de-direcciones" title="Permalink to this headline">¶</a></h2>
+<p>La tabla muestra la lista de direcciones de red (IP o MAC) que tienen
+personalizada reglas de prioridad. Por ejemplo, usted puede decidir
+que el tráfico de un equipo específico en la red local
+tener una prioridad alta o baja en comparación con otros.</p>
+<div class="section" id="id2">
+<h3>Crear / Modificar<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Dirección IP o MAC</dt>
+<dd>Introduzca la dirección IP o la dirección MAC que identifica el ordenador.</dd>
+<dt>Descripción</dt>
+<dd>Una descripción opcional para identificar claramente el propósito de la regla. Por ejemplo: una alta prioridad para el jefe.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="reglas-de-puerto">
+<h2>Reglas de puerto<a class="headerlink" href="#reglas-de-puerto" title="Permalink to this headline">¶</a></h2>
+<p>La tabla muestra la lista de puertos TCP / UDP que tienen reglas
+personalizadas prioridad. Por ejemplo, puede especificar que el
+tráfico en un servicio de red en particular (desde o hacia
+un puerto en particular) tiene una prioridad baja o alta
+en comparación con el tráfico normal de la red.</p>
+<div class="section" id="crear">
+<h3>Crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Puerto</dt>
+<dd>Especifique el puerto utilizado por el servicio de red.</dd>
+<dt>Protocolo</dt>
+<dd>Introduzca el protocolo IP.</dd>
+<dt>Descripción</dt>
+<dd>Una descripción opcional que establece claramente la finalidad de la norma. Por ejemplo: Fondo para Servicio FTP.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Puerto delantero</a><ul>
+<li><a class="reference internal" href="#crear-modificar">Crear / Modificar</a></li>
+<li><a class="reference internal" href="#activar-desactivar">Activar / Desactivar</a></li>
+<li><a class="reference internal" href="#verificacion-del-servidor-de-seguridad">Verificacion del servidor de seguridad</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gestion-de-ancho-de-banda">Gestion de ancho de banda</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#reglas-de-interfaz">Reglas de interfaz</a><ul>
+<li><a class="reference internal" href="#id1">Crear / Modificar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reglas-de-direcciones">Reglas de direcciones</a><ul>
+<li><a class="reference internal" href="#id2">Crear / Modificar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reglas-de-puerto">Reglas de puerto</a><ul>
+<li><a class="reference internal" href="#crear">Crear</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="web_proxy.html"
+                        title="previous chapter">Proxy Web</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bandiwidth_monitor.html"
+                        title="next chapter">Monitor de ancho de banda (ntopng)</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/firewall.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bandiwidth_monitor.html" title="Monitor de ancho de banda (ntopng)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="web_proxy.html" title="Proxy Web"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

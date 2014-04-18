@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Las carpetas compartidas &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Red de Windows" href="samba.html" />
+    <link rel="prev" title="Email" href="mail.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="samba.html" title="Red de Windows"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mail.html" title="Email"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="las-carpetas-compartidas">
+<h1>Las carpetas compartidas<a class="headerlink" href="#las-carpetas-compartidas" title="Permalink to this headline">¶</a></h1>
+<p>Una carpeta compartida es un recurso en el sistema que se puede acceder de acuerdo a los servicios instalados en el sistema y los permisos establecidos por este módulo.</p>
+<div class="section" id="crear-nueva-editar">
+<h2>Crear nueva / editar<a class="headerlink" href="#crear-nueva-editar" title="Permalink to this headline">¶</a></h2>
+<p>Dependiendo de los servicios instalados en el sistema, verá
+varias pestañas.</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Nombre</dt>
+<dd>El nombre de la carpeta compartida. Sólo puede contener letras minúsculas,
+números, puntos, guiones y guiones bajos. La longitud máxima del nombre es de 12 caracteres.</dd>
+<dt>Descripción</dt>
+<dd>Campo opcional para una breve descripción de la carpeta compartida.</dd>
+<dt>Propietario del grupo</dt>
+<dd>El grupo propietario de la carpeta compartida, sólo los miembros del
+grupo puede acceder a la carpeta.</dd>
+<dt>Permitir escrito al propietario del grupo</dt>
+<dd>Permitir el acceso de escritura a los miembros del grupo propietario.</dd>
+<dt>Permitir el acceso de lectura a todos</dt>
+<dd>Acceso de lectura a cualquiera que se conecte al sistema, así como
+redes públicas.</dd>
+</dl>
+</div>
+<div class="section" id="acl">
+<h3>ACL<a class="headerlink" href="#acl" title="Permalink to this headline">¶</a></h3>
+<p>La Lista de control de acceso permite acceder  a los permisos especificos de la
+carpeta compartida para cada uno de los usuarios o grupos, además de aquellas del propietario del grupo.</p>
+<dl class="docutils">
+<dt>Leer</dt>
+<dd>Permitir o denegar el acceso de lectura al usuario o grupo seleccionado.</dd>
+<dt>Escribir</dt>
+<dd>Permitir o denegar el acceso de escritura para el usuario o grupo
+seleccionado.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="borrar">
+<h2>Borrar<a class="headerlink" href="#borrar" title="Permalink to this headline">¶</a></h2>
+<p>Elimina la carpeta y todo su contenido. <em>La acción no es
+reversible!</em> La única manera de recuperar el contenido de una carpeta compartida
+que a medida que se han eliminado, para restaurar es una copia de seguridad.</p>
+</div>
+<div class="section" id="restablecer-los-permisos">
+<h2>Restablecer los permisos<a class="headerlink" href="#restablecer-los-permisos" title="Permalink to this headline">¶</a></h2>
+<p>Establezca el propietario del grupo y las ACL configuradas usando este módulo
+en todos los archivos de la carpeta. La operación se lleva a cabo de forma recursiva en todos los archivos y subcarpetas de la carpeta compartida.</p>
+<div class="section" id="acceso-a-la-web">
+<h3>Acceso a la web<a class="headerlink" href="#acceso-a-la-web" title="Permalink to this headline">¶</a></h3>
+<p>Permite el acceso a la carpeta compartida desde la web.</p>
+<dl class="docutils">
+<dt>Host virtual</dt>
+<dd>Te permite elegir que nombre de host se encuentra disponible en la carpeta compartida. La lista viene de la tarjeta de &#8220;Alias servidor&#8221; en el
+módulo &#8220;DNS y DHCP.&#8221;</dd>
+<dt>Dirección Web (URL)</dt>
+<dd>Define la dirección web en la que el recurso está disponible.</dd>
+<dt>Permitir el acceso sólo desde redes locales</dt>
+<dd>Si sólo se activa, restringe el acceso al recurso sólo para
+redes locales.</dd>
+<dt>Requerir una contraseña</dt>
+<dd>El acceso a los recursos de la web no requiere
+la autenticación. Active esta opción para solicitar una contraseña: especifique en el campo de abajo.</dd>
+</dl>
+</div>
+<div class="section" id="samba">
+<h3>Samba<a class="headerlink" href="#samba" title="Permalink to this headline">¶</a></h3>
+<p>Samba ofrece compartir archivos e impresoras para clientes SMB / CIFS (compartir archivos e impresoras en Windows).</p>
+<dl class="docutils">
+<dt>Habilitar Samba</dt>
+<dd>Permite el acceso como una &#8220;carpeta compartida&#8221; de Windows.</dd>
+<dt>Papelera de reciclaje de red</dt>
+<dd>Recopila los archivos eliminados por esta carpeta compartida, de modo similar a la papelera de reciclaje de Windows.</dd>
+<dt>Mantener los archivos con el mismo nombre</dt>
+<dd>Si dos archivos con el mismo nombre, que siguen siendo distintos en la basura. por
+desactivar esta opción, el último sobrescribe el año anterior.</dd>
+<dt>Acceso de invitados</dt>
+<dd><p class="first">A <em>usuario invitado</em> es un usuario cuya identificación ha fallado porque
+no proporcionó credenciales o ha facilitado información incorrecta. Para
+usuarios o dispositivos que actúan de este modo, se pueden conceder la
+siguientes permisos:</p>
+<ul class="last simple">
+<li>Ninguno</li>
+<li>Sólo lectura</li>
+<li>Lectura y escritura</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Las carpetas compartidas</a><ul>
+<li><a class="reference internal" href="#crear-nueva-editar">Crear nueva / editar</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#acl">ACL</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#borrar">Borrar</a></li>
+<li><a class="reference internal" href="#restablecer-los-permisos">Restablecer los permisos</a><ul>
+<li><a class="reference internal" href="#acceso-a-la-web">Acceso a la web</a></li>
+<li><a class="reference internal" href="#samba">Samba</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mail.html"
+                        title="previous chapter">Email</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="samba.html"
+                        title="next chapter">Red de Windows</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/shared_folder.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="samba.html" title="Red de Windows"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mail.html" title="Email"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

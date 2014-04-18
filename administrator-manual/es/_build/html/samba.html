@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Red de Windows &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Servidor de chat" href="chat.html" />
+    <link rel="prev" title="Las carpetas compartidas" href="shared_folder.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="chat.html" title="Servidor de chat"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="shared_folder.html" title="Las carpetas compartidas"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="red-de-windows">
+<h1>Red de Windows<a class="headerlink" href="#red-de-windows" title="Permalink to this headline">¶</a></h1>
+<p>Gestione la función de servidor en una red Windows.</p>
+<div class="section" id="papel">
+<h2>Papel<a class="headerlink" href="#papel" title="Permalink to this headline">¶</a></h2>
+<p>Seleccione el NethServer papel dentro de la red:
+estación de trabajo, el controlador de dominio o miembro de Active Directory.</p>
+<dl class="docutils">
+<dt>Puesto de trabajo</dt>
+<dd>Al habilitar esta opción NethServer se comportará como una estación de trabajo normal.</dd>
+<dt>Controlador de dominio</dt>
+<dd>Al habilitar esta opción NethServer se configurará como un controlador de dominio para la red.</dd>
+<dt>Dominio</dt>
+<dd>El nombre del dominio.</dd>
+<dt>Habilitar perfiles móviles</dt>
+<dd>Si está activado, el perfil de usuario se guarda en el servidor. Todos los datos de los usuarios estarán siempre accesibles, independientemente del equipo en el que el usuario ha iniciado la sesión</dd>
+<dt>Miembro de Active Directory</dt>
+<dd>El servidor se convierte en miembro de un dominio de Active Directory existente.
+Se necesita la contraseña del administrador de dominio.</dd>
+<dt>Ambito</dt>
+<dd>Bienes de Active Directory, por ejemplo: mydomain.local</dd>
+<dt>Dominio</dt>
+<dd>Nombre del dominio de Active Directory.</dd>
+</dl>
+<div class="section" id="la-autenticacion-de-active-directory">
+<h3>La autenticación de Active Directory<a class="headerlink" href="#la-autenticacion-de-active-directory" title="Permalink to this headline">¶</a></h3>
+<p>Introduzca las credenciales para permitir NethServer para convertirse en un miembro de un dominio de Active Directory.</p>
+<dl class="docutils">
+<dt>Nombre de usuario</dt>
+<dd>Nombre de usuario del administrador de Active Directory.</dd>
+<dt>Contraseña</dt>
+<dd>Contraseña del administrador de Active Directory.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Red de Windows</a><ul>
+<li><a class="reference internal" href="#papel">Papel</a><ul>
+<li><a class="reference internal" href="#la-autenticacion-de-active-directory">La autenticación de Active Directory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="shared_folder.html"
+                        title="previous chapter">Las carpetas compartidas</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="chat.html"
+                        title="next chapter">Servidor de chat</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/samba.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="chat.html" title="Servidor de chat"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="shared_folder.html" title="Las carpetas compartidas"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

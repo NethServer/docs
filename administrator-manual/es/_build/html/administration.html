@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>El acceso remoto &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="Fecha y hora" href="date_time.html" />
+    <link rel="prev" title="Acceso al NethServer" href="access.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="date_time.html" title="Fecha y hora"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="access.html" title="Acceso al NethServer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="el-acceso-remoto">
+<h1>El acceso remoto<a class="headerlink" href="#el-acceso-remoto" title="Permalink to this headline">¶</a></h1>
+<p>Se puede permitir el acceso a la interfaz web desde ordenadores en redes remotas. Añadir redes prohibidas aquí.</p>
+<p>Hosts habilitados pueden acceder a la interfaz web a través de HTTPS.</p>
+</div>
+<div class="section" id="acceso-a-la-web">
+<h1>Acceso a la Web<a class="headerlink" href="#acceso-a-la-web" title="Permalink to this headline">¶</a></h1>
+<p>El acceso a la interfaz web de configuración.</p>
+<dl class="docutils">
+<dt>Dirección de red</dt>
+<dd>Esta es la dirección desde la que acceder a la interfaz web se permitirá  Web.</dd>
+<dt>Máscara de red</dt>
+<dd>Para permitir el acceso a un solo host, utilice como máscara de subred  255.255.255.255.</dd>
+</dl>
+<div class="section" id="ssh">
+<h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
+<p>Administrar el acceso al servidor Secure Shell (SSH).</p>
+<dl class="docutils">
+<dt>Activar/Desactivar</dt>
+<dd>Activar/Desactivar el acceso SSH.</dd>
+<dt>Puerto TCP</dt>
+<dd>Introduzca el puerto TCP utilizado para el acceso SSH.</dd>
+<dt>Aceptar conexiones de redes Locales</dt>
+<dd>Acceso SSH habilitado sólo para conexiones de redes locales.</dd>
+<dt>Aceptar conexiones desde cualquier red</dt>
+<dd>Acceso SSH habilitado para las conexiones desde cualquier red.</dd>
+<dt>Permitir el acceso para el usuario root</dt>
+<dd>Permitir el acceso SSH para el usuario root (usuario administrador)</dd>
+<dt>Permitir la autentificación de contraseña</dt>
+<dd>Permite el acceso a través de SSH con autentificación de contraseña simple. Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="redes-locales">
+<h1>Redes locales<a class="headerlink" href="#redes-locales" title="Permalink to this headline">¶</a></h1>
+<p>Por razones de seguridad, algunos servicios de servidor están disponibles sólo en la red local.
+Cualquier red privada (por ejemplo,
+redes conectados en VPN) puede tener los mismos privilegios que la red local
+si está configurado en este panel.</p>
+<p>El panel también puede ser usado para configurar rutas estáticas
+que no utilizan la puerta de enlace predeterminada (por ejemplo,
+para llegar a las redes privadas conectadas a través de líneas dedicadas).</p>
+</div>
+<div class="section" id="crear-modificar">
+<h1>Crear / Modificar<a class="headerlink" href="#crear-modificar" title="Permalink to this headline">¶</a></h1>
+<p>Crea una nueva ruta a una red remota y / o permitir que un
+red a distancia para acceder a los servicios del servidor.</p>
+<dl class="docutils">
+<dt>Dirección de red</dt>
+<dd>Dirección de red para la nueva ruta.</dd>
+<dt>Mascara de red</dt>
+<dd>Máscara de red para la nueva ruta.</dd>
+<dt>Dirección del router</dt>
+<dd>Dirección de la puerta de enlace utilizado para llegar a la red especificada,no se requiere este campo.</dd>
+<dt>Descripción</dt>
+<dd>Un campo de texto libre para registrar cualquier anotación.</dd>
+</dl>
+<p>Después de la creación de rutas, sólo se puede cambiar
+dirección del router y la descripción.</p>
+</div>
+<div class="section" id="perfil-del-usuario">
+<h1>Perfil del usuario<a class="headerlink" href="#perfil-del-usuario" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Nombre</dt>
+<dd>Es el nombre del usuario, por ejemplo &#8220;John&#8221;.</dd>
+<dt>Apellido</dt>
+<dd>El apellido del usuario, por ejemplo, &#8220;Smith&#8221;.</dd>
+<dt>Dirección de correo electrónico externa</dt>
+<dd>Dirección de correo electrónico del usuario de un proveedor de correo externo. Si se especifica, esta dirección es utilizado por el sistema en el proceso de recuperación y la renovación contraseña.</dd>
+</dl>
+<p>Puede especificar un valor personalizado para los campos siguientes,
+de lo contrario los valores del módulo <em>Datos organización</em> se utilizará (este módulo sólo está disponible para el administrador del sistema).</p>
+<ul class="simple">
+<li>Empresa</li>
+<li>Oficina</li>
+<li>Dirección</li>
+<li>Ciudad</li>
+<li>Teléfono</li>
+</ul>
+</div>
+<div class="section" id="cambiar-contrasena">
+<h1>Cambiar contraseña<a class="headerlink" href="#cambiar-contrasena" title="Permalink to this headline">¶</a></h1>
+<p>Cambiar contraseña actual con una nueva contraseña.</p>
+<dl class="docutils">
+<dt>Contraseña actual</dt>
+<dd>Introduzca la contraseña actual.</dd>
+<dt>Nueva contraseña</dt>
+<dd>Introduzca la nueva contraseña.</dd>
+<dt>Repetir nueva contraseña</dt>
+<dd>Repetir nueva contraseña: debe coincidir con el archivo <em>Nueva contraseña</em></dd>
+</dl>
+</div>
+<div class="section" id="organizacion-detalles">
+<h1>Organización detalles<a class="headerlink" href="#organizacion-detalles" title="Permalink to this headline">¶</a></h1>
+<p>Estos campos contienen valores por defecto para la empresa.
+Los datos proporcionados se utilizarán como predeterminados al crear
+nuevos usuarios.</p>
+<p>Para cada usuario se pueden especificar diferentes valores en el panel
+Usuarios, ficha Detalles.
+La modificación de estos datos reemplaza los valores predeterminados para el
+los usuarios que no disponen de campos personalizados.</p>
+<p><strong>ADVERTENCIA</strong>: Cualquier cambio en los datos introducidos vuelve a crear los certificados SSL.</p>
+<dl class="docutils">
+<dt>Empresa</dt>
+<dd>Introduzca el nombre de la empresa.</dd>
+<dt>Ciudad</dt>
+<dd>Entrar en la ciudad de la empresa.</dd>
+<dt>Oficina</dt>
+<dd>Introduzca el departamento u oficina, cuyos miembros tendrán acceso.</dd>
+<dt>Teléfono</dt>
+<dd>Introduzca el número de teléfono de la empresa.</dd>
+<dt>Dirección</dt>
+<dd>Introduzca la dirección de la empresa.</dd>
+</dl>
+</div>
+<div class="section" id="red">
+<h1>Red<a class="headerlink" href="#red" title="Permalink to this headline">¶</a></h1>
+<p>Cambiar la configuración de las interfaces de red. Las interfaces de red del sistema se detectan automáticamente.</p>
+</div>
+<div class="section" id="estado">
+<h1>Estado<a class="headerlink" href="#estado" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Enlace</dt>
+<dd>Indica si el adaptador está conectado a cualquier dispositivo de red (por ejemplo, Ethernet cable conectado al interruptor).</dd>
+<dt>Modelo</dt>
+<dd>Modelo de la tarjeta de red utilizada.</dd>
+<dt>Velocidad</dt>
+<dd>Indica la velocidad que la tarjeta de red ha negociado (expresada en Mb/s).</dd>
+<dt>Conductor</dt>
+<dd>El controlador utiliza el sistema para controlar la tarjeta.</dd>
+<dt>Bus</dt>
+<dd>Tarjeta de red física del bus (por ejemplo;PCI,USB).</dd>
+</dl>
+</div>
+<div class="section" id="editar">
+<h1>Editar<a class="headerlink" href="#editar" title="Permalink to this headline">¶</a></h1>
+<p>Cambiar la configuración de la interfaz de red</p>
+<dl class="docutils">
+<dt>Tarjeta</dt>
+<dd>Nombre de la interfaz de red. Este campo no puede estar cambiado.</dd>
+<dt>Dirección MAC</dt>
+<dd>Dirección física de la tarjeta de red. Este campo no puede estar cambiado.</dd>
+<dt>Papel</dt>
+<dd><dl class="first last docutils">
+<dt>El papel indica el destino de uso de la interfaz, por ejemplo:</dt>
+<dd><ul class="first last simple">
+<li>Verde -&gt; Negocios LAN</li>
+<li>Red -&gt; Internet, IP pública</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>Modo</dt>
+<dd>Indica qué método se utilizará para asignar la dirección IP a el adaptador de red. Los valores posibles son <em>Estático</em> y <em>DHCP</em>.</dd>
+<dt>Estatico</dt>
+<dd><p class="first">La configuración se reserva estáticamente.</p>
+<ul class="last simple">
+<li>Dirección IP: dirección IP de la tarjeta de red</li>
+<li>Máscara de red: máscara de red de la tarjeta de red</li>
+<li>Puerta de enlace: servidor de puerta de enlace predeterminada</li>
+</ul>
+</dd>
+<dt>DHCP</dt>
+<dd>La configuración se asigna dinámicamente (sólo disponible para Interfaces de RED)</dd>
+</dl>
+</div>
+<div class="section" id="ver-registro">
+<h1>Ver registro<a class="headerlink" href="#ver-registro" title="Permalink to this headline">¶</a></h1>
+<p>Buscar y mostrar el contenido de los archivos de registro.</p>
+</div>
+<div class="section" id="buscar-en-los-archivos-de-registro">
+<h1>Buscar en los archivos de registro<a class="headerlink" href="#buscar-en-los-archivos-de-registro" title="Permalink to this headline">¶</a></h1>
+<p>Le permite navegar por todos los archivos de registro del servidor y hacer
+búsquedas exhaustivas sobre ellos.</p>
+<dl class="docutils">
+<dt>Encontrar</dt>
+<dd>Le permite buscar palabras y frases dentro de todos los registros del servidor.</dd>
+</dl>
+<p>Usted puede ir directamente a cada registro a través de los enlaces
+que aparece en la página.</p>
+</div>
+<div class="section" id="mostrar-solo-registro">
+<h1>Mostrar solo registro<a class="headerlink" href="#mostrar-solo-registro" title="Permalink to this headline">¶</a></h1>
+<p>Te permite navegar por el contenido del registro seleccionado y
+seguir el flujo de texto en tiempo real.</p>
+<dl class="docutils">
+<dt>Cerrar</dt>
+<dd>Cierre la ventana del registro seleccionado y volver a la página principal.</dd>
+<dt>Vacío</dt>
+<dd>Se le permite vaciar el contenido de la ventana de registro. Los datos se eliminan solamente desde la ventana de la pantalla, no se hacen cambios en el contenido del registro.</dd>
+<dt>Seguir</dt>
+<dd>Actualización en tiempo real de la ventana de la pantalla con el nuevo la información que se escribe en el registro.</dd>
+<dt>Parar</dt>
+<dd>Detiene la actualización de la visualización de registros en tiempo real.</dd>
+</dl>
+</div>
+<div class="section" id="cerrar">
+<h1>Cerrar<a class="headerlink" href="#cerrar" title="Permalink to this headline">¶</a></h1>
+<p>Le permite apagar o reiniciar el servidor.
+Es obligatorio para apagar el sistema antes de apagar el servidor.
+La ejecución de estas funciones lleva unos pocos minutos.</p>
+<p>ADVERTENCIA! Al hacer clic en APAGADO la operación del sistema se iniciará
+inmediatamente.</p>
+<dl class="docutils">
+<dt>Reanudar</dt>
+<dd>Reinicie el servidor termine todos los procesos en ejecución.</dd>
+<dt>Power-off</dt>
+<dd>Apague el servidor después de completar todos los procesos en ejecución.</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">El acceso remoto</a></li>
+<li><a class="reference internal" href="#acceso-a-la-web">Acceso a la Web</a><ul>
+<li><a class="reference internal" href="#ssh">SSH</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#redes-locales">Redes locales</a></li>
+<li><a class="reference internal" href="#crear-modificar">Crear / Modificar</a></li>
+<li><a class="reference internal" href="#perfil-del-usuario">Perfil del usuario</a></li>
+<li><a class="reference internal" href="#cambiar-contrasena">Cambiar contraseña</a></li>
+<li><a class="reference internal" href="#organizacion-detalles">Organización detalles</a></li>
+<li><a class="reference internal" href="#red">Red</a></li>
+<li><a class="reference internal" href="#estado">Estado</a></li>
+<li><a class="reference internal" href="#editar">Editar</a></li>
+<li><a class="reference internal" href="#ver-registro">Ver registro</a></li>
+<li><a class="reference internal" href="#buscar-en-los-archivos-de-registro">Buscar en los archivos de registro</a></li>
+<li><a class="reference internal" href="#mostrar-solo-registro">Mostrar solo registro</a></li>
+<li><a class="reference internal" href="#cerrar">Cerrar</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="access.html"
+                        title="previous chapter">Acceso al NethServer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="date_time.html"
+                        title="next chapter">Fecha y hora</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/administration.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="date_time.html" title="Fecha y hora"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="access.html" title="Acceso al NethServer"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
