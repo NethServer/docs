@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DNS y DHCP &mdash; NethServer 6.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '6.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="NethServer 6.5 documentation" href="index.html" />
+    <link rel="next" title="VPN" href="vpn.html" />
+    <link rel="prev" title="Monitor de ancho de banda (ntopng)" href="bandiwidth_monitor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vpn.html" title="VPN"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bandiwidth_monitor.html" title="Monitor de ancho de banda (ntopng)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dns-y-dhcp">
+<h1>DNS y DHCP<a class="headerlink" href="#dns-y-dhcp" title="Permalink to this headline">¶</a></h1>
+<p>Gestión de alias de servidor, nombres de host y el servidor DHCP.</p>
+<div class="section" id="servidor-de-alias">
+<h2>Servidor de Alias<a class="headerlink" href="#servidor-de-alias" title="Permalink to this headline">¶</a></h2>
+<p>Los alias son nombres alternativos para este servidor. Por ejemplo, si el
+nombre del servidor es <em>nethserver.nethesis.it</em>, un alias puede ser
+<em>mail.nethesis.it</em>. El servidor usará su propia dirección IP
+para el nombre de alias.</p>
+<div class="section" id="crear-modificar">
+<h3>Crear / Modificar<a class="headerlink" href="#crear-modificar" title="Permalink to this headline">¶</a></h3>
+<p>Permite crear un nuevo alias para este servidor.</p>
+<dl class="docutils">
+<dt>Nombre del host</dt>
+<dd>El nombre de host que desea agregar o modificar. Puede contener sólo letras, números y guiones y deben comenzar con una letra o un número.</dd>
+<dt>Descripcion</dt>
+<dd>Una descripción opcional útil para identificar el alias.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="dhcp">
+<h2>DHCP<a class="headerlink" href="#dhcp" title="Permalink to this headline">¶</a></h2>
+<p>El DHCP (Dynamic Host Configuration Protocol) le permite
+asignar direcciones IP a los clientes de la red local</p>
+<div class="section" id="configure">
+<h3>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h3>
+<p>Configurar el servidor DHCP.</p>
+<dl class="docutils">
+<dt>Desabilitado</dt>
+<dd>El  servidor DHCP se desactivará y los clientes de LAN no recibirá la dirección de una manera automática por este servidor. Seleccione esta opción si hay otro servidor DHCP en su red local.</dd>
+<dt>Activado</dt>
+<dd>El servidor emitirá direcciones IP a los equipos de la red local (recomendado).</dd>
+<dt>Comienzo</dt>
+<dd>La primera dirección IP del rango asignado a los clientes en la LAN.</dd>
+<dt>Final</dt>
+<dd>La última dirección IP del rango, las direcciones entre inicio y fin se ge asignado a los clientes.</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h3>Crear / Modificar<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Agrega una nueva asignación estática (reserva) para el servidor DHCP.
+El dispositivo con la dirección MAC especificada siempre recibirá la
+Dirección IP especificada.</p>
+<dl class="docutils">
+<dt>Nombre del host</dt>
+<dd>El nombre de host que desea asignar a los clientes en la LAN con la especificado Dirección IP.</dd>
+<dt>Descripcion</dt>
+<dd>Una descripción opcional para identificar el sistema.</dd>
+<dt>Direccion IP</dt>
+<dd>La dirección IP que desea asignar.</dd>
+<dt>Direccion MAC</dt>
+<dd>La dirección MAC del sistema de red (por ejemplo 11:22:33:44:55:66:77:88).</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="dns">
+<h2>DNS<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h2>
+<p>El DNS (Domain Name System) es responsable de la resolución de nombres de dominio
+(por ejemplo www.nethesis.it) en sus direcciones IP numéricas correspondientes
+(Ej. 10.11.12.13), y viceversa. NethServer delega la resolución de
+nombres a los servidores DNS configurados, pero se puede especificar direcciones
+para los nombres seleccionados arbitrarias. Por ejemplo, puede configurar el
+sistema para responder a las solicitudes de facebook.com con la dirección IP
+0.0.0.0, logrando el efecto de hacer que el sitio de Facebook inalcanzable.</p>
+<div class="section" id="id2">
+<h3>Configure<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Haga clic en Configurar para ingresar las direcciones de los servidores DNS que
+NethServer se pondrá en contacto para resolver nombres.</p>
+<dl class="docutils">
+<dt>DNS primario</dt>
+<dd>La dirección del servidor primario de contacto para la resolución de nombres (obligatorio).</dd>
+<dt>DNS secundario</dt>
+<dd>La dirección del servidor secundario para ser contactado en caso de que el principal no está respondiendo (opcional).</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h3>Crear / Modificar<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Haga clic en Crear para asignar un nombre de host a una dirección IP. la
+servidor devolverá la dirección IP configurada para peticiones de su nombre.</p>
+<dl class="docutils">
+<dt>Nombre de host</dt>
+<dd>El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear nombres para el dominio local, que es útil para dar un nombre a mnemónico dispositivos configurados con IP estática o para cualquier dominio, que prevalecen sobre el servidor DNS del proveedor (véase facebook.com ejemplo anterior).</dd>
+<dt>Direccion IP</dt>
+<dd>La dirección IP del nombre de host.</dd>
+<dt>Descripcion</dt>
+<dd>Un comentario opcional para el nombre de host (ejemplo: &#8220;Bloquear facebook&#8221; o &#8220;servidor de video&#8221;).</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DNS y DHCP</a><ul>
+<li><a class="reference internal" href="#servidor-de-alias">Servidor de Alias</a><ul>
+<li><a class="reference internal" href="#crear-modificar">Crear / Modificar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dhcp">DHCP</a><ul>
+<li><a class="reference internal" href="#configure">Configure</a></li>
+<li><a class="reference internal" href="#id1">Crear / Modificar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dns">DNS</a><ul>
+<li><a class="reference internal" href="#id2">Configure</a></li>
+<li><a class="reference internal" href="#id3">Crear / Modificar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="bandiwidth_monitor.html"
+                        title="previous chapter">Monitor de ancho de banda (ntopng)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vpn.html"
+                        title="next chapter">VPN</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/dns_dhcp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vpn.html" title="VPN"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bandiwidth_monitor.html" title="Monitor de ancho de banda (ntopng)"
+             >previous</a> |</li>
+        <li><a href="index.html">NethServer 6.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Nethesis.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
