@@ -5,7 +5,7 @@ Las carpetas compartidas
 Una carpeta compartida es un recurso en el sistema que se puede acceder de acuerdo a los servicios instalados en el sistema y los permisos establecidos por este módulo. 
 
 
-Crear nueva / editar
+Crear nueva/Editar
 --------------------
 
 Dependiendo de los servicios instalados en el sistema, verá 
@@ -35,7 +35,7 @@ Permitir el acceso de lectura a todos
 ACL
 ^^^
 
-La Lista de control de acceso permite acceder  a los permisos especificos de la 
+La Lista de control de acceso permite acceder  a los permisos específicos de la 
 carpeta compartida para cada uno de los usuarios o grupos, además de aquellas del propietario del grupo. 
 
 Leer 
