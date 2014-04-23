@@ -40,8 +40,8 @@ Aceptar conexiones desde cualquier red
 Permitir el acceso para el usuario root
     Permitir el acceso SSH para el usuario root (usuario administrador)
 
-Permitir la autentificación de contraseña
-     Permite el acceso a través de SSH con autentificación de contraseña simple. Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.
+Permitir la autenticación de contraseña
+     Permite el acceso a través de SSH con autenticación de contraseña simple. Si no está habilitada, los usuarios podrán autenticarse sólo usando una clave criptográfica.
  
 
 ============== 
@@ -49,9 +49,7 @@ Redes locales
 ============== 
 
 Por razones de seguridad, algunos servicios de servidor están disponibles sólo en la red local. 
-Cualquier red privada (por ejemplo,
-redes conectados en VPN) puede tener los mismos privilegios que la red local 
-si está configurado en este panel. 
+Cualquier red privada (por ejemplo, redes conectados en VPN) puede tener los mismos privilegios que la red local si está configurado en este panel. 
 
 El panel también puede ser usado para configurar rutas estáticas 
 que no utilizan la puerta de enlace predeterminada (por ejemplo, 
@@ -190,7 +188,7 @@ Papel
 Modo
     Indica qué método se utilizará para asignar la dirección IP a el adaptador de red. Los valores posibles son *Estático* y *DHCP*.
 
-Estatico
+Estático
     La configuración se reserva estáticamente.
 
     * Dirección IP: dirección IP de la tarjeta de red
@@ -248,7 +246,7 @@ Es obligatorio para apagar el sistema antes de apagar el servidor.
 La ejecución de estas funciones lleva unos pocos minutos. 
 
 
-ADVERTENCIA! Al hacer clic en APAGADO la operación del sistema se iniciará 
+¡ADVERTENCIA! Al hacer clic en APAGADO la operación del sistema se iniciará 
 inmediatamente. 
 
 Reanudar
