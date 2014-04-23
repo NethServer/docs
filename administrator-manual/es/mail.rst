@@ -24,7 +24,7 @@ Entrega local
     Seleccione esta opción para configurar el servidor para entregar el correo entrante dirigido al dominio especificado en las carpetas locales.
 
 Reenviar a otro servidor
-    Si selecciona esta opción, el correo entrante será se transmitirá al servidor especificado.
+    Si selecciona esta opción, el correo entrante se transmitirá al servidor especificado.
 
 Disclaimer (aviso legal)
     Añadir automáticamente un mensaje legal (disclaimer) a todos los mensajes salientes (no dirigida al dominio).
@@ -33,7 +33,7 @@ Borrar
 ------- 
 
 Retire el dominio de los gestionados por el servidor. Cualquier correo electrónico 
-destinado para el dominio serán rechazadas.
+destinado para el dominio será rechazado.
 
 
 Filtro 
@@ -52,13 +52,13 @@ Spam Prefijo
     Este prefijo se añade al objeto fundamental de los correos electrónicos reconocidos como spam.
 
 Bloqueo de archivos adjuntos
-    El servidor de correo electrónico bloquee mensajes de correo electrónico que contengan archivos adjuntos de tipos especificado.
+    El servidor de correo electrónico bloquea mensajes de correo electrónico que contengan archivos adjuntos de tipos especificado.
 
 Ejecutable
     El servidor de correo electrónico bloqueará programas ejecutables en archivos adjuntos de correo electrónico.
 
 Archivo
-    El servidor de correo electrónico bloquee mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP,rar, etc.)
+    El servidor de correo electrónico bloquea mensajes de correo electrónico con archivos adjuntos que contienen archivos comprimidos (ZIP,rar, etc.)
 
 Lista personalizada
     Definir una lista de extensiones que serán bloqueados,tales como doc, pdf, etc (sin arrancar punto, es decir, doc y no. doc).
@@ -94,12 +94,12 @@ Mensajes
 
 Configurar la gestión de mensajes de correo electrónico. 
 
-Accepte el tamaño del mensaje a
+Acepte el tamaño del mensaje
     Utilice el cursor para seleccionar el tamaño máximo de un  mensaje de correo electrónico única. El servidor rechazará electrónico más grande que el valor establecer y devolverá un error explicativo.
 
 
 Vuelva a intentar el envio
-    Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor tratar de enviar un mensaje. Cuando llega el tiempo máximo y el correo electrónico no ha sido entregado, el remitente recibirá un error y el mensaje se elimina de la cola de envío, el servidor no hay ya intentar entregarlo.
+    Utilice el cursor para seleccionar el tiempo máximo durante el cual el servidor tratará de enviar un mensaje. Cuando llega el tiempo máximo y el correo electrónico no ha sido entregado, el remitente recibirá un error y el mensaje se elimina de la cola de envío, el servidor no hay ya intentar entregarlo.
 
 Enviar usando un host inteligente
     El servidor intentará enviar correos electrónicos directamente a destino (recomendado en la mayoría de los casos). Selección en lugar de enviar a través de un host inteligente, se intentará entregar a través del servidor SMTP del ISP (se recomienda en caso de conexión poco fiable o ADSL residencial, IP dinámica, etc.)
@@ -173,7 +173,7 @@ Descripción
     Un campo de texto libre para registrar cualquier anotación.
 
 Cuenta
-    Seleccione un usuario o un grupo entre los que ya están en elsistema que se asociará a la dirección de correo electrónico.
+    Seleccione un usuario o un grupo entre los que ya están en el sistema que se asociará a la dirección de correo electrónico.
 
 Sólo las redes locales
     Al habilitar esta opción bloqueará la recepción de mensajes de los remitentes externos. 
@@ -183,7 +183,7 @@ Borrar
 
 Elimine la dirección de correo electrónico. Esto no afecta a 
 mensajes que ya se entregan al usuario o grupo asociado con la dirección. 
-Los próximos mensajes destinados dirección será rechazada. 
+Los próximos mensajes destinados a esa dirección serán rechazados. 
 
 ========================================== 
 Direcciones de correo electrónico externas 
@@ -227,7 +227,7 @@ Habilitar SSL
     Habilitar el cifrado de la conexión con el servidor remoto.
 
 Eliminación de los mensajes descargados
-    Si está activado, los mensajes descargados se eliminan del servidor remoto (recomendado). Deja disabilitados para mantener una copia en el servidor remoto.
+    Si está activado, los mensajes descargados se eliminan del servidor remoto (recomendado). Dejalo desabilitado para mantener una copia en el servidor remoto.
 
 
 Borrar 
@@ -248,5 +248,5 @@ General
 Permitir
     Le permite activar o desactivar el demonio de Fetchmail que descarga correos electrónicos de direcciones externas.
 
-Comprobacion
+Comprobación
     Frecuencia de comprobación de nuevos mensajes en las direcciones externas. Se recomienda un intervalo de al menos 15 minutos.

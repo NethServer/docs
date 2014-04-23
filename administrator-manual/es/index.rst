@@ -1,7 +1,7 @@
 .. NethServer documentation master file
 
-Administrator Manual
-====================
+Manual del administrador
+========================
 
 .. image:: ../../_static/logo.png
       :alt: |product|
@@ -21,7 +21,7 @@ Administrator Manual
 
 
 Instalación
-------------
+-----------
 
 .. toctree::
    :maxdepth: 2
