@@ -11,11 +11,11 @@ El módem debe ser compatible con el envío y la recepción de faxes de preferen
 General 
 ======== 
 
-Codigo del país
+Código del país
     El prefijo internacional que se antepone a su número de fax.
 Prefijo
     Código de área.
-Númbero de fax
+Núbero de fax
     El número de fax del remitente.
 Remitente (TSI)
     La ETI se imprimirá en el encabezado del fax del destinatario, por lo general en la fila superior. Es posible introducir el número de fax o el nombre de una longitud total de hasta 20 caracteres (se recomienda el nombre de la empresa). Sólo se permiten caracteres alfanuméricos.
@@ -49,12 +49,12 @@ Notificaciones por correo electrónico
 ===================================== 
 
 Formato de los faxes recibidos
-    De forma predeterminada, el servidor de fax envía los faxes recibidos como mensajes de correo electrónico con un archivo adjunto. Especifique la dirección de correo electrónico donde se entregarán los faxes, y uno o más formatos el archivo adjunto. Para no recibir el fax como archivo adjunto, pero sólo un a notificación de recepción, anule la selección de todos los formatos.
+    De forma predeterminada, el servidor de fax envía los faxes recibidos como mensajes de correo electrónico con un archivo adjunto. Especifique la dirección de correo electrónico donde se entregarán los faxes, y uno o más formatos el archivo adjunto. Para no recibir el fax como archivo adjunto, pero sólo una notificación de recepción, anule la selección de todos los formatos.
 
 Faxes recibidos hacia Adelante
 
     * Grupo "faxmaster"
-        Por defecto, los faxes recibidos se envían a *faxmaster*: si un usuario necesita para recibir los faxes entrantes, debe añadirse a esta grupo.
+        Por defecto, los faxes recibidos se envían a *faxmaster*: si un usuario necesita para recibir los faxes entrantes, debe añadirse a este grupo.
     * Correo electrónico externo
         Introduzca una dirección de correo electrónico externa en caso de que desea enviar los faxes recibidos a una dirección de correo electrónico no en este servidor.
 
@@ -105,7 +105,7 @@ Contraseña
     Define IAX contraseña de la extensión previamente.
 
 Identificador de llamadas
-    Identificador de llamadas(número) que se muestra en los faxes salientes.
+    Identificador de llamadas (número) que se muestra en los faxes salientes.
 
 Nombre del llamante
     Nombre del llamante se muestra en los faxes salientes.

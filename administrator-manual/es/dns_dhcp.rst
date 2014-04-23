@@ -37,8 +37,8 @@ Configure
 
 Configurar el servidor DHCP. 
 
-Desabilitado
-    El  servidor DHCP se desactivará y los clientes de LAN no recibirá la dirección de una manera automática por este servidor. Seleccione esta opción si hay otro servidor DHCP en su red local.
+Deshabilitado
+    El  servidor DHCP se desactivará y los clientes de LAN no recibirán la dirección de una manera automática por este servidor. Seleccione esta opción si hay otro servidor DHCP en su red local.
 
 Activado
     El servidor emitirá direcciones IP a los equipos de la red local (recomendado).
@@ -50,7 +50,7 @@ Final
     La última dirección IP del rango, las direcciones entre inicio y fin se ge asignado a los clientes.
  
 
-Crear / Modificar 
+Crear/Modificar 
 ----------------- 
 
 Agrega una nueva asignación estática (reserva) para el servidor DHCP. 
@@ -60,13 +60,13 @@ Dirección IP especificada.
 Nombre del host
     El nombre de host que desea asignar a los clientes en la LAN con la especificado Dirección IP.
 
-Descripcion
+Descripción
     Una descripción opcional para identificar el sistema.
 
-Direccion IP 
+Dirección IP 
     La dirección IP que desea asignar.
 
-Direccion MAC 
+Dirección MAC 
     La dirección MAC del sistema de red (por ejemplo 11:22:33:44:55:66:77:88).
 
 
@@ -74,7 +74,7 @@ DNS
 === 
 
 El DNS (Domain Name System) es responsable de la resolución de nombres de dominio
-(por ejemplo www.nethesis.it) en sus direcciones IP numéricas correspondientes 
+(Por ejemplo www.nethesis.it) en sus direcciones IP numéricas correspondientes 
 (Ej. 10.11.12.13), y viceversa. |Product| delega la resolución de 
 nombres a los servidores DNS configurados, pero se puede especificar direcciones 
 para los nombres seleccionados arbitrarias. Por ejemplo, puede configurar el 
@@ -97,14 +97,14 @@ DNS secundario
 Crear / Modificar 
 ----------------- 
 
-Haga clic en Crear para asignar un nombre de host a una dirección IP. la 
+Haga clic en Crear para asignar un nombre de host a una dirección IP. El 
 servidor devolverá la dirección IP configurada para peticiones de su nombre.
 
 Nombre de host
     El nombre de dominio, por ejemplo www.nethesis.it. Es posible crear nombres para el dominio local, que es útil para dar un nombre a mnemónico dispositivos configurados con IP estática o para cualquier dominio, que prevalecen sobre el servidor DNS del proveedor (véase facebook.com ejemplo anterior).
 
-Direccion IP
+Dirección IP
     La dirección IP del nombre de host.
 
-Descripcion
+Descripción
     Un comentario opcional para el nombre de host (ejemplo: "Bloquear facebook" o "servidor de video").

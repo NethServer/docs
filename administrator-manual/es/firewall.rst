@@ -14,7 +14,7 @@ Puerto de origen
     Inserte el puerto abierto en la dirección IP pública.
 
 Puerto de destino
-    Intoduzca el puerto en el host interno que será el destino del tráfico.
+    Introduzca el puerto en el host interno que será el destino del tráfico.
 
 Host de destino
     Dirección IP de la máquina interna donde será redirigido tráfico.
@@ -40,14 +40,14 @@ No
 
  
 
-Verificacion del servidor de seguridad
+Verificación del servidor de seguridad
 ======================================
 
 
 Realiza un control general sobre las reglas del cortafuegos configuradas. Útil para la detección de inconsistencias.
 
 ===========================
-Gestion de ancho de banda
+Gestión de ancho de banda
 ===========================
 
 El gestor de ancho de banda le permite cambiar las prioridades en el tráfico al
@@ -83,7 +83,7 @@ Ancho de banda entrante (kbps)
 Ancho de banda de salida (kbps)
     Ajuste la cantidad de ancho de banda de salida (carga).
 
-Descripcion
+Descripción
     Una nota opcional (por ejemplo: ADSL 1280/256).
 
 
@@ -96,7 +96,7 @@ que el tráfico de un equipo específico en la red local
 tener una prioridad alta o baja en comparación con otros. 
 
 
-Crear / Modificar 
+Crear/Modificar 
 -----------------
 
 Dirección IP o MAC

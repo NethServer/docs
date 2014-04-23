@@ -4,18 +4,18 @@ UPS
 
 La gestión de un sistema de alimentación ininterrumpida (UPS - Sistema de Alimentación Ininterrumpida) conectada a |product| se asigna a NUT (Herramientas de UPS de red), que llevarán a cabo un cierre en caso de falta de energía. NUT soporta diferentes modelos de UPS, conectados por un cable serie o USB. 
 
-En este panel se realiza la configuración del NUT,para 
+En este panel se realiza la configuración del NUT, para 
 ver datos del SAI, utilice el Panel de control. 
 
 Habilitar NUT UPS 
      Activar o desactivar el servicio NUT.
 
 Modo
-========
+====
 
 Maestro
      Este modo debe seleccionarse si el SAI está conectado 
-     a |product| directamente a través de serie o cable USB. 
+     al |product| directamente a través de serie o cable USB. 
 
 Buscar controladores para el modelo 
      Le permite buscar un controlador compatible con tu modelo de UPS. Después de seleccionar el modelo de la lista,     
@@ -38,4 +38,4 @@ Dirección del servidor maestro
      Asegúrese de que el usuario se configura en el servidor maestro.
 
 Contraseña 
-     La contraseña que especifique aquí es la configurada en el servidor maestro para las conexiones de esclav    
+     La contraseña que especifique aquí es la configurada en el servidor maestro para las conexiones de esclavo.    
