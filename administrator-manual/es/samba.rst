@@ -7,7 +7,7 @@ Gestione la función de servidor en una red Windows.
 Papel
 =====
 
-Seleccione el |product| papel dentro de la red: 
+Seleccione el papel de |product| dentro de la red: 
 estación de trabajo, el controlador de dominio o miembro de Active Directory. 
 
 
