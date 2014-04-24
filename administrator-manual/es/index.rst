@@ -21,7 +21,7 @@ Manual de administrador
 
 
 Instalación
-------------
+-----------
 
 .. toctree::
    :maxdepth: 2

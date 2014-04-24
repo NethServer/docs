@@ -54,11 +54,11 @@ Formato de los faxes recibidos
 Faxes recibidos hacia Adelante
 
     * Grupo "faxmaster"
-        Por defecto, los faxes recibidos se envían a *faxmaster*: si un usuario necesita para recibir los faxes entrantes, debe añadirse a este grupo.
+        Por defecto, los fax recibidos se envían a *faxmaster*: si un usuario necesita para recibir los fax entrantes, debe añadirse a este grupo.
     * Correo electrónico externo
         Introduzca una dirección de correo electrónico externa en caso de que desea enviar los faxes recibidos a una dirección de correo electrónico no en este servidor.
 
-Formato de faxes enviados
+Formato de fax enviados
     Si lo solicita el cliente, el servidor envía una notificación por correo electrónico con un archivo adjunto. Seleccione el formato en el que prefiere recibir el fax. Anule la selección de todas las opciones si no desea recibir el fax adjunto. 
 Añadir notificación de entrega
     Si se selecciona, se agrega un informe de notificación de entrega en el correo electrónico enviado por fax.
@@ -67,10 +67,10 @@ Añadir notificación de entrega
 Funciones adicionales 
 ===================== 
 
-Ver los faxes enviados por el cliente
+Ver los fax enviados por el cliente
     Los clientes de fax también le permiten ver todos los faxes entrantes. Si, por razones de confidencialidad, se desea filtrar faxes recibidos, desactive esta opción.
 
-Imprimir automáticamente los faxes recibidos
+Imprimir automáticamente los fax recibidos
     Imprimir automáticamente todos los faxes recibidos en una impresora compatible con PCL5 configurado en |product|. La impresora debe estar seleccionado con la caída adecuada en el menú desplegable.
 
 SambaFax
@@ -105,7 +105,11 @@ Contraseña
     Define IAX contraseña de la extensión previamente.
 
 Identificador de llamadas
+<<<<<<< HEAD
     Identificador de llamadas (número) que se muestra en los faxes salientes.
+=======
+    Identificador de llamadas (número) que se muestra en los fax salientes.
+>>>>>>> 99905c435a6a42f3e2030515090433266821b19a
 
 Nombre del llamante
-    Nombre del llamante se muestra en los faxes salientes.
+    Nombre del llamante se muestra en los fax salientes.

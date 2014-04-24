@@ -249,10 +249,10 @@ La ejecución de estas funciones lleva unos pocos minutos.
 ¡ADVERTENCIA! Al hacer clic en APAGADO la operación del sistema se iniciará 
 inmediatamente. 
 
-Reanudar
-    Reinicie el servidor termine todos los procesos en ejecución.
+Reiniciar
+    Reinicie el servidor cuando termine todos los procesos en ejecución.
 
-Power-off
+Apagar
     Apague el servidor después de completar todos los procesos en ejecución.
 
 
