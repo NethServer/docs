@@ -28,7 +28,7 @@ DHCP
 ==== 
 
 El DHCP (Dynamic Host Configuration Protocol) le permite 
-asignar direcciones IP a los clientes de la red local 
+asignar direcciones IP a los clientes de la red local. 
 
 
 

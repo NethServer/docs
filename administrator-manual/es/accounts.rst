@@ -29,10 +29,10 @@ Nombre de usuario
      " 4friends ", " Franco Blacks " y " aldo / error " no lo son.
 
 Nombre
-     Es el nombre real del usuario. Por ejemplo, " John "
+     Es el nombre real del usuario. Por ejemplo, " John ".
 
 Apellido
-     El apellido del usuario
+     El apellido del usuario.
 
 Grupos
      Uso de la barra de búsqueda, puede seleccionar los grupos a los
@@ -169,7 +169,7 @@ Borrar
 ======
 
 Esta acción elimina los grupos definidos y su
-listas de distribución. Los buzones compartidos asociados
+listas de distribución, los buzones compartidos asociados.
 
 
 .. _admin-user:

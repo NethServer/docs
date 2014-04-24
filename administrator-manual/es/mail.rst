@@ -2,7 +2,7 @@
 Email 
 ===== 
 
-Configure los servicios de correo electrónico 
+Configure los servicios de correo electrónico. 
 
 Dominios 
 ======== 
@@ -123,11 +123,11 @@ Gestión de Colas
 ================ 
 Esta ficha le permite gestionar la cola de mensajes de correo electrónico en tránsito en el servidor. La tabla recoge todo el correo en espera de ser entregado, y está normalmente vacía. Los siguientes campos se mostrarán: 
 
-* Id: identificador del mensaje 
-* Remitente: desde la dirección de correo electrónico (que envió el mensaje) 
-* Tamaño: El tamaño en bytes de la dirección de correo electrónico 
-* Fecha: La fecha de la creación del correo electrónico 
-* Destinatarios: la lista de destinatarios
+* Id: Identificador del mensaje. 
+* Remitente: Desde la dirección de correo electrónico (que envió el mensaje). 
+* Tamaño: El tamaño en bytes de la dirección de correo electrónico. 
+* Fecha: La fecha de la creación del correo electrónico. 
+* Destinatarios: La lista de destinatarios.
 
 
 Borrar 

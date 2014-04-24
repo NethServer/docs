@@ -14,8 +14,7 @@ Modo
 ====
 
 Maestro
-     Este modo debe seleccionarse si el SAI está conectado 
-     al |product| directamente a través de serie o cable USB. 
+     Este modo debe seleccionarse si el SAI está conectado al |product| directamente a través de serie o cable USB. 
 
 Buscar controladores para el modelo 
      Le permite buscar un controlador compatible con tu modelo de UPS. Después de seleccionar el modelo de la lista,     
