@@ -48,3 +48,17 @@ In assenza dell'opzione :guilabel:`Libera Chiave` sarebbe necessario eliminare i
 in questo modo tra l'altro si perderebbero anche i dati relativi allo storico della macchina in questione. 
 Tramite il pulsante :guilabel:`Libera Chiave` è invece possibile registrare il server appena ripristinato con la stessa chiave 
 che c'era prima del ripristino, senza dover modificare altro.
+
+NethServer community
+====================
+
+E' possibile trasformare un NethServer versione community in un NethServer Enterprise.
+
+* Eseguire da linea di comando:
+
+::
+
+  yum -c http://update.nethesis.it/nethserver-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
+
+* Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Gestione pacchetti`.
+
