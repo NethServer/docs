@@ -7,7 +7,7 @@ il :index:`Centro Servizi` Nethesis, accessibile con la coppia utente/password a
 Come prima operazione, per ogni |product| installato, è necessario effettuare la 
 :index:`registrazione` per permettere una corretta identificazione e comunicazione con la console web.
 
-Accedere all'interfaccia web del server (https://server:980), fare click su :guilabel:`Registra server` e seguire la procedura guidata:
+Accedere all'interfaccia web del server (https://server:980), fare click su :guilabel:`Gestione Pacchetti` e seguire la procedura guidata:
 
 * Inserire le credenziali rivenditore utilizzate presso il sito https://register.nethesis.it
 * Selezionare un server esistente oppure scegliere la creazione di nuovo server
