@@ -7,11 +7,9 @@ el tráfico de red. Esto le permite evaluar el ancho de banda utilizado por
 hosts individuales y para identificar los protocolos de red más utilizados. 
 
 Habilitar ntopng
-    Habilitacion ntopng, todo el trafico que pasa a traves de las interfaces de red se analizara. Puede causar una desaceleracion de la red y una aumento en la carga del sistema.
+    Habilitación ntopng, todo el trafico que pasa a través de las interfaces de red se analizara. Puede causar una desaceleración de la red y un aumento en la carga del sistema.
 Puerto
     El puerto en el que para ver la interfaz web ntopng.
 Contraseña para el usuario 'admin'
      Contraseña del usuario administrador. Esta contraseña no está relacionado con el |product| admin contraseña.
-
- 
 

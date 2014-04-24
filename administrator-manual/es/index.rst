@@ -1,7 +1,7 @@
 .. NethServer documentation master file
 
-Manual del administrador
-========================
+Manual de administrador
+=======================
 
 .. image:: ../../_static/logo.png
       :alt: |product|

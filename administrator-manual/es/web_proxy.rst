@@ -22,14 +22,13 @@ Filtro
 ====== 
 
 El filtro de contenidos se utiliza para controlar la navegación web y 
-sitio bloqueando el uso de algunas variables, como palabras clave, ip 
-dirección, los usuarios internos, o evaluar el contenido de la página web, 
+sitio bloqueando el uso de algunas variables, como palabras clave, dirección IP, los usuarios internos, o evaluar el contenido de la página web, 
 o extensiones de archivo. Con esta herramienta es posible por ejemplo para permitir 
 acceso sólo en algunos sitios deseados (tales como los de interés 
 empresa), mientras que el bloqueo de todos los demás. 
 
 Modo 
-     Habilitación del Web Filter modo puede configurar 
+     Habilitación del Web Filter y de que modo puede configurarlo 
      "Bloquear todo" y luego permitir que las categorías seleccionadas, o 
      "Permitir todos" y luego bloquear las categorías seleccionadas. 
 

@@ -1,11 +1,11 @@
 =============
-Instalacion
+Instalación
 =============
 
-Requerimientos minimos
+Requerimientos mínimos
 ======================
 
-Los requerimientos minimos son:
+Los requerimientos mínimos son:
 
 * 64 bit CPU (x86_64)
 * 1 GB de RAM
@@ -22,29 +22,29 @@ Compatibilidad hardware
 Red Hat® Enterprise Linux® (RHEL®), escuchado en `hardware.redhat.com <http://hardware.redhat.com/>`_
 
 
-Tipos de instalacion
+Tipos de instalación
 ====================
 
 |product| es compatible con dos modos de instalación. En resumen:
 
-**Instalacion desde ISO**
+**Instalación desde ISO**
 
   * Descargue la imagen ISO, 
   * Preparar un  CD / DVD o una memoria USB de arranque.
   * Siga el asistente
 
-**Instalacion desde YUM**
+**Instalación desde YUM**
 
   * Instale CentOS Minimal
   * Configurar la red
   * Instalar desde la red
 
-Instalacion desde ISO
+Instalación desde ISO
 =====================
 
 Descargar |product| el archivo  ISO desde el sitio oficial |download_site|. 
 
-El archivo ISO descargado se puede utilizar para crear un *Dispositivo de arranque*, como un CD, un DVD o una memoria USB. La creación de un disco de inicio es diferente de escribir archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, *escritura* o *Grabar imagen ISO*). Las instrucciones sobre cómo crear un CD / DVD de la ISO estan fácilmente disponibles en Internet o en la documentación de su sistema operativo. 
+El archivo ISO descargado se puede utilizar para crear un *Dispositivo de arranque*, como un CD, un DVD o una memoria USB. La creación de un disco de inicio es diferente de escribir archivos en un CD / DVD, y se requiere el uso de una función específica (por ejemplo, *escritura* o *Grabar imagen ISO*). Las instrucciones sobre cómo crear un CD / DVD de la ISO están fácilmente disponibles en Internet o en la documentación de su sistema operativo. 
 
 Un procedimiento similar se aplica para la memoria USB de arranque. 
 Hay programas específicos [#]_ que convertirán lo descargado ISO en memorias USB de arranque. 
@@ -62,7 +62,7 @@ En el arranque de un menú mostrará diferentes tipos de instalación:
 .. warning :: La instalación borrará todos los datos existentes en los discos duros!
 
 
-|product| instalacion interactiva
+|product| instalación interactiva
     Le permite seleccionar el idioma, configurar el soporte RAID, red y sistema de ficheros cifrado. Se describe en profundidad en el siguiente párrafo. 
 
 Otros / desatendida |product| instalar
@@ -81,8 +81,8 @@ Al final del proceso de instalación, se le pedirá que
 reinicie la máquina. Asegúrese de retirar el CD o 
 Soporte USB antes de reiniciar. 
 
-Modo desantendido
------------------
+Modo desatendido
+----------------
 Después de la instalación, el sistema se configura de la siguiente manera: 
 
 * Credenciales: root / Nethesis 1234 
@@ -134,7 +134,7 @@ El idioma seleccionado será el idioma predeterminado del sistema instalado.
 El sistema también le sugerirá valores por defecto para el teclado y la zona horaria.
 
 
-Distribucion del teclado
+Distribución del teclado
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Un teclado puede tener un diseño diferente en función del idioma para el que fue hecho. 
@@ -195,7 +195,7 @@ Seleccione la interfaz de red que se utiliza para acceder a la LAN.
 Esta interfaz también se conoce como interfaz *verde*.
 
 
-Configuracion de la red
+Configuración de la red
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Host y el nombre de dominio (FQDN)
@@ -203,7 +203,7 @@ Host y el nombre de dominio (FQDN)
 
     *Nota:* El nombre de dominio sólo puede contener letras, números y el guión.
 
-Direccion IP
+Dirección IP
     Escriba una dirección IP privada (por RFC 1918) que se asignará al servidor;     si quieres instalarlo en una red existente, usted debe proporcionar una dirección IP no utilizada válida para esa red (en general, se puede utilizar la primera o la última de acogida dentro del alcance de la red, por ejemplo, 192.168.7.1 o 192.168.7.254).
 
 Máscara de red
@@ -215,7 +215,7 @@ Puerta de acceso
 DNS
     Escriba un DNS válido. Ejemplo: 8.8.8.8
 
-Fin del proceso de instalacion
+Fin del proceso de instalación
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Después de parámetros de entrada, el procedimiento iniciará la instalación.
@@ -253,7 +253,7 @@ Ejemplo para el correo y los módulos de UPS:
   nethserver-install nethserver-mail nethserver-nut
 
 
-Al final del procedimiento, el sistema esta listo para su uso.
+Al final del procedimiento, el sistema está listo para su uso.
 
 
 
