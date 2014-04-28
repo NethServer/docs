@@ -40,6 +40,7 @@ Architecture
    databases
    templates
    events
+   services
 
 Implementation
 --------------
