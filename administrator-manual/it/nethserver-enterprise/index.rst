@@ -50,6 +50,13 @@ Configurazione
    dns_dhcp
    vpn
 
+Appendice
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   license
 
 Indici
 ======
@@ -57,3 +64,9 @@ Indici
 * :ref:`genindex`
 * :ref:`search`
 
+
+
+.. image:: ../../../_static/by-nc-sa_small.png
+   :alt: CC by-nc-sa
+   :align: right
+   :target: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

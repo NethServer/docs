@@ -5,7 +5,7 @@ License
 This documentation is distributed under the terms of 
 **Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
 
-.. image:: ../../_static/by-nc-sa_large.png
+.. image:: ../../../_static/by-nc-sa_large.png
    :alt: CC by-nc-sa
    :align: right
    :target: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
