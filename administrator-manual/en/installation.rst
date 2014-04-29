@@ -198,7 +198,7 @@ A good password is:
 
 
 Encrypted file system
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 When enabling this option, all data written to the disk will be encrypted using symmetric encryption.
 In case of theft, an attacker will not be able to read the data without 
