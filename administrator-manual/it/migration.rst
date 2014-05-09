@@ -10,11 +10,18 @@ in un nuovo server |product|.
 #. Estrarre il backup in una directory, ad esempio :file:`/var/lib/migration`.
 #. Iniziare il processo di migrazione::
 
-    # signal-event migration-import /var/lib/migration
+     # signal-event migration-import /var/lib/migration
 
    Questa operazione potrebbe richiedere molti minuti.
 
-#. Consultare il log di sistema :file:`/var/log/messages` ed assicurarsi che non si siano verificati errori::
+#. Consultare il log di sistema :file:`/var/log/messages` ed
+   assicurarsi che non si siano verificati errori::
  
-    # grep ERROR /var/log/messages
+    # grep -E '(FAIL|ERROR)' /var/log/messages
 
+.. tip:: 
+   Nella migrazione di un mail server, è possibile sincronizzare le
+   caselle di posta dopo l'evento ``migration-import``. Uno script di
+   aiuto è già incluso nel pacchetto
+   ``nethserver-mail-server``. Vedere
+   :file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`.
