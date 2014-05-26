@@ -20,7 +20,6 @@ There is also another action called :command:`adjust-services` which does the sa
 
 A service without a record in the configuration database is ignored and can be manually manged using :command:`chkconfig` and :command:`service` commands.
 
-For more information on ``TCPPorts`` and ``access`` properties, see firewall section.
 
 Control a service
 =================
@@ -48,3 +47,8 @@ Where ``myservice`` is the name of the new service.
 Signal the new service to the system: ::
 
   signal-event runlevel-adjust
+
+If the new service needs one or more open ports, use the TCPPort(s) or UDPPort(s) prop to declare the port(s) and signal the firewall to open it: ::
+
+  config set myservice service status enabled  TCPPort 12345
+  signal-event firewall-adjust
