@@ -72,6 +72,7 @@ Packages
 .. toctree::
    :maxdepth: 2
 
+   repositories
    package_groups
 
 Appendix
