@@ -82,6 +82,7 @@ Appendix
    :maxdepth: 2
 
    license_headers
+   rebranding_manual 
    license
 
 
