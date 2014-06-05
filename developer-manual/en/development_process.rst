@@ -142,12 +142,13 @@ Commit message style guide
 ==========================
 
 Commit messages *must* include four components
-# WHERE 
-# WHAT
-# WHY #Num (see "Redmine issues in commit messages":http://www.redmine.org/projects/redmine/wiki/RedmineSettings#Referencing-issues-in-commit-messages)
-# WHY Name
 
-See jQueryUI "Commit message style guide":http://wiki.jqueryui.com/w/page/25941597/Commit%20Message%20Style%20Guide for details.
+* WHERE 
+* WHAT
+* WHY #Num (see http://www.redmine.org/projects/redmine/wiki/RedmineSettings#Referencing-issues-in-commit-messages)
+* WHY Name
+
+See also jQueryUI Commit message style guide: http://contribute.jquery.org/commits-and-pull-requests/#commit-guidelines.
 
 
 Example:

@@ -5,7 +5,7 @@ Databases
 Overview
 ========
 
-All user-modifiable configuration parameters on NethServer are stored in
+All user-editable configuration parameters on NethServer are stored in
 plain text database. 
 
 These values are used to generate the system configuration files, such
@@ -117,10 +117,10 @@ The configuration databases are initialized from files in the
 actions:
 
 * Create a database entry and set it to a default value, if the entry
-   does not already exist.
+  does not already exist.
 * Migrate an entry from a previous value to a new value.
 * Force a database entry to a specific value, regardless of its current
-   setting (**use with care!**)
+  setting (**use with care!**)
 
 This design allows each package to provide part of the system
 configuration, or migrate the system configuration values as required.

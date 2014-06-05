@@ -64,7 +64,15 @@ Web interface
    dashboard
    customization
    inline_help
+   web_interface_translation
 
+Packages
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   package_groups
 
 Appendix
 --------
