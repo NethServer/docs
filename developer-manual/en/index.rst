@@ -72,6 +72,7 @@ Packages
 .. toctree::
    :maxdepth: 2
 
+   building_rpms
    repositories
    package_groups
 
