@@ -44,6 +44,8 @@ where
 
 * :dfn:`%changelog` section is at the bottom of the file.
 
+.. _rpm_prepare_env:
+
 Prepare your development machine
 --------------------------------
 

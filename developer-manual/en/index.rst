@@ -73,6 +73,7 @@ Packages
    :maxdepth: 2
 
    building_rpms
+   building_iso
    repositories
    package_groups
 
