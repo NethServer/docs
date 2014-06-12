@@ -65,7 +65,7 @@ The package implements 4 policies. A policy is a set of rules which will change 
   access, and just about anything not related to getting work done.  
   If you run your network with an iron fist start here.
 
-* *Expert*: no policy is applied. All rules must be manually select by the administrator
+* *Expert*: no policy is applied. All rules must be manually select by the administrator (see pulledpork documentation).
 
 
 Changing the current policy to ``security``: ::
