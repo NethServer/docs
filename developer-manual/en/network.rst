@@ -22,14 +22,17 @@ auto-explicative):
 In a scalar context these methods return an interface with the given
 role:
 
-* green: interface on LAN
+* green
 * orange
 * blue
-* red: interfaces exposed to external networks when the server is used as a gateway 
+* red 
 
 For more information use: ::
 
  perldoc esmith::NetworksDB
+
+
+See also :ref:`roles`.
 
 Templates
 =========

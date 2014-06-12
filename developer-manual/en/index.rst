@@ -52,6 +52,8 @@ Implementation
    random_url
    migration
    certificate_management
+   gateway
+   ips
 
 Web interface
 -------------
