@@ -4,10 +4,10 @@ Firewall and Gateway
 
 NethServer can work into two basic modes:
 
-* server mode: the system will be a normal host inside the network bringing services like the mail or file server.
-* gateway mode: the system is the gateway and firewall of the network
+* server mode: the system will be a standard host inside the network offering services like e-mail or file server.
+* gateway mode: the system is the gateway and firewall of the local network
 
-The system has an abstraction for firewall base functions, like opening ports for running services.
+The system has an abstraction layer for firewall base functions, like opening ports for running services.
 Actually two implementations are available:
 
 * server mode: standard :command:`lokkit` (default on CentOS)
@@ -25,14 +25,14 @@ Roles and zones
 
 .. _roles:
 
-Each network interface has a role which indicates its firewall zone.
-The firewall has following built-in zones, ordered from the most to the least privileged:
+Each network interface has a role which maps to a firewall zone.
+The firewall has the following built-in zones, ordered from the most to the least privileged:
 
 * *green*: local network, it's considered almost trusted. Hosts in this network can access any other zone. Hosts connected via VPN can be considered in green zone.
 * *blue*: guest network.  Hosts in this network can access orange and red zones, can't access green zone
 * *orange*: DMZ network. Hosts in this network can access red zone, can't access green and blue zones
-* *red*: external/internet networks.  Hosts in this network can access only firewall zone.
-* gray: (not implemented yet) traffic from/to this zone must be explicitly allowed
+* *red*: external/internet networks.  Hosts in this network can access only firewall zone
+* grey: (not implemented yet) traffic from/to this zone must be explicitly allowed
 
 There is also a special *firewall* zone which represents the firewall itself. The firewall can access any other zone. 
 
@@ -56,12 +56,12 @@ Properties of ``firewall`` key inside ``configuration`` db:
 
 * ``event``: event to call when ``firewall-adjust`` event is fired
 * ``tc``: traffic shape mode (see below)
-* ``ExternalPing``: if enabled, allow ping on external interface
+* ``ExternalPing``: if enabled, allow ping responses on external interface
 * ``WanMode``: multi-wan mode. Default is ``balance``, can be:
 
   * ``balance``: traffic is balanced among red interfaces in weighted mode
   * ``backup``: traffic is routed via wan interface with maximum weight, all other interfaces are used as fallback
-* ``nfq``: if enabled, traffic from external networks will be passed to NFQ and scanned with SNORT. See :ref:`ips`.
+* ``nfq``: if enabled, traffic from external networks will be passed to NFQ and scanned with Snort. See :ref:`ips`.
 * ``Policy``: can be ``permissive`` or ``strict``. See above.
 
 Example
@@ -73,7 +73,7 @@ Example
       tc=Simple
       nfq=disabled
       WanMode=balance
-      Policy: permissive
+      Policy=permissive
 
 
 Events
@@ -90,7 +90,7 @@ Other events:
 The ``wan-uplink-event`` event takes at least two parameters:
 
 * provider name: name of the provider involved
-* action: can be ``up`` or ``down``, it describe the new provider status
+* action: can be ``up`` or ``down``, describing the new provider status
 
 Example: ::
 
@@ -100,7 +100,7 @@ Example: ::
 Policy
 ======
 
-Every time network traffic passes between firewall zones, the system will apply a list of rules to allow/block the specific traffic.
+For every network packet travelling between firewall zones, the system will evaluate a list of rules to allow/block the specific traffic.
 Policies are default firewall rules which will be applied only if no other rule matches the ongoing traffic.
 
 Firewall implements two standard policies:
@@ -121,7 +121,7 @@ Rules
 Firewall rules can allow or deny traffic matching certain conditions.
 Rules are saved inside the ``fwrules`` database as records of type ``rule``.
 
-Each rule record has following fields:
+Each rule record has the following fields:
 
 * ``key``: a unique key identifier
 * ``Position``: integer sorting key
@@ -134,9 +134,9 @@ Each rule record has following fields:
 
   * ``ACCEPT`` allows the traffic
   * ``REJECT`` denies the traffic, an ICMP port unreachable packet is sent to the source address
-  * ``DROP`` discards the traffic without informing the source address
+  * ``DROP`` discards the traffic without informing the source address (the connection will timeout)
 * ``Service``: (optional) can be a service object or a port number. If a port number is used, both TCP and UDP protocols are matched.
-* ``Log``: can be ``none`` or ``info``. If value is ``info``, all matched packets will be logged in ``/var/log/firewall.log``. Default to ``none``
+* ``Log``: can be ``none`` or ``info``. If value is ``info``, all matched packets will be logged in ``/var/log/firewall.log``. Defaults to ``none``
 * ``status``: can be ``enabled`` or ``disabled``. Default is ``enabled``
 * ``Description``: (optional)
 
@@ -149,7 +149,7 @@ Example of a rule accepting traffic: ::
       Action=accept 
       Position=32
 
-Accept all traffic from myhost to myserver on for ssh service (port 22): ::
+Accept all traffic from myhost to myserver for ssh service (port 22): ::
 
   db fwrules set 1 rule Src "host;myhost" Dst "host;myserver" Service ssh Action ACCEPT Log none status enabled Position 8765
 
@@ -161,7 +161,7 @@ Drop all traffic from 192.168.1.0/24 to 192.168.4.1 on TCP and UDP port 25: ::
 Firewall objects
 =================
 
-Firewall module uses objects to simplify rule creation. The use of objects is not mandatory but it's strongly encouraged.
+Firewall module uses objects to simplify rules creation. The use of objects is not mandatory but it's strongly encouraged.
 
 Supported objects are:
 
@@ -203,14 +203,14 @@ A service can have a protocol and one or more ports. A ``service`` entry in ``fw
 Rules based on mac address
 --------------------------
 
-It's possible to create rules based on mac address only using template-custom.
-For example to block internet access to a host on local network using its mac address: ::
+It's possible to create rules based on MAC address only using a template-custom.
+For example to block internet access to a host on local network using its MAC address: ::
 
   mkdir -p /etc/e-smith/templates-custom/etc/shorewall/rules
   echo "DROP      loc:~xx-xx-xx-xx-xx-xx          net" > /etc/e-smith/templates-custom/etc/shorewall/rules/90mymac
 
 
-Where ``xx-xx-xx-xx-xx-xx`` is the mac address to block.
+Where ``xx-xx-xx-xx-xx-xx`` is the MAC address to block.
 
 See :command:`man shorewall-rules` for more information.
 
@@ -251,7 +251,7 @@ A record could be of type:
 
 * ``device``: describe an interface
 * ``port``: describe a rule for a port
-* ``ip``: describe a rule for an ip (or mac address)
+* ``ip``: describe a rule for an ip (or MAC address)
 * ``helper``: describe an helper rule (eg. sip)
 
 Device record:
@@ -287,15 +287,15 @@ For more information about helpers, see: http://www.shorewall.net/Helpers.html
 Multi WAN
 =========
 
-NethServer firewall can handle 15 red (WAN) interfaces. The logic is implemented using package using Shorewall + LSM (Link Status Monitor).
+NethServer firewall can handle 15 red (WAN) interfaces. Implementation uses Shorewall with LSM (Link Status Monitor).
 The LSM daemon takes care of monitoring WAN connections (interface) using ICMP traffic and it informs Shorewall about interface up/down events.
 Each interface can be checked using multiple IPs (see ``checkip`` property below). At least one IP must be reachable to mark the WAN connection as usable. 
-If no IP is specified, the system will try to find a suitable ip, usually the next hop after the gateway. 
+If no IP is specified (recommnded option), the system will try to find a suitable ip, usually the next hop after the gateway. 
 
 If you want to use a custom checkip, these are some lines guides to make the right choice:
 
 * use an ip address inside the network of you provider, for example the provider DNS
-* choose an hop near your gateway. You can use a command like this: 
+* choose an hop near your gateway. You can use a command like this to discover a suitable next hop: 
 
 ::
 
@@ -429,15 +429,15 @@ Static routes are saved inside the routes database with a record of type static.
      Router=89.97.220.225
 
 
-Each record has following properties:
+Each record has the following properties:
 
 * ``key``: network address
 * ``Mask``: network mask
 * ``Router``: gateway for the network
 * ``Description``: a custom description (optional)
 
-There also a special type of static routes called ``provider-static``.
-These routes have same properties as described above and are used to correctly route traffic for link monitor.
+There is also a special type of static route called ``provider-static``.
+These routes have the same properties as described above and are used to correctly route traffic for link monitor.
 This type of rules should never be manually edited.
 
 
