@@ -62,6 +62,19 @@ Next headers levels are::
     Fourth level
     ~~~~~~~~~~~~
 
+
+To create cross-references set a label before headers, with ``-section`` suffix::
+
+    .. _mytitle-section:
+
+    My title
+    --------
+
+In other documents refer to "My title" with the ``:ref:`` command::
+    
+    More informations are explained on :ref:`mytitle-section`
+    
+
 Use the \* character for unordered list ::
  
     * First element
