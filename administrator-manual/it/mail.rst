@@ -1,3 +1,5 @@
+.. _email section:
+
 =====
 Email
 =====
