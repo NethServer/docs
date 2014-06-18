@@ -48,6 +48,8 @@ Implementation
 .. toctree::
    :maxdepth: 2
 
+   filesystem_options
+   logs
    network
    random_url
    migration
