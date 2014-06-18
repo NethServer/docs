@@ -1,8 +1,8 @@
+.. _ips:
+
 ==========================
 IPS (Intrusion Prevention)
 ==========================
-
-.. _ips:
 
 The IPS (Intrusion Prevention System) module configures Snort using the netfilter queue (NFQUEUE). 
 NFQUEUE is an iptables and ip6tables target which delegate the decision on packets to a userspace software.

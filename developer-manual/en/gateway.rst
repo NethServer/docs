@@ -20,10 +20,10 @@ The gateway functionality is built around three modules:
 * nethserver-lsm: link status monitor for multi-wan configurations
 
 
+.. _section-roles-and-zones:
+
 Roles and zones
 ===============
-
-.. _roles:
 
 Each network interface has a role which maps to a firewall zone.
 The firewall has the following built-in zones, ordered from the most to the least privileged:
