@@ -6,10 +6,10 @@ It is possible to allow access to the web interface from computers in remote net
 
 Enabled hosts can access the web interface over HTTPS.
 
-Web access
-===========
+Server Manager
+==============
 
-Access to  configuration web interface.
+Configure access to Server Manager web interface.
 
 Network address
     This is the address from which access to the web interface will be allowed
@@ -17,7 +17,7 @@ Network address
 
 Network Mask
      To allow access to only one host, use as a subnet mask of 255.255.255.255.
-    
+
 
 SSH
 ===
@@ -32,7 +32,7 @@ TCP port
 
 Accept connections from local networks
     SSH access enabled only for connections from local networks.
-    
+
 Accept connections from any network
     SSH access enabled for connections from any network.
 
@@ -48,14 +48,12 @@ Allow password authentication
 Local networks
 ==============
 
-For security reasons, some server services are available
-only on the local network. Any private networks (eg. networks
-connected in VPN) can have the same privileges as the local network
-if configured in this panel.
+For security reasons, some server services are available only on the local network. 
+Any private networks (eg. networks connected in VPN) can have the same privileges
+as the local network if configured in this panel.
 
-The panel can also be used to configure static routes
-which don't use the default gateway (for example
-to reach private networks connected via dedicated lines).
+If the network can be reached only using a router, 
+make sure to create a static route for the network itself inside the Static routes panel.
 
 Create / Modify
 ===============
@@ -69,15 +67,8 @@ Network address
 Network Mask
     Network mask for the new route.
 
-Router address
-    Address of the gateway used to reach the specified network,
-    this field is not required.
-
 Description
     A free text field to record any annotation.
-
-After route creation, you can only change
-router address and description.
 
 ==============
 User Profile
@@ -268,3 +259,36 @@ Restart
 
 Power-off
     Turn off the server after completing all the running processes.
+
+==============
+Statir routes
+==============
+
+The panel can used to configure static routes
+which don't use the default gateway (for example
+to reach private networks connected via dedicated lines).
+
+Remember to add the same network to the :guilabel:`Trusted networks` panel,
+if hosts on the remote network should access local services.
+
+Create / Modify
+===============
+
+Create a new route to a remote network.
+
+Network address
+    Network address for the new route.
+
+Network Mask
+    Network mask for the new route.
+
+Router address
+    Address of the gateway used to reach the specified network,
+    this field is not required.
+
+Description
+    A free text field to record any annotation.
+
+After route creation, you can only change
+router address and description.
+

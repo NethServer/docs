@@ -78,19 +78,10 @@ Accesso remoto
 Reti locali
 -----------
 
-Per ragioni di sicurezza alcuni servizi del server sono a disposizione
-soltanto della rete locale; eventuali reti private (ad esempio reti
-collegate in VPN) possono avere gli stessi privilegi della rete locale
-se configurate in questo pannello.
+Per ragioni di sicurezza alcuni servizi del server sono a disposizione soltanto della rete locale; 
+eventuali reti private (ad esempio reti collegate in VPN) possono avere gli stessi privilegi della rete locale se configurate in questo pannello.
 
-Il pannello può essere utilizzato anche per specificare instradamenti
-particolari che non facciano uso del default gateway (ad esempio per
-raggiungere reti private collegate tramite linee dedicate o simili).
-
-E' possibile consentire l'accesso a computer su reti remote
-all'interfaccia web, inserendo le reti abilitate in questa pagina.
-
-I computer abilitati potranno accedere all'interfaccia web in HTTPS.
+Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello Rotte statiche.
 
 
 Crea / Modifica
@@ -105,22 +96,14 @@ Indirizzo di rete
 Maschera di rete
     La maschera della rete verso cui stabilire il nuovo instradamento.
 
-Indirizzo del router
-    Indirizzo del gateway da utilizzare per raggiungere la rete
-    specificata, questo campo non è obbligatorio.
-
 Descrizione
     Un campo di testo libero, per registrare una qualsiasi annotazione.
 
-Una volta creato l'instradamento, sarà possibile modificare solo
-l'indirizzo del router e la descrizione.
 
+Server Manager
+--------------
 
-
-Accesso web
------------
-
-Accesso all'interfaccia web di configurazione.
+Configura accesso all'interfaccia web Server Manager.
 
 Indirizzo di rete
     È l'indirizzo dal quale sarà consentito accedere all'interfaccia
@@ -289,5 +272,37 @@ Ripeti nuova password
     Ripetere la nuova password: deve coincidere con quella del campo
     *Nuova Password*.
 
+==============
+Rotte statiche
+==============
+
+Il pannello consente di specificare instradamenti
+particolari che non facciano uso del default gateway (ad esempio per
+raggiungere reti private collegate tramite linee dedicate o simili).
+
+Se si desidera che gli host nella rete remota possano accedere ai servizi
+del server, ricordarsi di creare una rete corrispondente nel pannello
+:guilabel:`Reti fidate`.
+
+Crea / Modifica
+=====================
+
+Crea un nuovo instradamento verso una rete remota.
+
+Indirizzo di rete
+    L'indirizzo della rete verso cui stabilire il nuovo instradamento
+
+Maschera di rete
+    La maschera della rete verso cui stabilire il nuovo instradamento
+
+Indirizzo del router
+    Indirizzo del gateway da utilizzare per raggiungere la rete
+    specificata, questo campo non è obbligatorio.
+
+Descrizione
+    Un campo di testo libero, per registrare una qualsiasi annotazione.
+
+Una volta creato l'instradamento, sarà possibile modificare solo
+l'indirizzo del router e la descrizione.
 
 
