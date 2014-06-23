@@ -35,7 +35,7 @@ By the way, it’s perfectly reasonable to not fill issues for
 occasional small fixes, like typos in translations.
 
 Issues are not TODO list. Issues track status changes of a job, to
-output of the job will bew a new object implementing the issue itself.
+output of the job will be a new object implementing the issue itself.
 If you are exploring some esoteric paths for new feature or hunting
 something like an `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
 , please write a draft wiki page with your thoughts, then create a new
@@ -197,3 +197,16 @@ Package creation
 *  Make sure the git repository is registered at Ohlo
    (https://www.ohloh.net/p/nethserver)
 
+New packages
+============
+
+When creating a new NethServer packages, make sure following requirements are met:
+
+* Create an issue describing the package
+* Request the creation of a new repository (including Github mirror)
+* Add the repository to Redmine to keep track of source changes from issues
+* Add new record inside the package list http://dev.nethserver.org/projects/nethserver/wiki/Packages
+* Add a wiki page describing the usage of package, the page should be named like the package itself
+* Request Redmine administrators to add the package on  "NethServer package" custom field 
+* If needed, add the package to a yum group as optional or mandatory package
+* Add the repository to Ohloh for statics gathering
