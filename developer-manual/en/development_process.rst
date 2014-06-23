@@ -184,23 +184,10 @@ Package release
 #. push git tag and package changelog
 #. if needed, update yum groups file
 
-Package creation
-----------------
-
-*  Create a wiki package for documentation named as the package itself
-*  Add the package to [[Packages]] page
-*  Update the dependency graph
-   source:dev-nethesis-it\|/nethserver/package-dependencies.dot
-*  Make sure the git repository is registered on Redmine
-*  Make sure the git repository is replicated to Github
-   (https://github.com/nethesis)
-*  Make sure the git repository is registered at Ohlo
-   (https://www.ohloh.net/p/nethserver)
-
 New packages
 ============
 
-When creating a new NethServer packages, make sure following requirements are met:
+When creating a new package, make sure the following requirements are met:
 
 * Create an issue describing the package
 * Request the creation of a new repository (including Github mirror)
