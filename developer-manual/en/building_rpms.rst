@@ -1,3 +1,6 @@
+.. _buildrpm-section:
+
+=============
 Building RPMs
 =============
 
@@ -32,7 +35,7 @@ For example, a simple directory layout would be:
 
 
 Spec template file
-------------------
+==================
 
 A :file:`.spec.in` template file syntax is the same as RPM :file:`.spec` files,
 where
@@ -47,10 +50,10 @@ where
 .. _rpm_prepare_env:
 
 Prepare your development machine
---------------------------------
+================================
 
 NethServer
-~~~~~~~~~~
+----------
 
 On NethServer, you can simply install nethserver-devbox, by typing: ::
 
@@ -59,7 +62,7 @@ On NethServer, you can simply install nethserver-devbox, by typing: ::
 Then copy :file:`/usr/share/doc/nethserver-devbox-<version>/config.sample` to :file:`Projects/config` and edit it.
 
 Fedora
-~~~~~~
+------
 
 On Fedora, clone nethserver-devbox repository somewhere in your filesystem: ::
 
@@ -84,7 +87,7 @@ Add :command:`build-rpm` and :command:`build-iso` commands to your :file:`PATH`.
 Copy :file:`config.sample` to :file:`Projects/config` and edit it.
 
 Build the RPM
--------------
+=============
 
 The build process uses mock (http://fedoraproject.org/wiki/Projects/Mock) and must be run as a non privileged user in the `mock` system group.
 Add your user with: ::
@@ -105,7 +108,7 @@ The script can execute one or more tasks listed above in the same run. Intermedi
   Usage: build-rpm [-cousp] [-S <gpgkeyid>] [[-D <key>=<value>] ... ] <package_name> ...
    
 Development release
--------------------
+===================
 
 If you want to create a package with a development release, just execute from the :file:`Projects/` directory: ::
 
@@ -124,7 +127,7 @@ For example, given the project nethserver-ntp with the tag 1.0.0 set two commits
   RELEASE=2.0git5a6ddeb.ns6
 
 Stable release
---------------
+==============
 
 When you are ready for a production release, the :command:`release-rpm` command helps you in the following tasks:
 
@@ -152,7 +155,7 @@ Your ``$EDITOR`` program (or git core.editor) is opened automatically to adjust 
 To abort at this point, save an empty message.
 
 Old releases
-------------
+============
 
 If you want to create a RPM with a specific version: ::
 
@@ -161,7 +164,7 @@ If you want to create a RPM with a specific version: ::
 A tag equal to the given version MUST exists. ``RELEASE`` is set to ``1.<DIST>``.
 
 Sign the RPM
-------------
+============
 
 Just execute:
 
@@ -179,7 +182,7 @@ If a password is not set in :file:`config` file, the :command:`print-gnome-keyri
 password stored in ``SIGN_KEYRING_NAME`` at ``SIGN_KEYRING_ID`` index.
 
 Publish the RPM
----------------
+===============
 
 .. note::  
   The nethserver-devbox package must be installed on the remote
@@ -198,7 +201,7 @@ After the RPMs have been built, they are copied to ``PUBLISH_HOST`` into
 update the yum repository.
 
 Known problems
---------------
+==============
 
 When using mock on a VirtualBox (or KVM) virtual machine, the system can
 lock with error similar to this one:

@@ -157,32 +157,19 @@ Example:
 
 Refs links the commit to a Redmine issue.
 
-Activities
-==========
+ISO releases
+============
 
-ISO release
------------
-
-#. An ISO release starts whenever a target version is reached (see
-   `Roadmap <http://dev.nethserver.org/projects/nethserver/roadmap)>`__
-#. search for all new RPMs in nethserver-dev repository and select
+#. An ISO release starts whenever a target version is reached
+#. Search for all new RPMs in nethserver-dev repository and select
    stable packages ready for production
-#. rebuild each selected package and publish it to nethserver-testing
+#. Rebuild each selected package and publish it to nethserver-testing
    repository
-#. test new RPMs in existing machine and in a new freshly installed one
-#. if all test pass, move RPMs to repository nethserver-update
-#. build the new ISO (see [[Building ISO]])
+#. Test new RPMs in existing machine and in a new freshly installed one
+#. If all test pass, move RPMs to repository nethserver-update
+#. Build the new ISO 
 
-Package release
----------------
-
-#. update/commit changelog
-#. add git tag
-#. build RPM
-#. move RPM to yum repository
-#. (testing)
-#. push git tag and package changelog
-#. if needed, update yum groups file
+See :ref:`buildiso-section`.
 
 New packages
 ============
@@ -197,3 +184,16 @@ When creating a new package, make sure the following requirements are met:
 * Request Redmine administrators to add the package on  "NethServer package" custom field 
 * If needed, add the package to a yum group as optional or mandatory package
 * Add the repository to Ohloh for statics gathering
+
+
+Steps to release a new package
+
+#. Update/commit changelog
+#. Add git tag
+#. Build RPM
+#. Publish the RPM to nethserver-update yum repository
+#. Push git tag and package changelog
+#. If needed, update yum groups file
+
+See :ref:`buildrpm-section`.
+

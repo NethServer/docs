@@ -1,3 +1,5 @@
+.. _buildiso-section:
+
 ============
 Building ISO
 ============
