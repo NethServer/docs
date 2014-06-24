@@ -95,6 +95,7 @@ Triager
 ^^^^^^^
 
 The *triager* handles all issue in NEW state. He/she collects missing info, set NEEDINFO flag, set state to TRIAGED when having enough informations.
+
 He/she can also change the status to CLOSE and set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG.
 
 Developer
@@ -102,6 +103,7 @@ Developer
 
 The *developer* takes a TRIAGED issue and put it ON_DEV setting the Assignee to himself/herself.
 He/she moves the issue from TRIAGED (or ON_QA) to ON_DEV state. 
+
 Developer write test cases, optionally annotate RPM changelog message for Packager.
 Finally push changes to SCM and change to MODIFIED resetting the Assignee.
 
@@ -111,9 +113,13 @@ Packager
 ^^^^^^^^
 
 The *packager* pulls changes from SCM and build the package. 
-He/she puts the package in testing repository. Change state to ON_QA.
-When the package is VERIFIED from the QA team, packager will tag the package, build the tagged release and upload to updates/base repository. 
+He/she puts the package in testing repository then changes state to ON_QA.
+An issue in QA state should also report the name and release of packages in testing repository.
+The packager should also take care to write a test case (or ask to a developer), if the test case is missing.
+
+When the package is VERIFIED from the QA team, packager will tag the package, build the tagged release and upload to updates/base repository.
 Verify yum update works fine then push the tagged changelog in SCM. 
+
 Finally he/she sets state to CLOSED leaving  resolution field blank.
 
 QA team member
