@@ -1,4 +1,4 @@
-.. _email section:
+.. _email-section:
 
 =====
 Email
