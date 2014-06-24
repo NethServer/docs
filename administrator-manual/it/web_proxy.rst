@@ -8,20 +8,20 @@ estensioni dei file. Grazie a questo strumento è possibile ad esempio abilitare
 l'accesso solo su alcuni siti desiderati (ad esempio quelli di interesse
 aziendale) bloccando tutti gli altri.
 
-Nethserver è in grado di svolgere la funzione di server-proxy  con
+|product| è in grado di svolgere la funzione di server-proxy  con
 l’installazione dell’ apposito pacchetto.
 
 Installazione
 =============
 
-Per installare il pacchetto Proxy web fare click su Configurazione → Gestione pacchetti. Mettere la spunta su Proxy web e fare click sul pulsante Avanti.
+Per installare il pacchetto Proxy web fare click su 
+:menuselection:`Configurazione -> Gestione pacchetti`.
+Mettere la spunta su Proxy web e fare click sul pulsante Avanti.
 
 Gestione Proxy web
 ==================
 
-Per configurare il server proxy fare click su Configurazione → Proxy web.
-
-Verrà aperta una pagina con quattro schede.
+Per configurare il server proxy fare click su :guilabel:`Configurazione -> Proxy web`.
 
 Il Proxy Web lavora per ridurre l'utilizzo della banda facendo cache
 delle pagine visitate. E' trasparente ai web browser che utilizzano
@@ -45,16 +45,26 @@ Manuale
 
 
 Autenticato
-    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy, ma sono richiesti  lo username e la password prima di procedere con la navigazione. L'autenticazione è basata sugli utenti di |product|.
+    Il proxy è abilitato sulla porta 3128. 
+    Tutti i client devono essere configurati per usare il proxy, 
+    ma sono richiesti  lo username e la password prima di procedere con la navigazione. 
+    L'autenticazione è basata sugli utenti di sistema.
 
 
 Trasparente
-    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. Tutto il reaffico sulla porta 80 è rediretto verso proxy.
+    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. 
+    Tutto il traffico sulla porta 80 è rediretto verso il proxy.
 
 
 Trasparente SSL
-    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. Tutto il reaffico sulla porta 80 e 443 è rediretto verso proxy.
+    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta.
+    Tutto il traffico sulla porta 80 e 443 è rediretto verso il proxy.
+    Il certificato del server (CA) deve essere installato in ogni client.
     Tutto il traffico SSL è decriptato all'interno del proxy e criptato di nuovo prima di essere inviato
+
+Blocca porte HTTP e HTTPS
+    Se abilitato, i client non potranno bypassare il proxy.
+    Le porte 80 e 443 saranno raggiungibili solo utilizzando il proxy.
     
 
 Opzioni Avanzate

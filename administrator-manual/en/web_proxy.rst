@@ -2,17 +2,36 @@
 Web proxy 
 =========
 
-Configure the web proxy with content filtering.
+Configure the web proxy (Squid) with content filtering.
 
 Proxy
 =====
 
-The Web Proxy works to reduce bandwidth usage by caching
+The web proxy works to reduce bandwidth usage by caching
 the pages you visit. It's transparent to web browsers using
 this server as their gateway.
 
 Enabled
-    Enable Proxy.
+    Enable/disable proxy.
+
+Manual
+    Squid will listen on port 3128. All client must be explicitly configured to use the proxy.
+
+Authenticated
+    Each user will be forced to enter username and password.
+    Squid will listen on port 3128. All client must be explicitly configured to use the proxy.
+
+Transparent
+    All HTTP traffic will be redirect through the proxy.
+    No client configuration is needed.
+
+Transparent with SSL
+    All HTTP and HTTPS traffic will be redirect through the proxy.
+    The server certificate (CA) must be installed on each client to allow HTTPS traffic.
+
+Block HTTP and HTTPS ports
+    If enabled, clients will not be able to bypass the proxy.
+    Ports 80 and 443 will be reachable only using the proxy.
 
 Parent proxy
     Enter the IP address and port of the parent proxy. The correct syntax is
