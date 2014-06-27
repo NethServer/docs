@@ -2,6 +2,10 @@
 Gestione pacchetti
 ==================
 
+|product| è altamente modulare e, al termine dell'installazione, il sistema contiene solo
+il sistema base. L'amministratore può quindi decidere quali moduli installare in base
+alle proprie esigenze (es. mail server, DHCP server, firewall ecc.)
+
 La vista principale mostra una lista di componenti software. Gli elementi
 spuntati rappresentano i componenti installati, mentre quelli non spuntati sono
 quelli disponibili. Si può filtrare la lista per categoria.
