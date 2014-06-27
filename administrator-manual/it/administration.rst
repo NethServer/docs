@@ -2,11 +2,8 @@
 Amministrazione
 ===============
 
-Status
-======
-
 Dashboard
----------
+=========
 
 La pagina mostrata di default dopo il log in è la index:`Dashboard`; qui viene
 visualizzato un riepilogo dello stato del sistema e delle sue
@@ -17,88 +14,46 @@ del disco, informazioni sul carico ed uptime della macchina, etc.
 
 Arresto
 =======
-La macchina su cui è installato |product| può essere riavviata o spenta dal menu Amministrazione→ Arresto.
-Selezionare l’opzione Riavvia oppure Spegni e fare click sul pulsante ``Arresta il sistema``.
 
-E' obbligatorio arrestare il sistema prima di spegnere il server.
-L'esecuzione di queste funzioni richiede alcuni minuti.
+La macchina su cui è installato |product| può essere riavviata o spenta dalla pagina :menuselection:`Arresto`.
+Selezionare l’opzione Riavvia oppure Spegni e fare click sul :guilabel:`Arresta il sistema`.
 
-.. warning:: Cliccando ``Arresta il sistema`` l'operazione inizierà immediatamente.
-
-Riavvia
-    Riavvia il server terminando tutti i processi in esecuzione.
-Spegni
-    Spegne il server dopo aver terminato tutti i processi in esecuzione.
+Al fine di evitare danni al sistema, utilizzare sempre questo modulo per effettuare una corretta procedura
+di riavvio o spegnimento del server.
 
 
 Visualizza Log
 ==============
+
 Come per ogni sistema Linux, Nethserver è molto ricco di file di :index:`log` che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
 Per visualizzare i file di log fare clic su :menuselection:`Amministrazione → Visualizza Log`. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
 
-Trova e mostra il contenuto dei file di log.
+Questo modulo consente di:
 
-Trova nei file di log
----------------------
-
-Permette di consultare tutti i file di log del server e di effettuare
-ricerche approfondite all'interno degli stessi.
-
-Trova
-    Consente di ricercare termini ed espressioni all'interno di tutti i
-    log del server.
-
-È possibile accedere direttamente a ciascun log attraverso i link
-riportati nella pagina.
-
-Visualizzazione singolo log
----------------------------
-
-Permette di consultare il contenuto più recente del log selezionato e di
-seguirne l'evoluzione in tempo reale.
-
-Chiudi
-    Chiude la finestra relativa al log selezionato e torna alla pagina
-    principale della visualizzazione log.
-Svuota
-    Permette di svuotare il contenuto della finestra del log. I dati
-    vengono rimossi solamente dalla finestra di visualizzazione, non
-    viene modificato il contenuto del log.
-Segui
-    Aggiorna in tempo reale la finestra di visualizzazione con le nuove
-    informazioni che vengono scritte nel log.
-Ferma
-    Interrompe l'aggiornamento in tempo reale della visualizzazione del
-    log.
-
+* effettuare ricerche all'interno di tutti i log del server
+* visualizzare un singolo log
+* seguire in tempo reale il contenuto di un log
 
 Accesso remoto
 ==============
 
-Reti locali
+.. _trusted_networks-section:
+
+Reti fidate
 -----------
 
-Per ragioni di sicurezza alcuni servizi del server sono a disposizione soltanto della rete locale; 
-eventuali reti private (ad esempio reti collegate in VPN) possono avere gli stessi privilegi della rete locale se configurate in questo pannello.
+Le :index:`reti fidate` sono speciali reti (remote o locali) a cui è garantito l'accesso a servizi speciali del server.
 
-Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello Rotte statiche.
+Ad esempio, i computer sulle reti fidate possono accedere a:
 
+* Server Manager
+* Cartelle condivise (SAMBA)
+* Servizi web per reti locali (Statistiche)
 
-Crea / Modifica
-^^^^^^^^^^^^^^^
+Se si desidera che gli utenti collegati in VPN possanno accedere a tutti i servizi del sistema,
+aggiungere le reti delle VPN a questo pannello.
 
-Crea un nuovo instradamento verso una rete remota e/o permette ad una
-rete remota di accedere a tutti i servizi del server.
-
-Indirizzo di rete
-    L'indirizzo della rete verso cui stabilire il nuovo instradamento.
-
-Maschera di rete
-    La maschera della rete verso cui stabilire il nuovo instradamento.
-
-Descrizione
-    Un campo di testo libero, per registrare una qualsiasi annotazione.
-
+Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello :ref:`static_routes-section`.
 
 Server Manager
 --------------
@@ -139,67 +94,6 @@ Consenti l'autenticazione mediante password
     semplice. Se non abilitato, gli utenti si potranno autenticare
     solamente utilizzando una chiave crittografica.
 
-====
-Rete
-====
-
-Cambia impostazioni delle :index:`interfacce di rete`. Le interfacce di rete presenti nel sistema sono rilevate automaticamente.
-
-Stato
-=====
-
-Link
-    Indica se la scheda è collegata a qualche apparato di rete (ad es. cavo
-    ethernet collegato allo switch aziendale).
-
-Modello
-    Modello della scheda di rete utilizzata.
-
-Velocità
-    Indica la velocità che la scheda di rete ha negoziato (espressa in Mb/s).
-
-Driver
-    Il Driver che il sistema utilizza per pilotare la scheda.
-
-Bus
-    Su quale bus è collegata la scheda di rete (es: pci, usb).
-
-
-
-Modifica
-========
-
-Modifica le impostazioni dell'interfaccia di rete
-
-Scheda
-    Nome dell'interfaccia di rete. Questo campo non può essere
-    modificato.
-
-Indirizzo MAC
-    Indirizzo fisico della scheda di rete. Questo campo non può essere
-    modificato.
-
-Ruolo
-    Il ruolo indica la destinazione d'uso dell'interfaccia, ad esempio:
-    
-    * Green -> LAN Aziendale
-    * Red -> Internet, ip pubblici
-
-Modalità
-    Indica quale metodo verrà usato per attribuire l'indirizzo IP alla
-    scheda di rete, valori i possibili sono *Statico* e *DHCP*.
-
-Statico
-    La configurazione è attribuita staticamente.
-
-    * Indirizzo IP: indirizzo IP della scheda di rete
-    * Netmask: netmask della scheda di rete
-    * Gateway: default gateway del server
-
-DHCP
-    La configurazione è attribuita dinamicamente (disponibile solo per interfacce
-    RED).
-
 
 
 ===================
@@ -234,21 +128,14 @@ Indirizzo
 Profilo utente
 ==============
 
-Nome
-    È il nome dell'utente, per esempio "Mario".
+Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali.
 
-Cognome
-    Il cognome dell'utente, per esempio "Rossi".
+Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le informazioni associate al proprio account:
 
-Indirizzo email esterno
-    Indirizzo email dell'utente, presso un provider di posta
-    elettronica esterno. Se specificato, questo indirizzo viene
-    utilizzato dal sistema nelle procedure di recupero e di rinnovo
-    della password.
+* Nome e Cognome
+* Indirizzo email esterno
 
-Per i seguenti campi è possibile specificare un valore personalizzato,
-altrimenti vale l'impostazione effettuata dal modulo "Dati
-organizzazione", disponibile solo per l'amministratore del sistema.
+L'utente può anche sovracrivere i seguenti campi già impostati dall'amministratore:
 
 * Società
 * Ufficio
@@ -257,52 +144,19 @@ organizzazione", disponibile solo per l'amministratore del sistema.
 * Telefono
 
 
-Cambia Password
-===============
-
-Cambia la password attuale con una nuova password.
-
-Password attuale
-    Inserire la password attuale.
-
-Nuova password
-    Inserire la nuova password.
-
-Ripeti nuova password
-    Ripetere la nuova password: deve coincidere con quella del campo
-    *Nuova Password*.
+.. _static_routes-section:
 
 ==============
 Rotte statiche
 ==============
 
 Il pannello consente di specificare instradamenti
-particolari che non facciano uso del default gateway (ad esempio per
+particolari (:index:`rotte statiche`) che non facciano uso del default gateway (ad esempio per
 raggiungere reti private collegate tramite linee dedicate o simili).
 
 Se si desidera che gli host nella rete remota possano accedere ai servizi
 del server, ricordarsi di creare una rete corrispondente nel pannello
 :guilabel:`Reti fidate`.
 
-Crea / Modifica
-=====================
 
-Crea un nuovo instradamento verso una rete remota.
-
-Indirizzo di rete
-    L'indirizzo della rete verso cui stabilire il nuovo instradamento
-
-Maschera di rete
-    La maschera della rete verso cui stabilire il nuovo instradamento
-
-Indirizzo del router
-    Indirizzo del gateway da utilizzare per raggiungere la rete
-    specificata, questo campo non è obbligatorio.
-
-Descrizione
-    Un campo di testo libero, per registrare una qualsiasi annotazione.
-
-Una volta creato l'instradamento, sarà possibile modificare solo
-l'indirizzo del router e la descrizione.
-
-
+Vedi :ref:`trusted_networks-section`.

@@ -26,6 +26,7 @@ Installazione
    :maxdepth: 2
 
    installation
+   inline_help
    packages
    migration
 
@@ -36,6 +37,7 @@ Configurazione
    :maxdepth: 2
 
    access
+   network
    administration
    date_time
    backup
@@ -48,6 +50,7 @@ Configurazione
    fax_server
    web_proxy
    firewall
+   snort
    bandiwidth_monitor
    dns_dhcp
    vpn

@@ -1,185 +1,254 @@
-=======
-Gateway
-=======
+==================
+Firewall e gateway
+==================
 
-Nethserver è in grado di svolgere il ruolo di Gateway all’interno della
-rete in cui viene installato. Per una corretta funzionalità è possibile
-impostare il reindirizzamento ed inoltro delle porte e la gestione della
-banda utilizzata dalle varie macchine connesse in rete.
+|product| è in grado di svolgere il ruolo di :index:`firewall` e :index:`gateway` all’interno della
+rete in cui viene installato.
+Tutto il traffico fra i computer della rete locale e Internet passa attraverso il server che decide come
+instradare i pacchetti di rete (routing) e quali regole applicare.
+ 
 
-Port Forward
-==============
+Funzioni principali:
 
-Il Port Forward permette il reindirizzamento e l’inoltro di pacchetti in
-entrata su di una determinata porta di un server in ascolto.
-
-Installazione
-==============
-
-Gestione Port Forward
-=====================
-
-Per il Port forward dei pacchetti su una determinata porta occorre
-andare sulla sezione Gestione→ Port Forward.
-
-Si apre una pagina che mostra un tabella riassuntiva di tutti i port
-forward configurati.
-
-Creare un nuovo port forward
-----------------------------
-
-E' possibile usare questo pannello per modificare le regole del firewall
-così da aprire una specifica porta (o un intervallo di porte) sul server
-ed inoltrare una porta ad un altra. In questo modo è possibile
-permettere l'accesso ad host privato nella rete locale.
+* Configurazione di rete avanzata (bridge, bonds, alias, ecc)
+* Supporto WAN multiple (fino a 15)
+* Gestione regole firewall
+* Gestione banda (QoS)
+* Port forwarding
+* Regole per routing traffico su una specifica WAN
+* Intrusion Prevention System (IPS)
 
 
-Porta di origine
-    Specifica la porta aperta sul IP pubblico.
+La modalità firewall e gateway viene attivata solo se:
 
-Porta destinazione
-    Specifica la porta sul host interno e destinazione del traffico.
+* il pacchetto `nethserver-firewall-base` è installato
+* è configurata almeno una scheda di rete con ruolo red
 
-Host destinazione
-    E' la macchina interna alla LAN a cui verrà rediretto il traffico.
+.. _policy-section:
 
-Permetti solo da
-    Permette il forward del traffico solo da alcune sorgenti reti/host.
+Policy
+======
 
-Descrizione
-    Descrizione opzionale della regola di port forwarding.
+Ogni interfaccia di rete è identificata da un colore che ne indica il ruolo all'interno del sistema.
+Vedi :ref:`network-section`.
 
+Quando un pacchetto di rete attraversa una zona del firewall, il sistema valuta una lista di regole per decidere se 
+il traffico debba essere bloccato o permesso.
+Le :dfn:`policy` sono le regole di default che vengono applicate se il traffico di rete passante non corrisponde a nessun criterio
+esistente.
 
+Il firewall implementa due policy standard modificabili nella pagina :menuselection:`Regole firewall` -> :guilabel:`Configura`:
 
-Abilitare o disabilitare un port forward
-----------------------------------------
+* :dfn:`Permesso`: tutto il traffico dalla rete green alla red è permesso
+* :dfn:`Bloccato`: tutto il traffico dalla rete green alla red è bloccato. Il traffico permesso deve essere esplicitato con apposite regole
 
-Per disabilitare/abilitare un port forward fare click sul pulsante
-disabilita/abilita nella colona Azioni. 
+Le :index:`policy` del firewall permettono il traffico fra zone seguendo lo schema qui sotto: ::
 
-Le regole di Port Forwarding vengono abilitate di default al momento
-della creazione, ed è possibile abilitarle e disabilitarle momentaneamente
-attraverso questo pulsante
+ GREEN -> BLUE -> ORANGE -> RED
 
-Si
-    Abilita la regola.
+Il traffico è permesso da sinistra a destra, bloccato da destra a sinistra.
 
-No
-    Disabilita la regola.
+Per cambiare le policy di default è possibile creare delle regole tra zone nella pagina :guilabel:`Regole firewall`.
 
-
-Modificare un port forward
---------------------------
-
-Per modificare un port forward fare click sulla freccia adiacente al ulsante disabilita. 
-
-Eliminare un port forward
---------------------------
-
-Per eliminare un port forward già impostato fare click sulla freccia accanto al pulsante disabilita Si apre un menù a tendina, fare click ulla voce elimina..
+.. note:: Il traffico dalla rete locale verso il server sulla porta SSH (default 22) e Server Manager (default 980) è **sempre** permesso.
 
 
-Controllo Firewall
-------------------
-Esegue un controllo generale delle regole del firewall configurate. Utile per individuare inconsistenze.
+Regole
+======
+
+Le :index:`regole` vengono applicate a tutto il traffico di rete che attraversa il firewall.
+Quando un pacchetto di rete transita da una zona all'altra, il sistema cerca fra le regole configurate.
+Se le caratteristiche del pacchetto corrispondono a quelle descritte in una regola, tale regola viene applicata.
+
+.. note:: L'ordine delle regole è molto importante. Il sistema applica sempre la prima regola che corrisponde al traffico in transito.
+
+Una regola si compone di tre parti principali:
+
+* Azione: azione da intraprendere quando si applica la regola
+* Origine traffico: indirizzo di origine del traffico, può essere una zona, una rete o un singolo host
+* Destinazione traffico: indirizzo di destinazione del traffico, può essere una zona, una rete o un singolo host
+* Servizio: porta e protocollo che individua un determinato tipo di traffico
+
+
+Le azioni disponibili sono:
+
+* :dfn:`ACCEPT`: accetta il traffico
+* :dfn:`REJECT`: blocca il traffico ed informa il mittente che la richiesta effettuata non è permessa
+* :dfn:`DROP`: blocca il traffico, i pacchetti vengono scartati e il mittente *non* viene notificato
+
+REJECT vs DROP
+--------------
+
+Come regola generale, si consiglia di usare :index:`REJECT` quando si desidera informare l'host sorgente del traffico che la porta a cui si
+sta provando ad accedere è chiusa.
+Solitamente le regole che rispondono alle richieste della LAN possono usare REJECT.
+
+Per le connessioni provenienti da Internet si consiglia di usare :index:`DROP`, al fine di minimizzare la rivelazione di informazioni ad eventuali
+attaccanti.
+
+Log
+---
+
+Quando una regola viene applicata, è possibile registrare l'evento nel log abilitando la relativa spunta.
+Il :index:`log del firewall` è salvato nel file :file:`/var/log/firewall.log`.
+
+Esempi
+------
+
+Si riportano di seguito alcuni esempi di regole.
+
+Bloccare tutto il traffico DNS proveniente dalla LAN e diretto verso Internet:
+
+* Azione: REJECT
+* Origine: green
+* Destinazione: red
+* Servizio: DNS (UDP porta 53)
+
+Permettere alla rete ospiti di accedere a tutti i servizi in ascolto sul Server1:
+
+* Azione: ACCEPT
+* Origine: blue
+* Destinazione: Server1
+* Servizio: -
+
+
+Multi WAN
+=========
+
+Con il termine :dfn:`WAN` (Wide Area Network) si indica una rete pubblica esterna al server, solitamente collegata a Internet.
+I fornitori di collegamenti :index:`WAN` sono detti :dfn:`provider`.
+
+Il sistema supporta fino ad un massimo di 15 connessioni WAN.
+Se sul server sono configurare due o più schede red, è obbligatorio procedere alla configurazione dei :index:`provider`
+dalla pagina :guilabel:`Multi WAN`.
+
+Ogni provider configurato rappresenta una connessione WAN ed è associato ad una scheda di rete.
+Ciascun provider definisce un :dfn:`peso`: maggiore è il :index:`peso`
+maggiore è la priorità della scheda di rete associata al provider stesso.
+
+Il sistema può utilizzare le connessioni WAN in due modalità (pulsante :guilabel:`Configura` nella pagina :menuselection:`Multi WAN`):
+
+* :dfn:`Balance`: tutti i provider sono utilizzati contemporaneamente in base al loro peso 
+* :dfn:`Active backup`: i provider sono utilizzati uno alla vola a partire da quello con il peso più alto. Se il provider in uso perde la connessione, tutto il traffico verrà dirottato sul successivo provider.
+
+
+Esempio
+-------
+
+Dati due provider così configurati:
+
+* Provider1: interfaccia di rete eth1, peso 100
+* Provider2: interfaccia di rete eth0, peso 50
+
+Se è attiva la modalità bilanciata, il server indirizzerà il doppio delle connessioni sul Provider1 rispetto al Provider2.
+
+Se è attiva la modalità backup, il server indirizzerà tutte le connessioni sul Provider1; solo se il Provider1 diventa
+inutilizzabile tutte le connessioni saranno indirizzate sul Provider2.
+
+
+
+Port forward
+============
+
+Il firewall impedisce che richieste iniziate dall'esterno possano accedere alle reti private.
+Se ad esempio all'interno della rete è presente un server web, solo i computer presenti nella rete green potranno accedere al servizio.
+Qualsiasi richiesta fatta da un utente esterno alle reti locali viene bloccata.
+
+Per permettere a qualsiasi utente esterno l'accesso al server web si utilizza il :dfn:`port forward`.
+Il :index:`port forward` è una regola che consente un accesso limitato alle risorse delle LAN dall'esterno.
+
+Quando si configura il server, è necessario scegliere le porte in ricezione o in ascolto su cui verrà redirezionato 
+il traffico in ingresso nella scheda red.
+Nel caso di un server web, le porte in ascolto sono solitamente la porta 80 (HTTP) e 443 (HTTPS).
+
+Quando si crea un port forward è necessario specificare almeno i seguenti parametri:
+
+* la porta di origine
+* la porta di destinazione, che può essere diversa dalla porta di origine
+* l'indirizzo dell'host a cui deve essere instradato il traffico
+
+Esempio
+-------
+
+Dato il seguente scenario:
+
+* Server interno con IP 192.168.1.10, detto Server1
+* Server web in ascolto sulla porta 80 su Server1
+* Server SSH in ascolto sulla porta 22 su Server1
+
+In caso si voglia rendere accessibile dall'esterno il server web direttamente sulla porta 80, si dovrà creare un port forward fatto così:
+
+* porta origine: 80
+* porta destinazione: 80
+* indirizzo host: 192.168.1.10
+
+Tutto il traffico che arriva sulle reti red del firewall sulla porta 80, verrà redirezionato alla porta 80 di Server1.
+
+
+In caso si voglia rendere accessibile dall'esterno il server SSH sulla porta 2222, si dovrà creare un port forward fatto così:
+
+* porta origine: 2222
+* porta destinazione: 22
+* indirizzo host: 192.168.1.10
+
+
+Tutto il traffico che arriva sulle reti red del firewall sulla porta 2222, verrà redirezionato alla porta 22 di Server1.
+ 
+
+Limitare accesso
+----------------
+
+E' possibile limitare l'accesso al port forward solo da alcuni IP o reti compilando il campo :guilabel:`Permetti solo da`.
+
+Questa configurazione è utile in casi alcuni servizi debbano essere accessibili solo da IP/reti fidati.
+Esempi di alcuni valori possibili:
+
+* ``10.2.10.4``: abilita il port forward solo per il traffico proveniente dall'IP 10.2.10.4
+* ``10.2.10.4,10.2.10.5``: abilita il port forward solo per il traffico proveniente dagli IP 10.2.10.4 e 10.2.10.5
+* ``10.2.10.0/24``: abilita il port forward solo per il traffico proveniente dalla rete 10.2.10.0/24
+* ``!10.2.10.4``: abilita il port forward per tutti gli IP tranne 10.2.10.4
+* ``192.168.1.0/24!192.168.1.3,192.168.1.9``: abilita il port forward per tutta la rete 192.168.1.0/24  ad eccezione degli host 192.168.1.3 e 192.168.1.9
 
 
 Gestione banda
 ==============
 
-La gestione banda permette di cambiare priorità al traffico che
-attraversa il firewall (che dovrà avere almeno due interfacce di rete).
+La :index:`gestione banda` (:index:`traffic shaping`) permette di applicare regole di priorità sul traffico che attraversa il firewall.
+In tal modo è possibile ottimizzare la trasmissione, controllare la latenza e sfruttare al meglio
+la banda disponibile.
+
+Per attivare il traffic shaping è necessario conoscere la quantità di banda disponibile nelle due direzioni
+e compilare i campi indicando la velocità nominale del link Internet, consapevoli del fatto
+che in caso di congestione da parte del provider non c'è nulla da fare per poter migliorare le prestazioni.
+I classici valori per una ADSL sono 256 kbit/sec per uplink e 1280 per downlink.
+
+La configurazione della banda può essere effettuata nella pagina :menuselection:`Gestione banda` -> :guilabel:`Regole interfacce`.
+
+Il sistema prevede tre livelli di priorità, alta, media e bassa: di default tutto il traffico ha priorità media,
+ma è possibile assegnare priorità alta o bassa a determinati servizi in base alla porta utilizzata (per esempio bassa al traffico peer to peer).
+
+Da evidenziare il fatto che il sistema funziona anche senza che vengano specificati servizi a priorità alta o bassa,
+perché, di default, il traffico interattivo viene automaticamente gestito ad alta priorità
+(significa che, per esempio, non è necessario specificare porte per il traffico VoIP o SSH).
+Anche al traffico di tipo PING è garantita alta priorità.
 
 
-
-Installazione
--------------
-
-Per installare il pacchetto  Gestione banda web fare click su Configurazione →Gestione pacchetti. Mettere la spunta su *Monitoraggio banda* e fare click sul pulsante *Avanti*. Verrano suggeriti dei pacchetti aggiuntivi da installare, selezionare quelli che si ritengono utili e confermare le modifiche al sistema facendo click sul pulsante applica.
-
-Al termine dell’ installazione verrà mostrato in alto un messaggio che
-ci informa che l’operazione è stata completata correttamente.
+.. note:: Assicurarsi di specificare una stima accurata della banda.
 
 
-Configurazione
---------------
+Oggetti firewall
+================
 
-Per gestire la banda andare sulla sezione Configurazione→ Backup si apre
-una pagina con quattro schede.
+Gli :index:`oggetti firewall` sono delle rappresentazioni dei componenti della rete e sono utili per semplificare la creazione
+di regole.
 
-Scheda generale
-^^^^^^^^^^^^^^^
+Esistono 4 tipi di oggetti:
 
-Nella scheda generale è possibile abilitare la gestione della banda
-scegliendo si; fare click sul pulsante salva per salvare l’impostazione.
+* Host: rappresentano computer locali e remoti. Esempio: server_web, pc_boss
+* Gruppi di host: rappresentano gruppi omogenei di computer. Esempio: servers, pc_segreteria
+* Zone: rappresentano reti di host. Anche se concettualmente simili ai gruppi di host, è possibile esprimere zone in notazione CIDR
+* Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
-Scheda Regole interfacce
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Nella scheda regole interfacce è possibile impostare l’utilizzo della
-banda per ogni scheda di rete presente sul server. Nella pagina viene
-mostrata una tabella riassuntiva delle regole impostate.
-
-
-Per ogni interfaccia su cui si desidera gestire la priorità di banda è
-necessario indicare la quantità massima di banda disponibile sia in
-uscita che in entrata. E' fondamentale utilizzare valori reali,
-preferibilmente misurati con dei test, in particolare per la banda in
-upload (in uscita). La tabella mostra i valori configurati su ogni
-interfaccia, permettendo di modificare i limiti di banda.
-
-
-Crea una configurazione di limiti di banda per interfaccia.
-
-Interfaccia
-    Selezionare l'interfaccia a cui si riferisce la quantità di banda
-    sottostante. In genere si limita la banda solo nelle interfacce WAN.
-Banda entrante (kbps)
-    Impostare la quantità di banda in ingresso (download).
-Banda uscente (kbps)
-    Impostare la quantità di banda in uscita (upload).
-Descrizione
-    E' possibile indicare una nota (per esempio: ADSL 1280/256).
-
-
-
-Scheda Regole indirizzi
-^^^^^^^^^^^^^^^^^^^^^^^
-
-La tabella mostra l'elenco degli indirizzi di rete (IP o MAC) che hanno
-regole di priorità personalizzate. Per esempio, è possibile decidere
-che il traffico proveniente da uno specifico computer della rete locale
-abbia una priorità bassa oppure alta rispetto agli altri.
-
-
-Indirizzo IP o MAC
-    Indicare l'indirizzo IP o MAC che identifica il computer.
-Descrizione
-     E' possibile aggiungere una descrizione opzionale per descrivere
-     chiaramente la scopo della regola. Per esempio: priorità alta per il pc del
-     direttore.
-
-
-Scheda Regole porte
-^^^^^^^^^^^^^^^^^^^
-
-La tabella mostra l'elenco delle porte TCP/UDP che hanno regole di
-priorità personalizzate. Per esempio, è possibile specificare che il
-traffico relativo ad un determinato servizio di rete (proveniente o
-destinato a una determinata porta) abbia una priorità bassa oppure alta
-rispetto al normale traffico di rete.
-
-
-Porta
-    Indicare la porta utilizzata dal servizio di rete
-Protocollo
-    Inserire il protocollo IP
-Descrizione
-    E' possibile aggiungere una descrizione opzionale che indichi
-    chiaramente la scopo della regola. Per esempio: priorità bassa per il
-    servizio ftp.
-
-
-
-
+Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dnsdhcp-section` come oggetti host.
+Inoltre ogni interfaccia di rete con un ruolo associato è automaticamente elencata fra le zone disponibili.
 

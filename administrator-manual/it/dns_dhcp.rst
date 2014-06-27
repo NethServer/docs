@@ -1,3 +1,5 @@
+.. _dnsdhcp-section:
+
 ==========
 DNS e DHCP
 ==========
