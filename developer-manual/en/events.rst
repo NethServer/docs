@@ -185,10 +185,9 @@ The ``signal-event`` program takes an event name as an argument, and
 executes all of the actions in that event, providing the event name as
 the first parameter and directing all output to the system log. It works
 by listing the entries in the event directory and executing them in
-sequence. So for example, the command:
+sequence. So for example, the command: ::
 
-..
-   signal-event interface-update
+  signal-event interface-update
 
 will perform all the actions associated with the ``interface-update``
 event, which is defined by the contents of the
