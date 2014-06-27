@@ -2,8 +2,9 @@
 Gestione pacchetti
 ==================
 
-|product| è altamente modulare e, al termine dell'installazione, il sistema contiene solo
-il sistema base. L'amministratore può quindi decidere quali moduli installare in base
+|product| è altamente modulare: al termine dell'installazione il sistema contiene solo
+i moduli di base (es. configurazioen rete, visualizzazione log).
+L'amministratore può quindi decidere quali componenti installare in base
 alle proprie esigenze (es. mail server, DHCP server, firewall ecc.)
 
 La vista principale mostra una lista di componenti software. Gli elementi
