@@ -94,7 +94,7 @@ on FedoraProject.org.
 Triager
 ^^^^^^^
 
-The *triager* handles all issue in NEW state. He/she collects missing info, set NEEDINFO flag, set state to TRIAGED when having enough informations.
+The *triager* handles all issue in NEW state. He/she collects missing info, set NEEDINFO flag, set state to TRIAGED when having enough information.
 
 He/she can also change the status to CLOSE and set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG.
 
@@ -120,7 +120,8 @@ The packager should also take care to write a test case (or ask to a developer),
 When the package is VERIFIED from the QA team, packager will tag the package, build the tagged release and upload to updates/base repository.
 Verify yum update works fine then push the tagged changelog in SCM. 
 
-Finally he/she sets state to CLOSED leaving  resolution field blank.
+Finally he/she sets state to CLOSED leaving resolution field blank. 
+When the package is CLOSED, all related documentation must be in place.
 
 QA team member
 ^^^^^^^^^^^^^^
@@ -163,6 +164,18 @@ Example:
 
 Refs links the commit to a Redmine issue.
 
+
+Documentation
+=============
+
+The developer must take care to write all documentation on:
+
+* wiki page during development
+* Developer Manual before release
+* Administrator Manual before release
+
+Packages should be inside testing repositories untile all documentation is completed.
+
 ISO releases
 ============
 
@@ -179,6 +192,13 @@ See :ref:`buildiso-section`.
 
 New packages
 ============
+
+Before creating a new package, make sure it's a good a idea.
+Often a simple documentation page is enough, and it requires much less effort.
+When tring new things, just take care to write down on a public temporary document (maybe a wiki page)
+all steps and comments.
+If the feature collects many requests, it's time to think about a new package.
+Otherwise, the temporary document can be moved to a manual page.
 
 When creating a new package, make sure the following requirements are met:
 
