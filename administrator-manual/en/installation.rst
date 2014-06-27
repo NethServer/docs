@@ -99,7 +99,7 @@ Unattended mode
 
 After installation, the system will be configured as follows:
 
-* Credentials: root / Nethesis 1234
+* Credentials: root / Nethesis,1234
 * Network: DHCP enabled on all interfaces
 * Keyboard: us
 * Time zone: Greenwich
