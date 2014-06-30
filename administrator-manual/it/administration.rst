@@ -5,7 +5,7 @@ Amministrazione
 Dashboard
 =========
 
-La pagina mostrata di default dopo il log in è la index:`Dashboard`; qui viene
+La pagina mostrata di default dopo il login è la index:`Dashboard`; qui viene
 visualizzato un riepilogo dello stato del sistema e delle sue
 impostazioni.
 
@@ -25,8 +25,10 @@ di riavvio o spegnimento del server.
 Visualizza Log
 ==============
 
-Come per ogni sistema Linux, Nethserver è molto ricco di file di :index:`log` che registrano tutte le operazioni che vengono svolte; ciò può essere molto utile in situazioni di malfunzionamento del sever per individuare i problemi in maniera rapida.
-Per visualizzare i file di log fare clic su :menuselection:`Amministrazione → Visualizza Log`. Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
+Tutti i servizi registrano le operazioni svolte all'interno di file detti :dfn:`log`.
+L'analisi dei :index:`log` è lo strumento principale per individuare malfunzionamenti e problemi.
+Per visualizzare i file di log fare clic su :menuselection:`Visualizza Log`.
+Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
 
 Questo modulo consente di:
 
@@ -58,41 +60,17 @@ Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la
 Server Manager
 --------------
 
-Configura accesso all'interfaccia web Server Manager.
-
-Indirizzo di rete
-    È l'indirizzo dal quale sarà consentito accedere all'interfaccia
-    web.
-
-Maschera di rete
-    Maschera di rete dell'indirizzo. Per consentire l'accesso ad un solo
-    host, utilizzare come maschera di rete 255.255.255.255.
+E' possibile specificare reti a cui sia esplicitametne consentito l'accesso al Server Manager.
+Ad esempio, se il server è presso un cliente, si consiglia di permettere il collegamento dalla rete
+remota da cui si voglia amministrare la macchina.
 
 SSH
 ---
 
-Gestione dell'accesso :index:`SSH` (Secure Shell) al server.
+Si consiglia di mantenere sempre attivo il servizio :index:`SSH` (Secure Shell).
+SSH è un protocollo per aprire una shell remota usando connessioni cifrate.
 
-Abilitato / Disabilito
-    Abilita / disabilita l'accesso SSH.
-
-Porta TCP
-    Inserire la porta TCP usata per l'accesso SSH.
-
-Accetta connessioni da reti locali
-    Accesso SSH abilitato solo da connessioni provenienti da reti
-    locali.
-
-Accetta connessioni da qualsiasi rete
-    Accesso SSH abilitato per connessioni provenienti da qualsiasi rete.
-
-Consenti l'accesso per l'utente root
-    Consenti l'accesso SSH all'utente root (utente amministrativo).
-
-Consenti l'autenticazione mediante password
-    Consente l'accesso SSH tramite l'autenticazione con password
-    semplice. Se non abilitato, gli utenti si potranno autenticare
-    solamente utilizzando una chiave crittografica.
+La configurazione di default consente l'autenticazione via password e mediante chiave pubblica/privata.
 
 
 
@@ -100,28 +78,11 @@ Consenti l'autenticazione mediante password
 Dati organizzazione
 ===================
 
-Questi campi contengono i valori di default per l'azienda.
-I dati indicati verranno utilizzati come default durante la creazione
-dei nuovi utenti.
+I campi in questa sezione vengono utilizzati per la generazione dei certificati
+SSL auto-firmati e per la creazione degli utenti.
 
-Per ogni utente è possibile specificare valori diversi nel pannello
-Utenti, scheda Dettagli.
-La variazione di questi dati sostituisce i valori di default per gli
-utenti che non hanno campi personalizzati.
-
-.. note:: Ogni modifica ai dati inseriti rigenera il certificato SSL.
-
-Azienda
-    Inserire il nome dell'azienda.
-Città
-    Inserire la città dell'azienda.
-Ufficio
-    Inserire il dipartimento o ufficio i cui componenti avranno accesso
-    ai servizi del server.
-Telefono
-    Inserire il numero di telefono dell'azienda.
-Indirizzo
-    Inserire l'indirizzo dell'azienda.
+.. note:: Ogni modifica ai dati inseriti rigenera tutti i certificati SSL, peranto sarà necessario
+   accettarli nuovamente nei client già configurati (es. client posta e browser).
 
 
 ==============
