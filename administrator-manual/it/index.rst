@@ -26,8 +26,6 @@ Installazione
    :maxdepth: 2
 
    installation
-   inline_help
-   packages
    migration
 
 Configurazione
