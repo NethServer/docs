@@ -54,6 +54,7 @@ Implementation
    random_url
    migration
    certificate_management
+   backup
    gateway
    ips
 
