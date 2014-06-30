@@ -26,7 +26,6 @@ Installation
    :maxdepth: 2
 
    installation
-   packages
    migration
 
 Configuration

@@ -318,7 +318,7 @@ Gestione pacchetti
 ==================
 
 |product| è altamente modulare: al termine dell'installazione il sistema contiene solo
-i moduli di base (es. configurazioen rete, visualizzazione log).
+i moduli di base (es. configurazione di rete, visualizzazione log).
 L'amministratore può quindi decidere quali componenti installare in base
 alle proprie esigenze (es. mail server, DHCP server, firewall ecc.)
 
@@ -369,14 +369,13 @@ in lingua italiana, usare l'indirizzo: ::
 Moduli opzionali
 ================
 
-I seguenti moduli sono opzionali e devono essere installati dalla pagina :guilabel:`Gestione pacchetti`.
-
+I seguenti moduli non fanno parte dell'installazione base e possono essere installati dalla pagina :guilabel:`Gestione pacchetti`.
 
 In alternativa, è possibile installare i moduli da linea di comando utilizzando :command:`yum` ::
 
   yum install @<module_id>
 
-Dove ``module_it`` è l'ID del modulo preso dall lista qui sotto. Esempio per installare il modulo di backup: ::
+Dove ``module_id`` è l'ID del modulo preso dall lista qui sotto. Esempio per installare il modulo di backup: ::
    
   yum install @nethserver-backup
 
