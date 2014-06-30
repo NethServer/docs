@@ -134,7 +134,7 @@ Supported VFSType:
 * ``cifs`` : save the backup on a remote SMB server. Authentication is mandatory.
 * ``nfs`` : save the backup on a remote NFS server. No authentication supported.
 * ``usb`` : save the backup on a USB device. The device must have a writable filesystem with a custom label. 
-  When the backup is started, the system will search for an USB device with the filesystem label saved in ``SmbShare``.
+  When the backup is started, the system will search for an USB device with the filesystem label saved in ``USBLabel``.
 
 Backup
 ------
