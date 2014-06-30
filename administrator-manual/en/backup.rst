@@ -2,74 +2,134 @@
 Backup
 ======
 
-The backup contains all the data such as users home directories, 
-shared folders, emails but also all the configurations
-of the system. It runs daily and may be full or
-incremental, depending on day of week and configuration. The
-media available for backup are: USB disk, Windows share
-and NFS share. At the end of the backup procedure, an email notification will be sent
-to the administrator or to a custom address.
+Backup is the only way to restore a machine when disasters occur.
+The system handles two kind of backup:
 
-General
-========
+* :index:`configuration backup`
+* :index:`data backup`
 
-Enable automatic backup
-    This option enables or disables the backup procedure. The default is *enabled*.
+Configuration backup contains only system configuration files. 
+It's scheduled to be executed every night and it will create a new archive only if any file is changed in the last 24 hours. 
+The purpose of this kind of backup is to quickly restore a machine in case of disaster recovery. 
+When the machine is functional, a full data restore can be done even if the machine is already in production.
 
-Schedule backup
-    The time when the backup will start. Change the value directly in the field.
+Data backup contains all data like user's home directories and mails. It runs every night and can be full or incremental on a weekly basis. 
+This backup also contains the archive of the configuration backup.
 
-Full
-    Selecting this option will run a full backup every day of the week
+Data backup can be saved on three different destinations:
 
-Incremental
-    Selecting this option will run a full backup on the day
-    selected through the specific field while the rest of
-    week will run an incremental backup.
+* USB: disk connected to an USB port, it's useful but limited by USB bus speed
+* CIFS: Windows shared folder, it's available on all NAS
+* NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
 
-Retention policy
-    Input the number of days for which the backup will be stored.
+The backup status can be notified to the system administrator or to an external mail address.
 
-Destination
-============
+Restore
+=======
 
-USB Disk
-    Select the backup destination to a USB drive. The USB disk must
-    be formatted with a compatible file system (ext2/3/4 or FAT, NTFS not supported) and a label configured.
+Make sure that backup destination is reachable (for example, USB disk must be connected).
 
-    * Filesystem label: Lists the USB disks connected
+.. note:: For now only restore form command line is available.
 
-Windows Share (CIFS)
-    Select the backup destination, a Windows share (CIFS). Authentication is required.
+Listing files
+--------------
 
-    * Server: The IP address or FQDN of the target Windows server
-    * Share: the name of the share on the target Windows system
-    * User: username to use for authentication
-    * Password: password to use for authentication.
+It's possible to list all file present inside the last backup using this command: ::
 
-NFS Share
-    Select the backup destination on an NFS share
+ backup-data-list
 
-Host
-   The IP address or FQDN of the NFS server
+The command can take some times depending on the backup size.
 
-   * Share: name the NFS share target
+File and directory
+------------------
 
-Notifications
+All relevant files are saved under :file:`/var/lib/nethserver/` directory:
+
+* Mails: :file:`/var/lib/nethserver/vmail/<user>`
+* Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
+* User's home: :file:`/var/lib/nethserver/home/<user>`
+
+To restore a file/directory, use the command: ::
+
+  restore-file <position> <file>
+
+Example, restore *test* mail account to :file:`/tmp` directory: ::
+
+  restore-file /tmp /var/lib/nethserver/vmail/test
+
+Example, restore *test* mail account to original position: ::
+
+  restore-file / /var/lib/nethserver/vmail/test
+
+
+The system can restore a previous version of directory (or file).
+
+Example, restore the version of a file from 15 days ago: ::
+
+  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
+
+The ``-t`` option allows to specify the number of days (15 in this scenario).
+
+
+Disaster recovery
+-----------------
+
+The system is restored in two phases: first configuration, then data. 
+Right after configuration restore, the system is ready to be used if proper packages are installed. 
+You can install additional packages before or after restore.
+For example, if mail-server is installed, the system can send and receive mail (even sieve filters are already in place).
+
+Other restored configurations:
+
+* Users and groups, including old root/admin password
+* SSL certificates
+
+
+Steps to be executed:
+
+1. Install the new machine with the same host name as the old one
+2. Configure a data backup, so the system can retrieve saved data and configuration
+3. Install additional packages (optional)
+4. Restore configuration backup executing: :command:`restore-config`
+5. If the old machine was the network gateway, remember to reinstall firewall module
+6. Reconfigure network from web interface
+7. Verify the system is functional
+8. Restore data backup executing: :command:`restore-data`
+
+Customization
 =============
 
-In case of error
-    Send notification only in the event of failure of the backup.
+If additional software is installed, the administrator can edit
+the list of files and directories included (or excluded).
 
-Always
-    Always send notifications, if successful or in case of failure.
+Inclusion
+---------
 
-Never
-    You will not get any notification.
+If you wish to add a file or directory to data backup, add a line to the file :file:`/etc/backup-data.d/custom.include`.
 
-Send notification to
-    Input who will receive the email notification
-   
-    * System Administrator: notification of the backup will be sent to the system administrator (admin user)
-    * Custom Address: notification of the backup will be sent
+For example, to backup a software installed inside :file:`/opt` directory, add this line: ::
+
+  /opt/mysoftware
+
+If you wish to add a file or directory to configuration backup, add a line to the :file:`/etc/backup-config.d/custom.include`.
+Do not add big directories or files to configuration backup.
+
+Exclusion
+---------
+
+If you wish to  exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
+
+For example, to exclude all directories called *Download*, add this line: ::
+
+  **Download**
+
+To exclude a mail directory called *test*, add this line: ::
+
+  /var/lib/nethserver/vmail/test/ 
+
+
+Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
+
+
+.. note:: Make sure to not leave empty lines inside edited files.
 
