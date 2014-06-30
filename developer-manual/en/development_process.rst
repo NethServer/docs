@@ -173,6 +173,7 @@ The developer must take care to write all documentation on:
 * wiki page during development
 * Developer Manual before release
 * Administrator Manual before release
+* Inline help before release
 
 Packages should be inside testing repositories untile all documentation is completed.
 
