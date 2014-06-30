@@ -35,6 +35,7 @@ Configuration
    :maxdepth: 2
 
    access
+   network
    administration
    date_time
    backup
