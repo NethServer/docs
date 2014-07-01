@@ -246,7 +246,7 @@ End of installation procedure
 
 After parameters input, the procedure will start the installation.
 
-At the end of the procedure, install optional modules if needed: :ref:`packages-section`.
+At the end of the procedure, install optional modules if needed: :ref:`package_manager-section`.
 
 
 Install on CentOS
@@ -280,111 +280,5 @@ Example for mail and ups modules:
   nethserver-install nethserver-mail nethserver-nut
 
 
-At the end of the procedure, install optional modules if needed: :ref:`packages-section`.
-
-
-
-.. _packages-section:
-
-===============
-Package manager
-===============
-
-|product| is highly modular: at the end of the installation only base system will be ready to be used.
-Base system includes modules like network configuration and log viewer.
-The administrator can install additional modules like mail server, DHCP server and firewall.
-
-The main page shows all available and installed (checked) modules.
-The view can be filtered by category.
-
-To install a module, check the corresponding box and click on :guilabel:`Apply`.
-To remove a module, uncheck the corresponding box and click on :guilabel:`Apply`.
-Next page will resume all modifications and display all optional packages.
-
-
-.. NOTE:: 
-
-    Optional packages can be added to the system *after* installation
-    of the main component.
-    Just click again on :guilabel:`Apply` and select optional packages
-    from confirmation page.
-
-
-The section :guilabel:`Installed software` displays all packages already installed into the system.
-
-
-Inline help
-===========
-
-All packages inside the Server Manager contain an :index:`inline help`.
-The inline help explains how the module works and all available options.
-
-These help pages are available in all Server Manager's languages.
-
-A list of all available inline help pages can be found at the address: ::
-
- https://<server>:980/<language>/Help
-
-**Example**
-
-If the server has address ``192.168.1.2``, and you want to see all English help pages, use this address: ::
-
- https://192.168.1.2:980/en/Help
-
-
-Extra modules
-=============
-
-These extra modules are not part of the base installation and can be installed from the :guilabel:`Package manager` page.
-
-Otherwise, it's possible to install modules via command line using :command:`yum`: ::
-
-  yum install @<module_id>
-
-Where ``module_id`` is the ID taken from below list. For example, to install the backup module: ::
-   
-  yum install @nethserver-backup
-
-
-Available modules:
-
-* **Backup** : Backup of configuration and data
-   ID: ``nethserver-backup``
-* **DNS and DHCP server** : Daemons and tools for DHCP and DNS server
-   ID: ``nethserver-dns-dhcp``
-* **Fax server** : Configure HylaFax+ and manage IAX modems
-   ID: ``nethserver-fax-server``
-* **Web-based fax client** : Manage faxes from a simple web interface
-   ID: ``nethserver-faxweb2``
-* **Basic firewall** : Configure network adapters and basic firewall
-   ID: ``nethserver-firewall-base``
-* **File server** : Daemons and tools for network file sharing
-   ID: ``nethserver-file-server``
-* **Groupware** : SOGo server and Thundebird extensions
-   ID: ``nethserver-groupware``
-* **Email** : Email server and filter
-   ID: ``nethserver-mail``
-* **Instant messaging** : XMPP/Jabber chat server
-   ID: ``nethserver-messaging``
-* **Print server** : Print management server (CUPS)
-   ID: ``nethserver-printers``
-* **Web server** : Configuration tools for Apache web server
-   ID: ``nethserver-web``
-* **Bandwidth monitor** : Configure and manage Ntopng
-   ID: ``nethserver-bandwidth-monitor``
-* **UPS support** : UPS management and monitoring configuration
-   ID: ``nethserver-nut``
-* **Statistics** : Collect and analyse system statistics
-   ID: ``nethserver-statistics``
-* **Web proxy** : Squid web caching proxy configuration
-   ID: ``nethserver-web-proxy``
-* **Web filter** : Squid web content and virus filter
-   ID: ``nethserver-web-filter``
-* **VPN** : Configure remote-access and site-to-site Virtual Private Networks (VPN)
-   ID: ``nethserver-vpn``
-* **ownCloud** : Configure ownCloud, universal access to your files via the web, your computer or your mobile devices - wherever you are
-   ID: ``nethserver-owncloud``
-* **MySQL server** : Configuration tools for MySQL
-   ID: ``nethserver-mysql``
-
+At the end of the procedure, install optional modules if needed: :ref:`package_manager-section`.
 

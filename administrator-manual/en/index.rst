@@ -19,25 +19,23 @@ Administrator Manual
     * **IRC**: `#nethserver on freenode.net`
 
 
-Installation
-------------
+Installation and configuration
+------------------------------
 
 .. toctree::
    :maxdepth: 2
 
    installation
-   migration
+   access
+   base_system
+   packages
 
-Configuration
--------------
+Modules
+-------
 
 .. toctree::
    :maxdepth: 2
 
-   access
-   network
-   administration
-   date_time
    backup
    accounts
    mail
@@ -51,6 +49,14 @@ Configuration
    bandiwidth_monitor
    dns_dhcp
    vpn
+
+Upgrades
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   migration
 
 Appendix
 --------

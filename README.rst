@@ -48,6 +48,8 @@ The document must start with a title such as ::
     Document title
     ==============
 
+Make sure to add only *one* first-level title for each rst file.
+
 Next headers levels are::
 
     First level

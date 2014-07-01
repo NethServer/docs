@@ -274,7 +274,7 @@ Alla fine della procedura di installazione verrà chiesto di effettuare
 il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
 supporto USB prima di riavviare.
 
-Al termine dell'installazione, installare i moduli opzionali: :ref:`packages-section`.
+Al termine dell'installazione, installare i moduli opzionali: :ref:`package_manager-section`.
 
 Installazione su CentOS
 =======================
@@ -308,116 +308,6 @@ Esempio:
   nethserver-install nethserver-mail nethserver-nut
 
 
-Al termine dell'installazione, installare i moduli opzionali: :ref:`packages-section`.
+Al termine dell'installazione, installare i moduli opzionali: :ref:`package_manager-section`.
 
-
-.. _packages-section:
-
-==================
-Gestione pacchetti
-==================
-
-|product| è altamente modulare: al termine dell'installazione il sistema contiene solo
-i moduli di base (es. configurazione di rete, visualizzazione log).
-L'amministratore può quindi decidere quali componenti installare in base
-alle proprie esigenze (es. mail server, DHCP server, firewall ecc.)
-
-La vista principale mostra una lista di componenti software. Gli elementi
-spuntati rappresentano i componenti installati, mentre quelli non spuntati sono
-quelli disponibili. Si può filtrare la lista per categoria.
-
-
-Per installare o rimuovere i componenti software elencati, aggiungere
-o togliere il segno di spunta, quindi premere il pulsante
-:guilabel:`Applica`.  La schermata successiva riepiloga cosa sarà
-installato e rimosso. Inoltre, viene mostrata la lista di pacchetti
-opzionali, da selezionare per l'installazione.
-
-.. NOTE:: 
-
-    I pacchetti opzionali possono essere installati anche *dopo*
-    l'installazione del componente relativo: cliccare di nuovo sul
-    bottone :guilabel:`Applica` e selezionarli dalla schermata di
-    riepilogo.
-
-
-La sezione :guilabel:`Software installato` elenca i pacchetti installati sul sistema.
-
-
-Aiuto in linea
-==============
-
-Tutti i pacchetti che sono configurabili attraverso il Server Manager
-contengono un :index:`manuale in linea` che spiega l'utilizzo base e tutti
-i campi contenuti nella pagina.
-
-Il manuale in linea è consultabile in tutte le lingue in cui è tradotto
-il Server Manager.
-
-Una lista di tutti i manuali installati nel sistema è disponibile all'indirizzo: ::
-
- https://<server>:980/<language>/Help
-
-**Esempio**
-
-Se il server ha indirizzo ``192.168.1.2`` e si desidera visualizzare la lista dei manuali
-in lingua italiana, usare l'indirizzo: ::
-
- https://192.168.1.2:980/it/Help
-
-
-Moduli opzionali
-================
-
-I seguenti moduli non fanno parte dell'installazione base e possono essere installati dalla pagina :guilabel:`Gestione pacchetti`.
-
-In alternativa, è possibile installare i moduli da linea di comando utilizzando :command:`yum` ::
-
-  yum install @<module_id>
-
-Dove ``module_id`` è l'ID del modulo preso dall lista qui sotto. Esempio per installare il modulo di backup: ::
-   
-  yum install @nethserver-backup
-
-
-Moduli disponibili:
-
-* **Backup** : Backup della configurazione del sistema e dei dati
-   ID: ``nethserver-backup``
-* **Server DNS e DHCP** : Demoni e strumenti per i servizi DNS e DHCP
-   ID: ``nethserver-dns-dhcp``
-* **Fax server** : Configura HylaFax+ e gestisce i modem IAX
-   ID: ``nethserver-fax-server``
-* **Web-based fax client** : Manage faxes from a simple web interface
-   ID: ``nethserver-faxweb2``
-* **Firewall base** : Configura le interfacce di rete e il firewall base
-   ID: ``nethserver-firewall-base``
-* **File server** : Demoni e strumenti per la condivisione file in rete
-   ID: ``nethserver-file-server``
-* **Groupware** : Server SOGo ed estensioni per Thunderbird
-   ID: ``nethserver-groupware``
-* **Email** : Server e filtri di posta elettronica
-   ID: ``nethserver-mail``
-* **Messaggistica istantanea** : Server di chat XMPP/Jabber
-   ID: ``nethserver-messaging``
-* **Server di stampa** : Servizio di gestione stampanti (CUPS)
-   ID: ``nethserver-printers``
-* **Server Web** : Strumenti di configurazione per il server web Apache
-   ID: ``nethserver-web``
-* **Monitoraggio banda** : Configurazione e gestione di Ntopng
-   ID: ``nethserver-bandwidth-monitor``
-* **Supporto UPS** : Configurazione della gestione e del monitoraggio dei gruppi di continuità
-   ID: ``nethserver-nut``
-* **Statistiche** : Registra e analizza le statistiche del sistema
-   ID: ``nethserver-statistics``
-* **Proxy web** : Configurazione Squid (web caching proxy)
-   ID: ``nethserver-web-proxy``
-* **Filtro web** : Filtro web per contenuti e virus
-   ID: ``nethserver-web-filter``
-* **VPN** : Configure remote-access and site-to-site Virtual Private Networks (VPN)
-   ID: ``nethserver-vpn``
-* **ownCloud** : Configura ownCloud - accesso completo ai propri file via web, computer o dispositivi mobili - da qualsiasi luogo
-   ID: ``nethserver-owncloud``
-* **Server MySQL** : Strumenti di configurazione per MySQL
-   ID: ``nethserver-mysql``
 
