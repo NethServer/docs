@@ -15,27 +15,25 @@ Manuale amministratore
     * **Blog**: `http://blog.nethesis.it <http://blog.nethesis.it>`_
 
 
-Installazione
--------------
-   
+Installazione e configurazione
+------------------------------
+
 .. toctree::
    :maxdepth: 2
 
    release_notes
    installation
-   migration
+   access
+   base_system
    packages
+   registration
 
-Configurazione
---------------
+Moduli
+------
 
 .. toctree::
    :maxdepth: 2
 
-   access
-   registration
-   administration
-   date_time
    backup
    accounts
    mail
@@ -46,9 +44,19 @@ Configurazione
    fax_server
    web_proxy
    firewall
+   snort
    bandiwidth_monitor
    dns_dhcp
    vpn
+
+Aggiornamenti
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   migration
+
 
 Appendice
 ---------
