@@ -1,7 +1,7 @@
 .. _users_and_groups-section:
 
 ===============
-Utente e gruppi
+Utenti e gruppi
 ===============
 
 Utenti
