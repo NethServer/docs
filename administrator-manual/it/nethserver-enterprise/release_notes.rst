@@ -142,11 +142,11 @@ Altre migliorie:
 
 * Integrazione con utenti da Active Directory
 * Log unificato in :file:`/var/log/maillog`
-* webmail di default TODO
 
-Sono inoltre state introdotte alcune impostatzioni di default che possono impattare sulla configurazione dei client:
+Sono inoltre state introdotte alcune impostazioni di default che possono impattare sulla configurazione dei client:
 
-* Porta per l'invio (submission): 587
+* Porta per l'invio di posta (submission): 587
+* Se è configurata la porta 25 per l'invio posta, obbligatorio l'uso di SSL o STARTLS (o porta 465 SMTPS)
 * Obbligatorio l'uso di STARTTLS su porta 143
 
 Cartelle condivise
