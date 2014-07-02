@@ -166,6 +166,7 @@ SSL auto-firmati e per la creazione degli utenti.
 .. note:: Ogni modifica ai dati inseriti rigenera tutti i certificati SSL, peranto sarà necessario
    accettarli nuovamente nei client già configurati (es. client posta e browser).
 
+.. _user_profile-section:
 
 Profilo utente
 ==============

@@ -143,6 +143,7 @@ Fields in this section are used to generate self-signed SSL certificates and for
 .. note:: Any modification to these data will regenerate all SSL certificates. Most clients will must
    be reconfigured.
 
+.. _user_profile-section:
 
 User's profile
 ==============
