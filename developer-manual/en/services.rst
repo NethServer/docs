@@ -19,7 +19,7 @@ This is what :command:`runlevel-adjust` event and action do for all configured s
 There is also another action called :command:`adjust-services` which does the same thing for services registered on a single event.
 
 A service without a record in the configuration database is ignored and can be manually manged using :command:`chkconfig` and :command:`service` commands.
-
+See :ref:`add_a_new_service`.
 
 Control a service
 =================
@@ -35,6 +35,42 @@ Disable a service: ::
   signal-event runlevel-adjust
 
 Where ``myservice`` is the service name to be enabled or disabled.
+
+Access network service
+======================
+
+A network service is a service running on the server which expose UDP or TCP ports.
+Ports can be listed in following properties:
+
+* ``TCPPort``: a single TCP port
+* ``TCPPorts``: a comma separated list of TCP ports
+* ``UDPPort``: a single UDP port
+* ``UDPPorts``: a comma separated list of UDP ports
+
+If both TCPPort and TCPPorts properties are set, TCPPorts has the precedence.
+If both UDPPort and TCPPorts properties are set, UDPPorts has the precedence.
+
+A service can be accessible from public or private LAN. This configuration is saved on ``access`` property.
+The property can have one of the following values:
+
+* ``none``: the service is accessible only from localhost, no port is open
+* ``private``: the service is accessible only from LAN (Green interfaces)
+* ``public``: the service is accessible from LAN (green interfaces) and Internet (red interfaces). 
+  This is implemented only if the :ref:`firewall_and_gateway-section` module is installed.
+
+Example of a service with UDP port 1122 open to the Internet: ::
+
+  config setprop myservice status enabled UDPPort 1122 access public
+
+Example of a service with TCP ports 1122 an 2233  open to local network: ::
+
+  config setprop myservice status enabled TCPPorts 1122,2233 access private
+
+
+The ports are opened only if the ``status`` property is set to ``enabled``.
+
+
+.. _add_a_new_service:
 
 Add a new service
 =================
