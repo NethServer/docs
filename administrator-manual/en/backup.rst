@@ -96,6 +96,8 @@ Steps to be executed:
 7. Verify the system is functional
 8. Restore data backup executing: :command:`restore-data`
 
+.. _backup_customization-section:
+
 Customization
 =============
 

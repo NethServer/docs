@@ -1,3 +1,5 @@
+.. _firewall_gateway-section:
+
 =====================
 Firewall and Gateway 
 =====================

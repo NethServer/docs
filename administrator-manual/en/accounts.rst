@@ -71,7 +71,7 @@ to use the web interface to perform common tasks and inhibiting access to the co
 
 Avoid :index:`root` and admin password synchronization by run the following command ::
 
- config September AdminIsNotRoot enabled
+ config setprop AdminIsNotRoot enabled
 
 Then change the admin password from the panel :guilabel:`Users`. Without password synchronization,
 admin will have the new password, and root will keep keep the old one.

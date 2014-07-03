@@ -100,6 +100,8 @@ I passi da eseguire sono:
 7. Verificare che la macchina sia funzionante
 8. Ripristinare i dati eseguendo il comando :command:`restore-data`
 
+.. _backup_customization-section:
+
 Personalizzazione
 =================
 

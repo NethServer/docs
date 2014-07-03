@@ -3,7 +3,7 @@ Services
 ========
 
 A :dfn:`service` is a software which usually runs in background.
-The system will ensure :index:`service` status accordignly to its configuration.
+The system will ensure :index:`service` status accordingly to its configuration.
 A service in :file:`configuration` database is something like this: ::
 
   httpd=service
@@ -39,16 +39,40 @@ Where ``myservice`` is the service name to be enabled or disabled.
 Add a new service
 =================
 
-Create a new record inside configuration database: ::
+Any software can configure the init system using the standard :command:`chkconfig` command.
+This approach always work for third-party software.
+
+
+On the other hand, if the service must be controlled by NethServer, create a new record inside configuration database: ::
   
   config set myservice service status enabled  
 
 Where ``myservice`` is the name of the new service.
+
+Make sure also there are defaults values inside the directory :file:`/etc/e-smith/db/configuration/defaults`: if the key is present
+inside the configuration database, but not inside defaults, the service will be stopped.
+Given the above example, create these files: ::
+
+  mkdir -p /etc/e-smith/db/configuration/defaults/myservice
+  echo "service" > /etc/e-smith/db/configuration/defaults/myservice/type
+  echo "enabled" > /etc/e-smith/db/configuration/defaults/myservice/status 
+
 Signal the new service to the system: ::
 
   signal-event runlevel-adjust
 
-If the new service needs one or more open ports, use the TCPPort(s) or UDPPort(s) prop to declare the port(s) and signal the firewall to open it: ::
+Add a new network service
+=========================
 
-  config set myservice service status enabled  TCPPort 12345
+If a service not controlled by NethServer needs one or more open ports, use the TCPPort(s) or UDPPort(s) prop to declare the port(s) and signal the firewall to open it: ::
+
+  config set fw_myservice service status enabled TCPPort 12345 access private
   signal-event firewall-adjust
+
+Otherwise, if the service is controlled by NethServer, you can add the properties directly to the service key. For the service *myservice* on above
+example: ::
+
+  config set myservice service status enabled TCPPort 12345 access private
+  signal-event firewall-adjust
+
+See :ref:`firewall_gateway-section`.
