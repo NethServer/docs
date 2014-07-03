@@ -56,7 +56,7 @@ The property can have one of the following values:
 * ``none``: the service is accessible only from localhost, no port is open
 * ``private``: the service is accessible only from LAN (Green interfaces)
 * ``public``: the service is accessible from LAN (green interfaces) and Internet (red interfaces). 
-  This is implemented only if the :ref:`firewall_and_gateway-section` module is installed.
+  This is implemented only if the :ref:`firewall_gateway-section` module is installed.
 
 Example of a service with UDP port 1122 open to the Internet: ::
 
