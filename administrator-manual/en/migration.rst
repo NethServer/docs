@@ -10,7 +10,7 @@ Migration from NethService/SME Server
 #. Explode the full backup archive into some directory (for instance :file:`/var/lib/migration`)
 #. Signal the event::
 
-    # signal-event migration-import /var/lib/migration
+     signal-event migration-import /var/lib/migration
 
    This step will require some time.
 #. Search for any ``ERROR`` or ``FAIL`` string in :file:`/var/log/messages`

@@ -10,14 +10,14 @@ in un nuovo server |product|.
 #. Estrarre il backup in una directory, ad esempio :file:`/var/lib/migration`.
 #. Iniziare il processo di migrazione::
 
-     # signal-event migration-import /var/lib/migration
+      signal-event migration-import /var/lib/migration
 
    Questa operazione potrebbe richiedere molti minuti.
 
 #. Consultare il log di sistema :file:`/var/log/messages` ed
    assicurarsi che non si siano verificati errori::
  
-    # grep -E '(FAIL|ERROR)' /var/log/messages
+     grep -E '(FAIL|ERROR)' /var/log/messages
 
 .. tip:: 
    Nella migrazione di un mail server, è possibile sincronizzare le

@@ -49,6 +49,15 @@ Moduli
    dns_dhcp
    vpn
 
+Best practices
+--------------
+
+.. toctree::
+   :maxdepth: 2
+
+   third_party
+
+
 Aggiornamenti
 -------------
 
