@@ -20,3 +20,10 @@ in un nuovo server |product|.
  
     # grep ERROR /var/log/messages
 
+.. tip:: 
+   Nella migrazione di un mail server, è possibile sincronizzare le
+   caselle di posta dopo l'evento ``migration-import``. Uno script di
+   aiuto è già incluso nel pacchetto
+   ``nethserver-mail-server``. Vedere
+   :file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`.
+
