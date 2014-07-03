@@ -12,7 +12,7 @@ Relevant libraries should be:
 * libstdc++
 * zlib
 
-For example, to install this packages: ::
+For example, to install the above mentioned packages: ::
 
  yum install glibc.i686 libgcc.i686 glib2.i686 libstdc++.i686 zlib.i686
 
@@ -36,18 +36,18 @@ Firewall
 
 If the software needs some open ports on the firewall, create a new service named ``fw_<softwarename>``.
 
-For example, given the software *mysoftware* which needs port 3344 on LAN, use the following commands: ::
+For example, given the software *mysoftware* which needs ports 3344 and 5566 on LAN, use the following commands: ::
 
- config set fw_mysoftware service status enabled TCPPorts 8090,8443,5632,5432 access private
+ config set fw_mysoftware service status enabled TCPPorts 3344,5566 access private
  signal-event firewall-adjust
  signal-event runlevel-adjust
 
 Starting and stopping
 ---------------------
 
-|product| uses the standard runlevel 5.
+|product| uses the standard runlevel 3.
 
-Software installed with yum should already be configured to start at boot on runlevel 5.
+Software installed with yum should already be configured to start at boot on runlevel 3.
 To check the configuration, execute the :command:`chkconfig` command. The command will display a list of services
 with their own status.
 
