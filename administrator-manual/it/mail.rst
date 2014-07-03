@@ -256,8 +256,7 @@ Ricarica l'elenco delle mail in coda.
 Filtro
 ======
 
-Configura le opzioni di filtraggio della mail (antivirus, antispam,
-allegati vietati, etc).
+Il server filtra le email in transito analizzando il contenuto alla ricerca di virus, spam e allegati vietati.
 
 Antivirus
     Abilita la scansione antivirus delle email in transito.
@@ -277,6 +276,17 @@ Archivi
 Lista personalizzata
     E' possibile definire un elenco di estensioni che verranno bloccate, per
     esempio doc, pdf, etc, (senza punto iniziale, doc e non .doc).
+
+Allenamento filtro Antispam
+---------------------------
+
+Per allenare il sistema antispam in caso di errori di classificazione è possibile utilizzare qualsiasi client IMAP, 
+semplicemente spostando le mail erroneamente riconosciute.
+In particolare, per indicare al sistema una mail di spam non riconosciuta basterà spostarla nella apposita cartella :dfn:`junkmail`.
+Per segnalare invece una mail valida erroneamente marcata come spam sarà necessario spostarla fuori da :index:`junkmail`.
+
+Di default, tutti gli utenti possono allenare i filtri in questo modo. Per restringere la facoltà di allenamento soltanto ad alcuni utenti,
+è necessario creare un gruppo chiamato ``spamtrainers`` contenente gli utenti abilitati all'allenamento dei filtri.
 
 
 
