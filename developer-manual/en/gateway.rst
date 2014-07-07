@@ -311,7 +311,18 @@ If you want to use a custom checkip, these are some lines guides to make the rig
 All checkip must always be reachable. For each configured checkip the system will create special static routes. These static routes are records of type ``provider-static`` inside the ``routes`` database.
 Properties of ``provider-static`` records are the same of ``static`` records.
 
+For each configured provider, LSM will send ping to a configured IP (checkip). 
+When a provider status changes, the system will signal a ``wan-uplink-update`` event.
+
+Inside the event, the action ``nethserver-shorewall-wan-update`` invokes:
+
+* shorewall enable <interface> when a red interface is usable
+* shorewall disable <interface> then a red interface is not usable
+
+When an interface is disabled, all associated routes will be deleted. 
+
 When a new TCP connection is started, a route is selected and all successive packets will always be routed via same interface. If the used interfaces goes down, the connection is closed.
+
 
 Actually two behaviors are implemented: balanced and active-backup.
 
