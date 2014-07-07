@@ -234,7 +234,8 @@ of rules.
 There are 4 types of objects: 
 
 * Host: representing local and remote computers. Example: web_server, pc_boss 
-* Groups of hosts: representing homogeneous groups of computers. Example: servers, pc_segreteria 
+* Groups of hosts: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
+  Example: servers, pc_segreteria 
 * Zone: representing networks of hosts. Although similar in concept to a group of hosts, you can express networks using CIDR notation 
 * Services: a service listening on a host with at least one port and protocol. Example: ssh, https 
 

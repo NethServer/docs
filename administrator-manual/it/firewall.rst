@@ -245,7 +245,8 @@ di regole.
 Esistono 4 tipi di oggetti:
 
 * Host: rappresentano computer locali e remoti. Esempio: server_web, pc_boss
-* Gruppi di host: rappresentano gruppi omogenei di computer. Esempio: servers, pc_segreteria
+* Gruppi di host: rappresentano gruppi omogenei di computer. Gli host all'interno di un gruppo devono essere raggiungibili attraverso la stessa interfaccia.
+  Esempio: servers, pc_segreteria
 * Zone: rappresentano reti di host. Anche se concettualmente simili ai gruppi di host, è possibile esprimere zone in notazione CIDR
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 

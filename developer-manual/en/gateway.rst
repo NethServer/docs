@@ -181,7 +181,9 @@ A host is an already defined entry inside the ``hosts`` db, or a new key of type
 
 
 
-A ``host-group`` is a group of hosts inside the ``hosts`` db. A ``host-group`` db entry can be something like: ::
+A ``host-group`` is a group of hosts inside the ``hosts`` db. Hosts in a :index:`host-group` should always be reachable using the same interface.
+For example: a group of host inside the LAN or on the Internet.
+A ``host-group`` db entry can be something like: ::
 
     name=host-group
         Members=host1,host2
@@ -191,6 +193,7 @@ A zone represents a network zone which can be associated to an interface or a se
 
     name=zone
        Network=CIDR
+       Interface=eth0
 
 
 A configured network interface is automatically a zone.
