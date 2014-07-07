@@ -133,6 +133,7 @@ nethserver-mail-server
 ----------------------
 
 During pseudonyms migration, 
+
 * pseudonyms pointing to ``admin`` and ``shared`` accounts are mapped to ``postmaster``, as any other account not existing in destination AccountsDB.  Thus the resulting configuration requires post-migration supervision.
 * recursive pseudonyms (pointing to another pseudonym) are flattened and a relation with a user or group account record is established.
 
