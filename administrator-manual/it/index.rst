@@ -51,6 +51,7 @@ Moduli
    bandiwidth_monitor
    dns_dhcp
    vpn
+   ftp
 
 Best practices
 --------------

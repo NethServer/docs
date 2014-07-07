@@ -37,6 +37,8 @@ E' possibile farlo usando i pulsanti :guilabel:`Blocca` e :guilabel:`Sblocca`.
 
 .. note:: Quando utente viene eliminati, verranno eliminati anche tutti i dati dell'utente.
 
+.. _users_services-section:
+
 Accesso ai servizi
 ------------------
 
@@ -102,6 +104,9 @@ La policy :index:`strong` impone che la password debba rispettare le seguenti re
 * non può avere ripetizioni di pattern formati da più 3 caratteri (ad esempio la password As1.$As1.$ non è valida)
 
 La policy di default è :dfn:`strong`.
+
+.. warning:: Cambiare le politiche predefinite è altamente sconsigliato. L'utilizzo di password deboli è la prima
+   causa di compromissione dei server da parte di attaccanti esterni.
 
 Per cambiare l'impostazione a none::
  

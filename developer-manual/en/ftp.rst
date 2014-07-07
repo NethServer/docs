@@ -45,9 +45,9 @@ Where *share_name* is the name of the share, *user* the username and *pass* the 
 System users
 ============
 
-.. warning:: This configuration is highly discouraged, because user password is transmitted in CLEAR TEXT
+.. warning:: This configuration is highly discouraged, because user's password is transmitted in *clear text*
 
-After enabling system users, all virtual users will be disabled. In this mode, custom chroot directory is *not* supported.
+After enabling system users, all virtual users will be disabled. 
 
 Enable system users: ::
 
@@ -69,8 +69,16 @@ To disable an already enabled user: ::
   db accounts setprop myuser FTPAccess disabled
   signal-event nethserver-vsftpd-save
 
-If not explicitly disabled, all system users are chrooted. To disable a chroot for a system user: ::
+If not explicitly disabled, all system users are chrooted inside their home directories. To disable a chroot for a system user: ::
 
   db accounts setprop myuser FTPChroot disabled
   signal-event nethserver-vsftpd-save
 
+
+Custom chroot
+-------------
+
+When the FTP server uses system users, custom chroot is *not* supported: all users are chrooted inside their own home directory.
+Although it's possible to change a system user home directory. Use the command below if the system user will used only for FTP access: ::
+
+ lusermod -d <your_custom_home> <user>

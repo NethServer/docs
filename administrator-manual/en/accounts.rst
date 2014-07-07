@@ -41,6 +41,8 @@ This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` 
 
 .. note:: When a user is deleted, all user data will be also deleted.
 
+.. _users_services-section:
+
 Access to services
 ------------------
 
@@ -105,6 +107,9 @@ The :index:`strong` policy requires that the password must comply with the follo
 * Can not have repetitions of patterns formed by 3 or more characters (for example the password As1.$ AS1. $ is invalid)
 
 The default policy is :dfn:`strong`.
+
+.. warning:: Changing the default policies is highly discouraged. The use of weak passwords often lead
+   to compromised servers by external attackers.
 
 To change the setting to none ::
 
