@@ -192,3 +192,30 @@ If the system is configured as a domain controller,users can change their passwo
 In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
 Windows performs preliminary checks and sends the password to the server where they are then evaluated 
 with enabled policies.
+
+Import users
+============
+
+The system can import a list of users from a CSV file.
+The file must contain a line per user, each line must have TAB-separated fields and must respect following format: ::
+
+ username    firstName    lastName    email    password
+
+Example: ::
+
+  Mario   Rossi   mario@example.org       112233
+
+
+Make sure the mail server is installed, then execute: ::
+
+  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+
+For example, if the user's file is :file:`/root/users.csv`, execute following command: ::
+
+  /usr/share/doc/nethserver-directory-`rpm --query --qf "%{VERSION}" nethserver-directory`/import_users /root/users.csv
+
+
+The command can be executed multiple times: already existing users will be skipped. 
+
+.. note:: The command will fail if mail server module is not installed
+

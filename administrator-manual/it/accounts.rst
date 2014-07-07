@@ -189,3 +189,28 @@ In quest'ultimo caso non è possibile impostare password più corte di *6 caratt
 delle policy sul server. Infatti Windows esegue dei controlli preliminari e invia le password al server dove vengono poi valutate 
 con le policy in uso.
 
+Importazione utenti
+===================
+
+E' possibile importare una lista di utenti a partire da un file CSV.
+Il file deve contenere una linea per utente, ogni linea deve avere i campi separati da TAB, rispettando il seguente formato: ::
+
+ username    firstName    lastName    email    password
+
+Esempio: ::
+
+  Mario   Rossi   mario@example.org       112233
+
+
+Assicurarsi che il modulo server di posta sia installato, quindi eseguire il comando: ::
+
+  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+
+Per esempio, se il file che contiene gli utenti si chiama :file:`/root/users.csv`, eseguire: ::
+
+  /usr/share/doc/nethserver-directory-`rpm --query --qf "%{VERSION}" nethserver-directory`/import_users /root/users.csv
+
+Il comando può essere eseguito più volte: gli utenti esistenti saranno saltati.
+
+.. note:: Il comando fallisce se il modulo del server di posta non è installto.
+
