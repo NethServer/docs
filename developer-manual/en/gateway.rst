@@ -304,7 +304,13 @@ If you want to use a custom checkip, these are some lines guides to make the rig
 
 ::
 
-  traceroute -n -f 2 -m 3 -i _interface_ 8.8.8.8
+  traceroute -n -f 2 -m 3 -i <interface> 8.8.8.8
+
+or
+
+::
+
+  ping -c 1 -I <interface> -t 2 8.8.8.8 | grep 'Time to live'  | cut -d' ' -f2
 
 * be careful, when the provider goes down, checkip will be no longer reachable from hosts inside the local network
 

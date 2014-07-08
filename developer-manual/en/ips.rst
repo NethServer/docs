@@ -74,3 +74,17 @@ Changing the current policy to ``security``: ::
   signal-event nethserver-pulledpork-save
 
 
+Troubleshooting
+===============
+
+When troubleshooting network traffic, just remember that Snort will intercept all the traffic.
+
+To temporary disable Snort use: ::
+
+  config setprop firewall nfqueue disabled
+  signal-event firewall-adjust
+
+To re-enable Snort: ::
+  
+  config setprop firewall nfqueue enabled
+  signal-event firewall-adjust
