@@ -46,6 +46,7 @@ Modules
    fax_server
    web_proxy
    firewall
+   snort
    bandiwidth_monitor
    dns_dhcp
    vpn
