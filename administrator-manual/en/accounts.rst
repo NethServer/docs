@@ -49,6 +49,7 @@ Access to services
 After creation a user can be enabled only to some (or all) services.
 This configuration can be done using the :guilabel:`Services` tab page.
 
+.. _groups-section:
 
 Groups
 ======
@@ -59,7 +60,7 @@ As for the users, a group can be enabled to some (or all) services.
 
 
 
-.. _admin-user:
+.. _admin_user-section:
 
 Administrator user
 ==================

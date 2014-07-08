@@ -45,6 +45,9 @@ Accesso ai servizi
 Dopo la creazione, un utente può essere abilito ad alcuni o tutti i servizi.
 La configurazione può essere fatta dalla sezione :guilabel:`Servizi`.
 
+
+.. _groups-section:
+
 Gruppi
 ======
 
@@ -53,7 +56,7 @@ Un gruppo di utenti può essere usato per assegnare permessi speciali o per crea
 Come gli utenti, un gruppo può essere abilitati ad alcuni o tutti i servizi.
 
 
-.. _admin-user:
+.. _admin_user-section:
 
 Utente amministratore
 =====================

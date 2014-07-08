@@ -23,4 +23,4 @@ Use following credentials:
 * Password: **root_password** (chosen during installation process)
 
 If the directory module is installed, and the admin user has been enabled, you can use it to access
-the web interface with same privileges as root user. See :ref:`admin-user`.
+the web interface with same privileges as root user. See :ref:`admin_user-section`.

@@ -89,6 +89,7 @@ Modules
 .. toctree::
    :maxdepth: 2
 
+   chat
    ftp
    ups
 
