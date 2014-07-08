@@ -90,6 +90,7 @@ Modules
    :maxdepth: 2
 
    ftp
+   ups
 
 Appendix
 --------

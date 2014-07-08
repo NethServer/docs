@@ -1,48 +1,40 @@
-===
+.. _ups-section:
+
+====
 UPS
-===
+====
 
-The management of an uninterruptible power supply (UPS - Uninterruptible Power
-Supply) connected to |product| is assigned to NUT (Network UPS Tools), which
-will carry out a shutdown in case of absence of
-power. NUT supports different models of UPS,
-connected by serial cable or USB.
+|product| supports the management of :index:`UPS` (Uninterruptible Power Supply) connected to the system.
 
-In this panel you perform the configuration of NUT, to
-see UPS data, use the Dashboard.
+The server can be configured in two ways: 
 
-Enable NUT UPS
-    Enable or disable the NUT service.
+* *master*: UPS is directly connected to the server, the server accepts connections from slaves
+* *slave*: UPS is connected to another server accessible over the network
 
-Mode
-========
+.. note:: You should consult the list of supported models before buying, 
+   by trying to put the model into the search field of the web interface
 
-Master
-    This mode should be selected if the UPS is connected
-    to |product| directly via serial or USB cable.
+In :index:`master` mode, the UPS can be connected to the server:
 
-Search drivers for model
-    Allows you to search for a driver compatible with your UPS model. After selecting the model from the list,
-    the *Driver* field will be filled out with the name of the appropriate driver.
+* on a serial port 
+* on a USB port 
+* with a USB to serial adapter 
 
-Driver
-    The driver to be used for the model of UPS connected.
 
-USB Connection
-    Select this option if the UPS is connected via USB.
+In :index:`slave` mode, you will need to provide the IP address of the master server.
 
-Serial connection
-    Select this option if the UPS is connected via serial cable to |product|.
+The default configuration provides a controlled shutdown in the event of the absence of 
+power.
 
-Slave
-    This mode should be used if the UPS is not connected
-    directly to |product|, but to another server configured with NUT
-    in Master mode to which |product| will connect.
+Custom device 
+============= 
 
-Address of the master server
-    IP address or host name of the master server. The client will use the user * UPS * to connect to the master server.
-    Make sure that the user is configured on the master server.
+If the UPS is connected to a port that is not listed in the web interface, you can configure a custom device with the following commands: :: 
 
-Password
-    The password you specify here is the one configured on the master server
-    for slave connections.
+ config setprop ups Device <your_device>
+ signal-event nethserver-nut-save
+
+UPS statistics
+==============
+
+If the statistics module (collectd) is installed and running, the module will automatically collect statistic data about UPS status.
