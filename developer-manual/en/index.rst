@@ -92,6 +92,7 @@ Modules
    chat
    ftp
    ups
+   tftp
 
 Appendix
 --------

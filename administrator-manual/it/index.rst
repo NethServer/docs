@@ -52,6 +52,7 @@ Moduli
    dns_dhcp
    vpn
    ftp
+   tftp
 
 Best practices
 --------------
