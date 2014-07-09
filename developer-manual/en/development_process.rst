@@ -94,34 +94,78 @@ on FedoraProject.org.
 Triager
 ^^^^^^^
 
-The *triager* handles all issue in NEW state. He/she collects missing info, set NEEDINFO flag, set state to TRIAGED when having enough informations.
-He/she can also change the status to CLOSE and set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG.
+The *Triager* handles all issues in NEW state. She 
+
+* collects missing info, setting the NEEDINFO flag
+
+* sets state to TRIAGED when the issue is clear enough and all
+  requirements are discovered.
+
+If the issue is a *Bug*, she can also change the status to CLOSE and
+set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG. Additional
+infos are appreciated.  If the issue is NOT a *Bug*, sets the generic
+REJECTED resolution, specifying the reason in a comment.
 
 Developer
 ^^^^^^^^^
 
-The *developer* takes a TRIAGED issue and put it ON_DEV setting the Assignee to himself/herself.
-He/she moves the issue from TRIAGED (or ON_QA) to ON_DEV state. 
-Developer write test cases, optionally annotate RPM changelog message for Packager.
-Finally push changes to SCM and change to MODIFIED resetting the Assignee.
+The *Developer* 
 
-He/she can also change the status to CLOSE and set resolution: CANTFIX, WONTFIX, WORKSFORME, CURRENTRELEASE, NEXTRELEASE, UPSTREAM.
+* Takes a TRIAGED issue and put it ON_DEV setting the *Assignee* to himself,
+
+* Writes test cases, optionally annotating RPM changelog message for Packager, or 
+
+* Writes and updates the documentation associated with the code.
+
+* Finally pushes the code/docs changes to SCM 
+
+* Changes the issue state to MODIFIED, resetting the *Assignee*.
+
+If the issue is a *Bug*, he can change the status to CLOSE and specify
+a *Resolution*: CANTFIX, WONTFIX, WORKSFORME, CURRENTRELEASE,
+NEXTRELEASE, UPSTREAM. Additional infos are appreciated. If the issue
+is NOT a *Bug*, specify the generic REJECTED resolution, specifying
+the reason in a comment.
 
 Packager
 ^^^^^^^^
 
-The *packager* pulls changes from SCM and build the package. 
-He/she puts the package in testing repository. Change state to ON_QA.
-When the package is VERIFIED from the QA team, packager will tag the package, build the tagged release and upload to updates/base repository. 
-Verify yum update works fine then push the tagged changelog in SCM. 
-Finally he/she sets state to CLOSED leaving  resolution field blank.
+The *Packager*:
+
+* Pulls changes from SCM and builds the RPM. 
+
+* Uploads the RPM to the *testing* repository. 
+
+* Changes state from ON_DEV to ON_QA, specifing the RPM file name of
+  the package in the issue comment.
+
+When the package is VERIFIED from the QA team, the *Packager* 
+
+* Makes a *tagged release commit*.
+
+* Re-builds the tagged RPM.
+
+* Uploads to *updates* (or *base*) repository. 
+
+* Checks ``yum update`` works fine then pushes the tagged commit to SCM. 
+
+* Finally, sets state to CLOSED (with blank *Resolution* field),
+  adding a comment to the issue, with the RPM file name and the yum
+  repository name where to find the package.
 
 QA team member
 ^^^^^^^^^^^^^^
 
-The *QA team member* takes an unassigned issue ON_QA state and sets the Assignee to himself/herself. 
-He/she tests the package, and can also set NEEDINFO flag if test case is missing. When test is passed he/she sets state VERIFIED, 
-otherwise TRIAGED again without Assignee.
+The *QA team member* 
+
+* Takes an unassigned issue ON_QA state and sets the *Assignee* field to herself. 
+
+* Tests the package, following the test case documentation written by the *Developer* 
+
+* She can set NEEDINFO flag if informations about how to test the code are missing. 
+
+* When test is passed she sets the issue state to VERIFIED, otherwise
+  she puts it back in TRIAGED state cleaning the *Assignee* field.
 
 
 Version numbering rules
