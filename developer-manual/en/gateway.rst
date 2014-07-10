@@ -431,9 +431,9 @@ For example, this rules will route all traffic to port 22 via the provider named
 Properties:
 
 * ``key``: numeric id
-* ``Src``: can be a zone with a network CIDR, or a custom value like IP or CIDR
-* ``Dst``: can be a zone with a network CIDR, or a custom value like IP or CIDR
-* ``Provider``: provider name to use for this kind of traffic
+* ``Src``: can be a zone (not interface), host object, ip address or CIDR
+* ``Dst``: can be a zone (not interface), host object, ip address or CIDR
+* ``Provider``: provider object, in the form of "provider;<name>"
 * ``Service``: (optional) can be a service object
 * ``status``: can be enabled or disabled. Default is enabled
 * ``Position``: integer sorting key
