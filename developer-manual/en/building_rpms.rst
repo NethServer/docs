@@ -16,22 +16,22 @@ Let assume you have a ``Projects/`` directory where you have cloned
 some git repositories. The :command:`build-rpm` command requires that each project directory:
 
 * is a git repository
-* contains a file named after it, plus ``.spec.in`` extension
+* contains a file named after it, plus ``.spec`` or ``.spec.in`` extension
 * has a tag representing the current version number: ``X.Y.Z``
 
 For example, a simple directory layout would be:
 
-* Projects/
+* ``Projects/``
 
-  * projA/
+  * ``projA/``
 
-    * .git/
-    * projA.spec.in
+    * ``.git/``
+    * ``projA.spec.in``
 
-  * projB/
+  * ``projB/``
 
-    * .git/
-    * projB.spec.in
+    * ``.git/``
+    * ``projB.spec``
 
 
 Spec template file
@@ -114,17 +114,27 @@ If you want to create a package with a development release, just execute from th
 
   build-rpm <package>
 
-The system will search for the first available tag inside the git repository and will calculate the version and release values (see :command:`git describe`): ::
+The system will search for the first available tag inside the git
+repository and will calculate the version and release values (see
+:command:`git describe`). This means **the tag must exist**!::
 
   VERSION=<last_tag>
+
+For ``.spec.in`` file: ::
+
   RELEASE=<commits_from_tag>.0git<commit_hash>.<DIST>
 
-This means **the tag must exist**! 
+Or, if using plain ``.spec`` file: ::
+
+  RELEASE=<spec_release>.<commits_from_tag>git<commit_hash>.<DIST>
 
 For example, given the project nethserver-ntp with the tag 1.0.0 set two commits backwards from HEAD we have: ::
 
   VERSION=1.0.0
   RELEASE=2.0git5a6ddeb.ns6
+  ---
+  RELEASE=1.2git5a6ddeb.ns6
+
 
 Stable release
 ==============
@@ -132,9 +142,9 @@ Stable release
 When you are ready for a production release, the :command:`release-rpm` command helps you in the following tasks:
 
 * Fetch changelog info from git and relate commits with issues from Redmine installation at ``REDMINE_URL``.
-* Update the changelog section in the :file:`.spec.in`
-* Review and commit the changelog
-* Create a (signed) git tag
+* Update the changelog section in ``spec`` or ``spec.in`` file (whatever applies).
+* Review and commit the changelog.
+* Create a (signed) git tag.
 
 Commit and tag are added locally, thus they need to be pushed to your
 upstream git repository, once reviewed.
