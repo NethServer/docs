@@ -230,13 +230,12 @@ Each record has:
 * ``type``: pf
 * ``protocol``: tcp/udp  
 * ``src``: can be a port number or a range in the form xxxx:yyyy
-* ``dst``: can be a port number
-* ``srcHost``: src ip address (eg. red1, red2)
-* ``dstHost``: destination host
+* ``dst``: can be a port number, if empty the value of ``src`` is used
+* ``dstHost``: destination host, can be an IP address or a hos firewall object
 * ``allow``: allowed ip address or network, see SOURCE  at http://www.shorewall.net/4.2/manpages/shorewall-rules.html
 * ``status``: enabled/disabled
-* ``oriDst``: original destination ip, for example alias for a wan interface
-* ``description``
+* ``oriDst``: original destination ip, for example alias for a wan interface. If empty, the port forward is valid for all red interface
+* ``description``: optional description
 
 Traffic shaping
 ================
@@ -262,30 +261,29 @@ A record could be of type:
 Device record:
 
 * ``key``: interface name
-* ``role``: external/internal
-* ``in``: inbound  bandwidth in kbps
-* ``out``: outbound  bandwidth in kbps
-* ``priority``: traffic priority, default is 2
-* ``Description``
+* ``In``: inbound  bandwidth in kbps
+* ``Out``: outbound  bandwidth in kbps
+* ``Priority``: traffic priority, default is 2
+* ``Description``: optional description
 
 Port record:
 
 * ``key``: port number
-* ``priority``: traffic priority
-* ``proto``: protocol name
-* ``Description``
+* ``Priority``: traffic priority
+* ``Proto``: protocol name
+* ``Description``: optional description
 
 Ip record:
 
 * ``key``: ip (or mac address)
-* ``priority``: traffic priority
-* ``description``
+* ``Priority``: traffic priority
+* ``Description``: optional description
 
 Helper record:
 
 * ``key``: helper name
-* ``priority``: traffic priority
-* ``Description``
+* ``Priority``: traffic priority
+* ``Description``: optional description
 
 For more information about helpers, see: http://www.shorewall.net/Helpers.html
 
@@ -338,6 +336,7 @@ Balanced
 All red interfaces are simultaneously used accordingly to the configured weight (see below).
 
 **Example**: 
+
 Given a connection A with weight 2, and connection B with weight 1, the firewall will route a double number of connections via A over B.
 
 Active-backup
