@@ -1,130 +1,71 @@
+.. _proxy-section:
+
 =========
 Proxy web
 =========
-Il filtro contenuti serve per controllare la navigazione web ed
-impostare dei blocchi in base ad alcuni elementi quali parole chiave, ip
-interni, utenti interni, valutazione del contenuto della pagina web,
-estensioni dei file. Grazie a questo strumento è possibile ad esempio abilitare
-l'accesso solo su alcuni siti desiderati (ad esempio quelli di interesse
-aziendale) bloccando tutti gli altri.
 
-|product| è in grado di svolgere la funzione di server-proxy  con
-l’installazione dell’ apposito pacchetto.
+Il :index:`proxy web` è un server che si interpone fra i PC della LAN e i siti Internet.
+I client effettuano le richieste al proxy che comunica con i siti esterni, quindi
+trasmette le risposte al client.
 
-Installazione
-=============
+I vantaggi del proxy web sono due:
 
-Per installare il pacchetto Proxy web fare click su 
-:menuselection:`Configurazione -> Gestione pacchetti`.
-Mettere la spunta su Proxy web e fare click sul pulsante Avanti.
-
-Gestione Proxy web
-==================
-
-Per configurare il server proxy fare click su :guilabel:`Configurazione -> Proxy web`.
-
-Il Proxy Web lavora per ridurre l'utilizzo della banda facendo cache
-delle pagine visitate. E' trasparente ai web browser che utilizzano
-questo server come loro gateway.
-
-Scheda Proxy
-------------
-
-Nella scheda Proxy è possibile abilitare il servizio mettendo la spunta
-su Abilita proxy e si può  scegliere la modalità con cui il servizio
-dovrà lavorare.
-
-Abilitato
-    Abilita il Proxy.
-
-Modalità
-^^^^^^^^
-
-Manuale
-    Il proxy è abilitato sulla porta 3128. Tutti i client devono essere configurati per usare il proxy
+* possibilità di filtrare i contenuti
+* ridurre l'utilizzo della banda facendo cache delle pagine visitate
 
 
-Autenticato
-    Il proxy è abilitato sulla porta 3128. 
-    Tutti i client devono essere configurati per usare il proxy, 
-    ma sono richiesti  lo username e la password prima di procedere con la navigazione. 
-    L'autenticazione è basata sugli utenti di sistema.
+Il proxy supporta le seguenti modalità:
+
+* Manuale: tutti i client devono essere manualmente configurati
+* Autenticato: gli utenti devono inserire nome utente e password per poter navigare
+* Trasparente: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP
+* Trasparente SSL: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP e HTTPS
 
 
-Trasparente
-    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta. 
-    Tutto il traffico sulla porta 80 è rediretto verso il proxy.
+Configurazione client
+=====================
+   
+Il proxy è sempre in ascolto sulla porta 3128. Quando si utilizzano le modalità Manuale o Autenticato,
+tutti i client devono essere esplicitamente configurati per utilizzare il proxy.
+La configurazione è accessibile dal pannello impostazioni del browser.
+In questo caso è utile attivare l'opzione :guilabel:`Blocca porta HTTP e HTTPS` per evitare il bypass del proxy.
 
+Se il proxy è installato in modalità trasparente, tutto il traffico web proveniente dai client viene intercettato dal firewall
+e indirizzato attraverso il proxy. Nessuna configurazione è necessaria sui singoli client.
 
-Trasparente SSL
-    Il proxy è abilitato sulla porta 3128, ma la configurazione dei client non è richiesta.
-    Tutto il traffico sulla porta 80 e 443 è rediretto verso il proxy.
-    Il certificato del server (CA) deve essere installato in ogni client.
-    Tutto il traffico SSL è decriptato all'interno del proxy e criptato di nuovo prima di essere inviato
+Proxy SSL
+---------
 
-Blocca porte HTTP e HTTPS
-    Se abilitato, i client non potranno bypassare il proxy.
-    Le porte 80 e 443 saranno raggiungibili solo utilizzando il proxy.
+.. warning:: Decifrare connessioni SSL senza il consenso dell'utente è illegale in molti stati. 
+
+In modalità trasparente SSL, il server è in grado di filtrare anche il traffico cifrato in HTTPS. 
+Il proxy stabilisce il collegamento SSL con i siti remoti, verifica la validità dei certificati, e decifra il traffico.
+Infine genera un nuovo certificato firmato con la Certification Authority (CA) del server stesso.
+
+Il traffico fra il client e il proxy è sempre cifrato, ma sarà necessario installare su tutti i client (browser)
+il certificato CA del server.
+
+Il certificato del server è posizionato in :file:`/etc/pki/tls/certs/NSRV.crt`.
+Si consiglia di trasferire il file usando un client SSH (es. FileZilla).
+
     
-
-Opzioni Avanzate
-^^^^^^^^^^^^^^^^
-
-Parent proxy
-    Inserire l'IP e la porta del parent proxy. La sintassi corretta è
-    Indirizzo_IP:porta .
-
-
-
-Filtro
--------------
-
-Modalità
-    Abilitando il Filtro Web è possibile configurarlo nella modalità
-    "Blocca tutto" e poi permettere le categorie selezionate, oppure
-    "Permetti tutto" e poi bloccare le categorie selezionate.
-
-Blocca accesso con IP ai siti web
-    Se abilitato, non è possibile accedere ai siti web usando un IP ma solo il nome host.
-
-Abilita filtro con espressioni su URL
-    Se abilitato, gli URL sono scansionati alla ricerca di parole che ricadono nelle categorie selezionate. 
-    Ad esempio potrebbero essere bloccati gli url che contengono la parola *sesso*.
-
-Lista di estensioni file bloccate
-    Inserire le estensioni che si vogliono bloccare, separate da virgola.
-
-Siti e IP bloccati
-    Contiene la lista di siti sempre bloccati e la lista degli host della LAN che non possono navigare.
-
-Siti e IP permessi
-    Contiene la lista dei siti sempre permessi e degli host della LAN che possono bypassare il filtro contenuti.
-
-Scheda Bypass proxy trasparente
--------------------------------
-
-Nella scheda Bypass proxy trasparente è possibile impostare degli
-indirizzi IP della rete che bypassano il proxy.
-
-Per far ciò fare click su crea nuovo ed inserire l’indirizzo IP
-sull’apposito campo. Fare click su salva per confermare.
-
-Configurare alcuni IP per bypassare il proxy trasparente ed accedere ad
-internet senza essere proxati
-
-
-Crea una nuova regola di bypass.
-
-Indirizzo IP
-    Indirizzo IP dell'host che non sarà filtrato dal proxy.
-
-
-Scheda Antivirus
+Filtro contenuti
 ----------------
 
-Nella scheda Antivirus è possibile abilitare o disabilitare l’antivirus
-ClamAV, fare click sul pulsante Salva per confermare l’impostazione
-scelta.
+Il filtro contenuti analizza il traffico web ed è in grado di bloccare siti pericolosi o contenenti virus.
 
-Abilita / disabilita la scansione antivirus delle pagine web.
+La configurazione prevede un unico profilo che può lavorare in due modalità:
+
+* Permetti tutto: permette l'accesso a tutti i siti, ad eccezione di quelli esplicitamente bloccati
+* Blocca tutto: blocca l'accesso a tutti i siti, ad eccezione di quelli esplicitamente consentiti.
+
+Il filtro contenuti consente di:
+
+* bloccare l'accesso a categorie di siti
+* bloccare l'accesso ai siti acceduti usando indirizzi IP
+* filtrare gli URL con espressioni regolari
+* bloccare file con specifiche estensioni
+* specificare blacklist e whitelist per sorgente (ip o utenti)
+* specificare blacklist e whitelist per destinazione
+* indicare gli indirizzi che possono effettuare il bypass del proxy
 
