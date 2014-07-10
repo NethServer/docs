@@ -49,6 +49,33 @@ See :ref:`policy-section` for more information on roles and firewall rules.
 If the server i installed on a public VPS (Virtual Private Server) public, it should must be configured with a green interface.
 All critical services should be closed using :ref:`network_services-section` panel.
 
+.. _logical_interfaces-section:
+
+Logical interfaces
+------------------
+
+Supported logical interfaces are:
+
+* :index:`alias`: associate more than one IP address to an existing network interface. 
+  The alias has the same role of its associated physical interface
+* :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
+* :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
+* :index:`vlan` (Virtual Local Area Network): create two or more physically separated networks using a single interface
+
+Aliases are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
+red interface.
+
+Bonds allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
+at the same time, balancing traffic among all active interfaces.
+If an error occurs, the faulty card is automatically excluded from the bond.
+
+Bridge has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
+to access to the local network (green).
+
+When it is not possible to physically separate two different networks, you can use tagged vlan. The traffic of the two networks can
+be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
+The use of VLAN, requires properly configured switches.
+
 .. _RFC1918-section:
 
 Address for private networks (RFC1918)

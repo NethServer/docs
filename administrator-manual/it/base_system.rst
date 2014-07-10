@@ -36,7 +36,7 @@ con funzionalità speciali come DMZ (DeMilitarized Zone) o rete ospiti.
 Le reti gestite devono sottostare alle regole seguenti:
 
 * le reti devono essere fisicamente separate (non possono essere collegate allo stesso switch/hub)
-* le reti devono essere logicamente separate (essere configurate su sottoreti differenti)
+* le reti devono essere logicamente separate (essere configurate su sotto-reti differenti)
 * le reti private (es. LAN) devono rispettare le regole per gli indirizzi specificate nel documento RFC1918.
   Vedi :ref:`RFC1918-section`
 
@@ -54,6 +54,31 @@ Si veda :ref:`policy-section` per maggiori informazioni sull'uso dei ruoli nelle
 
 In caso di installazione su VPS (Virtual Private Server) pubblico, il server deve essere configurato con una schede di rete green.
 Si consiglia quindi di chiudere le porte dei servizi critici usando il pannello :ref:`network_services-section`. 
+
+.. _logical_interfaces-section:
+
+Interfacce logiche
+------------------
+
+I tipi di interfacce logiche supportate sono:
+
+* :index:`alias`: associa uno o più IP ad una scheda esistenza. L'alias ha lo stesso ruolo della scheda fisica associata
+* :index:`bond`: combina due o più interfacce, garantisce bilanciamento del traffico e tolleranza ai guasti
+* :index:`bridge`: collega due reti distinte, è spesso utilizzata per le VPN in bridge e le macchine virtuali
+* :index:`vlan` (Virtual Local Area Network): crea due o più reti fisicamente separate usando una singola interfaccia fisica
+
+Gli alias sono utilizzati per configurare IP multipli su una singola scheda di rete. Ad esempio, se si desidera avere più IP pubblici su
+un'interfaccia red.
+
+I bond consentono di aggregare banda fra due o più interfacce di rete. Il sistema utilizzerà tutte le schede contemporaneamente bilanciando
+il traffico fra tutte le schede attive. In caso di errore, la scheda guasta viene automaticamente esclusa dal bond.
+
+I bridge hanno la funzione di collegare segmenti di rete differenti, per esempio consentendo ai client collegati in VPN o macchine virtuali
+di accedere alla rete locale (green).
+
+Quando non è possibile separare fisicamente due reti diverse, è possibile utilizzare le vlan con tag. Il traffico delle due reti può
+essere trasmesso sullo stesso cavo ma sarà trattato come se fosse inviato e ricevuto da due schede separate.
+L'utilizzo delle vlan necessita di switch adeguatamente configurati.
 
 .. _RFC1918-section:
 
@@ -105,7 +130,7 @@ Accesso remoto
 Server Manager
 --------------
 
-E' possibile specificare reti a cui sia esplicitametne consentito l'accesso al Server Manager.
+E' possibile specificare reti a cui sia esplicitamente consentito l'accesso al Server Manager.
 Ad esempio, se il server è presso un cliente, si consiglia di permettere il collegamento dalla rete
 remota da cui si voglia amministrare la macchina.
 
@@ -131,7 +156,7 @@ Ad esempio, i computer sulle reti fidate possono accedere a:
 * Cartelle condivise (SAMBA)
 * Servizi web per reti locali (Statistiche)
 
-Se si desidera che gli utenti collegati in VPN possanno accedere a tutti i servizi del sistema,
+Se si desidera che gli utenti collegati in VPN possano accedere a tutti i servizi del sistema,
 aggiungere le reti delle VPN a questo pannello.
 
 Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello :ref:`static_routes-section`.
@@ -163,7 +188,7 @@ Dati organizzazione
 I campi in questa sezione vengono utilizzati per la generazione dei certificati
 SSL auto-firmati e per la creazione degli utenti.
 
-.. note:: Ogni modifica ai dati inseriti rigenera tutti i certificati SSL, peranto sarà necessario
+.. note:: Ogni modifica ai dati inseriti rigenera tutti i certificati SSL, pertanto sarà necessario
    accettarli nuovamente nei client già configurati (es. client posta e browser).
 
 .. _user_profile-section:
@@ -178,7 +203,7 @@ Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le infor
 * Nome e Cognome
 * Indirizzo email esterno
 
-L'utente può anche sovracrivere i seguenti campi già impostati dall'amministratore:
+L'utente può anche sovrascrivere i seguenti campi già impostati dall'amministratore:
 
 * Società
 * Ufficio
