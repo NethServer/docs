@@ -174,6 +174,22 @@ We plan to support all duplicity features in the near future.
 
 See http://duplicity.nongnu.org/ for more information.
 
+
+Listing backup sets
+^^^^^^^^^^^^^^^^^^^
+
+To list current backup sets:
+
+1. Mount the backup directory
+2. Query duplicity status
+3. Umount the backup directory
+
+For example, given a backup configured on a NFS storage, execute: ::
+
+  /etc/e-smith/events/actions/mount-nfs
+  /usr/bin/duplicity collection-status --no-encryption --archive-dir /var/lib/nethserver/backup/duplicity/ file:///mnt/backup/`config get SystemName`
+  /etc/e-smith/events/actions/umount-nfs
+
 Restore
 -------
 
