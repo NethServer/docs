@@ -275,7 +275,7 @@ Port record:
 
 Ip record:
 
-* ``key``: ip (or mac address)
+* ``key``: host object, in the form ``host;<hostname>``
 * ``Priority``: traffic priority
 * ``Description``: optional description
 
