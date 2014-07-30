@@ -1,1 +1,0 @@
-../nethserver-enterprise/license.rst
