@@ -184,11 +184,11 @@ To list current backup sets:
 2. Query duplicity status
 3. Umount the backup directory
 
-For example, given a backup configured on a NFS storage, execute: ::
+Just execute: ::
 
-  /etc/e-smith/events/actions/mount-nfs
-  /usr/bin/duplicity collection-status --no-encryption --archive-dir /var/lib/nethserver/backup/duplicity/ file:///mnt/backup/`config get SystemName`
-  /etc/e-smith/events/actions/umount-nfs
+  /etc/e-smith/events/actions/mount-`config getprop backup-data VFSType`
+  duplicity collection-status --no-encryption --archive-dir /var/lib/nethserver/backup/duplicity/ file:///mnt/backup/`config get SystemName`
+  /etc/e-smith/events/actions/umount-`config getprop backup-data VFSType`
 
 Restore
 -------
