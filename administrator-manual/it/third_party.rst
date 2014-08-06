@@ -45,9 +45,9 @@ Ad esempio, dato il software *mysoftware* che necessita la porta 3344 aperta sul
 Avvio e arresto
 ---------------
 
-|product| usa il runlevel standard 5.
+|product| usa il runlevel standard 3.
 
-Il software installato con yum dovrebbe già essere configurato per partire nel runlevel 5.
+Il software installato con yum dovrebbe già essere configurato per partire nel runlevel 3.
 Per controllare la configurazione, eseguire il comando :command:`chkconfig`. Il comando mostra una lista dei servizi con la relativa configurazione.
 
 Per abilitare un servizio al boot: ::
