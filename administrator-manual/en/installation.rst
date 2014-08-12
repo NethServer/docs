@@ -270,7 +270,7 @@ To install the base system, run:
 
 ::
 
-  nethserver-install
+  nethserver-install nethserver-register nethserver-nethserverenterprise-branding
 
 To install additional modules, pass the name of the module as a parameter to the install script.
 Example for mail and ups modules:
