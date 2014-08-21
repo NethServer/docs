@@ -55,12 +55,15 @@ Workstation
 -----------
 
 Quando agisce come workstation, |product| registra se stesso come
-membro del *workgroup Windows* chiamato appunto ``WORKGROUP``. Come
-detto in precedenza, per accedere alle risorse del server, i client
-devono fornire le credenziali di un account locale valido.
+membro del *workgroup Windows* specificato nel campo :guilabel:`Nome del gruppo di lavoro`. 
 
-Dagli altri host della rete Windows, |product| sarà elencato sotto il
-nodo ``WORKGROUP`` in *Risorse di rete*.
+Dagli altri host della rete Windows, |product| sarà elencato in
+*Risorse di rete*, sotto il nodo chiamato come il valore del campo
+:guilabel:`Nome del gruppo di lavoro`.
+
+Come detto in precedenza, per accedere alle risorse del server, i
+client devono fornire le credenziali di un account locale valido.
+
 
 Primary domain controller
 -------------------------

@@ -55,12 +55,18 @@ Workstation
 -----------
 
 When acting as a workstation, |product| registers itself as member of
-the *Windows workgroup* named just ``WORKGROUP``. As stated before, to
-access the server resources, clients must provide the authentication
-credentials of a valid local account.
+the *Windows workgroup* specified by the :guilabel:`Workgroup
+name` field. The default value is ``WORKGROUP``.
 
 From the other hosts of the Windows network, |product| will be listed
-under the ``WORKGROUP`` node in *Network resources*.
+in *Network resources*, under the node named after the
+:guilabel:`Workgroup name` field value.
+
+As stated before, to access the server resources, clients
+must provide the authentication credentials of a valid local account.
+
+
+
 
 
 Primary domain controller
@@ -122,7 +128,7 @@ be shared across the whole domain.
 .. note:: For mail server integration with AD, refer to the
           :ref:`email-section` module documentation.
 
-Joining an Active Directory domain have some pre-requisites:
+Joining an Active Directory domain has some pre-requisites:
 
 1. In :menuselection:`DNS and DHCP` page, set the domain controller
    as DNS. If a second DC exists, it can be set as secondary DNS.
