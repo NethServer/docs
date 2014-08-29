@@ -186,7 +186,6 @@ Update
 
 Reload the list of emails in the queue.
 
-===============
 Email addresses
 ===============
 
@@ -194,7 +193,7 @@ Associate email address to users or groups of the system.
 
 
 Create / Modify
-===================
+---------------
 
 Create the association between a new email address and a
 user or group already present in the system.
@@ -216,13 +215,12 @@ Only local networks
     from external senders.
 
 Delete
-=======
+------
 
 Delete the e-mail address. This does not affect
 messages already delivered to the user or group associated with the address.
 Future messages destined the address will be rejected.
 
-========================
 External email addresses
 ========================
 
@@ -233,12 +231,12 @@ local users or groups, as per configuration in
 this form.
 
 External addresses
-==================
+------------------
 
 Configure the list of external addresses and the association with the user of the system.
 
 Create / Modify
----------------
+~~~~~~~~~~~~~~~
 
 Create or edit an external address.
 
@@ -268,19 +266,19 @@ Delete messages downloaded
     a copy on remote server.
 
 Delete
--------
+~~~~~~
 
 Deleting an account will *not* delete the messages already delivered.
 
 
 Download now
-------------
+~~~~~~~~~~~~
 
 Immediately starts the download from all external addresses.
 
 
 General
-========
+-------
 
 Enable
     Allows you to enable or disable the Fetchmail daemon that

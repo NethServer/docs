@@ -290,7 +290,6 @@ Di default, tutti gli utenti possono allenare i filtri in questo modo. Per restr
 
 
 
-=======================
 Indirizzi email esterni
 =======================
 
@@ -301,12 +300,12 @@ consegnati agli utenti o gruppi locali, in base alla configurazione
 sottostante.
 
 Indirizzi esterni
-=================
+-----------------
 
 Configura la lista degli indirizzi esterni e l'associazione con l'utente di sistema.
 
 Crea / Modifica
----------------
+^^^^^^^^^^^^^^^
 
 Crea o modifica un indirizzo esterno.
 
@@ -336,19 +335,19 @@ Elimina messaggi scaricati
     una copia sul server remoto.
 
 Elimina
--------
+^^^^^^^
 
 L'eliminazione di un account *non* comporta l'eliminazione dei messaggi già consegnati.
 
 
 Scarica ora
------------
+^^^^^^^^^^^
 
 Avvia immediatamente il controllo di tutte gli indirizzi esterni.
 
 
 Generale
-========
+--------
 
 Abilita
     Consente di abilitare o disabilitare il demone Fetchmail che si
@@ -360,25 +359,24 @@ Controlla ogni
 
 
 
-===============
 Indirizzi email
 ===============
 
 Installazione
-=============
+-------------
 
 Il modulo di gestione degli indirizzi email viene installato
 automaticamente con l’installazione del pacchetto mail server (vedi
 Capitolo Email)
 
 Gestione
-========
+--------
 
 Accedendo alla pagina *Indirizzi email* del server-manager, verrà mostrata una
 tabella con l'elenco di tutti gli indirizzi email registrati su |product|.
 
 Creare nuovo indirizzo email
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Per creare un nuovo indirizzo email fare clic sul pulsante CREA NUOVO.
 Si aprirà una pagina con i campi per inserire i dati.
@@ -405,14 +403,14 @@ Fare clic sul pulsante SALVA per attivare l'e-mail appena creata.
 
 
 Modificare un indirizzo email
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Per modificare un'indirizzo email fare clic sul pulsante Modifica nella
 colonna azioni. Si aprirà una pagina di creazione dove è possibile
 modificare l’utente o il gruppo a cui appartiene.
 
 Eliminare un indirizzo email
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Per eliminare un indirizzo email fare clic sulla freccia accanto al
 pulsante modifica nella colonna azioni e selezionare Elimina. Verrà chiesta la conferma
