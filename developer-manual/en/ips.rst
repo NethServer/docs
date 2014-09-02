@@ -26,14 +26,14 @@ The web interface will take care of this by assuring both ``firewall{nfqueue}`` 
 Enabling: ::
 
   config setprop firewall nfqueue enabled
-  config setprop squid status enabled
+  config setprop snort status enabled
   signal-event firewall-adjust
   signal-event nethserver-snort-save
 
 Disabling: ::
 
   config setprop firewall nfqueue disabled
-  config setprop squid status disabled
+  config setprop snort status disabled
   signal-event firewall-adjust
   signal-event nethserver-snort-save
 
