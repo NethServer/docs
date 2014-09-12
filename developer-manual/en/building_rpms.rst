@@ -164,14 +164,17 @@ Your ``$EDITOR`` program (or git core.editor) is opened automatically to adjust 
 
 To abort at this point, save an empty message.
 
-Old releases
-============
+Specific releases
+=================
 
 If you want to create a RPM with a specific version: ::
 
   build-rpm -D VERSION=<X.Y.Z> <package>  
 
 A tag equal to the given version MUST exists. ``RELEASE`` is set to ``1.<DIST>``.
+If you want to set a release number for the spec files, use: ::
+
+  build-rpm -D VERSION=<X.Y.Z> -D RELEASE=<R> <package>
 
 Sign the RPM
 ============
