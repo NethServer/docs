@@ -97,17 +97,34 @@ Add :command:`build-rpm` and :command:`build-iso` commands to your :file:`PATH`.
 
 Copy :file:`config.sample` to :file:`Projects/config` and edit it.
 
+Fetch external sources
+======================
+
+The git repository may not be the only code source.  External source tarballs
+can be addressed by `Source` tags in the spec file, according to
+Fedora `Packaging:SourceURL`_ guidelines.
+
+.. _`Packaging:SourceURL`: http://fedoraproject.org/wiki/Packaging:SourceURL
+
+The external sources can be fetched by issuing the following command: ::
+
+  spectool -g
+
+Each external source tarball must be verifiable by its `SHA` string in file
+:file:`SHA1SUM` placed at the repository root.
+
 Build the RPM
 =============
 
-The build process uses mock (http://fedoraproject.org/wiki/Projects/Mock) and must be run as a non privileged user in the `mock` system group.
-Add your user with: ::
+The build process uses Mock_ and must be run as a non privileged user
+in the `mock` system group.  Add your user with: ::
 
   usermod -a -G mock <username>
 
 The build-rpm script
 
-* creates the tarball and the :file:`.spec` file for the given package name, 
+* creates the tarball and the :file:`.spec` file for the given package name (if starting from a `.spec.in` template)
+* verifies external source tarballs SHA hashes against :file:`SHA1SUM`
 * builds the source and binary RPMs
 * signs RPMs with your GPG key (``-s`` or ``-S <KEYID>`` options)
 * copy RPMs to a local yum repository  (if ``REPODIR`` directory exists)
@@ -160,13 +177,13 @@ When you are ready for a production release, the :command:`release-rpm` command 
 * Review and commit the changelog.
 * Create a (signed) git tag.
 
-Commit and tag are added locally, thus they need to be pushed to your
+The commit and tag are added locally, thus they need to be pushed to your
 upstream git repository, once reviewed.
 
 ::
 
   release-rpm
-  Usage: release-rpm [-s] -T  
+  Usage: release-rpm [-s] [-T X.Y.Z] <git repo>
 
 For instance:
 
@@ -202,8 +219,11 @@ or
 
   build-rpm -S  
 
-If a password is not set in :file:`config` file, the :command:`print-gnome-keyring-secret` command asks gnome-keyring for a secret 
-password stored in ``SIGN_KEYRING_NAME`` at ``SIGN_KEYRING_ID`` index.
+If a password is not set in :file:`config` file, you can set
+``SIGN_KEYRING_NAME`` and ``SIGN_KEYRING_ID`` to fetch the secrets
+from gnome-keyring. The :command:`print-gnome-keyring-secret` command
+reads the secrets from gnome-keyring.
+
 
 Publish the RPM
 ===============
