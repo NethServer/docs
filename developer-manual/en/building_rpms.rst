@@ -59,19 +59,13 @@ where
 Prepare your development machine
 ================================
 
-NethServer
-----------
-
-On NethServer, you can simply install nethserver-devbox, by typing: ::
+On **NethServer**, you can simply install nethserver-devbox, by typing: ::
 
   yum install nethserver-devbox
 
 Then copy :file:`/usr/share/doc/nethserver-devbox-<version>/config.sample` to :file:`Projects/config` and edit it.
 
-Fedora
-------
-
-On Fedora, clone nethserver-devbox repository somewhere in your filesystem: ::
+On **Fedora**, clone nethserver-devbox repository somewhere in your filesystem: ::
 
   git clone git://code.nethesis.it/nethserver-devbox
 
@@ -147,24 +141,10 @@ If you want to create a package with a development release, just execute from th
 
 The system will search for the first available tag inside the git
 repository and will calculate the version and release values (see
-:command:`git describe`). This means **the tag must exist**!::
+:command:`git describe`). This means **the tag must exist**!
 
-  VERSION=<last_tag>
-
-For ``.spec.in`` file: ::
-
-  RELEASE=<commits_from_tag>.0git<commit_hash>.<DIST>
-
-Or, if using plain ``.spec`` file: ::
-
-  RELEASE=<spec_release>.<commits_from_tag>git<commit_hash>.<DIST>
-
-For example, given the project nethserver-ntp with the tag 1.0.0 set two commits backwards from HEAD we have: ::
-
-  VERSION=1.0.0
-  RELEASE=2.0git5a6ddeb.ns6
-  ---
-  RELEASE=1.2git5a6ddeb.ns6
+* For ``.spec.in`` file, RPM ``Version`` is last git tag, RPM ``Release`` has the form ``<commits_from_tag>.0git<commit_hash>.<DIST>``.
+* For ``.spec`` file, the ``%{dist}` macro value has the form ``.<commits_from_tag>git<commit_hash>.<DIST>``.
 
 
 Stable release
@@ -195,14 +175,22 @@ Your ``$EDITOR`` program (or git core.editor) is opened automatically to adjust 
 
 To abort at this point, save an empty message.
 
+When ``build-rpm`` is executed on a tagged version
+``<commits_from_tag>git<commit_hash>`` form is stripped.
+
+
 Old releases
 ============
 
-If you want to create a RPM with a specific version: ::
+If you want to create a RPM with a specific version, use ``git
+checkout`` to set the source tree to that version then proceed as
+usual: ::
 
-  build-rpm -D VERSION=<X.Y.Z> <package>  
+  cd <package>
+  git checkout <versionrefernce>
+  cd ..
+  build-rpm <package>  
 
-A tag equal to the given version MUST exists. ``RELEASE`` is set to ``1.<DIST>``.
 
 Sign the RPM
 ============
