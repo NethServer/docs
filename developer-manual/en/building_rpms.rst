@@ -9,8 +9,10 @@ The entire RPM building process is automatized and is run by
 
 The process has been successfully tested on
 
-* NethServer 6.3-alpha1 and later
-* Fedora 17 and later
+* NethServer 6.x
+* Fedora 17 and later, with ``mock <= 1.35``, until `Bug 2879`_ will be fixed.
+
+.. _bug 2879: http://dev.nethserver.org/issues/2879
 
 Let assume you have a ``Projects/`` directory where you have cloned
 some git repositories. The :command:`build-rpm` command requires that each project directory:
@@ -34,8 +36,13 @@ For example, a simple directory layout would be:
     * ``projB.spec``
 
 
+
 Spec template file
 ==================
+
+.. WARNING:: 
+   The `.spec.in` template format is deprecated and will be removed on
+   version `2.0.0`. Use only `.spec` format for new projects.
 
 A :file:`.spec.in` template file syntax is the same as RPM :file:`.spec` files,
 where
@@ -68,7 +75,7 @@ On Fedora, clone nethserver-devbox repository somewhere in your filesystem: ::
 
   git clone git://code.nethesis.it/nethserver-devbox
 
-Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec.in`: 
+Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec`: 
 
 * mock
 * expect
@@ -78,6 +85,10 @@ Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec
 * git
 * rpm-build
 * intltool
+* isomd5sum
+* syslinux
+* rpmdevtools
+
 
 Add :command:`build-rpm` and :command:`build-iso` commands to your :file:`PATH`. For instance create symlinks in your :file:`~/bin` directory: ::
 
@@ -107,6 +118,9 @@ The script can execute one or more tasks listed above in the same run. Intermedi
   build-rpm
   Usage: build-rpm [-cousp] [-S <gpgkeyid>] [[-D <key>=<value>] ... ] <package_name> ...
    
+.. _Mock: http://fedoraproject.org/wiki/Projects/Mock
+
+
 Development release
 ===================
 
