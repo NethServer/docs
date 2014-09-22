@@ -9,8 +9,10 @@ The entire RPM building process is automatized and is run by
 
 The process has been successfully tested on
 
-* NethServer 6.3-alpha1 and later
-* Fedora 17 and later
+* NethServer 6.x
+* Fedora 17 and later, with ``mock <= 1.35``, until `Bug 2879`_ will be fixed.
+
+.. _bug 2879: http://dev.nethserver.org/issues/2879
 
 Let assume you have a ``Projects/`` directory where you have cloned
 some git repositories. The :command:`build-rpm` command requires that each project directory:
@@ -34,8 +36,13 @@ For example, a simple directory layout would be:
     * ``projB.spec``
 
 
+
 Spec template file
 ==================
+
+.. WARNING:: 
+   The `.spec.in` template format is deprecated and will be removed on
+   version `2.0.0`. Use only `.spec` format for new projects.
 
 A :file:`.spec.in` template file syntax is the same as RPM :file:`.spec` files,
 where
@@ -52,23 +59,17 @@ where
 Prepare your development machine
 ================================
 
-NethServer
-----------
-
-On NethServer, you can simply install nethserver-devbox, by typing: ::
+On **NethServer**, you can simply install nethserver-devbox, by typing: ::
 
   yum install nethserver-devbox
 
 Then copy :file:`/usr/share/doc/nethserver-devbox-<version>/config.sample` to :file:`Projects/config` and edit it.
 
-Fedora
-------
-
-On Fedora, clone nethserver-devbox repository somewhere in your filesystem: ::
+On **Fedora**, clone nethserver-devbox repository somewhere in your filesystem: ::
 
   git clone git://code.nethesis.it/nethserver-devbox
 
-Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec.in`: 
+Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec`: 
 
 * mock
 * expect
@@ -78,6 +79,10 @@ Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec
 * git
 * rpm-build
 * intltool
+* isomd5sum
+* syslinux
+* rpmdevtools
+
 
 Add :command:`build-rpm` and :command:`build-iso` commands to your :file:`PATH`. For instance create symlinks in your :file:`~/bin` directory: ::
 
@@ -86,17 +91,34 @@ Add :command:`build-rpm` and :command:`build-iso` commands to your :file:`PATH`.
 
 Copy :file:`config.sample` to :file:`Projects/config` and edit it.
 
+Fetch external sources
+======================
+
+The git repository may not be the only code source.  External source tarballs
+can be addressed by `Source` tags in the spec file, according to
+Fedora `Packaging:SourceURL`_ guidelines.
+
+.. _`Packaging:SourceURL`: http://fedoraproject.org/wiki/Packaging:SourceURL
+
+The external sources can be fetched by issuing the following command: ::
+
+  spectool -g
+
+Each external source tarball must be verifiable by its `SHA` string in file
+:file:`SHA1SUM` placed at the repository root.
+
 Build the RPM
 =============
 
-The build process uses mock (http://fedoraproject.org/wiki/Projects/Mock) and must be run as a non privileged user in the `mock` system group.
-Add your user with: ::
+The build process uses Mock_ and must be run as a non privileged user
+in the `mock` system group.  Add your user with: ::
 
   usermod -a -G mock <username>
 
 The build-rpm script
 
-* creates the tarball and the :file:`.spec` file for the given package name, 
+* creates the tarball and the :file:`.spec` file for the given package name (if starting from a `.spec.in` template)
+* verifies external source tarballs SHA hashes against :file:`SHA1SUM`
 * builds the source and binary RPMs
 * signs RPMs with your GPG key (``-s`` or ``-S <KEYID>`` options)
 * copy RPMs to a local yum repository  (if ``REPODIR`` directory exists)
@@ -107,6 +129,9 @@ The script can execute one or more tasks listed above in the same run. Intermedi
   build-rpm
   Usage: build-rpm [-cousp] [-S <gpgkeyid>] [[-D <key>=<value>] ... ] <package_name> ...
    
+.. _Mock: http://fedoraproject.org/wiki/Projects/Mock
+
+
 Development release
 ===================
 
@@ -116,24 +141,10 @@ If you want to create a package with a development release, just execute from th
 
 The system will search for the first available tag inside the git
 repository and will calculate the version and release values (see
-:command:`git describe`). This means **the tag must exist**!::
+:command:`git describe`). This means **the tag must exist**!
 
-  VERSION=<last_tag>
-
-For ``.spec.in`` file: ::
-
-  RELEASE=<commits_from_tag>.0git<commit_hash>.<DIST>
-
-Or, if using plain ``.spec`` file: ::
-
-  RELEASE=<spec_release>.<commits_from_tag>git<commit_hash>.<DIST>
-
-For example, given the project nethserver-ntp with the tag 1.0.0 set two commits backwards from HEAD we have: ::
-
-  VERSION=1.0.0
-  RELEASE=2.0git5a6ddeb.ns6
-  ---
-  RELEASE=1.2git5a6ddeb.ns6
+* For ``.spec.in`` file, RPM ``Version`` is last git tag, RPM ``Release`` has the form ``<commits_from_tag>.0git<commit_hash>.<DIST>``.
+* For ``.spec`` file, the ``%{dist}` macro value has the form ``.<commits_from_tag>git<commit_hash>.<DIST>``.
 
 
 Stable release
@@ -146,13 +157,13 @@ When you are ready for a production release, the :command:`release-rpm` command 
 * Review and commit the changelog.
 * Create a (signed) git tag.
 
-Commit and tag are added locally, thus they need to be pushed to your
+The commit and tag are added locally, thus they need to be pushed to your
 upstream git repository, once reviewed.
 
 ::
 
   release-rpm
-  Usage: release-rpm [-s] -T  
+  Usage: release-rpm [-s] [-T X.Y.Z] <git repo>
 
 For instance:
 
@@ -164,17 +175,22 @@ Your ``$EDITOR`` program (or git core.editor) is opened automatically to adjust 
 
 To abort at this point, save an empty message.
 
-Specific releases
-=================
+When ``build-rpm`` is executed on a tagged version
+``<commits_from_tag>git<commit_hash>`` form is stripped.
 
-If you want to create a RPM with a specific version: ::
 
-  build-rpm -D VERSION=<X.Y.Z> <package>  
+Old releases
+============
 
-A tag equal to the given version MUST exists. ``RELEASE`` is set to ``1.<DIST>``.
-If you want to set a release number for the spec files, use: ::
+If you want to create a RPM with a specific version, use ``git
+checkout`` to set the source tree to that version then proceed as
+usual: ::
 
-  build-rpm -D VERSION=<X.Y.Z> -D RELEASE=<R> <package>
+  cd <package>
+  git checkout <versionrefernce>
+  cd ..
+  build-rpm <package>  
+
 
 Sign the RPM
 ============
@@ -191,8 +207,11 @@ or
 
   build-rpm -S  
 
-If a password is not set in :file:`config` file, the :command:`print-gnome-keyring-secret` command asks gnome-keyring for a secret 
-password stored in ``SIGN_KEYRING_NAME`` at ``SIGN_KEYRING_ID`` index.
+If a password is not set in :file:`config` file, you can set
+``SIGN_KEYRING_NAME`` and ``SIGN_KEYRING_ID`` to fetch the secrets
+from gnome-keyring. The :command:`print-gnome-keyring-secret` command
+reads the secrets from gnome-keyring.
+
 
 Publish the RPM
 ===============
