@@ -102,7 +102,7 @@ Fedora `Packaging:SourceURL`_ guidelines.
 
 The external sources can be fetched by issuing the following command: ::
 
-  spectool -g
+  spectool -g <specfile>
 
 Each external source tarball must be verifiable by its `SHA` string in file
 :file:`SHA1SUM` placed at the repository root.
