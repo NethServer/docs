@@ -143,6 +143,5 @@ Help pages are RST documents compiled into xHTML pages at package build time.
 More examples
 =============
 
-More examples can be found here
-http://code.nethesis.it/?p=nethserver-ui-examples.git;a=summary or
-browsing the existing modules.
+More examples can be found `here <https://github.com/nethesis/nethserver-ui-examples>`_ or
+browsing the `existing modules <https://github.com/nethesis/nethserver-base/tree/master/root/usr/share/nethesis/NethServer/Module>`_.
