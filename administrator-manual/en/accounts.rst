@@ -204,7 +204,7 @@ The file must contain a line per user, each line must have TAB-separated fields 
 
 Example: ::
 
-  Mario   Rossi   mario@example.org       112233
+  mario   Mario   Rossi   mario@example.org       112233
 
 
 Make sure the mail server is installed, then execute: ::
