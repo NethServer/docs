@@ -202,7 +202,7 @@ Il file deve contenere una linea per utente, ogni linea deve avere i campi separ
 
 Esempio: ::
 
-  Mario   Rossi   mario@example.org       112233
+ mario  Mario   Rossi   mario@example.org       112233
 
 
 Assicurarsi che il modulo server di posta sia installato, quindi eseguire il comando: ::
