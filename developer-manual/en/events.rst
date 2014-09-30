@@ -260,8 +260,14 @@ migration-import                       Path to migration directory            Im
 password-expired                       Username, expire date                  The given username password will expire on expiredate
 password-modify                        User key                               Called when a user password is modified
 password-policy-update                 User key                               Called when the system password policy has been changed
-pre-backup                                                                    The pre-backup event creates consistent system state for the backup
-post-backup                                                                   Called after backup end
+post-backup-config                                                            Called after configuration backup end
+post-backup-data                                                              Called after data backup end
+post-restore-config                                                           Called after restore of configuration
+post-restore-data                                                             Called after restore of data
+pre-backup-config                                                             The pre-backup-config event creates consistent system state for the backup
+pre-backup-data                                                               The pre-backup-data event creates consistent system state for the backup
+pre-restore-config                                                            Called before restore of configuration
+pre-restore-data                                                              Called before restore of data
 pseudonym-create                       Pseudonym key                          Called when a pseudonym is created
 pseudonym-delete                       Pseudonym key                          Called when a pseudonym is deleted
 pseudonym-modify                       Pseudonym key                          Called when a pseudonym is modified
