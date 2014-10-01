@@ -7,13 +7,15 @@ Migration from NethService/SME Server
 #. In the old host, create a full backup archive and move it
    to the new |product| host.
 #. In the new server, install all packages that cover the same features of the old one.
-#. Explode the full backup archive into some directory (for instance :file:`/var/lib/migration`)
+#. Explode the full backup archive into some directory; for instance, create the directory :file:`/var/lib/migration`.
 #. Signal the event::
 
      signal-event migration-import /var/lib/migration
 
    This step will require some time.
-#. Search for any ``ERROR`` or ``FAIL`` string in :file:`/var/log/messages`
+#. Check for any error message in :file:`/var/log/messages`::
+ 
+     grep -E '(FAIL|ERROR)' /var/log/messages
 
 .. tip::
    For mail server migrations, you can re-synchronize the mail storage after 
