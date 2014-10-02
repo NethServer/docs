@@ -11,6 +11,13 @@ Logrotate db property:
 * ``Times``: rotate log files ``Times`` number of times (days, weeks or months) before being removes, default is 4
 * ``Compression``: can be ``enabled`` or ``disabled``. Defaults is ``disabled``
 
+Example: ::
+
+  logrotate=configuration
+    Compression=disabled
+    Rotate=weekly
+    Times=4
+
 Keep logs for 6 months, rotate once a week: ::
 
   config setprop logrotate Rotate weekly
