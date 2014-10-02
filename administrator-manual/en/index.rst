@@ -48,7 +48,8 @@ Modules
    firewall
    snort
    bandiwidth_monitor
-   dns_dhcp
+   dns
+   dhcp
    vpn
    ftp
    tftp

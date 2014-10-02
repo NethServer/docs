@@ -239,6 +239,6 @@ There are 4 types of objects:
 * Zone: representing networks of hosts. Although similar in concept to a group of hosts, you can express networks using CIDR notation 
 * Services: a service listening on a host with at least one port and protocol. Example: ssh, https 
 
-When creating rules, you can use the records defined in :ref:`dnsdhcp-section` like host objects.
+When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
 

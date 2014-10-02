@@ -250,6 +250,6 @@ Esistono 4 tipi di oggetti:
 * Zone: rappresentano reti di host. Anche se concettualmente simili ai gruppi di host, è possibile esprimere zone in notazione CIDR
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
-Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dnsdhcp-section` come oggetti host.
+Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dns-section` e :ref:`dhcp-section` come oggetti host.
 Inoltre ogni interfaccia di rete con un ruolo associato è automaticamente elencata fra le zone disponibili.
 
