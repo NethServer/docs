@@ -50,6 +50,7 @@ Implementation
 
    filesystem_options
    dns
+   dhcp
    logs
    network
    random_url
