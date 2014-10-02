@@ -9,6 +9,16 @@ PEM-formatted certificate parts:
 *  *certificate/crt* public certificate
 *  *certificate/pem* both key+crt parts
 
+Configuration is inside the ``configuration`` database. Example: ::
+
+  pki=configuration
+    KeyFile=
+    CrtFile=
+    ChainFile=
+    CertificateDuration=365
+    CommonName=
+
+
 A certificate consumer daemon should expand those templates to its own
 certificate paths, by installing the proper configuration under
 ``/etc/e-smith/templates.metadata``.
