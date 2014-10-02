@@ -25,6 +25,11 @@ The key of the record is the name of the associated interface. Example: ::
     DhcpRangeStart=192.168.5.200
     status=enabled
 
+If the property ``DhcpGatewayIp`` is not set, the router for DHCP clients will be the ip address of the network
+interface associated to the range.
+Hosts inside the blue network can always access the local DNS server.
+
+
 .. note:: If a record is a related to an interface without a role, the record is automatically deleted.
 
 
