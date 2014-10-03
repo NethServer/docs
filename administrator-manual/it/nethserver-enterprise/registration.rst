@@ -22,7 +22,7 @@ L'utilizzo di :command:`yum` da linea di comando permette di aggirare questa lim
 
 Il modulo utenti consente di utilizzare l'utente :dfn:`admin` per accedere all'interfaccia web con privilegi amministrativi. 
 L'utente :dfn:`admin` potrà quindi configurare l'intero sistema ma non potrà installare software aggiuntivo. 
-Per maggiori informazioni, vedi :ref:`admin-user`.
+Per maggiori informazioni, vedi :ref:`admin_user-section`.
 
 
 :index:`Codice server`
