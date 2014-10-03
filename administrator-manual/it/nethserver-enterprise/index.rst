@@ -37,6 +37,7 @@ Moduli
    backup
    accounts
    mail
+   pop3_proxy
    shared_folder
    samba
    chat
@@ -46,7 +47,8 @@ Moduli
    firewall
    snort
    bandiwidth_monitor
-   dns_dhcp
+   dns
+   dhcp
    vpn
    ftp
    tftp
