@@ -96,6 +96,7 @@ Modules
    ups
    tftp
    pop3_proxy
+   pop3_connector
 
 Appendix
 --------

@@ -39,6 +39,7 @@ Modules
    backup
    accounts
    mail
+   pop3_connector
    pop3_proxy
    shared_folder
    samba
