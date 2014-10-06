@@ -54,21 +54,29 @@ A service can be accessible from public or private LAN. This configuration is sa
 The property can have one of the following values:
 
 * ``none``: the service is accessible only from localhost, no port is open
-* ``private``: the service is accessible only from LAN (Green interfaces)
-* ``public``: the service is accessible from LAN (green interfaces) and Internet (red interfaces). 
-  This is implemented only if the :ref:`firewall_gateway-section` module is installed.
+* ``private``: the service is accessible only from green interfaces
+* ``public``: the service is accessible from green and red interfaces, but no blue and orange
 
 Example of a service with UDP port 1122 open to the Internet: ::
 
   config setprop myservice status enabled UDPPort 1122 access public
 
-Example of a service with TCP ports 1122 an 2233  open to local network: ::
+Example of a service with TCP ports 1122 an 2233 open to local network: ::
 
   config setprop myservice status enabled TCPPorts 1122,2233 access private
 
 
 The ports are opened only if the ``status`` property is set to ``enabled``.
 
+Custom access
+-------------
+
+Each network service can have one or both of following properties:
+
+* ``AllowHosts``: listed hosts can always access the service 
+* ``DenyHosts``: listed hosts can never access the service
+
+Both properties can be a list of IPs or CIDR networks and are honored only if access is seto to ``private`` or ``public``
 
 .. _add_a_new_service:
 

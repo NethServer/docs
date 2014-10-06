@@ -104,11 +104,25 @@ Access policies can be modified from :guilabel:`Network services` page.
 
 Available policies are:
 
-* Access only from local networks (private): all hosts from green network and from VPNs
-* Access from any network (public): any hosts
+* Access only from green networks (private): all hosts from green networks and from VPNs
+* Access from green and red networks (public): any host from green networks, VPNs and external networks. But not guests (blue) and DMZ (orange) networks
 * Access only from the server itself (none): no host can connect to selected service
 
-If policies private or public are selected, it’s possible to add a specific host (or a host list) always allowed (or blocked).
+Custom access
+-------------
+
+If selected policy is private or public, it’s possible to add hosts and networks which are always allowed (or blocked).
+This rule also apply for blue and orange networks.
+
+Example
+^^^^^^^
+
+Given the following configuration:
+
+* Orange network: 192.168.2.0/24
+* Access for NTP server set to private
+
+If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
 
 .. _remote_access-section:
 

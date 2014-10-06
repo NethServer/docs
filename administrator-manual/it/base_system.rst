@@ -114,12 +114,29 @@ E' possibile cambiare le politiche di accesso dalla pagina :guilabel:`Servizi di
 
 Le politiche di accesso disponibili sono:
 
-* Accesso solo dalle reti locali (privato): comprende tutti gli host sulla rete green e tutti i computer collegati in VPN
-* Accesso da tutte le reti (pubblico): tutti gli host
+* Accesso solo dalle reti verdi (privat): comprende tutti gli host sulla rete green e tutti i computer collegati in VPN
+* Accesso dalle reti green e red (public): tutti gli host dalle reti green, VPN e reti esterne. Ma non dalla rete ospiti (blue) e dalla DMZ (orange)
+* Accesso solo dal server stesso (none): nessun host può collegarsi al servizio selezionato
 
 Se si selezionano le prime due politiche elencate è possibile specificare un host (o una lista di host) a cui l'accesso
 al servizio è sempre bloccato o sempre permesso.
 
+Accesso personalizzato
+----------------------
+
+Se la politica selezionata è private o public, è possibile specificare una lista di host e reti che sono sempre 
+consentiti (o bloccati).
+La regola di applica anche per le reti orange e blue.
+
+Esempio
+^^^^^^^
+
+Data la seguente configurazione:
+
+* Rete orange: 192.168.2.0/24
+* Server NTP con politica di accesso private
+
+Se gli host dalla DMZ devono accedere al server NTP, aggiungere la rete 192.168.2.0/24 nel campo :guilabel:`Consenti host`.
 
 
 .. _remote_access-section:
