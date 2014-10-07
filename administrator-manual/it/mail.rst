@@ -6,8 +6,8 @@ Email
 
 Il mail server è composto da tre moduli principali:
 
-* server IMAP e POP3
-* server SMTP per l'invio
+* server IMAP e POP3 per la lettura della posta
+* server SMTP per l'invio e la ricezione
 * filtro antispam, antivirus e blocco allegati
 
 Vantaggi:
@@ -206,7 +206,7 @@ Tutta la posta in transito è sottoposta ad una serie di controlli che possono e
 Antivirus
 ---------
 
-Individua le mail che contengono virus. I messaggi infetti vengono scartai e non sono consegnati al destinatario.
+Individua le mail che contengono virus. I messaggi infetti vengono scartati e non sono consegnati al destinatario.
 
 Blocco allegati
 ----------------
@@ -215,7 +215,7 @@ Individua le mail che contengono :index:`allegati proibiti` dalle politiche azie
 tipi:
 
 * :index:`file eseguibili` (es. exe, msi)
-* :index:`archivi` di file (es. zip, targz, docx)
+* :index:`archivi` di file (es. zip, tar.gz, docx)
 * lista personalizzata di estensioni
 
 Nel caso si scelga di bloccare file eseguibili o archivi, il sistema riconosce tali tipi indipendentemente dal nome file.
@@ -229,7 +229,7 @@ Il filtro :index:`antispam` analizza i messaggi di posta rilevando e classifican
 regole predeterminate e valutazioni statistiche sul contenuto della mail.
 
 Il server utilizza una combinazione di regole e filtri statistici.
-Le regole sono pubbliche e aggiornate quotidianamente come viene fatto da tempo per gli antivirus. Ad ogni regola è associato
+Le regole sono pubbliche e aggiornate regolarmente come viene fatto da tempo per gli antivirus. Ad ogni regola è associato
 un punteggio. I filtri statistici, detti bayesiani, sono speciali regole che evolvono e si adattano
 velocemente analizzando i messaggi marcati come :index:`spam` o :index:`ham`.
 
@@ -274,7 +274,7 @@ La sezione :guilabel:`Regole di accesso per indirizzi email` consente di creare 
 * :guilabel:`Accetta da`: tutti i messaggi provenienti dal mittente indicato vengono sempre accettati
 * :guilabel:`Accetta a`: tutti i messaggi destinati all'indirizzo indicato vengono sempre accettati
 
-.. warning:: L'utilizzo di whitelist e blacklist è sconsigliato. Ricorrere a questa opzione
+.. warning:: L'utilizzo delle blacklist è sconsigliato. Ricorrere a questa opzione
    solo se il sistema antispam fallisce il riconoscimento anche dopo un corretto allenamento
    dei filtri bayesiani.
 
@@ -282,7 +282,7 @@ La sezione :guilabel:`Regole di accesso per indirizzi email` consente di creare 
 Gestione coda
 =============
 
-I messaggi che devono essere inviati vengono posizionati una coda.
+I messaggi che devono essere inviati vengono posizionati in una coda.
 Qualora un messaggio non possa essere consegnato, il messaggio rimarrà nella coda sino a quando
 non raggiungerà il tempo massimo configurato per l'invio (vedi :ref:`mail_messages-section`).
 
