@@ -100,10 +100,10 @@ può funzionare con tutti i domini configurati oppure solo su domini specifici.
 
 Esempio:
 
-* Primo dominio: miodiminio.it
+* Primo dominio: miodominio.it
 * Secondo dominio: esempio.com
-* Indirizzo email *info*: valido per entrambi i domini (info@miodominio.it, info@esempio.com)
-* Indirizzo email *pippo*: valido solo per un dominio (pippo@esempio.com)
+* Indirizzo email *info* valido per entrambi i domini: info@miodominio.it, info@esempio.com
+* Indirizzo email *pippo* valido solo per un dominio: pippo@esempio.com
 
 Se il modulo server di posta è installato, il sistema creerà un indirizzo per tutti i nuovi utenti usando il nome utente.
 In fase di creazione dell'utente è possibile specificare per quali domini sarà valido l'indirizzo.
@@ -173,8 +173,8 @@ Messaggi
 L'amministratore può stabilire la dimensioni massima dei messaggi:
 i messaggi con dimensione maggiore saranno rifiutati.
 
-Il server tenterà di consegnare la posta ad host remoti ad intervalli regolari sino a raggiungere
-il tempo massimo configurato: il default sono 4 giorni.
+In caso di errore, il server tenterà di consegnare la posta ad host remoti ad intervalli regolari
+sino a raggiungere il tempo massimo configurato: il default sono 4 giorni.
 
 Smarthost
 ---------
@@ -199,7 +199,7 @@ Filtro
 
 Tutta la posta in transito è sottoposta ad una serie di controlli che possono essere abilitati selettivamente:
 
-* antivirus
+* :index:`antivirus`
 * antispam
 * blocco allegati
 
@@ -211,11 +211,11 @@ Individua le mail che contengono virus. I messaggi infetti vengono scartai e non
 Blocco allegati
 ----------------
 
-Individua le mail che contengono allegati proibiti dalle politiche aziendali. E' possibile bloccare i seguenti
+Individua le mail che contengono :index:`allegati proibiti` dalle politiche aziendali. E' possibile bloccare i seguenti
 tipi:
 
 * :index:`file eseguibili` (es. exe, msi)
-* :index:`archivi` di file (zip, targz, docx)
+* :index:`archivi` di file (es. zip, targz, docx)
 * lista personalizzata di estensioni
 
 Nel caso si scelga di bloccare file eseguibili o archivi, il sistema riconosce tali tipi indipendentemente dal nome file.
@@ -225,13 +225,13 @@ E' quindi possibile che file MS Word (docx) e OpenOffice (odt) siano bloccati pe
 Antispam
 --------
 
-Il filtro antispam analizza i messaggi di posta rilevando e classificando lo spam utilizzando criteri euristici, 
+Il filtro :index:`antispam` analizza i messaggi di posta rilevando e classificando lo spam utilizzando criteri euristici, 
 regole predeterminate e valutazioni statistiche sul contenuto della mail.
 
 Il server utilizza una combinazione di regole e filtri statistici.
 Le regole sono pubbliche e aggiornate quotidianamente come viene fatto da tempo per gli antivirus. Ad ogni regola è associato
 un punteggio. I filtri statistici, detti bayesiani, sono speciali regole che evolvono e si adattano
-velocemente analizzando i messaggi marcati come SPAM o HAM.
+velocemente analizzando i messaggi marcati come :index:`spam` o :index:`ham`.
 
 Il totale del punteggio antispam ottenuto al termine dell'analisi consente al server di decidere se rifiutare 
 il messaggio o marcarlo come spam.
@@ -295,7 +295,7 @@ svuotare la coda con il pulsante :guilabel:`Elimina tutti`.
 Configurazione client
 =====================
 
-Il client supporta qualsiasi client mail, le porte da configurare sono:
+Il server supporta qualsiasi :index:`client mail`, le porte da configurare sono:
 
 * IMAP: 143 con TLS
 * POP3: 110 con TLS
@@ -321,7 +321,7 @@ nome utente e dominio.
 Alias DNS
 =========
 
-I i seguenti alias DNS sono riservati:
+I seguenti alias DNS sono riservati:
 
 * smtp.<dominio>
 * imap.<dominio>
@@ -336,7 +336,7 @@ Per disabilitare gli alias: ::
 HELO personalizzato
 ===================
 
-Il primo passo di una sessione SMTP è lo scambio del comando HELO (o EHLO). 
+Il primo passo di una sessione SMTP è lo scambio del comando :index:`HELO` (o :index:`EHLO`). 
 Tale comando richiede un parametro obbligatorio che l'RFC 1123 definisce come il nome di dominio principale, valido, del server.
 
 Alcuni mail server, nel tentativo di ridurre lo spam, non accettano HELO con domini non registrati 
@@ -352,11 +352,12 @@ ad esempio quando si vuole mantenere la consistenza con un server di dominio esi
   config setprop postfix HeloHost myhelo
   signal-event nethserver-mail-common-save
 
+Dove ``myhelo`` è il dominio che si vuole utilizzare nel comando HELO.
+
 Tale configurazione è utilizzabile anche quando non si è proprio in possesso di un dominio registrato, 
 in questo caso è possibile registrare gratuitamente un DNS dinamico, 
 associarlo all'IP pubblico del server ed utilizzare questo dominio come parametro ``HeloHost`` del precedente comando.
 
-Dove ``myhelo`` è il dominio che si vuole utilizzare nel comando HELO.
 
 Policy invio
 ============
