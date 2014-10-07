@@ -4,16 +4,16 @@
 Email
 =====
 
-The email server is split in main modules: 
+The email server is split in three main modules: 
 
-* IMAP and POP3 server 
-* SMTP server for sending 
+* IMAP and POP3 server to read email
+* SMTP server for sending and receiving
 * antispam filter, antivirus and attachments blocker
 
 Benefits: 
 
 * complete autonomy in the mail management
-* avoid problems due to the provider 
+* avoid problems due to the Internet Service Provider
 * ability to track message's route in order to detect errors 
 * optimized antivirus and antispam scan
 
@@ -43,11 +43,11 @@ See also:
    any message already received will be kept on the server.
 
 
-|product| allows you to keep a copy of all email throw the server:
+|product| allows you to keep a copy of all email traversing the server:
 all messages will be delivered to the final recipient and to a local user (or group). 
 This option can be configured for each domain managed by the mail server. 
 
-.. warning:: On some states, enabling the :index:`hidden copy` can be against privacy laws.
+.. warning:: On some countries, enabling the :index:`hidden copy` can be against privacy laws.
 
 Disclaimer
 ----------
@@ -104,7 +104,7 @@ When creating the user, the administrator can choose which domains will be enabl
 Example:
 
 * Domain: mydomain.net
-* User goofy
+* User: goofy
 * Address: goofy@mydomain.net
 
 Group addresses
@@ -201,7 +201,7 @@ Block attachments
 Check for :index:`attachments` forbidden by company policies. The server can check following types:
 
 * :index:`executables` (eg. exe, msi)
-* :index:`archives`  (eg. zip, targz, docx)
+* :index:`archives`  (eg. zip, tar.gz, docx)
 * custom extension list
 
 If you choose to block executable files or archives, the system recognizes these types regardless of file name. 
@@ -214,7 +214,7 @@ Antispam
 predetermined rules and statistical evaluations on the content of messages. 
 
 The server uses a combination of rules and statistical filters. 
-The rules are public and updated on a daily basis. A score is associated to each rule.
+The rules are public and updated on a regular basis. A score is associated to each rule.
 Statistical filters, called Bayesian, are special rules that evolve and quickly adapt
 analyzing messages marked as :index:`SPAM` or HAM. 
 
@@ -257,14 +257,14 @@ The section :guilabel:`Rules by mail address` allows you to create three types o
 * :guilabel:`Allow From`:  all messages from specified sender are always accepted
 * :guilabel:`Allow To`: all messages destined to specified address are always accepted
 
-.. warning:: The use of whitelists and blacklists is not recommended. Use this option 
+.. warning:: The use of blacklists is not recommended. Use this option 
    only if the system fails to recognize spam even after a proper training.
 
 
 Queue management
 ================
 
-Messages are places in a queue before sending.
+Messages are placed in a queue before sending.
 If a message can not be delivered, the message remains in queue until 
 maximum configured time is reached (see :ref:`mail_messages-section`).
 
@@ -283,7 +283,7 @@ The server supports any type of mail clients. Ports to configure inside clients 
 * POP3: 110 with TLS
 * SMTP: 587 with TLS
 
-Server is reachable from the LAN using following aliases:
+Server is reachable from the LAN using the following aliases:
 
 * smtp.<domain>
 * imap.<domain>
