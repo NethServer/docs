@@ -202,6 +202,7 @@ Missing features
 ----------------
 
 When using Active Directory LDAP as user database some features are currently not available:
+
 * group copy delivery
 * group shared folder delivery
 
