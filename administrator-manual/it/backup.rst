@@ -10,11 +10,11 @@ Il sistema gestisce due tipi di backup:
 * :index:`backup dei dati`
 
 Il backup della configurazione contiene tutte e sole le configurazioni di sistema.
-Viene eseguito ogni notte e genera un nuovo archivio solo in caso la configurazione sia cambiata nelle ultime 24 ore.
+Viene eseguito automaticamente ogni notte e genera un nuovo archivio, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, solo in caso la configurazione sia cambiata nelle ultime 24 ore.
 Lo scopo del backup della configurazione è quello di consentire un rapido ripristino della macchina in caso di disaster recovery.
 Dopo aver ripristinato la configurazione, la macchina può già essere messa in produzione mentre i dati vengono ripristinati in background.
 
-Il backup dei dati contiene i dati degli utenti come caselle di posta e cartelle condivise. 
+Il backup dei dati è abilitato installando il modulo "Backup" e comprende i dati degli utenti come caselle di posta e cartelle condivise. 
 Viene eseguito ogni notte e può essere completo o incrementale su base settimanale.
 Questo backup contiene anche il backup della configurazione.
 
