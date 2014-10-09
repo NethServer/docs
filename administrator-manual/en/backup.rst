@@ -9,11 +9,11 @@ The system handles two kind of backup:
 * :index:`data backup`
 
 Configuration backup contains only system configuration files. 
-It's scheduled to be executed every night and it will create a new archive only if any file is changed in the last 24 hours. 
+It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours. 
 The purpose of this kind of backup is to quickly restore a machine in case of disaster recovery. 
 When the machine is functional, a full data restore can be done even if the machine is already in production.
 
-Data backup contains all data like user's home directories and mails. It runs every night and can be full or incremental on a weekly basis. 
+Data backup is enabled installing "backup" module and contains all data like user's home directories and mails. It runs every night and can be full or incremental on a weekly basis. 
 This backup also contains the archive of the configuration backup.
 
 Data backup can be saved on three different destinations:
