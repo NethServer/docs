@@ -7,7 +7,13 @@ All module language files are placed in :file:`/usr/share/nethesis/NethServer/La
 Given a module with name "Test", the English language file will be :file:`/usr/share/nethesis/NethServer/Language/en/NethServer_Module_Test.php`.
 
 Missing translations can be found in :file:`/var/log/messages` after Nethgui debug is enabled.
-To enable the debug, use index_dev.php on URLs, eg: :file:`https://<ipaddress>/index_dev.php/en/<module>`.
+To enable the debug, 
+
+* Unlock ``index_dev.php`` controller: ::
+    
+    touch /usr/share/nethesis/nethserver-manager/debug
+    
+* Prepend ``index_dev.php`` on URLs path, eg: :file:`https://<ipaddress>/index_dev.php/en/<module>`.
 
 Inside nethserver-devbox there are two helper scripts:
 
