@@ -111,7 +111,8 @@ Available policies are:
 Custom access
 -------------
 
-If selected policy is private or public, it’s possible to add hosts and networks which are always allowed (or blocked).
+If selected policy is private or public, it’s possible to add hosts and networks which are always allowed (or blocked)
+using :guilabel:`Allow hosts` and :guilabel:`Deny hosts`.
 This rule also apply for blue and orange networks.
 
 Example

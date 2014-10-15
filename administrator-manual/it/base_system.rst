@@ -125,7 +125,7 @@ Accesso personalizzato
 ----------------------
 
 Se la politica selezionata è private o public, è possibile specificare una lista di host e reti che sono sempre 
-consentiti (o bloccati).
+consentiti (o bloccati) usando i campi :guilabel:`Consenti host` e :guilabel:`Blocca host`.
 La regola di applica anche per le reti orange e blue.
 
 Esempio
