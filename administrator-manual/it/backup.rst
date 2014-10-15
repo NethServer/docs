@@ -28,8 +28,8 @@ Il backup dei dati può essere fatto su tre tipi di destinazione:
 L'esito del backup può essere notificato all'amministratore o ad un indirizzo mail esterno.
 
 
-Ripristino
-==========
+Ripristino dati
+===============
 
 Assicurarsi che la destinazione contenente il backup sia raggiungibile (es. disco USB collegato).
 
@@ -77,7 +77,7 @@ L'opzione ``-t`` consente di specificare il numero di giorni, in questo caso 15.
 
 
 Disaster recovery
------------------
+=================
 
 Il sistema è ripristinato in due fasi: prima la configurazione, poi i dati.
 Al termine del ripristino, il sistema è pronto all'uso se i moduli sono già installati.
@@ -94,7 +94,7 @@ I passi da eseguire sono:
 1. Installare una nuova macchina e configurarla con lo stesso nome host della vecchia
 2. Installare e configurare il backup dei dati
 3. Installare i moduli aggiuntivi (opzionale)
-4. Eseguire il ripristino della configurazione lanciando il comando :command:`restore-config`
+4. Eseguire il ripristino della configurazione lanciando il comando :command:`restore-config` oppure usando l'interfaccia web
 5. Se la vecchia macchina era il gateway della rete, ricordarsi di reinstallare il modulo firewall
 6. Riconfigurare la rete da interfaccia web
 7. Verificare che la macchina sia funzionante
@@ -102,8 +102,8 @@ I passi da eseguire sono:
 
 .. _backup_customization-section:
 
-Personalizzazione
-=================
+Personalizzazione backup dati
+=============================
 
 In caso di installazione di software aggiuntivi, potrebbe esser necessario modificare
 la lista delle directory e dei file inclusi (o esclusi) dal backup.
@@ -117,10 +117,6 @@ al file :file:`/etc/backup-data.d/custom.include`.
 Ad esempio, per eseguire il backup di un software installato nella directory :file:`/opt`, aggiungere la linea: ::
 
   /opt/mysoftware
-
-Se si desidera includere una directory o un file nel backup della configurazione, aggiungere una linea
-al file :file:`/etc/backup-config.d/custom.include`.
-Non aggiungere directory e file voluminosi al backup della configurazione.
 
 Escludere
 ---------
@@ -137,9 +133,35 @@ Per escludere una casella di posta *test*, aggiungere la riga: ::
   /var/lib/nethserver/vmail/test/ 
 
 
-La stessa sintassi si applica per il backup della configurazione. Le modifiche vanno effettuate nel file
-:file:`/etc/backup-config.d/custom.exclude`.
-
-
 .. note:: Assicurarsi di non lasciare linee vuote nei file modificati.
 
+Personalizzazione backup configurazione
+=======================================
+
+Nella maggior parte dei casi non è necessario modificare la configurazione
+del backup dei dati.
+Ma può essere utile, ad esempio, se è stato installato un certificato SSL personalizzato.
+In questo caso è possibile aggiungere il percorso del file che contiene il certificato
+al backup della configurazione.
+
+Includere
+---------
+
+Se si desidera includere una directory o un file nel backup della configurazione, aggiungere una linea
+al file :file:`/etc/backup-config.d/custom.include`.
+
+Ad esempio, per eseguire il backup del file :file:`/etc/pki/mycert.pem`, aggiungere la linea: ::
+
+  /etc/pki/mycert.pem
+
+Non aggiungere mai directory e file voluminosi al backup della configurazione.
+
+Escludere
+---------
+
+Se si desidera escludere una directory o un file dal backup della configurazione, aggiungere una linea
+al file :file:`/etc/backup-config.d/custom.exclude`.
+
+.. note:: 
+   Assicurarsi di non lasciare linee vuote nei file modificati.
+   La sintassi del backup della configurazione supporta solo percorsi file e directory semplici.

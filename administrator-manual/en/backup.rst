@@ -2,7 +2,7 @@
 Backup
 ======
 
-Backup is the only way to restore a machine when disasters occur.
+:index:`Backup` is the only way to restore a machine when disasters occur.
 The system handles two kind of backup:
 
 * :index:`configuration backup`
@@ -24,8 +24,8 @@ Data backup can be saved on three different destinations:
 
 The backup status can be notified to the system administrator or to an external mail address.
 
-Restore
-=======
+Data restore
+============
 
 Make sure that backup destination is reachable (for example, USB disk must be connected).
 
@@ -72,7 +72,7 @@ The ``-t`` option allows to specify the number of days (15 in this scenario).
 
 
 Disaster recovery
------------------
+=================
 
 The system is restored in two phases: first configuration, then data. 
 Right after configuration restore, the system is ready to be used if proper packages are installed. 
@@ -90,7 +90,7 @@ Steps to be executed:
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
 3. Install additional packages (optional)
-4. Restore configuration backup executing: :command:`restore-config`
+4. Restore configuration backup executing: :command:`restore-config` or using the web interface
 5. If the old machine was the network gateway, remember to reinstall firewall module
 6. Reconfigure network from web interface
 7. Verify the system is functional
@@ -98,8 +98,8 @@ Steps to be executed:
 
 .. _backup_customization-section:
 
-Customization
-=============
+Data backup customization
+=========================
 
 If additional software is installed, the administrator can edit
 the list of files and directories included (or excluded).
@@ -135,3 +135,30 @@ Same syntax applies to configuration backup. Modification should be done inside 
 
 .. note:: Make sure to not leave empty lines inside edited files.
 
+
+Configuration backup customization
+==================================
+
+In most cases it is not necessary to change the configuration backup. 
+But it can be useful, for example, if you have installed a custom SSL certificate. 
+In this case you can add the file that contains the certificate to the list of backuped files.
+
+Inclusion
+---------
+
+If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
+
+For example, to backup :file:`/etc/pki/mycert.pem` file , add this line: ::
+
+  /etc/pki/mycert.pem
+
+Do not add big directories or files to configuration backup.
+
+Exclusion
+---------
+
+If you wish to  exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
+
+.. note:: 
+   Make sure to not leave empty lines inside edited files.
+   The syntax of the configuration backup supports only simple file and directory paths.
