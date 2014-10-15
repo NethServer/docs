@@ -4,79 +4,83 @@
 Email
 =====
 
-The email server is split in three main modules:
+The Email module is split in three main parts:
 
 * IMAP and POP3 server to read email
 * SMTP server for sending and receiving
 * antispam filter, antivirus and attachments blocker
 
-Benefits:
+Benefits are
 
 * complete autonomy in the mail management
 * avoid problems due to the Internet Service Provider
 * ability to track message's route in order to detect errors
 * optimized antivirus and antispam scan
 
+See also the following related topics:
 
-See also:
- 
-* How electronic mail works: http://en.wikipedia.org/wiki/Email
-* MX record: http://en.wikipedia.org/wiki/MX_record
-* SMTP protocol: http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+* How electronic mail works [#Email]_
+* MX DNS record [#MXRecord]_
+* Simple Mail Transfer Protocol (SMTP) [#SMTP]_
 
+.. index::
+   pair: mail; relay
+   pair: mail; delivery
+   pair: mail; domain
 
 Domains
 =======
 
-The server can handle an unlimited number of domains.  For each
-domain, the server can:
+|product| can handle an unlimited number of mail domains, configurable
+from the :guilabel:`Email > Domains` page.  For each domain there are
+two alternatives:
 
-* Deliver locally: mail is delivered to local users and stored in
-  Maildir format
-* :index:`Relay` to another server: incoming mail is forwarded to
-  another mail server
+* *Deliver* messages to local mailboxes, according to the Maildir
+  [#MailDirFormat]_ format.
+* *Relay* messages to another mail server.
 
-See also:
+.. note:: If a domain is deleted, email will not be deleted, too;
+   any message already received is preserved.
 
-* Maildir format: http://en.wikipedia.org/wiki/Maildir
+.. index::
+   single: always send a copy
+   single: hidden copy
+   single: bcc
 
+|product| allows you to store an :dfn:`hidden copy` of all messages
+directed to a particular domain: they will be delivered to the final
+recipient *and also* to a local user (or group).  The hidden copy is
+enabled by the :guilabel:`Always send a copy (Bcc)` checkbox.
 
-.. note:: If you delete a domain, mail will not be deleted, any
-   message already received will be kept on the server.
+.. warning:: On some countries, enabling the *Always send a copy
+             (Bcc)* can be against privacy laws.
 
+.. index::
+   pair: email; disclaimer
+   pair: email; signature
+   pair: email; legal note
 
-|product| allows you to keep a copy of all email traversing the
-server: all messages will be delivered to the final recipient and to a
-local user (or group).  This option can be configured for each domain
-managed by the mail server.
-
-.. warning:: On some countries, enabling the :index:`hidden copy` can
-             be against privacy laws.
-
-Disclaimer
-----------
-
-|product| can automatically append a default text to outgoing
-email. This text is called :index:`disclaimer` and it can be used to
+|product| can automatically :guilabel:`append a legal note to sent
+messages`. This text is called :dfn:`disclaimer` and it can be used to
 meet some law's requirements.  Please note :dfn:`signature` and
-:dfn:`disclaimer` are very different concepts.
+disclaimer are very different concepts.
 
-:dfn:`Signature` should be inserted inside message's text only from
-mail client (MUA): Outlook, Thunderbird, etc.  Usually it's a
+The signature should be inserted inside the message text only by the
+mail client (MUA): Outlook, Thunderbird, etc.  Usually it is a
 customizable text containing information such as sender addresses and
 phone numbers.
 
 Signature example: ::
 
- John Smith 
- President | My Mighty Company | Middle Earth 
+ John Smith
+ President | My Mighty Company | Middle Earth
  555-555-5555 | john@mydomain.com | http://www.mydomain.com
 
-The :dfn:`disclaimer` is a fixed text and can only be "attached" to
-messages from the server.  The disclaimer shall be attached to
-outgoing email, not added to the message.  This technique allows you
-to maintain the integrity of the message in case of using digital
-signature.
+The :dfn:`disclaimer` is a fixed text and can only be *attached* (not
+added) to messages by the mail server.
+
+This technique allows you to maintain the integrity of the message in
+case of using digital signature.
 
 Disclaimer example: ::
 
@@ -86,23 +90,18 @@ Disclaimer example: ::
   notify the system manager.  This message contains confidential
   information and is intended only for the individual named.
 
+The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
 
-Discaliemr can contain :dfn:`markdown` code to format the text.
+.. index:: email address, pseudonym
 
-See also:
+Email addresses
+===============
 
-* http://en.wikipedia.org/wiki/Markdown
-
-
-Mail addresses
-==============
-
-The system enables the creation of an unlimited number of email
-addresses also known as :index:`pseudonyms`.  Each address is
-associated with a system user or group. It can be enabled on all
-configured domains or only on specific domains.
-
-Example:
+The system enables the creation of an unlimited number of :dfn:`email
+addresses` also known as :dfn:`pseudonyms`, from the :guilabel:`Email
+addresses` page.  Each address is associated with a system user or
+group. It can be enabled on all configured domains or only on specific
+domains. For example:
 
 * First domain: mydomain.net
 * Second domain: example.com
@@ -110,42 +109,38 @@ Example:
   info@example.com
 * Email address *goofy* valid only for one domain: goofy@example.com
 
-If the mail server module is installed, the system will create an
-address for any new users using the user name.  When creating the
-user, the administrator can choose which domains will be enabled for
-the pseudonym.
+When creating a new user account from the :guilabel:`Users` page, the
+system suggests a default email address for it.
 
-Example:
+For instance, creating a new account for *Donald Duck*:
 
-* Domain: mydomain.net
-* User: goofy
-* Address: goofy@mydomain.net
+* Account name: donald.duck
+* Domain: ducks.net, ducks.com
+* Suggested addresses: donald.duck@ducks.net, donald.duck@ducks.com
 
-Group addresses
----------------
+.. index:: shared folder
 
-When an address is associated with a group, the server can deliver
-mail in two ways:
+When an address is associated with a group, the server can be
+configured to deliver mail in two ways, from the :guilabel:`Groups`
+page:
 
 * send a copy to each member of the group
-* store the message in a shared folder
+* store the message in a :dfn:`shared folder`
 
-.. note:: If the group has many members and messages contain big
-   attachments, using the first method can lead to excessive disk
-   space usage.
+.. note:: Especially, the "shared folder" method fits large groups
+          receiving big messages.
 
-This option can be changed from the :guilabel:`Groups` page.
+.. index::
+   pair: email; local network only
+   triple: email; private; internal
 
-
-Private addresses
------------------
-
-Sometimes a company doesn't want to allow communications with external
-world using personal mail addresses.
+Sometimes a company forbids communications from the external world
+using personal email addresses.
 
 The :guilabel:`Local network only` option blocks the possibility of an
-address to receive mail from the outside.  Still the address can be
-used for index:`internal mail`.
+address to receive email from the outside.  Still the "local network
+only" address can be used to exchange messages with other accounts of
+the system.
 
 
 .. _mailboxes-section:
@@ -155,286 +150,333 @@ Mailboxes
 
 Mailboxes can be accessed using two protocols:
 
-* IMAP
-* POP3 (not recommended)
+* IMAP [#IMAP]_ (recommended)
+* POP3 [#POP3]_ (obsolete)
 
 All connections from/to clients are encrypted by default.  Even if
 strongly not recommended, you can disable encryption by enabling the
 option :guilabel:`Allow unencrypted connections`.
 
+.. index::
+   single: spam
+   pair: email; expunge
 
-Messages marked as SPAM can be automatically moved into the
+Messages marked as **spam** can be automatically moved into the
 :dfn:`junkmail` folder by enabling the option :guilabel:`Move to
-"junkmail" folder"`.  Finally you can set a timeout after which SPAM
-messages should be removed from the mailbox.
+"junkmail" folder"`.
 
-See also:
+Spam messages are expunged automatically after th :guilabel:`Hold for`
+period has elapsed.
 
-* IMAP protocol:
-  http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
-* POP3 protocol: http://en.wikipedia.org/wiki/Post_Office_Protocol
 
 .. _mail_messages-section:
 
 Messages
 ========
 
-The administrator can set the maximum message size: messages with
-larger size will be rejected.
+.. index::
+   pair: email; size
+   pair: email; retries
 
-In case of errors, the server will attempt to deliver mail to remote
-hosts at regular intervals until the maximum configured time is
-reached: default value is 4 days.
+From the :guilabel:`Email > Messages` page, the :guilabel:`Queue
+message max size` slider sets the maximum size of messages traversing
+the system. If this limit is exceeded, a message cannot enter the
+system at all, and is rejected.
 
-Smarthost
----------
+When |product| sends out a message to a remote server, errors may
+occur. For instance,
 
-In this mode, the server will not directly send mail to remote hosts,
-but it will deliver messages to an external mail server (usually the
-ISP) that will take care of delivering.
+* the network connection fails, or
+* the other server is down or is overloaded.
 
-The SMTP server (technically defined as :index:`smarthost`) will
-accept mail if:
+This and other instances of errors are *temporary*: in such cases,
+|product| attempts to reconnect the remote host at regular intervals
+until a limit is reached. The :guilabel:`Queue message lifetime`
+slider changes this limit and.  By default it is set to *4 days*.
+Refer also to the :ref:`queue_management-section` section.
 
-* it has been configured to act as a SMTP relay for the IP address of
-  |product| (normal configuration for a provider)
-* |product| is using the SMTP AUTH, authentication based on username
-  and password
+.. index::
+   single: always send a copy
+   single: hidden copy
+   single: bcc
 
-.. note:: The use of smarthost is not recommended. Use this function
-   only in case the server is temporarily blacklisted.
+To keep an hidden copy of any message traversing the mail server,
+enable the :guilabel:`Always send a copy (Bcc)` checkbox. This feature
+is different from the same checkbox under :guilabel:`Email > Domain` as
+it does not differentiate between mail domains and catches also any
+outgoing message.
 
-See also:
+.. warning:: On some countries, enabling the *Always send a copy
+             (Bcc)* can be against privacy laws.
 
-* Blacklist antispam: http://it.wikipedia.org/wiki/DNSBL
+.. index:: smarthost
+
+The :guilabel:`Send using a smarthost` option, forces all outgoing
+messages to be directed through a special SMTP server, technically
+named :dfn:`smarthost`.  A smarthost accepts to relay messages under
+some restrictions. It could check:
+
+* the client IP address,
+* the client SMTP AUTH credentials.
+
+.. note:: Sending through a smarthost is generally not recommended.
+          It might be accepted only if the server is temporarily
+          blacklisted [#DNSBL]_, or normal SMTP access is restricted
+          by the ISP.
+
+.. index::
+   pair: email; filter
 
 Filter
 ======
 
 All mail in transit is subjected to a list of checks that can be
-selectively enabled:
+selectively enabled in :guilabel:`Email > Filter` page:
 
-* antivirus
-* antispam
-* block of attachment
+* Block of attachments
+* Anti-virus
+* Anti-spam
 
-Antivirus
----------
+.. index::
+   pair: email; attachment
 
-It finds mails containing viruses. Infected messages are discarded and
-not delivered to the recipient.
+Block of attachments
+--------------------
 
-Block attachments
-------------------
-
-Check for :index:`attachments` forbidden by company policies. The
-server can check following types:
+The system can inspect mail attachments, denying access to messages
+carrying forbidden file formats. The server can check following
+attachment classes:
 
 * :index:`executables` (eg. exe, msi)
-* :index:`archives` (eg. zip, tar.gz, docx)
-* custom extension list
+* :index:`archives`  (eg. zip, tar.gz, docx)
+* custom file format list
 
-If you choose to block executable files or archives, the system
-recognizes these types regardless of file name.  Therefore it's
-possible that MS Word file (docx) and OpenOffice (odt) are blocked
-because they actually are archives.
+The system recognizes file types by looking at their contents,
+regardless of the file attachment name.  Therefore it is possible that
+MS Word file (docx) and OpenOffice (odt) are blocked because they
+actually are also zip archives.
 
-Antispam
---------
+.. index::
+   pair: email; anti-virus
+   see: antivirus; anti-virus
 
-:index:`Antispam` filter analyzes emails by detecting and classifying
-spam using heuristic criteria, predetermined rules and statistical
-evaluations on the content of messages.
+Anti-virus
+----------
 
-The server uses a combination of rules and statistical filters.  The
-rules are public and updated on a regular basis. A score is associated
-to each rule.  Statistical filters, called Bayesian, are special rules
-that evolve and quickly adapt analyzing messages marked as
-:index:`SPAM` or HAM.
+The anti-virus component finds mails containing viruses. Infected
+messages are discarded. The virus signature database is updated
+periodically.
 
-Total spam score collected at the end of the analysis allows the
-server to decide whether to reject the message or mark it as spam.
+.. index::
+   single: spam
+   pair: email; anti-spam
+   see: antispam; anti-spam
 
-Although not recommended, you can change the thresholds with
-:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
-options.
+Anti-spam
+---------
 
-.. note:: Event if highly unlikely, the system may assign a score
-   greater than 15 to a valid email.  In this case, the sender will
-   receive a clear error (552 spam score exceeded threshold).
+The anti-spam component analyzes emails by detecting and classifying
+:dfn:`spam` [#SPAM]_ messages using heuristic criteria, predetermined
+rules and statistical evaluations on the content of messages.  The
+rules are public and updated on a regular basis.  A score is
+associated to each rule.  Statistical filters, called Bayesian
+[#BAYES]_, are special rules that evolve and quickly adapt analyzing
+messages marked as **spam** or **ham**.
 
-See also:
+.. index::
+   single: spam training
 
-* What is SPAM: http://en.wikipedia.org/wiki/Spam e
-  http://wiki.apache.org/spamassassin/Spam
-* Bayesian filtering:
-  http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
+The statistical filters can be trained with any IMAP client by simply
+moving a message in and out of the *junkmail* folder.
 
-.. _bayes-section:
+* By putting a message *into* the *junkmail* folder, the filters learn
+  it is spam and will assign an higher score to similar messages.
 
-Bayes
-^^^^^
-
-The anti-spam system is constantly trained through the messages
-located in the folder :dfn:`junkmail`.  To inform the system about a
-not recognized spam message, simply move it to the folder
-:index:`junkmail` folder.  To report a valid email mistakenly marked
-as spam you will need to move it out of junkmail folder.
+* On the contrary, by getting a message *out of junkmail*, the filters
+  learn it is ham: next time a lower score will be assigned.
 
 By default, all users can train the filters using this technique.  If
-you create a group called `spamtrainers``, only users in this group
+you create a group called ``spamtrainers``, only users in this group
 will be allowed to train the filters.
 
-.. note:: It's a good idea to constantly check your junkmail in order
-   to not losing email wrongly recognized as spam.
+.. note:: It is a good habit to constantly check your junkmail folder
+          in order to not losing email wrongly marked as spam.
 
-Whitelist and blacklist
-^^^^^^^^^^^^^^^^^^^^^^^
+Total spam score collected at the end of the analysis allows the
+server to decide whether to *reject* the message or *mark* it as spam
+and deliver it anyway.  The score thresholds are controlled by
+:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
+sliders in :guilabel:`Email > Filter` page.
 
-Whitelists and blacklists are lists of email addresses respectively
-always allowed and always blocked.
+.. index::
+   pair: email; whitelist
+   pair: email; blacklist
+
+If the system fails to recognize spam properly even after training,
+the *whitelists* and *blacklists* can help. Those are lists of email
+addresses or domains respectively always allowed and always blocked to
+send or receive a message.
 
 The section :guilabel:`Rules by mail address` allows you to create
 three types of rules:
 
-* :guilabel:`Block From`: all messages from specified sender are
-  always blocked
-* :guilabel:`Allow From`: all messages from specified sender are
-  always accepted
-* :guilabel:`Allow To`: all messages destined to specified address are
-  always accepted
+* :guilabel:`Block From`: any message from specified sender is blocked
 
-.. warning:: The use of blacklists is not recommended. Use this option
-   only if the system fails to recognize spam even after a proper
-   training.
+* :guilabel:`Allow From`: any message from specified sender is
+  accepted
 
+* :guilabel:`Allow To`: any message to the specified recipient is
+  accepted
+
+
+.. _queue_management-section:
 
 Queue management
 ================
 
 Messages are placed in a queue before sending.  If a message can not
-be delivered, the message remains in queue until maximum configured
-time is reached (see :ref:`mail_messages-section`).
+be sent out, it remains in queue until maximum configured time is
+reached (see also :ref:`mail_messages-section`).
 
-While messages are in queue, you can force a retry by pressing the
+While messages are in the queue, you can force a retry by pressing the
 button :guilabel:`Attempt to send`.  Otherwise the administrator can
 selectively delete queued messages or empty the queue with
 :guilabel:`Delete all` button.
 
 .. _mail_client-section:
 
+.. index::
+   pair: port; imap
+   pair: port; imaps
+   pair: port; pop3
+   pair: port; pop3s
+   pair: port; smtp
+   pair: port; smtps
+
 Client configuration
 ====================
 
-The server supports any type of mail clients. Ports to configure
-inside clients are:
+The server supports standard-compliants email clients using the following IANA ports:
 
-* IMAP: 143 with TLS
-* POP3: 110 with TLS
-* SMTP: 587 with TLS
+* imap/143 with TLS
+* pop3/110 with TLS
+* smtp/587 with TLS AUTH/LOGIN or AUTH/PLAIN
 
-Server is reachable from the LAN using the following aliases:
+Also the following SSL-enabled ports are available for legacy software
+that still does not support TLS.
 
-* smtp.<domain>
-* imap.<domain>
-* pop.<domain>
-* pop3.<domain>
+* imaps/993 SSL
+* pop3s/995 SSL
+* smtps/465 SSL
 
-Example:
+.. warning:: The standard SMTP port 25 is reserved for mail transfers
+             between MTA servers. On clients use only submission ports.
 
-* Domain: mysite.com
-* Available aliases: smtp.mysite.com, imap.mysite.com, pop.mysite.com,
-  pop3.mysite.com
+If |product| acts also as DNS server on the LAN, it registers its name as MX record along with the
+following aliases:
 
-If the mail server is also DNS server for the network, some mail
-clients (eg. Mozilla Thunderbird) are able to use DNS aliases to
-automatically configure email accounts simply by entering username and
-domain.
+* ``smtp.<domain>``
+* ``imap.<domain>``
+* ``pop.<domain>``
+* ``pop3.<domain>``
 
-DNS alias
-=========
+For example:
 
-Following DNS aliases are reserved:
+* Domain: ``mysite.com``
+* Hostname: ``mail.mysite.com``
+* MX record: ``mail.mysite.com``
+* Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``, ``pop.mysite.com``, ``pop3.mysite.com``.
 
-* smtp.<domain>
-* imap.<domain>
-* pop.<domain>
-* pop3.<domain>
+.. note:: Some mail clients (eg. Mozilla Thunderbird) are able to use DNS
+          aliases and MX record to automatically configure email accounts by
+          simply typing the email address.
 
-To disable aliases: ::
+To disable local MX and aliases, access the root's console and type: ::
 
-  config setprop postfix MxRecordStatus disabled signal-event
-  nethserver-hosts-save
+  config setprop postfix MxRecordStatus disabled
+  signal-event nethserver-hosts-save
 
-Custom HELO
-===========
 
-The first step of an SMTP session is the exchange of :index:`HELO`
-command (or :index:`EHLO`).  This command takes a valid server name as
-required parameter (RFC 1123).
+.. _special_smtp_access_policies-section:
 
-Some mail servers try to reduce spam by not accepting HELO domains
-that are not registered on a public DNS.
+Special SMTP access policies
+============================
 
-|product| uses the value of the main domain (FQDN) as the parameter of
-the HELO command.  If it is not possible to configure a server with
-the real domain, you can still change value for the HELO command.
-Just use these commands: ::
+By default, all clients must use the submission port 587 with
+encryption and authentication enabled to send mail through the SMTP
+server.
 
-  config setprop postfix HeloHost myhelo signal-event
-  nethserver-mail-common-save
+The server also implements special access policies to ease the
+configuration of legacy environments.
 
-Where `myhelo`` is the domain you want to use in HELO command.
+.. warning:: Do not change the default policy on new environments!
 
-This configuration can also be used when using a free dynamic DNS
-service.
+Use these commands to enable sending on port 25 with TLS and authentication: ::
 
-Send policies
-=============
-
-All clients must use the submission port 587 with encryption enabled
-to send mail using SMTP server.
-
-The server also implements additional access policies to ease the
-configuration on in case of legacy environments.
-
-Use these commands to enabled sending on port 25 with authentication
-from any LAN or Internet clients: ::
-
-  config setprop postfix AccessPolicies smtpauth signal-event
-  nethserver-mail-server-save
+  config setprop postfix AccessPolicies smtpauth
+  signal-event nethserver-mail-server-save
 
 Use these commands to enable sending on port 25 without authentication
-from any client inside trusted networks: ::
+from any client from trusted networks: ::
 
-  config setprop postfix AccessPolicies trustednetworks signal-event
-  nethserver-mail-server-save
+  config setprop postfix AccessPolicies trustednetworks
+  signal-event nethserver-mail-server-save
 
-Policies can be used together: ::
+Policies can be used together, by separating with a comma ``,``: ::
 
   config setprop postfix AccessPolicies trustednetworks,smptauth
   signal-event nethserver-mail-server-save
 
+However, there are some devices (printers, scanners, ...) that do not
+support SMTP authentication, encryption or port settings.  They can be
+enabled to send messages by looking at their IP address in Postfix
+:file:`access` table: ::
 
-However, there are some devices that do not support encryption or port
-settings.  In this case you can force the configuration to accept send
-operations on port 25 without authentication, but only for specific
-hosts: ::
+  mkdir -p /etc/e-smith/templates-custom/etc/postfix/access
+  echo "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
+  signal-event nethserver-mail-common-save
 
-  mkdir -p /etc/e-smith/templates-custom/etc/postfix/access echo
-  "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
-  signal-event nethserver-mail-common-save signal-event
-  nethserver-mail-server-save
 
-.. warning:: Avoid changing default policy unless it's really
-             necessary
+Custom HELO
+===========
+
+The first step of an SMTP session is the exchange of :index:`HELO` command (or :index:`EHLO`).
+This command takes a valid server name as required parameter (RFC 1123).
+
+Some mail servers try to reduce spam by not accepting HELO domains that are not registered on
+a public DNS.
+
+|product| uses the value of the main domain (FQDN) as the parameter of the HELO command.
+If it is not possible to configure a server with the real domain,
+you can still change value for the HELO command.
+Just use these commands: ::
+
+  config setprop postfix HeloHost myhelo.example.com
+  signal-event nethserver-mail-common-save
+
+Where ``myhelo.example.com`` is the domain you want to use in HELO command.
+
+This configuration can also be used when using a free dynamic DNS service.
 
 Log
 ===
 
 All operations are saved inside log files:
 
-* :file:`/var/log/maillog`: contains all sending and delivery
-  operations
-* :file:`/var/log/imap`: contains all login/logout actions to
-  mailboxes
+* :file:`/var/log/maillog`: contains all sending and delivery operations
+* :file:`/var/log/imap`: contains all login/logout actions to mailboxes
+
+
+.. rubric:: Footnotes
+
+.. [#Email] Email, http://en.wikipedia.org/wiki/Email
+.. [#MXRecord] The MX DNS record, http://en.wikipedia.org/wiki/MX_record
+.. [#SMTP] SMTP, http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+.. [#MailDirFormat] The Maildir format, http://en.wikipedia.org/wiki/Maildir
+.. [#Markdown] The Markdown plain text formatting syntax, http://en.wikipedia.org/wiki/Markdown
+.. [#IMAP] IMAP http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
+.. [#POP3] POP3 http://en.wikipedia.org/wiki/Post_Office_Protocol
+.. [#DNSBL] DNSBL http://en.wikipedia.org/wiki/DNSBL
+.. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spam
+.. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
+.. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
