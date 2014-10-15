@@ -72,10 +72,20 @@ Backup
 The main command is ``/sbin/e-smith/backup-config`` which starts the backup process (if enabled). The backup process has 3 steps:
 
 * *pre-backup-config* event: used to prepare data, for example a LDAP dump of users
-* *backup-config-execute* action: actually execute the backup if any file is changed in the last 24 hours. The backup file is saved in ``/var/lib/nethserver/backup/backup-config.tar.gz`` (see ``perldoc NethServer::BackupConfig``) 
+* *backup-config-execute* action: actually execute the backup if any file is changed in the last 24 hours. 
+  The backup file is saved in ``/var/lib/nethserver/backup/backup-config.tar.xz`` (see ``perldoc NethServer::BackupConfig``) 
 * *post-backup-config* event: used to post-process the backup file, for example to copy the backup to a remote server or encrypting the archive
 
+The configuration backup runs every night and it creates a new backup only if:
+
+* destination file does not exist
+* or new files are added or removed to/from the backup set
+* or content of any file inside the set is changed
+
 This package does not provide any default action in the pre-backup-config and post-backup-config events.
+But you can create a script inside the post-backup-config event to copy the configuration backup to a remote machine
+using, for example, the SSH protocol.
+
 
 Logs:
 
