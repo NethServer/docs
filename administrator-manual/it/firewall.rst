@@ -76,6 +76,8 @@ Le azioni disponibili sono:
 * :dfn:`REJECT`: blocca il traffico ed informa il mittente che la richiesta effettuata non è permessa
 * :dfn:`DROP`: blocca il traffico, i pacchetti vengono scartati e il mittente *non* viene notificato
 
+.. note:: Se non è configurata almeno un'interfaccia red, il firewall non genererà nessuna regola per le zone blue e orange.
+
 REJECT vs DROP
 --------------
 
