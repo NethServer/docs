@@ -73,6 +73,8 @@ Available actions are:
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and not notification is sent to the sender host
 
+.. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
+
 REJECT vs DROP
 --------------
 
