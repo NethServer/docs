@@ -7,14 +7,14 @@ Email
 The Email module is split in three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
-* IMAP and POP3 server to read email [#Dovecot]_
-* antispam filter, antivirus and attachments blocker [#Amavis]_
+* IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
+* Antispam filter, antivirus and attachments blocker [#Amavis]_
 
 Benefits are
 
 * complete autonomy in the mail management
 * avoid problems due to the Internet Service Provider
-* ability to track message's route in order to detect errors
+* ability to track the route of messages in order to detect errors
 * optimized antivirus and antispam scan
 
 See also the following related topics:
@@ -180,10 +180,10 @@ available to access a user or group mailbox:
 * IMAP [#IMAP]_ (recommended)
 * POP3 [#POP3]_ (obsolete)
 
-For security reasons, all protocols require encryption by default.
-The :guilabel:`Allow unencrypted connections`, disables this important
-requirement, and allows passing clear-text passwords and mail
-contents on the network.
+For security reasons, all protocols require STARTTLS encryption by
+default.  The :guilabel:`Allow unencrypted connections`, disables this
+important requirement, and allows passing clear-text passwords and
+mail contents on the network.
 
 .. warning:: Do not allow unencrypted connections on production
              environments!
@@ -234,7 +234,7 @@ to a remote server, errors may occur. For instance,
 This and other errors are *temporary*: in such cases, |product|
 attempts to reconnect the remote host at regular intervals until a
 limit is reached. The :guilabel:`Queue message lifetime` slider
-changes this limit and.  By default it is set to *4 days*.  
+changes this limit and.  By default it is set to *4 days*.
 
 While messages are in the queue, the administrator can request an
 immediate message relay attempt, by pressing the button
@@ -348,7 +348,7 @@ given string to the ``Subject`` header.
 
 Statistical filters, called Bayesian [#BAYES]_, are special rules that
 evolve and quickly adapt analyzing messages marked as **spam** or
-**ham**.  
+**ham**.
 
 The statistical filters can then be trained with any IMAP client by
 simply moving a message in and out of the :dfn:`junkmail folder`. As
@@ -404,16 +404,23 @@ Client configuration
 
 The server supports standard-compliants email clients using the following IANA ports:
 
-* imap/143 with TLS
-* pop3/110 with TLS
-* smtp/587 with TLS AUTH/LOGIN or AUTH/PLAIN
+* imap/143
+* pop3/110
+* smtp/587
+* sieve/4190
+
+Authentication requires the STARTTLS command and supports the
+following variants:
+
+* LOGIN
+* PLAIN
 
 Also the following SSL-enabled ports are available for legacy software
 that still does not support TLS.
 
-* imaps/993 SSL
-* pop3s/995 SSL
-* smtps/465 SSL
+* imaps/993
+* pop3s/995
+* smtps/465
 
 .. warning:: The standard SMTP port 25 is reserved for mail transfers
              between MTA servers. On clients use only submission ports.
@@ -566,7 +573,7 @@ typical actions performed.
 ``dovecot``
 
     The Dovecot daemon delivers messages into users' mailboxes,
-    possibly applying Sieve filters [#Sieve]_.
+    possibly applying Sieve filters.
 
 A picture of the whole system is available from *workaroung.org* [#MailComponents]_.
 
@@ -574,6 +581,7 @@ A picture of the whole system is available from *workaroung.org* [#MailComponent
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
+.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
 .. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
 .. [#Email] Email, http://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, http://en.wikipedia.org/wiki/MX_record
@@ -586,5 +594,4 @@ A picture of the whole system is available from *workaroung.org* [#MailComponent
 .. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spam
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
-.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
 .. [#MailComponents] The wonderous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
