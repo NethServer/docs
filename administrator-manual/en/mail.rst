@@ -270,6 +270,7 @@ periodically.
 .. index::
    single: spam
    pair: email; anti-spam
+   pair: spam; score
    see: antispam; anti-spam
 
 Anti-spam
@@ -279,15 +280,21 @@ The anti-spam component [#Spamassassin]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
 content of messages.  The rules are public and updated on a regular
-basis.  A score is associated to each rule.  Statistical filters,
-called Bayesian [#BAYES]_, are special rules that evolve and quickly
-adapt analyzing messages marked as **spam** or **ham**.
+basis.  A score is associated to each rule.
+
+Total spam score collected at the end of the analysis allows the
+server to decide whether to *reject* the message or *mark* it as spam
+and deliver it anyway.  The score thresholds are controlled by
+:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
+sliders in :guilabel:`Email > Filter` page.
 
 .. index::
    single: spam training
 
-The statistical filters can be trained with any IMAP client by simply
-moving a message in and out of the *junkmail* folder.
+Statistical filters, called Bayesian [#BAYES]_, are special rules that
+evolve and quickly adapt analyzing messages marked as **spam** or
+**ham**.  The statistical filters can be trained with any IMAP client
+by simply moving a message in and out of the *junkmail* folder.
 
 * By putting a message *into* the *junkmail* folder, the filters learn
   it is spam and will assign an higher score to similar messages.
@@ -296,17 +303,11 @@ moving a message in and out of the *junkmail* folder.
   learn it is ham: next time a lower score will be assigned.
 
 By default, all users can train the filters using this technique.  If
-you create a group called ``spamtrainers``, only users in this group
+a group called ``spamtrainers`` exits, only users in this group
 will be allowed to train the filters.
 
-.. note:: It is a good habit to constantly check your junkmail folder
+.. note:: It is a good habit to constantly check the junkmail folder
           in order to not losing email wrongly marked as spam.
-
-Total spam score collected at the end of the analysis allows the
-server to decide whether to *reject* the message or *mark* it as spam
-and deliver it anyway.  The score thresholds are controlled by
-:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
-sliders in :guilabel:`Email > Filter` page.
 
 .. index::
    pair: email; whitelist
@@ -317,7 +318,7 @@ the *whitelists* and *blacklists* can help. Those are lists of email
 addresses or domains respectively always allowed and always blocked to
 send or receive a message.
 
-The section :guilabel:`Rules by mail address` allows you to create
+The section :guilabel:`Rules by mail address` allows creating
 three types of rules:
 
 * :guilabel:`Block From`: any message from specified sender is blocked
