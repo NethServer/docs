@@ -459,18 +459,18 @@ configuration of legacy environments.
 Use these commands to enable sending on port 25 with TLS and authentication: ::
 
   config setprop postfix AccessPolicies smtpauth
-  signal-event nethserver-mail-server-save
+  signal-event nethserver-mail-common-save
 
 Use these commands to enable sending on port 25 without authentication
 from any client from trusted networks: ::
 
   config setprop postfix AccessPolicies trustednetworks
-  signal-event nethserver-mail-server-save
+  signal-event nethserver-mail-common-save
 
 Policies can be used together, by separating with a comma ``,``: ::
 
   config setprop postfix AccessPolicies trustednetworks,smptauth
-  signal-event nethserver-mail-server-save
+  signal-event nethserver-mail-common-save
 
 However, there are some devices (printers, scanners, ...) that do not
 support SMTP authentication, encryption or port settings.  They can be
