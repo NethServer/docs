@@ -389,6 +389,8 @@ three types of rules:
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
 
+.. note:: Antivirus checks are enforced despite *whitelist* settings.
+
 .. index::
    pair: port; imap
    pair: port; imaps
