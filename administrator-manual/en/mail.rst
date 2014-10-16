@@ -451,17 +451,16 @@ HELO domains that are not registered on a public DNS.
 
 When talking to another mail server, |product| uses its full host name
 (FQDN) as the value for the HELO command.  If the FQDN is not
-registered in public DNS, you can still change the value for the HELO
-command.  Just use these commands: ::
+registered in public DNS, the HELO can be fixed by setting a special
+*prop*.  For instance, assuming ``myhelo.example.com`` is the publicly
+registered DNS record, type the following commands: ::
 
   config setprop postfix HeloHost myhelo.example.com
   signal-event nethserver-mail-common-save
 
-Where ``myhelo.example.com`` is the domain you want to use in the HELO
-command.
+This configuration is also valuable if the mail server is using a free
+dynamic DNS service.
 
-This configuration can also be used when using a free dynamic DNS
-service.
 
 Log
 ===
