@@ -1,14 +1,19 @@
+.. index:: migration
+
 =====================================
 Migration from NethService/SME Server
 =====================================
 
-:index:`Migration` is the process to convert a SME Server (or NethService) machine into a |product|.
+Migration is the process to convert a SME Server/NethService
+machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 
-#. In the old host, create a full backup archive and move it
-   to the new |product| host.
-#. In the new server, install all packages that cover the same features of the old one.
-#. Explode the full backup archive into some directory; for instance, create the directory :file:`/var/lib/migration`.
-#. Signal the event::
+#. In the source host, create a full backup archive and move it
+   to the destination host.
+#. In the destination host, install all packages that cover the same
+   features of the source.
+#. Explode the full backup archive into some directory; for instance,
+   create the directory :file:`/var/lib/migration`.
+#. In |product|, signal the event ``migration-import``::
 
      signal-event migration-import /var/lib/migration
 
@@ -17,7 +22,31 @@ Migration from NethService/SME Server
  
      grep -E '(FAIL|ERROR)' /var/log/messages
 
-.. tip::
-   For mail server migrations, you can re-synchronize the mail storage after 
-   the ``migration-import`` event.  An helper script is provided by package
-   ``nethserver-mail-server``: see :file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`.
+Email
+=====
+
+* Before running |product| in production, some considerations about
+  the network and existing mail client configurations are required:
+  what ports are in use, if SMTPAUTH and TLS are enabled.  Refer to
+  :ref:`email_clients` and :ref:`email_policies` sections for more
+  informations.
+
+* In mail server migrations, the source mail server could be on
+  production even after the backup has been done, and email messages
+  continue to be delivered until it is taken down permanently.
+  
+  An helper ``rsync`` script is provided by package
+  ``nethserver-mail-server``, to re-synchronize destination mailboxes
+  with the source host:
+  :file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`. It
+  runs on the destination host: ::
+
+    Usage: 
+	./sync_maildirs.sh [-h] [-n] [-p] -s IPADDR 
+	    -h          help message
+	    -n          dry run
+	    -p PORT     ssh port on source host (default 22)
+	    -s IPADDR   rsync from source host IPADDR
+
+  The source host at ``IPADDR`` must be accessible by the ``root`` user,
+  through ``ssh`` with public key authentication.

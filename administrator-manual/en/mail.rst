@@ -28,6 +28,8 @@ See also the following related topics:
    pair: mail; delivery
    pair: mail; domain
 
+.. _email_domains:
+
 Domains
 =======
 
@@ -102,7 +104,7 @@ Email addresses
 The system enables the creation of an unlimited number of :dfn:`email
 addresses` also known as :dfn:`pseudonyms`, from the :guilabel:`Email
 addresses` page.  Each address is associated with a system user or
-group owning a :dfn:`mailbox` (see :ref:`mailboxes`).  It can be
+group owning a :dfn:`mailbox` (see :ref:`email_mailboxes`).  It can be
 enabled on all configured domains or only on specific domains. For
 example:
 
@@ -135,7 +137,7 @@ For instance, creating a new account for user *Donald Duck*:
 .. index::
    pair: email; mailbox
 
-.. _mailboxes:
+.. _email_mailboxes:
 
 User and group mailboxes
 ========================
@@ -200,7 +202,7 @@ each user.  The quota can be customized for a specific user in
    pair: email; spam retention
    triple: email; custom; spam retention
 
-Messages marked as **spam** (see :ref:`Filter`) can be automatically
+Messages marked as **spam** (see :ref:`email_filter`) can be automatically
 moved into the :dfn:`junkmail` folder by enabling the option
 :guilabel:`Move to "junkmail" folder"`. Spam messages are expunged
 automatically after th :guilabel:`Hold for` period has elapsed.  The
@@ -208,7 +210,7 @@ spam retention period can be customized for a specific user in
 :guilabel:`Users > Edit > Services > Customize spam message
 retention`.
 
-.. _messages:
+.. _email_messages:
 
 Messages
 ========
@@ -273,7 +275,7 @@ some restrictions. It could check:
    pair: email; filter
 
 
-.. _filter:
+.. _email_filter:
 
 Filter
 ======
@@ -387,8 +389,6 @@ three types of rules:
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
 
-.. _mail_client-section:
-
 .. index::
    pair: port; imap
    pair: port; imaps
@@ -396,6 +396,8 @@ three types of rules:
    pair: port; pop3s
    pair: port; smtp
    pair: port; smtps
+
+.. _email_clients:
 
 Client configuration
 ====================
@@ -442,7 +444,7 @@ To disable local MX and aliases, access the root's console and type: ::
   signal-event nethserver-hosts-save
 
 
-.. _special_smtp_access_policies-section:
+.. _email_policies:
 
 Special SMTP access policies
 ============================
@@ -481,6 +483,7 @@ enabled to send messages by looking at their IP address in Postfix
   echo "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
   signal-event nethserver-mail-common-save
 
+.. _email_helo:
 
 Custom HELO
 ===========
@@ -504,6 +507,7 @@ registered DNS record, type the following commands: ::
 This configuration is also valuable if the mail server is using a free
 dynamic DNS service.
 
+.. _email_log:
 
 Log
 ===
