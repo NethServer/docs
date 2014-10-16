@@ -335,14 +335,14 @@ three types of rules:
 Queue management
 ================
 
-Messages are placed in a queue before sending.  If a message can not
-be sent out, it remains in queue until maximum configured time is
-reached (see also :ref:`mail_messages-section`).
+Messages are placed in a queue before being delivered or sent.  If a
+message can not be sent out, it remains in queue until maximum
+configured time is reached (see also :ref:`mail_messages-section`).
 
-While messages are in the queue, you can force a retry by pressing the
-button :guilabel:`Attempt to send`.  Otherwise the administrator can
-selectively delete queued messages or empty the queue with
-:guilabel:`Delete all` button.
+While messages are in the queue, an immediate attempt can be requested
+by pressing the button :guilabel:`Attempt to send`.  Otherwise the
+administrator can selectively delete queued messages or empty the
+queue with :guilabel:`Delete all` button.
 
 .. _mail_client-section:
 
