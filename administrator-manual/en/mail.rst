@@ -6,9 +6,9 @@ Email
 
 The Email module is split in three main parts:
 
-* IMAP and POP3 server to read email
-* SMTP server for sending and receiving
-* antispam filter, antivirus and attachments blocker
+* SMTP server for sending and receiving [#Postfix]_
+* IMAP and POP3 server to read email [#Dovecot]_
+* antispam filter, antivirus and attachments blocker [#Amavis]_
 
 Benefits are
 
@@ -47,7 +47,7 @@ two alternatives:
    single: hidden copy
    single: bcc
 
-|product| allows you to store an :dfn:`hidden copy` of all messages
+|product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
 recipient *and also* to a local user (or group).  The hidden copy is
 enabled by the :guilabel:`Always send a copy (Bcc)` checkbox.
@@ -79,8 +79,8 @@ Signature example: ::
 The :dfn:`disclaimer` is a fixed text and can only be *attached* (not
 added) to messages by the mail server.
 
-This technique allows you to maintain the integrity of the message in
-case of using digital signature.
+This technique allows maintaining the integrity of the message in case
+of using digital signature.
 
 Disclaimer example: ::
 
@@ -275,13 +275,13 @@ periodically.
 Anti-spam
 ---------
 
-The anti-spam component analyzes emails by detecting and classifying
-:dfn:`spam` [#SPAM]_ messages using heuristic criteria, predetermined
-rules and statistical evaluations on the content of messages.  The
-rules are public and updated on a regular basis.  A score is
-associated to each rule.  Statistical filters, called Bayesian
-[#BAYES]_, are special rules that evolve and quickly adapt analyzing
-messages marked as **spam** or **ham**.
+The anti-spam component [#Spamassassin]_ analyzes emails by detecting
+and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
+criteria, predetermined rules and statistical evaluations on the
+content of messages.  The rules are public and updated on a regular
+basis.  A score is associated to each rule.  Statistical filters,
+called Bayesian [#BAYES]_, are special rules that evolve and quickly
+adapt analyzing messages marked as **spam** or **ham**.
 
 .. index::
    single: spam training
@@ -372,8 +372,8 @@ that still does not support TLS.
 .. warning:: The standard SMTP port 25 is reserved for mail transfers
              between MTA servers. On clients use only submission ports.
 
-If |product| acts also as DNS server on the LAN, it registers its name as MX record along with the
-following aliases:
+If |product| acts also as DNS server on the LAN, it registers its name
+as MX record along with the following aliases:
 
 * ``smtp.<domain>``
 * ``imap.<domain>``
@@ -385,7 +385,8 @@ For example:
 * Domain: ``mysite.com``
 * Hostname: ``mail.mysite.com``
 * MX record: ``mail.mysite.com``
-* Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``, ``pop.mysite.com``, ``pop3.mysite.com``.
+* Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``,
+  ``pop.mysite.com``, ``pop3.mysite.com``.
 
 .. note:: Some mail clients (eg. Mozilla Thunderbird) are able to use DNS
           aliases and MX record to automatically configure email accounts by
@@ -440,23 +441,26 @@ enabled to send messages by looking at their IP address in Postfix
 Custom HELO
 ===========
 
-The first step of an SMTP session is the exchange of :index:`HELO` command (or :index:`EHLO`).
-This command takes a valid server name as required parameter (RFC 1123).
+The first step of an SMTP session is the exchange of :index:`HELO`
+command (or :index:`EHLO`).  This command takes a valid server name as
+required parameter (RFC 1123).
 
-Some mail servers try to reduce spam by not accepting HELO domains that are not registered on
-a public DNS.
+|product| and other mail servers try to reduce spam by not accepting
+HELO domains that are not registered on a public DNS.
 
-|product| uses the value of the main domain (FQDN) as the parameter of the HELO command.
-If it is not possible to configure a server with the real domain,
-you can still change value for the HELO command.
-Just use these commands: ::
+When talking to another mail server, |product| uses its full host name
+(FQDN) as the value for the HELO command.  If the FQDN is not
+registered in public DNS, you can still change the value for the HELO
+command.  Just use these commands: ::
 
   config setprop postfix HeloHost myhelo.example.com
   signal-event nethserver-mail-common-save
 
-Where ``myhelo.example.com`` is the domain you want to use in HELO command.
+Where ``myhelo.example.com`` is the domain you want to use in the HELO
+command.
 
-This configuration can also be used when using a free dynamic DNS service.
+This configuration can also be used when using a free dynamic DNS
+service.
 
 Log
 ===
@@ -469,6 +473,9 @@ All operations are saved inside log files:
 
 .. rubric:: Footnotes
 
+.. [#Postfix] Postfix mail server http://www.postfix.org/
+.. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
+.. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
 .. [#Email] Email, http://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, http://en.wikipedia.org/wiki/MX_record
 .. [#SMTP] SMTP, http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
@@ -480,3 +487,5 @@ All operations are saved inside log files:
 .. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spam
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
+.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
+.. [#MailComponents] The wonderous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
