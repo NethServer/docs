@@ -336,18 +336,28 @@ and deliver it anyway.  The score thresholds are controlled by
 :guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
 sliders in :guilabel:`Email > Filter` page.
 
+Messages marked as spam have a special header ``X-Spam-Flag: YES``.
+The :guilabel:`Add a prefix to spam messages subject` option makes the
+spam flag visible on the subject of the message, by prepending the
+given string to the ``Subject`` header.
+
 .. index::
    single: spam training
 
 Statistical filters, called Bayesian [#BAYES]_, are special rules that
 evolve and quickly adapt analyzing messages marked as **spam** or
-**ham**.  The statistical filters can be trained with any IMAP client
-by simply moving a message in and out of the *junkmail* folder.
+**ham**.  
 
-* By putting a message *into* the *junkmail* folder, the filters learn
+The statistical filters can then be trained with any IMAP client by
+simply moving a message in and out of the :dfn:`junkmail folder`. As
+prerequisite, the junkmail folder must be enabled from
+:guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
+"junkmail" folder"` option.
+
+* By *putting a message into the junkmail folder*, the filters learn
   it is spam and will assign an higher score to similar messages.
 
-* On the contrary, by getting a message *out of junkmail*, the filters
+* On the contrary, by *getting a message out of junkmail*, the filters
   learn it is ham: next time a lower score will be assigned.
 
 By default, all users can train the filters using this technique.  If
