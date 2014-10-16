@@ -94,41 +94,23 @@ The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
 
 .. index:: email address, pseudonym
 
+.. _email_addresses:
+
 Email addresses
 ===============
 
 The system enables the creation of an unlimited number of :dfn:`email
 addresses` also known as :dfn:`pseudonyms`, from the :guilabel:`Email
 addresses` page.  Each address is associated with a system user or
-group. It can be enabled on all configured domains or only on specific
-domains. For example:
+group owning a :dfn:`mailbox` (see :ref:`mailboxes`).  It can be
+enabled on all configured domains or only on specific domains. For
+example:
 
 * First domain: mydomain.net
 * Second domain: example.com
 * Email address *info* valid for both domains: info@mydomain.net,
   info@example.com
 * Email address *goofy* valid only for one domain: goofy@example.com
-
-When creating a new user account from the :guilabel:`Users` page, the
-system suggests a default email address for it.
-
-For instance, creating a new account for *Donald Duck*:
-
-* Account name: donald.duck
-* Domain: ducks.net, ducks.com
-* Suggested addresses: donald.duck@ducks.net, donald.duck@ducks.com
-
-.. index:: shared folder
-
-When an address is associated with a group, the server can be
-configured to deliver mail in two ways, from the :guilabel:`Groups`
-page:
-
-* send a copy to each member of the group
-* store the message in a :dfn:`shared folder`
-
-.. note:: Especially, the "shared folder" method fits large groups
-          receiving big messages.
 
 .. index::
    pair: email; local network only
@@ -142,34 +124,93 @@ address to receive email from the outside.  Still the "local network
 only" address can be used to exchange messages with other accounts of
 the system.
 
+When creating a new account from the :guilabel:`Users` or
+:guilabel:`Groups` page, the system suggests a default email address
+for each configured mail domain.
 
-.. _mailboxes-section:
+For instance, creating a new account for user *Donald Duck*:
 
-Mailboxes
-=========
+* User name: donald.duck
+* Domains: ducks.net, ducks.com
+* Suggested addresses: donald.duck@ducks.net, donald.duck@ducks.com
 
-Mailboxes can be accessed using two protocols:
+.. index::
+   pair: email; mailbox
+
+.. _mailboxes:
+
+User and group mailboxes
+========================
+
+Email messages delivered to a user or group account, as configured
+from the :ref:`email_addresses` page, are written to a disk location known
+as :dfn:`mailbox`.
+
+When the Email module is installed, existing user and group accounts
+do not have a mailbox. It must be explicitly enabled from the
+:guilabel:`Users > Services` or :guilabel:`Groups > Services`
+tab.  Instead, newly created accounts have this option enabled by
+default.
+
+.. index::
+   pair: email; forward address
+
+From the same :guilabel:`Services` page under :guilabel:`Users` or
+:guilabel:`Groups` it can be defined an external email address where
+to :guilabel:`Forward messages`.  Optionally, a copy of the message
+can be stored on the server.
+
+.. index::
+   triple: email; group; shared folder
+
+When an address is associated with a group, the server can be
+configured to deliver mail in two ways, from the :guilabel:`Groups >
+Services` tab:
+
+* send a copy to each member of the group
+* store the message in a :dfn:`shared folder`. This option is
+  recommended for large groups receiving big messages.
+
+.. warning:: Deleting a user or group account erases the associated
+             mailbox!
+
+The :guilabel:`Email > Mailboxes` page controls what protocols are
+available to access a user or group mailbox:
 
 * IMAP [#IMAP]_ (recommended)
 * POP3 [#POP3]_ (obsolete)
 
-All connections from/to clients are encrypted by default.  Even if
-strongly not recommended, you can disable encryption by enabling the
-option :guilabel:`Allow unencrypted connections`.
+For security reasons, all protocols require encryption by default.
+The :guilabel:`Allow unencrypted connections`, disables this important
+requirement, and allows passing clear-text passwords and mail
+contents on the network.
+
+.. warning:: Do not allow unencrypted connections on production
+             environments!
 
 .. index::
-   single: spam
-   pair: email; expunge
+   pair: email; quota
+   triple: email; custom; quota
 
-Messages marked as **spam** can be automatically moved into the
-:dfn:`junkmail` folder by enabling the option :guilabel:`Move to
-"junkmail" folder"`.
+From the same page, the :guilabel:`disk space` of a mailbox can be
+limited to a :dfn:`quota`.  If the mailbox quota is enabled, the
+:guilabel:`Dashboard > Mail quota` page summarizes the quota usage for
+each user.  The quota can be customized for a specific user in
+:guilabel:`Users > Edit > Services > Custom mailbox quota`.
 
-Spam messages are expunged automatically after th :guilabel:`Hold for`
-period has elapsed.
+.. index::
+   pair: email; spam retention
+   triple: email; custom; spam retention
 
+Messages marked as **spam** (see :ref:`Filter`) can be automatically
+moved into the :dfn:`junkmail` folder by enabling the option
+:guilabel:`Move to "junkmail" folder"`. Spam messages are expunged
+automatically after th :guilabel:`Hold for` period has elapsed.  The
+spam retention period can be customized for a specific user in
+:guilabel:`Users > Edit > Services > Customize spam message
+retention`.
 
-.. _mail_messages-section:
+.. _messages:
 
 Messages
 ========
@@ -183,17 +224,23 @@ message max size` slider sets the maximum size of messages traversing
 the system. If this limit is exceeded, a message cannot enter the
 system at all, and is rejected.
 
-When |product| sends out a message to a remote server, errors may
-occur. For instance,
+Once a message enters |product|, it is persisted to a :dfn:`queue`,
+waiting for final delivery or relay. When |product| relays a message
+to a remote server, errors may occur. For instance,
 
 * the network connection fails, or
 * the other server is down or is overloaded.
 
-This and other instances of errors are *temporary*: in such cases,
-|product| attempts to reconnect the remote host at regular intervals
-until a limit is reached. The :guilabel:`Queue message lifetime`
-slider changes this limit and.  By default it is set to *4 days*.
-Refer also to the :ref:`queue_management-section` section.
+This and other errors are *temporary*: in such cases, |product|
+attempts to reconnect the remote host at regular intervals until a
+limit is reached. The :guilabel:`Queue message lifetime` slider
+changes this limit and.  By default it is set to *4 days*.  
+
+While messages are in the queue, the administrator can request an
+immediate message relay attempt, by pressing the button
+:guilabel:`Attempt to send` from the :guilabel:`Email > Queue
+management` page.  Otherwise the administrator can selectively delete
+queued messages or empty the queue with :guilabel:`Delete all` button.
 
 .. index::
    single: always send a copy
@@ -226,6 +273,9 @@ some restrictions. It could check:
 
 .. index::
    pair: email; filter
+
+
+.. _filter:
 
 Filter
 ======
@@ -328,21 +378,6 @@ three types of rules:
 
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
-
-
-.. _queue_management-section:
-
-Queue management
-================
-
-Messages are placed in a queue before being delivered or sent.  If a
-message can not be sent out, it remains in queue until maximum
-configured time is reached (see also :ref:`mail_messages-section`).
-
-While messages are in the queue, an immediate attempt can be requested
-by pressing the button :guilabel:`Attempt to send`.  Otherwise the
-administrator can selectively delete queued messages or empty the
-queue with :guilabel:`Delete all` button.
 
 .. _mail_client-section:
 
