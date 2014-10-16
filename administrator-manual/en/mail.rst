@@ -465,11 +465,63 @@ service.
 Log
 ===
 
-All operations are saved inside log files:
+Every mail server operation is saved in the following log files:
 
-* :file:`/var/log/maillog`: contains all sending and delivery operations
-* :file:`/var/log/imap`: contains all login/logout actions to mailboxes
+* :file:`/var/log/maillog` registers all mail transactions
+* :file:`/var/log/imap` contains users' login and logout operations
 
+A transaction recorded in the :file:`maillog` file usually involves
+different components of the mail server.  Each line contains
+respectively
+
+* the timestamp,
+* the host name,
+* the component name, and the process-id of the component instance
+* a text message detailing the operation
+
+Here follows a brief description of the component names and the
+typical actions performed.
+
+``transfer/smtpd``
+
+    This is the public-facing SMTP daemon, listening on port 25. A log
+    line from this component identifies an activity involving another
+    Mail Transfer Agent (MTA).
+
+``submission/smtpd``
+
+    This is the SMTP daemon listening on submission port 587 and smtps
+    port 465. A log line from this component identifies a Mail User
+    Agent (MUA) that sends an email message.
+
+``amavis``
+
+    The Amavis SMTP daemon enforces all mail filtering rules.  It
+    decides what is accepted or not.  Log lines from this component
+    detail the filter decisions.
+
+``queue/smtpd``
+
+    This is an internal SMTP daemon, accessible only from the local
+    system.  It receives and queues good messages from Amavis.
+
+``relay/smtp``
+
+    This is the SMTP client talking to a remote server: it picks a
+    message from the queue and relays it to the remote server, as
+    specified by the mail domain configuration.
+
+``delivery/lmtp``
+
+    Messages directed to local accounts are picked up from the queue
+    and transfered to the local Dovecot instance.
+
+``dovecot``
+
+    The Dovecot daemon delivers messages into users' mailboxes,
+    possibly applying Sieve filters [#Sieve]_.
+
+A picture of the whole system is available from *workaroung.org* [#MailComponents]_.
 
 .. rubric:: Footnotes
 
