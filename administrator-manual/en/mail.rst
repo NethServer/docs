@@ -117,12 +117,10 @@ example:
    triple: email; private; internal
 
 Sometimes a company forbids communications from the external world
-using personal email addresses.
-
-The :guilabel:`Local network only` option blocks the possibility of an
-address to receive email from the outside.  Still the "local network
-only" address can be used to exchange messages with other accounts of
-the system.
+using personal email addresses. The :guilabel:`Local network only`
+option blocks the possibility of an address to receive email from the
+outside.  Still the "local network only" address can be used to
+exchange messages with other accounts of the system.
 
 When creating a new account from the :guilabel:`Users` or
 :guilabel:`Groups` page, the system suggests a default email address
