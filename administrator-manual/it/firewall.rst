@@ -165,7 +165,7 @@ Nel caso di un server web, le porte in ascolto sono solitamente la porta 80 (HTT
 
 Quando si crea un port forward è necessario specificare almeno i seguenti parametri:
 
-* la porta di origine
+* la porta di origine, può essere un numero o un intervallo nel formato XX:YY (es: 1000-1100)
 * la porta di destinazione, che può essere diversa dalla porta di origine
 * l'indirizzo dell'host a cui deve essere instradato il traffico
 
