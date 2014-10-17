@@ -37,7 +37,7 @@ To update: ::
 
  yum update nethserver-owncloud
 
-.. note:: The update does not change the LDAP configuration.
+.. note:: The update does not change the current configuration.
 
 
 Force SSL for client connection
