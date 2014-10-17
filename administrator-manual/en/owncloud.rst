@@ -11,14 +11,15 @@ basic editing right on the web.
 
 * preconfigure :index:`ownCloud` with mysql and default access credential
 * preconfigure httpd 
-* tool for auto create ldap user and password, and docs for configuration
+* integration with |product| system users and groups
+* documentation
 * backup ownCloud data with nethserver-backup tool
 
 
 Installation
 ============
 
-The installation can be done through the NethServer web interface.
+The installation can be done through the |product| web interface.
 After the installation:
 
 * open the url https://your_nethserver_ip/owncloud
@@ -26,7 +27,7 @@ After the installation:
 * change the default password
 
 LDAP access authentication is enabled by default, so each user can login with its system credentials. 
-After the installation a new application widget is added to the NethServer web interface dashboard.
+After the installation a new application widget is added to the |product| web interface dashboard.
 
 
 Update from ownCloud 5
@@ -36,7 +37,7 @@ To update: ::
 
  yum update nethserver-owncloud
 
-.. note:: The update does not change the LDAP configuration.
+.. note:: The update does not change the current configuration.
 
 
 Force SSL for client connection
