@@ -163,6 +163,8 @@ can be stored on the server.
 .. index::
    triple: email; group; shared folder
 
+.. _email_sharedfolder:
+
 When an address is associated with a group, the server can be
 configured to deliver mail in two ways, from the :guilabel:`Groups >
 Services` tab:
@@ -516,6 +518,92 @@ registered DNS record, type the following commands: ::
 This configuration is also valuable if the mail server is using a free
 dynamic DNS service.
 
+.. _email_ads:
+
+Email in Active Directory
+=========================
+
+The Email module integrates with an Active Directory (AD) environment,
+if :ref:`samba_ads` role is enabled in :guilabel:`Windows Network`
+page.
+
+Make sure :guilabel:`LDAP accounts branch` in :guilabel:`Windows
+Network` page is actually set to the LDAP branch where email users and
+groups are placed.
+
+This is an example of an user entry in AD LDAP (some attributes omitted): ::
+
+    dn: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC=it
+    objectClass: top
+    objectClass: person
+    objectClass: organizationalPerson
+    objectClass: user
+    cn: John Smith
+    sn: Smith
+    givenName: John
+    distinguishedName: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC
+     =it
+    instanceType: 4
+    displayName: John Smith
+    memberOf: CN=sviluppo,OU=Nethesis,DC=adnethesis,DC=it
+    memberOf: CN=secgroup,OU=Nethesis,DC=adnethesis,DC=it
+    memberOf: CN=tecnici,OU=Nethesis,DC=adnethesis,DC=it
+    name: John Smith
+    primaryGroupID: 513
+    sAMAccountName: john.smith
+    sAMAccountType: 805306368
+    userAccountControl: 66048
+    userPrincipalName: john.smith@adnethesis.it
+    objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=adnethesis,DC=it
+    mail: john@adnethesis.it
+    otherMailbox: smtp:js@adnethesis.it
+    proxyAddresses: smtp:j.smith@adnethesis.it
+
+To make |product| work with the external LDAP database provided by
+Active Directory, the following rules applies:
+
+#. Only enabled accounts are considered (``userAccountControl`` attribute).
+
+#. IMAP and SMTP login name is the value of ``sAMAccountName``
+   attribute.
+
+#. Email addresses associated with an user are the values of ``mail``,
+   ``otherMailbox`` and ``proxyAddresses`` attributes.  The last two
+   attributes expect a ``smtp:`` prefix before the actual value.  Also
+   ``userPrincipalName`` is considered an email address, by default;
+   this can be disabled (see :ref:`commands below
+   <email_topic_AdsMapUserPrincipalStatus>`).
+
+#. A group email address is the value of its ``mail`` attribute. By
+   default any group is treated as a *distribution list*: a copy of the
+   email is delivered to its members.
+
+#. The domain part of email addresses specified by the above
+   attributes must match a :ref:`configured domain <email_domains>`,
+   otherwise it is ignored.
+
+To configure security groups as :ref:`shared folders
+<email_sharedfolder>` globally, type the following commands at root's
+console: ::
+
+   config setprop postfix AdsGroupsDeliveryType shared
+   signal-event nethserver-samba-save
+
+.. warning:: Avoid AD group names containing uppercase letters with
+	     shared folder: IMAP ACLs does not to work properly. See
+	     `BUG#2744`_.
+
+.. _email_topic_AdsMapUserPrincipalStatus:
+
+To avoid the ``userPrincipalName`` attribute is considered a valid
+email address, type the following commands at root's console: ::
+
+   config setprop postfix AdsMapUserPrincipalStatus disabled
+   signal-event nethserver-samba-save
+
+.. _BUG#2744: http://dev.nethserver.org/issues/2744
+
+
 .. _email_log:
 
 Log
@@ -579,7 +667,7 @@ typical actions performed.
 
 A picture of the whole system is available from *workaroung.org* [#MailComponents]_.
 
-.. rubric:: Footnotes
+.. rubric:: References
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/

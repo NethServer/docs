@@ -118,9 +118,6 @@ controllers.  When operating in ADS mode, Samba is configured to map
 domain accounts into |product|, thus files and directories access can
 be shared across the whole domain.  
 
-.. note:: For mail server integration with AD, refer to the
-          :ref:`email-section` module documentation.
-
 Joining an Active Directory domain has some pre-requisites:
 
 1. In :menuselection:`DNS and DHCP` page, set the domain controller
@@ -146,6 +143,9 @@ role:
 * :guilabel:`SUBMIT` changes. You will be prompted for an user name and
   password: provide AD ``administrator`` or any other account
   credentials with permissions to join the machine to the domain.
+
+.. note:: For Email integration with AD, refer also to
+          :ref:`email_ads`.
 
 .. rubric:: Footnotes
 
