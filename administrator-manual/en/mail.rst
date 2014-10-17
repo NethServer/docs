@@ -8,14 +8,14 @@ The Email module is split in three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
-* Antispam filter, antivirus and attachments blocker [#Amavis]_
+* Anti-spam filter, anti-virus and attachments blocker [#Amavis]_
 
 Benefits are
 
 * complete autonomy in the mail management
 * avoid problems due to the Internet Service Provider
 * ability to track the route of messages in order to detect errors
-* optimized antivirus and antispam scan
+* optimized anti-virus and anti-spam scan
 
 See also the following related topics:
 
@@ -52,7 +52,7 @@ two alternatives:
 |product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
 recipient *and also* to a local user (or group).  The hidden copy is
-enabled by the :guilabel:`Always send a copy (Bcc)` checkbox.
+enabled by the :guilabel:`Always send a copy (Bcc)` check box.
 
 .. warning:: On some countries, enabling the *Always send a copy
              (Bcc)* can be against privacy laws.
@@ -69,7 +69,7 @@ disclaimer are very different concepts.
 
 The signature should be inserted inside the message text only by the
 mail client (MUA): Outlook, Thunderbird, etc.  Usually it is a
-customizable text containing information such as sender addresses and
+user-defined text containing information such as sender addresses and
 phone numbers.
 
 Signature example: ::
@@ -207,7 +207,7 @@ each user.  The quota can be customized for a specific user in
 Messages marked as **spam** (see :ref:`email_filter`) can be automatically
 moved into the :dfn:`junkmail` folder by enabling the option
 :guilabel:`Move to "junkmail" folder"`. Spam messages are expunged
-automatically after th :guilabel:`Hold for` period has elapsed.  The
+automatically after the :guilabel:`Hold for` period has elapsed.  The
 spam retention period can be customized for a specific user in
 :guilabel:`Users > Edit > Services > Customize spam message
 retention`.
@@ -250,8 +250,8 @@ queued messages or empty the queue with :guilabel:`Delete all` button.
    single: bcc
 
 To keep an hidden copy of any message traversing the mail server,
-enable the :guilabel:`Always send a copy (Bcc)` checkbox. This feature
-is different from the same checkbox under :guilabel:`Email > Domain` as
+enable the :guilabel:`Always send a copy (Bcc)` check box. This feature
+is different from the same check box under :guilabel:`Email > Domain` as
 it does not differentiate between mail domains and catches also any
 outgoing message.
 
@@ -368,7 +368,7 @@ By default, all users can train the filters using this technique.  If
 a group called ``spamtrainers`` exits, only users in this group
 will be allowed to train the filters.
 
-.. note:: It is a good habit to constantly check the junkmail folder
+.. n note:: It is a good habit to constantly check the junkmail folder
           in order to not losing email wrongly marked as spam.
 
 .. index::
@@ -406,7 +406,7 @@ three types of rules:
 Client configuration
 ====================
 
-The server supports standard-compliants email clients using the following IANA ports:
+The server supports standard-compliant email clients using the following IANA ports:
 
 * imap/143
 * pop3/110
@@ -445,7 +445,7 @@ For example:
 * Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``,
   ``pop.mysite.com``, ``pop3.mysite.com``.
 
-.. note:: Some mail clients (eg. Mozilla Thunderbird) are able to use DNS
+.. note:: Some mail clients (e.g. Mozilla Thunderbird) are able to use DNS
           aliases and MX record to automatically configure email accounts by
           simply typing the email address.
 
@@ -658,7 +658,7 @@ typical actions performed.
 ``delivery/lmtp``
 
     Messages directed to local accounts are picked up from the queue
-    and transfered to the local Dovecot instance.
+    and transferred to the local Dovecot instance.
 
 ``dovecot``
 
@@ -684,4 +684,4 @@ A picture of the whole system is available from *workaroung.org* [#MailComponent
 .. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spam
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
-.. [#MailComponents] The wonderous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
+.. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
