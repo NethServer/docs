@@ -53,6 +53,7 @@ Moduli
    vpn
    ftp
    tftp
+   owncloud
 
 Best practices
 --------------
