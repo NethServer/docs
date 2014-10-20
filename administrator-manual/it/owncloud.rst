@@ -96,3 +96,12 @@ Configurazione LDAP
     Clicca "Cancella associazione Nome utente-Utente LDAP" 
 
 #. Clicca il pulsante "Salva"
+
+Note su LDAP
+============
+
+Lista utenti
+------------
+
+Dopo aver configurato ownCloud con LDAP, la lista utenti potrebbe mostrare qualche nome contenente dei numeri casuali.
+È una soluzione adottata da ownCloud per garantire che non ci siano nomi duplicati. Per maggiori informazioni leggere `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_

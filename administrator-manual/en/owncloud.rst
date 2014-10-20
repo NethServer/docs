@@ -97,3 +97,12 @@ LDAP Configuration
     Click on "Clear Username-LDAP user mapping" 
 
 #. Click the "Save" button
+
+LDAP Note
+=========
+
+User list
+---------
+
+After ownCloud LDAP configuration, the user list can show some username containing random numbers.
+This is because ownCloud ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
