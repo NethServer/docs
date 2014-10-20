@@ -106,3 +106,5 @@ User list
 
 After |product_oc| LDAP configuration, the user list can show some username containing random numbers.
 This is because |product_oc| ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
+
+If two administrator users are present, they are of |product_oc| and LDAP. So you can remove that of |product_oc| after have assigned the LDAP one to the administrator group. So, as a result, you can use only the LDAP administrator user.
