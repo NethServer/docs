@@ -1,6 +1,6 @@
-========
-ownCloud
-========
+============
+|product_oc|
+============
 
 `ownCloud <http://owncloud.org/>`_ provides universal access to your files via the web,
 your computer or your mobile devices wherever you are. It also provides a platform to easily
@@ -13,7 +13,7 @@ basic editing right on the web.
 * preconfigure httpd 
 * integration with |product| system users and groups
 * documentation
-* backup ownCloud data with nethserver-backup tool
+* backup |product_oc| data with nethserver-backup tool
 
 
 Installation
@@ -30,8 +30,8 @@ LDAP access authentication is enabled by default, so each user can login with it
 After the installation a new application widget is added to the |product| web interface dashboard.
 
 
-Update from ownCloud 5
-======================
+Update from |product_oc| 5
+==========================
 
 To update: ::
 
@@ -55,7 +55,7 @@ LDAP Configuration
 
     cat /var/lib/nethserver/secrets/owncloud
 
-#. Login to ownCloud as administrator
+#. Login to |product_oc| as administrator
 #. Search LDAP user and group backend: *Applications -> LDAP user and group backend*
 #. Enable "LDAP user and group backend"
 #. Configure server parameters: *Admin -> Admin -> Server tab*
@@ -104,5 +104,5 @@ LDAP Note
 User list
 ---------
 
-After ownCloud LDAP configuration, the user list can show some username containing random numbers.
-This is because ownCloud ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
+After |product_oc| LDAP configuration, the user list can show some username containing random numbers.
+This is because |product_oc| ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
