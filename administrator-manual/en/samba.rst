@@ -2,9 +2,9 @@
 Windows network
 ===============
 
-|Microsoft Windows (TM)| interoperability is provided by Samba_. To
-install it, select the :dfn:`File Server` module, or any other module
-that requires it.
+|Microsoft Windows (TM)| interoperability is provided by Samba
+[#SambaOrg]_. To install it, select the :dfn:`File Server` module, or
+any other module that requires it.
 
 |product| configures Samba to act in a Windows network according to
 its *role*. You can choose the role from the Server Manager, in the
@@ -48,8 +48,8 @@ Active Directory member
     controller, and the access to the resource is granted.
 
 .. |Microsoft Windows (TM)| unicode:: Microsoft \x20 Windows U+2122
-.. _Samba: http://www.samba.org/
 
+.. _samba_ws:
 
 Workstation
 -----------
@@ -65,9 +65,7 @@ in *Network resources*, under the node named after the
 As stated before, to access the server resources, clients
 must provide the authentication credentials of a valid local account.
 
-
-
-
+.. _samba_pdc:
 
 Primary domain controller
 -------------------------
@@ -94,8 +92,7 @@ and hosts accounts are stored. To setup a Windows network where
 
    * only capital letters.
 
-   For more informations refer to Microsoft `Naming conventions`_.
-
+   For more informations refer to Microsoft Naming conventions [#MS909264]_.
 
 2. For each workstation of the Windows network, join the new domain.
    This step requires privileged credentials.  In |product|, members
@@ -107,14 +104,10 @@ and hosts accounts are stored. To setup a Windows network where
    Some versions of Windows may require applying a system registry
    patch to join the domain.  From the Server Manager, follow
    :guilabel:`Client registry settings` link to download the
-   appropriate ``.reg`` file.  Refer to the `official Samba
-   documentation`_ for more informations.
+   appropriate ``.reg`` file.  Refer to the official Samba
+   documentation [#SambaRegistry]_ for more informations.
 
-.. _Naming conventions: http://support.microsoft.com/kb/909264
-.. _official Samba documentation: https://wiki.samba.org/index.php/Registry_changes_for_NT4-style_domains
-
-
-
+.. _samba_ads: 
 
 Active Directory member
 -----------------------
@@ -124,9 +117,6 @@ as an Active Directory domain member, delegating authentication to domain
 controllers.  When operating in ADS mode, Samba is configured to map
 domain accounts into |product|, thus files and directories access can
 be shared across the whole domain.  
-
-.. note:: For mail server integration with AD, refer to the
-          :ref:`email-section` module documentation.
 
 Joining an Active Directory domain has some pre-requisites:
 
@@ -153,3 +143,15 @@ role:
 * :guilabel:`SUBMIT` changes. You will be prompted for an user name and
   password: provide AD ``administrator`` or any other account
   credentials with permissions to join the machine to the domain.
+
+.. note:: For Email integration with AD, refer also to
+          :ref:`email_ads`.
+
+.. rubric:: Footnotes
+
+.. [#SambaOrg] Samba official website http://www.samba.org/
+.. [#MS909264] Naming conventions in Active Directory for computers,
+               domains, sites, and OUs
+               http://support.microsoft.com/kb/909264
+.. [#SambaRegistry] Registry changes for NT4-style domains
+                    https://wiki.samba.org/index.php/Registry_changes_for_NT4-style_domains
