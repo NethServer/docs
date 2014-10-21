@@ -24,9 +24,9 @@ See also the following related topics:
 * Simple Mail Transfer Protocol (SMTP) [#SMTP]_
 
 .. index::
-   pair: mail; relay
-   pair: mail; delivery
-   pair: mail; domain
+   pair: email; relay
+   pair: email; delivery
+   pair: email; domain
 
 .. _email_domains:
 
@@ -45,9 +45,9 @@ two alternatives:
    any message already received is preserved.
 
 .. index::
-   single: always send a copy
-   single: hidden copy
-   single: bcc
+   pair: email; always send a copy
+   pair: email; hidden copy
+   pair: email; bcc
 
 |product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
@@ -78,7 +78,7 @@ Signature example: ::
  President | My Mighty Company | Middle Earth
  555-555-5555 | john@mydomain.com | http://www.mydomain.com
 
-The :dfn:`disclaimer` is a fixed text and can only be *attached* (not
+The "disclaimer" is a fixed text and can only be *attached* (not
 added) to messages by the mail server.
 
 This technique allows maintaining the integrity of the message in case
@@ -191,7 +191,6 @@ mail contents on the network.
              environments!
 
 .. index::
-   pair: email; quota
    triple: email; custom; quota
 
 From the same page, the :guilabel:`disk space` of a mailbox can be
@@ -220,6 +219,7 @@ Messages
 .. index::
    pair: email; size
    pair: email; retries
+   pair: email; message queue
 
 From the :guilabel:`Email > Messages` page, the :guilabel:`Queue
 message max size` slider sets the maximum size of messages traversing
@@ -233,10 +233,10 @@ to a remote server, errors may occur. For instance,
 * the network connection fails, or
 * the other server is down or is overloaded.
 
-This and other errors are *temporary*: in such cases, |product|
+Those and other errors are *temporary*: in such cases, |product|
 attempts to reconnect the remote host at regular intervals until a
 limit is reached. The :guilabel:`Queue message lifetime` slider
-changes this limit and.  By default it is set to *4 days*.
+changes this limit.  By default it is set to *4 days*.
 
 While messages are in the queue, the administrator can request an
 immediate message relay attempt, by pressing the button
@@ -245,9 +245,9 @@ management` page.  Otherwise the administrator can selectively delete
 queued messages or empty the queue with :guilabel:`Delete all` button.
 
 .. index::
-   single: always send a copy
-   single: hidden copy
-   single: bcc
+   pair: email; always send a copy
+   pair: email; hidden copy
+   pair: email; bcc
 
 To keep an hidden copy of any message traversing the mail server,
 enable the :guilabel:`Always send a copy (Bcc)` check box. This feature
@@ -258,7 +258,8 @@ outgoing message.
 .. warning:: On some countries, enabling the *Always send a copy
              (Bcc)* can be against privacy laws.
 
-.. index:: smarthost
+.. index:: 
+   pair: email; smarthost
 
 The :guilabel:`Send using a smarthost` option, forces all outgoing
 messages to be directed through a special SMTP server, technically
@@ -268,22 +269,22 @@ some restrictions. It could check:
 * the client IP address,
 * the client SMTP AUTH credentials.
 
-.. note:: Sending through a smarthost is generally not recommended.
+.. note:: Sending through a *smarthost* is generally not recommended.
           It might be accepted only if the server is temporarily
           blacklisted [#DNSBL]_, or normal SMTP access is restricted
           by the ISP.
 
+
 .. index::
    pair: email; filter
-
 
 .. _email_filter:
 
 Filter
 ======
 
-All mail in transit is subjected to a list of checks that can be
-selectively enabled in :guilabel:`Email > Filter` page:
+All transiting email messages are subjected to a list of checks that
+can be selectively enabled in :guilabel:`Email > Filter` page:
 
 * Block of attachments
 * Anti-virus
@@ -310,20 +311,20 @@ actually are also zip archives.
 
 .. index::
    pair: email; anti-virus
-   see: antivirus; anti-virus
+   see: anti-virus; antivirus
 
 Anti-virus
 ----------
 
-The anti-virus component finds mails containing viruses. Infected
-messages are discarded. The virus signature database is updated
-periodically.
+The anti-virus component finds email messages containing
+viruses. Infected messages are discarded. The virus signature database
+is updated periodically.
 
 .. index::
    single: spam
    pair: email; anti-spam
    pair: spam; score
-   see: antispam; anti-spam
+   see: anti-spam; antispam
 
 Anti-spam
 ---------
@@ -346,7 +347,7 @@ spam flag visible on the subject of the message, by prepending the
 given string to the ``Subject`` header.
 
 .. index::
-   single: spam training
+   pair: email; spam training
 
 Statistical filters, called Bayesian [#BAYES]_, are special rules that
 evolve and quickly adapt analyzing messages marked as **spam** or
@@ -368,7 +369,7 @@ By default, all users can train the filters using this technique.  If
 a group called ``spamtrainers`` exits, only users in this group
 will be allowed to train the filters.
 
-.. n note:: It is a good habit to constantly check the junkmail folder
+.. note:: It is a good habit to constantly check the junkmail folder
           in order to not losing email wrongly marked as spam.
 
 .. index::
@@ -406,7 +407,8 @@ three types of rules:
 Client configuration
 ====================
 
-The server supports standard-compliant email clients using the following IANA ports:
+The server supports standard-compliant email clients using the
+following IANA ports:
 
 * imap/143
 * pop3/110
@@ -420,7 +422,7 @@ following variants:
 * PLAIN
 
 Also the following SSL-enabled ports are available for legacy software
-that still does not support TLS.
+that still does not support STARTTLS:
 
 * imaps/993
 * pop3s/995
@@ -445,7 +447,7 @@ For example:
 * Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``,
   ``pop.mysite.com``, ``pop3.mysite.com``.
 
-.. note:: Some mail clients (e.g. Mozilla Thunderbird) are able to use DNS
+.. note:: Some email clients (e.g. Mozilla Thunderbird) are able to use DNS
           aliases and MX record to automatically configure email accounts by
           simply typing the email address.
 
@@ -469,7 +471,8 @@ configuration of legacy environments.
 
 .. warning:: Do not change the default policy on new environments!
 
-Use these commands to enable sending on port 25 with TLS and authentication: ::
+Use these commands to enable sending on port 25 with TLS and
+authentication: ::
 
   config setprop postfix AccessPolicies smtpauth
   signal-event nethserver-mail-common-save
@@ -494,13 +497,18 @@ enabled to send messages by looking at their IP address in Postfix
   echo "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
   signal-event nethserver-mail-common-save
 
+
+.. index::
+   pair: email; HELO
+   alias: HELO; EHLO
+
 .. _email_helo:
 
 Custom HELO
 ===========
 
-The first step of an SMTP session is the exchange of :index:`HELO`
-command (or :index:`EHLO`).  This command takes a valid server name as
+The first step of an SMTP session is the exchange of :dfn:`HELO`
+command (or :dfn:`EHLO`).  This command takes a valid server name as
 required parameter (RFC 1123).
 
 |product| and other mail servers try to reduce spam by not accepting
@@ -681,7 +689,7 @@ A picture of the whole system is available from *workaroung.org* [#MailComponent
 .. [#IMAP] IMAP http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
 .. [#POP3] POP3 http://en.wikipedia.org/wiki/Post_Office_Protocol
 .. [#DNSBL] DNSBL http://en.wikipedia.org/wiki/DNSBL
-.. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spam
+.. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spamming
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
 .. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
