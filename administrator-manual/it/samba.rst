@@ -109,6 +109,8 @@ passi:
 .. _Naming conventions: http://support.microsoft.com/kb/909264
 .. _documentazione ufficiale di Samba: https://wiki.samba.org/index.php/Registry_changes_for_NT4-style_domains
 
+.. _samba_ads:
+
 Active Directory member
 -----------------------
 
