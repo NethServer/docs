@@ -101,6 +101,7 @@ LDAP Configuration
 LDAP Note
 =========
 
+
 User list
 ---------
 
@@ -108,3 +109,14 @@ After |product_oc| LDAP configuration, the user list can show some username cont
 This is because |product_oc| ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
 
 If two administrator users are present, they are of |product_oc| and LDAP. So you can remove that of |product_oc| after have assigned the LDAP one to the administrator group. So, as a result, you can use only the LDAP administrator user.
+
+
+Refresh user list
+-----------------
+
+When you create a new system user, it does not appears immediately in the |product_oc| user list (admin -> Users). This is because a cache interval is expected and the default value is ten minutes. So if you want to force the update of the user list you must do the following actions:
+
+#. admin -> Admin
+#. click "Advanced" tab
+#. click "Save" button
+#. admin -> Users
