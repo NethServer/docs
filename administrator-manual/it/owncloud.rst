@@ -13,7 +13,7 @@ La piattaforma offre inoltre la possibilità di visualizzare, modificare e sincr
 * configurazione automatica di httpd
 * integrazione automatica con gli utenti e gruppi di sistema di |product|
 * documentazione
-* backup dei dati tramite nethserver-backup
+* backup dei dati tramite nethserver-backup-data
 
 
 Installazione
