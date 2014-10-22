@@ -91,9 +91,7 @@ Modules
 .. toctree::
    :maxdepth: 2
 
-   mail_common
-   mail_server
-   mail_filter
+   email
    chat
    ftp
    ups
