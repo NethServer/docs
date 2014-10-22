@@ -98,6 +98,7 @@ Modules
    tftp
    pop3_proxy
    pop3_connector
+   owncloud
 
 Appendix
 --------

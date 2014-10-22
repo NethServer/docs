@@ -13,7 +13,7 @@ basic editing right on the web.
 * preconfigure httpd 
 * integration with |product| system users and groups
 * documentation
-* backup |product_oc| data with nethserver-backup tool
+* backup |product_oc| data with nethserver-backup-data tool
 
 
 Installation
