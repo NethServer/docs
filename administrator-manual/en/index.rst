@@ -54,7 +54,6 @@ Modules
    dhcp
    vpn
    ftp
-   tftp
    owncloud
 
 Best practices
