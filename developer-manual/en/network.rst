@@ -128,6 +128,6 @@ Create a bridge interface from command line.
 The new interface will have green role (eth0 was the previous green interface): ::
 
  db networks delprop eth0 ipaddr netmask bootproto
- db networks setprop eth0 role 'bridged' bridge br0
+ db networks setprop eth0 role bridged bridge br0
  db networks set br0 bridge bootproto static device br0 ipaddr 192.168.1.254 netmask 255.255.255.0 onboot yes role green
  signal-event interface-update
