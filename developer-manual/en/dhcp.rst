@@ -2,6 +2,8 @@
 DHCP
 ====
 
+.. warning:: This page is outdated since ``nethserver-dnmasq-1.3.0`` release
+
 The system can act as DHCP server for the local network.
 Machines which are configured by DHCP have their names automatically included in the DNS server.
 
