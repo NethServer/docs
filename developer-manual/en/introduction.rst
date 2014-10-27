@@ -22,3 +22,8 @@ The NethServer project welcomes anyone who would like to become involved in the 
 * Translating the web interface
 * Developing / coding in Perl, PHP, Python, Bash
 
+
+.. note:: This manual is a work in progress. If you can't find some information
+   please also check the developer wiki: http://dev.nethserver.org/projects/nethserver/wiki/Packages
+
+   Always free feel to ask in ML or IRC channel!
