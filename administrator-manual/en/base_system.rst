@@ -92,6 +92,77 @@ Private network   Subnet mask   IP addresses interval
 192.168.0.0       255.255.0.0   192.168.0.1 - 192.168.255.254
 ===============   ===========   =============================
 
+.. _reset_network-section:
+
+Reset network configuration
+---------------------------
+
+In case of misconfiguration, it's possible to :index:`reset network configuration` by following these steps.
+
+1. Delete all logical and physical interfaces from the db
+
+   Display current configuration: ::
+
+     db networks show
+
+   Delete all interfaces: ::
+
+     db network delete eth0
+
+   Repeat the operation for all interfaces including bridges, bonds and vlans.
+
+
+2. Disable interfaces
+
+   Physical interfaces: ::
+   
+     ifconfig eth0 down
+
+   In case of a bridge: ::
+
+     ifconfig br0 down
+     brctl delbr br0 
+
+   In case of a bond (eth0 is enslaved to bond0): ::
+
+     ifenslave -d bond0 eth0
+     rmmod bonding
+
+3. Remove configuration files
+
+   Network configuration files are inside the :file:`/etc/sysconfig/network-scripts/` directory
+   in the form: :file:`/etc/sysconfig/network-scripts/ifcfg-<devicename>`. Where `devicename` is the
+   name of the interface like `eth0`, `br0`, `bond0`.
+
+   Delete the files: ::
+
+     rm -f /etc/sysconfig/network-scripts/ifcfg-eth0
+
+   Repeat the operation for all interfaces including bridges, bonds and vlans.
+
+4. Restart the network
+
+   After restarting the network you should see only the loopback interface: ::
+
+     service network restart
+
+   Use :command:`ifconfig` command to check the network status.
+
+5. Manually reconfigure the network
+
+   Choose an IP to assign to an interface, for example `192.168.1.100`: ::
+
+     ifconfig eth0 192.168.1.100
+
+   Then reconfigure the system: ::
+
+     signal-event system-init
+
+   The interface will have the chosen IP address.
+
+6. Open the web interface and reconfigure accordingly to your needs
+
+
 .. _network_services-section:
 
 Network services

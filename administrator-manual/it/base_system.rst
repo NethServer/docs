@@ -101,6 +101,76 @@ ID rete privata   Subnet mask   Intervallo di indirizzi IP
 
 I numeri di questi intervalli sono riservati da IANA per l'utilizzo privato in reti TCP/IP e non vengono utilizzati in Internet.
 
+.. _reset_network-section:
+
+Reset network configuration
+---------------------------
+
+In caso di configurazione errata, è possibile :index:`riconfigurare la rete` seguendo i passi descritti sotto.
+
+1. Eliminare tutte le interfacce logiche e fisiche dal database
+
+   Per visualizzare la configurazione corrente ::
+
+     db networks show
+
+   Eliminare le interfacce: ::
+
+     db network delete eth0
+
+   Ripetere l'operazione per tutte le le interfacce compresi bridge, bond e vlan.
+
+
+2. Disabilitare le interfacce
+
+   Interfacce fisiche: ::
+   
+     ifconfig eth0 down
+
+   In caso di bridge: ::
+
+     ifconfig br0 down
+     brctl delbr br0 
+
+   In caso di bond (eth0 collegata a bond0): ::
+
+     ifenslave -d bond0 eth0
+     rmmod bonding
+
+3. Rimuovere i file di configurazione
+
+   I file della configurazione di rete sono salvati all'interno della directory :file:`/etc/sysconfig/network-scripts/`
+   nella forma :file:`/etc/sysconfig/network-scripts/ifcfg-<devicename>`. Dove `devicename` è il nome
+   dell'interfaccia come `eth0`, `br0`, `bond0`.
+
+   Eliminare i file: ::
+
+     rm -f /etc/sysconfig/network-scripts/ifcfg-eth0
+   
+   Ripetere l'operazione per tutte le le interfacce compresi bridge, bond e vlan.
+
+4. Riavviare la rete
+
+   Dopo il riavvio della rete, dovrebbe risultare configurata solo l'interfaccia di loopback: ::
+
+     service network restart
+
+   usare il comando :command:`ifconfig` per controllare lo stato della rete.
+
+5. Riconfigurare manualmente la rete
+
+   Scegliere un IP da assegnare all'interfaccia, per esempio `192.168.1.100`: ::
+
+     ifconfig eth0 192.168.1.100
+
+   Quindi riconfigurare il sistema: ::
+
+     signal-event system-init
+
+   L'interfaccia avrà quindi l'IP scelto.
+
+6. Aprire l'interfaccia web e riconfigurare secondo le proprie necessità
+
 
 .. _network_services-section:
 
@@ -114,7 +184,7 @@ E' possibile cambiare le politiche di accesso dalla pagina :guilabel:`Servizi di
 
 Le politiche di accesso disponibili sono:
 
-* Accesso solo dalle reti verdi (privat): comprende tutti gli host sulla rete green e tutti i computer collegati in VPN
+* Accesso solo dalle reti verdi (private): comprende tutti gli host sulla rete green e tutti i computer collegati in VPN
 * Accesso dalle reti green e red (public): tutti gli host dalle reti green, VPN e reti esterne. Ma non dalla rete ospiti (blue) e dalla DMZ (orange)
 * Accesso solo dal server stesso (none): nessun host può collegarsi al servizio selezionato
 
