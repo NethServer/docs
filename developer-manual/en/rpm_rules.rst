@@ -15,6 +15,14 @@ Each package **MUST** contain:
 * ``<packagename>-update`` event, raised each time the package is installed/updated
    and when the system is re-configured (for instance, after another package has been uninstalled)
 
+The update event should:
+
+* configure the package on first install
+* take care of upgrading current installation in case of package update
+
+.. note:: You should not add code in %post and %pre sections of the spec file.
+   All the logic must be inside the ``-update`` event.
+
 Each package MAY contain:
 
 * ``<packagename>-save`` event, raised by the console or the web
