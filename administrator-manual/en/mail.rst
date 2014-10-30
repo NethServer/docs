@@ -485,7 +485,7 @@ from any client from trusted networks: ::
 
 Policies can be used together, by separating with a comma ``,``: ::
 
-  config setprop postfix AccessPolicies trustednetworks,smptauth
+  config setprop postfix AccessPolicies trustednetworks,smtpauth
   signal-event nethserver-mail-common-save
 
 However, there are some devices (printers, scanners, ...) that do not
