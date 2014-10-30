@@ -114,7 +114,7 @@ The default policy is :dfn:`strong`.
 
 To change the setting to none ::
 
-  config setprop passwordstrength none Users
+  config setprop passwordstrength Users none
 
 To change the setting to strong ::
 
