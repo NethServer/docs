@@ -111,7 +111,8 @@ See Administrator manual for more examples.
 Logging
 =======
 
-OpenLDAP logs only start and stop events inside the :file:`/var/log/messages`.
+OpenLDAP doesn't output any log with standard configuration.
+When logging is enabled, all logs are saved inside :file:`/var/log/slapd`.
 But its verbosity can be changed at run time by issuing this command: ::
 
   # ldapmodify -Y EXTERNAL <<EOF
@@ -127,6 +128,10 @@ Check the debugging levels table from OpenLDAP site for more details: http://www
 .. note:: 
    slapd log file can grow quickly. Remember to set `olcLogLevel` to `0` if you do not need it any longer.
 
+To permanently change LDAP log level: ::
+
+  config setprop slapd LogLevel 256
+  ignal-event nethserver-directory-update
 
 Service accounts
 ================
