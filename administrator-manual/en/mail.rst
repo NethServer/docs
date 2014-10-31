@@ -673,7 +673,7 @@ typical actions performed.
     The Dovecot daemon delivers messages into users' mailboxes,
     possibly applying Sieve filters.
 
-A picture of the whole system is available from *workaroung.org* [#MailComponents]_.
+A picture of the whole system is available from *workaround.org* [#MailComponents]_.
 
 .. rubric:: References
 
