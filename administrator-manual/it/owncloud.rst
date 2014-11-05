@@ -101,4 +101,11 @@ Lista utenti
 Dopo aver configurato |product_oc| con LDAP, la lista utenti potrebbe mostrare qualche nome contenente dei numeri casuali.
 È una soluzione adottata da |product_oc| per garantire che non ci siano nomi duplicati. Per maggiori informazioni leggere `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
 
-Se la lista utenti contiene due amministratori, questi sono di |product_oc| e LDAP. È quindi possibile rimuovere quello di |product_oc| dopo aver assegnato l'utente amministratore di LDAP al gruppo amministratore. In questo modo è possibile usare solo quello di LDAP.
+Se la lista utenti contiene due amministratori, questi sono di |product_oc| e LDAP. È quindi possibile rimuovere quello di |product_oc| dopo aver assegnato l'utente amministratore di LDAP al gruppo amministratore. In questo modo è possibile usare solo quello di LDAP. Per farlo è sufficiente procedere nel seguente modo:
+
+#. eseguire il login a |product_oc| come amministratore
+#. aprire la lista utenti: *admin -> Utenti*
+#. cambiare il gruppo dell'utente "admin_xxx", selezionando "admin"
+#. cambiare la password dell'utente admin di |product_oc|
+#. eseguire il logout e login tramite l'utente admin di LDAP
+#. rimuovere l'utente admin di |product_oc| (chiamato "admin")
