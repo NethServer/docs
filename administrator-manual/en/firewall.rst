@@ -39,13 +39,13 @@ The firewall implements two default policies editable from the page :menuselecti
 * :dfn:`Allowed`: all traffic from green to red is allowed
 * :dfn:`Blocked`: all traffic from green to red network is blocked. Specific traffic must be allowed with custom rules.
 
-Firewall index:`policies` allow inter-zone traffic accordingly to this schema: ::
+Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: ::
 
  GREEN -> BLUE -> ORANGE -> RED
 
 Traffic is allowed from left to right, blocked from right to left.
 
-You can can create rules between zones to change default policies from :guilabel:`Firewall rules` page.
+You can create rules between zones to change default policies from :guilabel:`Firewall rules` page.
 
 .. note::  Traffic from local network to the server on SSH port (default 22) and Server Manager port (default 980) is **always** permitted.
 
