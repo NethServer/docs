@@ -39,12 +39,6 @@ Per aggiornare: ::
 .. note:: L'aggiornamento non modifica la configurazione corrente.
 
 
-Forza SSL per le connessioni client
-===================================
-
-Connettersi tramite *Admin user -> Admin Panel -> Check "Enforce HTTPS"*
-
-
 Configurazione LDAP
 ===================
 
@@ -108,14 +102,3 @@ Dopo aver configurato |product_oc| con LDAP, la lista utenti potrebbe mostrare q
 È una soluzione adottata da |product_oc| per garantire che non ci siano nomi duplicati. Per maggiori informazioni leggere `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
 
 Se la lista utenti contiene due amministratori, questi sono di |product_oc| e LDAP. È quindi possibile rimuovere quello di |product_oc| dopo aver assegnato l'utente amministratore di LDAP al gruppo amministratore. In questo modo è possibile usare solo quello di LDAP.
-
-
-Aggiornare la lista utenti
---------------------------
-
-Quando un nuovo utente di sistema viene creato, non appare immediatamente nella lista utenti di |product_oc| (admin -> Utenti). Questo è dovuto alla presenza di una cache dei dati il cui intervallo temporale di aggiornamento è di dieci minuti. È possibile però forzare l'aggiornamento della lista tramite le seguenti azioni:
-
-#. admin -> Admin
-#. cliccare il tab "Advanzate"
-#. cliccare il pulsante "Save"
-#. admin -> Utenti
