@@ -47,4 +47,7 @@ Una lista di tutti i manuali installati nel sistema è disponibile all'indirizzo
 
 **Esempio**
 
-Se il server ha indirizzo ``192.168.1.2`` e si desidera visualizzare la lista dei manuali
+Se il server ha indirizzo ``192.168.1.2`` e si desidera visualizzare la lista dei manuali in italiano,
+usare il seguente indirizzo: ::
+
+ https://192.168.1.2:980/it/Help
