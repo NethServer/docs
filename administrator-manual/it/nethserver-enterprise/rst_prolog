@@ -1,2 +1,4 @@
 .. |product| replace:: NethServer Enterprise
+.. |product_voice| replace:: NethVoice
+.. |product_cti| replace:: NethCTI
 .. |download_site| replace:: http://docs.nethesis.it

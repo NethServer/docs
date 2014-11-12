@@ -38,6 +38,7 @@ Moduli
    accounts
    mail
    webmail
+   phonebook-mysql
    pop3_proxy
    shared_folder
    samba
