@@ -11,6 +11,17 @@ Roundcube main features are:
 * Shared folders support
 * Plugins
 
+The webmail is available at the following URLs:
+
+* http://_server_/webmail
+* http://_server_/roundcube
+
+For example, given a server with IP address *192.168.1.1* and name *mail.mydomain.com*, valid addresses are:
+
+* http://192.168.1.1/webmail
+* http://192.168.1.1/roundcube
+* http://mail.mydomain.com/webmail
+* http://mail.mydomain.com/roundcube
 
 Plugins
 =======
