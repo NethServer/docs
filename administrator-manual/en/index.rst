@@ -39,6 +39,7 @@ Modules
    backup
    accounts
    mail
+   webmail
    pop3_connector
    pop3_proxy
    shared_folder
