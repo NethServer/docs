@@ -1,1 +1,0 @@
-../webmal.rst
