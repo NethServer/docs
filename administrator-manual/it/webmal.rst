@@ -14,14 +14,14 @@ Le caratteristiche principali della :index:`webmail` sono:
 La webmail è raggiungibile ai seguenti indirizzi:
 
 * http://_server_/webmail
-* http://_server_/roundcube
+* http://_server_/roundcubemail
 
 Per esempio, dato un server con indirizzo IP *192.168.1.1* e nome *mail.miodominio.com*, gli indirizzi validi sono:
 
 * http://192.168.1.1/webmail
-* http://192.168.1.1/roundcube
+* http://192.168.1.1/roundcubemail
 * http://mail.miodominio.com/webmail
-* http://mail.miodominio.com/roundcube
+* http://mail.miodominio.com/roundcubemail
 
 Plugin
 ======
