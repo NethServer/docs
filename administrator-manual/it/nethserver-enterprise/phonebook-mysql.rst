@@ -26,7 +26,7 @@ Gli script personalizzati possono essere scritti in un qualsiasi linguaggio, ass
 
 La directory ::
 
-/usr/share/phonebooks/scripts
+ /usr/share/phonebooks/scripts
 
 fa parte del backup della configurazione.
 
@@ -36,7 +36,7 @@ Nella directory ::
 
 si trovano degli esempi di script per collegare diversi tipi di sorgenti.
 
-Per sorgenti di dati esterne (Mysql,PostgreSQL,MSSql) al |product| è possibile creare un record ODBC che permetta il collegamento.
+Per sorgenti di dati esterne (Mysql,PostgreSQL) al |product| è possibile creare un record ODBC che permetta il collegamento.
 
 Configurazione ODBC
 -------------------
@@ -47,10 +47,6 @@ Esempio MySql: ::
 
  config set miarubrica ODBC Description "MiaRubrica" Driver "MySQL" Server "localhost" Database miarubrica Port 3306
    
-Esempio MSSQL ::
-
- config set business ODBC Description "Business" Driver "MSSQL" Server 192.168.5.168 Database miarubrica Port 1433
-
 Esempio PostgreSQL ::
 
  config set miarubrica ODBC Description "MiaRubrica" Driver "PostgreSQL" Server 192.168.5.168 Database miarubrica Port 5432
@@ -63,7 +59,7 @@ Testare il funzionamento
 ------------------------
 Testare il funzionamento (sintassi: isql -v nomeDSN utente password): ::
 
- isql -v MSSQL sa test
+ isql -v miarubrica sa test
  +---------------------------------------+
  | Connected!                            |
  |                                       |
