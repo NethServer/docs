@@ -37,6 +37,7 @@ Moduli
    backup
    accounts
    mail
+   webmail
    pop3_proxy
    shared_folder
    samba

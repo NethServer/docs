@@ -100,6 +100,7 @@ Modules
    pop3_proxy
    pop3_connector
    owncloud
+   roundcube
 
 Appendix
 --------
