@@ -1,6 +1,6 @@
-============
-|product_oc|
-============
+========
+ownCloud
+========
 
 Configuration
 =============
@@ -25,7 +25,7 @@ This task is accomplished by the action: ::
 LDAP authentication
 ===================
 
-It is enabled by default when clear install |product_oc| and can be `manually activated <http://nethserver.readthedocs.org/en/latest/owncloud.html#ldap-configuration>`_ in the update scenario.
+It is enabled by default when clear install ownCloud and can be `manually activated <http://nethserver.readthedocs.org/en/latest/owncloud.html#ldap-configuration>`_ in the update scenario.
 
 To do the automatic configuration a patched version of the ``occ`` command line tool has been used. The patch add the ``ldap:create-empty-config`` command as explained `here. <https://github.com/owncloud/core/pull/11347>`_ The patched files are: ::
 
@@ -38,7 +38,7 @@ The configuration is made by the action: ::
 
 It does the following:
 
-* first access to |product_oc| url using the ``curl`` to initialize all values of the database
+* first access to ownCloud url using the ``curl`` to initialize all values of the database
 * enable the `"user_ldap"` application
 * create an empty ldap configuration (using the patch)
 * set all the database ldap values
@@ -60,7 +60,7 @@ expand the `ownCloud` and `httpd` templates and restart the `httpd` server.
 Backup
 ======
 
-The |product_oc| backup includes the configuration file and all data of the users: ::
+The ownCloud backup includes the configuration file and all data of the users: ::
 
  /var/www/html/owncloud/data/
  /var/www/html/owncloud/config/config.php

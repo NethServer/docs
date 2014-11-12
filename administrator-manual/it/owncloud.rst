@@ -1,6 +1,6 @@
-============
-|product_oc|
-============
+========
+ownCloud
+========
 
 `ownCloud <http://owncloud.org/>`_ è una soluzione flessibile per la sincronizzazione dei file e la loro condivisione. È possibile avere i propri file sempre a portata di mano su ogni dispositivo, utilizzando un dispositivo mobile, un personal computer, una workstation od un accesso web. La condivisione viene realizzata in maniera semplice, sicura, e privata che significa avere il pieno controllo dei propri dati.
 
@@ -19,18 +19,18 @@ La piattaforma offre inoltre la possibilità di visualizzare, modificare e sincr
 Installazione
 =============
 
-È possibile installare |product_oc| tramite l'interfaccia web di |product|.
+È possibile installare ownCloud tramite l'interfaccia web di |product|.
 Dopo l'installazione:
 
-* accedere all'interfaccia web di |product_oc| tramite l'url https://your_nethserver_ip/owncloud
+* accedere all'interfaccia web di ownCloud tramite l'url https://your_nethserver_ip/owncloud
 * usare le credenziali di default **admin/Nethesis,1234**
 * cambiare la password di default
 
 L'autenticazione LDAP è abilitata di default cosicchè ciascun utente presente nel sistema può accedere tramite le sue credenziali.
 Dopo l'installazione sarà presente anche un nuovo widget applicativo nella dashboard di |product|.
 
-Aggiornamento da |product_oc| 5
-===============================
+Aggiornamento da ownCloud 5
+===========================
 
 Per aggiornare: ::
 
@@ -48,7 +48,7 @@ Configurazione LDAP
 
     cat /var/lib/nethserver/secrets/owncloud
 
-#. Eseguire il login su |product_oc| usando l'account amministratore
+#. Eseguire il login su ownCloud usando l'account amministratore
 #. Cercare l'applicazione LDAP user and group backend: *Applicazioni -> LDAP user and group backend*
 #. Abilitare "LDAP user and group backend"
 #. Configurare i parametri del server: *Admin -> Admin -> tab Server*
@@ -98,14 +98,14 @@ Note su LDAP
 Lista utenti
 ------------
 
-Dopo aver configurato |product_oc| con LDAP, la lista utenti potrebbe mostrare qualche nome contenente dei numeri casuali.
-È una soluzione adottata da |product_oc| per garantire che non ci siano nomi duplicati. Per maggiori informazioni leggere `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
+Dopo aver configurato ownCloud con LDAP, la lista utenti potrebbe mostrare qualche nome contenente dei numeri casuali.
+È una soluzione adottata da ownCloud per garantire che non ci siano nomi duplicati. Per maggiori informazioni leggere `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
 
-Se la lista utenti contiene due amministratori, questi sono di |product_oc| e LDAP. È quindi possibile rimuovere quello di |product_oc| dopo aver assegnato l'utente amministratore di LDAP al gruppo amministratore. In questo modo è possibile usare solo quello di LDAP. Per farlo è sufficiente procedere nel seguente modo:
+Se la lista utenti contiene due amministratori, questi sono di ownCloud e LDAP. È quindi possibile rimuovere quello di ownCloud dopo aver assegnato l'utente amministratore di LDAP al gruppo amministratore. In questo modo è possibile usare solo quello di LDAP. Per farlo è sufficiente procedere nel seguente modo:
 
-#. eseguire il login a |product_oc| come amministratore
+#. eseguire il login a ownCloud come amministratore
 #. aprire la lista utenti: *admin -> Utenti*
 #. cambiare il gruppo dell'utente "admin_xxx", selezionando "admin"
-#. cambiare la password dell'utente admin di |product_oc|
+#. cambiare la password dell'utente admin di ownCloud
 #. eseguire il logout e login tramite l'utente admin di LDAP
-#. rimuovere l'utente admin di |product_oc| (chiamato "admin")
+#. rimuovere l'utente admin di ownCloud (chiamato "admin")

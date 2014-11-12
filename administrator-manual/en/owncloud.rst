@@ -1,6 +1,6 @@
-============
-|product_oc|
-============
+========
+ownCloud
+========
 
 `ownCloud <http://owncloud.org/>`_ provides universal access to your files via the web,
 your computer or your mobile devices wherever you are. It also provides a platform to easily
@@ -13,7 +13,7 @@ basic editing right on the web.
 * preconfigure httpd 
 * integration with |product| system users and groups
 * documentation
-* backup |product_oc| data with nethserver-backup-data tool
+* backup ownCloud data with nethserver-backup-data tool
 
 
 Installation
@@ -30,8 +30,8 @@ LDAP access authentication is enabled by default, so each user can login with it
 After the installation a new application widget is added to the |product| web interface dashboard.
 
 
-Update from |product_oc| 5
-==========================
+Update from ownCloud 5
+======================
 
 To update: ::
 
@@ -49,7 +49,7 @@ LDAP Configuration
 
     cat /var/lib/nethserver/secrets/owncloud
 
-#. Login to |product_oc| as administrator
+#. Login to ownCloud as administrator
 #. Search LDAP user and group backend: *Applications -> LDAP user and group backend*
 #. Enable "LDAP user and group backend"
 #. Configure server parameters: *Admin -> Admin -> Server tab*
@@ -99,14 +99,14 @@ LDAP Note
 User list
 ---------
 
-After |product_oc| LDAP configuration, the user list can show some usernames containing random numbers.
-This is because |product_oc| ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
+After ownCloud LDAP configuration, the user list can show some usernames containing random numbers.
+This is because ownCloud ensures that there are no duplicate internal usernames as reported in section `Internal Username. <http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html#expert-settings>`_
 
-If two administrator users are present, they are of |product_oc| and LDAP. So you can remove that of |product_oc| after have assigned the LDAP one to the administrator group. So, as a result, you can use only the LDAP administrator user. You can do this by the following steps:
+If two administrator users are present, they are of ownCloud and LDAP. So you can remove that of ownCloud after have assigned the LDAP one to the administrator group. So, as a result, you can use only the LDAP administrator user. You can do this by the following steps:
 
-#. login to |product_oc| as administrator
+#. login to ownCloud as administrator
 #. open the user list: *admin -> Users*
 #. change the group of "admin_xxx" user, checking "admin"
-#. change the password of |product_oc| admin user
+#. change the password of ownCloud admin user
 #. logout and login with LDAP admin user
-#. delete |product_oc| admin user (named "admin")
+#. delete ownCloud admin user (named "admin")
