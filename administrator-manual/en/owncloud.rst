@@ -110,3 +110,31 @@ If two administrator users are present, they are of ownCloud and LDAP. So you ca
 #. change the password of ownCloud admin user
 #. logout and login with LDAP admin user
 #. delete ownCloud admin user (named "admin")
+
+
+Domain or IP change
+-------------------
+
+When you change the domain name or IP address of |product|, you have to adapt the ``trusted_domains`` key into the file: ::
+
+ /var/www/html/owncloud/config/config.php
+
+Modify the old values with the new ones. For example if the domain name and IP address were *oldname.server.it 192.168.5.250* and the new ones are *newname.server.it 192.168.5.251*, the old file was: ::
+
+    ...
+    'trusted_domains' =>
+    array (
+        0 => '192.168.5.250',
+        1 => 'oldname.server.it',
+    ),
+    ...
+
+and must be changed as: ::
+
+    ...
+    'trusted_domains' =>
+    array (
+        0 => '192.168.5.251',
+        1 => 'newname.server.it',
+    ),
+    ...
