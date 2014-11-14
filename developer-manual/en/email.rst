@@ -326,7 +326,7 @@ Quickstart: ::
 
  yum install mutt
  cat - <<EOF > ~/.muttrc 
- set spoolfile="imaps://admin*vmail``localhost/"
+ set spoolfile="imaps://admin*vmail@localhost/"
  set folder=""
  EOF
  mutt
@@ -337,7 +337,7 @@ When mutt starts always asks for the ``vmail`` master-user password.
 This is an auto-generated random password, stored in ``/etc/dovecot/master-users``. 
 To avoid typing the password again and again write it in :file:`.muttrc`: ::
 
- set spoolfile="imaps://admin*vmail:PASSWORD``localhost/"
+ set spoolfile="imaps://admin*vmail:PASSWORD@localhost/"
  set folder=""
 
 ``PASSWORD`` must be URL-encoded. For instance the slash character ``/`` is encoded as ``%2f``.
