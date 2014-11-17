@@ -157,7 +157,7 @@ In the case of a web server, listening ports are usually port 80 (HTTP) and 443 
 
 When you create a port forward, you must specify at least the following parameters: 
 
-* The source port, can be a number or a range in the format XX:YY (eg: 1000-1100)
+* The source port, can be a number or a range in the format XX:YY (eg: 1000:1100 for begin port and end port 1100)
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
 
