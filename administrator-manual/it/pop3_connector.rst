@@ -54,6 +54,8 @@ Tutte le operazioni di download sono riportate nei seguenti file:
 * :file:`/var/log/fetchmail.log`
 * :file:`/var/log/maillog`
 
+.. rubric:: Riferimenti
+
 .. [#Fetchmail] Fetchmail è una programma per ricevere e inoltrare la
                 posta remota http://www.fetchmail.info/
 

@@ -49,5 +49,7 @@ All operations are logged to the following files:
 * :file:`/var/log/fetchmail.log`
 * :file:`/var/log/maillog`
 
+.. rubric:: References
+
 .. [#Fetchmail] Fetchmail is a remote-mail retrieval and forwarding
                 utility http://www.fetchmail.info/
