@@ -1,18 +1,18 @@
-.. NethSerice documentation master file
+.. NethServer Enterprise documentation master file
 
 Manuale amministratore
 ======================
 
 .. image:: _static/logo.png
-   :alt: NethService
+   :alt: NethServer Enterprise
 
 .. rubric:: |product| è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
 
 .. sidebar:: Contatti
 
-    * **Sito ufficiale**: `http://www.nethesis.it <http://www.nethsis.it>`_
-    * **Documentazione**: `http://docs.nethesis.it <http://docs.nethesis.it>`_
-    * **Blog**: `http://blog.nethesis.it <http://blog.nethesis.it>`_
+    * **Sito ufficiale**: `www.nethesis.it <http://www.nethsis.it>`_
+    * **Documentazione**: `docs.nethesis.it <http://docs.nethesis.it>`_
+    * **Blog**: `blog.nethesis.it <http://blog.nethesis.it>`_
 
 
 Installazione e configurazione
@@ -37,6 +37,7 @@ Moduli
    backup
    accounts
    mail
+   pop3_connector
    webmail
    phonebook-mysql
    pop3_proxy
@@ -86,8 +87,6 @@ Indici
 
 * :ref:`genindex`
 * :ref:`search`
-
-
 
 .. image:: ../../../_static/by-nc-sa_small.png
    :alt: CC by-nc-sa
