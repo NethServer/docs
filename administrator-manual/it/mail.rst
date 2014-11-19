@@ -725,7 +725,7 @@ azioni tipiche che eseguono:
 
 Un quadro di tutto il sistema è disponibile dal sito *workaround.org* [#MailComponents]_.
 
-.. rubric:: References
+.. rubric:: Riferimenti
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
