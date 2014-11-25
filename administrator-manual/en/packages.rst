@@ -6,7 +6,7 @@ Package manager
 
 |product| is highly modular: at the end of the installation only base system will be ready to be used.
 Base system includes modules like network configuration and log viewer.
-The administrator can install additional modules like mail server, DHCP server and firewall.
+The administrator can install additional modules like :ref:`email-section`, :ref:`dhcp-section` and :ref:`firewall-section`.
 
 The main page shows all available and installed (checked) modules.
 The view can be filtered by category.
