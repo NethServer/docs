@@ -10,9 +10,11 @@ Manuale amministratore
 
 .. sidebar:: Contatti
 
-    * **Sito ufficiale**: `www.nethesis.it <http://www.nethsis.it>`_
-    * **Documentazione**: `docs.nethesis.it <http://docs.nethesis.it>`_
-    * **Blog**: `blog.nethesis.it <http://blog.nethesis.it>`_
+    Sito ufficiale `www.nethesis.it <http://www.nethesis.it>`_
+
+    Documentazione `docs.nethesis.it <http://docs.nethesis.it>`_
+
+    Blog `blog.nethesis.it <http://blog.nethesis.it>`_
 
 
 Installazione e configurazione
