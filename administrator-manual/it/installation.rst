@@ -126,9 +126,9 @@ Al termine dell'installazione, il sistema sarà così configurato:
 * Nome utente: :samp:`root`
 * Password: :samp:`Nethesis,1234`
 * Rete: DHCP abilitato su tutte le interfacce
-* Tastiera: :samp:`us`
-* Fuso orario: :samp:`Greenwich`
-* Lingua: :samp:`en_US.UTF-8`
+* Tastiera: |ks_keyboard|
+* Fuso orario: |ks_timezone|
+* Lingua: |ks_language|
 * Dischi: se sono presenti due o più dischi, verrà creato un RAID1 sui primi due dischi
 
 Opzioni installazione
@@ -274,7 +274,7 @@ Alla fine della procedura di installazione verrà chiesto di effettuare
 il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
 supporto USB prima di riavviare.
 
-Al termine dell'installazione, installare i moduli opzionali: :ref:`package_manager-section`.
+.. include:: installation_end.inc
 
 .. index::
    pair: installazione; ISO
@@ -298,7 +298,7 @@ per trasformare CentOS in |product|.
 
 Abilitare i repository specifici di |product| con il comando: ::
 
- yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
+ yum localinstall -y |yum_localinstall_url|
 
 Per installare il sistema di base eseguire: ::
 
@@ -310,8 +310,5 @@ installazione.  Esempio: ::
 
  nethserver-install nethserver-mail nethserver-nut
 
-In ogni caso, al termine dell'installazione, :ref:`accedere al Server Manager
-<access-section>` per :ref:`installare il software
-<package_manager-section>` addizionale.
-
+.. include:: installation_end.inc
 

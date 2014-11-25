@@ -112,11 +112,11 @@ Unattended mode
 
 After installation, the system will be configured as follows:
 
-* Credentials: root / Nethesis,1234
+* Credentials: :samp:`root / Nethesis,1234`
 * Network: DHCP enabled on all interfaces
-* Keyboard: us
-* Time zone: Greenwich
-* Language: en_US.UTF-8
+* Keyboard: :samp:`|ks_keyboard|`
+* Time zone: :samp:`|ks_timezone|`
+* Language: :samp:`|ks_language|`
 * Disks: if there are two or more disks, a RAID 1 will be created on
   first two disks
 
@@ -276,8 +276,7 @@ End of installation procedure
 
 After parameters input, the procedure will start the installation.
 
-At the end of the procedure, install optional modules if needed:
-:ref:`package_manager-section`.
+.. include:: installation_end.inc
 
 
 .. index::
@@ -302,7 +301,7 @@ commands to transform CentOS into |product|.
 
 Enable |product| repositories with this command: ::
 
-  yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
+  yum localinstall -y |yum_localinstall_url|
 
 To install the base system, run: ::
 
@@ -313,8 +312,5 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
-Anyway, at the end of the procedure, :ref:`access the server-manager
-<access-section>` to :ref:`install additional software
-<package_manager-section>`.
-
+.. include:: installation_end.inc
 

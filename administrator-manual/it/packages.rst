@@ -1,7 +1,7 @@
-.. _package_manager-section:
-
 .. index::
    pair: installazione; software addizionale
+
+.. _package_manager-section:
 
 ==================
 Gestione pacchetti

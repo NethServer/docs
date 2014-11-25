@@ -1,21 +1,27 @@
+.. index::
+   single: registrazione
+   single: Centro Servizi
+
+.. _registration-section:
+
 =============
 Registrazione
 =============
 
 |product| offre la possibilità di tenere sotto controllo i parametri critici di funzionamento tramite 
-il :index:`Centro Servizi` Nethesis, accessibile con la coppia utente/password all'indirizzo https://register.nethesis.it.
+il :dfn:`Centro Servizi`, accessibile con la coppia utente/password all'indirizzo |register_link|.
 Come prima operazione, per ogni |product| installato, è necessario effettuare la 
 :index:`registrazione` per permettere una corretta identificazione nella comunicazione con la console web.
 
-Accedere all'interfaccia web del server (https://server:980), fare click su :guilabel:`Gestione pacchetti` e seguire la procedura guidata:
+Accedere all'interfaccia web del server (``https://server:980``), fare click su :guilabel:`Gestione pacchetti` e seguire la procedura guidata:
 
-* Inserire le credenziali rivenditore utilizzate presso il sito https://register.nethesis.it
+* Inserire le credenziali rivenditore utilizzate presso il Centro Servizi |register_link|
 * Selezionare un server esistente oppure scegliere la creazione di nuovo server
 * In caso di creazione assicurarsi di inserire un nome che faciliti l'identificazione del server. Si consiglia anche di immettere una descrizione
 * Associare un cliente esistente al nuovo server oppure compilare i campi per la creazione di nuovo cliente
 * Confermare i dati immessi per terminare la procedura di registrazione
 
-Al termine sarà possibile installare il software aggiuntivo.
+Al termine sarà possibile :ref:`installare il software aggiuntivo <package_manager-section>`.
 
 L'installazione di software aggiuntivo dall'interfaccia web è permessa esclusivamente solo ai possessori delle credenziali rivenditore.
 L'utilizzo di :command:`yum` da linea di comando permette di aggirare questa limitazione. Pertanto si sconsiglia di consegnare la password di :dfn:`root` all'utente finale.
@@ -28,7 +34,7 @@ Per maggiori informazioni, vedi :ref:`admin_user-section`.
 :index:`Codice server`
 ======================
 
-Il :dfn:`codice server` permette di identificare in modo univoco il server all'interno del Centro Servizi Nethesis (http://register.nethesis.it).
+Il :dfn:`codice server` permette di identificare in modo univoco il server all'interno del Centro Servizi |register_link|.
 Nel dettaglio del server presente sul Centro Servizi Nethesis sono presenti due pulsanti chiamati 
 :guilabel:`Libera Chiave` e :guilabel:`Elimina Server`, ognuno dei quali ha una funzione ben specifica.
 
