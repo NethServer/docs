@@ -1,4 +1,7 @@
-.. _installation:
+.. _installation-section:
+
+.. index::
+   single: installazione
 
 =============
 Installazione
@@ -16,7 +19,7 @@ Compatibilità hardware
 ----------------------
 
 |product| è compatibile con tutto l':index:`hardware certificato` per
-Red Hat® Enterprise  Linux® (RHEL ®). Vedi: `https://hardware.redhat.com/ <https://hardware.redhat.com/>`_
+Red Hat® Enterprise  Linux® (RHEL ®). Vedi: `hardware.redhat.com <https://hardware.redhat.com/>`__
 
 Si richiede HW di classe server e non desktop, dato che garantisce
 maggiore compatibilità e qualità dei componenti.
@@ -40,14 +43,14 @@ default da un apposito software pre-configurato che segnala eventuali
 anomalie.
 
 Tipi di installazione
-======================
+=====================
 
 Sono supportati due modi per :index:`installare` |product|. In breve:
 
 * **Installazione da ISO**
 
   * scaricare l'immagine ISO, 
-  * preparare un CD/DVD o una chiavetta USB avviabile
+  * preparare un CD/DVD,
   * seguire la procedura guidata
 
 * **Installazione da YUM**
@@ -57,14 +60,21 @@ Sono supportati due modi per :index:`installare` |product|. In breve:
   * eseguire l'installazione da rete
 
 
+.. index::
+   pair: installazione; ISO
+
 Installazione da ISO
 ====================
+
+.. warning:: L'installazione eliminerà tutti i dati esistenti sui
+             dischi rigidi!
+
 
 Il file :index:`ISO` di |product| si scarica dal sito ufficiale
 |download_site|.  
 
 Una volta scaricato, il file ISO può essere utilizzato per creare un
-*supporto avviabile*, come un CD, un DVD, o una chiavetta USB.
+*supporto avviabile*, come un CD o un DVD.
 
 La creazione di un disco avviabile è diversa dalla semplice scrittura
 di un file su CD/DVD, e richiede l'uso di una funzione dedicata, di
@@ -74,25 +84,15 @@ CD/DVD avviabile a partire dall'immagine ISO sono facilmente
 reperibili su Internet o nella documentazione del proprio sistema
 operativo.
 
-In maniera simile, per preparare una chiavetta USB avviabile, la
-semplice copia del file sulla chiavetta non è sufficiente. Ci sono
-specifici programmi [#]_ che a partire dall'immagine ISO preparano la
-chiavetta USB.
-
-In entrambi i casi, una volta preparato il supporto avviabile (CD,
-DVD, USB) con l'immagine ISO di |product|, inserirlo e avviare la
+Una volta preparato il supporto avviabile (CD,
+DVD) con l'immagine ISO di |product|, inserirlo e avviare la
 macchina.  Se non viene riconosciuto, fare riferimento alla
 documentazione del BIOS della scheda madre. Una problematica tipica è
 impostare la priorità dei dispositivi all'avvio in modo da tentare per
 primo il supporto con l'immagine ISO di |product|.
 
-.. [#] Per esempio, http://unetbootin.sourceforge.net/ 
-
 All'avviò verrà mostrata un menù con i diversi tipi di installazione
 disponibili.
-
-.. warning:: L'installazione eliminerà tutti i dati esistenti sui
-                dischi rigidi!
 
 |product| interactive install
     Consente di selezionare la lingua, configurare il supporto RAID,
@@ -114,12 +114,12 @@ Boot from local drive
     Tenta l'avvio di un sistema già installato sul disco rigido.
 
 Alla fine della procedura di installazione verrà chiesto di effettuare
-il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
-supporto USB prima di riavviare.
+il riavvio della macchina. **Rimuovere il media di
+installazione**, prima di riavviare.
 
 
-Modalità unattended
--------------------
+Modalità *unattended*
+---------------------
 
 Al termine dell'installazione, il sistema sarà così configurato:
 
@@ -276,38 +276,42 @@ supporto USB prima di riavviare.
 
 Al termine dell'installazione, installare i moduli opzionali: :ref:`package_manager-section`.
 
+.. index::
+   pair: installazione; ISO
+   pair: installazione; VPS
+   pair: installazione; USB
+
 Installazione su CentOS
 =======================
 
-E’ possibile installare |product| su una nuova installazione di :index:`CentOS`
-usando il comando :command:`yum` per scaricare via rete i
-pacchetti software. 
+È possibile installare |product| su una nuova installazione di
+:index:`CentOS` usando il comando :program:`yum` per scaricare via
+rete i pacchetti software.  Questo è il metodo di installazione racommandato se si ha
 
-Per esempio, per installare |product| 6.5 si
-comincerà installando CentOS 6.5 sul sistema (molti fornitori di VPS
+* un server virtuale privato (VPS), oppure
+* una chiavetta USB
+
+Per esempio, per installare |product| |version| si
+comincerà installando CentOS |version| sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
 per trasformare CentOS in |product|. 
 
-Abilitare i repository specifici di |product| con il comando:
-
-::
+Abilitare i repository specifici di |product| con il comando: ::
 
  yum localinstall -y http://pulp.nethserver.org/nethserver/nethserver-release.rpm
 
-Per installare il sistema di base eseguire:
-
-::
+Per installare il sistema di base eseguire: ::
 
  nethserver-install
 
-Per installare i moduli aggiuntivi, passare il nome dei moduli come parametro allo script di installazione.
-Esempio:
+Oppure, per installare contestualmente del software addizionale,
+passare il nome dei moduli desiderati come parametro allo script di
+installazione.  Esempio: ::
 
-::
+ nethserver-install nethserver-mail nethserver-nut
 
-  nethserver-install nethserver-mail nethserver-nut
-
-
-Al termine dell'installazione, installare i moduli opzionali: :ref:`package_manager-section`.
+In ogni caso, al termine dell'installazione, :ref:`accedere al Server Manager
+<access-section>` per :ref:`installare il software
+<package_manager-section>` addizionale.
 
 

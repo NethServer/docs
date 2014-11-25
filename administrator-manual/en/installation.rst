@@ -1,5 +1,7 @@
 .. _installation-section:
 
+.. index:: installation
+
 =============
 Installation
 =============
@@ -29,7 +31,7 @@ Hardware compatibility
 
 |product| is compatible with any hardware certified by Red Hat®
 Enterprise Linux® (RHEL®), listed on `hardware.redhat.com
-<http://hardware.redhat.com/>`_
+<http://hardware.redhat.com/>`__
 
 
 Installation types
@@ -40,7 +42,7 @@ Installation types
 **Installing from ISO**
 
   * Download the ISO image,
-  * Prepare a CD / DVD or a bootable USB stick
+  * Prepare a CD / DVD
   * Follow the wizard
 
 **Installing from YUM**
@@ -55,32 +57,24 @@ Installation types
 Installing from ISO
 ===================
 
-Download |product| ISO file from official site |download_site|.
+.. warning:: The ISO installation will erase all existing data on
+             hard drives!
 
-Downloaded ISO file can be used to create a *Bootable media* such as a
-CD, a DVD, or a USB stick.  The creation of a bootable disk is
-different from writing files into CD/DVD, and it requires the use of a
-dedicated function (e.g. *write* or *burn ISO image*).  Instructions
-on how to create a bootable CD/DVD from the ISO are easily available
-on the Internet or in the documentation of your system operating
-system.
 
-A similar procedure applies for bootable USB stick.  There are
-specific programs [#]_ which will convert downloaded ISO into bootable
-USB sticks.
+**Download the ISO file** from official site |download_site|.  The
+downloaded ISO file can be used to **create a bootable media** such as
+CD or DVD.  The creation of a bootable disk is different from
+writing files into CD/DVD, and it requires the use of a dedicated
+function (e.g. *write* or *burn ISO image*).  Instructions on how to
+create a bootable CD/DVD from the ISO are easily available on the
+Internet or in the documentation of your system operating system.
 
-In both cases, you can now start the machine using the freshly backed
-media.  If the machine will not start from the CD/DVD (or USB), please
-refer to the documentation of the motherboard BIOS. A typical problem
-is how boot device priority is configured.  First boot device should
-be the CD/DVD reader (or USB stick).
-
-.. [#] For example, http://unetbootin.sourceforge.net/
+**Start the machine using the freshly backed media**.  If the machine
+will not start from the CD/DVD, please refer to the documentation of
+the motherboard BIOS. A typical problem is how boot device priority is
+configured.  First boot device should be the CD/DVD reader.
 
 On start a menu will display different types of installation:
-
-.. warning :: The installation will erase all existing data on hard
-   drives!
 
 |product| interactive install
 
@@ -110,7 +104,7 @@ Boot from local drive
 
 
 At the end of the installation process you will be asked to reboot the
-machine. Be sure to remove the CD or USB support before restarting.
+machine. Be sure to remove the installation media before restarting.
 
 
 Unattended mode
@@ -231,7 +225,7 @@ When enabling this option, all data written to the disk will be
 encrypted using symmetric encryption.  In case of theft, an attacker
 will not be able to read the data without the encryption key.
 
-It's possible to choose a password for the encryption, otherwise the
+It is possible to choose a password for the encryption, otherwise the
 system administrator password will be used.
 
 .. note :: You will need to enter the password at every system boot.
@@ -288,12 +282,18 @@ At the end of the procedure, install optional modules if needed:
 
 .. index::
    pair: installation; CentOS
+   pair: installation; VPS
+   pair: installation; USB
 
 Install on CentOS
 =================
 
-It's possible to install |product| on a fresh CentOS install using the
-command *yum* to download software packages.
+It is possible to install |product| on a fresh CentOS installation
+using the :program:`yum` command to download software packages. This
+is the recommended installation method if you have
+
+* a virtual private servers (VPS), or
+* an USB stick.
 
 For example, if you wish to install |product| |version|, just start
 with a CentOS |version| on your system (many VPS providers offer
@@ -308,11 +308,13 @@ To install the base system, run: ::
 
   nethserver-install
 
-To install additional modules, pass the name of the module as a
-parameter to the install script.  Example for mail and ups modules: ::
+Alternatively, to install base system *and* additional modules, pass
+the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
-At the end of the procedure, install optional modules if needed:
-:ref:`package_manager-section`.
+Anyway, at the end of the procedure, :ref:`access the server-manager
+<access-section>` to :ref:`install additional software
+<package_manager-section>`.
+
 
