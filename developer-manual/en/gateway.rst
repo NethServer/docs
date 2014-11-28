@@ -297,7 +297,7 @@ If no IP is specified (recommnded option), the system will try to find a suitabl
 
 If you want to use a custom checkip, these are some lines guides to make the right choice:
 
-* use an ip address inside the network of you provider, for example the provider DNS
+* use an ip address inside the network of you provider
 * choose an hop near your gateway. You can use a command like this to discover a suitable next hop: 
 
 ::
