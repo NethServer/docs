@@ -101,6 +101,7 @@ Modules
    pop3_connector
    owncloud
    roundcube
+   collectd
 
 Appendix
 --------
