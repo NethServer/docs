@@ -51,6 +51,7 @@ Modules
    firewall
    snort
    bandiwidth_monitor
+   statistics
    dns
    dhcp
    vpn

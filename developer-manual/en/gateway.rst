@@ -287,6 +287,8 @@ Helper record:
 
 For more information about helpers, see: http://www.shorewall.net/Helpers.html
 
+.. _section-multiwan:
+
 Multi WAN
 =========
 

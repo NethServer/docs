@@ -24,10 +24,11 @@ No configuration is needed, collectd is enabled by default when installed.
 Ping plugin
 ===========
 
-The ping plugin sends an ICMP packet every 5 seconds to the configured upstream DNS measure network latency.
-If the multi wan module is configured, every checkip is also pinged.
+The ping plugin sends an ICMP packet every 5 seconds to:
+* upstream DNS
+* every checkip of enabled provider (see :ref:`section-multiwan`) 
 
-Additional hosts could be monitored (i.e. a webserver) using a comma separeted list of hosts ``PingHosts`` property: ::
+Additional hosts must be added to the ``PingHosts`` property: ::
 
  config setprop collectd PingHosts www.nethesis.it,www.nethserver.org
  signal-event nethserver-collectd-update
@@ -42,7 +43,7 @@ When installed, both interfaces create a random URL for accessing the interface.
 Cleanup
 =======
 
-Every day a cronjob (:file:`/etc/cron.daily/collectd_cleanup`) takes care to clean up all rdd files not updated
+Every day a cronjob (:file:`/etc/cron.daily/collectd_cleanup`) takes care to clean up all RRD files not updated
 during the last day.
 
 
