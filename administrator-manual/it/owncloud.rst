@@ -39,10 +39,10 @@ Per aggiornare: ::
 .. note:: L'aggiornamento non modifica la configurazione corrente.
 
 
-Configurazione LDAP
-===================
+Configurazione LDAP (solo aggiornamenti da versione 5)
+======================================================
 
-.. note:: Nelle nuove installazioni la configurazione LDAP è eseguita automaticamente.
+.. note:: Questa sezione è da seguire SOLO se è stato eseguito un aggiornamento dalla versione 5 alla versione 7 e non è stata ancora configurata la parte LDAP. Nelle nuove installazioni la configurazione LDAP è eseguita automaticamente. 
 
 #. Copiare la password LDAP con il seguente comando: ::
 
