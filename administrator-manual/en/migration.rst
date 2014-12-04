@@ -28,6 +28,9 @@ machine (:dfn:`source`) into a |product| (:dfn:`destination`).
  
      grep -E '(FAIL|ERROR)' /var/log/messages
 
+.. note:: No custom template is migrated during the migration process.
+   Check the new template files before copying any custom fragment from the old backup.
+
 .. index::
    pair: migration; email
 
