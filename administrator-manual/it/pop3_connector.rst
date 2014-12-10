@@ -54,6 +54,13 @@ Tutte le operazioni di download sono riportate nei seguenti file:
 * :file:`/var/log/fetchmail.log`
 * :file:`/var/log/maillog`
 
+.. warning:: Se un account di :ref:`Active Directory <samba_ads>`
+             scelto per la consegna viene eliminato in un secondo
+             momento, la configurazione diventa inconsistente.  La
+             configurazione dell'account esistente nella pagina
+             :guilabel:`Connettore POP3` deve essere disabilitata o
+             eliminata.
+
 .. rubric:: Riferimenti
 
 .. [#Fetchmail] Fetchmail è una programma per ricevere e inoltrare la

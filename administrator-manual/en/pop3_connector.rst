@@ -49,6 +49,12 @@ All operations are logged to the following files:
 * :file:`/var/log/fetchmail.log`
 * :file:`/var/log/maillog`
 
+.. warning:: If an :ref:`Active Directory <samba_ads>` account was
+             selected for delivery and has been subsequently deleted,
+             the configuration becomes inconsistent!  The existing
+             account configuration in :guilabel:`POP3 connector` page
+             must be disabled or deleted.
+
 .. rubric:: References
 
 .. [#Fetchmail] Fetchmail is a remote-mail retrieval and forwarding
