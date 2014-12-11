@@ -48,7 +48,7 @@ copyright = u'2014, Nethesis'
 # built documents.
 #
 # The short X.Y version.
-version = '6.5'
+version = '6.6'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -88,7 +88,6 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output ---------------------------------------------------
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'default'
@@ -103,6 +102,7 @@ html_theme = 'default'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
+html_title = u"%s %s" % (project, release)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None

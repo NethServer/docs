@@ -6,17 +6,10 @@ Manuale amministratore
 .. image:: ../../_static/logo.png
    :alt: |product|
 
-.. rubric:: |product| è un sistema operativo progettato per le piccole e medie imprese. Semplice, sicuro, flessibile.
+|product| è un sistema operativo progettato per le piccole e medie
+imprese. Semplice, sicuro, flessibile.
 
-.. sidebar:: Contatti
-
-    * **Sito ufficiale**: `http://www.nethserver.org <http://www.nethserver.org>`_
-    * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
-    * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
-    * **Codice sorgente**: `http://code.nethserver.org <http://code.nethserver.org>`_
-    * **Mailing list**: `nethserver@googlegroup.com` 
-    * **Archivio ML**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
-    * **IRC**: `#nethserver su freenode.net`
+`www.nethserver.org <http://www.nethserver.org>`_
 
 
 Installazione e configurazione
