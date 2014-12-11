@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# NethServer enterprise documentation build configuration file, created by
+# NethServer Enterprise documentation build configuration file, created by
 # sphinx-quickstart on Sun Jan 19 10:47:03 2014.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'NethServer enterprise'
+project = u'NethServer Enterprise'
 copyright = u'2014, Nethesis'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_show_sourcelink = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'NethServer enterprisedoc'
+htmlhelp_basename = 'NethServer_enterprisedoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'NethServer_enterprise.tex', u'Documentazione NethServer enterprise',
+  ('index', 'NethServer_enterprise.tex', u'Documentazione NethServer Enterprise',
    u'Nethesis', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'nethserver_enterprise', u'Documentazione NethServer enterprise',
+    ('index', 'nethserver_enterprise', u'Documentazione NethServer Enterprise',
      [u'Nethesis'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'NethServer enterprise', u'Documentazione NethServer enterprise',
-   u'Nethesis', 'NethServer enterprise', '',
+  ('index', 'NethServer enterprise', u'Documentazione NethServer Enterprise',
+   u'Nethesis', 'NethServer Enterprise', '',
    'Miscellaneous'),
 ]
 

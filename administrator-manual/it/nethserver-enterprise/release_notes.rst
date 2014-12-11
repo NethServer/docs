@@ -8,7 +8,7 @@ introduce numerose novità a livello funzionale ed estetico.
 Sistema base
 ============
 
-|product| è basato su CentOS 6.x ed è disponibile solo per sistemi a 64 bit. 
+|product| è basato su CentOS |version| ed è disponibile solo per sistemi a 64 bit. 
 
 La struttura di |product| è altamente modulare, ovvero è possibile installare solo i software strettamente necessari.
 Il sistema base è composto dall'interfaccia web per la configurazione, un firewall minimale e il server per l'accesso remoto sicuro (SSH).

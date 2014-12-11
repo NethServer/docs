@@ -1,8 +1,14 @@
+.. _access-section:
+
+.. index::
+   single: interfaccia web
+   single: Server Manager
+
 ========================
 Accesso (Server Manager)
 ========================
 
-|product| viene configurato tramite una :index:`interfaccia web`, detta :dfn:`Server Manager`.
+|product| viene configurato tramite una *interfaccia web*, detta :dfn:`Server Manager`.
 Per accedere alle pagine di gestione si utilizza un browser (es. FireFox, Google Chrome, etc)
 installato su un PC connesso alla stessa rete LAN del server.
 
@@ -12,7 +18,7 @@ impostati al momento dell’installazione.
 
 Se il modulo web server è installato, l'interfaccia web è raggiungibile anche all'indirizzo: ``https://server/server-manager``
 
-Il :index:`Server Manager` utilizza certificati SSL auto-firmati, sarà quindi necessario
+Il Server Manager utilizza certificati SSL auto-firmati, sarà quindi necessario
 accettare esplicitamente tali certificati la prima volta che si accede al server.
 La connessione è comunque sicura e cifrata.
 

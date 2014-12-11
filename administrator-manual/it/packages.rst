@@ -1,3 +1,6 @@
+.. index::
+   pair: installazione; software addizionale
+
 .. _package_manager-section:
 
 ==================
@@ -7,7 +10,7 @@ Gestione pacchetti
 |product| è altamente modulare: al termine dell'installazione il sistema contiene solo
 i moduli di base (es. configurazione di rete, visualizzazione log).
 L'amministratore può quindi decidere quali componenti installare in base
-alle proprie esigenze (es. mail server, DHCP server, firewall ecc.)
+alle proprie esigenze (es. :ref:`email-section`, :ref:`dhcp-section`, :ref:`firewall-section`, ecc.).
 
 La vista principale mostra una lista di componenti software. Gli elementi
 spuntati rappresentano i componenti installati, mentre quelli non spuntati sono
