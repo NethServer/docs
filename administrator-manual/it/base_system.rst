@@ -209,27 +209,6 @@ Data la seguente configurazione:
 Se gli host dalla DMZ devono accedere al server NTP, aggiungere la rete 192.168.2.0/24 nel campo :guilabel:`Consenti host`.
 
 
-.. _remote_access-section:
-
-Accesso remoto
-==============
-
-Server Manager
---------------
-
-E' possibile specificare reti a cui sia esplicitamente consentito l'accesso al Server Manager.
-Ad esempio, se il server è presso un cliente, si consiglia di permettere il collegamento dalla rete
-remota da cui si voglia amministrare la macchina.
-
-SSH
----
-
-Si consiglia di mantenere sempre attivo il servizio :index:`SSH` (Secure Shell).
-SSH è un protocollo per aprire una shell remota usando connessioni cifrate.
-
-La configurazione di default consente l'autenticazione via password e mediante chiave pubblica/privata.
-
-
 .. _trusted_networks-section:
 
 Reti fidate

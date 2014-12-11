@@ -196,28 +196,8 @@ Given the following configuration:
 
 If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
 
-.. _remote_access-section:
-
-Remote access
-=============
-
-Server Manager
---------------
-
-It's possible to grant Server Manager's access to selected networks.
-For example, if the server is inside a customer network, you should allow connections from remote management networks.
-
-SSH
----
-
-The :index:`SSH` (Secure Shell) should be always available.
-SSH is a protocol to open remote shells over secure connections.
-
-Default configuration allows authentication using password and public/private keys.
-
 
 .. _trusted_networks-section:
-
 
 Trusted networks
 ================
