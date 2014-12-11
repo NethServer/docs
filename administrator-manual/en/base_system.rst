@@ -251,10 +251,25 @@ Remember to add the network to :ref:`trusted_networks-section`, if you wish to a
 Organization contacts
 =====================
 
-Fields in this section are used to generate self-signed SSL certificates and for user creation.
+The :guilabel:`Organization contacts` page fields are used as default
+values for user accounts.  The organization name and address are also
+displayed on the Server Manager login screen.
 
-.. note:: Any modification to these data will regenerate all SSL certificates. Most clients will must
-   be reconfigured.
+.. index::
+   pair: Certificate; SSL   
+
+.. _server_certificate-section:
+
+Server certificate
+==================
+
+The :guilabel:`Server certificate` page shows the currently installed
+SSL certificate that is provided by all system services.
+
+The :guilabel:`Generate certificate` button allows generating a new
+self-signed SSL certificate.  When a new certificate is generated, all
+SSL services are restarted and network clients will be required to
+accept the new certificate.
 
 .. _user_profile-section:
 

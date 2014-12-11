@@ -269,14 +269,32 @@ Vedi :ref:`trusted_networks-section`.
 
 .. _organization_contacts-section:
 
-Dati organizzazione
-===================
+Indirizzo dell'organizzazione
+=============================
 
-I campi in questa sezione vengono utilizzati per la generazione dei certificati
-SSL auto-firmati e per la creazione degli utenti.
+I campi della pagina :guilabel:`Indirizzo dell'organizzazione` sono
+utilizzati come valori di default nella creazione degli utenti.
+Inoltre il nome dell'organizzazione e l'indirizzo sono mostrati nella
+pagina di login del Server Manager.
 
-.. note:: Ogni modifica ai dati inseriti rigenera tutti i certificati SSL, pertanto sarà necessario
-   accettarli nuovamente nei client già configurati (es. client posta e browser).
+
+.. index::
+   pair: Certificato; SSL   
+
+.. _server_certificate-section:
+
+Certificato del server
+======================
+
+La pagina :guilabel:`Certificato del server` mostra il certificato SSL
+attualmente installato e che viene presentato da tutti i servizi
+presenti nel sistema.
+
+Il pulsante :guilabel:`Nuovo certificate` consente di generare un
+nuovo certificato SSL auto-firmato. Se si genera un nuovo certificato,
+tutti i servizi SSL verranno riavviati e ai client di rete sarà
+richiesto di accettare il nuovo certificato.
+
 
 .. _user_profile-section:
 
