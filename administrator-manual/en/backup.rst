@@ -24,6 +24,10 @@ Data backup can be saved on three different destinations:
 
 The backup status can be notified to the system administrator or to an external mail address.
 
+.. note:: The destination directory is based on the server host name: in case of
+   FQDN change, the administrator should take care to copy backup data from
+   the old directory to the new one.
+
 Data restore
 ============
 

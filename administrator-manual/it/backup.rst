@@ -27,6 +27,10 @@ Il backup dei dati può essere fatto su tre tipi di destinazione:
 
 L'esito del backup può essere notificato all'amministratore o ad un indirizzo mail esterno.
 
+.. note:: La directory di destinazione è basta sul nome host del server:
+   in caso di cambio FQDN, l'amministratore dovrà occuparsi di spostare manualmente
+   i dati del backup dalla vecchia alla nuova directory.
+
 
 Ripristino dati
 ===============
