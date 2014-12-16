@@ -57,6 +57,7 @@ Modules
    vpn
    ftp
    owncloud
+   phone_home
 
 Best practices
 --------------
