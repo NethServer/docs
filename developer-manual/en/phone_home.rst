@@ -40,6 +40,9 @@ Create table in your database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 After setting up your own credentials, simply run (MySQL syntax): ::
 
+ CREATE DATABASE phonehome;
+ GRANT ALL ON phonehome.* TO user IDENTIFIED BY 'password';
+
  CREATE TABLE IF NOT EXISTS phone_home_tb (
   uuid                  VARCHAR(40) PRIMARY KEY, 
   release_tag           VARCHAR(10) NOT NULL,
@@ -65,18 +68,3 @@ Create a file named ``phone-home`` in ``/etc/sysconfig`` and set the correct inf
  PROXY_PORT=__proxyport__
 
 the variables ``PROXY_SERVER, PROXY_USER, PROXY_PASS, PROXY_PORT`` are not mandatory.
-
-Add new record for phone-home
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Simply run: ::
-
- config set phone-home configuration status enabled
-
-to enable the tool (*Disabled by default*).
-
-Run phone-home
-^^^^^^^^^^^^^^
-Copy the ``phone-home`` script from ``/root/etc/cron.weekly`` in this repo into your ``/etc/cron.weekly`` directory, or simply run: ::
-
- ./phone-home
-
