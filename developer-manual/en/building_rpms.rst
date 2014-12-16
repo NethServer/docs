@@ -67,7 +67,7 @@ Then copy :file:`/usr/share/doc/nethserver-devbox-<version>/config.sample` to :f
 
 On **Fedora**, clone nethserver-devbox repository somewhere in your filesystem: ::
 
-  git clone git://code.nethesis.it/nethserver-devbox
+  git clone https://github.com/nethesis/nethserver-devbox.git
 
 Then install some packages marked as "Requires" in :file:`nethserver-devbox.spec`: 
 
