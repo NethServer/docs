@@ -102,6 +102,7 @@ Modules
    owncloud
    roundcube
    collectd
+   phone_home
 
 Appendix
 --------
