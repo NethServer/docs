@@ -16,7 +16,7 @@ Developer Manual
     * **Official site**: `http://www.nethserver.org <http://www.nethserver.org>`_
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
-    * **Source code**: `http://code.nethserver.org <http://code.nethserver.org>`_
+    * **Source code**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Mailing list**: `nethserver@googlegroup.com` 
     * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`

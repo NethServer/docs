@@ -13,7 +13,7 @@ The build process is tested on Fedora 17 and NethServer (CentOS).
 
 Prepare the yum package groups file: ::
 
- git clone git://code.nethesis.it/comps
+ git clone https://github.com/nethesis/comps.git
  cd comps
  make
 
