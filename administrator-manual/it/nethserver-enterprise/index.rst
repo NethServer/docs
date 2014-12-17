@@ -57,6 +57,7 @@ Moduli
    vpn
    ftp
    owncloud
+   weekly_report
 
 Best practices
 --------------
