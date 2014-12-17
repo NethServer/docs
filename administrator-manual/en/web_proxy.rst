@@ -15,7 +15,8 @@ The advantages of a web proxy are:
 * reduce bandwidth usage by caching the pages you visit
 
 
-The proxy supports the following modes:
+The proxy can be enabled only on green and blue zones.
+Supported modes are:
 
 * Manual: all clients must be configured manually
 * Authenticated users must enter a user name and password in order to navigate
@@ -29,14 +30,19 @@ Client configuration
 The proxy is always listening on port 3128. When using manual or authenticated modes,
 all clients must be explicitly configured to use the proxy.
 The configuration panel is accessible from the browser settings.
+By the way, most clients will be automatically configured using WPAD protocol.
 In this case it is useful to enable :guilabel:`Block HTTP and HTTPS ports` option to avoid proxy bypass.
 
 If the proxy is installed in transparent mode, all web traffic coming from clients is diverted
 through the proxy. No configuration is required on individual clients.
+
+Certificate file is saved inside :file:`/etc/pki/tls/certs/NSRV.crt` file, it can be downloaded from client
+at ``http://<ip_server>/proxy.crt`` address.
    
+.. _proxy_ssl-section:
 
 SSL Proxy
----------
+=========
 
 .. warning:: Decrypting HTTPS connection without user consent is illegal in many countries.
 
@@ -50,3 +56,13 @@ the CA certificate of the server.
 The server certificate is located in :file:`/etc/pki/tls/certs/NSRV.crt`.
 It is advisable to transfer the file using an SSH client (eg FileZilla).
 
+Bypass
+======
+
+In some cases it may be necessary to ensure that traffic originating
+from specific IP or destinated to some sites it's not routed through the HTTP/HTTPS proxy.
+
+The proxy allows you to create:
+
+* bypass by source, configurable from :guilabel:`Hosts without proxy` section
+* bypass by destination, configurabile from :guilabel:`Sites without proxy` section
