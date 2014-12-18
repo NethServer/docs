@@ -48,6 +48,7 @@ Modules
    ups
    fax_server
    web_proxy
+   content_filter
    firewall
    snort
    bandiwidth_monitor
