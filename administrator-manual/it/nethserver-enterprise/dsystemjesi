@@ -80,7 +80,7 @@ Il Gestore pacchetti consente di installare e rimuovere software aggiuntivo nel 
 Il Gestore pacchetti è accedibile solo con le credenziali
 del rivenditore. Ogni rivenditore potrà installare sul sistema tutte le linee di prodotto per cui ha sottoscritto un contratto.
 |product| potrà quindi essere composto sia da moduli che ricadono sotto il supporto NethService (es. server di posta)
-sia da moduli specifici di NethSecurity (es. firewall avanzato).
+sia da moduli specifici di NethSecurity (es. firewall di base e avanzato).
 
 Visualizzazione log
 -------------------
