@@ -3,7 +3,7 @@ Backup
 ======
 
 :index:`Backup` is the only way to restore a machine when disasters occur.
-The system handles two kind of backup:
+The system handles two kinds of backup:
 
 * :index:`configuration backup`
 * :index:`data backup`
@@ -18,8 +18,8 @@ This backup also contains the archive of the configuration backup.
 
 Data backup can be saved on three different destinations:
 
-* USB: disk connected to an USB port, it's useful but limited by USB bus speed
-* CIFS: Windows shared folder, it's available on all NAS
+* USB: disk connected to a local USB port
+* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage)
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
 
 The backup status can be notified to the system administrator or to an external mail address.
@@ -33,12 +33,12 @@ Data restore
 
 Make sure that backup destination is reachable (for example, USB disk must be connected).
 
-.. note:: For now only restore form command line is available.
+.. note:: The current version supports restore only from command line.
 
 Listing files
 --------------
 
-It's possible to list all file present inside the last backup using this command: ::
+It's possible to list all files inside the last backup using this command: ::
 
  backup-data-list
 
@@ -78,10 +78,10 @@ The ``-t`` option allows to specify the number of days (15 in this scenario).
 Disaster recovery
 =================
 
-The system is restored in two phases: first configuration, then data. 
+The system is restored in two phases: configuration first, then data. 
 Right after configuration restore, the system is ready to be used if proper packages are installed. 
 You can install additional packages before or after restore.
-For example, if mail-server is installed, the system can send and receive mail (even sieve filters are already in place).
+For example, if mail-server is installed, the system can send and receive mail.
 
 Other restored configurations:
 
@@ -117,13 +117,10 @@ For example, to backup a software installed inside :file:`/opt` directory, add t
 
   /opt/mysoftware
 
-If you wish to add a file or directory to configuration backup, add a line to the :file:`/etc/backup-config.d/custom.include`.
-Do not add big directories or files to configuration backup.
-
 Exclusion
 ---------
 
-If you wish to  exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
+If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
 
 For example, to exclude all directories called *Download*, add this line: ::
 
@@ -137,7 +134,7 @@ To exclude a mail directory called *test*, add this line: ::
 Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
 
 
-.. note:: Make sure to not leave empty lines inside edited files.
+.. note:: Make sure not to leave empty lines inside edited files.
 
 
 Configuration backup customization
@@ -145,7 +142,7 @@ Configuration backup customization
 
 In most cases it is not necessary to change the configuration backup. 
 But it can be useful, for example, if you have installed a custom SSL certificate. 
-In this case you can add the file that contains the certificate to the list of backuped files.
+In this case you can add the file that contains the certificate to the list of files to backup.
 
 Inclusion
 ---------
@@ -161,8 +158,8 @@ Do not add big directories or files to configuration backup.
 Exclusion
 ---------
 
-If you wish to  exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
+If you wish to exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
 
 .. note:: 
-   Make sure to not leave empty lines inside edited files.
+   Make sure not to leave empty lines inside edited files.
    The syntax of the configuration backup supports only simple file and directory paths.
