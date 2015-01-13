@@ -107,7 +107,3 @@ Disabilitare esportazione rubriche di SOGo: ::
 
  config setprop phonebook sogo disabled
 
-Al termine della configurazione eseguire: ::
-
- signal-event nethserver-unixODBC-update
-
