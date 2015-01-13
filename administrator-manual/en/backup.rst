@@ -85,9 +85,10 @@ For example, if mail-server is installed, the system can send and receive mail.
 
 Other restored configurations:
 
-* Users and groups, including old root/admin password
+* Users and groups
 * SSL certificates
 
+.. note:: The root/admin password is not restored.
 
 Steps to be executed:
 
