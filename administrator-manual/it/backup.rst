@@ -90,8 +90,10 @@ Ad esempio, se il server di posta è installato, il sistema è già in grado di 
 
 Altre configurazioni ripristinate:
 
-* utenti e gruppi, inclusa la password di root/admin
+* Utenti e gruppi
 * Certificati SSL
+
+.. note:: La password di root/admin non viene ripristinata, verrà mantenuta quella impostata nel nuovo sistema.
 
 I passi da eseguire sono:
 
