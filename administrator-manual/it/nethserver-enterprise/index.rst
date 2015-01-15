@@ -23,7 +23,6 @@ Installazione e configurazione
 .. toctree::
    :maxdepth: 2
 
-   release_notes
    installation
    access
    base_system
@@ -34,29 +33,54 @@ Moduli
 ------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    backup
+   ups
+   dns
+   dhcp
+	      
+NethService
+^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+
    accounts
    mail
    pop3_connector
    webmail
-   phonebook-mysql
-   pop3_proxy
    shared_folder
    samba
    chat
-   ups
-   fax_server
-   web_proxy
-   firewall
-   snort
-   bandiwidth_monitor
-   dns
-   dhcp
-   vpn
-   ftp
    owncloud
+   fax_server
+   ftp
+
+
+NethSecurity
+^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+
+   firewall
+   web_proxy
+   snort
+   bandwidth_monitor
+   pop3_proxy
+   vpn
+
+
+NethVoice
+^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+
+   phonebook-mysql
+
+
 
 Best practices
 --------------
@@ -82,6 +106,7 @@ Appendice
 .. toctree::
    :maxdepth: 2
 
+   release_notes
    license
 
 Indici
