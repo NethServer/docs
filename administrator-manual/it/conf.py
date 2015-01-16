@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'NethServer'
-copyright = u'2014, Nethesis'
+copyright = u'2015, Nethesis'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

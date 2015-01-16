@@ -98,7 +98,7 @@ the following configuration file::
  # at https://dev.nethesis.it/projects/nethserver/wiki/NethServer
  # original work from http://www.contribs.org/development/
  #
- # Copyright (C) 2013 Nethesis S.r.l. 
+ # Copyright (C) 2015 Nethesis S.r.l. 
  # http://www.nethesis.it - support@nethesis.it
  # 
  127.0.0.1       localhost
