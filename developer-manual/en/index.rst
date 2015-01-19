@@ -103,6 +103,9 @@ Modules
    roundcube
    collectd
    phone_home
+   web_proxy
+   web_antivirus
+   content_filter
 
 Appendix
 --------
