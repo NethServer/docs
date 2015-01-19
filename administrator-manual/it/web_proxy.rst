@@ -25,7 +25,7 @@ Le modalità supportate sono:
 Configurazione client
 =====================
    
-Il proxy è sempre in ascolto sulla porta 3128. Quando si utilizzano le modalità Manuale o Autenticato,
+Il proxy è sempre in ascolto sulla porta **3128**. Quando si utilizzano le modalità Manuale o Autenticato,
 tutti i client devono essere esplicitamente configurati per utilizzare il proxy.
 La configurazione è accessibile dal pannello impostazioni del browser.
 La maggior parte dei client verranno comunque configurati automaticamente attraverso il protocollo WPAD.

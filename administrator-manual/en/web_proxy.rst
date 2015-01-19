@@ -27,7 +27,7 @@ Supported modes are:
 Client configuration
 ====================
 
-The proxy is always listening on port 3128. When using manual or authenticated modes,
+The proxy is always listening on port **3128**. When using manual or authenticated modes,
 all clients must be explicitly configured to use the proxy.
 The configuration panel is accessible from the browser settings.
 By the way, most clients will be automatically configured using WPAD protocol.

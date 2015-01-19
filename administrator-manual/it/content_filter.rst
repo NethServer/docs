@@ -59,7 +59,7 @@ a Google stesso pur avendo al loro interno contenuti provenienti da server ester
 In questo modo i blocchi imposti a livello di dominio non possono funzionare limitando l'azione del filtro contenuti.
 
 E' possibile bloccare tutte le richieste a :index:`Google Translate` (in qualsiasi lingua), creando un URL bloccato
-nella pagina :guilabebl:`Generale` con il seguente contenuto: ``translate.google``.
+nella pagina :guilabel:`Generale` con il seguente contenuto: ``translate.google``.
 
 Utenti da Active Directory
 ==========================
