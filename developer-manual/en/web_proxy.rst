@@ -82,6 +82,28 @@ Authentication schema depend on system configuration:
 * if Samba is installed and the server is a Primary Domain Controller, clients can use NTLM authentication
 * if Samba is installed and the server is a member of an Active Directory domain, clients can use Kerberos (SPNEGO/GSSAPI)
 
+Bypasses
+========
+
+Bypass rules are saved inside the ``fwrules`` databases.
+A bypass can be of two types:
+
+* bypass-src: listed origin host are bypassed
+* bypass-dst: listed target host are bypassed
+
+Properties:
+* *Host*: a host object, like a remote or local host
+* *status*: can be ``enabled`` or ``disabled``
+* *Description*: optional description
+
+
+Bypass example: ::
+
+ boss=bypass-src
+    Description=Boss without proxy
+    Host=host;bosspc
+    status=enabled
+
 Miscellaneous options
 =====================
 
