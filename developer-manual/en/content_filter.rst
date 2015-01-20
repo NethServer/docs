@@ -121,13 +121,13 @@ Properties:
 
 * *Days*: comma separated list of week days. Valid values are:
 
-** *m*: Monday
-** *t*: Tuesday
-** *w*: Wednesday
-** *h*: Thursday
-** *f*: Friday
-** *a*: Saturday
-** *s*: Sunday 
+  * *m*: Monday
+  * *t*: Tuesday
+  * *w*: Wednesday
+  * *h*: Thursday
+  * *f*: Friday
+  * *a*: Saturday
+  * *s*: Sunday 
 * *Description*: optional description
 * *EndTime*: hour of the day in 24h format or empty
 * *StartTime*: our of the day in 24h format or empty
@@ -173,3 +173,11 @@ It's a single page which can handle requests from SquidGuard and SquidClamav (:r
 The page is localized depending on browser language.
 
 This configuration can be overwritten using ``RedirectUrl`` property.
+
+
+Log files
+=========
+
+Blocked page logs:
+
+* SquidGuard: :file:`/var/log/squidGuard/urlfilter.log`

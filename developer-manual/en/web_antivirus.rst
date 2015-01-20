@@ -39,3 +39,11 @@ Examples: ::
 
 The ``TemplateDefaultLanguage`` select the language for ICAP block page, but the block page
 is actually implemented in nethserver-squidguard. See :ref:`squidguard-blockpage-section`.
+
+Log files
+=========
+
+Blocked page logs:
+
+* Squidclamav: :file:`/var/log/c-icap/server.log`
+
