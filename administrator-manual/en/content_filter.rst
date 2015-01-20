@@ -2,7 +2,8 @@
 Web content filter
 ==================
 
-The :index:`content filter` analyzes all web traffic and blocks dangerous sites or sites containing virus.
+The :index:`content filter` analyzes all web traffic and blocks selected websites or sites containing viruses.
+Forbidden sites are selected from a list of categories, which in turn must be downloaded from external sources and stored on the system.
 
 The system allows to create an infinite number of profiles.
 A profile is composed by three parts:
@@ -10,7 +11,7 @@ A profile is composed by three parts:
 * **Who**: the client associated with the profile.
   Can be a user, a group of users, a host or a group of hosts.
 
-* **What**: which sites can be browsed by the profiled client
+* **What**: which sites can be browsed by the profiled client.
   It's a filter created inside the :guilabel:`Filters` section.
 
 * **When**: the filter can always be enabled or valid only during certain period of times.
@@ -20,11 +21,11 @@ A profile is composed by three parts:
 This is the recommended order for content filter configuration:
 
 1. Select a list of categories from :guilabel:`Blacklists` page and start the download
-2. Create one or more time conditions
-3. Create custom categories
+2. Create one or more time conditions (optional)
+3. Create custom categories (optional)
 4. Create a new filter or modify the default one
 5. Create a new profile associated to a user or host, then select
-   a filter and a time frame
+   a filter and a time frame (if enabled)
 
 If no profile matches, the system provides a default profile that is applied to all clients.
 
