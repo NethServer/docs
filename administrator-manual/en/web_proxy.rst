@@ -70,8 +70,8 @@ The proxy allows you to create:
 Report
 ======
 
-Install ``nethserver-lightsquid`` package to generate :index:`web navigation report`.
+Install ``nethserver-lightsquid`` package to generate :index:`web navigation reports`.
 
-LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day.
+LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day, summarizing browsing habits of the proxy's users.
 Link to web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
 
