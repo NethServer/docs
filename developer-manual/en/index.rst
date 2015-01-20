@@ -106,6 +106,7 @@ Modules
    web_proxy
    web_antivirus
    content_filter
+   lightsquid
 
 Appendix
 --------
