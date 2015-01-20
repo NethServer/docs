@@ -62,3 +62,12 @@ Il proxy consente di creare:
 
 * bypass per sorgente, configurabili nella sezione :guilabel:`Host senza proxy`
 * bypass per destinazione, configurabili nella sezione :guilabel:`Siti senza proxy`
+
+Report
+======
+
+Installando il modulo ``nethserver-lightsquid`` il sistema genererà automaticamente i :index:`report di navigazione web`.
+
+LightSquid è un analizzatore di log per Squid leggero e veloce che ogni giorno generare un nuovo report HTML.
+Il collegamento all'interfaccia web è disponibile nella scheda :guilabel:`Applicazioni` all'interno della :guilabel:`Dashboard`.
+

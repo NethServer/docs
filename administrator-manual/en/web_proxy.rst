@@ -60,9 +60,18 @@ Bypass
 ======
 
 In some cases it may be necessary to ensure that traffic originating
-from specific IP or destinated to some sites it's not routed through the HTTP/HTTPS proxy.
+from specific IP or destined to some sites it's not routed through the HTTP/HTTPS proxy.
 
 The proxy allows you to create:
 
 * bypass by source, configurable from :guilabel:`Hosts without proxy` section
-* bypass by destination, configurabile from :guilabel:`Sites without proxy` section
+* bypass by destination, configurable from :guilabel:`Sites without proxy` section
+
+Report
+======
+
+Install ``nethserver-lightsquid`` package to generate :index:`web navigation report`.
+
+LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day.
+Link to web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
+
