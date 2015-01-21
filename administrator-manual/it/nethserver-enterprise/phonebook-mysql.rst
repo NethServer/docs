@@ -2,8 +2,6 @@
 Rubrica Centralizzata
 =====================
 
-.. warning:: Il collegamento con un batabase di tipo MSSQL al momento non è supportato. Verrà implementato a breve.
-
 La rubrica centralizzata di |product| permette di aggregare i contatti provenienti da più fonti e renderli consultabili in sola lettura dai vari client.
 
 L'aggiunta o la modifica dei contatti dovrà essere effettuata alla fonte degli stessi, quindi, e non direttamente sulla rubrica centralizata.
