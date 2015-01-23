@@ -58,6 +58,7 @@ Moduli
    ftp
    owncloud
    weekly_report
+   hotspot
 
 Best practices
 --------------
