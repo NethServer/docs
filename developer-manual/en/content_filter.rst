@@ -98,7 +98,7 @@ Properties:
   If enabled, all listed categories in ``Categories`` are allowed and all other sites are blocked
 * *BlockFileTypes*: enable or disable the global file extension list (``BlockedFileTypes``). Can be ``enabled`` or ``disabled`` 
 * *BlockIpAccess*: if enabled, sites can be accessed only using a domain name (not an IP address). Can be ``enabled`` or ``disabled``
-* *Categories*: comma separated list of categories blocked or allowed. If a category is not present inside the SquidGuard db (:file:`/var/squidGuard/Blacklists`), the category will be excluded from configuration file to avoid squidGuard panic-mode
+* *Categories*: comma separated list of categories blocked or allowed. If a category is not present inside the SquidGuard db (:file:`/var/squidGuard/Blacklists`), the category will be excluded from configuration file to avoid SquidGuard panic-mode
 * *Description*: optional description
 * *WhiteList*: enable or disable the global whitelist (``DomainWhitelist`` and ``UrlWhitelist``). Can be ``enabled`` or ``disabled``
 * *Removable*: can be ``yes`` or ``no``. If set to ``no`` the record can't be removed from web interface 
@@ -147,7 +147,8 @@ Profiles
 Properties:
 
 * *Filter*: a filter object
-* *Src*: it can be a user, user group, host or host group
+* *Src*: it can be an object of type user, user group, host or host group. Otherwise, if it is a string, the system will
+  assume the profile is associated with an user from Active Directory; the system must be joined to a domain
 * *Time*: a time object (optional)
 * *Description*: optional description
 * *Removable*: can be ``yes`` or ``no``. If set to ``no`` the record can't be removed from web interface 
