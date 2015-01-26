@@ -11,7 +11,6 @@ imprese. Semplice, sicuro, flessibile.
 
 `www.nethserver.org <http://www.nethserver.org>`_
 
-
 Installazione e configurazione
 ------------------------------
    
@@ -42,6 +41,7 @@ Moduli
    ups
    fax_server
    web_proxy
+   content_filter
    firewall
    snort
    bandiwidth_monitor
@@ -51,6 +51,7 @@ Moduli
    vpn
    ftp
    owncloud
+   phone_home
 
 Best practices
 --------------

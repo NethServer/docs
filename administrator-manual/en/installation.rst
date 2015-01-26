@@ -299,7 +299,9 @@ with a CentOS |version| on your system (many VPS providers offer
 CentOS pre-installed virtual machines), and then execute below
 commands to transform CentOS into |product|.
 
-Enable |product| repositories with this command: ::
+Enable |product| repositories with this command:
+
+.. parsed-literal::
 
   yum localinstall -y |yum_localinstall_url|
 

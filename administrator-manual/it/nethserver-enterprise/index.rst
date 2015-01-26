@@ -70,7 +70,10 @@ NethSecurity
    bandwidth_monitor
    pop3_proxy
    vpn
-
+   ftp
+   owncloud
+   weekly_report
+   hotspot
 
 NethVoice
 ^^^^^^^^^
@@ -79,7 +82,6 @@ NethVoice
    :maxdepth: 1
 
    phonebook-mysql
-
 
 
 Best practices

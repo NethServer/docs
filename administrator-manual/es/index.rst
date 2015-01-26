@@ -14,7 +14,7 @@ Manual de administrador
     * **Sitio Oficial**: `http://www.nethserver.org <http://www.nethserver.org>`_
     * **Rastreador de errores**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@NethServer <http://twitter.com/NethServer>`_
-    * **Codigo fuente**: `http://code.nethserver.org <http://code.nethserver.org>`_
+    * **Codigo fuente**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Lista de correo**: `nethserver@googlegroups.com` 
     * **Arvhivo ML**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`

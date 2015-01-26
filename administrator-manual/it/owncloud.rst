@@ -29,6 +29,11 @@ Dopo l'installazione:
 L'autenticazione LDAP è abilitata di default cosicchè ciascun utente presente nel sistema può accedere tramite le sue credenziali.
 Dopo l'installazione sarà presente anche un nuovo widget applicativo nella dashboard di |product|.
 
+Aggiornamento
+=============
+
+L'aggiornamento è automatico. Non eseguire l'aggiornamento manuale.
+
 Aggiornamento da ownCloud 5
 ===========================
 

@@ -30,6 +30,11 @@ LDAP access authentication is enabled by default, so each user can login with it
 After the installation a new application widget is added to the |product| web interface dashboard.
 
 
+Update
+======
+
+Updates are automatic. Do not do the manual update.
+
 Update from ownCloud 5
 ======================
 

@@ -64,6 +64,7 @@ E' possibile trasformare un NethServer versione community in un NethServer Enter
 
 ::
 
+  yum update
   yum -c http://update.nethesis.it/nethserver-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
 
 * Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Gestione pacchetti`.

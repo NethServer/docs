@@ -6,9 +6,6 @@ Administrator Manual
 .. image:: ../../_static/logo.png
       :alt: |product|
 
-|product| is an operating system designed for small offices and medium
-enterprises. It's simple, secure and flexible.
-
 `www.nethserver.org <http://www.nethserver.org>`_
 
 Installation and configuration
@@ -40,6 +37,7 @@ Modules
    ups
    fax_server
    web_proxy
+   content_filter
    firewall
    snort
    bandiwidth_monitor
@@ -49,6 +47,7 @@ Modules
    vpn
    ftp
    owncloud
+   phone_home
 
 Best practices
 --------------

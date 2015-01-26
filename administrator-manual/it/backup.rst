@@ -27,6 +27,10 @@ Il backup dei dati può essere fatto su tre tipi di destinazione:
 
 L'esito del backup può essere notificato all'amministratore o ad un indirizzo mail esterno.
 
+.. note:: La directory di destinazione è basta sul nome host del server:
+   in caso di cambio FQDN, l'amministratore dovrà occuparsi di spostare manualmente
+   i dati del backup dalla vecchia alla nuova directory.
+
 
 Ripristino dati
 ===============
@@ -86,8 +90,10 @@ Ad esempio, se il server di posta è installato, il sistema è già in grado di 
 
 Altre configurazioni ripristinate:
 
-* utenti e gruppi, inclusa la password di root/admin
+* Utenti e gruppi
 * Certificati SSL
+
+.. note:: La password di root/admin non viene ripristinata, verrà mantenuta quella impostata nel nuovo sistema.
 
 I passi da eseguire sono:
 
