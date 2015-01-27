@@ -1,6 +1,6 @@
-=============
-Release notes
-=============
+=======
+Changes
+=======
 
 * Following sections has been removed from interactive installer:
   root password, filesystem encryption, keyboard selection, time zone selection.

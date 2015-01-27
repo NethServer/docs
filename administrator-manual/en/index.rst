@@ -1,20 +1,36 @@
 .. NethServer documentation master file
 
-Administrator Manual
+Administrator Manual 
 ====================
 
 .. image:: ../../_static/logo.png
       :alt: |product|
 
-`www.nethserver.org <http://www.nethserver.org>`_
+**Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Installation and configuration
-------------------------------
+Release notes 6.6
+-----------------
+
+.. toctree::
+   :maxdepth: 2
+
+   changes
+   upgrade
+
+Installation
+------------
 
 .. toctree::
    :maxdepth: 2
 
    installation
+
+Configuration
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
    access
    base_system
    packages
@@ -72,7 +88,6 @@ Appendix
 .. toctree::
    :maxdepth: 2
 
-   release_notes
    license
 
 
