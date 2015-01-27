@@ -1,4 +1,7 @@
-=======
+=============
+Release notes
+=============
+
 Changes
 =======
 
@@ -39,3 +42,18 @@ Changes
 
 * If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 
   (gateway mode), port 25 is blocked from green and blue zones. See :ref:`email-port25`.
+
+Upgrading from 6.5
+==================
+
+The system upgrade can be done using the shell.
+
+Make sure the system is fully updated: ::
+
+  yum update
+
+Then, start the upgrade: ::
+
+  yum update --releasever=6.6
+
+At the end, reboot the system.

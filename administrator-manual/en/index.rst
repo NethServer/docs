@@ -14,8 +14,7 @@ Release notes 6.6
 .. toctree::
    :maxdepth: 2
 
-   changes
-   upgrade
+   release_notes
 
 Installation
 ------------
