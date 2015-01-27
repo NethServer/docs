@@ -13,7 +13,7 @@ il :dfn:`Centro Servizi`, accessibile con la coppia utente/password all'indirizz
 Come prima operazione, per ogni |product| installato, è necessario effettuare la 
 :index:`registrazione` per permettere una corretta identificazione nella comunicazione con la console web.
 
-Accedere all'interfaccia web del server (``https://server:980``), fare click su :guilabel:`Gestione pacchetti` e seguire la procedura guidata:
+Accedere all'interfaccia web del server (``https://server:980``), fare click su :guilabel:`Software center` e seguire la procedura guidata:
 
 * Inserire le credenziali rivenditore utilizzate presso il Centro Servizi |register_link|
 * Selezionare un server esistente oppure scegliere la creazione di nuovo server
@@ -67,5 +67,5 @@ E' possibile trasformare un NethServer versione community in un NethServer Enter
   yum update
   yum -c http://update.nethesis.it/nethserver-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
 
-* Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Gestione pacchetti`.
+* Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Software center`.
 

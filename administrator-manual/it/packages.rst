@@ -3,9 +3,9 @@
 
 .. _package_manager-section:
 
-==================
-Gestione pacchetti
-==================
+===============
+Software center
+===============
 
 |product| è altamente modulare: al termine dell'installazione il sistema contiene solo
 i moduli di base (es. configurazione di rete, visualizzazione log).

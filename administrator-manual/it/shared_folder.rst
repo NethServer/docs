@@ -15,7 +15,7 @@ permessi impostati da questo modulo.
 Installazione
 =============
 
-Per installare il pacchetto *Cartelle condivise* fare click su *Configurazione → Gestione pacchetti*. Mettere la
+Per installare il pacchetto *Cartelle condivise* fare click su *Configurazione → Software center*. Mettere la
 spunta su *File server* e fare click sul pulsante *Avanti*. Verrano
 suggeriti dei pacchetti aggiuntivi da installare, selezionare quelli che
 si ritengono utili e confermare le modifiche al sistema facendo click

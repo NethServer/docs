@@ -1,7 +1,7 @@
 .. _package_manager-section:
 
 ===============
-Package manager
+Software center
 ===============
 
 |product| is highly modular: at the end of the installation only base system will be ready to be used.
