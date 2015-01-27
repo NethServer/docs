@@ -1,3 +1,5 @@
+.. _phonehome-section:
+
 ==========
 Phone Home
 ==========
