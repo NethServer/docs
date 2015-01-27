@@ -52,8 +52,12 @@ Make sure the system is fully updated: ::
 
   yum update
 
+Since repository configuration is changed, remove the old configuration file: ::
+
+  rm -f /etc/yum.repos.d/NethServer.repo
+
 Then, start the upgrade: ::
 
-  yum update --releasever=6.6
+  yum -c http://pulp.nethserver.org/nethserver/nethserver-6.6.conf update
 
-Then, reboot the system.
+Finally, reboot the system.
