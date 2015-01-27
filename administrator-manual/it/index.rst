@@ -6,13 +6,27 @@ Manuale amministratore
 .. image:: ../../_static/logo.png
    :alt: |product|
 
-|product| è un sistema operativo progettato per le piccole e medie
-imprese. Semplice, sicuro, flessibile.
 
-`www.nethserver.org <http://www.nethserver.org>`_
+**Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Installazione e configurazione
-------------------------------
+Note di rilascio 6.6
+--------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   release_notes
+
+Installazione
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   installation
+
+Configurazione
+--------------
    
 .. toctree::
    :maxdepth: 2
