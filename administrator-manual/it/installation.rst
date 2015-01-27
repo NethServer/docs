@@ -117,6 +117,7 @@ Alla fine della procedura di installazione verrà chiesto di effettuare
 il riavvio della macchina. **Rimuovere il media di
 installazione**, prima di riavviare.
 
+.. _installation-unattended:
 
 Modalità *unattended*
 ---------------------
@@ -128,7 +129,7 @@ Al termine dell'installazione, il sistema sarà così configurato:
 * Rete: DHCP abilitato su tutte le interfacce
 * Tastiera: |ks_keyboard|
 * Fuso orario: |ks_timezone|
-* Lingua: |ks_language|
+* Lingua: Inglese
 * Dischi: se sono presenti due o più dischi, verrà creato un RAID1 sui primi due dischi
 
 Opzioni installazione
@@ -149,42 +150,29 @@ Altre opzioni disponibili:
 * lang: lingua del sistema, default è :samp:`en_US`
 * keyboard: layout tastiera, default è :samp:`us`
 * timezone: fuso orario, default è :samp:`UTC Greenwich`
-* password: abilita la il crittografia del file system usando la password immessa
+* fspassword: abilita la crittografia del file system usando la password immessa
+  Questa opzione puà essere usata anche in Modalità interattiva
 
+.. _installation-interactive:
 
 Modalità interattiva
 --------------------
 
 La modalità interattiva consente di effettuare poche e semplici scelte sulla configurazione del sistema:
 
-1. Lingua
-2. Layout tastiera
-3. Fuso orario
-4. RAID software
-5. Password amministratore di sistema
-6. File system cifrato
-7. Interfacce di rete
-8. Configurazione di rete
+* Lingua
+* RAID software
+* Configurazione di rete
 
 
 Lingua
 ^^^^^^
 
 Selezionare in quale lingua si desidera utilizzare la modalità interattiva.
-La lingua selezionata sarà la lingua di default del sistema installato. 
-Inoltre saranno suggeriti i default per tastiera e fuso orario.
-
-Layout tastiera
-^^^^^^^^^^^^^^^
-
-La tastiera può avere layout (disposizione dei tasti) dipendentemente dalla lingua per cui è stata realizzata.
-Lasciare il valore suggerito o inserire un valore personalizzato.
-
-Fuso orario
-^^^^^^^^^^^
-
-La scelta del fuso orario consente di configurare data e ora del sistema.
-Lasciare il valore suggerito o inserire un valore personalizzato.
+Il layout della tastiera e il fuso orario saranno cambiati in base alla lingua selezionata.
+Entrambe le configurazioni saranno modificabili al primo login nell'interfaccia web.
+ 
+La lingua del sistema è sempre l'inglese.
 
 RAID software
 ^^^^^^^^^^^^^
@@ -211,7 +199,7 @@ Un disco di spare è un disco che viene aggiunto al RAID qualora si verifichi un
 Password amministratore di sistema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-E' fortemente consigliato impostare una password di amministratore personalizzata.
+E' possibile cambiare la password dell'amministratore durante la prima configurazione.
 Una buona password deve:
 
 * essere lunga almeno 8 caratteri
@@ -221,13 +209,17 @@ Una buona password deve:
 File system cifrato
 ^^^^^^^^^^^^^^^^^^^
 
-Abilitando il file system cifrato, tutti i dati scritti sul disco verrano cifrati usando la crittografia
+Abilitando il file system cifrato, tutti i dati scritti sul disco verranno cifrati usando la crittografia
 simmetrica. In caso di furto, un malintenzionato non sarà in grado di leggere i dati a meno di 
 non possedere la chiave crittografica.
 
 E' possibile scegliere una password per la cifratura, altrimenti verrà utilizzata la password dell'amministratore.
 
 .. note:: Sarà necessario inserire la password scelta ad ogni avvio del sistema.
+
+.. warning:: I seguenti caratteri non sono supportato all'interno della password:
+   ``#``, ``=`` e ``$``.
+
 
 Interfacce di rete
 ^^^^^^^^^^^^^^^^^^

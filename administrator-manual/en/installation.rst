@@ -106,6 +106,7 @@ Boot from local drive
 At the end of the installation process you will be asked to reboot the
 machine. Be sure to remove the installation media before restarting.
 
+.. _installation-unattended:
 
 Unattended mode
 ---------------
@@ -116,7 +117,7 @@ After installation, the system will be configured as follows:
 * Network: DHCP enabled on all interfaces
 * Keyboard: :samp:`|ks_keyboard|`
 * Time zone: :samp:`|ks_timezone|`
-* Language: :samp:`|ks_language|`
+* Language: English
 * Disks: if there are two or more disks, a RAID 1 will be created on
   first two disks
 
@@ -139,7 +140,10 @@ Other available options:
 * lang: system language, default is en_US
 * keyboard: keyboard layout, default is us
 * timezone: default is UTC Greenwich
-* password: enable file system encryption with given password
+* fspassword: enable file system encryption with given password
+  This option can be used even in Interactive Mode
+
+.. _installation-interactive:
 
 Interactive Mode
 ----------------
@@ -147,37 +151,18 @@ Interactive Mode
 The interactive mode allows you to make a few simple choices on the
 system configuration:
 
-1. Language
-2. Keyboard layout
-3. Time zone
-4. Software RAID
-5. System administrator password
-6. Encrypted file system
-7. Network interfaces
-8. Network configuration
+* Language 
+* Software RAID
+* Network configuration
 
 Language
 ^^^^^^^^
 
 Select the language in which you want to use the interactive mode.
-Selected language will be the default language of installed system.
-The system will also suggest default values for keyboard and time
-zone.
+Keyboard layout and time zone are changed accordingly and can be 
+modified just after the first login to the web interface.
 
-
-Keyboard layout
-^^^^^^^^^^^^^^^
-
-A keyboard can have different layout depending on the language for
-which it was made.  Leave the suggested value or enter a custom value.
-
-
-Time zone
-^^^^^^^^^
-
-The choice of time zone allows you to configure the date and time of
-the system.  Leave the suggested value or enter a custom value.
-
+System language is always set to English.
 
 Software RAID
 ^^^^^^^^^^^^^
@@ -209,7 +194,7 @@ RAID in case a failure occurs.
 System administrator password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You are strongly advised to set a custom administrator password.
+You can change the administrator password inside the first configuration wizard.
 
 A good password is:
 
@@ -229,6 +214,9 @@ It is possible to choose a password for the encryption, otherwise the
 system administrator password will be used.
 
 .. note :: You will need to enter the password at every system boot.
+
+.. warning:: Following characters are not supported inside the password:
+   ``#``, ``=`` and ``$``.
 
 
 Network interfaces

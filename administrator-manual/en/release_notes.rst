@@ -2,6 +2,14 @@
 Release notes
 =============
 
+* Following sections has been removed from interactive installer:
+  root password, filesystem encryption, keyboard selection, time zone selection.
+  See :ref:`installation-interactive` and :ref:`installation-unattended`.
+  These options can now be configured using the *First
+  Configuration wizard*.
+
+* New packages installed by default: bind-utils, traceroute, tmpwatch.
+
 * After system installation, the server-manager shows the *First
   Configuration wizard*, where the admin can set the password, change
   the host name and so on.
@@ -26,3 +34,8 @@ Release notes
   new SSL certificate any more.  The same applies for the
   :guilabel:`Organization contacts`.
 
+* Added phone home to collect usage statistic. Phone home is disabled
+  by default.
+
+* If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 
+  (gateway mode), port 25 is blocked from green and blue zones. See :ref:`email-port25`.

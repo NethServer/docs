@@ -51,6 +51,7 @@ You can create rules between zones to change default policies from :guilabel:`Fi
 
 .. note::  Traffic from local network to the server on SSH port (default 22) and Server Manager port (default 980) is **always** permitted.
 
+.. _firewall-rules-section:
 
 Rules
 =====

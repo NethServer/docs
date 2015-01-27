@@ -402,6 +402,17 @@ three types of rules:
    pair: port; smtp
    pair: port; smtps
 
+.. _email-port25:
+
+Block port 25
+=============
+
+If the system is acting as the network gateway, green and blue zones 
+will not be able to send mail to external servers through port 25 (SMTP).
+Blocking port 25 could prevent remotely controlled machines inside the LAN from sending SPAM.
+
+The administrator can change this policy creating a custom firewall rule inside the :ref:`firewall-rules-section` page.
+
 .. _email_clients:
 
 Client configuration

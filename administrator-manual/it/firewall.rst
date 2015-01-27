@@ -54,6 +54,7 @@ Per cambiare le policy di default è possibile creare delle regole tra zone nell
 
 .. note:: Il traffico dalla rete locale verso il server sulla porta SSH (default 22) e Server Manager (default 980) è **sempre** permesso.
 
+.. _firewall-rules-section:
 
 Regole
 ======
