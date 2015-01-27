@@ -9,7 +9,7 @@ Developer Manual
 .. image:: ../../_static/logo.png
       :alt: NethServer
 
-.. rubric:: NethServer is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible. 
+.. rubric:: NethServer is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible.
 
 .. sidebar:: About
 
@@ -17,7 +17,7 @@ Developer Manual
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Source code**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
-    * **Mailing list**: `nethserver@googlegroup.com` 
+    * **Mailing list**: `nethserver@googlegroup.com`
     * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`
 
@@ -26,7 +26,7 @@ Rules and conventions
 
 .. toctree::
    :maxdepth: 2
-   
+
    introduction
    development_process
    rpm_rules
@@ -103,6 +103,7 @@ Modules
    roundcube
    collectd
    phone_home
+   webvirtmgr
 
 Appendix
 --------
@@ -111,13 +112,13 @@ Appendix
    :maxdepth: 2
 
    license_headers
-   rebranding_manual 
+   rebranding_manual
    license
 
 
 Indices and tables
 ==================
-   
+
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`

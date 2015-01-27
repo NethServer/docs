@@ -6,7 +6,7 @@ Administrator Manual
 .. image:: ../../_static/logo.png
       :alt: |product|
 
-.. rubric:: |product| is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible. 
+.. rubric:: |product| is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible.
 
 .. sidebar:: About
 
@@ -14,7 +14,7 @@ Administrator Manual
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@NethServer <http://twitter.com/NethServer>`_
     * **Source code**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
-    * **Mailing list**: `nethserver@googlegroups.com` 
+    * **Mailing list**: `nethserver@googlegroups.com`
     * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`
 
@@ -58,6 +58,7 @@ Modules
    ftp
    owncloud
    phone_home
+   webvirtmgr
 
 Best practices
 --------------

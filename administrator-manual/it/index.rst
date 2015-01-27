@@ -14,14 +14,14 @@ Manuale amministratore
     * **Bug tracker**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
     * **Twitter**: `@nethserver <http://twitter.com/nethserver>`_
     * **Codice sorgente**: `http://dev.nethserver.org <http://dev.nethserver.org>`_
-    * **Mailing list**: `nethserver@googlegroup.com` 
+    * **Mailing list**: `nethserver@googlegroup.com`
     * **Archivio ML**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver su freenode.net`
 
 
 Installazione e configurazione
 ------------------------------
-   
+
 .. toctree::
    :maxdepth: 2
 
@@ -59,6 +59,7 @@ Moduli
    ftp
    owncloud
    phone_home
+   webvirtmgr
 
 Best practices
 --------------
