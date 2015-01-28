@@ -83,6 +83,6 @@ Nel caso una pagina indesiderata non venga bloccata, verificare che:
 
 * il client stia navigando attraverso il proxy
 * il client non abbia un bypass configurato nella sezione :guilabel:`Host senza proxy`
-* il sito visitato non abbia un bypass configurato nella sezione :guilabebl:`Siti senza proxy`
+* il sito visitato non abbia un bypass configurato nella sezione :guilabel:`Siti senza proxy`
 * il client sia associato ad un profilo in cui la pagina non è permessa
 * il client non stia navigando in un periodo di tempo in cui il filtro ha una configurazione permissiva
