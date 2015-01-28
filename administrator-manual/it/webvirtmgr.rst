@@ -16,7 +16,7 @@ L'applicazione web è in ascolto sulla porta **8000** del server. per esempio: `
 
 Il servizio è disabilitato di default.
 
-Dalla pagina guilabel:`Macchine virtuali` è possibile:
+Dalla pagina Macchine virtuali è possibile:
 
 * abilitare il gestore delle macchine virtuali
 * abilitare l'accesso alla console delle macchine virtuali direttamente dal browser
