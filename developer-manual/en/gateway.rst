@@ -423,7 +423,7 @@ For example, this rules will route all traffic to port 22 via the provider named
  1=rule
      Src=192.168.1.0/24
      Dst=0.0.0.0/0
-     Service=service;ssh
+     Service=fwservice;ssh
      Provider=provider;myadsl
      status=enabled
      Position=2
