@@ -59,6 +59,7 @@ Moduli
    owncloud
    weekly_report
    hotspot
+   webvirtmgr
 
 Best practices
 --------------
