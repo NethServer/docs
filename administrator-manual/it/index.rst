@@ -66,6 +66,7 @@ Moduli
    ftp
    owncloud
    phone_home
+   webvirtmgr
 
 Best practices
 --------------

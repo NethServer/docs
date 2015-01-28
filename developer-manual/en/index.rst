@@ -107,6 +107,7 @@ Modules
    web_antivirus
    content_filter
    lightsquid
+   webvirtmgr
 
 Appendix
 --------

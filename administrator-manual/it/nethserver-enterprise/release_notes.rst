@@ -27,7 +27,7 @@ L'architettura del sistema è stata fortemente razionalizzata per aderire agli s
 convenzioni molto stringenti per agevolare la configurazione del sistema. 
 Ad esempio, tutto quello che è possibile fare da interfaccia web, è facilmente replicabile e scriptabile da linea di comando.
 
-Sono disponibili nuovi metodi di installazione, per maggiori informazioni vedi :ref:`installation`.
+Sono disponibili nuovi metodi di installazione, per maggiori informazioni vedi :ref:`installation-section`.
 
 Interfaccia web
 ---------------

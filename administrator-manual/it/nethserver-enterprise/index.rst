@@ -74,6 +74,7 @@ NethSecurity
    owncloud
    weekly_report
    hotspot
+   webvirtmgr
 
 NethVoice
 ^^^^^^^^^
