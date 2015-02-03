@@ -28,7 +28,7 @@ La gestione degli utenti e della fatturazione risiede nel Centro Servizi: http:/
 Come procedere:
 
 * assicurarsi di avere almeno un'interfaccia libera (senza ruolo) che verrà utilizzata esclusivamente all'hotspot
-* accedere alla sezione :guilabel:`Hotspot` per configurare i parametri del servizio e definire l'interfaccia da utilizzare
+* accedere alla sezione :guilabel:`Hotspot` per definire l'interfaccia da utilizzare e configurare i parametri del servizio 
 * collegare l'interfaccia all'Access Point
 
 
@@ -41,7 +41,7 @@ per cui devono comportarsi come un banale switch di rete, a tal fine è opportun
 * configurare l’Access Point senza alcuna autenticazione e senza DHCP
 * disabilitare qualsiasi servizio (servizi di sicurezza etc.) al fine di evitare interferenze col funzionamento dell'hotspot
 * se si utilizzano più AP configurarli con SSID differenti (es: SCUOLA-1/SCUOLA-2/...) in modo da individuare facilmente eventuali AP malfunzionanti
-* configurare gli AP con un indirizzo IP dell'interfaccia BLUE (che rimane su un segmento di rete differente dall'hotspot) in modo da facilitarne la gestione sia da locale che da remoto
+* configurare gli AP con un indirizzo IP statico su un segmento di rete (rfc-1918) differente da quello utilizzato dall'hotspot
 * se possibile abilitare la "client isolation", in modo che i vari client che si collegano all'access point non si vedano tra di loro
 * configurare gli AP per lavorare su canali differenti in modo da minimizzare le interferenze, gli AP di buon livello permettono di gestire i canali in automatico oppure di selezionarli manualmente
 * non utilizzare prodotti troppo scadenti, AP di bassa qualità possono provocare frequenti disconnessioni che poi impattano sulla qualità del servizio generale, la raccomandazione è ancora più importante nel caso si utilizzino dei repeater
