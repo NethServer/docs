@@ -43,6 +43,18 @@ Changes
 * If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 
   (gateway mode), port 25 is blocked from green and blue zones. See :ref:`email-port25`.
 
+* The ``php/DateTimezone`` default prop value changed from ``UTC`` to
+  the empty string. When that prop is set to empty string the actual
+  PHP ``date.timezone`` INI setting is inherited from the system
+  default ``TimeZone``.  Depending on existing PHP applications and
+  current system ``TimeZone``, it should be safe to adopt the new
+  default value: ::
+
+    config setprop php DateTimezone ''
+    expand-template /etc/php.ini
+
+  Then restart ``httpd`` and other dependant services accordingly.
+
 Upgrading from 6.5
 ==================
 

@@ -44,6 +44,19 @@ Cambiamenti
   sono installati (modalità gateway), la porta 25 è bloccata dalle reti blue e green.
   Vedi :ref:`email-port25`.
 
+* Il valore di default della prop ``php/DateTimezone`` è cambiato da
+  ``UTC`` alla stringa vuota. Quando questa prop è una stringa vuota
+  il valore INI di PHP ``date.timezone`` è ereditato dal default
+  ``TimeZone`` di sistema.  A seconda delle applicazioni PHP
+  installate e dal valore di ``TimeZone`` dovrebbe essere accettabile
+  l'adozione del nuovo valore di default: ::
+
+    config setprop php DateTimezone ''
+    expand-template /etc/php.ini
+
+  Quindi riavviare ``httpd`` e gli altri servizi dipendenti da ``php.ini``.
+
+
 
 Aggiornamento da 6.5
 ====================
