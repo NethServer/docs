@@ -30,3 +30,7 @@ Per accedere all'interfaccia web, effettuare il login con le credenziali disponi
 .. warning:: 
    Non creare bridge di rete usando l'interfaccia di WebVirtManager.
    E' sufficiente creare il bridge dalla pagina :guilabel:`Rete` ed utilizzarlo all'interno di WebVirtManager.
+
+Per maggiori informazioni si rimanda alla documentazione ufficiale:
+* http://wiki.qemu.org/Manual
+* http://www.linux-kvm.org/page/Documents
