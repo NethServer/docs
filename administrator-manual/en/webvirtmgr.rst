@@ -30,3 +30,8 @@ To access the web interface you must login with credentials that can be found on
 .. warning:: 
    Do not create network bridges using WebVirtManager interface.
    Just create the bridge inside :guilabel:`Network` page and use it under WebVirtManager.
+
+For more information, see official documentation:
+
+* http://wiki.qemu.org/Manual
+* http://www.linux-kvm.org/page/Documents

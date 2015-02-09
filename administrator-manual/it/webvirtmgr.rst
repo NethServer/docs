@@ -16,7 +16,7 @@ L'applicazione web è in ascolto sulla porta **8000** del server. per esempio: `
 
 Il servizio è disabilitato di default.
 
-Dalla pagina guilabel:`Macchine virtuali` è possibile:
+Dalla pagina Macchine virtuali è possibile:
 
 * abilitare il gestore delle macchine virtuali
 * abilitare l'accesso alla console delle macchine virtuali direttamente dal browser
@@ -30,3 +30,8 @@ Per accedere all'interfaccia web, effettuare il login con le credenziali disponi
 .. warning:: 
    Non creare bridge di rete usando l'interfaccia di WebVirtManager.
    E' sufficiente creare il bridge dalla pagina :guilabel:`Rete` ed utilizzarlo all'interno di WebVirtManager.
+
+Per maggiori informazioni si rimanda alla documentazione ufficiale:
+
+* http://wiki.qemu.org/Manual
+* http://www.linux-kvm.org/page/Documents
