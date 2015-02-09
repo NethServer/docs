@@ -56,6 +56,7 @@ NethService
    owncloud
    fax_server
    ftp
+   webvirtmgr
 
 
 NethSecurity
@@ -74,7 +75,7 @@ NethSecurity
    owncloud
    weekly_report
    hotspot
-   webvirtmgr
+   content_filter
 
 NethVoice
 ^^^^^^^^^
