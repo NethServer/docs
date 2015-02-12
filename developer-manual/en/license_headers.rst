@@ -2,6 +2,11 @@
 License Headers
 ===============
 
+Always add a :file:`COPYING` in the documentation directory of your
+package, containing the full GPLv3 license.
+
+Change the *Copyright* line according to your needs.
+
 PHP, Javascript, CSS
 ====================
 
@@ -9,7 +14,7 @@ PHP, Javascript, CSS
 
     /*
      * Copyright (C) 2015 Nethesis S.r.l.
-     * http://www.nethesis.it - support@nethesis.it
+     * http://www.nethesis.it - nethserver@nethesis.it
      * 
      * This script is part of NethServer.
      * 
@@ -24,7 +29,7 @@ PHP, Javascript, CSS
      * GNU General Public License for more details.
      * 
      * You should have received a copy of the GNU General Public License
-     * along with NethServer.  If not, see .
+     * along with NethServer.  If not, see COPYING.
      */
 
 Perl, Python and BASH
@@ -34,7 +39,7 @@ Perl, Python and BASH
 
     #
     # Copyright (C) 2015 Nethesis S.r.l.
-    # http://www.nethesis.it - support@nethesis.it
+    # http://www.nethesis.it - nethserver@nethesis.it
     # 
     # This script is part of NethServer.
     # 
@@ -49,6 +54,6 @@ Perl, Python and BASH
     # GNU General Public License for more details.
     # 
     # You should have received a copy of the GNU General Public License
-    # along with NethServer.  If not, see .
+    # along with NethServer.  If not, see COPYING.
     #
 
