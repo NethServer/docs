@@ -72,6 +72,7 @@ Web interface
    customization
    inline_help
    web_interface_translation
+   todos_api
 
 Packages
 --------
