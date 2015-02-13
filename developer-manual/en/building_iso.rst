@@ -1,31 +1,23 @@
+.. index::
+   pair: Build; ISO
+
 .. _buildiso-section:
 
 ============
 Building ISO
 ============
 
-The build process is tested on Fedora 17 and NethServer (CentOS). 
+To create a NethServer ISO on NethServer or Fedora, follow these steps:
 
-* We assume you have a non-root account and your working directory is ``$HOME``.
-* Download a CentOS Minimal x86_64 iso
-* See how to :ref:`rpm_prepare_env`.
-* On NethServer, add your user to ``fuse`` group
+1) Install ``nethserver-createiso`` package
 
-Prepare the yum package groups file: ::
+2) Log in as a non-privileged user, member of ``mock`` and ``fuse`` groups
+   
+3) Download CentOS minimal ISO
+   
+4) Run ``createiso`` command ::
 
- git clone https://github.com/nethesis/comps.git
- cd comps
- make
+     createiso  -i CentOS-6.6-x86_64-minimal.iso -n nethserver -v 6.6-beta1
 
-Set some parameters in your devbox :file:`config` file: ::
 
-  COMPS_FILE=~/comps/comps-ns64.xml
 
-Run :command:`build-iso` script and relax..  ::
-
- build-iso -c -i CentOS-minimal.iso -v 6.4-beta1
-
-The first time, be sure to pass ``-c``, the clean flag, that initializes mock chroot environment with a CentOS-minimal RPM set. 
-Once you have the mock chroot initialized, you can run without ``-c`` and get quicker builds.
-
-All file manipulations are performed on ``WORKDIR``. To change the ``WORKDIR`` path edit your :file:`config` file.
