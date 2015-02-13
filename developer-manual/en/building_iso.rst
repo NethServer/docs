@@ -7,7 +7,7 @@
 Building ISO
 ============
 
-To create a NethServer ISO on NethServer or Fedora, follow these steps:
+To create a NethServer ISO on a NethServer system, follow these steps:
 
 1) Install ``nethserver-createiso`` package
 
