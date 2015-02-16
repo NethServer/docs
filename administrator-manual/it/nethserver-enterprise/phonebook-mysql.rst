@@ -51,6 +51,10 @@ Esempio PostgreSQL ::
 
  config set miarubrica ODBC Description "MiaRubrica" Driver "PostgreSQL" Server 192.168.5.168 Database miarubrica Port 5432
 
+Esempio MSSQL ::
+
+ config set business ODBC Description "MSSQL" Driver "MSSQL" Server 192.168.5.169 Database PROVA Port 1433
+
 2. Eseguire: ::
 
  signal-event nethserver-unixODBC-update
