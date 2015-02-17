@@ -206,6 +206,8 @@ Una buona password deve:
 * contenere lettere maiuscole e minuscole
 * contenere simboli e numeri
 
+La password di default è **Nethesis,1234**.
+
 File system cifrato
 ^^^^^^^^^^^^^^^^^^^
 

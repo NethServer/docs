@@ -202,6 +202,7 @@ A good password is:
 * contain uppercase and lowercase letters
 * contain symbols and numbers
 
+Default password is **Nethesis,1234**.
 
 Encrypted file system
 ^^^^^^^^^^^^^^^^^^^^^
