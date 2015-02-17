@@ -5,8 +5,20 @@ Release notes
 Changes
 =======
 
-* At first login after system installation, the server-manager displays a *First
-  Configuration wizard*, where the administrator ("root" user) can set its password, change
+* Always login as ``root``! The passwords of ``root`` and ``admin``
+  users are no longer synchronized.  The ``AdminIsNotRoot`` DB key has
+  been removed.
+
+  The ``admin`` user name is available only if
+  ``nethserver-directory`` RPM is installed. For backward
+  compatibility it has still full privileges through Server Manager.
+
+  When ``nethserver-directory`` is installed ``admin`` is
+  automatically created, as in the past, but its Unix password is not
+  copied from ``root`` any more.
+
+* At first login after system installation, the *Server Manager* displays a *First
+  Configuration wizard*, where the administrator (``root`` user) can set its password, change
   the host name, select the timezone and tune other security related settings.
 
 * The :guilabel:`Package manager` page has been renamed
@@ -26,7 +38,7 @@ Changes
   by default.
 
 * The :guilabel:`Remote access` page has been removed. Access to the
-  *server-manager* is now controlled from :guilabel:`Network services`
+  *Server Manager* is now controlled from :guilabel:`Network services`
   page, service :guilabel:`httpd-admin`.
 
 * Secure Shell (SSH) access is configured from the new :guilabel:`SSH`

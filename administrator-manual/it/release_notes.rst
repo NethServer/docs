@@ -5,8 +5,20 @@ Note di rilascio
 Cambiamenti
 ===========
 
-* Al termine dell'installazione, il server-manager mostra il 
-  *Wizard di prima configurazione*, che consente all'amministratore
+* Entrare sempre come ``root``! Le password degli utenti ``root`` e
+  ``admin`` non sono più sincronizzate.  La chiave di database
+  ``AdminIsNotRoot`` è stata rimossa.
+
+  Il nome utente ``admin`` è disponibile solo se è installato l'RPM
+  ``nethserver-directory``.  Per retro-compatibilità ha ancora tutti i
+  permessi sul sistema tramite il *Server Manager*.
+
+  Quando ``nethserver-directory`` è installato, ``admin`` viene creato
+  automaticamente, come nel passato, ma la sua password Unix non è più
+  copiata da ``root``.
+
+* Al termine dell'installazione, il *Server Manager* mostra il 
+  *Wizard di prima configurazione*, che consente all'amministratore (utente ``root``)
   di cambiare password, nome host e altri parametri di base.
 
 * La pagina :guilabel:`Package manager` è stata rinominata in
