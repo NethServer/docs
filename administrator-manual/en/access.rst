@@ -25,8 +25,8 @@ Login
 The login page will gave you a trusted access to the web interface.
 Use following credentials:
 
-* User name: **root**
-* Password: **root_password** (chosen during installation process)
+* :index:`Default user` name: **root**
+* :index:`Default password`: **Nethesis,1234**
 
 If the directory module is installed, and the admin user has been enabled, you can use it to access
 the web interface with same privileges as root user. See :ref:`admin_user-section`.

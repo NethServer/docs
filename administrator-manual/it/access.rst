@@ -28,8 +28,8 @@ Login
 Prima di accedere, è necessario autenticarsi attraverso nome utente e password.
 Compilare i campi come segue:
 
-* Nome utente: **root**
-* Password: **password_di_root** (inserita in fase di installazione)
+* :index:`Nome utente di default`: **root**
+* :index:`Password di default`: **Nethesis,1234**
 
 Se è installato il pacchetto nethserver-directory, utilizzato dai moduli che abilitano la 
 gestione utenti come File server o Mail, viene attivata nella Dashboard l'interfaccia di 
