@@ -28,10 +28,21 @@ On **NethServer**, install ``nethserver-mock`` package, by typing: ::
 
   yum install nethserver-mock
 
-On **Fedora**, download ``nethserver-mock`` RPM then install it from
-the current directory: ::
+On **Fedora**, put the following content into :file:`/etc/yum.repos.d/nethserver-mock.repo`: ::
 
-  yum localinstall nethserver-mock-{..version..}.noarch.rpm
+    [nethserver-mock]
+    name=NethServer Mock (6.6)
+    #baseurl=http://pulp.nethserver.org/nethserver/6.6/base/x86_64/
+    mirrorlist=http://pulp.nethserver.org/mirrors/nethserver?release=6.6&repo=base&arch=x86_64
+    enabled=1
+    skip_if_unavailable=1
+    gpgcheck=1
+    gpgkey=https://raw.githubusercontent.com/nethesis/nethserver-release/6.5-5-Final/root/etc/pki/rpm-gpg/RPM-GPG-KEY-NethServer-6
+    includepkgs=nethserver-mock
+
+Then install ``nethserver-mock``: ::
+
+  yum install nethserver-mock
 
 The build process uses Mock and must be run as a non privileged user,
 member of the ``mock`` system group.  Add your user to the ``mock``
