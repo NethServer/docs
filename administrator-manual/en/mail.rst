@@ -622,6 +622,20 @@ email address, type the following commands at root's console: ::
 
 .. _BUG#2744: http://dev.nethserver.org/issues/2744
 
+.. _email_outlook_deleted:
+
+Outlook deleted mail
+====================
+
+Unlike almost any IMAP clients, Outlook does not move deleted messages to the trash, but simply mark them as "deleted".
+
+It's possibile to automatically move messages inside the trash using following commands: ::
+
+ config setprop dovecot DeletedToTrash enabled
+ signal-event nethserver-mail-server-save
+
+You should also change Outlook configuration to hide deleted messages from inbox folder.
+This configuration is available in the options menu.
 
 .. _email_log:
 

@@ -678,6 +678,21 @@ root: ::
 
 .. _BUG#2744: http://dev.nethserver.org/issues/2744
 
+.. _email_outlook_deleted:
+
+Posta eliminata Outlook
+=======================
+
+A differenza della quasi totalià dei client IMAP, Outlook non sposta i messaggi eliminati nel cestino, ma si limita a marcarli "cancellati".
+E' possibile forzare lo spostamento di tali messaggi nel cestino con questi comandi: ::
+
+ config setprop dovecot DeletedToTrash enabled
+ signal-event nethserver-mail-server-save
+
+Si consiglia quindi di modificare la configurazione di Outlook in modo che nasconda i messaggi eliminati dalla posta in arrivo.
+La funzione è disponibile nel menu delle opzioni di visualizzazione.
+
+
 .. _email_log:
 
 Log
