@@ -39,6 +39,7 @@ Moduli
    ups
    dns
    dhcp
+   duc
 	      
 NethService
 ^^^^^^^^^^^

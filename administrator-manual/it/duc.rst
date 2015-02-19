@@ -2,20 +2,18 @@
 Analizzatore disco
 ==================
 
-Questo tool è usato per visualizzare l'utilizzo del disco in un semplice grafico in cui è possibile interagire con click e doppio click per navigare nelle cartelle.
+Questo strumento è usato per visualizzare l'utilizzo del disco in un semplice grafico in cui è possibile interagire con click e doppio click per navigare nelle cartelle.
 
-Dopo l'installazione andare in *Dashboard* e poi nel tab *Utilizzo disco* e cliccare su **Aggiorna** per indicizzare la directory root e mostrare il grafico.
+Dopo l'installazione andare nella pagina :guilabel:`Dashboard` e poi nella scheda :guilabel:`Utilizzo disco`, 
+quindi cliccare su :guilabel:`Aggiorna` per indicizzare la directory root e mostrare il grafico.
+Questo processo può durare diversi minuti in base allo spazio occupato su disco.
 
-Solitamente le cartelle più pesanti sono:
+Alcune cartelle note sono:
 
-``/var/lib/nethserver/fax``
+* Cartelle condivise: :file:`/var/lib/nethserver/ibay`
+* Home degli utenti: :file:`/var/lib/nethserver/home`
+* Profili roaming Windows: :file:`/var/lib/nethserver/profile`
+* Mail: :file:`/var/lib/nethserver/vmail`
+* Fax: :file:`/var/lib/nethserver/fax`
+* Database MySQL: :file:`/var/lib/mysql`
 
-``/var/lib/nethserver/ibay`` (shared folder)
-
-``/var/lib/nethserver/home`` (home utenti)
-
-``/var/lib/nethserver/profile`` (roaming profile windows)
-
-``/var/lib/nethserver/vmail`` (mail)
-
-``/var/lib/mysql``
