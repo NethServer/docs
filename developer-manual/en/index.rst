@@ -108,6 +108,7 @@ Modules
    content_filter
    lightsquid
    webvirtmgr
+   duc
 
 Appendix
 --------

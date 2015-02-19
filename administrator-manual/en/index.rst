@@ -64,6 +64,7 @@ Modules
    owncloud
    phone_home
    webvirtmgr
+   duc
 
 Best practices
 --------------
