@@ -80,8 +80,8 @@ Cache
 Under tab :guilabel:`Cache` there is a form to configure cache parameters:
 
 * The cache can be enabled or disabled (*disabled* by default)
-* **DiskCacheSize**: maximum value of squid cache on disk (in MB)
-* **MinObjSize**: can be left at 0 to cache everything, but may be raised if small objects are not desired in the cache (in kB)
-* **MaxObjSize**: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value (in kB)
+* **Disk cache size**: maximum value of squid cache on disk (in MB)
+* **Min object size**: can be left at 0 to cache everything, but may be raised if small objects are not desired in the cache (in kB)
+* **Max object size**: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value (in kB)
 
 The button :guilabel:`Empty cache` also works if squid is disabled, it might be useful to clear space on disk.

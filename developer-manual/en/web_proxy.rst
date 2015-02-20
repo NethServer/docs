@@ -39,13 +39,13 @@ Example: ::
     BlueMode=manual
     DiskCache=disabled
     DiskCacheSize=100
-    GreenMode=manual
+    GreenMode=transparent
     KrbPrimaryList=HTTP
     KrbStatus=enabled
     MaxObjSize=4096
     MemCacheSize=256
     MinObjSize=1
-    NoCache=
+    NoCache=www.nethserver.org
     ParentProxy=
     PortBlock=disabled
     SSLBypass=
@@ -117,11 +117,6 @@ Bypass example: ::
 Cache
 =====
 There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
-
-Every records of database can be modified changing the property with ``config setprop squid <property> <value>``.
-
-.. warning:: Be careful to above description of *MaxObjSize*, *MinObjSize* and *MemCacheSize*.
-
 
 Miscellaneous options
 =====================

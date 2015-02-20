@@ -73,12 +73,12 @@ Il collegamento all'interfaccia web è disponibile nella scheda :guilabel:`Appli
 
 Cache
 =====
-Nel pannello :guilabel:`Cache` c'è un form per configurare i parametri di cache:
+Nel pannello :guilabel:`Cache` è presente un form per configurare i parametri di cache:
 
 * La cache può essere abilitata o disabilitata (*disabilitata* di default)
-* **DiskCacheSize**: valore massimo della cache di squid sul disco (in MB)
-* **MinObjSize**: può essere lasciato a 0 per mettere in cache tutto, ma può essere alzato se gli oggetti piccoli non sono desiderati in cache (in kB)
-* **MaxObjSize**: gli oggetti più grandi di questa dimensione non vengono salvati in cache. Se si preferisce la velocità al salvataggio della banda, può essere impostato ad un valore basso (in kB)
+* **Dimensione cache disco**: valore massimo della cache di squid sul disco (in MB)
+* **Dimensione minima oggetto**: può essere lasciato a 0 per mettere in cache tutto, ma può essere alzato se gli oggetti piccoli non sono desiderati in cache (in kB)
+* **Dimensione massima oggetto**: gli oggetti più grandi di questa dimensione non vengono salvati in cache. Se si preferisce la velocità al salvataggio della banda, può essere impostato ad un valore basso (in kB)
 
 Il pulsante :guilabel:`Svuota cache` funziona anche se squid è disabilitato, potrebbe essere utile per liberare spazio su disco.
 
