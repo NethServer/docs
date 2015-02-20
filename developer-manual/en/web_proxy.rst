@@ -15,15 +15,20 @@ All properties are saved in the ``squid`` key under the ``configuration`` databa
 
 Properties:
 
+* *BlueMode*: change Squid operation mode on blue networks. It has same values and defaults of ``GreenMode``
+* *DiskCache*: disabled by default, if enabled it actives the disk caching system for squid
+* *DiskCacheSize*: maximum value of squid cache on disk
 * *GreenMode*: change Squid operation mode on green networks.
   Can be: ``manual``, ``authenticated``, ``transparent``, ``transparent_ssl``. Default is: ``manual``
-* *BlueMode*: change Squid operation mode on blue networks. It has same values and defaults of ``GreenMode``
+* *KrbPrimaryList*: name for Kerberos keytab (used for Active Directory integration)
+* *KrbStatus*:  if set to enabled a ticket credential cache file is kept valid by the hourly cron job (used for Active Directory integration)
+* *MaxObjSize*: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value
+* *MemCacheSize*: value of squid cache on memory
+* *MinObjSize*: can be left at 0 to cache everything, but may be raised if small objects are not desired in the cache.
 * *NoCache*: comma separated list of domains which will be not cached
 * *ParentProxy*: in the form host:port, if omitted port is default to 3128. Default is empty
 * *PortBlock*: if enabled, block port 80 and 443. Default is: ``disabled`` 
 * *SSLBypass*: comma separated list of domains bypassing the proxy when set in transparent_ssl mode
-* *KrbStatus*:  If set to enabled a ticket credential cache file is kept valid by the hourly cron job (used for Active Directory integration)
-* *KrbPrimaryList*: name for Kerberos keytab (used for Active Directory integration)
 
 Database example
 ----------------
@@ -32,10 +37,15 @@ Example: ::
 
  squid=service
     BlueMode=manual
-    GreenMode=transparent
+    DiskCache=disabled
+    DiskCacheSize=100
+    GreenMode=manual
     KrbPrimaryList=HTTP
     KrbStatus=enabled
-    NoCache=www.nethserver.org
+    MaxObjSize=4096
+    MemCacheSize=256
+    MinObjSize=1
+    NoCache=
     ParentProxy=
     PortBlock=disabled
     SSLBypass=
@@ -104,6 +114,15 @@ Bypass example: ::
     Host=host;bosspc
     status=enabled
 
+Cache
+=====
+There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
+
+Every records of database can be modified changing the property with ``config setprop squid <property> <value>``.
+
+.. warning:: Be careful to above description of *MaxObjSize*, *MinObjSize* and *MemCacheSize*.
+
+
 Miscellaneous options
 =====================
 
@@ -111,4 +130,3 @@ Following options are always enabled:
 
 * buffered logs
 * SNMP support on port 3401
-
