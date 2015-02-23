@@ -77,6 +77,7 @@ NethSecurity
    weekly_report
    hotspot
    content_filter
+   flashstart
 
 NethVoice
 ^^^^^^^^^
