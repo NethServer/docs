@@ -50,6 +50,7 @@ Moduli
    fax_server
    web_proxy
    content_filter
+   flashstart
    firewall
    snort
    bandiwidth_monitor
