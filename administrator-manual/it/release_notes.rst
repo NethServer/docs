@@ -38,6 +38,11 @@ Cambiamenti
   Vedi :ref:`installation-interactive` e :ref:`installation-unattended`.
   Queste opzioni possono essere cambiate nel *Wizard di prima configurazione*.
 
+* Dopo aver ripristinato un backup di configurazione su un hardware
+  differente o se una scheda di rete è stata sostituita con una nuova,
+  un avviso è visualizzato nelle pagine :guilabel:`Dashboard` e
+  :guilabel:`Rete`.  Una procedura speciale aiuta nel :ref:`ripristino della configurazione di rete<restore-roles-section>`.
+  
 * Nuovi pacchetti installati di default: bind-utils, traceroute, tmpwatch.
 
 * Se entrambi i pacchetti ``nethserver-mail-filter`` e ``nethserver-firewall-base`` 

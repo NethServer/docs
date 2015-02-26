@@ -16,12 +16,17 @@ Dashboard
 The index:`Dashboard` page is the landing page after a successful login.
 The page will display the :index:`status` and configurations of the system.
 
+.. index::
+   single: Network
+   pair: interface; role
+
 .. _network-section:
 
 Network
 =======
 
-:index:`Network` configuration tells the system how the server is connected to local network (LAN) or public ones (Internet).
+The :guilabel:`Network` page configures how the server is connected to the
+local network (LAN) or other ones (i.e. Internet).
 
 If the server has firewall and gateway functionality, it will handle extra networks with special function like 
 DMZ (DeMilitarized Zone) and guests network.
@@ -33,7 +38,7 @@ Any network managed by the system must follow these rules:
 * networks must be logically separated: each network must have different addresses
 * private networks, like LANs, must follow address's convention from RFC1918 document.
   See :ref:`RFC1918-section`
-
+  
 Every network interface as a specific role which determinates its behavior. Roles are identified by colors.
 Each role correspond to a well-known zone with special network traffic rules:
 
@@ -46,21 +51,23 @@ See :ref:`policy-section` for more information on roles and firewall rules.
 
 .. note:: The server must have at least one network interface. When the server has only one interface, this interface must have green role.
 
-If the server i installed on a public VPS (Virtual Private Server) public, it should must be configured with a green interface.
+If the server is installed on a public VPS (Virtual Private Server) public, it should must be configured with a green interface.
 All critical services should be closed using :ref:`network_services-section` panel.
+
 
 .. _logical_interfaces-section:
 
 Logical interfaces
 ------------------
 
-Supported logical interfaces are:
+In :guilabel:`Network` page press :guilabel:`New interface` button to
+create a logical interface. Supported logical interfaces are:
 
 * :index:`alias`: associate more than one IP address to an existing network interface. 
   The alias has the same role of its associated physical interface
 * :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
 * :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
-* :index:`vlan` (Virtual Local Area Network): create two or more physically separated networks using a single interface
+* :index:`VLAN` (Virtual Local Area Network): create two or more physically separated networks using a single interface
 
 Aliases are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
 red interface.
@@ -72,9 +79,10 @@ If an error occurs, the faulty card is automatically excluded from the bond.
 Bridge has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
 to access to the local network (green).
 
-When it is not possible to physically separate two different networks, you can use tagged vlan. The traffic of the two networks can
+When it is not possible to physically separate two different networks, you can use a tagged VLAN. The traffic of the two networks can
 be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
 The use of VLAN, requires properly configured switches.
+
 
 .. _RFC1918-section:
 
@@ -92,75 +100,8 @@ Private network   Subnet mask   IP addresses interval
 192.168.0.0       255.255.0.0   192.168.0.1 - 192.168.255.254
 ===============   ===========   =============================
 
-.. _reset_network-section:
-
-Reset network configuration
----------------------------
-
-In case of misconfiguration, it's possible to :index:`reset network configuration` by following these steps.
-
-1. Delete all logical and physical interfaces from the db
-
-   Display current configuration: ::
-
-     db networks show
-
-   Delete all interfaces: ::
-
-     db network delete eth0
-
-   Repeat the operation for all interfaces including bridges, bonds and vlans.
 
 
-2. Disable interfaces
-
-   Physical interfaces: ::
-   
-     ifconfig eth0 down
-
-   In case of a bridge: ::
-
-     ifconfig br0 down
-     brctl delbr br0 
-
-   In case of a bond (eth0 is enslaved to bond0): ::
-
-     ifenslave -d bond0 eth0
-     rmmod bonding
-
-3. Remove configuration files
-
-   Network configuration files are inside the :file:`/etc/sysconfig/network-scripts/` directory
-   in the form: :file:`/etc/sysconfig/network-scripts/ifcfg-<devicename>`. Where `devicename` is the
-   name of the interface like `eth0`, `br0`, `bond0`.
-
-   Delete the files: ::
-
-     rm -f /etc/sysconfig/network-scripts/ifcfg-eth0
-
-   Repeat the operation for all interfaces including bridges, bonds and vlans.
-
-4. Restart the network
-
-   After restarting the network you should see only the loopback interface: ::
-
-     service network restart
-
-   Use :command:`ifconfig` command to check the network status.
-
-5. Manually reconfigure the network
-
-   Choose an IP to assign to an interface, for example `192.168.1.100`: ::
-
-     ifconfig eth0 192.168.1.100
-
-   Then reconfigure the system: ::
-
-     signal-event system-init
-
-   The interface will have the chosen IP address.
-
-6. Open the web interface and reconfigure accordingly to your needs
 
 
 .. _network_services-section:
