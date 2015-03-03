@@ -44,6 +44,11 @@ Cambiamenti
   sono installati (modalità gateway), la porta 25 è bloccata dalle reti blue e green.
   Vedi :ref:`email-port25`.
 
+* Il valore della prop ``php/DateTimezone`` è ora controllato dalla
+  pagina :guilabel:`Data e ora`, che già imposta il fuso orario del
+  sistema. Se il valore del sistema non può essere applicato al
+  parametro PHP INI ``date.timezone``, viene considerato il valore di
+  default ``UTC``.
 
 Aggiornamento da 6.5
 ====================
@@ -62,5 +67,17 @@ Quindi, avviare l'aggiornamento: ::
   
   yum -c http://pulp.nethserver.org/nethserver/nethserver-6.6.conf update
 
+Cose che possono essere aggiustate:
+
+* Aggiornare il fuso orario di default di PHP (``date.timezone`` INI
+  setting) dal valore di default del sistema:
+
+  1. Nella pagina :guilabel:`Data e ora` cambiare :guilabel:`Fuso
+     orario` in un valore temporaneo e premere il pulsante
+     :guilabel:`Salva`.
+
+  2. Impostare il valore di :guilabel:`Fuso orario` a quello originale
+     e premere di nuovo :guilabel:`Salva`.
+  
 Al termine, riavviare il sistema.
 

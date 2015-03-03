@@ -43,6 +43,11 @@ Changes
 * If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 
   (gateway mode), port 25 is blocked from green and blue zones. See :ref:`email-port25`.
 
+* The ``php/DateTimezone`` prop value is now controlled from
+  :guilabel:`Date and time` page, that already sets the system time zone.
+  If the system-wide value is not valid for the PHP INI
+  ``date.timezone`` parameter, the default ``UTC`` is set instead.
+
 Upgrading from 6.5
 ==================
 
@@ -60,4 +65,16 @@ Then, start the upgrade: ::
 
   yum -c http://pulp.nethserver.org/nethserver/nethserver-6.6.conf update
 
+Things that can be tweaked:
+
+* Upgrade the default PHP timezone (``date.timezone`` INI setting)
+  from system default:
+  
+  1. In :guilabel:`Date and time` page change the :guilabel:`Timezone`
+     to a temporary value and click :guilabel:`Submit` button.
+
+  2. Set the :guilabel:`Timezone` to the original value and click
+     :guilabel:`Submit` again.
+  	      
 Finally, reboot the system.
+
