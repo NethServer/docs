@@ -94,13 +94,54 @@ Steps to be executed:
 
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
-3. Install additional packages (optional)
-4. Restore configuration backup executing: :command:`restore-config` or using the web interface
-5. If the old machine was the network gateway, remember to reinstall firewall module
-6. Reconfigure network from web interface
+3. If the old machine was the network gateway, remember to reinstall firewall module
+4. Install additional packages (optional)
+5. Restore the configuration backup from page :guilabel:`Backup
+   (configuration) > Restore` in Server Manager, or executing:
+   :command:`restore-config`
+6. If a warning message requires it, reconfigure the nework roles assignment. See :ref:`restore-roles-section` below.
 7. Verify the system is functional
 8. Restore data backup executing: :command:`restore-data`
 
+
+.. _restore-roles-section:
+   
+Restore network roles 
+---------------------
+
+If a role configuration points to a missing network interface, the
+:guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore`
+and :guilabel:`Network` pages pop up a warning. This happens for
+instance in the followin cases:
+
+* configuration backup has been restored on a new hardware
+* one or more network cards have been substituted
+* system disks are moved to a new machine
+
+The warning points to a page that lists the network cards present in
+the system, highlighting those not having an assigned :ref:`role
+<network-section>`. Such cards have a drop down menu where to select a
+role available for restoring.
+
+For instance, if a card with the *orange* role has been replaced, the
+drop down menu will list an element ``orange``, near the new
+network card.
+
+The same applies if the old card was a component of a logical
+interface, such as a bridge or bond.
+
+By picking an element from the drop down menu, the old role is
+transferred to the new physical interface.
+
+Click the :guilabel:`Submit` button to apply the changes.
+
+.. warning:: Choose carefully the new interfaces assignment: doing a mistake
+             here could lead to a system isolated from the network!
+
+If the missing role is ``green`` an interactive procedure asks to fix
+the configuration at boot-time, to ensure a minimal network
+connectivity and login again on the Server Manager.
+	   
 .. _backup_customization-section:
 
 Data backup customization

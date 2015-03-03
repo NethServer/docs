@@ -50,6 +50,12 @@ Changes
   These options can now be configured using the *First
   Configuration wizard*.
 
+* A warning is shown on :guilabel:`Dashboard` and :guilabel:`Network`
+  pages if a configuration backup has been restored on new hardware or
+  if a network card has been replaced by a new one.  A special
+  procedure helps in :ref:`restoring the network
+  configuration<restore-roles-section>`.
+  
 * Some new packages are installed by default to help troubleshooting: bind-utils, traceroute, tmpwatch.
 
 * If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 

@@ -21,13 +21,19 @@ impostazioni.
 Vengono riportate la configurazione di rete, l’uso della memoria, l’uso
 del disco, informazioni sul carico ed uptime della macchina, etc.
 
+
+.. index::
+   single: Rete
+   pair: interfaccia; ruolo
+
 .. _network-section:
 
 Rete
 ====
 
-La configurazione di rete consente di stabilire in quale modo il server è collegato
-alla :index:`rete` locale (LAN) oppure alle reti pubbliche (Internet).
+La pagina :guilabel:`Rete` consente di stabilire in quale modo il
+server è collegato alla rete locale (LAN) oppure alle reti pubbliche
+(Internet).
 
 Se il server svolge la funzionalità di firewall e gateway, sarà in grado di gestire reti aggiuntive
 con funzionalità speciali come DMZ (DeMilitarized Zone) o rete ospiti.
@@ -60,7 +66,9 @@ Si consiglia quindi di chiudere le porte dei servizi critici usando il pannello 
 Interfacce logiche
 ------------------
 
-I tipi di interfacce logiche supportate sono:
+Nella pagina :guilabel:`Network` premere il pulsante :guilabel:`Nuova
+interfaccia` per creare una interfaccia logica.  I tipi di interfacce
+logiche supportate sono:
 
 * :index:`alias`: associa uno o più IP ad una scheda esistenza. L'alias ha lo stesso ruolo della scheda fisica associata
 * :index:`bond`: combina due o più interfacce, garantisce bilanciamento del traffico e tolleranza ai guasti
@@ -100,76 +108,6 @@ ID rete privata   Subnet mask   Intervallo di indirizzi IP
 
 
 I numeri di questi intervalli sono riservati da IANA per l'utilizzo privato in reti TCP/IP e non vengono utilizzati in Internet.
-
-.. _reset_network-section:
-
-Reset network configuration
----------------------------
-
-In caso di configurazione errata, è possibile :index:`riconfigurare la rete` seguendo i passi descritti sotto.
-
-1. Eliminare tutte le interfacce logiche e fisiche dal database
-
-   Per visualizzare la configurazione corrente ::
-
-     db networks show
-
-   Eliminare le interfacce: ::
-
-     db network delete eth0
-
-   Ripetere l'operazione per tutte le le interfacce compresi bridge, bond e vlan.
-
-
-2. Disabilitare le interfacce
-
-   Interfacce fisiche: ::
-   
-     ifconfig eth0 down
-
-   In caso di bridge: ::
-
-     ifconfig br0 down
-     brctl delbr br0 
-
-   In caso di bond (eth0 collegata a bond0): ::
-
-     ifenslave -d bond0 eth0
-     rmmod bonding
-
-3. Rimuovere i file di configurazione
-
-   I file della configurazione di rete sono salvati all'interno della directory :file:`/etc/sysconfig/network-scripts/`
-   nella forma :file:`/etc/sysconfig/network-scripts/ifcfg-<devicename>`. Dove `devicename` è il nome
-   dell'interfaccia come `eth0`, `br0`, `bond0`.
-
-   Eliminare i file: ::
-
-     rm -f /etc/sysconfig/network-scripts/ifcfg-eth0
-   
-   Ripetere l'operazione per tutte le le interfacce compresi bridge, bond e vlan.
-
-4. Riavviare la rete
-
-   Dopo il riavvio della rete, dovrebbe risultare configurata solo l'interfaccia di loopback: ::
-
-     service network restart
-
-   usare il comando :command:`ifconfig` per controllare lo stato della rete.
-
-5. Riconfigurare manualmente la rete
-
-   Scegliere un IP da assegnare all'interfaccia, per esempio `192.168.1.100`: ::
-
-     ifconfig eth0 192.168.1.100
-
-   Quindi riconfigurare il sistema: ::
-
-     signal-event system-init
-
-   L'interfaccia avrà quindi l'IP scelto.
-
-6. Aprire l'interfaccia web e riconfigurare secondo le proprie necessità
 
 
 .. _network_services-section:

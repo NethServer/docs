@@ -98,14 +98,62 @@ Altre configurazioni ripristinate:
 I passi da eseguire sono:
 
 1. Installare una nuova macchina e configurarla con lo stesso nome host della vecchia
+
 2. Installare e configurare il backup dei dati
-3. Installare i moduli aggiuntivi (opzionale)
-4. Eseguire il ripristino della configurazione lanciando il comando :command:`restore-config` oppure usando l'interfaccia web
-5. Se la vecchia macchina era il gateway della rete, ricordarsi di reinstallare il modulo firewall
-6. Riconfigurare la rete da interfaccia web
+
+3. Se la vecchia macchina era il gateway della rete, ricordarsi di reinstallare il modulo firewall
+
+4. Installare i moduli aggiuntivi (opzionale)
+
+5. Eseguire il ripristino della configurazione dalla pagina
+   :guilabel:`Backup (configurazione) > Ripristino` nel Server Manager,
+   oppure eseguendo il comando :command:`restore-config`
+
+6. Se un avviso lo richiede, riconfigurare le interfacce di
+   rete. Vedere :ref:`restore-roles-section` più sotto.
+	
 7. Verificare che la macchina sia funzionante
+
 8. Ripristinare i dati eseguendo il comando :command:`restore-data`
 
+.. _restore-roles-section:
+   
+Assegnamento delle interfacce di rete
+-------------------------------------
+
+Le pagine :guilabel:`Dashboard`, :guilabel:`Backup (configuration) >
+Restore` e :guilabel:`Network` mostrano un avviso. Questo può accadere per
+esempio nei seguenti casi:
+
+* dopo il ripristino del backup della configurazione su un nuovo hardware
+* una o più schede di rete sono state sostituite
+* i dischi del sistema sono stati spostati su una nuova macchina
+
+L'avviso punta verso una pagina che elenca le schede di rete fisiche
+presenti nel sistema, evidenziando quelle che non hanno un :ref:`ruolo
+<network-section>` assegnato. Per ogni scheda di questo tipo, un menù
+a discesa mostra i ruoli da assegnare.
+
+Per esempio, se una scheda con ruolo *orange* è stata sostituita, il
+menù a discesa elencherà un elemento ``orange`` in corrispondenza
+della nuova scheda di rete.
+
+Lo stesso accade se la vecchia scheda era il componente di una
+interfaccia logica, come un *bridge* o un *bond*.
+
+Selezionando un elemento dal menù a discesa, le impostazioni del ruolo
+sono trasferiti alla nuova scheda.
+
+Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate.
+
+.. warning:: Assegnare con attenzione i ruoli alle nuove
+             interfacce. Un errore può portare ad un sistema isolato
+             dalla rete.
+
+Se il ruolo mancante è ``green`` una procedura interattiva chiede di
+aggiustare la configurazione all'avvio del sistema, per assicurare una
+connettività di rete minima e accedere di nuovo al Server Manager.
+	     
 .. _backup_customization-section:
 
 Personalizzazione backup dati
