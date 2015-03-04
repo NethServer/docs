@@ -1,3 +1,5 @@
+.. _duc-section:
+
 ==================
 Analizzatore disco
 ==================

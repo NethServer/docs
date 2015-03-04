@@ -69,6 +69,8 @@ Changes
   If the system-wide value is not valid for the PHP INI
   ``date.timezone`` parameter, the default ``UTC`` is set instead.
 
+* The base installation now includes the disk space analyzer.
+  See :ref:`duc-section`.
   
 Upgrading from 6.5
 ==================

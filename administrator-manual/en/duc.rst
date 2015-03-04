@@ -1,3 +1,5 @@
+.. _duc-section:
+
 =============
 Disk analyzer
 =============

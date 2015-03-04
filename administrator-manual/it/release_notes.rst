@@ -70,6 +70,9 @@ Cambiamenti
   parametro PHP INI ``date.timezone``, viene considerato il valore di
   default ``UTC``.
 
+* L'installazione di base ora include l'analizzatore di spazio su disco.
+  Vedi :ref:`duc-section`.
+
 Aggiornamento da 6.5
 ====================
 
