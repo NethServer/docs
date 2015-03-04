@@ -49,7 +49,7 @@ configuration:
 Set ``OUTPUT_FILENAME``, ``PERMS``, ``UID`` and ``GID`` values according
 to daemon configuration.
 
-Default behaviour
+Default behavior
 =================
 
 By default, ``CrtFile`` and ``KeyFile`` properties have empty values. In
@@ -100,3 +100,17 @@ Notify registered daemons about certificate update:
 
     signal-event certificate-update
 
+Custom certificates should be placed inside the following standard directories:
+
+* :file:`/etc/pki/tls/certs`: public key
+* :file:`/etc/pki/tls/private`: private key
+
+Backup
+------
+   
+Always remember to add custom certificates to configuration backup.
+Just add the paths inside :file:`/etc/backup-config.d/custom.include` file.
+
+For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply execute: ::
+
+ echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
