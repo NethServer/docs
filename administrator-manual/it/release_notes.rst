@@ -28,6 +28,9 @@ Cambiamenti
   E' ora possibile effettuare l'aggiornamento dei pacchetti e leggere
   il changelog degli aggiornamenti.
 
+* A iniziare da questa release, il client YUM è reindirizzato ai mirror
+  ufficiali di CentOS per scaricare i pacchetti.
+  
 * La pagina :guilabel:`Certificato server` mostra il certificato SSL
   auto-firmato e consente di generarne e personalizzarne uno nuovo usando
   anche *nomi alternativi* per il server.

@@ -26,6 +26,9 @@ Changes
   section.  To enhance the page usability, two separate tabs show
   respectively *Available* and *Installed* modules.  It is now possible
   to update the installed packages and read the updates changelog.
+
+* Starting from this release, YUM clients are redirected to the
+  official CentOS mirrors to download packages.
   
 * A new page, :guilabel:`Server certificate` shows the self-signed
   SSL certificate and allows generating a new one, customizing also
@@ -66,6 +69,7 @@ Changes
   If the system-wide value is not valid for the PHP INI
   ``date.timezone`` parameter, the default ``UTC`` is set instead.
 
+  
 Upgrading from 6.5
 ==================
 
