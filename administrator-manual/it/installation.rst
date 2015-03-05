@@ -125,7 +125,7 @@ Modalità *unattended*
 Al termine dell'installazione, il sistema sarà così configurato:
 
 * Nome utente: :samp:`root`
-* Password: :samp:`Nethesis,1234`
+* Password di default: :samp:`Nethesis,1234`
 * Rete: DHCP abilitato su tutte le interfacce
 * Tastiera: |ks_keyboard|
 * Fuso orario: |ks_timezone|
@@ -199,14 +199,14 @@ Un disco di spare è un disco che viene aggiunto al RAID qualora si verifichi un
 Password amministratore di sistema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-E' possibile cambiare la password dell'amministratore durante la prima configurazione.
-Una buona password deve:
+E' possibile cambiare la password dell'utente ``root`` durante la prima
+configurazione.  Una buona password deve:
 
 * essere lunga almeno 8 caratteri
 * contenere lettere maiuscole e minuscole
 * contenere simboli e numeri
 
-La password di default è **Nethesis,1234**.
+La password di default è :samp:`Nethesis,1234`.
 
 File system cifrato
 ^^^^^^^^^^^^^^^^^^^

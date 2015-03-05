@@ -113,10 +113,11 @@ Unattended mode
 
 After installation, the system will be configured as follows:
 
-* Credentials: :samp:`root / Nethesis,1234`
+* User name: :samp:`root`
+* Default password: :samp:`Nethesis,1234`
 * Network: DHCP enabled on all interfaces
-* Keyboard: :samp:`|ks_keyboard|`
-* Time zone: :samp:`|ks_timezone|`
+* Keyboard: |ks_keyboard|
+* Time zone: |ks_timezone|
 * Language: English
 * Disks: if there are two or more disks, a RAID 1 will be created on
   first two disks
@@ -194,7 +195,8 @@ RAID in case a failure occurs.
 System administrator password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can change the administrator password inside the first configuration wizard.
+You can change the ``root`` user's password inside the first
+configuration wizard.
 
 A good password is:
 
@@ -202,7 +204,7 @@ A good password is:
 * contain uppercase and lowercase letters
 * contain symbols and numbers
 
-Default password is **Nethesis,1234**.
+Default password is :samp:`Nethesis,1234`.
 
 Encrypted file system
 ^^^^^^^^^^^^^^^^^^^^^
