@@ -60,6 +60,8 @@ Cambiamenti
   
 * Nuovi pacchetti installati di default: bind-utils, traceroute, tmpwatch.
 
+* Il plugin presto per yum è ora installato di default per velocizzare il processo di aggiornamento.
+
 * Se entrambi i pacchetti ``nethserver-mail-filter`` e ``nethserver-firewall-base`` 
   sono installati (modalità gateway), la porta 25 è bloccata dalle reti blue e green.
   Vedi :ref:`email-port25`.

@@ -61,6 +61,8 @@ Changes
   
 * Some new packages are installed by default to help troubleshooting: bind-utils, traceroute, tmpwatch.
 
+* The presto plugin for yum is now installed by default to speed up the update process.
+
 * If ``nethserver-mail-filter`` and ``nethserver-firewall-base`` are both installed 
   (gateway mode), port 25 is blocked from green and blue zones. See :ref:`email-port25`.
 
