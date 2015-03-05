@@ -62,24 +62,20 @@ As for the users, a group can be enabled to some (or all) services.
 
 .. _admin_user-section:
 
-Administrator user
-==================
+Admin account
+=============
 
-The :guilabel:`Users` module creates the user :dfn:`admin` that allows access to the web interface with the same password for the :dfn:`root` user.
-The :index:`admin` user does not have access to the system from the command line.
-Despite being two separate users, the password of both coincide and can be changed from the web interface.
+The :guilabel:`Users` page has one default entry: :dfn:`admin`. This
+account allows access to the Server Manager with the same permissions
+of the :dfn:`root` account.  It is initially *disabled* and has no
+access from the console.
 
-On some occasions, it may be useful to differentiate the admin and root password, for example, to allow an inexperienced user
-to use the web interface to perform common tasks and inhibiting access to the command line.
+.. tip:: To enable ``admin`` account set its password.
 
-Avoid :index:`root` and admin password synchronization by run the following command ::
+Where applicable, the ``admin`` user also is granted special
+privileges on some specific services, such as :ref:`joining a
+workstation in Samba domain <samba_pdc>`.
 
- config setprop AdminIsNotRoot enabled
-
-Then change the admin password from the panel :guilabel:`Users`. Without password synchronization,
-admin will have the new password, and root will keep keep the old one.
-
-If you want to change the root password, it should be done from the command line using :command:`passwd`.
 
 Password management
 ===================

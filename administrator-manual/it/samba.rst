@@ -51,6 +51,8 @@ Membro di Active Directory
 .. |Microsoft Windows (TM)| unicode:: Microsoft \x20 Windows U+2122
 .. _Samba: http://www.samba.org/
 
+.. _samba_ws:
+
 Workstation
 -----------
 
@@ -64,6 +66,7 @@ Dagli altri host della rete Windows, |product| sarà elencato in
 Come detto in precedenza, per accedere alle risorse del server, i
 client devono fornire le credenziali di un account locale valido.
 
+.. _samba_pdc:
 
 Primary domain controller
 -------------------------

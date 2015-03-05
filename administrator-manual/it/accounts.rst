@@ -58,25 +58,19 @@ Come gli utenti, un gruppo può essere abilitati ad alcuni o tutti i servizi.
 
 .. _admin_user-section:
 
-Utente amministratore
-=====================
+Utente admin
+============
 
-Il modulo :guilabel:`Utenti` crea l'utente :dfn:`admin` che consente l'accesso all'interfaccia web con la stessa password dell'utente :dfn:`root`.
-L'utente :index:`admin` non ha accesso al sistema da linea di comando.
-Pur essendo due utenti distinti, la password di entrambi coincide ed è possibile modificarla dall'interfaccia web.
+La pagina :guilabel:`Utenti` ha un elemento di default:
+:dfn:`admin`. Questo account consente di accedere al Server Manager
+con gli stessi permessi dell'utente :dfn:`root`.  Inizialmente è
+*disabilitato* e non ha accesso dalla console.
 
-In alcune occasioni, potrebbe essere utile differenziare le password di admin e di root, per esempio, per consentire ad un utente poco esperto 
-di utilizzare l'interfaccia web per svolgere le operazioni più comuni, inibendo però l'accesso alla linea comandi.
+.. tip:: Per abilitare l'account ``admin`` impostare la sua password.
 
-Per dissociare la password di :index:`root` da quella di admin eseguire il seguente comando::
-
- config set AdminIsNotRoot enabled
-
-Successivamente cambiare la password di admin dal pannello :guilabel:`Utenti`. Non venendo più sincronizzate le password, 
-admin avrà la nuova password, mentre root manterrà la vecchia.
-
-Se si desidera modificare la password di root, andrà fatto da linea di comando tramite il comando :command:`passwd`.
-
+Dove possibile, l'utente ``admin`` ha dei privilegi speciali su alcuni
+servizi specifici, come :ref:`aggiungere una workstation al dominio
+Samba <samba_pdc>`.
 
 
 Gestione password
