@@ -40,7 +40,7 @@ Usando questa modalità è possibile profilare gli utenti attraverso il nome ute
 Procedere come segue:
 
 * Creare un gruppo di utenti
-* Aprire la scheda :guilabel:`Profili IP` e fare click su :guilabel:`Crea nuovo`
+* Aprire la scheda :guilabel:`Profili utente` e fare click su :guilabel:`Crea nuovo`
 * Selezionare un gruppo di utenti e immettere una descrizione
 * Per selezionare le blacklist associate al profilo, fare click su :guilabel:`Configura`
   ed accedere all'interfaccia di FlashStart
