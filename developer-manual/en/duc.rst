@@ -1,6 +1,8 @@
-================================================
-Disk analyzer (Duc: https://github.com/zevv/duc)
-================================================
+===================
+Disk analyzer (Duc)
+===================
+
+Official site: https://github.com/zevv/duc
 
 This tool is used to visualize disk usage in a simply and nice graph.
 
