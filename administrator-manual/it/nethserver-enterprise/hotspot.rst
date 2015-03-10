@@ -46,3 +46,8 @@ per cui devono comportarsi come un banale switch di rete, a tal fine è opportun
 * configurare gli AP per lavorare su canali differenti in modo da minimizzare le interferenze, gli AP di buon livello permettono di gestire i canali in automatico oppure di selezionarli manualmente
 * non utilizzare prodotti troppo scadenti, AP di bassa qualità possono provocare frequenti disconnessioni che poi impattano sulla qualità del servizio generale, la raccomandazione è ancora più importante nel caso si utilizzino dei repeater
 
+Utilizzo del servizio
+=====================
+
+Il servizio è amministrabile da centro servizi Nethesis, la documentazione è disponibile al seguente link : https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi 
+
