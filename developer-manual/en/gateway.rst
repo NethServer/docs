@@ -237,6 +237,24 @@ Each record has:
 * ``oriDst``: original destination ip, for example alias for a wan interface. If empty, the port forward is valid for all red interface
 * ``description``: optional description
 
+NAT 1:1
+=======
+
+All NAT one-to-one configurations are stored in ``networks`` db.
+
+Each value is a new attribute for an existing alias key and the name of attribute is ``FwObjectNat`` that contains the reference of an associated host: ::
+
+    eth1:0=alias
+        FwObjectNat=host;host_name
+        ipaddr=11.11.11.11
+        netmask=255.255.255.0
+        role=alias
+
+During template-expanding phase, the associated host is mapping with referenced IP and added in shorewall nat configuration. The file is ``/etc/shorewall/nat``. 
+
+More informations are available here: http://shorewall.net/NAT.htm
+
+
 Traffic shaping
 ================
 

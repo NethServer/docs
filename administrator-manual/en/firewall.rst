@@ -204,6 +204,22 @@ Some possible values:
 * ``!10.2.10.4``: enable port forward  for all IPs except 10.2.10.4
 * ``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for 192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9
 
+NAT 1:1
+=======
+
+One-to-one NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
+
+If you have a bunch of public IP addresses and if you want to associate one of these to a specific network host, :index:`NAT 1:1` is the way.
+
+Example
+-------
+
+In our network we have an host called ``example_host`` with IP ``192.168.5.122``. We have also associated a public IP address ``89.95.145.226`` as an alias of ``eth0`` interface (``RED``).
+
+We want to map our internal host (``example_host`` - ``192.168.5.122``) with public IP ``89.95.145.226``.
+
+In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (readonly field) the specific host (``example_host``) from the combobox. We have configured correctly the one-to-one NAT for our host.
+
 
 Traffic shaping
 ===============

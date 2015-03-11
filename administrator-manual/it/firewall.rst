@@ -214,6 +214,23 @@ Esempi di alcuni valori possibili:
 * ``!10.2.10.4``: abilita il port forward per tutti gli IP tranne 10.2.10.4
 * ``192.168.1.0/24!192.168.1.3,192.168.1.9``: abilita il port forward per tutta la rete 192.168.1.0/24  ad eccezione degli host 192.168.1.3 e 192.168.1.9
 
+NAT 1:1
+=======
+
+Il NAT uno-a-uno consiste nell'associare un indirizzo IP privato ad un indirizzo IP pubblico per configurare, ad esempio, sistemi che si trovano dietro ad un firewall.
+
+Se si hanno a disposizione diversi IP pubblici e si vuole associare uno di questi ad un determinato host della rete, è possibile farlo, appunto, mediante il :index:`NAT 1:1`. 
+
+
+Esempio
+-------
+
+Nella nostra rete abbiamo un host di nome ``host_esempio`` che ha IP ``192.168.5.122``. Abbiamo inoltre associato un IP pubblico di cui disponiamo ``89.95.145.226`` come alias dell'interfaccia ``eth0`` (``RED``). 
+
+Vogliamo quindi mappare il nostro host interno (``host_esempio`` - ``192.168.5.122``) con l'IP pubblico ``89.95.145.226``.
+
+Dal pannello :guilabel:`NAT 1:1` andremo a scegliere per l'IP ``89.95.145.226`` (che compare come campo in sola lettura) il corrispondente host (``host_esempio``) che scegliamo dal combobox. Così facendo abbiamo configurato il NAT uno-a-uno per il nostro host.
+
 
 Gestione banda
 ==============
