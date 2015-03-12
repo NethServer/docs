@@ -6,6 +6,10 @@ Il filtro contenuti cloud consente di profilare e bloccare il traffico web degli
 Il sistema consente di creare più profili basati sul nome utente (proxy web autenticato)
 oppure sull'IP sorgente (proxy trasparente o manuale).
 
+Operazioni preliminari
+======================
+E' necessario accedere a https://register.nethesis.it, nella sezione `Amministrazione` e aggiungere il server a quelli che possono utilizzare  il `Filtro Contenuti Cloud`.
+
 Configurazione
 ==============
 
