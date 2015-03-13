@@ -90,7 +90,7 @@ Dal momento che la struttura dei repository è cambiata, eliminare il vecchio fi
 
 Quindi, avviare l'aggiornamento: ::
   
-  yum -c http://pulp.nethserver.org/nethserver/nethserver-6.6.conf update
+  yum -c http://mirror.nethserver.org/nethserver/nethserver-6.6.conf update
 
 Cose che possono essere aggiustate:
 
@@ -106,3 +106,12 @@ Cose che possono essere aggiustate:
   
 Al termine, riavviare il sistema.
 
+
+Aggiornamento da 6.6 beta1
+==========================
+
+Gli URL dei repository YUM sono cambiati. Prima di aggiornare il
+sistema scaricare la nuova configurazione di YUM: ::
+
+  curl https://raw.githubusercontent.com/nethesis/nethserver-release/6.6-0.9/root/etc/yum.repos.d/NethServer.repo > /etc/yum.repos.d/NethServer.repo
+  
