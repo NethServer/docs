@@ -31,7 +31,6 @@ Configurazione
 .. toctree::
    :maxdepth: 2
 
-   installation
    access
    base_system
    packages
