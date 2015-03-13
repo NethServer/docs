@@ -58,14 +58,13 @@ che c'era prima del ripristino, senza dover modificare altro.
 NethServer community
 ====================
 
-E' possibile trasformare un NethServer versione community in un NethServer Enterprise.
+È possibile trasformare un NethServer 6.6 versione community in un
+NethServer Enterprise.
 
-* Eseguire da linea di comando:
-
-::
+* Eseguire da linea di comando: ::
 
   yum update
-  yum -c http://update.nethesis.it/nethserver-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
+  yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
 
 * Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Software center`.
 
