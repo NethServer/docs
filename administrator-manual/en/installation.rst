@@ -294,7 +294,7 @@ Enable |product| repositories with this command:
 
 .. parsed-literal::
 
-  yum localinstall -y |yum_localinstall_url|
+  yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
 
 To install the base system, run: ::
 

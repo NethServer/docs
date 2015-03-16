@@ -5,5 +5,4 @@
 .. |ks_keyboard| replace:: :samp:`it`
 .. |ks_timezone| replace:: :samp:`Europe/Rome`
 .. |ks_language| replace:: :samp:`it_IT`
-.. |yum_localinstall_url| replace:: http://pulp.nethesis.it/nethserver/nethserver-release.rpm
 .. |register_link| replace:: `register.nethesis.it <https://register.nethesis.it/>`__

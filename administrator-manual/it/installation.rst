@@ -290,11 +290,9 @@ comincerà installando CentOS |version| sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
 per trasformare CentOS in |product|. 
 
-Abilitare i repository specifici di |product| con il comando:
+Abilitare i repository specifici di |product| con il comando: ::
 
-.. parsed-literal::
-
- yum localinstall -y |yum_localinstall_url|
+ yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
 
 Per installare il sistema di base eseguire: ::
 
