@@ -98,6 +98,8 @@ NethVoice
 .. toctree::
    :maxdepth: 1
 
+   nethvoice_intro
+   nethcti_intro
    phonebook-mysql
 
 
@@ -114,7 +116,7 @@ Appendice
 ---------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    migration
    license
