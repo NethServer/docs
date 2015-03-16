@@ -63,8 +63,8 @@ NethServer Enterprise.
 
 * Eseguire da linea di comando: ::
 
-  yum update
-  yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
+    yum update
+    yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
 
 * Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Software center`.
 

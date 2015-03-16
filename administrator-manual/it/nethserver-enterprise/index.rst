@@ -28,9 +28,11 @@ Installazione
 -------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    installation
+   access
+   registration
 
 Configurazione
 --------------
@@ -38,10 +40,8 @@ Configurazione
 .. toctree::
    :maxdepth: 2
 
-   access
    base_system
    packages
-   registration
 
 Moduli
 ------
