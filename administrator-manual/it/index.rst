@@ -40,7 +40,7 @@ Moduli
 ------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    backup
    accounts
@@ -75,22 +75,14 @@ Best practices
 
    third_party
 
-Aggiornamenti
--------------
-
-.. toctree::
-   :maxdepth: 2
-
-   migration
-
 
 Appendice
 ---------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   release_notes
+   migration	      
    license
 
 

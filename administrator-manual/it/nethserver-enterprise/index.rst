@@ -16,14 +16,28 @@ Manuale amministratore
 
     Blog `blog.nethesis.it <http://blog.nethesis.it>`_
 
+Note di rilascio 6.6
+--------------------
 
-Installazione e configurazione
-------------------------------
+.. toctree::
+   :maxdepth: 2
+
+   release_notes
+
+Installazione
+-------------
 
 .. toctree::
    :maxdepth: 2
 
    installation
+
+Configurazione
+--------------
+   
+.. toctree::
+   :maxdepth: 2
+
    access
    base_system
    packages
@@ -96,22 +110,13 @@ Best practices
    third_party
 
 
-Aggiornamenti
--------------
-
-.. toctree::
-   :maxdepth: 2
-
-   migration
-
-
 Appendice
 ---------
 
 .. toctree::
    :maxdepth: 2
 
-   release_notes
+   migration
    license
 
 Indici
