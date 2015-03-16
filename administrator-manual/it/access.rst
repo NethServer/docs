@@ -1,12 +1,13 @@
-.. _access-section:
 
 .. index::
    single: interfaccia web
    single: Server Manager
 
-========================
-Accesso (Server Manager)
-========================
+.. _access-section:
+   
+=========================
+Accesso al Server Manager
+=========================
 
 |product| viene configurato tramite una *interfaccia web*, detta :dfn:`Server Manager`.
 Per accedere alle pagine di gestione si utilizza un browser (es. FireFox, Google Chrome, etc)
@@ -31,6 +32,11 @@ Compilare i campi come segue:
 * :index:`Nome utente di default`: **root**
 * :index:`Password di default`: **Nethesis,1234**
 
+.. warning:: Cambiare la password di root appena possibile,
+             scegliendone una sicura, che sia composta da una sequenza
+             casuale di lettere maiuscole, minuscole e da numeri e
+             simboli.
+  
 Se è installato il pacchetto nethserver-directory, utilizzato dai moduli che abilitano la 
 gestione utenti come File server o Mail, viene attivata nella Dashboard l'interfaccia di 
 gestione :ref:`users_and_groups-section` dalla quale è possibile abilitare l'utente admin ed utilizzarlo 

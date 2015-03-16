@@ -4,9 +4,9 @@
    single: Server Manager
    single: web interface
 
-====================
-Access to |product|
-====================
+============================
+Accessing the Server Manager
+============================
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
@@ -28,5 +28,9 @@ Use following credentials:
 * :index:`Default user` name: **root**
 * :index:`Default password`: **Nethesis,1234**
 
+.. warning:: Change the root's password as soon as possible, by
+             picking a secure one, composed of a random sequence of
+             mixed-case letters, digits and symbols.
+  
 If the directory module is installed, and the admin user has been enabled, you can use it to access
 the web interface with same privileges as root user. See :ref:`admin_user-section`.
