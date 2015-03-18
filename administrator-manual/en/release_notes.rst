@@ -9,30 +9,34 @@ Upgrading from 6.5
 
 The system upgrade should be started from the command line shell.
 
-Make sure the system is fully updated: ::
+1. Make sure the system is fully updated: ::
 
-  yum update
+     yum update
 
-Since repository configuration has changed, remove the old configuration file: ::
+2. Installing ``yum-presto`` should reduce the total download size: ::
 
-  rm -f /etc/yum.repos.d/NethServer.repo
+     yum install yum-presto
 
-Then, start the upgrade: ::
+3. Since repository configuration has changed, remove the old configuration file: ::
 
-  yum -c http://mirror.nethserver.org/nethserver/nethserver-6.6.conf update
-
-Things that can be tweaked:
-
-* Upgrade the default PHP timezone (``date.timezone`` INI setting)
-  from system default:
+     rm -f /etc/yum.repos.d/NethServer.repo
   
-  1. In :guilabel:`Date and time` page change the :guilabel:`Timezone`
-     to a temporary value and click :guilabel:`Submit` button.
+4. Then, start the upgrade: ::
 
-  2. Set the :guilabel:`Timezone` to the original value and click
-     :guilabel:`Submit` again.
+     yum -c http://mirror.nethserver.org/nethserver/nethserver-6.6.conf update
+
+5. Things that can be tweaked:
+
+   * Upgrade the default PHP timezone (``date.timezone`` INI setting)
+     from system default:
+  
+     1. In :guilabel:`Date and time` page change the :guilabel:`Timezone`
+	to a temporary value and click :guilabel:`Submit` button.
+
+     2. Set the :guilabel:`Timezone` to the original value and click
+	:guilabel:`Submit` again.
   	      
-Finally, reboot the system.
+6. Finally, reboot the system.
 
 
 Updating 6.6 beta1
