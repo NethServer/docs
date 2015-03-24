@@ -9,6 +9,9 @@ Upgrading from 6.5
 
 The system upgrade should be started from the command line shell.
 
+.. Warning:: Check the system for the presence of *template-custom*
+             and their compatibility with updates.
+
 1. Make sure the system is fully updated: ::
 
      yum update

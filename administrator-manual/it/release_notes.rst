@@ -10,6 +10,9 @@ Aggiornamento da 6.5
 
 L'aggiornamento del sistema deve essere eseguito dalla linea di comando.
 
+.. Warning:: Verificare la presenza di eventuali *template-custom* nel
+             sistema e la compatibilità con gli aggiornamenti.
+
 1. Assicurarsi che il sistema sia aggiornato: ::
 
      yum update
