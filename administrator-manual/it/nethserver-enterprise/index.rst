@@ -81,6 +81,8 @@ NethSecurity
 
    firewall
    web_proxy
+   content_filter
+   flashstart
    snort
    bandwidth_monitor
    pop3_proxy
@@ -89,8 +91,6 @@ NethSecurity
    owncloud
    weekly_report
    hotspot
-   content_filter
-   flashstart
 
 NethVoice
 ^^^^^^^^^

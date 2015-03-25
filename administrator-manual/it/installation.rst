@@ -1,7 +1,7 @@
-.. _installation-section:
-
 .. index::
    single: installazione
+
+.. _installation-section:
 
 =============
 Installazione
