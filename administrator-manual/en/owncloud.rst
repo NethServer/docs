@@ -29,22 +29,6 @@ After the installation:
 LDAP access authentication is enabled by default, so each user can login with its system credentials. 
 After the installation a new application widget is added to the |product| web interface dashboard.
 
-
-Update
-======
-
-Updates are automatic. Do not do the manual update.
-
-Update from ownCloud 5
-======================
-
-To update: ::
-
- yum update nethserver-owncloud
-
-.. note:: The update does not change the current configuration.
-
-
 LDAP Configuration
 ==================
 
