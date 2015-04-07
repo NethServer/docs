@@ -75,8 +75,8 @@ forms, like *Create* and *Modify*, they can be merged together.
    effects.
 
 
-Creating herlp for plugin modules
-=================================
+Creating help for plugin modules
+================================
 
 Some NethServer modules have a plugin behavior which means
 the module will load all help documents inside a well known directory.
@@ -103,6 +103,22 @@ apply:
 
 The actual level value depends on the type of plugin. Usually *2* or *3* applies. 
 For instance, see ``NethServer_Module_SharedFolder_Plugin_Samba.rst`` inside nethserver-samba package.
+
+Building docs inside RPMS
+=========================
+
+RST documentation needs to be compiled in HTML.
+To include HTML files inside the RPM, remember to add this macro in the spec file, under the *%build* section: ::
+
+  %{makedocs}
+
+Example: ::
+
+  %build
+  ...
+  %{makedocs}
+  ...
+  perl createlinks
 
 RST editors
 ===========
