@@ -85,3 +85,14 @@ Under tab :guilabel:`Cache` there is a form to configure cache parameters:
 * **Max object size**: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value (in kB)
 
 The button :guilabel:`Empty cache` also works if squid is disabled, it might be useful to clear space on disk.
+
+Sites without cache
+-------------------
+
+Sometime the proxy can't correctly handle some bad crafted sites.
+To exclude one or more domain from the cache, use the ``NoCache`` property.
+
+Example: ::
+
+  config setprop squid NoCache www.nethserver.org,www.google.com
+  signal-event nethserver-squid-save

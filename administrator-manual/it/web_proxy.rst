@@ -82,3 +82,14 @@ Nel pannello :guilabel:`Cache` è presente un form per configurare i parametri d
 
 Il pulsante :guilabel:`Svuota cache` funziona anche se squid è disabilitato, potrebbe essere utile per liberare spazio su disco.
 
+Siti senza cache
+----------------
+
+A volte il proxy non è in grado di fare cache di alcuni siti mal costruiti.
+Per escludere uno o più domini dalla cache, usare l'opzione ``NoCache``.
+
+Esempio: ::
+
+  config setprop squid NoCache www.nethserver.org,www.google.com
+  signal-event nethserver-squid-save
+
