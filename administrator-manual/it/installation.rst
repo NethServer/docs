@@ -298,11 +298,9 @@ Per installare il sistema di base eseguire: ::
 
  nethserver-install
 
-Oppure, per installare contestualmente del software addizionale,
-passare il nome dei moduli desiderati come parametro allo script di
-installazione.  Esempio: ::
+Per trasformare NethServer Community in NethServer Enterprise eseguire: ::
 
- nethserver-install nethserver-mail nethserver-nut
-
-.. include:: installation_end.inc
+ yum update
+ yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
+ 
 
