@@ -66,6 +66,7 @@ Moduli
    owncloud
    phone_home
    webvirtmgr
+   snmp
 
 Best practices
 --------------

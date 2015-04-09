@@ -110,6 +110,7 @@ Modules
    lightsquid
    webvirtmgr
    duc
+   snmp
 
 Appendix
 --------
