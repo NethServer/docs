@@ -262,7 +262,7 @@ Best practices
   case.* 
 * Underscores and hyphens are valid in key and property names, but
   should normally be avoided.
-* Do not "overload&quot; an existing property with a new value. If the
+* Do not "overload" an existing property with a new value. If the
   existing values do not meet your requirements, discuss your
   implementation with the developers. Values which are not known by the
   base may cause serious issues on upgrade. If the existing panels have
