@@ -297,10 +297,11 @@ List of available database
 Table of databases
 ------------------
 
-| The following table summarizes
-| \* the database name,
-| \* the perl module that manages it and
-| \* the package that provides it.
+The following table summarizes
+
+* the database name
+* the perl module that manages it and
+* the package that provides it
 
 
 Databases provides by the base system:
