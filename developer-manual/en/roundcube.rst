@@ -13,7 +13,7 @@ Configuration is saved in ``roundcubemail`` key inside ``configuration`` databas
 
 Available properites:
 
-* ``Server: server address of the mail server, default is ``localhost``
+* ``Server``: server address of the mail server, default is ``localhost``
 * ``access``: can be ``public`` or ``private``, default is ``public``
   
   * *public*: webmail can be accessed from any networks
