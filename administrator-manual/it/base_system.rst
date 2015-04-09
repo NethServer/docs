@@ -288,3 +288,26 @@ L'orologio della macchina può essere configurato manualmente o automaticamente 
 La corretta configurazione dell'orologio è importante per il funzionamento di molti protocolli.
 Per evitare problemi, tutti gli host della LAN possono essere configurati per usare il server stesso come server NTP.
 
+
+Aiuto in linea
+==============
+
+Tutti i pacchetti che sono configurabili attraverso il Server Manager
+contengono un :index:`manuale in linea` che spiega l'utilizzo base e tutti
+i campi contenuti nella pagina.
+
+Il manuale in linea è consultabile in tutte le lingue in cui è tradotto
+il Server Manager.
+
+Una lista di tutti i manuali installati nel sistema è disponibile all'indirizzo: ::
+
+ https://<server>:980/<language>/Help
+
+**Esempio**
+
+Se il server ha indirizzo ``192.168.1.2`` e si desidera visualizzare la lista dei manuali in italiano,
+usare il seguente indirizzo: ::
+
+ https://192.168.1.2:980/it/Help
+
+

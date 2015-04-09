@@ -27,22 +27,3 @@ Next page will resume all modifications and display all optional packages.
 The section :guilabel:`Installed software` displays all packages already installed into the system.
 
 
-Inline help
-===========
-
-All packages inside the Server Manager contain an :index:`inline help`.
-The inline help explains how the module works and all available options.
-
-These help pages are available in all Server Manager's languages.
-
-A list of all available inline help pages can be found at the address: ::
-
- https://<server>:980/<language>/Help
-
-**Example**
-
-If the server has address ``192.168.1.2``, and you want to see all English help pages, use this address: ::
-
- https://192.168.1.2:980/en/Help
-
-

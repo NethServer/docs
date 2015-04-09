@@ -260,3 +260,23 @@ The machine clock can be configured manually or automatically using public NTP s
 
 The machine clock is very important in many protocols. To avoid problems, all hosts in LAN can be configured to use the server as NTP server.
 
+
+Inline help
+===========
+
+All packages inside the Server Manager contain an :index:`inline help`.
+The inline help explains how the module works and all available options.
+
+These help pages are available in all Server Manager's languages.
+
+A list of all available inline help pages can be found at the address: ::
+
+ https://<server>:980/<language>/Help
+
+**Example**
+
+If the server has address ``192.168.1.2``, and you want to see all English help pages, use this address: ::
+
+ https://192.168.1.2:980/en/Help
+
+
