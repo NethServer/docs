@@ -267,7 +267,7 @@ End of installation procedure
 
 After parameters input, the procedure will start the installation.
 
-.. include:: installation_end.inc
+.. include:: installation_interactive_end.inc
 
 
 .. index::
@@ -290,9 +290,7 @@ with a CentOS |version| on your system (many VPS providers offer
 CentOS pre-installed virtual machines), and then execute below
 commands to transform CentOS into |product|.
 
-Enable |product| repositories with this command:
-
-.. parsed-literal::
+Enable specific YUM repositories with this command: ::
 
   yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
 
@@ -305,5 +303,5 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
-.. include:: installation_end.inc
+.. include:: installation_centos_end.inc
 

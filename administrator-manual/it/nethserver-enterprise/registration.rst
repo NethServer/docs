@@ -61,10 +61,4 @@ NethServer community
 È possibile trasformare un NethServer 6.6 versione community in un
 NethServer Enterprise.
 
-* Eseguire da linea di comando: ::
-
-    yum update
-    yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
-
-* Accedere all'interfaccia web e procedere alla registrazione dal menu :guilabel:`Software center`.
-
+.. include:: installation_centos_end.inc

@@ -268,7 +268,7 @@ Alla fine della procedura di installazione verrà chiesto di effettuare
 il riavvio della macchina. Assicurarsi di aver rimosso il CD o il
 supporto USB prima di riavviare.
 
-.. include:: installation_end.inc
+.. include:: installation_interactive_end.inc
 
 .. index::
    pair: installazione; ISO
@@ -290,7 +290,7 @@ comincerà installando CentOS |version| sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
 per trasformare CentOS in |product|. 
 
-Abilitare i repository specifici di |product| con il comando: ::
+Abilitare i repository YUM specifici con il comando: ::
 
  yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
 
@@ -304,5 +304,5 @@ installazione.  Esempio: ::
 
  nethserver-install nethserver-mail nethserver-nut
 
-.. include:: installation_end.inc
+.. include:: installation_centos_end.inc
 
