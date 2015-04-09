@@ -55,10 +55,6 @@ in questo modo tra l'altro si perderebbero anche i dati relativi allo storico de
 Tramite il pulsante :guilabel:`Libera Chiave` è invece possibile registrare il server appena ripristinato con la stessa chiave 
 che c'era prima del ripristino, senza dover modificare altro.
 
-NethServer community
-====================
 
-È possibile trasformare un NethServer 6.6 versione community in un
-NethServer Enterprise.
 
-.. include:: installation_centos_end.inc
+

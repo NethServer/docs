@@ -275,6 +275,8 @@ supporto USB prima di riavviare.
    pair: installazione; VPS
    pair: installazione; USB
 
+.. _install_centos-section:
+   
 Installazione su CentOS
 =======================
 
@@ -289,20 +291,6 @@ Per esempio, per installare |product| |version| si
 comincerà installando CentOS |version| sul sistema (molti fornitori di VPS
 offrono CentOS già pre-installato) e poi si eseguiranno alcuni comandi
 per trasformare CentOS in |product|. 
-
-Abilitare i repository YUM specifici con il comando: ::
-
- yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
-
-Per installare il sistema di base eseguire: ::
-
- nethserver-install
-
-Oppure, per installare contestualmente del software addizionale,
-passare il nome dei moduli desiderati come parametro allo script di
-installazione.  Esempio: ::
-
- nethserver-install nethserver-mail nethserver-nut
 
 .. include:: installation_centos_end.inc
 
