@@ -29,6 +29,7 @@ Properties:
 * *ParentProxy*: in the form host:port, if omitted port is default to 3128. Default is empty
 * *PortBlock*: if enabled, block port 80 and 443. Default is: ``disabled`` 
 * *SSLBypass*: comma separated list of domains bypassing the proxy when set in transparent_ssl mode
+* *SafePorts*: comma separated list of ports thath can be accessed through the proxy. Listed ports will be added to the default list of safe and ssl ports
 
 Database example
 ----------------

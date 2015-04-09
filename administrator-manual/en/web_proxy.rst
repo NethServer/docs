@@ -96,3 +96,19 @@ Example: ::
 
   config setprop squid NoCache www.nethserver.org,www.google.com
   signal-event nethserver-squid-save
+
+Safe ports
+==========
+
+Safe ports are a list of ports accessible using the proxy.
+If a port is not inside the safe port list, the proxy will refuse to contact the server.
+For example, given a HTTP service running on port 1234, the server can't be accessed using the proxy.
+
+The ``SafePorts`` property is a comma-separated list of ports.
+Listed ports will be added to the default list of safe ports.
+
+Eg. Access extra ports 446 and 1234: ::
+
+  config setprop squid SafePorts 446,1234
+  signal-event nethserver-squid-save
+

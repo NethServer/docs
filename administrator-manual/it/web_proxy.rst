@@ -93,3 +93,18 @@ Esempio: ::
   config setprop squid NoCache www.nethserver.org,www.google.com
   signal-event nethserver-squid-save
 
+Porte sicure
+============
+
+Le porte sicure sono una lista di porti accessibili attraverso il proxy.
+Se una porta non è all'interno della lista delle porte sicure, il proxy si rifiuterà di collegarsi al server.
+Per esempio, dato un servizio HTTP che gira sulla porta 1234, tale servizio non sarebbe accessibile usando il proxy.
+
+L'opzione ``SafePorts`` è una lista di porte separata da virgole.
+Le porte elencate saranno aggiunte alla lista preconfigurata di porte sicure.
+
+Per esempio, per aprire l'accesso alle porte 446 e 1234: ::
+
+  config setprop squid SafePorts 446,1234
+  signal-event nethserver-squid-save
+
