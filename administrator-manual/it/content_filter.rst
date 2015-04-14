@@ -8,7 +8,7 @@ La configurazione consente di creare un numero illimitato di profili.
 Ciascun profilo è composto da tre parti:
 
 * **Chi**: il client associato al profilo.
-  Può essere un utente, un gruppo di utenti, un host o un gruppo di host.
+  Può essere un utente, un gruppo di utenti, un host, un gruppo di host, una zona o un ruolo (es. green, blue, ecc).
 
 * **Cosa**: quali siti può vedere il client associato al profilo
   E' un filtro creato nella pagina :guilabel:`Filtri`.

@@ -147,7 +147,7 @@ Profiles
 Properties:
 
 * *Filter*: a filter object
-* *Src*: it can be an object of type user, user group, host or host group. Otherwise, if it is a string, the system will
+* *Src*: it can be an object of type user, user group, host, host group, zone or role. Otherwise, if it is a string, the system will
   assume the profile is associated with an user from Active Directory; the system must be joined to a domain
 * *Time*: a time object (optional)
 * *Description*: optional description

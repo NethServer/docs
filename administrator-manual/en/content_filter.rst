@@ -9,7 +9,7 @@ The system allows to create an infinite number of profiles.
 A profile is composed by three parts:
 
 * **Who**: the client associated with the profile.
-  Can be a user, a group of users, a host or a group of hosts.
+  Can be a user, a group of users, a host, a group of hosts, a zone or an interface role (like green, blue, etc).
 
 * **What**: which sites can be browsed by the profiled client.
   It's a filter created inside the :guilabel:`Filters` section.
