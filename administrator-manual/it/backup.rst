@@ -20,7 +20,7 @@ Questo backup contiene anche il backup della configurazione.
 
 Il backup dei dati può essere fatto su tre tipi di destinazione:
 
-* USB: disco collegato via USB, utile in caso di molti dati ma limitato dalla velocità dell'USB
+* USB: disco collegato via USB, utile in caso di molti dati ma limitato dalla velocità dell'USB (Vedi: :ref:`backup_usb_disk-section`)
 * CIFS: cartella condivisa Windows, disponibile su tutti i NAS  
 * NFS: cartella condivisa Linux, disponibile su tutti i NAS, solitamente più veloce di CIFS
 
@@ -219,3 +219,51 @@ al file :file:`/etc/backup-config.d/custom.exclude`.
 .. note:: 
    Assicurarsi di non lasciare linee vuote nei file modificati.
    La sintassi del backup della configurazione supporta solo percorsi file e directory semplici.
+
+.. _backup_usb_disk-section:
+
+Configurazione disco USB
+========================
+
+Si consiglia di formattare i dischi USB in formato EXT3 per le migliori prestazioni. 
+Generalmente i dischi utilizzano il filesystem NTFS, che **non è supportato**.
+Il filesystem FAT è invece supportato ma *sconsigliato*.
+
+Per eseguire la formattazione, è necessario collegare il disco e identificarlo correttamente: ::
+
+ # dmesg | tail -20
+
+ Apr 15 16:20:43 mynethserver kernel: usb-storage: device found at 4
+ Apr 15 16:20:43 mynethserver kernel: usb-storage: waiting for device to settle before scanning
+ Apr 15 16:20:48 mynethserver kernel:   Vendor: WDC WD32  Model: 00BEVT-00ZCT0     Rev:
+ Apr 15 16:20:48 mynethserver kernel:   Type:   Direct-Access           ANSI SCSI revision: 02
+ Apr 15 16:20:49 mynethserver kernel: SCSI device sdc: 625142448 512-byte hdwr sectors (320073 MB)
+ Apr 15 16:20:49 mynethserver kernel: sdc: Write Protect is off
+ Apr 15 16:20:49 mynethserver kernel: sdc: Mode Sense: 34 00 00 00
+ Apr 15 16:20:49 mynethserver kernel: sdc: assuming drive cache: write through
+ Apr 15 16:20:49 mynethserver kernel: SCSI device sdc: 625142448 512-byte hdwr sectors (320073 MB)
+ Apr 15 16:20:49 mynethserver kernel: sdc: Write Protect is off
+ Apr 15 16:20:49 mynethserver kernel: sdc: Mode Sense: 34 00 00 00
+ Apr 15 16:20:49 mynethserver kernel: sdc: assuming drive cache: write through
+ Apr 15 16:20:49 mynethserver kernel:  sdc: sdc1
+ Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi disk '''sdc'''
+ Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi generic sg3 type 0
+ Apr 15 16:20:49 mynethserver kernel: usb-storage: device scan complete
+
+In questo esempio, il disco è stato riconosciuto come device *sdc*.
+
+* Creare una unica partizione Linux sull'intero disco sdc ::
+
+    echo "0," | sfdisk /dev/sdc
+
+* Creare il filesystem sulla partizione *sdc1* assegnando una label, ad esempio *backup* ::
+
+    mke2fs -v -T largefile4 -j /dev/sdc1 -L backup
+
+* Scollegare e ricollegare il disco USB
+
+  E' possibile utilizzare il comando seguente per simulare il collegamento del disco: ::
+
+    blockdev --rereadpt /dev/sdc
+
+* A questo punto la voce *backup*  sarà selezionabile dalla pagina :guilabel:`Backup (dati)`.

@@ -18,7 +18,7 @@ This backup also contains the archive of the configuration backup.
 
 Data backup can be saved on three different destinations:
 
-* USB: disk connected to a local USB port
+* USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
 * CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage)
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
 
@@ -94,12 +94,12 @@ Steps to be executed:
 
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
-3. If the old machine was the network gateway, remember to reinstall firewall module
+3. If the old machine was the network gateway, remember to re-install firewall module
 4. Install additional packages (optional)
 5. Restore the configuration backup from page :guilabel:`Backup
    (configuration) > Restore` in Server Manager, or executing:
    :command:`restore-config`
-6. If a warning message requires it, reconfigure the nework roles assignment. See :ref:`restore-roles-section` below.
+6. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
 7. Verify the system is functional
 8. Restore data backup executing: :command:`restore-data`
 
@@ -112,7 +112,7 @@ Restore network roles
 If a role configuration points to a missing network interface, the
 :guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore`
 and :guilabel:`Network` pages pop up a warning. This happens for
-instance in the followin cases:
+instance in the following cases:
 
 * configuration backup has been restored on a new hardware
 * one or more network cards have been substituted
@@ -205,3 +205,51 @@ If you wish to exclude a file or directory from configuration backup, add a line
 .. note:: 
    Make sure not to leave empty lines inside edited files.
    The syntax of the configuration backup supports only simple file and directory paths.
+
+.. _backup_usb_disk-section:
+
+USB disk configuration
+======================
+
+The best filesystem for USB backup disks is EXT3. FAT filesystem is supported but *not recommended*,
+while NTFS is **not supported**.
+
+Before formatting the disk, attach it to the server and find the device name: ::
+
+ # dmesg | tail -20
+
+ Apr 15 16:20:43 mynethserver kernel: usb-storage: device found at 4
+ Apr 15 16:20:43 mynethserver kernel: usb-storage: waiting for device to settle before scanning
+ Apr 15 16:20:48 mynethserver kernel:   Vendor: WDC WD32  Model: 00BEVT-00ZCT0     Rev:
+ Apr 15 16:20:48 mynethserver kernel:   Type:   Direct-Access           ANSI SCSI revision: 02
+ Apr 15 16:20:49 mynethserver kernel: SCSI device sdc: 625142448 512-byte hdwr sectors (320073 MB)
+ Apr 15 16:20:49 mynethserver kernel: sdc: Write Protect is off
+ Apr 15 16:20:49 mynethserver kernel: sdc: Mode Sense: 34 00 00 00
+ Apr 15 16:20:49 mynethserver kernel: sdc: assuming drive cache: write through
+ Apr 15 16:20:49 mynethserver kernel: SCSI device sdc: 625142448 512-byte hdwr sectors (320073 MB)
+ Apr 15 16:20:49 mynethserver kernel: sdc: Write Protect is off
+ Apr 15 16:20:49 mynethserver kernel: sdc: Mode Sense: 34 00 00 00
+ Apr 15 16:20:49 mynethserver kernel: sdc: assuming drive cache: write through
+ Apr 15 16:20:49 mynethserver kernel:  sdc: sdc1
+ Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi disk sdc
+ Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi generic sg3 type 0
+ Apr 15 16:20:49 mynethserver kernel: usb-storage: device scan complete
+
+In this scenario, the disk is accessibile as *sdc* device.
+
+* Create a Linux partition on the whole disk: ::
+
+    echo "0," | sfdisk /dev/sdc
+
+* Create the filesystem on *sdc1* partition with a label named *backup*: ::
+
+    mke2fs -v -T largefile4 -j /dev/sdc1 -L backup
+
+* Detach and reconnect the USB disk:
+
+  You can simulate it with the following command: ::
+
+    blockdev --rereadpt /dev/sdc
+
+* Now the *backup* label will be displayed inside the :guilabel:`Backup (data)` page.
+
