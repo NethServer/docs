@@ -30,6 +30,7 @@ Rules and conventions
    introduction
    development_process
    rpm_rules
+   i18n
 
 Architecture
 ------------
@@ -71,7 +72,6 @@ Web interface
    dashboard
    customization
    inline_help
-   web_interface_translation
    todos_api
 
 Packages
