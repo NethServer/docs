@@ -22,6 +22,16 @@ repository should respect them.
 .. _Transifex: https://www.transifex.com/projects/p/nethserver
 .. _Transifex client: http://docs.transifex.com/developer/client/
 
+To configure the Transifex client execute the `txinit.sh`_ script on the
+repository root.  The script can be executed multiple times, if new
+catalogs are added to the repository.
+
+.. _`txinit.sh`: https://gist.github.com/DavidePrincipi/8e4d4e97831d0850f01a
+
+Currently both gettext and Server Manager specific format is supported
+for language catalogs.
+
+
 gettext
 ^^^^^^^
 
