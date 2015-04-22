@@ -233,6 +233,11 @@ tutti i servizi SSL verranno riavviati e ai client di rete sarà
 richiesto di accettare il nuovo certificato.
 
 
+.. note::
+   Per evitare problemi di importazione certificato con Internet Explorer,
+   si consiglia di configurare il campo CN (Common Name) o Nome Comune
+   in modo che corrisponda al FQDN del server.
+
 .. _user_profile-section:
 
 Profilo utente

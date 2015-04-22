@@ -212,6 +212,11 @@ self-signed SSL certificate.  When a new certificate is generated, all
 SSL services are restarted and network clients will be required to
 accept the new certificate.
 
+.. note::
+   To avoid problems while importing the certificate in Internet Explorer,
+   the Common Name (CN) field should match the server FQDN. 
+
+
 .. _user_profile-section:
 
 User's profile
