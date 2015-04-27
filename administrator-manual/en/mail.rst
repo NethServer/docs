@@ -465,7 +465,7 @@ For example:
 To disable local MX and aliases, access the root's console and type: ::
 
   config setprop postfix MxRecordStatus disabled
-  signal-event nethserver-hosts-save
+  signal-event nethserver-hosts-update
 
 
 .. _email_policies:

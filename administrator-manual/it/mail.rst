@@ -513,7 +513,7 @@ Per disabilitare il record MX e gli alias, accedere alla console di
 root e digitare: ::
 
   config setprop postfix MxRecordStatus disabled
-  signal-event nethserver-hosts-save
+  signal-event nethserver-hosts-update
 
 .. _email_policies:
 
