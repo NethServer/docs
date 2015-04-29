@@ -12,7 +12,7 @@ The Email module is split in three main parts:
 
 Benefits are
 
-* complete autonomy in the mail management
+* complete autonomy in electronic mail management
 * avoid problems due to the Internet Service Provider
 * ability to track the route of messages in order to detect errors
 * optimized anti-virus and anti-spam scan
@@ -41,7 +41,7 @@ two alternatives:
   [#MailDirFormat]_ format.
 * *Relay* messages to another mail server.
 
-.. note:: If a domain is deleted, email will not be deleted, too;
+.. note:: If a domain is deleted, email will not be deleted;
    any message already received is preserved.
 
 .. index::
@@ -51,7 +51,7 @@ two alternatives:
 
 |product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
-recipient *and also* to a local user (or group).  The hidden copy is
+recipient *and also* to a local user (or group). The hidden copy is
 enabled by the :guilabel:`Always send a copy (Bcc)` check box.
 
 .. warning:: On some countries, enabling the *Always send a copy
@@ -62,9 +62,9 @@ enabled by the :guilabel:`Always send a copy (Bcc)` check box.
    pair: email; signature
    pair: email; legal note
 
-|product| can automatically :guilabel:`append a legal note to sent
+|product| can automatically :guilabel:`append a legal notice to sent
 messages`. This text is called :dfn:`disclaimer` and it can be used to
-meet some law's requirements.  Please note :dfn:`signature` and
+meet some legal requirements.  Please note :dfn:`signature` and
 disclaimer are very different concepts.
 
 The signature should be inserted inside the message text only by the
@@ -82,7 +82,7 @@ The "disclaimer" is a fixed text and can only be *attached* (not
 added) to messages by the mail server.
 
 This technique allows maintaining the integrity of the message in case
-of using digital signature.
+of digital signature.
 
 Disclaimer example: ::
 
@@ -118,7 +118,7 @@ example:
    pair: email; local network only
    triple: email; private; internal
 
-Sometimes a company forbids communications from the external world
+Sometimes a company forbids communications from outside the organization
 using personal email addresses. The :guilabel:`Local network only`
 option blocks the possibility of an address to receive email from the
 outside.  Still the "local network only" address can be used to
@@ -224,7 +224,7 @@ Messages
 From the :guilabel:`Email > Messages` page, the :guilabel:`Queue
 message max size` slider sets the maximum size of messages traversing
 the system. If this limit is exceeded, a message cannot enter the
-system at all, and is rejected.
+system at all and is rejected.
 
 Once a message enters |product|, it is persisted to a :dfn:`queue`,
 waiting for final delivery or relay. When |product| relays a message
@@ -270,7 +270,7 @@ some restrictions. It could check:
 * the client SMTP AUTH credentials.
 
 .. note:: Sending through a *smarthost* is generally not recommended.
-          It might be accepted only if the server is temporarily
+          It might be used only if the server is temporarily
           blacklisted [#DNSBL]_, or normal SMTP access is restricted
           by the ISP.
 
@@ -297,7 +297,7 @@ Block of attachments
 --------------------
 
 The system can inspect mail attachments, denying access to messages
-carrying forbidden file formats. The server can check following
+carrying forbidden file formats. The server can check the following
 attachment classes:
 
 * :index:`executables` (eg. exe, msi)
@@ -369,8 +369,8 @@ By default, all users can train the filters using this technique.  If
 a group called ``spamtrainers`` exits, only users in this group
 will be allowed to train the filters.
 
-.. note:: It is a good habit to constantly check the junkmail folder
-          in order to not losing email wrongly marked as spam.
+.. note:: It is a good habit to frequently check the junkmail folder
+          in order to not losing email wrongly recognized as spam.
 
 .. index::
    pair: email; whitelist
@@ -379,7 +379,7 @@ will be allowed to train the filters.
 If the system fails to recognize spam properly even after training,
 the *whitelists* and *blacklists* can help. Those are lists of email
 addresses or domains respectively always allowed and always blocked to
-send or receive a message.
+send or receive messages.
 
 The section :guilabel:`Rules by mail address` allows creating
 three types of rules:
@@ -473,7 +473,7 @@ To disable local MX and aliases, access the root's console and type: ::
 Special SMTP access policies
 ============================
 
-By default, all clients must use the submission port 587 with
+By default, all clients must use the submission port (587) with
 encryption and authentication enabled to send mail through the SMTP
 server.
 
@@ -500,7 +500,7 @@ Policies can be used together, by separating with a comma ``,``: ::
   signal-event nethserver-mail-common-save
 
 However, there are some devices (printers, scanners, ...) that do not
-support SMTP authentication, encryption or port settings.  They can be
+support SMTP authentication, encryption or port settings.  Those can be
 enabled to send messages by looking at their IP address in Postfix
 :file:`access` table: ::
 
@@ -627,7 +627,7 @@ email address, type the following commands at root's console: ::
 Outlook deleted mail
 ====================
 
-Unlike almost any IMAP clients, Outlook does not move deleted messages to the trash, but simply mark them as "deleted".
+Unlike almost any IMAP client, Outlook does not move deleted messages to the trash folder, but simply marks them as "deleted".
 
 It's possibile to automatically move messages inside the trash using following commands: ::
 
@@ -645,7 +645,7 @@ Log
 Every mail server operation is saved in the following log files:
 
 * :file:`/var/log/maillog` registers all mail transactions
-* :file:`/var/log/imap` contains users' login and logout operations
+* :file:`/var/log/imap` contains users login and logout operations
 
 A transaction recorded in the :file:`maillog` file usually involves
 different components of the mail server.  Each line contains
@@ -695,7 +695,7 @@ typical actions performed.
 
 ``dovecot``
 
-    The Dovecot daemon delivers messages into users' mailboxes,
+    The Dovecot daemon delivers messages into users mailboxes,
     possibly applying Sieve filters.
 
 A picture of the whole system is available from *workaround.org* [#MailComponents]_.
