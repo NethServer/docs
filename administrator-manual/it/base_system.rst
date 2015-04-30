@@ -238,6 +238,47 @@ richiesto di accettare il nuovo certificato.
    si consiglia di configurare il campo CN (Common Name) o Nome Comune
    in modo che corrisponda al FQDN del server.
 
+.. _custom_certificate-section:
+
+Installare un certificato personalizzato
+----------------------------------------
+
+I :index:`certificati personalizzati` devono essere salvati all'interno delle seguenti directory:
+
+* :file:`/etc/pki/tls/certs`: chiave pubblica
+* :file:`/etc/pki/tls/private`: chiave privata
+
+
+Configurare i percorsi della chiave pubblica e privata:
+
+::
+
+    db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
+    db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
+
+E' possibile anche configurare il file di chain SSL:
+
+::
+
+    db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
+
+Segnalare il cambio di certificato a tutti i demoni:
+
+::
+
+    signal-event certificate-update
+
+Backup certificato personalizzato
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ricordarsi sempre di aggiungere i certificati personalizzati al backup della configurazione.
+E' sufficiente aggiungere i percorsi nel file :file:`/etc/backup-config.d/custom.include`.
+
+Per esempio, se il certificato è :file:`/etc/pki/tls/certs/mycert.crt`, eseguire semplicemente: ::
+
+ echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
+
+
 .. _user_profile-section:
 
 Profilo utente
