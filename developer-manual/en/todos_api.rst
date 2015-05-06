@@ -42,60 +42,15 @@ The :file:`AdminTodo` known callers are:
 
 * :guilabel:`Dashboard`
 * :guilabel:`Software center`
+* :guilabel:`Network`
+* :guilabel:`Backup (configuration)`
 
 Translations
 ============
 
-Steps to setup translation for a new todo:
-
-1. Be sure gettext is installed in your system
-
-2. Add the todo script to the git repository
-
-3. Create locale directory inside the git repository root: ::
-
-     mkdir -p locale
-
-4. Extract the strings:  ::
-
-     xgettext --msgid-bugs-address "nethserver@googlegroups.com" --package-version "$(git describe)"  --package-name "$(basename `pwd`)" --foreign-user -d "$(basename `pwd`)" -o "locale/$(basename `pwd`).pot" -L Python root/etc/nethserver/todos.d/*
-
-5. Create the language file from template: ::
-
-     mkdir -p locale/en/LC_MESSAGES
-     cp locale/<pkgname>.pot  locale/en/LC_MESSAGES/<pkgname>.po
-
-6. Substitute following fields in po file:
-
-  * DESCRIPTIVE
-  * LANGUAGE <LL@li.org>
-  * CHARSET (must be UTF-8)
-  * FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-
-7. Add translations. You can try poedit editor
-
-8. Repeat for all languages
-
-9. Inside the spec file, add this dependency: ::
-
-     BuildRequires: gettext
-
-9. In the %build section of the spec file, add following snippet: ::
-
-     for D in locale/*/LC_MESSAGES; do
-       [ -d "$D" ] && msgfmt -v $D/%{name}.po -o $D/%{name}.mo
-     done
-
-10. In the \%install section of the spec file, add following snippet: ::
-
-      for F in locale/*/LC_MESSAGES/%{name}.mo; do
-        install -D $F $RPM_BUILD_ROOT/%{_datadir}/$F
-      done
-      %{find_lang} %{name}
-
-11. Change %file line to this: ::
-
-      %files -f %{name}-%{version}-%{release}-filelist -f %{name}.lang
+A TODO script must be locale-aware.  Use the ``gettext`` library for
+code internationalization (i18n) and follow guidelines from
+:ref:`section-i18n`.
 
 .. rubric:: References
 
