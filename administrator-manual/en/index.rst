@@ -8,8 +8,12 @@ Administrator Manual
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Release notes 6.6
------------------
+.. WARNING:: This is an Alpha release. The documentation is a
+             work-in-progress. Not all modules are ready to be
+             installed.
+
+Release notes 7-alpha1
+----------------------
 
 .. toctree::
    :maxdepth: 2

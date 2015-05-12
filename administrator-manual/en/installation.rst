@@ -292,7 +292,7 @@ commands to transform CentOS into |product|.
 
 Enable specific YUM repositories with this command: ::
 
-  yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.6.rpm
+  yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-7-alpha1.rpm
 
 To install the base system, run: ::
 
