@@ -250,6 +250,25 @@ If output appears to be base64-encoded type: ::
 
   ldapsearch -LLL -Y EXTERNAL -b cn=config -s one 'objectClass=olcDatabaseConfig' olcAccess 2>/dev/null | perl -MMIME::Base64 -MEncode=decode -n -00 -e 's/\n +//g;s/(?<=:: )(\S+)/decode("UTF-8",decode_base64($1))/eg;print'
 
+Anonymous access to user account entries
+========================================
+
+Some LDAP clients and/or legacy environments requires anonymous bind to the LDAP accounts database.
+
+Following command opens the LDAP to the world (except password fields): ::
+
+  perl -MNethServer::Directory -e '$l = NethServer::Directory->new(); $l->enforceAccessDirective("by anonymous read", "*");'
+
+Configuration for client (eg. Mozilla Thunderbird):
+
+* Host: ip address of the server
+* Port: 389
+* Base DN: ou=People,dc=example,dc=org
+* On Advanced tab, make sue "Login method" is set to "Simple"
+
+
+.. warning:: This modification is not easily reversible!
+
 Tools
 =====
 
