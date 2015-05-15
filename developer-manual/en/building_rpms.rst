@@ -164,11 +164,12 @@ This is the help output::
 
 For instance: ::
 
-  release-rpm -k ABCDABCD -T 1.8.5 nethserver-mail-server.spec
+  release-tag -k ABCDABCD -T 1.8.5 nethserver-mail-server.spec
 
 Replace ``ABCDABCD`` with your signing GPG key. The ``$EDITOR``
 program (or git ``core.editor``) is opened automatically to adjust the
 commit message. The same text is used as tag annotation.
+Usage of ``-k`` option is optional.
 
 The :file:`.spec` argument is optional: if not provided the first
 :file:`.spec` file in the current directory is processed.
