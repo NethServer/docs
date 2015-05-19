@@ -112,6 +112,7 @@ Modules
    duc
    snmp
    tomcat7
+   postgresql
 
 Appendix
 --------
