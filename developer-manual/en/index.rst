@@ -111,6 +111,7 @@ Modules
    webvirtmgr
    duc
    snmp
+   tomcat7
 
 Appendix
 --------
