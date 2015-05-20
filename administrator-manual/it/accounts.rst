@@ -78,6 +78,7 @@ Gestione password
 
 Il sistema prevede la possibilità di impostare dei vincoli sulla :dfn:`complessità` e la :dfn:`scadenza` delle password.
 
+Le politiche di gestione password possono essere cambiate usando l'interfaccia web dopo aver installato il modulo ``nethserver-password``.
 
 Complessità
 -----------
@@ -185,6 +186,19 @@ In caso il sistema sia configurato come controller di Dominio, l'utente potrà c
 In quest'ultimo caso non è possibile impostare password più corte di *6 caratteri* indipendentemente dalla configurazione
 delle policy sul server. Infatti Windows esegue dei controlli preliminari e invia le password al server dove vengono poi valutate 
 con le policy in uso.
+
+Notification language
+=====================
+
+La lingua di default per le notifiche è l'inglese.
+Se si desidera cambiarla, usare il seguente comando: ::
+
+  config setprop sysconfig DefaultLanguage <lang>
+
+Esempio per l'italiano: ::
+
+  config setprop sysconfig DefaultLanguage it_IT.utf8
+
 
 Importazione utenti
 ===================
