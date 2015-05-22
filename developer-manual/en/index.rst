@@ -113,6 +113,7 @@ Modules
    snmp
    tomcat7
    postgresql
+   unixodbc
 
 Appendix
 --------
