@@ -15,7 +15,7 @@ Each record of ``range`` type is associated to an ethernet interface and can hav
 * ``status``: can be ``enabled`` or ``disabled``
 * ``DhcpRangeStart``: first IP address of DHCP range
 * ``DhcpRangeEnd``: last IP address of DHCP range
-* ``DhcpLeaseTime``: seconds of lease time. Default is 8640
+* ``DhcpLeaseTime``: seconds of lease time. Default is 86400
 * ``DhcpGatewayIp``: (optional) set a custom gateway ip. If not set, the gateway is the ip address of associated interface (record key)
 
 The key of the record is the name of the associated interface. Example: ::
