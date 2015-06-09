@@ -264,12 +264,19 @@ Oggetti firewall
 Gli :index:`oggetti firewall` sono delle rappresentazioni dei componenti della rete e sono utili per semplificare la creazione
 di regole.
 
-Esistono 4 tipi di oggetti:
+Esistono 6 tipi di oggetti, 5 di questi sono relativi a sorgenti e destinazioni e sono:
 
 * Host: rappresentano computer locali e remoti. Esempio: server_web, pc_boss
 * Gruppi di host: rappresentano gruppi omogenei di computer. Gli host all'interno di un gruppo devono essere raggiungibili attraverso la stessa interfaccia.
   Esempio: servers, pc_segreteria
-* Zone: rappresentano reti di host. Anche se concettualmente simili ai gruppi di host, è possibile esprimere zone in notazione CIDR
+* Reti CIDR : E' possibile esprimere una intera rete CIDR per semplificare e rendere più leggibili le regole. Esempio 1 : gli ultimi 14 ip della rete sono destinati ai server (192.168.0.240/28).
+Esempio 2 : Più interfacce green configurate ma vogliamo creare una regola di firewall valida solo per una di queste green (192.168.2.0/24).
+* Range IP : Usati per lo stesso motivo delle reti CIDR, cambia solo la modalità di definizione.
+* Zone: rappresentano reti di host, vanno espresse in notazione CIDR, utili se si vuole definire un segmento di rete con caratteristiche differenti dalla zona di cui fa parte. Solitamente utilizzate per esigenze molto specifiche.
+.. note:: Di default gli host che fanno parte di una Zona non possono fare alcun tipo di traffico, sarà necessario quindi creare tutte le regole necessarie a caratterizzarne il comportamento.
+
+L'altro oggetto invece specifica il tipo di traffico ed è quello dei:
+
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
 Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dns-section` e :ref:`dhcp-section` come oggetti host.
