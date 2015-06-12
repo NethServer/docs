@@ -205,7 +205,7 @@ each user.  The quota can be customized for a specific user in
 
 Messages marked as **spam** (see :ref:`email_filter`) can be automatically
 moved into the :dfn:`junkmail` folder by enabling the option
-:guilabel:`Move to "junkmail" folder"`. Spam messages are expunged
+:guilabel:`Move to "junkmail" folder`. Spam messages are expunged
 automatically after the :guilabel:`Hold for` period has elapsed.  The
 spam retention period can be customized for a specific user in
 :guilabel:`Users > Edit > Services > Customize spam message
@@ -473,41 +473,30 @@ To disable local MX and aliases, access the root's console and type: ::
 Special SMTP access policies
 ============================
 
-By default, all clients must use the submission port (587) with
-encryption and authentication enabled to send mail through the SMTP
-server.
+The standard configuration requires that all clients use the
+submission port (587) with encryption and authentication enabled to
+send mail through the SMTP server.
 
-The server also implements special access policies to ease the
-configuration of legacy environments.
+To ease the configuration of legacy environments, the :guilabel:`Email
+> SMTP access` page allows making some exceptions on the standard SMTP
+access policy.
 
 .. warning:: Do not change the default policy on new environments!
 
-Use these commands to enable sending on port 25 with TLS and
-authentication: ::
+For instance, there are some devices (printers, scanners, ...) that do
+not support SMTP authentication, encryption or port settings.  Those
+can be enabled to send email messages by listing their IP address in
+:guilabel:`Allow relay from IP addresses` text area.
 
-  config setprop postfix AccessPolicies smtpauth
-  signal-event nethserver-mail-common-save
+Moreover, under :guilabel:`Advanced options` it is possible to support
+very old environments.
 
-Use these commands to enable sending on port 25 without authentication
-from any client from trusted networks: ::
+* The :guilabel:`Allow relay from trusted networks` option allows any
+  client in the trusted networks to send email messages without any
+  restriction.
 
-  config setprop postfix AccessPolicies trustednetworks
-  signal-event nethserver-mail-common-save
-
-Policies can be used together, by separating with a comma ``,``: ::
-
-  config setprop postfix AccessPolicies trustednetworks,smtpauth
-  signal-event nethserver-mail-common-save
-
-However, there are some devices (printers, scanners, ...) that do not
-support SMTP authentication, encryption or port settings.  Those can be
-enabled to send messages by looking at their IP address in Postfix
-:file:`access` table: ::
-
-  mkdir -p /etc/e-smith/templates-custom/etc/postfix/access
-  echo "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
-  signal-event nethserver-mail-common-save
-
+* The :guilabel:`Enable authentication on port 25` option allows
+  authenticated SMTP clients to send email messages also on port 25.
 
 .. index::
    pair: email; HELO
