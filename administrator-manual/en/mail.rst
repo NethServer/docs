@@ -211,6 +211,24 @@ spam retention period can be customized for a specific user in
 :guilabel:`Users > Edit > Services > Customize spam message
 retention`.
 
+.. index::
+   pair: email; master user
+
+The ``admin`` user can impersonate another user, gaining full rights
+to the latter's mailbox contents and on folder permissions.  The
+:guilabel:`Admin can log in as another user` option controls this
+empowerment, known also as *master user* in [#Dovecot]_.
+
+When :guilabel:`Admin can log in as another user` is enabled, the IMAP
+server accepts any user name with ``*admin`` suffix appended and
+admin's password.
+
+For instance, to access as ``john`` with admin's password ``secr3t``,
+use the following credentials:
+
+* username: ``john*admin``
+* password: ``secr3t``
+
 .. _email_messages:
 
 Messages
