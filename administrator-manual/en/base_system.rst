@@ -157,22 +157,23 @@ Given the following configuration:
 
 If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
 
+.. index:: trusted networks
 
 .. _trusted_networks-section:
 
 Trusted networks
 ================
 
-:dfn:`Trusted networks` are special networks (local or remote) allowed to access special server's services.
+Trusted networks are special networks (local, VPNs or remote)
+allowed to access special server's services.
 
-For example, hosts inside :index:`trusted networks` can access to:
+For example, hosts inside trusted networks can access to:
 
 * Server Manager
 * Shared folders (SAMBA)
 
-If users connected from VPNs must access system's services, add VPN networks to this page.
-
-If the remote network is reachable using a router, remember to add a static route inside :ref:`static_routes-section` page.
+If the remote network is reachable using a router, remember to add a
+static route inside :ref:`static_routes-section` page.
 
 
 
