@@ -8,7 +8,6 @@ Per installare il sistema di base eseguire: ::
 
 Per promuovere la macchina a |product| eseguire da linea di comando: ::
 
-    yum update
     yum -c http://update.nethesis.it/nethserver-6_6-nethesis-support.conf install nethserver-register nethserver-nethserverenterprise-branding
 
 Come ultimo passaggio per attivare il supporto Nethesis :ref:`accedere
