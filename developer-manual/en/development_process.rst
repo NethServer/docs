@@ -145,7 +145,7 @@ The *Packager*:
 
 When the package is VERIFIED from the QA team, the *Packager* 
 
-* Commits a *release tag* (using ``release-rpm`` command from ``nethserver-devbox``).
+* Commits a *release tag* (using ``release-rpm`` command from ``nethserver-mock``).
 
 * Re-builds the tagged RPM.
 
