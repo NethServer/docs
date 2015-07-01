@@ -101,29 +101,17 @@ If two administrator users are present, they are of ownCloud and LDAP. So you ca
 #. delete ownCloud admin user (named "admin")
 
 
-Domain or IP change
--------------------
+Trusted Domains
+===============
 
-When you change the domain name or IP address of |product|, you have to adapt the ``trusted_domains`` key into the file: ::
+`Trusted domains <https://doc.owncloud.org/server/7.0/admin_manual/configuration/config_sample_php_parameters.html>`_ are a list of domains that users can log into. Default trusted domains are:
 
- /var/www/html/owncloud/config/config.php
+* domain name
+* ip address
 
-Modify the old values with the new ones. For example if the domain name and IP address were *oldname.server.it 192.168.5.250* and the new ones are *newname.server.it 192.168.5.251*, the old file was: ::
+To add a new one use: ::
 
-    ...
-    'trusted_domains' =>
-    array (
-        0 => '192.168.5.250',
-        1 => 'oldname.server.it',
-    ),
-    ...
+    config setprop owncloud TrustedDomains server.domain.com
+    signal-event nethserver-owncloud-update
 
-and must be changed as: ::
-
-    ...
-    'trusted_domains' =>
-    array (
-        0 => '192.168.5.251',
-        1 => 'newname.server.it',
-    ),
-    ...
+To add more than one, concatenate the names with a comma.
