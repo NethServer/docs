@@ -160,6 +160,14 @@ Logs:
 * /var/log/backup-data.log: parsable log
 * /var/log/last-backup.log: backup program output
 
+Indexing
+--------
+
+In the *pre-backup-data* event the disk analyzer (Duc) make an indexing of filesystem, useful to create the graphical tree.
+
+The name of the actions is ``/etc/e-smith/events/actions/nethserver-restore-data-duc-index`` and it compose the JSON file to create
+the navigable graphic tree.
+
 Customization
 -------------
 
@@ -200,14 +208,20 @@ Just execute: ::
   duplicity collection-status --no-encryption --archive-dir /var/lib/nethserver/backup/duplicity/ file:///mnt/backup/`config get SystemName`
   /etc/e-smith/events/actions/umount-`config getprop backup-data VFSType`
 
-Restore
--------
+Restore command line
+--------------------
 
 The main command is ``/sbin/e-smith/restore-data`` which starts the restore process:
 
 * *pre-restore-data* event: used to prepare the system (Eg. mysql stop)
 * *restore-data-<program>* action: search for a backup in the configuration database and restore it
 * *post-restore-data* event: used to inform programs about new available data (eg. mysql restart)
+
+Restore grahic interface
+------------------------
+
+After the selection of the paths to restore, the main command called is ``/usr/libexec/nethserver/nethserver-restore-data-help`` that
+reads the list of paths to restore and creates a executable command to restore the directories. If the second option of restore was selected (Restored file without overwrite the existing files), after the restore in a temp directory, the script moves the restored directories in the correct paths.
 
 Logs:
 
