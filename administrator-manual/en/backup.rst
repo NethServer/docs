@@ -33,10 +33,11 @@ Data restore
 
 Make sure that backup destination is reachable (for example, USB disk must be connected).
 
-.. note:: The current version supports restore only from command line.
+Command line
+------------
 
 Listing files
---------------
+^^^^^^^^^^^^^
 
 It's possible to list all files inside the last backup using this command: ::
 
@@ -45,7 +46,7 @@ It's possible to list all files inside the last backup using this command: ::
 The command can take some times depending on the backup size.
 
 File and directory
-------------------
+^^^^^^^^^^^^^^^^^^
 
 All relevant files are saved under :file:`/var/lib/nethserver/` directory:
 
@@ -73,6 +74,25 @@ Example, restore the version of a file from 15 days ago: ::
   restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
 
 The ``-t`` option allows to specify the number of days (15 in this scenario).
+
+Graphic interface
+-----------------
+
+In the :menuselection:`Restore Data` menu section it is possible to search, select and restore
+one or more directories from backup, navigating the graphical tree with all paths included in the backup.
+
+There are two options to restore:
+
+* Restore data in the original path, the current files in the filesystem are overwritten by the restored files from backup.
+* Restore data in original path but the restored files from backup are moved on a new directory (the files are not overwritten) in this path: ::
+
+  /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
+
+To use the search field, simply insert at least 3 chars and the searching starts automatically, highlighting the matched directories
+
+It is possibile to restore the directories by clicking on **Restore** button.
+
+.. note:: Multiple selection can be done with Ctrl key pressed.
 
 
 Disaster recovery
@@ -141,7 +161,7 @@ Click the :guilabel:`Submit` button to apply the changes.
 If the missing role is ``green`` an interactive procedure asks to fix
 the configuration at boot-time, to ensure a minimal network
 connectivity and login again on the Server Manager.
-	   
+     
 .. _backup_customization-section:
 
 Data backup customization

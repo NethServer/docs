@@ -37,10 +37,11 @@ Ripristino dati
 
 Assicurarsi che la destinazione contenente il backup sia raggiungibile (es. disco USB collegato).
 
-.. note:: Al momento non è ancora disponibile l'interfaccia web per il ripristino dei dati.
+Linea di comando
+----------------
 
 Elenco contenuti
-----------------
+^^^^^^^^^^^^^^^^
 
 E' possibile elencare i file presenti nell'ultimo backup con il comando: ::
 
@@ -49,7 +50,7 @@ E' possibile elencare i file presenti nell'ultimo backup con il comando: ::
 Il comando può richiedere del tempo in base alla dimensione del backup.
 
 File e directory
-----------------
+^^^^^^^^^^^^^^^^
 
 Tutti i dati sono sono posizionati nella directory :file:`/var/lib/nethserver/`:
 
@@ -78,6 +79,25 @@ Esempio, ripristinare un file alla versione di 15 giorni fa: ::
   restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
 
 L'opzione ``-t`` consente di specificare il numero di giorni, in questo caso 15.
+
+Interfaccia grafica
+-------------------
+
+Nel menu :menuselection:`Restore Data` è possibile cercare, selezionare e ripristinare
+una o più cartelle dal backup, navigando l'albero grafico con tutti i path inclusi nel backup.
+
+Ci sono due opzioni di ripristino:
+
+* Ripristinare i dati nel path originale, i file correnti del filesystem sono sosvrascritti con quelli ripristinati dal backup.
+* Ripristinare i dati nel path originale ma i file ripristinati dal backup sono spostati in una nuova directory (i file non sono sovrascritti) in questo percorso: ::
+
+  /percorso/completo/del/file_YYYY-MM-DD (YYYY-MM-DD è la data del restore)
+
+Per usare il campo di ricerca, inserisci almeno tre caratteri e la ricerca parte da sola, evidenziando le cartelle corrispondenti alla ricerca
+
+Il ripristino delle cartelle avviene cliccando sul bottone **Ripristina**.
+
+.. note:: Tenendo premuto il tasto Ctrl è possbile effettuare la selzione multipla di cartelle.
 
 
 Disaster recovery
@@ -111,7 +131,7 @@ I passi da eseguire sono:
 
 6. Se un avviso lo richiede, riconfigurare le interfacce di
    rete. Vedere :ref:`restore-roles-section` più sotto.
-	
+  
 7. Verificare che la macchina sia funzionante
 
 8. Ripristinare i dati eseguendo il comando :command:`restore-data`
@@ -153,7 +173,7 @@ Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate.
 Se il ruolo mancante è ``green`` una procedura interattiva chiede di
 aggiustare la configurazione all'avvio del sistema, per assicurare una
 connettività di rete minima e accedere di nuovo al Server Manager.
-	     
+       
 .. _backup_customization-section:
 
 Personalizzazione backup dati
