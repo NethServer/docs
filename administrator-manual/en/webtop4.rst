@@ -10,6 +10,9 @@ Access to web interface is: ``http://<server_name>/webtop``.
    WebTop and SOGo can't be installed on the same machine.
    Before installing WebTop, make sure SOGo is not present.
 
+.. warning::
+   Remember to change the admin password just after installation. See :ref:`webtop_admin-section`.
+
 Authentication
 ==============
 
@@ -29,3 +32,17 @@ Login to web application: goofy
 
 Login to Active Sync: goofy@mightydomain.com
 
+.. _webtop_admin-section:
+
+Admin user
+----------
+
+After installation, WebTop will be accessible with a super user.
+Credentials are:
+
+* User: admin
+* Password: admin
+
+Admin user password can be changed with this command: ::
+
+    su - postgres -c "psql webtop -c \"UPDATE users set password='_your_password_' WHERE login='admin'\";" 
