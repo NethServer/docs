@@ -29,13 +29,17 @@ Example: ::
 
 Configuration can be applied using the ``nethserver-webtop4-update`` event.
 
-Logs
-====
+Troubleshooting
+===============
 
 In case of errors, see following logs:
 
 * Tomcat: :file:`/var/log/tomcat/catalina.out`
 * Active Sync: :file:`/var/log/z-push/z-push-error.log`
+
+To inspect z-push status use: ::
+
+    php /usr/share/webtop/z-push/z-push-admin.php
 
 
 Known problems
