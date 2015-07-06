@@ -22,6 +22,10 @@ Caratteristiche dell hotspot:
 Configurazione
 ==============
 
+.. note::
+Per poter installare l'hotspot è necessario che la macchina abbia almeno una scheda green ed una red configurate e che disponga almeno di 3 schede di rete.
+
+
 Il server deve essere collegato agli access point della rete per poter gestire il traffico.
 La gestione degli utenti e della fatturazione risiede nel Centro Servizi: http://hotspot.nethesis.it
 
