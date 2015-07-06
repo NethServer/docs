@@ -1,0 +1,47 @@
+========
+WebTop 4
+========
+
+WebTop 4 is a full-featured groupware written in Java.
+
+It's composed by three parts:
+
+* Java web application running on Tomcat 7
+* PHP implementation of Active Sync protocol
+* PostgreSQL database
+
+Access to web application is forced in SSL mode.
+
+Database
+========
+
+Configuration is saved in ``webtop`` key inside ``configuration`` database.
+
+Available properties:
+
+* ``PublicUrl``: public URL used to publish resources for the cloud. If not set, default is ``http://<FQDN>/webtop``
+
+Example: ::
+
+  webtop=configuration
+      PublicUrl=
+
+
+Configuration can be applied using the ``nethserver-webtop4-update`` event.
+
+Logs
+====
+
+In case of errors, see following logs:
+
+* Tomcat: :file:`/var/log/tomcat/catalina.out`
+* Active Sync: :file:`/var/log/z-push/z-push-error.log`
+
+
+Known problems
+==============
+
+When PostgreSQL is restarted, WebTop can loss the database connection.
+If a blank page is displayed, restart Tomcat with the following command: ::
+
+    service tomcat restart

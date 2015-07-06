@@ -114,6 +114,7 @@ Modules
    tomcat7
    postgresql
    unixodbc
+   webtop4
 
 Appendix
 --------
