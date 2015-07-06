@@ -491,12 +491,12 @@ To disable local MX and aliases, access the root's console and type: ::
 Special SMTP access policies
 ============================
 
-The standard configuration requires that all clients use the
+The default |product| configuration requires that all clients use the
 submission port (587) with encryption and authentication enabled to
 send mail through the SMTP server.
 
 To ease the configuration of legacy environments, the :guilabel:`Email
-> SMTP access` page allows making some exceptions on the standard SMTP
+> SMTP access` page allows making some exceptions on the default SMTP
 access policy.
 
 .. warning:: Do not change the default policy on new environments!
@@ -506,8 +506,7 @@ not support SMTP authentication, encryption or port settings.  Those
 can be enabled to send email messages by listing their IP address in
 :guilabel:`Allow relay from IP addresses` text area.
 
-Moreover, under :guilabel:`Advanced options` it is possible to support
-very old environments.
+Moreover, under :guilabel:`Advanced options` there are further options:
 
 * The :guilabel:`Allow relay from trusted networks` option allows any
   client in the trusted networks to send email messages without any
