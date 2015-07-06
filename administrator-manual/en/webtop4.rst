@@ -2,6 +2,9 @@
 WebTop 4
 ========
 
+WebTop is a full-featured groupware which implements Active Sync protocol.
+
+Access to web interface is: ``http://<server_name>/webtop``.
 
 .. note::
    WebTop and SOGo can't be installed on the same machine.
@@ -19,10 +22,10 @@ of the server.
 **Example**
 
 * Server name: mymail.mightydomain.com
-* Alternatve mail domain: baddomain.net
+* Alternative mail domain: baddomain.net
 * User: goofy
 
 Login to web application: goofy
-Logint to Active Sync: goofy@mightydomain.com
 
+Login to Active Sync: goofy@mightydomain.com
 

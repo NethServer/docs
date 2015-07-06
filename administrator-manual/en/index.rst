@@ -65,6 +65,7 @@ Modules
    phone_home
    webvirtmgr
    snmp
+   webtop4
 
 Best practices
 --------------
