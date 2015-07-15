@@ -90,6 +90,7 @@ create a logical interface. Supported logical interfaces are:
 * :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
 * :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
 * :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
+* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
 **Aliases** are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
 red interface.
@@ -105,6 +106,9 @@ When it is not possible to physically separate two different networks, you can u
 be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
 The use of VLAN, requires properly configured switches.
 
+.. warning:: The **PPPoE** logical interface must be assigned the red
+             role, thus requires the gateway functionality. See
+             :ref:`firewall-section` for details.
 
 .. _RFC1918-section:
 
