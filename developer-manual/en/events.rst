@@ -253,9 +253,7 @@ ibay-delete                            Shared folder key                      Ca
 ibay-modify                            Shared folder key                      Called when a shared folder is modified
 interface-update                                                              Called when a network interface configuration is updated in networks db
 logrotate-update                                                              Change default log retention and rotation policies
-network-create                         Network key                            Called when a local network is created
-network-modify                         Network key                            Called when a local network is modified
-network-delete                         Network key                            Called when a local network is deleted
+trusted-networks-update                                                       The set of trusted networks is changed
 migration-import                       Path to migration directory            Import migration data from the given directory
 password-expired                       Username, expire date                  The given username password will expire on expiredate
 password-modify                        User key                               Called when a user password is modified

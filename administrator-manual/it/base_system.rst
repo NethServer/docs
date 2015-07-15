@@ -166,13 +166,15 @@ Data la seguente configurazione:
 
 Se gli host dalla DMZ devono accedere al server NTP, aggiungere la rete 192.168.2.0/24 nel campo :guilabel:`Consenti host`.
 
+.. index:: reti fidate
 
 .. _trusted_networks-section:
 
 Reti fidate
 ===========
 
-Le :index:`reti fidate` sono speciali reti (remote o locali) a cui è garantito l'accesso a servizi speciali del server.
+Le reti fidate sono speciali reti (remote o locali) a cui è garantito
+l'accesso a servizi speciali del server.
 
 Ad esempio, i computer sulle reti fidate possono accedere a:
 
@@ -180,10 +182,13 @@ Ad esempio, i computer sulle reti fidate possono accedere a:
 * Cartelle condivise (SAMBA)
 * Servizi web per reti locali (Statistiche)
 
-Se si desidera che gli utenti collegati in VPN possano accedere a tutti i servizi del sistema,
-aggiungere le reti delle VPN a questo pannello.
+Se si desidera che gli utenti collegati in VPN possano accedere a
+tutti i servizi del sistema, aggiungere le reti delle VPN a questo
+pannello.
 
-Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello :ref:`static_routes-section`.
+Se la rete remota è raggiungibile attraverso un router, ricordarsi di
+creare la rotta statica corrispondente nel pannello
+:ref:`static_routes-section`.
 
 
 
