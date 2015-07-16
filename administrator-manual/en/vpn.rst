@@ -40,9 +40,10 @@ You should choose bridged mode only if the tunnel must carry non-IP traffic.
 To allow a client to establish a VPN:
 
 1. Create a new account: it is recommended to use a dedicated VPN account
-   with certificate, avoiding the need to create a system user.
-   Instead, it's mandatory to choose a system account if you want to use
-   authentication with user name and password.
+   with certificate, avoiding the need to create a system user.
+
+   Instead, it's mandatory to choose a system account if you want to use
+   authentication with user name and password.
 
 2. Download the file containing the configuration and certificates.
 
@@ -61,8 +62,7 @@ Steps to be performed on the master:
 
 * Create a VPN-only account for each slave
 
-* During the account creation remember to specify the remote network
-  configured behind the slave
+* During the account creation remember to specify the remote network configured behind the slave
 
 Steps to be performed on the slave:
 
