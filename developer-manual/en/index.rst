@@ -115,6 +115,7 @@ Modules
    postgresql
    unixodbc
    webtop4
+   vpn
 
 Appendix
 --------
