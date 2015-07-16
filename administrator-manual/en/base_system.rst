@@ -249,7 +249,7 @@ Notify registered daemons about certificate update:
     signal-event certificate-update
 
 Custom certificate backup
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
    
 Always remember to add custom certificates to configuration backup.
 Just add the paths inside :file:`/etc/backup-config.d/custom.include` file.
