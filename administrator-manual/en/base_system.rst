@@ -59,7 +59,7 @@ Any network managed by the system must follow these rules:
 * private networks, like LANs, must follow address's convention from RFC1918 document.
   See :ref:`RFC1918-section`
   
-Every network interface as a specific role which determinates its behavior. Roles are identified by colors.
+Every network interface has a specific role which determinates its behavior. Roles are identified by colors.
 Each role correspond to a well-known zone with special network traffic rules:
 
 * *green*: local network. Hosts on this network can access any other configured network
