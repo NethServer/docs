@@ -8,6 +8,13 @@ VPN implementation is splitted into various packages:
 * nethserver-openvpn: OpenVPN implementation
 * nethserver-ipsec: IPsec implementation
 
+All VPN networks are consider as trusted networks.
+Allowed traffic:
+
+* Local network to VPN
+* VPN to local network
+* VPN to firewall
+
 Certificates
 ============
 
@@ -54,6 +61,15 @@ Renew is done via the command: ::
 
 The ``commonName`` parameter is an unique name stored inside the certificate. 
 
+Events
+======
+
+* ``nethserver-vpn-create``: fired when a new account is created, takes the account name as argument
+* ``nethserver-vpn-delete``: fired when a new account is deleted, takes the account name as argument
+* ``nethserver-vpn-modify``: fired when a new account is modified, takes the account name as argument
+* ``nethserver-vpn-save``: fired when a +client+ is created, modified or deleted
+
+
 Accounts
 ========
 
@@ -97,6 +113,7 @@ OpenVPN clients are used to connect the server with other network, typically to 
 Common properties:
 
 * ``AuthMode``: default value is ``certificate``. Possible values:
+
   * ``certificate``: use x509 certificate. Certificates, including CA and private key, are saved in ``/var/lib/nethserver/certs/clients`` directory in a PEM file named ``key``.pem
   * ``password``: use username and password
   * ``password-certificate``: use username, password and a valid x509 certificate
@@ -134,13 +151,89 @@ Database: ``vpn``
     Compression=enabled
 
 
-Events
-======
+OpenVPN
+=======
 
-* ``nethserver-vpn-create``: fired when a new account is created, takes the account name as argument
-* ``nethserver-vpn-delete``: fired when a new account is deleted, takes the account name as argument
-* ``nethserver-vpn-modify``: fired when a new account is modified, takes the account name as argument
-* ``nethserver-vpn-save``: fired when a +client+ is created, modified or deleted
+Client configuration is generated using :file:`/usr/libexec/nethserver/openvpn-local-client` command. 
+The file will contain the CA certificate inside the <ca>.
+
+Example: ::
+
+  /usr/libexec/nethserver/openvpn-local-client myuser
+
+The OpenVPN server listens on a management socket: :file:`/var/spool/openvpn/host-to-net`.
+It's possible to retrieve server status and execute commands using the socket.
+
+Available scripts:
+
+* :file:`/usr/libexec/nethserver/openvpn-status`: retrieve status of connected clients and return result in JSON format
+* :file:`/usr/libexec/nethserver/openvpn-kill`: kill a connected client, exits 0 on success, 1 otherwise
+
+Example with netcat: ::
+
+  >INFO:OpenVPN Management Interface Version 1 -- type 'help' for more info
+  status
+  OpenVPN CLIENT LIST
+  Updated,Thu Jan 23 09:22:24 2014
+  Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since
+  ROUTING TABLE
+  Virtual Address,Common Name,Real Address,Last Ref
+  GLOBAL STATS
+  Max bcast/mcast queue length,0
+  END
+
+See more on management option: http://openvpn.net/index.php/open-source/documentation/miscellaneous/79-management-interface.html
+
+Log files
+---------
+
+Host to net status: :file:`/var/log/openvpn/host-to-net-status.log`.
+Server and client output: :file:`/var/log/messages`.
+
+Configuration database
+----------------------
+
+Properties:
+
+* ``status``: enable or disabled OpenVPN server _and_ cleints,  can be ``enabled`` or ``disabled``, default is ``enabled``
+* ``ServerStatus``: enable or disabled the OpenVPN server, can be ``enabled`` or ``disabled``, default is ``disabled``
+* ``AuthMode``: authentication mode, can be ``password``, ``certificate`` or ``password-certificate``. Default is ``password``
+* ``UDPPort``: server listen port, default is ``1194``
+* ``Mode``: network mode, can be ``routed`` or ``bridged``. Default is ``routed``.
+* ``ClientToClient``: can be ``enabled`` or ``disabled``, default is ``disabled``. When enabled, traffic between VPN clients is allowed
+* ``Compression``: can be ``enabled`` or ``disabled``, default is ``disabled``. When enabled, adaptive LZO compression is used
+
+If mode is ``bridged``:
+
+* ``BridgeEndIP``: first client IP pool, must be inside the LAN range and outside DHCP range
+* ``BridgeStartIP``: last client IP pool, must be inside the LAN range and outside DHCP range
+* ``BridgeName``: name of the bridge, default is ``br0``
+* ``TapInterface``: name of bridged tap interface, default is ``tap0``
+
+If mode is ``routed``:
+
+* ``Network``: network of VPN clients, eg. 192.168.6.0
+* ``Netmask``: netmask of VPN clients, eg. 255.255.255.0
+* ``RouteToVPN``: can be ``enabled`` or ``disabled``, default is ``disabled``. When enabled, all traffic from client will be routed via VPN tunnel
 
 
+Reference
+^^^^^^^^^
 
+Example: ::
+
+ openvpn=service
+    ServerStatus=enabled
+    AuthMode=password
+    BridgeEndIP=192.168.1.122
+    BridgeName=br0
+    BridgeStartIP=192.168.1.121
+    ClientToClient=disabled
+    Mode=routed
+    Netmask=255.255.255.0
+    Network=192.168.6.0
+    RouteToVPN=disabled
+    TapInterfaces=tap0
+    UDPPort=1194
+    access=public
+    status=enabled
