@@ -237,3 +237,49 @@ Example: ::
     UDPPort=1194
     access=public
     status=enabled
+
+
+IPsec
+=====
+
+This packages implements:
+
+* a common layer for IPsec daemons
+* roadwarrior clients with L2TP and PPP
+* tunnel connections (net2net)
+
+
+L2TP
+----
+
+Properties:
+
+* ``AuthenticationId``: The authentication identifier during SA negotiation. 
+  If not set, ``SystemName.DomainName`` is assumed ``SystemName.DomainName`` is assumed
+* ``KeyPskSecret``:  The Private Shared Key value.  Keep it private!
+* ``KeyRsaName`` The private RSA key associated from NSS database. 
+  If not set, ``SystemName.DomainName`` is assumed ``SystemName.DomainName`` is assumed
+* ``KeyType`` {secret,rsasig}:  What kind of security token to use:
+  ``secret`` (PSK), or ``rsasig`` (RSA signatures)
+* ``L2tpNetwork``:  Network address for L2TP clients (RoadWarriors)
+* ``L2tpNetmask``:  Network mask for the above network address
+
+
+Database reference
+^^^^^^^^^^^^^^^^^^
+
+::
+
+ ipsec=service
+    [...]
+    AuthenticationId=
+    KeyPskSecret=
+    KeyRsaName=
+    KeyType=secret
+    L2tpNetwork=192.168.78.0
+    L2tpNetmask=255.255.255.0
+
+ xl2tpd=service
+    status=disabled
+
+
