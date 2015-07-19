@@ -11,8 +11,10 @@ The server can be configured in two ways:
 * *master*: UPS is directly connected to the server, the server accepts connections from slaves
 * *slave*: UPS is connected to another server accessible over the network
 
-.. note:: You should consult the list of supported models before buying, 
-   by trying to put the model into the search field of the web interface
+.. note:: You should consult the list of supported models before buying. 
+   Via *Administartion/Software centre* install the UPS package. In *Configuration*
+   appears the new entry *UPS* where can be find the supported model by typing in
+   *Search driver for model* field.
 
 In :index:`master` mode, the UPS can be connected to the server:
 
