@@ -12,7 +12,7 @@ The server can be configured in two ways:
 * *slave*: UPS is connected to another server accessible over the network
 
 .. note:: You should consult the list of supported models before buying. 
-   Via *Administartion/Software centre* install the UPS package. In *Configuration*
+   Via *Administration/Software centre* install the UPS package. In *Configuration*
    appears the new entry *UPS* where can be find the supported model by typing in
    *Search driver for model* field.
 
