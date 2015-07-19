@@ -31,6 +31,8 @@ Use following credentials:
 .. warning:: Change the root's password as soon as possible, by
              picking a secure one, composed of a random sequence of
              mixed-case letters, digits and symbols.
+             Assign a password for the admin as well. Otherwise you
+             can't change the network roles e.g from green to red.
   
 If the directory module is installed, and the admin user has been enabled, you can use it to access
 the web interface with same privileges as root user. See :ref:`admin_user-section`.
