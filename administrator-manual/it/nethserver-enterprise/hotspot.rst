@@ -31,7 +31,8 @@ La gestione degli utenti e della fatturazione risiede nel Centro Servizi: http:/
 
 Come procedere:
 
-* assicurarsi di avere almeno un'interfaccia libera (senza ruolo) che verrà utilizzata esclusivamente all'hotspot
+* assicurarsi di avere almeno un'interfaccia libera (senza ruolo) che sarà assegnata esclusivamente all'hotspot
+* assicurarsi che il sistema possa comunicare su Internet verso il Centro Servizi sulle porte TCP/UDP 1812 e 1813 
 * accedere alla sezione :guilabel:`Hotspot` per definire l'interfaccia da utilizzare e configurare i parametri del servizio 
 * collegare l'interfaccia all'Access Point
 
