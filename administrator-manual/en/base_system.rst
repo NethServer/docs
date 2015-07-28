@@ -260,10 +260,10 @@ For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply
 
 .. _user_profile-section:
 
-User's profile
-==============
+Change user password
+====================
 
-All users can login to Server Manager using their own credentials.
+All users can login to Server Manager using their own credentials and accedd the :index:`user profile`.
 
 After login, a user can :index:`change the password` and information about the account, like:
 

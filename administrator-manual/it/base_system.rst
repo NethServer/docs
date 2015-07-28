@@ -286,10 +286,10 @@ Per esempio, se il certificato è :file:`/etc/pki/tls/certs/mycert.crt`, eseguir
 
 .. _user_profile-section:
 
-Profilo utente
-==============
+Cambio password utente
+======================
 
-Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali.
+Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali ed accedere al :index:`profilo utente`.
 
 Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le informazioni associate al proprio account:
 
