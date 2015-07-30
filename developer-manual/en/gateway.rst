@@ -169,8 +169,10 @@ Supported objects are:
 
 * Host
 * Group of host
-* Zone
 * Service
+* CIDR
+* Ip range
+* Zone
 
 
 A host is an already defined entry inside the ``hosts`` db, or a new key of type ``host``: ::
@@ -188,13 +190,26 @@ A ``host-group`` db entry can be something like: ::
     name=host-group
         Members=host1,host2
 
+A ``CIDR`` is a group of hosts defined as a CIDR network. It's saved inside the ``hosts`` db: ::
+
+    mycidr=cidr
+        Address=192.168.100.0/24
+        Description=
+
+
+A ``IP range`` is a group of hosts defined as a range of IP. It's saved inside the ``hosts`` db: ::
+
+    myrange=iprange
+        Description=
+        End=192.168.100.20
+        Start=192.168.100.10
+
 
 A zone represents a network zone which can be associated to an interface or a set of IP address. A ``zone`` entry in ``networks`` database can be something like: ::
 
     name=zone
        Network=CIDR
        Interface=eth0
-
 
 A configured network interface is automatically a zone.
 
