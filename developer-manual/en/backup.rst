@@ -65,6 +65,7 @@ The ``nethserver-backup-config`` package implements the backup of configuration 
 
 Properties:
 * ``status`` : enable or disable the automatic backup, can be ``enabled`` or ``disabled``. Default is ``enabled``.
+* ``reinstall``: enable or disable the reinstallation of RPMs during the restore process. Can be ``enabled`` or ``disabled``. Default is ``enabled``.
 
 Backup
 ------
@@ -98,9 +99,9 @@ The main command is ``/sbin/e-smith/restore-config`` which starts the restore pr
 
 * *pre-restore-config* event: used to prepare the system, for example stop a running service
 * *restore-config-execute* action: search for a backup file in the well-known directory (see above) and restore it
-* *post-restore-config* event: used to apply restored configuration, for example load the LDAP dump
+* *post-restore-config* event: used to apply restored configuration, for example reinstall packages and load the LDAP dump
 
-This package does not provide any action in the pre-restore-config and post-restore-config events.
+This package does not provide any action in the pre-restore-config event.
 
 Logs:
 
