@@ -9,7 +9,8 @@ The system handles two kinds of backup:
 * :index:`data backup`
 
 Configuration backup contains only system configuration files. 
-It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours. 
+It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours.
+The configuration backup also saves a list of installed modules. All modules will be reinstalled during the configuration restore process.
 The purpose of this kind of backup is to quickly restore a machine in case of disaster recovery. 
 When the machine is functional, a full data restore can be done even if the machine is already in production.
 
@@ -90,7 +91,7 @@ There are two options to restore:
 
 To use the search field, simply insert at least 3 chars and the searching starts automatically, highlighting the matched directories
 
-It is possibile to restore the directories by clicking on **Restore** button.
+It is possible to restore the directories by clicking on **Restore** button.
 
 .. note:: Multiple selection can be done with Ctrl key pressed.
 
@@ -115,13 +116,12 @@ Steps to be executed:
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
 3. If the old machine was the network gateway, remember to re-install firewall module
-4. Install additional packages (optional)
-5. Restore the configuration backup from page :guilabel:`Backup
+4. Restore the configuration backup from page :guilabel:`Backup
    (configuration) > Restore` in Server Manager, or executing:
    :command:`restore-config`
-6. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
-7. Verify the system is functional
-8. Restore data backup executing: :command:`restore-data`
+5. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
+6. Verify the system is functional
+7. Restore data backup executing: :command:`restore-data`
 
 
 .. _restore-roles-section:
@@ -161,6 +161,17 @@ Click the :guilabel:`Submit` button to apply the changes.
 If the missing role is ``green`` an interactive procedure asks to fix
 the configuration at boot-time, to ensure a minimal network
 connectivity and login again on the Server Manager.
+
+.. _backup_config_rpms:
+
+Restore installed modules
+-------------------------
+
+By default the process of configuration restore will also restore all previously installed modules.
+
+To avoid the reinstallation, execute this command before the restore: ::
+
+  config setprop backup-config reinstall disabled
      
 .. _backup_customization-section:
 

@@ -11,6 +11,7 @@ Il sistema gestisce due tipi di backup:
 
 Il backup della configurazione contiene tutte e sole le configurazioni di sistema.
 Viene eseguito automaticamente ogni notte e genera un nuovo archivio, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, solo in caso la configurazione sia cambiata nelle ultime 24 ore.
+Il backup della configurazione salva anche la lista dei moduli installati. Tutti i moduli saranno reinstallati durante il processo di ripristino.
 Lo scopo del backup della configurazione è quello di consentire un rapido ripristino della macchina in caso di disaster recovery.
 Dopo aver ripristinato la configurazione, la macchina può già essere messa in produzione mentre i dati vengono ripristinati in background.
 
@@ -84,12 +85,12 @@ Interfaccia grafica
 -------------------
 
 Nel menu :menuselection:`Restore Data` è possibile cercare, selezionare e ripristinare
-una o più cartelle dal backup, navigando l'albero grafico con tutti i path inclusi nel backup.
+una o più cartelle dal backup, navigando l'albero grafico con tutti i percorsi inclusi nel backup.
 
 Ci sono due opzioni di ripristino:
 
-* Ripristinare i dati nel path originale, i file correnti del filesystem sono sosvrascritti con quelli ripristinati dal backup.
-* Ripristinare i dati nel path originale ma i file ripristinati dal backup sono spostati in una nuova directory (i file non sono sovrascritti) in questo percorso: ::
+* Ripristinare i dati nel percorso originale, i file correnti del filesystem sono sovrascritti con quelli ripristinati dal backup.
+* Ripristinare i dati nel percorso originale ma i file ripristinati dal backup sono spostati in una nuova directory (i file non sono sovrascritti) in questo percorso: ::
 
   /percorso/completo/del/file_YYYY-MM-DD (YYYY-MM-DD è la data del restore)
 
@@ -97,7 +98,7 @@ Per usare il campo di ricerca, inserisci almeno tre caratteri e la ricerca parte
 
 Il ripristino delle cartelle avviene cliccando sul bottone **Ripristina**.
 
-.. note:: Tenendo premuto il tasto Ctrl è possbile effettuare la selzione multipla di cartelle.
+.. note:: Tenendo premuto il tasto Ctrl è possibile effettuare la selezione multipla di cartelle.
 
 
 Disaster recovery
@@ -123,18 +124,30 @@ I passi da eseguire sono:
 
 3. Se la vecchia macchina era il gateway della rete, ricordarsi di reinstallare il modulo firewall
 
-4. Installare i moduli aggiuntivi (opzionale)
-
-5. Eseguire il ripristino della configurazione dalla pagina
+4. Eseguire il ripristino della configurazione dalla pagina
    :guilabel:`Backup (configurazione) > Ripristino` nel Server Manager,
    oppure eseguendo il comando :command:`restore-config`
 
-6. Se un avviso lo richiede, riconfigurare le interfacce di
+5. Se un avviso lo richiede, riconfigurare le interfacce di
    rete. Vedere :ref:`restore-roles-section` più sotto.
   
-7. Verificare che la macchina sia funzionante
+6. Verificare che la macchina sia funzionante
 
-8. Ripristinare i dati eseguendo il comando :command:`restore-data`
+7. Ripristinare i dati eseguendo il comando :command:`restore-data`
+
+
+
+.. _backup_config_rpms:
+
+Ripristino moduli installati
+----------------------------
+
+Il processo di ripristino della configurazione reinstalla tutti i moduli presenti precedentemente.
+
+Per evitare che i moduli vengano reinstallati, eseguire questo comando prima del ripristino: ::
+
+  config setprop backup-config reinstall disabled
+
 
 .. _restore-roles-section:
    
