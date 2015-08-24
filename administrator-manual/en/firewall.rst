@@ -263,7 +263,9 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 
   Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (192.168.2.0/24).
 
-* Zone: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface.They are used for very specific needs.
+.. index:: zone
+
+* *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface.They are used for very specific needs.
 .. note:: As a default all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
 The last type of object is used to specify the type of traffic:

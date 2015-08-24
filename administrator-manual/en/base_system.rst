@@ -58,9 +58,11 @@ Any network managed by the system must follow these rules:
 * networks must be logically separated: each network must have different addresses
 * private networks, like LANs, must follow address's convention from RFC1918 document.
   See :ref:`RFC1918-section`
-  
-Every network interface has a specific role which determinates its behavior. Roles are identified by colors.
-Each role correspond to a well-known zone with special network traffic rules:
+
+.. index:: zone, role
+
+Every network interface has a specific *role* which determinates its behavior. Roles are identified by colors.
+Each role correspond to a well-known *zone* with special network traffic rules:
 
 * *green*: local network. Hosts on this network can access any other configured network
 * *blue*: guests network. Hosts on this network can access orange and red network, but can't access to green zone
@@ -87,22 +89,26 @@ create a logical interface. Supported logical interfaces are:
   The alias has the same role of its associated physical interface
 * :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
 * :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
-* :index:`VLAN` (Virtual Local Area Network): create two or more physically separated networks using a single interface
+* :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
+* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
-Aliases are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
+**Aliases** are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
 red interface.
 
-Bonds allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
+**Bonds** allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
 at the same time, balancing traffic among all active interfaces.
 If an error occurs, the faulty card is automatically excluded from the bond.
 
-Bridge has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
+A **bridge** has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
 to access to the local network (green).
 
-When it is not possible to physically separate two different networks, you can use a tagged VLAN. The traffic of the two networks can
+When it is not possible to physically separate two different networks, you can use a tagged **VLAN**. The traffic of the two networks can
 be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
 The use of VLAN, requires properly configured switches.
 
+.. warning:: The **PPPoE** logical interface must be assigned the red
+             role, thus requires the gateway functionality. See
+             :ref:`firewall-section` for details.
 
 .. _RFC1918-section:
 
