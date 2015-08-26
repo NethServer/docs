@@ -8,8 +8,8 @@ Administrator Manual
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Release notes 6.6
------------------
+Release notes |release|
+-----------------------
 
 .. toctree::
    :maxdepth: 2
