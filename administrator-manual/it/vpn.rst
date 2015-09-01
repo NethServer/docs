@@ -119,6 +119,12 @@ Se si sta creando una rete net2net fra due |product|, dati il firewall A e B:
 
 2. Configurare il secondo firewall B in modo completamente speculare inserendo come indirizzo e rete remota
    quelle relative al server A.
+   
+Se un'interfaccia è dietro un NAT, i valori per i campi
+:guilabel:`Identificatore locale` e :guilabel:`Identificatore remoto`
+devono essere impostati a dei nomi a scelta con prefisso ``@``.
+Comunemente vengono scelti i nomi delle località dove sono ubicati i
+server, come la nazione o il nome della città.
 
 .. note::
    Solo le reti dietro ai firewall possono scambiarsi traffico attraverso il tunnel IPsec.

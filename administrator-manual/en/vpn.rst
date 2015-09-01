@@ -118,6 +118,12 @@ If you are creating a tunnel between two |product|, given the firewalls A and B:
 
 2. Configure the second firewall B by mirroring the configuration from A inside the remote section.
 
+If an endpoint is behind a NAT, the values for :guilabel:`Local
+identifier` and :guilabel:`Remote identifier` fields must be set to
+custom unique names prepended with ``@``.  Common names are the
+geographic locations of the servers, such as the state or city name.
+
 .. note::
    Only the networks behind the firewall can exchange traffic through the IPsec tunnel.
    Firewalls, which are the end point of the tunnel, can not communicate using the encrypted link.
+
