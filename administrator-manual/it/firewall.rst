@@ -277,6 +277,7 @@ Esistono 6 tipi di oggetti, 5 di questi sono relativi a sorgenti e destinazioni 
 
 * Range IP : Usati per lo stesso motivo delle reti CIDR, cambia solo la modalità di definizione.
 * Zone: rappresentano reti di host, vanno espresse in notazione CIDR, utili se si vuole definire un segmento di rete con caratteristiche differenti dalla zona di cui fa parte. Solitamente utilizzate per esigenze molto specifiche.
+
 .. note:: Di default gli host che fanno parte di una Zona non possono fare alcun tipo di traffico, sarà necessario quindi creare tutte le regole necessarie a caratterizzarne il comportamento.
 
 L'altro oggetto invece specifica il tipo di traffico ed è quello dei:
@@ -285,4 +286,25 @@ L'altro oggetto invece specifica il tipo di traffico ed è quello dei:
 
 Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dns-section` e :ref:`dhcp-section` come oggetti host.
 Inoltre ogni interfaccia di rete con un ruolo associato è automaticamente elencata fra le zone disponibili.
+
+Binding IP/MAC
+==============
+
+Quando il sistema è configurato come server DHCP, il firewall può utilizzare la lista delle riserve DHCP per
+controllare il traffico generato dagli host presenti nelle reti locali.
+Se il :index:`binding IP/MAC` è abilitato, l'amministratore può scegliere quale politica applicare agli host
+senza riserva DHCP.
+Solitamente questa funzione è utilizzata per permettere il traffico solo dagli host conosciuti e bloccare tutti gli altri.
+In questo caso, gli host senza una riserva DHCP non potranno accedere ne al firewall ne alla rete esterna.
+
+Per abilitare il traffico solo dagli host conosciuti, seguire questi passi:
+
+1. Creare una riserva DHCP per l'host
+2. Andare sulla pagina :menuselection:`Regole firewall` e selezionare :guilabel:`Configura` dal menu
+3. Selezionare :guilabel:`Validazione MAC (Binding IP/MAC)`
+4. Spuntare :guilabel:`Blocca traffico` come policy per gli host senza riserva DHCP
+
+
+.. note:: Ricordarsi di creare almeno una riserva DHCP prima di abilitare la modalità binding IP/MAC, 
+   altrimenti nessun host sarà in grado di configurare il server usando l'interfaccia web o SSH.
 
