@@ -34,7 +34,7 @@ The firewall has the following built-in zones, ordered from the most to the leas
 * *blue*: guest network.  Hosts in this network can access orange and red zones, can't access green zone
 * *orange*: DMZ network. Hosts in this network can access red zone, can't access green and blue zones
 * *red*: external/internet networks.  Hosts in this network can access only firewall zone
-* grey: (not implemented yet) traffic from/to this zone must be explicitly allowed
+* a: (not implemented yet) traffic from/to this zone must be explicitly allowed
 
 There is also a special *firewall* zone which represents the firewall itself. The firewall can access any other zone. 
 
@@ -65,6 +65,8 @@ Properties of ``firewall`` key inside ``configuration`` db:
   * ``backup``: traffic is routed via wan interface with maximum weight, all other interfaces are used as fallback
 * ``nfq``: if enabled, traffic from external networks will be passed to NFQ and scanned with Snort. See :ref:`ips`.
 * ``Policy``: can be ``permissive`` or ``strict``. See above.
+* ``MACValidation``: if enabled, the firewall will check the traffic against a list of known MAC addresses (see: :ref:`ipbinding-section`)
+* ``MACValidationPolicy``: can be ``accept`` or ``drop``. Default is ``drop``. See ``man shorewall.conf`` for all valid values
 
 Example
 
@@ -102,7 +104,7 @@ Example: ::
 Policy
 ======
 
-For every network packet travelling between firewall zones, the system will evaluate a list of rules to allow/block the specific traffic.
+For every network packet traveling between firewall zones, the system will evaluate a list of rules to allow/block the specific traffic.
 Policies are default firewall rules which will be applied only if no other rule matches the ongoing traffic.
 
 Firewall implements two standard policies:
@@ -116,6 +118,18 @@ In the schema below, traffic is permitted from left to right and blocked from ri
 GREEN -> BLUE -> ORANGE -> RED
 
 To override a policy, you should create a firewall rule between zones.
+
+.. _ipbinding-section:
+
+IP/MAC binding
+==============
+
+When ``MACValidation`` option is enabled, the firewall analyzes all the traffic based on a well-known list of IPs associated to MAC addresses.
+If the host generating the traffic is not inside the list, ``MACValidationPolicy`` will be applied.
+The list of IP/MAC association is created from DHCP reservations.
+
+Thus, enabling MACValidation and leaving MACValidationPolicy set to drop, will block all traffic from hosts without a DHCP reservation.
+
 
 Rules
 =====
@@ -267,7 +281,7 @@ Each value is a new attribute for an existing alias key and the name of attribut
 
 During template-expanding phase, the associated host is mapping with referenced IP and added in shorewall nat configuration. The file is ``/etc/shorewall/nat``. 
 
-More informations are available here: http://shorewall.net/NAT.htm
+More information are available here: http://shorewall.net/NAT.htm
 
 
 Traffic shaping
@@ -328,7 +342,7 @@ Multi WAN
 NethServer firewall can handle 15 red (WAN) interfaces. Implementation uses Shorewall with LSM (Link Status Monitor).
 The LSM daemon takes care of monitoring WAN connections (interface) using ICMP traffic and it informs Shorewall about interface up/down events.
 Each interface can be checked using multiple IPs (see ``checkip`` property below). At least one IP must be reachable to mark the WAN connection as usable. 
-If no IP is specified (recommnded option), the system will try to find a suitable ip, usually the next hop after the gateway. 
+If no IP is specified (recommended option), the system will try to find a suitable ip, usually the next hop after the gateway. 
 
 If you want to use a custom checkip, these are some lines guides to make the right choice:
 
