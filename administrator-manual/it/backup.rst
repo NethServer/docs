@@ -283,8 +283,10 @@ Per eseguire la formattazione, è necessario collegare il disco e identificarlo 
  Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi generic sg3 type 0
  Apr 15 16:20:49 mynethserver kernel: usb-storage: device scan complete
 
-Un altro buon comando da utilizzare può essere:
+Un altro buon comando da utilizzare può essere: ::
+
  lsblk -io KNAME,TYPE,SIZE,MODEL
+
 
 In questo esempio, il disco è stato riconosciuto come device *sdc*.
 
