@@ -218,7 +218,7 @@ In our network we have an host called ``example_host`` with IP ``192.168.5.122``
 
 We want to map our internal host (``example_host`` - ``192.168.5.122``) with public IP ``89.95.145.226``.
 
-In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (readonly field) the specific host (``example_host``) from the combobox. We have configured correctly the one-to-one NAT for our host.
+In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (read-only field) the specific host (``example_host``) from the combo-box. We have configured correctly the one-to-one NAT for our host.
 
 
 Traffic shaping
@@ -257,7 +257,7 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 * Host: representing local and remote computers. Example: web_server, pc_boss 
 * Groups of hosts: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
   Example: servers, pc_segreteria 
-* CIDR Networks: You can express a CIDR network in order to semplify firewall rules.
+* CIDR Networks: You can express a CIDR network in order to simplify firewall rules.
   
   Example 1 : last 14 IP address of the network are assigned to servers (192.168.0.240/28).
 
@@ -266,6 +266,7 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 .. index:: zone
 
 * *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface.They are used for very specific needs.
+
 .. note:: As a default all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
 The last type of object is used to specify the type of traffic:
@@ -274,4 +275,25 @@ The last type of object is used to specify the type of traffic:
 
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
+
+
+IP/MAC binding
+==============
+
+When the system is acting as DHCP server, the firewall can use the list of DHCP reservations to strictly check
+all traffic generated from hosts inside local networks.
+When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
+The common use is to allow traffic only from known hosts and block all other traffic. 
+In this case, hosts without a reservation will not be able to access the firewall nor the external network.
+
+To enable traffic only from well-known hosts, follow these steps:
+
+1. Create a DHCP reservation for a host
+2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
+3. Select :guilabel:`MAC validation (IP/MAC binding)`
+4. Choose :guilabel:`Block traffic` as policy to apply to unregistered hosts
+
+
+.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
+   otherwise no hosts will be able to manage the server using the web interface or SSH.
 

@@ -265,6 +265,10 @@ Before formatting the disk, attach it to the server and find the device name: ::
  Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi disk sdc
  Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi generic sg3 type 0
  Apr 15 16:20:49 mynethserver kernel: usb-storage: device scan complete
+ 
+Another good command could be: ::
+
+ lsblk -io KNAME,TYPE,SIZE,MODEL
 
 In this scenario, the disk is accessibile as *sdc* device.
 
