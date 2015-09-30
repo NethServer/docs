@@ -22,8 +22,12 @@ L'aggiornamento del sistema avviene tramite la shell a riga di comando.
 
 3. Pulire la cache di YUM e aggiornare di nuovo il sistema: ::
 
-     yum clean all && yum update 
+     yum clean all && yum update
+
+4. Se installato, aggiornare il gruppo firewall: ::
+
+     yum update @nethserver-firewall-base 
   	      
-3. Infine, riavviare il sistema.
+5. Infine, riavviare il sistema.
 
 

@@ -22,7 +22,11 @@ The system upgrade should be started from the command line shell.
 3. Clean up yum cache and run update again: ::
 
      yum clean all && yum update 
+
+4. If installed, upgrade the firewall group: ::
+
+     yum update @nethserver-firewall-base 
   	      
-3. Finally, reboot the system.
+5. Finally, reboot the system.
 
 
