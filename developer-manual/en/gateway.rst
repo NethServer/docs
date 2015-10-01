@@ -67,6 +67,7 @@ Properties of ``firewall`` key inside ``configuration`` db:
 * ``Policy``: can be ``permissive`` or ``strict``. See above.
 * ``MACValidation``: if enabled, the firewall will check the traffic against a list of known MAC addresses (see: :ref:`ipbinding-section`)
 * ``MACValidationPolicy``: can be ``accept`` or ``drop``. Default is ``drop``. See ``man shorewall.conf`` for all valid values
+* ``InterfaceRoleList``: list of network interface roles configurable from web interface. Default is: ``green,red,blue,orange``
 
 Example
 
