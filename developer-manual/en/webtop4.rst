@@ -20,10 +20,12 @@ Configuration is saved in ``webtop`` key inside ``configuration`` database.
 Available properties:
 
 * ``PublicUrl``: public URL used to publish resources for the cloud. If not set, default is ``http://<FQDN>/webtop``
+* ``ActiveSync``: if set to ``enabled``, it enables /Microsoft-Server-ActiveSync url.  Default is ``enabled``
 
 Example: ::
 
   webtop=configuration
+      ActiveSync=enabled
       PublicUrl=
 
 
