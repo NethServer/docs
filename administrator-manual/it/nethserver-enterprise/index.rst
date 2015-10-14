@@ -71,6 +71,7 @@ NethService
    fax_server
    ftp
    webvirtmgr
+   webtop4
 
 
 NethSecurity
