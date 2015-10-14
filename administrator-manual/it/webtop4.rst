@@ -38,7 +38,7 @@ Quando si configura un account Active Sync, assicurarsi di specificare l'indiriz
 e lasciare vuoto il campo dominio.
 
 .. note::
-   Il protocollo Active Sync è supportato solo su device Android e iOS.
+   Il protocollo Active Sync è supportato solo su dispositivi Android e iOS.
    Outlook non è supportato.
    La sincronizzazione della posta non è attualmente supportata.
    
@@ -94,3 +94,47 @@ Tutti i filtri di posta configurati da SOGo, devono essere ricreati manualmente 
 dell'interfaccia di WebTop.
 La stessa cosa si applica se l'utente sta effettuando il passaggio inverso da WebTop a SOGo.
 
+Integrazione Google e Dropbox
+=============================
+
+Ogni utente può integrare i propri account Google Drive e Dropbox all'interno di WebTop.
+Prima di procedere, l'amministratore deve creare una coppia di credenziali per l'accesso
+alle API.
+
+API Google
+----------
+
+* Accedere a https://console.developers.google.com/project e creare un nuovo progetto
+* Creare una nuova coppia di credenziali di tipo "OAuth 2.0 clientID" avendo cura di 
+  compilare la sezione "OAuth consent screen"
+* Inserire la coppia di credenziali appena create (Client ID e Client Secret) nella 
+  configurazione di WebTop
+
+  Da shell accedere al database webtop: ::
+
+    su - postgres -c "psql webtop"
+
+  Eseguire le query, sostituendo al campo ``__value__`` il corrispettivo valore: ::
+
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientid', '__value__');
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientsecret', '__value__');
+
+API Dropbox
+-----------
+
+* Accedere a https://www.dropbox.com/developers/apps e creare una nuova app
+* Inserire la coppia di credenziali appena create (App key e App secret) nella
+  configurazione di WebTop.
+
+  Da shell accedere al database webtop: ::
+
+    su - postgres -c "psql webtop"
+
+  Eseguire le query, sostituendo al campo ``__value__`` il corrispettivo valore: ::
+
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientsecret', '__value__');
+    INSERT INTO settings (idsetting,value) VALUES ('main.dropbox.appsecret', '__value__');
+
+
+Se si desidera cambiare il limite massimo di utenti, verificare la procedura corretta nella
+documentazione ufficiale di Dropbox.

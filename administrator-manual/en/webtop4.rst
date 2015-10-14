@@ -94,3 +94,45 @@ To disable ActiveSync on WebTop: ::
 
 All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
 The same apply if the user is switching from WebTop to SOGo.
+
+Google and Dropbox integration
+==============================
+
+Users can add their own Google Drive and Dropbox accounts inside WebTop.
+Before proceeding, the administrator must create a pair of API access credentials.
+
+Google API
+----------
+
+* Access https://console.developers.google.com/project and create a new project
+* Create new credentials by selecting "OAuth 2.0 clientID" type and remember to compile
+  "OAuth consent screen" section
+* Insert new credentials (Client ID e Client Secret) inside WebTop configuration
+
+  From shell, access webtop database: ::
+
+    su - postgres -c "psql webtop"
+
+  Execute the queries, using the corresponding value in place of ``__value__`` variable: ::
+
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientid', '__value__');
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientsecret', '__value__');
+
+Dropbox API
+-----------
+
+* Access https://www.dropbox.com/developers/apps and create a new app
+* Insert the new credential key pair (App key e App secret) inside WebTop configuration
+
+  From shell, access webtop database: ::
+
+    su - postgres -c "psql webtop"
+
+  Execute the queries, using the corresponding value in place of ``__value__`` variable: ::
+
+    INSERT INTO settings (idsetting,value) VALUES ('main.googledrive.clientsecret', '__value__');
+    INSERT INTO settings (idsetting,value) VALUES ('main.dropbox.appsecret', '__value__');
+
+
+If you need to raise the user limit, please read the official Dropbox documentation.
+
