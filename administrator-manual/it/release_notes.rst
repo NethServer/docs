@@ -7,10 +7,10 @@ Note di rilascio
 .. include:: changelog.rst.inc
 
 
-Aggiornamento da 6.6
-====================
+Aggiornamento manuale da 6.6
+============================
 
-L'aggiornamento del sistema avviene tramite la shell a riga di comando.
+E' possibile aggiornare il sistema da riga di comando.
 
 1. Assicurarsi che il sistema attuale sia aggiornato: ::
 
@@ -24,10 +24,5 @@ L'aggiornamento del sistema avviene tramite la shell a riga di comando.
 
      yum clean all && yum update
 
-4. Se installato, aggiornare il gruppo firewall: ::
-
-     yum update @nethserver-firewall-base 
-  	      
-5. Infine, riavviare il sistema.
-
+4. Infine, riavviare il sistema (opzionale).
 

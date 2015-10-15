@@ -6,10 +6,10 @@ Release notes
 
 .. include:: changelog.rst.inc
   
-Upgrading from 6.6
-==================
+Manual upgrade from 6.6
+=======================
 
-The system upgrade should be started from the command line shell.
+The system can be upgraded from the command line.
 
 1. Make sure the system is fully updated: ::
 
@@ -23,10 +23,5 @@ The system upgrade should be started from the command line shell.
 
      yum clean all && yum update 
 
-4. If installed, upgrade the firewall group: ::
-
-     yum update @nethserver-firewall-base 
-  	      
-5. Finally, reboot the system.
-
+4. Finally, reboot the system (optional).
 
