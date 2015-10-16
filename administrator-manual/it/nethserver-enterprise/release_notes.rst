@@ -9,12 +9,24 @@ Note di rilascio
 Aggiornamento da 6.6
 ====================
 
-Quando il sistema è pronto per essere aggiornato alla versione 6.7,
-nel Server Manager viene mostrato un avviso con un pulsante.  Seguire
-le istruzioni a schermo per avviare l'aggiornamento.
+L'aggiornamento da 6.6 a 6.7 è automatico e verrà rilasciato gradualmente.
 
-.. Warning:: Verificare la presenza di eventuali *template-custom* nel
-             sistema e la compatibilità con gli aggiornamenti.
+Qualora si desideri forzare l'aggiornamento manualmente seguire la procedura qui descritta.
 
-Al termine dell'aggiornamento sarà necessario effettuare di nuovo il
-login al Server Manager.
+Aggiornamento manuale
+---------------------
+
+1. Assicurarsi che il sistema attuale sia aggiornato: ::
+
+     yum update
+
+2. Installare la nuova versione del pacchetto ``nethserver-release``: ::
+
+     yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.7.rpm
+
+3. Pulire la cache di YUM e aggiornare di nuovo il sistema: ::
+
+     yum clean all && yum update
+
+4. Infine, riavviare il sistema (opzionale).
+

@@ -23,7 +23,7 @@ Configurazione
 ==============
 
 .. note::
-Per poter installare l'hotspot è necessario che la macchina abbia almeno una scheda green ed una red configurate e che disponga almeno di 3 schede di rete.
+   Per poter installare l'hotspot è necessario che la macchina abbia almeno una scheda green ed una red configurate e che disponga almeno di 3 schede di rete.
 
 
 Il server deve essere collegato agli access point della rete per poter gestire il traffico.

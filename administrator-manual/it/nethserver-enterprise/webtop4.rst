@@ -1,6 +1,6 @@
-========
+=========
 NethTop 4
-========
+=========
 
 NethTop è un groupware completo che implementa il protocollo ActiveSync.
 
@@ -72,7 +72,7 @@ admin@<dominio> dove ``<dominio>`` è il dominio del server che fa parte del FQD
 * Login: admin@mightydomain.com
 
 NethTop vs SOGo
-==============
+===============
 
 NethTop e SOGo possono essere installati sullo stesso server.
 
