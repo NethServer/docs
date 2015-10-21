@@ -168,9 +168,11 @@ Nel caso di un server web, le porte in ascolto sono solitamente la porta 80 (HTT
 
 Quando si crea un port forward è necessario specificare almeno i seguenti parametri:
 
-* la porta di origine, può essere un numero o un intervallo nel formato XX:YY (es: 1000:1100 per porta iniziale 1000 e porta finale 1100)
+* la porta di origine
 * la porta di destinazione, che può essere diversa dalla porta di origine
 * l'indirizzo dell'host a cui deve essere instradato il traffico
+* è possibile specificare un range di porte utilizzando i due punti come separatore nella porta di origine (es: 1000:2000), in tale caso particolare il campo porta di destinazione dovrà rimanere vuoto
+
 
 Esempio
 -------
@@ -180,6 +182,7 @@ Dato il seguente scenario:
 * Server interno con IP 192.168.1.10, detto Server1
 * Server web in ascolto sulla porta 80 su Server1
 * Server SSH in ascolto sulla porta 22 su Server1
+* Altri servizi in ascolto sul range di porte compreso tra 5000 e 6000
 
 In caso si voglia rendere accessibile dall'esterno il server web direttamente sulla porta 80, si dovrà creare un port forward fatto così:
 
@@ -198,6 +201,12 @@ In caso si voglia rendere accessibile dall'esterno il server SSH sulla porta 222
 
 
 Tutto il traffico che arriva sulle reti red del firewall sulla porta 2222, verrà redirezionato alla porta 22 di Server1.
+
+In caso si voglia rendere accessibile dall'esterno il server sull'intero range di porte compreso tra 5000 e 6000 si dovrà creare un port forward fatto così:
+
+* porta origine: 5000:6000
+* porta destinazione: 
+* indirizzo host: 192.168.1.10
  
 
 Limitare accesso
