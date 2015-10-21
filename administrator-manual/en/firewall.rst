@@ -160,9 +160,10 @@ In the case of a web server, listening ports are usually port 80 (HTTP) and 443 
 
 When you create a port forward, you must specify at least the following parameters: 
 
-* The source port, can be a number or a range in the format XX:YY (eg: 1000:1100 for begin port and end port 1100)
+* The source port
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
+* It's possibile to specify a port range using a colon as separator in the source port field (eX: 1000:2000), in this case the field destination port must be left void
 
 Example
 -------
@@ -172,6 +173,7 @@ Given the following scenario:
 * Internal server with IP 192.168.1.10, named Server1
 * Web server listening on port 80 on Server1
 * SSH server listening on port 22 on Server1
+* Other services in the port range beetween 5000 and 6000  on Server1
 
 If you want to make the server web available directly from public networks, you must create a rule like this:
 
@@ -189,6 +191,13 @@ In case you want to make accessible from outside the SSH server on port 2222, yo
 
 All incoming traffic on firewall's red interfaces on port 2222, will be redirected to port 22 on Server1.
  
+In case you want to make accessible from outside the server on the whole port range beetween 5000 and 6000, you will have to create a port forward like this:
+
+* origin port: 5000:6000
+* destination port: 
+* host address: 192.168.1.10
+
+All incoming traffic on firewall's red interfaces on port range beetween 5000 and 6000 will be redirected to same ports on Server1.
 
 Limiting access
 ---------------
