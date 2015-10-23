@@ -131,7 +131,7 @@ Check the debugging levels table from OpenLDAP site for more details: http://www
 To permanently change LDAP log level: ::
 
   config setprop slapd LogLevel 256
-  ignal-event nethserver-directory-update
+  signal-event nethserver-directory-update
 
 Service accounts
 ================
