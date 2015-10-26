@@ -132,7 +132,6 @@ Indices and tables
 ==================
    
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 .. image:: ../../_static/by-nc-sa_small.png
