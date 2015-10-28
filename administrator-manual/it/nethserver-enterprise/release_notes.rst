@@ -24,9 +24,13 @@ Aggiornamento manuale
 
      yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.7.rpm
 
-3. Pulire la cache di YUM e aggiornare di nuovo il sistema: ::
+3. Abilitare solo i repository enterprise: ::
+
+     /etc/cron.daily/00fixyumrepos
+
+4. Pulire la cache di YUM e aggiornare di nuovo il sistema: ::
 
      yum clean all && yum update
 
-4. Infine, riavviare il sistema (opzionale).
+5. Infine, riavviare il sistema (opzionale).
 
