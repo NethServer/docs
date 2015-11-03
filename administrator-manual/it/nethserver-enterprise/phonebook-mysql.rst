@@ -14,7 +14,7 @@ La sincronizzazione dei contatti dalle varie fonti esterne viene eseguita di def
 
 La rubrica centralizzata è accessibile in LDAP, attivandone l'esportazione, impostando come Dominio Base: ::
 
- ou=phonebook,dc=directory,dc=nh
+ dc=phonebook,dc=nh
 
 L'interfaccia permette di attivare l'importazione dei contatti provenienti da tutte le rubriche di SOGo condivise a tutti gli utenti locali, dei contatti condivisi del |product_cti| e dei Numeri Brevi di |product_voice|.
 
