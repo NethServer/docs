@@ -136,6 +136,14 @@ Il sistema può utilizzare le connessioni WAN in due modalità (pulsante :guilab
 * :dfn:`Balance`: tutti i provider sono utilizzati contemporaneamente in base al loro peso 
 * :dfn:`Active backup`: i provider sono utilizzati uno alla vola a partire da quello con il peso più alto. Se il provider in uso perde la connessione, tutto il traffico verrà dirottato sul successivo provider.
 
+Per determinare lo stato di un provider, il sistema invia un pacchetto ICMP (ping) ad intervalli regolari.
+Se il numero di pacchetti persi supera una determinata soglia, il provider viene disabilitato.
+
+L'amministratore può configurare la sensibilità del monitoraggio attraverso i seguenti parametri:
+
+* percentuale di pacchetti persi
+* numero consecutivo di pacchetti persi
+* intervallo di invio fra un pacchetto e l'altro
 
 Esempio
 -------

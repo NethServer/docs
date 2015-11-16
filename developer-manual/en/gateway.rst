@@ -68,6 +68,14 @@ Properties of ``firewall`` key inside ``configuration`` db:
 * ``MACValidation``: if enabled, the firewall will check the traffic against a list of known MAC addresses (see: :ref:`ipbinding-section`)
 * ``MACValidationPolicy``: can be ``accept`` or ``drop``. Default is ``drop``. See ``man shorewall.conf`` for all valid values
 * ``InterfaceRoleList``: list of network interface roles configurable from web interface. Default is: ``green,red,blue,orange``
+* ``CheckIP``: comma-separeted list of IP monitored by LSM, to check if a provider is up or down
+* ``MaxNumberPacketLoss``: number of maximum consecutive packets lost, over this threshold the provider is considered down
+* ``MaxPercentPacketLoss``: percentage of maximum packet lost, over this threshold the provider is considered down
+* ``PingInterval``: seconds between ICMP packets sent by LSM, default is ``5``
+* ``NotifyWan``: can be ``enabled`` or ``disabled``, if ``enabled`` a mail is sent every time a provider changes its own state
+* ``NotifyWanFrom``: sender address for mails sent if NotifyWAN is set to enabled
+* ``NotifyWanTo``: recipient address for mails sent if NotifyWAN is set to enabled
+
 
 Example
 
@@ -343,27 +351,7 @@ Multi WAN
 NethServer firewall can handle 15 red (WAN) interfaces. Implementation uses Shorewall with LSM (Link Status Monitor).
 The LSM daemon takes care of monitoring WAN connections (interface) using ICMP traffic and it informs Shorewall about interface up/down events.
 Each interface can be checked using multiple IPs (see ``checkip`` property below). At least one IP must be reachable to mark the WAN connection as usable. 
-If no IP is specified (recommended option), the system will try to find a suitable ip, usually the next hop after the gateway. 
-
-If you want to use a custom checkip, these are some lines guides to make the right choice:
-
-* use an ip address inside the network of you provider
-* choose an hop near your gateway. You can use a command like this to discover a suitable next hop: 
-
-::
-
-  traceroute -n -f 2 -m 3 -i <interface> 8.8.8.8
-
-or
-
-::
-
-  ping -c 1 -I <interface> -t 2 8.8.8.8 | grep 'Time to live'  | cut -d' ' -f2
-
-* be careful, when the provider goes down, checkip will be no longer reachable from hosts inside the local network
-
-All checkip must always be reachable. For each configured checkip the system will create special static routes. These static routes are records of type ``provider-static`` inside the ``routes`` database.
-Properties of ``provider-static`` records are the same of ``static`` records.
+If no IP is specified (recommended option), the system will uses well-known default IPs (Google DNS and OpenDNS).
 
 For each configured provider, LSM will send ping to a configured IP (checkip). 
 When a provider status changes, the system will signal a ``wan-uplink-update`` event.
@@ -417,13 +405,11 @@ A ``provider`` record inside the ``networks`` database has following properties:
 * ``key``: name of provider
 * ``interface``: associated red interface, it's mandatory
 * ``weight``: weight of connection expressed with an integer number, it's mandatory
-* ``checkip``: comma separated list of pinged IP to check connection status, if blank the interface is not monitored
 * ``Description``: (optional) custom description
 
 Example: ::
 
   myisp=provider
-    checkip=208.67.222.222,8.8.8.8
     interface=eth1
     weight=5
     Description=my fast provider

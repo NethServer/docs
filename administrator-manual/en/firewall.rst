@@ -130,6 +130,14 @@ The system can use WAN connections in two modes (button  :guilabel:`Configure` o
 * :dfn:`Balance`: all providers are used simultaneously according to their weight 
 * :dfn:`Active backup`: providers are used one at a fly from the one with the highest weight. If the provider you are using loses its connection, all traffic will be diverted to the next provider.
 
+To determine the status of a provider, the system sends an ICMP packet (ping) at regular intervals.
+If the number of dropped packets exceeds a certain threshold, the provider is disabled.
+
+The administrator can configure the sensitivity of the monitoring through the following parameters:
+
+* Percentage of lost packets
+* Number of consecutive lost packets
+* Interval in seconds between sent packets
 
 Example
 -------
