@@ -95,6 +95,23 @@ To disable ActiveSync on WebTop: ::
 All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
 The same apply if the user is switching from WebTop to SOGo.
 
+Active Directory authentication
+===============================
+
+After performing the join to Active Directory domain, access WebTop administration page,
+then from tree menu on the left, select :guilabel:`Domain` -> :guilabel:`NethServer`.
+
+Edit the following fields:
+
+* Authentication Uri: select ``ldapAD`` mode and insert the full FQDN of the server and port 389.
+  Example: w2k8.nethserver.org:389
+
+* Admin LDAP: user name of AD domain administrator
+
+* LDAP Password: user password of AD domain administrator
+
+After saving, the page :guilabel:`Users` will display users from Active Directory.
+
 Google and Dropbox integration
 ==============================
 
@@ -135,4 +152,39 @@ Dropbox API
 
 
 If you need to raise the user limit, please read the official Dropbox documentation.
+
+
+Importing data from SOGo
+========================
+
+You can migrate some data from SOGo to WebTop using the following script:
+
+* Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
+* Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
+
+Before using the scripts you need to install this package: ::
+
+  yum install php-mysql -y
+
+When launching the scripts, indicate the user name you want to import from SOGo: ::
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php <user>
+  php /usr/share/webtop/doc/sogo2webtop_card.php <user>
+
+Where ``user`` can be a username or ``all``.
+
+**Examples**
+
+Import all address books from SOGo: ::
+
+  php /usr/share/webtop/doc/sogo2webtop_card.php all
+
+Import the calendar of user "foo": ::
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php foo
+
+.. note::
+   If the script is executed multiple times, both calendars and address books will be imported multiple times.
+   Import of distribution lists and recurring events are not currently supported.
+
 
