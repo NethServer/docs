@@ -1,164 +1,153 @@
-.. _shared-folder:
+.. _shared-folders-section:
+
+.. index:: cartelle condivise
+   single: HTTP
+   single: SMB
+   single: CIFS
 
 ==================
 Cartelle condivise
 ==================
 
-Le cartelle condivise sono uno strumento di |product| che permette di
-condividere file fra gli utenti del server.
+Una *cartella condivisa* è un posto dove i file sono accessibili da un
+gruppo di persone, utilizzando diversi metodi, o *protocolli*.  Poiché
+|product| è un sistema modulare, i metodi disponibili dipendono da
+quali moduli sono stati installati.
 
-Una cartella condivisa (conosciuta anche come i-bay) è una risorsa a
-cui si può accedere in base ai servizi installati nel sistema e ai
-permessi impostati da questo modulo.
+I metodi/protocolli disponibili sono:
 
+* Web access (HTTP)
+* Samba (SMB/CIFS)
 
-Installazione
-=============
+Permessi di accesso
+-------------------
 
-Per installare il pacchetto *Cartelle condivise* fare click su *Configurazione → Software center*. Mettere la
-spunta su *File server* e fare click sul pulsante *Avanti*. Verrano
-suggeriti dei pacchetti aggiuntivi da installare, selezionare quelli che
-si ritengono utili e confermare le modifiche al sistema facendo click
-sul pulsante applica.
+Una cartella condivisa appartiene sempre ad un gruppo di utenti
+(:guilabel:`Gruppo proprietario`). Ogni membro del gruppo può leggere
+i contenuti della cartella. Opzionalmente, al gruppo può essere
+concesso di modificare il contenuto della cartella e i permessi di
+lettura possono essere estesi a chiunque abbia accesso al sistema.
+Questo semplice modello di permessi è basato sui tradizionali permessi
+del filesystem di UNIX.
 
-Al termine dell’ installazione verrà mostrato in alto un messaggio che
-ci informa che l’operazione è stata completata correttamente.
+I permessi di accesso possono essere ulteriormente raffinati dalla
+scheda :guilabel:`ACL`, consentendo a singoli utenti o ad altri gruppi
+i permessi di lettura o scrittura.  Questo modello di permessi esteso
+è basato sulla specifica POSIX ACL.
 
-Gestione
-========
-
-Per configurare Cartelle condivise andare sulla sezione *Gestione →
-Cartelle condivise*.
-
-Si aprirà una pagina che mostra una tabella dove sono elencate tutte le
-cartelle condivise presenti sul sistema; qui è possibile creare una
-nuova cartella condivisa oppure modificarne o eliminarne una già
-esistente
-
-Creazione
-=========
-
-Cliccare sul pulsante *Crea nuovo* nella sezione *Cartelle condivise*.
-
-Generale
---------
-
-Nella scheda generale si deve inserire il nome della nuova cartella
-condivisa e una sua eventuale descrizione nei campi Nome e Descrizione.
-Scegliere il gruppo proprietario della cartella attraverso il menù a
-tendina. Lasciando tutti gli utenti autenticati la cartella sarà
-disponibile a tutti gli utenti registrati e autenticati sul sistema.
-
-E’ possibile scegliere i permessi di accesso alla cartella mettendo la
-spunta su consenti scrittura a gruppo proprietario e/o consenti lettura
-a tutti.
-
-Nome
-    Il nome della cartella condivisa può contenere solo lettere
-    minuscole, numeri, punti, trattini e underscore e deve iniziare con
-    una lettera. La lunghezza massima consentita del nome è 12
-    caratteri.
-
-Descrizione
-    Campo opzionale per una breve descrizione della cartella condivisa.
-
-Gruppo proprietario
-    Il gruppo proprietario della cartella condivisa, solo i membri del
-    gruppo potranno accedere.
-
-Consenti scrittura al gruppo proprietario
-    Consenti l'accesso in scrittura ai membri del gruppo proprietario.
-
-Consenti lettura a tutti
-    Accesso in lettura a chiunque si connetta al sistema, anche da reti pubbliche.
 
 Accesso web
 -----------
 
-Nella scheda Accesso web è possibile abilitare l’accesso alle cartelle
-condivise dal sito web del dominio registrato sul server in fase di
-installazione.
+Il metodo :guilabel:`Accesso web` consente la connessione di un
+*browser web* ad una cartella condivisa mediante il protocollo HTTP.
+Le risorse web sono identificate da una stringa, detta *Uniform
+Resource Locator*, o URL.
 
-Per abilitare l’accesso web mettere la spunta su abilita accesso web;
-abilitata l’opzione si può
+Per esempio, se il nome della cartella condivisa è ``docs`` gli URL
+per accedervi potrebbero essere: ::
 
-*  Personalizzare il percorso per accedere alla cartella condivisa
-   scegliendo fra le opzioni default, radice sito web oppure
-   personalizzato, in questo caso occorre inserire il percorso nel campo
-   dedicato.
-*  Decidere se riservare l’accesso solo dalle reti locali, in tal caso
-   mettere la spunta su Consenti l'accesso solo dalle reti locali
-*  Impostare una password di accesso alla cartella condivisa.
+    http://192.168.1.1/docs
+    https://192.168.1.1/docs
+    http://myserver/docs
+    http://www.domain.com/docs
+    http://docs.domain.com/
+
+Ogni URL ha tre componenti:
+
+* protocollo (``http://`` or ``https://``),
+* nome host (``192.168.1.1``, ``myserver``, ``www.domain.com``),
+* percorso (``docs``).
+
+Il gruppo :guilabel:`Indirizzo web (URL)` definisce il componente "percorso".
+
+* :guilabel:`Nome cartella` è il default, lo stesso della cartella
+  condivisa, come ``docs`` nell'esempio precedente.
+
+* :guilabel:`Radice del sito web` significa nessun percorso. Per
+  esempio ``http://docs.domain.com``.
+
+* :guilabel:`Personalizzato` significa un nome alternativo, da specificare.
+
+Il selettore :guilabel:`Host virtuale` elenca tutti gli
+:guilabel:`Alias server` definiti nella pagina :guilabel:`DNS`.
+"Tutti" significa che il nome host non è considerato nell'associare
+l'URL alla cartella condivisa.
+
+L'accesso web è anonimo è in sola lettura.  Ci sono alcune opzioni con
+cui restringere ulteriormente il permesso di accesso.
+
+* :guilabel:`Consenti l'accesso solo dalle reti fidate`, restringe
+  l'accesso in base all'indirizzo IP del client,
+
+* :guilabel:`Richiedi la password`, limita l'accesso a chi conosce la
+  password condivisa (da specificare).
+
+* :guilabel:`Richiedi connessione SSL cifrata`.
 
 
-Host virtuale
-    Permette di scegliere da quale nome di host è accessibile la
-    cartella condivisa. L'elenco è modificabile tramite la scheda
-    "Alias server" del modulo "DNS e DHCP". 
-    
-Indirizzo web (URL)
-    Definisce l'indirizzo web a cui è disponibile la risorsa.
+Configurare un'applicazione web
+-------------------------------
 
+La casella :guilabel:`Consenti override di .htaccess e dei permessi
+di scrittura` attiva una speciale configurazione di Apache pensata per
+ospitare una semplice applicazione web in una cartella condivisa.
+Consente di modificare la configurazione di default di Apache e di
+concedere i permessi di scrittura per specifice sub-directory.
 
+.. warning:: Se una cartella condivisa contiene condice eseguibile,
+             come ad esempio script PHP, i permessi degli utenti e le
+             possibili implicazioni di sicurezza devono essere
+             vaultati attentamente.
+
+Se la casella è abilitata
+
+* i file con nome :file:`.htaccess` sono caricati come `configurazione
+  di Apache <http://httpd.apache.org/docs/2.2/howto/htaccess.html>`_.
+
+* un file di testo con nome :file:`.htwritable` posizionato nella
+  radice della cartella condivisa può contenere una lista di
+  sotto-directory dove Apache ottiene i permessi di scrittura.  La
+  sintassi del file è una sotto-directory per ogni riga.  Le righe che
+  iniziano con ``#`` sono commenti.  Quando il contenuto del file
+  :file:`.htwritable` cambia il pulsante :guilabel:`Reimposta
+  permessi` deve essere premuto di nuovo per propagare i permessi al
+  file system.
+
+.. note:: Le cartelle condivise sono uno strumento potente ma non
+          vanno intese come una soluzione completa per il web hosting!
+          Per configurare Apache e i virtual host in maniera più
+          avanzata aggiungere un file ``.conf`` sotto la directory
+          :file:`/etc/httpd/conf.d/`.  Fare riferimento alla
+          documentazione di Apache per questo.
 
 Samba
 -----
 
-Nella scheda Samba è possibile abilitare il server samba, il quale
-permette di interagire con client o server Microsoft Windows.
+SMB/CIFS è un protocollo molto diffuso che consente di condividere
+file in una rete di computer.  In un modo simile agli URL Web visti
+sopra, il nome della cartella condivisa divente il nome della
+condivisione SMB.
 
-Per abilitare Samba mettere la spunta su Abilita samba; è possibile
-abilitare il cestino di rete dove finiranno i file cancellati dalle
-cartelle condivise mettendo la spunta su Cestino di rete e decidere se
-mantenere i file omonimi all’interno del cestino.
+Per esempio, l'indirizzo di rete SMB per la condivisione ``docs``
+potrebbe essere ::
 
-Si può abilitare anche un accesso di tipo ospite alle cartelle
-condivise; se si sceglie nessuno non sarà consentito l’accesso
-ospite, se si sceglie solo lettura gli utenti ospiti potranno solamente
-aprire i file delle cartella condivisa, mentre se si sceglie lettura e
-scrittura potranno aprire e modificare i file condivisi.
+   \\192.168.1.1\docs
+   \\MYSERVER\docs
 
+I client compatibili con SMB possono essere utilizzati per impostare
+le ACL su specifici file o sotto-directory.  In ogni momento, il
+pulsante :guilabel:`Reimposta permessi` ripristina i permessi UNIX e
+POSIX secondo quanto definito nelle schede :guilabel:`Generale` e
+:guilabel:`ACL`.
 
-ACL
----
+Se l'opzione :guilabel:`Cestino di rete` è abilitata, i file rimossi
+da una cartella condivisa sono in realtà spostati in una directory
+"cestino" speciale. L'opzione :guilabel:`Mantieni file omonimi`
+assicura che i file nel cestino abbiano sempre nomi distiniti,
+impedendo la sovrascrittura.
 
-Nella scheda ACL è possibile redigere una lista ordinata di regole che
-stabiliscono quali  permessi delle cartella condivisa sono concessi ogni
-singolo utente o per un intero gruppo.
-
-Per impostare una regola inserire il nome utente o del gruppo nel campo,
-il sistema cercherà automaticamente man mano che si compila il nome.
-Scelto il nome da aggiungere fare click sul pulsante aggiungi.
-
-Viene aggiunta una riga sotto il campo dove è inserito il nome scelto e
-accanto le opzioni per impostare i permessi, mettere la spunta su
-lettura se l’utente o il gruppo deve solo poter aprire la cartella o i
-files condivisi, mettere la spunta su lettura e  scrittura se l'utente o
-il gruppo può aprire e modificare la cartella o i files condivisi.
-
-Per cancellare una regola fare click sulla **X** a destra della riga
-contenente il nome dell’ utente o del gruppo.
-
-Eliminazione
-============
-
-Per eliminare una cartella condivisa fare click sulla freccia adiacente
-il pulsante modifica. Si apre un menù a tendina, fare click sulla voce
-elimina. Verrà chiesta la conferma, fare click sul pulsante elimina per
-eliminare definitivamente la cartella.
-
-
-Rimuove la cartella e tutto il suo contenuto.
-In caso di eliminazione accidentale, è possibile recuperare
-il contenuto della cartella ripristinandola da un backup.
-
-.. warning:: L'eliminazione di una cartella condivisa è irreversibile.
-
-Reimposta permessi
-==================
-
-Imposta ai valori configurati tramite questo modulo il gruppo
-proprietario e le ACL. L'operazione sarà eseguita ricorsivamente su
-tutti i file e le sottocartelle della cartella condivisa.
+Se è attiva l'opzione :guilabel:`Accesso guest`, sono considerate valide
+qualsiasi credenziali vengano presentate.
 
 
