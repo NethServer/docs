@@ -94,3 +94,57 @@ Tutti i filtri di posta configurati da SOGo, devono essere ricreati manualmente 
 dell'interfaccia di NethTop.
 La stessa cosa si applica se l'utente sta effettuando il passaggio inverso da NethTop a SOGo.
 
+Autenticazione Active Directory
+===============================
+
+Dopo aver eseguito il join al dominio Active Directory, accedere alla pagina di amministrazione
+di WebTop, dall'albero di sinistra selezionare :guilabel:`Domini` -> :guilabel:`NethServer`.
+
+Modificare i campi nella come segue:
+
+* Authentication Uri: selezionare la modalità ``ldapAD`` e indicare il nome FQDN completo del server e la porta 389.
+  Esempio: w2k8.nethserver.org:389
+
+* Admin Ldap: nome dell'utente amministratore del dominio AD
+
+* Password Ldap: password dell'utente amministratore del dominio AD
+
+Dopo il salvataggio, nella pagina :guilabel:`Utenti` saranno visualizzati gli utenti di Active Directory.
+
+
+Importazione dati da SOGo
+=========================
+
+E' possibile migrare alcuni dati da SOGo a WebTop utilizzando i seguenti script:
+
+* calendari: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
+* rubriche: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
+
+Prima di utilizzare gli script è necessario installare questo pacchetto: ::
+
+  yum install php-mysql -y
+
+
+Entrambi gli script vanno eseguiti indicando il nome utente di cui si vuole eseguire l'importazione da SOGo: :: 
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php <user>
+  php /usr/share/webtop/doc/sogo2webtop_card.php <user>
+
+Dove ``user`` può essere un nome utente oppure ``all``.
+
+**Esempi**
+
+Importare tutte le rubriche presenti su SOGo: ::
+
+  php /usr/share/webtop/doc/sogo2webtop_card.php all
+
+Importare il calendario dell'utente "pippo": ::
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php pippo
+
+
+.. note::
+   Se lo script viene eseguito più volte verranno importati più volte sia calendari che rubriche.
+   Attualmente non è supportata l'importazione sia delle liste di distribuzione dalle 
+   rubriche che degli eventi ricorrenti dai calendari.
+
