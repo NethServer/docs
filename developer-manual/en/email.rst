@@ -39,7 +39,7 @@ In package ``nethserver-mail-server``:
 
 In package ``nethserver-mail-filter``:
 
-* Anti-spam
+* Anti-spam with DNSBL (see: :ref:`unbound-section`)
 * Anti-virus
 * Attachment block
 * Real-time Blackhole List (RBL) (disabled)

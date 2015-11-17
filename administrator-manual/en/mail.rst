@@ -351,7 +351,9 @@ The anti-spam component [#Spamassassin]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
 content of messages.  The rules are public and updated on a regular
-basis.  A score is associated to each rule.
+basis.
+The filter can also check if sender server is listed in one or more blacklists (:index:`DNSBL`).
+A score is associated to each rule.
 
 Total spam score collected at the end of the analysis allows the
 server to decide whether to *reject* the message or *mark* it as spam

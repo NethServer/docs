@@ -116,6 +116,7 @@ Modules
    unixodbc
    webtop4
    vpn
+   unbound
 
 Appendix
 --------

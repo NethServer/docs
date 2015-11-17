@@ -385,8 +385,10 @@ Anti-spam
 Il filtro :dfn:`anti-spam` [#Spamassassin]_ analizza la posta
 elettronica rilevando e classificando un messaggio come :dfn:`spam`
 [#SPAM]_ utilizzando criteri euristici, regole predeterminate e
-valutazioni statistiche sul contenuto del messaggio. Un punteggio è
-associato ad ognuna di queste regole.
+valutazioni statistiche sul contenuto del messaggio. 
+Il filtro inoltre può controllare se il server mittente è presente in una 
+o più blacklist (:index:`DNSBL`).
+Un punteggio è associato ad ognuna di queste regole.
 
 Il punteggio totale raccolto alla fine dell'analisi consente al server
 di decidere se *rifiutare* il messaggio o *marcarlo* come spam e
