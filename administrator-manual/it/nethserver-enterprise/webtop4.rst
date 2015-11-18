@@ -100,7 +100,7 @@ Autenticazione Active Directory
 Dopo aver eseguito il join al dominio Active Directory, accedere alla pagina di amministrazione
 di WebTop, dall'albero di sinistra selezionare :guilabel:`Domini` -> :guilabel:`NethServer`.
 
-Modificare i campi nella come segue:
+Modificare i campi nella pagina come segue:
 
 * Authentication Uri: selezionare la modalità ``ldapAD`` e indicare il nome FQDN completo del server e la porta 389.
   Esempio: w2k8.nethserver.org:389
