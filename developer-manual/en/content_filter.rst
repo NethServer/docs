@@ -98,6 +98,7 @@ Properties:
   If enabled, all listed categories in ``Categories`` are allowed and all other sites are blocked
 * *BlockFileTypes*: enable or disable the global file extension list (``BlockedFileTypes``). Can be ``enabled`` or ``disabled`` 
 * *BlockIpAccess*: if enabled, sites can be accessed only using a domain name (not an IP address). Can be ``enabled`` or ``disabled``
+* *BlockBuiltinRules*: if enabled, the ``custom/builtin`` DB is loaded. The DB contents are the result of template expansions. Can be ``enabled`` or ``disabled``.
 * *Categories*: comma separated list of categories blocked or allowed. If a category is not present inside the SquidGuard db (:file:`/var/squidGuard/Blacklists`), the category will be excluded from configuration file to avoid SquidGuard panic-mode
 * *Description*: optional description
 * *WhiteList*: enable or disable the global whitelist (``DomainWhitelist`` and ``UrlWhitelist``). Can be ``enabled`` or ``disabled``
@@ -110,6 +111,7 @@ Filter example: ::
     BlockAll=disabled
     BlockFileTypes=disabled
     BlockIpAccess=disabled
+    BlockBuiltinRules=disabled
     Categories=aggressive,alcohol,weapons,warez
     Description=Default filter
     WhiteList=enabled
