@@ -202,6 +202,7 @@ Properties:
 * ``Mode``: network mode, can be ``routed`` or ``bridged``. Default is ``routed``.
 * ``ClientToClient``: can be ``enabled`` or ``disabled``, default is ``disabled``. When enabled, traffic between VPN clients is allowed
 * ``Compression``: can be ``enabled`` or ``disabled``, default is ``disabled``. When enabled, adaptive LZO compression is used
+* ``Remote``: comma-separated list of IPs or host names, it's used as multiple *remote* option inside client configuration generation script
 
 If mode is ``bridged``:
 
