@@ -75,6 +75,7 @@ Available actions are:
 * :dfn:`ACCEPT`: accept the network traffic
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and not notification is sent to the sender host
+* :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
 
 .. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
 
@@ -113,6 +114,8 @@ Allow guest's network to access all the services listening on Server1:
 * Destination: Server1 
 * Service: -
 
+.. _multi-wan-section:
+
 Multi WAN
 =========
 
@@ -138,6 +141,11 @@ The administrator can configure the sensitivity of the monitoring through the fo
 * Percentage of lost packets
 * Number of consecutive lost packets
 * Interval in seconds between sent packets
+
+The :guilabel:`Firewall rules` page allows to route network packets to
+a   given   WAN   provider,   if    some   criteria   are   met.   See
+:ref:`firewall-rules-section`.
+
 
 Example
 -------
