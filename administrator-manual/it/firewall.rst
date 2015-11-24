@@ -78,6 +78,7 @@ Le azioni disponibili sono:
 * :dfn:`ACCEPT`: accetta il traffico
 * :dfn:`REJECT`: blocca il traffico ed informa il mittente che la richiesta effettuata non è permessa
 * :dfn:`DROP`: blocca il traffico, i pacchetti vengono scartati e il mittente *non* viene notificato
+* :dfn:`ROUTE`: instrada il traffico al provider WAN specificato. Vedi anche :ref:`multi-wan-section`.
 
 .. note:: Se non è configurata almeno un'interfaccia red, il firewall non genererà nessuna regola per le zone blue e orange.
 
@@ -116,6 +117,7 @@ Permettere alla rete ospiti di accedere a tutti i servizi in ascolto sul Server1
 * Destinazione: Server1
 * Servizio: -
 
+.. _multi-wan-section:
 
 Multi WAN
 =========
@@ -144,6 +146,11 @@ L'amministratore può configurare la sensibilità del monitoraggio attraverso i 
 * percentuale di pacchetti persi
 * numero consecutivo di pacchetti persi
 * intervallo di invio fra un pacchetto e l'altro
+
+La pagina :guilabel:`Regole firewall` consente di instradare i
+pacchetti di rete verso un particolare provider WAN, a patto che siano
+soddisfatte alcune condizioni. Vedi anche
+:ref:`firewall-rules-section`.
 
 Esempio
 -------
