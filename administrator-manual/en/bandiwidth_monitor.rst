@@ -15,3 +15,5 @@ Port
 Password for 'admin' user
     Admin user password. This password is not related to
     the |product| admin password.
+Interfaces
+    Interfaces on which ntopng will listens to.
