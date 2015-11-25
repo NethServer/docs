@@ -117,6 +117,7 @@ Modules
    webtop4
    vpn
    unbound
+   ntopng
 
 Appendix
 --------
