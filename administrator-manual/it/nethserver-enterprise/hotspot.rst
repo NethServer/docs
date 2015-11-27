@@ -36,6 +36,17 @@ Come procedere:
 * accedere alla sezione :guilabel:`Hotspot` per definire l'interfaccia da utilizzare e configurare i parametri del servizio 
 * collegare l'interfaccia all'Access Point
 
+Interfaccia web
+---------------
+
+L'interfaccia web consente di attivare e disattivare il servizio HotSpot configurandolo secondo le proprie esigenze.
+
+Inoltre è possibile:
+* selezionre l'interfaccia di rete associata al servizio HotSpot
+* modificare l'indirizzamento di rete dedicato ai client
+* abilitare il proxy trasparente e il filtro contenuti
+* personalizzare, titolo, piè di pagina, disclaimer e siti senza autenticazione
+
 
 Access Point
 ------------
