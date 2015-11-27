@@ -458,7 +458,7 @@ For example, this rules will route all traffic to port 22 via the provider named
      Src=192.168.1.0/24
      Dst=0.0.0.0/0
      Service=fwservice;ssh
-     Provider=provider;myadsl
+     Action=provider;myadsl
      status=enabled
      Position=2
      Description=
@@ -467,13 +467,22 @@ For example, this rules will route all traffic to port 22 via the provider named
 Properties:
 
 * ``key``: numeric id
-* ``Src``: can be a zone (not interface), host object, ip address or CIDR
-* ``Dst``: can be a zone (not interface), host object, ip address or CIDR
-* ``Provider``: provider object, in the form of "provider;<name>"
+* ``Src``: can be a 'any', role (execpt red), zone (not interface), host object, ip address, ip range or CIDR
+* ``Dst``: can be a zone (not interface), host object, ip address, ip range  or CIDR
+* ``Action``: provider object, in the form of "provider;<name>"
 * ``Service``: (optional) can be a service object
 * ``status``: can be enabled or disabled. Default is enabled
 * ``Position``: integer sorting key
 * ``Description``: (optional)
+
+
+A rule is ignore during template expansion if:
+
+* the source is red role
+* the destination is a role which is not red
+* source, destination and service are all set to any
+* the provider doesn't exists
+* destination is set to any
 
 Static routes
 =============
