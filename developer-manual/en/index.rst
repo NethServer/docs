@@ -120,6 +120,7 @@ Modules
    ntopng
    samba_audit
    redis
+   memcached
 
 Appendix
 --------
