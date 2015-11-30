@@ -119,6 +119,7 @@ Modules
    unbound
    ntopng
    samba_audit
+   redis
 
 Appendix
 --------
