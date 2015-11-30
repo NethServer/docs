@@ -121,6 +121,7 @@ Modules
    samba_audit
    redis
    memcached
+   smartd
 
 Appendix
 --------
