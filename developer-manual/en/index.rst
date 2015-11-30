@@ -118,6 +118,7 @@ Modules
    vpn
    unbound
    ntopng
+   samba_audit
 
 Appendix
 --------
