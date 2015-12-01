@@ -1,3 +1,5 @@
+.. _cups-section:
+
 ====
 CUPS
 ====
@@ -21,7 +23,7 @@ Printer discovery
 =================
 
 CUPS uses avahi to discover network-attached printer. If you wish to use this features, just install the optional package *nethserver-avahi*.
-
+See :ref:`avahi-section`.
 
 Old Windows clients
 ===================
