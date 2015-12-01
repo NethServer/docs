@@ -124,6 +124,7 @@ Modules
    memcached
    smartd
    cups
+   antivirus
 
 Appendix
 --------
