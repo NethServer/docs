@@ -119,6 +119,22 @@ Cache
 =====
 There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
 
+WPAD
+====
+
+WPAD is located at :file:`/var/www/html/wpad.dat`.
+The web server is configured to allow the download only from from trusted and blue networks,
+but be aware that you need to manually open the httpd por for blue networks (see :ref:`network_service_custom_access-section`).
+
+The WPAD returns:
+
+* DIRECT, if squid is disabled or the requesting client is inside a network where the proxy is configured in transparent mode
+* IP of corresponding network interface, if the requesting client is inside a network where the proxy is configured in manual or authenticated mode
+* proxy.<domain>, if the server is joined to Active Directory and the requesting client is inside a 
+  network where the proxy is configured in manual or authenticated mode
+
+Also WPAD file includes all source and destination bypasses.
+
 Miscellaneous options
 =====================
 
