@@ -122,6 +122,7 @@ Modules
    redis
    memcached
    smartd
+   cups
 
 Appendix
 --------
