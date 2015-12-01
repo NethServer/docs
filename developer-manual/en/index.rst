@@ -127,6 +127,7 @@ Modules
    avahi
    antivirus
    c-icap
+   iaxmodem
 
 Appendix
 --------
