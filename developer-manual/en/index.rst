@@ -125,6 +125,7 @@ Modules
    smartd
    cups
    antivirus
+   c-icap
 
 Appendix
 --------
