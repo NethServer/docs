@@ -2,11 +2,10 @@
 Yum plugin
 ===========
 
-The ``nethserver-yum`` package contains the ``nethserver-events`` "Yum plugin":http://yum.baseurl.org/wiki/WritingYumPlugins which extends the post-RPM transaction hook.  It executes the ``*-update`` event of each ``nethserver-*`` package involved in the transaction, preserving the order of RPM dependencies. 
+The ``nethserver-yum`` package contains the ``nethserver_events`` which extends the post-RPM transaction hook.  It executes the ``*-update`` event of each ``nethserver-*`` package involved in the transaction, preserving the order of RPM dependencies. 
 
 Signalling ``update`` events *after* RPM cleaning up assures that any old event handler and template fragments have been removed.
 
-h2. Configuration
 
 The configuration file is ``/etc/yum/pluginconf.d/nethserver.conf``. Available options are:
 
@@ -20,4 +19,4 @@ When NethServer is behind a proxy server you can force to bypass an intermediate
  
  http_caching=none
 
-This command can raise load on remote repository servers, use with care!
+Be aware that yum.conf is a template and not using the cache can raise load on remote repository servers, use with care!
