@@ -57,6 +57,7 @@ Implementation
    random_url
    migration
    certificate_management
+   yum_plugin
    backup
    gateway
    ips
