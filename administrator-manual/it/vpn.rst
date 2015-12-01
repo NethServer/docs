@@ -115,11 +115,14 @@ per tanto le configurazioni sono speculari.
 
 Se si sta creando una rete net2net fra due |product|, dati il firewall A e B:
 
-1. Configurare il server A specificando l'indirizzo del server remoto B e la rete LAN remota.
+1. Configurare il server A specificando l'indirizzo del server remoto B e la rete LAN remota. 
+   Se il campo :guilabel:`IP remoto` ha il valore speciale ``%any``, il server attende l'inizio della
+   connessione dall'altro estremo del tunnel.
 
 2. Configurare il secondo firewall B in modo completamente speculare inserendo come indirizzo e rete remota
-   quelle relative al server A.
-   
+   quelle relative al server A. L'uso del valore speciale ``%any`` è consentito solo in una delle due 
+   estremità del tunnel.
+
 Se un'interfaccia è dietro un NAT, i valori per i campi
 :guilabel:`Identificatore locale` e :guilabel:`Identificatore remoto`
 devono essere impostati a dei nomi a scelta con prefisso ``@``.
