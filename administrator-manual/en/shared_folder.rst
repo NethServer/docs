@@ -141,3 +141,7 @@ the wastebasket directory, preventing overwrites.
 If :guilabel:`Guest access` is enabled, any provided authentication
 credentials are considered valid.
 
+If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. 
+This does not affect the permission to use this resource.
+
+

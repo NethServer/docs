@@ -150,4 +150,7 @@ impedendo la sovrascrittura.
 Se è attiva l'opzione :guilabel:`Accesso guest`, sono considerate valide
 qualsiasi credenziali vengano presentate.
 
+Se è attiva l'opzione :guilabel:`Visibile`, la cartella condivisa 
+sarà elencata fra le cartelle disponibili.
+Questa opzione non influisce sui permessi di accesso della cartella.
 
