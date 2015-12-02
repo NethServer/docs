@@ -61,6 +61,7 @@ Implementation
    backup
    gateway
    ips
+   samba
 
 Web interface
 -------------
