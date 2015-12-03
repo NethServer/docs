@@ -131,6 +131,7 @@ Modules
    iaxmodem
    mysql
    hylafax
+   ntpd
 
 Appendix
 --------
