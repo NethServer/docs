@@ -130,6 +130,7 @@ Modules
    c-icap
    iaxmodem
    mysql
+   hylafax
 
 Appendix
 --------
