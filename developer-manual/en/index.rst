@@ -129,6 +129,7 @@ Modules
    antivirus
    c-icap
    iaxmodem
+   mysql
 
 Appendix
 --------
