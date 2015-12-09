@@ -3,133 +3,100 @@ Server fax
 ==========
 
 Il server :index:`fax` (:index:`HylaFAX`) permette di ricevere e inviare fax attraverso un modem
-fisico collegato direttamente a |product| o attraverso un :index:`modem virtuale`. 
-Si veda :ref:`iax-modem` per maggiori informazioni. 
+fisico collegato direttamente al server o attraverso un :index:`modem virtuale`. 
 
-Il modem deve supportare l'invio e la ricezione di fax preferibilmente in classe 1 o 1.0 (sono supportati anche le classi 2, 2.0 e 2.1).
+L'interfaccia web consente di configurare:
 
-Generale
-========
-
-Prefisso internazionale
-    Il prefisso internazionale da anteporre al proprio numero di fax.
-Prefisso
-    Il proprio prefisso telefonico.
-Numero fax
-    Numero fax del mittente.
-Mittente (TSI)
-    Il TSI viene stampato nell'intestazione del fax ricevente, generalmente nella prima riga in alto. E' possibile inserire il numero di fax oppure un nome di lunghezza massima pari a 20 caratteri (consigliato il nome dell'azienda). Sono consentiti solo caratteri alfanumerici.
+* prefisso e numero di fax
+* mittente (TSI)
+* un modem fisico specificando i parametri della linea telefonica e la modalità di invio/ricezione
+* uno o più :ref:`iax-modem`
+* notifiche mail per fax inviati e ricevuti, con documento allegato in formati multipli (PDF, PostScript, TIFF)
+* stampa dei fax ricevuti
+* stampante virtuale Samba
+* rapporto di invio giornaliero
+* invio fax attraverso mail
 
 
 Modem
 =====
 
-Porta modem
-    Indica la porta fisica o virtuale a cui è collegato il modem fax
+Sebbene HylaFAX supporti un vasto numero di marche e modelli, si consiglia di utilizzare modem esterni seriali o USB.
 
-    * Device standard: consente di selezionare il device da una lista delle porte più comuni
-    * Device personalizzato: permette di indicare un device personalizzato da utilizzare come modem fax. *Deve corrispondere al nome di un device del sistema.*
-Modalità
-    Specifica la modalità di funzionamento del device selezionato. Le modalità disponibili sono:
+Un modem interno, in caso di blocco, richiede il riavvio completo del server, 
+mentre un modem esterno ha la possibilità di essere spento in maniera distinta. 
+Inoltre, la maggior parte dei modem interni in commercio appartiene alla cosiddetta famiglia dei winmodem, 
+modem "software" che necessitano di un driver, solitamente disponibile solo in ambiente Windows. 
 
-    * Invia e ricevi: il modem sarà utilizzato per inviare e ricevere fax
-    * Solo ricezione: il modem sarà utilizzato esclusivamente per la ricezione di fax
-    * Solo invio: il modem sarà utilizzato esclusivamente per l'invio di fax
-Prefisso centralino
-    Se il modem fax è collegato ad un centralino, potrebbe essere necessario inserire un prefisso per "prendere la linea esterna".
-    Se il modem è direttamente collegato ad una linea, oppure il centralino non richiede prefisso, lasciare il campo vuoto.
-    Se per chiamare si utilizza un centralino, inserire il prefisso da comporre.
+Inoltre si consiglia di fare attenzione al fatto che anche molti modem esterni USB sono winmodem.
 
-Attesa segnale di linea libera
-    Alcuni modem non sono in grado di riconoscere il tono di linea libera
-    (in particolare se collegati a centralini) e non compongono il numero
-    segnalando l'assenza di tono (errore "No Dial Tone").
-
-    E' possibile configurare il modem per ignorare l'assenza di linea e
-    comporre immediatamente il numero. L'impostazione raccomandata è
-    "Abilitato", si consiglia di disattivare *Attesa segnale di linea libera* solo in caso di problemi.
+In linea di massima sono da preferire modem funzionanti in classe 1 o 1.0, in particolare se basati su chipset Rockwell/Conexant o Lucent/Agere.
+Sono supportati anche modem in classi 2, 2.0 e 2.1.
 
 
-Notifiche mail
-==============
+Client
+======
 
-Formato fax ricevuti
-    Il server fax, come operazione predefinita, inoltra i fax ricevuti sotto
-    forma di e-mail con allegato. E' necessario specificare l'indirizzo
-    e-mail a cui si desidera inoltrare i fax, ed uno o più formati per
-    l'allegato. Se non si desidera ricevere il fax in allegato, ma solo una
-    notifica di ricezione, deselezionare tutti i formati.
+Si consiglia l'utilizzo del client fax YajHFC (http://www.yajhfc.de/) che si collega direttamente al server e consente:
 
-Inoltra fax ricevuti a
+* l'utilizzo di una rubrica LDAP
+* possibilità di selezionare i modem per l'invio
+* visualizzare la situazione dei modem fax
 
-    * Gruppo "faxmaster"
-        Di default i fax ricevuti vengono inviati al *faxmaster*: se
-        un utente deve ricevere i fax in arrivo deve essere aggiunto a tale
-        gruppo.
-    * Indirizzo mail esterno
-        E' possibile indicare un indirizzo mail esterno nel caso si
-        vogliano inviare i fax ricevuti ad indirizzi email esterni.
+Autenticazione
+--------------
 
-Formato fax inviati
-    Se richiesto dal client, il server inoltra una notifica d'invio sotto forma di e-mail con
-    allegato. Scegliere il formato in cui si preferisce ricevere il fax
-    allegato, se non si desidera ricevere il fax in allegato deselezionare
-    tutti i formati.
+Il sistema supporta due metodi di autenticazione per l'invio di fax:
 
-Aggiungi rapporto spedizione nella notifica di invio fax
-    Se selezionato, aggiunge un rapporto di spedizione nella notifica di invio fax.
+* Host Based: utilizza l'indirizzo IP del computer che invia la richiesta
+* PAM: utilizza nome utente e password, gli utenti devono appartenere al gruppo *faxmaster*
 
+Assicurarsi inoltre che sia abilitata l'opzione :guilabel:`Visualizza fax inviati dai client`.
 
+Stampante virtuale Samba
+========================
 
-Funzioni aggiuntive
-===================
+Attivando l'opzione SambaFax il server mette a disposizione della rete locale una stampante virtuale, 
+denominata "sambafax".
 
-Visualizza fax inviati dai client
-    I client fax consentono anche di visualizzare tutti i fax in arrivo. Se,
-    per motivi di riservatezza, si desidera inibire la visione dei fax
-    ricevuti, disabilitare questa opzione.
+I singoli client dovranno configurare questa stampante usando il driver *Apple LaserWriter 16/600 PS*.
 
-Stampa automaticamente i fax ricevuti
-    E' possibile stampare automaticamente tutti i fax ricevuti su una
-    stampante configurata su |product| compatibile PCL5. La stampante va
-    selezionata tramite l'apposito menu a tendina.
+Il documento da inviare dovrà rispettare i seguenti prerequisiti:
 
-SambaFax
-    Selezionando questa opzione il server fax può mettere a disposizione della
-    rete locale una stampante virtuale, denominata "sambafax" che dovrà
-    essere configurata sui client, selezionando il driver Apple LaserWriter
-    16/600 PS. I documenti stampati sulla stampante di rete sambafax
-    dovranno contenere esattamente la dicitura "Numero Fax:" seguita dal
-    numero di fax del destinatario.
+* deve contenere esattamente la stringa "Fax Number: ", contente il numero fax, per esempio: ::
 
-Invia report giornaliero
-    Invia un report giornaliero all'amministratore
+  Fax Number: 12345678
+
+* la stringa può essere presente in qualsiasi posizione del documento, ma su una riga singola.
+* la stringa deve essere scritta con carattere non bitmap (ad esempio Truetype)
+
+I fax spediti avranno come mittente l'id del utente specificato. Questa informazione sarà ben visibile nella coda dei fax.
+
+Mail2Fax
+========
+
+Tutto le email inviate da rete locale all'indirizzo ``sendfax@<nomedominio>`` saranno trasformate in fax ed inviate al destinatario.
+
+Il ``<nomedominio>`` deve corrispondere ad un dominio di posa configurato per la consegna locale.
+
+Le mail devono rispettare questo formato:
+
+* Il numero del destinatario deve essere specificato nel campo oggetto (o subject)
+* L'email deve essere in formato solo testo
+* Può contenere allegati di tipo PDF o PS che saranno convertiti e inviati insieme al fax
+
+.. note:: Questo servizio è abilitato solo per i client che inviano mail dalla rete green.
 
 .. _iax-modem:
 
-=========
-Modem IAX
-=========
+Modem virtuali
+==============
 
-Questa pagina consente di configurare dei modem IAX.
+I modem virtuali sono modem software che comunicano con un PBX (solitamente Asterisk) utilizzando 
+degli interni IAX.
 
-Un modem IAX è un modem software che usa un canale IAX (normalmente
-viene fornito da un centralino Asterisk) invece che una linea telefonica
-tradizionale.
+La configurazione dei modem virtuali si compone di due parti:
 
-Crea / Modifica
-===============
-
-Nome
-    Nome del nuovo modem IAX che si intende creare.
-IP server
-    Indirizzo IP del server sul quale il modem IAX si registra (es. IP del server Asterisk).
-Interno
-    Interno IAX sul quale si desidera ricevere i FAX.
-Password
-    Password dell'interno IAX definito precedentemente.
-Numero chiamante
-    Numero chiamante mostrato nei FAX in uscita.
-Nome chiamante
-    Nome chiamante mostrato nei FAX in uscita.
+1. Creazione dell'interno IAX all'interno del PBX
+2. Configurazione del modem virtuale 
 
