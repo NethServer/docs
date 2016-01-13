@@ -58,6 +58,12 @@ A group of user can be used to assign special permissions to some users or to cr
 
 As for the users, a group can be enabled to some (or all) services.
 
+.. tip:: For delegating permissions to the Server Manager, use the groups ``managers`` or ``administrators``.
+
+Two special groups exist, the users who belong in one of these groups are granted to the panels of the server-manager
+
+* :dfn:`administrators`: Users of this group have the same permission as the root or admin users.
+* :dfn:`managers`: Users of this group are granted to the Management section.
 
 
 .. _admin_user-section:
