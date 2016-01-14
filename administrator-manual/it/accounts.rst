@@ -53,7 +53,20 @@ Gruppi
 
 Un gruppo di utenti può essere usato per assegnare permessi speciali o per creare liste di distribuzione email.
 
-Come gli utenti, un gruppo può essere abilitati ad alcuni o tutti i servizi.
+Come gli utenti, un gruppo può essere abilitato ad alcuni (o tutti) i servizi.
+
+.. tip:: Per delegare l'accesso al Server Manager è possibile
+         utilizzare i gruppi ``administrators`` e ``managers``.
+
+Si possono creare due gruppi speciali, gli utenti che appartengono a
+questi gruppi ottengono dei permessi aggiuntivi alle pagine del Server
+Manager.
+
+* :dfn:`administrators`: Gli utenti di questo gruppo hanno gli stessi
+  permessi di ``root`` e ``admin``.
+
+* :dfn:`managers`: Gli utenti di questo gruppo hanno l'accesso alle
+  pagine della sezione *Gestione*.
 
 
 .. _admin_user-section:
