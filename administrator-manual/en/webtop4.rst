@@ -112,6 +112,107 @@ Edit the following fields:
 
 After saving, the page :guilabel:`Users` will display users from Active Directory.
 
+Importing from SOGo
+===================
+
+You can migrate some data from SOGo to WebTop using the following script:
+
+* Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
+* Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
+
+Before using the scripts you need to install this package: ::
+
+  yum install php-mysql -y
+
+When launching the scripts, indicate the user name you want to import from SOGo: ::
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php <user>
+  php /usr/share/webtop/doc/sogo2webtop_card.php <user>
+
+Where ``user`` can be a username or ``all``.
+
+**Examples**
+
+Import all address books from SOGo: ::
+
+  php /usr/share/webtop/doc/sogo2webtop_card.php all
+
+Import the calendar of user "foo": ::
+ 
+  php /usr/share/webtop/doc/sogo2webtop_cal.php foo
+
+.. note::
+   If the script is executed multiple times, both calendars and address books will be imported multiple times.
+   Import of distribution lists and recurring events are not currently supported.
+
+Importint from Outlook PST
+==========================
+
+You can import email, calendars and address books from an :index:`Outlook` :index:`PST` archive.
+
+Before using followings scripts, you will need to install *libpst* package: ::
+
+   yum install libpst -y
+
+Mail
+----
+
+Initial script to import mail messages: :file:`/user/share/webtop/doc/pst2webtop.sh`
+   
+To start the import, run the script specifying the PST file and the system user: ::
+
+   /usr/share/webtop/doc/pst2webtop.sh <filename.pst> <user>
+
+All mail messages will be imported. Contacts and calendars will be saved inside a 
+temporary files for later import.
+The script will list all created temporary files.
+
+Contacts
+--------
+
+Script for contacts import: :file:`/user/share/webtop/doc/pst2webtop_card.php`.
+
+The script will use files generated from mail import phase: ::
+
+        /usr/share/webtop/doc/pst2webtop_card.php <user> <file_to_import> <phonebook_category>
+        
+**Example**
+
+Let us assume that the pst2webtop.sh script has generated following output from mail import: ::
+
+   Contacts Folder found: Cartelle personali/Contatti/contacts
+    Import to webtop:
+   ./pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' <foldername>
+   
+To import the default address book (WebTop) of *foo* user: ::
+
+   /user/share/webtop/doc/pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
+  
+Calendars
+---------
+ 
+Script for calendars import: :file:`/user/share/webtop/doc/pst2webtop_cal.php`
+
+The script will use files generated from mail import phase: ::
+
+        /usr/share/webtop/doc/pst2webtop_cal.php <user> <file_to_import> <foldername>
+        
+**Example**
+
+Let us assume that the pst2webtop.sh script has generated following output from mail import: ::
+
+   Events Folder found: Cartelle personali/Calendario/calendar
+    Import to webtop:
+   ./pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' <foldername>
+
+To import the default calendar (WebTop) of *foo* user: ::
+
+        /user/share/webtop/doc/pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
+
+.. note::
+   The script will import all events using the timezone selected by the user inside WebTop, if set.
+   Otherwise system timezone will be used.
+
 Google and Dropbox integration
 ==============================
 
@@ -154,37 +255,5 @@ Dropbox API
 If you need to raise the user limit, please read the official Dropbox documentation.
 
 
-Importing data from SOGo
-========================
-
-You can migrate some data from SOGo to WebTop using the following script:
-
-* Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
-* Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
-
-Before using the scripts you need to install this package: ::
-
-  yum install php-mysql -y
-
-When launching the scripts, indicate the user name you want to import from SOGo: ::
- 
-  php /usr/share/webtop/doc/sogo2webtop_cal.php <user>
-  php /usr/share/webtop/doc/sogo2webtop_card.php <user>
-
-Where ``user`` can be a username or ``all``.
-
-**Examples**
-
-Import all address books from SOGo: ::
-
-  php /usr/share/webtop/doc/sogo2webtop_card.php all
-
-Import the calendar of user "foo": ::
- 
-  php /usr/share/webtop/doc/sogo2webtop_cal.php foo
-
 .. note::
-   If the script is executed multiple times, both calendars and address books will be imported multiple times.
-   Import of distribution lists and recurring events are not currently supported.
-
-
+   The Enterprise version is already integrated with Google and Dropbox.
