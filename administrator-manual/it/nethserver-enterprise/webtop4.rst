@@ -40,7 +40,6 @@ e lasciare vuoto il campo dominio.
 .. note::
    Il protocollo Active Sync è supportato solo su dispositivi Android e iOS.
    Outlook non è supportato.
-   La sincronizzazione della posta non è attualmente supportata.
    
 
 .. _webtop_admin-section:
@@ -148,3 +147,53 @@ Importare il calendario dell'utente "pippo": ::
    Attualmente non è supportata l'importazione sia delle liste di distribuzione dalle 
    rubriche che degli eventi ricorrenti dai calendari.
 
+Importazione Email, Calendari e Contatti da PST
+===============================================
+
+E' possibile importare Email e successivamente anche Calendari e Rubriche da un archivio PST.
+
+* Script iniziale per esportazione dati da PST e importazione Email: :file:`/user/share/webtop/doc/pst2webtop.sh`
+
+Prima di utilizzare lo script installare questo pacchetto: ::
+
+   yum install libpst -y
+
+Eseguire lo script indicando il file PST e l'utente di sistema in cui importare le email: ::
+
+   /usr/share/webtop/doc/pst2webtop.sh <filename.pst> <user>
+   
+Alla fine dell'importazione verranno elencati i file contatti e calendari trovati per le eventuali successive importazioni.
+
+* Script importazione Contatti: :file:`/user/share/webtop/doc/pst2webtop_card.php`
+
+In base ai Contatti trovati durante l'esportazione dello script iniziale utilizzare lo script in questo modo: ::
+
+   /usr/share/webtop/doc/pst2webtop_card.php <user> <file_to_import> <foldername>
+   
+* Esempio
+Ipotizziamo che lo script precedente (pst2webtop.sh) abbia esportato dal file PST questi Contatti: ::
+
+   Contacts Folder found: Cartelle personali/Contatti/contacts
+    Import to webtop:
+   ./pst2webtop_card.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' <foldername>
+   
+Per importare nella Rubrica predefinita (WebTop) dell'utente pippo: ::
+
+   /user/share/webtop/doc/pst2webtop_card.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
+   
+* Script importazione Calendari: :file:`/user/share/webtop/doc/pst2webtop_cal.php`
+
+In base ai Calendari trovati durante l'esportazione dello script iniziale utilizzare lo script in questo modo: ::
+
+   /usr/share/webtop/doc/pst2webtop_cal.php <user> <file_to_import> <foldername>
+   
+*Esempio
+Ipotizziamo che lo script precedente (pst2webtop.sh) abbia esportato dal file PST questo Calendario: ::
+
+   Events Folder found: Cartelle personali/Calendario/calendar
+    Import to webtop:
+   ./pst2webtop_cal.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' <foldername>
+   
+Per importare nel Calendario predefinito (WebTop) dell'utente pippo: ::
+
+   /user/share/webtop/doc/pst2webtop_cal.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
