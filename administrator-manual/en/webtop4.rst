@@ -145,7 +145,7 @@ Import the calendar of user "foo": ::
    If the script is executed multiple times, both calendars and address books will be imported multiple times.
    Import of distribution lists and recurring events are not currently supported.
 
-Importint from Outlook PST
+Importing from Outlook PST
 ==========================
 
 You can import email, calendars and address books from an :index:`Outlook` :index:`PST` archive.
