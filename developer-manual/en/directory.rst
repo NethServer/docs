@@ -42,7 +42,7 @@ The LDAP tree is always accessible with the following DN: **dc=directory,dc=nh**
 But there is also an :index:`overlay` which maps the domain name to the base DN.
 For example, given the domain *mydomain.com*, the corresponding DN will be **dc=mydomain,dc=com**.
 
-Accounts re saved inside following branches:
+Accounts are saved inside following branches:
 
 * Users: ou=People,dc=directory,dc=nh
 * Groups: ou=Groups,dc=directory,dc=nh
