@@ -3,11 +3,11 @@ OCS Inventory NG
 ================
 
 `OCS Inventory NG <http://www.ocsinventory-ng.org/en/>`_ is free software that enables users 
-to inventory IT assets. OCS-NG collects information about the hardware and software of 
-networked machines running the OCS client program (*OCS Inventory Agent*). OCS Inventory NG 
-can visualize the inventory through a web interface and includes the capability of deploying 
-applications on computers according to search criteria. Agent-side IpDiscover makes it possible 
-to discover the entirety of networked computers and devices.
+to inventory IT assets. :index:`OCS Inventory NG` collects information about the hardware and 
+software of networked machines running the OCS client program (*OCS Inventory Agent*). 
+OCS Inventory NG can visualize the inventory through a web interface and includes the capability 
+of deploying applications on computers according to search criteria. Agent-side *IpDiscover* 
+makes it possible to discover the entirety of networked computers and devices.
 
 **Key features:**
 
