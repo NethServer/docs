@@ -6,7 +6,7 @@ OCS Inventory NG
 raccolta dei dati di inventario degli asset presenti in una infrastruttura IT.
 :index:`OCS Inventory NG` collezione le informazioni relative all'hardware ed al software delle
 macchine interconnesse alla rete locale attraverso l'esecuzione di un agent software 
-(*OCS Inventory Agent*), visualizzandole in maneta completa attraverso un'organizzata interfaccia
+(*OCS Inventory Agent*), visualizzandole in modo completo attraverso un'organizzata interfaccia
 web based.
 Inoltre, OCS Inventory NG è in grado di eseguire il deploy massivo di applicazioni e configurazioni
 e di arrichire le sue funzionalità nella raccolta dati attraverso l'implementazione di numerosi
@@ -20,7 +20,7 @@ plugin.
 * console di amministrazione web based
 * autodiscovery di rete
 * supporto multipiattaforma (Windows, Linux, BSD, Sun Solaris, IBM AIX, HP-UX, MacOSX)
-* accesso via web service SOAP
+* web service accessibile via interfaccia SOAP
 * supporto a numerosi plugin
 * backup dei dati di Adagios integrato nella procedura di backup di |product|
 
