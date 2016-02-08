@@ -4,7 +4,7 @@ OCS Inventory NG
 
 `OCS Inventory NG <http://www.ocsinventory-ng.org/en/>`_ è un software che consente un'agevole
 raccolta dei dati di inventario degli asset presenti in una infrastruttura IT.
-:index: `OCS Inventory NG` collezione le informazioni relative all'hardware ed al software delle
+:index:`OCS Inventory NG` collezione le informazioni relative all'hardware ed al software delle
 macchine interconnesse alla rete locale attraverso l'esecuzione di un agent software 
 (*OCS Inventory Agent*), visualizzandole in maneta completa attraverso un'organizzata interfaccia
 web based.
