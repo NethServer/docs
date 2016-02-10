@@ -9,8 +9,8 @@ Manuale amministratore
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Note di rilascio 6.6
---------------------
+Note di rilascio |release|
+--------------------------
 
 .. toctree::
    :maxdepth: 2
@@ -67,6 +67,7 @@ Moduli
    phone_home
    webvirtmgr
    snmp
+   webtop4
 
 Best practices
 --------------

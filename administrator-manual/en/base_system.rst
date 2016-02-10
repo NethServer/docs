@@ -58,9 +58,11 @@ Any network managed by the system must follow these rules:
 * networks must be logically separated: each network must have different addresses
 * private networks, like LANs, must follow address's convention from RFC1918 document.
   See :ref:`RFC1918-section`
-  
-Every network interface as a specific role which determinates its behavior. Roles are identified by colors.
-Each role correspond to a well-known zone with special network traffic rules:
+
+.. index:: zone, role
+
+Every network interface has a specific *role* which determinates its behavior. Roles are identified by colors.
+Each role correspond to a well-known *zone* with special network traffic rules:
 
 * *green*: local network. Hosts on this network can access any other configured network
 * *blue*: guests network. Hosts on this network can access orange and red network, but can't access to green zone
@@ -87,22 +89,26 @@ create a logical interface. Supported logical interfaces are:
   The alias has the same role of its associated physical interface
 * :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
 * :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
-* :index:`VLAN` (Virtual Local Area Network): create two or more physically separated networks using a single interface
+* :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
+* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
-Aliases are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
+**Aliases** are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
 red interface.
 
-Bonds allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
+**Bonds** allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
 at the same time, balancing traffic among all active interfaces.
 If an error occurs, the faulty card is automatically excluded from the bond.
 
-Bridge has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
+A **bridge** has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
 to access to the local network (green).
 
-When it is not possible to physically separate two different networks, you can use a tagged VLAN. The traffic of the two networks can
+When it is not possible to physically separate two different networks, you can use a tagged **VLAN**. The traffic of the two networks can
 be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
 The use of VLAN, requires properly configured switches.
 
+.. warning:: The **PPPoE** logical interface must be assigned the red
+             role, thus requires the gateway functionality. See
+             :ref:`firewall-section` for details.
 
 .. _RFC1918-section:
 
@@ -157,22 +163,23 @@ Given the following configuration:
 
 If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
 
+.. index:: trusted networks
 
 .. _trusted_networks-section:
 
 Trusted networks
 ================
 
-:dfn:`Trusted networks` are special networks (local or remote) allowed to access special server's services.
+Trusted networks are special networks (local, VPNs or remote)
+allowed to access special server's services.
 
-For example, hosts inside :index:`trusted networks` can access to:
+For example, hosts inside trusted networks can access to:
 
 * Server Manager
 * Shared folders (SAMBA)
 
-If users connected from VPNs must access system's services, add VPN networks to this page.
-
-If the remote network is reachable using a router, remember to add a static route inside :ref:`static_routes-section` page.
+If the remote network is reachable using a router, remember to add a
+static route inside :ref:`static_routes-section` page.
 
 
 
@@ -212,12 +219,57 @@ self-signed SSL certificate.  When a new certificate is generated, all
 SSL services are restarted and network clients will be required to
 accept the new certificate.
 
+.. note::
+   To avoid problems while importing the certificate in Internet Explorer,
+   the Common Name (CN) field should match the server FQDN. 
+
+
+.. _custom_certificate-section:
+
+Install a custom certificate
+----------------------------
+
+:index:`Custom certificates` should be placed inside the following standard directories:
+
+* :file:`/etc/pki/tls/certs`: public key
+* :file:`/etc/pki/tls/private`: private key
+
+
+Set the private key and certificate file paths:
+
+::
+
+    db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
+    db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
+
+You can also set a SSL certificate chain file:
+
+::
+
+    db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
+
+Notify registered daemons about certificate update:
+
+::
+
+    signal-event certificate-update
+
+Custom certificate backup
+-------------------------
+   
+Always remember to add custom certificates to configuration backup.
+Just add the paths inside :file:`/etc/backup-config.d/custom.include` file.
+
+For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply execute: ::
+
+ echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
+
 .. _user_profile-section:
 
-User's profile
-==============
+Change user password
+====================
 
-All users can login to Server Manager using their own credentials.
+All users can login to Server Manager using their own credentials and accedd the :index:`user profile`.
 
 After login, a user can :index:`change the password` and information about the account, like:
 

@@ -53,7 +53,20 @@ Gruppi
 
 Un gruppo di utenti può essere usato per assegnare permessi speciali o per creare liste di distribuzione email.
 
-Come gli utenti, un gruppo può essere abilitati ad alcuni o tutti i servizi.
+Come gli utenti, un gruppo può essere abilitato ad alcuni (o tutti) i servizi.
+
+.. tip:: Per delegare l'accesso al Server Manager è possibile
+         utilizzare i gruppi ``administrators`` e ``managers``.
+
+Si possono creare due gruppi speciali, gli utenti che appartengono a
+questi gruppi ottengono dei permessi aggiuntivi alle pagine del Server
+Manager.
+
+* :dfn:`administrators`: Gli utenti di questo gruppo hanno gli stessi
+  permessi di ``root`` e ``admin``.
+
+* :dfn:`managers`: Gli utenti di questo gruppo hanno l'accesso alle
+  pagine della sezione *Gestione*.
 
 
 .. _admin_user-section:
@@ -78,6 +91,7 @@ Gestione password
 
 Il sistema prevede la possibilità di impostare dei vincoli sulla :dfn:`complessità` e la :dfn:`scadenza` delle password.
 
+Le politiche di gestione password possono essere cambiate usando l'interfaccia web dopo aver installato il modulo ``nethserver-password``.
 
 Complessità
 -----------
@@ -185,6 +199,19 @@ In caso il sistema sia configurato come controller di Dominio, l'utente potrà c
 In quest'ultimo caso non è possibile impostare password più corte di *6 caratteri* indipendentemente dalla configurazione
 delle policy sul server. Infatti Windows esegue dei controlli preliminari e invia le password al server dove vengono poi valutate 
 con le policy in uso.
+
+Notification language
+=====================
+
+La lingua di default per le notifiche è l'inglese.
+Se si desidera cambiarla, usare il seguente comando: ::
+
+  config setprop sysconfig DefaultLanguage <lang>
+
+Esempio per l'italiano: ::
+
+  config setprop sysconfig DefaultLanguage it_IT.utf8
+
 
 Importazione utenti
 ===================

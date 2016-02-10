@@ -39,7 +39,7 @@ In package ``nethserver-mail-server``:
 
 In package ``nethserver-mail-filter``:
 
-* Anti-spam
+* Anti-spam with DNSBL (see: :ref:`unbound-section`)
 * Anti-virus
 * Attachment block
 * Real-time Blackhole List (RBL) (disabled)
@@ -375,23 +375,6 @@ Enable RBL checks, by adding *zen.spamhaus.org* to the RBL server list: ::
 
   db configuration setprop postfix RblStatus enabled RblServers zen.spamhaus.org
   signal-event nethserver-mail-filter-save
-
-   
-
-IP-based access table
-=====================
-
-Some SMTP clients do not support SMTPAUTH, submission ports, and are
-not fully compliant with SMTP standard (scanners, printers...). Those
-clients must be added to the ``access`` table, to enable IP-based
-access and bypass strict checks.
-
-Adding IP 192.168.123.4 to the list of clients without restrictions: ::
-   
-  mkdir -p /etc/e-smith/templates-custom/etc/postfix/access
-  echo "192.168.123.4 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/10custom_whitelist
-  signal-event nethserver-mail-common-save
-
 
 
 Active Directory integration

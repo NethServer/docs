@@ -9,7 +9,8 @@ The system handles two kinds of backup:
 * :index:`data backup`
 
 Configuration backup contains only system configuration files. 
-It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours. 
+It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours.
+The configuration backup also saves a list of installed modules. All modules will be reinstalled during the configuration restore process.
 The purpose of this kind of backup is to quickly restore a machine in case of disaster recovery. 
 When the machine is functional, a full data restore can be done even if the machine is already in production.
 
@@ -33,10 +34,11 @@ Data restore
 
 Make sure that backup destination is reachable (for example, USB disk must be connected).
 
-.. note:: The current version supports restore only from command line.
+Command line
+------------
 
 Listing files
---------------
+^^^^^^^^^^^^^
 
 It's possible to list all files inside the last backup using this command: ::
 
@@ -45,7 +47,7 @@ It's possible to list all files inside the last backup using this command: ::
 The command can take some times depending on the backup size.
 
 File and directory
-------------------
+^^^^^^^^^^^^^^^^^^
 
 All relevant files are saved under :file:`/var/lib/nethserver/` directory:
 
@@ -74,6 +76,25 @@ Example, restore the version of a file from 15 days ago: ::
 
 The ``-t`` option allows to specify the number of days (15 in this scenario).
 
+Graphic interface
+-----------------
+
+In the :menuselection:`Restore Data` menu section it is possible to search, select and restore
+one or more directories from backup, navigating the graphical tree with all paths included in the backup.
+
+There are two options to restore:
+
+* Restore data in the original path, the current files in the filesystem are overwritten by the restored files from backup.
+* Restore data in original path but the restored files from backup are moved on a new directory (the files are not overwritten) in this path: ::
+
+  /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
+
+To use the search field, simply insert at least 3 chars and the searching starts automatically, highlighting the matched directories
+
+It is possible to restore the directories by clicking on **Restore** button.
+
+.. note:: Multiple selection can be done with Ctrl key pressed.
+
 
 Disaster recovery
 =================
@@ -95,13 +116,12 @@ Steps to be executed:
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
 3. If the old machine was the network gateway, remember to re-install firewall module
-4. Install additional packages (optional)
-5. Restore the configuration backup from page :guilabel:`Backup
+4. Restore the configuration backup from page :guilabel:`Backup
    (configuration) > Restore` in Server Manager, or executing:
    :command:`restore-config`
-6. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
-7. Verify the system is functional
-8. Restore data backup executing: :command:`restore-data`
+5. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
+6. Verify the system is functional
+7. Restore data backup executing: :command:`restore-data`
 
 
 .. _restore-roles-section:
@@ -141,7 +161,18 @@ Click the :guilabel:`Submit` button to apply the changes.
 If the missing role is ``green`` an interactive procedure asks to fix
 the configuration at boot-time, to ensure a minimal network
 connectivity and login again on the Server Manager.
-	   
+
+.. _backup_config_rpms:
+
+Restore installed modules
+-------------------------
+
+By default the process of configuration restore will also restore all previously installed modules.
+
+To avoid the reinstallation, execute this command before the restore: ::
+
+  config setprop backup-config reinstall disabled
+     
 .. _backup_customization-section:
 
 Data backup customization
@@ -234,6 +265,10 @@ Before formatting the disk, attach it to the server and find the device name: ::
  Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi disk sdc
  Apr 15 16:20:49 mynethserver kernel: sd 7:0:0:0: Attached scsi generic sg3 type 0
  Apr 15 16:20:49 mynethserver kernel: usb-storage: device scan complete
+ 
+Another good command could be: ::
+
+ lsblk -io KNAME,TYPE,SIZE,MODEL
 
 In this scenario, the disk is accessibile as *sdc* device.
 

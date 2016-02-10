@@ -78,6 +78,7 @@ Le azioni disponibili sono:
 * :dfn:`ACCEPT`: accetta il traffico
 * :dfn:`REJECT`: blocca il traffico ed informa il mittente che la richiesta effettuata non è permessa
 * :dfn:`DROP`: blocca il traffico, i pacchetti vengono scartati e il mittente *non* viene notificato
+* :dfn:`ROUTE`: instrada il traffico al provider WAN specificato. Vedi anche :ref:`multi-wan-section`.
 
 .. note:: Se non è configurata almeno un'interfaccia red, il firewall non genererà nessuna regola per le zone blue e orange.
 
@@ -116,6 +117,7 @@ Permettere alla rete ospiti di accedere a tutti i servizi in ascolto sul Server1
 * Destinazione: Server1
 * Servizio: -
 
+.. _multi-wan-section:
 
 Multi WAN
 =========
@@ -136,6 +138,19 @@ Il sistema può utilizzare le connessioni WAN in due modalità (pulsante :guilab
 * :dfn:`Balance`: tutti i provider sono utilizzati contemporaneamente in base al loro peso 
 * :dfn:`Active backup`: i provider sono utilizzati uno alla vola a partire da quello con il peso più alto. Se il provider in uso perde la connessione, tutto il traffico verrà dirottato sul successivo provider.
 
+Per determinare lo stato di un provider, il sistema invia un pacchetto ICMP (ping) ad intervalli regolari.
+Se il numero di pacchetti persi supera una determinata soglia, il provider viene disabilitato.
+
+L'amministratore può configurare la sensibilità del monitoraggio attraverso i seguenti parametri:
+
+* percentuale di pacchetti persi
+* numero consecutivo di pacchetti persi
+* intervallo di invio fra un pacchetto e l'altro
+
+La pagina :guilabel:`Regole firewall` consente di instradare i
+pacchetti di rete verso un particolare provider WAN, a patto che siano
+soddisfatte alcune condizioni. Vedi anche
+:ref:`firewall-rules-section`.
 
 Esempio
 -------
@@ -168,9 +183,11 @@ Nel caso di un server web, le porte in ascolto sono solitamente la porta 80 (HTT
 
 Quando si crea un port forward è necessario specificare almeno i seguenti parametri:
 
-* la porta di origine, può essere un numero o un intervallo nel formato XX:YY (es: 1000:1100 per porta iniziale 1000 e porta finale 1100)
+* la porta di origine
 * la porta di destinazione, che può essere diversa dalla porta di origine
 * l'indirizzo dell'host a cui deve essere instradato il traffico
+* è possibile specificare un range di porte utilizzando i due punti come separatore nella porta di origine (es: 1000:2000), in tale caso particolare il campo porta di destinazione dovrà rimanere vuoto
+
 
 Esempio
 -------
@@ -180,6 +197,7 @@ Dato il seguente scenario:
 * Server interno con IP 192.168.1.10, detto Server1
 * Server web in ascolto sulla porta 80 su Server1
 * Server SSH in ascolto sulla porta 22 su Server1
+* Altri servizi in ascolto sul range di porte compreso tra 5000 e 6000
 
 In caso si voglia rendere accessibile dall'esterno il server web direttamente sulla porta 80, si dovrà creare un port forward fatto così:
 
@@ -198,6 +216,12 @@ In caso si voglia rendere accessibile dall'esterno il server SSH sulla porta 222
 
 
 Tutto il traffico che arriva sulle reti red del firewall sulla porta 2222, verrà redirezionato alla porta 22 di Server1.
+
+In caso si voglia rendere accessibile dall'esterno il server sull'intero range di porte compreso tra 5000 e 6000 si dovrà creare un port forward fatto così:
+
+* porta origine: 5000:6000
+* porta destinazione: 
+* indirizzo host: 192.168.1.10
  
 
 Limitare accesso
@@ -264,14 +288,47 @@ Oggetti firewall
 Gli :index:`oggetti firewall` sono delle rappresentazioni dei componenti della rete e sono utili per semplificare la creazione
 di regole.
 
-Esistono 4 tipi di oggetti:
+Esistono 6 tipi di oggetti, 5 di questi sono relativi a sorgenti e destinazioni e sono:
 
 * Host: rappresentano computer locali e remoti. Esempio: server_web, pc_boss
 * Gruppi di host: rappresentano gruppi omogenei di computer. Gli host all'interno di un gruppo devono essere raggiungibili attraverso la stessa interfaccia.
   Esempio: servers, pc_segreteria
-* Zone: rappresentano reti di host. Anche se concettualmente simili ai gruppi di host, è possibile esprimere zone in notazione CIDR
+* Reti CIDR : E' possibile esprimere una intera rete CIDR per semplificare e rendere più leggibili le regole. 
+
+  Esempio 1 : gli ultimi 14 ip della rete sono destinati ai server (192.168.0.240/28).
+
+  Esempio 2 : Più interfacce green configurate ma vogliamo creare una regola di firewall valida solo per una di queste green (192.168.2.0/24).
+
+* Range IP : Usati per lo stesso motivo delle reti CIDR, cambia solo la modalità di definizione.
+* Zone: rappresentano reti di host, vanno espresse in notazione CIDR, utili se si vuole definire un segmento di rete con caratteristiche differenti dalla zona di cui fa parte. Solitamente utilizzate per esigenze molto specifiche.
+
+.. note:: Di default gli host che fanno parte di una Zona non possono fare alcun tipo di traffico, sarà necessario quindi creare tutte le regole necessarie a caratterizzarne il comportamento.
+
+L'altro oggetto invece specifica il tipo di traffico ed è quello dei:
+
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
 Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dns-section` e :ref:`dhcp-section` come oggetti host.
 Inoltre ogni interfaccia di rete con un ruolo associato è automaticamente elencata fra le zone disponibili.
+
+Binding IP/MAC
+==============
+
+Quando il sistema è configurato come server DHCP, il firewall può utilizzare la lista delle riserve DHCP per
+controllare il traffico generato dagli host presenti nelle reti locali.
+Se il :index:`binding IP/MAC` è abilitato, l'amministratore può scegliere quale politica applicare agli host
+senza riserva DHCP.
+Solitamente questa funzione è utilizzata per permettere il traffico solo dagli host conosciuti e bloccare tutti gli altri.
+In questo caso, gli host senza una riserva DHCP non potranno accedere ne al firewall ne alla rete esterna.
+
+Per abilitare il traffico solo dagli host conosciuti, seguire questi passi:
+
+1. Creare una riserva DHCP per l'host
+2. Andare sulla pagina :menuselection:`Regole firewall` e selezionare :guilabel:`Configura` dal menu
+3. Selezionare :guilabel:`Validazione MAC (Binding IP/MAC)`
+4. Spuntare :guilabel:`Blocca traffico` come policy per gli host senza riserva DHCP
+
+
+.. note:: Ricordarsi di creare almeno una riserva DHCP prima di abilitare la modalità binding IP/MAC, 
+   altrimenti nessun host sarà in grado di configurare il server usando l'interfaccia web o SSH.
 

@@ -37,8 +37,9 @@ Compilare i campi come segue:
              casuale di lettere maiuscole, minuscole e da numeri e
              simboli.
   
-Se è installato il pacchetto nethserver-directory, utilizzato dai moduli che abilitano la 
-gestione utenti come File server o Mail, viene attivata nella Dashboard l'interfaccia di 
-gestione :ref:`users_and_groups-section` dalla quale è possibile abilitare l'utente admin ed utilizzarlo 
-per accedere all'interfaccia web con gli stessi privilegi dell'utente root. 
-Vedi :ref:`admin_user-section`.
+Se è installato il pacchetto ``nethserver-directory``, utilizzato dai
+moduli che abilitano la gestione utenti come File server o Mail, viene
+attivata nella Dashboard l'interfaccia di gestione
+:ref:`users_and_groups-section` dalla quale è possibile abilitare
+l'utente admin ed utilizzarlo per accedere all'interfaccia web con gli
+stessi privilegi dell'utente root.  Vedi :ref:`admin_user-section`.

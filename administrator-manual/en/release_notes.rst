@@ -2,6 +2,8 @@
 Release notes
 =============
 
+|product| release |release|
+
 .. include:: changelog.rst.inc
 
 Known bugs
@@ -12,8 +14,8 @@ Known bugs
 * Only basic system can be installed. No additional packages are known to work.
 
   
-Upgrading from 6.6
-==================
 
-Upgrade from previous major release is not available in alpha.
+.. warning: 
+   Upgrade from previous major release is not available in alpha.
+  
 

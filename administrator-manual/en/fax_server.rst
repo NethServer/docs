@@ -1,138 +1,102 @@
 ==========
-Fax Server
+Fax server
 ==========
 
-The fax server allows you to send and receive faxes via a modem
-connected directly to a server port (COM or USB) or through a 
-virtual IAX modem. 
+The :index:`fax` server allows you to send and receive faxes via a modem
+connected directly to a server port or through a :index:`virtual modem`. 
 
-The modem must support sending and receiving faxes preferably in class 1 or 1.0 (2, 2.0 and 2.1 classes are also supported).
+The web interface allows you to configure:
 
-General
-========
-
-Country code
-    The international prefix to be prepended to your fax number.
-Prefix
-    Area code.
-Fax Number
-    Fax number of the sender.
-Sender (TSI)
-    The TSI is printed in the header of the recipient fax, usually in the top row. It's possible to enter the fax number or name of a total length of up to 20 characters (recommended your company name). Only alphanumeric characters are allowed.
+* Area code and fax number
+* Sender (TSI)
+* A physical modem with phone line parameters and how to send/receive faxes
+* One or more :ref:`iax-modem`
+* Email notifications for sent and received faces, with the attached document in multiple formats (PDF, PostScript, TIFF)
+* Print received faxes
+* Virtual Samba printer
+* Daily report of sent faxes
+* Sending faxes via email
 
 
 Modem
 =====
 
-Modem
-    The physical port (COM or USB) to which the modem is attached or virtual fax modem
+Although HylaFAX supports a large number of brands and models, we recommend using an external serial or USB modem.
 
-    * Device Standard: allows you to select the device from a list of common ports
-    * Custom Device: allows you to specify a custom device to be used as a fax modem. * Must be the name of a device in the system.*
-Mode
-    Specifies the operating mode of the selected device. The available modes are:
+If an internal modem blocks, you must reboot the whole server,
+while an external modem can be turned off separately.
+In addition, the majority of internal modems on the market belongs to the so-called family of winmodem,
+"software" modems that need a driver, usually available only on Windows.
 
-    * Send and receive: the modem will be used to send and receive faxes
-    * Receive only: the modem will be used only for receiving faxes
-    * Send only: the modem will only be used for sending faxes
-PBX Prefix
-    If the fax modem is connected to a PABX, you may need to enter an access code to "get an outside line."
-    If the modem is directly connected to a line, or the PBX requires no code, leave the field empty.
-    If you are behind a PBX, enter the prefix to be dialed.
+Also be aware that many external USB modem are also winmodem.
 
-Wait for dial tone
-    Some modems are not capable of recognizing a dial tone
-    (especially if connected to a PBX) and do not dial the number
-    signalling the absence of tone (error "No Dial Tone").
+You should prefer modems in Class 1 or 1.0, especially if based on Rockwell/Conexant or Lucent/Agere chips.
+The system also supports modems in classes 2, 2.0 and 2.1.
 
-    To configure the modem to ignore the absence of line and
-    immediately dial the number select Disabled. The recommended setting is
-    "Enabled", you may want to disable * Wait for dial tone * only in case of problems.
+Client
+======
 
+We recommend using the fax client YajHFC (http://www.yajhfc.de/) that connects directly to the server and allows:
 
-Email notifications
-===================
+* the use of an LDAP address book
+* ability to select the modem to send
+* view the status of modems
 
-Received faxes format
-    By default, the fax server forwards the received faxes as
-    emails with an attachment. Specify the email address
-    where faxes will be delivered, and one or more formats for
-    the attachment. To not receive the fax as attachment, but only a
-    notification of reception, deselect all formats.
+Authentication
+--------------
 
-Forward received faxes to
+The system supports two authentication methods for sending faxes:
 
-    * Group "faxmaster"
-        By default, the received faxes are sent to *faxmaster*: if
-        a user needs to receive incoming faxes should be added to this
-        group.
-    * External email
-        Input an external email address in case you
-        want to send received faxes to an email address not on this server.
+* Host Based: uses the IP address of the computer sending the request
+* PAM: uses username and password, users must belong to the group *faxmaster*
 
-Sent faxes format
-    If requested by the client, the server sends an email notification with an
-    attachment. Choose the format in which you prefer to receive the fax.
-    Deselect all options if you do not want to receive the fax attached.
-    
-
-Add delivery notification
-    If selected, adds a delivery notification report in the sent fax email.
+Also make sure to enable the :guilabel:`View faxes from clients` option.
 
 
-
-Additional functions
+Samba virtual printer
 =====================
 
-View faxes sent by the client
-    The fax clients also allow you to view all incoming faxes. If,
-    for reasons of confidentiality, you want to filter out faxes
-    received, disable this option.
+If SambaFax option is enabled, the server will create virtual printer called "sambafax" available to the local network.
 
-Automatically print received faxes
-    Automatically print all received faxes on a
-    PCL5 compatible printer configured on |product|. The printer should be
-    selected using the appropriate drop down menu.
+Each client must configure the printer using the Apple LaserWriter 16/600 PS driver.
 
-SambaFax
-    By selecting this option, the fax server can make available to the
-    local area network a virtual printer named "sambafax" that will
-    be configured on the client, by selecting the Apple LaserWriter driver
-    16/600 PS. Documents printed on the network printer sambafax
-    must contain the exact phrase "Fax Number:" followed by the
-    fax number of the recipient.
+Sent documents must meet the following prerequisites:
 
-Send daily report
-    Send a daily report to the administrator
+* Must contain exactly the string "Fax Number", containing the fax number, for example: ::
 
-=========
-IAX Modem
-=========
+   Fax Number: 12345678
 
-This page allows you to configure IAX modems.
+* The string may be present in any position of the document, but on a single line
+* The string must be written in non-bitmap font (eg. Truetype)
 
-An IAX modem is a software modem that uses an IAX channel (usually 
-provided by an Asterisk PBX) instead of a traditional telephone line.
+Faxes will be sent using the sending user id. This information will be displayed in the fax queue.
 
 
-Create / Modify
-===============
+Mail2Fax
+========
 
-Name
-    Name the new IAX modem that you are creating.
+All emails sent to the local network at ``sendfax@<domainname>`` will be transformed into a fax and sent to the recipient.
 
-Server IP
-    IP address of the server on which the IAX modem registers (eg IP address of the Asterisk server).
+The ``<domainname>`` must match a local mail domain configured for local delivery.
 
-Extension
-    IAX extension on which you want to receive faxes.
+The email must comply with this format:
 
-Password 
-    IAX extension password defined previously.
+* The recipient's number must be specified in the object (or subject)
+* The email must be in plain text format
+* It may contain attachments such as PDF or PS which will be converted and sent with your fax
 
-Caller ID
-    Caller ID (number) shown in the outgoing faxes.
+.. Note :: This service is enabled only for clients that send email from the green network.
 
-Caller Name
-    Caller name shown in the outgoing faxes.
+.. _iax-modem:
+
+Virtual modems
+==============
+
+Virtual modems are software modems connected to a PBX (Asterisk usually) using
+a IAX extension.
+
+The configuration of the virtual modems consists of two parts:
+
+1. Creation of IAX extension within the PBX
+2. Configuration of virtual modem
 

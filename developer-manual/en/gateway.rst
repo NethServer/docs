@@ -34,7 +34,7 @@ The firewall has the following built-in zones, ordered from the most to the leas
 * *blue*: guest network.  Hosts in this network can access orange and red zones, can't access green zone
 * *orange*: DMZ network. Hosts in this network can access red zone, can't access green and blue zones
 * *red*: external/internet networks.  Hosts in this network can access only firewall zone
-* grey: (not implemented yet) traffic from/to this zone must be explicitly allowed
+* a: (not implemented yet) traffic from/to this zone must be explicitly allowed
 
 There is also a special *firewall* zone which represents the firewall itself. The firewall can access any other zone. 
 
@@ -65,6 +65,17 @@ Properties of ``firewall`` key inside ``configuration`` db:
   * ``backup``: traffic is routed via wan interface with maximum weight, all other interfaces are used as fallback
 * ``nfq``: if enabled, traffic from external networks will be passed to NFQ and scanned with Snort. See :ref:`ips`.
 * ``Policy``: can be ``permissive`` or ``strict``. See above.
+* ``MACValidation``: if enabled, the firewall will check the traffic against a list of known MAC addresses (see: :ref:`ipbinding-section`)
+* ``MACValidationPolicy``: can be ``accept`` or ``drop``. Default is ``drop``. See ``man shorewall.conf`` for all valid values
+* ``InterfaceRoleList``: list of network interface roles configurable from web interface. Default is: ``green,red,blue,orange``
+* ``CheckIP``: comma-separeted list of IP monitored by LSM, to check if a provider is up or down
+* ``MaxNumberPacketLoss``: number of maximum consecutive packets lost, over this threshold the provider is considered down
+* ``MaxPercentPacketLoss``: percentage of maximum packet lost, over this threshold the provider is considered down
+* ``PingInterval``: seconds between ICMP packets sent by LSM, default is ``5``
+* ``NotifyWan``: can be ``enabled`` or ``disabled``, if ``enabled`` a mail is sent every time a provider changes its own state
+* ``NotifyWanFrom``: sender address for mails sent if NotifyWAN is set to enabled
+* ``NotifyWanTo``: recipient address for mails sent if NotifyWAN is set to enabled
+
 
 Example
 
@@ -102,7 +113,7 @@ Example: ::
 Policy
 ======
 
-For every network packet travelling between firewall zones, the system will evaluate a list of rules to allow/block the specific traffic.
+For every network packet traveling between firewall zones, the system will evaluate a list of rules to allow/block the specific traffic.
 Policies are default firewall rules which will be applied only if no other rule matches the ongoing traffic.
 
 Firewall implements two standard policies:
@@ -116,6 +127,18 @@ In the schema below, traffic is permitted from left to right and blocked from ri
 GREEN -> BLUE -> ORANGE -> RED
 
 To override a policy, you should create a firewall rule between zones.
+
+.. _ipbinding-section:
+
+IP/MAC binding
+==============
+
+When ``MACValidation`` option is enabled, the firewall analyzes all the traffic based on a well-known list of IPs associated to MAC addresses.
+If the host generating the traffic is not inside the list, ``MACValidationPolicy`` will be applied.
+The list of IP/MAC association is created from DHCP reservations.
+
+Thus, enabling MACValidation and leaving MACValidationPolicy set to drop, will block all traffic from hosts without a DHCP reservation.
+
 
 Rules
 =====
@@ -169,8 +192,10 @@ Supported objects are:
 
 * Host
 * Group of host
-* Zone
 * Service
+* CIDR
+* Ip range
+* Zone
 
 
 A host is an already defined entry inside the ``hosts`` db, or a new key of type ``host``: ::
@@ -188,13 +213,26 @@ A ``host-group`` db entry can be something like: ::
     name=host-group
         Members=host1,host2
 
+A ``CIDR`` is a group of hosts defined as a CIDR network. It's saved inside the ``hosts`` db: ::
+
+    mycidr=cidr
+        Address=192.168.100.0/24
+        Description=
+
+
+A ``IP range`` is a group of hosts defined as a range of IP. It's saved inside the ``hosts`` db: ::
+
+    myrange=iprange
+        Description=
+        End=192.168.100.20
+        Start=192.168.100.10
+
 
 A zone represents a network zone which can be associated to an interface or a set of IP address. A ``zone`` entry in ``networks`` database can be something like: ::
 
     name=zone
        Network=CIDR
        Interface=eth0
-
 
 A configured network interface is automatically a zone.
 
@@ -252,7 +290,7 @@ Each value is a new attribute for an existing alias key and the name of attribut
 
 During template-expanding phase, the associated host is mapping with referenced IP and added in shorewall nat configuration. The file is ``/etc/shorewall/nat``. 
 
-More informations are available here: http://shorewall.net/NAT.htm
+More information are available here: http://shorewall.net/NAT.htm
 
 
 Traffic shaping
@@ -313,27 +351,7 @@ Multi WAN
 NethServer firewall can handle 15 red (WAN) interfaces. Implementation uses Shorewall with LSM (Link Status Monitor).
 The LSM daemon takes care of monitoring WAN connections (interface) using ICMP traffic and it informs Shorewall about interface up/down events.
 Each interface can be checked using multiple IPs (see ``checkip`` property below). At least one IP must be reachable to mark the WAN connection as usable. 
-If no IP is specified (recommnded option), the system will try to find a suitable ip, usually the next hop after the gateway. 
-
-If you want to use a custom checkip, these are some lines guides to make the right choice:
-
-* use an ip address inside the network of you provider
-* choose an hop near your gateway. You can use a command like this to discover a suitable next hop: 
-
-::
-
-  traceroute -n -f 2 -m 3 -i <interface> 8.8.8.8
-
-or
-
-::
-
-  ping -c 1 -I <interface> -t 2 8.8.8.8 | grep 'Time to live'  | cut -d' ' -f2
-
-* be careful, when the provider goes down, checkip will be no longer reachable from hosts inside the local network
-
-All checkip must always be reachable. For each configured checkip the system will create special static routes. These static routes are records of type ``provider-static`` inside the ``routes`` database.
-Properties of ``provider-static`` records are the same of ``static`` records.
+If no IP is specified (recommended option), the system will uses well-known default IPs (Google DNS and OpenDNS).
 
 For each configured provider, LSM will send ping to a configured IP (checkip). 
 When a provider status changes, the system will signal a ``wan-uplink-update`` event.
@@ -387,13 +405,11 @@ A ``provider`` record inside the ``networks`` database has following properties:
 * ``key``: name of provider
 * ``interface``: associated red interface, it's mandatory
 * ``weight``: weight of connection expressed with an integer number, it's mandatory
-* ``checkip``: comma separated list of pinged IP to check connection status, if blank the interface is not monitored
 * ``Description``: (optional) custom description
 
 Example: ::
 
   myisp=provider
-    checkip=208.67.222.222,8.8.8.8
     interface=eth1
     weight=5
     Description=my fast provider
@@ -442,7 +458,7 @@ For example, this rules will route all traffic to port 22 via the provider named
      Src=192.168.1.0/24
      Dst=0.0.0.0/0
      Service=fwservice;ssh
-     Provider=provider;myadsl
+     Action=provider;myadsl
      status=enabled
      Position=2
      Description=
@@ -451,13 +467,22 @@ For example, this rules will route all traffic to port 22 via the provider named
 Properties:
 
 * ``key``: numeric id
-* ``Src``: can be a zone (not interface), host object, ip address or CIDR
-* ``Dst``: can be a zone (not interface), host object, ip address or CIDR
-* ``Provider``: provider object, in the form of "provider;<name>"
+* ``Src``: can be a 'any', role (execpt red), zone (not interface), host object, ip address, ip range or CIDR
+* ``Dst``: can be a zone (not interface), host object, ip address, ip range  or CIDR
+* ``Action``: provider object, in the form of "provider;<name>"
 * ``Service``: (optional) can be a service object
 * ``status``: can be enabled or disabled. Default is enabled
 * ``Position``: integer sorting key
 * ``Description``: (optional)
+
+
+A rule is ignore during template expansion if:
+
+* the source is red role
+* the destination is a role which is not red
+* source, destination and service are all set to any
+* the provider doesn't exists
+* destination is set to any
 
 Static routes
 =============

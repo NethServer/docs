@@ -57,9 +57,11 @@ Implementation
    random_url
    migration
    certificate_management
+   yum_plugin
    backup
    gateway
    ips
+   samba
 
 Web interface
 -------------
@@ -111,6 +113,25 @@ Modules
    webvirtmgr
    duc
    snmp
+   tomcat7
+   postgresql
+   unixodbc
+   webtop4
+   vpn
+   unbound
+   ntopng
+   samba_audit
+   redis
+   memcached
+   smartd
+   cups
+   avahi
+   antivirus
+   c-icap
+   iaxmodem
+   mysql
+   hylafax
+   ntpd
 
 Appendix
 --------
@@ -127,7 +148,6 @@ Indices and tables
 ==================
    
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 .. image:: ../../_static/by-nc-sa_small.png

@@ -12,8 +12,8 @@ Administrator Manual
              work-in-progress. Not all modules are ready to be
              installed.
 
-Release notes 7-alpha1
-----------------------
+Release notes |release|
+-----------------------
 
 .. toctree::
    :maxdepth: 2
@@ -69,6 +69,7 @@ Modules
    phone_home
    webvirtmgr
    snmp
+   webtop4
 
 Best practices
 --------------

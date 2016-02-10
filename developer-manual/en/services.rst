@@ -68,6 +68,8 @@ Example of a service with TCP ports 1122 an 2233 open to local network: ::
 
 The ports are opened only if the ``status`` property is set to ``enabled``.
 
+.. _network_service_custom_access-section:
+
 Custom access
 -------------
 

@@ -38,7 +38,10 @@ through the proxy. No configuration is required on individual clients.
 
 Certificate file is saved inside :file:`/etc/pki/tls/certs/NSRV.crt` file, it can be downloaded from client
 at ``http://<ip_server>/proxy.crt`` address.
-   
+
+.. note:: To make the WPAD file accessible from guest network, add the address of blue network
+   inside the :guilabel:`Allow hosts` field for httpd service from the :guilabel:`Network services` page.
+ 
 .. _proxy_ssl-section:
 
 SSL Proxy
@@ -66,6 +69,8 @@ The proxy allows you to create:
 
 * bypass by source, configurable from :guilabel:`Hosts without proxy` section
 * bypass by destination, configurable from :guilabel:`Sites without proxy` section
+
+Bypass rules are also configured inside the WPAD file.
 
 Report
 ======

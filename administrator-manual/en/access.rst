@@ -32,5 +32,8 @@ Use following credentials:
              picking a secure one, composed of a random sequence of
              mixed-case letters, digits and symbols.
   
-If the directory module is installed, and the admin user has been enabled, you can use it to access
-the web interface with same privileges as root user. See :ref:`admin_user-section`.
+If the File server, Email server or any other module requiring Users
+and groups module is installed from the Software center, the ``admin``
+user is also available to access the web interface with same
+privileges as the ``root`` user. See :ref:`admin_user-section` for
+details.

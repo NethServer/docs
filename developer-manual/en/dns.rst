@@ -30,12 +30,12 @@ If no local record is found, an external DNS query will be done.
 .. note:: Local DNS record will always override records from external DNS servers.
 
 DNS records are called :dfn:`hosts` and are saved inside the ``hosts`` database.
-Eeach entry is saved inside the :file:`/etc/hosts` file.
+Each entry is saved inside the :file:`/etc/hosts` file.
 
 There are three types of records:
 
 * ``local``: hosts inside the internal network
-* ``remote``: hosts outside the internal networ
+* ``remote``: hosts outside the internal network
 * ``self``: alias for the server itself 
 
 Records of type ``local`` and ``remote`` can have following properties:
@@ -72,12 +72,38 @@ Example: ::
 DNS server
 ==========
 
-The system uses *dnsmasq* as DNS and DHCP server. If server role is ``resolver``, the server
-will directly resolve all hosts inside its domain. All other names will be queried to external DNS servers.
+The system uses *dnsmasq* as DNS and DHCP server and it directly resolves all hosts inside its domain. 
+All other names will be queried to external DNS servers.
 
-Uninstall
----------
+The server will forward reverse lookups to upstream DNS servers, only if upstream DNS servers are inside a
+private network (eg. network address is 192.168.x.x).
 
-Before uninstalling *nethserver-dnsmasq* package, disable local name resolution. Execute: ::
+The option ``bind-interfaces`` is always enabled, as consequence (from dnsmasq man):
 
-  config setprop dns role none
+ This option has been patched to always use SO_BINDTODEVICE socket option when binding to  interfaces.  As  consequence,  dnsmasq
+ WILL  NOT ANSWER to any DNS Queries that come to the socket with the correct destination IP address, but originally on different
+ interface. This behavior differs from the original dnsmasq upstream version and is used for security reasons.
+
+
+Properties:
+
+* ``CacheSize``: entry to be cached by server, default is ``4000``
+* ``dhcp-boot``: directly pass parameters to dhcp-boot option
+* ``except-interface``: comma-separated list of interfaces. Do not listen to listed interfaces, useful to avoid conflicts with libvirt
+* ``tftp-status``: can be ``enabled`` or ``disabled``. If enabled, enable the TFTP server for BOOTP (port 67)
+* ``access``: default is ``private``, do NOT set to ``public``
+
+Database example: ::
+
+  dnsmasq=service
+    AllowHosts=
+    CacheSize=4000
+    DenyHosts=
+    TCPPort=53
+    UDPPorts=53,67
+    access=private
+    dhcp-boot=pxelinux.0,myserver.mydomain.com,192.168.1.1
+    except-interface=virbr0,tunspot
+    status=enabled
+    tftp-status=enabled
+

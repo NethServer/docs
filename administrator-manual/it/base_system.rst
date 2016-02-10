@@ -166,13 +166,15 @@ Data la seguente configurazione:
 
 Se gli host dalla DMZ devono accedere al server NTP, aggiungere la rete 192.168.2.0/24 nel campo :guilabel:`Consenti host`.
 
+.. index:: reti fidate
 
 .. _trusted_networks-section:
 
 Reti fidate
 ===========
 
-Le :index:`reti fidate` sono speciali reti (remote o locali) a cui è garantito l'accesso a servizi speciali del server.
+Le reti fidate sono speciali reti (remote o locali) a cui è garantito
+l'accesso a servizi speciali del server.
 
 Ad esempio, i computer sulle reti fidate possono accedere a:
 
@@ -180,10 +182,13 @@ Ad esempio, i computer sulle reti fidate possono accedere a:
 * Cartelle condivise (SAMBA)
 * Servizi web per reti locali (Statistiche)
 
-Se si desidera che gli utenti collegati in VPN possano accedere a tutti i servizi del sistema,
-aggiungere le reti delle VPN a questo pannello.
+Se si desidera che gli utenti collegati in VPN possano accedere a
+tutti i servizi del sistema, aggiungere le reti delle VPN a questo
+pannello.
 
-Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare la rotta statica corrispondente nel pannello :ref:`static_routes-section`.
+Se la rete remota è raggiungibile attraverso un router, ricordarsi di
+creare la rotta statica corrispondente nel pannello
+:ref:`static_routes-section`.
 
 
 
@@ -233,12 +238,58 @@ tutti i servizi SSL verranno riavviati e ai client di rete sarà
 richiesto di accettare il nuovo certificato.
 
 
+.. note::
+   Per evitare problemi di importazione certificato con Internet Explorer,
+   si consiglia di configurare il campo CN (Common Name) o Nome Comune
+   in modo che corrisponda al FQDN del server.
+
+.. _custom_certificate-section:
+
+Installare un certificato personalizzato
+----------------------------------------
+
+I :index:`certificati personalizzati` devono essere salvati all'interno delle seguenti directory:
+
+* :file:`/etc/pki/tls/certs`: chiave pubblica
+* :file:`/etc/pki/tls/private`: chiave privata
+
+
+Configurare i percorsi della chiave pubblica e privata:
+
+::
+
+    db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
+    db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
+
+E' possibile anche configurare il file di chain SSL:
+
+::
+
+    db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
+
+Segnalare il cambio di certificato a tutti i demoni:
+
+::
+
+    signal-event certificate-update
+
+Backup certificato personalizzato
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ricordarsi sempre di aggiungere i certificati personalizzati al backup della configurazione.
+E' sufficiente aggiungere i percorsi nel file :file:`/etc/backup-config.d/custom.include`.
+
+Per esempio, se il certificato è :file:`/etc/pki/tls/certs/mycert.crt`, eseguire semplicemente: ::
+
+ echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
+
+
 .. _user_profile-section:
 
-Profilo utente
-==============
+Cambio password utente
+======================
 
-Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali.
+Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali ed accedere al :index:`profilo utente`.
 
 Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le informazioni associate al proprio account:
 

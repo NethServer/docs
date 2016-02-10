@@ -33,15 +33,56 @@ for language catalogs.
 
 
 gettext
-^^^^^^^
+=======
 
 The ``xgettext`` command can be used to extract strings from the
 source code. The resulting ``.pot`` file must be named
 :file:`locale/<rpmname>.pot`.
 
 
+gettext example
+---------------
+
+In this example we will translate a new TODO message for the web interface.
+
+Steps to setup translation for a new todo:
+
+1. Be sure gettext is installed in your system
+
+2. Add the todo script to the git repository
+
+3. Create locale directory inside the git repository root:
+
+::
+
+  mkdir -p locale
+
+4. Extract the strings (from a Python source code): 
+
+::
+
+  xgettext --msgid-bugs-address "nethserver@googlegroups.com" --package-version "$(git describe --tags)"  \
+  --package-name "$(basename `pwd`)" --foreign-user -d "$(basename `pwd`)" -o "locale/$(basename `pwd`).pot" \
+  -L Python root/etc/nethserver/todos.d/*
+
+5. Create the language file from template:
+
+::
+
+  mkdir -p locale/en/LC_MESSAGES
+  cp locale/<pkgname>.pot  locale/en/LC_MESSAGES/<pkgname>.po
+
+6. Substitute following fields in po file:
+
+  * DESCRIPTIVE
+  * LANGUAGE <LL@li.org>
+  * CHARSET (must be UTF-8)
+  * FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+
+7. Add translations. You can try poedit editor
+
 Server Manager
-^^^^^^^^^^^^^^
+==============
 
 All source language catalog files are placed in
 :file:`root/usr/share/nethesis/NethServer/Language/en`. We assume

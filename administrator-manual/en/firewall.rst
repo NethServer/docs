@@ -75,6 +75,7 @@ Available actions are:
 * :dfn:`ACCEPT`: accept the network traffic
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and not notification is sent to the sender host
+* :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
 
 .. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
 
@@ -113,6 +114,8 @@ Allow guest's network to access all the services listening on Server1:
 * Destination: Server1 
 * Service: -
 
+.. _multi-wan-section:
+
 Multi WAN
 =========
 
@@ -129,6 +132,19 @@ The system can use WAN connections in two modes (button  :guilabel:`Configure` o
 
 * :dfn:`Balance`: all providers are used simultaneously according to their weight 
 * :dfn:`Active backup`: providers are used one at a fly from the one with the highest weight. If the provider you are using loses its connection, all traffic will be diverted to the next provider.
+
+To determine the status of a provider, the system sends an ICMP packet (ping) at regular intervals.
+If the number of dropped packets exceeds a certain threshold, the provider is disabled.
+
+The administrator can configure the sensitivity of the monitoring through the following parameters:
+
+* Percentage of lost packets
+* Number of consecutive lost packets
+* Interval in seconds between sent packets
+
+The :guilabel:`Firewall rules` page allows to route network packets to
+a   given   WAN   provider,   if    some   criteria   are   met.   See
+:ref:`firewall-rules-section`.
 
 
 Example
@@ -160,9 +176,10 @@ In the case of a web server, listening ports are usually port 80 (HTTP) and 443 
 
 When you create a port forward, you must specify at least the following parameters: 
 
-* The source port, can be a number or a range in the format XX:YY (eg: 1000:1100 for begin port and end port 1100)
+* The source port
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
+* It's possibile to specify a port range using a colon as separator in the source port field (eX: 1000:2000), in this case the field destination port must be left void
 
 Example
 -------
@@ -172,6 +189,7 @@ Given the following scenario:
 * Internal server with IP 192.168.1.10, named Server1
 * Web server listening on port 80 on Server1
 * SSH server listening on port 22 on Server1
+* Other services in the port range beetween 5000 and 6000  on Server1
 
 If you want to make the server web available directly from public networks, you must create a rule like this:
 
@@ -189,6 +207,13 @@ In case you want to make accessible from outside the SSH server on port 2222, yo
 
 All incoming traffic on firewall's red interfaces on port 2222, will be redirected to port 22 on Server1.
  
+In case you want to make accessible from outside the server on the whole port range beetween 5000 and 6000, you will have to create a port forward like this:
+
+* origin port: 5000:6000
+* destination port: 
+* host address: 192.168.1.10
+
+All incoming traffic on firewall's red interfaces on port range beetween 5000 and 6000 will be redirected to same ports on Server1.
 
 Limiting access
 ---------------
@@ -218,7 +243,7 @@ In our network we have an host called ``example_host`` with IP ``192.168.5.122``
 
 We want to map our internal host (``example_host`` - ``192.168.5.122``) with public IP ``89.95.145.226``.
 
-In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (readonly field) the specific host (``example_host``) from the combobox. We have configured correctly the one-to-one NAT for our host.
+In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (read-only field) the specific host (``example_host``) from the combo-box. We have configured correctly the one-to-one NAT for our host.
 
 
 Traffic shaping
@@ -252,14 +277,48 @@ Firewall objects
 :index:`Firewall objects` are representations of network components and are useful to simplify the creation 
 of rules. 
 
-There are 4 types of objects: 
+There are 6 types of objects, 5 of them represent sources and destinations:
 
 * Host: representing local and remote computers. Example: web_server, pc_boss 
 * Groups of hosts: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
   Example: servers, pc_segreteria 
-* Zone: representing networks of hosts. Although similar in concept to a group of hosts, you can express networks using CIDR notation 
+* CIDR Networks: You can express a CIDR network in order to simplify firewall rules.
+  
+  Example 1 : last 14 IP address of the network are assigned to servers (192.168.0.240/28).
+
+  Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (192.168.2.0/24).
+
+.. index:: zone
+
+* *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface.They are used for very specific needs.
+
+.. note:: As a default all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
+
+The last type of object is used to specify the type of traffic:
+
 * Services: a service listening on a host with at least one port and protocol. Example: ssh, https 
 
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
+
+
+IP/MAC binding
+==============
+
+When the system is acting as DHCP server, the firewall can use the list of DHCP reservations to strictly check
+all traffic generated from hosts inside local networks.
+When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
+The common use is to allow traffic only from known hosts and block all other traffic. 
+In this case, hosts without a reservation will not be able to access the firewall nor the external network.
+
+To enable traffic only from well-known hosts, follow these steps:
+
+1. Create a DHCP reservation for a host
+2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
+3. Select :guilabel:`MAC validation (IP/MAC binding)`
+4. Choose :guilabel:`Block traffic` as policy to apply to unregistered hosts
+
+
+.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
+   otherwise no hosts will be able to manage the server using the web interface or SSH.
 

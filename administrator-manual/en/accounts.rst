@@ -58,6 +58,12 @@ A group of user can be used to assign special permissions to some users or to cr
 
 As for the users, a group can be enabled to some (or all) services.
 
+.. tip:: For delegating permissions to the Server Manager, use the groups ``managers`` or ``administrators``.
+
+Two special groups can be created, the users who belong in one of these groups are granted to the panels of the Server Manager
+
+* :dfn:`administrators`: Users of this group have the same permissions as the root or admin user.
+* :dfn:`managers`: Users of this group are granted to the Management section.
 
 
 .. _admin_user-section:
@@ -81,6 +87,8 @@ Password management
 ===================
 
 The system provides the ability to set constraints on password :dfn:`complexity` and :dfn:`expiration`.
+
+Password policies can be changed from web interface after installing ``nethserver-password`` module.
 
 Complexity
 -----------
@@ -189,6 +197,18 @@ If the system is configured as a domain controller,users can change their passwo
 In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
 Windows performs preliminary checks and sends the password to the server where they are then evaluated 
 with enabled policies.
+
+Notification language
+=====================
+
+Default language for notifications is English.
+If you wish to change it, use the following command: ::
+
+  config setprop sysconfig DefaultLanguage <lang>
+
+Example for Italian: ::
+
+  config setprop sysconfig DefaultLanguage it_IT.utf8
 
 Import users
 ============

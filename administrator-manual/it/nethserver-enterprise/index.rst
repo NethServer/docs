@@ -16,8 +16,8 @@ Manuale amministratore
 
     Blog `blog.nethesis.it <http://blog.nethesis.it>`_
 
-Note di rilascio 6.6
---------------------
+Note di rilascio |release|
+--------------------------
 
 .. toctree::
    :maxdepth: 2
@@ -71,6 +71,7 @@ NethService
    fax_server
    ftp
    webvirtmgr
+   webtop4
 
 
 NethSecurity

@@ -34,6 +34,9 @@ In questo caso è utile attivare l'opzione :guilabel:`Blocca porta HTTP e HTTPS`
 Se il proxy è installato in modalità trasparente, tutto il traffico web proveniente dai client viene intercettato dal firewall
 e indirizzato attraverso il proxy. Nessuna configurazione è necessaria sui singoli client.
 
+.. note:: Per rendere accessibile il file WPAD dalla rete ospiti, aggiungere l'indirizzo della rete blue
+          nel campo :guilabel:`Consenti host` per il servizio httpd nella pagina :guilabel:`Servizi di rete`.
+ 
 .. _proxy_ssl-section:
 
 Proxy SSL
@@ -62,6 +65,8 @@ Il proxy consente di creare:
 
 * bypass per sorgente, configurabili nella sezione :guilabel:`Host senza proxy`
 * bypass per destinazione, configurabili nella sezione :guilabel:`Siti senza proxy`
+
+Le regole di bypass create sono configurate anche all'interno del file WPAD.
 
 Report
 ======

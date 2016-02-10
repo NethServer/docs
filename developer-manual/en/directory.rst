@@ -42,7 +42,7 @@ The LDAP tree is always accessible with the following DN: **dc=directory,dc=nh**
 But there is also an :index:`overlay` which maps the domain name to the base DN.
 For example, given the domain *mydomain.com*, the corresponding DN will be **dc=mydomain,dc=com**.
 
-Accounts re saved inside following branches:
+Accounts are saved inside following branches:
 
 * Users: ou=People,dc=directory,dc=nh
 * Groups: ou=Groups,dc=directory,dc=nh
@@ -131,7 +131,7 @@ Check the debugging levels table from OpenLDAP site for more details: http://www
 To permanently change LDAP log level: ::
 
   config setprop slapd LogLevel 256
-  ignal-event nethserver-directory-update
+  signal-event nethserver-directory-update
 
 Service accounts
 ================
@@ -249,6 +249,25 @@ Service accounts require OpenLDAP ACLs tuning. To inspect the current ACLs type:
 If output appears to be base64-encoded type: ::
 
   ldapsearch -LLL -Y EXTERNAL -b cn=config -s one 'objectClass=olcDatabaseConfig' olcAccess 2>/dev/null | perl -MMIME::Base64 -MEncode=decode -n -00 -e 's/\n +//g;s/(?<=:: )(\S+)/decode("UTF-8",decode_base64($1))/eg;print'
+
+Anonymous access to user account entries
+========================================
+
+Some LDAP clients and/or legacy environments requires anonymous bind to the LDAP accounts database.
+
+Following command opens the LDAP to the world (except password fields): ::
+
+  perl -MNethServer::Directory -e '$l = NethServer::Directory->new(); $l->enforceAccessDirective("by anonymous read", "*");'
+
+Configuration for client (eg. Mozilla Thunderbird):
+
+* Host: ip address of the server
+* Port: 389
+* Base DN: ou=People,dc=example,dc=org
+* On Advanced tab, make sue "Login method" is set to "Simple"
+
+
+.. warning:: This modification is not easily reversible!
 
 Tools
 =====

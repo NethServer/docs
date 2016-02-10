@@ -240,6 +240,26 @@ Tale periodo può essere personalizzato per un utente particolare dal
 controllo :guilabel:`Utenti > Modifica > Servizi > Personalizza tempo
 di permanenza delle email di spam`.
 
+.. index::
+   pair: email; master user
+
+L'utente ``admin`` può impersonare un altro utente, acquisendo pieni
+diritti sui contenuti della casella di posta e sui permessi delle
+cartelle di quest'ultimo.  L'opzione :guilabel:`Admin può accedere
+impersonando un altro utente` controlla questa facoltà, conosciuta con
+il nome di *master user* in [#Dovecot]_.
+
+Quando :guilabel:`Admin può accedere impersonando un altro utente` è
+abilitata, il server IMAP accetta qualsiasi nome utente al quale sia
+aggiunto il suffisso ``*admin``, e la password di ``admin`` come
+credenziali valide.
+
+Per esempio, per accedere come ``john`` con la password di admin
+``secr3t``, utilizzare le seguenti credenziali:
+
+* nome utente: ``john*admin``
+* password: ``secr3t``
+
 .. _email_messages:
 
 Messaggi
@@ -365,8 +385,10 @@ Anti-spam
 Il filtro :dfn:`anti-spam` [#Spamassassin]_ analizza la posta
 elettronica rilevando e classificando un messaggio come :dfn:`spam`
 [#SPAM]_ utilizzando criteri euristici, regole predeterminate e
-valutazioni statistiche sul contenuto del messaggio. Un punteggio è
-associato ad ognuna di queste regole.
+valutazioni statistiche sul contenuto del messaggio. 
+Il filtro inoltre può controllare se il server mittente è presente in una 
+o più blacklist (:index:`DNSBL`).
+Un punteggio è associato ad ognuna di queste regole.
 
 Il punteggio totale raccolto alla fine dell'analisi consente al server
 di decidere se *rifiutare* il messaggio o *marcarlo* come spam e
@@ -513,45 +535,40 @@ Per disabilitare il record MX e gli alias, accedere alla console di
 root e digitare: ::
 
   config setprop postfix MxRecordStatus disabled
-  signal-event nethserver-hosts-save
+  signal-event nethserver-hosts-update
 
 .. _email_policies:
 
 Politiche SMTP di invio speciali
 ================================
 
-Tutti i client che vogliono spedire posta usando il server SMTP devono
-obbligatoriamente utilizzare la porta di submission 587 con cifratura
-abilitata.
+La configurazione predefinita di |product| richiede che tutti i client
+utilizzino la porta submission (587) con cifratura e autenticazione
+abilitate per inviare messaggi attraverso il server SMTP.
 
-Il server implementa politiche di accesso speciali che consentono
-configurazioni particolari in caso di ambienti legacy.
+Per semplificare la configurazione di ambienti preesistenti, la pagina
+:guilabel:`Email > Accesso SMTP` consente di specificare delle
+eccezioni ai criteri di accesso SMTP di default.
 
-Per abilitare l'invio sulla porta 25 con TLS e autenticazione, usare
-questi comandi: ::
+.. warning:: non modificare i criteri di accesso di default in
+             ambienti nuovi!
 
-  config setprop postfix AccessPolicies smtpauth
-  signal-event nethserver-mail-common-save
+Per esempio, ci sono alcuni dispositivi (stampanti, scanner, ...) che
+non supportano l'autenticazione SMTP, la cifratura o l'uso di porte
+personalizzate.  Questi possono essere abilitati all'invio di messaggi
+email elencando il loro indirizzo IP nell'area di testo
+:guilabel:`Consenti relay dai seguenti indirizzi IP`.
 
-Per abilitare l'invio sulla porta 25 senza autenticazione da tutti i
-client nelle reti fidate, usare questi comandi: ::
+Sotto :guilabel:`Opzioni avanzate` si trovano inoltre
 
-  config setprop postfix AccessPolicies trustednetworks
-  signal-event nethserver-mail-common-save
+* L'opzione :guilabel:`Consenti relay dalle reti fidate`, che abilita la
+  spedizione di messaggi da qualsiasi client connesso dalle reti
+  fidate.
 
-Le policy possono anche essere combinate, separandole con la virgola ``,``: ::
+* L'opzione :guilabel:`Abilita autenticazione sulla porta 25`, che consente
+  l'autenticazione dei client SMTP e l'invio (relay) di messaggi anche
+  sulla porta 25.
 
-  config setprop postfix AccessPolicies trustednetworks,smtpauth
-  signal-event nethserver-mail-common-save
-
-Esistono però alcuni dispositivi (stampanti, scanner, ...) che non
-supportano autenticazione, cifratura o cambio di porta.  In questi
-casi l'invio può essere consentito cercando l'indirizzo IP nella
-tabella :file:`access` di Postfix: ::
-
-  mkdir -p /etc/e-smith/templates-custom/etc/postfix/access
-  echo "192.168.1.22 OK" >> /etc/e-smith/templates-custom/etc/postfix/access/20clients
-  signal-event nethserver-mail-common-save
 
 .. index::
    pair: email; HELO
