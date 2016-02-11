@@ -17,7 +17,6 @@ Core
 * Dashboard tabs have been split into multiple pages under the Status menu
 * Data backup destination now supports more storage types (iSCSI, eSATA)
 * All services are now controlled by systemd
-* The e-smith database has been cleaned up
 * UID of user accounts now starts from 1000
 * Sudo configuration has been rewritten to be upstream compliant
 * Network configuration now uses persistent device naming
