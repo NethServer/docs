@@ -8,9 +8,8 @@ Administrator Manual
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-.. WARNING:: This is an Alpha release. The documentation is a
-             work-in-progress. Not all modules are ready to be
-             installed.
+.. WARNING:: This is an Alpha release, do not use in production environment.
+             The documentation is a work-in-progress.
 
 Release notes |release|
 -----------------------

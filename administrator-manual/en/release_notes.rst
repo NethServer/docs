@@ -9,9 +9,12 @@ Release notes
 Known bugs
 ==========
 
-* Only unattended mode installation works.
-
-* Only basic system can be installed. No additional packages are known to work.
+* Only unattended mode installation works
+* Inside the monitoring group, nethserver-adagios is known to NOT work
+  (See: https://github.com/NethServer/dev/issues/5015)
+* ntopng package will install all build chain (gcc, make, etc.), we are working with
+  upstream to fix the package and remove unwanted dependencies
+* Postfix can't be used as SMTP server if the server is joined to Active Directory
 
   
 
