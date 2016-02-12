@@ -9,7 +9,7 @@ Release notes
 Testing
 =======
 
-Please, help us with testing the alpha release!
+Please, help us testing the alpha release!
 Check out this wiki page for more details: http://wiki.nethserver.org/doku.php?id=developer:nethserver_7_needs_testing
 
 Known bugs
