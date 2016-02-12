@@ -216,9 +216,7 @@ Host and Domain Name (FQDN)
 
     Type the host name and domain in which the server will operate
     (e.g. :samp:`server.mycompany.com`).
-
-    *Note:* Domain name can only contain letters, numbers and the
-     dash.
+    Domain name should only contain letters, numbers and the dash.
 
 IP Address
 
