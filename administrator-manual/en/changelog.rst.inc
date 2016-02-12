@@ -5,8 +5,8 @@ All packages have been rebuilt and adapted to CentOS 7.
 
 The following packages are now part of the default installation:
 
-* HTTP server (nethserver-dnsmasq)
-* DNS server (nethserver-httpd)
+* HTTP server (nethserver-httpd)
+* DNS server (nethserver-dnsmasq)
 
 Core
 ----
