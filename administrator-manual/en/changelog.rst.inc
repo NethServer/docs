@@ -98,3 +98,4 @@ The following packages have been removed:
 * nethserver-collectd-web: replaced by nethserver-cgp
 * nethserver-password: integrated inside nethserver-directory
 * nethserver-faxweb2: http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645
+* nethserver-fetchmail: should be replaced by getmail in the near future (https://github.com/NethServer/dev/issues/5021)

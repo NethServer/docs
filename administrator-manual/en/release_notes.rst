@@ -21,6 +21,8 @@ Known bugs
 * ntopng package will install all build chain (gcc, make, etc.), we are working with
   upstream to fix the package and remove unwanted dependencies
 * Postfix can't be used as SMTP server if the server is joined to Active Directory
+* Inside the mail server group, nethserver-fetchmail is not fully functional.
+  We are searching for a good replacement: https://github.com/NethServer/dev/issues/5021
 
   
 
