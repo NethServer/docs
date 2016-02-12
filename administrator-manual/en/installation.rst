@@ -16,7 +16,7 @@ Minimum requirements are:
 
 * 64 bit CPU (x86_64)
 * 1 GB of RAM
-* 8 GB of disk space
+* 10 GB of disk space
 
 
 .. hint:: We recommend to use at least 2 disks to setup a RAID 1.  The
@@ -76,13 +76,14 @@ configured.  First boot device should be the CD/DVD reader.
 
 On start a menu will display different types of installation:
 
-|product| interactive install
+|product| interactive installation
 
     It allows you to select the language, configure RAID support,
     network, and encrypted file system.  It will be described in depth
     in the next paragraph.
 
-Other / Unattended |product| install
+
+|product| unattended installation
 
     This installation mode does not require any kind of human
     intervention: a set of default parameters will applied to the
@@ -150,20 +151,17 @@ Interactive Mode
 ----------------
 
 The interactive mode allows you to make a few simple choices on the
-system configuration:
+system configuration.
 
-* Language 
-* Software RAID
-* Network configuration
+Required choices are:
 
-Language
-^^^^^^^^
+* Language
+* Keyboard layout
+* Root password
 
-Select the language in which you want to use the interactive mode.
-Keyboard layout and time zone are changed accordingly and can be 
-modified just after the first login to the web interface.
+All other options are set to a reasonable default accordingly to current hardware,
+but you're free to edit any install configuration available.
 
-System language is always set to English.
 
 Software RAID
 ^^^^^^^^^^^^^
@@ -175,7 +173,7 @@ performance.
 This screen is displayed when two or more disks were detected at
 start.
 
-Available levels:
+Most used levels are:
 
 * RAID 1: it creates an exact copy (mirror) of all the data on two or more disks.
   Minimum number of disks: 2
@@ -184,19 +182,11 @@ Available levels:
   distributing the parity data evenly across all disks.  Minimum
   number of disks: 3
 
-Spare disk
-~~~~~~~~~~
-
-You can create a spare disk if disk number is greater than the minimum
-required by the selected level RAID, A spare disk will be added to the
-RAID in case a failure occurs.
-
 
 System administrator password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can change the ``root`` user's password inside the first
-configuration wizard.
+You're strongly advised too choose a secure password for the ``root`` user.
 
 A good password is:
 
@@ -213,24 +203,14 @@ When enabling this option, all data written to the disk will be
 encrypted using symmetric encryption.  In case of theft, an attacker
 will not be able to read the data without the encryption key.
 
-It is possible to choose a password for the encryption, otherwise the
-system administrator password will be used.
-
-.. note :: You will need to enter the password at every system boot.
-
-.. warning:: Following characters are not supported inside the password:
-   ``#``, ``=`` and ``$``.
-
-
-Network interfaces
-^^^^^^^^^^^^^^^^^^
-
-Select the network interface that will be used to access the LAN.
-This interface is also known as *green* interface.
+.. note :: You will need to enter the encryption password at every system boot.
 
 
 Network configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+As default, all network interfaces are configure with DHCP.
+Please, read the following notes before customizing network configuration. 
 
 Host and Domain Name (FQDN)
 
@@ -258,9 +238,6 @@ Gateway
     Type the IP address of the gateway on which you are installing the
     server.
 
-DNS
-
-    Type a valid DNS. Example: 8.8.8.8
 
 End of installation procedure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -301,7 +278,7 @@ To install the base system, run: ::
 Alternatively, to install base system *and* additional modules, pass
 the name of the module as a parameter to the install script.  Example: ::
 
-  nethserver-install nethserver-mail nethserver-nut
+  nethserver-install nethserver-mail nethserver-owncloud
 
 .. include:: installation_centos_end.inc
 
