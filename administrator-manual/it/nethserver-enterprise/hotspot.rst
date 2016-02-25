@@ -88,6 +88,6 @@ Accettare le richieste su porta udp 3779 provenienti da hotspot.nethesis.it
 
 Impartire i seguenti comandi: ::
 
-  config set hotspot-disconnect service UDPPort 3779 access private status enabled AllowHosts `host hotspot.nethesis.it | grep address | head -1 |  cut -d' ' -f4`
+  config set hotspot-disconnect service UDPPort 3779 access private status enabled AllowHosts `dig +short hotspot.nethesis.it | grep address | head -1 |  cut -d' ' -f4`
  
   signal-event firewall-adjust
