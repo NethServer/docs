@@ -152,7 +152,7 @@ is created and the value loaded. For example, this file:
 
 It would create the ``sshd`` database entry if it doesn’t already exist,
 create the ``status`` property for that entry, again if it doesn’t
-already exist, and finally set the status property to ``disabled``.
+already exist, and finally set the *status* property to ``enabled``.
 
 Forcing database initialization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -163,15 +163,14 @@ Simply call the action:
 Force files
 -----------
 
-Force files are just like defaults files, except they \ *overwrite*\ 
-the existing value. So, this file:
+Force files are just like defaults files, except they \ *overwrite*\    the existing value. So, this file:
 
 ::
 
     [root@nsrv -]# cat /etc/e-smith/db/configuration/force/sysconfig/Version
     6
 
-It would create the ReleaseVersion property of the sysconfig entry and
+It would create the *Version* property of the *sysconfig* entry and
 unconditionally set its value to ``6``.
 
 .. warning:: Do not use force fragments if not really necessary!
@@ -225,11 +224,11 @@ Important notes about migrate fragments
 
 * Migrate fragments must be safe to run multiple times. They should
   migrate the value when required and do nothing in other cases.
-* Migrate fragments should never call croak or die. This will cause the
-  database migration to stop. If an error is detected, call carp or
-  warn to note the error in the logs.
-* Migrate fragments should call good termination with return(0) rather
-  than exit(0).
+* Migrate fragments should never call ``croak`` or ``die``. This will cause the
+  database migration to stop. If an error is detected, call ``carp`` or
+  ``warn`` to note the error in the logs.
+* Migrate fragments should call good termination with ``return(0)`` rather
+  than ``exit(0)``.
 * Migrate fragments should be owned by the package requiring the
   migration so that the migration only occurs when that package is
   installed.

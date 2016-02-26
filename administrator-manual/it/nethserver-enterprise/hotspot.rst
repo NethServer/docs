@@ -66,5 +66,28 @@ per cui devono comportarsi come un banale switch di rete, a tal fine è opportun
 Utilizzo del servizio
 =====================
 
-Il servizio è amministrabile da centro servizi Nethesis, la documentazione è disponibile al seguente link : https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi 
+E' necessario accedere al centro servizi Nethesis, creare una nuova istanza hotspot (o utilizzarne una già presente) e associarla al firewall:
 
+* https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot
+
+A questo punto, sarà possibile amministrare l'hotspot collegandosi al sito: https://hotspot.nethesis.it accedendo con le  credenziali ottenute al punto precedente. 
+Il manuale di amministrazione dell'Hotspot Manager è disponibile qui:
+
+* https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi 
+
+Disconnessione di un account da hotspot Manager
+=====================================================
+
+Dalla dashboard dell'hotspot manager è possibile disconnettere singoli account dal servizio, per farlo  è necessario che:
+
+* NethSecurity sia raggiungibile da internet sulla porta udp 3779
+* NethSecurity accetti le richieste sulla porta udp 3779 provenienti da hotspot.nethesis.it
+
+Accettare le richieste su porta udp 3779 provenienti da hotspot.nethesis.it
+----------------------------------------------------------------------------
+
+Impartire i seguenti comandi: ::
+
+  config set hotspot-disconnect service UDPPort 3779 access private status enabled AllowHosts `dig +short hotspot.nethesis.it`
+ 
+  signal-event firewall-adjust
