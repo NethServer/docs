@@ -152,7 +152,7 @@ is created and the value loaded. For example, this file:
 
 It would create the ``sshd`` database entry if it doesn’t already exist,
 create the ``status`` property for that entry, again if it doesn’t
-already exist, and finally set the status property to ``enabled``.
+already exist, and finally set the *status* property to ``enabled``.
 
 Forcing database initialization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -170,7 +170,7 @@ Force files are just like defaults files, except they \ *overwrite*\    the exis
     [root@nsrv -]# cat /etc/e-smith/db/configuration/force/sysconfig/Version
     6
 
-It would create the Version property of the sysconfig entry and
+It would create the *Version* property of the *sysconfig* entry and
 unconditionally set its value to ``6``.
 
 .. warning:: Do not use force fragments if not really necessary!
