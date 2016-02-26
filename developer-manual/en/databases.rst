@@ -163,8 +163,7 @@ Simply call the action:
 Force files
 -----------
 
-Force files are just like defaults files, except they \ *overwrite*\ 
-the existing value. So, this file:
+Force files are just like defaults files, except they \ *overwrite*\    the existing value. So, this file:
 
 ::
 
