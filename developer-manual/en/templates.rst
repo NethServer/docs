@@ -66,7 +66,7 @@ The template system uses this mechanism to automatically pass
 in global configuration variables from the *configuration* database
 which can then be used to fill out the configuration files.
 
-For example, the ``/etc/hosts`` template coud be fairly simple and composed of
+For example, the ``/etc/hosts`` template could be fairly simple and composed of
 two fragments::
 
  [root@test hosts]$ ls /etc/e-smith/templates/etc/hosts
@@ -188,7 +188,7 @@ Local site overrides: templates-custom and templates-user-custom
 
 It is possible that the standard templates are not correct for a
 particular installation, and so the local system administrator can
-override the extsing templates by placing files in the
+override the existing templates by placing files in the
 ``templates-custom`` tree. This is a parallel tree to the normal templates
 hierarchy, and is normally empty. There is also a ``template-user-custom``
 tree for overriding entries in the templates-user tree.
@@ -256,7 +256,7 @@ of the following:
    the system as the templates-custom entry will be preferred, but will
    behave identically.
 *  Modify the copy in templates-custom to suit your required behaviour.
-*  Inform the NethServer team about te problem.
+*  Inform the NethServer team about the problem.
    Please attach your modified template (or even better, a patch file)
    and provide details of why you think that the standard template
    should be changed.
@@ -290,7 +290,7 @@ Requesting expansion of a template in an event is a simple matter of
 creating an empty file under the ``templates2expand`` hierarchy for that
 event. 
 
-See Events manual chapter for further information.
+See [Events manual chapter](http://docs.nethserver.org/projects/nethserver-devel/en/latest/events.html#events) for further information.
 
 Template permissions and ownership: templates.metadata
 ======================================================
@@ -304,7 +304,7 @@ file which defines the additional attributes for the expansion.
 
 .. note:: Configuration files should generally **not** be writable
  by any user other than root. In particular, configuration files should
- not normally be writable the *www* user as this poses a significant
+ not normally be writable by the *www* user as this poses a significant
  security risk. Installation advice which says ``chmod 777`` is almost
  invariably wrong.
 
@@ -341,20 +341,20 @@ full list of options can be seen with:
 Perl API: processTemplate
 ==========================
 
-In rare circumstances you may need to call ``processTemplate`` directlry.
+In rare circumstances you may need to call ``processTemplate`` directly.
 Explicit calls to ``processTemplate`` are typically only used when the
 output filename is variable:
 
 ::
 
     use esmith::templates;
-    foreach my $name (``names) 
+    foreach my $name (@names) 
     {
         [...]
         processTemplate(
-        { 
-           TEMPLATE_PATH => "/etct/myservice/user.conf",
-          OUTPUT_FILENAME => "/etct/myservice/$name.conf
+        {
+          TEMPLATE_PATH => "/etc/myservice/user.conf",
+          OUTPUT_FILENAME => "/etc/myservice/$name.conf
         );
         [...]
     }
