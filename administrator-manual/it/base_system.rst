@@ -83,6 +83,15 @@ Si consiglia quindi di chiudere le porte dei servizi critici usando il pannello 
 
 .. _logical_interfaces-section:
 
+Alias IP
+--------
+
+Per assegnare più indirizzi IP alla stessa scheda è possibile utilizzare gli alias IP.
+
+In tal modo è possibile ad esempio associare alla stessa red più indirizzi IP della stessa classe e gestirli in modo indipendente (ad esempio con dei port forward che discriminano in base allo specifico IP di destinazione).
+
+L'alias è configurabile cliccando nel menu a tendina della specifica scheda di rete e avrà lo stesso ruolo della scheda fisica associata. 
+
 Interfacce logiche
 ------------------
 
@@ -90,13 +99,10 @@ Nella pagina :guilabel:`Network` premere il pulsante :guilabel:`Nuova
 interfaccia` per creare una interfaccia logica.  I tipi di interfacce
 logiche supportate sono:
 
-* :index:`alias`: associa uno o più IP ad una scheda esistenza. L'alias ha lo stesso ruolo della scheda fisica associata
 * :index:`bond`: combina due o più interfacce, garantisce bilanciamento del traffico e tolleranza ai guasti
 * :index:`bridge`: collega due reti distinte, è spesso utilizzata per le VPN in bridge e le macchine virtuali
 * :index:`vlan` (Virtual Local Area Network): crea due o più reti fisicamente separate usando una singola interfaccia fisica
 
-Gli alias sono utilizzati per configurare IP multipli su una singola scheda di rete. Ad esempio, se si desidera avere più IP pubblici su
-un'interfaccia red.
 
 I bond consentono di aggregare banda fra due o più interfacce di rete. Il sistema utilizzerà tutte le schede contemporaneamente bilanciando
 il traffico fra tutte le schede attive. In caso di errore, la scheda guasta viene automaticamente esclusa dal bond.
