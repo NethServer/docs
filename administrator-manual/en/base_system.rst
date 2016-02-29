@@ -73,7 +73,7 @@ See :ref:`policy-section` for more information on roles and firewall rules.
 
 .. note:: The server must have at least one network interface. When the server has only one interface, this interface must have green role.
 
-If the server is installed on a public VPS (Virtual Private Server) public, it should must be configured with a green interface.
+If the server is installed on a public VPS (Virtual Private Server), it should must be configured with a green interface.
 All critical services should be closed using :ref:`network_services-section` panel.
 
 
@@ -269,7 +269,7 @@ For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply
 Change user password
 ====================
 
-All users can login to Server Manager using their own credentials and accedd the :index:`user profile`.
+All users can login to Server Manager using their own credentials and access the :index:`user profile`.
 
 After login, a user can :index:`change the password` and information about the account, like:
 
