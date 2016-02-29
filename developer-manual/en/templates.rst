@@ -290,7 +290,7 @@ Requesting expansion of a template in an event is a simple matter of
 creating an empty file under the ``templates2expand`` hierarchy for that
 event. 
 
-See [Events manual chapter](http://docs.nethserver.org/projects/nethserver-devel/en/latest/events.html#events) for further information.
+See :ref:`events` manual chapter for further information.
 
 Template permissions and ownership: templates.metadata
 ======================================================
@@ -354,7 +354,7 @@ output filename is variable:
         processTemplate(
         {
           TEMPLATE_PATH => "/etc/myservice/user.conf",
-          OUTPUT_FILENAME => "/etc/myservice/$name.conf
+          OUTPUT_FILENAME => "/etc/myservice/$name.conf"
         );
         [...]
     }
