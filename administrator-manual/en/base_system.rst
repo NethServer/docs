@@ -73,9 +73,18 @@ See :ref:`policy-section` for more information on roles and firewall rules.
 
 .. note:: The server must have at least one network interface. When the server has only one interface, this interface must have green role.
 
-If the server is installed on a public VPS (Virtual Private Server) public, it should must be configured with a green interface.
+If the server is installed on a public VPS (Virtual Private Server), it should must be configured with a green interface.
 All critical services should be closed using :ref:`network_services-section` panel.
 
+.. _alias_IP-section:
+Alias IP
+--------
+
+Use alias IP to assign more IP addresses to the same NIC.
+
+The most common use is with a red interface: when the ISP provides a pool of public IP addresses (within the same subnet) you can add some (or all) of them to the same red interface and manage them individually (e.g. in the port forward configuration).
+
+Alias IP section can be found in the dropdown menu of the related network interface.
 
 .. _logical_interfaces-section:
 
@@ -85,15 +94,10 @@ Logical interfaces
 In :guilabel:`Network` page press :guilabel:`New interface` button to
 create a logical interface. Supported logical interfaces are:
 
-* :index:`alias`: associate more than one IP address to an existing network interface. 
-  The alias has the same role of its associated physical interface
 * :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
 * :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
 * :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
 * :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
-
-**Aliases** are used to configure multiple IPs on a single NIC. For example, if you want to have more public IP on a
-red interface.
 
 **Bonds** allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
 at the same time, balancing traffic among all active interfaces.
@@ -269,7 +273,7 @@ For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply
 Change user password
 ====================
 
-All users can login to Server Manager using their own credentials and accedd the :index:`user profile`.
+All users can login to Server Manager using their own credentials and access the :index:`user profile`.
 
 After login, a user can :index:`change the password` and information about the account, like:
 

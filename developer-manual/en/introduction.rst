@@ -9,7 +9,7 @@ NethServer is ready to deliver your messages, to protect your network with the b
 Target audience
 ===============
 
-This manual is intended for developers who are interested avout NethServer internals. 
+This manual is intended for developers who are interested about NethServer internals. 
 Reading this manual you should be able to learn how to extend, enpower and debug the NethServer platform.
 
 Get involved
@@ -26,4 +26,4 @@ The NethServer project welcomes anyone who would like to become involved in the 
 .. note:: This manual is a work in progress. If you can't find some information
    please also check the developer wiki: http://dev.nethserver.org/projects/nethserver/wiki/Packages
 
-   Always free feel to ask in ML or IRC channel!
+   Always feel free to ask in ML or IRC channel!

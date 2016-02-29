@@ -238,9 +238,9 @@ See :ref:`buildiso-section`.
 New packages
 ============
 
-Before creating a new package, make sure it's a good a idea.
+Before creating a new package, make sure it's a good idea.
 Often a simple documentation page is enough, and it requires much less effort.
-When tring new things, just take care to write down on a public temporary document (maybe a wiki page)
+When trying new things, just take care to write down on a public temporary document (maybe a wiki page)
 all steps and comments.
 If the feature collects many requests, it's time to think about a new package.
 Otherwise, the temporary document can be moved to a manual page.

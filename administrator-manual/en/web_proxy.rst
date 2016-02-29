@@ -23,6 +23,7 @@ Supported modes are:
 * Transparent: all clients are automatically forced to use the proxy for HTTP connections
 * Transparent SSL: all clients are automatically forced to use the proxy for HTTP and HTTPS connections
 
+.. note:: Please make sure to have Users module installed (nethserver-directory package), if you plan to use authenticate mode.
 
 Client configuration
 ====================

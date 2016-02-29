@@ -22,6 +22,8 @@ Le modalità supportate sono:
 * Trasparente: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP
 * Trasparente SSL: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP e HTTPS
 
+.. note:: Assicurarsi di avere installato il modulo Utenti (pacchetto nethserver-directory), se si desidera utilizzare la modalità autenticata.
+
 Configurazione client
 =====================
    
