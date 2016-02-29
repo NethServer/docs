@@ -35,7 +35,7 @@ When a user is enabled, the user can access to the Server Manager and change his
 
 A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one. 
 
-Sometimes you need to block user's access to service without deleting the the account. 
+Sometimes you need to block user's access to service without deleting the account. 
 This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` buttons.
 
 
@@ -60,10 +60,10 @@ As for the users, a group can be enabled to some (or all) services.
 
 .. tip:: For delegating permissions to the Server Manager, use the groups ``managers`` or ``administrators``.
 
-Two special groups can be created, the users who belong in one of these groups are granted to the panels of the Server Manager
+Two special groups can be created, the users who belong in one of these groups are granted access to the panels of the Server Manager
 
 * :dfn:`administrators`: Users of this group have the same permissions as the root or admin user.
-* :dfn:`managers`: Users of this group are granted to the Management section.
+* :dfn:`managers`: Users of this group are granted access to the Management section.
 
 
 .. _admin_user-section:
@@ -185,14 +185,13 @@ For example, to change to 5 "Number of days on which the warning is sent by emai
 Effects of expired password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or 
-or other computer if the machine is part of the domain. 
+After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or other computer if the machine is part of the domain. 
 
 
 Domain password
 ----------------
 
-If the system is configured as a domain controller,users can change their password using the Windows tools.
+If the system is configured as a domain controller, users can change their password using the Windows tools.
 
 In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
 Windows performs preliminary checks and sends the password to the server where they are then evaluated 
