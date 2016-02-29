@@ -102,7 +102,7 @@ Email addresses
 ===============
 
 The system enables the creation of an unlimited number of :dfn:`email
-addresses` also known as :dfn:`pseudonyms`, from the :guilabel:`Email
+addresses`, also known as :dfn:`pseudonyms`, from the :guilabel:`Email
 addresses` page.  Each address is associated with a system user or
 group owning a :dfn:`mailbox` (see :ref:`email_mailboxes`).  It can be
 enabled on all configured domains or only on specific domains. For
@@ -386,7 +386,7 @@ prerequisite, the junkmail folder must be enabled from
   learn it is ham: next time a lower score will be assigned.
 
 By default, all users can train the filters using this technique.  If
-a group called ``spamtrainers`` exits, only users in this group
+a group called ``spamtrainers`` exists, only users in this group
 will be allowed to train the filters.
 
 .. note:: It is a good habit to frequently check the junkmail folder
@@ -617,12 +617,12 @@ console: ::
    signal-event nethserver-samba-save
 
 .. warning:: Avoid AD group names containing uppercase letters with
-	     shared folder: IMAP ACLs does not to work properly. See
+	     shared folder: IMAP ACLs does not work properly. See
 	     `BUG#2744`_.
 
 .. _email_topic_AdsMapUserPrincipalStatus:
 
-To avoid the ``userPrincipalName`` attribute is considered a valid
+To avoid the ``userPrincipalName`` attribute to be considered as a valid
 email address, type the following commands at root's console: ::
 
    config setprop postfix AdsMapUserPrincipalStatus disabled
