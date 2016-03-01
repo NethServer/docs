@@ -39,4 +39,5 @@ Per maggiori informazioni si rimanda alla documentazione ufficiale:
 
 * http://www.ocsinventory-ng.org/en/
 * http://wiki.ocsinventory-ng.org/index.php/Documentation:Main
+* http://www.ocsinventory-ng.org/en/download/download-agent.html
 

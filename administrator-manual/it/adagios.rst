@@ -24,7 +24,7 @@ di status e di configurazione degli host monitorati.
 Installazione
 =============
 
-È possibile installare ownCloud tramite l'interfaccia web di |product|.
+È possibile installare Adagios tramite l'interfaccia web di |product|.
 Dopo l'installazione:
 
 * abilitare l'account di :samp:`admin` (vedi :ref:`admin_user-section` per dettagli)
