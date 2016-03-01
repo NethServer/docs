@@ -72,7 +72,8 @@ NethService
    ftp
    webvirtmgr
    webtop4
-
+   adagios
+   ocs
 
 NethSecurity
 ^^^^^^^^^^^^
