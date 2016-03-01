@@ -77,6 +77,7 @@ If the server is installed on a public VPS (Virtual Private Server), it should m
 All critical services should be closed using :ref:`network_services-section` panel.
 
 .. _alias_IP-section:
+
 Alias IP
 --------
 
