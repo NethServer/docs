@@ -34,7 +34,7 @@ Manual configuration
 ====================
 
 If this is not enough, you can always manually create your own proxy pass 
-by creating a new file inside :file:``/etc/httpd/conf.d/`` directory.
+by creating a new file inside :file:`/etc/httpd/conf.d/` directory.
 
 **Example**
 
