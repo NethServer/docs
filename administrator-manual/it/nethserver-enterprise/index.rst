@@ -93,6 +93,7 @@ NethSecurity
    owncloud
    weekly_report
    hotspot
+   proxy_pass
 
 NethVoice
 ^^^^^^^^^
