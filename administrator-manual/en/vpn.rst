@@ -19,7 +19,7 @@ OpenVPN lets you easily create VPN connections,
 It brings with numerous advantages including:
 
 * Availability of clients for various operating systems: Windows, Linux, Apple, Android, iOS
-* Multiple NAT traversal, you do not need a static dedicated static IP on the firewall
+* Multiple NAT traversal, you do not need a dedicated static IP on the firewall
 * High stability
 * Simple configuration
 
@@ -42,7 +42,7 @@ To allow a client to establish a VPN:
 1. Create a new account: it is recommended to use a dedicated VPN account
    with certificate, avoiding the need to create a system user.
 
-   Instead, it's mandatory to choose a system account if you want to use
+   On the other hand, it's mandatory to choose a system account if you want to use
    authentication with user name and password.
 
 2. Download the file containing the configuration and certificates.
@@ -53,10 +53,10 @@ To allow a client to establish a VPN:
 Tunnel (net2net)
 ----------------
 
-When creating an OpenVPN net2net connection, you must choose a master between involved server.
-All other server are considered as slave (client).
+When creating an OpenVPN net2net connection, you must choose a master between involved servers.
+All other servers are considered as slaves (clients).
 
-Steps to be performed on the master:
+Steps to be performed on the master server:
 
 * Enable roadwarrior server
 
@@ -101,14 +101,14 @@ To allow a client to establish a VPN:
 
 .. note::
    Use of L2TP is recommended if and only if 
-   is not possible to install a OpenVPN client into the device.
+   it is not possible to install a OpenVPN client into the device.
 
 Tunnel (net2net)
 ----------------
 
 IPsec is extremely reliable and compatible with many devices.
 In fact, it is an obvious choice when you need to create net2net connections
-between firewall of different manufacturers.
+between firewalls of different manufacturers.
 
 Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered peers.
 
