@@ -455,7 +455,7 @@ la creazione di tre tipi di regole:
 * :guilabel:`Accetta a`: tutti i messaggi destinati all'indirizzo
   indicato vengono sempre accettati
 
-Benchè sconsigliato è possibile creare regole non solo sul singolo indirizzo email, ma su un intero dominio di posta, per farlo è sufficiente specificare solo il dominio nella regola (es: nethesis.it).
+Benchè sconsigliato è possibile creare regole non solo sul singolo indirizzo email, ma su un intero dominio di posta, per farlo è sufficiente specificare solo il dominio nella regola (es: nethserver.org).
 
 .. note:: Il controllo anti-virus è eseguito indipendentemente dalle
           impostazioni di *whitelist*.
