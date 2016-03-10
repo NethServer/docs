@@ -412,6 +412,8 @@ three types of rules:
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
 
+It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specificy the desired domain (e.g. : nethserver.org).
+
 .. note:: Antivirus checks are enforced despite *whitelist* settings.
 
 .. index::
