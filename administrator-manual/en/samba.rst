@@ -21,11 +21,11 @@ Currently the following roles are available:
 The differences between these roles concern `where` user database is
 stored and `which hosts` can access it.  The user database contains
 the list of users of the system, their passwords, group membership and
-other informations.
+other information.
 
 Workstation
 
-    In this role |product| use only its own local user database. Only
+    In this role |product| uses only its own local user database. Only
     local users can access its resources, by providing the correct user
     name and password credentials.  This is the behaviour of a Windows
     standalone workstation.
@@ -92,7 +92,7 @@ and hosts accounts are stored. To setup a Windows network where
 
    * only capital letters.
 
-   For more informations refer to Microsoft Naming conventions [#MS909264]_.
+   For more information refer to Microsoft Naming conventions [#MS909264]_.
 
 2. For each workstation of the Windows network, join the new domain.
    This step requires privileged credentials.  In |product|, members
@@ -105,7 +105,7 @@ and hosts accounts are stored. To setup a Windows network where
    patch to join the domain.  From the Server Manager, follow
    :guilabel:`Client registry settings` link to download the
    appropriate ``.reg`` file.  Refer to the official Samba
-   documentation [#SambaRegistry]_ for more informations.
+   documentation [#SambaRegistry]_ for more information.
 
 .. _samba_ads: 
 
@@ -116,7 +116,7 @@ The Active Directory member role (ADS) configures |product|
 as an Active Directory domain member, delegating authentication to domain
 controllers.  When operating in ADS mode, Samba is configured to map
 domain accounts into |product|, thus files and directories access can
-be shared across the whole domain.  
+be shared across the whole domain.
 
 Joining an Active Directory domain has some pre-requisites:
 
