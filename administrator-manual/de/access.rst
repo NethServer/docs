@@ -1,3 +1,10 @@
+.. _access-section:
+
+.. index::
+   single: Server Manager
+   single: web interface
+   
+===========================
 Zugriff auf die Management-Oberfläche
 ============================
 
