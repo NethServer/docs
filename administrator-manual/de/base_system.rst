@@ -63,78 +63,71 @@ Jedes Netzwerk muss folgenden Anforderungen genügen:
 
 .. index:: zone, role
 
-Jede Netzwerkkarte hat eine bestimmte Rolle (Funktion), die ihr Verhalten festlegt.
-Die R-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Jede Netzwerkkarte hat eine bestimmte *Rolle* (Funktion), die ihr Verhalten festlegt.
+Die Rolle wird durch eine Farbkodierung beschrieben, die einer Zone mit bestimmten Regeln gehört: 
 
-Every network interface has a specific *role* which determinates its behavior. Roles are identified by colors.
-Each role correspond to a well-known *zone* with special network traffic rules:
 
-* *green*: local network. Hosts on this network can access any other configured network
-* *blue*: guests network. Hosts on this network can access orange and red network, but can't access to green zone
-* *orange*: DMZ network.  Hosts on this network can access red networks, but can't access to blue, orange and green zones
-* *red*: public network. Hosts on this network can access only the server itself
+* *grün*: Lokales Netzwerk. Rechner in diesem Netz können auf alle anderen Netze zugreifen.
+* *blau*: Gast Netzwerk. Rechner in diesem Netz können auf das rote und orange Netz zugreifen. Das grüne Netz ist nicht erreichbar.
+* *orange*: DMZ Netzwerk.  Rechner in diesem Netz können auf das rote Netzwerk zugreifen. Blau, Grün und Orange sind nicht erreichbar.
+* *rot*: Öffentliches Netzwerk. Rechner in diesem Netz können nur auf den Server zugreifen.
 
-See :ref:`policy-section` for more information on roles and firewall rules.
+Siehe :ref:`policy-section` für weitere INformationen zu Rollen und Firewallregeln.
 
-.. note:: The server must have at least one network interface. When the server has only one interface, this interface must have green role.
+.. note:: Der Server benötigt immer mindestens eine Netzwerkkarte. Wenn nur eine Netzwerkkarte vorhanden ist, muss diese im grünen Netz sein.
 
-If the server is installed on a public VPS (Virtual Private Server), it should must be configured with a green interface.
-All critical services should be closed using :ref:`network_services-section` panel.
+Falls der Server auf einem öffentlichen Server (Virtual Private Server) installiert wird, so muss er mit einem grünen Netz konfiguriert werden. Alle kritischen Dienste sollten über die Konfigurationsoberfläche :ref:`network_services-section` deaktiviert werden.
 
 .. _alias_IP-section:
 
 Alias IP
 --------
 
-Use alias IP to assign more IP addresses to the same NIC.
+Mit Hilfe von Alias IPs können einer Netzwerkkarte mehrere IP-Adressen zugeordnet werden.
 
-The most common use is with a red interface: when the ISP provides a pool of public IP addresses (within the same subnet) you can add some (or all) of them to the same red interface and manage them individually (e.g. in the port forward configuration).
+Beim typischsten Szenario werden einer roten Netzwerkkarte mehrere Adressen zugeordnet. Dies kann sinnvoll sein, wenn der ISP mehrere Adressen aus dem gleichen Subnet anbietet. Von diesen können dann mehrere (oder alle) an diese Netzwerkkarte gebunden werden. Auf diese Weise kann man individuelle Konfigurationen erstellen (z.B. im Bereich Port-Forwarding).
 
-Alias IP section can be found in the dropdown menu of the related network interface.
+Der Alias IP Bereich befindet sich im Dropdown Menü der entsprechenden Netzwerkkarte.
 
 .. _logical_interfaces-section:
 
-Logical interfaces
+Logische Metzwerkkarten
 ------------------
 
-In :guilabel:`Network` page press :guilabel:`New interface` button to
-create a logical interface. Supported logical interfaces are:
+Im Bereich :guilabel:`Network` den Knopf :guilabel:`New interface` anklicken, 
+um eine logische Netzwerkkarte zu erstellen.
 
-* :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
-* :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
-* :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
-* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
+Mögliche logische Netzwerkkarten sind:
 
-**Bonds** allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
-at the same time, balancing traffic among all active interfaces.
-If an error occurs, the faulty card is automatically excluded from the bond.
+* :index:`bond`: Zusammenfassen von zwei oder mehr Netzwerkkarten, um Lastausgleich und Fehrertoleranz zu ermöglichen.
+* :index:`bridge`: Zwei verschiedene Netzwerke verbinden. Wird oft für bridged VPN und virtuelle Maschinen verwendet.
+* :index:`VLAN` (Virtual Local Area Network): Erstellen von zwei oder mehr logisch getrennten Netzwerken auf einer Netzwerkkarte.
+* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): Internetverbindung über ein DSL-Modem
 
-A **bridge** has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
-to access to the local network (green).
+**Bonds** erlauben die Zusammenfassung von Bandbreite von zwei oder mehr Netzwerkkarten. Das System verwendet alle Netzwerkkarten gleichzeitig und verteilt den Verkehr auf die einzelnen Karten. Beim Auftreten von Fehlern wird die defekte Karte automatisch aus dem **bond** entfernt.
 
-When it is not possible to physically separate two different networks, you can use a tagged **VLAN**. The traffic of the two networks can
-be transmitted on the same cable, but it will be handled as if it were sent and received on separate network cards.
-The use of VLAN, requires properly configured switches.
+Eine **bridge** dient zur Verbindung zweier verschiedener Netzwerksegmente, zum Beispiel um virtuelle Maschinen zu verbinden oder einem Client via VPN eine Verbindung ins grüne Netz zu ermöglichen.
 
-.. warning:: The **PPPoE** logical interface must be assigned the red
-             role, thus requires the gateway functionality. See
-             :ref:`firewall-section` for details.
+Wenn eine physikalische Trennung zweier Netze nicht möglich ist, kann ein **tagged VLAN** verwendet werden. Der Datenverkehr der beiden Netze läuft über das gleiche Kabel, wird aber behandelt, als käme er von getennten Netzwerkkarten. Die Verwendung von VLANs erfordert sauber konfigurierte Switche.
+
+.. warning:: Die logische **PPPoE** Netzwerkkarte muss dem roten Netz zugeordnet werden,
+             da dies für die Funktion als Gateway benötigt wird. Sie :ref:`firewall-section` für Details.
 
 .. _RFC1918-section:
 
-Address for private networks (RFC1918)
+Addressen für private Netzwerke (RFC1918)
 --------------------------------------
 
-TCP/IP private networks not directly connected to Internet should use special addresses selected by
-Internet Assigned Numbers Authority (IANA).
+Private TCP/IP Netzwerke, die nicht direkt mit dem Internet verbunden werden, sollten spezielle Adressbereiche verwenden, die von der IANA (Internet Assigned Numbers Authority) dafür reserviert wurden:
+ 
 
-===============   ===========   =============================
-Private network   Subnet mask   IP addresses interval
-===============   ===========   =============================
-10.0.0.0          255.0.0.0     10.0.0.1 - 10.255.255.254
-172.16.0.0        255.240.0.0   172.16.0.1 - 172.31.255.254
-192.168.0.0       255.255.0.0   192.168.0.1 - 192.168.255.254
-===============   ===========   =============================
+=================     ===========   ================
+Privates Netzwerk     Subnetmaske   IP Adressbereich
+=================     ===========   ================
+10.0.0.0              255.0.0.0     10.0.0.1 - 10.255.255.254
+172.16.0.0            255.240.0.0   172.16.0.1 - 172.31.255.254
+192.168.0.0           255.255.0.0   192.168.0.1 - 192.168.255.254
+=================     ===========   =============================
 
 
 
@@ -142,202 +135,207 @@ Private network   Subnet mask   IP addresses interval
 
 .. _network_services-section:
 
-Network services
+Netzwerk Dienste
 ================
 
-A :index:`network service` is a service running on the firewall itself.
+Ein :index:`network service` ist ein Dienst, der direkt auf der Firewall läuft.
 
-These services are always available to hosts on green network (local network).
-Access policies can be modified from :guilabel:`Network services` page.
+Diese Dienste sind für alle Rechner im grünen Netz (LAN) erreichbar.
+Zugriffsrichtlinien können über den Bereich :guilabel:`Network services` geändert werden.
 
-Available policies are:
+Mögliche Richtlinien sind:
 
-* Access only from green networks (private): all hosts from green networks and from VPNs
-* Access from green and red networks (public): any host from green networks, VPNs and external networks. But not guests (blue) and DMZ (orange) networks
-* Access only from the server itself (none): no host can connect to selected service
+* Zugriff nur aus dem grünen Netz (private): Alle rechner aus dem grünen Netz und VPN-Clients.
+* Zugriff aus grün und rot (public): Jeder Rechner aus grün, VPN-Clients und externe Netzwerke. Zugriff aus blau (Gäste) und orange (DMZ) sind nicht erlaubt.
+* Zugriff nur vom Server (none): Kein Rechner kann den Dienst verwenden.
 
-Custom access
--------------
+Benutzerdefinierter Zugriff
+---------------------------
+Wenn die gewählte Richtlinie *private* oder *public* ist, so kann man Rechner oder Netzwerke hinzufügen, denen der 
+Zugriff immer erlaubt (verboten) ist, indem man :guilabel:`Allow hosts` oder :guilabel:`Deny hosts` wählt.
+Diese Regeln gelten auch für das blaue und orange Netz.
 
-If selected policy is private or public, it’s possible to add hosts and networks which are always allowed (or blocked)
-using :guilabel:`Allow hosts` and :guilabel:`Deny hosts`.
-This rule also apply for blue and orange networks.
+Beispiel
+^^^^^^^^
 
-Example
-^^^^^^^
+Gegeben ist folgende Konfiguration:
 
-Given the following configuration:
+* Oranges Netz: 192.168.2.0/24
+* Zugriff auf NTP Dienst ist *privat*
 
-* Orange network: 192.168.2.0/24
-* Access for NTP server set to private
-
-If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
+Wenn Rechner aus der DMZ auf den NTP Dienst zugreifen müssen, so fügt man das 192.168.2.0/24 Netz im Bereich :guilabel:`Allow hosts` hinzu.
 
 .. index:: trusted networks
 
 .. _trusted_networks-section:
 
-Trusted networks
-================
+Vertrauenswürdige Netzwerke
+===========================
 
-Trusted networks are special networks (local, VPNs or remote)
-allowed to access special server's services.
+Vertrauenswürdige Netzwerke sind spezielle Netze (local, VPNs oder auch entfernt)
+denen der Zugriff auf spezielle Dienste des Servers erlaubt wird.
 
-For example, hosts inside trusted networks can access to:
+Zum Beispiel können Rechner in vertrauenswürdigen Netzen auf folgende Dienste zugreifen:
 
 * Server Manager
 * Shared folders (SAMBA)
 
-If the remote network is reachable using a router, remember to add a
-static route inside :ref:`static_routes-section` page.
-
-
+Wenn das entfernte Netzwerk über einen Router erreicht wird, so
+muss in :ref:`static_routes-section` eine statische Route eingetragen werden.
 
 .. _static_routes-section:
 
-Static routes
-==============
+Statische Routen
+================
 
-This page allow to create special :index:`static routes` which will use the specified gateway.
-These routes are usually used to connect private network.
+Auf dieser Seite werden statische Routen erstellt :index:`static routes`, die ein bestimmtes Gateway verwenden. 
+Derartige Routen werden üblicherweise verwendet, um Verbindungen zu privaten Netzen aufzubauen.
 
-Remember to add the network to :ref:`trusted_networks-section`, if you wish to allow remote hosts to access local services.
+Es ist wichtig, dass das Netzwerk in :ref:`trusted_networks-section` als vertrauenswürdiges Netz eingetragen wird.
 
 
 .. _organization_contacts-section:
 
-Organization contacts
+Firmenkontaktdaten
 =====================
 
-The :guilabel:`Organization contacts` page fields are used as default
-values for user accounts.  The organization name and address are also
-displayed on the Server Manager login screen.
+Die Felder der :guilabel:`Organization contacts` Seite liefert die Voreinstellungen
+für Benutzeraccounts. Der NAme der Firme sowie die Adresse werden auch auf der Login-Seite 
+angezeigt.
 
 .. index::
    pair: Certificate; SSL   
 
 .. _server_certificate-section:
 
-Server certificate
+Server Zertifikate
 ==================
 
-The :guilabel:`Server certificate` page shows the currently installed
-SSL certificate that is provided by all system services.
+Die :guilabel:`Server certificate` Seite zeigt das aktuell installierte
+SSL-Zertifikat, das für alle Systemdienste gültig ist.
 
-The :guilabel:`Generate certificate` button allows generating a new
-self-signed SSL certificate.  When a new certificate is generated, all
-SSL services are restarted and network clients will be required to
-accept the new certificate.
+Der Knopf :guilabel:`Generate certificate` erlaubt die Erstellung eines 
+neuen selbstsignierten  SSL-Zertifikat.
+Wird ein neues Zertifikat erstellt, so werden alle dienste neu gestartet.
+Alle Clients müssen dieses Zertifikat dann noch akzeptieren.
 
 .. note::
-   To avoid problems while importing the certificate in Internet Explorer,
-   the Common Name (CN) field should match the server FQDN. 
-
+   Um Probleme beim Import des Zertifikates in den Internet Explorer zu vermeiden,
+   sollte der *Common Name* (CN) dem FQDN des Servers entsprechen.
 
 .. _custom_certificate-section:
 
-Install a custom certificate
-----------------------------
+Installation eines Benutzerzertifikates
+---------------------------------------
 
-:index:`Custom certificates` should be placed inside the following standard directories:
+:index:`Custom certificates` sollten in den den folgenden 
+(üblichen) Verzeichnissen abgespeichert werden:
 
 * :file:`/etc/pki/tls/certs`: public key
 * :file:`/etc/pki/tls/private`: private key
 
-
-Set the private key and certificate file paths:
+Einstellen der Pfade für den privaten Schlüssel und das Zertifikat
 
 ::
 
     db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
     db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
 
-You can also set a SSL certificate chain file:
+Man kann auch ein *SSL certificate chain file* verwenden:
 
 ::
 
     db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
 
-Notify registered daemons about certificate update:
+Informieren der Dienste über das neue Zertifikat:
 
 ::
 
     signal-event certificate-update
 
-Custom certificate backup
--------------------------
-   
-Always remember to add custom certificates to configuration backup.
-Just add the paths inside :file:`/etc/backup-config.d/custom.include` file.
+Sicherung eines Benutzerzertifikates
+------------------------------------
 
-For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply execute: ::
+Benutzerzertifikate müssen explizit in das Konfigurationsbackup aufgenommen werden.   
+Dafür müssen die Pfade in :file:`/etc/backup-config.d/custom.include` eingetragen werden.
+
+Wenn das Zertifikat beispielsweise hier zu finden ist :file:`/etc/pki/tls/certs/mycert.crt`,
+so genügt die Ausführung von 
+
+::
 
  echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
 
 .. _user_profile-section:
 
-Change user password
-====================
+Benutzerkennwort ändern
+=======================
 
-All users can login to Server Manager using their own credentials and access the :index:`user profile`.
+Alle Benutzer können sich an der Konfigurationsoberfläche anmelden und auf ihr :index:`user profile` zugreifen.
 
-After login, a user can :index:`change the password` and information about the account, like:
+Nach der Anmeldung kann ein Benutzer sein Kennwort :index:`change the password` und 
+folgende Informationen ändern:
 
-* Name and surname
-* External mail address
+* Name und Vorname
+* External Mail-Addresse
 
-The user can also overwrite fields set by the administrator:
+Der Benutzer kann auch die vom Administrator voreingestellten Felder ändern:
 
 * Company
 * Office
 * Address
 * City
 
-Shutdown
-========
+Herunterfahren
+==============
 
-The machine where |product| is installed can be rebooted or halted from the :menuselection:`Shutdown` page.
-Choose an option (reboot or halt) then click on submit button.
+der Rechner, auf dem |product| installiert ist kann von :menuselection:`Shutdown` heruntergefahren
+oder neu gestartet werden. Man wählt die gewünschte Aktion an und klickt auf den *submit* Button.
 
-Always use this module to avoid bad shutdown which can cause data damages.
+Man sollte stets diesen Weg wählen, um den Computer herunterzufahren. Andere Methoden können
+zu inkonsistenten Daten führen.
 
-Log viewer
-==========
+Log Betrachter
+==============
 
-All services will save operations inside files called :dfn:`logs`.
-The :index:`log` analysis is the main tool to find and resolve problems.
-To analyze log files click in :menuselection:`Log viewer`.
+Alle Dienste schreiben ihr Protokoll (Log) in die Dateien (:dfn:`logs`).
 
-This module allows to:
+Die :index:`log` Analyse ist das Hauptwerkzeug um Probleme zu finden und zu lösen.
+Das Werkzeug findet maun unter :menuselection:`Log viewer`.
 
-* start search on all server's logs
-* display a single log
-* follow the content of a log in real time
+Dieses Modul erlaubt:
 
-Date and time
-=============
+* Alle Logs durchsuchen
+* Eine einzelne Datei durchsuchen
+* Die Einträge in eine Logdatei in Echtzeit verfolgen
 
-After installation, make sure the server is configured with the correct timezone.
-The machine clock can be configured manually or automatically using public NTP servers (preferred).
+Datum und Zeit
+==============
 
-The machine clock is very important in many protocols. To avoid problems, all hosts in LAN can be configured to use the server as NTP server.
+Nach der Installation ist es wichtig, dass sich der Server in der richtigen Zeitzone befindet.
+Die Uhrzeit des Rechners kann manuell oder automatisch via NTP (bevorzugt) eingestellt werden.
+
+Die Uhrzeit des Rechners ist für viele Protokolleinträge wichtig. Um Probleme zu vermeiden, sollten alle
+Rechner im LAN den Server als NTP-Server verwenden.
 
 
-Inline help
+Inline Hilfe
 ===========
 
-All packages inside the Server Manager contain an :index:`inline help`.
-The inline help explains how the module works and all available options.
+Alle Programme im  Server Manager enthalten eine :index:`inline help`.
+Sie erklärt wie das Modul arbeitet und welche Optionen es besitzt.
 
-These help pages are available in all Server Manager's languages.
+Diese Hilfeseiten sind in allen Sprachen des Server Managers verfügbar.
 
-A list of all available inline help pages can be found at the address: ::
+Eine Liste aller verfügbaren Hilfeseitenfindet man unter 
+::
 
  https://<server>:980/<language>/Help
 
-**Example**
+**Beispiel**
 
-If the server has address ``192.168.1.2``, and you want to see all English help pages, use this address: ::
+Wenn der Server die Adresse ``192.168.1.2`` besitzt, so erhält man alle englischen Hilfeseiten durch
+::
 
  https://192.168.1.2:980/en/Help
 
