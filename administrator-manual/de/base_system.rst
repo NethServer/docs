@@ -10,32 +10,32 @@ installiert werden (einschließlich backup und Benutzerunterstützung).
 
 .. _dashboard-section:
 
-Dashboard
+Übersicht
 =========
 
-Die :index:`Dashboard` Seite ist die Startseite nach einer erfolgreichen Anmeldung..
+Die :index:`Übersicht` Seite ist die Startseite nach einer erfolgreichen Anmeldung..
 Hier ist der Status :index:`status` und die Konfiguration des Systems ersichtlich.
 
 .. _duc-section:
 
-Disk analyzer
+Festplattennutzung
 -------------
 
-Dieses Tool macht die Belegung der Festplatte optisch erkennbar :index:`Festplattenbelegung`. 
+Das Werkzeug :index:`Festplattennutzung` macht die Belegung der Festplatte optisch erkennbar . 
 Ein einfach bedienbares Diagramm ermöglicht durch Klick und Doppelklick eine Navigation in der Ordnerstruktur.
 
-Nach dem Ende der Installation kann man im Bereich :guilabel:`Disk usage` des :guilabel:`Dashboard` den Punkt :guilabel:`Update`
+Nach dem Ende der Installation kann man im Bereich :guilabel:`Fetplattennutzung` der :guilabel:`Übersicht` den Punkt :guilabel:`Update`
 auswählen um eine Katalogisierung des Verzeichnisbaums auszulösen und im Anschluss das Diagramm anzeigen zu lassen. 
 Je nach Datenmenge kann dies mehrere Minuten dauern.
 
 Bekannte Verzeichnisse sind:
 
-* Shared folders: :file:`/var/lib/nethserver/ibay`
-* User home directories: :file:`/var/lib/nethserver/home`
+* Freigegebene Verzeichnisse: :file:`/var/lib/nethserver/ibay`
+* Benutzerhomes: :file:`/var/lib/nethserver/home`
 * Windows roaming profiles: :file:`/var/lib/nethserver/profile`
 * Mail: :file:`/var/lib/nethserver/vmail`
 * Faxes: :file:`/var/lib/nethserver/fax`
-* MySQL databases: :file:`/var/lib/mysql`
+* MySQL Datenbanken: :file:`/var/lib/mysql`
 
 
 .. index::
@@ -44,10 +44,10 @@ Bekannte Verzeichnisse sind:
 
 .. _network-section:
 
-Network
-=======
+Netzwerk
+========
 
-Die Seite :guilabel:`Network` legt fest, wie der Server mit dem lokalen Netzwerk (LAN) 
+Die Seite :guilabel:`Netzwerk` legt fest, wie der Server mit dem lokalen Netzwerk (LAN) 
 und anderen Netzen (z.B. Internet) verbunden ist.
 
 Falls der Server als Firewall und Gateway arbeitet, so wird er spezielle Netze verwalten, 
@@ -80,21 +80,21 @@ Falls der Server auf einem öffentlichen Server (Virtual Private Server) install
 
 .. _alias_IP-section:
 
-Alias IP
+Alias IPs
 --------
 
 Mit Hilfe von Alias IPs können einer Netzwerkkarte mehrere IP-Adressen zugeordnet werden.
 
 Beim typischsten Szenario werden einer roten Netzwerkkarte mehrere Adressen zugeordnet. Dies kann sinnvoll sein, wenn der ISP mehrere Adressen aus dem gleichen Subnet anbietet. Von diesen können dann mehrere (oder alle) an diese Netzwerkkarte gebunden werden. Auf diese Weise kann man individuelle Konfigurationen erstellen (z.B. im Bereich Port-Forwarding).
 
-Der Alias IP Bereich befindet sich im Dropdown Menü der entsprechenden Netzwerkkarte.
+Der Menüpunkt zum Erstellen eine Alias IP befindet sich im Dropdown Menü der entsprechenden Netzwerkkarte (Erstelle IP Alias).
 
 .. _logical_interfaces-section:
 
 Logische Metzwerkkarten
 ------------------
 
-Im Bereich :guilabel:`Network` den Knopf :guilabel:`New interface` anklicken, 
+Im Bereich :guilabel:`Netzwerk` den Knopf :guilabel:`Neue Schnittstelle` anklicken, 
 um eine logische Netzwerkkarte zu erstellen.
 
 Mögliche logische Netzwerkkarten sind:
@@ -111,7 +111,7 @@ Eine **bridge** dient zur Verbindung zweier verschiedener Netzwerksegmente, zum 
 Wenn eine physikalische Trennung zweier Netze nicht möglich ist, kann ein **tagged VLAN** verwendet werden. Der Datenverkehr der beiden Netze läuft über das gleiche Kabel, wird aber behandelt, als käme er von getennten Netzwerkkarten. Die Verwendung von VLANs erfordert sauber konfigurierte Switche.
 
 .. warning:: Die logische **PPPoE** Netzwerkkarte muss dem roten Netz zugeordnet werden,
-             da dies für die Funktion als Gateway benötigt wird. Sie :ref:`firewall-section` für Details.
+             da dies für die Funktion als Gateway benötigt wird. Siehe :ref:`firewall-section` für Details.
 
 .. _RFC1918-section:
 
@@ -141,18 +141,18 @@ Netzwerk Dienste
 Ein :index:`Netzwerkdienst` ist ein Dienst, der direkt auf der Firewall läuft.
 
 Diese Dienste sind für alle Rechner im grünen Netz (LAN) erreichbar.
-Zugriffsrichtlinien können über den Bereich :guilabel:`Network services` geändert werden.
+Zugriffsrichtlinien können über den Bereich :guilabel:`Netzwerkdienste` geändert werden.
 
 Mögliche Richtlinien sind:
 
-* Zugriff nur aus dem grünen Netz (private): Alle rechner aus dem grünen Netz und VPN-Clients.
-* Zugriff aus grün und rot (public): Jeder Rechner aus grün, VPN-Clients und externe Netzwerke. Zugriff aus blau (Gäste) und orange (DMZ) sind nicht erlaubt.
-* Zugriff nur vom Server (none): Kein Rechner kann den Dienst verwenden.
+* Zugriff nur aus dem grünen Netz (private): Alle Rechner aus dem grünen Netz und VPN-Clients.
+* Zugriff aus grün und rot (public): Jeder Rechner aus grün, VPN-Clients und externe Netzwerke. Zugriffe aus blau (Gäste) und orange (DMZ) sind nicht erlaubt.
+* Zugriff nur vom Server (lokal): Kein Rechner kann den Dienst verwenden.
 
 Benutzerdefinierter Zugriff
 ---------------------------
 Wenn die gewählte Richtlinie *private* oder *public* ist, so kann man Rechner oder Netzwerke hinzufügen, denen der 
-Zugriff immer erlaubt (verboten) ist, indem man :guilabel:`Allow hosts` oder :guilabel:`Deny hosts` wählt.
+Zugriff immer erlaubt (verboten) ist, indem man :guilabel:`Erlaubte hosts` oder :guilabel:`Deny hosts` wählt.
 Diese Regeln gelten auch für das blaue und orange Netz.
 
 Beispiel
@@ -163,9 +163,9 @@ Gegeben ist folgende Konfiguration:
 * Oranges Netz: 192.168.2.0/24
 * Zugriff auf NTP Dienst ist *privat*
 
-Wenn Rechner aus der DMZ auf den NTP Dienst zugreifen müssen, so fügt man das 192.168.2.0/24 Netz im Bereich :guilabel:`Allow hosts` hinzu.
+Wenn Rechner aus der DMZ auf den NTP Dienst zugreifen müssen, so fügt man das 192.168.2.0/24 Netz im Bereich :guilabel:`Erlaubte Hosts` hinzu.
 
-.. index:: vertrauenswürdiges Netzwerk
+.. index:: Vertrauenswürdige Netzwerke
 
 .. _trusted_networks-section:
 
@@ -178,17 +178,17 @@ denen der Zugriff auf spezielle Dienste des Servers erlaubt wird.
 Zum Beispiel können Rechner in vertrauenswürdigen Netzen auf folgende Dienste zugreifen:
 
 * Server Manager
-* Shared folders (SAMBA)
+* Freigegebene Verzeichnisse (SAMBA)
 
 Wenn das entfernte Netzwerk über einen Router erreicht wird, so
 muss in :ref:`static_routes-section` eine statische Route eingetragen werden.
 
 .. _static_routes-section:
 
-Statische Routen
+Statische Route
 ================
 
-Auf dieser Seite werden statische Routen erstellt :index:`Statische Routen`, die ein bestimmtes Gateway verwenden. 
+Auf dieser Seite werden statische Routen erstellt :index:`Statische Route`, die ein bestimmtes Gateway verwenden. 
 Derartige Routen werden üblicherweise verwendet, um Verbindungen zu privaten Netzen aufzubauen.
 
 Es ist wichtig, dass das Netzwerk in :ref:`trusted_networks-section` als vertrauenswürdiges Netz eingetragen wird.
@@ -199,24 +199,24 @@ Es ist wichtig, dass das Netzwerk in :ref:`trusted_networks-section` als vertrau
 Firmenkontaktdaten
 =====================
 
-Die Felder der :guilabel:`Organization contacts` Seite liefert die Voreinstellungen
-für Benutzeraccounts. Der NAme der Firme sowie die Adresse werden auch auf der Login-Seite 
+Die Felder der :guilabel:`Organisation` Seite liefert die Voreinstellungen
+für Benutzeraccounts. Der Name der Firme sowie die Adresse werden auch auf der Login-Seite 
 angezeigt.
 
 .. index::
-   pair: Certificate; SSL   
+   pair: Zertifikate; SSL   
 
 .. _server_certificate-section:
 
 Server Zertifikate
 ==================
 
-Die :guilabel:`Server certificate` Seite zeigt das aktuell installierte
+Die :guilabel:`Server Zertifikate` Seite zeigt das aktuell installierte
 SSL-Zertifikat, das für alle Systemdienste gültig ist.
 
-Der Knopf :guilabel:`Generate certificate` erlaubt die Erstellung eines 
+Der Knopf :guilabel:`Neues zertifikat` erlaubt die Erstellung eines 
 neuen selbstsignierten  SSL-Zertifikat.
-Wird ein neues Zertifikat erstellt, so werden alle dienste neu gestartet.
+Wird ein neues Zertifikat erstellt, so werden alle Dienste neu gestartet.
 Alle Clients müssen dieses Zertifikat dann noch akzeptieren.
 
 .. note::
@@ -271,9 +271,9 @@ so genügt die Ausführung von
 Benutzerkennwort ändern
 =======================
 
-Alle Benutzer können sich an der Konfigurationsoberfläche anmelden und auf ihr :index:`user profile` zugreifen.
+Alle Benutzer können sich an der Konfigurationsoberfläche anmelden und auf ihr :index:`Benutzerprofil` zugreifen.
 
-Nach der Anmeldung kann ein Benutzer sein Kennwort :index:`change the password` und 
+Nach der Anmeldung kann ein Benutzer eine :index:`Kennwortädnerung` vornehmen und 
 folgende Informationen ändern:
 
 * Name und Vorname
@@ -281,27 +281,28 @@ folgende Informationen ändern:
 
 Der Benutzer kann auch die vom Administrator voreingestellten Felder ändern:
 
-* Company
-* Office
-* Address
-* City
+* Firme
+* Bereich
+* Addresse
+* Stadt
 
 Herunterfahren
 ==============
 
-der Rechner, auf dem |product| installiert ist kann von :menuselection:`Shutdown` heruntergefahren
-oder neu gestartet werden. Man wählt die gewünschte Aktion an und klickt auf den *submit* Button.
+der Rechner, auf dem |product| installiert ist kann von :menuselection:`Herunterfahren` ausgeschaltet
+oder neu gestartet werden. Man wählt die gewünschte Aktion an und klickt auf den Knopf mit der Aufschrift
+**Das System herunterfahren**.
 
 Man sollte stets diesen Weg wählen, um den Computer herunterzufahren. Andere Methoden können
 zu inkonsistenten Daten führen.
 
-Log Betrachter
-==============
+Protokoll Betrachter (LogViwer)
+===============================
 
 Alle Dienste schreiben ihr Protokoll (Log) in die Dateien (:dfn:`logs`).
 
 Die :index:`Protokoll` Analyse ist das Hauptwerkzeug um Probleme zu finden und zu lösen.
-Das Werkzeug findet maun unter :menuselection:`Log viewer`.
+Das Werkzeug findet man unter :menuselection:`Log viewer`.
 
 Dieses Modul erlaubt:
 
