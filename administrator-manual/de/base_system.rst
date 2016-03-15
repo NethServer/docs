@@ -21,11 +21,11 @@ Hier ist der Status :index:`status` und die Konfiguration des Systems ersichtlic
 Disk analyzer
 -------------
 
-Dieses Tool macht die Belegung der Festplatte optisch erkennbar :index:`disk usage`. Ein einfach bedinbares Diagramm
-ermöglicht durch Klick und Doppelklick eine Navigation in der Ordnerstruktur.
+Dieses Tool macht die Belegung der Festplatte optisch erkennbar :index:`Festplattenbelegung`. 
+Ein einfach bedienbares Diagramm ermöglicht durch Klick und Doppelklick eine Navigation in der Ordnerstruktur.
 
-Nach dem Ende der Installation kann man im Bereich :guilabel:`Disk usage` des :guilabel:`Dashboard`  den Punkt :guilabel:`Update`
-auswählen um eine Katalogisierung des Verzeichnisbaums auszulösen und im Anschluss das Daigramm anzeigen zu lassen. 
+Nach dem Ende der Installation kann man im Bereich :guilabel:`Disk usage` des :guilabel:`Dashboard` den Punkt :guilabel:`Update`
+auswählen um eine Katalogisierung des Verzeichnisbaums auszulösen und im Anschluss das Diagramm anzeigen zu lassen. 
 Je nach Datenmenge kann dies mehrere Minuten dauern.
 
 Bekannte Verzeichnisse sind:
@@ -39,8 +39,8 @@ Bekannte Verzeichnisse sind:
 
 
 .. index::
-   single: Network
-   pair: interface; role
+   single: Netzwerk
+   pair: Netzwerkkarte; Rolle
 
 .. _network-section:
 
@@ -61,7 +61,7 @@ Jedes Netzwerk muss folgenden Anforderungen genügen:
 * Private Netzwerke (wie LANs) müssen den Adresskonventionen nach RFC1918 folgen.
   Siehe :ref:`RFC1918-section`
 
-.. index:: zone, role
+.. index:: Zone, Rolle
 
 Jede Netzwerkkarte hat eine bestimmte *Rolle* (Funktion), die ihr Verhalten festlegt.
 Die Rolle wird durch eine Farbkodierung beschrieben, die einer Zone mit bestimmten Regeln gehört: 
@@ -99,8 +99,8 @@ um eine logische Netzwerkkarte zu erstellen.
 
 Mögliche logische Netzwerkkarten sind:
 
-* :index:`bond`: Zusammenfassen von zwei oder mehr Netzwerkkarten, um Lastausgleich und Fehrertoleranz zu ermöglichen.
-* :index:`bridge`: Zwei verschiedene Netzwerke verbinden. Wird oft für bridged VPN und virtuelle Maschinen verwendet.
+* :index:`Bond`: Zusammenfassen von zwei oder mehr Netzwerkkarten, um Lastausgleich und Fehrertoleranz zu ermöglichen.
+* :index:`Bridge`: Zwei verschiedene Netzwerke verbinden. Wird oft für bridged VPN und virtuelle Maschinen verwendet.
 * :index:`VLAN` (Virtual Local Area Network): Erstellen von zwei oder mehr logisch getrennten Netzwerken auf einer Netzwerkkarte.
 * :index:`PPPoE` (Point-to-Point Protocol over Ethernet): Internetverbindung über ein DSL-Modem
 
@@ -138,7 +138,7 @@ Privates Netzwerk     Subnetmaske   IP Adressbereich
 Netzwerk Dienste
 ================
 
-Ein :index:`network service` ist ein Dienst, der direkt auf der Firewall läuft.
+Ein :index:`Netzwerkdienst` ist ein Dienst, der direkt auf der Firewall läuft.
 
 Diese Dienste sind für alle Rechner im grünen Netz (LAN) erreichbar.
 Zugriffsrichtlinien können über den Bereich :guilabel:`Network services` geändert werden.
@@ -165,7 +165,7 @@ Gegeben ist folgende Konfiguration:
 
 Wenn Rechner aus der DMZ auf den NTP Dienst zugreifen müssen, so fügt man das 192.168.2.0/24 Netz im Bereich :guilabel:`Allow hosts` hinzu.
 
-.. index:: trusted networks
+.. index:: vertrauenswürdiges Netzwerk
 
 .. _trusted_networks-section:
 
@@ -188,7 +188,7 @@ muss in :ref:`static_routes-section` eine statische Route eingetragen werden.
 Statische Routen
 ================
 
-Auf dieser Seite werden statische Routen erstellt :index:`static routes`, die ein bestimmtes Gateway verwenden. 
+Auf dieser Seite werden statische Routen erstellt :index:`Statische Routen`, die ein bestimmtes Gateway verwenden. 
 Derartige Routen werden üblicherweise verwendet, um Verbindungen zu privaten Netzen aufzubauen.
 
 Es ist wichtig, dass das Netzwerk in :ref:`trusted_networks-section` als vertrauenswürdiges Netz eingetragen wird.
@@ -228,7 +228,7 @@ Alle Clients müssen dieses Zertifikat dann noch akzeptieren.
 Installation eines Benutzerzertifikates
 ---------------------------------------
 
-:index:`Custom certificates` sollten in den den folgenden 
+:index:`Benutzerzertifikate` sollten in den den folgenden 
 (üblichen) Verzeichnissen abgespeichert werden:
 
 * :file:`/etc/pki/tls/certs`: public key
@@ -300,7 +300,7 @@ Log Betrachter
 
 Alle Dienste schreiben ihr Protokoll (Log) in die Dateien (:dfn:`logs`).
 
-Die :index:`log` Analyse ist das Hauptwerkzeug um Probleme zu finden und zu lösen.
+Die :index:`Protokoll` Analyse ist das Hauptwerkzeug um Probleme zu finden und zu lösen.
 Das Werkzeug findet maun unter :menuselection:`Log viewer`.
 
 Dieses Modul erlaubt:
