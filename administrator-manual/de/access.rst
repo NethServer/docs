@@ -24,7 +24,7 @@ Anmeldung (Login)
 Nach dem Ausfüllen des Anmeldedialogs kann der Zugriff auf die Konfigurationsoberfläche erfolgen.
 Die erste Anmeldung ist mit folgenden Benutzerdaten möglich:
 
-* :index:`Default user` name: **root**
+* :index:`Default Benutzer` name: **root**
 * :index:`Default password`: **Nethesis,1234**
 
 
@@ -32,9 +32,9 @@ Die erste Anmeldung ist mit folgenden Benutzerdaten möglich:
 Warnung
 --------
 
-Das Kennwort des Benutzers root sollte so bald wie möglich geändert werden. Dabei sollte ein möglichst sicheres Kennwort 
-verwendet werden. Ideal ist eine zufällige Zeichenkette aus Groß- und Kleinbuchstaben, die außerdem Zahlen und Sonderzeichen
-enthält.
+Das Kennwort des Benutzers **root** sollte so bald wie möglich geändert werden. Für ein möglichst sicheres Kennwort 
+ ist eine zufällige Zeichenkette sinnvoll, die aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen
+besteht.
 
 Falls der Dateiserver, Mailserver oder ein anderes Modul installiert wurde, das auf dem Benutzer- und Gruppenmodul basiert,
 so kann der ``admin`` Benutzer mit dem gleichen Kennwort und den gleichen Rechten auf die Konfigurationsoberfläche zugreifen wie ``root`` (siehe :ref:`admin_user-section` für Details).
