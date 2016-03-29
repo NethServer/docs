@@ -17,15 +17,15 @@ This configuration supports:
 
 **Example**
 
-The MySQL daemons listens to a virtual IP and stores the data inside the DRBD partition.
-In case of failure of master node, the service will be restarted on the secondary node.
+The MySQL daemon listens on a virtual IP and stores the data inside the DRBD partition.
+In case of failure of the master node, mysqld service will be restarted on the secondary node.
 All clients connect to MySQL using the virtual IP.
 
 
 Limitations
 ===========
 
-* The LDAP service, and all services depending on it, can't be clustered.
+* The LDAP service and all services depending on it can't be clustered.
   We recommend the use of and external LDAP server.
 * Nodes can have only one green interface
 * Only STONITH fence devices are supported
@@ -54,7 +54,7 @@ Each node must be connected to pre-configured fence device.
 
 *Fencing* is the action which disconnects a node from shared storage. 
 The *fence device* is a hardware device than can be used to shutdown a node using 
-the STONITH method (Shoot The Other Node In The Head), thus cutting off the power to the failed node.
+the STONITH (Shoot The Other Node In The Head) method, thus cutting off the power to the failed node.
 
 See also: https://access.redhat.com/articles/28603
 
@@ -63,7 +63,7 @@ Installation
 
 Before install:
 
-* connect both nodes as described before, also take care the secondary node is shut down. Proceed by installing |product| on the primary node
+* connect both nodes as described before, while the secondary node is powered off. Proceed by installing |product| on the primary node
 * make sure the System Name of the master node is *ns1*. Example: ns1.mydomain.com. 
   Also choose the domain name, which *can not* be changed later.
 
@@ -71,12 +71,12 @@ Primary node
 ------------
 
 The primary node will be the one running services on normal conditions.
-First, you must configure a logival volume reserved for DRBD shared storage.
+First, you must configure a logical volume reserved for DRBD shared storage.
 
 Configuring DRBD storage
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Add ad new disk (example, vdb)
+* Add a new disk (example: vdb)
 * Create a new partition:
 
 ::
@@ -109,7 +109,7 @@ Software
 Cluster options are saved inside the ``ha`` configuration key. The key must have the same configuration
 on both nodes.
 
-Execute following steps to proceed with software installation and configuration.
+Execute the following steps to proceed with software installation and configuration.
 
 * Configure the green interface, then add a new network interface for DRBD. This interface will have ``ha`` role.
 
@@ -145,7 +145,7 @@ Execute following steps to proceed with software installation and configuration.
  signal-event nethserver-ha-save
 
 
-At the end, the primary node is ready to run the services.
+When the command completes, the primary node is ready to run the services.
 You can check the cluster status with following command: ::
 
  pcs status
@@ -160,7 +160,7 @@ you should disable |product| service handling for the clustered service: ::
  chkconfig mysqld off
  /sbin/e-smith/config settype mysqld clustered
 
-Following commands will configure a MySQL instance bound to the virtual IP. Data are saved inside DRBD: ::
+The following commands will configure a MySQL instance bound to the virtual IP. Data are saved inside DRBD: ::
 
  /usr/sbin/pcs cluster cib /tmp/mycluster
  /usr/sbin/pcs -f /tmp/mycluster resource create DRBDData ocf:linbit:drbd drbd_resource=drbd00 op monitor interval=60s
@@ -182,7 +182,7 @@ Check cluster and service status: ::
 
  pcs status
 
-Take a look to the official pacemaker documentation for more information.
+Take a look at the official pacemaker documentation for more information.
 
 Secondary node
 --------------
@@ -190,7 +190,7 @@ Secondary node
 * Install |product| on the secondary node
 * Make sure the secondary node is named *ns2* and the domain name is the same as primary node
 * Configure the DRBD storage as already done for the primary node
-* Install and configure software as already done for the primary node
+* Install and configure software following the same steps as in the primary node
 * Configure ha network interface for DRBD. Example with eth1:
 
 ::
@@ -202,13 +202,13 @@ Secondary node
 Final steps
 -----------
 
-* Enable the STONITH, commands can be executed on any node:
+* Enable the STONITH (commands can be executed on any node):
 
 ::
 
  pcs property set stonith-enabled=true
 
-* Configure the fence device, commands can be executed on any node.
+* Configure the fence device (commands can be executed on any node).
   
   Example for libvirt fence, where nodes are virtual machines hosted on the same KVM-enabled host with IP 192.168.1.1: 
 
@@ -241,6 +241,6 @@ Only the primary node will actually execute the backup process, the backup scrip
 on the secondary node only if the master node has failed.
 
 If both nodes fail, you should re-install the primary node, reconfigure the cluster and 
-restore the backup only at the end.
-After the restore, reboot the system.
+restore the backup only as the last step.
+Whenb the restore ends, reboot the system.
 
