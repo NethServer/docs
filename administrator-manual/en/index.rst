@@ -69,6 +69,7 @@ Modules
    webtop4
    adagios
    ocs
+   ha
 
 Best practices
 --------------
