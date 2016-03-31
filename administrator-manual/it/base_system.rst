@@ -101,18 +101,31 @@ logiche supportate sono:
 
 * :index:`bond`: combina due o più interfacce, garantisce bilanciamento del traffico e tolleranza ai guasti
 * :index:`bridge`: collega due reti distinte, è spesso utilizzata per le VPN in bridge e le macchine virtuali
-* :index:`vlan` (Virtual Local Area Network): crea due o più reti fisicamente separate usando una singola interfaccia fisica
+* :index:`VLAN` (Virtual Local Area Network): crea due o più reti fisicamente separate usando una singola interfaccia fisica
+* :index:`PPPoE` (Point-to-Point Protocol over Ethernet): collegamento a Internet attraverso un modem DSL
 
+I **bond** consentono di aggregare banda o tollerare guasti. I bond posso essere configurati in varie modalità.
 
-I bond consentono di aggregare banda fra due o più interfacce di rete. Il sistema utilizzerà tutte le schede contemporaneamente bilanciando
-il traffico fra tutte le schede attive. In caso di errore, la scheda guasta viene automaticamente esclusa dal bond.
+Modalità che supportano aggregazione di banda e tolleranza ai guasti:
 
-I bridge hanno la funzione di collegare segmenti di rete differenti, per esempio consentendo ai client collegati in VPN o macchine virtuali
+* Balance Round Robin (raccomandato)
+* Balance XOR
+* 802.3ad (LACP): richiede il supporto nel driver della scheda di rete
+  ed uno switch in cui sia abilitata la modalità IEEE 802.3ad Dynamic link
+* Balance TLB: richiede il supporto nel driver della scheda di rete
+* Balance ALB
+
+Modalità che supportano solo tolleranza ai guasti:
+
+* Active backup (raccomandato)
+* Broadcast policy
+
+I **bridge** hanno la funzione di collegare segmenti di rete differenti, per esempio consentendo ai client collegati in VPN o macchine virtuali
 di accedere alla rete locale (green).
 
-Quando non è possibile separare fisicamente due reti diverse, è possibile utilizzare le vlan con tag. Il traffico delle due reti può
+Quando non è possibile separare fisicamente due reti diverse, è possibile utilizzare le **VLAN** con tag. Il traffico delle due reti può
 essere trasmesso sullo stesso cavo ma sarà trattato come se fosse inviato e ricevuto da due schede separate.
-L'utilizzo delle vlan necessita di switch adeguatamente configurati.
+L'utilizzo delle VLAN necessita di switch adeguatamente configurati.
 
 .. _RFC1918-section:
 

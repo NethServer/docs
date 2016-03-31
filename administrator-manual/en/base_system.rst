@@ -100,9 +100,20 @@ create a logical interface. Supported logical interfaces are:
 * :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
 * :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
-**Bonds** allow you to aggregate bandwidth between two or more network interfaces. The system will use all network interfaces
-at the same time, balancing traffic among all active interfaces.
-If an error occurs, the faulty card is automatically excluded from the bond.
+**Bonds** allow you to aggregate bandwidth or tollerate link faults. Bonds can be configured in multiple modes.
+
+Modes providing load balancing and fault tolerance:
+
+* Balance Round Robin (recommended)
+* Balance XOR
+* 802.3ad (LACP): it requires support at driver level and a switch with IEEE 802.3ad Dynamic link aggregation mode enabled
+* Balance TLB: it requires support at driver level
+* Balance ALB
+
+Modes providing fault tolerance only:
+
+* Active backup (recommended)
+* Broadcast policy
 
 A **bridge** has the function to connect different network segments, for example by allowing virtual machines, or client connected using a VPN,
 to access to the local network (green).

@@ -30,7 +30,8 @@ The ``type`` variable is the type of interface. Valid values are:
 * bond
 * bridge
 * alias
-* ipsec 
+* ipsec
+* xdsl
 
 The ``<device_name>`` variable is the name for the device.
 
@@ -48,6 +49,7 @@ There are also 3 special roles:
 * *bridged*: interface is part of a bridge
 * *slave*: interface is part of a bond
 * *alias*: interface is an alias of another interface
+* *xdsl-disabled*: xdsl disabled interface
 
 See also :ref:`section-roles-and-zones` for the meaning of each color.
 
@@ -71,6 +73,22 @@ One green ethernet: ::
 File content: ::
 
  green=ethernet|bootproto|static|device|green|hwaddr|xx:yy:27:DE:B6:51|ipaddr|192.168.1.4|netmask|255.255.255.0|network|192.168.1.0|onboot|yes|role|green
+
+Bond options
+------------
+
+Any property starting with ``BondOpt`` prefix is used as bonding options.
+
+Example: ::
+
+ bond0=bond
+    BondOptMode=0
+    BondOptMiimon=80
+    bootproto=none
+    gateway=192.168.1.100
+    ipaddr=192.168.1.2
+    netmask=255.255.255.0
+    role=green
 
 
 
