@@ -12,7 +12,7 @@ Both nodes share a DRBD storage in active-passive mode.
 This configuration supports:
 
 * Virtual IPs connected to the green network
-* Clustered services storing the date inside the shared storage
+* Clustered services storing the data inside the shared storage
 
 
 **Example**
@@ -163,7 +163,7 @@ The following commands will configure a MySQL instance bound to the virtual IP. 
  /usr/sbin/pcs -f /tmp/mycluster resource create VirtualIP IPaddr2 ip=`config getprop ha VirtualIP` cidr_netmask=`config getprop ha VirtualMask` op monitor interval=30s
  /usr/sbin/pcs -f /tmp/mycluster resource create drbdFS Filesystem device="/dev/drbd/by-res/drbd00" directory="/mnt/drbd" fstype="ext4" 
  /usr/sbin/pcs -f /tmp/mycluster resource create mysqld lsb:mysqld
- /usr/sbin/pcs -f /tmp/mycluster resource create sym_var_lib_asterisk ocf:heartbeat:symlink params target="/mnt/drbd/var/lib/asterisk" link="/var/lib/asterisk" backup_suffix=.active
+ /usr/sbin/pcs -f /tmp/mycluster resource create sym_var_lib_asterisk ocf:heartbeat:symlink params target="/mnt/drbd/var/lib/mysql" link="/var/lib/mysql" backup_suffix=.active
  /usr/sbin/pcs -f /tmp/mycluster resource create sym_etc_my.pwd ocf:heartbeat:symlink params target="/mnt/drbd/etc/my.pwd" link="/etc/my.pwd" backup_suffix=.active
  /usr/sbin/pcs -f /tmp/mycluster resource create sym_root_.my.cnf ocf:heartbeat:symlink params target="/mnt/drbd/root/.my.cnf" link="/root/.my.cnf" backup_suffix=.active
 
@@ -298,7 +298,17 @@ The backup must be configured on both nodes and must be executed on a network sh
 Only the primary node will actually execute the backup process, the backup script will be enabled
 on the secondary node only if the master node has failed.
 
-If both nodes fail, you should re-install the primary node, reconfigure the cluster and 
-restore the backup only as the last step.
+If both nodes fail, you should re-install the primary node, restore the configuration backup
+and start the cluster: ::
+
+ signal-event nethserver-ha-save
+
+Then restore the data backup only as the last step.
 When the restore ends, reboot the system.
 
+If you wish to backup the data inside the DRBD, take care to add the directories
+inside the :file:`custom.include` file.
+
+Example: ::
+
+  echo "/mnt/drbd/var/lib/mysql" >> /etc/backup-data.d/custom.include 

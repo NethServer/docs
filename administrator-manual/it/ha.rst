@@ -170,7 +170,7 @@ I seguenti comandi configurano un'istanza di MySQL che salva i dati sul DRBD ed 
  /usr/sbin/pcs -f /tmp/mycluster resource create VirtualIP IPaddr2 ip=`config getprop ha VirtualIP` cidr_netmask=`config getprop ha VirtualMask` op monitor interval=30s
  /usr/sbin/pcs -f /tmp/mycluster resource create drbdFS Filesystem device="/dev/drbd/by-res/drbd00" directory="/mnt/drbd" fstype="ext4" 
  /usr/sbin/pcs -f /tmp/mycluster resource create mysqld lsb:mysqld
- /usr/sbin/pcs -f /tmp/mycluster resource create sym_var_lib_asterisk ocf:heartbeat:symlink params target="/mnt/drbd/var/lib/asterisk" link="/var/lib/asterisk" backup_suffix=.active
+ /usr/sbin/pcs -f /tmp/mycluster resource create sym_var_lib_asterisk ocf:heartbeat:symlink params target="/mnt/drbd/var/lib/mysql" link="/var/lib/mysql" backup_suffix=.active
  /usr/sbin/pcs -f /tmp/mycluster resource create sym_etc_my.pwd ocf:heartbeat:symlink params target="/mnt/drbd/etc/my.pwd" link="/etc/my.pwd" backup_suffix=.active
  /usr/sbin/pcs -f /tmp/mycluster resource create sym_root_.my.cnf ocf:heartbeat:symlink params target="/mnt/drbd/root/.my.cnf" link="/root/.my.cnf" backup_suffix=.active
 
@@ -306,6 +306,9 @@ Il backup deve essere configurato su entrambi i nodi ed eseguito su una condivis
 Solo il nodo primario effettuerà realmente il backup, il backup del nodo secondario
 verrà automaticamente abilitato qualora il nodo primario sia guasto.
 
-In caso di guasto di entrambi i nodi, reinstallare il nodo primario, riconfigurare il cluster
-ed infine ripristinare il backup.
-Al termine, riavviare il sistema.
+In caso di guasto di entrambi i nodi, reinstallare il nodo primario, 
+ripristinare il backup della configurazione e avviare il cluster: ::
+
+ signal-event nethserver-ha-save
+
+Infine ripristinare il backup dei date e, al termine, riavviare il sistema.
