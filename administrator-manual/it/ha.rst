@@ -112,7 +112,7 @@ Configurazione storage per DRBD
 Software
 ^^^^^^^^
 
-Le opzioni del cluster sono salve all'interno della chiave di configurazione *ha* che deve essere
+Le opzioni del cluster sono salvate all'interno della chiave di configurazione *ha* che deve essere
 configurata specularmente su entrambi i nodi.
 
 Eseguire i passi di configurazione come riportati di seguito.
