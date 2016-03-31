@@ -37,27 +37,32 @@ Requisiti hardware
 
 La procedura prevede l'installazione su due nodi gemelli. Ogni nodo dovrà avere
 
-* un interfaccia di rete per la *green*, 
-  entrambi i nodi devono essere collegati allo switch della rete locale
-* un interfaccia di rete per il ruolo ``ha`` (Gigabit ethernet), 
-  i nodi possono essere collegati fra di loro con un singolo cavo.
 * un disco o una partizione dedicata allo storage condiviso DRBD (Distributed Replicated Block Device)
+* due interfacce di rete per creare un bond con ruolo *green*, entrambe le interfacce
+  devono essere collegate agli switch della rete locale
 
-Gli indirizzi IP sulla rete ``ha`` sono così fissati e *non* possono essere modificati:
+E' necessario possedere due switch all'interno della LAN, per esempio SW1 e SW2.
+Creare un bond su ciascun nodo usando due interfacce di rete. 
+Ogni nodo deve essere collegato ad entrambi gli switch SW1 e SW2.
 
-* Nodo primario: 192.168.144.51
-* Nodo secondario: 192.168.144.52
 
 Fence device
 ------------
 
-Ogni nodo dovrà essere collegato con un fence device già correttamente configurato.
+Ogni nodo dovrà essere collegato ad almeno un fence device già correttamente configurato.
 
 Con il termine *fencing* si intende la disconnessione di un nodo dallo storage condiviso.
 Il *fence device* è il dispositivo hardware che consente tale disconnessione usando
 il metodo STONITH (Shoot The Other Node In The Head), ovvero togliendo l'alimentazione al nodo guasto.
 
-Per maggiori informazioni, consultare: https://access.redhat.com/articles/28603
+Si consiglia l'utilizzo di PDU (Power Distribution Unit), 
+ma anche dispositivi IPMI (Intelligent Platform Management Interface) possono essere usati con alcune limitazioni.
+
+Collegamenti esterni:
+
+* lista dei dispositivi supportati: https://access.redhat.com/articles/28603
+* maggiori informazioni sul fencing: http://clusterlabs.org/doc/crm_fencing.html
+ 
 
 Installazione
 =============
@@ -113,32 +118,28 @@ configurata specularmente su entrambi i nodi.
 
 Eseguire i passi di configurazione come riportati di seguito.
 
-* Configurare l'interfaccia green, quindi aggiungere un interfaccia dedicata per il DRBD. L'interfaccia avrà il ruolo **ha**. 
+* Configurare il bond sulle interfacce green.
 
-  Esempio con eth1 sul nodo primario:  
-
-::
-
- db networks setprop eth1 device eth1 role ha ipaddr 192.168.144.51 netmask 255.255.255.0 onboot yes bootproto none 
- signal-event interface-update
-
-* Installare i servizi del cluster
+* Installare i servizi del cluster:
 
 ::
 
  yum install nethserver-ha
 
-* Installare il software, esempio MySQL 
+* Installare il software, esempio MySQL:
 
 ::
 
   yum install nethserver-mysql
 
-* Configurare l'IP virtuale 
+* Configurare l'IP virtuale, ed informare il cluster sugli IP green di entrambi i nodi:
 
 ::
 
  config setprop ha VirtualIP <GREEN_IP_HA>
+ config setprop ha NS1 <NS1_GREEN_IP>
+ config setprop ha NS2 <NS2_GREEN_IP>
+
 
 * Applicare le modifiche e avviare i servizi sul nodo primario: 
 
@@ -193,12 +194,11 @@ Nodo secondario
 * Assicurarsi che l'hostname del nodo secondario sia *ns2* e che il dominio sia lo stesso del nodo primario
 * Procedere alla configurazione storage DRBD come sul nodo primario
 * Installare e configurare il software come per il nodo primario
-* Configurazione interfaccia di rete per DRBD.  Esempio con eth1: 
+* Configurare l'IP virtuale, le opzioni NS1 e NS2, quindi applicare la configurazione:
 
-::
-
- db networks setprop eth1 device eth1 role ha ipaddr 192.168.144.52 netmask 255.255.255.0 onboot yes bootproto none 
- signal-event interface-update
+  ::
+ 
+   signal-event nethserver-ha-save
 
 
 Passi finali
@@ -226,13 +226,78 @@ Passi finali
 * E' fortemente consigliato di cambiare la password di root da interfaccia web su entrambi i nodi. 
   La password di root è infatti utilizzata per impartire ordini ai nodi del cluster.
 
-Avviare i servizi
-=================
+Fencing con IPMI
+----------------
 
-Tutti i servizi clusterizzati sono disabilitati al boot per evitare problemi in caso di fencing.
-Per avviare i servizi clusterizzati eseguire: ::
+Molti server possiedono un'interfaccia di gestione preinstallata conosciuta con vari nomi commerciali come
+ILO (HP), DRAC (Dell) o BMC (IBM). Tutte queste interfacce rispettano lo standard IPMI.
+Dal momento che l'interfaccia di gestione controlla solo il nodo su cui è installata,
+è necessario configurare almeno due dispositivi di fence, uno per ciascun nodo.
+
+Se il dominio del cluster è ``nethserver.org``, usare i seguenti comandi: ::
+
+ pcs stonith create ns2Stonith fence_ipmilan pcmk_host_list="ns2.nethserver.org" ipaddr="ns2-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
+ pcs stonith create ns1Stonith fence_ipmilan pcmk_host_list="ns1.nethserver.org" ipaddr="ns1-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
+
+Dove ns1-ipmi.nethserver.org e ns2-ipmi.nethserver.org sono i nomi host associati agli IP delle interfacce di gestione.
+
+Inoltre, assicurarsi che la risorsa stonith risieda sul nodo corretto: ::
+
+ pcs constraint location ns2Stonith prefers ns1.nethserver.org=INFINITY
+ pcs constraint location ns1Stonith prefers ns2.nethserver.org=INFINITY
+
+
+Guasti e ripristino
+===================
+
+Un cluster a due nodi può tollerare solo un guasto alla volta.
+
+.. note::
+   Qualora si utilizzino i dispositivi di fence di tipo IPMI, il cluster non è in grado di gestire 
+   la perdita di alimentazione di un nodo, in quanto il dispositivo di fence è alimentato dal nodo stesso.
+
+   In questo caso è necessario confermare manualmente lo spegnimento del nodo eseguendo questo comando: ::
+
+     pcs stonith confirm <failed_node_name>
+
+Nodi guasti
+-----------
+
+Quando un nodo non risponde all'heartbeat, il nodo viene escluso dal cluster.
+Tutti i servizi clusterizzati sono disabilitati al boot per evitare problemi in caso di fencing:
+un nodo che è stato spento da un evento di fencing, necessita probabilmente di manutenzione prima di rientrare 
+nel cluster.
+
+Per inserire nuovamente il nodo nel cluster, eseguire: ::
 
  pcs cluster start
+
+
+Fence device irraggiungibili
+----------------------------
+
+Il cluster controlla periodicamente lo stato dei dispositivi di fence configurati.
+Se un dispositivo non è raggiungibile, verrà considerato in stato fermo (stopped).
+
+Quando il dispositivo di fence è stato sistemato è necessario informare il cluster sullo stato
+di ciascun device con il seguente comando: ::
+
+  crm_resource --resource <stonith_name> --cleanup --node <node_name>
+
+Disaster recovery
+-----------------
+
+In caso di guasto hardware, è possibile reinstallare il nodo è raggiungerlo al cluster.
+I servizi clusterizzati saranno automaticamente configurati e i dati verranno sincronizzati fra i nodi.
+
+Seguire questi passi.
+
+1. Installare |product| sulla macchina.
+2. Ripristinare il backup della configurazione del nodo. Se non si possiede il backup della configurazione,
+   riconfigurare il server e assicurarsi di installare il pacchetto ``nethserver-ha``.
+3. Eseguire l'evento per unire il nodo al cluster: ::
+
+     signal-event nethserver-ha-save
 
 
 Backup

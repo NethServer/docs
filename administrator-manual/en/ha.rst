@@ -36,27 +36,28 @@ Hardware requirements
 
 You must use two identical nodes. Each node must have
 
-* a *green* interface, 
-  both nodes must be connected to the LAN switch
-* a network interface (gigabit ethernet) with the ``ha`` role,
-  nodes can be directly connected with a cable
 * a disk, or a partition, dedicated to shared storage DRBD (Distributed Replicated Block Device)
+* two network interfaces to be bonded on a *green* role, both interfaces must be connected to LAN switches
 
-IP address on ``ha`` network are fixed and can't be modified:
-
-* Primary node: 192.168.144.51
-* Secondary node: 192.168.144.52
+You should also have two LAN switches, let's say SW1 and SW2.
+On each node, create a bond using two interfaces. Every node must be attached both to SW1 and SW2.
 
 Fence device
 ------------
 
-Each node must be connected to pre-configured fence device.
+Each node must be connected at least to one pre-configured fence device.
 
 *Fencing* is the action which disconnects a node from shared storage. 
 The *fence device* is a hardware device than can be used to shutdown a node using 
 the STONITH (Shoot The Other Node In The Head) method, thus cutting off the power to the failed node.
 
-See also: https://access.redhat.com/articles/28603
+We recommend a switched PDU (Power Distribution Unit), 
+but IPMI (Intelligent Platform Management Interface) devices should work with some limitations.
+
+External links:
+
+* list of supported devices: https://access.redhat.com/articles/28603
+* more info about fencing: http://clusterlabs.org/doc/crm_fencing.html
 
 Installation
 ============
@@ -111,32 +112,27 @@ on both nodes.
 
 Execute the following steps to proceed with software installation and configuration.
 
-* Configure the green interface, then add a new network interface for DRBD. This interface will have ``ha`` role.
+* Configure a bond on green interfaces.
 
-  Example with eth1 on primary node:  
-
-::
-
- db networks setprop eth1 device eth1 role ha ipaddr 192.168.144.51 netmask 255.255.255.0 onboot yes bootproto none 
- signal-event interface-update
-
-* Install cluster services
+* Install cluster services:
 
 ::
 
  yum install nethserver-ha
 
-* Install extra software, like MySQL
+* Install extra software, like MySQL:
 
 ::
 
   yum install nethserver-mysql
 
-* Configure the virtual IP
+* Configure the virtual IP, and inform the cluster about green IPs of both nodes:
 
 ::
 
  config setprop ha VirtualIP <GREEN_IP_HA>
+ config setprop ha NS1 <NS1_GREEN_IP>
+ config setprop ha NS2 <NS2_GREEN_IP>
 
 * Apply the configuration and start services on master node: 
 
@@ -191,12 +187,11 @@ Secondary node
 * Make sure the secondary node is named *ns2* and the domain name is the same as primary node
 * Configure the DRBD storage as already done for the primary node
 * Install and configure software following the same steps as in the primary node
-* Configure ha network interface for DRBD. Example with eth1:
+* Configure Virtual IP, NS1 and NS2 options, then apply the configuration:
 
 ::
 
- db networks setprop eth1 device eth1 role ha ipaddr 192.168.144.52 netmask 255.255.255.0 onboot yes bootproto none 
- signal-event interface-update
+ signal-event nethserver-ha-save
 
 
 Final steps
@@ -216,6 +211,7 @@ Final steps
 
  pcs  stonith create Fencing fence_virsh ipaddr=192.168.1.1 login=root passwd=myrootpass pcmk_host_map="ns1.nethserver.org:ns1;ns2.nethserver.org:ns2" pcmk_host_list="ns1.nethserver.org,ns2.nethserver.org"
 
+
 * Configure an email address where notification will be sent in case of failure:
 
 ::
@@ -225,13 +221,76 @@ Final steps
 * It's strongly advised to change root password from web interface on both nodes.
   Root password is used to send commands to all cluster nodes.
 
-Start services
-==============
+Fencing with IPMI
+-----------------
 
-All cluster services are disabled at boot to avoid problems in case of fencing.
-To start clustered services execute: ::
+Many servers have a built-in management interface often known with commercial name like 
+ILO (HP), DRAC (Dell) or BMC (IBM). Any of these interfaces follow the IPMI standard.
+Since any management interface controls only the node where it resides, you must configure at least two fence
+devices, one for each node.
+
+If the cluster domain is ``nethserver.org``, you should use following commands: ::
+
+ pcs stonith create ns2Stonith fence_ipmilan pcmk_host_list="ns2.nethserver.org" ipaddr="ns2-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
+ pcs stonith create ns1Stonith fence_ipmilan pcmk_host_list="ns1.nethserver.org" ipaddr="ns1-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
+
+Where ns1-ipmi.nethserver.org and ns2-ipmi.nethserver.org are host names associated with IP of the management interface.
+
+Also, you should make sure that each stonith resource is hosted by the right node: ::
+
+ pcs constraint location ns2Stonith prefers ns1.nethserver.org=INFINITY
+ pcs constraint location ns1Stonith prefers ns2.nethserver.org=INFINITY
+
+Failure and recovery
+====================
+
+A two-node cluster can handle only one fault at a time.
+
+.. note::
+   If you're using IPMI fence devices, the cluster can't handle the power failure of a node,
+   since the power is shared with its own fence device.
+
+   In this case you must manually confirm the eviction of the node by executing this command
+   on the running node: ::
+
+     pcs stonith confirm <failed_node_name>
+
+Failed nodes
+------------
+
+When a node is not responding to cluster heartbeat, the node will be evicted.
+All cluster services are disabled at boot to avoid problems just in case of fencing:
+a fenced node probably needs a little of maintenance before re-joining the cluster.
+
+To re-join the cluster, manually start the services: ::
 
  pcs cluster start
+
+
+Disconnected fence devices
+--------------------------
+
+The cluster will periodically monitor the status of configured fence devices.
+If a device is not reachable, it will be put on stopped state.
+
+When the fence device has been fixed, you must inform the cluster about each fence device with this command: ::
+
+  crm_resource --resource <stonith_name> --cleanup --node <node_name>
+
+Disaster recovery
+-----------------
+
+If case of hardware failure, you should simply re-install the failed node and rejoin the cluster.
+Clustered services will be automatically recovered and data will be synced between nodes.
+
+Just follow this steps.
+
+1. Install |product| on machine.
+2. Restore the configuration backup of the node, if you don't have the configuration backup,
+   reconfigure the server and make sure to install ``nethserver-ha`` package.
+3. Execute the join cluster event: ::
+
+     signal-event nethserver-ha-save
 
 Backup
 ======
@@ -242,5 +301,5 @@ on the secondary node only if the master node has failed.
 
 If both nodes fail, you should re-install the primary node, reconfigure the cluster and 
 restore the backup only as the last step.
-Whenb the restore ends, reboot the system.
+When the restore ends, reboot the system.
 

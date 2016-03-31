@@ -26,9 +26,7 @@ Constraints
 ===========
 
 * DRBD resource is named ``drbd00``
-* Only one green is supported
-* IPs on `ha` interface are fixed: 192.168.144.51 for primary node, 192.168.144.52 for secondary node
-* System names are fixes: ns1 for primary node, ns2 for secondary node
+* System names are fixed: ns1 for primary node, ns2 for secondary node
 
 Database
 ========
