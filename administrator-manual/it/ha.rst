@@ -222,7 +222,7 @@ Passi finali
 
   pcs resource create MailNotify ocf:heartbeat:MailTo params email="admin@nethserver.org" subject="Cluster notification"
 
-* E' fortemente consigliato di cambiare la password di root da interfaccia web su entrambi i nodi. 
+* E' fortemente consigliato cambiare la password di root da interfaccia web su entrambi i nodi. 
   La password di root è infatti utilizzata per impartire ordini ai nodi del cluster.
 
 Fencing con IPMI
@@ -278,8 +278,8 @@ Fence device irraggiungibili
 Il cluster controlla periodicamente lo stato dei dispositivi di fence configurati.
 Se un dispositivo non è raggiungibile, verrà considerato in stato fermo (stopped).
 
-Quando il dispositivo di fence è stato sistemato è necessario informare il cluster sullo stato
-di ciascun device con il seguente comando: ::
+Dopo aver ripristinato il dispositivo di fence, informare il cluster sullo stato
+di ciascun dispositivo con il seguente comando: ::
 
   crm_resource --resource <stonith_name> --cleanup --node <node_name>
 
