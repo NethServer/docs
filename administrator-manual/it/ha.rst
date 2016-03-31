@@ -28,7 +28,6 @@ Limitazioni
 
 * Il servizio LDAP, e tutti i servizi che dipendono da esso, non possono essere clusterizzati.
   Si consiglia l'utilizzo di un LDAP esterno
-* I nodi possono avere una singola interfaccia green
 * Sono supportati solo i dispositivi di fencing di tipo STONITH
 
 

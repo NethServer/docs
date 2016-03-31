@@ -27,7 +27,6 @@ Limitations
 
 * The LDAP service and all services depending on it can't be clustered.
   We recommend the use of and external LDAP server.
-* Nodes can have only one green interface
 * Only STONITH fence devices are supported
 
 
