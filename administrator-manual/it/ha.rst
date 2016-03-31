@@ -312,3 +312,11 @@ ripristinare il backup della configurazione e avviare il cluster: ::
  signal-event nethserver-ha-save
 
 Infine ripristinare il backup dei date e, al termine, riavviare il sistema.
+
+Se si desidera eseguire il backup dei dati contenuti nel DRBD,
+assicurarsi di aggiungere le directory all'interno del file :file:`custom.include`.
+
+Esempio: ::
+
+  echo "/mnt/drbd/var/lib/mysql" >> /etc/backup-data.d/custom.include
+
