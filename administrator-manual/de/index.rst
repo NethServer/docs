@@ -67,8 +67,6 @@ Modules
    webvirtmgr
    snmp
    webtop4
-   adagios
-   ocs
 
 Best practices
 --------------
