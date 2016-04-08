@@ -1,6 +1,6 @@
-====
-NTPd
-====
+============
+Chrony (NTP)
+===========
 
 Manage server date and time, ntp server for lan clients.
 
@@ -11,10 +11,7 @@ When the time and date are modified, some services must be restarted. Each packa
 
 Date and time can be set *manually* or automatically via a *ntp server*.
 
-Note that
-
-* ``ntpdate`` command is deprecated (see #934)
-* ``ntp`` is executed with ``-g`` flag, to support large time steps - see ntpd manual page.
+The current time zone is accessible from the configuration database, but the value is read and written using systemd commands.
 
 Events
 ------
@@ -25,7 +22,7 @@ Events
 Actions
 -------
 
-* ``nethserver-ntp-localtime``, copy the zoneinfo file from ``/usr/share/zoneinfo`` to ``/etc/localtime`` according to ``TimeZone`` key in _configuration_ database.
+* ``nethserver-ntp-localtime``, create a lint to the zoneinfo file from ``/usr/share/zoneinfo`` to ``/etc/localtime`` according to ``TimeZone`` key in _configuration_ database.
 * ``nethserver-ntp-clock-adjust``, adjust the system date and hardware clock when NTP is disabled. Requires the *event name* and *timestamp* arguments. When NTP is enabled, restarts the ntp daemon.
 
 Database
@@ -33,17 +30,21 @@ Database
 
 Example: ::
 
- ntpd=service
+ chronyd=service
     NTPServer=pool.ntp.org
-    SyncToHWClockSupported=yes
     access=private
 
 Daemon status
 -------------
 
-Run ``ntpdc -p`` command: ::
+Run following command command: ::
 
-    # ntpdc -p        
-     remote           local      st poll reach  delay   offset    disp
-    =======================================================================
-    *192.168.9.7     192.168.9.3      3   64   17 0.00143 -0.026033 0.12788
+  chronyc sourcestats
+
+Sample output: ::
+
+  210 Number of sources = 1
+  Name/IP Address            NP  NR  Span  Frequency  Freq Skew  Offset  Std Dev
+  ==============================================================================
+  yourntp.server.com    41  20   43m     +0.001      0.172    +58ns   227us
+
