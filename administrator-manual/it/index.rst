@@ -56,6 +56,7 @@ Moduli
    web_proxy
    content_filter
    firewall
+   proxy_pass
    snort
    bandiwidth_monitor
    statistics
@@ -68,6 +69,9 @@ Moduli
    webvirtmgr
    snmp
    webtop4
+   adagios
+   ocs
+   ha
 
 Best practices
 --------------

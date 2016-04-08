@@ -41,7 +41,7 @@ Installation types
 
 **Installing from ISO**
 
-  * Download the ISO image,
+  * Download the ISO image
   * Prepare a CD / DVD
   * Follow the wizard
 
@@ -67,7 +67,7 @@ CD or DVD.  The creation of a bootable disk is different from
 writing files into CD/DVD, and it requires the use of a dedicated
 function (e.g. *write* or *burn ISO image*).  Instructions on how to
 create a bootable CD/DVD from the ISO are easily available on the
-Internet or in the documentation of your system operating system.
+Internet or in the documentation of your operating system.
 
 **Start the machine using the freshly backed media**.  If the machine
 will not start from the CD/DVD, please refer to the documentation of
@@ -86,7 +86,7 @@ On start a menu will display different types of installation:
 |product| unattended installation
 
     This installation mode does not require any kind of human
-    intervention: a set of default parameters will applied to the
+    intervention: a set of default parameters will be applied to the
     system.
 
 Standard CentOS installations
@@ -257,7 +257,7 @@ It is possible to install |product| on a fresh CentOS installation
 using the :program:`yum` command to download software packages. This
 is the recommended installation method if you have
 
-* a virtual private servers (VPS), or
+* a virtual private server (VPS), or
 * an USB stick.
 
 For example, if you wish to install |product| |version|, just start

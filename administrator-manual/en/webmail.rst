@@ -46,7 +46,7 @@ For example, to enable "mail notification", "mark as junk" and "manage sieve plu
  config setprop roundcubemail PluginsList managesieve,markasjunk,newmail_notifier
  signal-event nethserver-roundcubemail-update
 
-A list of bundled plugins can be found inside file:``/usr/share/roundcubemail/plugins`` directory.
+A list of bundled plugins can be found inside ``/usr/share/roundcubemail/plugins`` directory.
 To get the list, just execute: ::
 
  ls /usr/share/roundcubemail/plugins

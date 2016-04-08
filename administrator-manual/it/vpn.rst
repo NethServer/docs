@@ -129,6 +129,3 @@ devono essere impostati a dei nomi a scelta con prefisso ``@``.
 Comunemente vengono scelti i nomi delle località dove sono ubicati i
 server, come la nazione o il nome della città.
 
-.. note::
-   Solo le reti dietro ai firewall possono scambiarsi traffico attraverso il tunnel IPsec.
-   I firewall che costituiscono i due lati del tunnel non possono comunicare sfruttando il collegamento cifrato.

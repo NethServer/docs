@@ -8,9 +8,6 @@ Administrator Manual
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-.. WARNING:: This is an Alpha release, do not use in production environment.
-             The documentation is a work-in-progress.
-
 Release notes |release|
 -----------------------
 
@@ -72,7 +69,6 @@ Modules
    webtop4
    adagios
    ocs
-   ha
 
 Best practices
 --------------
