@@ -56,6 +56,7 @@ il metodo STONITH (Shoot The Other Node In The Head), ovvero togliendo l'aliment
 
 Si consiglia l'utilizzo di PDU (Power Distribution Unit), 
 ma anche dispositivi IPMI (Intelligent Platform Management Interface) possono essere usati con alcune limitazioni.
+È possibile anche utilizzare uno switch managed che supporti IF-MIB.
 
 Collegamenti esterni:
 
@@ -244,6 +245,35 @@ Inoltre, assicurarsi che la risorsa stonith risieda sul nodo corretto: ::
 
  pcs constraint location ns2Stonith prefers ns1.nethserver.org=INFINITY
  pcs constraint location ns1Stonith prefers ns2.nethserver.org=INFINITY
+
+Fencing con switch IF-MIB
+--------------------------
+
+È possibile utilizzare uno switch managed che supporti il protocollo SNMP IF-MIB come dispositivo di fencing. In questo caso il nodo che subisce il fencing non viene spento, ma tagliato fuori dalla rete. 
+
+Per testare di aver correttamente configurato gli switch, verificare che sia possibile chiudere ed aprire le porte utilizzando il fence agent:
+
+  ::
+  fence_ifmib -a <IP_SWITCH_1> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <VERSIONE_SNMP> -c <COMMUNITY> -n<PORTA> -o <off|on|status>
+
+I comandi qui di seguito configurano due switch così collegati: 
+la porta di rete 1 del nodo 1 è collegata alla porta 1 dello switch 1
+la porta di rete 2 del nodo 1 è collegata alla porta 1 dello switch 2
+la porta di rete 1 del nodo 2 è collegata alla porta 2 dello switch 1
+la porta di rete 2 del nodo 2 è collegata alla porta 2 dello switch 2
+
+::
+
+  pcs stonith create ns1sw1 fence_ifmib action=off community=<COMMUNITY> ipaddr=<IP_SWITCH_1> login=<USERNAME> passwd=<PASSWORD> port=1 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_1>"
+  pcs stonith create ns1sw2 fence_ifmib action=off community=fence ipaddr=<IP_SWITCH_2> login=<USERNAME> passwd=<PASSWORD> port=1 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_1>"
+  pcs stonith create ns2sw1 fence_ifmib action=off community=fence ipaddr=<IP_SWITCH_1> login=<USERNAME> passwd=<PASSWORD> port=2 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_2>"
+  pcs stonith create ns2sw2 fence_ifmib action=off community=fence ipaddr=<IP_SWITCH_2> login=<USERNAME> passwd=<PASSWORD> port=2 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_2>"
+  pcs stonith level add 1 <HOST_1> ns1sw1,ns1sw2
+  pcs stonith level add 1 <HOST_2> ns2sw1,ns2sw2
+  pcs constraint location ns1sw1 prefers <HOST_2>=INFINITY
+  pcs constraint location ns1sw2 prefers <HOST_2>=INFINITY
+  pcs constraint location ns2sw1 prefers <HOST_1>=INFINITY
+  pcs constraint location ns2sw2 prefers <HOST_1>=INFINITY
 
 
 Guasti e ripristino
