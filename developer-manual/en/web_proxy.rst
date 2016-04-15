@@ -70,7 +70,7 @@ Following sites are always excluded from SSL bump:
 
 * images.metaservices.microsoft.com 
 * crl.microsoft.com 
-* update.microsoft.com 
+* .update.microsoft.com 
 * www.download.windowsupdate.com 
 * windowsupdate.microsoft.com 
 * sls.microsoft.com 
