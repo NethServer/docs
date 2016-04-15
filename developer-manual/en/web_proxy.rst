@@ -64,7 +64,7 @@ This configuration requires Shorewall.
 SSL bump
 --------
 
-If the proxy us enabled in transparent SSL mode, also all traffic destined to port 443 is redirected to Squid (port 3130).
+If the proxy is enabled in transparent SSL mode, also all traffic destined to port 443 is redirected to Squid (port 3130).
 
 Following sites are always excluded from SSL bump:
 
@@ -87,7 +87,7 @@ Following sites are always excluded from SSL bump:
 Authenticated mode
 ==================
 
-Authentication schema depend on system configuration:
+Authentication schema depends on system configuration:
 
 * standard authentication for system users is done over LDAP
 * if Samba is installed and the server is a Primary Domain Controller, clients can use NTLM authentication
@@ -123,8 +123,8 @@ WPAD
 ====
 
 WPAD is located at :file:`/var/www/html/wpad.dat`.
-The web server is configured to allow the download only from from trusted and blue networks,
-but be aware that you need to manually open the httpd por for blue networks (see :ref:`network_service_custom_access-section`).
+The web server is configured to allow the download only from trusted and blue networks,
+but be aware that you need to manually open the httpd port for blue networks (see :ref:`network_service_custom_access-section`).
 
 The WPAD returns:
 
