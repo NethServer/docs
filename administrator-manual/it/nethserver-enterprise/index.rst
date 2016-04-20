@@ -12,10 +12,9 @@ Manuale amministratore
 
     Sito ufficiale `www.nethesis.it <http://www.nethesis.it>`_
 
-    Documentazione `docs.nethesis.it <http://docs.nethesis.it>`_
+    Documentazione `docs.nethesis.it <http://helpdesk.nethesis.it>`_
 
-    Blog `blog.nethesis.it <http://blog.nethesis.it>`_
-
+    
 Note di rilascio |release|
 --------------------------
 
