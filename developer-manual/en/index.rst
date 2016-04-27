@@ -132,6 +132,7 @@ Modules
    mysql
    hylafax
    ntpd
+   ha
 
 Appendix
 --------
