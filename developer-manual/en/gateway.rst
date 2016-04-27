@@ -143,7 +143,7 @@ Each rule record has the following fields:
 * ``Description``: (optional)
 
 Example of a rule accepting traffic: ::
-
+  
   1=rule 
       Src=host;myhost 
       Dst=192.168.1.2 
@@ -159,6 +159,59 @@ Drop all traffic from 192.168.1.0/24 to 192.168.4.1 on TCP and UDP port 25: ::
 
   db fwrules set 2 rule Src  192.168.1.0/24 Dst 192.168.4.1 Service 22 Action DROP Log none status enabled Position 5469
 
+Template Fragment
+-----------------
+Rules in the firewall can be added manually by a template fragment in the folder ``/etc/e-smith/templates/etc/shorewall/rules``
+
+For example drop a file 40YourSpecificRule
+
+  ## 40nethvoice
+  
+  {
+      my $iax = $nethvoice{'AllowExternalIAX'} || 'disabled';
+
+      my $webrtc = $nethvoice{'AllowExternalWebRTC'} || 'disabled';
+      
+      if ($iax eq 'enabled') {
+      
+          $OUT .= "# Enable IAX from red interfaces\n";
+          
+          $OUT .= "?COMMENT Enable IAX from red interfaces\n";
+          
+          $OUT .= "ACCEPT\tnet\t\$FW\tudp\t4569,5036\n";
+      }
+      
+      if ($webrtc eq 'enabled') {
+      
+          $OUT .= "# Enable WebRTC from red interfaces\n";
+          
+          $OUT .= "?COMMENT Enable WebRTC from red interfaces\n";
+          
+          $OUT .= "ACCEPT\tnet\t\$FW\ttcp\t8089\n";
+      }
+  
+      $OUT .= "?COMMENT\n";
+  }
+ 
+You can use all the settings below but you might be interested by the shorewall documentation also at http://shorewall.net/manpages/shorewall-rules.html)
+
+* ``\t``       -> write a tab space (can be also written : ``$OUT .= "ACCEPT  net  $FW  tcp  8089\n";)``
+* ``ACCEPT``   -> allows the traffic
+* ``REJECT``   -> denies the traffic, an ICMP port unreachable packet is sent to the source address
+* ``DROP``     -> discards the traffic without informing the source address (the connection will timeout)
+* ``REDIRECT`` -> redirect the traffic to another firewall zone
+
+The target may optionally be followed by ":" and a syslog log level (e.g, REJECT:info or Web(ACCEPT):debug).
+
+* ``loc``      -> green (Local network)
+* ``net``      -> red   (Internet network)
+* ``blue``     -> blue  (Guest network)
+* ``orang``    -> orange (DMZ network)
+* ``$FW``      -> firewall
+* ``tcp``      -> tcp port (comma separated list of ports)
+* ``udp``      -> udp port (comma separated list of ports)
+
+then you must expand your templates and restart your firewall by : ``signal-event firewall-adjust``
 
 Firewall objects
 =================
