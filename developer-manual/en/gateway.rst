@@ -186,7 +186,7 @@ Template Fragment
 -----------------
 Rules in the firewall can be added manually by a template fragment in the folder ``/etc/e-smith/templates/etc/shorewall/rules``
 
-For example drop a file 40YourSpecificRule
+For example drop a file 40YourSpecificRule ::
 
   ## 40nethvoice
   
