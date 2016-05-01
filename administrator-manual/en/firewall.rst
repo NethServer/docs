@@ -32,9 +32,9 @@ Policy
 Each interface is identified with a color indicating its role within the system.
 See :ref:`network-section`.
 
-When a packet network passed through a firewall zone, the system evaluates a list of rules to decide whether 
+When a network packet passes through a firewall zone, the system evaluates a list of rules to decide whether 
 traffic should be blocked or allowed. 
-:dfn:`Policies` are the default which rules are applied if the network traffic does not match any existing criteria.
+:dfn:`Policies` are the default rules to be applied when the network traffic does not match any existing criteria.
 
 The firewall implements two default policies editable from the page :menuselection:`Firewall rules` -> :guilabel:`Configure`:
 
@@ -58,11 +58,11 @@ Rules
 
 :index:`Rules` apply to all traffic passing through the firewall.
 When a network packet moves from one zone to another, the system looks among configured rules. 
-If the packet match rule, the rule is applied.
+If the packet match a rule, the rule is applied.
 
 .. note:: Rule's order is very important. The system always applies the first rule that matches.
 
-A rule consists of three main parts:
+A rule consists of four main parts:
 
 * Action: action to take when the rule applies
 * Source: 
@@ -74,7 +74,7 @@ Available actions are:
 
 * :dfn:`ACCEPT`: accept the network traffic
 * :dfn:`REJECT`: block the traffic and notify the sender host 
-* :dfn:`DROP`: block the traffic, packets are dropped and not notification is sent to the sender host
+* :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
 * :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
 
 .. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
@@ -123,7 +123,7 @@ The term :dfn:`WAN` (Wide Area Network) refers to a public network outside the s
 A :dfn:`provider` is the company who actually manage the :index:`WAN` link.
 
 The system supports up to 15 WAN connections. 
-If the server has two or more configured red card, it is required to proceed with :index:`provider` configuration from :guilabel:`Multi WAN` page. 
+If the server has two or more configured red cards, it is required to proceed with :index:`provider` configuration from :guilabel:`Multi WAN` page. 
 
 Each provider represents a  WAN connection and is associated with a network adapter. 
 Each provider defines a  :dfn:`weight`: higher the :index:`weight`, higher the priority of the network card associated with the provider. 
@@ -157,14 +157,14 @@ Given two configured providers:
 
 If balanced mode is selected, the server will route a double number of connections on Provider1 over Provider2.
 
-If active backup mode is selected, the server will route all connection on Provider1; only if Provider1 become
-unavailable connections will be redirected to Provider2.
+If active backup mode is selected, the server will route all connections on Provider1; only if Provider1 becomes
+unavailable the connections will be redirected to Provider2.
 
 
 Port forward
 ============
 
-The firewall blocks request from public networks to private ones. 
+The firewall blocks requests from public networks to private ones. 
 For example, if web server is running inside the LAN, only computers on the local network can access the service on the green zone. 
 Any request made by a user outside the local network is blocked. 
 
@@ -191,7 +191,7 @@ Given the following scenario:
 * SSH server listening on port 22 on Server1
 * Other services in the port range beetween 5000 and 6000  on Server1
 
-If you want to make the server web available directly from public networks, you must create a rule like this:
+If you want to make the web server available directly from public networks, you must create a rule like this:
 
 * origin port: 80
 * destination port: 80
@@ -220,7 +220,7 @@ Limiting access
 
 You can restrict access to port forward only from some IP address or networks using the field :guilabel:`Allow only from`.
 
-This configuration is useful when services should be available on from trusted IP or networks.
+This configuration is useful when services should be available only from trusted IP or networks.
 Some possible values:
 
 * ``10.2.10.4``: enable port forward for traffic coming from 10.2.10.4 IP
@@ -253,11 +253,11 @@ Traffic shaping
 In this way it is possible to optimize the transmission, check the latency and tune 
 the available bandwidth. 
 
-To enable traffic shaping is necessary to know the amount of available bandwidth in both directions 
-and fill in the fields indicating the speed Internet link. Be aware 
+To enable traffic shaping it is necessary to know the amount of available bandwidth in both directions 
+and fill in the fields indicating the speed of the Internet link. Be aware 
 that in case of congestion by the provider there is nothing to do in order to improve performance. 
 
-Traffic shaping can be configured inside from the page :menuselection:`Traffic shaping` -> :guilabel:`Interface rules`.
+Traffic shaping can be configured from the page :menuselection:`Traffic shaping` -> :guilabel:`Interface rules`.
 
 The system provides three levels of priority, high, medium and low: as default all traffic has medium priority.
 It is possible to assign high or low priority to certain services based on the port used (eg low traffic peer to peer). 
@@ -268,7 +268,7 @@ because, by default, the interactive traffic is automatically run at high priori
 Even the traffic type PING is guaranteed high priority. 
 
 
-.. note:: Be sure to specify an accurate estimate of the band on network interfaces.
+.. note:: Be sure to specify an accurate estimate of the bandwidth on network interfaces.
 
 
 Firewall objects
@@ -290,9 +290,9 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 
 .. index:: zone
 
-* *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface.They are used for very specific needs.
+* *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
 
-.. note:: As a default all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
+.. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
 The last type of object is used to specify the type of traffic:
 
