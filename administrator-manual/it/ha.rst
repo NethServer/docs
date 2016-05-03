@@ -251,9 +251,8 @@ Fencing con switch IF-MIB
 
 È possibile utilizzare uno switch managed che supporti il protocollo SNMP IF-MIB come dispositivo di fencing. In questo caso il nodo che subisce il fencing non viene spento, ma tagliato fuori dalla rete. 
 
-Per testare di aver correttamente configurato gli switch, verificare che sia possibile chiudere ed aprire le porte utilizzando il fence agent:
+Per testare di aver correttamente configurato gli switch, verificare che sia possibile chiudere ed aprire le porte utilizzando il fence agent: ::
 
-  ::
   fence_ifmib -a <IP_SWITCH_1> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <VERSIONE_SNMP> -c <COMMUNITY> -n<PORTA> -o <off|on|status>
 
 I comandi qui di seguito configurano due switch così collegati: 
@@ -312,6 +311,44 @@ Dopo aver ripristinato il dispositivo di fence, informare il cluster sullo stato
 di ciascun dispositivo con il seguente comando: ::
 
   crm_resource --resource <stonith_name> --cleanup --node <node_name>
+
+
+Split Brain DRBD
+----------------
+In caso di split brain del DRBD, i dati non vengono più sincronizzati. Può avvenire a causa di un fence fallito. 
+Lo stato del DRBD del nodo attivo in questa situazione (visibile con cat /proc/drbd) sarà Primary/Unknown e sul nodo non attivo Secondary/Unknown. (invece di Primary/Secondary e Secondary/Primary)
+Inoltre con il comando ::
+  
+  pcs status
+
+si vedrà il drbd nello stato:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Stopped: [ ns2.nethserver.org ]
+
+invece di:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Slaves: [ ns2.nethserver.org ]
+
+Soluzione:
+
+sul nodo in cui si vogliono tenere tutti i dati dare il comando :: 
+
+  drbdadm invalidate-remote drbd00
+
+sul nodo in cui si desiderano eliminare tutti i dati dare il comando ::
+
+  drbdadm invalidate drbd00
+
+Dare poi su tutti e due i nodi il comando ::
+
+  drbdadm connect drbd00 
+
+verificare poi che il drbd sia di nuovo sincronizzato con ::
+
+  cat /proc/drbd
+
 
 Disaster recovery
 -----------------

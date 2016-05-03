@@ -246,9 +246,8 @@ Fencing with IF-MIB switch
 
 It's also possible to use a managed switch that supports SNMP IF-MIB as fence device. In this case, fenced node does not get powered off, but instead is cut offline by the switch, with the same effect. 
 
-Verify switch configuration using fence agent for opening and closing ports on the switch:
+Verify switch configuration using fence agent for opening and closing ports on the switch: ::
 
-  ::
   fence_ifmib -a <SWITCH_IP> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <SNMP_VERSION> -c <COMMUNITY> -n<PORT> -o <off|on|status>
 
 Following commands configure two switch connected in this way:
@@ -305,6 +304,44 @@ If a device is not reachable, it will be put on stopped state.
 When the fence device has been fixed, you must inform the cluster about each fence device with this command: ::
 
   crm_resource --resource <stonith_name> --cleanup --node <node_name>
+
+
+DRBD Split Brain
+----------------
+When DRBD split brain happens, data between two nodes storage are no more synchronized. It could happens when a fence fails. 
+Active node DRBD status (cat /proc/drbd) will be Primary/Unknown and on non active node Secondary/Unknown. (instead of Primary/Secondary and Secondary/Primary)
+And with command ::
+
+  pcs status
+
+drbd state will be:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Stopped: [ ns2.nethserver.org ]
+
+instead of:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Slaves: [ ns2.nethserver.org ]
+
+Solution:
+
+On node with valid data launch command :: 
+
+  drbdadm invalidate-remote drbd00
+
+On node with wrong storage data, launch command ::
+
+  drbdadm invalidate drbd00
+
+On both nodes, launch ::
+
+  drbdadm connect drbd00 
+
+Check drbd synchronization with ::
+
+  cat /proc/drbd
+
 
 Disaster recovery
 -----------------
