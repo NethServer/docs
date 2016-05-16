@@ -124,7 +124,6 @@ Modules
    memcached
    smartd
    cups
-   avahi
    antivirus
    c-icap
    iaxmodem
