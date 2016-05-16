@@ -50,4 +50,4 @@ Known problems
 When PostgreSQL is restarted, WebTop can loss the database connection.
 If a blank page is displayed, restart Tomcat with the following command: ::
 
-    service tomcat restart
+    systemctl restart tomcat

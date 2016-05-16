@@ -116,7 +116,6 @@ Modules
    tomcat7
    postgresql
    unixodbc
-   webtop4
    vpn
    unbound
    ntopng
