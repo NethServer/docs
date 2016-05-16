@@ -12,7 +12,6 @@ Example of a database containing an interface:
     bootproto=none
     device=eth0
     gateway=192.168.1.254
-    hwaddr=xx:yy:18:da:dd:01
     ipaddr=192.168.1.1
     netmask=255.255.255.0
     onboot=yes
@@ -56,7 +55,6 @@ See also :ref:`section-roles-and-zones` for the meaning of each color.
 All ``<param>/<value>`` are all valid CentOS network parameter for the specified interface. All parameters must be lowercase. Example:
 
 * ippaddr
-* hwaddr
 * dhcp_hostname
 * netmask
 * slave
@@ -68,11 +66,11 @@ All parameters will be mapped 1-to-1  to the configuration file
 
 One green ethernet: ::
 
- db networks set eth0 ethernet role green hwaddr xx:yy:27:DE:B6:51 ipaddr 192.168.1.4 netmask 255.255.255.0 network 192.168.1.0 onboot yes bootproto static
+ db networks set eth0 ethernet role green ipaddr 192.168.1.4 netmask 255.255.255.0 network 192.168.1.0 onboot yes bootproto static
 
 File content: ::
 
- green=ethernet|bootproto|static|device|green|hwaddr|xx:yy:27:DE:B6:51|ipaddr|192.168.1.4|netmask|255.255.255.0|network|192.168.1.0|onboot|yes|role|green
+ green=ethernet|bootproto|static|device|green|ipaddr|192.168.1.4|netmask|255.255.255.0|network|192.168.1.0|onboot|yes|role|green
 
 Bond options
 ------------
