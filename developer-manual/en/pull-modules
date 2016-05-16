@@ -1,0 +1,21 @@
+#!/bin/bash
+
+BASE_URL=https://raw.githubusercontent.com/NethServer
+
+branch_name=$(git symbolic-ref -q HEAD)
+branch_name=${branch_name##refs/heads/}
+branch_name=${branch_name:-HEAD}
+
+echo "Remember to commit the following files:"
+echo
+for r in `cat modules`
+do
+    url=$BASE_URL/$r/$branch_name/README.rst
+    curl -sSf $BASE_URL/$r/$branch_name/README.rst &> /dev/null
+    if [ $? -gt 0 ]; then # link not valid, try with master branch
+        branch_name='master'
+        wget $BASE_URL/$r/$branch_name/README.rst -O $r.rst -o /dev/null
+        echo "    $r.rst"
+    fi
+done
+echo

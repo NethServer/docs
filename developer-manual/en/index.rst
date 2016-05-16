@@ -93,6 +93,7 @@ Modules
 
 .. toctree::
    :maxdepth: 2
+   :glob:
 
    directory
    email
@@ -132,6 +133,7 @@ Modules
    mysql
    hylafax
    ntp
+   nethserver-*
 
 Appendix
 --------

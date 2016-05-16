@@ -163,3 +163,22 @@ First clone the repository, enter language directory and type ::
    make html
 
 Output files will be generated inside the *_build* directory.
+
+Upgrading developer manual
+==========================
+
+Developer manual is built using files from this repository
+and READMEs files from other github repositories.
+
+To update the developer manual follow these steps:
+
+* Checkout this repository and move to developer-manual directory
+* If needed, add the name of new github repositories inside the ``modules`` file
+* Execute ``pull-modules`` script
+* Try to build the manual: ::
+
+   make html
+
+* After fixing errors and warnings, commit the changes
+
+
