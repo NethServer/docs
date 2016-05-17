@@ -53,7 +53,6 @@ Implementation
    dns
    dhcp
    logs
-   network
    random_url
    migration
    certificate_management
