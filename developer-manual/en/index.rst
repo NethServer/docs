@@ -96,7 +96,6 @@ Modules
    :glob:
 
    directory
-   email
    chat
    ftp
    ups
