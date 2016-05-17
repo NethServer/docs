@@ -1,6 +1,6 @@
-=======
-Hylafax
-=======
+==================
+nethserver-hylafax
+==================
 
 Hylafax is a fax server for receiving and sending faxes.
 

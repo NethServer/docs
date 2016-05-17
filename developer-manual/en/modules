@@ -7,3 +7,4 @@ nethserver-mail-server
 nethserver-mail-filter
 nethserver-directory
 nethserver-hylafax
+nethserver-ntp

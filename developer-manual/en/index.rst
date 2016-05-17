@@ -125,7 +125,6 @@ Modules
    c-icap
    iaxmodem
    mysql
-   ntp
    nethserver-*
 
 Appendix
