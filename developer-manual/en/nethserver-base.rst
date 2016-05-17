@@ -222,3 +222,35 @@ configuration by following these steps.
    The interface will have the chosen IP address.
 
 6. Open the web interface and reconfigure accordingly to your needs
+
+===============
+Password policy
+===============
+
+The system can handle global or per-user policies.
+All policies are enforced by PAM and saved under ``passwordstrength`` inside the ``configuration`` database.
+
+Available properties are:
+
+* ``Users``: change strength password for all users, can be:
+
+  * ``strong``: (default) strong passwords must conform to cracklib checks
+  * ``none``: no strength check
+* ``PassExpires``: can be ``yes`` (default) or ``no``. If set to ``no`` password will not expire, if set to ``yes``,
+    following properties apply:
+
+  * ``MaxPassAge``: minimum number of days for which the user is forced to keep the same password (default 0)
+  * ``MinPassAge``: maximum number of days for which the user can keep the same password (default: 180)
+  * ``PassWarning``: an email will be sent to the user X days before password expiration
+
+Configuration can be applied using the :command:`password-policy-update` event.
+
+DB example: ::
+
+ passwordstrength=configuration
+    MaxPassAge=180
+    MinPassAge=0
+    PassExpires=no
+    PassWarning=7
+    Users=none
+
