@@ -30,8 +30,8 @@ The default configuration will execute the script ``00savefiles`` which saves al
 Incoming fax (FaxDispatch)
 ==========================
 
-Hylafax requires a FaxMaster mail address where incoming faxes will be sent. NethServer implement the FaxMaster pseudonym using a system group named *faxmaster*.
-Any users who want to receive incoming faxes should be added to this group.
+Hylafax requires a mail address where incoming faxes will be sent.
+If ``SendTo`` prop is not set, all faxes will be forwarded to root mailbox.
 
 When a fax is received, Hylafax will execute the ``/var/spool/hylafax/etc/FaxDispatch`` script. FaxDispatch runs all executable scripts inside the directory ``/var/spool/hylafax/etc/dispatch`` in alphabetical order.
 
@@ -56,12 +56,12 @@ Authentication
 
 Clients are authenticated using reverse dns queries: all ip resolved with the same domain as server itself are automatically authenticated. If reverse dns query, client can authenticate using user name and password of a user inside ``faxmaster`` group.
 
-Clients should always user username, despite of authentication method used.
+Clients should always use username, despite of authentication method used.
 
 Internationalization
 ====================
 
-Notification on incoming and outgoing faxes can be localized using the ``Lang`` property. Default value is ``it_It``.
+Notification on incoming and outgoing faxes can be localized using the ``Lang`` property. Default value is ``en_US``.
 
 Client configuration
 ====================
@@ -79,7 +79,7 @@ Configuration DB
 
 Example: ::
 
- hylafax=service
+ hylafax=configuration
     AreaNumber=
     ClientShowReceived=disabled
     CountryCode=39
@@ -108,7 +108,12 @@ Example: ::
     SendReport=disabled
     SendTo=aa``test.tld
     SummaryReport=disabled
-    TCPPort=4559
     WaitDialTone=enabled
+
+ hylafax-hfaxd=service
+    TCPPort=4559
+    status=enabled
     access=private
+
+ hylafax-faxq=service
     status=enabled
