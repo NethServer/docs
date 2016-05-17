@@ -46,30 +46,27 @@ Modules
    backup
    accounts
    mail
-   webmail
-   pop3_connector
-   pop3_proxy
-   shared_folder
-   samba
-   chat
    ups
    fax_server
-   web_proxy
-   content_filter
    firewall
    proxy_pass
-   snort
    bandiwidth_monitor
    statistics
    dns
    dhcp
    vpn
    ftp
-   owncloud
    phone_home
-   webvirtmgr
    snmp
-   webtop4
+
+NethForge modules
+-----------------
+
+.. toctree::
+   :maxdepth: 2
+ 
+   webvirtmgr
+
 
 Best practices
 --------------
