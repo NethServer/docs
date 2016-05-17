@@ -50,6 +50,7 @@ Il sistema supporta due metodi di autenticazione per l'invio di fax:
 
 * Host Based: utilizza l'indirizzo IP del computer che invia la richiesta
 * PAM: utilizza nome utente e password, gli utenti devono appartenere al gruppo *faxmaster*
+  Il gruppo *faxmaster* deve essere creato esplicitamente.
 
 Assicurarsi inoltre che sia abilitata l'opzione :guilabel:`Visualizza fax inviati dai client`.
 

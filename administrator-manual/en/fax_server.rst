@@ -48,7 +48,8 @@ Authentication
 The system supports two authentication methods for sending faxes:
 
 * Host Based: uses the IP address of the computer sending the request
-* PAM: uses username and password, users must belong to the group *faxmaster*
+* PAM: uses username and password, users must belong to the group *faxmaster*.
+  The *faxmaster* group must be explicitly created.
 
 Also make sure to enable the :guilabel:`View faxes from clients` option.
 
