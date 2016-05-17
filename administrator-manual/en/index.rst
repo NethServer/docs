@@ -49,6 +49,7 @@ Modules
    ups
    fax_server
    firewall
+   snort
    proxy_pass
    bandiwidth_monitor
    statistics
