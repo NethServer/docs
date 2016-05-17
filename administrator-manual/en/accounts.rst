@@ -4,6 +4,59 @@
 Users and groups
 ================
 
+|product| supports authentication and authorization on local and remote account providers.
+
+Supported providers are:
+
+* LDAP: OpenLDAP running on |product|
+* Active Directory: Samba Active Directory running locally (or remotely) or on an existing Windows AD machine
+
+After the first configuration wizard, the administrator can configure the authentication
+source using the :guilabel:`User and groups` page.
+If no extra package is installed, the admin user must select a remote account provider.
+Users and groups from remote sources are in *read-only* mode and can not be modified.
+
+After installing a local backend (Samba Active Directory or OpenLDAP), the user will be able to 
+create/modify/delete local users and groups.
+
+OpenLDAP
+========
+
+From the :guilabel:`Software Center` install the package named :guilabel:`Account provider: OpenLDAP`.
+At the end of the installation, the package is automatically configured and the administrator
+will be able to manage users and groups from the :guilabel:`User and groups` page.
+
+
+Samba Active Directory
+======================
+
+When installing Samba Active Directory, the system needs an additional IP address which will be the address of 
+Active Directory controller inside the LAN.
+The additional IP address must satisfy three conditions:
+
+* the IP address must be in the same subnet range of a green network
+* the green network must be bound to a bridged interface
+* the IP address must not be used by any other machine
+
+From the :guilabel:`Software Center` install the package named :guilabel:`Account provider: Samba Active Directory`.
+At the end of the installation, access the :guilabel:`User and groups` page to configure Samba for the first time.
+Then insert the additional IP address and press the submit button: if needed, 
+the system will automatically create a bridge on the green network.
+
+Users and groups can be managed from the :guilabel:`User and groups` page.
+
+Default account
+---------------
+
+After installing Samba Active Directory, the :guilabel:`Users and groups` page has one default entry: :dfn:`administrator`. This
+account is granted special privileges on some specific services, such as joining a
+workstation in Samba Active Directory domain.
+
+Default password for user administrator is: *Nethesis,1234*
+
+.. tip:: Remember to change the administrator password at first login.
+
+
 Users
 =====
 
@@ -18,16 +71,7 @@ servers that require authentication.
 When creating a user, following fields are mandatory:
 
 * Username
-* Name
-* Surname
-
-Optional fields:
-
-* Company
-* Office
-* Address
-* City
-* Phone
+* Full name (name and surname)
 
 
 Just after creation, the user is disabled. To enable the user, set a password using the :guilabel:`Change password` button.
@@ -46,8 +90,16 @@ This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` 
 Access to services
 ------------------
 
-After creation a user can be enabled only to some (or all) services.
-This configuration can be done using the :guilabel:`Services` tab page.
+A user can be enabled to access specific (or all) services.
+The access must be done using the full user name with the domain: `username@<domain>`.
+
+Example:
+
+* Domain: nethserver.org
+* Username: goofy
+
+The full user name for login is: `goofy@nethserver.org`.
+
 
 .. _groups-section:
 
@@ -62,25 +114,8 @@ As for the users, a group can be enabled to some (or all) services.
 
 Two special groups can be created, the users who belong in one of these groups are granted access to the panels of the Server Manager
 
-* :dfn:`administrators`: Users of this group have the same permissions as the root or admin user.
+* :dfn:`administrators`: Users of this group have the same permissions as the root user.
 * :dfn:`managers`: Users of this group are granted access to the Management section.
-
-
-.. _admin_user-section:
-
-Admin account
-=============
-
-The :guilabel:`Users` page has one default entry: :dfn:`admin`. This
-account allows access to the Server Manager with the same permissions
-of the :dfn:`root` account.  It is initially *disabled* and has no
-access from the console.
-
-.. tip:: To enable ``admin`` account set its password.
-
-Where applicable, the ``admin`` user also is granted special
-privileges on some specific services, such as :ref:`joining a
-workstation in Samba domain <samba_pdc>`.
 
 
 Password management
@@ -88,7 +123,7 @@ Password management
 
 The system provides the ability to set constraints on password :dfn:`complexity` and :dfn:`expiration`.
 
-Password policies can be changed from web interface after installing ``nethserver-password`` module.
+Password policies can be changed from web interface.
 
 Complexity
 -----------
@@ -110,23 +145,12 @@ The :index:`strong` policy requires that the password must comply with the follo
 * Must be not present in the dictionaries of common words 
 * Must be different from the username
 * Can not have repetitions of patterns formed by 3 or more characters (for example the password As1.$ AS1. $ is invalid)
+* If Samba Active Directory is installed, also the system will enable password history
 
 The default policy is :dfn:`strong`.
 
 .. warning:: Changing the default policies is highly discouraged. The use of weak passwords often lead
    to compromised servers by external attackers.
-
-To change the setting to none ::
-
-  config setprop passwordstrength Users none
-
-To change the setting to strong ::
-
-  config setprop passwordstrength Users strong
-
-Check the policy currently in use on the server ::
-
-  config getprop passwordstrength Users
 
 Expiration
 ----------
@@ -139,47 +163,6 @@ The system will send an e-mail to inform the users when their password is about 
    In this case you need to change the user password.
    For example, if the last password change was made in January, and the activation of the deadline in October, 
    the system will assume the password changed in January is expired, and notify the user.
-
-If you wish to bypass the password expiration globally (also allow access for users with expired password) ::
-
-  config setprop passwordstrength PassExpires no
-  signal-event password-policy-update
-
-To disable password expiration for a single user (replace username with the user) ::
-
-  db accounts setprop <username> PassExpires no
-  signal event password-policy-update
-
-
-Below are the commands to view enabled policies.
-
-Maximum number of days for which you can keep the same password (default: 180) ::
-
-  config getprop passwordstrength MaxPassAge
-
-
-Minimum number of days for which you are forced to keep the same password (default 0) ::
-
-  config getprop passwordstrength MinPassAge
-
-
-Number of days on which the warning is sent by email (default: 7) ::
-
-  config getprop passwordstrength PassWarning
-
-
-To change the parameters replace the :command:`getprop` command with :command:`setprop`,  
-then add the desired value at end of the line. Finally apply new configurations::
-
-  signal-event password-policy-update
-
-
-
-For example, to change to 5 "Number of days on which the warning is sent by email" ::
-
- config setprop passwordstrength PassWarning 5
- signal-event password-policy-update
-
 
 
 Effects of expired password
@@ -208,30 +191,4 @@ If you wish to change it, use the following command: ::
 Example for Italian: ::
 
   config setprop sysconfig DefaultLanguage it_IT.utf8
-
-Import users
-============
-
-The system can import a list of users from a CSV file.
-The file must contain a line per user, each line must have TAB-separated fields and must respect following format: ::
-
- username    firstName    lastName    email    password
-
-Example: ::
-
-  mario   Mario   Rossi   mario@example.org       112233
-
-
-Make sure the mail server is installed, then execute: ::
-
-  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
-
-For example, if the user's file is :file:`/root/users.csv`, execute following command: ::
-
-  /usr/share/doc/nethserver-directory-`rpm --query --qf "%{VERSION}" nethserver-directory`/import_users /root/users.csv
-
-
-The command can be executed multiple times: already existing users will be skipped. 
-
-.. note:: The command will fail if mail server module is not installed
 
