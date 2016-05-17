@@ -2,3 +2,6 @@ nethserver-base
 nethserver-lightsquid
 nethserver-webtop4
 nethserver-avahi
+nethserver-mail-common
+nethserver-mail-server
+nethserver-mail-filter
