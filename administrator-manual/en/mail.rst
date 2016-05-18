@@ -107,8 +107,8 @@ Email addresses
 Each user has a personal :dfn:`mailbox` and any user name in the form
 *<username>@<domain>* is also a valid email address to deliver messages into it.
 The list of mailboxes is shown by the :guilabel:`Email addresses > User
-mailboxes` page. The :guilabel:`Edit` button allows disabling the access to
-email services (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
+mailboxes` page. The :guilabel:`Edit` button allows disabling the :guilabel:`Access to
+email services` (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
 to that user's mailbox can be forwarded to an external email address.
 
 .. index::
