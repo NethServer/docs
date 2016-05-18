@@ -40,15 +40,17 @@ Also the full web filter stack has been updated to latest upstream release:
 
 
 Mail server
-------------
+-----------
 
-The whole stack has been updated, from upstream:
+The whole stack has been enhanced and now is based on upstream packages:
 
-* amavis
+* amavisd-new
 * postfix
+* dovecot
 
-Also the mail filter stack uses its own clamd instance.
-
+The mail filter component runs its own clamd instance.
+The mail server is configured to use NSS/PAM system accounts (coming from OpenLDAP
+or Samba/Microsoft Active Directory).
 
 Updated packages
 ----------------
@@ -96,6 +98,6 @@ Discontinued packages
 The following packages have been removed:
 
 * nethserver-collectd-web: replaced by nethserver-cgp
-* nethserver-password: integrated inside nethserver-directory
+* nethserver-password: integrated inside nethserver-sssd
 * nethserver-faxweb2: http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645
 * nethserver-fetchmail: should be replaced by getmail in the near future (https://github.com/NethServer/dev/issues/5021)

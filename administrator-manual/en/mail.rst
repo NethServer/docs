@@ -4,7 +4,7 @@
 Email
 =====
 
-The Email module is split in three main parts:
+The Email module is split into three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
@@ -51,7 +51,7 @@ two alternatives:
 
 |product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
-recipient *and also* to a local user (or group). The hidden copy is
+recipient *and also* to a custom email address. The hidden copy is
 enabled by the :guilabel:`Always send a copy (Bcc)` check box.
 
 .. warning:: On some countries, enabling the *Always send a copy
@@ -101,12 +101,34 @@ The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
 Email addresses
 ===============
 
-The system enables the creation of an unlimited number of :dfn:`email
-addresses`, also known as :dfn:`pseudonyms`, from the :guilabel:`Email
-addresses` page.  Each address is associated with a system user or
-group owning a :dfn:`mailbox` (see :ref:`email_mailboxes`).  It can be
-enabled on all configured domains or only on specific domains. For
-example:
+.. index::
+    pair: user; mailbox
+
+Each user has a personal :dfn:`mailbox` and any user name in the form
+*<username>@<domain>* is also a valid email address to deliver messages into it.
+The list of mailboxes is shown by the :guilabel:`Email addresses > User
+mailboxes` page. The :guilabel:`Edit` button allows disabling the access to
+email services (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
+to that user's mailbox can be forwarded to an external email address.
+
+.. index::
+    pair: shared; mailbox
+
+Mailboxes can be shared among groups of users.  The :guilabel:`Email addresses >
+Shared mailboxes` page allows creating a new :dfn:`shared mailbox` and defining
+one or more owning groups.
+
+The system enables the creation of an unlimited number of additional email
+addresses, from the :guilabel:`Email addresses > Mail aliases` page. Each
+:dfn:`mail alias` is associated with one or more destinations. A
+:dfn:`destination` can be of the following types:
+
+* user mailbox,
+* shared mailbox,
+* external email address.
+
+A mail alias can be bound to any mail domain or be specific to one mail domain.
+For example:
 
 * First domain: mydomain.net
 * Second domain: example.com
@@ -124,60 +146,13 @@ option blocks the possibility of an address to receive email from the
 outside.  Still the "local network only" address can be used to
 exchange messages with other accounts of the system.
 
-When creating a new account from the :guilabel:`Users` or
-:guilabel:`Groups` page, the system suggests a default email address
-for each configured mail domain.
-
-For instance, creating a new account for user *Donald Duck*:
-
-* User name: donald.duck
-* Domains: ducks.net, ducks.com
-* Suggested addresses: donald.duck@ducks.net, donald.duck@ducks.com
-
-.. index::
-   pair: email; mailbox
-
 .. _email_mailboxes:
 
-User and group mailboxes
-========================
-
-Email messages delivered to a user or group account, as configured
-from the :ref:`email_addresses` page, are written to a disk location known
-as :dfn:`mailbox`.
-
-When the Email module is installed, existing user and group accounts
-do not have a mailbox. It must be explicitly enabled from the
-:guilabel:`Users > Services` or :guilabel:`Groups > Services`
-tab.  Instead, newly created accounts have this option enabled by
-default.
-
-.. index::
-   pair: email; forward address
-
-From the same :guilabel:`Services` page under :guilabel:`Users` or
-:guilabel:`Groups` it can be defined an external email address where
-to :guilabel:`Forward messages`.  Optionally, a copy of the message
-can be stored on the server.
-
-.. index::
-   triple: email; group; shared folder
-
-.. _email_sharedfolder:
-
-When an address is associated with a group, the server can be
-configured to deliver mail in two ways, from the :guilabel:`Groups >
-Services` tab:
-
-* send a copy to each member of the group
-* store the message in a :dfn:`shared folder`. This option is
-  recommended for large groups receiving big messages.
-
-.. warning:: Deleting a user or group account erases the associated
-             mailbox!
+Mailbox configuration
+=====================
 
 The :guilabel:`Email > Mailboxes` page controls what protocols are
-available to access a user or group mailbox:
+available to access a user mailbox:
 
 * IMAP [#IMAP]_ (recommended)
 * POP3 [#POP3]_ (obsolete)
@@ -193,40 +168,40 @@ mail contents on the network.
 .. index::
    triple: email; custom; quota
 
-From the same page, the :guilabel:`disk space` of a mailbox can be
-limited to a :dfn:`quota`.  If the mailbox quota is enabled, the
+From the same page, the :guilabel:`disk space` of each mailbox can be
+limited to a default :dfn:`quota`.  If the mailbox quota is enabled, the
 :guilabel:`Dashboard > Mail quota` page summarizes the quota usage for
 each user.  The quota can be customized for a specific user in
-:guilabel:`Users > Edit > Services > Custom mailbox quota`.
+:guilabel:`Email addresses > User mailboxes > Edit > Custom mailbox quota`.
 
 .. index::
    pair: email; spam retention
    triple: email; custom; spam retention
 
 Messages marked as **spam** (see :ref:`email_filter`) can be automatically
-moved into the :dfn:`junkmail` folder by enabling the option
-:guilabel:`Move to "junkmail" folder`. Spam messages are expunged
+moved into the :dfn:`Junk` folder by enabling the option
+:guilabel:`Move to "Junk" folder`. Spam messages are expunged
 automatically after the :guilabel:`Hold for` period has elapsed.  The
 spam retention period can be customized for a specific user in
-:guilabel:`Users > Edit > Services > Customize spam message
+:guilabel:`Email addresses > User mailboxes > Edit > Customize spam message
 retention`.
 
 .. index::
    pair: email; master user
 
-The ``admin`` user can impersonate another user, gaining full rights
+The ``root`` user can impersonate another user, gaining full rights
 to the latter's mailbox contents and on folder permissions.  The
-:guilabel:`Admin can log in as another user` option controls this
+:guilabel:`Root can log in as another user` option controls this
 empowerment, known also as *master user* in [#Dovecot]_.
 
-When :guilabel:`Admin can log in as another user` is enabled, the IMAP
-server accepts any user name with ``*admin`` suffix appended and
-admin's password.
+When :guilabel:`Root can log in as another user` is enabled, the IMAP
+server accepts any user name with ``*root`` suffix appended and
+root's password.
 
 For instance, to access as ``john`` with admin's password ``secr3t``,
 use the following credentials:
 
-* username: ``john*admin``
+* username: ``john*root``
 * password: ``secr3t``
 
 .. _email_messages:
@@ -453,6 +428,7 @@ following variants:
 
 * LOGIN
 * PLAIN
+* GSSAPI (only if |product| is bound to Samba/Microsoft Active Directory)
 
 Also the following SSL-enabled ports are available for legacy software
 that still does not support STARTTLS:
@@ -547,91 +523,6 @@ registered DNS record, type the following commands: ::
 This configuration is also valuable if the mail server is using a free
 dynamic DNS service.
 
-.. _email_ads:
-
-Email in Active Directory
-=========================
-
-The Email module integrates with an Active Directory (AD) environment,
-if :ref:`samba_ads` role is enabled in :guilabel:`Windows Network`
-page.
-
-Make sure :guilabel:`LDAP accounts branch` in :guilabel:`Windows
-Network` page is actually set to the LDAP branch where email users and
-groups are placed.
-
-This is an example of an user entry in AD LDAP (some attributes omitted): ::
-
-    dn: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC=it
-    objectClass: top
-    objectClass: person
-    objectClass: organizationalPerson
-    objectClass: user
-    cn: John Smith
-    sn: Smith
-    givenName: John
-    distinguishedName: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC
-     =it
-    instanceType: 4
-    displayName: John Smith
-    memberOf: CN=sviluppo,OU=Nethesis,DC=adnethesis,DC=it
-    memberOf: CN=secgroup,OU=Nethesis,DC=adnethesis,DC=it
-    memberOf: CN=tecnici,OU=Nethesis,DC=adnethesis,DC=it
-    name: John Smith
-    primaryGroupID: 513
-    sAMAccountName: john.smith
-    sAMAccountType: 805306368
-    userAccountControl: 66048
-    userPrincipalName: john.smith@adnethesis.it
-    objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=adnethesis,DC=it
-    mail: john@adnethesis.it
-    otherMailbox: smtp:js@adnethesis.it
-    proxyAddresses: smtp:j.smith@adnethesis.it
-
-To make |product| work with the external LDAP database provided by
-Active Directory, the following rules applies:
-
-#. Only enabled accounts are considered (``userAccountControl`` attribute).
-
-#. IMAP and SMTP login name is the value of ``sAMAccountName``
-   attribute.
-
-#. Email addresses associated with an user are the values of ``mail``,
-   ``otherMailbox`` and ``proxyAddresses`` attributes.  The last two
-   attributes expect a ``smtp:`` prefix before the actual value.  Also
-   ``userPrincipalName`` is considered an email address, by default;
-   this can be disabled (see :ref:`commands below
-   <email_topic_AdsMapUserPrincipalStatus>`).
-
-#. A group email address is the value of its ``mail`` attribute. By
-   default any group is treated as a *distribution list*: a copy of the
-   email is delivered to its members.
-
-#. The domain part of email addresses specified by the above
-   attributes must match a :ref:`configured domain <email_domains>`,
-   otherwise it is ignored.
-
-To configure security groups as :ref:`shared folders
-<email_sharedfolder>` globally, type the following commands at root's
-console: ::
-
-   config setprop postfix AdsGroupsDeliveryType shared
-   signal-event nethserver-samba-save
-
-.. warning:: Avoid AD group names containing uppercase letters with
-	     shared folder: IMAP ACLs does not work properly. See
-	     `BUG#2744`_.
-
-.. _email_topic_AdsMapUserPrincipalStatus:
-
-To avoid the ``userPrincipalName`` attribute to be considered as a valid
-email address, type the following commands at root's console: ::
-
-   config setprop postfix AdsMapUserPrincipalStatus disabled
-   signal-event nethserver-samba-save
-
-.. _BUG#2744: http://dev.nethserver.org/issues/2744
-
 .. _email_outlook_deleted:
 
 Outlook deleted mail
@@ -714,7 +605,7 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
-.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
+.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language) 
 .. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
 .. [#Email] Email, http://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, http://en.wikipedia.org/wiki/MX_record
@@ -727,4 +618,4 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 .. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spamming
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
-.. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
+.. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/
