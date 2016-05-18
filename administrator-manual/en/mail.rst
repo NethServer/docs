@@ -171,8 +171,9 @@ mail contents on the network.
 From the same page, the :guilabel:`disk space` of each mailbox can be
 limited to a default :dfn:`quota`.  If the mailbox quota is enabled, the
 :guilabel:`Dashboard > Mail quota` page summarizes the quota usage for
-each user.  The quota can be customized for a specific user in
-:guilabel:`Email addresses > User mailboxes > Edit > Custom mailbox quota`.
+each user.  This summary is updated when a user logs in or a message is
+delivered. The quota can be customized for a specific user in :guilabel:`Email
+addresses > User mailboxes > Edit > Custom mailbox quota`.
 
 .. index::
    pair: email; spam retention
