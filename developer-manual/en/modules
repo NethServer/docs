@@ -9,3 +9,4 @@ nethserver-directory
 nethserver-hylafax
 nethserver-ntp
 nethserver-sssd
+nethserver-ejabberd

@@ -94,7 +94,6 @@ Modules
    :maxdepth: 2
    :glob:
 
-   chat
    ftp
    ups
    tftp
