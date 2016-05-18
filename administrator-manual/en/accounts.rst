@@ -19,6 +19,9 @@ Users and groups from remote sources are in *read-only* mode and can not be modi
 After installing a local backend (Samba Active Directory or OpenLDAP), the user will be able to 
 create/modify/delete local users and groups.
 
+Please, choose wisely your account provider because the choice is not reversible.
+Also, the system will forbid any change to the FQDN after the account provider has been configured.
+
 OpenLDAP
 ========
 

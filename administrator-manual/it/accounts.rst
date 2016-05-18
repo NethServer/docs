@@ -20,6 +20,9 @@ e sono configurati in *sola lettura*.
 Dopo aver installato una sorgente locale (Samba Active Directory o OpenLDAP), sarà possibile
 creare/modificare/eliminare utenti e gruppi locali.
 
+Si consiglia di selezionare con attenzione la sorgente di utenti e gruppi, in quanto la scelta non è reversibile.
+Inoltre, al termine della configurazione, il sistema non cosentirà più di cambiare l'FQDN del server.
+
 OpenLDAP
 ========
 
