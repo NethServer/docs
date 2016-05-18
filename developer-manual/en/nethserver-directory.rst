@@ -1,6 +1,6 @@
-================
-Directory (LDAP)
-================
+====================
+nethserver-directory
+====================
 
 The `nethserver-directory` implements user authentication and authorization.
 All accounts are saved inside OpenLDAP.

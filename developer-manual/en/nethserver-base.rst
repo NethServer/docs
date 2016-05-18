@@ -1,4 +1,9 @@
-=======
+===============
+nethserver-base
+===============
+
+This package implements all core configuration.
+
 Network
 =======
 
@@ -25,6 +30,7 @@ Each entry describes a network interface according to CentOS/RHEL specification 
         <param> = <value>
 
 The ``type`` variable is the type of interface. Valid values are:
+
 * ethernet
 * bond
 * bridge
@@ -91,7 +97,7 @@ Example: ::
 
 
 Templates
-=========
+---------
 
 The network database can be manipulated using the :dfn:`esmith::NetworksDB` perl module.
 For more information use: ::
@@ -111,12 +117,12 @@ If you need to access the local ip address within a template, use this code snip
    ipaddress. *This variable is no more available.*
 
 Events
-======
+------
 
 All network configurations are applied by ``interface-update`` event.
 
 Database initialization
-=======================
+-----------------------
 
 All interfaces are imported from configuration files to database using
 the script: ``/usr/libexec/nethserver/update-networks-db`` .
@@ -124,7 +130,7 @@ the script: ``/usr/libexec/nethserver/update-networks-db`` .
 The *networks* database is updated Whenever an interface is plugged into the system.
 
 Best practices
-==============
+--------------
 
 DHCP on red interfaces
 ----------------------
@@ -223,7 +229,6 @@ configuration by following these steps.
 
 6. Open the web interface and reconfigure accordingly to your needs
 
-===============
 Password policy
 ===============
 

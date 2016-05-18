@@ -1,6 +1,6 @@
-========
-WebTop 4
-========
+==================
+nethserver-webtop4
+==================
 
 WebTop 4 is a full-featured groupware written in Java.
 
