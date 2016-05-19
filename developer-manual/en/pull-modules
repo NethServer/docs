@@ -11,12 +11,21 @@ echo "Remember to commit the following files:"
 echo
 for r in `cat modules`
 do
-    url=$BASE_URL/$r/$branch_name/README.rst
-    curl -sSf $BASE_URL/$r/$branch_name/README.rst &> /dev/null
-    if [ $? -gt 0 ]; then # link not valid, try with master branch
-        branch_name='master'
+    curl -sf $BASE_URL/$r/$branch_name/README.rst -o $r.rst
+    if [[ $? != 0 ]]; then # link not valid, try with master branch
+        curl -sf $BASE_URL/$r/master/README.rst -o $r.rst
+        if [[ $? == 0 ]]; then
+            echo "         $r.rst (master)"
+        else
+            echo "    !ERR $r.rst $BASE_URL/$r/master/README.rst"
+        fi
+        continue
     fi
-    wget $BASE_URL/$r/$branch_name/README.rst -O $r.rst -o /dev/null
-    echo "    $r.rst"
+
+    if [[ $? == 0 ]]; then
+        echo "         $r.rst"
+    else
+        echo "    !ERR $r.rst $BASE_URL/$r/$branch_name/README.rst"
+    fi
 done
 echo
