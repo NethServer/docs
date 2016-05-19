@@ -10,3 +10,4 @@ nethserver-hylafax
 nethserver-ntp
 nethserver-sssd
 nethserver-ejabberd
+nethserver-httpd
