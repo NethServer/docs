@@ -177,3 +177,45 @@ All functions are documented using perldoc ::
 
   perldoc NethServer::SSSD
 
+
+Join Active Directory
+---------------------
+
+The Active Directory join operation is run by *realmd*. After the AD has been
+joined sucessfully the system keytab file is initialized as long as individual
+service keytabs, as defined on the respective *service* record (see `Service
+configuration hooks`_).
+
+Service configuration hooks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A service (i.e. *dovecot*) record in ``configuration`` DB can be extended with
+the following special props, that are read during the join operation, machine
+password renewal, and crojob tasks: ::
+
+ dovecot=service
+    ...    
+    KrbStatus=enabled
+    KrbCredentialsCachePath=
+    KrbKeytabPath=/var/lib/dovecot/krb5.keytab
+    KrbPrimaryList=smtp,imap,pop
+    KrbKeytabOwner=
+    KrbKeytabPerms=
+
+* ``KrbStatus {enabled,disabled}``
+  This is the main switch. If set to ``enabled`` a ticket credential cache file is kept valid by the hourly cronjob
+* ``KrbCredentialsCachePath``
+  The path of the credentials cache. It defaults to ``/tmp/krb5cc*<service*uid>``, if ``service`` is also a system user.
+* ``KrbKeytabPath``
+  Keytab file path. If empty, ``/var/lib/misc/nsrv-<service>.keytab`` is assumed
+* ``KrbPrimaryList <comma separated words list>``
+  Defines the keytab contents. In Kerberos jargon a "primary" is the first part of the "principal":http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/What-is-a-Kerberos-Principal*003f.html string, before the slash (``/``) character. Any primary in this list is exported to the keytab.
+* ``KrbKeytabOwner``
+  The unix file owner. Default is the ``service`` name. This is applied to both the credentials cache file and the keytab file.
+* ``KrbKeytabPerms``
+  The unix bit permissions in octal form. Default is ``0400``. This is applied to both the credentials cache file and the keytab file.
+
+The implementation is provided by ``/usr/libexec/nethserver/smbads``.
+
+Individual services can link themselves to ``nethserver-sssd-initkeytabs``
+action in the respective ``-update`` event.

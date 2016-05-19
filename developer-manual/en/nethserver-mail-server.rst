@@ -144,7 +144,26 @@ User: ::
      Account=jdoe
      ControlledBy=operators
      Access=private
-   
+
+Mail quota
+----------
+
+The default mail quota is configured in ``dovecot.conf``. Custom user mail quota
+is set by the ``dovecot-postlogin`` script, by reading
+``/etc/dovecot/user-quota`` (which is a template). If a custom mail quota is set
+the UI interface does not show the updated value until the user performs an IMAP
+login.
+
+Disabled users
+--------------
+
+By default all system users are also Dovecot users. To disable a user we
+configure a blacklist in ``dovecot.conf``: ``/etc/dovecot/deny.passwd``.
+
+As Dovecot is configured as authentication backend for Postfix, a disabled user
+loses also SMTP AUTH access.
+
+
 Testing Dovecot with Mutt
 -------------------------
 
@@ -153,18 +172,31 @@ Quickstart: ::
 
   yum install mutt
   cat - <<EOF > ~/.muttrc 
-  set spoolfile="imaps://admin*vmail@localhost/"
+  set spoolfile="imaps://root@localhost/"
   set folder=""
   EOF
   mutt
 
 See: http://dev.mutt.org/doc/manual.html
 
-When mutt starts always asks for the ``vmail`` master-user password. 
-This is an auto-generated random password, stored in ``/etc/dovecot/master-users``. 
+When mutt starts always asks for the ``root`` password.
 To avoid typing the password again and again write it in ``.muttrc``: ::
 
-  set spoolfile="imaps://admin*vmail:PASSWORD@localhost/"
+  set spoolfile="imaps://root:PASSWORD@localhost/"
   set folder=""
 
-``PASSWORD`` must be URL-encoded. For instance the slash character ``/`` is encoded as ``%2f``.   
+``PASSWORD`` must be URL-encoded. For instance the slash character ``/`` is encoded as ``%2f``.
+
+Active Directory configuration
+------------------------------
+
+To configure mutt for GSSAPI authentication ::
+
+    yum install krb5-workstation
+    cat - <<EOF > ~/.muttrc
+    set spoolfile="imaps://vm5.dpnet.nethesis.it/"
+    set folder=""
+    set imap_user=davide.principi@DPNET.NETHESIS.IT
+    set imap_authenticators="gssapi"
+    EOF
+    mutt
