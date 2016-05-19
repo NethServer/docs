@@ -21,9 +21,6 @@ Developer Manual
     * **ML archive**: `Google Groups <https://groups.google.com/d/forum/nethserver>`_
     * **IRC**: `#nethserver on freenode.net`
 
-Rules and conventions
----------------------
-
 .. toctree::
    :maxdepth: 2
    :caption: Rules and conventions
@@ -33,9 +30,6 @@ Rules and conventions
    rpm_rules
    i18n
 
-Architecture
-------------
-
 .. toctree::
    :maxdepth: 2
    :caption: Architecture
@@ -44,9 +38,6 @@ Architecture
    templates
    events
    services
-
-Implementation
---------------
 
 .. toctree::
    :maxdepth: 2
@@ -65,9 +56,6 @@ Implementation
    ips
    samba
 
-Web interface
--------------
-
 .. toctree::
    :maxdepth: 2
    :caption: Web interface
@@ -79,9 +67,6 @@ Web interface
    inline_help
    todos_api
 
-Packages
---------
-
 .. toctree::
    :maxdepth: 2
    :caption: Packages
@@ -90,9 +75,6 @@ Packages
    building_iso
    repositories
    package_groups
-
-Modules
--------
 
 .. toctree::
    :maxdepth: 2
@@ -128,9 +110,6 @@ Modules
    c-icap
    iaxmodem
    mysql
-   
-Modules (new)
--------------
 
 .. toctree::
    :maxdepth: 2
@@ -138,9 +117,6 @@ Modules (new)
    :caption: Modules (new)
  
    nethserver-*
-
-Appendix
---------
 
 .. toctree::
    :maxdepth: 2
