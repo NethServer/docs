@@ -26,6 +26,7 @@ Rules and conventions
 
 .. toctree::
    :maxdepth: 2
+   :caption: Rules and conventions
    
    introduction
    development_process
@@ -37,6 +38,7 @@ Architecture
 
 .. toctree::
    :maxdepth: 2
+   :caption: Architecture
 
    databases
    templates
@@ -48,6 +50,7 @@ Implementation
 
 .. toctree::
    :maxdepth: 2
+   :caption: Implementation
 
    filesystem_options
    dns
@@ -67,6 +70,7 @@ Web interface
 
 .. toctree::
    :maxdepth: 2
+   :caption: Web interface
 
    web_interface
    create_interface_module
@@ -80,7 +84,8 @@ Packages
 
 .. toctree::
    :maxdepth: 2
-
+   :caption: Packages
+   
    building_rpms
    building_iso
    repositories
@@ -89,10 +94,9 @@ Packages
 Modules
 -------
 
-
 .. toctree::
    :maxdepth: 2
-   :glob:
+   :caption: Modules
 
    ftp
    ups
@@ -124,6 +128,15 @@ Modules
    c-icap
    iaxmodem
    mysql
+   
+Modules (new)
+-------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   :caption: Modules (new)
+ 
    nethserver-*
 
 Appendix
@@ -131,6 +144,7 @@ Appendix
 
 .. toctree::
    :maxdepth: 2
+   :caption: Appendix
 
    license_headers
    rebranding_manual 
