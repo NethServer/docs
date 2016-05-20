@@ -24,6 +24,5 @@ The NethServer project welcomes anyone who would like to become involved in the 
 
 
 .. note:: This manual is a work in progress. If you can't find some information
-   please also check the developer wiki: http://dev.nethserver.org/projects/nethserver/wiki/Packages
-
-   Always feel free to ask in ML or IRC channel!
+   please check also our wiki: http://wiki.nethserver.org and always feel free 
+   to ask on http://community.nethserver.org
