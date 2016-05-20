@@ -56,7 +56,7 @@ dominio sono disponibili due modalità:
 |product| permette di conservare una :dfn:`copia nascosta` di tutte le
 mail in transito, con relativo contenuto (quindi non un semplice log
 di mittenti e destinatari): tutti i messaggi verranno consegnati sia
-al destinatario sia ad un utente o gruppo locale.  Questa opzione è
+al destinatario sia ad un indirizzo personalizzato.  Questa opzione è
 configurabile individualmente per ciascun dominio gestito dal server
 di posta.
 
@@ -146,59 +146,15 @@ proveniente dall'esterno: tale tecnica rende inutile qualsiasi tipo di
 invio all'esterno, dato che inibisce ogni risposta da parte del
 destinatario.
 
-Quando si crea un nuovo account dalle pagine :guilabel:`Utenti` o
-:guilabel:`Gruppi`, il sistema suggerisce un indirizzo email di
-default per ogni dominio di posta configurato.
-
-Per esempio:
-
-* Nome utente: mario.rossi
-* Dominio: mycompany.it, mycompany.net
-* Indirizzi di default: mario.rossi@mycompany.it, mario.rossi@mycompany.net
-
 .. index::
    pair: email; casella di posta
    pair: email; mailbox
 
 .. _email_mailboxes:
 
-Caselle di posta di utenti e gruppi
-===================================
 
-I messaggi di posta elettronica consegnati ad un utente o gruppo, così
-come configurato dalla pagina :ref:`email_addresses`, sono scritti in
-una posizione del disco chiamata :dfn:`casella di posta` (mailbox).
-
-Quando viene installato il modulo Email, eventuali utenti e gruppi già
-esistenti non hanno una casella di posta associata.  Essa deve essere
-abilitata in maniera esplicita dalla scheda :guilabel:`Utenti >
-Servizi` o :guilabel:`Gruppi > Servizi`.  Al contrario, i nuovi
-account hanno questa opzione abilitata di default.
-
-.. index::
-   pair: email; inoltro messaggi
-
-Dalla stessa scheda :guilabel:`Servizi` delle pagine
-:guilabel:`Utenti` e :guilabel:`Gruppi` può essere impostato un
-indirizzo email esterno dove saranno inoltrati i messaggi.  Una copia
-di ogni singolo messaggio può essere mantenuta sul server stesso.
-
-.. index::
-   triple: email; gruppo; cartella condivisa
-
-.. _email_sharedfolder:
-
-Quando un indirizzo è associato ad un gruppo, il server può essere
-configurato per consegnare i messaggi di posta in due modi, dalla
-scheda :guilabel:`Gruppi > Servizi`:
-
-* inviare una copia del messaggio a ciascun membro del gruppo
-* depositare il messaggio in una :dfn:`cartella condivisa`.  Questa
-  opzione è raccomandata per gruppi con tanti membri che ricevono
-  allegati molto grandi.
-
-.. warning:: L'eliminazione di un gruppo o di un utente rimuove la
-  casella di posta associata!
+Caselle di posta
+================
 
 Il server consente di accedere alle proprie caselle di posta
 utilizzando due protocolli:
@@ -224,8 +180,8 @@ posta può essere limitato da una :dfn:`quota` prestabilita.  Se alle
 caselle di posta è applicata una quota, la pagina
 :guilabel:`Dashboard > Mail quota` riassume l'utilizzo dello spazio
 disco di ogni utente.  La quota può essere personalizzata per un
-utente particolare dal controllo :guilabel:`Utenti > Modifica >
-Servizi > Quota email personalizzata`.
+utente particolare dal controllo :guilabel:`Indirizzi email > Caselle utenti 
+> Modifica > > Quota email personalizzata`.
 
 .. index::
    pair: email; conserva spam
@@ -233,8 +189,8 @@ Servizi > Quota email personalizzata`.
 
 I messaggi marcati come **spam** (vedi :ref:`email_filter`) possono
 essere spostati automaticamente all'interno della cartella
-:dfn:`junkmail` abilitando l'opzione :guilabel:`Sposta nella cartella
-"junkmail"`.  I messaggi di spam vengono automaticamente rimossi dopo
+:dfn:`Junk` abilitando l'opzione :guilabel:`Sposta nella cartella
+"Junk"`.  I messaggi di spam vengono automaticamente rimossi dopo
 che è trascorso il periodo specificato da :guilabel:`Conserva per`.
 Tale periodo può essere personalizzato per un utente particolare dal
 controllo :guilabel:`Utenti > Modifica > Servizi > Personalizza tempo
@@ -243,21 +199,21 @@ di permanenza delle email di spam`.
 .. index::
    pair: email; master user
 
-L'utente ``admin`` può impersonare un altro utente, acquisendo pieni
+L'utente ``root`` può impersonare un altro utente, acquisendo pieni
 diritti sui contenuti della casella di posta e sui permessi delle
-cartelle di quest'ultimo.  L'opzione :guilabel:`Admin può accedere
+cartelle di quest'ultimo.  L'opzione :guilabel:`Root può accedere
 impersonando un altro utente` controlla questa facoltà, conosciuta con
 il nome di *master user* in [#Dovecot]_.
 
-Quando :guilabel:`Admin può accedere impersonando un altro utente` è
+Quando :guilabel:`Root può accedere impersonando un altro utente` è
 abilitata, il server IMAP accetta qualsiasi nome utente al quale sia
-aggiunto il suffisso ``*admin``, e la password di ``admin`` come
+aggiunto il suffisso ``*root``, e la password di ``root`` come
 credenziali valide.
 
-Per esempio, per accedere come ``john`` con la password di admin
+Per esempio, per accedere come ``john`` con la password di root
 ``secr3t``, utilizzare le seguenti credenziali:
 
-* nome utente: ``john*admin``
+* nome utente: ``john*root``
 * password: ``secr3t``
 
 .. _email_messages:
@@ -605,98 +561,6 @@ registrare gratuitamente un DNS dinamico, associarlo all'IP pubblico
 del server ed utilizzare questo dominio come parametro ``HeloHost``
 del precedente comando.
 
-.. _email_ads:
-
-Email in Active Directory
-=========================
-
-Il modulo Email si integra in un ambiente Active Directory (AD) se il
-ruolo :ref:`samba_ads` è abilitato nella pagina :guilabel:`Rete
-Windows`.
-
-Assicurarsi che il valore del campo :guilabel:`Ramo LDAP degli
-account` nella pagina :guilabel:`Rete Windows` sia correttamente
-impostato al ramo LDAP sotto cui gli utenti e i gruppi per cui
-attivare l'email sono posizionati.
-
-Questo è l'esempio di un nodo LDAP corrispondente ad un utente di AD
-(alcuni attributi sono stati omessi): ::
-
-    dn: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC=it
-    objectClass: top
-    objectClass: person
-    objectClass: organizationalPerson
-    objectClass: user
-    cn: John Smith
-    sn: Smith
-    givenName: John
-    distinguishedName: CN=John Smith,OU=Sviluppo,OU=Nethesis,DC=adnethesis,DC
-     =it
-    instanceType: 4
-    displayName: John Smith
-    memberOf: CN=sviluppo,OU=Nethesis,DC=adnethesis,DC=it
-    memberOf: CN=secgroup,OU=Nethesis,DC=adnethesis,DC=it
-    memberOf: CN=tecnici,OU=Nethesis,DC=adnethesis,DC=it
-    name: John Smith
-    primaryGroupID: 513
-    sAMAccountName: john.smith
-    sAMAccountType: 805306368
-    userAccountControl: 66048
-    userPrincipalName: john.smith@adnethesis.it
-    objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=adnethesis,DC=it
-    mail: john@adnethesis.it
-    otherMailbox: smtp:js@adnethesis.it
-    proxyAddresses: smtp:j.smith@adnethesis.it
-
-Per far funzionare |product| con il database LDAP esterno di Active
-Directory vengono applicate le seguenti regole:
-
-#. Sono considerati solo gli account abilitati (attributo
-   ``userAccountControl``).
-
-#. Il nome di login per IMAP e SMTP è preso dall'attributo
-   ``sAMAccountName``.
-
-#. Gli indirizzi email associati ad un utente provengono dagli
-   attributi ``mail``, ``otherMailbox`` e ``proxyAddresses``. Gli
-   ultimi due si aspettano il prefisso ``smtp:`` prima del valore vero
-   e proprio. Inoltre ``userPrincipalName`` è di default considerato
-   anche come indirizzo email, ma può essere disabilitato (vedi
-   :ref:`i comandi qui sotto
-   <email_topic_AdsMapUserPrincipalStatus>`).
-
-#. L'indirizzo email di un gruppo è preso dal suo attributo
-   ``mail``. Per default ogni gruppo è trattato come una *lista di
-   distribuzione*: una copia del messaggio è consegnata ai suoi
-   membri.
-
-#. Il suffisso di dominio degli indirizzi email specificati dagli
-   attributi suddetti deve corrispondere ad uno dei :ref:`domini
-   configurati <email_domains>`, altrimenti viene ignorato.
-
-Per configurare globalmente i *gruppi di sicurezza* per ricevere i
-messaggi in una :ref:`cartella condivisa <email_sharedfolder>`,
-digitare i seguenti comandi nella console di root: ::
-
-   config setprop postfix AdsGroupsDeliveryType shared
-   signal-event nethserver-samba-save
-
-.. warning:: Evitare le lettere maiuscole nel nome dei gruppi di AD
-             con cartella condivisa: le ACL IMAP non funzionano come
-             atteso. Vedere `BUG#2744`_.
-
-
-.. _email_topic_AdsMapUserPrincipalStatus:
-
-Per evitare che l'attributo ``userPrincipalName`` sia considerato un
-indirizzo email valido, digitare i seguenti comandi nella console di
-root: ::
-
-   config setprop postfix AdsMapUserPrincipalStatus disabled
-   signal-event nethserver-samba-save
-
-.. _BUG#2744: http://dev.nethserver.org/issues/2744
-
 .. _email_outlook_deleted:
 
 Posta eliminata Outlook
@@ -790,4 +654,4 @@ Un quadro di tutto il sistema è disponibile dal sito *workaround.org* [#MailCom
 .. [#SPAM] SPAM http://it.wikipedia.org/wiki/Spam
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
 .. [#BAYES] Filtro bayesiano http://it.wikipedia.org/wiki/Filtro_bayesiano
-.. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/lenny/bigpicture
+.. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/
