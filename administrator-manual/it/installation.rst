@@ -77,7 +77,7 @@ Una volta scaricato, il file ISO può essere utilizzato per creare un
 *supporto avviabile*, come un DVD o una chiavetta USB.
 
 Chiavetta USB
-^^^^^^^^^^^^^
+-------------
 
 Su una macchina Linux, aprire il terminale ed eseguire: ::
 
@@ -104,7 +104,7 @@ Quindi usare uno dei seguenti tool per scrivere i dati:
 
 
 DVD
-^^^
+---
 
 La creazione di un disco avviabile è diversa dalla semplice scrittura
 di un file su DVD, e richiede l'uso di una funzione dedicata, di
