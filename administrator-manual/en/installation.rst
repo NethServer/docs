@@ -42,7 +42,7 @@ Installation types
 **Installing from ISO**
 
   * Download the ISO image
-  * Prepare a CD / DVD
+  * Prepare a DVD or USB stick
   * Follow the wizard
 
 **Installing from YUM**
@@ -60,19 +60,56 @@ Installing from ISO
 .. warning:: The ISO installation will erase all existing data on
              hard drives!
 
+Media creation
+--------------
 
 **Download the ISO file** from official site |download_site|.  The
 downloaded ISO file can be used to **create a bootable media** such as
-CD or DVD.  The creation of a bootable disk is different from
-writing files into CD/DVD, and it requires the use of a dedicated
+DVD or USB stick.  
+
+USB stick
+^^^^^^^^^
+
+On a Linux machine, open the shell and execute: ::
+
+  dd if=NethServer.iso of=/dev/sdc
+
+Where `NethServer.iso` is the file name of the downloaded ISO and `/dev/sdc` is the
+destination device corresponding to the USB key and 
+not a partition (such as /dev/sdc1).
+
+On a Windows machine, make sure to format the USB drive then unmount it.
+Use one of the following tools to write the USB stick:
+
+* `Rufus`_
+* `Fedora LiveUSB Creator`_
+* `Win32 Disk Imager`_
+* `Rawrite32`_
+* `dd for Windows`_
+
+.. _`Rufus`: https://rufus.akeo.ie/ 
+.. _`Fedora LiveUSB Creator`: https://fedorahosted.org/liveusb-creator/ 
+.. _`Win32 Disk Imager`: http://sourceforge.net/projects/win32diskimager/ 
+.. _`Rawrite32`: http://www.netbsd.org/~martin/rawrite32/ 
+.. _`dd for Windows`: http://www.chrysocome.net/dd 
+
+DVD
+^^^
+
+The creation of a bootable DVD is different from
+writing files into USB stick, and it requires the use of a dedicated
 function (e.g. *write* or *burn ISO image*).  Instructions on how to
-create a bootable CD/DVD from the ISO are easily available on the
+create a bootable DVD from the ISO are easily available on the
 Internet or in the documentation of your operating system.
 
+
+Install modes
+-------------
+
 **Start the machine using the freshly backed media**.  If the machine
-will not start from the CD/DVD, please refer to the documentation of
+will not start from the DVD or USB stick, please refer to the documentation of
 the motherboard BIOS. A typical problem is how boot device priority is
-configured.  First boot device should be the CD/DVD reader.
+configured.  First boot device should be the DVD reader or USB stick.
 
 On start a menu will display different types of installation:
 

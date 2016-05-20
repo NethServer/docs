@@ -11,7 +11,7 @@ Requisiti minimi
 ================
 
 La dotazione minima richiesta da |product| è un macchina con CPU a 64
-bit, 1 GB di RAM e 8 GB di spazio su hard disk. Si consiglia l’uso di
+bit, 1 GB di RAM e 10 GB di spazio su hard disk. Si consiglia l’uso di
 due hard disk in modo che venga garantita l’integrità dei dati
 attraverso il supporto automatico RAID1.
 
@@ -50,7 +50,7 @@ Sono supportati due modi per :index:`installare` |product|. In breve:
 * **Installazione da ISO**
 
   * scaricare l'immagine ISO, 
-  * preparare un CD/DVD,
+  * preparare un DVD o una chiavetta USB,
   * seguire la procedura guidata
 
 * **Installazione da YUM**
@@ -74,18 +74,51 @@ Il file :index:`ISO` di |product| si scarica dal sito ufficiale
 |download_site|.  
 
 Una volta scaricato, il file ISO può essere utilizzato per creare un
-*supporto avviabile*, come un CD o un DVD.
+*supporto avviabile*, come un DVD o una chiavetta USB.
+
+Chiavetta USB
+^^^^^^^^^^^^^
+
+Su una macchina Linux, aprire il terminale ed eseguire: ::
+
+  dd if=NethServer.iso of=/dev/sdc
+
+Dove `NethServer.iso` è il nome del file della ISO scaricata, e `/dev/sdc`
+è la destinazione che corrisponde all'intera chiavetta USB, non una partizione
+(come /dev/sdc1).
+
+Su una macchina Windows, formattare la chiavetta USB e smontarla.
+Quindi usare uno dei seguenti tool per scrivere i dati:
+
+* `Rufus`_
+* `Fedora LiveUSB Creator`_
+* `Win32 Disk Imager`_
+* `Rawrite32`_
+* `dd for Windows`_
+
+.. _`Rufus`: https://rufus.akeo.ie/ 
+.. _`Fedora LiveUSB Creator`: https://fedorahosted.org/liveusb-creator/ 
+.. _`Win32 Disk Imager`: http://sourceforge.net/projects/win32diskimager/ 
+.. _`Rawrite32`: http://www.netbsd.org/~martin/rawrite32/ 
+.. _`dd for Windows`: http://www.chrysocome.net/dd 
+
+
+DVD
+^^^
 
 La creazione di un disco avviabile è diversa dalla semplice scrittura
-di un file su CD/DVD, e richiede l'uso di una funzione dedicata, di
-solito presente nei programmi per la creazione di CD/DVD (es. *scrivi
+di un file su DVD, e richiede l'uso di una funzione dedicata, di
+solito presente nei programmi per la creazione di DVD (es. *scrivi
 immagine* oppure *masterizza ISO*).  Le istruzioni su come creare un
-CD/DVD avviabile a partire dall'immagine ISO sono facilmente
+DVD avviabile a partire dall'immagine ISO sono facilmente
 reperibili su Internet o nella documentazione del proprio sistema
 operativo.
 
-Una volta preparato il supporto avviabile (CD,
-DVD) con l'immagine ISO di |product|, inserirlo e avviare la
+Modalità di installazione
+-------------------------
+
+Una volta preparato il supporto avviabile (DVD o USB) con l'immagine 
+ISO di |product|, inserirlo e avviare la
 macchina.  Se non viene riconosciuto, fare riferimento alla
 documentazione del BIOS della scheda madre. Una problematica tipica è
 impostare la priorità dei dispositivi all'avvio in modo da tentare per
