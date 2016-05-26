@@ -1,8 +1,6 @@
-.. _avahi-section:
-
-=====
-Avahi
-=====
+================
+nethserver-avahi
+================
 
 Configure avahi-daemon to start at boot.
 The  Avahi  mDNS/DNS-SD daemon implements Apple's Zeroconf architecture.

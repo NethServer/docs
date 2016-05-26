@@ -11,3 +11,4 @@ nethserver-ntp
 nethserver-sssd
 nethserver-ejabberd
 nethserver-httpd
+nethserver-firewall-base

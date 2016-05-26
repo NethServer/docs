@@ -1,6 +1,8 @@
-============================
-LightSquid: Web Proxy report
-============================
+=====================
+nethserver-lightsquid
+=====================
+
+LightSquid, Web Proxy report
 
 LightSquid is a lite and fast log analizer for squid proxy.
 It parses :file:`/var/log/squid/access.log` log file on daily basis and generate

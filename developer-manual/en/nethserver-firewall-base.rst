@@ -1,8 +1,9 @@
+
 .. _firewall_gateway-section:
 
-=====================
-Firewall and Gateway 
-=====================
+========================
+nethserver-firewall-base
+========================
 
 NethServer can work into two basic modes:
 
@@ -152,7 +153,7 @@ Each rule record has the following fields:
 * ``Position``: integer sorting key
 * ``Src``, ``Dst``: {*literal*|*reference*} where
 
-  * *literal* is an IP or CIDR
+  * *literal* is an IP, a CIDR, ``any`` (any source/destination) or ``fw`` (the firewall itself)
   * *reference* has the form ``prefix;value``, where prefix can be a DB type (``host``, ``host-group``,  ``zone``) or the string ``role``, 
     ``value`` is a DB key or an interface role name (``green``, ``red``...)
 * ``Action``: can be ``ACCEPT``, ``DROP`` or ``REJECT``
