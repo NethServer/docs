@@ -7,7 +7,7 @@ Note di rilascio
 .. include:: changelog.rst.inc
 
 
-Aggiornamento manuale da 6.6
+Aggiornamento manuale da 6.7
 ============================
 
 E' possibile aggiornare il sistema da riga di comando.
@@ -18,7 +18,7 @@ E' possibile aggiornare il sistema da riga di comando.
 
 2. Installare la nuova versione del pacchetto ``nethserver-release``: ::
 
-     yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.7.rpm
+     yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.rpm
 
 3. Pulire la cache di YUM e aggiornare di nuovo il sistema: ::
 
