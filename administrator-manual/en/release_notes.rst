@@ -6,7 +6,7 @@ Release notes
 
 .. include:: changelog.rst.inc
   
-Manual upgrade from 6.8
+Manual upgrade from 6.7
 =======================
 
 The system can be upgraded from the command line.
