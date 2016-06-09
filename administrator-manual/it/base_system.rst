@@ -247,62 +247,45 @@ pagina di login del Server Manager.
 Certificato del server
 ======================
 
-La pagina :guilabel:`Certificato del server` mostra il certificato SSL
-attualmente installato e che viene presentato da tutti i servizi
-presenti nel sistema.
+La pagina :guilabel:`Certificato del server` mostra i certificati X.509
+attualmente installati e il certificato di default fornito dal sistema per
+cifrare le comunicazioni TLS/SSL.
 
-Il pulsante :guilabel:`Nuovo certificate` consente di generare un
-nuovo certificato SSL auto-firmato. Se si genera un nuovo certificato,
-tutti i servizi SSL verranno riavviati e ai client di rete sarà
-richiesto di accettare il nuovo certificato.
+Il pulsante :guilabel:`Imposta default` consente di scegliere il certificato di
+default. Quando viene scelto un nuovo certificato, tutti i servizi che
+utilizzano TLS/SSL vengono riavviati e i client di rete devono accettare il
+nuovo certificato.
 
+Quando |product| è installato viene automaticamente generato un certificato
+auto-firmato. Dovrebbe essere modificato inserendo dei valori appropriati prima
+di utilizzarlo dai client di rete.  Come alternative, la pagina
+:guilabel:`Certificato del server`  consente di:
+
+* caricare un certificato esistente e la chiave privata RSA.  In aggiunta può
+  essere specificato anche un *chain file*. Tutti i file devono essere codificati
+  nel formato PEM.
+
+* richiedere un nuovo certificato di *Let's Encrypt* [#Letsencrypt]_. Questo è 
+  possibile se sono rispettati i seguenti requisiti:
+  
+  1. il server deve essere raggiungibile dall'esterno alla porta 80. Assicurarsi
+     che la porta 80 è aperta alle connessioni da Internet (si può effettuare un 
+     test da siti come [#CSM]_);
+
+  2. i domini che si vogliono associare al certificato devono essere domini pubblici,
+     associati all'indirizzo IP pubblico del server. Assicurarsi di avere un nome
+     registrato nel DNS pubblico che punta correttamente al proprio server (si
+     può effettuare un test da siti come [#VDNS]_).
 
 .. note::
-   Per evitare problemi di importazione certificato con Internet Explorer,
-   si consiglia di configurare il campo CN (Common Name) o Nome Comune
-   in modo che corrisponda al FQDN del server.
+       Per evitare problemi di importazione certificato con Internet Explorer,
+       si consiglia di configurare il campo CN (Common Name) o Nome Comune
+       in modo che corrisponda al FQDN del server. 
 
-.. _custom_certificate-section:
-
-Installare un certificato personalizzato
-----------------------------------------
-
-I :index:`certificati personalizzati` devono essere salvati all'interno delle seguenti directory:
-
-* :file:`/etc/pki/tls/certs`: chiave pubblica
-* :file:`/etc/pki/tls/private`: chiave privata
-
-
-Configurare i percorsi della chiave pubblica e privata:
-
-::
-
-    db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
-    db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
-
-E' possibile anche configurare il file di chain SSL:
-
-::
-
-    db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
-
-Segnalare il cambio di certificato a tutti i demoni:
-
-::
-
-    signal-event certificate-update
-
-Backup certificato personalizzato
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Ricordarsi sempre di aggiungere i certificati personalizzati al backup della configurazione.
-E' sufficiente aggiungere i percorsi nel file :file:`/etc/backup-config.d/custom.include`.
-
-Per esempio, se il certificato è :file:`/etc/pki/tls/certs/mycert.crt`, eseguire semplicemente: ::
-
- echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
-
-
+.. [#Letsencrypt] Sito web di *Let's Encrypt* https://letsencrypt.org/
+.. [#CSM] Sito web http://www.canyouseeme.org/
+.. [#VDNS] Sito web http://viewdns.info/
+     
 .. _user_profile-section:
 
 Cambio password utente
