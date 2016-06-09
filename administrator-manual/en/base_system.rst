@@ -243,8 +243,8 @@ configuring the network clients to use it.  As alternatives, the
 * uploading an existing certificate and private RSA key. Optionally a
   certificate chain file can be specified, too. All files must be PEM-encoded;
 
-* requesting a new *Let's Encrypt* [#Letsencrypt]_ cerificate.  This is possible if the following
-  requirements are met:
+* requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is
+  possible if the following requirements are met:
 
   1. the server must be reachable from outside at port 80. Make sure your port 80
      is open to the public Internet (you can check with sites like [#CSM]_);
