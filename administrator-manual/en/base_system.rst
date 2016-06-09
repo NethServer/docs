@@ -227,58 +227,39 @@ displayed on the Server Manager login screen.
 Server certificate
 ==================
 
-The :guilabel:`Server certificate` page shows the currently installed
-SSL certificate that is provided by all system services.
+The :guilabel:`Server certificate` page shows the currently installed X.509
+certificates, and the default one provided by system services for TLS/SSL
+encrypted communications.
 
-The :guilabel:`Generate certificate` button allows generating a new
-self-signed SSL certificate.  When a new certificate is generated, all
-SSL services are restarted and network clients will be required to
-accept the new certificate.
+The :guilabel:`Set as default` button allows choosing the default certificate.
+When a new certificate is chosen, all services using TLS/SSL are restarted
+and network clients will be required to accept the new certificate.
+
+When |product| is installed a temporary default self-signed certificate is
+generated automatically.  It should be edited by inserting proper values before
+configuring the network clients to use it.  As alternatives, the
+:guilabel:`Server certificate` page allows:
+
+* uploading an existing certificate and private RSA key. Optionally a
+  certificate chain file can be specified, too. All files must be PEM-encoded;
+
+* requesting a new *Let's Encrypt* [#Letsencrypt]_ cerificate.  This is possible if the following
+  requirements are met:
+
+  1. the server must be reachable from outside at port 80. Make sure your port 80
+     is open to the public Internet (you can check with sites like [#CSM]_);
+
+  2. the domains that you want the certificate for, must be public domain names
+     associated to server own public IP. Make sure you have public DNS name
+     pointing to your server (you can check with sites like [#VDNS]_).
 
 .. note::
    To avoid problems while importing the certificate in Internet Explorer,
    the Common Name (CN) field should match the server FQDN. 
 
-
-.. _custom_certificate-section:
-
-Install a custom certificate
-----------------------------
-
-:index:`Custom certificates` should be placed inside the following standard directories:
-
-* :file:`/etc/pki/tls/certs`: public key
-* :file:`/etc/pki/tls/private`: private key
-
-
-Set the private key and certificate file paths:
-
-::
-
-    db configuration setprop pki CrtFile '/path/to/cert/pem-formatted.crt'
-    db configuration setprop pki KeyFile '/path/to/private/pem-formatted.key'
-
-You can also set a SSL certificate chain file:
-
-::
-
-    db configuration setprop pki ChainFile '/path/to/cert/pem-formatted-chain.crt'
-
-Notify registered daemons about certificate update:
-
-::
-
-    signal-event certificate-update
-
-Custom certificate backup
--------------------------
-   
-Always remember to add custom certificates to configuration backup.
-Just add the paths inside :file:`/etc/backup-config.d/custom.include` file.
-
-For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply execute: ::
-
- echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
+.. [#Letsencrypt] Let's Encrypt website https://letsencrypt.org/
+.. [#CSM] Website http://www.canyouseeme.org/
+.. [#VDNS] Website http://viewdns.info/
 
 .. _user_profile-section:
 
