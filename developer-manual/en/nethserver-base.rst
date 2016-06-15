@@ -49,7 +49,7 @@ The ``role`` property is a mandatory parameter which describes the interface rol
 
 If the role property is empty, the interface is not used by the system.
 
-There are also 3 special roles:
+There are also 4 special roles:
 
 * *bridged*: interface is part of a bridge
 * *slave*: interface is part of a bond
