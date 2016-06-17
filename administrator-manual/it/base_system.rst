@@ -92,6 +92,8 @@ In tal modo è possibile ad esempio associare alla stessa red più indirizzi IP 
 
 L'alias è configurabile cliccando nel menu a tendina della specifica scheda di rete e avrà lo stesso ruolo della scheda fisica associata. 
 
+.. note:: L'alias IP su interfaccia PPPoE in alcuni casi potrebbe non funzionare correttamente a causa di differenze nella fornitura del servizio tra i vari provider internet.
+
 Interfacce logiche
 ------------------
 
