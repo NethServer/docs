@@ -87,6 +87,8 @@ The most common use is with a red interface: when the ISP provides a pool of pub
 
 Alias IP section can be found in the dropdown menu of the related network interface.
 
+.. note:: Alias IPs on PPPoE interface could not work properly, due to different implementations of the service made by internet providers.
+
 .. _logical_interfaces-section:
 
 Logical interfaces
