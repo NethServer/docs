@@ -12,30 +12,30 @@ Both nodes share a DRBD storage in active-passive mode.
 This configuration supports:
 
 * Virtual IPs connected to the green network
-* Clustered services storing the data inside the shared storage
+* Clustered services storing data inside the shared storage
 
 
 **Example**
 
-The MySQL daemon listens on a virtual IP and stores the data inside the DRBD partition.
-In case of failure of the master node, mysqld service will be restarted on the secondary node.
-All clients connect to MySQL using the virtual IP.
+The MySQL daemon listens on a virtual IP and stores its data inside the DRBD partition.
+In case of failure of the master node, the mysqld service will be restarted on the secondary node.
+All clients should connect to MySQL using the virtual IP.
 
 
 Limitations
 ===========
 
 * The LDAP service and all services depending on it can't be clustered.
-  We recommend the use of and external LDAP server.
+  We recommend to use of an external LDAP server.
 * Only STONITH fence devices are supported
 
 
 Hardware requirements
 =====================
 
-You must use two identical nodes. Each node must have
+You must use two identical nodes. Each node must have:
 
-* a disk, or a partition, dedicated to shared storage DRBD (Distributed Replicated Block Device)
+* a disk, or a partition, dedicated to the DRBD (Distributed Replicated Block Device) shared storage
 * two network interfaces to be bonded on a *green* role, both interfaces must be connected to LAN switches
 
 You should also have two LAN switches, let's say SW1 and SW2.
@@ -46,13 +46,13 @@ Fence device
 
 Each node must be connected at least to one pre-configured fence device.
 
-*Fencing* is the action which disconnects a node from shared storage. 
+*Fencing* is the action which disconnects a node from the shared storage. 
 The *fence device* is a hardware device than can be used to shutdown a node using 
 the STONITH (Shoot The Other Node In The Head) method, thus cutting off the power to the failed node.
 
 We recommend a switched PDU (Power Distribution Unit), 
 but IPMI (Intelligent Platform Management Interface) devices should work with some limitations.
-It's also possible to use a managed switch that supports SNMP IF-MIB protocol.
+It's also possible to use a managed switch that supports the SNMP IF-MIB protocol.
 
 External links:
 
@@ -126,7 +126,7 @@ Execute the following steps to proceed with software installation and configurat
 
   yum install nethserver-mysql
 
-* Configure the virtual IP, and inform the cluster about green IPs of both nodes:
+* Configure the virtual IP and inform the cluster about the green IPs of both nodes:
 
 ::
 
@@ -149,14 +149,14 @@ You can check the cluster status with following command: ::
 Service configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-Cluster services must be handled by resource manager daemon (pacemaker),
+Cluster services must be handled by the resource manager daemon (pacemaker),
 you should disable |product| service handling for the clustered service: ::
 
  service mysqld stop
  chkconfig mysqld off
  /sbin/e-smith/config settype mysqld clustered
 
-The following commands will configure a MySQL instance bound to the virtual IP. Data are saved inside DRBD: ::
+The following commands will configure a MySQL instance bound to the virtual IP. Data is saved inside the DRBD: ::
 
  /usr/sbin/pcs cluster cib /tmp/mycluster
  /usr/sbin/pcs -f /tmp/mycluster resource create DRBDData ocf:linbit:drbd drbd_resource=drbd00 op monitor interval=60s
@@ -224,12 +224,12 @@ Final steps
 Fencing with IPMI
 -----------------
 
-Many servers have a built-in management interface often known with commercial name like 
+Many servers have a built-in management interface often known with commercial names like 
 ILO (HP), DRAC (Dell) or BMC (IBM). Any of these interfaces follow the IPMI standard.
 Since any management interface controls only the node where it resides, you must configure at least two fence
 devices, one for each node.
 
-If the cluster domain is ``nethserver.org``, you should use following commands: ::
+If the cluster domain is ``nethserver.org``, you should use the following commands: ::
 
  pcs stonith create ns2Stonith fence_ipmilan pcmk_host_list="ns2.nethserver.org" ipaddr="ns2-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
  pcs stonith create ns1Stonith fence_ipmilan pcmk_host_list="ns1.nethserver.org" ipaddr="ns1-ipmi.nethserver.org" login=ADMIN passwd=ADMIN timeout=4 power_timeout=4 power_wait=4 stonith-timeout=4 lanplus=1 op monitor interval=60s
@@ -244,13 +244,13 @@ Also, you should make sure that each stonith resource is hosted by the right nod
 Fencing with IF-MIB switch
 --------------------------
 
-It's also possible to use a managed switch that supports SNMP IF-MIB as fence device. In this case, fenced node does not get powered off, but instead is cut offline by the switch, with the same effect. 
+It's also possible to use a managed switch that supports SNMP IF-MIB as fence device. In this case, fenced node does not get powered off, but instead it is cut offline by the switch, with the same effect. 
 
-Verify switch configuration using fence agent for opening and closing ports on the switch: ::
+Verify the switch configuration using fence agent for opening and closing ports on the switch: ::
 
   fence_ifmib -a <SWITCH_IP> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <SNMP_VERSION> -c <COMMUNITY> -n<PORT> -o <off|on|status>
 
-Following commands configure two switch connected in this way:
+The following commands configure two switches connected in this way:
 Node 1 network port 1 is connected to switch 1 port 1
 Node 1 network port 2 is connected to switch 2 port 1
 Node 2 network port 1 is connected to switch 1 port 2
@@ -288,7 +288,7 @@ Failed nodes
 
 When a node is not responding to cluster heartbeat, the node will be evicted.
 All cluster services are disabled at boot to avoid problems just in case of fencing:
-a fenced node probably needs a little of maintenance before re-joining the cluster.
+a fenced node probably needs a little maintenance before re-joining the cluster.
 
 To re-join the cluster, manually start the services: ::
 
@@ -299,7 +299,7 @@ Disconnected fence devices
 --------------------------
 
 The cluster will periodically monitor the status of configured fence devices.
-If a device is not reachable, it will be put on stopped state.
+If a device is not reachable, it will be put into the stopped state.
 
 When the fence device has been fixed, you must inform the cluster about each fence device with this command: ::
 
@@ -308,13 +308,13 @@ When the fence device has been fixed, you must inform the cluster about each fen
 
 DRBD Split Brain
 ----------------
-When DRBD split brain happens, data between two nodes storage are no more synchronized. It could happens when a fence fails. 
-Active node DRBD status (cat /proc/drbd) will be Primary/Unknown and on non active node Secondary/Unknown. (instead of Primary/Secondary and Secondary/Primary)
+When a DRBD split brain happens, data between two nodes storage is no longer synchronized. It could happen when a fence fails. 
+Active node DRBD status (cat /proc/drbd) will be Primary/Unknown and on the inactive node Secondary/Unknown (instead of Primary/Secondary and Secondary/Primary).
 And with command ::
 
   pcs status
 
-drbd state will be:
+DRBD state will be:
  Master/Slave Set: DRBDDataPrimary [DRBDData]
      Masters: [ ns1.nethserver.org ]
      Stopped: [ ns2.nethserver.org ]
@@ -326,11 +326,11 @@ instead of:
 
 Solution:
 
-On node with valid data launch command :: 
+On the node with valid data launch the following command :: 
 
   drbdadm invalidate-remote drbd00
 
-On node with wrong storage data, launch command ::
+On the node with wrong storage data, run ::
 
   drbdadm invalidate drbd00
 
@@ -349,7 +349,7 @@ Disaster recovery
 If case of hardware failure, you should simply re-install the failed node and rejoin the cluster.
 Clustered services will be automatically recovered and data will be synced between nodes.
 
-Just follow this steps.
+Just follow this steps:
 
 1. Install |product| on machine.
 2. Restore the configuration backup of the node, if you don't have the configuration backup,
