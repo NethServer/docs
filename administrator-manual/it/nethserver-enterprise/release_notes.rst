@@ -4,7 +4,7 @@ Note di rilascio
 
 |product| versione |release|
 
-.. include:: ../changelog.rst.inc
+.. include:: changelog.rst.inc
 
 Aggiornamento da 6.7
 ====================
