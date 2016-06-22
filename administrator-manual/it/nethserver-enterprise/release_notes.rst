@@ -6,10 +6,10 @@ Note di rilascio
 
 .. include:: ../changelog.rst.inc
 
-Aggiornamento da 6.6
+Aggiornamento da 6.7
 ====================
 
-L'aggiornamento da 6.6 a 6.7 è automatico e verrà rilasciato gradualmente.
+L'aggiornamento da 6.7 a 6.8 è automatico e verrà rilasciato gradualmente.
 
 Qualora si desideri forzare l'aggiornamento manualmente seguire la procedura qui descritta.
 
@@ -22,7 +22,7 @@ Aggiornamento manuale
 
 2. Installare la nuova versione del pacchetto ``nethserver-release``: ::
 
-     yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.7.rpm
+     yum localinstall http://mirror.nethserver.org/nethserver/nethserver-release-6.rpm
 
 3. Abilitare solo i repository enterprise: ::
 
