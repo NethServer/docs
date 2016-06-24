@@ -167,7 +167,7 @@ configuration by following these steps.
 
    Delete all interfaces: ::
 
-     db network delete eth0
+     db networks delete eth0
 
    Repeat the operation for all interfaces including bridges, bonds
    and vlans.
