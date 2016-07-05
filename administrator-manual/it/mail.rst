@@ -598,43 +598,6 @@ rispettivamente
 * il nome del componente e l'id del processo dell'istanza
 * il testo che descrive l'operazione
 
-Di seguito una breve descrizione dei nomi dei componenti e delle
-azioni tipiche che eseguono:
-
-``transfer/smtpd``
-
-  Identifica il demone SMTP in ascolto sulla porta 25 pubblica.  Una
-  riga di log di questo componente segnala un'attività che coinvolge
-  un altro server di posta (MTA).
-
-``submission/smtpd``
-
-  Identifica il demone SMTP in ascolto sulla porta 587 o 465 pubblica.
-  Una riga di log di questo componente segnala un'attività che
-  coinvolge un client di posta (MUA) che spedisce un messaggio.
-
-``amavis``
-
-  Il demone SMTP Amavis applica tutte le regole di filtraggio della
-  posta elettronica.  Le righe di log di questo componente dettagliano
-  le decisioni prese dal filtro.
-
-``relay/smtp``
-
-  Questo è il client SMTP connesso ad un server remoto: prende un
-  messaggio dalla coda e lo trasferisce al server remoto, così come
-  specificato dalla configurazione dei domini di posta.
-
-``delivery/lmtp``
-
-  I messaggi diretti agli account locali sono presi dalla coda e
-  trasferiti all'istanza di Dovecot locale.
-
-``dovecot``
-
-  Il demone Dovecot consegna i messaggi nelle caselle di posta degli
-  utenti, eventualmente applicando i filtri Sieve.
-
 Un quadro di tutto il sistema è disponibile dal sito *workaround.org* [#MailComponents]_.
 
 .. rubric:: Riferimenti

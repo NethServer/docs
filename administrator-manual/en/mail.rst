@@ -558,48 +558,6 @@ respectively
 * the component name, and the process-id of the component instance
 * a text message detailing the operation
 
-Here follows a brief description of the component names and the
-typical actions performed.
-
-``transfer/smtpd``
-
-    This is the public-facing SMTP daemon, listening on port 25. A log
-    line from this component identifies an activity involving another
-    Mail Transfer Agent (MTA).
-
-``submission/smtpd``
-
-    This is the SMTP daemon listening on submission port 587 and smtps
-    port 465. A log line from this component identifies a Mail User
-    Agent (MUA) that sends an email message.
-
-``amavis``
-
-    The Amavis SMTP daemon enforces all mail filtering rules.  It
-    decides what is accepted or not.  Log lines from this component
-    detail the filter decisions.
-
-``queue/smtpd``
-
-    This is an internal SMTP daemon, accessible only from the local
-    system.  It receives and queues good messages from Amavis.
-
-``relay/smtp``
-
-    This is the SMTP client talking to a remote server: it picks a
-    message from the queue and relays it to the remote server, as
-    specified by the mail domain configuration.
-
-``delivery/lmtp``
-
-    Messages directed to local accounts are picked up from the queue
-    and transferred to the local Dovecot instance.
-
-``dovecot``
-
-    The Dovecot daemon delivers messages into users mailboxes,
-    possibly applying Sieve filters.
-
 A picture of the whole system is available from *workaround.org* [#MailComponents]_.
 
 .. rubric:: References
