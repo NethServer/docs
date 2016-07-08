@@ -6,26 +6,24 @@ Issues
 ======
 
 An issue is a formal description of a known problem, or wished
-feature, inside a tracker. There are 4 types of issue:
+feature, inside a tracker. There are two types of issues:
 
 * **Bug**: describe a defect on the software, it must lead to a
   resolution of the problem. For example, a process crashing under certain
-  conditions
-* **Feature**: describe a new wished function inside the software.
-  For example, a new GUI interface to configure user preferences
-* **Enhancement**: describe a small improvement of current code or
-  features. For example, remove harmless warning of a running process
-* **Task**: describe a generic task not strictly related to source
-  code. For example, a document about a new feature
+  conditions.
+* **Enhancement**: describe an improvement of current code or an entire new
+  feature. For example, remove harmless warning of a running process or a 
+  new UI panel.
 
-Bugs, features and enhancements will always produce a commit inside a
-SCM repository and/or a new software package (typically RPM) containing
+Bugs and enhancements will always produce a commit inside a
+one or more git repositories and one or more new RPM packages containing 
 the new code.
-Developer *must take care* to link commits to code reporting the
-commit inside the issues, and the issue number inside the commit
-comment.
-All released packages must contain a list and a description of related
-closed issues.
+
+The developer must bundle his commits as one or more GitHub *pull requests*, 
+reporting the issue reference.
+
+All released packages must contain the references to closed issues and/or pull 
+requests.
 
 Do I need to open a new issue?
 ------------------------------
@@ -34,7 +32,7 @@ Yes, if what you’re talking about will produce some code.
 By the way, it’s perfectly reasonable to not fill issues for
 occasional small fixes, like typos in translations.
 
-Issues are not TODO list. Issues track status changes of a job, to
+Issues are not a TODO list. Issues track the status changes of a job, the
 output of the job will be a new object implementing the issue itself.
 If you are exploring some esoteric paths for new feature or hunting
 something like an `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
@@ -44,7 +42,12 @@ some output object.
 
 A process for a new feature, can be something like this:
 
-* Make informal discussion using small meetings or ML discussions
+* Open a new topic on http://community.nethserver.org and discuss it
+* Open the issue on GitHub https://github.com/NethServer/dev/issues/new
+
+If the feature is very complex, a dedicated wiki page could be written on
+http://wiki.nethserver.org/.
+
 * Create a wiki page with notes and thoughts (team contributions are welcome!)
 * When the wiki page is pretty “stable” and the whole thing is well
   outlined, a team member will create one or more new issues.
