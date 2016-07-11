@@ -11,14 +11,9 @@ Manuale amministratore
 
 .. toctree::
    :maxdepth: 2
-   :caption: Note di rilascio |release|
-
-   release_notes
-
-.. toctree::
-   :maxdepth: 2
    :caption: Installazione
 
+   release_notes
    installation
    access
 

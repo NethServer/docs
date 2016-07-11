@@ -10,14 +10,9 @@ Administrator Manual
 
 .. toctree::
    :maxdepth: 2
-   :caption: Release notes |release|
-
-   release_notes
-
-.. toctree::
-   :maxdepth: 2
    :caption: Installation
 
+   release_notes
    installation
    access
 

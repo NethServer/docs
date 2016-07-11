@@ -1,6 +1,6 @@
-================
-Note di rilascio
-================
+==========================
+Note di rilascio |release|
+==========================
 
 |product| versione |release|
 

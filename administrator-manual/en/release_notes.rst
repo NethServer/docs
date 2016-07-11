@@ -1,6 +1,6 @@
-=============
-Release notes
-=============
+=======================
+Release notes |release|
+=======================
 
 |product| release |release|
 
