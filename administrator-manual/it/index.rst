@@ -9,38 +9,29 @@ Manuale amministratore
 
 **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
 
-Note di rilascio |release|
---------------------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Note di rilascio |release|
 
    release_notes
 
-Installazione
--------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Installazione
 
    installation
    access
 
-Configurazione
---------------
-   
 .. toctree::
    :maxdepth: 2
+   :caption: Configurazione
 
    base_system
    packages
 
-
-Moduli
-------
-
 .. toctree::
    :maxdepth: 1
+   :caption: Moduli
 
    backup
    accounts
@@ -61,33 +52,24 @@ Moduli
    phone_home
    snmp
 
-Moduli NethForge
-----------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Moduli NethForge
 
    webvirtmgr
 
-
-Best practices
---------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Best practices
 
    third_party
 
-
-Appendice
----------
-
 .. toctree::
    :maxdepth: 1
+   :caption: Appendice
 
-   migration	      
+   migration
    license
-
 
 Indici
 ======
