@@ -50,6 +50,8 @@ Moduli
    firewall
    snort
    proxy_pass
+   virtual_hosts
+   shared_folder
    bandiwidth_monitor
    statistics
    dns
