@@ -63,8 +63,10 @@ Writing issues
 
 How to write a bug report:
 
-* Point to the right component with the associated version
-* Describe the error and the expected behavior
+* Apply the **bug** label
+* Point to the right software component with the associated version
+* Describe the error, and how to reproduce it
+* Describe the expected behavior
 * If possible, suggest a fix or workaround
 * If possible, add a piece of system output (log, command, etc)
 * Text presentation matters: it makes the whole report more readable
