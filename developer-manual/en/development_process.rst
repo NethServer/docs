@@ -8,22 +8,22 @@ Issues
 An issue is a formal description of a known problem, or wished
 feature, inside a tracker. There are two types of issues:
 
-* **Bug**: describe a defect on the software, it must lead to a
+Bug
+  describes a defect of the software; it must lead to a
   resolution of the problem. For example, a process crashing under certain
   conditions.
-* **Enhancement**: describe an improvement of current code or an entire new
-  feature. For example, remove harmless warning of a running process or a 
-  new UI panel.
 
-Bugs and enhancements will always produce a commit inside a
-one or more git repositories and one or more new RPM packages containing 
-the new code.
+Enhancement
+  describe an improvement of the current code or an entire new
+  feature. For example, remove harmless warning of a running process or
+  designing a new UI panel.
 
-The developer must bundle his commits as one or more GitHub *pull requests*, 
-reporting the issue reference.
+Bugs and enhancements will always produce some code changes inside a one or more
+git repositories.
 
-All released packages must contain the references to closed issues and/or pull 
-requests.
+Each repository is associated to one or more RPM packages. Changes to the code
+produce new releases of RPM packages.
+
 
 Do I need to open a new issue?
 ------------------------------
@@ -33,7 +33,7 @@ By the way, it’s perfectly reasonable to not fill issues for
 occasional small fixes, like typos in translations.
 
 Issues are not a TODO list. Issues track the status changes of a job, the
-output of the job will be a new object implementing the issue itself.
+output of the job will be a new RPM implementing the issue itself.
 If you are exploring some esoteric paths for new feature or hunting
 something like an `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
 , please write a draft wiki page with your thoughts, then create a new
@@ -42,19 +42,19 @@ some output object.
 
 A process for a new feature, can be something like this:
 
-* Open a new topic on http://community.nethserver.org and discuss it
-* Open the issue on GitHub https://github.com/NethServer/dev/issues/new
+* Open a new topic on http://community.nethserver.org and discuss it.
+* Open the issue on GitHub https://github.com/NethServer/dev/issues/new.
 
 If the feature is very complex, a dedicated wiki page could be written on
 http://wiki.nethserver.org/.
 
-* Create a wiki page with notes and thoughts (team contributions are welcome!)
+* Create a wiki page with notes and thoughts (team contributions are welcome!).
 * When the wiki page is pretty “stable” and the whole thing is well
   outlined, a team member will create one or more new issues.
 * If the wiki page is a feature design document, the feature can
-  simply point to the wiki page
+  simply point to the wiki page.
 * The wiki page should become a technical documentation of the
-  feature, or a changelog for a new release
+  feature, or a changelog for a new release.
 
 At any point in time, make sure the issue status reflects actual work.
 
@@ -84,52 +84,57 @@ More information:
 * http://fedoraproject.org/wiki/Bugs_and_feature_requests
 * http://fedoraproject.org/wiki/How_to_file_a_bug_report
 
-Issue status
-------------
 
-Issues can have multiple states. Each state should be handled by a person who fit in the below roles.
-Of course, one person can wear one or more roles.
 
-See also the `workflow
-figure <https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow>`__
-on FedoraProject.org.
+Issue tracker
+-------------
 
-Triager
-^^^^^^^
+The NethServer project is hosted on GitHub and is constituted by many git
+repositories.  We set one of them to be the issue tracker:
 
-The *Triager* handles all issues in NEW state. She 
+https://github.com/NethServer/dev
 
-* collects missing info, setting the NEEDINFO flag
-
-* sets state to TRIAGED when the issue is clear enough and all
-  requirements are discovered.
-
-If the issue is a *Bug*, she can also change the status to CLOSE and
-set resolution: DUPLICATE, INSUFFICIENT_DATA, NOTABUG. Additional
-infos are appreciated.  If the issue is NOT a *Bug*, sets the generic
-REJECTED resolution, specifying the reason in a comment.
-
+Issues created on *dev* help coordinating the development process, determining
+who is in charge of what.
 
 Developer
 ^^^^^^^^^
 
-The *Developer* 
+The *Developer*.
 
-* Takes a TRIAGED issue and put it ON_DEV setting the *Assignee* to himself,
+* Sets the *Assignee* to himself.
 
-* Writes test cases, optionally annotating RPM changelog message for Packager, or 
+* Bundle his commits as one or more GitHub *pull requests*, reporting the
+  issue number reference on them (see also `Commit message style guide`_).
 
-* Writes and updates the documentation associated with the code.
+* Builds and uploads the RPMs to the *testing* repository
+  and sets the **testing** label (see :ref:`buildrpm-section`).
 
-* Finally pushes the code/docs changes to SCM 
+* For *enhancements*, writes the test case (for *bugs* the procedure to
+  reproduce the problem should be already set).
 
-* Changes the issue state to MODIFIED, resetting the *Assignee*.
+* Writes and updates the `Documentation`_ associated with the code.
 
-If the issue is a *Bug*, he can change the status to CLOSE and specify
-a *Resolution*: CANTFIX, WONTFIX, WORKSFORME, CURRENTRELEASE,
-NEXTRELEASE, UPSTREAM. Additional infos are appreciated. If the issue
-is NOT a *Bug*, specify the generic REJECTED resolution, specifying
-the reason in a comment.
+* Finally, clears the *Assignee*.
+
+If the issue is not valid, he can close it adding one of the labels **invalid**,
+**duplicate**, **wontfix**.
+
+
+QA team member (testing)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The *QA team member*.
+
+* Takes an unassigned issue with label **testing** and sets the *Assignee* field
+  to herself.
+
+* Tests the package, following the test case documentation written by the
+  *Developer*.
+
+* When test finishes she removes the **testing** label and clears *Assignee*
+  field.  If the test is *successful*, she sets the **verified** label,
+  otherwise she alerts the *Developer* and plans further developments.
 
 
 Packager
@@ -137,80 +142,51 @@ Packager
 
 The *Packager*:
 
-* Pulls changes from SCM and builds the RPM. 
+* Takes an unassigned issue with label **verified**
 
-* Uploads the RPM to the *testing* repository. 
+* Review the code changes of pull requests and merges them
 
-* Changes state from ON_DEV to ON_QA, specifing the RPM file name and
-  yum repository name in the issue comment.
-
-* Takes care to write a test case (or ask to a developer), if the test case is missing.
-
-When the package is VERIFIED from the QA team, the *Packager* 
-
-* Commits a *release tag* (using ``release-rpm`` command from ``nethserver-mock``).
+* Commits a *release tag* (see `Building RPMs`_).
 
 * Re-builds the tagged RPM.
 
-* Uploads the RPM to *updates* (or *base*) repository. 
+* Uploads the RPM to *updates* (or *base*) repository.
 
-* Checks ``yum update`` works fine then pushes the tagged commit to SCM. 
+* Pushes the *release tag* and commit to SCM
 
-* Finally, sets state to CLOSED (with blank *Resolution* field),
-  adding a comment to the issue, containing the RPM file name and the
-  yum repository name where to find the package.
+* Closes the issue, specifying the list of released RPMs
 
-When the package is CLOSED, all related documentation must be in place.
+When the package is CLOSED, all related `documentation`_ must be in place.
 
-
-QA team member
-^^^^^^^^^^^^^^
-
-The *QA team member* 
-
-* Takes an unassigned issue ON_QA state and sets the *Assignee* field to herself. 
-
-* Tests the package, following the test case documentation written by the *Developer* 
-
-* She can set NEEDINFO flag if informations about how to test the code are missing. 
-
-* When test is passed she sets the issue state to VERIFIED, otherwise
-  she puts it back in TRIAGED state cleaning the *Assignee* field.
-
-
-Version numbering rules
-=======================
+RPM Version numbering rules
+===========================
 
 NethServer releases bring the version number of the underlying CentOS.
-For example ``NethServer 6.4 beta1`` is based on ``CentOS 6.4``.
+For example ``NethServer 7 beta1`` is based on ``CentOS 7``.
 
 Packages have a version number in the form **X.Y.Z-N** (Eg.
-``nethserver-myservice-1.0.3-1.ns6.rpm``):
+``nethserver-myservice-1.0.3-1.ns7.rpm``):
 
 * X: major release, breaks retro-compatibility
-* Y: minor release, new features
-* Z: bug fixes/enhancements
-* N: spec modifications inside the current release
+* Y: minor release, new features - big enhancements
+* Z: bug fixes - small enhancements
+* N: spec modifications inside the current release - hotfixes
 
 Commit message style guide
 ==========================
 
-Commit messages *must* include four components
+Individual commits should contain a cohesive set of changes to the code. These
+`seven rules`_ summarize how should be good commit message.
 
-* WHERE 
-* WHAT
-* WHY #Num (see http://www.redmine.org/projects/redmine/wiki/RedmineSettings#Referencing-issues-in-commit-messages)
-* WHY Name
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
 
-See also jQueryUI Commit message style guide: http://contribute.jquery.org/commits-and-pull-requests/#commit-guidelines.
-
-
-Example:
-
- git commit createlinks -m "createlinks: add nethserver-myserver event. Refs #1234"
-
-Refs links the commit to a Redmine issue.
-
+.. _`seven rules`: http://chris.beams.io/posts/git-commit/#seven-rules
 
 Documentation
 =============
@@ -218,56 +194,33 @@ Documentation
 The developer must take care to write all documentation on:
 
 * wiki page during development
-* Developer Manual before release
+* Developer Manual and/or README.rst before release
 * Administrator Manual before release
 * Inline help before release
 
-Packages should be inside testing repositories untile all documentation is completed.
-
-ISO releases
-============
-
-#. An ISO release starts whenever a target version is reached
-#. Search for all new RPMs in nethserver-dev repository and select
-   stable packages ready for production
-#. Rebuild each selected package and publish it to nethserver-testing
-   repository
-#. Test new RPMs in existing machine and in a new freshly installed one
-#. If all test pass, move RPMs to repository nethserver-update
-#. Build the new ISO 
-
-See :ref:`buildiso-section`.
+Packages should be inside *testing* or *nethforge-testing* repositories until 
+all documentation is completed.
 
 New packages
 ============
 
-Before creating a new package, make sure it's a good idea.
-Often a simple documentation page is enough, and it requires much less effort.
-When trying new things, just take care to write down on a public temporary document (maybe a wiki page)
-all steps and comments.
-If the feature collects many requests, it's time to think about a new package.
-Otherwise, the temporary document can be moved to a manual page.
+Before creating a new package, make sure it's a good idea. Often a simple
+documentation page is enough, and it requires much less effort. When trying new
+things, just take care to write down on a public temporary document (maybe a
+wiki page) all steps and comments. If the feature collects many requests, it's
+time to think about a new package. Otherwise, the temporary document can be
+moved to a manual page.
 
 When creating a new package, make sure the following requirements are met:
 
+* Announce it on http://community.nethserver.org
 * Create an issue describing the package
-* Request the creation of a new repository (including Github mirror)
-* Add the repository to Redmine to keep track of source changes from issues
-* Add new record inside the package list http://dev.nethserver.org/projects/nethserver/wiki/Packages
-* Add a wiki page describing the usage of package, the page should be named like the package itself
-* Request Redmine administrators to add the package on  "NethServer package" custom field 
-* If needed, add the package to a yum group as optional or mandatory package
-* Add the repository to Ohloh for statics gathering
+* Create a personal repository on GitHub
+* Add a GPL license and copyright notice in the COPYING file
+* Add a README.rst file, with developer documentation
+* If needed, create a pull request for the NethServer/comps or NethServer/nethforge-comps repository,
+  to list the package in the Software center page.
+* Build the package and push it to *testing* or *nethforge-testing* repository
 
-
-Steps to release a new package
-
-#. Update/commit changelog
-#. Add git tag
-#. Build RPM
-#. Publish the RPM to nethserver-update yum repository
-#. Push git tag and package changelog
-#. If needed, update yum groups file
-
-See :ref:`buildrpm-section`.
+See also :ref:`buildrpm-section`.
 

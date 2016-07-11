@@ -12,12 +12,7 @@ To build NethServer RPMs a few helper scripts are provided by the
 ``nethserver-mock`` package along with the Mock [#Mock]_ configuration
 files pointing to NethServer YUM repositories.
 
-.. note::
 
-  The ``nethserver-mock`` package obsoletes ``nethserver-devbox``
-  commands such as ``build-rpm`` and does not support the
-  :file:`.spec.in` templates any more. To convert a :file:`.spec.in`
-  file to plain :file:`.spec` see :ref:`spec-in-conversion`.
 
 .. _rpm_prepare_env:
 
@@ -28,21 +23,9 @@ On **NethServer**, install ``nethserver-mock`` package, by typing: ::
 
   yum install nethserver-mock
 
-On **Fedora**, put the following content into :file:`/etc/yum.repos.d/nethserver-mock.repo`: ::
+On **Fedora**, and other RPM-based distros run the command: ::
 
-    [nethserver-mock]
-    name=NethServer Mock (6.6)
-    #baseurl=http://pulp.nethserver.org/nethserver/6.6/base/x86_64/
-    mirrorlist=http://pulp.nethserver.org/mirrors/nethserver?release=6.6&repo=base&arch=x86_64
-    enabled=1
-    skip_if_unavailable=1
-    gpgcheck=1
-    gpgkey=https://raw.githubusercontent.com/nethesis/nethserver-release/6.5-5-Final/root/etc/pki/rpm-gpg/RPM-GPG-KEY-NethServer-6
-    includepkgs=nethserver-mock
-
-Then install ``nethserver-mock``: ::
-
-  yum install nethserver-mock
+  yum localinstall <URL>
 
 The build process uses Mock and must be run as a non privileged user,
 member of the ``mock`` system group.  Add your user to the ``mock``
@@ -174,19 +157,7 @@ Usage of ``-k`` option is optional.
 The :file:`.spec` argument is optional: if not provided the first
 :file:`.spec` file in the current directory is processed.
 
-.. _spec-in-conversion:
 
-Converting ``.spec.in`` templates
-=================================
-
-The :file:`.spec.in` template format is not supported by
-``nethserver-mock``. To convert it to a traditional :file:`.spec`
-replace the two placeholders:
-
-* ``@VERSION@``, becomes the actual package version in the form
-  *MAJOR.MINOR.RELEASE*
-* ``@RELEASE@``, becomes an integer with the conditional *dist*
-  macro suffix. For instance: ``1%{?dist}``
 
 .. rubric:: References
 
