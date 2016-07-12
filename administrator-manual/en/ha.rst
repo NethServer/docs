@@ -18,7 +18,7 @@ This configuration supports:
 **Example**
 
 The MySQL daemon listens on a virtual IP and stores its data inside the DRBD partition.
-In case of failure of the master node, the mysqld service will be restarted on the secondary node.
+In case of failure of the master node, the mysqld service will restart on the secondary node.
 All clients should connect to MySQL using the virtual IP.
 
 
@@ -26,7 +26,7 @@ Limitations
 ===========
 
 * The LDAP service and all services depending on it can't be clustered.
-  We recommend to use of an external LDAP server.
+  We recommend using an external LDAP server.
 * Only STONITH fence devices are supported
 
 
@@ -224,7 +224,7 @@ Final steps
 Fencing with IPMI
 -----------------
 
-Many servers have a built-in management interface often known with commercial names like 
+Many servers have a built-in management interface often known by commercial names like 
 ILO (HP), DRAC (Dell) or BMC (IBM). Any of these interfaces follow the IPMI standard.
 Since any management interface controls only the node where it resides, you must configure at least two fence
 devices, one for each node.
@@ -244,9 +244,9 @@ Also, you should make sure that each stonith resource is hosted by the right nod
 Fencing with IF-MIB switch
 --------------------------
 
-It's also possible to use a managed switch that supports SNMP IF-MIB as fence device. In this case, fenced node does not get powered off, but instead it is cut offline by the switch, with the same effect. 
+It's also possible to use a managed switch that supports SNMP IF-MIB as a fence device. In this case, fenced node does not get powered off, but instead it is cut offline by the switch, with the same effect. 
 
-Verify the switch configuration using fence agent for opening and closing ports on the switch: ::
+Verify the switch configuration using the fence agent for opening and closing ports on the switch: ::
 
   fence_ifmib -a <SWITCH_IP> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <SNMP_VERSION> -c <COMMUNITY> -n<PORT> -o <off|on|status>
 
@@ -349,7 +349,7 @@ Disaster recovery
 If case of hardware failure, you should simply re-install the failed node and rejoin the cluster.
 Clustered services will be automatically recovered and data will be synced between nodes.
 
-Just follow this steps:
+Just follow these steps:
 
 1. Install |product| on machine.
 2. Restore the configuration backup of the node, if you don't have the configuration backup,
