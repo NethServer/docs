@@ -8,7 +8,6 @@ Features
 
 * Common infrastructure for ``nethserver-mail-server and nethserver-mail-filter``, Postfix-based.
 * Relay
-* Smarthost
 * Queue parameters: age + message size
 * MX record configuration
 * Disclaimer (based on Amavis)
@@ -27,14 +26,6 @@ Postfix example: ::
     MessageSizeMax=20000000
     MessageSizeMin=1048576
     MxRecordStatus=enabled
-    SmartHostAuth=disabled
-    SmartHostAuthStatus=disabled
-    SmartHostName=192.168.5.252
-    SmartHostPassword=password
-    SmartHostPort=25
-    SmartHostStatus=disabled
-    SmartHostTlsStatus=enabled
-    SmartHostUsername=ns1
     ContentInspectionType=default
     ConnectionsLimit=
     ConnectionsLimitPerIp=
