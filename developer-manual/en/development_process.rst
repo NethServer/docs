@@ -109,9 +109,6 @@ The *Developer*.
 * Bundle his commits as one or more GitHub *pull requests*, reporting the
   issue number reference on them (see also `Commit message style guide`_).
 
-* Builds and uploads the RPMs to the *testing* repository
-  and sets the **testing** label (see :ref:`buildrpm-section`).
-
 * For *enhancements*, writes the test case (for *bugs* the procedure to
   reproduce the problem should be already set).
 
@@ -136,17 +133,26 @@ The *QA team member*.
 
 * When test finishes she removes the **testing** label and clears *Assignee*
   field.  If the test is *successful*, she sets the **verified** label,
-  otherwise she alerts the *Developer* and plans further developments.
+  otherwise she alerts the *Developer* and the *Packager* to plan a new
+  process iteration.
 
 
 Packager
 ^^^^^^^^
 
-The *Packager*:
+The *Packager* coordinates the *Developer* and *QA member* work.  After the 
+*Developer* opens one or more pull requests:
+
+* Selects issues with open pull requests
+
+* Reviews the pull request code and merges it
+
+* Builds and uploads the RPMs to the *testing* repository
+  and sets the **testing** label (see :ref:`buildrpm-section`)
+
+After the *QA member* has completed the testing phase:
 
 * Takes an unassigned issue with label **verified**
-
-* Review the code changes of pull requests and merges them
 
 * Commits a *release tag* (see `Building RPMs`_).
 
