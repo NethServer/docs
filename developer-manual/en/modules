@@ -12,3 +12,4 @@ nethserver-sssd
 nethserver-ejabberd
 nethserver-httpd
 nethserver-firewall-base
+nethserver-httpd-admin

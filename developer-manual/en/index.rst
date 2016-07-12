@@ -53,7 +53,6 @@ Developer Manual
    web_interface
    create_interface_module
    dashboard
-   customization
    inline_help
    todos_api
 
