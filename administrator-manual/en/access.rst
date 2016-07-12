@@ -31,9 +31,3 @@ Use following credentials:
 .. warning:: Change the root's password as soon as possible, by
              picking a secure one, composed of a random sequence of
              mixed-case letters, digits and symbols.
-  
-If the File server, Email server or any other module requiring Users
-and groups module is installed from the Software center, the ``admin``
-user is also available to access the web interface with same
-privileges as the ``root`` user. See :ref:`admin_user-section` for
-details.

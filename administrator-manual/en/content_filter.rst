@@ -60,10 +60,8 @@ The content of the blocked URL must be: ``translate.google``.
 Users from Active Directory
 ===========================
 
-If the server is joined to an Active Directory domain (:ref:`samba_ads`),
-you can create profiles connected to the users from the domain.
-
-.. note:: Groups from Active Directory are not supported.
+If the server is joined to an Active Directory domain,
+you can create profiles connected to users and groups from the domain.
 
 Antivirus
 =========
