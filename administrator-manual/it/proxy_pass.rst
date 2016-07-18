@@ -1,40 +1,37 @@
-==========
-Proxy pass
-==========
+=============
+Reverse proxy
+=============
 
-La funzionalità :index:`proxy pass` è utile quando si desidera accedere a siti
-interni dall rete esterna.
+La funzionalità :index:`reverse proxy` è utile quando si desidera accedere a
+siti interni dalla rete esterna.
 
-La configurazione del proxy pass deve essere effettuata da linea di comando.
-Prima di procedere, assicurarsi che il pacchetto ``nethserver-httpd`` sia installato: ::
-
-  yum install -y nethserver-httpd
-
-Scenario:
+Scenario tipico:
 
 * |product| è il firewall della LAN
+
 * Si possiede il dominio http://mydomain.com
-* Si desidera che http://mydomain.com/mysite inoltri le richieste al server interno (IP privato: 192.168.2.00)
 
-Comandi per questo esempio: ::
+* Si desidera che http://mydomain.com/mysite inoltri le richieste al server
+  interno (IP privato: 192.168.2.100)
 
-  db proxypass set mysite ProxyPass
-  db proxypass setprop mysite Target http://192.168.2.100
-  db proxypass setprop mysite Description "My internal server"
-  db proxypass setprop mysite HTTP on
-  db proxypass setprop mysite HTTPS on
-  signal-event nethserver-httpd-update
+In questo scenario creare un nuovo record nella pagina :guilabel:`Reverse
+proxy`. Impostare il :guilabel:`Nome` dell'elemento a ``mysite`` e
+:guilabel:`URL destinazione` a ``http://192.168.2.100``.
 
-E' possibile restringere l'accesso ad una lista di IP: ::
+Se sono consentite solo connessioni cifrate, abilitare l'opzione
+:guilabel:`Richiedi connessione SSL cifrata`.
 
-  db proxypass setprop mysite ValidFrom 88.88.00.0/24,78.22.33.44
-  signal-event nethserver-httpd-update
+Si può restringere l'accesso solo ai client appartenenti ad alcune reti,
+specificando un elenco separato da virgola di reti in notazione CIDR nel campo
+:guilabel:`Accedi da reti CIDR`.
+
 
 Configurazione manuale
 ======================
 
-Se questa configurazione non è abbastanza, è sempre possibile creare 
-manualmente il proprio proxy pass creando un nuovo file nella directory :file:`/etc/httpd/conf.d/`.
+Se la pagina :guilabel:`Reverse proxy` non è abbastanza, è sempre possibile
+configurare Apache manualmente, creando un nuovo file nella directory
+:file:`/etc/httpd/conf.d/`.
 
 **Esempio**
 
