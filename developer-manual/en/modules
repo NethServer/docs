@@ -14,3 +14,4 @@ nethserver-ejabberd
 nethserver-httpd
 nethserver-firewall-base
 nethserver-httpd-admin
+nethserver-virtualhosts
