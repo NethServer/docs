@@ -31,13 +31,6 @@ Letsencrypt
  
 See also "Certificate management".
 
-Virtual hosts
--------------
-
-Ongoing discussion http://community.nethserver.org/t/proposal-for-ns7-virtualhost-page/3082
-
-Shared folders
---------------
 
 Events
 ------
@@ -45,3 +38,4 @@ Events
 ::
 
  signal-event nethserver-httpd-update
+ signal-event nethserver-httpd-save
