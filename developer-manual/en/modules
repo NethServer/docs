@@ -6,6 +6,7 @@ nethserver-mail-common
 nethserver-mail-server
 nethserver-mail-filter
 nethserver-directory
+nethserver-dc
 nethserver-hylafax
 nethserver-ntp
 nethserver-sssd
