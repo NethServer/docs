@@ -59,6 +59,39 @@ Default password for user administrator is: *Nethesis,1234*
 
 .. tip:: Remember to change the administrator password at first login.
 
+Installing on a virtual machine
+-------------------------------
+
+Samba Active Directory runs inside a container which uses a virtual network interface bridged to
+the network interface of the system.
+The virtual network interface must be visible inside the physical network, but often virtualization 
+solutions block ARP traffic. As a result, the Samba Active Directory container
+isn't visible from hosts inside the LAN.
+
+When installing on virtual environment, make sure the virtualization solution allows traffic in *promiscuous mode*.
+
+VirtualBox
+~~~~~~~~~~
+
+To setup the promiscuous mode policy, select "Allow all" from the drop down list located in 
+the network settings section.
+
+VMWare
+~~~~~~
+
+Enter the networking configuration section of the virtualization node and set the virtual switch
+in promiscuous mode.
+
+KVM
+~~~
+
+Make sure the virtual machine is bridged to a real bridge (like br0) and the bridge
+is put in promiscuous mode.
+
+It's possible to force a bridge (br0) in promiscuous mode using this command: ::
+
+  ifconfig br0 promisc
+
 
 Users
 =====
