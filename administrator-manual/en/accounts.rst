@@ -202,7 +202,7 @@ The system will send an e-mail to inform the users when their password is about 
 
 
 Effects of expired password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or other computer if the machine is part of the domain. 
 

@@ -313,7 +313,7 @@ To install the base system, run: ::
 Alternatively, to install base system *and* additional modules, pass
 the name of the module as a parameter to the install script.  Example: ::
 
-  nethserver-install nethserver-mail nethserver-owncloud
+  nethserver-install nethserver-mail nethserver-nextcloud
 
 .. include:: installation_centos_end.inc
 

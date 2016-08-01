@@ -48,6 +48,7 @@ Administrator Manual
    dns
    dhcp
    vpn
+   nextcloud
    ftp
    phone_home
    snmp
