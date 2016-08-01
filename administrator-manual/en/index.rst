@@ -33,6 +33,7 @@ Administrator Manual
    webmail
    webtop4
    pop3_proxy
+   pop3_connector
    chat
    ups
    fax_server
