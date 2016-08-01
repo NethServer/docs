@@ -16,3 +16,4 @@ nethserver-firewall-base
 nethserver-httpd-admin
 nethserver-virtualhosts
 nethserver-getmail
+nethserver-nextcloud
