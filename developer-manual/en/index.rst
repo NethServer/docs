@@ -73,7 +73,6 @@ Developer Manual
    ups
    tftp
    pop3_proxy
-   pop3_connector
    owncloud
    roundcube
    collectd

@@ -9,7 +9,8 @@ For each enabled account the system:
 * generates a ``.cfg`` file inside the ``/var/lib/getmail`` directory from the template ``/etc/e-smith/templates/getmailrc``
 * adds a line inside the ``/etc/cron.d/getmail``, all getmail instances use a non-blocking flock
 * delivers the messages using dovecot-lda
- 
+
+All operations are logged in ``/var/log/maillog``. 
 
 Database
 --------
