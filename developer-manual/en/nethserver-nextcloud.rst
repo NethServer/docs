@@ -2,7 +2,7 @@
 nethserver-nextcloud
 ====================
 
-This package can be installer before or after any user provider like nethserver-dc
+This package can be installed before or after any user provider like nethserver-dc
 and nethserver-directory.
 
 If nethserver-dc or nethserver-directory are installed, the nethserver-nextcloud-save
