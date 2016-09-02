@@ -282,6 +282,138 @@ For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, simply
 
  echo "/etc/pki/tls/certs/mycert.crt" >> /etc/backup-config.d/custom.include
 
+Let's Encrypt certificate
+-------------------------
+
+Let's Encrypt is a free, automated, and open certificate authority brought to you by the non-profit Internet Security Research Group (ISRG).
+It can create free valid SSL certificate for you server.
+
+From https://letsencrypt.readthedocs.org:
+
+  The Let’s Encrypt Client is a fully-featured, extensible client for the Let’s Encrypt CA 
+  (or any other CA that speaks the ACME protocol) that can automate 
+  the tasks of obtaining certificates and configuring webservers to use them.
+
+
+Prerequisites
+^^^^^^^^^^^^^
+
+1. The server must be reachable from outside at port 80.
+
+   Make sure your port 80 is open to the public Internet, you can check with sites like http://www.canyouseeme.org/
+
+2. The fully qualified name (FQDN) of the server must be a public domain name associated to its own public IP.
+
+   Make sure you have a public DNS name pointing to your server, you can check with sites like http://viewdns.info/
+
+How it works
+^^^^^^^^^^^^
+
+The system will release a single certificate for server FQDN (Fully Qualified Domain Name).
+
+When you want to access your server, you MUST always use the FQDN, but sometimes the server has multiple aliases.
+Let's Encrypt can add extra valid names to the FQDN certificate, so you will be able to access the server with other names.
+
+
+**Example**
+
+The server FQDN is: ''server.nethserver.org'' with public IP ''1.2.3.4''.
+But you want to access the server also using this names (aliases):'' mail.nethserver.org'' and ''www.nethserver.org''.
+
+The server must:
+
+* have the port 80 open to the public internet: if you access http://1.2.3.4 from a remote site you must see NethServer landing page
+* have a DNS public record for ''server.nethserver.org'', ''mail.nethserver.org'' and ''www.nethserver.org''. All DNS records must point to the same server (it may have multiple public IP addresses, though)
+
+Installation
+^^^^^^^^^^^^
+
+Install the package from command line: ::
+
+    yum install nethserver-letsencrypt
+
+Configuration
+^^^^^^^^^^^^^
+
+Let's Encrypt configuration must be done from command line using the root user.
+Access the server with a monitor or connect to it with SSH.
+
+Certificate for FQDN
+~~~~~~~~~~~~~~~~~~~~
+
+Enable Let's Encrypt globally, this will automatically enable the generation of a certificate for the FQDN.
+Execute: ::
+
+  config setprop pki LetsEncrypt enabled
+  signal-event nethserver-letsencrypt-update
+
+Certificate for server alias (optional)
+
+The FQDN certificate can be extended to be valid also for extra domains configured as server alias.
+This feature is called SubjectAltName (SAN): https://en.wikipedia.org/wiki/SubjectAltName
+
+Create a server alias inside the DNS page, then enable Let's Encrypt on the newly created record.
+
+Example for ''alias.mydomain.com'' alias: ::
+
+    db hosts setprop alias.mydomain.com LetsEncrypt enabled
+
+
+Options
+~~~~~~~
+
+You can customize the following options by using config command:
+
+* ``LetsEncryptMail``: if set, Let's Encrypt will send notification about your certificate to this mail address (this must be set before executing the letsencrypt-certs script for the first time!)
+* ``LetsEncryptRenewDays``: minimum days before expiration to automatically renew certificate (default: 30)
+
+Example: ::
+
+  config setprop pki LetsEncryptMail admin@mydomain.com
+  signal-event nethserver-letsencrypt-update
+
+Test certificate creation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since you can request the certificate maximum 5 times per week, make sure the configuration is correct by requesting a fake certificate. 
+Execute: ::
+
+  /usr/libexec/nethserver/letsencrypt-certs -v -t
+
+This command will try to generate a fake certificate using Let's Encrypt server. If everything goes well, the output should be something like this: ::
+
+  INFO: Using main config file /tmp/3XhzEPg7Dt
+  + Generating account key...
+  + Registering account key with letsencrypt...
+  Processing test1.neth.eu
+  + Signing domains...
+  + Creating new directory /etc/letsencrypt.sh/certs/test1.neth.eu ...
+  + Generating private key...
+  + Generating signing request...
+  + Requesting challenge for test1.neth.eu...
+  + Responding to challenge for test1.neth.eu...
+  + Challenge is valid!
+  + Requesting certificate...
+  + Checking certificate...
+  + Done!
+  + Creating fullchain.pem...
+  + Done!
+
+Verify the presented certificate has been signed by Let's Encrypt CA on all SSL-enabled services like:
+If something goes wrong, please make sure all prerequisites are met.
+
+Obtaining a valid certificate
+-----------------------------
+
+If your configuration has been validated by the testing step, you're ready to request a new valid certificate.
+Execute the following script against the real Let's Encrypt server: ::
+
+   /usr/libexec/nethserver/letsencrypt-certs -v
+
+
+Access your http server and check your certificate is valid.
+
+
 .. _user_profile-section:
 
 Change user password
