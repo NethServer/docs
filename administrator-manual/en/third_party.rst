@@ -38,24 +38,24 @@ If the software needs some open ports on the firewall, create a new service name
 
 For example, given the software *mysoftware* which needs ports 3344 and 5566 on LAN, use the following commands: ::
 
- config set fw_mysoftware service status enabled TCPPorts 3344,5566 access private
+ config set fw_mysoftware service status enabled TCPPorts 3344,5566 access green
  signal-event firewall-adjust
  signal-event runlevel-adjust
 
 Starting and stopping
 ---------------------
 
-|product| uses the standard runlevel 3.
+|product| uses the standard systemd multiuser target.
 
-Software installed with yum should already be configured to start at boot on runlevel 3.
-To check the configuration, execute the :command:`chkconfig` command. The command will display a list of services
+Software installed with yum should already be configured to start at boot.
+To check the configuration, execute the :command:`systemctl` command. The command will display a list of services
 with their own status.
 
 To enable a service on boot: ::
 
-  chkconfig mysoftware on
+  systemctl enable mysoftware
 
 To disable a service on boot: ::
   
-  chkconfig mysoftware off
+  systemctl disable mysoftware
 
