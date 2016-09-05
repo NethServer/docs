@@ -2,14 +2,14 @@
 Package groups
 ==============
 
-The composition of package groups is documented on http://dev.nethserver.org/nethserver/comps.html, an automatically generated document in XHTML format. 
+The composition of package groups is documented on https://github.com/NethServer/comps/blob/master/README.
  
 Generate comps file
 ===================
 
 Checkout the **comps** git repository, enter the directory and execute:: 
 
-  $ make comps-ns<version>.xml
+  $ make
 
 For instance, see how :file:`nethserver-groups.xml` is generated from :file:`nethserver-groups.xml.in`.
 
