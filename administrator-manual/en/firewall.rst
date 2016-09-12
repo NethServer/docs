@@ -17,6 +17,7 @@ Main features:
 * Port forwarding
 * Routeing rules to divert traffic on a specific WAN
 * Intrusion Prevention System (IPS)
+* Deep packet inspection (DPI)
 
 
 Firewall and gateway modes are enabled only if:
@@ -94,6 +95,28 @@ Log
 
 When a rule matches the ongoing traffic, it's possible to register the event on a log file by checking the option from the web interface.
 :index:`Firewall log` is saved in :file:`/var/log/firewall.log` file.
+
+Deep Packet Inspection (DPI)
+----------------------------
+
+The Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
+On |product| it requires a customised Linux kernel with the additional ``xt_ndpi``
+module that can be installed from the :guilabel:`Software Center` page.
+
+.. warning:: Once the module is installed the system must be rebooted. The newly
+             installed kernel is selected by default.
+
+If the DPI module is correctly loaded, new items for the :guilabel:`Service`
+field are available in the :guilabel:`Edit rule` form. Those items are
+labeled *DPI protocol*, among the usual *network service* and *service object*
+items.
+
+The complete list of available DPI protocols can be obtained with the following
+command: ::
+
+    db NethServer::Database::Ndpi keys
+
+.. [#DPI] Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection
 
 Examples
 --------
