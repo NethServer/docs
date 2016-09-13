@@ -15,11 +15,8 @@ Dashboard
 =========
 
 La pagina mostrata di default dopo il login è la :index:`Dashboard`; qui viene
-visualizzato un riepilogo dello stato del sistema e delle sue
+visualizzato un riepilogo dello :index:`stato` del sistema e delle sue
 impostazioni.
-
-Vengono riportate la configurazione di rete, l’uso della memoria, l’uso
-del disco, informazioni sul carico ed uptime della macchina, etc.
 
 .. _duc-section:
 
@@ -66,10 +63,12 @@ Le reti gestite devono sottostare alle regole seguenti:
 * le reti private (es. LAN) devono rispettare le regole per gli indirizzi specificate nel documento RFC1918.
   Vedi :ref:`RFC1918-section`
 
-Ogni interfaccia di rete ha un ruolo specifico che ne determina l'utilizzo e il comportamento. I ruoli sono indicati
-tramite colori. Ogni colore indica la zona di appartenenza della scheda di rete e le regole ad essa applicate.
+.. index:: zone, role
 
-* *green*: rete locale. I computer su questa rete possono accedere a qualsiasi altra rete configurata sul server 
+Ogni interfaccia di rete ha un ruolo specifico che ne determina l'utilizzo e il comportamento. I ruoli sono indicati
+tramite colori. Ogni colore indica la zona di appartenenza della scheda di rete e le regole ad essa applicate:
+
+* *green*: rete locale. I computer su questa rete possono accedere a qualsiasi altra rete configurata sul server
 * *blue*: rete ospiti.  I computer su questa rete possono accedere alle reti orange e red, ma non possono accedere alla zona green
 * *orange*: rete DMZ. I computer su questa rete possono accedere alle reti red, ma non possono accedere alle zone blue e green
 * *red*: rete pubblica. I computer in questa rete possono accedere solo al server stesso
@@ -79,9 +78,9 @@ Si veda :ref:`policy-section` per maggiori informazioni sull'uso dei ruoli nelle
 .. note:: Il server deve avere almeno un'interfaccia di rete. Quando il server ha una sola scheda di rete, tale scheda deve avere il ruolo green.
 
 In caso di installazione su VPS (Virtual Private Server) pubblico, il server deve essere configurato con una schede di rete green.
-Si consiglia quindi di chiudere le porte dei servizi critici usando il pannello :ref:`network_services-section`. 
+Si consiglia quindi di chiudere le porte dei servizi critici usando il pannello :ref:`network_services-section`.
 
-.. _logical_interfaces-section:
+.. _alias_IP-section:
 
 Alias IP
 --------
@@ -90,9 +89,11 @@ Per assegnare più indirizzi IP alla stessa scheda è possibile utilizzare gli a
 
 In tal modo è possibile ad esempio associare alla stessa red più indirizzi IP della stessa classe e gestirli in modo indipendente (ad esempio con dei port forward che discriminano in base allo specifico IP di destinazione).
 
-L'alias è configurabile cliccando nel menu a tendina della specifica scheda di rete e avrà lo stesso ruolo della scheda fisica associata. 
+L'alias è configurabile cliccando nel menu a tendina della specifica scheda di rete e avrà lo stesso ruolo della scheda fisica associata.
 
 .. note:: L'alias IP su interfaccia PPPoE in alcuni casi potrebbe non funzionare correttamente a causa di differenze nella fornitura del servizio tra i vari provider internet.
+
+.. _logical_interfaces-section:
 
 Interfacce logiche
 ------------------
@@ -129,6 +130,9 @@ Quando non è possibile separare fisicamente due reti diverse, è possibile util
 essere trasmesso sullo stesso cavo ma sarà trattato come se fosse inviato e ricevuto da due schede separate.
 L'utilizzo delle VLAN necessita di switch adeguatamente configurati.
 
+.. warning:: All'interfaccia logica **PPPoE*** deve essere assegnato il ruolo di
+             `red`, quindi richiede la funzionalità di gateway. Vedi :ref:`firewall-section` per i dettagli.
+
 .. _RFC1918-section:
 
 Numerazione delle reti private (RFC1918)
@@ -137,7 +141,7 @@ Numerazione delle reti private (RFC1918)
 Per reti private TCP/IP indirettamente connesse a Internet che utilizzano un servizio di
 conversione degli indirizzi di rete (NAT) o un gateway di livello applicazione,
 quale un server proxy, l'Internet Assigned Numbers Authority (IANA) consiglia di utilizzare
-gli indirizzi IP privati indicati nella tabella che segue.
+gli indirizzi IP privati indicati nella tabella seguente.
 
 ===============   ===========   =============================
 ID rete privata   Subnet mask   Intervallo di indirizzi IP
@@ -167,15 +171,13 @@ Le politiche di accesso disponibili sono:
 * Accesso dalle reti green e red (public): tutti gli host dalle reti green, VPN e reti esterne. Ma non dalla rete ospiti (blue) e dalla DMZ (orange)
 * Accesso solo dal server stesso (none): nessun host può collegarsi al servizio selezionato
 
-Se si selezionano le prime due politiche elencate è possibile specificare un host (o una lista di host) a cui l'accesso
-al servizio è sempre bloccato o sempre permesso.
 
 Accesso personalizzato
 ----------------------
 
-Se la politica selezionata è private o public, è possibile specificare una lista di host e reti che sono sempre 
+Se la politica selezionata è private o public, è possibile specificare una lista di host e reti che sono sempre
 consentiti (o bloccati) usando i campi :guilabel:`Consenti host` e :guilabel:`Blocca host`.
-La regola di applica anche per le reti orange e blue.
+La regola si applica anche per le reti orange e blue.
 
 Esempio
 ^^^^^^^
@@ -201,11 +203,6 @@ Ad esempio, i computer sulle reti fidate possono accedere a:
 
 * Server Manager
 * Cartelle condivise (SAMBA)
-* Servizi web per reti locali (Statistiche)
-
-Se si desidera che gli utenti collegati in VPN possano accedere a
-tutti i servizi del sistema, aggiungere le reti delle VPN a questo
-pannello.
 
 Se la rete remota è raggiungibile attraverso un router, ricordarsi di
 creare la rotta statica corrispondente nel pannello
@@ -226,7 +223,6 @@ Se si desidera che gli host nella rete remota possano accedere ai servizi
 del server, ricordarsi di creare una rete corrispondente nel pannello
 :guilabel:`Reti fidate`.
 
-
 Vedi :ref:`trusted_networks-section`.
 
 
@@ -242,7 +238,7 @@ pagina di login del Server Manager.
 
 
 .. index::
-   pair: Certificato; SSL   
+   pair: Certificato; SSL
 
 .. _server_certificate-section:
 
@@ -260,18 +256,18 @@ nuovo certificato.
 
 Quando |product| è installato viene automaticamente generato un certificato
 auto-firmato. Dovrebbe essere modificato inserendo dei valori appropriati prima
-di utilizzarlo dai client di rete.  Come alternative, la pagina
-:guilabel:`Certificato del server`  consente di:
+di utilizzarlo dai client di rete. Come alternative, la pagina
+:guilabel:`Certificato del server` consente di:
 
-* caricare un certificato esistente e la chiave privata RSA.  In aggiunta può
+* caricare un certificato esistente e la chiave privata RSA. In aggiunta può
   essere specificato anche un *chain file*. Tutti i file devono essere codificati
   nel formato PEM.
 
-* richiedere un nuovo certificato di *Let's Encrypt* [#Letsencrypt]_. Questo è 
+* richiedere un nuovo certificato di *Let's Encrypt* [#Letsencrypt]_. Questo è
   possibile se sono rispettati i seguenti requisiti:
-  
+
   1. il server deve essere raggiungibile dall'esterno alla porta 80. Assicurarsi
-     che la porta 80 è aperta alle connessioni da Internet (si può effettuare un 
+     che la porta 80 è aperta alle connessioni da Internet (si può effettuare un
      test da siti come [#CSM]_);
 
   2. i domini che si vogliono associare al certificato devono essere domini pubblici,
@@ -282,12 +278,12 @@ di utilizzarlo dai client di rete.  Come alternative, la pagina
 .. note::
        Per evitare problemi di importazione certificato con Internet Explorer,
        si consiglia di configurare il campo CN (Common Name) o Nome Comune
-       in modo che corrisponda al FQDN del server. 
+       in modo che corrisponda al FQDN del server.
 
 .. [#Letsencrypt] Sito web di *Let's Encrypt* https://letsencrypt.org/
 .. [#CSM] Sito web http://www.canyouseeme.org/
 .. [#VDNS] Sito web http://viewdns.info/
-     
+
 .. _user_profile-section:
 
 Cambio password utente
@@ -295,18 +291,7 @@ Cambio password utente
 
 Ogni utente può collegarsi al Server Manager utilizzando le proprie credenziali ed accedere al :index:`profilo utente`.
 
-Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le informazioni associate al proprio account:
-
-* Nome e Cognome
-* Indirizzo email esterno
-
-L'utente può anche sovrascrivere i seguenti campi già impostati dall'amministratore:
-
-* Società
-* Ufficio
-* Indirizzo
-* Città
-* Telefono
+Dopo l'accesso, l'utente potrà :index:`cambiare la propria password`.
 
 
 Arresto
@@ -325,7 +310,7 @@ Visualizza Log
 Tutti i servizi registrano le operazioni svolte all'interno di file detti :dfn:`log`.
 L'analisi dei :index:`log` è lo strumento principale per individuare malfunzionamenti e problemi.
 Per visualizzare i file di log fare clic su :menuselection:`Visualizza Log`.
-Si aprirà una pagina con l'elenco di tutti i file di log disponibili; fare click sui file che si intendo visualizzare.
+Si aprirà una pagina con l'elenco di tutti i file di log disponibili: fare click sui file che si intendo visualizzare.
 
 Questo modulo consente di:
 
@@ -364,5 +349,3 @@ Se il server ha indirizzo ``192.168.1.2`` e si desidera visualizzare la lista de
 usare il seguente indirizzo: ::
 
  https://192.168.1.2:980/it/Help
-
-
