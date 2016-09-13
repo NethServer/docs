@@ -48,7 +48,7 @@ Network
 The :guilabel:`Network` page configures how the server is connected to the
 local network (LAN) or other ones (i.e. Internet).
 
-If the server has firewall and gateway functionality, it will handle extra networks with special function like 
+If the server has firewall and gateway functionality, it will handle extra networks with special function like
 DMZ (DeMilitarized Zone) and guests network.
 
 |product| supports an unlimited number of network interfaces.
@@ -66,7 +66,7 @@ Each role correspond to a well-known *zone* with special network traffic rules:
 
 * *green*: local network. Hosts on this network can access any other configured network
 * *blue*: guests network. Hosts on this network can access orange and red network, but can't access to green zone
-* *orange*: DMZ network.  Hosts on this network can access red networks, but can't access to blue, orange and green zones
+* *orange*: DMZ network.  Hosts on this network can access red networks, but can't access to blue and green zones
 * *red*: public network. Hosts on this network can access only the server itself
 
 See :ref:`policy-section` for more information on roles and firewall rules.
@@ -222,7 +222,7 @@ values for user accounts.  The organization name and address are also
 displayed on the Server Manager login screen.
 
 .. index::
-   pair: Certificate; SSL   
+   pair: Certificate; SSL
 
 .. _server_certificate-section:
 
@@ -239,11 +239,11 @@ and network clients will be required to accept the new certificate.
 
 When |product| is installed a temporary default self-signed certificate is
 generated automatically.  It should be edited by inserting proper values before
-configuring the network clients to use it.  As alternatives, the
+configuring the network clients to use it. As alternatives, the
 :guilabel:`Server certificate` page allows:
 
 * uploading an existing certificate and private RSA key. Optionally a
-  certificate chain file can be specified, too. All files must be PEM-encoded;
+  certificate chain file can be specified, too. All files must be PEM-encoded.
 
 * requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is
   possible if the following requirements are met:
@@ -257,7 +257,7 @@ configuring the network clients to use it.  As alternatives, the
 
 .. note::
    To avoid problems while importing the certificate in Internet Explorer,
-   the Common Name (CN) field should match the server FQDN. 
+   the Common Name (CN) field should match the server FQDN.
 
 .. [#Letsencrypt] Let's Encrypt website https://letsencrypt.org/
 .. [#CSM] Website http://www.canyouseeme.org/
@@ -270,17 +270,8 @@ Change user password
 
 All users can login to Server Manager using their own credentials and access the :index:`user profile`.
 
-After login, a user can :index:`change the password` and information about the account, like:
+After login, a user can :index:`change the password`.
 
-* Name and surname
-* External mail address
-
-The user can also overwrite fields set by the administrator:
-
-* Company
-* Office
-* Address
-* City
 
 Shutdown
 ========
@@ -329,5 +320,3 @@ A list of all available inline help pages can be found at the address: ::
 If the server has address ``192.168.1.2``, and you want to see all English help pages, use this address: ::
 
  https://192.168.1.2:980/en/Help
-
-
