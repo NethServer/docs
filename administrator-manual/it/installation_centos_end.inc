@@ -1,6 +1,6 @@
 Abilitare i repository YUM specifici con il comando: ::
 
- yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-6.7.rpm
+ yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
 
 Per installare il sistema di base eseguire: ::
 
