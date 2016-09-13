@@ -65,7 +65,7 @@ Media creation
 
 **Download the ISO file** from official site |download_site|.  The
 downloaded ISO file can be used to **create a bootable media** such as
-DVD or USB stick.  
+DVD or USB stick.
 
 USB stick
 ^^^^^^^^^
@@ -75,7 +75,7 @@ On a Linux machine, open the shell and execute: ::
   dd if=NethServer.iso of=/dev/sdc
 
 Where `NethServer.iso` is the file name of the downloaded ISO and `/dev/sdc` is the
-destination device corresponding to the USB key and 
+destination device corresponding to the USB key and
 not a partition (such as /dev/sdc1).
 
 On a Windows machine, make sure to format the USB drive then unmount it.
@@ -87,11 +87,11 @@ Use one of the following tools to write the USB stick:
 * `Rawrite32`_
 * `dd for Windows`_
 
-.. _`Rufus`: https://rufus.akeo.ie/ 
-.. _`Fedora LiveUSB Creator`: https://fedorahosted.org/liveusb-creator/ 
-.. _`Win32 Disk Imager`: http://sourceforge.net/projects/win32diskimager/ 
-.. _`Rawrite32`: http://www.netbsd.org/~martin/rawrite32/ 
-.. _`dd for Windows`: http://www.chrysocome.net/dd 
+.. _`Rufus`: https://rufus.akeo.ie/
+.. _`Fedora LiveUSB Creator`: https://fedorahosted.org/liveusb-creator/
+.. _`Win32 Disk Imager`: http://sourceforge.net/projects/win32diskimager/
+.. _`Rawrite32`: http://www.netbsd.org/~martin/rawrite32/
+.. _`dd for Windows`: http://www.chrysocome.net/dd
 
 DVD
 ^^^
@@ -164,7 +164,7 @@ Install options
 ^^^^^^^^^^^^^^^
 
 You can add extra parameters to unattended installation by pressing
-TAB and editing the boot loader command line.
+:kbd:`TAB` and editing the boot loader command line.
 
 To disable raid, just add this option to the command line: ::
 
@@ -176,9 +176,9 @@ If you need to select installation hard drives, use: ::
 
 Other available options:
 
-* lang: system language, default is en_US
-* keyboard: keyboard layout, default is us
-* timezone: default is UTC Greenwich
+* lang: system language, default is :samp:`en_US`
+* keyboard: keyboard layout, default is :samp:`us`
+* timezone: default is :samp:`UTC Greenwich`
 * fspassword: enable file system encryption with given password
   This option can be used even in Interactive Mode
 
@@ -247,7 +247,7 @@ Network configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
 As default, all network interfaces are configure with DHCP.
-Please, read the following notes before customizing network configuration. 
+Please, read the following notes before customizing network configuration.
 
 Host and Domain Name (FQDN)
 
@@ -292,7 +292,7 @@ Install on CentOS
 
 It is possible to install |product| on a fresh CentOS installation
 using the :program:`yum` command to download software packages. This
-is the recommended installation method if you have
+is the recommended installation method if you have:
 
 * a virtual private server (VPS), or
 * an USB stick.
@@ -316,4 +316,3 @@ the name of the module as a parameter to the install script.  Example: ::
   nethserver-install nethserver-mail nethserver-nextcloud
 
 .. include:: installation_centos_end.inc
-
