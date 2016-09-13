@@ -10,7 +10,7 @@ Oppure, per installare contestualmente del software addizionale,
 passare il nome dei moduli desiderati come parametro allo script di
 installazione.  Esempio: ::
 
- nethserver-install nethserver-mail nethserver-nut
+ nethserver-install nethserver-mail nethserver-nextcloud
 
 Al termine dell'installazione, :ref:`accedere al Server Manager
 <access-section>` per :ref:`installare il software
