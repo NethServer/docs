@@ -15,14 +15,14 @@ Il backup della configurazione salva anche la lista dei moduli installati. Tutti
 Lo scopo del backup della configurazione è quello di consentire un rapido ripristino della macchina in caso di disaster recovery.
 Dopo aver ripristinato la configurazione, la macchina può già essere messa in produzione mentre i dati vengono ripristinati in background.
 
-Il backup dei dati è abilitato installando il modulo "Backup" e comprende i dati degli utenti come caselle di posta e cartelle condivise. 
+Il backup dei dati è abilitato installando il modulo "Backup" e comprende i dati degli utenti come caselle di posta e cartelle condivise.
 Viene eseguito ogni notte e può essere completo o incrementale su base settimanale.
 Questo backup contiene anche il backup della configurazione.
 
 Il backup dei dati può essere fatto su tre tipi di destinazione:
 
 * USB: disco collegato via USB, utile in caso di molti dati ma limitato dalla velocità dell'USB (Vedi: :ref:`backup_usb_disk-section`)
-* CIFS: cartella condivisa Windows, disponibile su tutti i NAS  
+* CIFS: cartella condivisa Windows, disponibile su tutti i NAS
 * NFS: cartella condivisa Linux, disponibile su tutti i NAS, solitamente più veloce di CIFS
 
 
@@ -77,7 +77,7 @@ precedente rispetto all'ultimo backup.
 
 Esempio, ripristinare un file alla versione di 15 giorni fa: ::
 
-  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
+  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile"
 
 L'opzione ``-t`` consente di specificare il numero di giorni, in questo caso 15.
 
@@ -106,7 +106,7 @@ Disaster recovery
 
 Il sistema è ripristinato in due fasi: prima la configurazione, poi i dati.
 Al termine del ripristino, il sistema è pronto all'uso se i moduli sono già installati.
-E' possibile installare i moduli opzionali sia prima che dopo il ripristino. 
+E' possibile installare i moduli opzionali sia prima che dopo il ripristino.
 Ad esempio, se il server di posta è installato, il sistema è già in grado di inviare e ricevere mail.
 
 Altre configurazioni ripristinate:
@@ -130,27 +130,15 @@ I passi da eseguire sono:
 
 5. Se un avviso lo richiede, riconfigurare le interfacce di
    rete. Vedere :ref:`restore-roles-section` più sotto.
-  
+
 6. Verificare che la macchina sia funzionante
 
 7. Ripristinare i dati eseguendo il comando :command:`restore-data`
 
 
 
-.. _backup_config_rpms:
-
-Ripristino moduli installati
-----------------------------
-
-Il processo di ripristino della configurazione reinstalla tutti i moduli presenti precedentemente.
-
-Per evitare che i moduli vengano reinstallati, eseguire questo comando prima del ripristino: ::
-
-  config setprop backup-config reinstall disabled
-
-
 .. _restore-roles-section:
-   
+
 Assegnamento delle interfacce di rete
 -------------------------------------
 
@@ -186,7 +174,20 @@ Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate.
 Se il ruolo mancante è ``green`` una procedura interattiva chiede di
 aggiustare la configurazione all'avvio del sistema, per assicurare una
 connettività di rete minima e accedere di nuovo al Server Manager.
-       
+
+
+.. _backup_config_rpms:
+
+Ripristino moduli installati
+----------------------------
+
+Il processo di ripristino della configurazione reinstalla tutti i moduli presenti precedentemente.
+
+Per evitare che i moduli vengano reinstallati, eseguire questo comando prima del ripristino: ::
+
+  config setprop backup-config reinstall disabled
+
+
 .. _backup_customization-section:
 
 Personalizzazione backup dati
@@ -217,10 +218,12 @@ Ad esempio, per escludere dal backup tutte le directory chiamate *Download*, agg
 
 Per escludere una casella di posta *test*, aggiungere la riga: ::
 
-  /var/lib/nethserver/vmail/test/ 
+  /var/lib/nethserver/vmail/test/
 
+La stessa sintassi si applica al backup della configurazione. Le modifiche dovrebbero essere fatte all'interno del file :file:`/etc/backup-config.d/custom.exclude`.
 
 .. note:: Assicurarsi di non lasciare linee vuote nei file modificati.
+
 
 Personalizzazione backup configurazione
 =======================================
@@ -249,7 +252,7 @@ Escludere
 Se si desidera escludere una directory o un file dal backup della configurazione, aggiungere una linea
 al file :file:`/etc/backup-config.d/custom.exclude`.
 
-.. note:: 
+.. note::
    Assicurarsi di non lasciare linee vuote nei file modificati.
    La sintassi del backup della configurazione supporta solo percorsi file e directory semplici.
 
@@ -258,7 +261,7 @@ al file :file:`/etc/backup-config.d/custom.exclude`.
 Configurazione disco USB
 ========================
 
-Si consiglia di formattare i dischi USB in formato EXT3 per le migliori prestazioni. 
+Si consiglia di formattare i dischi USB in formato EXT3 per le migliori prestazioni.
 Generalmente i dischi utilizzano il filesystem NTFS, che **non è supportato**.
 Il filesystem FAT è invece supportato ma *sconsigliato*.
 
