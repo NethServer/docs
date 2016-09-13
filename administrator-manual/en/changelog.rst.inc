@@ -22,6 +22,7 @@ New features:
 * Improved package removal on Software Center
 
 * Many bug fixed and code cleanup, mainly on the following components:
+
   * Let's Encrypt
   * Firewall
   * Samba
@@ -50,6 +51,5 @@ The following packages have been removed:
 * nethserver-password: integrated inside nethserver-sssd
 * nethserver-faxweb2: http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645
 * nethserver-fetchmail: replaced by getmail
-* nethserver-ocsinventory, nethserver-adagios: due to compatibility problems with Nagios, these modules will be 
+* nethserver-ocsinventory, nethserver-adagios: due to compatibility problems with Nagios, these modules will be
   mantained only on |product| 6.x release
-
