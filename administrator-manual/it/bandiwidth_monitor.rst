@@ -15,3 +15,5 @@ Porta
 Password per l'utente 'admin'
     Password dell'utente amministratore. Questa password non è legata in
     alcun modo alla password di admin di |product|.
+Interfacce
+    Interfacce su cui ntopng sarà in ascolto per eventuali richieste.
