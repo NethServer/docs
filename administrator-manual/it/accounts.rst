@@ -21,7 +21,7 @@ Dopo aver installato una sorgente locale (Samba Active Directory o OpenLDAP), sa
 creare/modificare/eliminare utenti e gruppi locali.
 
 Si consiglia di selezionare con attenzione la sorgente di utenti e gruppi, in quanto la scelta non è reversibile.
-Inoltre, al termine della configurazione, il sistema non cosentirà più di cambiare l'FQDN del server.
+Inoltre, al termine della configurazione, il sistema non consentirà più di cambiare l'FQDN del server.
 
 OpenLDAP
 ========
@@ -59,15 +59,46 @@ l'utente predefinito :dfn:`administrator`.
 Questo utente ha dei privilegi speciali su alcuni servizi specifici,
 come aggiungere una workstation al dominio Samba.
 
-La password di per l'utente administrator è: *Nethesis,1234*
+La password di default per l'utente administrator è: *Nethesis,1234*
 
 .. tip:: Ricordarsi di cambiare la password dell'utente administrator al primo login.
+
+
+Installazione su macchina virtuale
+----------------------------------
+
+Samba Active Directory viene eseguita all'interno di un container che utilizza un bridge di rete virtuale con l'interfaccia di rete del sistema.
+L'interfaccia di rete virtuale deve essere visibile all'interno della rete fisica, ma spesso i software di virtualizzazione bloccano il traffico ARP e questo preclude la visibilità del container Samba Active Directory all'interno della LAN.
+
+È quindi necessario assicurarsi che il virtualizzatore abiliti il traffico di rete con la *modalità promiscua*.
+
+VirtualBox
+~~~~~~~~~~
+
+Per configurare la modalità promiscua, selezionare "Permetti tutto" dal menù a discesa presente nella sezione di configurazione di rete.
+
+VMWare
+~~~~~~
+
+Entrare nella sezione di configurazione di rete del nodo da virtualizzare e abilitare lo switch virtuale in modalità promiscua.
+
+KVM
+~~~
+
+Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per esempio br0) e che sia configurato in modalità promiscua.
+
+È possibile forzare un bridge (br0) in modalità promiscua usando il seguente comando: ::
+
+  ifconfig br0 promisc
+
+
 
 Utenti
 ======
 
 L'utente di sistema è necessario per accedere a molti servizi erogati da |product| (email, cartelle condivise etc.).
-Ogni utente è caratterizzato da una coppia di credenziali (utente e password). 
+Ogni utente è caratterizzato da una coppia di credenziali (utente e password).
+
 
 I seguenti campi sono obbligatori per la creazione di un utente:
 
@@ -79,7 +110,7 @@ Al termine della creazione, un utente risulta disabilitato fino a quando non vie
 Un utente bloccato non può utilizzare i servizi che richiedono autenticazione.
 Quando un utente è abilitato, l'utente può accedere al Server Manager e cambiare la propria password: :ref:`user_profile-section`.
 
-Un utente può essere aggiunto ad uno o più gruppi usando la pagina :guilabel:`Utenti` o :guilabel:`Groppi`.
+Un utente può essere aggiunto ad uno o più gruppi usando la pagina :guilabel:`Utenti` o :guilabel:`Gruppi`.
 
 A volte può essere necessario bloccare l'accesso ai servizi di un utente senza eliminare l'account.
 E' possibile farlo usando i pulsanti :guilabel:`Blocca` e :guilabel:`Sblocca`.
@@ -115,7 +146,7 @@ Come gli utenti, un gruppo può essere abilitato ad alcuni (o tutti) i servizi.
 .. tip:: Per delegare l'accesso al Server Manager è possibile
          utilizzare i gruppi ``administrators`` e ``managers``.
 
-Si possono creare due gruppi speciali, gli utenti che appartengono a
+Si possono creare due gruppi speciali e gli utenti che appartengono a
 questi gruppi ottengono dei permessi aggiuntivi alle pagine del Server
 Manager.
 
@@ -168,7 +199,7 @@ Il sistema invierà una mail informativa all'utente quando la sua password è in
 .. note:: Al momento dell'attivazione il sistema farà riferimento alla data dell'ultimo cambio password, 
    se tale data è precedente più di 6 mesi, il server invierà una mail per segnalare che la password è scaduta. 
    In tal caso è necessario cambiare la password dell'utente.
-   Ad esempio: se l'ultimo cambio password è stato fatto in gennaio, e l'attivazione della scadenza in ottobre, 
+   Ad esempio: se l'ultimo cambio password è stato fatto a gennaio e l'attivazione della scadenza in ottobre, 
    il sistema riterrà la password cambiata in gennaio come scaduta, e lo segnalerà all'utente.
 
 

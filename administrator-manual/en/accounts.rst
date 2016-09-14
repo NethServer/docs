@@ -150,8 +150,8 @@ As for the users, a group can be enabled to some (or all) services.
 
 Two special groups can be created, the users who belong in one of these groups are granted access to the panels of the Server Manager
 
-* :dfn:`administrators`: Users of this group have the same permissions as the root user.
-* :dfn:`managers`: Users of this group are granted access to the Management section.
+* :dfn:`administrators`: Users of this group have the same permissions as the ``root`` user.
+* :dfn:`managers`: Users of this group are granted access to the *Management* section.
 
 
 Password management
@@ -197,7 +197,7 @@ The system will send an e-mail to inform the users when their password is about 
 .. note:: The system will refer to the date of the last password change, 
    whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired. 
    In this case you need to change the user password.
-   For example, if the last password change was made in January, and the activation of the deadline in October, 
+   For example, if the last password change was made in January and the activation of the deadline in October, 
    the system will assume the password changed in January is expired, and notify the user.
 
 
