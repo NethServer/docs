@@ -2,7 +2,7 @@
 Filtro contenuti web
 ====================
 
-Il :index:`filtro contenuti` analizza il traffico web ed è in grado di bloccare siti pericolosi o contenenti virus.
+Il :index:`filtro contenuti` analizza il traffico web ed è in grado di bloccare siti pericolosi o contenenti virus. I siti proibiti sono selezionati da una lista di categorie che è possibile anche scaricare da sorgenti esterne e salvare sul sistema.
 
 La configurazione consente di creare un numero illimitato di profili.
 Ciascun profilo è composto da tre parti:
@@ -20,11 +20,11 @@ Ciascun profilo è composto da tre parti:
 Si consiglia di procedere in questo ordine:
 
 1. Selezionare una lista di categorie dalla pagina :guilabel:`Blacklist` ed avviare il download
-2. Creare una o più condizioni temporali
-3. Creare eventuali categorie personalizzate
+2. Creare una o più condizioni temporali (opzionale)
+3. Creare eventuali categorie personalizzate (opzionale)
 4. Creare un nuovo filtro o modificare quello di default
-5. Creare un nuovo profilo associato ad un utente o un host esistente, selezionare quindi
-   un filtro e una condizione temporale
+5. Creare un nuovo profilo associato ad un utente o un host, selezionare quindi
+   un filtro e una condizione temporale (se abilitata)
 
 Il sistema prevede un profilo di default che viene applicato a tutti i client qualora
 non rientrino in nessun altro profilo.
@@ -53,7 +53,7 @@ Blocco Google Translate
 -----------------------
 
 E' noto che il servizio di traduzione online di intere pagine html di Google 
-può essere usato per riuscire a scavalcare il filtro contenti.
+può essere usato per riuscire a scavalcare il filtro contenuti.
 Infatti le pagine visitate attraverso il traduttore fanno riferimento sempre ad un dominio riconducibile
 a Google stesso pur avendo al loro interno contenuti provenienti da server esterni. 
 In questo modo i blocchi imposti a livello di dominio non possono funzionare limitando l'azione del filtro contenuti.
