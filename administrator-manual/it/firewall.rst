@@ -222,6 +222,8 @@ In caso si voglia rendere accessibile dall'esterno il server sull'intero range d
 * porta origine: 5000:6000
 * porta destinazione: 
 * indirizzo host: 192.168.1.10
+
+Tutto il traffico che arriva sulle reti red del firewall per il range di porte compreso tra 5000 e 6000 verrà redirezionato alle stesse porte sul Server1.
  
 
 Limitare accesso
@@ -236,7 +238,7 @@ Esempi di alcuni valori possibili:
 * ``10.2.10.4,10.2.10.5``: abilita il port forward solo per il traffico proveniente dagli IP 10.2.10.4 e 10.2.10.5
 * ``10.2.10.0/24``: abilita il port forward solo per il traffico proveniente dalla rete 10.2.10.0/24
 * ``!10.2.10.4``: abilita il port forward per tutti gli IP tranne 10.2.10.4
-* ``192.168.1.0/24!192.168.1.3,192.168.1.9``: abilita il port forward per tutta la rete 192.168.1.0/24  ad eccezione degli host 192.168.1.3 e 192.168.1.9
+* ``192.168.1.0/24!192.168.1.3,192.168.1.9``: abilita il port forward per tutta la rete 192.168.1.0/24 ad eccezione degli host 192.168.1.3 e 192.168.1.9
 
 NAT 1:1
 =======
@@ -304,7 +306,7 @@ Esistono 6 tipi di oggetti, 5 di questi sono relativi a sorgenti e destinazioni 
 
 .. note:: Di default gli host che fanno parte di una Zona non possono fare alcun tipo di traffico, sarà necessario quindi creare tutte le regole necessarie a caratterizzarne il comportamento.
 
-L'altro oggetto invece specifica il tipo di traffico ed è quello dei:
+L'ultimo oggetto invece specifica il tipo di traffico ed è quello dei:
 
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
@@ -319,7 +321,7 @@ controllare il traffico generato dagli host presenti nelle reti locali.
 Se il :index:`binding IP/MAC` è abilitato, l'amministratore può scegliere quale politica applicare agli host
 senza riserva DHCP.
 Solitamente questa funzione è utilizzata per permettere il traffico solo dagli host conosciuti e bloccare tutti gli altri.
-In questo caso, gli host senza una riserva DHCP non potranno accedere ne al firewall ne alla rete esterna.
+In questo caso, gli host senza una riserva DHCP non potranno accedere né al firewall né alla rete esterna.
 
 Per abilitare il traffico solo dagli host conosciuti, seguire questi passi:
 
