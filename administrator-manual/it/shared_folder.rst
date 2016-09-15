@@ -12,7 +12,7 @@ gruppo di persone tramite Samba (SMB/CIFS).
 Permessi di accesso
 -------------------
 
-Il tipo di accesso consentito alle cartelle condivise, dipende dal metodo di autenticazione scelto: Se si è selezionato Active Directory come fornitore di autenticazione, è possibile scegliere un (:guilabel:`Gruppo proprietario`). Ogni membro del gruppo può leggere
+Il tipo di accesso consentito alle cartelle condivise, dipende dal metodo di autenticazione scelto: se si è selezionato Active Directory come fornitore di autenticazione, è possibile scegliere un (:guilabel:`Gruppo proprietario`). Ogni membro del gruppo può leggere
 i contenuti della cartella. Opzionalmente, al gruppo può essere
 concesso di modificare il contenuto della cartella e i permessi di
 lettura possono essere estesi a chiunque abbia accesso al sistema.
@@ -20,6 +20,9 @@ Questo semplice modello di permessi è basato sui tradizionali permessi
 del filesystem di UNIX.
 
 I permessi di accesso possono essere ulteriormente raffinati utilizzando le `ACL`, consentendo a singoli utenti o ad altri gruppi i permessi di lettura o scrittura.
+
+Se è attiva l'opzione :guilabel:`Accesso guest`, sono considerate valide
+qualsiasi credenziali vengano presentate.
 
 Se non è stato scelto un metodo di autenticazione o si è scelto OpenLDAP, non c'è autenticazione per le cartelle condivise, che saranno leggibili e scrivibili da tutti.
 
@@ -47,9 +50,6 @@ da una cartella condivisa sono in realtà spostati in una directory
 "cestino" speciale. L'opzione :guilabel:`Mantieni file omonimi`
 assicura che i file nel cestino abbiano sempre nomi distinti,
 impedendo la sovrascrittura.
-
-Se è attiva l'opzione :guilabel:`Accesso guest`, sono considerate valide
-qualsiasi credenziali vengano presentate.
 
 Se è attiva l'opzione :guilabel:`Visibile`, la cartella condivisa 
 sarà elencata fra le cartelle disponibili.
