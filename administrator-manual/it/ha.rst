@@ -55,7 +55,7 @@ Il *fence device* è il dispositivo hardware che consente tale disconnessione us
 il metodo STONITH (Shoot The Other Node In The Head), ovvero togliendo l'alimentazione al nodo guasto.
 
 Si consiglia l'utilizzo di PDU (Power Distribution Unit), 
-ma anche dispositivi IPMI (Intelligent Platform Management Interface) possono essere usati con alcune limitazioni.
+ma anche dispositivi IPMI (Intelligent Platform Management Interface) possono essere usati con alcune limitazioni. E' anche possibile usare uno switch gestito in grado di supportare il protocollo SNMP IF-MIB.
 
 Collegamenti esterni:
 
@@ -244,10 +244,36 @@ Inoltre, assicurarsi che la risorsa stonith risieda sul nodo corretto: ::
 
  pcs constraint location ns2Stonith prefers ns1.nethserver.org=INFINITY
  pcs constraint location ns1Stonith prefers ns2.nethserver.org=INFINITY
+ 
+ Fencing con switch IF-MIB
+ =========================
+ E' possibile anche usare come dispositivo di fence uno switch gestito che supporti il protocollo SNMP IF-MIB. In questo caso, il nodo su cui viene fatto il fence non viene spento ma messo offline dallo switch, col medesimo effetto.
 
+Verificare la configurazione dello switch usando l'agente di fence per aprire e chiudere le porte sullo stesso: ::
+
+  fence_ifmib -a <SWITCH_IP> -l <USERNAME> -p <PASSWORD> -P <PASSWORD_PRIV> -b MD5 -B DES -d <SNMP_VERSION> -c <COMMUNITY> -n<PORT> -o <off|on|status>
+
+I comandi seguenti configurano due switch connessi in questo modo:
+La porta 1 del nodo 1 è connessa alla porta 1 dello switch 1
+La porta 2 del nodo 1 è connessa alla porta 1 dello switch 2
+La porta 1 del nodo 2 è connessa alla porta 2 dello switch 1
+La porta 2 del nodo 2 è connessa alla porta 2 dello switch 2
+
+  ::
+
+    pcs stonith create ns1sw1 fence_ifmib action=off community=<COMMUNITY> ipaddr=<SWITCH_1_IP> login=<USERNAME> passwd=<PASSWORD> port=1 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_1>"
+    pcs stonith create ns1sw2 fence_ifmib action=off community=fence ipaddr=<SWITCH_2_IP> login=<USERNAME> passwd=<PASSWORD> port=1 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_1>"
+    pcs stonith create ns2sw1 fence_ifmib action=off community=fence ipaddr=<SWITCH_1_IP> login=<USERNAME> passwd=<PASSWORD> port=2 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_2>"
+    pcs stonith create ns2sw2 fence_ifmib action=off community=fence ipaddr=<SWITCH_2_IP> login=<USERNAME> passwd=<PASSWORD> port=2 snmp_auth_prot=MD5 snmp_priv_passwd=<PASSWORD_PRIV> snmp_priv_prot=DES snmp_sec_level=authPriv snmp_version=3 pcmk_host_list="<HOST_2>"
+    pcs stonith level add 1 <HOST_1> ns1sw1,ns1sw2
+    pcs stonith level add 1 <HOST_2> ns2sw1,ns2sw2
+    pcs constraint location ns1sw1 prefers <HOST_2>=INFINITY
+    pcs constraint location ns1sw2 prefers <HOST_2>=INFINITY
+    pcs constraint location ns2sw1 prefers <HOST_1>=INFINITY
+    pcs constraint location ns2sw2 prefers <HOST_1>=INFINITY
 
 Guasti e ripristino
-===================
+-------------------
 
 Un cluster a due nodi può tollerare solo un guasto alla volta.
 
@@ -283,10 +309,47 @@ di ciascun dispositivo con il seguente comando: ::
 
   crm_resource --resource <stonith_name> --cleanup --node <node_name>
 
+Split Brain del DRBD
+----------------
+Quando si verifica uno split brain del DRBD i dati tra i due nodi non sono più sincronizzati. Questo evento può verificarsi quando fallisce un fence.
+Lo stato DRBD dei nodi attivi (cat /proc/drbd) sarà Primary/Unknown e Secondary/Unknown (invece di Primary/Secondary e Secondary/Primary) sul nodo inattivo.
+Eseguendo il comando seguente ::
+
+  pcs status
+
+Lo stato del DRBD sarà:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Stopped: [ ns2.nethserver.org ]
+
+invece di:
+ Master/Slave Set: DRBDDataPrimary [DRBDData]
+     Masters: [ ns1.nethserver.org ]
+     Slaves: [ ns2.nethserver.org ]
+
+Soluzione:
+
+Sul nodo coi dati validi, lanciare il comando seguente :: 
+
+  drbdadm invalidate-remote drbd00
+
+Sul nodo coi dati errati, lanciare il comando seguente ::
+
+  drbdadm invalidate drbd00
+
+Su entrambi i nodi, lanciare il seguente ::
+
+  drbdadm connect drbd00 
+
+Controllare la sincronizzazione del DRBD, eseguendo ::
+
+  cat /proc/drbd
+
+
 Disaster recovery
 -----------------
 
-In caso di guasto hardware, è possibile reinstallare il nodo è raggiungerlo al cluster.
+In caso di guasto hardware, è possibile reinstallare il nodo è riaggiungerlo al cluster.
 I servizi clusterizzati saranno automaticamente configurati e i dati verranno sincronizzati fra i nodi.
 
 Seguire questi passi.
