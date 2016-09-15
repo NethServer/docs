@@ -30,7 +30,7 @@ nuovo server |product| (:dfn:`destinazione`).
  
      grep -E '(FAIL|ERROR)' /var/log/messages
 
-.. note:: Nessun template custom sarà migrato durante il processo di migrazine.
+.. note:: Nessun template custom sarà migrato durante il processo di migrazione.
    Controllare i nuovi template prima di copiare frammenti personalizzati dal vecchio backup.
 
 .. index::
