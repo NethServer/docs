@@ -36,25 +36,25 @@ Firewall
 
 Se il software necessita di porte aperte sul firewall, creare un servizio chiamato ``fw_<softwarename>``.
 
-Ad esempio, dato il software *mysoftware* che necessita la porta 3344 aperta sulla LAN, usare questi comandi: ::
+Ad esempio, dato il software *mysoftware* che necessita la porta 3344 e 5566 aperta sulla LAN, usare questi comandi: ::
 
- config set fw_mysoftware service status enabled TCPPorts 8090,8443,5632,5432 access private
+ config set fw_mysoftware service status enabled TCPPorts 3344,5566 access green
  signal-event firewall-adjust
  signal-event runlevel-adjust
 
 Avvio e arresto
 ---------------
 
-|product| usa il runlevel standard 3.
+|product| usa il target standard multi utente di systemd.
 
-Il software installato con yum dovrebbe già essere configurato per partire nel runlevel 3.
-Per controllare la configurazione, eseguire il comando :command:`chkconfig`. Il comando mostra una lista dei servizi con la relativa configurazione.
+Il software installato con yum dovrebbe già essere configurato per partire al boot del sistema.
+Per controllare la configurazione, eseguire il comando :command:`systemctl`. Il comando mostra una lista di servizi con il relativo stato.
 
 Per abilitare un servizio al boot: ::
 
-  chkconfig mysoftware on
+  systemctl enable mysoftware
 
 Per disabilitare un servizio al boot: ::
   
-  chkconfig mysoftware off
+  systemctl disable mysoftware
 
