@@ -15,7 +15,7 @@ Main features:
 * Firewall rules management
 * Traffic shaping (QoS)
 * Port forwarding
-* Routeing rules to divert traffic on a specific WAN
+* Routing rules to divert traffic on a specific WAN
 * Intrusion Prevention System (IPS)
 
 
