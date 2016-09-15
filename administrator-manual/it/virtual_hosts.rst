@@ -7,9 +7,9 @@
 Virtual host
 ============
 
-L'hosting virtuale è un metodo che consente di ospitare più nomi di dominio diversi su un singolo server. Su |product|, dalla pagina `Virtual host` è possibile configurare siti web come virtual host Apache
+L'hosting virtuale è un metodo che consente di ospitare più nomi di dominio diversi su un singolo server. Su |product|, dalla pagina `Virtual host` è possibile configurare siti web come virtual host Apache.
 
-Nomi di dominio (FQDN)
+Nomi dei virtual host (FQDN)
 -------------------------
 
 È la lista dei nomi di dominio FQDN che sono associati al virtual host. I valori devono essere separati con "," (virgola).
@@ -28,7 +28,7 @@ La password di autenticazione HTTP dovrebbe essere diversa da quella dell'FTP, i
 Permessi Apache 
 ---------------
 
-I file caricati con l'FTP hanno gruppo "apache". Se è necessario consentire il permesso di scrittura o esecuzione ad apache, è possibile cambiare i permessi del gruppo usando il client FTP
+I file caricati con l'FTP hanno gruppo "apache". Se è necessario consentire il permesso di scrittura o esecuzione ad apache, è possibile cambiare i permessi del gruppo usando il client FTP.
 
 .. warning:: Se una virtual host contiene del codice eseguibile, come script PHP, 
              i permessi utente e le implicazioni di sicurezza vanno valutati con 
