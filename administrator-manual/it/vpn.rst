@@ -43,8 +43,8 @@ Per consentire ad un client di stabilire una VPN:
 1. Creare un nuovo account: è consigliato creare un account VPN dedicato
    che utilizzi un certificato. In questo modo non è necessario creare un utente
    di sistema per garantire l'accesso VPN.
-   E' invece obbligatorio scegliere un account di sistema se si desidera utilizzare
-   l'autenticazione basta su nome utente e password.
+   È invece obbligatorio scegliere un account di sistema se si desidera utilizzare
+   l'autenticazione basata su nome utente e password.
 
 2. Scaricare il file che contiene la configurazione e i certificati.
 
