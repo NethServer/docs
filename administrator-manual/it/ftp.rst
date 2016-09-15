@@ -7,7 +7,7 @@ FTP
 Il server :index:`FTP` consente di trasferire file fra client e server.
 
 Un utente FTP può essere :dfn:`virtuale` oppure un utente di sistema.
-Gli utenti virtuali possono accedere solo il server FTP: questa è la configurazione consigliata.
+Gli utenti virtuali possono accedere solo al server FTP: questa è la configurazione consigliata.
 L'interfaccia web consente la configurazione solo degli utenti virtuali.
 
 Quando accede al server FTP, un utente può esplorare l'intero filesystem a seconda dei suoi privilegi.
