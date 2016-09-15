@@ -55,31 +55,24 @@ Steps to setup translation for a new todo:
 
 ::
 
-  mkdir -p locale
+  mkdir locale/
 
 4. Extract the strings (from a Python source code): 
 
 ::
 
-  xgettext --msgid-bugs-address "nethserver@googlegroups.com" --package-version "$(git describe --tags)"  \
-  --package-name "$(basename `pwd`)" --foreign-user -d "$(basename `pwd`)" -o "locale/$(basename `pwd`).pot" \
+  PACKAGE=$(basename `pwd`)
+  xgettext --msgid-bugs-address "translations@nethserver.org" --package-version "1.0.0"  \
+  --package-name "$PACKAGE" --foreign-user -d "$PACKAGE" -o "locale/${PACKAGE}.pot" \
   -L Python root/etc/nethserver/todos.d/*
 
-5. Create the language file from template:
+5. Run the txinit.sh script and commit newly created files into git.
 
-::
+6. Upload the new ``.pot`` resource to Transifex (special permissions are needed): ::
 
-  mkdir -p locale/en/LC_MESSAGES
-  cp locale/<pkgname>.pot  locale/en/LC_MESSAGES/<pkgname>.po
+  tx push -s
 
-6. Substitute following fields in po file:
 
-  * DESCRIPTIVE
-  * LANGUAGE <LL@li.org>
-  * CHARSET (must be UTF-8)
-  * FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-
-7. Add translations. You can try poedit editor
 
 Server Manager
 ==============
