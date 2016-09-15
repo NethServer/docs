@@ -40,7 +40,7 @@ Administrator Manual
    firewall
    web_proxy
    content_filter
-   snort
+   suricata
    proxy_pass
    virtual_hosts
    shared_folder

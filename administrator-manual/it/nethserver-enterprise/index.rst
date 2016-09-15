@@ -84,7 +84,7 @@ NethSecurity
    web_proxy
    content_filter
    flashstart
-   snort
+   suricata
    bandwidth_monitor
    pop3_proxy
    vpn

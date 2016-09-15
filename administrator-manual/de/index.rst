@@ -55,7 +55,7 @@ Modules
    content_filter
    firewall
    proxy_pass
-   snort
+   suricata
    bandiwidth_monitor
    statistics
    dns
