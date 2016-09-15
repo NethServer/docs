@@ -1,18 +1,16 @@
-.. _snort-section:
+.. _suricata-section:
 
 ===========
-IPS (Snort)
+IPS (Suricata)
 ===========
 
-Snort is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system for the network intrusion analysis. 
+Suricata is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system for the network intrusion analysis. 
 The software analyzes all traffic through the firewall searching for known attacks and anomalies. 
 
 When an attack or anomaly is detected, the system can decide whether to block traffic 
-or simply save the event on a log n (:file:`/var/log/snort/alert`). 
+or simply save the event on a log n (:file:`/var/log/suricata/fast.log`). 
 
-A special widget inside the dashboard summarizes all detected attacks. 
-
-:index:`Snort` can be configured accordingly to following policies. Each policy consists of several rules: 
+:index:`Suricata` can be configured accordingly to following policies. Each policy consists of several rules: 
 
 * Connectivity: check a large number of vulnerabilities, do not impact on non-realtime applications (eg VoIP) 
 * Balanced: suitable for most scenarios, it is a good compromise between security and usability (recommended) 

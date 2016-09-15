@@ -34,7 +34,7 @@ Manuale amministratore
    ups
    fax_server
    firewall
-   snort
+   suricata
    proxy_pass
    virtual_hosts
    shared_folder
