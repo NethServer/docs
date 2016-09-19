@@ -1,1 +1,0 @@
-../webvirtmgr.rst

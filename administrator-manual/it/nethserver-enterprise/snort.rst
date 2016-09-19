@@ -1,1 +1,0 @@
-../snort.rst

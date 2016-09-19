@@ -1,1 +1,0 @@
-../adagios.rst
