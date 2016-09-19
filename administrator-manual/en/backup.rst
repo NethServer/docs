@@ -82,6 +82,8 @@ Graphic interface
 In the :menuselection:`Restore Data` menu section it is possible to search, select and restore
 one or more directories from backup, navigating the graphical tree with all paths included in the backup.
 
+By default, last backup tree is shown. If you whant to restore a file from a previous backup, select the backup date from *"Backup File"* selector.
+
 There are two options to restore:
 
 * Restore data in the original path, the current files in the filesystem are overwritten by the restored files from backup.
