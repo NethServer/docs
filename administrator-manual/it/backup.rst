@@ -87,7 +87,8 @@ Interfaccia grafica
 Nel menu :menuselection:`Restore Data` è possibile cercare, selezionare e ripristinare
 una o più cartelle dal backup, navigando l'albero grafico con tutti i percorsi inclusi nel backup.
 
-Di default viene mostrato l'albero dell'ultimo backup, se si desidera ripristinare un file di un backup precedente, selezionare la data del backup dal selettore *"File Backup"*
+Di default viene mostrato l'albero dell'ultimo backup, se si desidera ripristinare un file di un backup precedente, selezionare la data del backup dal seletto
+re *"File Backup"*.
 
 Ci sono due opzioni di ripristino:
 
