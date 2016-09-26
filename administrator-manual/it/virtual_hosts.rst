@@ -10,7 +10,7 @@ Virtual host
 L'hosting virtuale è un metodo che consente di ospitare più nomi di dominio diversi su un singolo server. Su |product|, dalla pagina `Virtual host` è possibile configurare siti web come virtual host Apache.
 
 Nomi dei virtual host (FQDN)
--------------------------
+----------------------------
 
 È la lista dei nomi di dominio FQDN che sono associati al virtual host. I valori devono essere separati con "," (virgola).
 Per raggiungere il virtual host sarà anche necessario un record DNS. Se abilitata l'opzione nella sezione "Azioni aggiuntive", un alias  per ogni FQDN verrà automaticamente creato su "DNS > Alias Server", ma è utile solo per i client che usano il server come DNS.
