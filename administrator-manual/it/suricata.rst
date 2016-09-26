@@ -1,8 +1,8 @@
 .. _suricata-section:
 
-===========
+==============
 IPS (Suricata)
-===========
+==============
 
 Suricata è un :dfn:`IPS` (:index:`Intrusion Prevention System`), un sistema per la previsione delle intrusioni in rete.
 Il software analizza tutto il traffico che attraversa il firewall alla ricerca di attacchi noti e anomalie.
