@@ -69,6 +69,7 @@ A rule consists of four main parts:
 * Source: 
 * Destination: 
 * Service: 
+* Time condition:
 
 
 Available actions are:
@@ -316,6 +317,10 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 * *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
 
 .. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
+
+.. index:: time conditions
+
+* Time conditions: can be associated to firewall rules to limit their effectiveness to a given period of time.
 
 The last type of object is used to specify the type of traffic:
 
