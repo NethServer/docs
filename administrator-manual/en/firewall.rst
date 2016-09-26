@@ -65,11 +65,11 @@ If the packet match a rule, the rule is applied.
 
 A rule consists of four main parts:
 
-* Action: action to take when the rule applies
-* Source: 
-* Destination: 
-* Service: 
-* Time condition:
+* Action
+* Source 
+* Destination
+* Service
+* Time condition
 
 
 Available actions are:
@@ -281,9 +281,10 @@ To enable traffic shaping it is necessary to know the amount of available bandwi
 and fill in the fields indicating the speed of the Internet link. Be aware 
 that in case of congestion by the provider there is nothing to do in order to improve performance. 
 
-Traffic shaping can be configured from the page :menuselection:`Traffic shaping` -> :guilabel:`Interface rules`.
+Traffic shaping rules can be configured from the :menuselection:`Firewall rules` page,
+while the available bandwidth can be set from the :menuselection:`Network` page for all red interfaces.
 
-The system provides three levels of priority, high, medium and low: as default all traffic has medium priority.
+The system provides two levels of priority, high and low: as default all traffic has medium priority.
 It is possible to assign high or low priority to certain services based on the port used (eg low traffic peer to peer). 
 
 The system works even without specifying  services to high or low priority, 
@@ -292,7 +293,11 @@ because, by default, the interactive traffic is automatically run at high priori
 Even the traffic type PING is guaranteed high priority. 
 
 
-.. note:: Be sure to specify an accurate estimate of the bandwidth on network interfaces.
+.. note::
+
+   Be sure to specify an accurate estimate of the bandwidth on network interfaces.
+   To pick an appropriate setting, please do not trust the nominal value,
+   but use the online tools to test the real provider speed.
 
 
 Firewall objects
@@ -328,6 +333,12 @@ The last type of object is used to specify the type of traffic:
 
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
+
+.. note::
+
+   Rules which have time conditions are enforced only for new connections. 
+   Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
+   before 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
 
 
 IP/MAC binding

@@ -71,6 +71,7 @@ Una regola si compone di tre parti principali:
 * Origine traffico: indirizzo di origine del traffico, può essere una zona, una rete o un singolo host
 * Destinazione traffico: indirizzo di destinazione del traffico, può essere una zona, una rete o un singolo host
 * Servizio: porta e protocollo che individua un determinato tipo di traffico
+* Condizione temporale: la regola si applica solo nell'intervallo temporale specificato
 
 
 Le azioni disponibili sono:
@@ -270,9 +271,10 @@ e compilare i campi indicando la velocità nominale del link Internet, consapevo
 che in caso di congestione da parte del provider non c'è nulla da fare per poter migliorare le prestazioni.
 I classici valori per una ADSL sono 256 kbit/sec per uplink e 1280 per downlink.
 
-La configurazione della banda può essere effettuata nella pagina :menuselection:`Gestione banda` -> :guilabel:`Regole interfacce`.
+Le regole di gestione banda possono essere configurare dalla pagina :menuselection:`Regole firewall`,
+mentre la banda disponibile può essere modificata dalla pagina :menuselection:`Rete` per ciascuna interfaccia red.
 
-Il sistema prevede tre livelli di priorità, alta, media e bassa: di default tutto il traffico ha priorità media,
+Il sistema prevede due livelli di priorità, alta e bassa: di default tutto il traffico ha priorità media,
 ma è possibile assegnare priorità alta o bassa a determinati servizi in base alla porta utilizzata (per esempio bassa al traffico peer to peer).
 
 Da evidenziare il fatto che il sistema funziona anche senza che vengano specificati servizi a priorità alta o bassa,
@@ -281,7 +283,11 @@ perché, di default, il traffico interattivo viene automaticamente gestito ad al
 Anche al traffico di tipo PING è garantita alta priorità.
 
 
-.. note:: Assicurarsi di specificare una stima accurata della banda.
+.. note:: 
+
+   Assicurarsi di specificare una stima accurata della banda.
+   Prima di immetere un valore, si consiglia di stimare la velocità
+   della linea usando gli specifici strumenti disponibili online.
 
 
 Oggetti firewall
@@ -306,12 +312,24 @@ Esistono 6 tipi di oggetti, 5 di questi sono relativi a sorgenti e destinazioni 
 
 .. note:: Di default gli host che fanno parte di una Zona non possono fare alcun tipo di traffico, sarà necessario quindi creare tutte le regole necessarie a caratterizzarne il comportamento.
 
+.. index:: time conditions
+
+* Condizione temporali: possono essere associati alle regole del firewall per limitarne l'effetto ad un determinato periodo di tempo.
+
 L'ultimo oggetto invece specifica il tipo di traffico ed è quello dei:
 
 * Servizi: rappresentano un servizio in ascolto su un host. Esempio: ssh, https
 
 Durante la creazione delle regole, è possibile usare i record definiti in :ref:`dns-section` e :ref:`dhcp-section` come oggetti host.
 Inoltre ogni interfaccia di rete con un ruolo associato è automaticamente elencata fra le zone disponibili.
+
+.. note::
+
+   Le regole che hanno condizioni temporali sono applicate solo per le nuove connessioni.
+   Esempio: se si stanno bloccando le connessioni HTTP dalle 09:00 alle 18:00, tutte le connessioni
+   stabilite prima delle ore 09:00 saranno permesse fino a quando non termineranno.
+   Qualsiasi nuova connessione effettuata dopo le 09:00 sarà bloccata.
+
 
 Binding IP/MAC
 ==============
