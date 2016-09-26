@@ -204,7 +204,7 @@ Il sistema invierà una mail informativa all'utente quando la sua password è in
 
 
 Effetti password scaduta
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Allo scadere della password l'utente sarà in grado di scaricare regolarmente la posta ma non potrà più accedere alle cartelle
 e stampanti condivise sul server (Samba) o da altri pc in caso il pc faccia parte del dominio. 
