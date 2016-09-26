@@ -31,9 +31,16 @@ Manuale amministratore
    backup
    accounts
    mail
+   webmail
+   webtop4
+   pop3_proxy
+   pop3_connector
+   chat
    ups
    fax_server
    firewall
+   web_proxy
+   content_filter
    suricata
    proxy_pass
    virtual_hosts
@@ -43,6 +50,7 @@ Manuale amministratore
    dns
    dhcp
    vpn
+   nextcloud
    ftp
    phone_home
    snmp
