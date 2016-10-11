@@ -92,6 +92,36 @@ It's possible to force a bridge (br0) in promiscuous mode using this command: ::
 
   ifconfig br0 promisc
 
+Active Directory member
+=======================
+
+In this scenario |product| becomes a trusted server of an existing
+Active Directory (AD) domain.  When accessing a resource from a domain
+workstation, user credentials are checked against a domain
+controller, and the access to the resource is granted.
+
+Joining an Active Directory domain has some pre-requisites:
+
+1. In :menuselection:`DNS and DHCP` page, set the domain controller
+   as DNS. If a second DC exists, it can be set as secondary DNS.
+
+2. In :menuselection:`Date and time` page, set the DC as NTP time
+   source; the Kerberos protocol requires the difference between
+   systems clocks is less than 5 minutes.
+
+3. The domain name of the server is used as NetBios domain name,
+   thus the domain name of the server *must* be the same of the AD
+   domain controller.
+   Maximum length is 15 characters.
+
+After pre-requisites are set, proceed with the join from :guilabel:`User and groups` page:
+
+* Fill :guilabel:`DNS server IP address` field which usually is the 
+  IP address of the AD controller.
+
+* Click the submit button. You will be prompted for an user name and
+  password: provide AD ``administrator`` or any other account
+  credentials with permissions to join the machine to the domain.
 
 Users
 =====

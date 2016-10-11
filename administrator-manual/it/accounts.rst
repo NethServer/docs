@@ -91,6 +91,39 @@ Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per esem
 
   ifconfig br0 promisc
 
+Membro Active Directory 
+=======================
+
+In questo scenario |product| è configurato come
+un server membro di un dominio Active Directory (AD), e come tale delega
+l'autenticazione degli utenti ai controller di dominio.  
+
+Per entrare in un dominio Active Directory ci sono alcuni pre-requisiti:
+
+1. Nella pagina :menuselection:`DNS and DHCP`, impostare il controller
+   di dominio come DNS. Se esiste un altro DC, impostarlo come DNS
+   secondario.
+
+2. Nella pagina :menuselection:`Data e ora`, impostare il DC come
+   sorgente del tempo NTP; il protocollo Kerberos richiede infatti che
+   la differenza tra gli orologi dei sistemi sia meno di 5 minuti.
+
+3. Il nome dominio del server è usato come nome NetBios per il dominio,
+   quindi il nome del dominio del server *deve* essere lo stesso
+   del controllder AD.
+   La lunghezza massima è di 15 caratteri.
+
+
+Dopo aver sistemato i pre-requisiti, procedere con il join dalla pagina :guilabel:`Utenti e gruppi`:
+
+* Compilare il campo :guilabel:`Indirizzo IP server DNS` che
+  di solito è l'indirizzo IP del controller AD stesso.
+
+* Fare click sul pulsante. Verrà richiesto un nome utente e la
+  password: digitare le credenziali di ``administrator`` o di
+  qualsiasi altro account che ha il permesso di fare *join* della
+  macchina al dominio.
+
 
 
 Utenti
