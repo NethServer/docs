@@ -4,15 +4,14 @@ Statistiche (collectd)
 
 :index:`Collectd` è un software che raccoglie periodicamente :index:`statistiche` sulle performance del sistema e 
 le salva in speciali file :index:`RRD`.
-Le statistiche sono quindi consultabili attraverso un'interfaccia web.
+Le statistiche sono quindi consultabili attraverso un'interfaccia web, denominata:
 
-L'amministratore può scegliere fra due interfacce alternative:
-
-* Collectd web, pacchetto *nethserver-collectd-web*
 * Collectd Graph Panel (CGP), pacchetto *nethserver-cgp*
 
-Entrambe le interfacce web sono accessibili attraverso un URL casuale, l'indirizzo è
+L'interfaccia web è accessibile attraverso un URL casuale, l'indirizzo è
 visibile nella sezione :guilabel:`Applicazioni` all'interno della :guilabel:`Dashboard`.
+E' possibile condividere l'URL casuale per consentire a utenti non autenticati di visualizzare i grafici.
+L'accesso è limitato dalle zone e dagli indirizzi IP configurati nel servizio httpd-admin (in Servizi di rete).
 
 Al termine dell'installazione, il sistema collezionerà le seguenti informazioni:
 
@@ -27,12 +26,12 @@ Al termine dell'installazione, il sistema collezionerà le seguenti informazioni
 * interfacce di rete 
 * :index:`latenza di rete`
 
-Per ciascun controllo, l'interfaccia mostra un grafico che contiene sia l'ultimo valore raccolto, sia i valori minimi, massimi e medi.
+Per ciascuna metrica, l'interfaccia mostra un grafico che contiene sia l'ultimo valore raccolto, sia i valori minimi, massimi e medi.
 
 Latenza di rete
 ===============
 
-Il plugin :index:`ping` misura la latenza di rete. Ad intervalli regolari, collectd invia un ping al DNS configurato.
+Il plugin :index:`ping` misura la latenza di rete. Ad intervalli regolari, collectd invia un ping ICMP al DNS configurato.
 Se la multi WAN è attiva, anche tutti i provider abilitati verranno controllati.
 
 Host aggiuntivi possono essere monitorati (es. server web) usando una lista separata da virgole all'interno della proprietà ``PingHosts``.
