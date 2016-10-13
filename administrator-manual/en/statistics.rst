@@ -7,7 +7,7 @@ Statistics will be displayed inside a web interface, named
 
 * Collectd Graph Panel (CGP), package *nethserver-cgp*
 
-The web interfaces will create a random URL accessible from the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
+The web interface will create a random URL accessible from the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
 It's possible to share the random URL to let non-authenticated users view graphs. Access is allowed only from the
 zones and IP addresses of the http-admin service (see Network services).
 
