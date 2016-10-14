@@ -109,10 +109,22 @@ Joining an Active Directory domain has some pre-requisites:
    source; the Kerberos protocol requires the difference between
    systems clocks is less than 5 minutes.
 
-3. The domain name of the server is used as NetBios domain name,
-   thus the domain name of the server *must* be the same of the AD
-   domain controller.
-   Maximum length is 15 characters.
+3. When you join an Active Directory domain,
+   the system assumes the default NetBIOS domain name is the
+   leftmost label in the DNS domain suffix up to the first 15 characters.
+
+   **Example**
+
+   - FQDN: test.local.nethserver.org
+   - Domain: local.nethserver.org
+   - Default NetBIOS domain: LOCAL
+
+.. note::
+
+   If the default NetBIOS domain is not good for you environment,
+   you can change it from command line: ::
+
+     config set smb service Workgroup <your_netbios_domain>
 
 After pre-requisites are set, proceed with the join from :guilabel:`User and groups` page:
 

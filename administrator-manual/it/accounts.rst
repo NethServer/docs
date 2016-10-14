@@ -108,11 +108,22 @@ Per entrare in un dominio Active Directory ci sono alcuni pre-requisiti:
    sorgente del tempo NTP; il protocollo Kerberos richiede infatti che
    la differenza tra gli orologi dei sistemi sia meno di 5 minuti.
 
-3. Il nome dominio del server è usato come nome NetBios per il dominio,
-   quindi il nome del dominio del server *deve* essere lo stesso
-   del controllder AD.
-   La lunghezza massima è di 15 caratteri.
+3. Quando si esegue il join ad un dominio Active Directory,
+   il sistema assume come dominio NetBIOS di default
+   la parte più a sinistra del dominio DNS, fino ad un massimo di 15 caratteri.
 
+   **Esempio**
+
+   - FQDN: test.local.nethserver.org
+   - Dominio: local.nethserver.org
+   - Dominio NetBIOS di default: LOCAL
+
+.. note::
+
+   Se il dominio NetBIOS di default non è corretto per l'ambiente,
+   è possibile cambiarlo da line di comando: ::
+
+     config set smb service Workgroup <your_netbios_domain>
 
 Dopo aver sistemato i pre-requisiti, procedere con il join dalla pagina :guilabel:`Utenti e gruppi`:
 
