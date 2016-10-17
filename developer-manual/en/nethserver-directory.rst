@@ -91,7 +91,7 @@ A :index:`service account` is composed by three parts:
 * a password
 * an ACL to access LDAP fields
 
-The developer can user the ``NethServe::Directory`` perl module to handle a service account.
+The developer can use the ``NethServe::Directory`` perl module to handle a service account.
 
 Perl code snippet to create a service account with read access: ::
 
@@ -116,7 +116,7 @@ Configuration for client (eg. Mozilla Thunderbird):
 * Host: ip address of the server
 * Port: 389
 * Base DN: ou=People,dc=example,dc=org
-* On Advanced tab, make sue "Login method" is set to "Simple"
+* On Advanced tab, make sure "Login method" is set to "Simple"
 
 
 Inspect OpenLDAP ACLs
