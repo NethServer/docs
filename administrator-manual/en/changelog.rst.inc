@@ -2,7 +2,7 @@ Changes
 =======
 
 Full changelog:
-https://github.com/NethServer/dev/milestone/5?closed=1
+https://github.com/NethServer/dev/milestone/7?closed=1
 
 Known bugs:
 https://github.com/NethServer/dev/issues?q=is%3Aissue+is%3Aopen+label%3Abug
