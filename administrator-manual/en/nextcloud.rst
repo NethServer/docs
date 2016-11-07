@@ -2,7 +2,7 @@
 Nextcloud
 =========
 
-`Nextcloud <http://nextcloud.org/>`_ provides universal access to your files via the web,
+`Nextcloud <http://nextcloud.com/>`_ provides universal access to your files via the web,
 your computer or your mobile devices wherever you are. It also provides a platform to easily
 view and synchronize your contacts, calendars and bookmarks across all your devices and enables
 basic editing right on the web.
