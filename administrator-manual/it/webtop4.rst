@@ -152,7 +152,7 @@ Importazione email, calendari e contatti da PST
 
 E' possibile importare email e successivamente anche calendari e rubriche da un archivio :index:`PST` :index:`Outlook`.
 
-Script iniziale per esportazione dati da PST e importazione email: :file:`/user/share/webtop/doc/pst2webtop.sh`
+Script iniziale per esportazione dati da PST e importazione email: :file:`/usr/share/webtop/doc/pst2webtop.sh`
 
 Prima di utilizzare lo script installare questo pacchetto: ::
 
@@ -165,7 +165,7 @@ Eseguire lo script indicando il file PST e l'utente di sistema in cui importare 
 Il contenuto del file PST verrà esportato e inserito in una cartella temporanea.
 Alla fine dell'importazione verranno elencati i comandi per eseguire le eventuali importazioni di calendari e contatti.
 
-Script importazione Contatti: :file:`/user/share/webtop/doc/pst2webtop_card.php`
+Script importazione Contatti: :file:`/usr/share/webtop/doc/pst2webtop_card.php`
 
 In base ai Contatti trovati durante l'esportazione dello script iniziale utilizzare lo script in questo modo: ::
 
@@ -181,9 +181,9 @@ Ipotizziamo che lo script precedente (pst2webtop.sh) abbia esportato dal file PS
    
 Per importare nella Rubrica predefinita (WebTop) dell'utente pippo: ::
 
-   /user/share/webtop/doc/pst2webtop_card.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
+   /usr/share/webtop/doc/pst2webtop_card.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
    
-Script importazione Calendari: :file:`/user/share/webtop/doc/pst2webtop_cal.php`
+Script importazione Calendari: :file:`/usr/share/webtop/doc/pst2webtop_cal.php`
 
 In base ai Calendari trovati durante l'esportazione dello script iniziale utilizzare lo script in questo modo: ::
 
@@ -199,7 +199,7 @@ Ipotizziamo che lo script precedente (pst2webtop.sh) abbia esportato dal file PS
    
 Per importare nel Calendario predefinito (WebTop) dell'utente pippo: ::
 
-   /user/share/webtop/doc/pst2webtop_cal.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
+   /usr/share/webtop/doc/pst2webtop_cal.php pippo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
 
 .. note::
    Lo script importa gli eventi utilizzando il fuso orario dall'utente WebTop, se configurato.
