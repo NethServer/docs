@@ -157,7 +157,7 @@ Before using followings scripts, you will need to install *libpst* package: ::
 Mail
 ----
 
-Initial script to import mail messages: :file:`/user/share/webtop/doc/pst2webtop.sh`
+Initial script to import mail messages: :file:`/usr/share/webtop/doc/pst2webtop.sh`
    
 To start the import, run the script specifying the PST file and the system user: ::
 
@@ -170,7 +170,7 @@ The script will list all created temporary files.
 Contacts
 --------
 
-Script for contacts import: :file:`/user/share/webtop/doc/pst2webtop_card.php`.
+Script for contacts import: :file:`/usr/share/webtop/doc/pst2webtop_card.php`.
 
 The script will use files generated from mail import phase: ::
 
@@ -186,12 +186,12 @@ Let us assume that the pst2webtop.sh script has generated following output from 
    
 To import the default address book (WebTop) of *foo* user: ::
 
-   /user/share/webtop/doc/pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
+   /usr/share/webtop/doc/pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Contatti/contacts' WebTop
   
 Calendars
 ---------
  
-Script for calendars import: :file:`/user/share/webtop/doc/pst2webtop_cal.php`
+Script for calendars import: :file:`/usr/share/webtop/doc/pst2webtop_cal.php`
 
 The script will use files generated from mail import phase: ::
 
@@ -207,7 +207,7 @@ Let us assume that the pst2webtop.sh script has generated following output from 
 
 To import the default calendar (WebTop) of *foo* user: ::
 
-        /user/share/webtop/doc/pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
+        /usr/share/webtop/doc/pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Cartelle personali/Calendario/calendar' WebTop
 
 .. note::
    The script will import all events using the timezone selected by the user inside WebTop, if set.
