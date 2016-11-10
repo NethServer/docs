@@ -18,7 +18,8 @@ require a manual intervention:
 
 * Legacy short user name support (#5142). Starting from rc2 the system is
   configured to accept both short and long user name formats.  That means the
-  user can login to any service either as *username* or *username@domain*.
+  user can login to any PAM-based service either as *username* or
+  *username@domain*.
 
 To enable the enhancements run the following command: ::
 

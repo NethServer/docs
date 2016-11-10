@@ -29,9 +29,9 @@ richiedono un intervento manuale.
   l'RPM nethserver-directory.
 
 * Legacy short user name support (#5142). A cominciare dalla release rc2 il sistema
-  è configurato per accettare i nomi utenti in formato lungo e corto. Questo 
-  significa che l'utente può accedere a qualsiasi servizio o come *username* o
-  come *username@domain*.
+  è configurato per accettare i nomi utenti in formato lungo e corto. Questo
+  significa che l'utente può accedere a qualsiasi servizio basato su PAM o come
+  *username* o come *username@domain*.
 
 Per abilitare questi cambiamenti eseguire il seguente comando: ::
 
