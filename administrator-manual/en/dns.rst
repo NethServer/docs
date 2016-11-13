@@ -19,9 +19,6 @@ During a name lookup the server will:
 If |product| is also the DHCP server on the network, all the machines will be configured to use the server itself for name resolution.
 
 
-.. note:: You must specify at least one external DNS inside the :guilabel:`DNS server` page.
-
-
 Hosts
 =====
 
