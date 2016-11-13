@@ -42,6 +42,16 @@ interface. For instance, if the green interface has IP/netmask
 ``192.168.1.1/255.255.255.0`` the range must be ``192.168.1.2 -
 192.168.1.254``.
 
+.. _advanced options:
+
+Advanced options
+----------------------
+
+There are seven advanced options for DHCP.  You can assign zero options, one option or all seven options.   
+
+For the servers – DNS, NTP, WINS and TFTP – you can assign zero, one or more for each server; if you place more than one, use a comma between each server with no space.
+
+
 .. _dhcp_reservation:
 
 Host IP reservation
