@@ -92,6 +92,15 @@ It's possible to force a bridge (br0) in promiscuous mode using this command: ::
 
   ifconfig br0 promisc
 
+Hyper-V
+~~~~~~~
+
+Configure MAC Address Spoofing for Virtual Network Adapters
+
+https://technet.microsoft.com/en-us/library/ff458341.aspx
+
+
+
 Active Directory member
 =======================
 

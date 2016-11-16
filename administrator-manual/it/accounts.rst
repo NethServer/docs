@@ -90,6 +90,15 @@ Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per esem
 È possibile forzare un bridge (br0) in modalità promiscua usando il seguente comando: ::
 
   ifconfig br0 promisc
+  
+Hyper-V
+~~~~~~~
+
+Configurare *MAC Address Spoofing for Virtual Network Adapters*
+
+https://technet.microsoft.com/it-it/library/ff458341.aspx
+
+
 
 Membro Active Directory 
 =======================
