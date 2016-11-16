@@ -35,7 +35,7 @@ Samba Active Directory
 
 When installing Samba Active Directory, the system needs an additional IP address which will be the address of 
 Active Directory controller inside the LAN.
-The additional IP address must satisfy three conditions:
+The additional IP address is virtual whether or not are using you are |product| has a virtual, and must satisfy three conditions:
 
 * the IP address must be in the same subnet range of a green network
 * the green network must be bound to a bridged interface
