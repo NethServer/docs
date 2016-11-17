@@ -33,7 +33,7 @@ Realmd writes a lot of information on the system journal. See `journalctl` comma
 Manual Join
 -----------
 
-nethserver-dc-join action joins automatically to domain. If you whant to join domain manually, check that machine came up ::
+nethserver-dc-join action joins automatically to domain. If you want to join domain manually, check that machine came up ::
 
    # host -t SRV _ldap._tcp.`config get DomainName`
    _ldap._tcp.nethsever.org has SRV record 0 100 389 nsdc-vm8.nethsever.org.
@@ -72,3 +72,4 @@ new provisioning run. ::
     find /var/lib/machines/nsdc/var/lib/samba/ -type f | xargs -- rm -vf
     config setprop sssd Provider none status disabled
     > /etc/sssd/sssd.conf
+    signal-event nethserver-dnsmasq-save

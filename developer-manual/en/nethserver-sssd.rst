@@ -177,6 +177,10 @@ All functions are documented using perldoc ::
 
   perldoc NethServer::SSSD
 
+This command prints out the current settings, by querying ``NethServer::SSSD`` 
+methods ::
+    
+    perl -MNethServer::SSSD -MJSON -e '$o = NethServer::SSSD->new(); print JSON::to_json({'BaseDN' => $o->baseDN(), 'BindDN' => $o->bindDN(), 'BindPassword' => $o->bindPassword(), 'UserDN' => $o->userDN(), 'GroupDN' => $o->groupDN()});' | python -mjson.tool
 
 Join Active Directory
 ---------------------
@@ -202,10 +206,6 @@ password renewal, and crojob tasks: ::
     KrbKeytabOwner=
     KrbKeytabPerms=
 
-* ``KrbStatus {enabled,disabled}``
-  This is the main switch. If set to ``enabled`` a ticket credential cache file is kept valid by the hourly cronjob
-* ``KrbCredentialsCachePath``
-  The path of the credentials cache. It defaults to ``/tmp/krb5cc*<service*uid>``, if ``service`` is also a system user.
 * ``KrbKeytabPath``
   Keytab file path. If empty, ``/var/lib/misc/nsrv-<service>.keytab`` is assumed
 * ``KrbPrimaryList <comma separated words list>``
@@ -219,3 +219,10 @@ The implementation is provided by ``/usr/libexec/nethserver/smbads``.
 
 Individual services can link themselves to ``nethserver-sssd-initkeytabs``
 action in the respective ``-update`` event.
+
+The following props are no longer honoured since ns7:
+
+* ``KrbStatus {enabled,disabled}``
+  This is the main switch. If set to ``enabled`` a ticket credential cache file is kept valid by the hourly cronjob
+* ``KrbCredentialsCachePath``
+  The path of the credentials cache. It defaults to ``/tmp/krb5cc*<service*uid>``, if ``service`` is also a system user.

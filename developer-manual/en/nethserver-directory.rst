@@ -7,7 +7,7 @@ All accounts are saved inside OpenLDAP.
 
 Features:
 
-* User and group account management
+* RFC2307 schema, user and group account management
 * PAM LDAP password storage
 * Password strength control
 * Service accounts
@@ -16,11 +16,9 @@ Features:
 Schema and base DN
 ===================
 
-Following schema are used inside OpenLDAP:
+Following schema are always loaded by OpenLDAP: core, cosine, nis, inetorgperson.
 
-* always loaded: core, inetorgperson, cosine, corba
-
-The LDAP tree is always accessible with the following DN: **dc=directory,dc=nh**.
+The LDAP tree is always accessible with the following base DN: **dc=directory,dc=nh**.
 But there is also an :index:`overlay` which maps the domain name to the base DN.
 For example, given the domain *mydomain.com*, the corresponding DN will be **dc=mydomain,dc=com**.
 
@@ -34,19 +32,19 @@ All users are in the primary group named *locals*.
 Examples
 --------
 
-List all entries, with root access and automatic bind: ::
+List all entries, with root access and automatic bind (unix domain socket): ::
 
  ldapsearch -Y EXTERNAL
 
 List all entries with libuser bind: ::
 
- ldapsearch  -D cn=libuser,dc=directory,dc=nh -w `cat /var/lib/nethserver/secrets/libuser`
+ ldapsearch  -D cn=libuser,dc=directory,dc=nh -w `cat /var/lib/nethserver/secrets/libuser` -h 127.0.0.1
 
 
 User account states
 ===================
 
-Account management is done via :index:`libuser` which exports some tools (luseradd, luserdel, etc) to create/modify/delete users and groups.
+Account management is done via :index:`libuser` which exports some tools (luseradd, luserdel, etc) to create/modify/delete users, groups and set passwords.
 
 The process of user/group creations is:
 
@@ -73,25 +71,25 @@ But its verbosity can be changed at run time by issuing this command: ::
 The command above changes the OpenLDAP `config` DB and set the log verbosity to trace "connections/operations/results" (256). 
 Check the debugging levels table from OpenLDAP site for more details: http://www.openldap.org/doc/admin24/slapdconf2.html#olcLogLevel%3A%20%3Clevel%3E.
 
-.. note:: 
-   slapd log file can grow quickly. Remember to set `olcLogLevel` to `0` if you do not need it any longer.
-
-To permanently change LDAP log level: ::
-
-  config setprop slapd LogLevel 256
-  signal-event nethserver-directory-update
-
 Service accounts
 ================
 
-If a program need to access the LDAP, it should create a special account called :index:`service account`.
-A :index:`service account` is composed by three parts:
+The following service accounts are configured by the ``nethserver-directory-dit-setup`` action:
+
+* ``cn=libuser,dc=directory,dc=nh``. Granted read and write access from 127.0.0.1.
+
+* ``cn=ldapservice,dc=directory,dc=nh``. Granted read only access to
+  non-sensitive attributes, from localhost, or from any other IP address with TLS.
+
+The developer can use the ``NethServe::Directory`` Perl module to handle
+additional service accounts with ad-hoc permissions, if the existing ``ldapservice``, 
+``libuser`` accounts and anonymous binds do not fit his requirements.
+
+A service account is composed by three parts:
 
 * a LDAP user
 * a password
 * an ACL to access LDAP fields
-
-The developer can use the ``NethServe::Directory`` perl module to handle a service account.
 
 Perl code snippet to create a service account with read access: ::
 
@@ -104,19 +102,27 @@ Perl code snippet to use created password: ::
   use NethServer::Password;
   my $pwd = NethServer::Password::store('myservice');
  
+User accounts
+=============
+
+Authenticated binds are granted to TLS protected connections, or connections
+from 127.0.0.1. User DN are in the form: ::
+
+    uid=<username>,ou=People,dc=directory,dc=nh
+
 
 Anonymous access
-----------------
+================
 
 Some LDAP clients and/or legacy environments may require anonymous bind to the LDAP accounts database.
 Currently anonymous access is granted to non-sensitive fields.
 
-Configuration for client (eg. Mozilla Thunderbird):
+Configuration for client:
 
 * Host: ip address of the server
 * Port: 389
-* Base DN: ou=People,dc=example,dc=org
-* On Advanced tab, make sure "Login method" is set to "Simple"
+* Base DN: ``dc=directory,dc=nh``
+
 
 
 Inspect OpenLDAP ACLs
