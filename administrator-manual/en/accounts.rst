@@ -90,7 +90,7 @@ Therefore the additional IP address must satisfy three conditions:
 
 3. the green network must be bound to a bridged interface, so that the Linux
    Container can attach its virtual interface to it; the UI procedure can create the
-   bridge interface automatically if its missing.
+   bridge interface automatically, if it is missing.
 
 From the :guilabel:`Software center` page install the module named *Account
 provider: Samba Active Directory*. At the end of the installation, access the
