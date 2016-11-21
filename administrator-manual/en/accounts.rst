@@ -164,15 +164,16 @@ https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
 Join an existing Active Directory domain
-========================================
+----------------------------------------
 
 Here |product| is bound to a remote Active Directory account provider. It can be
 provided by either Samba or Microsoft implementations.  In this scenario
-|product| becomes a trusted server of an existing Active Directory (AD) domain.
-When accessing a resource from a domain workstation, user credentials are
-checked against a domain controller, and the access to the resource is granted.
+|product| becomes a trusted server of an existing Active Directory domain. When
+accessing a |product| resource from a domain workstation, user credentials are
+checked against one of the domain controllers, and the access to the resource is
+granted.
 
-Joining an Active Directory domain the following pre-requisites:
+Joining an Active Directory domain has the following pre-requisites:
 
 1. the Kerberos protocol requires the difference between systems clocks in the
    network is less than 5 minutes. Configure the network clients to align their
@@ -193,12 +194,13 @@ Joining an Active Directory domain the following pre-requisites:
 
       config set smb service Workgroup <your_netbios_domain>
 
-After pre-requisites are set, proceed with the join from :guilabel:`User and groups` page:
+After all the pre-requisites are met, proceed with the join from :guilabel:`User
+and groups` page:
 
 * Fill :guilabel:`DNS server IP address` field which usually is the
-  IP address of the AD controller.
+  IP address of an AD domain controller.
 
-* Click the submit button. You will be prompted for an user name and
+* Click the :guilabel:`Bind` button. You will be prompted for an user name and
   password: provide AD ``administrator`` or any other account
   credentials with permissions to join a new machine to the domain.
 
@@ -218,51 +220,65 @@ When creating a user, following fields are mandatory:
 * Username
 * Full name (name and surname)
 
-
-Just after creation, the user is disabled. To enable the user, set a password using the :guilabel:`Change password` button.
-When a user is enabled, the user can access to the Server Manager and change his/her own password: :ref:`user_profile-section`.
-
 A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one.
 
 Sometimes you need to block user's access to service without deleting the account.
 This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` buttons.
 
-
 .. note:: When a user is deleted, all user data will be also deleted.
 
-.. _users_services-section:
+Changing the password
+---------------------
 
-Access to services
-------------------
+If an inital password was not set during creation, the user account is disabled.
+To enable it, set a password using the :guilabel:`Change password` button.
 
-A user can be enabled to access specific (or all) services. The access must be
-done using either the full user name with the domain: `username@<domain>`, or
-the short form is supported: just type ``goofy``.
+When a user is enabled, the user can access the Server Manager and change
+his/her own password (see also :ref:`user_profile-section`).
 
-Example:
+If the system is bound to an Active Directory account provider, users can change
+their password using the Windows tools.  In this case you can not set passwords
+shorter than 6 *characters* regardless of the server policies. Windows performs
+preliminary checks and sends the password to the server where they are then
+evaluated according to the :ref:`configured policies <password-management-section>`.
 
-* Domain: nethserver.org
-* Username: goofy
 
-The full user name for login is: ``goofy@nethserver.org``.
+Credentials for services
+------------------------
 
+The user's credentials are the **user name** and his **password**.  Credentials
+are required to access the services installed on the system.
+
+The user name can be issued in two forms: *long* (default) and *short*.  The
+*long* form is always accepted by services. It depends on the service to accept
+also the *short* form.
+
+For instance if the domain is *example.com* and the user is *goofy*:
+
+Long user name form
+    *goofy@domain.com*
+
+Short user name form
+    *goofy*
 
 .. _groups-section:
 
 Groups
 ======
 
-A group of user can be used to assign special permissions to some users or to create email distribution lists.
+A group of users can be used to assign special permissions to some users, such
+as authorize access over a :ref:`shared folder <shared_folders-section>`.
 
-As for the users, a group can be enabled to some (or all) services.
+Two special groups can be created.  The users who belong in one of these groups
+are granted access to the panels of the Server Manager:
 
-.. tip:: For delegating permissions to the Server Manager, use the groups ``managers`` or ``administrators``.
+* :dfn:`administrators`: Users of this group have the same permissions as the
+  *root* user from the Server Manager.
 
-Two special groups can be created, the users who belong in one of these groups are granted access to the panels of the Server Manager
+* :dfn:`managers`: Users of this group are granted access to the *Management*
+  section of the Server Manager.
 
-* :dfn:`administrators`: Users of this group have the same permissions as the ``root`` user.
-* :dfn:`managers`: Users of this group are granted access to the *Management* section.
-
+.. _password-management-section:
 
 Password management
 ===================
@@ -317,11 +333,4 @@ Effects of expired password
 After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or other computer if the machine is part of the domain.
 
 
-Domain password
-----------------
 
-If the system is configured as a domain controller, users can change their password using the Windows tools.
-
-In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
-Windows performs preliminary checks and sends the password to the server where they are then evaluated
-with enabled policies.
