@@ -23,11 +23,7 @@ Login
 =====
 
 The login page will gave you a trusted access to the web interface.
-Use following credentials:
+Use the user name of **root** and your chosen password when installing |product| to log in.
 
-* :index:`Default user` name: **root**
-* :index:`Default password`: **Nethesis,1234**
+.. note:: You can change the root password on the web interface by going to the root@domain.com on the upper right and click on Profile.
 
-.. warning:: Change the root's password as soon as possible, by
-             picking a secure one, composed of a random sequence of
-             mixed-case letters, digits and symbols.
