@@ -93,14 +93,17 @@ Therefore the additional IP address must satisfy three conditions:
    bridge interface automatically, if it is missing.
 
 From the :guilabel:`Software center` page install the module named *Account
-provider: Samba Active Directory*. At the end of the installation, access the
-:guilabel:`User and groups` page to configure it.
+provider: Samba Active Directory*.
 
-Insert the **additional IP address** and press the :guilabel:`Start DC` button.
-If needed enable the automatic bridge interface creation for the green network.
+After the account provider installation, the :guilabel:`User and groups` page
+shows a configuration panel.  Insert the **additional IP address** as explained
+above and press the :guilabel:`Start DC` button. If needed, enable the automatic
+bridge interface creation for the green network.
 
-The Active Directory configuration procedure might require some time to run.
-It creates the Linux Container chroot, by downloading additional packages.
+.. tip::
+
+    The Active Directory configuration procedure might require some time to run.
+    It creates the Linux Container chroot, by downloading additional packages.
 
 At the end of the Active Directory configuration procedure,  the |product| host
 machine is automatically configured to join the Active Directory domain, then
@@ -117,7 +120,9 @@ Active Directory domain.
 
 Default password for user administrator is: ``Nethesis,1234``
 
-.. tip:: Remember to change the administrator password at first login.
+.. warning:: 
+
+    Remember to change the default administrator password by setting a secure one!
 
 Installing on a virtual machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
