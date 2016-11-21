@@ -261,6 +261,20 @@ of the following:
    and provide details of why you think that the standard template
    should be changed.
 
+The expansion of templates
+--------------------------
+
+To expand your custom templates to standard templates you have to use the following command:
+
+	expand-template /etc/***/***.conf
+
+where /etc/***/***.conf has to be changed with the true path to config. 
+For Example you want to add something to the samba configuration, 
+than you have to build a custom template in
+/etc/e-smith/template-custom/etc/samba/smb.conf
+and execute the command:
+
+	expand-template /etc/samba/smb.conf
 
 Subdirectory templates
 ----------------------
