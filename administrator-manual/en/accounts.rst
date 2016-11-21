@@ -34,15 +34,17 @@ Remote providers
 
 Local providers
     To run a **local** account provider go to :guilabel:`Software center` page
-    and install either OpenLDAP or Samba 4 account provider from the modules list.
-
-    .. warning::
-      Please, choose wisely your account provider because the choice is not
-      reversible. Also, the system will forbid any change to the FQDN after the
-      account provider has been configured.
+    and install either OpenLDAP **or** Samba 4 account provider from the modules list.
 
     After installing a local backend (either Samba 4 or OpenLDAP), the administrator
     can create, modify, delete the users and groups.
+
+.. warning::
+
+  Please, choose wisely your account provider because **the choice is not
+  reversible**. Also, the system will forbid any change to the FQDN after the
+  account provider has been configured.
+
 
 Choosing the right account provider
 -----------------------------------
@@ -194,7 +196,7 @@ Joining an Active Directory domain has the following pre-requisites:
    - Domain: local.nethserver.org
    - Default NetBIOS domain: LOCAL
 
-   If the default NetBIOS domain is not good for you environment,
+   If the default NetBIOS domain is not good for your environment,
    you can change it from command line: ::
 
       config set smb service Workgroup <your_netbios_domain>
