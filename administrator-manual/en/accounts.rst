@@ -4,96 +4,165 @@
 Users and groups
 ================
 
-|product| supports authentication and authorization on local and remote account providers.
 
-Supported providers are:
+Account providers
+=================
 
-* LDAP: OpenLDAP running on |product|
-* Active Directory: Samba Active Directory running locally (or remotely) or on an existing Windows AD machine
+|product| supports authentication and authorization against either a **local**
+or **remote** account provider.
 
-After the first configuration wizard, the administrator can configure the authentication
-source using the :guilabel:`User and groups` page.
-If no extra package is installed, the admin user must select a remote account provider.
-Users and groups from remote sources are in *read-only* mode and can not be modified.
+Supported provider types are:
 
-After installing a local backend (Samba Active Directory or OpenLDAP), the user will be able to 
-create/modify/delete local users and groups.
+* Local OpenLDAP running on |product| itself,
+* Remote LDAP server with RFC2307 schema,
+* Local Samba 4 Active Directory Domain Controller,
+* Remote Active Directory (both Microsoft and Samba).
 
-Please, choose wisely your account provider because the choice is not reversible.
-Also, the system will forbid any change to the FQDN after the account provider has been configured.
+Two limitations are enforced on the system, once |product| has been bound to an
+account provider:
 
-OpenLDAP
-========
+1. the FQDN cannot be changed any more
 
-From the :guilabel:`Software Center` install the package named :guilabel:`Account provider: OpenLDAP`.
-At the end of the installation, the package is automatically configured and the administrator
-will be able to manage users and groups from the :guilabel:`User and groups` page.
+2. the account provider cannot be changed
+
+Remote providers
+    A clean |product| installation is ready to connect a **remote** account provider
+    of both types (LDAP, AD). The root user can configure the remote account
+    provider from the :guilabel:`User and groups` page.  After |product| has been
+    bound to a remote account provider the :guilabel:`User and groups` page shows
+    the domain accounts in *read-only* mode.
+
+Local providers
+    To run a **local** account provider go to :guilabel:`Software center` page
+    and install either OpenLDAP **or** Samba 4 account provider from the modules list.
+
+    After installing a local backend (either Samba 4 or OpenLDAP), the administrator
+    can create, modify, delete the users and groups.
+
+.. warning::
+
+  Please, choose wisely your account provider because **the choice is not
+  reversible**. Also, the system will forbid any change to the FQDN after the
+  account provider has been configured.
 
 
-Samba Active Directory
-======================
+Choosing the right account provider
+-----------------------------------
 
-When installing Samba Active Directory, the system needs an additional IP address which will be the address of 
-Active Directory controller inside the LAN.
-The additional IP address is virtual whether or not are using you are |product| has a virtual, and must satisfy three conditions:
+Beside choosing to bind a remote provider or install a local one, the
+administrator must decide which backend type suits his needs.
 
-* the IP address must be in the same subnet range of a green network
-* the green network must be bound to a bridged interface
-* the IP address must not be used by any other machine
+The *File server* module of |product|, which enables the :guilabel:`Shared
+folders` page, can authenticate SMB/CIFS clients only if |product| is bound to an
+Active Directory domain.  The LDAP providers allow access to :guilabel:`Shared
+folders` only in *guest mode*.  See :ref:`shared_folders-section`.
 
-From the :guilabel:`Software Center` install the package named :guilabel:`Account provider: Samba Active Directory`.
-At the end of the installation, access the :guilabel:`User and groups` page to configure Samba for the first time.
-Then insert the additional IP address and press the submit button: if needed, 
-the system will automatically create a bridge on the green network.
+On the other hand, the local OpenLDAP provider is more easy to install and
+configure.
 
-Users and groups can be managed from the :guilabel:`User and groups` page.
+In the end, if the SMB file sharing protocol support is not required an
+LDAP provider is the best choice.
 
-Default account
----------------
 
-After installing Samba Active Directory, the :guilabel:`Users and groups` page has one default entry: :dfn:`administrator`. This
-account is granted special privileges on some specific services, such as joining a
-workstation in Samba Active Directory domain.
+OpenLDAP local provider installation
+------------------------------------
 
-Default password for user administrator is: *Nethesis,1234*
+From the :guilabel:`Software Center` install the module named
+*Account provider: OpenLDAP*. At the end of the installation, the
+package is automatically configured and the administrator will be able to manage
+users and groups from the :guilabel:`User and groups` page.
 
-.. tip:: Remember to change the administrator password at first login.
+
+
+Samba Active Directory local provider installation
+--------------------------------------------------
+
+When installing Samba Active Directory as local account provider, the system
+needs an **additional IP address** and a working internet connection.
+
+The additional IP is assigned to a Linux Container that runs the Active
+Directory Domain Controller roles and must be accessible from the LAN (green
+network).
+
+Therefore the additional IP address must satisfy three conditions:
+
+1. the IP address must be **free**; it must not be used by any other machine,
+
+2. the IP address must be in the same subnet range of a green network,
+
+3. the green network must be bound to a bridged interface, so that the Linux
+   Container can attach its virtual interface to it; the UI procedure can create the
+   bridge interface automatically, if it is missing.
+
+From the :guilabel:`Software center` page install the module named *Account
+provider: Samba Active Directory*.
+
+After the account provider installation, the :guilabel:`User and groups` page
+shows a configuration panel.  Insert the **additional IP address** as explained
+above and press the :guilabel:`Start DC` button. If needed, enable the automatic
+bridge interface creation for the green network.
+
+.. tip::
+
+    The Active Directory configuration procedure might require some time to run.
+    It creates the Linux Container chroot, by downloading additional packages.
+
+At the end of the Active Directory configuration procedure,  the |product| host
+machine is automatically configured to join the Active Directory domain, then
+the :guilabel:`User and groups` page is reloaded and it shows the default
+accounts.
+
+.. index::
+  pair: active directory; default accounts
+
+After installing Samba Active Directory, the :guilabel:`Users and groups` page
+has one default entry: :dfn:`administrator`. This account is granted special
+privileges on some specific services, such as joining a workstation in Samba
+Active Directory domain.
+
+Default password for user administrator is: ``Nethesis,1234``
+
+.. warning:: 
+
+    Remember to change the default administrator password by setting a secure one!
 
 Installing on a virtual machine
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Samba Active Directory runs inside a container which uses a virtual network interface bridged to
-the network interface of the system.
-The virtual network interface must be visible inside the physical network, but often virtualization 
-solutions block ARP traffic. As a result, the Samba Active Directory container
-isn't visible from hosts inside the LAN.
+Samba Active Directory runs inside a Linux Container which uses a virtual
+network interface bridged to the network interface of the system. The virtual
+network interface must be visible inside the physical network, but often
+virtualization solutions block ARP traffic. As a result, the Samba Active
+Directory container is not visible from LAN hosts.
 
-When installing on virtual environment, make sure the virtualization solution allows traffic in *promiscuous mode*.
+When installing on virtual environment, make sure the virtualization solution
+allows traffic in *promiscuous mode*.
 
 VirtualBox
-~~~~~~~~~~
+++++++++++
 
-To setup the promiscuous mode policy, select "Allow all" from the drop down list located in 
-the network settings section.
+To setup the promiscuous mode policy, select "Allow all" from the drop down list
+located in the network settings section.
 
 VMWare
-~~~~~~
+++++++
 
-Enter the networking configuration section of the virtualization node and set the virtual switch
-in promiscuous mode.
+Enter the networking configuration section of the virtualization node and set
+the virtual switch in promiscuous mode.
 
 KVM
-~~~
++++
 
-Make sure the virtual machine is bridged to a real bridge (like br0) and the bridge
-is put in promiscuous mode.
+Make sure the virtual machine is bridged to a real bridge (like br0) and the
+bridge is put in promiscuous mode.
 
-It's possible to force a bridge (br0) in promiscuous mode using this command: ::
+It is possible to force a bridge (i.e. ``br0``) in promiscuous mode using this
+command: ::
 
   ifconfig br0 promisc
 
 Hyper-V
-~~~~~~~
++++++++
 
 Configure MAC Address Spoofing for Virtual Network Adapters
 
@@ -101,25 +170,24 @@ https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
 
-Active Directory member
-=======================
+Join an existing Active Directory domain
+----------------------------------------
 
-In this scenario |product| becomes a trusted server of an existing
-Active Directory (AD) domain.  When accessing a resource from a domain
-workstation, user credentials are checked against a domain
-controller, and the access to the resource is granted.
+Here |product| is bound to a remote Active Directory account provider. It can be
+provided by either Samba or Microsoft implementations.  In this scenario
+|product| becomes a trusted server of an existing Active Directory domain. When
+accessing a |product| resource from a domain workstation, user credentials are
+checked against one of the domain controllers, and the access to the resource is
+granted.
 
-Joining an Active Directory domain has some pre-requisites:
+Joining an Active Directory domain has the following pre-requisites:
 
-1. In :menuselection:`DNS and DHCP` page, set the domain controller
-   as DNS. If a second DC exists, it can be set as secondary DNS.
+1. the Kerberos protocol requires the difference between systems clocks in the
+   network is less than 5 minutes. Configure the network clients to align their
+   clocks to a common time source.  For |product| go to :guilabel:`Date and time`
+   page.
 
-2. In :menuselection:`Date and time` page, set the DC as NTP time
-   source; the Kerberos protocol requires the difference between
-   systems clocks is less than 5 minutes.
-
-3. When you join an Active Directory domain,
-   the system assumes the default NetBIOS domain name is the
+2. The system assumes the default NetBIOS domain name is the
    leftmost label in the DNS domain suffix up to the first 15 characters.
 
    **Example**
@@ -128,21 +196,20 @@ Joining an Active Directory domain has some pre-requisites:
    - Domain: local.nethserver.org
    - Default NetBIOS domain: LOCAL
 
-.. note::
-
-   If the default NetBIOS domain is not good for you environment,
+   If the default NetBIOS domain is not good for your environment,
    you can change it from command line: ::
 
-     config set smb service Workgroup <your_netbios_domain>
+      config set smb service Workgroup <your_netbios_domain>
 
-After pre-requisites are set, proceed with the join from :guilabel:`User and groups` page:
+After all the pre-requisites are met, proceed with the join from :guilabel:`User
+and groups` page:
 
-* Fill :guilabel:`DNS server IP address` field which usually is the 
-  IP address of the AD controller.
+* Fill :guilabel:`DNS server IP address` field which usually is the
+  IP address of an AD domain controller.
 
-* Click the submit button. You will be prompted for an user name and
+* Click the :guilabel:`Bind` button. You will be prompted for an user name and
   password: provide AD ``administrator`` or any other account
-  credentials with permissions to join the machine to the domain.
+  credentials with permissions to join a new machine to the domain.
 
 Users
 =====
@@ -160,50 +227,65 @@ When creating a user, following fields are mandatory:
 * Username
 * Full name (name and surname)
 
+A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one.
 
-Just after creation, the user is disabled. To enable the user, set a password using the :guilabel:`Change password` button.
-When a user is enabled, the user can access to the Server Manager and change his/her own password: :ref:`user_profile-section`.
-
-A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one. 
-
-Sometimes you need to block user's access to service without deleting the account. 
+Sometimes you need to block user's access to service without deleting the account.
 This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` buttons.
-
 
 .. note:: When a user is deleted, all user data will be also deleted.
 
-.. _users_services-section:
+Changing the password
+---------------------
 
-Access to services
-------------------
+If an inital password was not set during creation, the user account is disabled.
+To enable it, set a password using the :guilabel:`Change password` button.
 
-A user can be enabled to access specific (or all) services.
-The access must be done using the full user name with the domain: `username@<domain>`.
+When a user is enabled, the user can access the Server Manager and change
+his/her own password (see also :ref:`user_profile-section`).
 
-Example:
+If the system is bound to an Active Directory account provider, users can change
+their password using the Windows tools.  In this case you can not set passwords
+shorter than 6 *characters* regardless of the server policies. Windows performs
+preliminary checks and sends the password to the server where they are then
+evaluated according to the :ref:`configured policies <password-management-section>`.
 
-* Domain: nethserver.org
-* Username: goofy
 
-The full user name for login is: `goofy@nethserver.org`.
+Credentials for services
+------------------------
 
+The user's credentials are the **user name** and his **password**.  Credentials
+are required to access the services installed on the system.
+
+The user name can be issued in two forms: *long* (default) and *short*.  The
+*long* form is always accepted by services. It depends on the service to accept
+also the *short* form.
+
+For instance if the domain is *example.com* and the user is *goofy*:
+
+Long user name form
+    *goofy@domain.com*
+
+Short user name form
+    *goofy*
 
 .. _groups-section:
 
 Groups
 ======
 
-A group of user can be used to assign special permissions to some users or to create email distribution lists.
+A group of users can be used to assign special permissions to some users, such
+as authorize access over a :ref:`shared folder <shared_folders-section>`.
 
-As for the users, a group can be enabled to some (or all) services.
+Two special groups can be created.  The users who belong in one of these groups
+are granted access to the panels of the Server Manager:
 
-.. tip:: For delegating permissions to the Server Manager, use the groups ``managers`` or ``administrators``.
+* :dfn:`administrators`: Users of this group have the same permissions as the
+  *root* user from the Server Manager.
 
-Two special groups can be created, the users who belong in one of these groups are granted access to the panels of the Server Manager
+* :dfn:`managers`: Users of this group are granted access to the *Management*
+  section of the Server Manager.
 
-* :dfn:`administrators`: Users of this group have the same permissions as the ``root`` user.
-* :dfn:`managers`: Users of this group are granted access to the *Management* section.
-
+.. _password-management-section:
 
 Password management
 ===================
@@ -215,7 +297,7 @@ Password policies can be changed from web interface.
 Complexity
 -----------
 
-The :index:`password` complexity is a set of minimum conditions that password must match to be accepted by the system: 
+The :index:`password` complexity is a set of minimum conditions that password must match to be accepted by the system:
 You can choose between two different management policies about password complexity:
 
 * :dfn:`none`: there is no specific control over the password entered, but minimum length is 7 characters
@@ -225,11 +307,11 @@ The :index:`strong` policy requires that the password must comply with the follo
 
 * Minimum length of 7 characters
 * Contain at least 1 number
-* Contain at least 1 uppercase character 
+* Contain at least 1 uppercase character
 * Contain at least 1 lowercase character
 * Contain at least 1 special character
 * At least 5 different characters
-* Must be not present in the dictionaries of common words 
+* Must be not present in the dictionaries of common words
 * Must be different from the username
 * Can not have repetitions of patterns formed by 3 or more characters (for example the password As1.$ AS1. $ is invalid)
 * If Samba Active Directory is installed, also the system will enable password history
@@ -245,37 +327,20 @@ Expiration
 The  :index:`password expiration` is enabled by default to 6 months from the time when the password is set.
 The system will send an e-mail to inform the users when their password is about to expire.
 
-.. note:: The system will refer to the date of the last password change, 
-   whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired. 
+.. note:: The system will refer to the date of the last password change,
+   whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired.
    In this case you need to change the user password.
-   For example, if the last password change was made in January and the activation of the deadline in October, 
+   For example, if the last password change was made in January and the activation of the deadline in October,
    the system will assume the password changed in January is expired, and notify the user.
 
 
-Effects of expired password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _effects-of-expired-password:
 
-After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or other computer if the machine is part of the domain. 
+Effects of expired passwords
+----------------------------
 
+After password expiration, the user is still able to read and send email messages.
 
-Domain password
-----------------
-
-If the system is configured as a domain controller, users can change their password using the Windows tools.
-
-In the latter case you can not set passwords shorter than 6 *characters* regardless of the server policies.
-Windows performs preliminary checks and sends the password to the server where they are then evaluated 
-with enabled policies.
-
-Notification language
-=====================
-
-Default language for notifications is English.
-If you wish to change it, use the following command: ::
-
-  config setprop sysconfig DefaultLanguage <lang>
-
-Example for Italian: ::
-
-  config setprop sysconfig DefaultLanguage it_IT.utf8
+If |product| has an Active Directory account provider, the user cannot access
+shared folders, printers (by Samba) and other domain computers.
 
