@@ -264,14 +264,15 @@ of the following:
 The expansion of templates
 --------------------------
 
-To expand your custom templates to standard templates you have to use the following command:
+To expand your custom templates to their destination you have to use the following command:
 
-	expand-template /etc/***/***.conf
+	expand-template <template destination>
 
-where /etc/***/***.conf has to be changed with the true path to config. 
+where *template destination* has to be changed with the true path to the configuration file.
+
 For Example you want to add something to the samba configuration, 
-than you have to build a custom template in
-/etc/e-smith/template-custom/etc/samba/smb.conf
+then you have to build a custom template fragment under
+``/etc/e-smith/template-custom/etc/samba/smb.conf/`` directory
 and execute the command:
 
 	expand-template /etc/samba/smb.conf
