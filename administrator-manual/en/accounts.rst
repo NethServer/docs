@@ -327,10 +327,13 @@ The system will send an e-mail to inform the users when their password is about 
    the system will assume the password changed in January is expired, and notify the user.
 
 
-Effects of expired password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _effects-of-expired-password:
 
-After password expiration, the user will be able to read and send mails but can no longer access the shared folders and printers (Samba) or other computer if the machine is part of the domain.
+Effects of expired passwords
+----------------------------
 
+After password expiration, the user is still able to read and send email messages.
 
+If |product| has an Active Directory account provider, the user cannot access
+shared folders, printers (by Samba) and other domain computers.
 
