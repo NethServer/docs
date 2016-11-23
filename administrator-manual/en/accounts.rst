@@ -287,6 +287,31 @@ are granted access to the panels of the Server Manager:
 
 .. _password-management-section:
 
+
+.. index: admin
+
+Admin account
+=============
+
+If a **local AD or LDAP provider** is installed, an *admin* user, member of  the
+*administrators* group is created automatically. This account allows
+access to all configuration pages within the Server Manager.  It is initially
+*disabled* and has no access from the console.
+
+.. tip:: To enable the *admin* account set its password.
+
+Where applicable, the *admin* account is granted special privileges on some
+specific services, such as joining a workstation to an Active Directory domain.
+
+If |product| is bound to a **remote account provider**, the *admin* user and
+*administrators* group can be created, if they do not already exist.
+
+If a user or group with a similar purpose is already present in the remote
+account provider database, but it is named differently, it can be selected with
+a `manual procedure
+<http://wiki.nethserver.org/doku.php?id=userguide:set_admin_account>`_.
+
+
 Password management
 ===================
 
