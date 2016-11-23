@@ -69,12 +69,8 @@ If you want to open the access from any network: ::
 Removing
 ========
 
-You can remove Roundcube to add another webmail type (eg: SOGo, WebTop.…) and you can keep all the mail server RPMs.
+If you want remove Roundcube, remove all the mail server RPMs and no longer have an email system on the server, do this step on the server console – either directly or by ssh. ::
 
-To do this only remove Roundcube from the Installed list in the Software Center.
-
-If you want remove Roundcube, remove all the mail server RPMs and no longer have an email system on the server, first remove Roundcube from the Installed list in the Software Center and when it's completed do this step on the server console – either directly or by ssh. ::
-
-   yum autoremove
+   yum autoremove nethserver-roundcubemail
 
 
