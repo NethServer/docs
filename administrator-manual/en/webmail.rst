@@ -65,4 +65,12 @@ If you want to open the access from any network: ::
 
   config setprop roundcubemail access public
   signal-event nethserver-roundcubemail-update
+  
+Removing
+========
+
+If you want remove Roundcube, remove all the mail server RPMs and no longer have an email system on the server, do this step on the server console – either directly or by ssh. ::
+
+   yum autoremove nethserver-roundcubemail
+
 
