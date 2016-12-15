@@ -123,6 +123,21 @@ Configuration for client:
 * Port: 389
 * Base DN: ``dc=directory,dc=nh``
 
+Administrative access
+=====================
+
+An existing DN (i.e. ``administrator``) can be granted full administrative
+privileges on the whole ``dc=directory,dc=nh`` tree. By default, the designated
+user is defined in config DB, under the ``admins`` key.
+
+```
+ldapmodify -Y EXTERNAL <<EOF
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: uid=administrator,ou=People,dc=directory,dc=nh
+EOF
+```
 
 
 Inspect OpenLDAP ACLs

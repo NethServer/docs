@@ -138,31 +138,52 @@ System users and groups
 -----------------------
 
 SSSD can access all users and groups from an account provider,
-but the web interface will always hide system users and groups.
+but the Server Manager hides system users and groups.
 
-The following users will not be accessible from the web interface:
+The following users will not be accessible from the Server Manager:
 
 * all users listed inside `/etc/nethserver/system-users`
-* all users with uid < 1000
-* all machine accounts from AD
+* all users in /etc/passwd
 
 The following groups will not be accessible from the web interface:
 
 * all groups listed inside `/etc/nethserver/system-groups`
-* all groups with gid < 1000
+* all groups in /etc/group
+
+The users and groups lists are retrieved by the following UI helpers:
+
+- ``/usr/libexec/nethserver/list-users``
+
+- ``/usr/libexec/nethserver/list-groups``
+
+The number of entries returned by the server is limited. For instance, AD has a 
+1000 entries search results cap.
+
+To retrieve the members of a group and the membership of a specific user:
+
+- ``/usr/libexec/nethserver/list-group-members``
+
+- ``/usr/libexec/nethserver/list-user-membership``
+
+The Dashboard account counters are provided by:
+
+- ``/usr/libexec/nethserver/count-accounts``
+
+All those helpers support the ``-A`` flag, to include hidden entries, 
+and the ``-s`` flag to return entries without ``@domain`` suffix.
 
 
 NethServer::SSSD
 ----------------
 
-NethServer::SSSD is the perl library module to retrieve current LDAP configuration. 
+NethServer::SSSD is the Perl library module to retrieve current LDAP configuration. 
 It supports both Active Directory and OpenLDAP providers.
 
 Template example: ::
 
   {
       use NethServer::SSSD;
-      my $sssd = new NethServer::SSSD();
+      my $sssd = NethServer::SSSD->new();
 
       $OUT .= "{ldap_uri, [".$sssd->ldapURI()."]}\n";
 
@@ -178,9 +199,13 @@ All functions are documented using perldoc ::
   perldoc NethServer::SSSD
 
 This command prints out the current settings, by querying ``NethServer::SSSD`` 
-methods ::
-    
-    perl -MNethServer::SSSD -MJSON -e '$o = NethServer::SSSD->new(); print JSON::to_json({'BaseDN' => $o->baseDN(), 'BindDN' => $o->bindDN(), 'BindPassword' => $o->bindPassword(), 'UserDN' => $o->userDN(), 'GroupDN' => $o->groupDN()});' | python -mjson.tool
+methods. It requires the package ``openldap-clients`` ::
+
+    /usr/sbin/account-provider-test dump
+
+Check the bind credentials are OK ::
+
+    /usr/sbin/account-provider-test
 
 Join Active Directory
 ---------------------
@@ -189,6 +214,22 @@ The Active Directory join operation is run by *realmd*. After the AD has been
 joined sucessfully the system keytab file is initialized as long as individual
 service keytabs, as defined on the respective *service* record (see `Service
 configuration hooks`_).
+
+Leave Active Directory
+----------------------
+
+This is the manual procedure ::
+    
+    realm leave
+    systemctl stop sssd
+    config delete sssd
+    /etc/e-smith/events/actions/initialize-default-databases
+    > /etc/sssd/sssd.conf
+
+Go to page :guilabel:`System name` and change the domain suffix in the FQDN field.
+
+In page :guilabel:`Users and groups` join the new domain.
+
 
 Service configuration hooks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,7 +250,7 @@ password renewal, and crojob tasks: ::
 * ``KrbKeytabPath``
   Keytab file path. If empty, ``/var/lib/misc/nsrv-<service>.keytab`` is assumed
 * ``KrbPrimaryList <comma separated words list>``
-  Defines the keytab contents. In Kerberos jargon a "primary" is the first part of the "principal":http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/What-is-a-Kerberos-Principal*003f.html string, before the slash (``/``) character. Any primary in this list is exported to the keytab.
+  Defines the keytab contents. In Kerberos jargon a "primary" is the first part of the `principal string<http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/What-is-a-Kerberos-Principal*003f.html>`_, before the slash (``/``) character. Any primary in this list is exported to the keytab.
 * ``KrbKeytabOwner``
   The unix file owner. Default is the ``service`` name. This is applied to both the credentials cache file and the keytab file.
 * ``KrbKeytabPerms``

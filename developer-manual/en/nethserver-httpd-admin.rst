@@ -2,6 +2,44 @@
 nethserver-httpd-admin
 ======================
 
+Apache configuration for the web administration console
+This Apache instance listens SSL connections on a non-standard port (by default 980) and execute system commands through ``sudo``. 
+
+The main PHP scripts (controllers) are located in ``/usr/share/nethesis/nethserver-manager/`` directory.
+
+Apache ``mod_rewrite`` configuration hides ``index.php`` in URLs. A generic production URL has the following form:  ``https://<hostname>:980/<lang>/<ModuleId>``
+
+An additional controller ``index_dev.php`` is available for development. 
+It produces more verbose logging, uses uncompressed JS and CSS libraries, and shows clear text names of widget target names. 
+The URL form for development is:  ``https://<hostname>:980/index_dev.php/<lang>/<ModuleId>``
+
+To enable ``index_dev.php`` controller, you need to execute the following command: ::
+
+ # touch /usr/share/nethesis/nethserver-manager/debug
+
+smwingsd daemon
+===============
+
+To speed up database read operations, avoiding ``sudo`` calls, the ``smwingsd`` Perl daemon is contacted. 
+As ``httpd-admin``, the daemon is controlled by systemd, and on start reads configuration from ``/etc/smwingsd.conf``. 
+It listens on the local Unix socket ``/var/run/smwingsd.sock``. You  can contact it with a command like this: ::
+
+ # php -r '$payload=json_encode(array_slice($argv, 1), TRUE); print pack("CN", 0x10, strlen($payload)) . $payload;' configuration getjson sysconfig \
+   | nc -U /var/run/smwingsd.sock  \
+   | cut -b 6-   \
+   | python -mjson.tool 
+ {
+    "name": "sysconfig", 
+    "props": {
+        "Copyright": "", 
+        "ProductName": "NethServer", 
+        "Registration": "none", 
+        "Release": "rc1", 
+        "Version": "6.5"
+    }, 
+    "type": "configuration"
+ }
+
 Customization
 =============
 
@@ -83,4 +121,22 @@ Change the default logo with this command:
 Reload the interface and check the new logo and favicon are loaded.
 
 .. note:: Favicons are often cached by browsers: be patient and reload the page after a little while.
-                                                                                                               
+
+
+Database example
+================
+
+::
+
+ httpd-admin=service
+    ForcedLoginModule=
+    SSL=enabled
+    TCPPort=980
+    access=green,red
+    colors=
+    favicon=favicon.png
+    headerBackground=
+    logo=
+    menuBackground=
+    status=enabled
+

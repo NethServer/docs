@@ -33,7 +33,3 @@ Key features:
 .. figure::  ../../_static/nethgui_stack.png
 
 
-Design goals
-============
-
-*TODO*
