@@ -17,3 +17,5 @@ nethserver-httpd-admin
 nethserver-virtualhosts
 nethserver-getmail
 nethserver-nextcloud
+nethserver-squid
+nethserver-suricata
