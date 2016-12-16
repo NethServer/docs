@@ -35,7 +35,7 @@ Enable system users: ::
   config setprop vsftpd UserType system
   signal-event nethserver-vsftpd-save
 
-Given a user name *goofy*, first make sure the user has Remote shell access. See :ref:`users_services-section`.
+Given a user name *goofy*, first make sure the user has Remote shell access.
 Then, enable the FTP access: ::
 
   db accounts setprop goofy FTPAccess enabled

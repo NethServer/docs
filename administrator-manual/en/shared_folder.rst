@@ -20,7 +20,7 @@ modify the folder contents and the read permission can be extended to everyone
 accessing the system.  This simple permission model is based on the traditional
 UNIX file system permissions. 
 
-Access privileges can be refined further with the :guilabl:`ACL` tab, allowing
+Access privileges can be refined further with the :guilabel:`ACL` tab, allowing
 individual users and other groups to gain read and write permissions.
 
 If :guilabel:`Guest access` is enabled, any provided authentication
