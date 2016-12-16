@@ -219,6 +219,17 @@ After all the pre-requisites are met, proceed with the join from the
   credentials with permissions to join a new machine to the domain 
   (i.e. ``admin`` on |product|).
 
+.. _bind-remote-ldap-section:
+
+Bind to a remote LDAP server
+----------------------------
+
+If the remote server is a |product|, only its IP address is required in
+:guilabel:`Accounts provider` page.
+
+For other implementations, change the bind credentials, Base DN and encryption
+settings under the :guilabel:`Advanced settings` panel.
+
 Users
 =====
 
