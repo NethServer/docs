@@ -50,15 +50,11 @@ SSL Proxy
 
 .. warning:: Decrypting HTTPS connection without user consent is illegal in many countries.
 
-In transparent SSL mode, server is able to also filter encrypted HTTPS traffic.
-The proxy establishes the SSL connection with remote sites, it checks the validity of certificates and it decrypts the traffic.
-Finally, it generates a new certificate signed by the Certification Authority (CA) server itself.
+In transparent SSL mode, the server is able to also analyze HTTPS traffic.
+The proxy implements the "peek and splice" behavior: it establishes the SSL connection with remote sites and
+checks the validity of certificates without decrypting the traffic.
+Then the server can filter requested URLs using the web filter and return back the response to the client.
 
-The traffic between client and proxy is always encrypted, but you will need to install on every client (browser)
-the CA certificate of the server.
-
-The server certificate is located in :file:`/etc/pki/tls/certs/NSRV.crt`.
-It is advisable to transfer the file using an SSH client (eg FileZilla).
 
 Bypass
 ======
