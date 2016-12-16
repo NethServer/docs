@@ -4,37 +4,80 @@ Release notes |release|
 
 |product| release |release|
 
-Upgrading rc1 to rc2
+This release has been rebased on CentOS 7.3:
+https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
+
+Relevant changes on |product|:
+
+* The web interface now lists remote users and groups in real time (#5168)
+* LDAP and Samba AD both have the same administrative built-in users and groups (#5157)
+* Handle built-int administrators groups from Server Manager (#5168)
+* Much simplified configuration of remote account providers (#5165)
+* Samba shares support both NTLM and Kerberos authentication (#5160)
+* Always enable LDAP secure protocols when connecting to remote account providers (#5161)
+* Nextcloud has been updated to release 10.0.2 (#5155)
+* Better certificate management (#5174)
+* DPI module now works on standard kernel (#5170)
+* SquidGuard has been replaced by ufdbGuard (#5171)
+* Squid transparent HTTPS proxy doesn't require certificate installation on clients (#5169)
+* Support UEFI bios (#5148)
+* Boot partition size has been increased to 1GB
+
+
+Upgrading rc2 to rc3
 --------------------
 
-To upgrade an rc1 installation to rc2, go to the :guilabel:`Software Center` 
-page and start the update as usual.
+To upgrade an rc2 installation to rc3, go to the :guilabel:`Software Center` 
+page and start the update as usual. 
+If the system is running a DPI-enabled kernel, before update
+follow :ref:`dpi-kernel_section`.
 
-All bug fixes are applied automatically, but there are two enhancements that
-require a manual intervention:
+All bug fixes are applied automatically, but there are some enhancements that
+require a manual intervention.
 
-* LDAP account with read-only privileges (#5145). Required only if
-  nethserver-directory RPM is installed.
+After update run the following command: ::
 
-* Legacy short user name support (#5142). Starting from rc2 the system is
-  configured to accept both short and long user name formats.  That means the
-  user can login to any PAM-based service either as *username* or
-  *username@domain*.
+  signal-event nethserver-sssd-save
 
-To enable the enhancements run the following command: ::
+If the the web filter is installed, run: ::
 
-    signal-event nethserver-sssd-save
+  /etc/cron.daily/update-squidguard-blacklists
+  signal-event nethserver-squid-update
 
-If the command is not executed the system does not support short user name format.
+At the end of updating, a reboot it's recommended
+to load the new kernel.
+
+.. _dpi-kernel_section:
+
+Upgrading a firewall with DPI-enabled kernel
+--------------------------------------------
+
+To upgrade a system running kernel-lt with DPI support, execute these commands
+before updating: ::
+
+  cat << EOF > /etc/sysconfig/kernel
+  # UPDATEDEFAULT specifies if new-kernel-pkg should make
+  # new kernels the default
+  UPDATEDEFAULT=yes
+
+  # DEFAULTKERNEL specifies the default kernel package type
+  DEFAULTKERNEL=kernel
+  EOF
+
+  yum reinstall grubby -y
+
+
 
 Changelog
 ---------
 
-|product| `rc2 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-10-18T13%3A22%3A00Z..2016-11-09T14%3A40%3A00Z>`_
+|product| `rc3 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-11-10T14%3A40%3A00Z..2016-12-16T10%3A40%3A00Z%20>`_
 
 
 Known bugs
 ----------
+
+* WebTop 4 will not work with remote account providers since it doesn't support LDAPS
 
 * List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
 
@@ -43,6 +86,12 @@ Known bugs
 
 Discontinued packages
 ---------------------
+
+CentOS 7.3 brings Squid 3.5 which is not compatibile with current
+implementation of web antivirus (C-ICAP + Squidclamav),
+thus in this release nethserver-squidclamav has been removed.
+We are working to find a suitable replacement for the next release.
+
 
 The following packages were available in the previous 6 release and have been
 removed in 7:
