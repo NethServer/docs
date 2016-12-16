@@ -18,19 +18,21 @@ Supported provider types are:
 * Local Samba 4 Active Directory Domain Controller,
 * Remote Active Directory (both Microsoft and Samba).
 
-Two limitations are enforced on the system, once |product| has been bound to an
-account provider:
+Be aware of the following rules about account providers:
 
-1. the FQDN cannot be changed any more
+1. Once |product| has been bound to an account provider the FQDN cannot be
+   changed any more.
 
-2. the account provider cannot be changed
+2. Local account providers cannot be uninstalled.
 
 Remote providers
-    A clean |product| installation is ready to connect a **remote** account provider
-    of both types (LDAP, AD). The root user can configure the remote account
-    provider from the :guilabel:`User and groups` page.  After |product| has been
-    bound to a remote account provider the :guilabel:`User and groups` page shows
-    the domain accounts in *read-only* mode.
+    A clean |product| installation is ready to connect a **remote** account
+    provider of both types (LDAP, AD). The root user can configure the remote
+    account provider from the :guilabel:`Accounts provider` page. 
+    
+    After |product| has been bound to a remote account provider the
+    :guilabel:`User and groups` page shows the domain accounts in *read-only*
+    mode.
 
 Local providers
     To run a **local** account provider go to :guilabel:`Software center` page
@@ -97,7 +99,7 @@ Therefore the additional IP address must satisfy three conditions:
 From the :guilabel:`Software center` page install the module named *Account
 provider: Samba Active Directory*.
 
-After the account provider installation, the :guilabel:`User and groups` page
+After the account provider installation, the :guilabel:`Accounts provider` page
 shows a configuration panel.  Insert the **additional IP address** as explained
 above and press the :guilabel:`Start DC` button. If needed, enable the automatic
 bridge interface creation for the green network.
@@ -108,23 +110,20 @@ bridge interface creation for the green network.
     It creates the Linux Container chroot, by downloading additional packages.
 
 At the end of the Active Directory configuration procedure,  the |product| host
-machine is automatically configured to join the Active Directory domain, then
-the :guilabel:`User and groups` page is reloaded and it shows the default
-accounts.
+machine is automatically configured to join the Active Directory domain. Go to 
+the page :guilabel:`User and groups` to see the default accounts.
 
 .. index::
   pair: active directory; default accounts
 
 After installing Samba Active Directory, the :guilabel:`Users and groups` page
-has one default entry: :dfn:`administrator`. This account is granted special
-privileges on some specific services, such as joining a workstation in Samba
-Active Directory domain.
+has two default entries; both are disabled: :dfn:`administrator` and
+:dfn:`admin`. "Administrator" is the default Active Directory privileged account
+and is not required by |product|; it is safe to keep it disabled. "Admin" is
+defined by |product| as the default system administrative account. It is member
+of the AD "Administrators" and "Domain admins" groups. See :ref:`admin-account-section`
+section for more details.
 
-Default password for user administrator is: ``Nethesis,1234``
-
-.. warning:: 
-
-    Remember to change the default administrator password by setting a secure one!
 
 Installing on a virtual machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -201,15 +200,35 @@ Joining an Active Directory domain has the following pre-requisites:
 
       config set smb service Workgroup <your_netbios_domain>
 
-After all the pre-requisites are met, proceed with the join from :guilabel:`User
-and groups` page:
+3. (only for Microsoft Active Directory) The default machine account cannot perform
+   simple LDAP binds due to AD security policies. To be fully operational |product|
+   requires an additional account to perform simple LDAP binds.  Create a **dedicated
+   user account** in AD, and set a complex _non-expiring_ password for it.
+
+After all the pre-requisites are met, proceed with the join from the
+:guilabel:`Accounts provider` page:
 
 * Fill :guilabel:`DNS server IP address` field which usually is the
   IP address of an AD domain controller.
 
-* Click the :guilabel:`Bind` button. You will be prompted for an user name and
+* (only for Microsoft Active Directory) specify the **dedicated user account**
+  credentials under the :guilabel:`Advanced settings` panel.
+
+* Push the :guilabel:`Submit` button. You will be prompted for an user name and
   password: provide AD ``administrator`` or any other account
-  credentials with permissions to join a new machine to the domain.
+  credentials with permissions to join a new machine to the domain 
+  (i.e. ``admin`` on |product|).
+
+.. _bind-remote-ldap-section:
+
+Bind to a remote LDAP server
+----------------------------
+
+If the remote server is a |product|, only its IP address is required in
+:guilabel:`Accounts provider` page.
+
+For other implementations, change the bind credentials, Base DN and encryption
+settings under the :guilabel:`Advanced settings` panel.
 
 Users
 =====
@@ -285,10 +304,11 @@ are granted access to the panels of the Server Manager:
 * :dfn:`managers`: Users of this group are granted access to the *Management*
   section of the Server Manager.
 
-.. _password-management-section:
 
 
 .. index: admin
+
+.. _admin-account-section:
 
 Admin account
 =============
@@ -311,6 +331,8 @@ account provider database, but it is named differently, it can be selected with
 a `manual procedure
 <http://wiki.nethserver.org/doku.php?id=userguide:set_admin_account>`_.
 
+
+.. _password-management-section:
 
 Password management
 ===================
