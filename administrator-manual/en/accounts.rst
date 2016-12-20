@@ -203,7 +203,7 @@ Joining an Active Directory domain has the following pre-requisites:
 3. (only for Microsoft Active Directory) The default machine account cannot perform
    simple LDAP binds due to AD security policies. To be fully operational |product|
    requires an additional account to perform simple LDAP binds.  Create a **dedicated
-   user account** in AD, and set a complex _non-expiring_ password for it.
+   user account** in AD, and set a complex *non-expiring* password for it.
 
 After all the pre-requisites are met, proceed with the join from the
 :guilabel:`Accounts provider` page:
