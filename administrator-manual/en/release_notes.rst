@@ -9,7 +9,9 @@ https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
 
 Relevant changes on |product|:
 
-* The web interface now lists remote users and groups in real time (#5168)
+* The web interface now lists remote users and groups in real time (#5168). See 
+  the :ref:`users_and_groups-section` manual page for details of the updated 
+  domain bind procedures.
 * LDAP and Samba AD both have the same administrative built-in users and groups (#5157)
 * Handle built-int administrators groups from Server Manager (#5168)
 * Much simplified configuration of remote account providers (#5165)
