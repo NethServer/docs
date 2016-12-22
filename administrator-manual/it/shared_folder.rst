@@ -1,6 +1,6 @@
-.. _shared-folders-section:
-
 .. index:: cartelle condivise
+
+.. _shared-folders-section:
 
 ==================
 Cartelle condivise

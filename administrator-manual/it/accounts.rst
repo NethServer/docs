@@ -4,187 +4,284 @@
 Utenti e gruppi
 ===============
 
-|product| supporta autenticazione e autorizzazione su sorgenti remote o locali.
+Account provider
+================
 
-Le sorgenti supportate sono:
+|product| supporta autenticazione e autorizzazione da un *account provider*
+**locale** o **remoto**.
 
-* LDAP: OpenLDAP eseguito su |product|
-* Active Directory: Samba Active Directory che gira localmente (o in remoto) oppure una macchina Windows AD esistente
+I tipi di account provider supportati sono:
 
-Dopo il wizard di prima configurazione, l'amministrazione può configurare la sorgente
-di autenticazione dalla pagina :guilabel:`Utenti e gruppi`.
-Se non è stato installato nessun pacchetto aggiuntivo, sarà possibile selezionare solo una sorgente remota.
-Gli utenti e i gruppi che appartengono ad una sorgente remota non possono essere modificati
-e sono configurati in *sola lettura*.
+* OpenLDAP locale in funzione sullo stesso |product|,
+* Server LDAP remoto con schema RFC2307,
+* Samba 4 Active Directory Domain Controller locale,
+* Active Directory remoto (sia Microsoft che Samba).
 
-Dopo aver installato una sorgente locale (Samba Active Directory o OpenLDAP), sarà possibile
-creare/modificare/eliminare utenti e gruppi locali.
+Tenere in conto le seguenti regole sugli account provider:
 
-Si consiglia di selezionare con attenzione la sorgente di utenti e gruppi, in quanto la scelta non è reversibile.
-Inoltre, al termine della configurazione, il sistema non consentirà più di cambiare l'FQDN del server.
+1. Dopo che |product| è stato collegato ad un account provider, il suo FQDN non
+   può più essere cambiato.
 
-OpenLDAP
-========
+2. Gli account provider di tipo locale non possono essere disinstallati.
 
-Dal :guilabel:`Software Center` installare il pacchetto chiamato :guilabel:`Account provider: OpenLDAP`.
-Al termine dell'installazione. il pacchetto sarà automaticamente configurato e l'amministratore
-potrà gestire gli account dalla pagina :guilabel:`Utenti e gruppi`.
+Provider remoto
+    Un'installazione pulita di |product| è già pronta per connettersi ad un
+    account provider **remoto** di entrambi i tipi (LDAP, AD). L'utente root può
+    configurare l'account provider remoto dalla pagina :guilabel:`Account
+    provider`.
+
+    Dopo che |product| è stato collegato ad un account provider remoto, la
+    pagina :guilabel:`Utenti e gruppi` visualizza gli account di dominio in sola
+    lettura.
+
+Provider locale
+    Per eseguire un account provider **locale** andare alla pagina
+    :guilabel:`Software center` e installare l'account provider OpenLDAP o Samba
+    4 dalla lista dei moduli disponibili.
+
+    Dopo aver installato un provider locale (sia Samba 4 che OpenLDAP),
+    l'amministratore può creare, modificare ed eliminare gli utenti e i gruppi.
+
+.. warning::
+
+  Scegliere con cautela l'account provider perché **la scelta non è
+  reversibile**. Inoltre il sistema impedisce di modificare l'FQDN dopo che
+  l'account provider è stato configurato.
 
 
-Samba Active Directory
-======================
+Scegliere l'account provider giusto
+-----------------------------------
 
-Quando si installa Samba Active Directory, il sistema richiede un indirizzo IP addizionale
-che sarà l'indirizzo del controller Active Directory all'interno della LAN.
+A parte collegarsi ad un account provider locale o remoto, l'amministratore deve
+decidere che tipo di provider è adatto alle proprie esigenze.
 
-L'indirizzo aggiuntivo deve soddisfare tre condizioni:
+Il modulo *File server* di |product|, che abilita la pagina :guilabel:`Cartelle
+condivise`, può autenticare i client SMB/CIFS solo se |product| è collegato ad
+un dominio Active Directory.  I provider LDAP consentono l'accesso alle
+:guilabel:`Cartelle condivise` solo in modalita *guest*. Vedere inoltre
+:ref:`shared-folders-section`.
 
-* l'indirizzo IP deve essere nella subnet di una rete green
-* la rete green deve essere configurata su interfaccia di tipo bridge
-* l'indirizzo IP non deve essere usato da nessun'altra macchina nella LAN
+D'altra parte il provider OpenLDAP locale è più semplice da installare e
+configurare.
 
-Dal :guilabel:`Software Center` installare il pacchetto :guilabel:`Account provider: Samba Active Directory`.
-Al termine dell'installazione, accedere alla pagina :guilabel:`Utenti e gruppi` e procedere
-alla prima configurazione di Samba.
-Inserire quindi l'indirizzo IP addizionale e premere il pulsante di salvataggio:
-se necessario, il sistema creerà automaticamente un bridge sulla rete green.
+In pratica, se il protocollo di condivisione file SMB non è richiesto, il
+provider LDAP è la scelta migliore.
 
-Utenti e gruppi possono essere gestiti dalla pagina :guilabel:`Utenti e gruppi`.
+Installazione del provider locale OpenLDAP
+------------------------------------------
 
-Utenti predefiniti
-------------------
+Dal :guilabel:`Software Center` installare il pacchetto chiamato *Account
+provider: OpenLDAP*. Al termine dell'installazione. il pacchetto sarà
+automaticamente configurato e l'amministratore potrà gestire gli account dalla
+pagina :guilabel:`Utenti e gruppi`.
 
-Dopo aver installato Samba Active Directory, la pagina :guilabel:`Utenti e gruppi` contiene
-l'utente predefinito :dfn:`administrator`.
-Questo utente ha dei privilegi speciali su alcuni servizi specifici,
-come aggiungere una workstation al dominio Samba.
+Installazione del provider locale Samba Active Directory
+--------------------------------------------------------
 
-La password di default per l'utente administrator è: *Nethesis,1234*
+Quando si installa Samba Active Directory come account provider locale il
+sistema richiede un **indirizzo IP addizionale** e un collegamento ad internet
+funzionante.
 
-.. tip:: Ricordarsi di cambiare la password dell'utente administrator al primo login.
+L'indirizzo IP addizionale è assegnato ad un Linux Container che esegue le
+funzioni di un controllore di dominio Active Directory e deve essere accessibile
+dalla LAN (rete green).
 
+Pertanto l'indirizzo IP  aggiuntivo deve soddisfare tre condizioni:
+
+1. l'indirizzo IP deve essere **libero**; non può essere usato da alcun
+   dispositivo,
+
+2. l'indirizzo IP deve appartenere alla stessa subnet di una rete green,
+
+3. la rete green deve essere collegata ad un'interfaccia bridge, in modo che il
+   container Linux possa aggiungervi la propria interfaccia di rete virtuale; la 
+   procedura guidata può creare il bridge al momento automaticamente, se manca.
+
+Dalla pagina :guilabel:`Software Center` installare il pacchetto *Account
+provider: Samba Active Directory*.
+
+Al termine dell'installazione, la pagina :guilabel:`Account provider` mostra un
+pannello di configurazione. Inserire **l'indirizzo IP addizionale** come
+spiegato sopra e premere il pulsante :guilabel:`Avvia DC`. Se necessario,
+abilitare la creazione automatica del bridge per la rete green.
+
+.. tip::
+    
+    La procedura di configurazione di Active Directory può richiedere un po' di
+    tempo per completare. Essa crea il *chroot* per il container Linux,
+    scaricando da internet dei pacchetti aggiuntivi.
+
+Al termine della procedura di configurazione, la macchina host |product| è
+automaticamente inserita nel dominio di Active Directory. Andare alla pagina
+:guilabel:`Utenti e gruppi` per modificare gli account predefiniti.
+
+.. index::
+  pair: active directory; account predefiniti
+
+Dopo aver installato Samba Active Directory, la pagina :guilabel:`Utenti e
+gruppi` contiene due elementi predefiniti; entrambi sono disabilitati:
+:dfn:`administrator` e :dfn:`admin`. "Administrator" è l'account privilegiato
+predefinito di Active Directory e non è necessario in |product|; va bene tenerlo
+disabilitato. "Admin" in |product| è l'account amministrativo predefinito. E'
+membro dei gruppi AD "Administrators" e "Domain admins". Vedere
+:ref:`admin-account-section` per maggiori informazioni.
 
 Installazione su macchina virtuale
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Samba Active Directory viene eseguita all'interno di un container che utilizza un bridge di rete virtuale con l'interfaccia di rete del sistema.
-L'interfaccia di rete virtuale deve essere visibile all'interno della rete fisica, ma spesso i software di virtualizzazione bloccano il traffico ARP e questo preclude la visibilità del container Samba Active Directory all'interno della LAN.
+Samba Active Directory viene eseguita all'interno di un container Linux che
+utilizza un'interfaccia di rete virtuale in bridge con l'interfaccia di rete del
+sistema. L'interfaccia di rete virtuale deve essere visibile all'interno della
+rete fisica, ma spesso i software di virtualizzazione bloccano il traffico ARP e
+questo preclude la visibilità del container Samba Active Directory dalla LAN.
 
-È quindi necessario assicurarsi che il virtualizzatore abiliti il traffico di rete con la *modalità promiscua*.
+È quindi necessario assicurarsi che il virtualizzatore abiliti il traffico di
+rete con la *modalità promiscua*.
 
 VirtualBox
-~~~~~~~~~~
+++++++++++
 
-Per configurare la modalità promiscua, selezionare "Permetti tutto" dal menù a discesa presente nella sezione di configurazione di rete.
+Per configurare la modalità promiscua, selezionare "Permetti tutto" dal menù a
+discesa presente nella sezione di configurazione di rete.
 
 VMWare
-~~~~~~
+++++++
 
-Entrare nella sezione di configurazione di rete del nodo da virtualizzare e abilitare lo switch virtuale in modalità promiscua.
+Entrare nella sezione di configurazione di rete del nodo da virtualizzare e
+abilitare lo switch virtuale in modalità promiscua.
 
 KVM
-~~~
++++
 
-Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per esempio br0) e che sia configurato in modalità promiscua.
+Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per
+esempio br0) e che sia configurato in modalità promiscua.
 
-È possibile forzare un bridge (br0) in modalità promiscua usando il seguente comando: ::
+È possibile forzare un bridge (per esempio, ``br0``) in modalità promiscua
+usando il seguente comando: ::
 
   ifconfig br0 promisc
   
 Hyper-V
-~~~~~~~
++++++++
 
 Configurare *MAC Address Spoofing for Virtual Network Adapters*
 
 https://technet.microsoft.com/it-it/library/ff458341.aspx
 
+Join ad un dominio Active Directory esistente
+---------------------------------------------
 
+In questo scenario |product| è collegato ad un account provider Active Directory
+remoto.  Può essere una implementazione Samba o Microsoft.  |product| diventa
+quindi un server membro di un dominio Active Directory esistente. Quando si
+accede ad una risorsa su |product| da una workstation del dominio, le
+credenziali dell'utente sono verificate da uno dei controllori di dominio e
+l'accesso alla risorsa viene consentito.
 
-Membro Active Directory 
-=======================
+Il join ad un dominio Active Directory ha i seguenti pre-requisiti:
 
-In questo scenario |product| è configurato come
-un server membro di un dominio Active Directory (AD), e come tale delega
-l'autenticazione degli utenti ai controller di dominio.  
+1.  Il protocollo Kerberos richiede che la differenza tra gli orologi dei
+    dispositivi del dominio sia meno di 5 minuti. Sincronizzare gli orologi dei
+    client di rete con una sorgente di orario comune. Per |product| andare alla
+    pagina :guilabel:`Data e ora`.
+ 
+2.  Il sistema assume che i nome di dominio NetBIOS di default sia la parte iniziale
+    del suffisso di dominio DNS, troncata ai primi 15 caratteri.
 
-Per entrare in un dominio Active Directory ci sono alcuni pre-requisiti:
+    **Esempio**
 
-1. Nella pagina :menuselection:`DNS and DHCP`, impostare il controller
-   di dominio come DNS. Se esiste un altro DC, impostarlo come DNS
-   secondario.
+    - FQDN: test.local.nethserver.org
+    - Dominio: local.nethserver.org
+    - Dominio NetBIOS di default: LOCAL
 
-2. Nella pagina :menuselection:`Data e ora`, impostare il DC come
-   sorgente del tempo NTP; il protocollo Kerberos richiede infatti che
-   la differenza tra gli orologi dei sistemi sia meno di 5 minuti.
+    Se il dominio NetBIOS di default non è adatto al proprio ambiente può essere
+    modificato dalla console: ::
+       
+        config set smb service Workgroup <your_netbios_domain>
 
-3. Quando si esegue il join ad un dominio Active Directory,
-   il sistema assume come dominio NetBIOS di default
-   la parte più a sinistra del dominio DNS, fino ad un massimo di 15 caratteri.
+3.  (Solo per Microsoft Active Directory) L'account del computer di default non è
+    autorizzato ad effettuare bind LDAP semplici, a causa delle politiche di
+    sicurezza di Microsoft AD. Per poter funzionare correttamente |product| richiede
+    un account utente aggiuntivo che possa effettuare bind LDAP semplici. Creare un
+    **account utente dedicato** in AD, e impostare per esso una password complessa,
+    *senza scadenza*.
 
-   **Esempio**
+Dopo aver sistemato i pre-requisiti, procedere con il join dalla pagina
+:guilabel:`Utenti e gruppi`:
 
-   - FQDN: test.local.nethserver.org
-   - Dominio: local.nethserver.org
-   - Dominio NetBIOS di default: LOCAL
+* Compilare il campo :guilabel:`Indirizzo IP server DNS` che di solito è
+  l'indirizzo IP del controller AD stesso.
 
-.. note::
+* (solo per Microsoft Active Directory) specificare le credenziali
+  dell'**account utente dedicato** nel pannello :guilabel:`Impostazioni
+  avanzate`.
 
-   Se il dominio NetBIOS di default non è corretto per l'ambiente,
-   è possibile cambiarlo da line di comando: ::
-
-     config set smb service Workgroup <your_netbios_domain>
-
-Dopo aver sistemato i pre-requisiti, procedere con il join dalla pagina :guilabel:`Utenti e gruppi`:
-
-* Compilare il campo :guilabel:`Indirizzo IP server DNS` che
-  di solito è l'indirizzo IP del controller AD stesso.
-
-* Fare click sul pulsante. Verrà richiesto un nome utente e la
+* Premere il pulsante :guilabel:`Salva`. Verrà richiesto un nome utente e la
   password: digitare le credenziali di ``administrator`` o di
   qualsiasi altro account che ha il permesso di fare *join* della
-  macchina al dominio.
+  macchina al dominio (per esempio ``admin`` su |product|).
 
+.. _bind-remote-ldap-section:
 
+Collegamento ad un server LDAP remoto
+-------------------------------------
+
+Se il server remoto è |product|, è sufficiente il solo indirizzo IP nella pagina
+:guilabel:`Account provider`.
+
+Per altre implementazioni, cambiare le credenziali per il bind, il *base DN* e
+le impostazioni di cifratura sotto il pannello :guilabel:`Impostazioni
+avanzate`.
 
 Utenti
 ======
 
-L'utente di sistema è necessario per accedere a molti servizi erogati da |product| (email, cartelle condivise etc.).
-Ogni utente è caratterizzato da una coppia di credenziali (utente e password).
-
+Un nuovo utente rimane bloccato finché non gli viene assegnata una password.
+Agli utenti bloccati è negato l'accesso ai servizi del sistema.
 
 I seguenti campi sono obbligatori per la creazione di un utente:
 
-* Username
+* Nome utente
 * Nome completo (nome e cognome)
 
-Al termine della creazione, un utente risulta disabilitato fino a quando non viene impostata una password usando il pulsante
-:guilabel:`Cambia password`.
-Un utente bloccato non può utilizzare i servizi che richiedono autenticazione.
-Quando un utente è abilitato, l'utente può accedere al Server Manager e cambiare la propria password: :ref:`user_profile-section`.
+Al termine della creazione, un utente risulta disabilitato fino a quando non
+viene impostata una password usando il pulsante :guilabel:`Cambia password`. Un
+utente bloccato non può utilizzare i servizi che richiedono autenticazione.
+Quando un utente è abilitato, l'utente può accedere al Server Manager e cambiare
+la propria password: :ref:`user_profile-section`.
 
-Un utente può essere aggiunto ad uno o più gruppi usando la pagina :guilabel:`Utenti` o :guilabel:`Gruppi`.
+Un utente può essere aggiunto ad uno o più gruppi usando la pagina
+:guilabel:`Utenti` o :guilabel:`Gruppi`.
 
-A volte può essere necessario bloccare l'accesso ai servizi di un utente senza eliminare l'account.
-E' possibile farlo usando i pulsanti :guilabel:`Blocca` e :guilabel:`Sblocca`.
+A volte può essere necessario bloccare l'accesso ai servizi di un utente senza
+eliminare l'account. E' possibile farlo usando le azioni :guilabel:`Blocca` e
+:guilabel:`Sblocca`.
 
-
-.. note:: Quando utente viene eliminato, verranno eliminati anche tutti i dati dell'utente.
+.. note::
+    
+    Quando utente viene eliminato, verranno eliminati anche tutti i dati
+    dell'utente.
 
 .. _users_services-section:
 
 Accesso ai servizi
 ------------------
 
-Dopo la creazione, un utente può essere abilito ad alcuni o tutti i servizi.
-L'accesso deve essere effettuato usando il nome utente completo di dominio: `username@<domain>`.
+Ogni utente è caratterizzato da una coppia di credenziali: **nome utente** e
+**password**. Le credenziali dell'utente sono necessarie per accedere ai servizi
+installati sul sistema.
 
-Esempio:
+Il nome utente può essere fornito in due forme: *lunga* (default) e *corta*. La
+forma *lunga* è sempre accettata dai servizi. L'accettare o meno la forma
+*corta* dipende dal singolo servizio.
 
-* Dominio: nethserver.org
-* Username: goofy
+Per esempio se il dominio è *example.com* e il nome utente è *goofy*:
 
-L'utente completo da utilizzare per l'accesso ai servizi è: `goofy@nethserver.org`.
+Forma lunga del nome utente
+    *goofy@example.com*
+
+Forma corta del nome utente
+    *goofy*
 
 
 .. _groups-section:
@@ -192,16 +289,12 @@ L'utente completo da utilizzare per l'accesso ai servizi è: `goofy@nethserver.o
 Gruppi
 ======
 
-Un gruppo di utenti può essere usato per assegnare permessi speciali o per creare liste di distribuzione email.
+Un gruppo di utenti può essere usato per assegnare permessi speciali ad alcuni
+utenti, come autorizzare l'accesso alle :ref:`cartelle condivise
+<shared-folders-section>`.
 
-Come gli utenti, un gruppo può essere abilitato ad alcuni (o tutti) i servizi.
-
-.. tip:: Per delegare l'accesso al Server Manager è possibile
-         utilizzare i gruppi ``administrators`` e ``managers``.
-
-Si possono creare due gruppi speciali e gli utenti che appartengono a
-questi gruppi ottengono dei permessi aggiuntivi alle pagine del Server
-Manager.
+Si possono creare due gruppi speciali.  Gli utenti che appartengono a questi
+gruppi ottengono l'accesso alle pagine del Server Manager.
 
 * :dfn:`administrators`: Gli utenti di questo gruppo hanno gli stessi
   permessi di ``root``.
@@ -209,12 +302,41 @@ Manager.
 * :dfn:`managers`: Gli utenti di questo gruppo hanno l'accesso alle
   pagine della sezione *Gestione*.
 
+.. index: admin
+
+.. _admin-account-section:
+
+Account admin
+=============
+
+Se un **account provider locale** LDAP o AD è installato, l'utente *admin*, membro
+del gruppo *administrators* è creato automaticamente. Questo account consente di
+accedere a tutte le pagine di configurazione del Server Manager. Inizialmente è
+bloccato e non ha accesso alla console.
+
+.. tip:: Per abilitare l'account *admin* impostargli la password.
+
+Dove possibile, l'account *admin* riceve dei permessi speciali da parte di
+servizi specifici, come poter aggiungere una workstation al dominio di Active
+Directory.
+
+Se |product| è collegato ad un **account provider remoto**, l'utente *admin* e
+il gruppo *administrators* possono essere creati, se non esistono già.
+
+Se un utente o un gruppo con una funzione simile è già presente nella base dati
+dell'account provider remoto, ma si chiama diversamente, può essere designato
+come *admin* mediante una `procedura manuale <http://wiki.nethserver.org/doku.php?id=userguide:set_admin_account>`.
+
+.. _password-management-section:
 
 Gestione password
 =================
 
-Il sistema prevede la possibilità di impostare dei vincoli sulla :dfn:`complessità` e la :dfn:`scadenza` delle password.
-Le politiche di gestione password possono essere cambiate usando l'interfaccia web.
+Il sistema prevede la possibilità di impostare dei vincoli sulla
+:dfn:`complessità` e la :dfn:`scadenza` delle password.
+
+Le politiche di gestione password possono essere cambiate usando l'interfaccia
+web.
 
 Complessità
 -----------
@@ -240,8 +362,11 @@ La policy :index:`strong` impone che la password debba rispettare le seguenti re
 
 La policy di default è :dfn:`strong`.
 
-.. warning:: Cambiare le politiche predefinite è altamente sconsigliato. L'utilizzo di password deboli è la prima
-   causa di compromissione dei server da parte di attaccanti esterni.
+.. warning::
+
+    Cambiare le politiche predefinite è altamente sconsigliato. L'utilizzo di
+    password deboli è la prima causa di compromissione dei server da parte di
+    attaccanti esterni.
 
 Scadenza
 --------
@@ -255,32 +380,11 @@ Il sistema invierà una mail informativa all'utente quando la sua password è in
    Ad esempio: se l'ultimo cambio password è stato fatto a gennaio e l'attivazione della scadenza in ottobre, 
    il sistema riterrà la password cambiata in gennaio come scaduta, e lo segnalerà all'utente.
 
+.. _effects-of-expired-password:
 
-Effetti password scaduta
-~~~~~~~~~~~~~~~~~~~~~~~~
+Effetti della password scaduta
+------------------------------
 
-Allo scadere della password l'utente sarà in grado di scaricare regolarmente la posta ma non potrà più accedere alle cartelle
-e stampanti condivise sul server (Samba) o da altri pc in caso il pc faccia parte del dominio. 
-
-
-Password di dominio
---------------------
-In caso il sistema sia configurato come controller di Dominio, l'utente potrà cambiare la propria password usando gli strumenti di Windows.
-
-In quest'ultimo caso non è possibile impostare password più corte di *6 caratteri* indipendentemente dalla configurazione
-delle policy sul server. Infatti Windows esegue dei controlli preliminari e invia le password al server dove vengono poi valutate 
-con le policy in uso.
-
-Lingua notifiche
-================
-
-La lingua di default per le notifiche è l'inglese.
-Se si desidera cambiarla, usare il seguente comando: ::
-
-  config setprop sysconfig DefaultLanguage <lang>
-
-Esempio per l'italiano: ::
-
-  config setprop sysconfig DefaultLanguage it_IT.utf8
-
-
+Allo scadere della password l'utente sarà in grado di scaricare regolarmente la
+posta ma non potrà più accedere alle cartelle e stampanti condivise sul server
+(Samba) o da altri pc in caso il pc faccia parte del dominio. 
