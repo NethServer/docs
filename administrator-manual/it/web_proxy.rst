@@ -22,7 +22,7 @@ Le modalità supportate sono:
 * Trasparente: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP
 * Trasparente SSL: tutti i client sono automaticamente forzati ad usare il proxy per le connessioni HTTP e HTTPS
 
-.. note:: Assicurarsi di avere installato il modulo Utenti (pacchetto nethserver-directory), se si desidera utilizzare la modalità autenticata.
+.. note:: Se si desidera utilizzare la modalità autenticata, assicurarsi di avere configurato un Account provider.
 
 Configurazione client
 =====================
@@ -46,15 +46,10 @@ Proxy SSL
 
 .. warning:: Decifrare connessioni SSL senza il consenso dell'utente è illegale in molti stati. 
 
-In modalità trasparente SSL, il server è in grado di filtrare anche il traffico cifrato in HTTPS. 
-Il proxy stabilisce il collegamento SSL con i siti remoti, verifica la validità dei certificati, e decifra il traffico.
-Infine genera un nuovo certificato firmato con la Certification Authority (CA) del server stesso.
-
-Il traffico fra il client e il proxy è sempre cifrato, ma sarà necessario installare su tutti i client (browser)
-il certificato CA del server.
-
-Il certificato del server è posizionato in :file:`/etc/pki/tls/certs/NSRV.crt`, può essere scaricato dai client
-all'indirizzo ``http://<ip_server>/proxy.crt``.
+In modalità SSL trasparente, il server è in grado di analizzare anche il traffico HTTPS.
+Il proxy implementa il comportamento "peek and splice": stabilisce la connessione SSL con i siti remoti e
+verifica la validità dei certificati senza decrittografare il traffico.
+Quindi il server può filtrare gli URL richiesti utilizzando il filtro web e tornare la risposta al client.
 
 Bypass
 ======

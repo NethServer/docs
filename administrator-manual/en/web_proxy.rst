@@ -23,7 +23,7 @@ Supported modes are:
 * Transparent: all clients are automatically forced to use the proxy for HTTP connections
 * Transparent SSL: all clients are automatically forced to use the proxy for HTTP and HTTPS connections
 
-.. note:: Please make sure to have Users module installed (nethserver-directory package), if you plan to use authenticate mode.
+.. note:: If you plan to use authenticate mode, please make sure to configure an Account provider.
 
 Client configuration
 ====================
@@ -79,6 +79,7 @@ Link to web interface can be found at the :guilabel:`Applications` tab inside th
 
 Cache
 =====
+
 Under tab :guilabel:`Cache` there is a form to configure cache parameters:
 
 * The cache can be enabled or disabled (*disabled* by default)
