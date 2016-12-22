@@ -57,12 +57,6 @@ despite having content from external servers.
 It's possible to block all requests to Google translate, creating a blocked URL inside the :guilabel:`General` page.
 The content of the blocked URL must be: ``translate.google``.
 
-Users from Active Directory
-===========================
-
-If the server is joined to an Active Directory domain,
-you can create profiles connected to users and groups from the domain.
-
 Antivirus
 =========
 

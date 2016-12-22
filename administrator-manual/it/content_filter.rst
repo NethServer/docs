@@ -61,14 +61,6 @@ In questo modo i blocchi imposti a livello di dominio non possono funzionare lim
 E' possibile bloccare tutte le richieste a :index:`Google Translate` (in qualsiasi lingua), creando un URL bloccato
 nella pagina :guilabel:`Generale` con il seguente contenuto: ``translate.google``.
 
-Utenti da Active Directory
-==========================
-
-Se il server è stato configurato per fare il join ad un dominio Active Directory (:ref:`samba_ads`),
-è possibile creare profili collegati ad utenti appartenenti al dominio.
-
-.. note:: I gruppi residenti nell'Active Directory non sono supportati.
-
 Antivirus
 =========
 
