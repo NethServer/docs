@@ -215,20 +215,47 @@ joined sucessfully the system keytab file is initialized as long as individual
 service keytabs, as defined on the respective *service* record (see `Service
 configuration hooks`_).
 
-Leave Active Directory
-----------------------
+Leave and Re-Join Active Directory
+----------------------------------
 
-This is the manual procedure ::
+To leave a remote AD go to the :guilabel:`Accounts provider` page. For local AD
+provider, this is the **manual leave procedure** ::
     
-    realm leave
-    systemctl stop sssd
-    config delete sssd
-    /etc/e-smith/events/actions/initialize-default-databases
-    > /etc/sssd/sssd.conf
+    signal-event nethserver-sssd-leave
 
-Go to page :guilabel:`System name` and change the domain suffix in the FQDN field.
+If the machine password or system keytab get corrputed, joining again the DC can fix them: ::
+    
+    realm join -U administrator $(hostname -d)
 
-In page :guilabel:`Users and groups` join the new domain.
+...at prompt, type the administrator (or admin) password, then: ::
+
+    signal-event nethserver-sssd-save
+
+If you leave and do not want to re-join, disable the sssd service permanently: ::
+
+    config setprop sssd status disabled Provider none
+    signal-event nethserver-sssd-save
+    signal-event nethserver-sssd-leave
+    signal-event nethserver-dnsmasq-save
+
+Change the FQDN
+---------------
+
+Once we are bound to an account provider the FQDN cannot be changed any more.
+However, this procedure can be useful in early server configuration to fix a
+wrong FQDN.  Please note that any existing account setting must be fixed
+manually. The procedure to do it is currently undefined.
+
+For local account providers:
+
+1. Execute the leave procedure explained above
+
+2. Go to page :guilabel:`System name` and change the domain suffix in the FQDN field.
+
+3. Re-join as explained above
+
+For remote account providers the procedure is similar. Use the
+:guilabel:`Accounts provider` page to leave/join the domain.
 
 
 Service configuration hooks

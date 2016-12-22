@@ -4,7 +4,7 @@ nethserver-squid
 
 This package configure the well-known Squid web proxy.
 
-Squid rpms are from: http://www1.ngtech.co.il/rpm/centos/6/x86_64/
+Squid rpms are from upstream.
 
 Configuration
 =============
@@ -71,9 +71,9 @@ You could find this kind of errors inside ``/var/log/squid/cache.log`` ::
   2016/12/09 09:44:18 kid1| SECURITY ALERT: on URL: avatars0.githubusercontent.com:443
   2016/12/09 09:44:18 kid1| SECURITY ALERT: Host header forgery detected on local=151.101.60.133:443 remote=192.168.5.22:40950 FD 166 flags=33 (local IP does not match any domain IP)
 
-In this case, when accessing github, the avatars won't be displayed by the browser, and you can fin a "Timeout error" for the not loaded images.
+In this case, when accessing github, the avatars won't be displayed by the browser, and you can find a "Timeout error" for the not loaded images.
 
-This kind of errors can't be fixes. See official documentation:
+This kind of errors can't be fixed. See official documentation for workarounds:
 
 * http://wiki.squid-cache.org/KnowledgeBase/HostHeaderForgery2
 * http://lists.squid-cache.org/pipermail/squid-users/2016-September/012344.html
@@ -131,7 +131,7 @@ Also WPAD file includes all source and destination bypasses.
 Miscellaneous options
 =====================
 
-Following options are always enabled:
+The following options are always enabled:
 
 * buffered logs
 * SNMP support on port 3401
