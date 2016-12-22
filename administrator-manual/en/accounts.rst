@@ -38,7 +38,7 @@ Local providers
     To run a **local** account provider go to :guilabel:`Software center` page
     and install either OpenLDAP **or** Samba 4 account provider from the modules list.
 
-    After installing a local backend (either Samba 4 or OpenLDAP), the administrator
+    After installing a local provider (either Samba 4 or OpenLDAP), the administrator
     can create, modify, delete the users and groups.
 
 .. warning::
@@ -181,7 +181,7 @@ granted.
 
 Joining an Active Directory domain has the following pre-requisites:
 
-1. the Kerberos protocol requires the difference between systems clocks in the
+1. The Kerberos protocol requires the difference between systems clocks in the
    network is less than 5 minutes. Configure the network clients to align their
    clocks to a common time source.  For |product| go to :guilabel:`Date and time`
    page.
@@ -200,7 +200,7 @@ Joining an Active Directory domain has the following pre-requisites:
 
       config set smb service Workgroup <your_netbios_domain>
 
-3. (only for Microsoft Active Directory) The default machine account cannot perform
+3. (Only for Microsoft Active Directory) The default machine account cannot perform
    simple LDAP binds due to AD security policies. To be fully operational |product|
    requires an additional account to perform simple LDAP binds.  Create a **dedicated
    user account** in AD, and set a complex *non-expiring* password for it.
@@ -233,23 +233,19 @@ settings under the :guilabel:`Advanced settings` panel.
 Users
 =====
 
-A system user is required to access many services provided by
-|product| (email, shared folders, etc..).
-
-Each user is characterized by a pair of credentials (user and
-password). A newly created user account remains locked until it has
-set a password. A blocked user can not use the services of
-servers that require authentication.
+A newly created user account remains locked until it has set a password.
+Disabled users are denied access to system services.
 
 When creating a user, following fields are mandatory:
 
-* Username
+* User name
 * Full name (name and surname)
 
 A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one.
 
-Sometimes you need to block user's access to service without deleting the account.
-This behavior can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock` buttons.
+Sometimes you need to block user's access to services without deleting the
+account. This can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock`
+actions.
 
 .. note:: When a user is deleted, all user data will be also deleted.
 
@@ -282,7 +278,7 @@ also the *short* form.
 For instance if the domain is *example.com* and the user is *goofy*:
 
 Long user name form
-    *goofy@domain.com*
+    *goofy@example.com*
 
 Short user name form
     *goofy*
