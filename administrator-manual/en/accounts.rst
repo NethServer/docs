@@ -400,11 +400,9 @@ Example: ::
 
 mario <TAB> Mario Rossi <TAB> 112233 <NEWLINE>
 
-Make sure nethserver-sssd is updated from nethserver-testing, then execute: ::
+then execute: ::
 
 /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
-
-.. tip:: update nethserver-sssd from testing :  yum --enablerepo=nethserver-testing update nethserver-sssd
 
 For example, if the user’s file is /root/users.tsv, execute following command: ::
 
