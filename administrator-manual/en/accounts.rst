@@ -387,44 +387,44 @@ After password expiration, the user is still able to read and send email message
 If |product| has an Active Directory account provider, the user cannot access
 shared folders, printers (by Samba) and other domain computers.
 
-.. _import-users:
+.. _import-users_section:
 
 Import users
 ============
 
 It is possible to create user accounts from a TSV (Tab Separated Values) file with the following format: ::
 
-username <TAB> fullName <TAB> password <NEWLINE>
+  username <TAB> fullName <TAB> password <NEWLINE>
 
 Example: ::
 
-mario <TAB> Mario Rossi <TAB> 112233 <NEWLINE>
+  mario <TAB> Mario Rossi <TAB> 112233 <NEWLINE>
 
 then execute: ::
 
-/usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
 
 For example, if the user’s file is /root/users.tsv, execute following command: ::
 
-/usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/import_users /root/users.tsv
+  /usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/import_users /root/users.tsv
 
-Alternative separator character:
+Alternative separator character: ::
 
-import_users users.tsv ','
+  import_users users.tsv ','
 
 Import Emails
 -------------
 
-It is possible to create mail aliases from a TSV (Tab Separated Values) file with the following format:
+It is possible to create mail aliases from a TSV (Tab Separated Values) file with the following format: ::
 
-username <TAB> emailaddress <NEWLINE>
+  username <TAB> emailaddress <NEWLINE>
 
-See import_users section for a sample script invocation.
+See :ref:`import-users_section` for a sample script invocation.
 
 Import Groups
 -------------
 
-Group management is available from the command line through signal-event group-create and group-modify. ::
+Group management is available from the command line through ``group-create`` and ``group-modify`` events ::
 
-signal-event group-create group1 user1 user2 user3
-signal-event group-modify group1 user1 user3 user4
+  signal-event group-create group1 user1 user2 user3
+  signal-event group-modify group1 user1 user3 user4
