@@ -388,3 +388,46 @@ Effetti della password scaduta
 Allo scadere della password l'utente sarà in grado di scaricare regolarmente la
 posta ma non potrà più accedere alle cartelle e stampanti condivise sul server
 (Samba) o da altri pc in caso il pc faccia parte del dominio. 
+
+
+.. _import-users_section:
+
+Importazione utenti
+===================
+
+E' possibile creare utenti a partire da un file TSV (Tab Separated Values) con il seguente formato: ::
+
+  username <TAB> fullName <TAB> password <NEWLINE>
+
+Esempio: ::
+
+  mario <TAB> Mario Rossi <TAB> 112233 <NEWLINE>
+
+quindi eseguire: ::
+
+  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+
+Per esempio, se il file è ``/root/users.tsv``, eseguire: ::
+
+  /usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/import_users /root/users.tsv
+
+Per utilizzare un carattere separatore alternativo: ::
+
+  import_users users.tsv ','
+
+Importazione indirizzi email
+----------------------------
+
+E' possibile creare indirizzi mail da un file TSV (Tab Separated Values) con il seguente formato: ::
+
+  username <TAB> emailaddress <NEWLINE>
+
+Vedi :ref:`import-users_section` per un esempio di invocazione del comando.
+
+Importazione gruppi
+-------------------
+
+La gestione dei gruppi è disponibile da linea di comando usando gli eventi ``group-create`` e ``group-modify`` ::
+
+  signal-event group-create group1 user1 user2 user3
+  signal-event group-modify group1 user1 user3 user4
