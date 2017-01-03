@@ -76,6 +76,12 @@ Example, restore the version of a file from 15 days ago: ::
 
 The ``-t`` option allows to specify the number of days (15 in this scenario).
 
+.. note:: When you are using *CIFS* to access the share, and the command doesn't work
+          as expected, verify that user and password for the network share are correct.
+          If user or password are wrong, you will find NT_STATUS_LOGON_FAILURE errors in
+          :file:`/var/log/messages`.
+          Also, you can use the :command:`backup-data-list` to check if the backup is accessible.
+
 Graphic interface
 -----------------
 

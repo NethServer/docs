@@ -81,6 +81,13 @@ Esempio, ripristinare un file alla versione di 15 giorni fa: ::
 
 L'opzione ``-t`` consente di specificare il numero di giorni, in questo caso 15.
 
+.. note:: Nel caso si utilizzi *CIFS* per accedere alla condivisione e il comando di restore 
+          non funzioni nel modo atteso, verificare che utente e password della condivisione di rete siano corretti.
+          Se la coppia utente/password è sbagliata nel file :file:`/var/log/messages` si troveranno degli errori 
+          di NT_STATUS_LOGON_FAILURE.
+          Allo stesso tempo il comando :command:`backup-data-list` non andrà a buon fine e uscirà immediatamente 
+          riportando degli errori.
+
 Interfaccia grafica
 -------------------
 
