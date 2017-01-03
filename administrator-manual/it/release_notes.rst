@@ -85,11 +85,6 @@ Bug noti
 Pacchetti rimossi
 -----------------
 
-CentOS 7.3 include Squid 3.5, che non è compatibile con l'attuale
-implementationze di antivirus web (C-ICAP + Squidclamav),
-quindi in questa versione nethserver-squidclamav è stato rimosso.
-Stiamo lavorando per trovare un sostituto adeguato per il prossimo rilascio.
-
 I seguenti pacchetti erano disponibili nella precedente release 6 e sono stati 
 rimossi nella 7:
 

@@ -89,12 +89,6 @@ Known bugs
 Discontinued packages
 ---------------------
 
-CentOS 7.3 brings Squid 3.5 which is not compatibile with current
-implementation of web antivirus (C-ICAP + Squidclamav),
-thus in this release nethserver-squidclamav has been removed.
-We are working to find a suitable replacement for the next release.
-
-
 The following packages were available in the previous 6 release and have been
 removed in 7:
 
