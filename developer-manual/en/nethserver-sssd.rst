@@ -294,3 +294,36 @@ The following props are no longer honoured since ns7:
   This is the main switch. If set to ``enabled`` a ticket credential cache file is kept valid by the hourly cronjob
 * ``KrbCredentialsCachePath``
   The path of the credentials cache. It defaults to ``/tmp/krb5cc*<service*uid>``, if ``service`` is also a system user.
+
+
+Account import scripts
+----------------------
+
+There are some perl scripts under the documentation ``scripts/`` directory. ::
+    
+    rpm -qd nethserver-sssd
+
+import_users
+^^^^^^^^^^^^
+
+It is possible to create user accounts from a TSV (Tab Separated Values) file with the following format: ::
+
+  username <TAB> fullName <TAB> password <NEWLINE>
+
+Sample invocation: ::
+
+  import_users users.tsv
+
+Alternative separator character: ::
+
+  import_users users.csv ','
+
+
+import_emails
+^^^^^^^^^^^^^
+
+It is possible to create mail aliases from a TSV (Tab Separated Values) file with the following format: ::
+
+  username <TAB> emailaddress <NEWLINE>
+
+See ``import_users`` section for a sample script invocation.

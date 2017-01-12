@@ -187,16 +187,14 @@ To avoid typing the password again and again write it in ``.muttrc``: ::
 
 ``PASSWORD`` must be URL-encoded. For instance the slash character ``/`` is encoded as ``%2f``.
 
-Active Directory configuration
-------------------------------
+Set special ACL
+---------------
 
-To configure mutt for GSSAPI authentication ::
+You can use ``doveadm`` to set special ACL on shared folder: ::
 
-    yum install krb5-workstation
-    cat - <<EOF > ~/.muttrc
-    set spoolfile="imaps://vm5.dpnet.nethesis.it/"
-    set folder=""
-    set imap_user=davide.principi@DPNET.NETHESIS.IT
-    set imap_authenticators="gssapi"
-    EOF
-    mutt
+  doveadm acl set -u <user> <shared_folder> <subject> <flags>
+
+Example: allow insert and expunge to user goofy on public folder testshare (domain of the machine is local.nethserver.org): ::
+
+  doveadm acl set -u goofy@local.nethserver.org Public/testshare "user=goofy@local.nethserver.org" insert expunge
+

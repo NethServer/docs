@@ -375,6 +375,22 @@ The feature is controlled by ``tc`` property in ``firewall`` key from ``configur
 
 See TC_ENABLED at http://shorewall.net/manpages/shorewall.conf.html .
 
+The firewall needs to know how much inbound and outbound bandwidth has a red interface.
+The bandwidth value (expressed in kbit) is stored inside ``FwInBandwidth`` and ``FwOutBandwidth`` properties, wich are
+parts of the network interface record inside the ``networks`` db.
+
+Example: ::
+
+ enp0s20f2=ethernet
+    FwInBandwidth=30000
+    FwOutBandwidth=24000
+    bootproto=none
+    gateway=1.2.3.4
+    ipaddr=1.2.3.5
+    netmask=255.255.255.0
+    role=red
+
+
 All traffic shaping rules are saved inside the ``fwrules`` database with the same format.
 Valid actions for traffic shaping rules are:
 

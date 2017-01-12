@@ -14,8 +14,13 @@ Samba machine needs an IP address in a green network, different from the machine
 nethserver-dc-save event
 ------------------------
 
-* it creates and configures systemd-nspawn machine (nethserver-dc-install action). Machine is provisioned with domain and realm taken from local system and won't be possible to change them anymore. For instance if system domain is `nethserver.org` domain will be `NETHSERVER` and realm `nethserver.org`. Those parameters are read from `/var/lib/machines/nsdc/etc/sysconfig/samba-provision` template
-To have a shell inside nspawn machine, you can use ::
+* it creates and configures systemd-nspawn machine (nethserver-dc-install
+  action). Machine is provisioned with domain and realm taken from local system
+  and won't be possible to change them anymore. For instance if system domain is
+  `nethserver.org` domain will be `NETHSERVER` and realm `nethserver.org`. Those
+  parameters are read from
+  `/var/lib/machines/nsdc/etc/sysconfig/samba-provision` template. To have a
+  shell inside nspawn machine, you can use ::
 
   # systemd-run -M nsdc -t /bin/bash
 
@@ -73,3 +78,70 @@ new provisioning run. ::
     config setprop sssd Provider none status disabled
     > /etc/sssd/sssd.conf
     signal-event nethserver-dnsmasq-save
+
+
+Changing the IP address of DC
+-----------------------------
+
+.. warning:: 
+    
+    Before applying this procedure, read carefully the `official Samba wiki page
+    <https://wiki.samba.org/index.php/Changing_the_IP_Address_of_a_Samba_AD_DC>`_.
+
+Example, change the network address ("122" becomes "101"):
+
+* domain ``dpnet.nethesis.it``, realm ``DPNET.NETHESIS.IT``
+* bridge is ``br0``
+* current host IP: 192.168.122.7
+* current gateway IP: 192.168.122.1
+* current nsdc container IP: 192.168.122.77
+* new host IP: 192.168.101.7
+* new gateway IP: 192.168.101.1
+* new nsdc container IP: 192.168.101.77
+
+.. warning::
+    
+    This procedure must be run from the system console. **Do not it run
+    remotely!** The server can become unreachable!
+
+1. Shut down the nsdc Linux container ::
+
+    systemctl stop nsdc
+
+2. Set the new host and gateway IP addresses ::
+    
+    db networks setprop br0 ipaddr 192.168.101.7 gateway 192.168.101.1 netmask 255.255.255.0
+
+3. Set the new nsdc IP address ::
+    
+    config setprop nsdc IpAddress 192.168.101.77
+    config setprop sssd AdDns 192.168.101.77
+
+4. Expand the templates from nethserver-dc-save event ::
+
+    for F in $(find /etc/e-smith/events/nethserver-dc-save/templates2expand -type f); do
+        expand-template ${F##/etc/e-smith/events/nethserver-dc-save/templates2expand}
+    done
+
+5. Apply the changes ::
+
+    signal-event interface-update
+    signal-event nethserver-dnsmasq-save
+
+6. Start nsdc ::
+
+    systemctl start nsdc
+
+7. Edit ``/var/lib/machines/nsdc/etc/krb5.conf`` and append a "realms" section like the following::
+    
+    [realms]
+    DPNET.NETHESIS.IT = {
+       kdc = 192.168.101.77
+    }
+
+8. Run ``samba_dnsupdate`` in nsdc container ::
+    
+    systemd-run -t -M nsdc /usr/sbin/samba_dnsupdate --verbose
+
+9. Clean up ``/var/lib/machines/nsdc/etc/krb5.conf``, by removing the section appended at step 7
+
