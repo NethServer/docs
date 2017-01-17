@@ -70,7 +70,11 @@ Substitute ``-n`` with ``-f`` to actually remove the files!
    The ``make-rpms`` command is sensible to ``dist`` and ``mockcfg``
    environment variables.  If they are missing the default values are
    shown by invoking it without arguments.
-  
+
+For example: ::
+
+  dist=ns7 mockcfg=nethserver-7-x86_64 make-rpms *.spec
+
 The ``make-rpms`` command in turn relies on other scripts
 
 ``make-srpm``
