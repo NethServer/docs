@@ -78,7 +78,7 @@ new provisioning run. ::
     config setprop sssd Provider none status disabled
     > /etc/sssd/sssd.conf
     signal-event nethserver-dnsmasq-save
-
+    config setprop nsdc status disabled
 
 Changing the IP address of DC
 -----------------------------
