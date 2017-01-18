@@ -4,6 +4,33 @@ Note di rilascio |release|
 
 |product| versione |release|
 
+RC4
+---
+
+Cambiamenti principali da RC3:
+
+* Installer: sistemata la seleziona del lingua della tastiera
+* Rete: supporto per vlan su bridge e bond
+* Cartelle condivise: sistemata la gestione ACL per i gruppi
+* Firewall: abilitato il traffic shaping per tutte le interfacce logiche
+* Firewall: il database viene ora inizializzato con una lista di servizi firewall più comuni
+* Firewall: Shorewall aggiornato alla versione 5.0.14 porta miglioramenti alla gestione multiwan
+* Proxy web: rimosso il supporto per l'autenticazione NTLM
+* Antivirus web: ecap-clamv sostituisce Squidclamav
+* Disaster recovery: sistemato il ripristino di Samba AD
+
+Aggiornamento da RC3 a RC4
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Per aggiornare un sistema RC2 a RC4, andare alla pagina :guilabel:`Software
+center` e avviare la procedura di aggiornamento come al solito.
+
+Tutti i bug fix sono applicati automaticamente.
+
+
+RC3
+---
+
 Questa versione è basata su CentOS 7.3:
 https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
 
@@ -23,10 +50,10 @@ Cambiamenti principali:
 * Supporto BIOS UEFI (#5148)
 * La dimensione della partizione di avvio è stata aumentata a 1 GB
 
-Aggiornamento di rc2 a rc3
---------------------------
+Aggiornamento da RC2 a RC4
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Per aggiornare un sistema rc2 a rc3, andare alla pagina :guilabel:`Software
+Per aggiornare un sistema RC2 a RC4, andare alla pagina :guilabel:`Software
 center` e avviare la procedura di aggiornamento come al solito.
 Se il sistema sta utilizzando un kernel DPI, prima di aggiornare verificare
 :ref:`dpi-kernel_section`.
@@ -49,7 +76,7 @@ per caricare il nuovo kernel.
 .. _dpi-kernel_section:
 
 Aggiornare un firewall con kernel DPI
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Per aggiornare un sistema che utilizza il kernel-lt con supporto DPI, eseguire 
 i seguenti comandi prima di aggiornare: ::
@@ -69,7 +96,9 @@ i seguenti comandi prima di aggiornare: ::
 Changelog
 ---------
 
-|product| `rc3 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-11-10T14%3A40%3A00Z..2016-12-16T10%3A40%3A00Z%20>`_
+|product| `RC4 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-12-16T10%3A40%3A00Z..2017-01-17%20>`_
+
+|product| `RC3 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-11-10T14%3A40%3A00Z..2016-12-16T10%3A40%3A00Z%20>`_
 
 
 Bug noti
