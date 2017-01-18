@@ -187,14 +187,23 @@ To avoid typing the password again and again write it in ``.muttrc``: ::
 
 ``PASSWORD`` must be URL-encoded. For instance the slash character ``/`` is encoded as ``%2f``.
 
-Set special ACL
----------------
+Set special ACL on mailboxes
+----------------------------
 
-You can use ``doveadm`` to set special ACL on shared folder: ::
+The ``nethserver-mail-shrmbx-modify`` action applies some predefined ACL 
+settings to shared mailboxes (type the mailbox name twice: the action performs also rename): ::
 
-  doveadm acl set -u <user> <shared_folder> <subject> <flags>
+   /etc/e-smith/events/actions/nethserver-mail-shrmbx-modify EVENT OLDNAME NEWNAME ID PERM [ID PERM ...]
 
-Example: allow insert and expunge to user goofy on public folder testshare (domain of the machine is local.nethserver.org): ::
+For instance, let's grant full "admin" permissions to group "administrators": ::
+
+   /etc/e-smith/events/actions/nethserver-mail-shrmbx-modify ev 'Public folder1' 'Public Folder One' group=administrators@$(hostname -d) ADMIN
+
+You can also use ``doveadm`` to set special ACL on a shared mailbox: ::
+
+  doveadm acl set -u <user> <shared_mailbox> <subject> <flags>
+
+Example: allow insert and expunge to user goofy on public mailbox testshare (domain of the machine is local.nethserver.org): ::
 
   doveadm acl set -u goofy@local.nethserver.org Public/testshare "user=goofy@local.nethserver.org" insert expunge
 
