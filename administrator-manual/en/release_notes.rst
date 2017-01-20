@@ -13,7 +13,7 @@ Relevant changes since RC3:
 * Installer: fix kebyoard layout selection
 * Network: support vlan on bonds and bridges
 * Shared folders: fix ACL for groups
-* Firewall: enable traffic shaping an all logical interfaces
+* Firewall: enable traffic shaping on all logical interfaces
 * Firewall: initialize the database with commonly used firewall services
 * Firewall: upgrade Shorewall to 5.0.14 with multiple fixes for multiwan setups
 * Web proxy: remove support for NTLM authentication
@@ -42,7 +42,7 @@ Relevant changes on |product|:
   the :ref:`users_and_groups-section` manual page for details of the updated 
   domain bind procedures.
 * LDAP and Samba AD both have the same administrative built-in users and groups (#5157)
-* Handle built-int administrators groups from Server Manager (#5168)
+* Handle built-in administrators groups from Server Manager (#5168)
 * Much simplified configuration of remote account providers (#5165)
 * Samba shares support both NTLM and Kerberos authentication (#5160)
 * Always enable LDAP secure protocols when connecting to remote account providers (#5161)
