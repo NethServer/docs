@@ -91,7 +91,7 @@ L'opzione ``-t`` consente di specificare il numero di giorni, in questo caso 15.
 Interfaccia grafica
 -------------------
 
-Nel menu :menuselection:`Restore Data` è possibile cercare, selezionare e ripristinare
+Nel menu :menuselection:`Restore file` è possibile cercare, selezionare e ripristinare
 una o più cartelle dal backup, navigando l'albero grafico con tutti i percorsi inclusi nel backup.
 
 Di default viene mostrato l'albero dell'ultimo backup, se si desidera ripristinare un file di un backup precedente, selezionare la data del backup dal seletto
@@ -99,8 +99,8 @@ re *"File Backup"*.
 
 Ci sono due opzioni di ripristino:
 
-* Ripristinare i dati nel percorso originale, i file correnti del filesystem sono sovrascritti con quelli ripristinati dal backup.
-* Ripristinare i dati nel percorso originale ma i file ripristinati dal backup sono spostati in una nuova directory (i file non sono sovrascritti) in questo percorso: ::
+* Ripristinare i file nel percorso originale, i file correnti del filesystem sono sovrascritti con quelli ripristinati dal backup.
+* Ripristinare i file nel percorso originale ma i file ripristinati dal backup sono spostati in una nuova directory (i file non sono sovrascritti) in questo percorso: ::
 
   /percorso/completo/del/file_YYYY-MM-DD (YYYY-MM-DD è la data del restore)
 

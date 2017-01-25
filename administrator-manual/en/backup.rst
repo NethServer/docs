@@ -85,15 +85,15 @@ The ``-t`` option allows to specify the number of days (15 in this scenario).
 Graphic interface
 -----------------
 
-In the :menuselection:`Restore Data` menu section it is possible to search, select and restore
+In the :menuselection:`Restore files` menu section it is possible to search, select and restore
 one or more directories from backup, navigating the graphical tree with all paths included in the backup.
 
-By default, last backup tree is shown. If you whant to restore a file from a previous backup, select the backup date from *"Backup File"* selector.
+By default, last backup tree is shown. If you want to restore a file from a previous backup, select the backup date from *"Backup File"* selector.
 
 There are two options to restore:
 
-* Restore data in the original path, the current files in the filesystem are overwritten by the restored files from backup.
-* Restore data in original path but the restored files from backup are moved on a new directory (the files are not overwritten) in this path: ::
+* Restore files in the original path, the current files in the filesystem are overwritten by the restored files from backup.
+* Restore files in original path but the restored files from backup are moved on a new directory (the files are not overwritten) in this path: ::
 
   /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
 
