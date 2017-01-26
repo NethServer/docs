@@ -271,7 +271,7 @@ Install on CentOS
 =================
 
 It is possible to install |product| on a fresh CentOS minimal installation using
-the a couple of commands to download the additional software packages. This
+a couple of commands to download the additional software packages. This
 installation method is designed for virtual private servers (VPS) where CentOS
 comes already installed by the VPS provider.
 
