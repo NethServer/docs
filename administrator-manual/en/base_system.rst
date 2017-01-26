@@ -4,9 +4,9 @@
 Base system
 ===========
 
-This chapter describes all available modules at the end of installation.
-All modules outside this section must be installed from :ref:`package_manager-section`, including
-backup and users support.
+This chapter describes all available modules at the end of installation. All
+modules outside this section must be installed from the
+:ref:`software-center-section` page, including :ref:`backup-section`.
 
 .. _dashboard-section:
 
@@ -262,16 +262,6 @@ configuring the network clients to use it. As alternatives, the
 .. [#Letsencrypt] Let's Encrypt website https://letsencrypt.org/
 .. [#CSM] Website http://www.canyouseeme.org/
 .. [#VDNS] Website http://viewdns.info/
-
-.. _user_profile-section:
-
-Change user password
-====================
-
-All users can login to Server Manager using their own credentials and access the :index:`user profile`.
-
-After login, a user can :index:`change the password`.
-
 
 Shutdown
 ========

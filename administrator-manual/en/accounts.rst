@@ -249,6 +249,8 @@ actions.
 
 .. note:: When a user is deleted, all user data will be also deleted.
 
+.. index:: password
+
 Changing the password
 ---------------------
 
@@ -256,10 +258,11 @@ If an inital password was not set during creation, the user account is disabled.
 To enable it, set a password using the :guilabel:`Change password` button.
 
 When a user is enabled, the user can access the Server Manager and change
-his/her own password (see also :ref:`user_profile-section`).
+his/her own password by going to the :guilabel:`user@domain.com` label on the
+upper right corner of the screen and clicking on :guilabel:`Profile`.
 
 If the system is bound to an Active Directory account provider, users can change
-their password using the Windows tools.  In this case you can not set passwords
+their password also using the Windows tools.  In this case you can not set passwords
 shorter than 6 *characters* regardless of the server policies. Windows performs
 preliminary checks and sends the password to the server where they are then
 evaluated according to the :ref:`configured policies <password-management-section>`.

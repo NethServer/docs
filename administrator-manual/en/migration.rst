@@ -6,6 +6,8 @@
 Migration from NethService/SME Server
 =====================================
 
+.. warning:: This procedure is still under development on |product| |version|
+
 Migration is the process to convert a SME Server/NethService
 machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 

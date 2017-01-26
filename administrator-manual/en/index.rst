@@ -20,15 +20,17 @@ Administrator Manual
    :maxdepth: 2
    :caption: Configuration
 
-   base_system
    packages
+   base_system
+   accounts
+   dns
+   dhcp
 
 .. toctree::
    :maxdepth: 1
    :caption: Modules
 
    backup
-   accounts
    mail
    webmail
    webtop4
@@ -46,8 +48,6 @@ Administrator Manual
    shared_folder
    bandiwidth_monitor
    statistics
-   dns
-   dhcp
    vpn
    nextcloud
    ftp
