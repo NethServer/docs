@@ -22,8 +22,28 @@ The connection is safe and encrypted.
 Login
 =====
 
-The login page will gave you a trusted access to the web interface.
-Use the user name of **root** and your chosen password when installing |product| to log in.
+The login page will gave you a trusted access to the web interface. Log in
+as **root** and type the password chosen during |product| installation.
 
-.. note:: You can change the root password on the web interface by going to the root@domain.com on the upper right and click on Profile.
+.. note:: 
+    
+    The *unattended* install procedure sets the root's password to the default
+    ``Nethesis,1234``.
 
+Change the current password
+===========================
+
+You can change the root's password from the web interface by going to the
+:guilabel:`root@host.domain.com` label on the upper right corner of the screen
+and clicking on :guilabel:`Profile`.
+
+The login page allows selecting an alternative language among those already
+installed on the system. After logging in, go to the
+:ref:`software-center-section` page to install additional languages.
+
+Logout
+======
+
+Terminate the current Server Manager session by going to the
+:guilabel:`root@host.domain.com` label on the upper right corner of the screen
+and by clicking on :guilabel:`Logout`.

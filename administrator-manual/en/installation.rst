@@ -113,29 +113,27 @@ configured.  First boot device should be the DVD reader or USB stick.
 
 On start a menu will display different types of installation:
 
-|product| **interactive** installation
+|product| :ref:`interactive installation <installation-interactive>`
 
-    It allows you to select the language, configure RAID support,
-    network, and encrypted file system.  It will be described in depth
-    in the next paragraph.
+    Requires only keyboard and time zone settings. By default, tries to
+    configure the network interfaces with DHCP and the first two available
+    disks with RAID-1.
 
 Other |product| installation methods
 
-    * **Unattended** installation
-
-        This installation mode does not require any kind of human
-        intervention: a set of default parameters will be applied to the
-        system.
+    *   :ref:`Unattended installation <installation-unattended>` --
+        A set of default parameters is applied to the system with no human
+        intervention.
     
-    * **Manual** installation
-    
-        This is the opposite of *unattended*. No defaults are applied: network, 
-        storage, timezone, language and so on... all settings must be provided 
+    *   :ref:`Manual installation <installation-manual>` --
+        This is the opposite of *unattended*. No defaults are applied: network,
+        storage, time zone, keyboard... all settings must be provided
         explicitly.
 
 Standard CentOS installations
 
-    Use the standard CentOS installation procedure.
+    Use the standard CentOS installation procedure. You can then configure 
+    |product| by following the :ref:`installation-centos` section.
 
 Tools
 
@@ -151,28 +149,11 @@ Boot from local drive
 At the end of the installation process you will be asked to reboot the
 machine. Be sure to remove the installation media before restarting.
 
-.. _installation-unattended:
+Optional boot parameters
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Unattended mode
----------------
-
-After installation, the system will be configured as follows:
-
-* User name: :samp:`root`
-* Default password: :samp:`Nethesis,1234`
-* Network: DHCP enabled on all interfaces, if no lease is received a 
-  :ref:`fallback IP configuration <fallback-ip-configuration>` is applied
-* Keyboard layout: us
-* Time zone: UTC
-* System language: English (United States)
-* Disks: if there are two or more disks, a RAID 1 will be created on
-  first two disks
-
-Install options
-^^^^^^^^^^^^^^^
-
-You can add extra parameters to unattended installation by pressing
-TAB and editing the boot loader command line.
+At the boot menu, you can add extra parameters by pressing :kbd:`TAB` and editing 
+the kernel command line. This can be useful in *unattended* mode.
 
 To disable raid, just add this option to the command line: ::
 
@@ -182,13 +163,23 @@ If you need to select installation hard drives, use: ::
 
     disks=sdx,sdy
 
-Other available options:
+.. index:: 
+    pair: encryption; file system
 
-* lang: system language, default is en_US
-* keyboard: keyboard layout, default is us
-* timezone: default is UTC
-* fspassword: enable file system encryption with given password
-  This option can be used even in Interactive and Manual modes
+To enable *file system encryption*, use: ::
+    
+    fspassword=s3cr3t
+
+When enabling this option, all data written to the disk will be
+encrypted using symmetric encryption.  In case of theft, an attacker
+will not be able to read the data without the encryption key.
+
+.. note :: You will need to enter the encryption password at every system boot!
+
+Other available options (*unattended* mode only):
+
+* ``keyboard``, keyboard layout, default is ``keyboard=us``
+* ``timezone``, default is ``timezone=UTC``
 
 .. _fallback-ip-configuration:
 
@@ -201,6 +192,23 @@ the following IP configuration is applied to the **first** network interface
 * IP 192.168.1.1
 * netmask 255.255.255.0
 
+System administrator password
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You are strongly advised to choose a secure password for the ``root`` user. 
+A good password:
+
+* is at least 8 characters long
+* contains uppercase and lowercase letters
+* contains symbols and numbers
+
+The default password in *unattended* mode is ``Nethesis,1234``.
+
+System language
+^^^^^^^^^^^^^^^
+
+The system language of |product| installations is *English (United States)*.
+Additional languages can be installed later. See :ref:`installation-next-steps`.
 
 .. _installation-manual:
 
@@ -218,8 +226,9 @@ Required choices are:
 * Keyboard layout
 * Root password
 
-All other options are set to a reasonable default accordingly to current hardware,
-but you're free to edit any install configuration available.
+All other options are set to a reasonable default accordingly to current
+hardware (see the :ref:`installation-unattended` section for details), but you
+are free to edit any install configuration available.
 
 On the other hand, the **manual** mode starts the installer with no default
 settings at all.  Also the network and storage sections must be configured.
@@ -233,48 +242,40 @@ settings at all.  Also the network and storage sections must be configured.
 
 .. _`RHEL 7 installation guide`: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-network-hostname-configuration-x86.html
 
-System administrator password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _installation-unattended:
 
-You are strongly advised to choose a secure password for the ``root`` user. 
-A good password:
+Unattended mode
+---------------
 
-* is at least 8 characters long
-* contains uppercase and lowercase letters
-* contains symbols and numbers
+The *unattended* mode requires no human intervention. After installation,
+the system is rebooted and the following configuration is applied:
 
-Default password is :samp:`Nethesis,1234`.
+* Keyboard layout: ``us``
+* Time zone: ``UTC``
+* Default ``root`` password: ``Nethesis,1234``
+* DHCP enabled on all network interfaces; if no DHCP lease is received the
+  :ref:`fallback IP configuration <fallback-ip-configuration>` is applied
+* if there are two or more disks, a RAID 1 will be created on
+  first two disks and LVM volumes are created on it
+* *swap* and *root* partitions are allocated automatically; 1GB is assigned to *boot*
 
-Encrypted file system
-^^^^^^^^^^^^^^^^^^^^^
-
-When enabling this option, all data written to the disk will be
-encrypted using symmetric encryption.  In case of theft, an attacker
-will not be able to read the data without the encryption key.
-
-.. note :: You will need to enter the encryption password at every system boot.
 
 .. index::
    pair: installation; CentOS
    pair: installation; VPS
    pair: installation; USB
 
+.. _installation-centos:
+
 Install on CentOS
 =================
 
-It is possible to install |product| on a fresh CentOS minimal installation
-using the :program:`yum` command to download software packages. This
-is the recommended installation method if you have
+It is possible to install |product| on a fresh CentOS minimal installation using
+the a couple of commands to download the additional software packages. This
+installation method is designed for virtual private servers (VPS) where CentOS
+comes already installed by the VPS provider.
 
-* a virtual private server (VPS), or
-* an USB stick.
-
-For example, if you wish to install |product| |version|, just start
-with a CentOS |version| on your system (many VPS providers offer
-CentOS pre-installed virtual machines), and then execute below
-commands to transform CentOS into |product|.
-
-Enable specific YUM repositories with this command: ::
+Enable |product| software repositories with this command: ::
 
   yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
 
@@ -287,11 +288,11 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nextcloud
 
+.. _installation-next-steps:
+
 Next steps
 ==========
 
 At the end of the installation procedure, :ref:`access the
 server-manager <access-section>` to :ref:`install additional software
 <package_manager-section>`.
-
-
