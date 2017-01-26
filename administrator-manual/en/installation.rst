@@ -113,18 +113,25 @@ configured.  First boot device should be the DVD reader or USB stick.
 
 On start a menu will display different types of installation:
 
-|product| interactive installation
+|product| **interactive** installation
 
     It allows you to select the language, configure RAID support,
     network, and encrypted file system.  It will be described in depth
     in the next paragraph.
 
+Other |product| installation methods
 
-|product| unattended installation
+    * **Unattended** installation
 
-    This installation mode does not require any kind of human
-    intervention: a set of default parameters will be applied to the
-    system.
+        This installation mode does not require any kind of human
+        intervention: a set of default parameters will be applied to the
+        system.
+    
+    * **Manual** installation
+    
+        This is the opposite of *unattended*. No defaults are applied: network, 
+        storage, timezone, language and so on... all settings must be provided 
+        explicitly.
 
 Standard CentOS installations
 
@@ -153,10 +160,11 @@ After installation, the system will be configured as follows:
 
 * User name: :samp:`root`
 * Default password: :samp:`Nethesis,1234`
-* Network: DHCP enabled on all interfaces
-* Keyboard: |ks_keyboard|
-* Time zone: |ks_timezone|
-* Language: English
+* Network: DHCP enabled on all interfaces, if no lease is received a 
+  :ref:`fallback IP configuration <fallback-ip-configuration>` is applied
+* Keyboard layout: us
+* Time zone: UTC
+* System language: English (United States)
 * Disks: if there are two or more disks, a RAID 1 will be created on
   first two disks
 
@@ -178,16 +186,30 @@ Other available options:
 
 * lang: system language, default is en_US
 * keyboard: keyboard layout, default is us
-* timezone: default is UTC Greenwich
+* timezone: default is UTC
 * fspassword: enable file system encryption with given password
-  This option can be used even in Interactive Mode
+  This option can be used even in Interactive and Manual modes
+
+.. _fallback-ip-configuration:
+
+Fallback IP configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If no IP is assigned by DHCP or by other means, during the first system boot 
+the following IP configuration is applied to the **first** network interface
+
+* IP 192.168.1.1
+* netmask 255.255.255.0
+
+
+.. _installation-manual:
 
 .. _installation-interactive:
 
-Interactive Mode
-----------------
+Interactive and Manual modes
+----------------------------
 
-The interactive mode allows you to make a few simple choices on the
+The **interactive** mode allows you to make a few simple choices on the
 system configuration.
 
 Required choices are:
@@ -199,37 +221,27 @@ Required choices are:
 All other options are set to a reasonable default accordingly to current hardware,
 but you're free to edit any install configuration available.
 
+On the other hand, the **manual** mode starts the installer with no default
+settings at all.  Also the network and storage sections must be configured.
 
-Software RAID
-^^^^^^^^^^^^^
+.. warning:: 
+    
+    Under the :guilabel:`Network > General` section, only the interfaces marked
+    as :guilabel:`Automatically connect to this network when it is available`
+    are enabled at boot in the installed system. For more info, refer to `RHEL 7
+    installation guide`_.
 
-RAID (Redundant Array of Independent Disks) allows you to combine all
-the disks in order to achieve fault tolerance and an increase in
-performance.
-
-This screen is displayed when two or more disks were detected at
-start.
-
-Most used levels are:
-
-* RAID 1: it creates an exact copy (mirror) of all the data on two or more disks.
-  Minimum number of disks: 2
-
-* RAID 5: it uses a subdivision of the data at the block level,
-  distributing the parity data evenly across all disks.  Minimum
-  number of disks: 3
-
+.. _`RHEL 7 installation guide`: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-network-hostname-configuration-x86.html
 
 System administrator password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You're strongly advised too choose a secure password for the ``root`` user.
+You are strongly advised to choose a secure password for the ``root`` user. 
+A good password:
 
-A good password is:
-
-* at least 8 characters long
-* contain uppercase and lowercase letters
-* contain symbols and numbers
+* is at least 8 characters long
+* contains uppercase and lowercase letters
+* contains symbols and numbers
 
 Default password is :samp:`Nethesis,1234`.
 
@@ -242,46 +254,6 @@ will not be able to read the data without the encryption key.
 
 .. note :: You will need to enter the encryption password at every system boot.
 
-
-Network configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-As default, all network interfaces are configure with DHCP.
-Please, read the following notes before customizing network configuration. 
-
-Host and Domain Name (FQDN)
-
-    Type the host name and domain in which the server will operate
-    (e.g. :samp:`server.mycompany.com`).
-    Domain name should only contain letters, numbers and the dash.
-
-IP Address
-
-    Type a private IP address (from RFC 1918) to be assigned to the
-    server; if you want to install it in an existing network, you must
-    provide a unused IP address valid for that network (in general you
-    can use the first or last host inside the network range, e.g.
-    192.168.7.1 or 192.168.7.254).
-
-Netmask
-
-    Type the subnet mask of the network. You can safely leave the
-    default value.
-
-Gateway
-
-    Type the IP address of the gateway on which you are installing the
-    server.
-
-
-End of installation procedure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-After parameters input, the procedure will start the installation.
-
-.. include:: installation_interactive_end.inc
-
-
 .. index::
    pair: installation; CentOS
    pair: installation; VPS
@@ -290,7 +262,7 @@ After parameters input, the procedure will start the installation.
 Install on CentOS
 =================
 
-It is possible to install |product| on a fresh CentOS installation
+It is possible to install |product| on a fresh CentOS minimal installation
 using the :program:`yum` command to download software packages. This
 is the recommended installation method if you have
 
@@ -315,5 +287,11 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nextcloud
 
-.. include:: installation_centos_end.inc
+Next steps
+==========
+
+At the end of the installation procedure, :ref:`access the
+server-manager <access-section>` to :ref:`install additional software
+<package_manager-section>`.
+
 
