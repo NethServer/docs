@@ -42,7 +42,7 @@ Relevant changes on |product|:
   the :ref:`users_and_groups-section` manual page for details of the updated 
   domain bind procedures.
 * LDAP and Samba AD both have the same administrative built-in users and groups (#5157)
-* Handle built-in administrator groups from Server Manager (#5168)
+* Handle built-in administrators group from Server Manager (#5168)
 * Simplified configuration of remote account providers (#5165)
 * Samba shares support both NTLM and Kerberos authentication (#5160)
 * Always enable LDAP secure protocols when connecting to remote account providers (#5161)
