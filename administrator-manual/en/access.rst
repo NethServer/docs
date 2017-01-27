@@ -22,18 +22,18 @@ The connection is safe and encrypted.
 Login
 =====
 
-The login page will gave you a trusted access to the web interface. Log in
+The login page will give you a trusted access to the web interface. Log in
 as **root** and type the password chosen during |product| installation.
 
 .. note:: 
     
-    The *unattended* install procedure sets the root's password to the default
+    The *unattended* install procedure sets the root password to the default
     ``Nethesis,1234``.
 
 Change the current password
 ===========================
 
-You can change the root's password from the web interface by going to the
+You can change the root password from the web interface by going to the
 :guilabel:`root@host.domain.com` label on the upper right corner of the screen
 and clicking on :guilabel:`Profile`.
 
