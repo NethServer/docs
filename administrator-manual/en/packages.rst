@@ -6,13 +6,13 @@ Software center
 ===============
 
 |product| is highly modular.  At the end of the installation a bare minimum set
-of modules is ready to be used. Basic system includes modules like *network
-configuration* and *log viewer*. Obviously, the administrator can install
+of modules are ready to be used. The basic system includes modules like *network
+configuration* and *log viewer*. Additionally, the administrator can install
 additional modules, like :ref:`email-section`, :ref:`dhcp-section`, 
 :ref:`firewall-section`...
 
-The :guilabel:`Available` tab lists the modules that can be installed. 
-The list can be filtered by category.
+The :guilabel:`Available` tab lists all of the modules that can be installed. 
+This list can be filtered by category.
 
 To install a module, check the corresponding box and click on :guilabel:`Add`.
 Some modules suggest optional packages that can be installed whether at the same or at a
