@@ -22,13 +22,13 @@ The connection is safe and encrypted.
 Login
 =====
 
-The login page will gave you a trusted access to the web interface.
+The login page will give you a trusted access to the web interface.
 Use following credentials:
 
 * :index:`Default user` name: **root**
 * :index:`Default password`: **Nethesis,1234**
 
-.. warning:: Change the root's password as soon as possible, by
+.. warning:: Change the root password as soon as possible, by
              picking a secure one, composed of a random sequence of
              mixed-case letters, digits and symbols.
   
