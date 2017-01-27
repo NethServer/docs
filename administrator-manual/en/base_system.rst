@@ -14,17 +14,17 @@ Dashboard
 =========
 
 The :index:`Dashboard` page is the landing page after a successful login.
-The page will display the :index:`status` and configurations of the system.
+The page will display the :index:`status` and configuration of the system.
 
 .. _duc-section:
 
 Disk analyzer
 -------------
 
-This tool is used to visualize :index:`disk usage` in a simply and nice graph in which you can interact with click and double click to navigate in the directories tree.
+This tool is used to visualize :index:`disk usage` in a simple and nice graph in which you can interact with, click, and double click to navigate in the directories tree.
 
-After installation go in :guilabel:`Dashboard` and then :guilabel:`Disk usage` tab and click :guilabel:`Update`
-to index the root directory and to display the graph. This process can take several minutes depending on occupied disk space.
+After installation go to the :guilabel:`Dashboard`, and then :guilabel:`Disk usage` tab, and click :guilabel:`Update` in order
+to index the root directory and display the graph. This process can take several minutes depending on the occupied disk space.
 
 Well known folders are:
 
@@ -46,9 +46,9 @@ Network
 =======
 
 The :guilabel:`Network` page configures how the server is connected to the
-local network (LAN) or other ones (i.e. Internet).
+local network (LAN) and/or other networks (i.e. Internet).
 
-If the server has firewall and gateway functionality, it will handle extra networks with special function like
+If the server has firewall and gateway functionality, it will handle extra networks with special functions like
 DMZ (DeMilitarized Zone) and guests network.
 
 |product| supports an unlimited number of network interfaces.
@@ -61,13 +61,13 @@ Any network managed by the system must follow these rules:
 
 .. index:: zone, role
 
-Every network interface has a specific *role* which determinates its behavior. Roles are identified by colors.
-Each role correspond to a well-known *zone* with special network traffic rules:
+Every network interface has a specific *role* which determines its behavior. All roles are identified by colors.
+Each role corresponds to a well-known *zone* with special network traffic rules:
 
-* *green*: local network. Hosts on this network can access any other configured network
-* *blue*: guests network. Hosts on this network can access orange and red network, but can't access to green zone
-* *orange*: DMZ network.  Hosts on this network can access red networks, but can't access to blue and green zones
-* *red*: public network. Hosts on this network can access only the server itself
+* *green*: local network (green role/zone). Hosts on this network can access any other configured network
+* *blue*: guests network (blue role/zone). Hosts on this network can access orange and red networks, but can't access the green network
+* *orange*: DMZ network (orange role/zone).  Hosts on this network can access red network, but can't access to blue and green networks
+* *red*: public network (red role/zone). Hosts on this network can access only the server itself
 
 See :ref:`policy-section` for more information on roles and firewall rules.
 
@@ -94,11 +94,11 @@ Alias IP section can be found in the dropdown menu of the related network interf
 Logical interfaces
 ------------------
 
-In :guilabel:`Network` page press :guilabel:`New interface` button to
+In :guilabel:`Network` page press the :guilabel:`New interface` button to
 create a logical interface. Supported logical interfaces are:
 
-* :index:`bond`: arrange two or more network interfaces, provides load balancing and fault tolerance
-* :index:`bridge`: connect two different networks, it's often used for bridged VPN and virtual machine
+* :index:`bond`: arrange two or more network interfaces (provides load balancing and fault tolerance)
+* :index:`bridge`: connect two different networks (it's often used for bridged VPN and virtual machine)
 * :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
 * :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
@@ -248,10 +248,13 @@ configuring the network clients to use it. As alternatives, the
 * requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is
   possible if the following requirements are met:
 
-  1. the server must be reachable from outside at port 80. Make sure your port 80
+  1. The server must be reachable from outside at port 80. Make sure your port 80
      is open to the public Internet (you can check with sites like [#CSM]_);
+     
+# I could be wrong, doesn't letsencrypt need access to port 443 to generate the certificate and renew the certificate?
+# when I've installed in in the past the only port needed was port 443. all other ports could be blocked from public access. 
 
-  2. the domains that you want the certificate for, must be public domain names
+  2. The domains that you want the certificate for must be public domain names
      associated to server own public IP. Make sure you have public DNS name
      pointing to your server (you can check with sites like [#VDNS]_).
 
