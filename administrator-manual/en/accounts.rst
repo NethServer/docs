@@ -119,9 +119,9 @@ the page :guilabel:`User and groups` to see the default accounts.
 After installing Samba Active Directory, the :guilabel:`Users and groups` page
 has two default entries; both are disabled: :dfn:`administrator` and
 :dfn:`admin`. "Administrator" is the default Active Directory privileged account
-and is not required by |product|; it is safe to keep it disabled. "Admin" is
+and is not required by |product|; it is safe to keep it disabled. "admin" is
 defined by |product| as the default system administrative account. It is member
-of the AD "Administrators" and "Domain admins" groups. See :ref:`admin-account-section`
+of the AD "domain admins" group. See :ref:`admin-account-section`
 section for more details.
 
 
@@ -291,19 +291,18 @@ Short user name form
 Groups
 ======
 
-A group of users can be used to assign special permissions to some users, such
-as authorize access over a :ref:`shared folder <shared_folders-section>`.
+A group of users can be granted some permission, such as authorize
+access over a :ref:`shared folder <shared_folders-section>`. The granted
+permission is propagated to all group members.
 
-Two special groups can be created.  The users who belong in one of these groups
-are granted access to the panels of the Server Manager:
+Two special groups can be created.  Members of these groups are granted access
+to the panels of the Server Manager:
 
-* :dfn:`administrators`: Users of this group have the same permissions as the
+* :dfn:`domain admins`: members of this group have the same permissions as the
   *root* user from the Server Manager.
 
-* :dfn:`managers`: Users of this group are granted access to the *Management*
+* :dfn:`managers`: members of this group are granted access to the *Management*
   section of the Server Manager.
-
-
 
 .. index: admin
 
@@ -312,8 +311,8 @@ are granted access to the panels of the Server Manager:
 Admin account
 =============
 
-If a **local AD or LDAP provider** is installed, an *admin* user, member of  the
-*administrators* group is created automatically. This account allows
+If a **local AD or LDAP provider** is installed, an *admin* user, member of the
+*domain admins* group is created automatically. This account allows
 access to all configuration pages within the Server Manager.  It is initially
 *disabled* and has no access from the console.
 
@@ -323,13 +322,14 @@ Where applicable, the *admin* account is granted special privileges on some
 specific services, such as joining a workstation to an Active Directory domain.
 
 If |product| is bound to a **remote account provider**, the *admin* user and
-*administrators* group can be created, if they do not already exist.
+*domain admins* group could be created manually, if they do not already exist.
 
 If a user or group with a similar purpose is already present in the remote
-account provider database, but it is named differently, it can be selected with
-a `manual procedure
-<http://wiki.nethserver.org/doku.php?id=userguide:set_admin_account>`_.
+account provider database, but it is named differently, |product| can be
+configured to rely on it with the following commands: ::
 
+    config setprop admins user customadmin group customadmins
+    /etc/e-smith/events/actions/system-adjust custom
 
 .. _password-management-section:
 
