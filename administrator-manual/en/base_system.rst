@@ -250,10 +250,7 @@ configuring the network clients to use it. As alternatives, the
 
   1. The server must be reachable from outside at port 80. Make sure your port 80
      is open to the public Internet (you can check with sites like [#CSM]_);
-     
-# I could be wrong, doesn't letsencrypt need access to port 443 to generate the certificate and renew the certificate?
-# when I've installed in in the past the only port needed was port 443. all other ports could be blocked from public access. 
-
+     
   2. The domains that you want the certificate for must be public domain names
      associated to server own public IP. Make sure you have public DNS name
      pointing to your server (you can check with sites like [#VDNS]_).
