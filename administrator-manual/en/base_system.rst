@@ -30,7 +30,6 @@ Well known folders are:
 
 * Shared folders: :file:`/var/lib/nethserver/ibay`
 * User home directories: :file:`/var/lib/nethserver/home`
-* Windows roaming profiles: :file:`/var/lib/nethserver/profile`
 * Mail: :file:`/var/lib/nethserver/vmail`
 * Faxes: :file:`/var/lib/nethserver/fax`
 * MySQL databases: :file:`/var/lib/mysql`
@@ -102,7 +101,7 @@ create a logical interface. Supported logical interfaces are:
 * :index:`VLAN` (Virtual Local Area Network): create two or more logically separated networks using a single interface
 * :index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet through a DSL modem
 
-**Bonds** allow you to aggregate bandwidth or tollerate link faults. Bonds can be configured in multiple modes.
+**Bonds** allow you to aggregate bandwidth or tolerate link faults. Bonds can be configured in multiple modes.
 
 Modes providing load balancing and fault tolerance:
 
