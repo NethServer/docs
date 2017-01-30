@@ -8,12 +8,12 @@ individual hosts and to identify the most commonly used network protocols.
 
 Enable ntopng
     Enabling ntopng, all traffic passing through the network interfaces
-    will be analyzed. It can cause a slowdown of the network and an
-    increased in system load.
+    will be analyzed. It can cause a slowdown of the network and
+    increase system load.
 Port
     The port where to view the ntopng web interface.
 Password for 'admin' user
     Admin user password. This password is not related to
     the |product| admin password.
 Interfaces
-    Interfaces on which ntopng will listens to.
+    Interfaces on which ntopng will listen to.
