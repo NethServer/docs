@@ -122,8 +122,8 @@ Dopo aver installato Samba Active Directory, la pagina :guilabel:`Utenti e
 gruppi` contiene due elementi predefiniti; entrambi sono disabilitati:
 :dfn:`administrator` e :dfn:`admin`. "Administrator" è l'account privilegiato
 predefinito di Active Directory e non è necessario in |product|; va bene tenerlo
-disabilitato. "Admin" in |product| è l'account amministrativo predefinito. E'
-membro dei gruppi AD "Administrators" e "Domain admins". Vedere
+disabilitato. "admin" in |product| è l'account amministrativo predefinito. E'
+membro del gruppo AD "Domain admins". Vedere
 :ref:`admin-account-section` per maggiori informazioni.
 
 Installazione su macchina virtuale
@@ -296,10 +296,10 @@ utenti, come autorizzare l'accesso alle :ref:`cartelle condivise
 Si possono creare due gruppi speciali.  Gli utenti che appartengono a questi
 gruppi ottengono l'accesso alle pagine del Server Manager.
 
-* :dfn:`administrators`: Gli utenti di questo gruppo hanno gli stessi
-  permessi di ``root``.
+* :dfn:`domain admins`: gli utenti di questo gruppo hanno gli stessi
+  permessi di ``root`` del Server Manager.
 
-* :dfn:`managers`: Gli utenti di questo gruppo hanno l'accesso alle
+* :dfn:`managers`: gli utenti di questo gruppo hanno l'accesso alle
   pagine della sezione *Gestione*.
 
 .. index: admin
@@ -310,7 +310,7 @@ Account admin
 =============
 
 Se un **account provider locale** LDAP o AD è installato, l'utente *admin*, membro
-del gruppo *administrators* è creato automaticamente. Questo account consente di
+del gruppo *domain admins* è creato automaticamente. Questo account consente di
 accedere a tutte le pagine di configurazione del Server Manager. Inizialmente è
 bloccato e non ha accesso alla console.
 
@@ -321,11 +321,14 @@ servizi specifici, come poter aggiungere una workstation al dominio di Active
 Directory.
 
 Se |product| è collegato ad un **account provider remoto**, l'utente *admin* e
-il gruppo *administrators* possono essere creati, se non esistono già.
+il gruppo *domain admins* possono essere creati, se non esistono già.
 
 Se un utente o un gruppo con una funzione simile è già presente nella base dati
 dell'account provider remoto, ma si chiama diversamente, può essere designato
-come *admin* mediante una `procedura manuale <http://wiki.nethserver.org/doku.php?id=userguide:set_admin_account>`.
+come *admin* usando questi comandi: ::
+
+  config setprop admins user customadmin group customadmins
+  /etc/e-smith/events/actions/system-adjust custom
 
 .. _password-management-section:
 
