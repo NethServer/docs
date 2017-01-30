@@ -31,10 +31,10 @@ module**, push the :guilabel:`Remove` button.
     pair: RPM; update
     pair: packages; update
 
-Sofware updates
-^^^^^^^^^^^^^^^
+Software updates
+^^^^^^^^^^^^^^^^
 
-Updates to the installed sofware are listed under the :guilabel:`Updates` tab. A
+Updates for the installed software are listed under the :guilabel:`Updates` tab. A
 message appears when software updates are available.
 
 .. hint:: Regularly update the installed software to fix bugs, security issues and receive new features.
