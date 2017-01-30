@@ -4,107 +4,57 @@ Note di rilascio |release|
 
 |product| versione |release|
 
-RC4
----
-
-Cambiamenti principali da RC3:
-
-* Installer: sistemata la seleziona del lingua della tastiera
-* Rete: supporto per vlan su bridge e bond
-* Cartelle condivise: sistemata la gestione ACL per i gruppi
-* Firewall: abilitato il traffic shaping per tutte le interfacce logiche
-* Firewall: il database viene ora inizializzato con una lista di servizi firewall più comuni
-* Firewall: Shorewall aggiornato alla versione 5.0.14 porta miglioramenti alla gestione multiwan
-* Proxy web: rimosso il supporto per l'autenticazione NTLM
-* Antivirus web: ecap-clamv sostituisce Squidclamav
-* Disaster recovery: sistemato il ripristino di Samba AD
-
-Aggiornamento da RC3 a RC4
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Per aggiornare un sistema RC2 a RC4, andare alla pagina :guilabel:`Software
-center` e avviare la procedura di aggiornamento come al solito.
-
-Tutti i bug fix sono applicati automaticamente.
-
-
-RC3
----
-
 Questa versione è basata su CentOS 7.3:
 https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
 
-Cambiamenti principali:
+Cambiamenti principali da RC4:
 
-* L'interfaccia web ora elenca gli utenti e gruppi remoti in tempo reale (#5168)
-* LDAP e Samba AD hanno entrambi gli stessi gruppi e utenti amministrativi (#5157)
-* I gruppi amministrativi built-int possono essere configurati dal Server Manager (#5168)
-* Configurazione semplificata degli account provider remoti (#5165)
-* Le condivisioni Samba supportano sia l'autenticazione NTLM sia  l'autenticazione Kerberos (#5160)
-* Il protocollo LDAP sicuro è sempre abilitato per le connessioni agli account provider remoti (#5161)
-* Nextcloud è stato aggiornato alla versione 10.0.2 (#5155)
-* Migliore gestione dei certificati (#5174)
-* Il modulo DPI ora funziona su kernel standard (#5170)
-* SquidGuard è stato sostituito da ufdbGuard (#5171)
-* Il proxy web HTTPS trasparente non richiede l'installazione del certificato sui client (#5169)
-* Supporto BIOS UEFI (#5148)
-* La dimensione della partizione di avvio è stata aumentata a 1 GB
+* Installatore: aggiunta modalità di installazione manuale
+* Account provider: il gruppo "administrators" è stato sostituito dal gruppo "domain admins" (:ref:`server_manager-section`)
+* Mail server: sistemata l'espansione di pseudonimi per i gruppi
+* Mail server: le caselle di posta condivise sono ora abilitate per default (:ref:`enable_shared_folders-section`)
+* Mail server: gli pseudonimi specifici per dominio hanno ora la precedenza su quelli generici
+* OpenVPN: abilitato l'avvio automatico dei client VPN al boot
+* Filtro web: corretti i profili basati su gruppi
+* Firewall: corretta la selezione delle condizioni temporali
+* IPS: configurazione aggiornata per l'ultima release pulledpork
 
-Aggiornamento da RC2 a RC4
+Aggiornamento da RC4 a Final
+----------------------------
+
+Per aggiornare un sistema RC4 a Final, andare alla pagina :guilabel:`Software
+center` e avviare la procedura di aggiornamento seguendo le istruzioni del Server Manager.
+
+.. _server_manager-section:
+
+Accesso al Server Manager
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Se si desidera abilitare l'accesso al Server Manager ad altri utenti oltre root,
+aggiungere gli utenti al gruppo "domain admins" ed eseguire: ::
+ 
+  config delete admins
+  /etc/e-smith/events/actions/initialize-default-databases
+
+
+.. _enable_shared_folders-section:
+
+Caselle di posta condivise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Per aggiornare un sistema RC2 a RC4, andare alla pagina :guilabel:`Software
-center` e avviare la procedura di aggiornamento come al solito.
-Se il sistema sta utilizzando un kernel DPI, prima di aggiornare verificare
-:ref:`dpi-kernel_section`.
+Se si desidera abilitare le caselle di posta condivise dagli utenti, eseguire: ::
 
-Tutti i bug fix sono applicati automaticamente, ma alcuni miglioramenti
-richiedono un intervento manuale.
-
-Dopo l'aggiornamento eseguire: ::
-
-    signal-event nethserver-sssd-save
-
-Se il filtro web è installato, eseguire: ::
-
-  /etc/cron.daily/update-squidguard-blacklists
-  signal-event nethserver-squid-update
-
-Al termine dell'aggiornamento, si consiglia di riavviare il sistema
-per caricare il nuovo kernel.
-
-.. _dpi-kernel_section:
-
-Aggiornare un firewall con kernel DPI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Per aggiornare un sistema che utilizza il kernel-lt con supporto DPI, eseguire 
-i seguenti comandi prima di aggiornare: ::
-
-  cat << EOF > /etc/sysconfig/kernel
-  # UPDATEDEFAULT specifies if new-kernel-pkg should make
-  # new kernels the default
-  UPDATEDEFAULT=yes
-
-  # DEFAULTKERNEL specifies the default kernel package type
-  DEFAULTKERNEL=kernel
-  EOF
-
-  yum reinstall grubby -y
+  config setprop dovecot SharedMailboxesStatus enabled
+  signal-event nethserver-mail-server-update
 
 
 Changelog
 ---------
 
-|product| `RC4 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-12-16T10%3A40%3A00Z..2017-01-17%20>`_
-
-|product| `RC3 changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2016-11-10T14%3A40%3A00Z..2016-12-16T10%3A40%3A00Z%20>`_
-
+|product| `Final changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_
 
 Bug noti
 --------
-
-* WebTop 4 al momento non funziona con account provider remoti in quanto non supporta il protocollo LDAPS
 
 * Lista di `bug noti <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
 
