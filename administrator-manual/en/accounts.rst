@@ -26,7 +26,7 @@ Be aware of the following rules about account providers:
 2. Local account providers cannot be uninstalled.
 
 Remote providers
-    A clean |product| installation is ready to connect a **remote** account
+    A clean |product| installation is ready to connect to a **remote** account
     provider of both types (LDAP, AD). The root user can configure the remote
     account provider from the :guilabel:`Accounts provider` page. 
     
@@ -39,12 +39,12 @@ Local providers
     and install either OpenLDAP **or** Samba 4 account provider from the modules list.
 
     After installing a local provider (either Samba 4 or OpenLDAP), the administrator
-    can create, modify, delete the users and groups.
+    can create, modify and delete the users and groups.
 
 .. warning::
 
-  Please, choose wisely your account provider because **the choice is not
-  reversible**. Also, the system will forbid any change to the FQDN after the
+  Please choose wisely your account provider because **the choice is not
+  reversible**. Also the system will forbid any change to the FQDN after the
   account provider has been configured.
 
 
@@ -52,7 +52,7 @@ Choosing the right account provider
 -----------------------------------
 
 Beside choosing to bind a remote provider or install a local one, the
-administrator must decide which backend type suits his needs.
+administrator has to decide which backend type suits he needs.
 
 The *File server* module of |product|, which enables the :guilabel:`Shared
 folders` page, can authenticate SMB/CIFS clients only if |product| is bound to an
@@ -62,7 +62,7 @@ folders` only in *guest mode*.  See :ref:`shared_folders-section`.
 On the other hand, the local OpenLDAP provider is more easy to install and
 configure.
 
-In the end, if the SMB file sharing protocol support is not required an
+In the end, if the SMB file sharing protocol support is not required, an
 LDAP provider is the best choice.
 
 
@@ -70,7 +70,7 @@ OpenLDAP local provider installation
 ------------------------------------
 
 From the :guilabel:`Software Center` install the module named
-*Account provider: OpenLDAP*. At the end of the installation, the
+*Account provider: OpenLDAP*. At the end of the installation the
 package is automatically configured and the administrator will be able to manage
 users and groups from the :guilabel:`User and groups` page.
 
@@ -88,12 +88,12 @@ network).
 
 Therefore the additional IP address must satisfy three conditions:
 
-1. the IP address must be **free**; it must not be used by any other machine,
+1. the IP address has to be **free**; it must not be used by any other machine,
 
-2. the IP address must be in the same subnet range of a green network,
+2. the IP address has to be in the same subnet range of a green network,
 
-3. the green network must be bound to a bridged interface, so that the Linux
-   Container can attach its virtual interface to it; the UI procedure can create the
+3. the green network has to be bound to a bridged interface where the Linux
+   Container can attach its virtual interface to; the installation procedure can create the
    bridge interface automatically, if it is missing.
 
 From the :guilabel:`Software center` page install the module named *Account
@@ -130,7 +130,7 @@ Installing on a virtual machine
 
 Samba Active Directory runs inside a Linux Container which uses a virtual
 network interface bridged to the network interface of the system. The virtual
-network interface must be visible inside the physical network, but often
+network interface has to be visible inside the physical network, but often
 virtualization solutions block ARP traffic. As a result, the Samba Active
 Directory container is not visible from LAN hosts.
 
@@ -146,7 +146,7 @@ located in the network settings section.
 VMWare
 ++++++
 
-Enter the networking configuration section of the virtualization node and set
+Enter the networking configuration section of the virtualization mode and set
 the virtual switch in promiscuous mode.
 
 KVM
@@ -205,7 +205,7 @@ Joining an Active Directory domain has the following pre-requisites:
    requires an additional account to perform simple LDAP binds.  Create a **dedicated
    user account** in AD, and set a complex *non-expiring* password for it.
 
-After all the pre-requisites are met, proceed with the join from the
+After all the prerequisites are fulfilled, proceed with the join from the
 :guilabel:`Accounts provider` page:
 
 * Fill :guilabel:`DNS server IP address` field which usually is the
@@ -214,7 +214,7 @@ After all the pre-requisites are met, proceed with the join from the
 * (only for Microsoft Active Directory) specify the **dedicated user account**
   credentials under the :guilabel:`Advanced settings` panel.
 
-* Push the :guilabel:`Submit` button. You will be prompted for an user name and
+* Push the :guilabel:`Submit` button. You will be prompted for an user name and a
   password: provide AD ``administrator`` or any other account
   credentials with permissions to join a new machine to the domain 
   (i.e. ``admin`` on |product|).
@@ -234,7 +234,7 @@ Users
 =====
 
 A newly created user account remains locked until it has set a password.
-Disabled users are denied access to system services.
+Disabled users are denied to access system services.
 
 When creating a user, following fields are mandatory:
 
@@ -254,7 +254,7 @@ actions.
 Changing the password
 ---------------------
 
-If an inital password was not set during creation, the user account is disabled.
+If there wasn't given an initial password during user creation, the user account is disabled.
 To enable it, set a password using the :guilabel:`Change password` button.
 
 When a user is enabled, the user can access the Server Manager and change
@@ -264,8 +264,8 @@ upper right corner of the screen and clicking on :guilabel:`Profile`.
 If the system is bound to an Active Directory account provider, users can change
 their password also using the Windows tools.  In this case you can not set passwords
 shorter than 6 *characters* regardless of the server policies. Windows performs
-preliminary checks and sends the password to the server where they are then
-evaluated according to the :ref:`configured policies <password-management-section>`.
+preliminary checks and sends the password to the server where it is evaluated 
+according to the :ref:`configured policies <password-management-section>`.
 
 
 Credentials for services
@@ -343,7 +343,7 @@ Password policies can be changed from web interface.
 Complexity
 -----------
 
-The :index:`password` complexity is a set of minimum conditions that password must match to be accepted by the system:
+The :index:`password` complexity is a set of minimum conditions for password to be accepted by the system:
 You can choose between two different management policies about password complexity:
 
 * :dfn:`none`: there is no specific control over the password entered, but minimum length is 7 characters
@@ -374,7 +374,7 @@ The  :index:`password expiration` is enabled by default to 6 months from the tim
 The system will send an e-mail to inform the users when their password is about to expire.
 
 .. note:: The system will refer to the date of the last password change,
-   whichever is the earlier more than 6 months, the server will send an email to indicate that password has expired.
+   if password is older than 6 months, the server will send an email to indicate that password has expired.
    In this case you need to change the user password.
    For example, if the last password change was made in January and the activation of the deadline in October,
    the system will assume the password changed in January is expired, and notify the user.
