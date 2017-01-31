@@ -422,7 +422,7 @@ It is possible to create mail aliases from a TSV (Tab Separated Values) file wit
 
   username <TAB> emailaddress <NEWLINE>
 
-See :ref:`import-users_section` for a sample script invocation.
+Then you can use the ``import_emails`` script. See :ref:`import-users_section` for a sample script invocation.
 
 Import Groups
 -------------
