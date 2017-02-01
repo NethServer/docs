@@ -1,6 +1,16 @@
-==========================
-Bandwidth monitor (ntopng)
-==========================
+=================
+Bandwidth monitor
+=================
+
+BandwidthD
+==========
+
+BandwidthD tracks usage of TCP/IP network subnets and builds graphs to display utilization.
+After installation, BandwidthD is automatically started.
+Graphs can be accessed using the Server Manager.
+
+ntopng
+======
 
 ntopng is a powerful tool that allows you to analyze real-time
 network traffic. It allows you to evaluate the bandwidth used by

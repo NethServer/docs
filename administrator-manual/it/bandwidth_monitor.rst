@@ -1,6 +1,17 @@
-======================
-Monitor banda (ntopng)
-======================
+=============
+Monitor banda
+=============
+
+
+BandwidthD
+==========
+
+BandwidthD tiene traccia del traffico di rete e crea grafici che ne mostrano l'utilizzo.
+BandwidthD viene automaticamente avviato dopo l'installazione.
+I grafici sono consultabili dal Server Manager.
+
+ntopng
+======
 
 ntopng è un potente strumento che permette di analizzare in tempo reale
 il traffico di rete. Consente di valutare la banda utilizzata dai
