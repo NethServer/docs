@@ -350,22 +350,22 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 **ham**.
 
 The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`junkmail folder`. As
-prerequisite, the junkmail folder must be enabled from
+simply moving a message in and out of the :dfn:`Junk folder`. As
+prerequisite, the Junk folder must be enabled from
 :guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
-"junkmail" folder"` option.
+"Junk" folder"` option.
 
-* By *putting a message into the junkmail folder*, the filters learn
+* By *putting a message into the Junk folder*, the filters learn
   it is spam and will assign an higher score to similar messages.
 
-* On the contrary, by *getting a message out of junkmail*, the filters
+* On the contrary, by *getting a message out of Junk*, the filters
   learn it is ham: next time a lower score will be assigned.
 
 By default, all users can train the filters using this technique.  If
 a group called ``spamtrainers`` exists, only users in this group
 will be allowed to train the filters.
 
-.. note:: It is a good habit to frequently check the junkmail folder
+.. note:: It is a good habit to frequently check the Junk folder
           in order to not losing email wrongly recognized as spam.
 
 .. index::

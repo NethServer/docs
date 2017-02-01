@@ -55,7 +55,7 @@ Dovecot example: ::
     QuotaStatus=enabled
     QuotaDefaultSize=20
     QuotaUiFunction=
-    SpamFolder=junkmail
+    SpamFolder=Junk
 
 Properties:
 
