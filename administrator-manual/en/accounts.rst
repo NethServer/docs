@@ -4,6 +4,7 @@
 Users and groups
 ================
 
+.. _account-providers:
 
 Account providers
 =================

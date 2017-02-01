@@ -106,17 +106,26 @@ Email addresses
 
 Each user has a personal :dfn:`mailbox` and any user name in the form
 *<username>@<domain>* is also a valid email address to deliver messages into it.
+
 The list of mailboxes is shown by the :guilabel:`Email addresses > User
 mailboxes` page. The :guilabel:`Edit` button allows disabling the :guilabel:`Access to
 email services` (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
 to that user's mailbox can be forwarded to an external email address.
+
+.. warning::
+
+    If the system is bound to a :ref:`remote account provider
+    <account-providers>` and a user account is remotely deleted, the associated
+    mailbox must be erased manually. The file system path prefix is
+    :file:`/var/lib/nethserver/vmail/`.
 
 .. index::
     pair: shared; mailbox
 
 Mailboxes can be shared among groups of users.  The :guilabel:`Email addresses >
 Shared mailboxes` page allows creating a new :dfn:`shared mailbox` and defining
-one or more owning groups.
+one or more owning groups. Shared mailboxes can also be created by any IMAP
+client supporting IMAP ACL protocol extension (RFC 4314).
 
 The system enables the creation of an unlimited number of additional email
 addresses, from the :guilabel:`Email addresses > Mail aliases` page. Each
