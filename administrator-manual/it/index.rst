@@ -45,7 +45,7 @@ Manuale amministratore
    proxy_pass
    virtual_hosts
    shared_folder
-   bandiwidth_monitor
+   bandwidth_monitor
    statistics
    dns
    dhcp
