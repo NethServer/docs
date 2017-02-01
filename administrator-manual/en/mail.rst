@@ -191,18 +191,20 @@ retention`.
    pair: email; master user
 
 The ``root`` user can impersonate another user, gaining full rights
-to the latter's mailbox contents and on folder permissions.  The
+to any mailbox contents and folder permissions.  The
 :guilabel:`Root can log in as another user` option controls this
 empowerment, known also as *master user* in [#Dovecot]_.
 
-When :guilabel:`Root can log in as another user` is enabled, the IMAP
-server accepts any user name with ``*root`` suffix appended and
-root's password.
+When :guilabel:`Root can log in as another user` is enabled, the following
+credentials are accepted by the IMAP server:
 
-For instance, to access as ``john`` with admin's password ``secr3t``,
+* user name with ``*root`` suffix appended
+* root's password
+
+For instance, to access as ``john`` with root password ``secr3t``,
 use the following credentials:
 
-* username: ``john*root``
+* user name: ``john*root``
 * password: ``secr3t``
 
 .. _email_messages:
