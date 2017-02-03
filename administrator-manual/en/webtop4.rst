@@ -12,8 +12,8 @@ Authentication
 Web interface
 -------------
 
-The login to the web application is always with simple user name and password, 
-no matters how many mail domains are configured.
+The login method to the web application is with a simple user name and password,
+regardless of how many mail domains are configured.
 
 **Example**
 
@@ -25,7 +25,7 @@ no matters how many mail domains are configured.
 Active Sync
 -----------
 
-Login to Active Sync account is with <username>@<domain> where ``<domain>`` is the 
+Logging in to the Active Sync account can be accomplished with <username>@<domain> where ``<domain>`` is the 
 domain part of server FQDN.
 
 **Example**
@@ -49,22 +49,22 @@ address and leave the domain field empty.
 Admin user
 ----------
 
-After installation, WebTop will be accessible with an administrator user.
+After installation, WebTop will be accessible via the administrator user.
 The administrator user can change global settings and login as all other users,
-but it's not a system users and can't access any other services like Mail, Calendar, etc.
+however, it's not a system user and can't access any other services like Mail, Calendar, etc.
 
 Default credentials are:
 
 * User: admin
 * Password: admin
 
-Admin user password must be changed from WebTop interface.
+The administrator user's password must be changed from within the WebTop interface.
 
 .. warning::
-   Remember to change the admin password just after installation.
+   **Remember to change the admin password just after installation!**
 
 
-To check the mail of the system user admin use the following login: admin@<domain> where ``<domain>`` is the
+To check the mail of the system's user admin account use the following login: admin@<domain> where ``<domain>`` is the
 domain part of server FQDN.
 
 **Example**
@@ -93,12 +93,12 @@ To disable ActiveSync on WebTop: ::
 
 
 All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
-The same apply if the user is switching from WebTop to SOGo.
+This also applies if the user is switching from WebTop to SOGo.
 
 Active Directory authentication
 ===============================
 
-After performing the join to Active Directory domain, access WebTop administration page,
+After an Active Directory domain has been joined, access WebTop administration page,
 then from tree menu on the left, select :guilabel:`Domain` -> :guilabel:`NethServer`.
 
 Edit the following fields:
@@ -115,7 +115,9 @@ After saving, the page :guilabel:`Users` will display users from Active Director
 Importing from SOGo
 ===================
 
-You can migrate some data from SOGo to WebTop using the following script:
+**Please read all directions before importing any data to ensure import is successful**
+
+Migration of Calendar and Address book data from SOGo to Webop can be accomplished by using the following scripts, and following the steps listed below:
 
 * Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
 * Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
@@ -133,11 +135,11 @@ Where ``user`` can be a username or ``all``.
 
 **Examples**
 
-Import all address books from SOGo: ::
+To import all address books from SOGo: ::
 
   php /usr/share/webtop/doc/sogo2webtop_card.php all
 
-Import the calendar of user "foo": ::
+To import the calendar of user "foo": ::
  
   php /usr/share/webtop/doc/sogo2webtop_cal.php foo
 
