@@ -8,9 +8,9 @@ The :index:`chat` service uses the standard protocol :index:`Jabber`/:index:`XMP
 
 The main features are: 
 
-* Messages between users of the system 
+* Messaging between users of the system 
 * Possibility to divide the users into groups, according to the company or department / office 
-* Chat server's administrators
+* Chat server administration
 * Broadcast messages 
 * Group chat 
 * Offline messages 
