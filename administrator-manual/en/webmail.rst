@@ -3,7 +3,7 @@ Webmail
 =======
 
 The default :index:`webmail` client is :index:`Roundcube`.
-Roundcube main features are:
+Roundcube's main features are:
 
 * Simple and fast
 * Built-in address book integrated with internal LDAP
@@ -26,14 +26,14 @@ For example, given a server with IP address *192.168.1.1* and name *mail.mydomai
 Plugins
 =======
 
-Roundcube supports many plugins already bundled within the installation.
+Roundcube supports many plugins that are already bundled within the installation.
 
-Plugins enabled by default:
+The plugins that are enabled by default are:
 
 * Manage sieve: manage filters for incoming mail
 * Mark as junk: mark the selected messages as Junk and move them to the configured Junk folder
 
-Other recommended plugins:
+Recommended plugins:
 
 * New mail notifier
 * Emoticons
