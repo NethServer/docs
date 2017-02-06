@@ -38,7 +38,7 @@ checked for new mail.
 The underneath implementation is based on :dfn:`Getmail`
 [#Getmail]_. After fetching mail messages from the POP3/IMAP
 provider Getmail applies all required filters (SPAM and virus) prior
- to delivering the mail locally.
+to delivering the mail locally.
 All messages are filtered according to the :ref:`configured rules <email_filter>`.
 
 All operations are logged in :file:`/var/log/maillog`.
