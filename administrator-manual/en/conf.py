@@ -63,10 +63,10 @@ locale_dirs = ['locale/']
 # directories to ignore when looking for source files.
 exclude_patterns = [
     '_build',
-    '_templates',
     '.tx',
     'locale',
-    'nsent'
+    'nsent',
+    'nscom'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -124,13 +124,13 @@ if tags.has('nsent'):
     }
 
 else:
-    templates_path = ['_templates']
+    templates_path = ['nscom/_templates']
     project = u'NethServer'
     html_title = u"%s %s" % (project, release)
     html_theme = "sphinx_rtd_theme"
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    html_favicon = '../../_static/favicon.ico' 
-    html_static_path = ['../../_static']
+    html_favicon = 'nscom/_static/favicon.ico' 
+    html_static_path = ['nscom/_static']
     rst_prolog="""
 .. |product| replace:: NethServer
 .. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__

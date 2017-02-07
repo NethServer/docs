@@ -5,7 +5,7 @@ Administrator Manual
 
 .. only:: nscom
 
-    .. image:: ../../_static/logo.png
+    .. image:: nscom/_static/logo.png
           :alt: |product|
 
     **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
@@ -92,7 +92,7 @@ Indices
 
 
 
-.. image:: ../../_static/by-nc-sa_small.png
+.. image:: nscom/_static/by-nc-sa_small.png
    :alt: CC by-nc-sa
    :align: right
    :target: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

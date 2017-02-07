@@ -166,7 +166,7 @@ Output files will be generated inside the *_build* directory.
 
 To specify an alternative configuration (i.e. ``nsent``) type ::
 
-   make SPHINXOPTS="-c nsent" html
+   make SPHINXOPTS="-t nsent" html
 
 Upgrading developer manual
 ==========================
