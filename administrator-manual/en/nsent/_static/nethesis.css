@@ -1,0 +1,278 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
+body {
+    color: #333;
+    background-color: #efefef;
+    font-size: 15px;
+    line-height: 24px;
+}
+.container {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+}
+h1, h2, h6, .h1, .h2, .h6 {
+    font-family: 'Open Sans Condensed', Helvetica, sans-serif !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+h1 {
+    padding-bottom: 15px;
+}
+h2 {
+    border-top: 4px solid #f4af1a;
+    width: 55%;
+    margin-top: 35px;
+    padding-top: 5px;
+    margin-bottom: 25px;
+}
+h3, h4, h5 {
+    font-family: Verdana, Helvetica, Arial, sans-serif !important;
+    font-weight: 600 !important;
+    color: #444;
+}
+h3 {
+    font-size: large;
+    margin: 30px 0 18px 0;
+}
+h4 {
+    font-size: medium;
+    margin: 25px 0 15px 0;
+}
+h5 {
+    font-size: inherit;
+    margin: 15px 0 5px 0;
+}
+.col-md-12, .col-lg-12 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+ul, ol {
+    list-style-type: square;
+    margin-bottom: 15px;
+}
+ul ul {
+    margin: 10px 0;
+}
+p {
+    margin-bottom: 15px;
+    color: #444;
+}
+a {
+    color: #049cdb;
+}
+pre, blockquote {
+    margin: 15px 20px;
+}
+
+/* -- navbar ---------------------------------------------------------------- */
+
+.navbar .container {
+    padding: 0;
+}
+.container>.navbar-header {
+    padding: 0 15px;
+    float: none;
+    border-bottom: 2px solid #ccc;
+}
+.navbar-default .navbar-collapse {
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
+    box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
+}
+.section li {
+    line-height: 26px;
+}
+.navbar-default .navbar-nav>li {
+    border-right: #cccccc 1px solid !important;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #000000;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: white !important;
+    background-color: #259ed5 !important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #259ed5;
+    color: #ffffff;
+}
+.navbar-right {
+    margin-right: 0 !important;
+}
+.navbar-default .navbar-text {
+    display: none;
+}
+.navbar-form .form-control {
+    border: 4px solid #b7dfff !important;
+}
+.navbar {
+    background-image: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+.navbar-default {
+    background-color: #efefef !important;
+    border-color: #efefef !important;
+}
+.navbar-toggle {
+    background-color: #259ed5;
+}
+.current.reference.internal {
+    background-color: #259ed5;
+    color: white !important;
+}
+.reference.internal[href="#"] {
+    font-weight: bolder;
+}
+
+/* -- section --------------------------------------------------------------- */
+
+img[alt ^="NethServer"] {
+    margin-left: calc(50% - 125px);
+    width: 250px;
+    margin-top: 10px;
+}
+h2 ~ .section, #manuale-amministratore, #appendice, .section:last-child {
+    border-bottom: none;
+}
+div.sidebar {
+    margin: 22px 0 0.5em 1em;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fffdf8;
+    width: 40%;
+    float: right;
+    border-radius: 6px;
+}
+div.sidebar p {
+    margin: 0;
+}
+.simple {
+    margin: 15px 0 20px 0;
+}
+div.admonition {
+    margin: 15px 0;
+    padding: 15px 20px;
+    color: #000;
+    word-spacing: 0.1em;
+    letter-spacing: 0.02em;
+}
+.alert-info {
+    background-color: #e0f1ff;
+    border-color: #1ca2d8;
+}
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #f4af1a;
+}
+img[alt="|product|"] {
+    display: none;
+}
+.guilabel {
+    font-style: italic;
+    font-weight: bolder;
+}
+.table>tbody>tr>td, .table>tfoot>tr>td {
+    word-break: break-word;
+}
+footer p {
+    margin-top: 20px;
+}
+footer .pull-right a {
+    border: 1px solid #bbb;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+footer .pull-right a:hover {
+    background-color: #ddd;
+}
+
+/* -- Media queries ------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 72px !important;
+    }
+    h2 {
+        width: 100%;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+    .divider {
+        display: none;
+    }
+    .form-control[name="q"] {
+        width: calc(100% - 49px);
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+    }
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        height: 55px;
+    }
+    div.sidebar {
+        margin: 12px 0 1.5em 0em;
+        width: 100%;
+        float: none;
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        padding-top: 137px !important;
+    }
+    .open>.dropdown-menu {
+        display: inline-table;
+    }
+    .dropdown-menu.globaltoc li {
+        display: inline-table;
+    }
+    .dropdown-menu.globaltoc {
+        width: 749px;
+    }
+    .dropdown-menu.globaltoc li a:nth-child(1n+0) {
+        width: 229px;
+    }
+    .dropdown-menu.globaltoc li:nth-child(1n+0) {
+        border-right: 1px solid #ddd;
+    }
+    .dropdown-menu.globaltoc li:nth-child(3n+0) {
+        border-right: none;
+    }
+    .navbar-brand {
+        height: 68px;
+    }
+}
+@media (min-width: 992px) {
+    .dropdown-menu.globaltoc {
+        width: 968px;
+    }
+    .dropdown-menu.globaltoc li a:nth-child(1n+0) {
+        width: 320px;
+    }
+    .dropdown-menu.globaltoc li:nth-child(1n+0) {
+        border-right: 1px solid #ddd;
+    }
+    .dropdown-menu.globaltoc li:nth-child(3n+0) {
+        border-right: none;
+    }
+}
+@media (min-width: 1200px) {
+    .dropdown-menu.globaltoc {
+        width: 1169px;
+    }
+    .dropdown-menu.globaltoc li a:nth-child(1n+0) {
+        width: 290px;
+    }
+    .dropdown-menu.globaltoc li:nth-child(1n+0) {
+        border-right: 1px solid #ddd;
+    }
+    .dropdown-menu.globaltoc li:nth-child(4n+0) {
+        border-right: none;
+    }
+}

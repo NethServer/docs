@@ -164,6 +164,10 @@ First clone the repository, enter language directory and type ::
 
 Output files will be generated inside the *_build* directory.
 
+To specify an alternative configuration (i.e. ``nsent``) type ::
+
+   make SPHINXOPTS="-c nsent" html
+
 Upgrading developer manual
 ==========================
 

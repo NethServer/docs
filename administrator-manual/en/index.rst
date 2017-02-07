@@ -3,10 +3,20 @@
 Administrator Manual 
 ====================
 
-.. image:: ../../_static/logo.png
-      :alt: |product|
+.. only:: nscom
 
-**Official site**: `www.nethserver.org <http://www.nethserver.org>`_
+    .. image:: ../../_static/logo.png
+          :alt: |product|
+
+    **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
+
+.. only:: nsent
+
+    .. sidebar:: Contacts
+
+        Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_
+
+        Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
 .. toctree::
    :maxdepth: 2
