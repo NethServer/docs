@@ -73,12 +73,14 @@ new provisioning run. ::
 
     realm leave
     systemctl stop nsdc sssd
+    systemctl disable nsdc sssd
     rm -vf /var/lib/machines/nsdc/etc/samba/smb.conf
     find /var/lib/machines/nsdc/var/lib/samba/ -type f | xargs -- rm -vf
-    config setprop sssd Provider none status disabled
+    config setprop sssd Provider none status disabled AdDns ''
     > /etc/sssd/sssd.conf
     signal-event nethserver-dnsmasq-save
-    config setprop nsdc status disabled
+    config setprop nsdc status disabled IpAddress ''
+
 
 Changing the IP address of DC
 -----------------------------
@@ -132,16 +134,22 @@ Example, change the network address ("122" becomes "101"):
 
     systemctl start nsdc
 
-7. Edit ``/var/lib/machines/nsdc/etc/krb5.conf`` and append a "realms" section like the following::
-    
+7. Edit ``/var/lib/machines/nsdc/var/lib/samba/private/krb5.conf`` and append a "realms" section like the following::
+
     [realms]
     DPNET.NETHESIS.IT = {
        kdc = 192.168.101.77
     }
 
+8. Install additional dependencies for ``samba_dnsupdate`` in nsdc container ::
+
+    yum --installroot=/var/lib/machines/nsdc/ -y install bind-utils
+
 8. Run ``samba_dnsupdate`` in nsdc container ::
-    
+
     systemd-run -t -M nsdc /usr/sbin/samba_dnsupdate --verbose
 
-9. Clean up ``/var/lib/machines/nsdc/etc/krb5.conf``, by removing the section appended at step 7
+8. Run again the last command, until it outputs *"No DNS updates needed"*.
+
+9. Clean up ``/var/lib/machines/nsdc/var/lib/samba/private/krb5.conf``, by removing the section appended at step 7
 
