@@ -131,6 +131,14 @@ else:
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     html_favicon = 'nscom/_static/favicon.ico' 
     html_static_path = ['nscom/_static']
+    exclude_patterns.extend([
+        'registration.rst',
+        'hotspot.rst',
+        'weekly_report.rst',
+        'nethvoice_intro.rst',
+        'nethcti_intro.rst',
+        'phonebook-mysql.rst'
+    ])
     rst_prolog="""
 .. |product| replace:: NethServer
 .. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__

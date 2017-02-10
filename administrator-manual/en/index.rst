@@ -25,6 +25,7 @@ Administrator Manual
    release_notes
    installation
    access
+   registration
 
 .. toctree::
    :maxdepth: 2
@@ -53,6 +54,7 @@ Administrator Manual
    web_proxy
    content_filter
    suricata
+   firewall
    proxy_pass
    virtual_hosts
    shared_folder
@@ -63,6 +65,11 @@ Administrator Manual
    ftp
    phone_home
    snmp
+   nethvoice_intro
+   nethcti_intro
+   phonebook-mysql
+   weekly_report
+   hotspot
 
 .. toctree::
    :maxdepth: 2
