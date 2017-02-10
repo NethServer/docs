@@ -58,7 +58,7 @@ Modules
    flashstart
    proxy_pass
    snort
-   bandiwidth_monitor
+   bandwidth_monitor
    statistics
    dns
    dhcp
