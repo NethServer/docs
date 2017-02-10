@@ -575,17 +575,17 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
-.. [#Sieve] Sieve mail filtering language http://en.wikipedia.org/wiki/Sieve_(mail_filtering_language) 
+.. [#Sieve] Sieve mail filtering language https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
 .. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
-.. [#Email] Email, http://en.wikipedia.org/wiki/Email
-.. [#MXRecord] The MX DNS record, http://en.wikipedia.org/wiki/MX_record
-.. [#SMTP] SMTP, http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
-.. [#MailDirFormat] The Maildir format, http://en.wikipedia.org/wiki/Maildir
-.. [#Markdown] The Markdown plain text formatting syntax, http://en.wikipedia.org/wiki/Markdown
-.. [#IMAP] IMAP http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
-.. [#POP3] POP3 http://en.wikipedia.org/wiki/Post_Office_Protocol
-.. [#DNSBL] DNSBL http://en.wikipedia.org/wiki/DNSBL
-.. [#SPAM] SPAM http://en.wikipedia.org/wiki/Spamming
+.. [#Email] Email, https://en.wikipedia.org/wiki/Email
+.. [#MXRecord] The MX DNS record, https://en.wikipedia.org/wiki/MX_record
+.. [#SMTP] SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+.. [#MailDirFormat] The Maildir format, https://en.wikipedia.org/wiki/Maildir
+.. [#Markdown] The Markdown plain text formatting syntax, https://en.wikipedia.org/wiki/Markdown
+.. [#IMAP] IMAP https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
+.. [#POP3] POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol
+.. [#DNSBL] DNSBL https://en.wikipedia.org/wiki/DNSBL
+.. [#SPAM] SPAM https://en.wikipedia.org/wiki/Spamming
 .. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
-.. [#BAYES] Bayesian filtering http://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
+.. [#BAYES] Bayesian filtering https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
 .. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/

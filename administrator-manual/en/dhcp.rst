@@ -144,9 +144,9 @@ network) from the start up screen.
 .. Rubric:: References
 
 .. [#DHCP] Dynamic Host Configuration Protocol (DHCP)
-           http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
+           https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
 .. [#TFTP] Trivial File Transfer Protocol
            https://en.wikipedia.org/wiki/Tftp
 .. [#PXE] Preboot eXecution Environment
-          http://en.wikipedia.org/wiki/Preboot_Execution_Environment
+          https://en.wikipedia.org/wiki/Preboot_Execution_Environment
 

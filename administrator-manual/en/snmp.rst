@@ -15,5 +15,5 @@ During first configuration. you should set three main options:
 
 .. rubric:: References
 
-.. [#SNMP] Simple Network Management Protocol http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
+.. [#SNMP] Simple Network Management Protocol https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
 
