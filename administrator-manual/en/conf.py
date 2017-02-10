@@ -13,6 +13,17 @@
 
 import sys, os
 
+try:
+    import sphinx_rtd_theme
+    import sphinx_bootstrap_theme
+except ImportError:
+    pass
+
+if 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
+    tags.add('nsent')
+else:
+    tags.add('nscom')
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -41,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'NethServer'
-copyright = u'2015, Nethesis'
+copyright = u'2017, Nethesis'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -64,7 +75,13 @@ language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','nethservice']
+exclude_patterns = [
+    '_build',
+    '.tx',
+    'locale',
+    'nsent',
+    'nscom'
+]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -165,81 +182,83 @@ html_static_path = ['../../_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'NethServerdoc'
 
+highlight_language = 'none'
 
-# -- Options for LaTeX output --------------------------------------------------
+if tags.has('nsent'):
+    templates_path = ['nsent/_templates']
+    project = u'NethServer Enterprise'
+    html_title = "%s %s" % (project, release)
+    html_theme = "bootstrap"
+    html_logo = 'nsent/_static/nethesislogo.jpg'
+    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+    html_favicon = 'nsent/_static/favicon.ico' 
+    html_static_path = ['nsent/_static']
+    exclude_patterns.extend([
+        'webvirtmgr.rst'
+    ])
+    rst_prolog = """
+.. |product| replace:: NethServer Enterprise
+.. |product_voice| replace:: NethVoice
+.. |product_cti| replace:: NethCTI
+.. |download_site| replace:: `helpdesk.nethesis.it <http://helpdesk.nethesis.it/solution/folders/3000008164>`__
+.. |ks_keyboard| replace:: :samp:`us`
+.. |ks_timezone| replace:: :samp:`UTC`
+.. |ks_language| replace:: :samp:`en_US`
+.. |register_link| replace:: `my.nethesis.it <https://my.nethesis.it/>`__
+"""
+    latex_elements = {}
+    latex_documents = [
+      ('index', 'NethServer_enterprise.tex', u'Documentazione NethServer Enterprise',
+       u'Nethesis', 'manual'),
+    ]
+    man_pages = [
+        ('index', 'nethserver_enterprise', u'NethServer Enterprise Documentation',
+         [u'Nethesis'], 1)
+    ]
+    texinfo_documents = [
+      ('index', 'NethServer enterprise', u'NethServer Enterprise Documentation',
+       u'Nethesis', 'NethServer Enterprise', '',
+       'Miscellaneous'),
+    ]
+    html_theme_options = {
+        'navbar_title': " ", # HACK to hide project name in navbar.
+        'navbar_links': [],
+        'navbar_sidebarrel': True,
+        'navbar_pagenav': True,
+        'globaltoc_includehidden': "true",
+        'navbar_class': "navbar",
+        'navbar_fixed_top': "true",
+        'source_link_position': "nav",
+        'bootswatch_theme': "cerulean",
+    }
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+else:
+    templates_path = ['nscom/_templates']
+    project = u'NethServer'
+    html_title = u"%s %s" % (project, release)
+    html_theme = "sphinx_rtd_theme"
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    html_favicon = 'nscom/_static/favicon.ico' 
+    html_static_path = ['nscom/_static']
+    rst_prolog="""
+.. |product| replace:: NethServer
+.. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__
+.. |ks_keyboard| replace:: :samp:`en`
+.. |ks_timezone| replace:: :samp:`Greenwich`
+.. |ks_language| replace:: :samp:`en_US`
+"""
+    texinfo_documents = [
+      ('index', 'NethServer', u'NethServer Documentation',
+       u'Nethesis', 'NethServer', 'One line description of project.',
+       'Miscellaneous'),
+    ]
+    latex_elements = {}
+    latex_documents = [
+      ('index', 'NethServer.tex', u'NethServer Documentation',
+       u'Nethesis', 'manual'),
+    ]
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-  ('index', 'NethServer.tex', u'NethServer Documentation',
-   u'Nethesis', 'manual'),
-]
-
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
-#latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
-
-
-# -- Options for manual page output --------------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    ('index', 'nethserver', u'NethServer Documentation',
-     [u'Nethesis'], 1)
-]
-
-# If true, show URL addresses after external links.
-#man_show_urls = False
-
-
-# -- Options for Texinfo output ------------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'NethServer', u'NethServer Documentation',
-   u'Nethesis', 'NethServer', 'One line description of project.',
-   'Miscellaneous'),
-]
-
-# Documents to append as an appendix to all manuals.
-#texinfo_appendices = []
-
-# If false, no module index is generated.
-#texinfo_domain_indices = True
-
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
-
-if os.path.exists('rst_prolog'):
-    with open('rst_prolog') as fid:
-        rst_prolog = fid.read()
+    man_pages = [
+        ('index', 'nethserver', u'NethServer Documentation',
+         [u'Nethesis'], 1)
+    ]
