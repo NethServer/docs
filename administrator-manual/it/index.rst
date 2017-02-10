@@ -25,6 +25,7 @@ Installazione
 
    installation
    access
+   registration
 
 Configurazione
 --------------
@@ -72,6 +73,13 @@ Moduli
    adagios
    ocs
    ha
+   flashstart.rst
+   hotspot.rst
+   nethcti_intro
+   nethvoice_intro
+   phonebook-mysql
+   weekly_report
+
 
 Best practices
 --------------

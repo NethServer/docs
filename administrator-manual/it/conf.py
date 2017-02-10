@@ -243,7 +243,10 @@ else:
     exclude_patterns.extend([
         'registration.rst',
         'hotspot.rst',
-        'weekly_report.rst'
+        'weekly_report.rst',
+        'nethvoice_intro.rst',
+        'nethcti_intro.rst',
+        'phonebook-mysql.rst'
     ])
     rst_prolog="""
 .. |product| replace:: NethServer
