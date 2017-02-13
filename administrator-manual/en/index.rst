@@ -24,6 +24,7 @@ Installation
 
    installation
    access
+   registration
 
 Configuration
 -------------
@@ -54,9 +55,10 @@ Modules
    web_proxy
    content_filter
    firewall
+   flashstart
    proxy_pass
    snort
-   bandiwidth_monitor
+   bandwidth_monitor
    statistics
    dns
    dhcp
@@ -70,6 +72,12 @@ Modules
    adagios
    ocs
    ha
+   nethvoice_intro
+   nethcti_intro
+   phonebook-mysql
+   weekly_report
+   hotspot
+
 
 Best practices
 --------------
