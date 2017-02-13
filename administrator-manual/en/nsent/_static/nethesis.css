@@ -10,7 +10,7 @@ body {
     border-radius: 6px;
     border: 1px solid #dcdcdc;
 }
-h1, h2, h6, .h1, .h2, .h6 {
+h1, h2, h6, .h1, .h2, .h6, .toctree-wrapper > .caption {
     font-family: 'Open Sans Condensed', Helvetica, sans-serif !important;
     font-weight: 700 !important;
     color: #333 !important;
@@ -18,12 +18,13 @@ h1, h2, h6, .h1, .h2, .h6 {
 h1 {
     padding-bottom: 15px;
 }
-h2 {
+h2, .toctree-wrapper > .caption {
     border-top: 4px solid #f4af1a;
     width: 55%;
     margin-top: 35px;
     padding-top: 5px;
     margin-bottom: 25px;
+    font-size: 30px;
 }
 h3, h4, h5 {
     font-family: Verdana, Helvetica, Arial, sans-serif !important;
