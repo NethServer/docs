@@ -151,12 +151,39 @@ Use a spell checker program before submitting a pull request. For instance run :
 
   hunspell -d en_US <filename>
 
+Conditional sections
+--------------------
+
+You can use the ``only`` tag to include some sections inside
+only inside the community or enterprise manual.
+
+Use this syntax: ::
+
+  .. only:: <tag>
+
+     my conditional text
+
+Where ``tag`` can be:
+
+* ``nscom`` for community manual
+* ``nsent`` for enterprise manual
+
+
 Build documentation
 ===================
 
 Whenever there are modifications, a build process will be launched from Read the Docs site.
 
 If you wish to build documentation locally on your machine, make sure to install all Sphinx packages.
+
+On Fedora 24 or later use: ::
+
+  sudo dnf install python2-sphinx
+
+Then, install all required modules: ::
+
+  sudo pip install -f ./administrator-manual/en/nsent/requirements.txt
+
 
 First clone the repository, enter language directory and type ::
 
