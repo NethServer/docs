@@ -9,6 +9,12 @@ Access to web interface is: ``https://<server_name>/webtop``.
 Authentication
 ==============
 
+.. note::
+
+   When the server is configured to use a remote Account Provider,
+   WebTop doesn't correctly fill name and surname of users.
+   Every user should modify its own name and surname on first login.
+
 Web interface
 -------------
 
@@ -94,23 +100,6 @@ To disable ActiveSync on WebTop: ::
 
 All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
 This also applies if the user is switching from WebTop to SOGo.
-
-Active Directory authentication
-===============================
-
-After an Active Directory domain has been joined, access WebTop administration page,
-then from tree menu on the left, select :guilabel:`Domain` -> :guilabel:`NethServer`.
-
-Edit the following fields:
-
-* Authentication Uri: select ``ldapAD`` mode and insert the full FQDN of the server and port 389.
-  Example: w2k8.nethserver.org:389
-
-* Admin LDAP: user name of AD domain administrator
-
-* LDAP Password: user password of AD domain administrator
-
-After saving, the page :guilabel:`Users` will display users from Active Directory.
 
 Importing from SOGo
 ===================
