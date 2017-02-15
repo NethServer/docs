@@ -168,6 +168,15 @@ Where ``tag`` can be:
 * ``nscom`` for community manual
 * ``nsent`` for enterprise manual
 
+Pushing translations
+====================
+
+After any commit, remember to push the new strings
+to Transifex: ::
+
+  make gettext
+  tx push -s
+
 
 Build documentation
 ===================
