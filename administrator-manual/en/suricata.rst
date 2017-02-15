@@ -8,7 +8,7 @@ Suricata is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system for th
 The software analyzes all traffic through the firewall searching for known attacks and anomalies. 
 
 When an attack or anomaly is detected, the system can decide whether to block traffic 
-or simply save the event on a log n (:file:`/var/log/suricata/fast.log`). 
+or simply save the event on a log (:file:`/var/log/suricata/fast.log`). 
 
 :index:`Suricata` can be configured accordingly to following policies. Each policy consists of several rules: 
 
