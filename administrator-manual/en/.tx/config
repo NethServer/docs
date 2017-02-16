@@ -56,7 +56,6 @@ source_file = _build/locale/installation.pot
 source_lang = en
 type = PO
 
-
 [docs-v7.dhcp]
 file_filter = ./locale/<lang>/LC_MESSAGES/dhcp.po
 source_file = _build/locale/dhcp.pot
@@ -249,6 +248,42 @@ type = PO
 [docs-v7.chat]
 file_filter = ./locale/<lang>/LC_MESSAGES/chat.po
 source_file = _build/locale/chat.pot
+source_lang = en
+type = PO
+
+[docs-v7.registration]
+file_filter = ./locale/<lang>/LC_MESSAGES/registration.po
+source_file = _build/locale/registration.pot
+source_lang = en
+type = PO
+
+[docs-v7.weekly_report]
+file_filter = ./locale/<lang>/LC_MESSAGES/weekly_report.po
+source_file = _build/locale/weekly_report.pot
+source_lang = en
+type = PO
+
+[docs-v7.phonebook-mysql]
+file_filter = ./locale/<lang>/LC_MESSAGES/phonebook-mysql.po
+source_file = _build/locale/phonebook-mysql.pot
+source_lang = en
+type = PO
+
+[docs-v7.nethvoice_intro]
+file_filter = ./locale/<lang>/LC_MESSAGES/nethvoice_intro.po
+source_file = _build/locale/nethvoice_intro.pot
+source_lang = en
+type = PO
+
+[docs-v7.nethcti_intro]
+file_filter = ./locale/<lang>/LC_MESSAGES/nethcti_intro.po
+source_file = _build/locale/nethcti_intro.pot
+source_lang = en
+type = PO
+
+[docs-v7.hotspot]
+file_filter = ./locale/<lang>/LC_MESSAGES/hotspot.po
+source_file = _build/locale/hotspot.pot
 source_lang = en
 type = PO
 
