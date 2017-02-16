@@ -288,6 +288,15 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nextcloud
 
+.. _installation-enterprise:
+
+Enterprise promotion
+====================
+
+To promote to |product| Enterprise version follow the istructions `available here`_.
+
+.. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062653-promozione-nethserver-enterprise-7-x-community-ad-enterprise
+
 .. _installation-next-steps:
 
 Next steps
