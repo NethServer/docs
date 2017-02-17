@@ -56,6 +56,7 @@ checks the validity of certificates without decrypting the traffic.
 Then the server can filter requested URLs using the web filter and return back the response to the client.
 
 .. note:: To prevent any malfunction when proxy is used in SSL Transparent Mode :
+
    * Use the same dns server for NethServer and for the clients
    * Avoid multiple dns for the clients, the best practice is setting only NethServer's local ip as dns for the clients
    * Avoid Google's dns (8.8.8.8., 8.8.4.4...) because there are some reported incompatibilities, you can use other free services as OpenDNS (https://www.opendns.com/) 
