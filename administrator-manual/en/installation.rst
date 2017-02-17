@@ -303,5 +303,12 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
+Enterprise promotion
+====================
+
+To promote to NethServer Enterprise version follow the istructions `available here`_.
+
+.. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062689-promozione-nethserver-enterprise-6-x-community-ad-enterprise
+
 .. include:: installation_centos_end.inc
 

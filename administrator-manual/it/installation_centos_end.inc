@@ -12,6 +12,16 @@ installazione.  Esempio: ::
 
  nethserver-install nethserver-mail nethserver-nut
 
+Promozione ad Enterprise
+========================
+
+Per promuovere il sistema a |product| Enterprise seguire le indicazioni riportate in `questo link`_.
+
+.. _`questo link`: http://helpdesk.nethesis.it/support/solutions/articles/3000062689-promozione-nethserver-enterprise-6-x-community-ad-enterprise
+ 
+Passi successivi
+================
+
 Al termine dell'installazione, :ref:`accedere al Server Manager
 <access-section>` per :ref:`installare il software
 <package_manager-section>` addizionale.
