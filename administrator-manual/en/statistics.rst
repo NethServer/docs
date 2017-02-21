@@ -3,14 +3,11 @@ Statistics (collectd)
 =====================
 
 :index:`Collectd` is a daemon which collects system performance :index:`statistics` periodically and stores them in RRD files.
-Statistics will be displayed inside a web interface.
+Statistics will be displayed inside a web interface called
 
-The administrator can choose between two web interfaces:
-
-* Collectd web, package *nethserver-collectd-web*
 * Collectd Graph Panel (CGP), package *nethserver-cgp*
 
-Both web interfaces will create a random URL accessible from :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
+The web interface can be accessed from the :guilabel:`Graphs`.
 
 After installation, the system will gather following statistics:
 
