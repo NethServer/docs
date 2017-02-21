@@ -28,7 +28,7 @@ HTTP authentication password should be different from FTP ones, because FTP is u
 Apache permissions
 ------------------
 
-FTP uploaded files has group "apache". If you need to allow apache write or execution access, you can change group permissions using the FTP client
+FTP uploaded files are owned by the "apache" group. If you need to allow apache write or execution access, you can change group permissions using the FTP client
 
 .. warning:: If a virtual host contains executable code, such as PHP
              scripts, user permissions and security implications must
