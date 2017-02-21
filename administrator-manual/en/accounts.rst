@@ -22,9 +22,9 @@ Supported provider types are:
 Be aware of the following rules about account providers:
 
 1. Once |product| has been bound to an account provider the FQDN cannot be
-   changed any more.
+   changed any more
 
-2. Local account providers cannot be uninstalled.
+2. Local account providers cannot be uninstalled
 
 Remote providers
     A clean |product| installation is ready to connect to a **remote** account
