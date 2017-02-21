@@ -83,11 +83,11 @@ To allow clients to boot from network, the following components are
 required:
 
 * the :ref:`DHCP <dhcp_configuration>` server, as we have seen in the
-  previous sections, 
+  previous sections 
 
-* the :dfn:`TFTP` server [#TFTP]_,
+* the :dfn:`TFTP` server [#TFTP]_
 
-* the software for the client, served through TFTP.
+* the software for the client, served through TFTP
 
 .. index::
    single: TFTP
