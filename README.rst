@@ -203,6 +203,27 @@ Output files will be generated inside the *_build* directory.
 To specify an alternative configuration (i.e. ``nsent``) type ::
 
    make SPHINXOPTS="-t nsent" html
+   
+Localization workflow
+---------------------
+
+To submit the English manual version to Transifex run: ::
+
+    make gettext && tx push -s
+
+When the resources has been translated on Transifex run: ::
+
+    tx pull -a
+
+To build a localized manual (for instance, Italian): ::
+    
+    make -e SPHINXOPTS="-D language='it' -t nscom" html
+
+Substitute ``nscom`` with ``nsent`` or any other tag corresponding to a 
+*documentation spin*.
+
+Remember to **commit any change** to ``.po`` files (also newly added files), and
+push commits to GitHub.  The ReadTheDocs build is triggered automatically.
 
 Upgrading developer manual
 ==========================
