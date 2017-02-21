@@ -37,9 +37,6 @@ In this case it is useful to enable :guilabel:`Block HTTP and HTTPS ports` optio
 If the proxy is installed in transparent mode, all web traffic coming from clients is diverted
 through the proxy. No configuration is required on individual clients.
 
-Certificate file is saved inside :file:`/etc/pki/tls/certs/NSRV.crt` file, it can be downloaded from client
-at ``http://<ip_server>/proxy.crt`` address.
-
 .. note:: To make the WPAD file accessible from guest network, add the address of blue network
    inside the :guilabel:`Allow hosts` field for httpd service from the :guilabel:`Network services` page.
  
@@ -48,13 +45,10 @@ at ``http://<ip_server>/proxy.crt`` address.
 SSL Proxy
 =========
 
-.. warning:: Decrypting HTTPS connection without user consent is illegal in many countries.
-
-In transparent SSL mode, the server is able to also analyze HTTPS traffic.
-The proxy implements the "peek and splice" behavior: it establishes the SSL connection with remote sites and
+In transparent SSL mode, the proxy implements the so-called "peek and splice" behavior: 
+it establishes the SSL connection with remote sites and
 checks the validity of certificates without decrypting the traffic.
 Then the server can filter requested URLs using the web filter and return back the response to the client.
-
 
 Bypass
 ======
@@ -72,10 +66,10 @@ Bypass rules are also configured inside the WPAD file.
 Report
 ======
 
-Install ``nethserver-lightsquid`` package to generate :index:`web navigation reports`.
+Install ``nethserver-lightsquid`` package to generate :index:`web proxy stats`.
 
 LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day, summarizing browsing habits of the proxy's users.
-Link to web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
+Lightsquid web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
 
 Cache
 =====
@@ -87,7 +81,7 @@ Under tab :guilabel:`Cache` there is a form to configure cache parameters:
 * **Min object size**: can be left at 0 to cache everything, but may be raised if small objects are not desired in the cache (in kB)
 * **Max object size**: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value (in kB)
 
-The button :guilabel:`Empty cache` also works if squid is disabled, it might be useful to clear space on disk.
+The button :guilabel:`Empty cache` also works if squid is disabled, it might be useful to free space on disk.
 
 Sites without cache
 -------------------
