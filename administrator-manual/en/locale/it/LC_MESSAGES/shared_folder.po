@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../shared_folder.rst:14
+msgid "Shared folders"
+msgstr "Cartelle condivise"
+
+#: ../../shared_folder.rst:16
+msgid ""
+"A *shared folder* is a place where files can be accessed by a group of "
+"people using Samba (SMB/CIFS)."
+msgstr ""
+"Una *cartella condivisa* è un posto dove i file sono accessibili da un "
+"gruppo di persone tramite Samba (SMB/CIFS)."
+
+#: ../../shared_folder.rst:21
+msgid "Authorizations"
+msgstr "Permessi di accesso"
+
+#: ../../shared_folder.rst:23
+msgid ""
+"If **Active directory** is selected as account provider, a shared folder is "
+"owned by a group of users (:guilabel:`Owning group`). Each member of the "
+"group is allowed to read the folder contents. Optionally the group can be "
+"entitled to modify the folder contents and the read permission can be "
+"extended to everyone accessing the system.  This simple permission model is "
+"based on the traditional UNIX file system permissions."
+msgstr ""
+"Se si è selezionato **Active Directory** come fornitore di autenticazione, è"
+" possibile scegliere un (:guilabel:`Gruppo proprietario`). Ogni membro del "
+"gruppo può leggere i contenuti della cartella. Opzionalmente, al gruppo può "
+"essere concesso di modificare il contenuto della cartella e i permessi di "
+"lettura possono essere estesi a chiunque abbia accesso al sistema. Questo "
+"semplice modello di permessi è basato sui tradizionali permessi del "
+"filesystem di UNIX."
+
+#: ../../shared_folder.rst:30
+msgid ""
+"Access privileges can be refined further with the :guilabel:`ACL` tab, "
+"allowing individual users and other groups to gain read and write "
+"permissions."
+msgstr ""
+"I permessi di accesso possono essere ulteriormente raffinati utilizzando le "
+":guilabel:`ACL`, consentendo a singoli utenti o ad altri gruppi i permessi "
+"di lettura o scrittura."
+
+#: ../../shared_folder.rst:33
+msgid ""
+"If :guilabel:`Guest access` is enabled, any provided authentication "
+"credentials are considered valid."
+msgstr ""
+"Se è attiva l’opzione :guilabel:`Accesso guest`, sono considerate valide "
+"qualsiasi credenziali vengano presentate."
+
+#: ../../shared_folder.rst:36
+msgid ""
+"If an **LDAP** account provider is selected or there is no account provider "
+"at all, any access to shared folders is considered as *Guest access* so that"
+" everyone is allowed to read and write its content."
+msgstr ""
+"Se non è stato scelto un metodo di autenticazione o si è scelto LDAP, non "
+"c'è autenticazione per le cartelle condivise, che saranno leggibili e "
+"scrivibili da tutti."
+
+#: ../../shared_folder.rst:41
+msgid "Network access"
+msgstr "Accesso alla rete"
+
+#: ../../shared_folder.rst:43
+msgid ""
+"SMB/CIFS is a widely adopted protocol that allows to share files across a "
+"computer network.  In a way similar to Web URLs above, the shared folder "
+"name becomes the SMB \"share name\"."
+msgstr ""
+"SMB/CIFS è un protocollo molto diffuso che consente di condividere file in "
+"una rete di computer.  In un modo simile agli URL Web visti sopra, il nome "
+"della cartella condivisa diventa il nome della condivisione SMB."
+
+#: ../../shared_folder.rst:47
+msgid ""
+"For instance, the SMB network addresses of the ``docs`` share could be ::"
+msgstr ""
+"Per esempio, l'indirizzo di rete SMB per la condivisione ``docs`` potrebbe "
+"essere ::"
+
+#: ../../shared_folder.rst:52
+msgid ""
+"At any time, the :guilabel:`Reset permissions` button propagates the shared "
+"folder UNIX permissions and Posix ACLs to its contents."
+msgstr ""
+"In ogni momento, il pulsante :guilabel:`Reimposta permessi` propaga i "
+"permessi UNIX e ACL POSIX della cartella condivisa alle sottodirectory."
+
+#: ../../shared_folder.rst:60
+msgid ""
+"If the option :guilabel:`Network recycle bin` is enabled, removed files are "
+"actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
+" homonym files` keeps distinct file names inside the wastebasket directory, "
+"preventing overwrites."
+msgstr ""
+"Se l'opzione :guilabel:`Cestino di rete` è abilitata, i file rimossi da una "
+"cartella condivisa sono in realtà spostati in una directory \"cestino\" "
+"speciale. L'opzione :guilabel:`Mantieni file omonimi` assicura che i file "
+"nel cestino abbiano sempre nomi distinti, impedendo la sovrascrittura."
+
+#: ../../shared_folder.rst:65
+msgid ""
+"If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
+"This does not affect the permission to use this resource."
+msgstr ""
+"Se è attiva l'opzione :guilabel:`Visibile`, la cartella condivisa sarà "
+"elencata fra le cartelle disponibili. Questa opzione non influisce sui "
+"permessi di accesso della cartella."

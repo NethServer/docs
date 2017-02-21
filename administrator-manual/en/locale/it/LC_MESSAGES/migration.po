@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../migration.rst:14
+msgid "Migration from NethService/SME Server"
+msgstr "Migrazione da NethService/SME Server"
+
+#: ../../migration.rst:16
+msgid "This procedure is still under development on |product| |version|"
+msgstr "Questa procedura è ancora in fase di sviluppo su |product| |version|"
+
+#: ../../migration.rst:18
+msgid ""
+"Migration is the process to convert a SME Server/NethService machine "
+"(:dfn:`source`) into a |product| (:dfn:`destination`)."
+msgstr ""
+"La migrazione è il processo che consente di convertire un’installazione SME "
+"Server/NethService (:dfn:`origine`) in un nuovo server NethServer "
+"(:dfn:`destinazione`)."
+
+#: ../../migration.rst:21
+msgid ""
+"In the source host, create a full backup archive and move it to the "
+"destination host."
+msgstr ""
+"Sulla macchina origine, effettuare un backup completo e spostarlo sul server"
+" destinazione."
+
+#: ../../migration.rst:24
+msgid ""
+"In the destination host, install all packages that cover the same features "
+"of the source."
+msgstr ""
+"Sul server destinazione, installare tutti i moduli che implementano i "
+"servizi presenti sulla macchina origine."
+
+#: ../../migration.rst:27
+msgid ""
+"Explode the full backup archive into some directory; for instance, create "
+"the directory :file:`/var/lib/migration`."
+msgstr ""
+"Estrarre il backup in una directory; per esempio, creare la directory "
+":file:`/var/lib/migration`."
+
+#: ../../migration.rst:30
+msgid "In |product|, signal the event ``migration-import``::"
+msgstr "In |product|, eseguire l'evento come ``migration-import``::"
+
+#: ../../migration.rst:34
+msgid "This step will require some time."
+msgstr "Questa operazione potrebbe richiedere molti minuti."
+
+#: ../../migration.rst:36
+msgid "Check for any error message in :file:`/var/log/messages`::"
+msgstr ""
+"Consultare il log di sistema file:`/var/log/messages` ed assicurarsi che non"
+" si siano verificati errori: ::"
+
+#: ../../migration.rst:40
+msgid ""
+"No custom template is migrated during the migration process. Check the new "
+"template files before copying any custom fragment from the old backup."
+msgstr ""
+"Nessun template custom sarà migrato durante il processo di migrazione. "
+"Controllare i nuovi template prima di copiare frammenti personalizzati dal "
+"vecchio backup."
+
+#: ../../migration.rst:49
+msgid "Email"
+msgstr "Email"
+
+#: ../../migration.rst:51
+msgid ""
+"Before running |product| in production, some considerations about the "
+"network and existing mail client configurations are required: what ports are"
+" in use, if SMTPAUTH and TLS are enabled.  Refer to :ref:`email_clients` and"
+" :ref:`email_policies` sections for more informations."
+msgstr ""
+"Prima di mettere |product| in produzione, vanno fatte alcune considerazioni "
+"sulla configurazione esistente della rete e dei client di posta elettronica:"
+" quali porte sono in uso, se vengono utilizzati SMTPAUTH e TLS. Per maggiori"
+" informazioni, fare riferimento alle sezioni :ref:`Configurazione client` e "
+":ref:`Politiche SMTP` di invio speciali."
+
+#: ../../migration.rst:57
+msgid ""
+"In a mail server migration, the source mail server could be on production "
+"even after the backup has been done, and email messages continue to be "
+"delivered until it is taken down permanently."
+msgstr ""
+"Nella migrazione di un server di posta, il server di origine può rimanere in"
+" produzione anche dopo che il backup è stato eseguito e nuovi messaggi di "
+"posta continuano ad essere consegnati finché non viene spento "
+"definitivamente."
+
+#: ../../migration.rst:61
+msgid ""
+"An helper ``rsync`` script is provided by package ``nethserver-mail-"
+"server``, to re-synchronize destination mailboxes with the source host: "
+":file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`. It"
+" runs on the destination host: ::"
+msgstr ""
+"Uno script ``rsync`` di aiuto è fornito dal pacchetto ``nethserver-mail-"
+"server``, per ri-sincronizzare le caselle di posta di destinazione con il "
+"server di origine. :file:`/usr/share/doc/nethserver-mail-"
+"server-<VERSION>/sync_maildirs.sh`. Lo script gira sul server di "
+"destinazione: ::"
+
+#: ../../migration.rst:74
+msgid ""
+"The source host at ``IPADDR`` must be accessible by the ``root`` user, "
+"through ``ssh`` with public key authentication."
+msgstr ""
+"Il server di origine con indirizzo ``IPADDR`` deve essere accessibile "
+"dall’utente ``root``, mediante ``ssh`` con autenticazione a chiave pubblica."

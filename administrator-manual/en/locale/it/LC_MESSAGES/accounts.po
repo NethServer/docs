@@ -1,0 +1,962 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../accounts.rst:12
+msgid "Users and groups"
+msgstr "Utenti e gruppi"
+
+#: ../../accounts.rst:17
+msgid "Account providers"
+msgstr "Account provider"
+
+#: ../../accounts.rst:19
+msgid ""
+"|product| supports authentication and authorization against either a "
+"**local** or **remote** account provider."
+msgstr ""
+"|product| supporta autenticazione e autorizzazione da un *account provider* "
+"**locale** o **remoto**."
+
+#: ../../accounts.rst:22
+msgid "Supported provider types are:"
+msgstr "I tipi di account provider supportati sono:"
+
+#: ../../accounts.rst:24
+msgid "Local OpenLDAP running on |product| itself"
+msgstr "OpenLDAP locale in funzione sullo stesso |product|"
+
+#: ../../accounts.rst:25
+msgid "Remote LDAP server with RFC2307 schema"
+msgstr "Server LDAP remoto con schema RFC2307"
+
+#: ../../accounts.rst:26
+msgid "Local Samba 4 Active Directory Domain Controller"
+msgstr "Samba 4 Active Directory Domain Controller locale"
+
+#: ../../accounts.rst:27
+msgid "Remote Active Directory (both Microsoft and Samba)"
+msgstr "Active Directory remoto (sia Microsoft che Samba)"
+
+#: ../../accounts.rst:29
+msgid "Be aware of the following rules about account providers:"
+msgstr "Tenere in conto le seguenti regole sugli account provider:"
+
+#: ../../accounts.rst:31
+msgid ""
+"Once |product| has been bound to an account provider the FQDN cannot be "
+"changed any more"
+msgstr ""
+"Dopo che |product| è stato collegato ad un account provider, il suo FQDN non"
+" può più essere cambiato"
+
+#: ../../accounts.rst:34
+msgid "Local account providers cannot be uninstalled"
+msgstr "Gli account provider di tipo locale non possono essere disinstallati"
+
+#: ../../accounts.rst:43
+msgid "Remote providers"
+msgstr "Provider remoto"
+
+#: ../../accounts.rst:37
+msgid ""
+"A clean |product| installation is ready to connect to a **remote** account "
+"provider of both types (LDAP, AD). The root user can configure the remote "
+"account provider from the :guilabel:`Accounts provider` page."
+msgstr ""
+"Un'installazione pulita di |product| è già pronta per connettersi ad un "
+"account provider **remoto** di entrambi i tipi (LDAP, AD). L'utente root può"
+" configurare l'account provider remoto dalla pagina :guilabel:`Account "
+"provider`."
+
+#: ../../accounts.rst:41
+msgid ""
+"After |product| has been bound to a remote account provider the "
+":guilabel:`User and groups` page shows the domain accounts in *read-only* "
+"mode."
+msgstr ""
+"Dopo che |product| è stato collegato ad un account provider remoto, la "
+"pagina :guilabel:`Utenti e gruppi` visualizza gli account di dominio in sola"
+" lettura."
+
+#: ../../accounts.rst:50
+msgid "Local providers"
+msgstr "Provider locale"
+
+#: ../../accounts.rst:46
+msgid ""
+"To run a **local** account provider go to :guilabel:`Software center` page "
+"and install either OpenLDAP **or** Samba 4 account provider from the modules"
+" list."
+msgstr ""
+"Per eseguire un account provider **locale** andare alla pagina "
+":guilabel:`Software center` e installare l'account provider OpenLDAP o Samba"
+" 4 dalla lista dei moduli disponibili."
+
+#: ../../accounts.rst:49
+msgid ""
+"After installing a local provider (either Samba 4 or OpenLDAP), the "
+"administrator can create, modify and delete the users and groups."
+msgstr ""
+"Dopo aver installato un provider locale (sia Samba 4 che OpenLDAP), "
+"l'amministratore può creare, modificare ed eliminare gli utenti e i gruppi."
+
+#: ../../accounts.rst:54
+msgid ""
+"Please choose wisely your account provider because **the choice is not "
+"reversible**. Also the system will forbid any change to the FQDN after the "
+"account provider has been configured."
+msgstr ""
+"Scegliere con cautela l'account provider perché **la scelta non è "
+"reversibile**. Inoltre il sistema impedisce di modificare l'FQDN dopo che "
+"l'account provider è stato configurato."
+
+#: ../../accounts.rst:60
+msgid "Choosing the right account provider"
+msgstr "Scegliere l'account provider giusto"
+
+#: ../../accounts.rst:62
+msgid ""
+"Beside choosing to bind a remote provider or install a local one, the "
+"administrator has to decide which backend type suits he needs."
+msgstr ""
+"A parte collegarsi ad un account provider locale o remoto, l'amministratore "
+"deve decidere che tipo di provider è adatto alle proprie esigenze."
+
+#: ../../accounts.rst:65
+msgid ""
+"The *File server* module of |product|, which enables the :guilabel:`Shared "
+"folders` page, can authenticate SMB/CIFS clients only if |product| is bound "
+"to an Active Directory domain.  The LDAP providers allow access to "
+":guilabel:`Shared folders` only in *guest mode*.  See :ref:`shared_folders-"
+"section`."
+msgstr ""
+"Il modulo *File server* di |product|, che abilita la pagina "
+":guilabel:`Cartelle condivise`, può autenticare i client SMB/CIFS solo se "
+"|product| è collegato ad un dominio Active Directory.  I provider LDAP "
+"consentono l'accesso alle :guilabel:`Cartelle condivise` solo in modalità "
+"*guest*. Vedere inoltre :ref:`shared_folders-section`."
+
+#: ../../accounts.rst:70
+msgid ""
+"On the other hand, the local OpenLDAP provider is more easy to install and "
+"configure."
+msgstr ""
+"D'altra parte il provider OpenLDAP locale è più semplice da installare e "
+"configurare."
+
+#: ../../accounts.rst:73
+msgid ""
+"In the end, if the SMB file sharing protocol support is not required, an "
+"LDAP provider is the best choice."
+msgstr ""
+"In pratica, se il protocollo di condivisione file SMB non è richiesto, il "
+"provider LDAP è la scelta migliore."
+
+#: ../../accounts.rst:78
+msgid "OpenLDAP local provider installation"
+msgstr "Installazione del provider locale OpenLDAP"
+
+#: ../../accounts.rst:80
+msgid ""
+"From the :guilabel:`Software Center` install the module named *Account "
+"provider: OpenLDAP*. At the end of the installation the package is "
+"automatically configured and the administrator will be able to manage users "
+"and groups from the :guilabel:`User and groups` page."
+msgstr ""
+"Dal :guilabel:`Software Center` installare il pacchetto chiamato *Provider "
+"account: OpenLDAP*. Al termine dell'installazione. il pacchetto sarà "
+"automaticamente configurato e l'amministratore potrà gestire gli account "
+"dalla pagina :guilabel:`Utenti e gruppi`."
+
+#: ../../accounts.rst:88
+msgid "Samba Active Directory local provider installation"
+msgstr "Installazione del provider locale Samba Active Directory"
+
+#: ../../accounts.rst:90
+msgid ""
+"When installing Samba Active Directory as local account provider, the system"
+" needs an **additional IP address** and a working internet connection."
+msgstr ""
+"Quando si installa Samba Active Directory come account provider locale il "
+"sistema richiede un **indirizzo IP addizionale** e un collegamento ad "
+"internet funzionante."
+
+#: ../../accounts.rst:93
+msgid ""
+"The additional IP is assigned to a Linux Container that runs the Active "
+"Directory Domain Controller roles and must be accessible from the LAN (green"
+" network)."
+msgstr ""
+"L'indirizzo IP addizionale è assegnato ad un Linux Container che esegue le "
+"funzioni di un controllore di dominio Active Directory e deve essere "
+"accessibile dalla LAN (rete green)."
+
+#: ../../accounts.rst:97
+msgid "Therefore the additional IP address must satisfy three conditions:"
+msgstr "Pertanto l'indirizzo IP aggiuntivo deve soddisfare tre condizioni:"
+
+#: ../../accounts.rst:99
+msgid ""
+"the IP address has to be **free**; it must not be used by any other machine"
+msgstr ""
+"l'indirizzo IP deve essere **libero**; non può essere usato da alcun "
+"dispositivo"
+
+#: ../../accounts.rst:101
+msgid "the IP address has to be in the same subnet range of a green network"
+msgstr "l'indirizzo IP deve appartenere alla stessa subnet di una rete green"
+
+#: ../../accounts.rst:103
+msgid ""
+"the green network has to be bound to a bridged interface where the Linux "
+"Container can attach its virtual interface to; the installation procedure "
+"can create the bridge interface automatically, if it is missing"
+msgstr ""
+"la rete green deve essere collegata ad un'interfaccia bridge, in modo che il"
+" container Linux possa aggiungervi la propria interfaccia di rete virtuale; "
+"la procedura guidata può creare il bridge al momento automaticamente, se "
+"manca"
+
+#: ../../accounts.rst:107
+msgid ""
+"From the :guilabel:`Software center` page install the module named *Account "
+"provider: Samba Active Directory*."
+msgstr ""
+"Dalla pagina :guilabel:`Software Center` installare il pacchetto \n"
+"*Provider account: Samba Active Directory*."
+
+#: ../../accounts.rst:110
+msgid ""
+"After the account provider installation, the :guilabel:`Accounts provider` "
+"page shows a configuration panel.  Insert the **additional IP address** as "
+"explained above and press the :guilabel:`Start DC` button. If needed, enable"
+" the automatic bridge interface creation for the green network."
+msgstr ""
+"Al termine dell'installazione, la pagina :guilabel:`Account provider` mostra"
+" un pannello di configurazione. Inserire **l'indirizzo IP addizionale** come"
+" spiegato sopra e premere il pulsante :guilabel:`Avvia DC`. Se necessario, "
+"abilitare la creazione automatica del bridge per la rete green."
+
+#: ../../accounts.rst:117
+msgid ""
+"The Active Directory configuration procedure might require some time to run."
+" It creates the Linux Container chroot, by downloading additional packages."
+msgstr ""
+"La procedura di configurazione di Active Directory può richiedere un po' di "
+"tempo per completarsi, perché crea il *chroot* per il container Linux, "
+"scaricando da internet dei pacchetti aggiuntivi."
+
+#: ../../accounts.rst:120
+msgid ""
+"At the end of the Active Directory configuration procedure,  the |product| "
+"host machine is automatically configured to join the Active Directory "
+"domain. Go to the page :guilabel:`User and groups` to see the default "
+"accounts."
+msgstr ""
+"Al termine della procedura di configurazione, la macchina host |product| è "
+"automaticamente inserita nel dominio di Active Directory. Andare alla pagina"
+" :guilabel:`Utenti e gruppi` per modificare gli account predefiniti."
+
+#: ../../accounts.rst:127
+msgid ""
+"After installing Samba Active Directory, the :guilabel:`Users and groups` "
+"page has two default entries; both are disabled: :dfn:`administrator` and "
+":dfn:`admin`. \"Administrator\" is the default Active Directory privileged "
+"account and is not required by |product|; it is safe to keep it disabled. "
+"\"admin\" is defined by |product| as the default system administrative "
+"account. It is member of the AD \"domain admins\" group. See :ref:`admin-"
+"account-section` section for more details."
+msgstr ""
+"Dopo aver installato Samba Active Directory, la pagina :guilabel:`Utenti e "
+"gruppi` contiene due elementi predefiniti; entrambi sono disabilitati: "
+":dfn:`administrator` e :dfn:`admin`. \"Administrator\" è l'account "
+"privilegiato predefinito di Active Directory e non è necessario in "
+"|product|; va bene tenerlo disabilitato. \"admin\" in |product| è l'account "
+"amministrativo predefinito. E' membro del gruppo AD \"Domain admins\". "
+"Vedere :ref:`admin-account-section` per maggiori informazioni."
+
+#: ../../accounts.rst:137
+msgid "Installing on a virtual machine"
+msgstr "Installazione su macchina virtuale"
+
+#: ../../accounts.rst:139
+msgid ""
+"Samba Active Directory runs inside a Linux Container which uses a virtual "
+"network interface bridged to the network interface of the system. The "
+"virtual network interface has to be visible inside the physical network, but"
+" often virtualization solutions block ARP traffic. As a result, the Samba "
+"Active Directory container is not visible from LAN hosts."
+msgstr ""
+"Samba Active Directory viene eseguito all'interno di un container Linux che "
+"utilizza un'interfaccia di rete virtuale in bridge con l'interfaccia di rete"
+" del sistema. L'interfaccia di rete virtuale deve essere visibile "
+"all'interno della rete fisica, ma spesso i software di virtualizzazione "
+"bloccano il traffico ARP e questo preclude la visibilità del container Samba"
+" Active Directory dalla LAN."
+
+#: ../../accounts.rst:145
+msgid ""
+"When installing on virtual environment, make sure the virtualization "
+"solution allows traffic in *promiscuous mode*."
+msgstr ""
+"È quindi necessario assicurarsi che il virtualizzatore abiliti il traffico "
+"di rete con la *modalità promiscua*."
+
+#: ../../accounts.rst:149
+msgid "VirtualBox"
+msgstr "VirtualBox"
+
+#: ../../accounts.rst:151
+msgid ""
+"To setup the promiscuous mode policy, select \"Allow all\" from the drop "
+"down list located in the network settings section."
+msgstr ""
+"Per configurare la modalità promiscua, selezionare \"Permetti tutto\" dal "
+"menù a discesa presente nella sezione di configurazione di rete."
+
+#: ../../accounts.rst:155
+msgid "VMWare"
+msgstr "VMWare"
+
+#: ../../accounts.rst:157
+msgid ""
+"Enter the networking configuration section of the virtualization mode and "
+"set the virtual switch in promiscuous mode."
+msgstr ""
+"Entrare nella sezione di configurazione di rete del nodo da virtualizzare e "
+"abilitare lo switch virtuale in modalità promiscua."
+
+#: ../../accounts.rst:161
+msgid "KVM"
+msgstr "KVM"
+
+#: ../../accounts.rst:163
+msgid ""
+"Make sure the virtual machine is bridged to a real bridge (like br0) and the"
+" bridge is put in promiscuous mode."
+msgstr ""
+"Assicurarsi che la macchina virtuale sia in bridge con un bridge reale (per "
+"esempio br0) e che sia configurato in modalità promiscua."
+
+#: ../../accounts.rst:166
+msgid ""
+"It is possible to force a bridge (i.e. ``br0``) in promiscuous mode using "
+"this command: ::"
+msgstr ""
+"È possibile forzare un bridge (per esempio, ``br0``) in modalità promiscua "
+"usando il seguente comando: ::"
+
+#: ../../accounts.rst:172
+msgid "Hyper-V"
+msgstr "Hyper-V"
+
+#: ../../accounts.rst:174
+msgid "Configure MAC Address Spoofing for Virtual Network Adapters"
+msgstr "Configurare *MAC Address Spoofing for Virtual Network Adapters*"
+
+#: ../../accounts.rst:176
+msgid "https://technet.microsoft.com/en-us/library/ff458341.aspx"
+msgstr "https://technet.microsoft.com/it-it/library/ff458341.aspx"
+
+#: ../../accounts.rst:181
+msgid "Join an existing Active Directory domain"
+msgstr "Join ad un dominio Active Directory esistente"
+
+#: ../../accounts.rst:183
+msgid ""
+"Here |product| is bound to a remote Active Directory account provider. It "
+"can be provided by either Samba or Microsoft implementations.  In this "
+"scenario |product| becomes a trusted server of an existing Active Directory "
+"domain. When accessing a |product| resource from a domain workstation, user "
+"credentials are checked against one of the domain controllers, and the "
+"access to the resource is granted."
+msgstr ""
+"In questo scenario |product| è collegato ad un account provider Active "
+"Directory remoto. Può essere una implementazione Samba o Microsoft.  "
+"|product| diventa quindi un server membro di un dominio Active Directory "
+"esistente. Quando si accede ad una risorsa su |product| da una workstation "
+"del dominio, le credenziali dell'utente sono verificate da uno dei "
+"controllori di dominio e l'accesso alla risorsa viene consentito."
+
+#: ../../accounts.rst:190
+msgid "Joining an Active Directory domain has the following pre-requisites:"
+msgstr "Il join ad un dominio Active Directory ha i seguenti pre-requisiti:"
+
+#: ../../accounts.rst:192
+msgid ""
+"The Kerberos protocol requires the difference between systems clocks in the "
+"network is less than 5 minutes. Configure the network clients to align their"
+" clocks to a common time source.  For |product| go to :guilabel:`Date and "
+"time` page."
+msgstr ""
+"Il protocollo Kerberos richiede che la differenza tra gli orologi dei "
+"dispositivi del dominio sia meno di 5 minuti. Sincronizzare gli orologi dei "
+"client di rete con una sorgente di orario comune. Per |product| andare alla "
+"pagina :guilabel:`Data e ora`."
+
+#: ../../accounts.rst:197
+msgid ""
+"The system assumes the default NetBIOS domain name is the leftmost label in "
+"the DNS domain suffix up to the first 15 characters."
+msgstr ""
+"Il sistema assume che i nome di dominio NetBIOS di default sia la parte "
+"iniziale del suffisso di dominio DNS, troncata ai primi 15 caratteri."
+
+#: ../../accounts.rst:200
+msgid "**Example**"
+msgstr "**Esempio**"
+
+#: ../../accounts.rst:202
+msgid "FQDN: test.local.nethserver.org"
+msgstr "FQDN: test.local.nethserver.org"
+
+#: ../../accounts.rst:203
+msgid "Domain: local.nethserver.org"
+msgstr "Dominio: local.nethserver.org"
+
+#: ../../accounts.rst:204
+msgid "Default NetBIOS domain: LOCAL"
+msgstr "Dominio NetBIOS di default: LOCAL"
+
+#: ../../accounts.rst:206
+msgid ""
+"If the default NetBIOS domain is not good for your environment, you can "
+"change it from command line: ::"
+msgstr ""
+"Se il dominio NetBIOS di default non è adatto al proprio ambiente può essere"
+" modificato dalla console: ::"
+
+#: ../../accounts.rst:211
+msgid ""
+"(Only for Microsoft Active Directory) The default machine account cannot "
+"perform simple LDAP binds due to AD security policies. To be fully "
+"operational |product| requires an additional account to perform simple LDAP "
+"binds.  Create a **dedicated user account** in AD, and set a complex *non-"
+"expiring* password for it."
+msgstr ""
+"(Solo per Microsoft Active Directory) L'account del computer di default non "
+"è autorizzato ad effettuare bind LDAP semplici, a causa delle politiche di "
+"sicurezza di Microsoft AD. Per poter funzionare correttamente |product| "
+"richiede un account utente aggiuntivo che possa effettuare bind LDAP "
+"semplici. Creare un **account utente dedicato** in AD, e impostare per esso "
+"una password complessa, *senza scadenza*."
+
+#: ../../accounts.rst:216
+msgid ""
+"After all the prerequisites are fulfilled, proceed with the join from the "
+":guilabel:`Accounts provider` page:"
+msgstr ""
+"Dopo aver sistemato i pre-requisiti, procedere con il join dalla pagina "
+":guilabel:`Utenti e gruppi`:"
+
+#: ../../accounts.rst:219
+msgid ""
+"Fill :guilabel:`DNS server IP address` field which usually is the IP address"
+" of an AD domain controller."
+msgstr ""
+"Compilare il campo :guilabel:`Indirizzo IP server DNS` che di solito è "
+"l'indirizzo IP del controller AD stesso."
+
+#: ../../accounts.rst:222
+msgid ""
+"(only for Microsoft Active Directory) specify the **dedicated user account**"
+" credentials under the :guilabel:`Advanced settings` panel."
+msgstr ""
+"(solo per Microsoft Active Directory) specificare le credenziali "
+"dell'**account utente dedicato** nel pannello :guilabel:`Impostazioni "
+"avanzate`."
+
+#: ../../accounts.rst:225
+msgid ""
+"Push the :guilabel:`Submit` button. You will be prompted for an user name "
+"and a password: provide AD ``administrator`` or any other account "
+"credentials with permissions to join a new machine to the domain (i.e. "
+"``admin`` on |product|)."
+msgstr ""
+"Premere il pulsante :guilabel:`Salva`. Verrà richiesto un nome utente e la "
+"password: digitare le credenziali di ``administrator`` o di qualsiasi altro "
+"account che ha il permesso di fare *join* della macchina al dominio (per "
+"esempio ``admin`` su |product|)."
+
+#: ../../accounts.rst:233
+msgid "Bind to a remote LDAP server"
+msgstr "Collegamento ad un server LDAP remoto"
+
+#: ../../accounts.rst:235
+msgid ""
+"If the remote server is a |product|, only its IP address is required in "
+":guilabel:`Accounts provider` page."
+msgstr ""
+"Se il server remoto è |product|, è sufficiente il solo indirizzo IP nella "
+"pagina :guilabel:`Account provider`."
+
+#: ../../accounts.rst:238
+msgid ""
+"For other implementations, change the bind credentials, Base DN and "
+"encryption settings under the :guilabel:`Advanced settings` panel."
+msgstr ""
+"Per altre implementazioni, cambiare le credenziali per il bind, il *base DN*"
+" e le impostazioni di cifratura nel pannello :guilabel:`Impostazioni "
+"avanzate`."
+
+#: ../../accounts.rst:242
+msgid "Users"
+msgstr "Utenti"
+
+#: ../../accounts.rst:244
+msgid ""
+"A newly created user account remains locked until it has set a password. "
+"Disabled users are denied to access system services."
+msgstr ""
+"Un nuovo utente rimane bloccato finché non gli viene assegnata una password."
+" Agli utenti bloccati è negato l'accesso ai servizi del sistema."
+
+#: ../../accounts.rst:247
+msgid "When creating a user, following fields are mandatory:"
+msgstr "I seguenti campi sono obbligatori per la creazione di un utente:"
+
+#: ../../accounts.rst:249
+msgid "User name"
+msgstr "Nome utente"
+
+#: ../../accounts.rst:250
+msgid "Full name (name and surname)"
+msgstr "Nome completo (nome e cognome)"
+
+#: ../../accounts.rst:252
+msgid ""
+"A user can be added to one or more group from the :guilabel:`Users` page or "
+"from the :guilabel:`Groups` one."
+msgstr ""
+"Un utente può essere aggiunto ad uno o più gruppi usando la pagina "
+":guilabel:`Utenti` o :guilabel:`Gruppi`."
+
+#: ../../accounts.rst:254
+msgid ""
+"Sometimes you need to block user's access to services without deleting the "
+"account. This can be achieved using the :guilabel:`Lock` and "
+":guilabel:`Unlock` actions."
+msgstr ""
+"A volte può essere necessario bloccare l'accesso ai servizi di un utente "
+"senza eliminare l'account. E' possibile farlo usando le azioni "
+":guilabel:`Blocca` e :guilabel:`Sblocca`."
+
+#: ../../accounts.rst:258
+msgid "When a user is deleted, all user data will be also deleted."
+msgstr ""
+"Quando l'utente viene eliminato, verranno eliminati anche tutti i dati "
+"dell'utente."
+
+#: ../../accounts.rst:263
+msgid "Changing the password"
+msgstr "Modifica della password"
+
+#: ../../accounts.rst:265
+msgid ""
+"If there wasn't given an initial password during user creation, the user "
+"account is disabled. To enable it, set a password using the "
+":guilabel:`Change password` button."
+msgstr ""
+"Se durante la creazione dell'utente non è stata impostata una password, "
+"l'account utente è disabilitato. Per abilitarlo, impostare una password con "
+"il pulsante :guilabel:`Cambia password` ."
+
+#: ../../accounts.rst:268
+msgid ""
+"When a user is enabled, the user can access the Server Manager and change "
+"his/her own password by going to the :guilabel:`user@domain.com` label on "
+"the upper right corner of the screen and clicking on :guilabel:`Profile`."
+msgstr ""
+"Quando un utente è abilitato, può accedere al Server Manager e cambiare la "
+"propria password dalla voce :guilabel:`Profilo` nel menù  "
+":guilabel:`user@domain.com` in alto a destra."
+
+#: ../../accounts.rst:272
+msgid ""
+"If the system is bound to an Active Directory account provider, users can "
+"change their password also using the Windows tools.  In this case you can "
+"not set passwords shorter than 6 *characters* regardless of the server "
+"policies. Windows performs preliminary checks and sends the password to the "
+"server where it is evaluated according to the :ref:`configured policies "
+"<password-management-section>`."
+msgstr ""
+"Se il sistema è collegato ad un account provider di tipo Active Directory, "
+"gli utenti possono cambiare la propria password anche utilizzando gli "
+"strumenti appositi di Windows. In questo caso, non è possibile impostare "
+"password più corte di 6 *caratteri*, indipendentemente dalla policy "
+"selezionata. Windows esegue dei controlli prima di inviare la password al "
+"server,dove viene valutata in base alla :ref:`policy configurata <password-"
+"management-section>`."
+
+#: ../../accounts.rst:280
+msgid "Credentials for services"
+msgstr "Credenziali per i servizi"
+
+#: ../../accounts.rst:282
+msgid ""
+"The user's credentials are the **user name** and his **password**.  "
+"Credentials are required to access the services installed on the system."
+msgstr ""
+"Le credenziali dell'utente sono lo **username** e la **password**. Le "
+"credenziali sono richieste per accedere ai servizi installati sul sistema."
+
+#: ../../accounts.rst:285
+msgid ""
+"The user name can be issued in two forms: *long* (default) and *short*.  The"
+" *long* form is always accepted by services. It depends on the service to "
+"accept also the *short* form."
+msgstr ""
+"Lo username può essere utilizzato in due forme: *lungo* (default) e *breve*."
+" La forma lunga è sempre accettata dai servizi. La forma breve potrebbe non "
+"essere valida in qualche servizio."
+
+#: ../../accounts.rst:289
+msgid "For instance if the domain is *example.com* and the user is *goofy*:"
+msgstr "Per esempio se il dominio è *example.com* e l'utente è *goofy*:"
+
+#: ../../accounts.rst:292
+msgid "Long user name form"
+msgstr "Forma lunga username"
+
+#: ../../accounts.rst:292
+msgid "*goofy@example.com*"
+msgstr "*goofy@example.com*"
+
+#: ../../accounts.rst:295
+msgid "Short user name form"
+msgstr "Forma breve username"
+
+#: ../../accounts.rst:295
+msgid "*goofy*"
+msgstr "*goofy*"
+
+#: ../../accounts.rst:300
+msgid "Groups"
+msgstr "Gruppi"
+
+#: ../../accounts.rst:302
+msgid ""
+"A group of users can be granted some permission, such as authorize access "
+"over a :ref:`shared folder <shared_folders-section>`. The granted permission"
+" is propagated to all group members."
+msgstr ""
+"Un gruppo di utenti può essere usato per assegnare permessi speciali ad "
+"alcuni utenti, come autorizzare l'accesso alle :ref:`cartelle condivise "
+"<shared-folders-section>`."
+
+#: ../../accounts.rst:306
+msgid ""
+"Two special groups can be created.  Members of these groups are granted "
+"access to the panels of the Server Manager:"
+msgstr ""
+"Si possono creare due gruppi speciali. Gli utenti che appartengono a questi "
+"gruppi ottengono l'accesso alle pagine del Server Manager."
+
+#: ../../accounts.rst:309
+msgid ""
+":dfn:`domain admins`: members of this group have the same permissions as the"
+" *root* user from the Server Manager."
+msgstr ""
+":dfn:`domain admins`: gli utenti di questo gruppo hanno gli stessi permessi "
+"di root nel Server Manager."
+
+#: ../../accounts.rst:312
+msgid ""
+":dfn:`managers`: members of this group are granted access to the "
+"*Management* section of the Server Manager."
+msgstr ""
+":dfn:`managers`: gli utenti di questo gruppo hanno l'accesso alle pagine "
+"della sezione Gestione."
+
+#: ../../accounts.rst:320
+msgid "Admin account"
+msgstr "Account admin"
+
+#: ../../accounts.rst:322
+msgid ""
+"If a **local AD or LDAP provider** is installed, an *admin* user, member of "
+"the *domain admins* group is created automatically. This account allows "
+"access to all configuration pages within the Server Manager.  It is "
+"initially *disabled* and has no access from the console."
+msgstr ""
+"Se è installato un account provider locale LDAP o AD, l'utente admin, membro"
+" del gruppo domain admins è creato automaticamente. Questo account consente "
+"di accedere a tutte le pagine di configurazione del Server Manager. "
+"Inizialmente è bloccato e non ha accesso alla console."
+
+#: ../../accounts.rst:327
+msgid "To enable the *admin* account set its password."
+msgstr "Per abilitare l'account admin impostargli la password."
+
+#: ../../accounts.rst:329
+msgid ""
+"Where applicable, the *admin* account is granted special privileges on some "
+"specific services, such as joining a workstation to an Active Directory "
+"domain."
+msgstr ""
+"Dove possibile, l'account admin riceve dei permessi speciali da parte di "
+"servizi specifici, come poter aggiungere una workstation al dominio di "
+"Active Directory."
+
+#: ../../accounts.rst:332
+msgid ""
+"If |product| is bound to a **remote account provider**, the *admin* user and"
+" *domain admins* group could be created manually, if they do not already "
+"exist."
+msgstr ""
+"Se |product| è collegato ad un account provider remoto, l'utente admin e il "
+"gruppo domain admins possono essere creati, se non esistono già."
+
+#: ../../accounts.rst:335
+msgid ""
+"If a user or group with a similar purpose is already present in the remote "
+"account provider database, but it is named differently, |product| can be "
+"configured to rely on it with the following commands: ::"
+msgstr ""
+"Se un utente o un gruppo con una funzione simile è già presente nella base "
+"dati dell'account provider remoto, ma si chiama diversamente, può essere "
+"designato come admin usando questi comandi:"
+
+#: ../../accounts.rst:345
+msgid "Password management"
+msgstr "Gestione password"
+
+#: ../../accounts.rst:347
+msgid ""
+"The system provides the ability to set constraints on password "
+":dfn:`complexity` and :dfn:`expiration`."
+msgstr ""
+"Il sistema prevede la possibilità di impostare dei vincoli sulla "
+":dfn:`complessità` e la :dfn:`scadenza` delle password."
+
+#: ../../accounts.rst:349
+msgid "Password policies can be changed from web interface."
+msgstr ""
+"Le politiche di gestione password possono essere cambiate usando "
+"l'interfaccia web."
+
+#: ../../accounts.rst:352
+msgid "Complexity"
+msgstr "Complessità"
+
+#: ../../accounts.rst:354
+msgid ""
+"The :index:`password` complexity is a set of minimum conditions for password"
+" to be accepted by the system: You can choose between two different "
+"management policies about password complexity:"
+msgstr ""
+"La :index:`complessità password` è un insieme di condizioni minime che "
+"devono essere soddisfatte affinché la password venga accettata dal sistema: "
+"è possibile scegliere tra due differenti policy di gestione complessità "
+"delle password:"
+
+#: ../../accounts.rst:357
+msgid ""
+":dfn:`none`: there is no specific control over the password entered, but "
+"minimum length is 7 characters"
+msgstr ""
+":dfn:`none`: non viene fatto alcun controllo sulla password immessa se non "
+"sulla lunghezza di almeno 7 caratteri"
+
+#: ../../accounts.rst:358
+msgid ":dfn:`strong`"
+msgstr ":dfn:`strong`"
+
+#: ../../accounts.rst:360
+msgid ""
+"The :index:`strong` policy requires that the password must comply with the "
+"following rules:"
+msgstr ""
+"La policy :index:`strong` impone che la password debba rispettare le "
+"seguenti regole:"
+
+#: ../../accounts.rst:362
+msgid "Minimum length of 7 characters"
+msgstr "lunghezza minima 7 caratteri"
+
+#: ../../accounts.rst:363
+msgid "Contain at least 1 number"
+msgstr "contenere almeno 1 numero"
+
+#: ../../accounts.rst:364
+msgid "Contain at least 1 uppercase character"
+msgstr "contenere almeno 1 carattere maiuscolo"
+
+#: ../../accounts.rst:365
+msgid "Contain at least 1 lowercase character"
+msgstr "contenere almeno 1 carattere minuscolo"
+
+#: ../../accounts.rst:366
+msgid "Contain at least 1 special character"
+msgstr "contenere almeno 1 carattere speciale"
+
+#: ../../accounts.rst:367
+msgid "At least 5 different characters"
+msgstr "contenere almeno 5 caratteri diversi"
+
+#: ../../accounts.rst:368
+msgid "Must be not present in the dictionaries of common words"
+msgstr "non deve essere presente nei dizionari di parole comuni"
+
+#: ../../accounts.rst:369
+msgid "Must be different from the username"
+msgstr "deve essere diversa dallo username"
+
+#: ../../accounts.rst:370
+msgid ""
+"Can not have repetitions of patterns formed by 3 or more characters (for "
+"example the password As1.$ AS1. $ is invalid)"
+msgstr ""
+"non può avere ripetizioni di pattern formati da più 3 caratteri (ad esempio "
+"la password As1.$As1.$ non è valida)"
+
+#: ../../accounts.rst:371
+msgid ""
+"If Samba Active Directory is installed, also the system will enable password"
+" history"
+msgstr ""
+"se è installato Samba Active Directory, sarà abilitato anche lo storico "
+"delle password"
+
+#: ../../accounts.rst:373
+msgid "The default policy is :dfn:`strong`."
+msgstr "La policy di default è :dfn:`strong`."
+
+#: ../../accounts.rst:375
+msgid ""
+"Changing the default policies is highly discouraged. The use of weak "
+"passwords often lead to compromised servers by external attackers."
+msgstr ""
+"Cambiare le politiche predefinite è altamente sconsigliato. L'utilizzo di "
+"password deboli è la prima causa di compromissione dei server da parte di "
+"attaccanti esterni."
+
+#: ../../accounts.rst:379
+msgid "Expiration"
+msgstr "Scadenza"
+
+#: ../../accounts.rst:381
+msgid ""
+"The  :index:`password expiration` is enabled by default to 6 months from the"
+" time when the password is set. The system will send an e-mail to inform the"
+" users when their password is about to expire."
+msgstr ""
+"La :index:`scadenza delle password` viene attivata di default a 6 mesi a "
+"partire dal momento in cui la password viene impostata. Il sistema invierà "
+"una mail informativa all'utente quando la sua password è in scadenza."
+
+#: ../../accounts.rst:384
+msgid ""
+"The system will refer to the date of the last password change, if password "
+"is older than 6 months, the server will send an email to indicate that "
+"password has expired. In this case you need to change the user password. For"
+" example, if the last password change was made in January and the activation"
+" of the deadline in October, the system will assume the password changed in "
+"January is expired, and notify the user."
+msgstr ""
+"Al momento dell'attivazione il sistema farà riferimento alla data "
+"dell'ultimo cambio password, se tale data è precedente più di 6 mesi, il "
+"server invierà una mail per segnalare che la password è scaduta. In tal caso"
+" è necessario cambiare la password dell'utente. Ad esempio: se l'ultimo "
+"cambio password è stato fatto a gennaio e l'attivazione della scadenza in "
+"ottobre, il sistema riterrà la password cambiata in gennaio come scaduta, e "
+"lo segnalerà all'utente."
+
+#: ../../accounts.rst:394
+msgid "Effects of expired passwords"
+msgstr "Effetti della password scaduta"
+
+#: ../../accounts.rst:396
+msgid ""
+"After password expiration, the user is still able to read and send email "
+"messages."
+msgstr ""
+"Allo scadere della password l'utente sarà ancora in grado di leggere e "
+"inviare email."
+
+#: ../../accounts.rst:398
+msgid ""
+"If |product| has an Active Directory account provider, the user cannot "
+"access shared folders, printers (by Samba) and other domain computers."
+msgstr ""
+"Se |product| ha un account provider Active Directory, l'utente non potrà più"
+" accedere alle cartelle condivise, stampanti (Samba) e altri PC del dominio"
+
+#: ../../accounts.rst:404
+msgid "Import users"
+msgstr "Importazione utenti"
+
+#: ../../accounts.rst:406
+msgid ""
+"It is possible to create user accounts from a TSV (Tab Separated Values) "
+"file with the following format: ::"
+msgstr ""
+"È possibile creare utenti a partire da un file TSV (Tab Separated Values) "
+"con il seguente formato:"
+
+#: ../../accounts.rst:410
+msgid "Example: ::"
+msgstr "Esempio: ::"
+
+#: ../../accounts.rst:414
+msgid "then execute: ::"
+msgstr "quindi eseguire: ::"
+
+#: ../../accounts.rst:418
+msgid ""
+"For example, if the user’s file is /root/users.tsv, execute following "
+"command: ::"
+msgstr "Per esempio, se il file è /root/users.tsv, eseguire: ::"
+
+#: ../../accounts.rst:422
+msgid "Alternative separator character: ::"
+msgstr "Per utilizzare un carattere separatore alternativo: ::"
+
+#: ../../accounts.rst:427
+msgid "Import Emails"
+msgstr "Importazione indirizzi email"
+
+#: ../../accounts.rst:429
+msgid ""
+"It is possible to create mail aliases from a TSV (Tab Separated Values) file"
+" with the following format: ::"
+msgstr ""
+"E' possibile creare indirizzi mail da un file TSV (Tab Separated Values) con"
+" il seguente formato:"
+
+#: ../../accounts.rst:433
+msgid ""
+"Then you can use the ``import_emails`` script. See :ref:`import-"
+"users_section` for a sample script invocation."
+msgstr ""
+"Poi si può usare lo script `import_emails``. Vedi :ref:`import-"
+"users_section` per un esempio di invocazione del comando."
+
+#: ../../accounts.rst:436
+msgid "Import Groups"
+msgstr "Importazione gruppi"
+
+#: ../../accounts.rst:438
+msgid ""
+"Group management is available from the command line through ``group-create``"
+" and ``group-modify`` events ::"
+msgstr ""
+"La gestione dei gruppi è disponibile da linea di comando usando gli eventi "
+"group-create e group-modify ::"

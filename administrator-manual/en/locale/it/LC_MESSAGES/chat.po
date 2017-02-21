@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../chat.rst:12
+msgid "Chat"
+msgstr "Chat"
+
+#: ../../chat.rst:14
+msgid ""
+"The :index:`chat` service uses the standard protocol "
+":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
+"5223)."
+msgstr ""
+"Il servizio di :index:`chat` utilizza il protocollo standard "
+":index:`Jabber`/:index:`XMPP`, supporta TLS sulla porte :index:`XMPP` "
+"standard (5222 o 5223)."
+
+#: ../../chat.rst:16
+msgid "The main features are:"
+msgstr "La principali funzionalità sono:"
+
+#: ../../chat.rst:18
+msgid "Messaging between users of the system"
+msgstr "messaggi fra gli utenti del sistema"
+
+#: ../../chat.rst:19
+msgid ""
+"Possibility to divide the users into groups, according to the company or "
+"department / office"
+msgstr ""
+"possibilità di suddividere gli utenti in gruppi, in base all'azienda o al "
+"dipartimento/ufficio"
+
+#: ../../chat.rst:20
+msgid "Chat server administration"
+msgstr "amministratori chat"
+
+#: ../../chat.rst:21
+msgid "Broadcast messages"
+msgstr "messaggi broadcast"
+
+#: ../../chat.rst:22
+msgid "Group chat"
+msgstr "chat di gruppo"
+
+#: ../../chat.rst:23
+msgid "Offline messages"
+msgstr "messaggi offline"
+
+#: ../../chat.rst:24
+msgid "Transfer files over LAN"
+msgstr "trasferimenti file in LAN"
+
+#: ../../chat.rst:26
+msgid "All system users can access the chat using their own credentials."
+msgstr ""
+"Tutti gli utenti di sistema possono accedere alla chat usando le proprie "
+"credenziali."
+
+#: ../../chat.rst:29
+msgid "Client"
+msgstr "Client"
+
+#: ../../chat.rst:31
+msgid "Jabber clients are available for all desktop and mobile platforms."
+msgstr ""
+"I client Jabber sono disponibili per tutte le piattaforme desktop e mobile."
+
+#: ../../chat.rst:33
+msgid "Some widespread clients:"
+msgstr "Fra i client più diffusi:"
+
+#: ../../chat.rst:35
+msgid "Pidgin is available for Windows and Linux"
+msgstr "Pidgin disponibile per Windows e Linux"
+
+#: ../../chat.rst:36
+msgid "Adium for Mac OS X"
+msgstr "Adium per Mac OS X"
+
+#: ../../chat.rst:37
+msgid "BeejibelIM for Android and iOS, Xabber only for Android"
+msgstr "BeejibelIM per Android e iOS, o Xabber solo Android"
+
+#: ../../chat.rst:39
+msgid ""
+"When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
+"user name and the domain of the machine."
+msgstr ""
+"Quando si configura il client, assicurarsi che sia abilitato TLS (o SSL). "
+"Inserire il nome utente e il dominio della macchina."
+
+#: ../../chat.rst:42
+msgid ""
+"If |product| is also the DNS server of the network, the client should "
+"automatically find the server's address through special pre-configured DNS "
+"records. Otherwise, specify the server address in the advanced options."
+msgstr ""
+"Se |product| è anche il server DNS della rete, i client dovrebbero trovare "
+"automaticamente l'indirizzo del server attraverso speciali record DNS "
+"preconfigurati. In caso contrario, specificare l'indirizzo del server nelle "
+"opzioni avanzate."
+
+#: ../../chat.rst:46
+msgid "Administrators"
+msgstr "Amministratori"
+
+#: ../../chat.rst:48
+msgid ""
+"All users within the group ``jabberadmins`` are considered administrators of"
+" the chat server."
+msgstr ""
+"Tutti gli utenti all'interno del gruppo ``jabberadmins`` sono considerati "
+"amministratori del server di chat."
+
+#: ../../chat.rst:50
+msgid "Administrators can:"
+msgstr "Gli amministratori possono:"
+
+#: ../../chat.rst:52
+msgid "Send broadcast messages"
+msgstr "inviare messaggi broadcast"
+
+#: ../../chat.rst:53
+msgid "Check the status of connected users"
+msgstr "controllare lo stato degli utenti collegati"
+
+#: ../../chat.rst:56
+msgid ""
+"The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
+msgstr ""
+"Il gruppo ``jabberadmins`` è configurabile dalla pagina :ref:`groups-"
+"section`."

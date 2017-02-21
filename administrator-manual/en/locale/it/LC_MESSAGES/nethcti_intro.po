@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 12:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../nethcti_intro.rst:17
+msgid "NethCTI"
+msgstr "NethCTI"
+
+#: ../../nethcti_intro.rst:19
+msgid ""
+"NethCTI is the application that allows to view and control the status of the"
+" entire communication and phone system, using a simple web interface."
+msgstr ""
+"NethCTI è l’applicazione che consente la visualizzazione e il controllo "
+"completo in tempo reale dell’intero sistema telefonico attraverso una "
+"semplice e intuitiva interfaccia web."
+
+#: ../../nethcti_intro.rst:23
+msgid ""
+"Full manual available at `nethcti.docs.nethesis.it "
+"<http://nethcti.docs.nethesis.it/>`_."
+msgstr ""
+"Il manuale completo è disponibile sul sito `nethcti.docs.nethesis.it "
+"<http://nethcti.docs.nethesis.it/>`_."

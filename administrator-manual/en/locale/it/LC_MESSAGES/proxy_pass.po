@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../proxy_pass.rst:10
+msgid "Reverse proxy"
+msgstr "Reverse proxy"
+
+#: ../../proxy_pass.rst:12
+msgid ""
+"The :index:`reverse proxy` feature is useful when you want to access "
+"internal sites from the outside network."
+msgstr ""
+"La funzionalità :index:`reverse proxy` è utile quando si desidera accedere a"
+" siti interni dalla rete esterna."
+
+#: ../../proxy_pass.rst:15
+msgid "Typical scenario:"
+msgstr "Scenario tipico:"
+
+#: ../../proxy_pass.rst:17
+msgid "|product| is the firewall of your LAN"
+msgstr "|product| è il firewall della LAN"
+
+#: ../../proxy_pass.rst:19
+msgid "You have a domain http://mydomain.com"
+msgstr "Si possiede il dominio http://mydomain.com"
+
+#: ../../proxy_pass.rst:21
+msgid ""
+"You would like http://mydomain.com/mysite to forward to the internal server "
+"(internal IP: 192.168.2.100)"
+msgstr ""
+"Si desidera che http://mydomain.com/mysite inoltri le richieste al server "
+"interno (IP privato: 192.168.2.100)"
+
+#: ../../proxy_pass.rst:24
+msgid ""
+"In this scenario create a new record under :guilabel:`Reverse proxy` page. "
+"Set the :guilabel:`Name` of the item to ``mysite`` and the :guilabel:`Target"
+" URL` to ``http://192.168.2.100``."
+msgstr ""
+"In questo scenario creare un nuovo record nella pagina :guilabel:`Reverse "
+"proxy`. Impostare il :guilabel:`Nome` dell’elemento a ``mysite`` e "
+":guilabel:`Target URL` destinazione a ``http://192.168.2.100``."
+
+#: ../../proxy_pass.rst:28
+msgid ""
+"If only encrypted connections are allowed, enable the :guilabel:`Require SSL"
+" encrypted connection`."
+msgstr ""
+"Se sono consentite solo connessioni cifrate, abilitare l’opzione "
+":guilabel:`Richiedi connessione SSL cifrata`."
+
+#: ../../proxy_pass.rst:31
+msgid ""
+"Only clients from certain networks can be allowed to connect, by specifying"
+"  a comma-separated list of CIDR networks under the :guilabel:`Access from "
+"CIDR networks`  field."
+msgstr ""
+"Si può restringere l’accesso solo ai client appartenenti ad alcune reti, "
+"specificando un elenco separato da virgola di reti in notazione CIDR nel "
+"campo :guilabel:`Accedi da reti CIDR`."
+
+#: ../../proxy_pass.rst:37
+msgid "Manual configuration"
+msgstr "Configurazione manuale"
+
+#: ../../proxy_pass.rst:39
+msgid ""
+"If :guilabel:`Reverse proxy` page is not enough, you can always configure "
+"Apache manually, by creating a new file inside :file:`/etc/httpd/conf.d/` "
+"directory."
+msgstr ""
+"Se la pagina :guilabel:`Reverse proxy` non è abbastanza, è sempre possibile "
+"configurare Apache manualmente, creando un nuovo file nella directory "
+":file:`/etc/httpd/conf.d/`."
+
+#: ../../proxy_pass.rst:42
+msgid "**Example**"
+msgstr "**Esempio**"
+
+#: ../../proxy_pass.rst:44
+msgid ""
+"Create :file:`/etc/httpd/conf.d/myproxypass.conf` file with this content: ::"
+msgstr ""
+"Creare il file :file:`/etc/httpd/conf.d/myproxypass.conf` con il seguente "
+"contenuto: ::"
+
+#: ../../proxy_pass.rst:61
+msgid ""
+"Please refer to official Apache documentation for more information: "
+"http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"
+msgstr ""
+"Far riferimento alla documentazione ufficiale di Apache per maggiori "
+"informazioni: http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"
