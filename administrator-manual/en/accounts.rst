@@ -14,10 +14,10 @@ or **remote** account provider.
 
 Supported provider types are:
 
-* Local OpenLDAP running on |product| itself,
-* Remote LDAP server with RFC2307 schema,
-* Local Samba 4 Active Directory Domain Controller,
-* Remote Active Directory (both Microsoft and Samba).
+* Local OpenLDAP running on |product| itself
+* Remote LDAP server with RFC2307 schema
+* Local Samba 4 Active Directory Domain Controller
+* Remote Active Directory (both Microsoft and Samba)
 
 Be aware of the following rules about account providers:
 

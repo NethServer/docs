@@ -3,26 +3,17 @@
 ==========
 Phone Home
 ==========
-This tool is used to track all NethServer's installations around the world. Each time a new NethServer is installed, this tool sends some installation information through comfortable APIs. The information are stored in database and used to display nice markers in a Google Map view with number of installation grouped by country and release.
+During the first configuration wizard, you can opt-out from contributing to usage statistics.
+Phone home is used to track all NethServer's installations around the world. Each time a new NethServer is installed, this tool sends some installation details to a central server. The information is stored in a database and used to display nice markers in a Google Map view with number of installation grouped by country and release.
 
 Overview
 ========
-The tool is *disabled* by default.
+The tool is *enabled* by default.
 
-To enable it simply run: ``config set phone-home configuration status enabled``
+To disable it at a later time, run: ``config setprop phone-home status disabled``
 
-If the tool is *enabled* the information sent are:
+If phone home is *enabled* the details sent are:
  * UUID: stored in ``/var/lib/yum/uuid``
- * RELEASE: get by ``/sbin/e-smith/config getprop sysconfig Version``
+ * RELEASE: from ``/sbin/e-smith/config getprop sysconfig Version``
 
-All the infos are used to populate the map.
-
-Configuration
-=============
-If you use a proxy edit the correct placeholders in file ``phone-home`` stored in ``/etc/sysconfig/`` : ::
-
- SERVER_IP=__serverip__
- PROXY_SERVER=__proxyserver__
- PROXY_USER=__proxyuser__
- PROXY_PASS=__proxypass__
- PROXY_PORT=__proxyport__
+All the data is used to populate the map.
