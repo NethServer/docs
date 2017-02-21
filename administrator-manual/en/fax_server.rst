@@ -63,9 +63,9 @@ Each client must configure the printer using the Apple LaserWriter 16/600 PS dri
 
 Sent documents must meet the following prerequisites:
 
-* Must contain exactly the string "Fax Number", containing the fax number, for example: ::
+* Must contain exactly the string "Numero Fax:", containing the fax number, for example: ::
 
-   Fax Number: 12345678
+   Numero Fax: 12345678
 
 * The string may be present in any position of the document, but on a single line
 * The string must be written in non-bitmap font (eg. Truetype)
