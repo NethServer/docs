@@ -103,18 +103,13 @@ Deep Packet Inspection (DPI)
 ----------------------------
 
 The Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
-On |product| it requires a customised Linux kernel with the additional ``xt_ndpi``
-module that can be installed from the :guilabel:`Software Center` page.
 
-.. warning:: Once the module is installed the system must be rebooted. The newly
-             installed kernel is selected by default.
-
-If the DPI module is correctly loaded, new items for the :guilabel:`Service`
+When the DPI module is active, new items for the :guilabel:`Service`
 field are available in the :guilabel:`Edit rule` form. Those items are
 labeled *DPI protocol*, among the usual *network service* and *service object*
 items.
 
-The complete list of available DPI protocols can be obtained with the following
+The complete list of available DPI protocols can be obtained from the Dashboard or with the following
 command: ::
 
     db NethServer::Database::Ndpi keys
@@ -151,8 +146,8 @@ A :dfn:`provider` is the company who actually manage the :index:`WAN` link.
 The system supports up to 15 WAN connections. 
 If the server has two or more configured red cards, it is required to proceed with :index:`provider` configuration from :guilabel:`Multi WAN` page. 
 
-Each provider represents a  WAN connection and is associated with a network adapter. 
-Each provider defines a  :dfn:`weight`: higher the :index:`weight`, higher the priority of the network card associated with the provider. 
+Each provider represents a WAN connection and is associated with a network adapter. 
+Each provider defines a :dfn:`weight`: higher the :index:`weight`, higher the priority of the network card associated with the provider. 
 
 The system can use WAN connections in two modes (button  :guilabel:`Configure` on page :menuselection:`Multi WAN`): 
 
@@ -292,7 +287,7 @@ It is possible to assign high or low priority to certain services based on the p
 The system works even without specifying  services to high or low priority, 
 because, by default, the interactive traffic is automatically run at high priority 
 (which means, for example, it is not necessary to specify ports for VoIP traffic or SSH). 
-Even the traffic type PING is guaranteed high priority. 
+Also ICMP ping traffic is guaranteed high priority. 
 
 
 .. note::
