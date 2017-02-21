@@ -78,6 +78,8 @@ Available actions are:
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
 * :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
+* :dfn:`Hi-Prio`: mark the traffic as high priority. See :ref:`traffic-shaping-section`.
+* :dfn:`Low-Prio`: mark the traffic as low priority. See :ref:`traffic-shaping-section`.
 
 .. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
 
