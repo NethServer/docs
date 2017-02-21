@@ -60,8 +60,8 @@ The content of the blocked URL must be: ``translate.google``.
 Antivirus
 =========
 
-It is recommended to always enable virus scanning on the web page content.
-If the proxy is configured in SSL transparent mode (:ref:`proxy_ssl-section`), virus scanning will work even on contents downloaded via HTTPS.
+Web browsing can be checked for malicious content, but only for clear text HTTP protocol.
+If the proxy is configured in SSL transparent mode (:ref:`proxy_ssl-section`), content downloaded via HTTPS will not be scanned.
 
 
 Troubleshooting
