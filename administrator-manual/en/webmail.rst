@@ -69,7 +69,7 @@ If you want to open the access from any network: ::
 Removing
 ========
 
-If you want remove Roundcube, remove all the mail server RPMs and no longer have an email system on the server, do this step on the server console – either directly or by ssh. ::
+If you want remove Roundcube, run the following command on the server command line. ::
 
    yum autoremove nethserver-roundcubemail
 
