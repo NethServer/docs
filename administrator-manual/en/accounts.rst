@@ -89,13 +89,13 @@ network).
 
 Therefore the additional IP address must satisfy three conditions:
 
-1. the IP address has to be **free**; it must not be used by any other machine,
+1. the IP address has to be **free**; it must not be used by any other machine
 
-2. the IP address has to be in the same subnet range of a green network,
+2. the IP address has to be in the same subnet range of a green network
 
 3. the green network has to be bound to a bridged interface where the Linux
    Container can attach its virtual interface to; the installation procedure can create the
-   bridge interface automatically, if it is missing.
+   bridge interface automatically, if it is missing
 
 From the :guilabel:`Software center` page install the module named *Account
 provider: Samba Active Directory*.
