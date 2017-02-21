@@ -224,17 +224,17 @@ Configuration backup customization
 ==================================
 
 In most cases it is not necessary to change the configuration backup. 
-But it can be useful, for example, if you have installed a custom SSL certificate. 
-In this case you can add the file that contains the certificate to the list of files to backup.
+But it can be useful, for example, if you have a custom httpd configuration.
+In this case you can add the file that contains the customization to the list of files to backup.
 
 Inclusion
 ---------
 
 If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
 
-For example, to backup :file:`/etc/pki/mycert.pem` file , add this line: ::
+For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add this line: ::
 
-  /etc/pki/mycert.pem
+  /etc/httpd/conf.d/mycustom.conf
 
 Do not add big directories or files to configuration backup.
 
