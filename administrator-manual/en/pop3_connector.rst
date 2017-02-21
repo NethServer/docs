@@ -17,13 +17,13 @@ be less effective due to the original email envelope information becoming lost.
 POP3/IMAP accounts are configured from :guilabel:`POP3 connector >
 Accounts` page. Each account can be specified:
 
-* the email address (as unique account identifier),
-* the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL),
-* the remote server address,
-* the account credentials,
-* the local user account where to deliver messages,
-* if a message has to be deleted from the remote server after delivery,
-* antiSPAM and antivirus checks.
+* the email address (as unique account identifier)
+* the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)
+* the remote server address
+* the account credentials
+* the local user account where to deliver messages
+* if a message has to be deleted from the remote server after delivery
+* antiSPAM and antivirus checks
 
 .. note:: It is allowed to associate more than one external accounts to a local
           one.  Deleting an account will *not* delete already
