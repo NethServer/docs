@@ -55,7 +55,7 @@ Any network managed by the system must follow these rules:
 
 * networks must be physically separated (multiple networks can't be connected to the same switch/hub)
 * networks must be logically separated: each network must have different addresses
-* private networks, like LANs, must follow address's convention from RFC1918 document.
+* private networks, like LANs, must follow address's convention from RFC1918 document
   See :ref:`RFC1918-section`
 
 .. index:: zone, role
@@ -154,31 +154,10 @@ Network services
 
 A :index:`network service` is a service running on the firewall itself.
 
-These services are always available to hosts on green network (local network).
-Access policies can be modified from :guilabel:`Network services` page.
+Each service has a list of "open" ports on which it answers to connections.
+Connections can be accepted from selected zones. Finer grained control of 
+access to network services can be configured from the Firewall rules page.
 
-Available policies are:
-
-* Access only from green networks (private): all hosts from green networks and from VPNs
-* Access from green and red networks (public): any host from green networks, VPNs and external networks. But not guests (blue) and DMZ (orange) networks
-* Access only from the server itself (none): no host can connect to selected service
-
-Custom access
--------------
-
-If selected policy is private or public, it’s possible to add hosts and networks which are always allowed (or blocked)
-using :guilabel:`Allow hosts` and :guilabel:`Deny hosts`.
-This rule also apply for blue and orange networks.
-
-Example
-^^^^^^^
-
-Given the following configuration:
-
-* Orange network: 192.168.2.0/24
-* Access for NTP server set to private
-
-If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside the :guilabel:`Allow hosts` field.
 
 .. index:: trusted networks
 
