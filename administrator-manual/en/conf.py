@@ -21,7 +21,7 @@ except ImportError:
 
 copyright = u'2017, Nethesis Srl'
 
-if 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
+if not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('nsent')
 else:
     tags.add('nscom')
@@ -123,7 +123,7 @@ if tags.has('nsent'):
         'bootswatch_theme': "cerulean",
     }
 
-else:
+elif tags.has('nscom'):
     templates_path = ['nscom/_templates']
     project = u'NethServer'
     html_title = u"%s %s" % (project, release)
