@@ -1,7 +1,0 @@
-.. |product| replace:: NethServer
-.. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__
-.. |ks_keyboard| replace:: :samp:`en`
-.. |ks_timezone| replace:: :samp:`Greenwich`
-.. |ks_language| replace:: :samp:`en_US`
-
-
