@@ -1,3 +1,10 @@
+# #-#-#-#-#  index-ent.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  index-com.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
@@ -8,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-02-22 15:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,22 +25,34 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../index.rst:11
+#: ../../index.rst:14 ../../index.rst:11
 msgid "Administrator Manual"
 msgstr "Manuale amministratore"
 
-#: ../../index.rst:18
+#: ../../index.rst:21 ../../index.rst:18
 msgid "**Official site**: `www.nethserver.org <http://www.nethserver.org>`_"
 msgstr "**Sito ufficiale**: `www.nethserver.org <http://www.nethserver.org>`_"
 
-#: ../../index.rst:107
+#: ../../index.rst:0
+msgid "Contacts"
+msgstr "Contatti"
+
+#: ../../index.rst:27
+msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
+msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
+
+#: ../../index.rst:29
+msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
+msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
+
+#: ../../index.rst:112 ../../index.rst:109
 msgid "Indices"
 msgstr "Indici"
 
-#: ../../index.rst:109
+#: ../../index.rst:114 ../../index.rst:111
 msgid ":ref:`genindex`"
 msgstr ":ref:`indice`"
 
-#: ../../index.rst:110
+#: ../../index.rst:115 ../../index.rst:112
 msgid ":ref:`search`"
 msgstr ":ref:`cerca`"
