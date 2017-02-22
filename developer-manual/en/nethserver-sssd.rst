@@ -277,7 +277,7 @@ password renewal, and crojob tasks: ::
 * ``KrbKeytabPath``
   Keytab file path. If empty, ``/var/lib/misc/nsrv-<service>.keytab`` is assumed
 * ``KrbPrimaryList <comma separated words list>``
-  Defines the keytab contents. In Kerberos jargon a "primary" is the first part of the `principal string<http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/What-is-a-Kerberos-Principal*003f.html>`_, before the slash (``/``) character. Any primary in this list is exported to the keytab.
+  Defines the keytab contents. In Kerberos jargon a "primary" is the first part of the `principal string <http://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/What-is-a-Kerberos-Principal*003f.html>`_, before the slash (``/``) character. Any primary in this list is exported to the keytab.
 * ``KrbKeytabOwner``
   The unix file owner. Default is the ``service`` name. This is applied to both the credentials cache file and the keytab file.
 * ``KrbKeytabPerms``

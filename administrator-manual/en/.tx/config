@@ -287,3 +287,10 @@ source_file = _build/locale/hotspot.pot
 source_lang = en
 type = PO
 
+
+[docs-v7.sphinx]
+file_filter = ./locale/<lang>/LC_MESSAGES/sphinx.po
+source_file = _build/locale/sphinx.pot
+source_lang = en
+type = PO
+

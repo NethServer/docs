@@ -24,18 +24,10 @@ Postfix example: ::
 
   postfix=service
       ...
-      AdsMapUserPrincipalStatus=enabled
-      AdsGroupsDeliveryType=copy
+      MxRecordStatus=enabled
       SystemUserRecipientStatus=disabled
-    
-* ``AdsMapUserPrincipalStatus {enabled,disabled}`` If ``enabled``,
-  the user principal is considered a vaild mail address (if mail
-  domain exists, also)
 
-* ``AdsGroupsDeliveryType {shared,copy}`` Mail to security group
-  is delivered shared or copied to its members, according to the
-  prop value
-
+* ``MxRecordStatus {enabled,disabled}`` Push smtp, imap, pop, pop3 into /etc/hosts. They masquerade DNS A records in the LAN.
 * ``SystemUserRecipientStatus {enabled,disabled}`` ``enabled``,
   accept from any network the recipient addresses formed by user
   account names and domain part ``localhost``,
@@ -43,26 +35,43 @@ Postfix example: ::
 
 Dovecot example: ::
 
-  dovecot=service
-    ...
-    ImapStatus=enabled    
-    PopStatus=disabled
-    TlsSecurity=optional
-    MaxProcesses=400
-    MaxUserConnectionsPerIp=12
-    SharedMailboxesStatus=disabled
-    LmtpInetListenerStatus=disabled
-    QuotaStatus=enabled
-    QuotaDefaultSize=20
-    QuotaUiFunction=
-    SpamFolder=Junk
+    dovecot=service
+        ...
+        AdminIsMaster=disabled
+        DeletedToTrash=disabled
+        FtsLuceneStatus=enabled
+        ImapStatus=enabled
+        LmtpInetListenerStatus=disabled
+        LogActions=disabled
+        MaxProcesses=400
+        MaxUserConnectionsPerIp=12
+        PopStatus=enabled
+        QuotaDefaultSize=20
+        QuotaStatus=disabled
+        SharedMailboxesStatus=enabled
+        SpamFolder=Junk
+        SpamRetentionTime=15d
+        TlsSecurity=required
+
 
 Properties:
 
+* ``AdminIsMaster {enabled,disabled}`` allow root user to impersonate other users
+* ``DeletedToTrash {enabled,disabled}`` deletedtotrash plugin
+* ``FtsLuceneStatus {enabled,disabled}`` lucene indexed search plugin
+* ``ImapStatus {enabled,disabled}`` IMAP protocol switch
+* ``LmtpInetListenerStatus {enabled,disabled}`` open a TCP socket for LMTP protocol
+* ``LogActions {enabled,disabled}`` IMAP actions logging plugin
+* ``MaxProcesses N`` maximum number of worker processes spawned by dovecot. A single user session usually requires multiple processes.
+* ``MaxUserConnectionsPerIp N`` maximum TCP connections for one user behind the same IP
+* ``PopStatus {enabled,disabled}`` POP3 protocol switch
+* ``QuotaDefaultSize N`` Default user quota size (1 unit is 10MB)
+* ``QuotaStatus {enabled,disabled}`` General user mail quota switch
+* ``SharedMailboxesStatus {disabled,enabled}`` Control the "Shared" IMAP namespace for per-user folder sharing
+* ``SpamFolder FolderName`` Deliver spam tagged messages to the given folder (applied to all users)
+* ``SpamRetentionTime Nd`` Expunge messages in SpamFolder if older than the given time span. "d" is for days.
 * ``TlsSecurity {optional,required}`` 
   controls dovecot ``disable_plaintext_auth`` parameter: if set to ``required`` clear-text authentication methods are disabled, while ``optional`` enables them.
-* ``QuotaUiFunction``
-  If set the sliders in server-manager apply the given increments, expressed in units of 100MB. 
 
 
 
