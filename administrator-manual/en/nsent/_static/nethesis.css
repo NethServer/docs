@@ -94,6 +94,8 @@ pre, blockquote {
     -webkit-box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
     -moz-box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
     box-shadow: 0px 5px 8px 0px rgba(180, 180, 180, 0.75);
+    padding: 0;
+    margin: 0;
 }
 .section li {
     line-height: 26px;
@@ -145,7 +147,6 @@ pre, blockquote {
 .navbar-default .navbar-brand {
     font-family: Open Sans Condensed,Helvetica,sans-serif;
     font-weight: bold;
-    font-size: 28px;
     color: #333;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -265,6 +266,9 @@ footer .pull-right a:hover {
     }
     .navbar-brand {
         height: 68px;
+        font-size: 28px;
+        margin-left: 0;
+        padding: 9px 0 9px 15px;
     }
 }
 @media (min-width: 992px) {
