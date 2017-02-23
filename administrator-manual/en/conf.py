@@ -112,14 +112,12 @@ if tags.has('nsent'):
        'Miscellaneous'),
     ]
     html_theme_options = {
-        'navbar_title': " ", # HACK to hide project name in navbar.
-        'navbar_links': [],
-        'navbar_sidebarrel': True,
         'navbar_pagenav': True,
-        'globaltoc_includehidden': "true",
+        'navbar_sidebarrel': False,
+        'navbar_pagenav_name': 'Contents',
         'navbar_class': "navbar",
-        'navbar_fixed_top': "true",
-        'source_link_position': "nav",
+        'navbar_fixed_top': "false",
+        'source_link_position': "none",
         'bootswatch_theme': "cerulean",
     }
 
