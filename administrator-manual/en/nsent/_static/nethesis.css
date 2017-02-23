@@ -10,7 +10,7 @@ body {
     border-radius: 6px;
     border: 1px solid #dcdcdc;
 }
-h1, h2, h6, .h1, .h2, .h6, .toctree-wrapper > .caption {
+h1, h2, h6, .h1, .h2, .h6 {
     font-family: 'Open Sans Condensed', Helvetica, sans-serif !important;
     font-weight: 700 !important;
     color: #333 !important;
@@ -18,14 +18,29 @@ h1, h2, h6, .h1, .h2, .h6, .toctree-wrapper > .caption {
 h1 {
     padding-bottom: 15px;
 }
-h2, .toctree-wrapper > .caption {
-    border-top: 4px solid #f4af1a;
-    width: 55%;
-    margin-top: 35px;
+h2 {
+    margin-top: 35px
     padding-top: 5px;
     margin-bottom: 25px;
     font-size: 30px;
 }
+
+.content > .section > .section {
+    margin-top: 35px;
+    border-top: 1px solid #f4af1a;
+}
+.section > h2 {
+    border-top: 6px solid #f4af1a;
+    display: inline-block;
+    margin-top: 0;
+}
+.section > span:empty {
+    height: 0;
+}
+h2 > a.headerlink {
+    position: absolute;
+}
+
 h3, h4, h5 {
     font-family: Verdana, Helvetica, Arial, sans-serif !important;
     font-weight: 600 !important;
@@ -194,9 +209,6 @@ footer .pull-right a:hover {
 /* -- Media queries ------------------------------------------------------- */
 
 @media (max-width: 767px) {
-    body {
-        padding-top: 72px !important;
-    }
     h2 {
         width: 100%;
     }
@@ -224,9 +236,6 @@ footer .pull-right a:hover {
     }
 }
 @media (min-width: 768px) {
-    body {
-        padding-top: 137px !important;
-    }
     .open>.dropdown-menu {
         display: inline-table;
     }
