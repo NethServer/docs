@@ -23,7 +23,7 @@ copyright = u'2017, Nethesis Srl'
 
 if not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('nsent')
-else:
+elif not tags.has('nsent'):
     tags.add('nscom')
 
 # If your documentation needs a minimal Sphinx version, state it here.
