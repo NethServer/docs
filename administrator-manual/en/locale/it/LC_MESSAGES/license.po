@@ -91,7 +91,7 @@ msgid ""
 "**ShareAlike** — If you remix, transform, or build upon the material, you "
 "must distribute your contributions under the same license as the original."
 msgstr ""
-"**StessaLicenza* — Se remixi, trasformi il materiale o ti basi su di esso, "
+"**StessaLicenza** — Se remixi, trasformi il materiale o ti basi su di esso, "
 "devi distribuire i tuoi contributi con la stessa licenza del materiale "
 "originario."
 

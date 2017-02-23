@@ -43,22 +43,24 @@ ODBC configuration
 
 1. Define the ODBC record describing the database connection
 
-Example MySql: ::
+   Example MySql: ::
 
- config set miarubrica ODBC Description "MiaRubrica" Driver "MySQL" Server "localhost" Database miarubrica Port 3306
-   
-Example PostgreSQL ::
+     config set miarubrica ODBC Description "MiaRubrica" Driver "MySQL" Server "localhost" Database miarubrica Port 3306
+       
+   Example PostgreSQL ::
 
- config set miarubrica ODBC Description "MiaRubrica" Driver "PostgreSQL" Server 192.168.5.168 Database miarubrica Port 5432
+     config set miarubrica ODBC Description "MiaRubrica" Driver "PostgreSQL" Server 192.168.5.168 Database miarubrica Port 5432
 
-Example MSSQL ::
+   Example MSSQL ::
 
- config set business ODBC Description "MSSQL" Driver "MSSQL" Server 192.168.5.169 Database PROVA Port 1433
+     config set business ODBC Description "MSSQL" Driver "MSSQL" Server 192.168.5.169 Database PROVA Port 1433
 
-2. Execute: ::
+2. Execute: 
 
- signal-event nethserver-unixODBC-update
+::
 
+    signal-event nethserver-unixODBC-update
+ 
 Test
 ----
 

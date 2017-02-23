@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 12:18+0100\n"
+"POT-Creation-Date: 2017-02-23 15:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,32 +138,28 @@ msgid "Example MSSQL ::"
 msgstr "Esempio MSSQL: ::"
 
 #: ../../phonebook-mysql.rst:68
-msgid "Execute: ::"
-msgstr "Eseguire: ::"
+msgid "Execute:"
+msgstr "Eseguire:"
 
-#: ../../phonebook-mysql.rst:70
-msgid "signal-event nethserver-unixODBC-update"
-msgstr "signal-event nethserver-unixODBC-update"
-
-#: ../../phonebook-mysql.rst:73
+#: ../../phonebook-mysql.rst:75
 msgid "Test"
 msgstr "Testare il funzionamento"
 
-#: ../../phonebook-mysql.rst:75
+#: ../../phonebook-mysql.rst:77
 msgid "To test if the configuration is working: ::"
 msgstr ""
 "Testare il funzionamento (sintassi: isql -v nomeDSN utente password): ::"
 
-#: ../../phonebook-mysql.rst:89
+#: ../../phonebook-mysql.rst:91
 msgid "Then, try to execute a query ::"
 msgstr ""
 "Provare una query su una tabella del database selezionato precedentemente: "
 "::"
 
-#: ../../phonebook-mysql.rst:97
+#: ../../phonebook-mysql.rst:99
 msgid "Database details"
 msgstr "Dettagli database"
 
-#: ../../phonebook-mysql.rst:104
+#: ../../phonebook-mysql.rst:106
 msgid "Display phonebook fields: ::"
 msgstr "Per visualizzare i campi della rubrica centralizzata: ::"

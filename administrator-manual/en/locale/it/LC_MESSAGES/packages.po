@@ -1,14 +1,21 @@
+# #-#-#-#-#  packages.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  packages.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-02-22 16:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../packages.rst:13
+#: ../../packages.rst:13 ../../packages.rst:16
 msgid "Software center"
 msgstr "Software center"
 
-#: ../../packages.rst:15
+#: ../../packages.rst:15 ../../packages.rst:18
 msgid ""
 "|product| is highly modular.  At the end of the installation a bare minimum "
 "set of modules are ready to be used. The basic system includes modules like "
@@ -33,10 +40,10 @@ msgstr ""
 "|product| è altamente modulare: al termine dell’installazione il sistema "
 "contiene solo i moduli di base (es. *configurazione di rete*, "
 "*visualizzazione log*). L’amministratore può quindi decidere quali "
-"componenti installare in base alle proprie esigenze (es. :ref:`Email`, "
-":ref:`Server DHCP`, :ref:`Firewall`, ecc.)."
+"componenti installare in base alle proprie esigenze (es. :ref:`email-"
+"section`, :ref:`dhcp-section`, :ref:`firewall-section`, ecc.)."
 
-#: ../../packages.rst:21
+#: ../../packages.rst:21 ../../packages.rst:24
 msgid ""
 "The :guilabel:`Available` tab lists all of the modules that can be "
 "installed. This list can be filtered by category."
@@ -44,7 +51,7 @@ msgstr ""
 "Il tab :guilabel:`Disponibili` elenca tutti i moduli disponibili per "
 "l'installazione. La lista può essere filtrata per categoria."
 
-#: ../../packages.rst:24
+#: ../../packages.rst:24 ../../packages.rst:27
 msgid ""
 "To install a module, check the corresponding box and click on "
 ":guilabel:`Add`. Some modules suggest optional packages that can be "
@@ -54,7 +61,7 @@ msgstr ""
 "pulsante :guilabel:`AGGIUNGI`. Alcuni moduli suggeriscono dei pacchetti "
 "opzionali, installabili contestualmente o in seguito."
 
-#: ../../packages.rst:28
+#: ../../packages.rst:28 ../../packages.rst:31
 msgid ""
 "To **install optional packages** at a later time, select "
 ":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
@@ -65,7 +72,7 @@ msgstr ""
 "voce della lista. Per **rimuovere un modulo**, premere il pulsante "
 ":guilabel:`Rimuovi`."
 
-#: ../../packages.rst:34
+#: ../../packages.rst:34 ../../packages.rst:37
 msgid ""
 "When removing a module other modules could be removed, too! Read carefully "
 "the list of affected packages to avoid removing required features."
@@ -74,11 +81,11 @@ msgstr ""
 "indirettamente! Leggere attentamente la lista dei pacchetti in rimozione per"
 " evitare di rimuovere delle funzionalità necessarie."
 
-#: ../../packages.rst:42
+#: ../../packages.rst:42 ../../packages.rst:45
 msgid "Software updates"
 msgstr "Aggiornamenti software"
 
-#: ../../packages.rst:44
+#: ../../packages.rst:44 ../../packages.rst:47
 msgid ""
 "Updates for the installed software are listed under the :guilabel:`Updates` "
 "tab. A message appears when software updates are available."
@@ -86,7 +93,7 @@ msgstr ""
 "Gli aggiornamenti sono elencati nel tab :guilabel:`Aggiornamenti`. Quando ci"
 " sono aggiornamenti disponibili appare un messaggio apposito."
 
-#: ../../packages.rst:47
+#: ../../packages.rst:47 ../../packages.rst:50
 msgid ""
 "Regularly update the installed software to fix bugs, security issues and "
 "receive new features."
@@ -94,11 +101,11 @@ msgstr ""
 "Applicare regolarmente gli aggiornamenti per fissare bug, problemi di "
 "sicurezza  e installare nuove funzionalità."
 
-#: ../../packages.rst:54
+#: ../../packages.rst:54 ../../packages.rst:57
 msgid "List of installed packages"
 msgstr "Lista dei pacchetti installati"
 
-#: ../../packages.rst:56
+#: ../../packages.rst:56 ../../packages.rst:59
 msgid ""
 "The complete list of installed RPM packages is available under "
 ":guilabel:`Installed > Packages`."
@@ -106,7 +113,7 @@ msgstr ""
 "La lista completa dei pacchetti RPM installati è disponibile nel tab "
 ":guilabel:`Installati`."
 
-#: ../../packages.rst:59
+#: ../../packages.rst:59 ../../packages.rst:62
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
 "installed into the system with the full package version."
@@ -114,11 +121,11 @@ msgstr ""
 "La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
 "installati con la versione completa del pacchetto."
 
-#: ../../packages.rst:65
+#: ../../packages.rst:65 ../../packages.rst:68
 msgid "Additional languages"
 msgstr "Lingue aggiuntive"
 
-#: ../../packages.rst:67
+#: ../../packages.rst:67 ../../packages.rst:70
 msgid ""
 "The Server Manager allows selecting the interface language at the login "
 "screen. Only installed languages are listed."
@@ -126,7 +133,7 @@ msgstr ""
 "Il Server Manager permette di selezionare la lingue dell'interfaccia al "
 "momento del login. Sono elencate solo le lingue installate."
 
-#: ../../packages.rst:70
+#: ../../packages.rst:70 ../../packages.rst:73
 msgid ""
 "In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
 "install the desired languages."
