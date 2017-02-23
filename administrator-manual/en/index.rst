@@ -117,8 +117,8 @@ Appendix
     Indices
     -------
 
-    * :ref:`genindex`
-    * :ref:`search`
+    * :ref:`General index <genindex>`
+    * :ref:`Search <search>`
 
 
 
