@@ -266,6 +266,7 @@ We want to map our internal host (``example_host`` - ``192.168.5.122``) with pub
 
 In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (read-only field) the specific host (``example_host``) from the combo-box. We have configured correctly the one-to-one NAT for our host.
 
+.. _traffic-shaping-section:
 
 Traffic shaping
 ===============
