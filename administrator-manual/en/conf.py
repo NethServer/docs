@@ -80,7 +80,7 @@ if tags.has('nsent'):
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
     html_theme = "bootstrap"
-    html_logo = 'nsent/_static/nethesislogo.jpg'
+    html_logo = 'nsent/_static/favico_neth.png'
     html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
     html_favicon = 'nsent/_static/favicon.ico' 
     html_static_path = ['nsent/_static']
@@ -112,6 +112,7 @@ if tags.has('nsent'):
        'Miscellaneous'),
     ]
     html_theme_options = {
+        'navbar_title': 'NethServer Enterprise',
         'navbar_pagenav': True,
         'navbar_sidebarrel': False,
         'navbar_pagenav_name': 'Contents',

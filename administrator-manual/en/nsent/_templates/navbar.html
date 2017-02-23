@@ -11,6 +11,7 @@
           {%- block sidebarlogo %}
             {%- if logo %}<span><img src="{{ pathto('_static/' + logo, 1) }}"></span>{%- endif %}
           {%- endblock %}
+          {% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- endif -%}
         </a>
         <span class="navbar-text navbar-version pull-left"><b>{{ version|e }}</b></span>
       </div>

@@ -142,6 +142,15 @@ pre, blockquote {
 .reference.internal[href="#"] {
     font-weight: bolder;
 }
+.navbar-default .navbar-brand {
+    font-family: Open Sans Condensed,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #333;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #333;
+}
 
 /* -- section --------------------------------------------------------------- */
 
