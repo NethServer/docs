@@ -18,23 +18,29 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
+Release notes 7
+---------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Release notes 7
 
    release_notes
 
+Installation
+------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Installation
 
    installation
    access
    registration
 
+Configuration
+-------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Configuration
 
    packages
    base_system
@@ -42,9 +48,11 @@ Administrator Manual
    dns
    dhcp
 
+Modules
+-------
+
 .. toctree::
    :maxdepth: 1
-   :caption: Modules
 
    backup
    mail
@@ -78,31 +86,39 @@ Administrator Manual
 
 .. only:: nscom
 
+    NethForge modules
+    -----------------
+
     .. toctree::
-       :maxdepth: 2
-       :caption: NethForge modules
+       :maxdepth: 1
 
        webvirtmgr
 
+Best practices
+--------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Best practices
 
    third_party
 
+Appendix
+--------
+
 .. toctree::
    :maxdepth: 1
-   :caption: Appendix
 
    migration
    license
 
 
-Indices
-=======
+.. only:: nscom
 
-* :ref:`genindex`
-* :ref:`search`
+    Indices
+    -------
+
+    * :ref:`genindex`
+    * :ref:`search`
 
 
 

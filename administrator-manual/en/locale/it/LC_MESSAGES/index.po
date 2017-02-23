@@ -1,21 +1,14 @@
-# #-#-#-#-#  index-ent.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  index-com.pot (NethServer 7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
-# This file is distributed under the same license as the NethServer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-22 15:28+0100\n"
+"POT-Creation-Date: 2017-02-23 11:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,11 +18,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../index.rst:14 ../../index.rst:11
+#: ../../index.rst:14
 msgid "Administrator Manual"
 msgstr "Manuale amministratore"
 
-#: ../../index.rst:21 ../../index.rst:18
+#: ../../index.rst:21
 msgid "**Official site**: `www.nethserver.org <http://www.nethserver.org>`_"
 msgstr "**Sito ufficiale**: `www.nethserver.org <http://www.nethserver.org>`_"
 
@@ -45,14 +38,42 @@ msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
 
-#: ../../index.rst:112 ../../index.rst:109
+#: ../../index.rst:32
+msgid "Release notes 7"
+msgstr "Release notes 7"
+
+#: ../../index.rst:40
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../index.rst:50
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../index.rst:62
+msgid "Modules"
+msgstr "Moduli"
+
+#: ../../index.rst:100
+msgid "NethForge modules"
+msgstr "Moduli NethForge"
+
+#: ../../index.rst:108
+msgid "Best practices"
+msgstr "Best practice"
+
+#: ../../index.rst:116
+msgid "Appendix"
+msgstr "Appendice"
+
+#: ../../index.rst:128
 msgid "Indices"
 msgstr "Indici"
 
-#: ../../index.rst:114 ../../index.rst:111
+#: ../../index.rst:130
 msgid ":ref:`genindex`"
 msgstr ":ref:`indice`"
 
-#: ../../index.rst:115 ../../index.rst:112
+#: ../../index.rst:131
 msgid ":ref:`search`"
 msgstr ":ref:`cerca`"
