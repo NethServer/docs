@@ -293,7 +293,7 @@ the name of the module as a parameter to the install script.  Example: ::
 Enterprise promotion
 ====================
 
-To promote |product| to the Enterprise version follow the istructions `available here`_.
+To promote |product| to the Enterprise version follow the instructions `available here`_.
 
 .. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062653-promozione-nethserver-enterprise-7-x-community-ad-enterprise
 
