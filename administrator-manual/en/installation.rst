@@ -301,7 +301,9 @@ To install the base system, run: ::
     
         yum localinstall http://update.nethesis.it/nethserver/7/nethserver-register.rpm
 
-    Proceed with :ref:`registration-section`.
+    Proceed with :ref:`registration <registration-section>` then run the following command: ::
+        
+        yum update @nethserver-iso
 
 .. _installation-next-steps:
 
