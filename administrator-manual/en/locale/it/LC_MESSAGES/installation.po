@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-22 16:11+0100\n"
+"POT-Creation-Date: 2017-03-01 13:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -547,7 +547,7 @@ msgstr "Abilitare i repository |product| specifici con il comando: ::"
 msgid "To install the base system, run: ::"
 msgstr "Per installare il sistema di base eseguire: ::"
 
-#: ../../installation.rst:293 ../../installation.rst:296
+#: ../../installation.rst:295
 msgid ""
 "Alternatively, to install base system *and* additional modules, pass the "
 "name of the module as a parameter to the install script.  Example: ::"
@@ -556,11 +556,11 @@ msgstr ""
 "nome dei moduli desiderati come parametro allo script di installazione. "
 "Esempio: ::"
 
-#: ../../installation.rst:301 ../../installation.rst:304
+#: ../../installation.rst:318 ../../installation.rst:321
 msgid "Next steps"
 msgstr "Prossimi passi"
 
-#: ../../installation.rst:303 ../../installation.rst:306
+#: ../../installation.rst:320 ../../installation.rst:323
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"
@@ -569,3 +569,20 @@ msgstr ""
 "Al termine dell’installazione, :ref:`accedere al Server Manager <access-"
 "section>` per :ref:`installare il software addizionale <package_manager-"
 "section>`."
+
+#: ../../installation.rst:308
+msgid "Enterprise promotion"
+msgstr "Promozione a Enterprise"
+
+#: ../../installation.rst:310
+msgid "To promote to the Enterprise version run the following command: ::"
+msgstr ""
+"Per promuovere il sistema alla versione Enterprise eseguire il comando: ::"
+
+#: ../../installation.rst:314
+msgid ""
+"Proceed with :ref:`registration <registration-section>` then run the "
+"following command: ::"
+msgstr ""
+"Procedere alla :ref:`registrazione <registration-section>` quindi eseguire "
+"il comando: ::"

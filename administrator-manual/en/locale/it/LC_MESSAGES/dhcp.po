@@ -1,14 +1,21 @@
+# #-#-#-#-#  dhcp.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  dhcp.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../dhcp.rst:18
+#: ../../dhcp.rst:18 ../../dhcp.rst:21
 msgid "DHCP and PXE server"
 msgstr "Server DHCP e PXE"
 
-#: ../../dhcp.rst:20
+#: ../../dhcp.rst:20 ../../dhcp.rst:23
 msgid ""
 "The :dfn:`Dynamic Host Configuration Protocol` (DHCP) [#DHCP]_ server "
 "centralizes the management of the local network configuration for any device"
@@ -38,7 +45,7 @@ msgstr ""
 "assegna automaticamente un indirizzo IP valido e effettua la configurazione "
 "di DNS e gateway."
 
-#: ../../dhcp.rst:28
+#: ../../dhcp.rst:28 ../../dhcp.rst:31
 msgid ""
 "In most cases, the devices are already configured to use DHCP protocol on "
 "start up."
@@ -46,7 +53,7 @@ msgstr ""
 "Nella maggior parte dei casi i dispositivi sono già configurati per "
 "utilizzare il protocollo DHCP."
 
-#: ../../dhcp.rst:31
+#: ../../dhcp.rst:31 ../../dhcp.rst:34
 msgid ""
 "The :dfn:`Preboot eXecution Environment` (PXE) [#PXE]_ specification allows "
 "a network device to retrieve the operating system from a centralized network"
@@ -58,11 +65,11 @@ msgstr ""
 "postazione di rete centralizzata, mediante i protocolli DHCP e TFTP. Vedere "
 ":ref:`dhcp_pxe` per un esempio su come configurare un caso simile."
 
-#: ../../dhcp.rst:40
+#: ../../dhcp.rst:40 ../../dhcp.rst:43
 msgid "DHCP configuration"
 msgstr "Configurazione DHCP"
 
-#: ../../dhcp.rst:42
+#: ../../dhcp.rst:42 ../../dhcp.rst:45
 msgid ""
 "The DHCP server can be enabled on all *green* and *blue* interfaces (see "
 ":ref:`network-section`).  |product| will assign a free IP address within the"
@@ -73,7 +80,7 @@ msgstr ""
 "all'interno dell':dfn:`intervallo DHCP` configurato nella pagina "
 ":guilabel:`DHCP > Server DHCP`."
 
-#: ../../dhcp.rst:47
+#: ../../dhcp.rst:47 ../../dhcp.rst:50
 msgid ""
 "The DHCP range must be defined within the network of the associated "
 "interface. For instance, if the green interface has IP/netmask "
@@ -85,11 +92,11 @@ msgstr ""
 "255.255.255.0, allora l'intervallo DHCP può andare da 192.168.1.2 a "
 "192.168.1.254."
 
-#: ../../dhcp.rst:55
+#: ../../dhcp.rst:55 ../../dhcp.rst:58
 msgid "Advanced options"
 msgstr "Opzioni avanzate"
 
-#: ../../dhcp.rst:57
+#: ../../dhcp.rst:57 ../../dhcp.rst:60
 msgid ""
 "There are seven advanced options for DHCP.  You can assign zero options, one"
 " option or all seven options."
@@ -97,7 +104,7 @@ msgstr ""
 "Il DHCP ha sette opzioni avanzate. Possono essere utilizzate "
 "indistintamente, da 0 a tutte 7."
 
-#: ../../dhcp.rst:59
+#: ../../dhcp.rst:59 ../../dhcp.rst:62
 msgid ""
 "For the servers – DNS, NTP, WINS and TFTP – you can assign zero, one or more"
 " for each server; if you place more than one, use a comma between each "
@@ -107,11 +114,11 @@ msgstr ""
 "uno o più server; in caso di più di uno, separare i valori con una virgola, "
 "senza lasciare spazi."
 
-#: ../../dhcp.rst:65
+#: ../../dhcp.rst:65 ../../dhcp.rst:68
 msgid "Host IP reservation"
 msgstr "IP riservato a un host"
 
-#: ../../dhcp.rst:67
+#: ../../dhcp.rst:67 ../../dhcp.rst:70
 msgid ""
 "The DHCP server leases an IP address to a device for a limited period of "
 "time.  If a device requires to always have the same IP address, it can be "
@@ -121,7 +128,7 @@ msgstr ""
 " un dispositivo necessita di avere sempre lo stesso IP, è possibile "
 "assegnarli un *IP Riservato* associato all'indirizzo MAC."
 
-#: ../../dhcp.rst:71
+#: ../../dhcp.rst:71 ../../dhcp.rst:74
 msgid ""
 "The page :guilabel:`DHCP > IP reservation` lists the currently assigned IP "
 "addresses:"
@@ -129,7 +136,7 @@ msgstr ""
 "Nella pagina :guilabel:`Riserva IP` sono elencati tutti gli indirizzi IP "
 "correntemente assegnati:"
 
-#: ../../dhcp.rst:74
+#: ../../dhcp.rst:74 ../../dhcp.rst:77
 msgid ""
 "a line with :guilabel:`IP reservation` button identifies an host with a "
 "temporary lease (gray color);"
@@ -137,7 +144,7 @@ msgstr ""
 "una riga con il pulsante :guilabel:`Riserva IP` identifica un host con un "
 "lease temporaneo (colore grigio);"
 
-#: ../../dhcp.rst:77
+#: ../../dhcp.rst:77 ../../dhcp.rst:80
 msgid ""
 "a line with :guilabel:`Edit` button identifies an host with a reserved IP "
 "(black color).  A small two arrows icon near the host name says the DHCP "
@@ -149,11 +156,11 @@ msgstr ""
 "lease DHCP è scaduto: questa è una condizione normale per gli host con "
 "configurazione IP statica, poiché non comunicano mai col server DHCP."
 
-#: ../../dhcp.rst:87
+#: ../../dhcp.rst:87 ../../dhcp.rst:90
 msgid "Boot from network configuration"
 msgstr "Configurazione per l'avvio da rete"
 
-#: ../../dhcp.rst:89
+#: ../../dhcp.rst:89 ../../dhcp.rst:92
 msgid ""
 "To allow clients to boot from network, the following components are "
 "required:"
@@ -161,7 +168,7 @@ msgstr ""
 "Per consentire ai client di avviarsi dalla rete, sono richiesti i seguenti "
 "componenti:"
 
-#: ../../dhcp.rst:92
+#: ../../dhcp.rst:92 ../../dhcp.rst:95
 msgid ""
 "the :ref:`DHCP <dhcp_configuration>` server, as we have seen in the previous"
 " sections"
@@ -169,15 +176,15 @@ msgstr ""
 "il server :ref:`DHCP <dhcp_configuration>`, come visto nelle sezioni "
 "precedenti"
 
-#: ../../dhcp.rst:95
+#: ../../dhcp.rst:95 ../../dhcp.rst:98
 msgid "the :dfn:`TFTP` server [#TFTP]_"
 msgstr "il server :dfn:`TFTP` [#TFTP]_"
 
-#: ../../dhcp.rst:97
+#: ../../dhcp.rst:97 ../../dhcp.rst:100
 msgid "the software for the client, served through TFTP"
 msgstr "il software per il client, servito mediante TFTP"
 
-#: ../../dhcp.rst:105
+#: ../../dhcp.rst:105 ../../dhcp.rst:108
 msgid ""
 "TFTP is a very simple file transfer protocol and usually it is used for "
 "automated transfer of configuration and boot files."
@@ -186,7 +193,7 @@ msgstr ""
 "utilizzato per il trasferimento automatico di file di configurazione o di "
 "boot."
 
-#: ../../dhcp.rst:108
+#: ../../dhcp.rst:108 ../../dhcp.rst:111
 msgid ""
 "In |product| the TFTP implementation comes with the DHCP module and is "
 "enabled by default.  To allow accessing a file through TFTP, simply put it "
@@ -196,12 +203,12 @@ msgstr ""
 "abilitata per default. Per consentire l'accesso a un file mediante TFTP è "
 "sufficiente mettere il file nella directory :file:`/var/lib/tftproot`."
 
-#: ../../dhcp.rst:112
+#: ../../dhcp.rst:112 ../../dhcp.rst:115
 msgid "To disable TFTP type the following commands in a root's console: ::"
 msgstr ""
 "Per disabilitare TFTP digitare i seguenti comandi in una console di root: ::"
 
-#: ../../dhcp.rst:118
+#: ../../dhcp.rst:118 ../../dhcp.rst:121
 msgid ""
 "For instance, we now configure a client to boot CentOS from the network. In "
 "|product|, type at root's console: ::"
@@ -209,7 +216,7 @@ msgstr ""
 "Per esempio, ora configuriamo un client per avviarsi da rete con CentOS. In "
 "|product|, digitare in una console di root: ::"
 
-#: ../../dhcp.rst:127
+#: ../../dhcp.rst:127 ../../dhcp.rst:130
 msgid ""
 "Then create the file :file:`/var/lib/tftpboot/pxelinux.cfg/default` with the"
 " following content: ::"
@@ -217,11 +224,11 @@ msgstr ""
 "Quindi, creare il file :file:`/var/lib/tftpboot/pxelinux.cfg/default` con il"
 " seguente contenuto: ::"
 
-#: ../../dhcp.rst:140
+#: ../../dhcp.rst:140 ../../dhcp.rst:143
 msgid "Create a CentOS directory: ::"
 msgstr "Creare una directory CentOS: ::"
 
-#: ../../dhcp.rst:144
+#: ../../dhcp.rst:144 ../../dhcp.rst:147
 msgid ""
 "Copy inside the directory :file:`vmlinuz` and :file:`initrd.img` files. "
 "These files are public, and can be found in the ISO image, in "
@@ -232,7 +239,7 @@ msgstr ""
 " immagine ISO, sotto la directory :file:`/images/pxeboot`, oppure scaricati "
 "da un mirror di CentOS."
 
-#: ../../dhcp.rst:148
+#: ../../dhcp.rst:148 ../../dhcp.rst:151
 msgid ""
 "Finally, power on the client host, selecting PXE boot (or boot from network)"
 " from the start up screen."
@@ -240,11 +247,11 @@ msgstr ""
 "Per finire, avviare il client, selezionando dalla schermata di avvio la "
 "modalità \"PXE boot\" o \"boot from network\", o simile."
 
-#: ../../dhcp.rst:152
+#: ../../dhcp.rst:152 ../../dhcp.rst:155
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../dhcp.rst:153
+#: ../../dhcp.rst:153 ../../dhcp.rst:156
 msgid ""
 "Dynamic Host Configuration Protocol (DHCP) "
 "https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol"
@@ -252,11 +259,11 @@ msgstr ""
 "Dynamic Host Configuration Protocol (DHCP) "
 "https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol"
 
-#: ../../dhcp.rst:155
+#: ../../dhcp.rst:155 ../../dhcp.rst:158
 msgid "Trivial File Transfer Protocol https://en.wikipedia.org/wiki/Tftp"
 msgstr "Trivial File Transfer Protocol https://en.wikipedia.org/wiki/Tftp"
 
-#: ../../dhcp.rst:157
+#: ../../dhcp.rst:157 ../../dhcp.rst:160
 msgid ""
 "Preboot eXecution Environment "
 "https://en.wikipedia.org/wiki/Preboot_Execution_Environment"

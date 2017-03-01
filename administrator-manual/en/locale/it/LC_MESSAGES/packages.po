@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-22 16:11+0100\n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -81,11 +81,11 @@ msgstr ""
 "indirettamente! Leggere attentamente la lista dei pacchetti in rimozione per"
 " evitare di rimuovere delle funzionalità necessarie."
 
-#: ../../packages.rst:42 ../../packages.rst:45
+#: ../../packages.rst:44 ../../packages.rst:47
 msgid "Software updates"
 msgstr "Aggiornamenti software"
 
-#: ../../packages.rst:44 ../../packages.rst:47
+#: ../../packages.rst:46 ../../packages.rst:49
 msgid ""
 "Updates for the installed software are listed under the :guilabel:`Updates` "
 "tab. A message appears when software updates are available."
@@ -93,7 +93,7 @@ msgstr ""
 "Gli aggiornamenti sono elencati nel tab :guilabel:`Aggiornamenti`. Quando ci"
 " sono aggiornamenti disponibili appare un messaggio apposito."
 
-#: ../../packages.rst:47 ../../packages.rst:50
+#: ../../packages.rst:49 ../../packages.rst:52
 msgid ""
 "Regularly update the installed software to fix bugs, security issues and "
 "receive new features."
@@ -101,11 +101,11 @@ msgstr ""
 "Applicare regolarmente gli aggiornamenti per fissare bug, problemi di "
 "sicurezza  e installare nuove funzionalità."
 
-#: ../../packages.rst:54 ../../packages.rst:57
+#: ../../packages.rst:56 ../../packages.rst:59
 msgid "List of installed packages"
 msgstr "Lista dei pacchetti installati"
 
-#: ../../packages.rst:56 ../../packages.rst:59
+#: ../../packages.rst:58 ../../packages.rst:61
 msgid ""
 "The complete list of installed RPM packages is available under "
 ":guilabel:`Installed > Packages`."
@@ -113,7 +113,7 @@ msgstr ""
 "La lista completa dei pacchetti RPM installati è disponibile nel tab "
 ":guilabel:`Installati`."
 
-#: ../../packages.rst:59 ../../packages.rst:62
+#: ../../packages.rst:61 ../../packages.rst:64
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
 "installed into the system with the full package version."
@@ -121,11 +121,11 @@ msgstr ""
 "La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
 "installati con la versione completa del pacchetto."
 
-#: ../../packages.rst:65 ../../packages.rst:68
+#: ../../packages.rst:67 ../../packages.rst:70
 msgid "Additional languages"
 msgstr "Lingue aggiuntive"
 
-#: ../../packages.rst:67 ../../packages.rst:70
+#: ../../packages.rst:69 ../../packages.rst:72
 msgid ""
 "The Server Manager allows selecting the interface language at the login "
 "screen. Only installed languages are listed."
@@ -133,7 +133,7 @@ msgstr ""
 "Il Server Manager permette di selezionare la lingue dell'interfaccia al "
 "momento del login. Sono elencate solo le lingue installate."
 
-#: ../../packages.rst:70 ../../packages.rst:73
+#: ../../packages.rst:72 ../../packages.rst:75
 msgid ""
 "In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
 "install the desired languages."

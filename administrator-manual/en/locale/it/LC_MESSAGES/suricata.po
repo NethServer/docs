@@ -1,14 +1,21 @@
+# #-#-#-#-#  suricata.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  suricata.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../suricata.rst:12
+#: ../../suricata.rst:12 ../../suricata.rst:15
 msgid "IPS (Suricata)"
 msgstr "IPS (Suricata)"
 
-#: ../../suricata.rst:14
+#: ../../suricata.rst:14 ../../suricata.rst:17
 msgid ""
 "Suricata is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system "
 "for the network intrusion analysis. The software analyzes all traffic "
@@ -33,7 +40,7 @@ msgstr ""
 "traffico che attraversa il firewall alla ricerca di attacchi noti e "
 "anomalie."
 
-#: ../../suricata.rst:17
+#: ../../suricata.rst:17 ../../suricata.rst:20
 msgid ""
 "When an attack or anomaly is detected, the system can decide whether to "
 "block traffic or simply save the event on a log "
@@ -43,7 +50,7 @@ msgstr ""
 " se bloccare il traffico o limitarsi a salvare l’evento sul log "
 "(:file:`/var/log/suricata/fast.log`)."
 
-#: ../../suricata.rst:20
+#: ../../suricata.rst:20 ../../suricata.rst:23
 msgid ""
 ":index:`Suricata` can be configured accordingly to following policies. Each "
 "policy consists of several rules:"
@@ -51,7 +58,7 @@ msgstr ""
 ":index:`Suricata` può essere configurato secondo le policy riportate. Ogni "
 "policy è composta da più regole:"
 
-#: ../../suricata.rst:22
+#: ../../suricata.rst:22 ../../suricata.rst:25
 msgid ""
 "Connectivity: check a large number of vulnerabilities, do not impact on non-"
 "realtime applications (eg VoIP)"
@@ -59,7 +66,7 @@ msgstr ""
 "Connectivity: controlla un vasto numero di vulnerabilità, non impatta su "
 "applicazioni realtime (es. VoIP)"
 
-#: ../../suricata.rst:23
+#: ../../suricata.rst:23 ../../suricata.rst:26
 msgid ""
 "Balanced: suitable for most scenarios, it is a good compromise between "
 "security and usability (recommended)"
@@ -67,7 +74,7 @@ msgstr ""
 "Balanced: adatta alla maggior parte degli scenari, è un buon compromesso fra"
 " sicurezza e usabilità (consigliata)"
 
-#: ../../suricata.rst:24
+#: ../../suricata.rst:24 ../../suricata.rst:27
 msgid ""
 "Security: safe mode but very invasive, may impact on chat and peer-to-peer "
 "applications"
@@ -75,7 +82,7 @@ msgstr ""
 "Security: modalità molto sicura ma invasiva, può impattare sul funzionamento"
 " di applicazioni di chat e peer to peer"
 
-#: ../../suricata.rst:25
+#: ../../suricata.rst:25 ../../suricata.rst:28
 msgid ""
 "Expert: the administrator must manually select the rules from the command "
 "line"
@@ -83,7 +90,7 @@ msgstr ""
 "Esperto: l'amministratore deve procedere a selezionare manualmente le regole"
 " da linea di comando"
 
-#: ../../suricata.rst:28
+#: ../../suricata.rst:28 ../../suricata.rst:31
 msgid ""
 "The use of an IPS impacts on all traffic passing through the firewall. Make "
 "sure you fully understand all the implications before enabling it."

@@ -1,14 +1,21 @@
+# #-#-#-#-#  phone_home.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  phone_home.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../phone_home.rst:12
+#: ../../phone_home.rst:12 ../../phone_home.rst:15
 msgid "Phone Home"
 msgstr "Phone Home"
 
-#: ../../phone_home.rst:13
+#: ../../phone_home.rst:13 ../../phone_home.rst:16
 msgid ""
 "During the first configuration wizard, you can opt-out from contributing to "
 "usage statistics. Phone home is used to track all NethServer's installations"
@@ -40,15 +47,15 @@ msgstr ""
 "contenente il numero di installazioni attive raggruppate per paese e "
 "versione."
 
-#: ../../phone_home.rst:17
+#: ../../phone_home.rst:17 ../../phone_home.rst:20
 msgid "Overview"
 msgstr "Panoramica"
 
-#: ../../phone_home.rst:18
+#: ../../phone_home.rst:18 ../../phone_home.rst:21
 msgid "The tool is *enabled* by default."
 msgstr "Questa applicazione è *abilitata* di default."
 
-#: ../../phone_home.rst:20
+#: ../../phone_home.rst:20 ../../phone_home.rst:23
 msgid ""
 "To disable it at a later time, run: ``config setprop phone-home status "
 "disabled``"
@@ -56,19 +63,19 @@ msgstr ""
 "Per disabilitarlo in seguito, eseguire: ``config setprop phone-home status "
 "disabled``"
 
-#: ../../phone_home.rst:24
+#: ../../phone_home.rst:24 ../../phone_home.rst:27
 msgid "If phone home is *enabled* the details sent are:"
 msgstr "Se il phone home è *abilitato* le informazioni inviate sono:"
 
-#: ../../phone_home.rst:23
+#: ../../phone_home.rst:23 ../../phone_home.rst:26
 msgid "UUID: stored in ``/var/lib/yum/uuid``"
 msgstr "UUID: che si trova in ``/var/lib/yum/uuid``"
 
-#: ../../phone_home.rst:24
+#: ../../phone_home.rst:24 ../../phone_home.rst:27
 msgid "RELEASE: from ``/sbin/e-smith/config getprop sysconfig Version``"
 msgstr ""
 "RELEASE: ottenuto da ``/sbin/e-smith/config getprop sysconfig Version``"
 
-#: ../../phone_home.rst:26
+#: ../../phone_home.rst:26 ../../phone_home.rst:29
 msgid "All the data is used to populate the map."
 msgstr "Tutte le informazioni sono usate per popolare la mappa."

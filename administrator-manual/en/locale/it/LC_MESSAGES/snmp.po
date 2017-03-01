@@ -1,14 +1,21 @@
+# #-#-#-#-#  snmp.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  snmp.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-03-01 12:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../snmp.rst:10
+#: ../../snmp.rst:10 ../../snmp.rst:13
 msgid "SNMP"
 msgstr "SNMP"
 
-#: ../../snmp.rst:12
+#: ../../snmp.rst:12 ../../snmp.rst:15
 msgid ""
 "SNMP (Simple Network Management Protocol) protocol allows to manage and "
 "monitor devices connected to the network. The :index:`SNMP` server can reply"
@@ -33,33 +40,33 @@ msgstr ""
 "in grado di rispondere a richieste specifiche presentando lo stato attuale "
 "del sistema."
 
-#: ../../snmp.rst:15
+#: ../../snmp.rst:15 ../../snmp.rst:18
 msgid "The server is disabled by default."
 msgstr "Il server è disabilitato di default."
 
-#: ../../snmp.rst:17
+#: ../../snmp.rst:17 ../../snmp.rst:20
 msgid "During first configuration. you should set three main options:"
 msgstr ""
 "Alla prima configurazione, si consiglia di configurare i tre parametri "
 "principali:"
 
-#: ../../snmp.rst:19
+#: ../../snmp.rst:19 ../../snmp.rst:22
 msgid "the SNMP community name"
 msgstr "il nome della comunità SNMP"
 
-#: ../../snmp.rst:20
+#: ../../snmp.rst:20 ../../snmp.rst:23
 msgid "the location name where the server is located"
 msgstr "il nome del luogo in cui risiede il server"
 
-#: ../../snmp.rst:21
+#: ../../snmp.rst:21 ../../snmp.rst:24
 msgid "the name and mail address of system administrator"
 msgstr "il nome e l’indirizzo mail dell’amministratore di sistema"
 
-#: ../../snmp.rst:24
+#: ../../snmp.rst:24 ../../snmp.rst:27
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../snmp.rst:25
+#: ../../snmp.rst:25 ../../snmp.rst:28
 msgid ""
 "Simple Network Management Protocol "
 "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"

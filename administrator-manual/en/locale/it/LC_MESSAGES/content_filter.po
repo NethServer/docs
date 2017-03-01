@@ -1,14 +1,21 @@
+# #-#-#-#-#  content_filter.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# #-#-#-#-#  content_filter.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:44+0100\n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -18,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../content_filter.rst:10
+#: ../../content_filter.rst:10 ../../content_filter.rst:13
 msgid "Web content filter"
 msgstr "Filtro contenuti web"
 
-#: ../../content_filter.rst:12
+#: ../../content_filter.rst:12 ../../content_filter.rst:15
 msgid ""
 "The :index:`content filter` analyzes all web traffic and blocks selected "
 "websites or sites containing viruses. Forbidden sites are selected from a "
@@ -34,7 +41,7 @@ msgstr ""
 "selezionati da una lista di categorie che è possibile anche scaricare da "
 "sorgenti esterne e salvare sul sistema."
 
-#: ../../content_filter.rst:15
+#: ../../content_filter.rst:15 ../../content_filter.rst:18
 msgid ""
 "The system allows to create an infinite number of profiles. A profile is "
 "composed by three parts:"
@@ -42,7 +49,7 @@ msgstr ""
 "La configurazione consente di creare un numero illimitato di profili. "
 "Ciascun profilo è composto da tre parti:"
 
-#: ../../content_filter.rst:18
+#: ../../content_filter.rst:18 ../../content_filter.rst:21
 msgid ""
 "**Who**: the client associated with the profile. Can be a user, a group of "
 "users, a host, a group of hosts, a zone or an interface role (like green, "
@@ -52,7 +59,7 @@ msgstr ""
 "utenti, un host, un gruppo di host, una zona o un ruolo (es. green, blue, "
 "ecc)."
 
-#: ../../content_filter.rst:21
+#: ../../content_filter.rst:21 ../../content_filter.rst:24
 msgid ""
 "**What**: which sites can be browsed by the profiled client. It's a filter "
 "created inside the :guilabel:`Filters` section."
@@ -60,7 +67,7 @@ msgstr ""
 "**Cosa**: quali siti può vedere il client associato al profilo E' un filtro "
 "creato nella pagina :guilabel:`Filtri`."
 
-#: ../../content_filter.rst:24
+#: ../../content_filter.rst:24 ../../content_filter.rst:27
 msgid ""
 "**When**: the filter can always be enabled or valid only during certain "
 "period of times. Time frames can be created inside the :guilabel:`Times` "
@@ -70,11 +77,11 @@ msgstr ""
 "alcuni periodi. Le condizioni temporali possono essere create nella sezione "
 ":guilabel:`Condizioni temporali`."
 
-#: ../../content_filter.rst:28
+#: ../../content_filter.rst:28 ../../content_filter.rst:31
 msgid "This is the recommended order for content filter configuration:"
 msgstr "Si consiglia di procedere in questo ordine:"
 
-#: ../../content_filter.rst:30
+#: ../../content_filter.rst:30 ../../content_filter.rst:33
 msgid ""
 "Select a list of categories from :guilabel:`Blacklists` page and start the "
 "download"
@@ -82,19 +89,19 @@ msgstr ""
 "Selezionare una lista di categorie dalla pagina :guilabel:`Blacklist` ed "
 "avviare il download"
 
-#: ../../content_filter.rst:31
+#: ../../content_filter.rst:31 ../../content_filter.rst:34
 msgid "Create one or more time conditions (optional)"
 msgstr "Creare una o più condizioni temporali (opzionale)"
 
-#: ../../content_filter.rst:32
+#: ../../content_filter.rst:32 ../../content_filter.rst:35
 msgid "Create custom categories (optional)"
 msgstr "Creare eventuali categorie personalizzate (opzionale)"
 
-#: ../../content_filter.rst:33
+#: ../../content_filter.rst:33 ../../content_filter.rst:36
 msgid "Create a new filter or modify the default one"
 msgstr "Creare un nuovo filtro o modificare quello di default"
 
-#: ../../content_filter.rst:34
+#: ../../content_filter.rst:34 ../../content_filter.rst:37
 msgid ""
 "Create a new profile associated to a user or host, then select a filter and "
 "a time frame (if enabled)"
@@ -102,7 +109,7 @@ msgstr ""
 "Creare un nuovo profilo associato ad un utente o un host, selezionare quindi"
 " un filtro e una condizione temporale (se abilitata)"
 
-#: ../../content_filter.rst:37
+#: ../../content_filter.rst:37 ../../content_filter.rst:40
 msgid ""
 "If no profile matches, the system provides a default profile that is applied"
 " to all clients."
@@ -110,52 +117,52 @@ msgstr ""
 "Il sistema prevede un profilo di default che viene applicato a tutti i "
 "client qualora non rientrino in nessun altro profilo."
 
-#: ../../content_filter.rst:40
+#: ../../content_filter.rst:40 ../../content_filter.rst:43
 msgid "Filters"
 msgstr "Filtri"
 
-#: ../../content_filter.rst:42
+#: ../../content_filter.rst:42 ../../content_filter.rst:45
 msgid "A filter can:"
 msgstr "Un filtro consente di:"
 
-#: ../../content_filter.rst:44
+#: ../../content_filter.rst:44 ../../content_filter.rst:47
 msgid "block access to categories of sites"
 msgstr "bloccare l'accesso a categorie di siti"
 
-#: ../../content_filter.rst:45
+#: ../../content_filter.rst:45 ../../content_filter.rst:48
 msgid "block access to sites accessed using IP address (recommended)"
 msgstr "bloccare l'accesso ai siti acceduti usando indirizzi IP (consigliato)"
 
-#: ../../content_filter.rst:46
+#: ../../content_filter.rst:46 ../../content_filter.rst:49
 msgid "filter URLs with regular expressions"
 msgstr "filtrare gli URL con espressioni regolari"
 
-#: ../../content_filter.rst:47
+#: ../../content_filter.rst:47 ../../content_filter.rst:50
 msgid "block files with specific extensions"
 msgstr "bloccare file con specifiche estensioni"
 
-#: ../../content_filter.rst:48
+#: ../../content_filter.rst:48 ../../content_filter.rst:51
 msgid "enable global blacklist and whitelist"
 msgstr "abilitare blacklist e whitelist globali"
 
-#: ../../content_filter.rst:50
+#: ../../content_filter.rst:50 ../../content_filter.rst:53
 msgid "A filter can operate in two different modes:"
 msgstr "Ogni filtro può lavorare in due modalità:"
 
-#: ../../content_filter.rst:52
+#: ../../content_filter.rst:52 ../../content_filter.rst:55
 msgid "Allow all: allow access to all sites, except those explicitly blocked"
 msgstr ""
 "Permetti tutto: permette l'accesso a tutti i siti, ad eccezione di quelli "
 "esplicitamente bloccati"
 
-#: ../../content_filter.rst:53
+#: ../../content_filter.rst:53 ../../content_filter.rst:56
 msgid ""
 "Block all: blocks access to all sites, except those explicitly permitted"
 msgstr ""
 "Blocca tutto: blocca l'accesso a tutti i siti, ad eccezione di quelli "
 "esplicitamente consentiti"
 
-#: ../../content_filter.rst:55
+#: ../../content_filter.rst:55 ../../content_filter.rst:58
 msgid ""
 "The category list will be displayed only after the download of list selected"
 " from :guilabel`Blacklist` page."
@@ -163,11 +170,11 @@ msgstr ""
 "La lista delle categorie compare solo al termine del download della lista "
 "selezionata nella pagina :guilabel:`Blacklists`."
 
-#: ../../content_filter.rst:58
+#: ../../content_filter.rst:58 ../../content_filter.rst:61
 msgid "Blocking Google Translate"
 msgstr "Blocco Google Translate"
 
-#: ../../content_filter.rst:60
+#: ../../content_filter.rst:60 ../../content_filter.rst:63
 msgid ""
 "Online translation services, like :index:`Google Translate`, can be used to "
 "bypass the content filter because pages visited trough the translator always"
@@ -179,7 +186,7 @@ msgstr ""
 "dominio riconducibile a Google stesso pur avendo al loro interno contenuti "
 "provenienti da server esterni."
 
-#: ../../content_filter.rst:64
+#: ../../content_filter.rst:64 ../../content_filter.rst:67
 msgid ""
 "It's possible to block all requests to Google translate, creating a blocked "
 "URL inside the :guilabel:`General` page. The content of the blocked URL must"
@@ -189,11 +196,11 @@ msgstr ""
 "qualsiasi lingua), creando un URL bloccato nella pagina :guilabel:`Generale`"
 " con il seguente contenuto: ``translate.google``."
 
-#: ../../content_filter.rst:68
+#: ../../content_filter.rst:68 ../../content_filter.rst:71
 msgid "Antivirus"
 msgstr "Antivirus"
 
-#: ../../content_filter.rst:70
+#: ../../content_filter.rst:70 ../../content_filter.rst:73
 msgid ""
 "Web browsing can be checked for malicious content, but only for clear text "
 "HTTP protocol. If the proxy is configured in SSL transparent mode (:ref"
@@ -204,19 +211,19 @@ msgstr ""
 "modalità trasparente SSL (:ref:`proxy_ssl-section`), i contenuti scaricati "
 "via HTTPS non verranno scansionati."
 
-#: ../../content_filter.rst:75
+#: ../../content_filter.rst:75 ../../content_filter.rst:78
 msgid "Troubleshooting"
 msgstr "Risoluzione problemi"
 
-#: ../../content_filter.rst:77
+#: ../../content_filter.rst:77 ../../content_filter.rst:80
 msgid "If a bad page is not blocked, please verify:"
 msgstr "Nel caso una pagina indesiderata non venga bloccata, verificare che:"
 
-#: ../../content_filter.rst:79
+#: ../../content_filter.rst:79 ../../content_filter.rst:82
 msgid "the client is surfing using the proxy"
 msgstr "il client stia navigando attraverso il proxy"
 
-#: ../../content_filter.rst:80
+#: ../../content_filter.rst:80 ../../content_filter.rst:83
 msgid ""
 "the client doesn't have a configured bypass inside :guilabel:`Hosts without "
 "proxy` section"
@@ -224,7 +231,7 @@ msgstr ""
 "il client non abbia un bypass configurato nella sezione :guilabel:`Host "
 "senza proxy`"
 
-#: ../../content_filter.rst:81
+#: ../../content_filter.rst:81 ../../content_filter.rst:84
 msgid ""
 "the client is not browsing a site with a configured bypass inside "
 ":guilabel:`Sites without proxy` section"
@@ -232,12 +239,12 @@ msgstr ""
 "il sito visitato non abbia un bypass configurato nella sezione "
 ":guilabel:`Siti senza proxy`"
 
-#: ../../content_filter.rst:82
+#: ../../content_filter.rst:82 ../../content_filter.rst:85
 msgid ""
 "the client is really associated with a profile not allowed to visit the page"
 msgstr "il client sia associato ad un profilo in cui la pagina non è permessa"
 
-#: ../../content_filter.rst:83
+#: ../../content_filter.rst:83 ../../content_filter.rst:86
 msgid ""
 "the client is surfing within a time frame when the filter is permissive"
 msgstr ""
