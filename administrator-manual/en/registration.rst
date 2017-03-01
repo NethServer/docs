@@ -23,6 +23,7 @@ Access the Server Manager (``https://server:980``), then click on :guilabel:`Sof
 
 At the end you will be able to :ref:`install additional software <package_manager-section>`.
 
+.. hint:: Run :ref:`software update <software-updates-section>` immediately after registration to get new features and security fixes!
 
 The installation of additional software from the web interface is only allowed exclusively to the reseller credentials holders.
 The use of :command:`yum` from the command line allows you to get around this limitation. 

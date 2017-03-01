@@ -283,19 +283,25 @@ To install the base system, run: ::
 
   nethserver-install
 
-Alternatively, to install base system *and* additional modules, pass
-the name of the module as a parameter to the install script.  Example: ::
+.. only:: nscom
 
-  nethserver-install nethserver-mail nethserver-nextcloud
+    Alternatively, to install base system *and* additional modules, pass
+    the name of the module as a parameter to the install script.  Example: ::
 
-.. _installation-enterprise:
+      nethserver-install nethserver-mail nethserver-nextcloud
 
-Enterprise promotion
-====================
+.. only:: nsent
 
-To promote |product| to the Enterprise version follow the instructions `available here`_.
+    .. _installation-enterprise:
 
-.. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062653-promozione-nethserver-enterprise-7-x-community-ad-enterprise
+    Enterprise promotion
+    ====================
+
+    To promote to the Enterprise version run the following command: ::
+    
+        yum localinstall http://update.nethesis.it/nethserver/7/nethserver-register.rpm
+
+    Proceed with :ref:`registration-section`.
 
 .. _installation-next-steps:
 
