@@ -31,6 +31,8 @@ module**, push the :guilabel:`Remove` button.
     pair: RPM; update
     pair: packages; update
 
+.. _software-updates-section:
+
 Software updates
 ^^^^^^^^^^^^^^^^
 

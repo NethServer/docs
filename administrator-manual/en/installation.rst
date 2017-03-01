@@ -297,10 +297,11 @@ To install the base system, run: ::
     Enterprise promotion
     ====================
 
-    To promote |product| to the Enterprise version follow the instructions `available here`_.
+    To promote to the Enterprise version run the following command: ::
+    
+        yum localinstall http://update.nethesis.it/nethserver/7/nethserver-register.rpm
 
-    .. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062653-promozione-nethserver-enterprise-7-x-community-ad-enterprise
-
+    Proceed with :ref:`registration-section`.
 
 .. _installation-next-steps:
 
