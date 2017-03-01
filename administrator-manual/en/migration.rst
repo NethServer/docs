@@ -6,8 +6,6 @@
 Migration from NethService/SME Server
 =====================================
 
-.. warning:: This procedure is still under development on |product| |version|
-
 Migration is the process to convert a SME Server/NethService
 machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 
@@ -20,7 +18,7 @@ machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 #. Explode the full backup archive into some directory; for instance,
    create the directory :file:`/var/lib/migration`.
 
-#. In |product|, signal the event ``migration-import``::
+#. In destination host, signal the event ``migration-import``::
 
      signal-event migration-import /var/lib/migration
 
@@ -51,18 +49,19 @@ In a mail server migration, the source mail server could be on
 production even after the backup has been done, and email messages
 continue to be delivered until it is taken down permanently.
 
-An helper ``rsync`` script is provided by package
-``nethserver-mail-server``, to re-synchronize destination mailboxes
-with the source host:
-:file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`. It
-runs on the destination host: ::
+An helper script based on ``rsync`` is provided by package
+``nethserver-mail-server``. It
+runs on the destination host and synchronizes destination mailboxes
+with the source host: ::
 
-  Usage: 
-    ./sync_maildirs.sh [-h] [-n] [-p] -s IPADDR 
-	-h          help message
-	-n          dry run
-	-p PORT     ssh port on source host (default 22)
-	-s IPADDR   rsync from source host IPADDR
+    Usage:
+        /usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh [-h] [-n] [-p] -s IPADDR
+            -h          help message
+            -n          dry run
+            -p PORT     ssh port on source host (default 22)
+            -s IPADDR   rsync from source host IPADDR
+            -t TYPE     source type: sme8 (default), ns6
 
-The source host at ``IPADDR`` must be accessible by the ``root``
-user, through ``ssh`` with public key authentication.
+
+The source host at ``IPADDR`` must be accessible by the ``root`` user, through
+``ssh`` with public key authentication.
