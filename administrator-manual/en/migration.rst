@@ -65,3 +65,48 @@ with the source host: ::
 
 The source host at ``IPADDR`` must be accessible by the ``root`` user, through
 ``ssh`` with public key authentication.
+
+.. _migration-web-server:
+
+Apache
+======
+
+The SSL cipher suite configuration is not migrated automatically because the
+source system uses a weak cipher suite by default. To migrate it manually,
+execute the following commands: ::
+
+    MIGRATION_PATH=/var/lib/migration
+    config setprop httpd SSLCipherSuite $(db $MIGRATION_PATH/home/e-smith/db/configuration getprop modSSL CipherSuite)
+    signal-event nethserver-httpd-update
+
+.. _migration-ibays:
+
+Ibays
+=====
+
+The *ibay* concept has been superseded by :ref:`shared_folders-section`.
+Supported protocols for accessing Shared folders are:
+
+- SMB file sharing protocol, typical of Windows networking, implemented by Samba
+
+- SFTP, provided by the ``sshd`` daemon
+
+Starting from |product| |version|, Shared folders are not configurable for HTTP
+access. After ``migration-import`` event, old ibays could be migrated according 
+to the following rules of thumb:
+
+1.  If the ibay was a **virtual host**, install the "Web server" module from the
+    :guilabel:`Software center` page. Copy the ibay contents to the virtual host
+    root directory. Refer to :ref:`virtual_hosts-section`.
+
+2.  If the ibay access was restricted with a **secret password** (for instance, to
+    share contents with a group of people across the internet), the :ref:`Nextcloud
+    <nextcloud-section>` module could be a good replacement for it.
+
+3.  If the ibay contents were accessible with an URL like ``http://<IP>/ibayname``
+    the easiest procedure to keep it working is moving it to Apache document root: ::
+        
+        mv -iv /var/lib/nethserver/ibay/ibayname /var/www/html/ibayname
+        chmod -c -R o+rX /var/www/html/ibayname
+        db accounts delete ibayname
+        signal-event nethserver-samba-update
