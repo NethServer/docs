@@ -31,6 +31,16 @@ machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 .. note:: No custom template is migrated during the migration process.
    Check the new template files before copying any custom fragment from the old backup.
 
+.. _migration_account:
+
+Account provider
+================
+
+You should install an account provider before starting the migration procedure.
+If you choose to have a Samba DC, remember to fully configure the DC before
+executing the ``migration-import`` event.
+
+
 .. index::
    pair: migration; email
 
