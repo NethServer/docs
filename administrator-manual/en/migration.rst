@@ -100,8 +100,9 @@ to the following rules of thumb:
     root directory. Refer to :ref:`virtual_hosts-section`.
 
 2.  If the ibay access was restricted with a **secret password** (for instance, to
-    share contents with a group of people across the internet), the :ref:`Nextcloud
-    <nextcloud-section>` module could be a good replacement for it.
+    share contents with a group of people across the internet), the
+    :ref:`virtual_hosts-section` page still offers the same feature. Also the
+    :ref:`Nextcloud <nextcloud-section>` module could be a good replacement.
 
 3.  If the ibay contents were accessible with an URL like ``http://<IP>/ibayname``
     the easiest procedure to keep it working is moving it to Apache document root: ::
