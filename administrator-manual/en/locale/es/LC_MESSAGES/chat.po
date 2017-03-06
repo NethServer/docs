@@ -1,0 +1,158 @@
+# #-#-#-#-#  chat.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  chat.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../chat.rst:12 ../../chat.rst:15
+msgid "Chat"
+msgstr "Chat"
+
+#: ../../chat.rst:14 ../../chat.rst:17
+msgid ""
+"The :index:`chat` service uses the standard protocol "
+":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
+"5223)."
+msgstr ""
+"El servicio: index:`chat` utiliza el protocolo estándar: "
+"index:`Jabber`/:index:`XMPP` y soporta TLS en puertos estándar (5222 o "
+"5223)."
+
+#: ../../chat.rst:16 ../../chat.rst:19
+msgid "The main features are:"
+msgstr "Las características principales son:"
+
+#: ../../chat.rst:18 ../../chat.rst:21
+msgid "Messaging between users of the system"
+msgstr "Messaging between users of the system"
+
+#: ../../chat.rst:19 ../../chat.rst:22
+msgid ""
+"Possibility to divide the users into groups, according to the company or "
+"department / office"
+msgstr ""
+"Posibilidad de dividir a los usuarios en grupos, de acuerdo a la empresa o "
+"departamento / oficina"
+
+#: ../../chat.rst:20 ../../chat.rst:23
+msgid "Chat server administration"
+msgstr "Administración del servidor de Chat"
+
+#: ../../chat.rst:21 ../../chat.rst:24
+msgid "Broadcast messages"
+msgstr "Mensajes de difusión"
+
+#: ../../chat.rst:22 ../../chat.rst:25
+msgid "Group chat"
+msgstr "Grupo de chat"
+
+#: ../../chat.rst:23 ../../chat.rst:26
+msgid "Offline messages"
+msgstr "Mensajes sin conexión"
+
+#: ../../chat.rst:24 ../../chat.rst:27
+msgid "Transfer files over LAN"
+msgstr "Transferencia de archivos a través de LAN"
+
+#: ../../chat.rst:26 ../../chat.rst:29
+msgid "All system users can access the chat using their own credentials."
+msgstr ""
+"Todos los usuarios del sistema pueden acceder al chat usando sus propias "
+"credenciales."
+
+#: ../../chat.rst:29 ../../chat.rst:32
+msgid "Client"
+msgstr "Cliente"
+
+#: ../../chat.rst:31 ../../chat.rst:34
+msgid "Jabber clients are available for all desktop and mobile platforms."
+msgstr ""
+"Los clientes Jabber están disponibles para todas las plataformas de "
+"escritorio y móviles."
+
+#: ../../chat.rst:33 ../../chat.rst:36
+msgid "Some widespread clients:"
+msgstr "Algunos clientes comunes:"
+
+#: ../../chat.rst:35 ../../chat.rst:38
+msgid "Pidgin is available for Windows and Linux"
+msgstr "Pidgin está disponible para Windows y Linux"
+
+#: ../../chat.rst:36 ../../chat.rst:39
+msgid "Adium for Mac OS X"
+msgstr "Adium para Mac OS X"
+
+#: ../../chat.rst:37 ../../chat.rst:40
+msgid "BeejibelIM for Android and iOS, Xabber only for Android"
+msgstr "BeejibelIM para Android e iOS, Xabber sólo para Android"
+
+#: ../../chat.rst:39 ../../chat.rst:42
+msgid ""
+"When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
+"user name and the domain of the machine."
+msgstr ""
+"Cuando configure el cliente, asegúrese de que TLS (o SSL) esté habilitado. "
+"Introduzca el nombre de usuario y el dominio de la máquina."
+
+#: ../../chat.rst:42 ../../chat.rst:45
+msgid ""
+"If |product| is also the DNS server of the network, the client should "
+"automatically find the server's address through special pre-configured DNS "
+"records. Otherwise, specify the server address in the advanced options."
+msgstr ""
+"Si |product| Es también el servidor DNS de la red, el cliente debe buscar "
+"automáticamente la dirección del servidor a través de los registros DNS "
+"especiales preconfigurados. De lo contrario, especifique la dirección del "
+"servidor en las opciones avanzadas."
+
+#: ../../chat.rst:46 ../../chat.rst:49
+msgid "Administrators"
+msgstr "Administradores"
+
+#: ../../chat.rst:48 ../../chat.rst:51
+msgid ""
+"All users within the group ``jabberadmins`` are considered administrators of"
+" the chat server."
+msgstr ""
+"Todos los usuarios dentro del grupo ``jabberadmins`` son considerados "
+"administradores del servidor de chat."
+
+#: ../../chat.rst:50 ../../chat.rst:53
+msgid "Administrators can:"
+msgstr "Los administradores pueden:"
+
+#: ../../chat.rst:52 ../../chat.rst:55
+msgid "Send broadcast messages"
+msgstr "Enviar mensajes de difusión"
+
+#: ../../chat.rst:53 ../../chat.rst:56
+msgid "Check the status of connected users"
+msgstr "Compruebe el estatus de los usuarios conectados"
+
+#: ../../chat.rst:56 ../../chat.rst:59
+msgid ""
+"The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
+msgstr ""
+"El grupo ``jabberadmins`` es configurable desde la página ref:`groups-"
+"section`."

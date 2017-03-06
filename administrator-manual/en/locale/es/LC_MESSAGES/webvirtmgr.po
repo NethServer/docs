@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../webvirtmgr.rst:10
+msgid "WebVirtMgr"
+msgstr "WebVirtMgr"
+
+#: ../../webvirtmgr.rst:12
+msgid ""
+"This tool is used to manage :index:`virtual machine` through a simple web "
+"interface:"
+msgstr ""
+"Esta herramienta se utiliza para gestionar: index:`máquina virtual` a través"
+" de una sencilla interfaz web "
+
+#: ../../webvirtmgr.rst:14
+msgid "Create and destroy new machines (:index:`KVM`)"
+msgstr "Crear y destruir nuevas máquinas (:index:`KVM`)"
+
+#: ../../webvirtmgr.rst:15
+msgid "Create custom template of virtual machines"
+msgstr "Crear plantilla personalizada de máquinas virtuales"
+
+#: ../../webvirtmgr.rst:16
+msgid "Easy shell remote access"
+msgstr "Acceso remoto a shell fácil"
+
+#: ../../webvirtmgr.rst:17
+msgid "Amazing UI"
+msgstr "Increíble interfaz de usuario"
+
+#: ../../webvirtmgr.rst:20
+msgid "Configuration"
+msgstr "Configuración"
+
+#: ../../webvirtmgr.rst:22
+msgid ""
+"The web application listen on port **8000** of your host machine, for "
+"example: ``http://HOST_IP:8000/``."
+msgstr ""
+"La aplicación web escucha en el puerto **8000** de su máquina host, por "
+"ejemplo: ``http://HOST_IP:8000/``."
+
+#: ../../webvirtmgr.rst:24
+msgid "The service is disabled by default."
+msgstr "El servidor está deshabilitado de manera predeterminada"
+
+#: ../../webvirtmgr.rst:26
+msgid "From the :guilabel:`Virtual machines` page you can:"
+msgstr "Desde la página :guilabel:`Máquinas virtuales` puede:"
+
+#: ../../webvirtmgr.rst:28
+msgid "enable the virtual machines manager"
+msgstr "habilitar el administrador de máquinas virtuales"
+
+#: ../../webvirtmgr.rst:29
+msgid "enable the virtual machines console access from web browser"
+msgstr ""
+"habilitar el acceso a la consola de máquinas virtuales desde el navegador "
+"web"
+
+#: ../../webvirtmgr.rst:31
+msgid ""
+"To access the web interface you must login with credentials that can be "
+"found on the same page:"
+msgstr ""
+"Para acceder a la interfaz web, debe iniciar sesión con credenciales que se "
+"pueden encontrar en la misma página:"
+
+#: ../../webvirtmgr.rst:33
+msgid "*User:* admin"
+msgstr "*Usuario:* admin"
+
+#: ../../webvirtmgr.rst:34
+msgid "*Password*: random alphanumeric (editable)"
+msgstr "*Contraseña*: aleatorio alfanumérico (editable)"
+
+#: ../../webvirtmgr.rst:38
+msgid ""
+"Do not create network bridges using WebVirtManager interface. Just create "
+"the bridge inside :guilabel:`Network` page and use it under WebVirtManager."
+msgstr ""
+"No cree puentes de red utilizando la interfaz WebVirtManager. Basta con "
+"crear el puente dentro de la página :guilabel:`Red` y usarla en "
+"WebVirtManager."
+
+#: ../../webvirtmgr.rst:41
+msgid "For more information, see official documentation:"
+msgstr "Para obtener más información, consulte la documentación oficial:"
+
+#: ../../webvirtmgr.rst:43
+msgid "http://wiki.qemu.org/Manual"
+msgstr "http://wiki.qemu.org/Manual"
+
+#: ../../webvirtmgr.rst:44
+msgid "http://www.linux-kvm.org/page/Documents"
+msgstr "http://www.linux-kvm.org/page/Documents"

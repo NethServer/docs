@@ -1,0 +1,137 @@
+# #-#-#-#-#  shared_folder.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  shared_folder.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 12:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../shared_folder.rst:14 ../../shared_folder.rst:17
+msgid "Shared folders"
+msgstr "Carpetas compartidas"
+
+#: ../../shared_folder.rst:16 ../../shared_folder.rst:19
+msgid ""
+"A *shared folder* is a place where files can be accessed by a group of "
+"people using Samba (SMB/CIFS)."
+msgstr ""
+"Una *carpeta compartida* es un lugar donde un grupo de personas puede "
+"acceder a los archivos mediante Samba (SMB/CIFS)."
+
+#: ../../shared_folder.rst:21 ../../shared_folder.rst:24
+msgid "Authorizations"
+msgstr "Autorizaciones"
+
+#: ../../shared_folder.rst:23 ../../shared_folder.rst:26
+msgid ""
+"If **Active directory** is selected as account provider, a shared folder is "
+"owned by a group of users (:guilabel:`Owning group`). Each member of the "
+"group is allowed to read the folder contents. Optionally the group can be "
+"entitled to modify the folder contents and the read permission can be "
+"extended to everyone accessing the system.  This simple permission model is "
+"based on the traditional UNIX file system permissions."
+msgstr ""
+"Si **Active directory** está seleccionado como proveedor de cuentas, una "
+"carpeta compartida pertenece a un grupo de usuarios (:guilabel:`Grupo "
+"propietario`). A cada miembro del grupo se le permite leer el contenido de "
+"la carpeta. Opcionalmente, el grupo puede tener derecho a modificar el "
+"contenido de la carpeta y el permiso de lectura se puede extender a todos "
+"los que acceden al sistema. Este modelo de permiso simple se basa en los "
+"permisos tradicionales del sistema de archivos UNIX."
+
+#: ../../shared_folder.rst:30 ../../shared_folder.rst:33
+msgid ""
+"Access privileges can be refined further with the :guilabel:`ACL` tab, "
+"allowing individual users and other groups to gain read and write "
+"permissions."
+msgstr ""
+"Los privilegios de acceso se pueden refinar aún más con la pestaña "
+":guilabel:`ACL`, que permite a los usuarios individuales ya otros grupos "
+"obtener permisos de lectura y escritura."
+
+#: ../../shared_folder.rst:33 ../../shared_folder.rst:36
+msgid ""
+"If :guilabel:`Guest access` is enabled, any provided authentication "
+"credentials are considered valid."
+msgstr ""
+"Si :guilabel:`Guest access` está habilitado, las credenciales de "
+"autenticación proporcionadas se consideran válidas."
+
+#: ../../shared_folder.rst:36 ../../shared_folder.rst:39
+msgid ""
+"If an **LDAP** account provider is selected or there is no account provider "
+"at all, any access to shared folders is considered as *Guest access* so that"
+" everyone is allowed to read and write its content."
+msgstr ""
+"Si se selecciona un proveedor de cuenta **LDAP** o no hay ningún proveedor "
+"de cuentas, el acceso a carpetas compartidas se considera como *Acceso de "
+"invitado* para que todos puedan leer y escribir su contenido."
+
+#: ../../shared_folder.rst:41 ../../shared_folder.rst:44
+msgid "Network access"
+msgstr "Acceso a la red"
+
+#: ../../shared_folder.rst:43 ../../shared_folder.rst:46
+msgid ""
+"SMB/CIFS is a widely adopted protocol that allows to share files across a "
+"computer network.  In a way similar to Web URLs above, the shared folder "
+"name becomes the SMB \"share name\"."
+msgstr ""
+"SMB/CIFS es un protocolo ampliamente adoptado que permite compartir archivos"
+" a través de una red informática. En una forma similar a las URL de la Web "
+"anteriores, el nombre de la carpeta compartida se convierte en el SMB "
+"\"nombre de recurso compartido\"."
+
+#: ../../shared_folder.rst:47 ../../shared_folder.rst:50
+msgid ""
+"For instance, the SMB network addresses of the ``docs`` share could be ::"
+msgstr ""
+"Por ejemplo, las direcciones de red SMB de la carpeta ``documentos`` podrían"
+" ser ::"
+
+#: ../../shared_folder.rst:52 ../../shared_folder.rst:55
+msgid ""
+"At any time, the :guilabel:`Reset permissions` button propagates the shared "
+"folder UNIX permissions and Posix ACLs to its contents."
+msgstr ""
+"En cualquier momento, el botón :guilabel:`Restablecer permisos` propaga los "
+"permisos UNIX de la carpeta compartida y las ACL de Posix a su contenido."
+
+#: ../../shared_folder.rst:60 ../../shared_folder.rst:63
+msgid ""
+"If the option :guilabel:`Network recycle bin` is enabled, removed files are "
+"actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
+" homonym files` keeps distinct file names inside the wastebasket directory, "
+"preventing overwrites."
+msgstr ""
+"Si la opción :guilabel:`Red de reciclaje` está habilitada, los archivos "
+"eliminados se mueven en un directorio especial de \"papelera \". El "
+":guilabel:`Mantener archivos homónimos` mantiene nombres de archivo "
+"distintos dentro del directorio papelera, evitando sobrescribir."
+
+#: ../../shared_folder.rst:65 ../../shared_folder.rst:68
+msgid ""
+"If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
+"This does not affect the permission to use this resource."
+msgstr ""
+"Si :guilabel:`Navegable` está habilitado, la carpeta compartida aparece "
+"públicamente. Esto no afecta al permiso para usar este recurso."

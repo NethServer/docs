@@ -1,0 +1,98 @@
+# #-#-#-#-#  suricata.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  suricata.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../suricata.rst:12 ../../suricata.rst:15
+msgid "IPS (Suricata)"
+msgstr "IPS (Suricata)"
+
+#: ../../suricata.rst:14 ../../suricata.rst:17
+msgid ""
+"Suricata is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system "
+"for the network intrusion analysis. The software analyzes all traffic "
+"through the firewall searching for known attacks and anomalies."
+msgstr ""
+"Suricata es un :dfn:`IPS` (:index:`Intrusion Prevention System`), un sistema"
+" para el análisis de intrusiones de red. El software analiza todo el tráfico"
+" a través del cortafuegos buscando ataques conocidos y anomalías."
+
+#: ../../suricata.rst:17 ../../suricata.rst:20
+msgid ""
+"When an attack or anomaly is detected, the system can decide whether to "
+"block traffic or simply save the event on a log "
+"(:file:`/var/log/suricata/fast.log`)."
+msgstr ""
+"Cuando se detecta un ataque o una anomalía, el sistema puede decidir si "
+"bloquea el tráfico o simplemente guarda el evento en un registro n "
+"(:file:`/var/log/suricata/fast.log`)."
+
+#: ../../suricata.rst:20 ../../suricata.rst:23
+msgid ""
+":index:`Suricata` can be configured accordingly to following policies. Each "
+"policy consists of several rules:"
+msgstr ""
+":Index:`Suricata` puede configurarse de acuerdo con las siguientes "
+"políticas. Cada política consta de varias reglas:"
+
+#: ../../suricata.rst:22 ../../suricata.rst:25
+msgid ""
+"Connectivity: check a large number of vulnerabilities, do not impact on non-"
+"realtime applications (eg VoIP)"
+msgstr ""
+"Conectividad: compruebe un gran número de vulnerabilidades, no impacte en "
+"aplicaciones de tiempo no real (por ejemplo VoIP)"
+
+#: ../../suricata.rst:23 ../../suricata.rst:26
+msgid ""
+"Balanced: suitable for most scenarios, it is a good compromise between "
+"security and usability (recommended)"
+msgstr ""
+"Equilibrado: adecuado para la mayoría de los escenarios, es un buen "
+"compromiso entre seguridad y usabilidad (recomendado)"
+
+#: ../../suricata.rst:24 ../../suricata.rst:27
+msgid ""
+"Security: safe mode but very invasive, may impact on chat and peer-to-peer "
+"applications"
+msgstr ""
+"Seguridad: modo seguro pero muy invasivo, puede tener impacto en las "
+"aplicaciones de chat y peer-to-peer"
+
+#: ../../suricata.rst:25 ../../suricata.rst:28
+msgid ""
+"Expert: the administrator must manually select the rules from the command "
+"line"
+msgstr ""
+"Experto: el administrador debe seleccionar manualmente las reglas desde la "
+"línea de comandos"
+
+#: ../../suricata.rst:28 ../../suricata.rst:31
+msgid ""
+"The use of an IPS impacts on all traffic passing through the firewall. Make "
+"sure you fully understand all the implications before enabling it."
+msgstr ""
+"El uso de un IPS impacta en todo el tráfico que pasa a través del firewall. "
+"Asegúrese de comprender todas las implicaciones antes de habilitarlo."

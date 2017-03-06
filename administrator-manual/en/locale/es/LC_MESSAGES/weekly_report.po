@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../weekly_report.rst:14
+msgid "Weekly report"
+msgstr "Reporte semanal"
+
+#: ../../weekly_report.rst:16
+msgid ""
+"The Weekly report is a summary document generated weekly and emailed to a "
+"selected address. It displays useful statistical analysis on Internet "
+"traffic (most visited sites, traffic composition, etc ...), mail server "
+"(incoming mail, spam, etc ..), content filter, quality of the connections "
+"(including VPN) in graphical and tabular form. The report is modular, the "
+"user can define which tables and/or graphs (widgets) to include in the "
+"report."
+msgstr ""
+"El informe Semanal es un documento de resumen generado semanalmente y "
+"enviado por correo electrónico a una dirección seleccionada. Muestra "
+"análisis estadísticos útiles sobre el tráfico de Internet (sitios más "
+"visitados, composición del tráfico, etc ...), servidor de correo (correo "
+"entrante, spam, etc.), filtro de contenido, calidad de las conexiones "
+"(incluyendo VPN) en gráficos y formas tabulares. El informe es modular, el "
+"usuario puede definir qué tablas y / o gráficos (widgets) incluir en el "
+"informe."
+
+#: ../../weekly_report.rst:26
+msgid "You can view current and all old reports the Server Manager."
+msgstr ""
+"Puede ver los informes actuales y antiguos en el Administrador del servidor."
+
+#: ../../weekly_report.rst:29
+msgid "Installation"
+msgstr "Instalación"
+
+#: ../../weekly_report.rst:31
+msgid ""
+"Install the add-on by selection nethserver-report from the "
+":guilabel:`Software center`."
+msgstr ""
+"Instale el complemento mediante la selección nethserver-report desde el "
+":guilabel:`Centro de software`."
+
+#: ../../weekly_report.rst:34
+msgid "Configuration"
+msgstr "Configuración"
+
+#: ../../weekly_report.rst:36
+msgid ""
+"The report configuration is located in the :guilabel:`Weekly report` "
+"section. The page displays the list of enabled/disabled widgets. You can "
+"also see the preview of the report and send a test email. From the same page"
+" you can enable/disable the generation of the report, the language, the "
+"sender and the destination recipient of the email."
+msgstr ""
+"La configuración del informe se encuentra en la sección  :guilabel:`Informe "
+"semanal`. La página muestra la lista de widgets activados/desactivados. "
+"También puede ver la vista previa del informe y enviar un correo electrónico"
+" de prueba. Desde la misma página puede activar/desactivar la generación del"
+" informe, el idioma, el remitente y el destinatario de destino del correo "
+"electrónico."
