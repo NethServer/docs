@@ -5,8 +5,8 @@ Development process
 Issues
 ======
 
-An issue is a formal description of a known problem, or wished
-feature, inside a tracker. There are two types of issues:
+An issue is a formal description of a known problem, or desired
+feature, inside a tracker. There are two kind of issues:
 
 Bug
   describes a defect of the software; it must lead to a
@@ -15,10 +15,10 @@ Bug
 
 Enhancement
   describe an improvement of the current code or an entire new
-  feature. For example, remove harmless warning of a running process or
+  feature. For example, remove an harmless warning of a running process or
   designing a new UI panel.
 
-Bugs and enhancements will always produce some code changes inside a one or more
+Bugs and enhancements will always produce some code changes inside one or more
 git repositories.
 
 Each repository is associated to one or more RPM packages. Changes to the code
@@ -29,7 +29,7 @@ Do I need to open a new issue?
 ------------------------------
 
 Yes, if what you’re talking about will produce some code.
-By the way, it’s perfectly reasonable to not fill issues for
+By the way, it’s perfectly reasonable not to fill issues for
 occasional small fixes, like typos in translations.
 
 Issues are not a TODO list. Issues track the status changes of a job, the
@@ -116,7 +116,7 @@ The *Developer*.
 
 * Finally, clears the *Assignee*.
 
-If the issue is not valid, he can close it adding one of the labels **invalid**,
+If the issue is not valid, it can be closed adding one of the labels **invalid**,
 **duplicate**, **wontfix**.
 
 
@@ -126,14 +126,14 @@ QA team member (testing)
 The *QA team member*.
 
 * Takes an unassigned issue with label **testing** and sets the *Assignee* field
-  to herself.
+  to him/herself.
 
 * Tests the package, following the test case documentation written by the
   *Developer*.
 
-* When test finishes she removes the **testing** label and clears *Assignee*
-  field.  If the test is *successful*, she sets the **verified** label,
-  otherwise she alerts the *Developer* and the *Packager* to plan a new
+* When test finishes he/she removes the **testing** label and clears the *Assignee*
+  field.  If the test is *successful*, he/she sets the **verified** label,
+  otherwise he/she alerts the *Developer* and the *Packager* to plan a new
   process iteration.
 
 
@@ -169,7 +169,7 @@ When the package is CLOSED, all related `documentation`_ must be in place.
 RPM Version numbering rules
 ===========================
 
-NethServer releases bring the version number of the underlying CentOS.
+NethServer releases carry the version number of the underlying CentOS.
 For example ``NethServer 7 beta1`` is based on ``CentOS 7``.
 
 Packages have a version number in the form **X.Y.Z-N** (Eg.
@@ -184,7 +184,7 @@ Commit message style guide
 ==========================
 
 Individual commits should contain a cohesive set of changes to the code. These
-`seven rules`_ summarize how should be good commit message.
+`seven rules`_ summarize how a good commit message should be composed.
 
 1. Separate subject from body with a blank line
 2. Limit the subject line to 50 characters
@@ -206,7 +206,7 @@ The developer must take care to write all documentation on:
 * Administrator Manual before release
 * Inline help before release
 
-Packages should be inside *testing* or *nethforge-testing* repositories until 
+Packages should be inside the *testing* or *nethforge-testing* repositories until 
 all documentation is completed.
 
 New packages
