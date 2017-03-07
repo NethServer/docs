@@ -6,7 +6,7 @@ Manage and configure MySQL server.
 
 When installed, the module will trigger the ``mysql_secure_installation`` script generating default configuration:
 
-* Auto-generated root password saved in /etc/my.pwd
+* Auto-generated root password saved in /var/lib/nethserver/secrets/mysql
 * No anonymous user
 * No remote root login allowed
 * No test database
