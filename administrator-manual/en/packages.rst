@@ -14,15 +14,16 @@ additional modules, like :ref:`email-section`, :ref:`dhcp-section`,
 The :guilabel:`Available` tab lists all of the modules that can be installed. 
 This list can be filtered by category.
 
-To install a module, check the corresponding box and click on :guilabel:`Add`.
+To **install a module**, check the corresponding box and click on :guilabel:`Add`.
 Some modules suggest optional packages that can be installed whether at the same or at a
 later time.
 
+To **install optional packages** at a later time, select :guilabel:`Installed`
+tab and push the :guilabel:`Edit` button on a listed entry. 
+
 .. only:: nscom
 
-    To **install optional packages** at a later time, select :guilabel:`Installed`
-    tab and push the :guilabel:`Edit` button on a listed entry. To **remove a
-    module**, push the :guilabel:`Remove` button.
+    To **remove a module**, push the :guilabel:`Remove` button.
 
     .. warning::
         
@@ -30,9 +31,6 @@ later time.
         the list of affected packages to avoid removing required features.
 
 .. only:: nsent
-
-    To **install optional packages** at a later time, select :guilabel:`Installed`
-    tab and push the :guilabel:`Edit` button on a listed entry.
 
     .. warning::
 
