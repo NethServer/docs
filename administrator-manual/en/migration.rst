@@ -33,8 +33,8 @@ machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 
 .. _migration_account:
 
-Account provider
-================
+Accounts provider
+=================
 
 You should install an account provider before starting the migration procedure.
 If you choose to have a Samba DC, remember to fully configure the DC before
