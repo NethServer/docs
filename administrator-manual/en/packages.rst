@@ -14,18 +14,28 @@ additional modules, like :ref:`email-section`, :ref:`dhcp-section`,
 The :guilabel:`Available` tab lists all of the modules that can be installed. 
 This list can be filtered by category.
 
-To install a module, check the corresponding box and click on :guilabel:`Add`.
+To **install a module**, check the corresponding box and click on :guilabel:`Add`.
 Some modules suggest optional packages that can be installed whether at the same or at a
 later time.
 
 To **install optional packages** at a later time, select :guilabel:`Installed`
-tab and push the :guilabel:`Edit` button on a listed entry. To **remove a
-module**, push the :guilabel:`Remove` button.
+tab and push the :guilabel:`Edit` button on a listed entry. 
 
-.. warning::
-    
-    When removing a module other modules could be removed, too! Read carefully
-    the list of affected packages to avoid removing required features.
+.. only:: nscom
+
+    To **remove a module**, push the :guilabel:`Remove` button.
+
+    .. warning::
+        
+        When removing a module other modules could be removed, too! Read carefully
+        the list of affected packages to avoid removing required features.
+
+.. only:: nsent
+
+    .. warning::
+
+        Installed packages **cannot be removed frome the Software Center!**
+        Please contact customer support if you need to remove an installed module.
 
 .. index::
     pair: RPM; update
@@ -39,7 +49,13 @@ Software updates
 Updates for the installed software are listed under the :guilabel:`Updates` tab. A
 message appears when software updates are available.
 
-.. hint:: Regularly update the installed software to fix bugs, security issues and receive new features.
+.. only:: nscom
+
+    .. hint:: Regularly update the installed software to fix bugs, security issues and receive new features.
+    
+.. only:: nsent
+
+    .. hint:: Updates will be automatically installed by a scheduled procedure.
 
 .. index::
     pair: RPM; installed
