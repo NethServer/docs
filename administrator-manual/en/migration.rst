@@ -48,7 +48,7 @@ starting the migration procedure.
   role was ADS), configure a *remote Active Directory* accounts provider.
   
 * If the source system was a NT Primary Domain Controller (Samba server role was
-  ADS) install a *local Active Directory* accounts provider.
+  PDC) install a *local Active Directory* accounts provider.
 
 * If access to Shared Folders on the destination system requires user
   authentication, install a *local Active Directory* accounts provider.
