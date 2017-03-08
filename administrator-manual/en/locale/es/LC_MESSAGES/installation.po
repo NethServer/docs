@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 13:01+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -553,7 +553,7 @@ msgstr "Habilitar repositorios de software |product| con este comando: ::"
 msgid "To install the base system, run: ::"
 msgstr "Para instalar el sistema base, ejecute: ::"
 
-#: ../../installation.rst:295
+#: ../../installation.rst:295 ../../installation.rst:298
 msgid ""
 "Alternatively, to install base system *and* additional modules, pass the "
 "name of the module as a parameter to the install script.  Example: ::"
@@ -561,6 +561,23 @@ msgstr ""
 "Alternativamente, para instalar el sistema base *and* módulos adicionales, "
 "pase el nombre del módulo como parámetro al script de instalación. Ejemplo: "
 "::"
+
+#: ../../installation.rst:305 ../../installation.rst:308
+msgid "Enterprise promotion"
+msgstr "Promoción de empresas"
+
+#: ../../installation.rst:307 ../../installation.rst:310
+msgid "To promote to the Enterprise version run the following command: ::"
+msgstr ""
+"Para promocionar a la versión Enterprise, ejecute el siguiente comando: ::"
+
+#: ../../installation.rst:311 ../../installation.rst:314
+msgid ""
+"Proceed with :ref:`registration <registration-section>` then run the "
+"following command: ::"
+msgstr ""
+"Proceda con el :ref: `registro <registration-section>` y luego ejecute el "
+"siguiente comando: ::"
 
 #: ../../installation.rst:318 ../../installation.rst:321
 msgid "Next steps"
@@ -575,20 +592,3 @@ msgstr ""
 "Al final del procedimiento de instalación, ref: `access the server-manager "
 "<access-section>` a: ref:`install additional software <package_manager-"
 "section>`."
-
-#: ../../installation.rst:308
-msgid "Enterprise promotion"
-msgstr "Promoción de empresas"
-
-#: ../../installation.rst:310
-msgid "To promote to the Enterprise version run the following command: ::"
-msgstr ""
-"Para promocionar a la versión Enterprise, ejecute el siguiente comando: ::"
-
-#: ../../installation.rst:314
-msgid ""
-"Proceed with :ref:`registration <registration-section>` then run the "
-"following command: ::"
-msgstr ""
-"Proceda con el :ref: `registro <registration-section>` y luego ejecute el "
-"siguiente comando: ::"

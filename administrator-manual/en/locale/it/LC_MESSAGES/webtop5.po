@@ -1,0 +1,259 @@
+# #-#-#-#-#  webtop5.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  webtop5.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../webtop5.rst:10 ../../webtop5.rst:13
+msgid "WebTop 5"
+msgstr "WebTop 5"
+
+#: ../../webtop5.rst:12 ../../webtop5.rst:15
+msgid ""
+"WebTop is a full-featured groupware which implements ActiveSync protocol."
+msgstr ""
+"WebTop è un groupware completo che implementa il protocollo ActiveSync."
+
+#: ../../webtop5.rst:14 ../../webtop5.rst:17
+msgid "Access to web interface is: ``https://<server_name>/webtop``."
+msgstr ""
+"L’indirizzo per accedere all’interfaccia web è: "
+"``https://<nome_server>/webtop``."
+
+#: ../../webtop5.rst:17 ../../webtop5.rst:20
+msgid "Authentication"
+msgstr "Autenticazione"
+
+#: ../../webtop5.rst:19 ../../webtop5.rst:22
+msgid ""
+"Always use the full user name format ``<user>@<domain>`` for login for the "
+"web application and Active Sync."
+msgstr ""
+"Utilizzare sempre il formato utente completo ``<utente>@<dominio>`` per il "
+"login sia all'applicazione web, sia per Active Sync."
+
+#: ../../webtop5.rst:22 ../../webtop5.rst:58 ../../webtop5.rst:25
+#: ../../webtop5.rst:61
+msgid "**Example**"
+msgstr "**Esempio**"
+
+#: ../../webtop5.rst:24 ../../webtop5.rst:60 ../../webtop5.rst:27
+#: ../../webtop5.rst:63
+msgid "Server name: mymail.mightydomain.com"
+msgstr "Nome server: mymail.mightydomain.com"
+
+#: ../../webtop5.rst:25 ../../webtop5.rst:28
+msgid "Alternative mail domain: baddomain.net"
+msgstr "Dominio di posta alternativo: baddomain.net"
+
+#: ../../webtop5.rst:26 ../../webtop5.rst:29
+msgid "User: goofy"
+msgstr "Utente: goofy"
+
+#: ../../webtop5.rst:27 ../../webtop5.rst:30
+msgid "Login: goofy@mightydomain.com"
+msgstr "Login: goofy@mightydomain.com"
+
+#: ../../webtop5.rst:30 ../../webtop5.rst:33
+msgid ""
+"Active Sync protocol is supported only on Android and iOS devices. Outlook "
+"is not supported. Mail synchronization is currently not supported."
+msgstr ""
+"Il protocollo Active Sync è supportato solo su dispositivi Android e iOS. "
+"Outlook non è supportato. La sincronizzazione della posta non è al momento "
+"supportata."
+
+#: ../../webtop5.rst:38 ../../webtop5.rst:41
+msgid "Admin user"
+msgstr "Utente admin"
+
+#: ../../webtop5.rst:40 ../../webtop5.rst:43
+msgid ""
+"After installation, WebTop will be accessible via the administrator user. "
+"The administrator user can change global settings and login as all other "
+"users, however, it's not a system user and can't access any other services "
+"like Mail, Calendar, etc."
+msgstr ""
+"Dopo l’installazione, WebTop è accessibile con un utente amministrativo. "
+"L’utente amministrativo può cambiare le impostazioni globali ed effettuare "
+"login come un altro utente, ma non è un utente di sistema e non può accedere"
+" agli altri servizi come Mail, Calendario, ecc."
+
+#: ../../webtop5.rst:44 ../../webtop5.rst:47
+msgid "Default credentials are:"
+msgstr "Le credenziali di default sono:"
+
+#: ../../webtop5.rst:46 ../../webtop5.rst:49
+msgid "User: *admin*"
+msgstr "Utente: admin"
+
+#: ../../webtop5.rst:47 ../../webtop5.rst:50
+msgid "Password: *admin*"
+msgstr "Password: admin"
+
+#: ../../webtop5.rst:49 ../../webtop5.rst:52
+msgid ""
+"The administrator user's password must be changed from within the WebTop "
+"interface."
+msgstr ""
+"La password del’utente admin deve essere cambiata dall’interfaccia di "
+"WebTop."
+
+#: ../../webtop5.rst:52 ../../webtop5.rst:55
+msgid "**Remember to change the admin password just after installation!**"
+msgstr ""
+"**Ricordarsi di cambiare la password di amministratore subito dopo "
+"l’installazione!**"
+
+#: ../../webtop5.rst:55 ../../webtop5.rst:58
+msgid ""
+"To check the mail of the system's user admin account use the following "
+"login: admin@<domain> where ``<domain>`` is the domain part of server FQDN."
+msgstr ""
+"E’ possibile controllare la posta dell’utente admin di sistema usando questo"
+" login: admin@<dominio> dove ``<dominio>`` è il dominio del server che fa "
+"parte del FQDN."
+
+#: ../../webtop5.rst:61 ../../webtop5.rst:64
+msgid "User: admin"
+msgstr "Utente: admin"
+
+#: ../../webtop5.rst:62 ../../webtop5.rst:65
+msgid "Login: admin@mightydomain.com"
+msgstr "Login: admin@mightydomain.com"
+
+#: ../../webtop5.rst:67 ../../webtop5.rst:70
+msgid "WebTop vs SOGo"
+msgstr "WebTop vs SOGo"
+
+#: ../../webtop5.rst:69 ../../webtop5.rst:72
+msgid "WebTop and SOGo can be installed on the same machine."
+msgstr "WebTop e SOGo possono essere installati sulla stessa macchina."
+
+#: ../../webtop5.rst:71 ../../webtop5.rst:74
+msgid ""
+"ActiveSync is enabled by default on SOGo and WebTop, but if both packages "
+"are installed, SOGo will take precedence."
+msgstr ""
+"ActiveSync è abilitato di default sia su SOGo che su WebTop, ma se sono "
+"entrambi installati, SOGo avrà la precedenza."
+
+#: ../../webtop5.rst:74 ../../webtop5.rst:77
+msgid "To disable ActiveSync on SOGo: ::"
+msgstr "Per disabilitare ActiveSync su SOGo: ::"
+
+#: ../../webtop5.rst:79 ../../webtop5.rst:82
+msgid "To disable ActiveSync on WebTop: ::"
+msgstr "Per disabilitare ActiveSync su WebTop: ::"
+
+#: ../../webtop5.rst:85 ../../webtop5.rst:88
+msgid ""
+"All incoming mail filters configured within SOGo, must be manually recreated"
+" inside WebTop interface. This also applies if the user is switching from "
+"WebTop to SOGo."
+msgstr ""
+"Tutti i filtri di posta configurati da SOGo, devono essere ricreati "
+"manualmente all’interno dell’interfaccia di WebTop. La stessa cosa si "
+"applica se l’utente sta effettuando il passaggio inverso da WebTop a SOGo."
+
+#: ../../webtop5.rst:90 ../../webtop5.rst:93
+msgid "Google and Dropbox integration"
+msgstr "Integrazione Google e Dropbox"
+
+#: ../../webtop5.rst:92 ../../webtop5.rst:95
+msgid ""
+"Users can add their own Google Drive and Dropbox accounts inside WebTop. "
+"Before proceeding, the administrator must create a pair of API access "
+"credentials."
+msgstr ""
+"Ogni utente può integrare i propri account Google Drive e Dropbox "
+"all’interno di WebTop. Prima di procedere, l’amministratore deve creare una "
+"coppia di credenziali per l’accesso alle API."
+
+#: ../../webtop5.rst:96 ../../webtop5.rst:99
+msgid "Google API"
+msgstr "Google API"
+
+#: ../../webtop5.rst:98 ../../webtop5.rst:101
+msgid ""
+"Access https://console.developers.google.com/project and create a new "
+"project"
+msgstr ""
+"Accedere a https://console.developers.google.com/project e creare un nuovo "
+"progetto"
+
+#: ../../webtop5.rst:99 ../../webtop5.rst:102
+msgid ""
+"Create new credentials by selecting \"OAuth 2.0 clientID\" type and remember"
+" to compile \"OAuth consent screen\" section"
+msgstr ""
+"Creare una nuova coppia di credenziali di tipo “OAuth 2.0 clientID” avendo "
+"cura di compilare la sezione “OAuth consent screen”"
+
+#: ../../webtop5.rst:101 ../../webtop5.rst:104
+msgid ""
+"Insert new credentials (Client ID e Client Secret) inside WebTop "
+"configuration"
+msgstr ""
+"Inserire la coppia di credenziali appena create (Client ID e Client Secret) "
+"nella configurazione di WebTop"
+
+#: ../../webtop5.rst:103 ../../webtop5.rst:118 ../../webtop5.rst:106
+#: ../../webtop5.rst:121
+msgid "From shell, access webtop database: ::"
+msgstr "Da shell accedere al database webtop: ::"
+
+#: ../../webtop5.rst:107 ../../webtop5.rst:122 ../../webtop5.rst:110
+#: ../../webtop5.rst:125
+msgid ""
+"Execute the queries, using the corresponding value in place of ``__value__``"
+" variable: ::"
+msgstr ""
+"Eseguire le query, sostituendo al campo ``__value__`` il valore "
+"corrispondente: ::"
+
+#: ../../webtop5.rst:113 ../../webtop5.rst:116
+msgid "Dropbox API"
+msgstr "Dropbox API"
+
+#: ../../webtop5.rst:115 ../../webtop5.rst:118
+msgid "Access https://www.dropbox.com/developers/apps and create a new app"
+msgstr ""
+"Accedere a https://www.dropbox.com/developers/apps e creare una nuova app"
+
+#: ../../webtop5.rst:116 ../../webtop5.rst:119
+msgid ""
+"Insert the new credential key pair (App key e App secret) inside WebTop "
+"configuration"
+msgstr ""
+"Inserire la coppia di credenziali appena create (App key e App secret) nella"
+" configurazione di WebTop."
+
+#: ../../webtop5.rst:128 ../../webtop5.rst:131
+msgid ""
+"If you need to raise the user limit, please read the official Dropbox "
+"documentation."
+msgstr ""
+"Se si desidera cambiare il limite massimo di utenti, verificare la procedura"
+" corretta nella documentazione ufficiale di Dropbox."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -99,8 +99,8 @@ msgid ""
 "alternatives:"
 msgstr ""
 "|product| puede manejar un número ilimitado de dominios de correo, "
-"configurable desde la página :guilabel:`Email > Domains`. Para cada dominio "
-"hay dos alternativas:"
+"configurable desde la página :guilabel:`Correo electrónico > Dominios`. Para"
+" cada dominio hay dos alternativas:"
 
 #: ../../mail.rst:47 ../../mail.rst:50
 msgid ""
@@ -188,15 +188,15 @@ msgstr ""
 
 #: ../../mail.rst:94 ../../mail.rst:97
 msgid "Disclaimer example: ::"
-msgstr "Ejemplo de exención de responsabilidad: ::"
+msgstr "Ejemplo de renuncia: ::"
 
 #: ../../mail.rst:102 ../../mail.rst:105
 msgid ""
 "The disclaimer text can contain Markdown [#Markdown]_ code to format the "
 "text."
 msgstr ""
-"El texto del descargo de responsabilidad puede contener el código Markdown "
-"[#Markdown]_ para dar formato al texto."
+"El texto de la renuncia puede contener el código Markdown [#Markdown]_ para "
+"dar formato al texto."
 
 #: ../../mail.rst:109 ../../mail.rst:112
 msgid "Email addresses"
@@ -263,9 +263,9 @@ msgid ""
 msgstr ""
 "El sistema permite la creación de un número ilimitado de direcciones de "
 "correo electrónico adicionales, desde la página :guilabel:`Direcciones de "
-"correo electrónico > Alias de correo`. Cada uno :dfn:`alias de correo` está "
-"asociado a uno o más destinos. Un :dfn: `destino` puede ser de los "
-"siguientes tipos:"
+"correo electrónico > Alias de correo`. Cada :dfn:`alias de correo` está "
+"asociado a uno o más destinos. Un :dfn:`destino` puede ser de los siguientes"
+" tipos:"
 
 #: ../../mail.rst:142 ../../mail.rst:145
 msgid "user mailbox,"
@@ -300,12 +300,14 @@ msgid ""
 "Email address *info* valid for both domains: info@mydomain.net, "
 "info@example.com"
 msgstr ""
-"Dirección de correo electrónico *info* es válida para ambos dominios: "
-"info@midominio.net, info@ejemplo.com"
+"La dirección de correo electrónico *info* es válida para ambos dominios: "
+"info@mydomain.net, info@example.com"
 
 #: ../../mail.rst:153 ../../mail.rst:156
 msgid "Email address *goofy* valid only for one domain: goofy@example.com"
-msgstr "Email address *goofy* valid only for one domain: goofy@ejemplo.com"
+msgstr ""
+"Dirección de correo electrónico *goofy* válido sólo para un dominio: "
+"goofy@example.com"
 
 #: ../../mail.rst:159 ../../mail.rst:162
 msgid ""
@@ -368,12 +370,12 @@ msgid ""
 ":guilabel:`Email addresses > User mailboxes > Edit > Custom mailbox quota`."
 msgstr ""
 "Desde la misma página, el  :guilabel:`espacio en disco' de cada buzón se "
-"puede limitar a un valor predeterminado :dfn:`cuota`. Si la cuota de buzón "
-"está habilitada, la página :guilabel:`Dashboard > Cuota de correo' resume el"
-" uso de cuota para cada usuario. Este resumen se actualiza cuando un usuario"
-" inicia sesión o se envía un mensaje. La cuota se puede personalizar para un"
-" usuario específico en :guilabel:`Direcciones de correo electrónico > "
-"Buzones de usuario > Editar > Cuota de buzón personalizado`."
+"puede limitar a un valor predeterminado de :dfn:`cuota`. Si la cuota de "
+"buzón está habilitada, la página :guilabel:`Dashboard > Cuota de correo' "
+"resume el uso de cuota para cada usuario. Este resumen se actualiza cuando "
+"un usuario inicia sesión o se envía un mensaje. La cuota se puede "
+"personalizar para un usuario específico en :guilabel:`Direcciones de correo "
+"electrónico > Buzones de usuario > Editar > Cuota de buzón personalizado`."
 
 #: ../../mail.rst:198 ../../mail.rst:201
 msgid ""
@@ -385,8 +387,8 @@ msgid ""
 "mailboxes > Edit > Customize spam message retention`."
 msgstr ""
 "Los mensajes marcados como **spam** (ver :ref:`email_filter`) se pueden "
-"mover automáticamente a la carpeta :dfn:`Junk` activando la opción "
-":guilabel:`Mueve a la carpeta \"Junk\"`. Los mensajes de spam se eliminan "
+"mover automáticamente a la carpeta :dfn:`Basura` activando la opción "
+":guilabel:`Mueve a la carpeta \"Basura\"`. Los mensajes de spam se eliminan "
 "automáticamente después de que haya transcurrido el período de "
 ":guilabel:`espera`. El período de espera de spam se puede personalizar para "
 "un usuario específico en :guilabel:`Direcciones de correo electrónico > "
@@ -448,7 +450,7 @@ msgid ""
 "rejected."
 msgstr ""
 "Desde la página :guilabel:`Correo electrónico > Mensajes`, el cursor "
-":guilabel:` Máximo tamaño del mensajes de cola` ajusta el tamaño máximo de "
+":guilabel:`Máximo tamaño del mensajes de cola` ajusta el tamaño máximo de "
 "los mensajes que atraviesan el sistema. Si se excede este límite, un mensaje"
 " no puede entrar en el sistema en absoluto y se rechaza."
 
@@ -459,8 +461,8 @@ msgid ""
 "server, errors may occur. For instance,"
 msgstr ""
 "Una vez que un mensaje entra en |product|, se mantiene en una :dfn:`cola`, "
-"esperando la entrega final o el relé. Cuando |product| transmite un mensaje "
-"a un servidor remoto, pueden producirse errores. Por ejemplo,"
+"esperando la entrega final o la retransmisión. Cuando |product| retransmite "
+"un mensaje a un servidor remoto, pueden producirse errores. Por ejemplo,"
 
 #: ../../mail.rst:245 ../../mail.rst:248
 msgid "the network connection fails, or"
@@ -477,7 +479,7 @@ msgid ""
 "The :guilabel:`Queue message lifetime` slider changes this limit.  By "
 "default it is set to *4 days*."
 msgstr ""
-"Estos y otros errores son *temporales*: en tales casos, |product| Intenta "
+"Estos y otros errores son *temporales*: en tales casos, |product| intenta "
 "volver a conectar el host remoto a intervalos regulares hasta que se alcance"
 " un límite. El control deslizante :guilabel:`Vida del mensaje de cola` "
 "cambia este límite. De forma predeterminada, se establece en *4 días*."
@@ -494,7 +496,7 @@ msgstr ""
 "intento inmediato de retransmisión de mensajes, pulsando el botón "
 ":guilabel:`Intento de envío` desde la página :guilabel:`Correo electrónico >"
 " Gestión de colas`. De lo contrario, el administrador puede eliminar de "
-"forma selectiva los mensajes en cola o vaciar la cola con el botón "
+"forma selectiva los mensajes en cola o vaciarla con el botón "
 ":guilabel:`Borrar todo`."
 
 #: ../../mail.rst:264 ../../mail.rst:267
@@ -521,7 +523,7 @@ msgstr ""
 "La opción :guilabel:`Enviar usando un host inteligente`, obliga a dirigir "
 "todos los mensajes salientes a través de un servidor SMTP especial, llamado "
 "técnicamente :dfn:`smarthost`. Un smarthost acepta transmitir mensajes bajo "
-"algunas restricciones. Podría comprobar:"
+"algunas restricciones. Se podría comprobar:"
 
 #: ../../mail.rst:281 ../../mail.rst:284
 msgid "the client IP address,"
@@ -537,7 +539,7 @@ msgid ""
 " only if the server is temporarily blacklisted [#DNSBL]_, or normal SMTP "
 "access is restricted by the ISP."
 msgstr ""
-"Por lo general, no se recomienda enviar a través de *smarthost*. Puede ser "
+"Por lo general, no se recomiendan envíos a través de *smarthost*. Puede ser "
 "utilizado sólo si el servidor está temporalmente en la lista negra "
 "[#DNSBL]_, o el acceso SMTP normal está restringido por el ISP."
 
@@ -690,8 +692,8 @@ msgid ""
 "On the contrary, by *getting a message out of Junk*, the filters learn it is"
 " ham: next time a lower score will be assigned."
 msgstr ""
-"Por el contrario, al *sacar un mensaje de la carpeta de correo basura *, los"
-" filtros aprenden que este es ham: la próxima vez se le asignará una "
+"Por el contrario, al *sacar un mensaje de la carpeta de correo basura*, los "
+"filtros aprenden que este es ham: la próxima vez se le asignará una "
 "puntuación menor."
 
 #: ../../mail.rst:382 ../../mail.rst:385
@@ -735,20 +737,20 @@ msgstr ""
 #: ../../mail.rst:401 ../../mail.rst:404
 msgid ":guilabel:`Block From`: any message from specified sender is blocked"
 msgstr ""
-":guilabel:`Block From`: cualquier mensaje del remitente especificado está "
+":guilabel:`Bloquear de`: cualquier mensaje del remitente especificado está "
 "bloqueado"
 
 #: ../../mail.rst:403 ../../mail.rst:406
 msgid ":guilabel:`Allow From`: any message from specified sender is accepted"
 msgstr ""
-":guilabel:`Allow From`: se acepta cualquier mensaje del remitente "
+":guilabel:`Permitir de`: se acepta cualquier mensaje del remitente "
 "especificado"
 
 #: ../../mail.rst:406 ../../mail.rst:409
 msgid ""
 ":guilabel:`Allow To`: any message to the specified recipient is accepted"
 msgstr ""
-":guilabel:`Allow To`: se acepta cualquier mensaje al destinatario "
+":guilabel:`Permitir a`: se acepta cualquier mensaje al destinatario "
 "especificado"
 
 #: ../../mail.rst:409 ../../mail.rst:412
@@ -825,8 +827,8 @@ msgid ""
 "Authentication requires the STARTTLS command and supports the following "
 "variants:"
 msgstr ""
-"El servidor admite clientes de correo electrónico estándar que cumplan con "
-"los siguientes puertos IANA:"
+"La autenticación requiere el comando STARTTLS y admite las siguientes "
+"variantes:"
 
 #: ../../mail.rst:448 ../../mail.rst:451
 msgid "LOGIN"
@@ -1062,7 +1064,7 @@ msgid ""
 "following commands: ::"
 msgstr ""
 "Es posible mover automáticamente mensajes dentro de la papelera utilizando "
-"los siguientes comandos:"
+"los siguientes comandos: ::"
 
 #: ../../mail.rst:557 ../../mail.rst:560
 msgid ""
@@ -1153,15 +1155,15 @@ msgstr "MTA/content-checker interface http://www.ijs.si/software/amavisd/"
 
 #: ../../mail.rst:587 ../../mail.rst:590
 msgid "Email, https://en.wikipedia.org/wiki/Email"
-msgstr "Correo electronico, https://en.wikipedia.org/wiki/Email"
+msgstr "Correo electrónico, https://es.wikipedia.org/wiki/Correo_electrónico"
 
 #: ../../mail.rst:588 ../../mail.rst:591
 msgid "The MX DNS record, https://en.wikipedia.org/wiki/MX_record"
-msgstr "El record MX DNS, https://en.wikipedia.org/wiki/MX_record"
+msgstr "El registro MX DNS, https://es.wikipedia.org/wiki/MX_(registro)"
 
 #: ../../mail.rst:589 ../../mail.rst:592
 msgid "SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol"
-msgstr "SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol"
+msgstr "SMTP, https://es.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol"
 
 #: ../../mail.rst:590 ../../mail.rst:593
 msgid "The Maildir format, https://en.wikipedia.org/wiki/Maildir"
@@ -1172,7 +1174,7 @@ msgid ""
 "The Markdown plain text formatting syntax, "
 "https://en.wikipedia.org/wiki/Markdown"
 msgstr ""
-"La sintaxis de formato de texto sin formato de Markdown, "
+"La sintaxis de formato de texto plano Markdown, "
 "https://es.wikipedia.org/wiki/Markdown"
 
 #: ../../mail.rst:592 ../../mail.rst:595
@@ -1181,15 +1183,15 @@ msgstr "IMAP https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol"
 
 #: ../../mail.rst:593 ../../mail.rst:596
 msgid "POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol"
-msgstr "IMAP https://e.wikipedia.org/wiki/Internet_Message_Access_Protocol"
+msgstr "POP3 https://es.wikipedia.org/wiki/Post_Office_Protocol"
 
 #: ../../mail.rst:594 ../../mail.rst:597
 msgid "DNSBL https://en.wikipedia.org/wiki/DNSBL"
-msgstr "DNSBL https://es.wikipedia.org/wiki/DNSBL"
+msgstr "DNSBL https://en.wikipedia.org/wiki/DNSBL"
 
 #: ../../mail.rst:595 ../../mail.rst:598
 msgid "SPAM https://en.wikipedia.org/wiki/Spamming"
-msgstr "SPAM https://es.wikipedia.org/wiki/Spamming"
+msgstr "SPAM https://es.wikipedia.org/wiki/Spam"
 
 #: ../../mail.rst:596 ../../mail.rst:599
 msgid "Spamassassin home page http://wiki.apache.org/spamassassin/Spam"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -43,18 +43,18 @@ msgstr "Escenario típico"
 
 #: ../../proxy_pass.rst:17 ../../proxy_pass.rst:20
 msgid "|product| is the firewall of your LAN"
-msgstr "|producto| es el cortafuegos de su LAN"
+msgstr "|product| es el cortafuegos de su LAN"
 
 #: ../../proxy_pass.rst:19 ../../proxy_pass.rst:22
 msgid "You have a domain http://mydomain.com"
-msgstr "Tiene un dominio http://midominio.com"
+msgstr "Usted tiene un dominio http://mydomain.com"
 
 #: ../../proxy_pass.rst:21 ../../proxy_pass.rst:24
 msgid ""
 "You would like http://mydomain.com/mysite to forward to the internal server "
 "(internal IP: 192.168.2.100)"
 msgstr ""
-"Desea que http://midominio.com/misitio reenvíe al servidor interno (IP "
+"Usted desea que http://mydomain.com/mysite reenvíe al servidor interno (IP "
 "interno: 192.168.2.100)"
 
 #: ../../proxy_pass.rst:24 ../../proxy_pass.rst:27
@@ -64,7 +64,7 @@ msgid ""
 " URL` to ``http://192.168.2.100``."
 msgstr ""
 "En este escenario, cree un nuevo registro en la página :guilabel:`Proxy "
-"inverso`. Configure el :guilabel:`Nombre` del elemento a ``misitio`` y el "
+"inverso`. Configure el :guilabel:`Nombre` del elemento a ``mysite`` y el "
 ":guilabel:`URL de destino` a ``http://192.168.2.100``."
 
 #: ../../proxy_pass.rst:28 ../../proxy_pass.rst:31

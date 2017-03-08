@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jose \"Martin\" Abeleira <mabeleira@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -38,7 +38,7 @@ msgid ""
 "|product| supports authentication and authorization against either a "
 "**local** or **remote** account provider."
 msgstr ""
-"|product|  soporta autenticacion y autorizacion contra un proveedor  de "
+"|product|  soporta autenticación y autorización contra un proveedor  de "
 "cuentas **local** o **remoto**"
 
 #: ../../accounts.rst:22 ../../accounts.rst:25
@@ -47,7 +47,7 @@ msgstr "Los tipos de proveedores compatibles son:"
 
 #: ../../accounts.rst:24 ../../accounts.rst:27
 msgid "Local OpenLDAP running on |product| itself"
-msgstr "OpenLDAP local en ejecución |product| sí mismo"
+msgstr "OpenLDAP local corriendo en el propio |product|"
 
 #: ../../accounts.rst:25 ../../accounts.rst:28
 msgid "Remote LDAP server with RFC2307 schema"
@@ -55,7 +55,7 @@ msgstr "Servidor LDAP remoto con esquema RFC2307"
 
 #: ../../accounts.rst:26 ../../accounts.rst:29
 msgid "Local Samba 4 Active Directory Domain Controller"
-msgstr "Controlador de dominio de Active Directory de Samba 4 local"
+msgstr "Controlador local de Active Directory de Samba 4"
 
 #: ../../accounts.rst:27 ../../accounts.rst:30
 msgid "Remote Active Directory (both Microsoft and Samba)"
@@ -90,8 +90,8 @@ msgid ""
 msgstr ""
 "Una instalacion limpia de |product|  esta lista para conectarse a un "
 "proveedor **remoto** de cuentas de tipo (LDAP, o AD). El usuario root puede "
-"configurar el proveedor de cuentas remotoo desde la pagina "
-":guilabel:`Accounts provider`"
+"configurar el proveedor de cuentas remoto desde la pagina "
+":guilabel:`Proveedor de cuentas`"
 
 #: ../../accounts.rst:41 ../../accounts.rst:44
 msgid ""
@@ -99,8 +99,8 @@ msgid ""
 ":guilabel:`User and groups` page shows the domain accounts in *read-only* "
 "mode."
 msgstr ""
-"Luego de que  |product|  ha sido unido a un proveedor de cuentas remoto la "
-"pagina de  :guilabel:`User and groups` muestra las cuentas del dominio en "
+"Luego de que |product| ha sido unido a un proveedor de cuentas remoto la "
+"pagina de  :guilabel:`Usuarios y grupos` muestra las cuentas del dominio en "
 "modo *solo-lectura*."
 
 #: ../../accounts.rst:50 ../../accounts.rst:53
@@ -114,8 +114,8 @@ msgid ""
 " list."
 msgstr ""
 "Para ejecutar un proveedor de cuenta **local**, vaya a la página "
-":guilabel:`Centro de software` e instale  ya sea OpenLDAP **o** Samba 4 como"
-" proveedor de cuenta de desde la lista de módulos."
+":guilabel:`Centro de software` e instale ya sea OpenLDAP **o** Samba 4 como "
+"proveedor de cuenta de desde la lista de módulos."
 
 #: ../../accounts.rst:49 ../../accounts.rst:52
 msgid ""
@@ -188,10 +188,10 @@ msgid ""
 "automatically configured and the administrator will be able to manage users "
 "and groups from the :guilabel:`User and groups` page."
 msgstr ""
-"Desde el :guilabel:`Software Center` instala el módulo denominado *Proveedor"
-" de la cuenta: OpenLDAP*. Al final de la instalación, el paquete se "
-"configura automáticamente y el administrador podrá administrar usuarios y "
-"grupos desde la página :guilabel:`Usuarios y grupos`."
+"Desde el :guilabel:`Centro de software` instala el módulo denominado "
+"*Proveedor de la cuenta: OpenLDAP*. Al final de la instalación, el paquete "
+"se configura automáticamente y el administrador podrá administrar usuarios y"
+" grupos desde la página :guilabel:`Usuarios y grupos`."
 
 #: ../../accounts.rst:88 ../../accounts.rst:91
 msgid "Samba Active Directory local provider installation"
@@ -202,9 +202,9 @@ msgid ""
 "When installing Samba Active Directory as local account provider, the system"
 " needs an **additional IP address** and a working internet connection."
 msgstr ""
-"Al instalar Samba Active Directory como proveedor de cuentas locales, el "
-"sistema necesita una **dirección IP adicional** y una conexión a Internet de"
-" trabajo."
+"Al instalar el Active Directory de Samba como proveedor de cuentas locales, "
+"el sistema necesita una **dirección IP adicional** y una conexión a Internet"
+" trabajando."
 
 #: ../../accounts.rst:93 ../../accounts.rst:96
 msgid ""
@@ -240,7 +240,7 @@ msgid ""
 "can create the bridge interface automatically, if it is missing"
 msgstr ""
 "La red verde tiene que estar enlazada a una interfaz puenteada donde el "
-"contenedor de Linux puede conectar su interfaz virtual; el procedimiento de "
+"Contenedor de Linux puede conectar su interfaz virtual; el procedimiento de "
 "instalación puede crear la interfaz de puente automáticamente, si falta"
 
 #: ../../accounts.rst:107 ../../accounts.rst:110
@@ -261,8 +261,8 @@ msgstr ""
 "Después de la instalación del proveedor de cuentas, la página "
 ":guilabel:`Proveedor de cuentas' muestra un panel de configuración. Inserte "
 "**la dirección IP adicional** como se explicó anteriormente y pulse el botón"
-" :guilabel:`Start DC`. Si es necesario, active la creación de la interfaz de"
-" puente automático para la red verde."
+" :guilabel:`Iniciar DC`. Si es necesario, active la creación de la interfaz "
+"de puente automático para la red verde."
 
 #: ../../accounts.rst:117 ../../accounts.rst:120
 msgid ""
@@ -280,9 +280,9 @@ msgid ""
 "domain. Go to the page :guilabel:`User and groups` to see the default "
 "accounts."
 msgstr ""
-"Al final del procedimiento de configuración de Active Directory, el "
-"|product| host se configura automáticamente para unirse al dominio de Active"
-" Directory. Vaya a la página :guilabel:`Usuario y grupos` para ver las "
+"Al final del procedimiento de configuración de Active Directory, el host "
+"|product| se configura automáticamente para unirse al dominio de Active "
+"Directory. Vaya a la página :guilabel:`Usuario y grupos` para ver las "
 "cuentas por defecto."
 
 #: ../../accounts.rst:127 ../../accounts.rst:130
@@ -296,7 +296,7 @@ msgid ""
 "account-section` section for more details."
 msgstr ""
 "Después de instalar Samba Active Directory, la página :guilabel:`Usuarios y "
-"grupos` tiene dos entradas predeterminadas; ambos están desactivados: "
+"grupos` tiene dos entradas predeterminadas; ambas están desactivadas: "
 ":dfn:`administrador` y :dfn:`admin`. \"Administrador\" es la cuenta "
 "privilegiada de Active Directory predeterminada y no es requerida por "
 "|product|; es seguro mantenerlo deshabilitado. \"Admin\" es definido por "
@@ -481,7 +481,7 @@ msgid ""
 ":guilabel:`Accounts provider` page:"
 msgstr ""
 "Una vez que se hayan cumplido todos los requisitos previos, proceda con la "
-"unión desde la página: guilabel: Página `Proveedor de cuentas ':"
+"unión desde la página: guilabel: `Proveedor de cuentas ':"
 
 #: ../../accounts.rst:219 ../../accounts.rst:222
 msgid ""
@@ -508,8 +508,8 @@ msgid ""
 msgstr ""
 "Pulse el botón :guilabel:`Enviar`. Se le pedirá un nombre de usuario y una "
 "contraseña: proporcione AD ``administrador`` o cualquier otra credencial de "
-"cuenta con permisos para unirse a una máquina nueva al dominio (es decir, "
-"``admin`` en |product|)."
+"cuenta con permisos para unirse a una máquina nueva al dominio (por ejemplo,"
+" ``admin`` en |product|)."
 
 #: ../../accounts.rst:233 ../../accounts.rst:236
 msgid "Bind to a remote LDAP server"
@@ -528,8 +528,8 @@ msgid ""
 "For other implementations, change the bind credentials, Base DN and "
 "encryption settings under the :guilabel:`Advanced settings` panel."
 msgstr ""
-"Para otras implementaciones, cambio de credeciales bind, DN de base y  "
-"configuracion de encripcion bajo el panel de :guilabel:`Advanced settings`"
+"Para otras implementaciones, cambio de credenciales de enlace, DN de base y "
+"configuración de cifrado, bajo el panel de :guilabel:`Ajustes avanzados`"
 
 #: ../../accounts.rst:242 ../../accounts.rst:245
 msgid "Users"
@@ -540,8 +540,8 @@ msgid ""
 "A newly created user account remains locked until it has set a password. "
 "Disabled users are denied to access system services."
 msgstr ""
-"Una nueva cuenta de usuario permanece bloqueada hasta que una password ha "
-"sido configurada. Los usuario deshabilitados tienen denegado el accesos a "
+"Una nueva cuenta de usuario permanece bloqueada hasta que una contraseña ha "
+"sido configurada. Los usuarios deshabilitados tienen denegado el accesos a "
 "los servicios del sistema."
 
 #: ../../accounts.rst:247 ../../accounts.rst:250
@@ -562,7 +562,7 @@ msgid ""
 "from the :guilabel:`Groups` one."
 msgstr ""
 "Un usuario puede ser agregado a uno o mas grupos de la pagina "
-"guilabel:`Users`  o de la pagina :guilabel:`Groups` ."
+"guilabel:`Usuarios`  o de la pagina :guilabel:`Grupos` ."
 
 #: ../../accounts.rst:254 ../../accounts.rst:257
 msgid ""
@@ -570,9 +570,9 @@ msgid ""
 "account. This can be achieved using the :guilabel:`Lock` and "
 ":guilabel:`Unlock` actions."
 msgstr ""
-"Algunas veces ud. puede necesitar bloquear el acceso de un usuario a algun "
+"Algunas veces ud. puede necesitar bloquear el acceso de un usuario a algún "
 "servicio, sin tener que borrar la cuenta. Esto se puede realizar usando las "
-"opciones  :guilabel:`Lock` y :guilabel:`Unlock`"
+"opciones  :guilabel:`Bloquear` y :guilabel:`Desbloquear`"
 
 #: ../../accounts.rst:258 ../../accounts.rst:261
 msgid "When a user is deleted, all user data will be also deleted."
@@ -582,7 +582,7 @@ msgstr ""
 
 #: ../../accounts.rst:263 ../../accounts.rst:266
 msgid "Changing the password"
-msgstr "Cambiar la contraseña"
+msgstr "Cambio de la contraseña"
 
 #: ../../accounts.rst:265 ../../accounts.rst:268
 msgid ""
@@ -590,9 +590,9 @@ msgid ""
 "account is disabled. To enable it, set a password using the "
 ":guilabel:`Change password` button."
 msgstr ""
-"Si no se configuro un password inicial durante la creacion del usuario, la "
-"cuente del usuario es deshabilitada. Para habilitarla, configure un password"
-" utilzando el boton :guilabel:`Change password`."
+"Si no se configuro una contraseña inicial durante la creación del usuario, "
+"la cuenta del usuario es deshabilitada. Para habilitarla, configure una "
+"contraseña utilizando el botón :guilabel:`Cambiar contraseña`."
 
 #: ../../accounts.rst:268 ../../accounts.rst:271
 msgid ""
@@ -601,9 +601,9 @@ msgid ""
 "the upper right corner of the screen and clicking on :guilabel:`Profile`."
 msgstr ""
 "Cuando un usuario es habilitado, el usuario puede acceder a la "
-"administracion del servidor para cambiar su propia password llendo a la  "
+"administración del servidor para cambiar su propia contraseña yendo a la  "
 "etiqueta :guilabel:`user@domain.com` en la esquina superior derecha de la "
-"pantalla y cliqueando en :guilabel:`Profile`."
+"pantalla y cliqueando en :guilabel:`Perfil`."
 
 #: ../../accounts.rst:272 ../../accounts.rst:275
 msgid ""
@@ -615,22 +615,22 @@ msgid ""
 "<password-management-section>`."
 msgstr ""
 "Si el sistema esta unido a un proveedor de cuentas de Active Directory, los "
-"usuario pueden cambiar su password usando las herramientas de Windows. En "
+"usuario pueden cambiar su contraseña usando las herramientas de Windows. En "
 "este caso  ud. no puede configurar contraseñas de menos de 6 *caracteres*  "
-"sin importar las politicas del servidor. Los checkeos preliminares de "
-"windows envian el password al servidor donde son evaluados de acuerdo a "
-":ref:`configured policies <password-management-section>`."
+"sin importar las políticas del servidor. Los chequeos preliminares de "
+"windows envían la contraseña al servidor donde son evaluados de acuerdo a "
+":ref:`políticas configuradas <password-management-section>`."
 
 #: ../../accounts.rst:280 ../../accounts.rst:283
 msgid "Credentials for services"
-msgstr "Credentials for services"
+msgstr "Credenciales de servicios"
 
 #: ../../accounts.rst:282 ../../accounts.rst:285
 msgid ""
 "The user's credentials are the **user name** and his **password**.  "
 "Credentials are required to access the services installed on the system."
 msgstr ""
-"Las credenciales de usuario son **usuario** y su **password**. Las "
+"Las credenciales de usuario son **usuario** y su **contraseña**. Las "
 "credenciales son requeridas para acceder a los servicios instalados en el "
 "sistema."
 
@@ -646,7 +646,7 @@ msgstr ""
 
 #: ../../accounts.rst:289 ../../accounts.rst:292
 msgid "For instance if the domain is *example.com* and the user is *goofy*:"
-msgstr "Por ejemplo si el dominio es *ejemplo.com* y el usuario es *goofy*:"
+msgstr "Por ejemplo si el dominio es *example.com* y el usuario es *goofy*:"
 
 #: ../../accounts.rst:292 ../../accounts.rst:295
 msgid "Long user name form"
@@ -654,7 +654,7 @@ msgstr "Formulario de nombre largo de usuario "
 
 #: ../../accounts.rst:292 ../../accounts.rst:295
 msgid "*goofy@example.com*"
-msgstr "*goofy@ejemplo.com*"
+msgstr "*goofy@example.com*"
 
 #: ../../accounts.rst:295 ../../accounts.rst:298
 msgid "Short user name form"
@@ -675,8 +675,8 @@ msgid ""
 " is propagated to all group members."
 msgstr ""
 "A un grupo de usuarios se le puede conceder algún permiso, como autorizar el"
-" acceso a través de :ref:`Carpetas compartida <shared_folders-section>`. El "
-"permiso concedido se propaga a todos los miembros del grupo."
+" acceso a través de :ref:`Carpetas compartidas <shared_folders-section>`. El"
+" permiso concedido se propaga a todos los miembros del grupo."
 
 #: ../../accounts.rst:306 ../../accounts.rst:309
 msgid ""
@@ -699,7 +699,7 @@ msgid ""
 ":dfn:`managers`: members of this group are granted access to the "
 "*Management* section of the Server Manager."
 msgstr ""
-":dfn:`gerentes`: los miembros de este grupo tienen acceso a la sección "
+":dfn:`managers`: los miembros de este grupo tienen acceso a la sección "
 "*Administración* del Administrador de servidores."
 
 #: ../../accounts.rst:320 ../../accounts.rst:323
@@ -750,7 +750,7 @@ msgid ""
 msgstr ""
 "Si un usuario o grupo con un propósito similar ya está presente en la base "
 "de datos del proveedor de cuentas remotas, pero se denomina de forma "
-"diferente, |product| puede configurarse para confiar en él con los "
+"diferente, |product| puede ser configurado para confiar en él con los "
 "siguientes comandos: ::"
 
 #: ../../accounts.rst:345 ../../accounts.rst:348
@@ -843,7 +843,7 @@ msgid ""
 "example the password As1.$ AS1. $ is invalid)"
 msgstr ""
 "No se pueden realizar repeticiones de patrones formados por 3 o más "
-"caracteres (por ejemplo, la contraseña As1.$ AS1.$ No es válida)"
+"caracteres (por ejemplo, la contraseña As1.$ AS1. $ No es válida)"
 
 #: ../../accounts.rst:371 ../../accounts.rst:374
 msgid ""
@@ -862,7 +862,7 @@ msgid ""
 "Changing the default policies is highly discouraged. The use of weak "
 "passwords often lead to compromised servers by external attackers."
 msgstr ""
-"El cambio de las políticas predeterminadas se desaconseja. El uso de "
+"El cambio de las políticas predeterminadas es contraindicado. El uso de "
 "contraseñas débiles a menudo conduce a servidores comprometidos por "
 "atacantes externos."
 
@@ -878,8 +878,8 @@ msgid ""
 msgstr ""
 "La :index:`Caducidad de contraseña` está habilitada de forma predeterminada "
 "a 6 meses desde el momento en que se establece la contraseña. El sistema "
-"enviará un e-mail para informar a los usuarios cuando su contraseña está a "
-"punto de expirar."
+"enviará un correo electrónico para informar a los usuarios cuando su "
+"contraseña está a punto de expirar."
 
 #: ../../accounts.rst:384 ../../accounts.rst:387
 msgid ""
@@ -948,7 +948,7 @@ msgstr ""
 
 #: ../../accounts.rst:422 ../../accounts.rst:425
 msgid "Alternative separator character: ::"
-msgstr "Caracter de separador alternativo: ::"
+msgstr "Carácter de separador alternativo: ::"
 
 #: ../../accounts.rst:427 ../../accounts.rst:430
 msgid "Import Emails"
@@ -959,8 +959,8 @@ msgid ""
 "It is possible to create mail aliases from a TSV (Tab Separated Values) file"
 " with the following format: ::"
 msgstr ""
-"Es posible crear alias de correo desde un archivo TSV (valores separados por"
-" tabulación) con el siguiente formato: ::"
+"Es posible crear alias de correo desde un archivo TSV (Tab Separated Values,"
+" valores separados por tabulación) con el siguiente formato: ::"
 
 #: ../../accounts.rst:433 ../../accounts.rst:436
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -90,7 +90,7 @@ msgstr "*Usuario:* admin"
 
 #: ../../webvirtmgr.rst:34
 msgid "*Password*: random alphanumeric (editable)"
-msgstr "*Contraseña*: aleatorio alfanumérico (editable)"
+msgstr "*Contraseña*: aleatoria alfanumérica (editable)"
 
 #: ../../webvirtmgr.rst:38
 msgid ""

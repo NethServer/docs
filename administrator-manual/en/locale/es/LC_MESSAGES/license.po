@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../license.rst:10 ../../license.rst:13
 msgid "Documentation license"
-msgstr "Licencia de documentación"
+msgstr "Documentación de la licencia"
 
 #: ../../license.rst:12 ../../license.rst:15
 msgid ""
@@ -35,9 +35,9 @@ msgid ""
 "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** "
 "license."
 msgstr ""
-"Esta documentación se distribuye bajo los términos de la licencia ** "
-"Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 Internacional "
-"(CC BY-NC-SA 4.0) **."
+"Esta documentación se distribuye bajo los términos de la licencia **Creative"
+" Commons - Attribution-NonCommercial-ShareAlike 4.0 Internacional (CC BY-NC-"
+"SA 4.0)**."
 
 #: ../../license.rst:20 ../../license.rst:23
 msgid "You are free to:"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../license.rst:23 ../../license.rst:26
 msgid "**Adapt** — remix, transform, and build upon the material"
-msgstr "** Adaptar** - combinar, transformar y construir sobre el material"
+msgstr "**Adaptar** - combinar, transformar y construir sobre el material"
 
 #: ../../license.rst:25 ../../license.rst:28
 msgid ""
@@ -88,8 +88,8 @@ msgid ""
 "**ShareAlike** — If you remix, transform, or build upon the material, you "
 "must distribute your contributions under the same license as the original."
 msgstr ""
-"**ShareAlike** - Si combinas, transformas o construyes el material, debes "
-"distribuir tus contribuciones bajo la misma licencia que el original."
+"**Compartir igual** - Si combinas, transformas o construyes el material, "
+"debes distribuir tus contribuciones bajo la misma licencia que el original."
 
 #: ../../license.rst:34 ../../license.rst:37
 msgid ""
