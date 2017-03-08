@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,11 +53,11 @@ msgstr ""
 
 #: ../../packages.rst:24 ../../packages.rst:27
 msgid ""
-"To install a module, check the corresponding box and click on "
+"To **install a module**, check the corresponding box and click on "
 ":guilabel:`Add`. Some modules suggest optional packages that can be "
 "installed whether at the same or at a later time."
 msgstr ""
-"Per installare un modulo, aggiungere il segno di spunta e premere il "
+"Per **installare un modulo**, aggiungere il segno di spunta e premere il "
 "pulsante :guilabel:`AGGIUNGI`. Alcuni moduli suggeriscono dei pacchetti "
 "opzionali, installabili contestualmente o in seguito."
 
@@ -65,14 +65,17 @@ msgstr ""
 msgid ""
 "To **install optional packages** at a later time, select "
 ":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
-"entry. To **remove a module**, push the :guilabel:`Remove` button."
+"entry."
 msgstr ""
 "Per **installare i pacchetti opzionali** in seguito, selezionare il tab "
 ":guilabel:`Installati` e premere il pulsante :guilabel:`Modifica` di una "
-"voce della lista. Per **rimuovere un modulo**, premere il pulsante "
-":guilabel:`Rimuovi`."
+"voce della lista."
 
-#: ../../packages.rst:34 ../../packages.rst:37
+#: ../../packages.rst:33 ../../packages.rst:36
+msgid "To **remove a module**, push the :guilabel:`Remove` button."
+msgstr "Per **rimuovere un modulo**, premere il pulsante :guilabel:`Rimuovi`."
+
+#: ../../packages.rst:37 ../../packages.rst:40
 msgid ""
 "When removing a module other modules could be removed, too! Read carefully "
 "the list of affected packages to avoid removing required features."
@@ -82,10 +85,18 @@ msgstr ""
 " evitare di rimuovere delle funzionalità necessarie."
 
 #: ../../packages.rst:44 ../../packages.rst:47
+msgid ""
+"Installed packages **cannot be removed frome the Software Center!** Please "
+"contact customer support if you need to remove an installed module."
+msgstr ""
+"I moduli installati **non possono essere rimossi attraverso il Software Center!**\n"
+"Nel caso in cui fosse necessario rimuovere un modulo invitiamo a contattare il supporto."
+
+#: ../../packages.rst:54 ../../packages.rst:57
 msgid "Software updates"
 msgstr "Aggiornamenti software"
 
-#: ../../packages.rst:46 ../../packages.rst:49
+#: ../../packages.rst:56 ../../packages.rst:59
 msgid ""
 "Updates for the installed software are listed under the :guilabel:`Updates` "
 "tab. A message appears when software updates are available."
@@ -93,7 +104,7 @@ msgstr ""
 "Gli aggiornamenti sono elencati nel tab :guilabel:`Aggiornamenti`. Quando ci"
 " sono aggiornamenti disponibili appare un messaggio apposito."
 
-#: ../../packages.rst:49 ../../packages.rst:52
+#: ../../packages.rst:61 ../../packages.rst:64
 msgid ""
 "Regularly update the installed software to fix bugs, security issues and "
 "receive new features."
@@ -101,11 +112,16 @@ msgstr ""
 "Applicare regolarmente gli aggiornamenti per fissare bug, problemi di "
 "sicurezza  e installare nuove funzionalità."
 
-#: ../../packages.rst:56 ../../packages.rst:59
+#: ../../packages.rst:65 ../../packages.rst:68
+msgid "Updates will be automatically installed by a scheduled procedure."
+msgstr ""
+"Gli update disponibili verranno installati da una procedura automatica."
+
+#: ../../packages.rst:72 ../../packages.rst:75
 msgid "List of installed packages"
 msgstr "Lista dei pacchetti installati"
 
-#: ../../packages.rst:58 ../../packages.rst:61
+#: ../../packages.rst:74 ../../packages.rst:77
 msgid ""
 "The complete list of installed RPM packages is available under "
 ":guilabel:`Installed > Packages`."
@@ -113,7 +129,7 @@ msgstr ""
 "La lista completa dei pacchetti RPM installati è disponibile nel tab "
 ":guilabel:`Installati`."
 
-#: ../../packages.rst:61 ../../packages.rst:64
+#: ../../packages.rst:77 ../../packages.rst:80
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
 "installed into the system with the full package version."
@@ -121,11 +137,11 @@ msgstr ""
 "La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
 "installati con la versione completa del pacchetto."
 
-#: ../../packages.rst:67 ../../packages.rst:70
+#: ../../packages.rst:83 ../../packages.rst:86
 msgid "Additional languages"
 msgstr "Lingue aggiuntive"
 
-#: ../../packages.rst:69 ../../packages.rst:72
+#: ../../packages.rst:85 ../../packages.rst:88
 msgid ""
 "The Server Manager allows selecting the interface language at the login "
 "screen. Only installed languages are listed."
@@ -133,7 +149,7 @@ msgstr ""
 "Il Server Manager permette di selezionare la lingue dell'interfaccia al "
 "momento del login. Sono elencate solo le lingue installate."
 
-#: ../../packages.rst:72 ../../packages.rst:75
+#: ../../packages.rst:88 ../../packages.rst:91
 msgid ""
 "In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
 "install the desired languages."

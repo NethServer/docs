@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 "En caso de que una instalación de yum no sea posible, el mejor directorio de"
 " destino para software adicional está en :file:`/opt`. Por ejemplo, dado un "
-"software llamado *misoftware*, instálelo en :file:`/opt/misoftware`."
+"software llamado *mysoftware*, instálelo en :file:`/opt/mysoftware`."
 
 #: ../../third_party.rst:36 ../../third_party.rst:39
 msgid "Backup"
@@ -104,22 +104,22 @@ msgstr ""
 
 #: ../../third_party.rst:42 ../../third_party.rst:45
 msgid "Firewall"
-msgstr "Cortafuegos"
+msgstr "Firewall"
 
 #: ../../third_party.rst:44 ../../third_party.rst:47
 msgid ""
 "If the software needs some open ports on the firewall, create a new service "
 "named ``fw_<softwarename>``."
 msgstr ""
-"Si el software necesita algunos puertos abiertos en el cortafuegos, cree un "
-"nuevo servicio llamado ``fw_<nombredelsoftware>``."
+"Si el software necesita algunos puertos abiertos en el firewall, cree un "
+"nuevo servicio llamado ``fw_<softwarename>``."
 
 #: ../../third_party.rst:46 ../../third_party.rst:49
 msgid ""
 "For example, given the software *mysoftware* which needs ports 3344 and 5566"
 " on LAN, use the following commands: ::"
 msgstr ""
-"Por ejemplo, dado el software *misoftware* que necesita los puertos 3344 y "
+"Por ejemplo, dado el software *mysoftware* que necesita los puertos 3344 y "
 "5566 en LAN, utilice los siguientes comandos: ::"
 
 #: ../../third_party.rst:53 ../../third_party.rst:56

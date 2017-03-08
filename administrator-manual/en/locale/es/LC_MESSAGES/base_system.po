@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -49,8 +49,8 @@ msgid ""
 "The page will display the :index:`status` and configuration of the system."
 msgstr ""
 "La página :index:`Dashboard` es la página de destino después de un inicio de"
-" sesión satisfactorio. La página mostrará :index:`estado` y la configuración"
-" del sistema."
+" sesión satisfactorio. La página mostrará el :index:`estado` y la "
+"configuración del sistema."
 
 #: ../../base_system.rst:29 ../../base_system.rst:32
 msgid "Disk analyzer"
@@ -62,7 +62,7 @@ msgid ""
 "graph in which you can interact with, click, and double click to navigate in"
 " the directories tree."
 msgstr ""
-"Esta herramienta se utiliza para visualizar :index:`uso del disco` en un "
+"Esta herramienta se utiliza para visualizar el :index:`uso del disco` en un "
 "simple y agradable gráfico en el que puedes interactuar, hacer clic y hacer "
 "doble clic para navegar en el árbol de directorios."
 
@@ -80,7 +80,7 @@ msgstr ""
 
 #: ../../base_system.rst:36 ../../base_system.rst:39
 msgid "Well known folders are:"
-msgstr "Las carpetas bien conocidas son:"
+msgstr "Las carpetas conocidas son:"
 
 #: ../../base_system.rst:38 ../../base_system.rst:41
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay`"
@@ -120,9 +120,9 @@ msgid ""
 "networks with special functions like DMZ (DeMilitarized Zone) and guests "
 "network."
 msgstr ""
-"Si el servidor tiene funcionalidad de firewall y puerta de enlace, manejará "
-"redes adicionales con funciones especiales como DMZ (Zona desmilitarizada) y"
-" la red de invitados."
+"Si el servidor tiene funcionalidad de firewall y gateway, manejará redes "
+"adicionales con funciones especiales como DMZ (Zona desmilitarizada) y la "
+"red de invitados."
 
 #: ../../base_system.rst:60 ../../base_system.rst:63
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "*blue*: guests network (blue role/zone). Hosts on this network can access "
 "orange and red networks, but can't access the green network"
 msgstr ""
-"*azul*: red de invitados (función zona/azul). Los hosts de esta red pueden "
+"*azul*: red de invitados (función/zona azul). Los hosts de esta red pueden "
 "acceder a redes naranjas y rojas, pero no pueden acceder a la red verde"
 
 #: ../../base_system.rst:75 ../../base_system.rst:78
@@ -211,7 +211,7 @@ msgid ""
 "only one interface, this interface must have green role."
 msgstr ""
 "El servidor debe tener al menos una interfaz de red. Cuando el servidor "
-"tiene sólo una interfaz, esta interfaz debe tener papel verde."
+"tiene sólo una interfaz, esta interfaz debe tener rol verde."
 
 #: ../../base_system.rst:82 ../../base_system.rst:85
 msgid ""
@@ -221,7 +221,7 @@ msgid ""
 msgstr ""
 "Si el servidor está instalado en un VPS público (Virtual Private Server), "
 "debe estar configurado con una interfaz verde. Todos los servicios críticos "
-"deben cerrarse mediante el panel ref: `network_services-section`."
+"deben cerrarse mediante el panel :ref:`network_services-section`."
 
 #: ../../base_system.rst:88 ../../base_system.rst:91
 msgid "Alias IP"
@@ -467,7 +467,7 @@ msgstr ""
 "Cada servicio tiene una lista de puertos \"abiertos\" en los que responde a "
 "las conexiones. Se pueden aceptar conexiones desde zonas seleccionadas. "
 "Puede configurarse un control más detallado del acceso a los servicios de "
-"red desde la página de reglas del cortafuegos."
+"red desde la página de reglas del firewall."
 
 #: ../../base_system.rst:174 ../../base_system.rst:177
 msgid "Trusted networks"
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../base_system.rst:203 ../../base_system.rst:206
 msgid "Organization contacts"
-msgstr "Organización contactos"
+msgstr "Contactos de la organización"
 
 #: ../../base_system.rst:205 ../../base_system.rst:208
 msgid ""

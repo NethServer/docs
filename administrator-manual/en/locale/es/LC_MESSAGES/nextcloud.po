@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../nextcloud.rst:10 ../../nextcloud.rst:13
+#: ../../nextcloud.rst:12 ../../nextcloud.rst:15
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: ../../nextcloud.rst:12 ../../nextcloud.rst:15
+#: ../../nextcloud.rst:14 ../../nextcloud.rst:17
 msgid ""
 "`Nextcloud <http://nextcloud.com/>`_ provides universal access to your files"
 " via the web, your computer or your mobile devices wherever you are. It also"
@@ -43,32 +43,32 @@ msgstr ""
 "sincronizar fácilmente sus contactos, calendarios y marcadores en todos sus "
 "dispositivos y permite la edición básica directamente en la web."
 
-#: ../../nextcloud.rst:17 ../../nextcloud.rst:20
+#: ../../nextcloud.rst:19 ../../nextcloud.rst:22
 msgid "**Key features:**"
 msgstr "**Características principales:**"
 
-#: ../../nextcloud.rst:19 ../../nextcloud.rst:22
+#: ../../nextcloud.rst:21 ../../nextcloud.rst:24
 msgid ""
 "preconfigure :index:`Nextcloud` with MariaDB and default access credential"
 msgstr ""
 "preconfigurar :index:`Nextcloud` con MariaDB y credencial de acceso "
 "predeterminada"
 
-#: ../../nextcloud.rst:20 ../../nextcloud.rst:23
+#: ../../nextcloud.rst:22 ../../nextcloud.rst:25
 msgid "integration with |product| system users and groups"
 msgstr "Integración con usuarios y grupos del sistema |product|"
 
-#: ../../nextcloud.rst:21 ../../nextcloud.rst:24
+#: ../../nextcloud.rst:23 ../../nextcloud.rst:26
 msgid "automatic backup data with nethserver-backup-data tool"
 msgstr ""
 "Datos de copia de seguridad automática con la herramienta nethserver-backup-"
 "data"
 
-#: ../../nextcloud.rst:25 ../../nextcloud.rst:28
+#: ../../nextcloud.rst:27 ../../nextcloud.rst:30
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../nextcloud.rst:27 ../../nextcloud.rst:30
+#: ../../nextcloud.rst:29 ../../nextcloud.rst:32
 msgid ""
 "The installation can be done through the |product| web interface. After the "
 "installation:"
@@ -76,19 +76,19 @@ msgstr ""
 "La instalación se puede culminar a través de la interfaz web de |product|. "
 "Después de la instalación:"
 
-#: ../../nextcloud.rst:30 ../../nextcloud.rst:33
+#: ../../nextcloud.rst:32 ../../nextcloud.rst:35
 msgid "open the url https://your_nethserver_ip/nextcloud"
 msgstr "abrir la url https://your_nethserver_ip/nextcloud"
 
-#: ../../nextcloud.rst:31 ../../nextcloud.rst:34
+#: ../../nextcloud.rst:33 ../../nextcloud.rst:36
 msgid "use **admin/Nethesis,1234** as default credentials"
 msgstr "use **admin/Nethesis,1234** como credenciales por defecto"
 
-#: ../../nextcloud.rst:32 ../../nextcloud.rst:35
+#: ../../nextcloud.rst:34 ../../nextcloud.rst:37
 msgid "change the default password"
 msgstr "cambiar la contraseña por defecto"
 
-#: ../../nextcloud.rst:34 ../../nextcloud.rst:37
+#: ../../nextcloud.rst:36 ../../nextcloud.rst:39
 msgid ""
 "All users configured inside any user provider (see :ref:`users_and_groups-"
 "section`) can automatically access the NextCloud installation. After the "
@@ -100,11 +100,11 @@ msgstr ""
 "instalación de NextCloud. Después de la instalación, se agrega un nuevo "
 "widget de aplicación al panel de interfaz web |product|."
 
-#: ../../nextcloud.rst:38 ../../nextcloud.rst:41
+#: ../../nextcloud.rst:40 ../../nextcloud.rst:43
 msgid "User list"
 msgstr "Lista de usuarios"
 
-#: ../../nextcloud.rst:40 ../../nextcloud.rst:43
+#: ../../nextcloud.rst:42 ../../nextcloud.rst:45
 msgid ""
 "All users are listed inside the administrator panel of NextCloud using a "
 "unique indeitifier containing letters and numenrs. This is because the "
@@ -118,11 +118,11 @@ msgstr ""
 "internos como se informó en la sección `Usuario interno' de`Documentación "
 "Oficial Netxtcloud <https://docs.nextcloud.com>`_."
 
-#: ../../nextcloud.rst:45 ../../nextcloud.rst:48
+#: ../../nextcloud.rst:47 ../../nextcloud.rst:50
 msgid "Trusted Domains"
 msgstr "Dominios confiables"
 
-#: ../../nextcloud.rst:47 ../../nextcloud.rst:50
+#: ../../nextcloud.rst:49 ../../nextcloud.rst:52
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -130,18 +130,18 @@ msgstr ""
 "Los dominios de confianza son una lista de dominios en los que los usuarios "
 "pueden iniciar sesión. Los dominios de confianza predeterminados son:"
 
-#: ../../nextcloud.rst:49 ../../nextcloud.rst:52
+#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
 msgid "domain name"
 msgstr "nombre de dominio"
 
-#: ../../nextcloud.rst:50 ../../nextcloud.rst:53
+#: ../../nextcloud.rst:52 ../../nextcloud.rst:55
 msgid "ip address"
 msgstr "dirección ip"
 
-#: ../../nextcloud.rst:52 ../../nextcloud.rst:55
+#: ../../nextcloud.rst:54 ../../nextcloud.rst:57
 msgid "To add a new one use: ::"
 msgstr "Para añadir uno nuevo use: ::"
 
-#: ../../nextcloud.rst:57 ../../nextcloud.rst:60
+#: ../../nextcloud.rst:59 ../../nextcloud.rst:62
 msgid "To add more than one, concatenate the names with a comma."
 msgstr "Para agregar más de uno, concatene los nombres con una coma."

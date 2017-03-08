@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 12:26+0100\n"
+"POT-Creation-Date: 2017-03-08 15:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -185,7 +185,7 @@ msgstr "El servidor :dfn:`TFTP` [#TFTP]_"
 
 #: ../../dhcp.rst:97 ../../dhcp.rst:100
 msgid "the software for the client, served through TFTP"
-msgstr "El software para el cliente, a través de TFTP"
+msgstr "El software para el cliente, servido a través de TFTP"
 
 #: ../../dhcp.rst:105 ../../dhcp.rst:108
 msgid ""
