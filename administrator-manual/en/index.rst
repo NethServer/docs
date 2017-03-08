@@ -58,6 +58,7 @@ Modules
    mail
    webmail
    webtop4
+   webtop5
    pop3_proxy
    pop3_connector
    chat

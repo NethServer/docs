@@ -82,6 +82,15 @@ It is also possibile to enable z-push debug using these commands: ::
 Instead of ``LOGLEVEL_DEBUG`` you can use any constant supported by z-push implementation.
 See ``/usr/share/webtop/z-push/config.php``.
 
+You can test Active Sync using this command (please set user, password and server_name): ::
+  
+  curl -k -u goofy@local.neth.eu:password https://server_name/Microsoft-Server-ActiveSync
+
+You should see an HTML output containing the string: ::
+
+  GET not supported
+
+
 
 Tomcat instance
 ===============
