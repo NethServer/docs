@@ -12,6 +12,14 @@ It's composed by three parts:
 
 Access to web application is forced in SSL mode.
 
+WebTop 5 has been split in 4 different RPMs:
+
+- webtop5-core: Tomcat webapp, derived from a WAR. It contains all jars developed by Sonicle. This package will be updated at each
+  WebTop release
+- webtop5-libs: derived from a WAR, it contains all third-party jars. This package will be seldom updated
+- webtop5-zpush: ActiveSync implementation for WebTop, it contains PHP code from z-push project (http://z-push.org/)
+- nethserver-webtop5: NethServer auto-configuration for WebTop
+
 Database
 ========
 
