@@ -225,6 +225,9 @@ Substitute ``nscom`` with ``nsent`` or any other tag corresponding to a
 Remember to **commit any change** to ``.po`` files (also newly added files), and
 push commits to GitHub.  The ReadTheDocs build is triggered automatically.
 
+When creating new rst files, remember also to add them as new 
+resources to Transifex by manually editing ``.tx/config``.
+
 Upgrading developer manual
 ==========================
 
