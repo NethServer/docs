@@ -106,7 +106,7 @@ Importing from SOGo
 
 **Please read all directions before importing any data to ensure import is successful**
 
-Migration of Calendar and Address book data from SOGo to Webop can be accomplished by using the following scripts, and following the steps listed below:
+Migration of Calendar and Address book data from SOGo to WebTop can be accomplished by using the following scripts, and following the steps listed below:
 
 * Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`
 * Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`
