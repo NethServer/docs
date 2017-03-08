@@ -401,7 +401,7 @@ Valid actions for traffic shaping rules are:
 Assumptions and limitations
 
 1. All nDPI traffic is marked in forward chain.
-   When a nDPI protocol is found, the whole connection is marke.
+   When a nDPI protocol is found, the whole connection is marked.
 
 2. Priority rules are in post chain and can use nDPI markers.
    If a priority rule uses a role (interface) as source, the rule can't be added 
