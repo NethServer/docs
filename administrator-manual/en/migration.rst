@@ -9,6 +9,11 @@ Migration from NethService/SME Server
 Migration is the process to convert a SME Server/NethService
 machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 
+.. warning:: 
+    
+    Before running the migration procedure, read carefully all the sections of this
+    chapter.
+
 #. In the source host, create a full backup archive and move it
    to the destination host.
 
@@ -36,9 +41,25 @@ machine (:dfn:`source`) into a |product| (:dfn:`destination`).
 Accounts provider
 =================
 
-You should install an account provider before starting the migration procedure.
-If you choose to have a Samba DC, remember to fully configure the DC before
-executing the ``migration-import`` event.
+You should configure an :ref:`accounts provider <account-providers>` before
+starting the migration procedure. 
+
+* If the source system was joined to an Active Directory domain (Samba server
+  role was ADS), configure a *remote Active Directory* accounts provider.
+  
+* If the source system was a NT Primary Domain Controller (Samba server role was
+  ADS) install a *local Active Directory* accounts provider.
+
+* If access to Shared Folders on the destination system requires user
+  authentication, install a *local Active Directory* accounts provider.
+
+* In any other case, install a *local LDAP* accounts provider.
+
+.. warning:: 
+
+    If you choose a local Active Directory accounts provider, remember to
+    fully configure and start the DC before executing the ``migration-import`` event.
+    See :ref:`account-providers`.
 
 
 .. index::
