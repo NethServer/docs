@@ -50,7 +50,7 @@ starting the migration procedure.
 * If the source system was a NT Primary Domain Controller (Samba server role was
   ADS) install a *local Active Directory* accounts provider.
 
-* If access to Shared Folders on the destination system require user
+* If access to Shared Folders on the destination system requires user
   authentication, install a *local Active Directory* accounts provider.
 
 * In any other case, install a *local LDAP* accounts provider.
