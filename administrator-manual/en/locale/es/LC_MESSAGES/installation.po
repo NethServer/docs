@@ -78,7 +78,7 @@ msgstr "Tipos de instalación"
 
 #: ../../installation.rst:47 ../../installation.rst:50
 msgid "|product| supports two installation modes. In short:"
-msgstr "|product| admite dos modos de instalación. En breve:"
+msgstr "|product| admite dos modos de instalación. En resumen:"
 
 #: ../../installation.rst:49 ../../installation.rst:52
 msgid "**Installing from ISO**"
@@ -309,7 +309,7 @@ msgid ""
 msgstr ""
 "En el menú de arranque, puede agregar parámetros adicionales pulsando "
 ":kbd:`TAB` y editando la línea de comandos del kernel. Esto puede ser útil "
-"en modo *desatendido *."
+"en modo *desatendido*."
 
 #: ../../installation.rst:165 ../../installation.rst:168
 msgid "To disable raid, just add this option to the command line: ::"
@@ -501,7 +501,7 @@ msgstr "Zona horaria: UTC"
 
 #: ../../installation.rst:262 ../../installation.rst:265
 msgid "Default ``root`` password: ``Nethesis,1234``"
-msgstr "Predeterminado ``root`` contraseña: ``Nethesis,1234``"
+msgstr "Contraseña predeterminada de``root``: ``Nethesis,1234``"
 
 #: ../../installation.rst:263 ../../installation.rst:266
 msgid ""
@@ -509,7 +509,7 @@ msgid ""
 ":ref:`fallback IP configuration <fallback-ip-configuration>` is applied"
 msgstr ""
 "DHCP habilitado en todas las interfaces de red; Si no se recibe una "
-"concesión DHCP, se aplica la opción: ref: `fallback IP configuration "
+"concesión DHCP, se aplica la opción :ref:`Configuración IP alternativa "
 "<fallback-ip-configuration>"
 
 #: ../../installation.rst:265 ../../installation.rst:268
@@ -564,7 +564,7 @@ msgstr ""
 
 #: ../../installation.rst:305 ../../installation.rst:308
 msgid "Enterprise promotion"
-msgstr "Promoción de empresas"
+msgstr "Promoción de Enterprise"
 
 #: ../../installation.rst:307 ../../installation.rst:310
 msgid "To promote to the Enterprise version run the following command: ::"
@@ -576,7 +576,7 @@ msgid ""
 "Proceed with :ref:`registration <registration-section>` then run the "
 "following command: ::"
 msgstr ""
-"Proceda con el :ref: `registro <registration-section>` y luego ejecute el "
+"Proceda con el :ref:`registro <registration-section>` y luego ejecute el "
 "siguiente comando: ::"
 
 #: ../../installation.rst:318 ../../installation.rst:321
@@ -589,6 +589,6 @@ msgid ""
 "<access-section>` to :ref:`install additional software <package_manager-"
 "section>`."
 msgstr ""
-"Al final del procedimiento de instalación, ref: `access the server-manager "
-"<access-section>` a: ref:`install additional software <package_manager-"
-"section>`."
+"Al final del procedimiento de instalación, ref:`acceda del administrador del"
+" servidor <access-section>` a: ref:`Instalar software adicional "
+"<package_manager-section>`."

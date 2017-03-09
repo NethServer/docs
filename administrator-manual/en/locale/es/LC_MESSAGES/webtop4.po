@@ -460,15 +460,17 @@ msgstr "API de Dropbox"
 
 #: ../../webtop4.rst:240 ../../webtop4.rst:243
 msgid "Access https://www.dropbox.com/developers/apps and create a new app"
-msgstr "Acceder a https://www.dropbox.com/developers/apps y crear una nueva r"
+msgstr ""
+"Acceder a https://www.dropbox.com/developers/apps y crear una nueva "
+"aplicación"
 
 #: ../../webtop4.rst:241 ../../webtop4.rst:244
 msgid ""
 "Insert the new credential key pair (App key e App secret) inside WebTop "
 "configuration"
 msgstr ""
-"Inserte el nuevo par de claves de credencial (clave de aplicación y secreto "
-"de aplicación) dentro de la configuración de WebTop"
+"Inserte el nuevo par de claves de credencial (App key e App secret) dentro "
+"de la configuración de WebTop"
 
 #: ../../webtop4.rst:253 ../../webtop4.rst:256
 msgid ""

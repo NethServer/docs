@@ -135,8 +135,8 @@ msgid ""
 msgstr ""
 "Si se seleccionó una cuenta para la entrega y se ha suprimido "
 "posteriormente, la configuración se vuelve incoherente. Si esto sucede, la "
-"configuración de la cuenta existente en :guilabel: `Conector POP3` debe "
-"estar deshabilitada o borrada."
+"configuración de la cuenta existente en :guilabel:`Conector POP3` debe estar"
+" deshabilitada o borrada."
 
 #: ../../pop3_connector.rst:59 ../../pop3_connector.rst:62
 msgid "References"

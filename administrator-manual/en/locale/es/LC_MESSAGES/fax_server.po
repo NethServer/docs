@@ -241,7 +241,7 @@ msgid ""
 "transformed into a fax and sent to the recipient."
 msgstr ""
 "Todos los correos electrónicos enviados a la red local en "
-"``sendfax@<nombrededominio>`` serán transformados en un fax y enviados al "
+"``sendfax@<domainname>`` serán transformados en un fax y enviados al "
 "destinatario."
 
 #: ../../fax_server.rst:88 ../../fax_server.rst:91
@@ -249,7 +249,7 @@ msgid ""
 "The ``<domainname>`` must match a local mail domain configured for local "
 "delivery."
 msgstr ""
-"El ``<nombrededominio>`` debe coincidir con un dominio de correo local "
+"El ``<domainname>`` debe coincidir con un dominio de correo local "
 "configurado para la entrega local."
 
 #: ../../fax_server.rst:90 ../../fax_server.rst:93
