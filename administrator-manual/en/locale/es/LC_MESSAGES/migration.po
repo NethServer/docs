@@ -42,6 +42,8 @@ msgid ""
 "Before running the migration procedure, read carefully all the sections of "
 "this chapter."
 msgstr ""
+"Antes de ejecutar el procedimiento de migración, lea atentamente todas las "
+"secciones de este capítulo. "
 
 #: ../../migration.rst:24 ../../migration.rst:27
 msgid ""
@@ -98,28 +100,39 @@ msgid ""
 "You should configure an :ref:`accounts provider <account-providers>` before "
 "starting the migration procedure."
 msgstr ""
+"Debe configurar un :ref:`proveedor de cuentas <account-providers>` antes de "
+"iniciar el procedimiento de migración."
 
 #: ../../migration.rst:54 ../../migration.rst:57
 msgid ""
 "If the source system was joined to an Active Directory domain (Samba server "
 "role was ADS), configure a *remote Active Directory* accounts provider."
 msgstr ""
+"Si el sistema de origen se unió a un dominio de Active Directory (la función"
+" de servidor Samba era ADS), configure un proveedor de cuentas *remoto de "
+"Active Directory*."
 
 #: ../../migration.rst:57 ../../migration.rst:60
 msgid ""
 "If the source system was a NT Primary Domain Controller (Samba server role "
 "was PDC) install a *local Active Directory* accounts provider."
 msgstr ""
+"Si el sistema de origen era un Primary Domain Controller de NT (el rol del "
+"servidor de Samba era PDC), instale un proveedor de cuentas *Active "
+"Directory local*."
 
 #: ../../migration.rst:60 ../../migration.rst:63
 msgid ""
 "If access to Shared Folders on the destination system requires user "
 "authentication, install a *local Active Directory* accounts provider."
 msgstr ""
+"Si el acceso a carpetas compartidas en el sistema de destino requiere "
+"autenticación de usuario, instale un proveedor de cuentas *Active Directory "
+"local*."
 
 #: ../../migration.rst:63 ../../migration.rst:66
 msgid "In any other case, install a *local LDAP* accounts provider."
-msgstr ""
+msgstr "En cualquier otro caso, instale un proveedor de cuentas *LDAP local*."
 
 #: ../../migration.rst:67 ../../migration.rst:70
 msgid ""
@@ -127,6 +140,9 @@ msgid ""
 "configure and start the DC before executing the ``migration-import`` event. "
 "See :ref:`account-providers`."
 msgstr ""
+"Si elige un proveedor de cuentas de Active Directory local, recuerde "
+"configurar e iniciar completamente el controlador de dominio antes de "
+"ejecutar el evento ``migration-import``. Véase :ref:`account-providers`."
 
 #: ../../migration.rst:78 ../../migration.rst:81
 msgid "Email"

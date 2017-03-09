@@ -87,7 +87,7 @@ msgstr "Filtro Web: fijar perfiles basados en grupos"
 
 #: ../../release_notes.rst:26 ../../release_notes.rst:29
 msgid "Firewall: fix selection of time conditions"
-msgstr "Cortafuegos: fija la selección de las condiciones de tiempo"
+msgstr "Firewall: fija la selección de las condiciones de tiempo"
 
 #: ../../release_notes.rst:27 ../../release_notes.rst:30
 msgid "IPS: update configuration for latest pulledpork release"

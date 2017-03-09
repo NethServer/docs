@@ -45,7 +45,9 @@ msgstr "El sistema admite dos tipos de VPN:"
 
 #: ../../vpn.rst:17 ../../vpn.rst:20
 msgid ":index:`roadwarrior`: connect a remote client to the internal network"
-msgstr ":index:`roadwarrior`: conecta un cliente remoto a la red interna"
+msgstr ""
+":index:`roadwarrior`: o modo guerrero, conecta un cliente remoto a la red "
+"interna"
 
 #: ../../vpn.rst:19 ../../vpn.rst:22
 msgid ":index:`net2net` or :index:`tunnel`: connect two remote networks"
@@ -88,15 +90,14 @@ msgstr "Configuración sencilla"
 
 #: ../../vpn.rst:34 ../../vpn.rst:37
 msgid "Roadwarrior"
-msgstr "Roadwarrior"
+msgstr "Roadwarrior/modo guerrero"
 
 #: ../../vpn.rst:36 ../../vpn.rst:39
 msgid ""
 "The OpenVPN server in roadwarrior mode allows connection of multiple "
 "clients."
 msgstr ""
-"El servidor OpenVPN en modo roadwarrior permite la conexión de varios "
-"clientes."
+"El servidor OpenVPN en modo guerrero permite la conexión de varios clientes."
 
 #: ../../vpn.rst:38 ../../vpn.rst:41
 msgid "Supported authentication methods are:"

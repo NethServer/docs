@@ -47,7 +47,9 @@ msgstr "Gestión de acceso con usuario / contraseña"
 msgid ""
 "Pricing based on prepaid credit, date expiration, traffic usage or freely "
 "accessible"
-msgstr "Gestión de acceso con usuario / contraseña"
+msgstr ""
+"Precios basados en crédito prepagado, vencimiento de la fecha, uso del "
+"tráfico o acceso libre"
 
 #: ../../hotspot.rst:23
 msgid "Login manager from web panel"
