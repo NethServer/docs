@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../firewall.rst:12 ../../firewall.rst:15
 msgid "Firewall and gateway"
-msgstr "Firewall y gateway"
+msgstr "Firewall y gateway / Cortafuego y Puerta de enlace"
 
 #: ../../firewall.rst:14 ../../firewall.rst:17
 msgid ""
@@ -36,10 +36,10 @@ msgid ""
 "network and the Internet passes through the server that decides how to route"
 " packets and what rules to apply."
 msgstr ""
-"|product| Puede actuar como: index:`firewall` y :index:`gateway` dentro de "
-"la red donde está instalado. Todo el tráfico entre computadoras de la red "
-"local e Internet pasa a través del servidor que decide cómo enrutar paquetes"
-" y qué reglas aplicar."
+"|product| Puede actuar como: index:`cortafuego` y :index:`puerta de enlace` "
+"dentro de la red donde está instalado. Todo el tráfico entre computadoras de"
+" la red local e Internet pasa a través del servidor que decide cómo enrutar "
+"paquetes y qué reglas aplicar."
 
 #: ../../firewall.rst:18 ../../firewall.rst:21
 msgid "Main features:"
@@ -120,8 +120,8 @@ msgid ""
 "The firewall implements two default policies editable from the page "
 ":menuselection:`Firewall rules` -> :guilabel:`Configure`:"
 msgstr ""
-"El firewall implementa dos políticas predeterminadas editables desde la "
-"página :menuselection:`Reglas de firewall` ->: guilabel:` Configurar`:"
+"El cortafuego implementa dos políticas predeterminadas editables desde la "
+"página :menuselection:`Reglas de firewall` -> :guilabel:` Configurar`:"
 
 #: ../../firewall.rst:49 ../../firewall.rst:52
 msgid ":dfn:`Allowed`: all traffic from green to red is allowed"
@@ -177,7 +177,7 @@ msgid ""
 "configured rules. If the packet match a rule, the rule is applied."
 msgstr ""
 "Las :index:`Reglas` se aplican a todo el tráfico que pasa a través del "
-"firewall. Cuando un paquete de red se desplaza de una zona a otra, el "
+"cortafuego. Cuando un paquete de red se desplaza de una zona a otra, el "
 "sistema busca entre las reglas configuradas. Si el paquete coincide con una "
 "regla, se aplica la regla."
 
@@ -262,7 +262,7 @@ msgid ""
 "The firewall will not generate rules for blue and orange zones, if at least "
 "a red interface is configured."
 msgstr ""
-"El firewall no generará reglas para las zonas azul y naranja, si al menos "
+"El cortafuego no generará reglas para las zonas azul y naranja, si al menos "
 "una interfaz roja está configurada."
 
 #: ../../firewall.rst:94 ../../firewall.rst:97
@@ -337,7 +337,7 @@ msgstr ""
 msgid ""
 "Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection"
 msgstr ""
-"Deep Packet Inspection, Inspección profunda de paquetes "
+"Inspección profunda de paquete, Deep Packet Inspection "
 "https://es.wikipedia.org/wiki/Inspección_profunda_de_paquete"
 
 #: ../../firewall.rst:127 ../../firewall.rst:130
@@ -537,7 +537,7 @@ msgid ""
 "local network can access the service on the green zone. Any request made by "
 "a user outside the local network is blocked."
 msgstr ""
-"El firewall bloquea las solicitudes de las redes públicas a las privadas. "
+"El cortafuego bloquea las solicitudes de las redes públicas a las privadas. "
 "Por ejemplo, si el servidor web se ejecuta dentro de la LAN, sólo los "
 "equipos de la red local pueden acceder al servicio en la zona verde. "
 "Cualquier solicitud hecha por un usuario fuera de la red local está "
@@ -812,8 +812,8 @@ msgid ""
 "transmission, check the latency and tune the available bandwidth."
 msgstr ""
 "La :index:`Modulación del tráfico` permite aplicar reglas de prioridad sobre"
-" el tráfico de red a través del firewall. De esta forma es posible optimizar"
-" la transmisión, comprobar la latencia y afinar el ancho de banda "
+" el tráfico de red a través del cortafuego. De esta forma es posible "
+"optimizar la transmisión, comprobar la latencia y afinar el ancho de banda "
 "disponible."
 
 #: ../../firewall.rst:285 ../../firewall.rst:288
@@ -877,15 +877,15 @@ msgstr ""
 
 #: ../../firewall.rst:309 ../../firewall.rst:312
 msgid "Firewall objects"
-msgstr "Objetos del firewall"
+msgstr "Objetos del cortafuego"
 
 #: ../../firewall.rst:311 ../../firewall.rst:314
 msgid ""
 ":index:`Firewall objects` are representations of network components and are "
 "useful to simplify the creation of rules."
 msgstr ""
-"Los :index:`Objetos del firewall` son representaciones de componentes de red"
-" y son útiles para simplificar la creación de reglas."
+"Los :index:`Objetos del cortafuego` son representaciones de componentes de "
+"red y son útiles para simplificar la creación de reglas."
 
 #: ../../firewall.rst:314 ../../firewall.rst:317
 msgid ""
@@ -931,7 +931,7 @@ msgid ""
 "firewall rules only for one green (192.168.2.0/24)."
 msgstr ""
 "Ejemplo 2 : tiene varias interfaces verdes pero desea crear reglas de "
-"cortafuegos sólo para una verde (192.168.2.0/24)."
+"firewall sólo para una verde (192.168.2.0/24)."
 
 #: ../../firewall.rst:327 ../../firewall.rst:330
 msgid ""
@@ -1013,13 +1013,13 @@ msgid ""
 "other traffic. In this case, hosts without a reservation will not be able to"
 " access the firewall nor the external network."
 msgstr ""
-"Cuando el sistema actúa como servidor DHCP, el firewall puede utilizar la "
+"Cuando el sistema actúa como servidor DHCP, el cortafuego puede utilizar la "
 "lista de reservas de DHCP para verificar estrictamente todo el tráfico "
 "generado desde los hosts dentro de las redes locales. Cuando :index:`Enlace "
 "IP/MAC` está habilitado, el administrador elegirá qué política se aplicará a"
 " los hosts sin una reserva de DHCP. El uso común es permitir el tráfico "
 "solamente desde los anfitriones conocidos y bloquear todo el otro tráfico. "
-"En este caso, los hosts sin reserva no podrán acceder al firewall ni a la "
+"En este caso, los hosts sin reserva no podrán acceder al cortafuego ni a la "
 "red externa."
 
 #: ../../firewall.rst:358 ../../firewall.rst:361

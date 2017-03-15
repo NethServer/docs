@@ -79,8 +79,8 @@ msgid ""
 msgstr ""
 "El servidor DHCP se puede habilitar en todas las interfaces *verde * y *azul"
 " * (ver :ref:`network-section`). |product| asignará una dirección IP libre "
-"dentro de la configuración :dfn:`DHCP range` en la página :guilabel:`DHCP > "
-"DHCP server`."
+"dentro de la configuración :dfn:`rango DHCP` en la página :guilabel:`DHCP > "
+"Servidor DHCP`."
 
 #: ../../dhcp.rst:47 ../../dhcp.rst:50
 msgid ""
@@ -181,7 +181,7 @@ msgstr ""
 
 #: ../../dhcp.rst:95 ../../dhcp.rst:98
 msgid "the :dfn:`TFTP` server [#TFTP]_"
-msgstr "El servidor :dfn:`TFTP` [#TFTP]_"
+msgstr "el servidor :dfn:`TFTP` [#TFTP]_"
 
 #: ../../dhcp.rst:97 ../../dhcp.rst:100
 msgid "the software for the client, served through TFTP"

@@ -35,9 +35,9 @@ msgid ""
 "and encrypted connection between two or more systems using a public network,"
 " like the Internet."
 msgstr ""
-"Una :index:`VPN`(Virtual Private Network) le permite establecer una conexión"
-" segura y encriptada entre dos o más sistemas usando una red pública, como "
-"Internet."
+"Una :index:`VPN` (Virtual Private Network, Red Privada Virtual) le permite "
+"establecer una conexión segura y encriptada entre dos o más sistemas usando "
+"una red pública, como la Internet."
 
 #: ../../vpn.rst:15 ../../vpn.rst:18
 msgid "The system supports two types of VPNs:"
@@ -90,14 +90,15 @@ msgstr "Configuración sencilla"
 
 #: ../../vpn.rst:34 ../../vpn.rst:37
 msgid "Roadwarrior"
-msgstr "Roadwarrior/modo guerrero"
+msgstr "Roadwarrior / guerrero"
 
 #: ../../vpn.rst:36 ../../vpn.rst:39
 msgid ""
 "The OpenVPN server in roadwarrior mode allows connection of multiple "
 "clients."
 msgstr ""
-"El servidor OpenVPN en modo guerrero permite la conexión de varios clientes."
+"El servidor OpenVPN en modo roadwarrior - o modo guerrero - permite la "
+"conexión de varios clientes."
 
 #: ../../vpn.rst:38 ../../vpn.rst:41
 msgid "Supported authentication methods are:"

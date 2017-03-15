@@ -87,7 +87,7 @@ msgstr "Filtro Web: fijar perfiles basados en grupos"
 
 #: ../../release_notes.rst:26 ../../release_notes.rst:29
 msgid "Firewall: fix selection of time conditions"
-msgstr "Firewall: fija la selección de las condiciones de tiempo"
+msgstr "Firewall: Selecciona correcciones según condiciones de tiempo"
 
 #: ../../release_notes.rst:27 ../../release_notes.rst:30
 msgid "IPS: update configuration for latest pulledpork release"
@@ -137,7 +137,7 @@ msgid ""
 "|product| `Final changelog "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_"
 msgstr ""
-"|product| `Registro de cambios final "
+"|product| `Registro final de cambios "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_"
 
 #: ../../release_notes.rst:64 ../../release_notes.rst:67
@@ -149,7 +149,7 @@ msgid ""
 "List of `known bugs "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
 msgstr ""
-"Lista de errores conocidos "
+"Lista de `errores conocidos "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
 
 #: ../../release_notes.rst:68 ../../release_notes.rst:71
@@ -184,8 +184,8 @@ msgid ""
 "nethserver-faxweb2: see the discussion `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
 msgstr ""
-"Nethserver-faxweb2: vea la discusión `faxweb2 vs avantfax "
-"<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>` _."
+"nethserver-faxweb2: vea la discusión `faxweb2 vs avantfax "
+"<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
 
 #: ../../release_notes.rst:80 ../../release_notes.rst:83
 msgid "nethserver-fetchmail: replaced by getmail"

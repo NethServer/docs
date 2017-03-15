@@ -39,11 +39,11 @@ msgstr ""
 
 #: ../../backup.rst:17 ../../backup.rst:20
 msgid ":index:`configuration backup`"
-msgstr ":index:`configuration backup`"
+msgstr ":index:`copia de seguridad configuración`"
 
 #: ../../backup.rst:18 ../../backup.rst:21
 msgid ":index:`data backup`"
-msgstr ":index:`data backup`"
+msgstr ":index:`copia de seguridad datos`"
 
 #: ../../backup.rst:20 ../../backup.rst:23
 msgid ""
@@ -364,8 +364,8 @@ msgid ""
 " > Restore` in Server Manager, or executing: :command:`restore-config`"
 msgstr ""
 "Restaurar la copia de seguridad de la configuración desde la página "
-":guilabel:`Backup (configuration) > Restore` en el Administrador de "
-"servidores, o ejecutar: :command:`restore-config`"
+":guilabel:`Copia de seguridad (configuración) > Restaurar` en el "
+"Administrador de servidores, o ejecutar: :command:`restore-config`"
 
 #: ../../backup.rst:139 ../../backup.rst:142
 msgid ""
@@ -395,8 +395,8 @@ msgid ""
 ":guilabel:`Network` pages pop up a warning. This happens for instance in the"
 " following cases:"
 msgstr ""
-"Si la configuración de roles apunta a una placa de red faltante, las páginas"
-" :guilabel:`Dashboard`, :guilabel:`Copia de seguridad (configuración) > "
+"Si la configuración de roles apunta a una placa de red ausente, las páginas "
+":guilabel:`Dashboard`, :guilabel:`Copia de seguridad (configuración) > "
 "Restaurar` y :guilabel:`Red` muestran una advertencia. Esto podría suceder "
 "en los siguientes casos:"
 

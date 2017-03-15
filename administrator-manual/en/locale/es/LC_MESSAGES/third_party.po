@@ -137,8 +137,9 @@ msgid ""
 "command will display a list of services with their own status."
 msgstr ""
 "El software instalado con yum ya debería estar configurado para iniciarse al"
-" arrancar. Para comprobar la configuración, ejecute el :comando:`systemctl`."
-" El comando mostrará una lista de servicios con su propio estado."
+" arrancar. Para comprobar la configuración, ejecute el comando "
+":command:`systemctl`. Este mostrará una lista de servicios con su propio "
+"estado."
 
 #: ../../third_party.rst:61 ../../third_party.rst:64
 msgid "To enable a service on boot: ::"
