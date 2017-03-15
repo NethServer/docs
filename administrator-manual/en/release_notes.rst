@@ -25,6 +25,12 @@ Upgrading RC4 to Final
 To upgrade a RC4 installation to Final, go to the :guilabel:`Software Center`
 page and follow Server Manager instructions.
 
+Upgrading |product| 6 to |product| |release|
+--------------------------------------------
+
+It is possible to upgrade the previous major release of |product| to |release|,
+with a backup/restore strategy. See the :ref:`upgrade-section` for details.
+
 .. _server_manager-section:
 
 Server Manager access
@@ -60,6 +66,7 @@ Known bugs
 
 * Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+.. _discontinued-section:
 
 Discontinued packages
 ---------------------
