@@ -32,7 +32,7 @@ After the installation a new application widget is added to the |product| web in
 User list
 ---------
 
-All users are listed inside the administrator panel of NextCloud using a unique indeitifier containing letters and numenrs.
+All users are listed inside the administrator panel of NextCloud using a unique indeitifier containing letters and numbers.
 This is because the system ensures that there are no duplicate internal usernames as reported 
 in section `Internal Username` of `Official Netxtcloud documentation <https://docs.nextcloud.com>`_.
 
