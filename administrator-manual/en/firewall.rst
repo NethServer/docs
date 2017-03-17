@@ -144,7 +144,8 @@ The term :dfn:`WAN` (Wide Area Network) refers to a public network outside the s
 A :dfn:`provider` is the company who actually manage the :index:`WAN` link.
 
 The system supports up to 15 WAN connections. 
-If the server has two or more configured red cards, it is required to proceed with :index:`provider` configuration from :guilabel:`Multi WAN` page. 
+If the server has two or more configured red cards, it is required to correctly fill :guilabel:`Link weight`, 
+:guilabel:`Inbound bandwidth` and :guilabel:`Outbound bandwidth` fields from the :guilabel:`Network` page. 
 
 Each provider represents a WAN connection and is associated with a network adapter. 
 Each provider defines a :dfn:`weight`: higher the :index:`weight`, higher the priority of the network card associated with the provider. 
