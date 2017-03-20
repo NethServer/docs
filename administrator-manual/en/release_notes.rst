@@ -1,8 +1,8 @@
 =======================
-Release notes |release|
+Release notes |version|
 =======================
 
-|product| release |release|
+|product| release |version|
 
 This release is based on CentOS 7.3:
 https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
@@ -25,10 +25,10 @@ Upgrading RC4 to Final
 To upgrade a RC4 installation to Final, go to the :guilabel:`Software Center`
 page and follow Server Manager instructions.
 
-Upgrading |product| 6 to |product| |release|
+Upgrading |product| 6 to |product| |version|
 --------------------------------------------
 
-It is possible to upgrade the previous major release of |product| to |release|,
+It is possible to upgrade the previous major release of |product| to |version|,
 with a backup/restore strategy. See the :ref:`upgrade-section` for details.
 
 .. _server_manager-section:
@@ -56,8 +56,8 @@ If you want to enable user shared mailbox, execute: ::
 Changelog
 ---------
 
-|product| `Final changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_
-
+* `ISO Final changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_ (from 2017-01-17 to 2017-01-30)
+* `Rolling release changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_ (from 2017-01-30 to 2024-06-30)
 
 Known bugs
 ----------

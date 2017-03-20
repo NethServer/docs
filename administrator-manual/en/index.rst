@@ -18,8 +18,8 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
-Release notes 7
----------------
+Release notes |version|
+-----------------------
 
 .. toctree::
    :maxdepth: 2
@@ -110,6 +110,7 @@ Appendix
    :maxdepth: 1
 
    migration
+   upgrade
    license
 
 

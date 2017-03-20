@@ -6,20 +6,20 @@
 Upgrade from |product| 6
 ========================
 
-The upgrade from |product| 6 to |product| 7 can be achieved using
-the backup and restore procedure.
+The upgrade from |product| 6 to |product| |version| can be achieved using
+the **backup and restore** procedure.
 
-.. warning:: 
-    
+.. warning::
+
     Before running the migration procedure, read carefully all the sections of this
     chapter.
     Please also read :ref:`discontinued-section`.
 
 #. Make sure to have an updated backup of the original installation.
 
-#. Install |product| 7 and complete the initial steps using the first configuration wizard.
+#. Install |product| |version| and complete the initial steps using the first configuration wizard.
    The new machine must have the same hostname of the old one, while the domain name
-   can be changed to fit account provider needs.
+   can be changed to fit the accounts provider needs.
 
 #. Restore the configuration backup using the web interface.
    If any error occurs, check the :file:`/var/log/messages` log file for further information: ::
@@ -28,58 +28,117 @@ the backup and restore procedure.
 
 #. If needed, change the network configuration accordingly to the new hardware.
 
-#. Restore the data backup using the web interface.
+#. Complete the restore procedure with the following command: ::
 
-Account provider
-================
+    restore-data
+
+#. Check the restore log: ::
+
+    cat /var/log/restore-data.log
+
+Accounts provider
+=================
 
 There are different upgrade scenarios, depending on how the source machine was configured.
 
-* If the source system was joined to an Active Directory domain (Samba server
-  role was ADS), the system will keep all settings but you will need to manually migrate 
-  mail addresses (see :ref:`ad_mail_upgrade-section`).
-
 * If the source system was a NT Primary Domain Controller (Samba server role was
-  PDC), you will need to follow some easy manual steps to install a *local Active Directory*.
-  All users, groups and machine accounts will be preserved. See :ref:`samba_promotion-section`.
+  :guilabel:`Primary Domain Controller` -- PDC) or a standalone file server
+  (role was :guilabel:`Workstation` -- WS), refer to :ref:`pdc-upgrade-section`.
 
-* In any other case, if the LDAP server (nethserver-directory package) was installed
-  in the original system, a *local LDAP* accounts provider will be provided.
+* If the source system was joined to an Active Directory domain (Samba server
+  role was :guilabel:`Active Directory member` -- ADS), refer to
+  :ref:`ads-upgrade-section`.
 
-.. samba_promotion-section:
+* In any other case, the LDAP server is upgraded automatically to *local
+  LDAP accounts provider*, preserving existing users, passwords and groups.
 
-Promote to Active Directory
----------------------------
+.. _pdc-upgrade-section:
 
-ADS: how to set hostname, fix auth in advanced settings (sogo creds)
+Primary Domain Controller and Workstation upgrade
+-------------------------------------------------
 
-Email
-=====
+After the restore procedure, the following manual steps are required to promote
+the LDAP server (nethserver-directory package) to a *local Active Directory*
+accounts provider.
 
-.. ad_mail_upgrade-section:
+An additional, free, IP address from the *green* network is required by the
+Linux container to run the local Active Directory accounts provider.
 
-Migrate mail addresses from AD
-------------------------------
+For instance:
+
+* nethserver IP (green): ``192.168.98.252``
+* free additional IP in green network: ``192.168.98.7``
+
+Verify it is really a free IP:
+
+::
+
+    # ping 192.168.98.7
+    PING 192.168.98.7 (192.168.98.7) 56(84) bytes of data.
+    From 192.168.98.252 icmp_seq=1 Destination Host Unreachable
+
+Ensure there is a working Internet connection:
+
+::
+
+    # curl -I http://packages.nethserver.org/nethserver/
+    HTTP/1.1 200 OK
+
+
+Set the IP for nsdc container and run the upgrade event:
+
+::
+
+    config set nsdc service IpAddress 192.168.98.7
+    signal-event nethserver-directory-ns6upgrade
+
+For more information about the local Active Directory accounts provider, see
+:ref:`ad-local-accounts-provider-section`.
+
+.. _ads-upgrade-section:
+
+Active Directory member upgrade
+-------------------------------
+
+The system upgrade procedure tries to reuse the AD machine credentials contained
+in the configuration backup.
+
+To upgrade the server correctly:
+
+- the **machine credentials must be still valid**
+
+- the AD domain controller must be reachable
+
+At the end of the restore procedure Users and Groups page could fail to connect
+AD. To fix the credentials used by Server Manager to access AD, go to "Accounts
+provider > Advanced settings" page. For more information see
+:ref:`join-existing-ad-section`.
+
+.. warning:: Mail aliases from AD server are not imported automatically!
 
 Shared folders
 ==============
 
 Shared folders have been split into two packages:
 
-- "Shared folder" page configures only Samba shares, it provides data access using CIFS/SMB protocol and
-  can be used to share files among Windows and Linux workstations
-- The "Web access" panel provides HTTP and FTP access, it has been designed to host web sites and web applications
+- "Shared folders" page configures only Samba shares, it provides data access
+  using CIFS/SMB protocol and can be used to share files among Windows and Linux
+  workstations
 
-Every shared folder with web access configured in |product| 6 can be migrated to a virtual host
-directly from the web interface by selecting the button :guilabel:`Migrate to virtual host`.
-After the migration, data inside the new virtual host will be accessible using only the FTP and HTTP protocols.
+- The "Virtual hosts" panel provides HTTP and FTP access, it has been designed
+  to host web sites and web applications
+
+Every shared folder with web access configured in |product| 6 can be migrated to
+a virtual host directly from the web interface by selecting the action
+:guilabel:`Migrate to virtual host`. After the migration, data inside the new
+virtual host will be accessible using only FTP and HTTP protocols.
 
 
 Owncloud and Nextcloud
 ======================
 
-In |product| 7, Owncloud has officially been replaced by Nextcloud.
+In |product| |version|, Owncloud has officially been replaced by Nextcloud.
 
-But Owncloud 7 is still available to avoid service disruption after the upgrade.
-Migration from Owncloud to Nextcloud it's manual and can be arrenged according
-to users need.
+However Owncloud 7 is still available to avoid service disruption after the upgrade.
+Migration from Owncloud to Nextcloud is manual and can be arranged according
+to user's need.
