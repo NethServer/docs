@@ -179,10 +179,11 @@ Restore installed modules
 
 By default the process of configuration restore will also restore all previously installed modules.
 
-To avoid the reinstallation, execute this command before the restore: ::
+To skip the automatic installation, execute the command with the
+``--no-reinstall`` argument: ::
 
-  config setprop backup-config reinstall disabled
-     
+    restore-config --no-reinstall
+
 .. _backup_customization-section:
 
 Data backup customization
