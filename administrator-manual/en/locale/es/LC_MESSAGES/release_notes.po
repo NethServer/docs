@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-20 18:03+0100\n"
+"POT-Creation-Date: 2017-03-21 11:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -26,12 +26,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../release_notes.rst:10 ../../release_notes.rst:13
-msgid "Release notes |release|"
-msgstr "Notas de la versión |release|"
+msgid "Release notes |version|"
+msgstr ""
 
 #: ../../release_notes.rst:12 ../../release_notes.rst:15
-msgid "|product| release |release|"
-msgstr "|product| versión |release|"
+msgid "|product| release |version|"
+msgstr ""
 
 #: ../../release_notes.rst:14 ../../release_notes.rst:17
 msgid ""
@@ -106,11 +106,22 @@ msgstr ""
 ":guilabel:`Centro de software` y siga las instrucciones del Administrador "
 "del servidor"
 
+#: ../../release_notes.rst:36 ../../release_notes.rst:39
+msgid "Upgrading |product| 6 to |product| |version|"
+msgstr ""
+
 #: ../../release_notes.rst:38 ../../release_notes.rst:41
+msgid ""
+"It is possible to upgrade the previous major release of |product| to "
+"|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
+"for details."
+msgstr ""
+
+#: ../../release_notes.rst:44 ../../release_notes.rst:47
 msgid "Server Manager access"
 msgstr "Acceso al Administrador del servidor"
 
-#: ../../release_notes.rst:40 ../../release_notes.rst:43
+#: ../../release_notes.rst:46 ../../release_notes.rst:49
 msgid ""
 "If you want to grant Server Manager access to other users than root, please "
 "add the users to the \"domain admins\" group and execute: ::"
@@ -119,32 +130,38 @@ msgstr ""
 "root, agregue los usuarios al grupo de \"administradores de dominio\" y "
 "ejecute: ::"
 
-#: ../../release_notes.rst:49 ../../release_notes.rst:52
+#: ../../release_notes.rst:55 ../../release_notes.rst:58
 msgid "User shared mailbox"
 msgstr "Buzón de correo compartido del usuario"
 
-#: ../../release_notes.rst:51 ../../release_notes.rst:54
+#: ../../release_notes.rst:57 ../../release_notes.rst:60
 msgid "If you want to enable user shared mailbox, execute: ::"
 msgstr ""
 "Si desea habilitar el buzón de correo compartido de usuario, ejecute: ::"
 
-#: ../../release_notes.rst:58 ../../release_notes.rst:61
+#: ../../release_notes.rst:64 ../../release_notes.rst:67
 msgid "Changelog"
 msgstr "Registro de cambios"
 
-#: ../../release_notes.rst:60 ../../release_notes.rst:63
+#: ../../release_notes.rst:66 ../../release_notes.rst:69
 msgid ""
-"|product| `Final changelog "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_"
+"`ISO Final changelog "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_"
+" (from 2017-01-17 to 2017-01-30)"
 msgstr ""
-"|product| `Registro final de cambios "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30%20>`_"
 
-#: ../../release_notes.rst:64 ../../release_notes.rst:67
+#: ../../release_notes.rst:67 ../../release_notes.rst:70
+msgid ""
+"`Rolling release changelog "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
+" (from 2017-01-30 to 2024-06-30)"
+msgstr ""
+
+#: ../../release_notes.rst:70 ../../release_notes.rst:73
 msgid "Known bugs"
 msgstr "Errores conocidos"
 
-#: ../../release_notes.rst:66 ../../release_notes.rst:69
+#: ../../release_notes.rst:72 ../../release_notes.rst:75
 msgid ""
 "List of `known bugs "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
@@ -152,18 +169,18 @@ msgstr ""
 "Lista de `errores conocidos "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
 
-#: ../../release_notes.rst:68 ../../release_notes.rst:71
+#: ../../release_notes.rst:74 ../../release_notes.rst:77
 msgid ""
 "Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_"
 msgstr ""
 "Discusiones sobre `posibles errores "
 "<http://community.nethserver.org/c/bug>`_"
 
-#: ../../release_notes.rst:72 ../../release_notes.rst:75
+#: ../../release_notes.rst:79 ../../release_notes.rst:82
 msgid "Discontinued packages"
 msgstr "Paquetes descontinuados"
 
-#: ../../release_notes.rst:74 ../../release_notes.rst:77
+#: ../../release_notes.rst:81 ../../release_notes.rst:84
 msgid ""
 "The following packages were available in the previous 6 release and have "
 "been removed in 7:"
@@ -171,15 +188,15 @@ msgstr ""
 "Los siguientes paquetes estaban disponibles en la versión anterior 6 y se "
 "han eliminado en 7:"
 
-#: ../../release_notes.rst:77 ../../release_notes.rst:80
+#: ../../release_notes.rst:84 ../../release_notes.rst:87
 msgid "nethserver-collectd-web: replaced by nethserver-cgp"
 msgstr "nethserver-collectd-web: reemplazado por nethserver-cgp"
 
-#: ../../release_notes.rst:78 ../../release_notes.rst:81
+#: ../../release_notes.rst:85 ../../release_notes.rst:88
 msgid "nethserver-password: integrated inside nethserver-sssd"
 msgstr "nethserver-password: integrado en nethserver-sssd"
 
-#: ../../release_notes.rst:79 ../../release_notes.rst:82
+#: ../../release_notes.rst:86 ../../release_notes.rst:89
 msgid ""
 "nethserver-faxweb2: see the discussion `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
@@ -187,11 +204,11 @@ msgstr ""
 "nethserver-faxweb2: vea la discusión `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
 
-#: ../../release_notes.rst:80 ../../release_notes.rst:83
+#: ../../release_notes.rst:87 ../../release_notes.rst:90
 msgid "nethserver-fetchmail: replaced by getmail"
 msgstr "nethserver-fetchmail: reemplazado por getmail"
 
-#: ../../release_notes.rst:81 ../../release_notes.rst:84
+#: ../../release_notes.rst:88 ../../release_notes.rst:91
 msgid ""
 "nethserver-ocsinventory, nethserver-adagios: due to compatibility problems "
 "with Nagios, these modules will be mantained only on |product| 6 release"
