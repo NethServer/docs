@@ -9,6 +9,8 @@ Shared folders
 A *shared folder* is a place where files can be accessed by a group of
 people using Samba (SMB/CIFS).
 
+To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
+page.
 
 Authorizations
 --------------
