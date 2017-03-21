@@ -30,17 +30,30 @@ If an **LDAP** account provider is selected or there is no account provider at
 all, any access to shared folders is considered as *Guest access* so that
 everyone is allowed to read and write its content. 
 
+.. _smb-access-section:
+
 Network access
 --------------
 
 SMB/CIFS is a widely adopted protocol that allows to share files
-across a computer network.  In a way similar to Web URLs above, the
-shared folder name becomes the SMB "share name".
+across a computer network. The shared folder name becomes the SMB "share name".
 
 For instance, the SMB network addresses of the ``docs`` share could be ::
 
    \\192.168.1.1\docs
    \\MYSERVER\docs
+
+When accessing a SMB share, some user interfaces provide a single user name
+field. In that case, specify the **short user name** prefixed with the **NetBIOS
+domain name**.  For instance, if the NetBIOS domain name is "COMPANY" and the
+user name is "john.smith", the domain-prefixed user name to access a SMB share
+is: ::
+
+    COMPANY\john.smith
+
+On the contrary, some applications provide separate input fields for the NetBIOS
+domain name and the user name; in that case fill in the input fields
+individually.
 
 At any time, the :guilabel:`Reset permissions` button propagates the shared
 folder UNIX permissions and Posix ACLs to its contents.
