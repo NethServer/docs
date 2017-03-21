@@ -52,7 +52,7 @@ folder UNIX permissions and Posix ACLs to its contents.
 
 If the option :guilabel:`Network recycle bin` is enabled, removed
 files are actually moved into a special "wastebasket" directory. The
-:guilabel:`Keep homonym files` keeps distinct file names inside
+:guilabel:`Keep copies of files with the same name` keeps distinct file names inside
 the wastebasket directory, preventing overwrites.
 
 If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. 
