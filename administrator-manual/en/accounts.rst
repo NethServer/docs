@@ -287,6 +287,8 @@ Long user name form
 Short user name form
     *goofy*
 
+To access a shared folder, see also :ref:`smb-access-section`.
+
 .. _groups-section:
 
 Groups
