@@ -21,3 +21,4 @@ nethserver-samba
 nethserver-squid
 nethserver-suricata
 nethserver-webtop5
+nethserver-ipsec-tunnels
