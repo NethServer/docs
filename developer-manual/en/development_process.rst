@@ -140,7 +140,7 @@ The *QA team member*.
 Packager
 ^^^^^^^^
 
-The *Packager* coordinates the *Developer* and *QA member* work.  After the 
+The *Packager* coordinates the *Developer* and *QA member* work.  After the
 *Developer* opens one or more pull requests:
 
 * Selects issues with open pull requests
@@ -206,7 +206,7 @@ The developer must take care to write all documentation on:
 * Administrator Manual before release
 * Inline help before release
 
-Packages should be inside *testing* or *nethforge-testing* repositories until 
+Packages should be inside *testing* or *nethforge-testing* repositories until
 all documentation is completed.
 
 New packages
@@ -231,4 +231,62 @@ When creating a new package, make sure the following requirements are met:
 * Build the package and push it to *testing* or *nethforge-testing* repository
 
 See also :ref:`buildrpm-section`.
+
+Package updates
+===============
+
+Updates to RPM packages must obey the following rules:
+
+* New features/enhancements and bug fixes must not alter the behavior of
+  existing systems
+
+* New behaviors must be enabled by an explicit and documented sysadmin operation
+
+* RPM packages must support updates from any previous release of the same branch
+
+
+.. _iso-releases-section:
+
+ISO releases
+============
+
+Usually, the NethServer project releases a new ISO image in the following cases:
+
+* when the upstream project releases a new ISO image. The NethServer ISO is
+rebased on it.
+
+* when packages bundled in the ISO receive new features that affect the
+installation procedure and/or the initial system configuration.
+
+The NethServer ISO is almost equivalent to the upstream one, except for the
+following points:
+
+* Additional boot menu options and graphics
+
+* Additional Anaconda kickstart scripts and graphics
+
+* Additional RPMs from the NethServer project
+
+See also :ref:`buildiso-section`.
+
+Pre-releases
+------------
+
+Before any **final** ISO release, the software development process goes through
+some test versions, usually called alpha, beta and release candidate (RC). These
+releases are an excellent way to experiment with new features, but may require
+some experience using a Linux system and/or the command line.
+
+**Alpha** releases are not ready to be used in production because some features
+are not finished, furthermore upgrade to the final release will not be supported
+(but may be possible).
+
+**Beta** releases could be used in production, especially if new features are
+not used on mission critical systems. Upgrades to the final release is
+supported.
+
+**Release candidates** (RC) can be run in production, all features are supposed
+to be complete and bug free. The upgrade to the final release will be minor
+or less.
+
 
