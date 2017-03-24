@@ -53,7 +53,7 @@ For instance, the SMB network addresses of the ``docs`` share could be ::
    \\192.168.1.1\docs
    \\MYSERVER\docs
 
-.. warning: 
+.. warning::
 
   Authenticated access to shared folders is available with an Active Directory
   accounts provider. LDAP provider allows guest access only.
@@ -70,8 +70,8 @@ On the contrary, some applications provide separate input fields for the NetBIOS
 domain name and the user name; in that case fill in the input fields
 individually.
 
-Deleted files recovery
-----------------------
+Network recycle bin
+-------------------
 
 If the option :guilabel:`Network recycle bin` is enabled, removed
 files are actually moved into a special "wastebasket" directory. The
