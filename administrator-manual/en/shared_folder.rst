@@ -25,6 +25,14 @@ UNIX file system permissions.
 Access privileges can be refined further with the :guilabel:`ACL` tab, allowing
 individual users and other groups to gain read and write permissions.
 
+At any time, the :guilabel:`Reset permissions` button propagates the shared
+folder UNIX permissions and Posix ACLs to its contents.
+
+.. warning: 
+
+  Compatible SMB clients can be used to set special ACLs on a specific file or
+  sub-directory only if the File server is configured with Kerberos authentication.
+
 If :guilabel:`Guest access` is enabled, any provided authentication
 credentials are considered valid.
 
@@ -45,6 +53,11 @@ For instance, the SMB network addresses of the ``docs`` share could be ::
    \\192.168.1.1\docs
    \\MYSERVER\docs
 
+.. warning: 
+
+  Authenticated access to shared folders is available with an Active Directory
+  accounts provider. LDAP provider allows guest access only.
+
 When accessing a SMB share, some user interfaces provide a single user name
 field. In that case, specify the **short user name** prefixed with the **NetBIOS
 domain name**.  For instance, if the NetBIOS domain name is "COMPANY" and the
@@ -57,18 +70,18 @@ On the contrary, some applications provide separate input fields for the NetBIOS
 domain name and the user name; in that case fill in the input fields
 individually.
 
-At any time, the :guilabel:`Reset permissions` button propagates the shared
-folder UNIX permissions and Posix ACLs to its contents.
-
-.. warning: 
-
-    Compatible SMB clients can be used to set special ACLs on a specific file or
-    sub-directory only if the File server is configured with Kerberos authentication.
+Deleted files recovery
+----------------------
 
 If the option :guilabel:`Network recycle bin` is enabled, removed
 files are actually moved into a special "wastebasket" directory. The
 :guilabel:`Keep copies of files with the same name` keeps distinct file names inside
 the wastebasket directory, preventing overwrites.
 
+Hide a shared folder
+--------------------
+
 If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. 
 This does not affect the permission to use this resource.
+
+
