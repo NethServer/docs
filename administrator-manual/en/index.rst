@@ -68,7 +68,6 @@ Modules
    web_proxy
    content_filter
    suricata
-   firewall
    proxy_pass
    virtual_hosts
    shared_folder
