@@ -27,6 +27,7 @@ On **Fedora**, and other RPM-based distros run the command: ::
 
   yum localinstall <URL>
 
+where <URL> is http://packages.nethserver.org/nethserver/7.3.1611/base/x86_64/Packages/nethserver-mock-1.3.2-1.ns7.noarch.rpm at the time of writing.
 The build process uses Mock and must be run as a non privileged user,
 member of the ``mock`` system group.  Add your user to the ``mock``
 group: ::
