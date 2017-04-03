@@ -125,13 +125,12 @@ Steps to be executed:
 
 1. Install the new machine with the same host name as the old one
 2. Configure a data backup, so the system can retrieve saved data and configuration
-3. If the old machine was the network gateway, remember to re-install firewall module
-4. Restore the configuration backup from page :guilabel:`Backup
+3. Restore the configuration backup from page :guilabel:`Backup
    (configuration) > Restore` in Server Manager, or executing:
    :command:`restore-config`
-5. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
-6. Verify the system is functional
-7. Restore data backup executing: :command:`restore-data`
+4. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
+5. Verify the system is functional
+6. Restore data backup executing: :command:`restore-data`
 
 
 .. _restore-roles-section:
@@ -179,10 +178,11 @@ Restore installed modules
 
 By default the process of configuration restore will also restore all previously installed modules.
 
-To avoid the reinstallation, execute this command before the restore: ::
+To skip the automatic installation, execute the command with the
+``--no-reinstall`` argument: ::
 
-  config setprop backup-config reinstall disabled
-     
+    restore-config --no-reinstall
+
 .. _backup_customization-section:
 
 Data backup customization

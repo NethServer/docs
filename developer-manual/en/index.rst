@@ -44,7 +44,6 @@ Developer Manual
    backup
    gateway
    ips
-   samba
 
 .. toctree::
    :maxdepth: 2

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-08 15:42+0100\n"
+"POT-Creation-Date: 2017-03-21 11:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -35,20 +35,20 @@ msgstr "El módulo de correo electrónico se divide en tres partes principales:"
 
 #: ../../mail.rst:16 ../../mail.rst:19
 msgid "SMTP server for sending and receiving [#Postfix]_"
-msgstr "Servidor SMTP para enviar y recibir [#Postfix] _"
+msgstr "Servidor SMTP para enviar y recibir [#Postfix]_"
 
 #: ../../mail.rst:17 ../../mail.rst:20
 msgid ""
 "IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to "
 "organize it [#Sieve]_"
 msgstr ""
-"IMAP y el servidor POP3 para leer el correo electrónico [#Dovecot] _, y el "
-"lenguaje Sieve para organizarlo [#Sieve] _"
+"Servidor IMAP y POP3 para leer el correo electrónico [#Dovecot]_, y el "
+"lenguaje Sieve para organizarlo [#Sieve]_"
 
 #: ../../mail.rst:18 ../../mail.rst:21
 msgid "Anti-spam filter, anti-virus and attachments blocker [#Amavis]_"
 msgstr ""
-"Filtro anti-spam, antivirus y bloqueador de archivos adjuntos [#Amavis]"
+"Filtro anti-spam, antivirus y bloqueador de archivos adjuntos [#Amavis]_"
 
 #: ../../mail.rst:20 ../../mail.rst:23
 msgid "Benefits are"
@@ -78,11 +78,11 @@ msgstr "Consulte también los siguientes temas relacionados:"
 
 #: ../../mail.rst:29 ../../mail.rst:32
 msgid "How electronic mail works [#Email]_"
-msgstr "Cómo funciona el correo electrónico [#Email] _"
+msgstr "Cómo funciona el correo electrónico [#Email]_"
 
 #: ../../mail.rst:30 ../../mail.rst:33
 msgid "MX DNS record [#MXRecord]_"
-msgstr "Registro MX DNS [#MXRecord]"
+msgstr "Registro MX DNS [#MXRecord]_"
 
 #: ../../mail.rst:31 ../../mail.rst:34
 msgid "Simple Mail Transfer Protocol (SMTP) [#SMTP]_"
@@ -342,7 +342,7 @@ msgstr "IMAP [#IMAP]_ (recomendado)"
 
 #: ../../mail.rst:174 ../../mail.rst:177
 msgid "POP3 [#POP3]_ (obsolete)"
-msgstr "POP3 [# POP3]_ (obsoleto)"
+msgstr "POP3 [#POP3]_ (obsoleto)"
 
 #: ../../mail.rst:176 ../../mail.rst:179
 msgid ""
@@ -652,7 +652,7 @@ msgid ""
 "the ``Subject`` header."
 msgstr ""
 "Los mensajes marcados como spam tienen una cabecera especial ``X-Spam-Flag: "
-"YES``. La opción :guilabel:`Añadir un prefijo a asunto de los mensajes de "
+"SI``. La opción :guilabel:`Añadir un prefijo al asunto de los mensajes de "
 "spam` hace que el indicador de spam sea visible en el asunto del mensaje, "
 "prefijando la cadena dada al encabezado``Asunto``."
 

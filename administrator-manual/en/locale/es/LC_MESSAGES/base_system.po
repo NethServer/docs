@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-08 15:42+0100\n"
+"POT-Creation-Date: 2017-03-21 11:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../base_system.rst:203 ../../base_system.rst:206
 msgid "Organization contacts"
-msgstr "Contactos de la organización"
+msgstr "Organización contactos"
 
 #: ../../base_system.rst:205 ../../base_system.rst:208
 msgid ""
@@ -532,14 +532,14 @@ msgid ""
 " for user accounts.  The organization name and address are also displayed on"
 " the Server Manager login screen."
 msgstr ""
-"Los campos de la página :guilabel:'Contactos de la organización' se utilizan"
-" como valores predeterminados para las cuentas de usuario. El nombre y la "
+"Los campos de la página :guilabel:`Organización contactos` se utilizan como "
+"valores predeterminados para las cuentas de usuario. El nombre y la "
 "dirección de la organización también se muestran en la pantalla de inicio de"
 " sesión del Administrador del servidor."
 
 #: ../../base_system.rst:215 ../../base_system.rst:218
 msgid "Server certificate"
-msgstr "Certificado de servidor"
+msgstr "Certificado del servidor"
 
 #: ../../base_system.rst:217 ../../base_system.rst:220
 msgid ""
@@ -580,7 +580,7 @@ msgid ""
 "uploading an existing certificate and private RSA key. Optionally a "
 "certificate chain file can be specified, too. All files must be PEM-encoded."
 msgstr ""
-"cargando un certificado existente y una clave RSA privada. También se puede "
+"cargar un certificado existente y una clave RSA privada. También se puede "
 "especificar un archivo de cadena de certificados. Todos los archivos deben "
 "estar codificados con PEM."
 
@@ -589,8 +589,8 @@ msgid ""
 "requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is "
 "possible if the following requirements are met:"
 msgstr ""
-"Solicitando un nuevo certificado de *Let's Encrypt* [#Letsencrypt]_. Esto es"
-" posible si se cumplen los siguientes requisitos:"
+"solicitar un nuevo certificado de *Let's Encrypt* [#Letsencrypt]_. Esto es "
+"posible si se cumplen los siguientes requisitos:"
 
 #: ../../base_system.rst:236 ../../base_system.rst:239
 msgid ""

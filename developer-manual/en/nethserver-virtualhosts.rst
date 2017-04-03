@@ -19,6 +19,30 @@ A new ``vhost`` database is defined by this module. It contains records of type
         SslCertificate=/etc/pki/tls/certs/NSRV.crt
         status=enabled
 
+The database contains a special ``default`` record which represents the defaul virtual host: ::
+
+  default=vhost
+    Description=Default virtual host
+    FtpPassword=
+    FtpStatus=enabled
+
+This virtual host is always enabled and can't be deleted.
+If FTP access is enabled, the user will be chrooted inside ``/var/www/html`` directory.
+
+NethServer 6 upgrade
+--------------------
+
+Shared folders from NethServer 6 with property ``HttpStatus`` set to ``enabled`` can
+be migrated to virtual hosts using the ``vhost-migrate-ibay`` event: ::
+
+    signal-event vhost-migrate-ibay <ibay-name>
+
+If the original ibay was availble to any virtual hosts (`HttpVirtualHost` = ``__ANY__``),
+the ibay will be migrated inside the ``default`` virtual host.
+Otherwise a new virtual host record will be created.
+
+The migration process is also available from the web interface.
+
 UI plugins
 ----------
 

@@ -294,7 +294,7 @@ A configured network interface is automatically a zone.
 A service can have a protocol and one or more ports. A ``service`` entry in ``fwservices`` database can be something like: ::
 
     name=fwservice
-       Protocol=TCP/UDP/TCPUDP/ICMP
+       Protocol=tcp/udp/tcpudp/icmp
        Ports=port/port range
 
 A service can also be a refence in the format ``ndpi;<protocol>`` where ``protocol`` is a supported protocol from nDPI kernel module.

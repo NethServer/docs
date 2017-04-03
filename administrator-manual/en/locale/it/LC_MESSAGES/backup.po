@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-08 15:42+0100\n"
+"POT-Creation-Date: 2017-03-21 11:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -482,16 +482,17 @@ msgstr ""
 
 #: ../../backup.rst:189 ../../backup.rst:192
 msgid ""
-"To avoid the reinstallation, execute this command before the restore: ::"
+"To skip the automatic installation, execute the command with the ``--no-"
+"reinstall`` argument: ::"
 msgstr ""
-"Per evitare che i moduli vengano reinstallati, eseguire questo comando prima"
-" del ripristino: ::"
+"Per saltare l'installazione automatica, eseguire il comando con l'argomento "
+"``--no-reinstall``: ::"
 
-#: ../../backup.rst:196 ../../backup.rst:199
+#: ../../backup.rst:197 ../../backup.rst:200
 msgid "Data backup customization"
 msgstr "Personalizzazione backup dati"
 
-#: ../../backup.rst:198 ../../backup.rst:201
+#: ../../backup.rst:199 ../../backup.rst:202
 msgid ""
 "If additional software is installed, the administrator can edit the list of "
 "files and directories included (or excluded)."
@@ -500,12 +501,12 @@ msgstr ""
 "modificare la lista delle directory e dei file inclusi (o esclusi) dal "
 "backup."
 
-#: ../../backup.rst:202 ../../backup.rst:238 ../../backup.rst:205
-#: ../../backup.rst:241
+#: ../../backup.rst:203 ../../backup.rst:239 ../../backup.rst:206
+#: ../../backup.rst:242
 msgid "Inclusion"
 msgstr "Includere"
 
-#: ../../backup.rst:204 ../../backup.rst:207
+#: ../../backup.rst:205 ../../backup.rst:208
 msgid ""
 "If you wish to add a file or directory to data backup, add a line to the "
 "file :file:`/etc/backup-data.d/custom.include`."
@@ -513,7 +514,7 @@ msgstr ""
 "Se si desidera includere una directory o un file nel backup dei dati, "
 "aggiungere una linea al file :file:`/etc/backup-data.d/custom.include`."
 
-#: ../../backup.rst:206 ../../backup.rst:209
+#: ../../backup.rst:207 ../../backup.rst:210
 msgid ""
 "For example, to backup a software installed inside :file:`/opt` directory, "
 "add this line: ::"
@@ -521,12 +522,12 @@ msgstr ""
 "Ad esempio, per eseguire il backup di un software installato nella directory"
 " :file:`/opt`, aggiungere la linea: ::"
 
-#: ../../backup.rst:211 ../../backup.rst:249 ../../backup.rst:214
-#: ../../backup.rst:252
+#: ../../backup.rst:212 ../../backup.rst:250 ../../backup.rst:215
+#: ../../backup.rst:253
 msgid "Exclusion"
 msgstr "Escludere"
 
-#: ../../backup.rst:213 ../../backup.rst:216
+#: ../../backup.rst:214 ../../backup.rst:217
 msgid ""
 "If you wish to exclude a file or directory from data backup, add a line to "
 "the file :file:`/etc/backup-data.d/custom.exclude`."
@@ -534,18 +535,18 @@ msgstr ""
 "Se si desidera escludere una directory o un file dal backup dei dati, "
 "aggiungere una linea al file  :file:`/etc/backup-data.d/custom.exclude`."
 
-#: ../../backup.rst:215 ../../backup.rst:218
+#: ../../backup.rst:216 ../../backup.rst:219
 msgid ""
 "For example, to exclude all directories called *Download*, add this line: ::"
 msgstr ""
 "Ad esempio, per escludere dal backup tutte le directory chiamate *Download*,"
 " aggiungere la linea: ::"
 
-#: ../../backup.rst:219 ../../backup.rst:222
+#: ../../backup.rst:220 ../../backup.rst:223
 msgid "To exclude a mail directory called *test*, add this line: ::"
 msgstr "Per escludere una casella di posta *test*, aggiungere la riga: ::"
 
-#: ../../backup.rst:224 ../../backup.rst:227
+#: ../../backup.rst:225 ../../backup.rst:228
 msgid ""
 "Same syntax applies to configuration backup. Modification should be done "
 "inside the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -554,15 +555,15 @@ msgstr ""
 "dovrebbero essere fatte all’interno del file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup.rst:227 ../../backup.rst:230
+#: ../../backup.rst:228 ../../backup.rst:231
 msgid "Make sure not to leave empty lines inside edited files."
 msgstr "Assicurarsi di non lasciare linee vuote nei file modificati."
 
-#: ../../backup.rst:231 ../../backup.rst:234
+#: ../../backup.rst:232 ../../backup.rst:235
 msgid "Configuration backup customization"
 msgstr "Personalizzazione backup configurazione"
 
-#: ../../backup.rst:233 ../../backup.rst:236
+#: ../../backup.rst:234 ../../backup.rst:237
 msgid ""
 "In most cases it is not necessary to change the configuration backup. But it"
 " can be useful, for example, if you have a custom httpd configuration. In "
@@ -575,7 +576,7 @@ msgstr ""
 "percorso del file che contiene la personalizzazione al backup della "
 "configurazione."
 
-#: ../../backup.rst:240 ../../backup.rst:243
+#: ../../backup.rst:241 ../../backup.rst:244
 msgid ""
 "If you wish to add a file or directory to configuration backup, add a line "
 "to the file :file:`/etc/backup-config.d/custom.include`."
@@ -584,7 +585,7 @@ msgstr ""
 "configurazione, aggiungere una linea al file :file:`/etc/backup-"
 "config.d/custom.include`."
 
-#: ../../backup.rst:242 ../../backup.rst:245
+#: ../../backup.rst:243 ../../backup.rst:246
 msgid ""
 "For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add "
 "this line: ::"
@@ -592,13 +593,13 @@ msgstr ""
 "Ad esempio, per eseguire il backup del file "
 ":file:`/etc/httpd/conf.d/mycustom.conf`, aggiungere la linea: ::"
 
-#: ../../backup.rst:246 ../../backup.rst:249
+#: ../../backup.rst:247 ../../backup.rst:250
 msgid "Do not add big directories or files to configuration backup."
 msgstr ""
 "Non aggiungere mai directory e file voluminosi al backup della "
 "configurazione."
 
-#: ../../backup.rst:251 ../../backup.rst:254
+#: ../../backup.rst:252 ../../backup.rst:255
 msgid ""
 "If you wish to exclude a file or directory from configuration backup, add a "
 "line to the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -607,7 +608,7 @@ msgstr ""
 "configurazione, aggiungere una linea al file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup.rst:254 ../../backup.rst:257
+#: ../../backup.rst:255 ../../backup.rst:258
 msgid ""
 "Make sure not to leave empty lines inside edited files. The syntax of the "
 "configuration backup supports only simple file and directory paths."
@@ -616,11 +617,11 @@ msgstr ""
 " backup della configurazione supporta solo percorsi file e directory "
 "semplici."
 
-#: ../../backup.rst:260 ../../backup.rst:263
+#: ../../backup.rst:261 ../../backup.rst:264
 msgid "USB disk configuration"
 msgstr "Configurazione disco USB"
 
-#: ../../backup.rst:262 ../../backup.rst:265
+#: ../../backup.rst:263 ../../backup.rst:266
 msgid ""
 "The best filesystem for USB backup disks is EXT3. FAT filesystem is "
 "supported but *not recommended*, while NTFS is **not supported**."
@@ -629,7 +630,7 @@ msgstr ""
 "prestazioni. Generalmente i dischi utilizzano il filesystem NTFS, che **non "
 "è supportato**. Il filesystem FAT è invece supportato ma *sconsigliato*."
 
-#: ../../backup.rst:265 ../../backup.rst:268
+#: ../../backup.rst:266 ../../backup.rst:269
 msgid ""
 "Before formatting the disk, attach it to the server and find the device "
 "name: ::"
@@ -637,36 +638,36 @@ msgstr ""
 "Per eseguire la formattazione, è necessario collegare il disco e "
 "identificarlo correttamente: ::"
 
-#: ../../backup.rst:286 ../../backup.rst:289
+#: ../../backup.rst:287 ../../backup.rst:290
 msgid "Another good command could be: ::"
 msgstr "Un altro buon comando da utilizzare può essere: ::"
 
-#: ../../backup.rst:290 ../../backup.rst:293
+#: ../../backup.rst:291 ../../backup.rst:294
 msgid "In this scenario, the disk is accessibile as *sdc* device."
 msgstr "In questo esempio, il disco è stato riconosciuto come device *sdc*."
 
-#: ../../backup.rst:292 ../../backup.rst:295
+#: ../../backup.rst:293 ../../backup.rst:296
 msgid "Create a Linux partition on the whole disk: ::"
 msgstr "Creare una unica partizione Linux sull’intero disco sdc: ::"
 
-#: ../../backup.rst:296 ../../backup.rst:299
+#: ../../backup.rst:297 ../../backup.rst:300
 msgid ""
 "Create the filesystem on *sdc1* partition with a label named *backup*: ::"
 msgstr ""
 "Creare il filesystem sulla partizione *sdc1* assegnando una label, ad "
 "esempio *backup*: ::"
 
-#: ../../backup.rst:300 ../../backup.rst:303
+#: ../../backup.rst:301 ../../backup.rst:304
 msgid "Detach and reconnect the USB disk:"
 msgstr "Scollegare e ricollegare il disco USB:"
 
-#: ../../backup.rst:302 ../../backup.rst:305
+#: ../../backup.rst:303 ../../backup.rst:306
 msgid "You can simulate it with the following command: ::"
 msgstr ""
 "E’ possibile utilizzare il comando seguente per simulare il collegamento del"
 " disco: ::"
 
-#: ../../backup.rst:306 ../../backup.rst:309
+#: ../../backup.rst:307 ../../backup.rst:310
 msgid ""
 "Now the *backup* label will be displayed inside the :guilabel:`Backup "
 "(data)` page."
