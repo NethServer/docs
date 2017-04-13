@@ -19,11 +19,12 @@ When the machine is functional, a full data restore can be done even if the mach
 Data backup is enabled installing "backup" module and contains all data like user's home directories and mails. It runs every night and can be full or incremental on a weekly basis. 
 This backup also contains the archive of the configuration backup.
 
-Data backup can be saved on three different destinations:
+Data backup can be saved on different destinations:
 
 * USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
 * CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage)
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
+* WebDAV: available on many NAS and remote servers (Use a server with a valid SSL certificate as webDAV target, otherwise the system will fail mounting the filesystem)
 
 The backup status can be notified to the system administrator or to an external mail address.
 
