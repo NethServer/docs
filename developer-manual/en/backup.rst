@@ -124,7 +124,7 @@ Properties:
 
 * ``status`` : enable or disable the automatic backup, can be ``enabled`` or ``disabled``. Default is ``enabled``. Regardless of this property, the backup is always executed if started manually
 * ``BackupTime: time of the scheduled backup. Must be in the form ``hh:mm``. Default is ``1:00``
-* ``VFSType`` : set the backup medium, can be ``usb``, ``cifs`` or ``nfs``.
+* ``VFSType`` : set the backup medium, can be ``usb``, ``cifs``, ``nfs`` or ``webdav``.
 * ``SMBShare``: contains the Samba share name
 * ``SMBHost`` : host name of the SMB server
 * ``SMBLogin`` : login user for the SMB server
@@ -132,6 +132,9 @@ Properties:
 * ``USBLabel`` : contains the filesystem label 
 * ``NFSHost`` : host name of the NFS server
 * ``NFShare`` : contains the NFS share name
+* ``WebDAVUrl`` : contains the WebDAV URL address
+* ``WebDAVLogin`` : login user for the WebDAV server
+* ``WebDAVPassword`` : password for the WebDAV server
 * ``Program`` : program used to perfrom the backup. Backup and restore processes will look for an action called respectively  ``backup-data-<Program>`` and ``restore-data-<Program>``. Default is: duplicity
 * ``Type`` : can be ``full`` or ``incremental``. If ``full``, a full backup will be executed every time. If ``incremental``, a full backup will be executed once a week at ``FullDay``, all other backups will be incremental
 * ``FullDay`` : number of day of the week when a full backup will be executed. Can be a number from 0 (Sunday) to 6 (Saturday). Defaults is ``0``.
@@ -146,6 +149,7 @@ Supported VFSType:
 * ``nfs`` : save the backup on a remote NFS server. No authentication supported.
 * ``usb`` : save the backup on a USB device. The device must have a writable filesystem with a custom label. 
   When the backup is started, the system will search for an USB device with the filesystem label saved in ``USBLabel``.
+* ``webdav`` : save the backup on a webDAV server. When using a secure connection make sure the target webDAV server has a valid SSL certificate, otherwise the system will fail mounting the filesystem.
 
 Backup
 ------
