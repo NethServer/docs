@@ -152,3 +152,24 @@ If output appears to be base64-encoded type: ::
   ldapsearch -LLL -Y EXTERNAL -b cn=config -s one 'objectClass=olcDatabaseConfig' olcAccess 2>/dev/null | perl -MMIME::Base64 -MEncode=decode -n -00 -e 's/\n +//g;s/(?<=:: )(\S+)/decode("UTF-8",decode_base64($1))/eg;print'
 
 
+Upgrade to Active Directory
+===========================
+
+If the LDAP database has been restored from a ns6 backup set, it is possible
+to upgrade it to a local Active Directory accounts provider.
+
+A ns7 LDAP database cannot be upgraded to Active Directory. It lacks the Samba
+LDAP schema extensions required by the Samba *classic upgrade* procedure.
+
+The ``nethserver-directory-ns6upgrade`` event 
+
+- removes the ``nethserver-directory`` RPM
+- installs and configures ``nethserver-dc``
+
+Before running the event, assign a free IP address to the ``nsdc`` Linux
+container, installed by ``nethserver-dc`` RPM. Ensure it is **a free IP
+address** of a **green network**.
+
+    config set nsdc '' IpAddress A.B.C.D
+    signal-event nethserver-directory-ns6upgrade
+

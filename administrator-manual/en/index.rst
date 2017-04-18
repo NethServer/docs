@@ -18,8 +18,8 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
-Release notes 7
----------------
+Release notes |version|
+-----------------------
 
 .. toctree::
    :maxdepth: 2
@@ -68,7 +68,6 @@ Modules
    web_proxy
    content_filter
    suricata
-   firewall
    proxy_pass
    virtual_hosts
    shared_folder
@@ -110,6 +109,7 @@ Appendix
    :maxdepth: 1
 
    migration
+   upgrade
    license
 
 

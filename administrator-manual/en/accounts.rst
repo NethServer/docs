@@ -66,6 +66,7 @@ configure.
 In the end, if the SMB file sharing protocol support is not required, an
 LDAP provider is the best choice.
 
+.. _ldap-local-accounts-provider-section:
 
 OpenLDAP local provider installation
 ------------------------------------
@@ -75,7 +76,7 @@ From the :guilabel:`Software Center` install the module named
 package is automatically configured and the administrator will be able to manage
 users and groups from the :guilabel:`User and groups` page.
 
-
+.. _ad-local-accounts-provider-section:
 
 Samba Active Directory local provider installation
 --------------------------------------------------
@@ -168,7 +169,7 @@ Configure MAC Address Spoofing for Virtual Network Adapters
 
 https://technet.microsoft.com/en-us/library/ff458341.aspx
 
-
+.. _join-existing-ad-section:
 
 Join an existing Active Directory domain
 ----------------------------------------
@@ -286,6 +287,8 @@ Long user name form
 
 Short user name form
     *goofy*
+
+To access a shared folder, see also :ref:`smb-access-section`.
 
 .. _groups-section:
 
