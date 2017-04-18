@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 11:43+0100\n"
+"POT-Creation-Date: 2017-04-18 09:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -42,6 +42,8 @@ msgid ""
 "To create, edit and delete a shared folder go to the :guilabel:`Shared "
 "folders` page."
 msgstr ""
+"Para crear, editar y borrar una carpeta compartida vaya a la pagina "
+":guilabel:`Carpetas compartidas` "
 
 #: ../../shared_folder.rst:23 ../../shared_folder.rst:26
 msgid "Authorizations"
@@ -76,13 +78,21 @@ msgstr ""
 
 #: ../../shared_folder.rst:35 ../../shared_folder.rst:38
 msgid ""
+"At any time, the :guilabel:`Reset permissions` button propagates the shared "
+"folder UNIX permissions and Posix ACLs to its contents."
+msgstr ""
+"En cualquier momento, el botón :guilabel:`Restablecer permisos` propaga los "
+"permisos UNIX de la carpeta compartida y las ACL de Posix a su contenido."
+
+#: ../../shared_folder.rst:43 ../../shared_folder.rst:46
+msgid ""
 "If :guilabel:`Guest access` is enabled, any provided authentication "
 "credentials are considered valid."
 msgstr ""
 "Si :guilabel:`Guest access` está habilitado, las credenciales de "
 "autenticación proporcionadas se consideran válidas."
 
-#: ../../shared_folder.rst:38 ../../shared_folder.rst:41
+#: ../../shared_folder.rst:46 ../../shared_folder.rst:49
 msgid ""
 "If an **LDAP** account provider is selected or there is no account provider "
 "at all, any access to shared folders is considered as *Guest access* so that"
@@ -92,24 +102,36 @@ msgstr ""
 "de cuentas, el acceso a carpetas compartidas se considera como *Acceso de "
 "invitado* para que todos puedan leer y escribir su contenido."
 
-#: ../../shared_folder.rst:45 ../../shared_folder.rst:48
+#: ../../shared_folder.rst:53 ../../shared_folder.rst:56
 msgid "Network access"
 msgstr "Acceso a la red"
 
-#: ../../shared_folder.rst:47 ../../shared_folder.rst:50
+#: ../../shared_folder.rst:55 ../../shared_folder.rst:58
 msgid ""
 "SMB/CIFS is a widely adopted protocol that allows to share files across a "
 "computer network. The shared folder name becomes the SMB \"share name\"."
 msgstr ""
+"SMB/CIFS es un protocolo ampliamente utilizado que permite compartir "
+"archivos a través de una red de computadoras. El nombre de la carpeta "
+"compartida se convierte en el SMB \"nombre de recurso compartido\"."
 
-#: ../../shared_folder.rst:50 ../../shared_folder.rst:53
+#: ../../shared_folder.rst:58 ../../shared_folder.rst:61
 msgid ""
 "For instance, the SMB network addresses of the ``docs`` share could be ::"
 msgstr ""
 "Por ejemplo, las direcciones de red SMB de la carpeta ``documentos`` podrían"
 " ser ::"
 
-#: ../../shared_folder.rst:55 ../../shared_folder.rst:58
+#: ../../shared_folder.rst:65 ../../shared_folder.rst:68
+msgid ""
+"Authenticated access to shared folders is available with an Active Directory"
+" accounts provider. LDAP provider allows guest access only."
+msgstr ""
+"El acceso autenticado a carpetas compartidas está disponible con un "
+"proveedor de cuentas de Active Directory. El proveedor LDAP sólo permite el "
+"acceso de invitados."
+
+#: ../../shared_folder.rst:68 ../../shared_folder.rst:71
 msgid ""
 "When accessing a SMB share, some user interfaces provide a single user name "
 "field. In that case, specify the **short user name** prefixed with the "
@@ -117,31 +139,45 @@ msgid ""
 "\"COMPANY\" and the user name is \"john.smith\", the domain-prefixed user "
 "name to access a SMB share is: ::"
 msgstr ""
+"Cuando se accede a un recurso compartido SMB, algunas interfaces de usuario "
+"solo proveen el nombre de usuario en el campo. En este caso, especifique el"
+"  **nombre de usuario corto** con el prefijo **Nombre de dominio NetBIOS**. "
+"Por ejemplo, si el nombre de dominio NetBIOS es \"COMPANY\", y el usuario es"
+" \"jhon.smith\", el nombre de usuario con el prefijo de dominio para acceder"
+" al recurso compartido SMB es: ::"
 
-#: ../../shared_folder.rst:63 ../../shared_folder.rst:66
+#: ../../shared_folder.rst:76 ../../shared_folder.rst:79
 msgid ""
 "On the contrary, some applications provide separate input fields for the "
 "NetBIOS domain name and the user name; in that case fill in the input fields"
 " individually."
 msgstr ""
+"Por el contrario, algunas aplicaciones proveen campos separados para el "
+"nombre de dominio NetBIOS y el nombre de usuario; en este caso llene cada "
+"uno de los campos individualmente."
 
-#: ../../shared_folder.rst:67 ../../shared_folder.rst:70
-msgid ""
-"At any time, the :guilabel:`Reset permissions` button propagates the shared "
-"folder UNIX permissions and Posix ACLs to its contents."
-msgstr ""
-"En cualquier momento, el botón :guilabel:`Restablecer permisos` propaga los "
-"permisos UNIX de la carpeta compartida y las ACL de Posix a su contenido."
+#: ../../shared_folder.rst:81 ../../shared_folder.rst:84
+msgid "Network recycle bin"
+msgstr "Papelera de reciclaje en red"
 
-#: ../../shared_folder.rst:75 ../../shared_folder.rst:78
+#: ../../shared_folder.rst:83 ../../shared_folder.rst:86
 msgid ""
 "If the option :guilabel:`Network recycle bin` is enabled, removed files are "
 "actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
 " copies of files with the same name` keeps distinct file names inside the "
 "wastebasket directory, preventing overwrites."
 msgstr ""
+"Si la opción :guilabel:`Papelera de reciclaje en red` está habilitada, los "
+"archivos removidos son reubicados en un directorio \"papelera\" especial . "
+"La opción :guilabel:`Guardar copias de archivos con el mismo nombre` "
+"mantiene distintos nombres de archivos en el directorio \"papelera\", "
+"evitando sobrescrituras."
 
-#: ../../shared_folder.rst:80 ../../shared_folder.rst:83
+#: ../../shared_folder.rst:89 ../../shared_folder.rst:92
+msgid "Hide a shared folder"
+msgstr "Ocultar una carpeta compartida"
+
+#: ../../shared_folder.rst:91 ../../shared_folder.rst:94
 msgid ""
 "If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
 "This does not affect the permission to use this resource."

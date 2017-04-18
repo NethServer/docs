@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 11:43+0100\n"
+"POT-Creation-Date: 2017-04-18 09:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -80,8 +80,8 @@ msgstr ""
 " backup contiene anche il backup della configurazione."
 
 #: ../../backup.rst:29 ../../backup.rst:32
-msgid "Data backup can be saved on three different destinations:"
-msgstr "Il backup dei dati può essere fatto su tre tipi di destinazione:"
+msgid "Data backup can be saved on different destinations:"
+msgstr "Il backup dei dati può essere fatto su diversi tipi di destinazione:"
 
 #: ../../backup.rst:31 ../../backup.rst:34
 msgid ""
@@ -107,7 +107,17 @@ msgstr ""
 "NFS: cartella condivisa Linux, disponibile su tutti i NAS, solitamente più "
 "veloce di CIFS"
 
-#: ../../backup.rst:35 ../../backup.rst:38
+#: ../../backup.rst:34 ../../backup.rst:37
+msgid ""
+"WebDAV: available on many NAS and remote servers (Use a server with a valid "
+"SSL certificate as webDAV target, otherwise the system will fail mounting "
+"the filesystem)"
+msgstr ""
+"WebDAV: disponibile su molti sistemi NAS e server remoti (utilizzare un "
+"server con un certificato SSL valido come destinazione WebDAV, altrimenti il"
+" mount del filesystem fallirà)"
+
+#: ../../backup.rst:36 ../../backup.rst:39
 msgid ""
 "The backup status can be notified to the system administrator or to an "
 "external mail address."
@@ -115,7 +125,7 @@ msgstr ""
 "L’esito del backup può essere notificato all’amministratore o ad un "
 "indirizzo mail esterno."
 
-#: ../../backup.rst:37 ../../backup.rst:40
+#: ../../backup.rst:38 ../../backup.rst:41
 msgid ""
 "The destination directory is based on the server host name: in case of FQDN "
 "change, the administrator should take care to copy backup data from the old "
@@ -125,11 +135,11 @@ msgstr ""
 "cambio FQDN, l’amministratore dovrà occuparsi di spostare manualmente i dati"
 " del backup dalla vecchia alla nuova directory."
 
-#: ../../backup.rst:42 ../../backup.rst:45
+#: ../../backup.rst:43 ../../backup.rst:46
 msgid "Data restore"
 msgstr "Ripristino dati"
 
-#: ../../backup.rst:44 ../../backup.rst:47
+#: ../../backup.rst:45 ../../backup.rst:48
 msgid ""
 "Make sure that backup destination is reachable (for example, USB disk must "
 "be connected)."
@@ -137,76 +147,76 @@ msgstr ""
 "Assicurarsi che la destinazione contenente il backup sia raggiungibile (es. "
 "disco USB collegato)."
 
-#: ../../backup.rst:47 ../../backup.rst:50
+#: ../../backup.rst:48 ../../backup.rst:51
 msgid "Command line"
 msgstr "Linea di comando"
 
-#: ../../backup.rst:50 ../../backup.rst:53
+#: ../../backup.rst:51 ../../backup.rst:54
 msgid "Listing files"
 msgstr "Elenco contenuti"
 
-#: ../../backup.rst:52 ../../backup.rst:55
+#: ../../backup.rst:53 ../../backup.rst:56
 msgid ""
 "It's possible to list all files inside the last backup using this command: "
 "::"
 msgstr ""
 "E’ possibile elencare i file presenti nell’ultimo backup con il comando:"
 
-#: ../../backup.rst:56 ../../backup.rst:59
+#: ../../backup.rst:57 ../../backup.rst:60
 msgid "The command can take some times depending on the backup size."
 msgstr ""
 "Il comando può richiedere del tempo in base alla dimensione del backup."
 
-#: ../../backup.rst:59 ../../backup.rst:62
+#: ../../backup.rst:60 ../../backup.rst:63
 msgid "File and directory"
 msgstr "File e directory"
 
-#: ../../backup.rst:61 ../../backup.rst:64
+#: ../../backup.rst:62 ../../backup.rst:65
 msgid ""
 "All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
 msgstr ""
 "Tutti i dati sono sono posizionati nella directory "
 ":file:`/var/lib/nethserver/` :"
 
-#: ../../backup.rst:63 ../../backup.rst:66
+#: ../../backup.rst:64 ../../backup.rst:67
 msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
 msgstr "Cartelle di posta: :file:`/var/lib/nethserver/vmail/<user>`"
 
-#: ../../backup.rst:64 ../../backup.rst:67
+#: ../../backup.rst:65 ../../backup.rst:68
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
 msgstr "Cartelle condivise: :file:`/var/lib/nethserver/ibay/<name>`"
 
-#: ../../backup.rst:65 ../../backup.rst:68
+#: ../../backup.rst:66 ../../backup.rst:69
 msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
 msgstr "Home utenti: :file:`/var/lib/nethserver/home/<user>`"
 
-#: ../../backup.rst:67 ../../backup.rst:70
+#: ../../backup.rst:68 ../../backup.rst:71
 msgid "To restore a file/directory, use the command: ::"
 msgstr "Dopo aver individuato il file da ripristinare, usare il comando:"
 
-#: ../../backup.rst:71 ../../backup.rst:74
+#: ../../backup.rst:72 ../../backup.rst:75
 msgid "Example, restore *test* mail account to :file:`/tmp` directory: ::"
 msgstr ""
 "Esempio, ripristinare nella directory :file:`/tmp` la cartella di posta "
 "*test*: ::"
 
-#: ../../backup.rst:75 ../../backup.rst:78
+#: ../../backup.rst:76 ../../backup.rst:79
 msgid "Example, restore *test* mail account to original position: ::"
 msgstr ""
 "Esempio, ripristinare la cartella di posta *test* nella posizione originale:"
 " ::"
 
-#: ../../backup.rst:80 ../../backup.rst:83
+#: ../../backup.rst:81 ../../backup.rst:84
 msgid "The system can restore a previous version of directory (or file)."
 msgstr ""
 "Il sistema supporta la possibilità di ripristinare directory (o file) ad una"
 " versione precedente rispetto all’ultimo backup."
 
-#: ../../backup.rst:82 ../../backup.rst:85
+#: ../../backup.rst:83 ../../backup.rst:86
 msgid "Example, restore the version of a file from 15 days ago: ::"
 msgstr "Esempio, ripristinare un file alla versione di 15 giorni fa: ::"
 
-#: ../../backup.rst:86 ../../backup.rst:89
+#: ../../backup.rst:87 ../../backup.rst:90
 msgid ""
 "The ``-t`` option allows to specify the number of days (15 in this "
 "scenario)."
@@ -214,7 +224,7 @@ msgstr ""
 "L’opzione ``-t`` consente di specificare il numero di giorni (in questo caso"
 " 15)."
 
-#: ../../backup.rst:88 ../../backup.rst:91
+#: ../../backup.rst:89 ../../backup.rst:92
 msgid ""
 "When you are using *CIFS* to access the share, and the command doesn't work "
 "as expected, verify that user and password for the network share are "
@@ -229,11 +239,11 @@ msgstr ""
 "NT_STATUS_LOGON_FAILURE. Allo stesso tempo il comando backup-data-list non "
 "andrà a buon fine e uscirà immediatamente riportando degli errori."
 
-#: ../../backup.rst:95 ../../backup.rst:98
+#: ../../backup.rst:96 ../../backup.rst:99
 msgid "Graphic interface"
 msgstr "Interfaccia grafica"
 
-#: ../../backup.rst:97 ../../backup.rst:100
+#: ../../backup.rst:98 ../../backup.rst:101
 msgid ""
 "In the :menuselection:`Restore files` menu section it is possible to search,"
 " select and restore one or more directories from backup, navigating the "
@@ -243,7 +253,7 @@ msgstr ""
 " ripristinare una o più cartelle dal backup, navigando l’albero grafico con "
 "tutti i percorsi inclusi nel backup."
 
-#: ../../backup.rst:100 ../../backup.rst:103
+#: ../../backup.rst:101 ../../backup.rst:104
 msgid ""
 "By default, last backup tree is shown. If you want to restore a file from a "
 "previous backup, select the backup date from *\"Backup File\"* selector."
@@ -252,11 +262,11 @@ msgstr ""
 "ripristinare un file di un backup precedente, selezionare la data del backup"
 " dal selettore *“Backup”*."
 
-#: ../../backup.rst:102 ../../backup.rst:105
+#: ../../backup.rst:103 ../../backup.rst:106
 msgid "There are two options to restore:"
 msgstr "Ci sono due opzioni di ripristino:"
 
-#: ../../backup.rst:104 ../../backup.rst:107
+#: ../../backup.rst:105 ../../backup.rst:108
 msgid ""
 "Restore files in the original path, the current files in the filesystem are "
 "overwritten by the restored files from backup."
@@ -264,7 +274,7 @@ msgstr ""
 "Ripristina i file nel percorso originale: i file attualmente presenti nel  "
 "filesystem sono sovrascritti con quelli ripristinati dal backup"
 
-#: ../../backup.rst:105 ../../backup.rst:108
+#: ../../backup.rst:106 ../../backup.rst:109
 msgid ""
 "Restore files in original path but the restored files from backup are moved "
 "on a new directory (the files are not overwritten) in this path: ::"
@@ -273,7 +283,7 @@ msgstr ""
 "sono spostati in una nuova directory (i file non sono sovrascritti) in "
 "questo percorso: ::"
 
-#: ../../backup.rst:109 ../../backup.rst:112
+#: ../../backup.rst:110 ../../backup.rst:113
 msgid ""
 "To use the search field, simply insert at least 3 chars and the searching "
 "starts automatically, highlighting the matched directories"
@@ -282,23 +292,23 @@ msgstr ""
 "partirà automaticamente, evidenziando le cartelle corrispondenti alla "
 "ricerca"
 
-#: ../../backup.rst:111 ../../backup.rst:114
+#: ../../backup.rst:112 ../../backup.rst:115
 msgid ""
 "It is possible to restore the directories by clicking on **Restore** button."
 msgstr ""
 "Il ripristino delle cartelle avviene cliccando sul bottone **Ripristino**."
 
-#: ../../backup.rst:113 ../../backup.rst:116
+#: ../../backup.rst:114 ../../backup.rst:117
 msgid "Multiple selection can be done with Ctrl key pressed."
 msgstr ""
 "Tenendo premuto il tasto Ctrl è possibile effettuare la selezione multipla "
 "di cartelle."
 
-#: ../../backup.rst:117 ../../backup.rst:120
+#: ../../backup.rst:118 ../../backup.rst:121
 msgid "Disaster recovery"
 msgstr "Disaster recovery"
 
-#: ../../backup.rst:119 ../../backup.rst:122
+#: ../../backup.rst:120 ../../backup.rst:123
 msgid ""
 "The system is restored in two phases: configuration first, then data. Right "
 "after configuration restore, the system is ready to be used if proper "
@@ -312,47 +322,39 @@ msgstr ""
 " ripristino. Ad esempio, se il server di posta è installato, il sistema è "
 "già in grado di inviare e ricevere mail."
 
-#: ../../backup.rst:124 ../../backup.rst:127
+#: ../../backup.rst:125 ../../backup.rst:128
 msgid "Other restored configurations:"
 msgstr "Altre configurazioni ripristinate:"
 
-#: ../../backup.rst:126 ../../backup.rst:129
+#: ../../backup.rst:127 ../../backup.rst:130
 msgid "Users and groups"
 msgstr "Utenti e gruppi"
 
-#: ../../backup.rst:127 ../../backup.rst:130
+#: ../../backup.rst:128 ../../backup.rst:131
 msgid "SSL certificates"
 msgstr "Certificati SSL"
 
-#: ../../backup.rst:129 ../../backup.rst:132
+#: ../../backup.rst:130 ../../backup.rst:133
 msgid "The root/admin password is not restored."
 msgstr ""
 "La password di root/admin non viene ripristinata, verrà mantenuta quella "
 "impostata nel nuovo sistema."
 
-#: ../../backup.rst:131 ../../backup.rst:134
+#: ../../backup.rst:132 ../../backup.rst:135
 msgid "Steps to be executed:"
 msgstr "I passi da eseguire sono:"
 
-#: ../../backup.rst:133 ../../backup.rst:136
+#: ../../backup.rst:134 ../../backup.rst:137
 msgid "Install the new machine with the same host name as the old one"
 msgstr ""
 "Installare una nuova macchina e configurarla con lo stesso nome host della "
 "vecchia"
 
-#: ../../backup.rst:134 ../../backup.rst:137
+#: ../../backup.rst:135 ../../backup.rst:138
 msgid ""
 "Configure a data backup, so the system can retrieve saved data and "
 "configuration"
 msgstr "Installare e configurare il backup dei dati"
-
-#: ../../backup.rst:135 ../../backup.rst:138
-msgid ""
-"If the old machine was the network gateway, remember to re-install firewall "
-"module"
-msgstr ""
-"Se la vecchia macchina era il gateway della rete, ricordarsi di reinstallare"
-" il modulo firewall"
 
 #: ../../backup.rst:136 ../../backup.rst:139
 msgid ""

@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 11:43+0100\n"
+"POT-Creation-Date: 2017-04-18 09:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +43,7 @@ msgstr "Sitio oficial: `www.nethesis.it <http://www.nethesis.it>`_"
 
 #: ../../index.rst:29 ../../index.rst:32
 msgid "Release notes |version|"
-msgstr ""
+msgstr "Notas de lanzamiento  |version|"
 
 #: ../../index.rst:37 ../../index.rst:40
 msgid "Installation"
@@ -57,26 +57,26 @@ msgstr "Configuración"
 msgid "Modules"
 msgstr "Módulos"
 
-#: ../../index.rst:98 ../../index.rst:101
+#: ../../index.rst:97 ../../index.rst:100
 msgid "NethForge modules"
 msgstr "Módulos NethForge"
 
-#: ../../index.rst:106 ../../index.rst:109
+#: ../../index.rst:105 ../../index.rst:108
 msgid "Best practices"
 msgstr "Mejores prácticas"
 
-#: ../../index.rst:114 ../../index.rst:117
+#: ../../index.rst:113 ../../index.rst:116
 msgid "Appendix"
 msgstr "Apéndice"
 
-#: ../../index.rst:127 ../../index.rst:130
+#: ../../index.rst:126 ../../index.rst:129
 msgid "Indices"
 msgstr "Índices"
 
-#: ../../index.rst:129 ../../index.rst:132
+#: ../../index.rst:128 ../../index.rst:131
 msgid ":ref:`General index <genindex>`"
 msgstr ":ref:`Índice general <genindex>`"
 
-#: ../../index.rst:130 ../../index.rst:133
+#: ../../index.rst:129 ../../index.rst:132
 msgid ":ref:`Search <search>`"
 msgstr ":ref:`Buscar <search>`"

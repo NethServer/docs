@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 11:43+0100\n"
+"POT-Creation-Date: 2017-04-18 09:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -27,11 +27,11 @@ msgstr ""
 
 #: ../../release_notes.rst:10 ../../release_notes.rst:13
 msgid "Release notes |version|"
-msgstr ""
+msgstr "Notas de lanzamiento |version|"
 
 #: ../../release_notes.rst:12 ../../release_notes.rst:15
 msgid "|product| release |version|"
-msgstr ""
+msgstr "|product| versión |version|"
 
 #: ../../release_notes.rst:14 ../../release_notes.rst:17
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../release_notes.rst:36 ../../release_notes.rst:39
 msgid "Upgrading |product| 6 to |product| |version|"
-msgstr ""
+msgstr "Actualizando |product| 6 a |product| |version|"
 
 #: ../../release_notes.rst:38 ../../release_notes.rst:41
 msgid ""
@@ -116,6 +116,9 @@ msgid ""
 "|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
 "for details."
 msgstr ""
+"Es posible actualizar completa la versión anterior de |product| a |version|,"
+" mediante una estrategia de respaldo/recuperación. Vea :ref:`upgrade-"
+"section` para más detalles."
 
 #: ../../release_notes.rst:44 ../../release_notes.rst:47
 msgid "Server Manager access"
@@ -149,6 +152,9 @@ msgid ""
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_"
 " (from 2017-01-17 to 2017-01-30)"
 msgstr ""
+"`Log de cambios final de la "
+"ISO<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_"
+" (de 2017-01-17 a 2017-01-30)"
 
 #: ../../release_notes.rst:67 ../../release_notes.rst:70
 msgid ""
@@ -156,6 +162,9 @@ msgid ""
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 " (from 2017-01-30 to 2024-06-30)"
 msgstr ""
+"`Registro de cambios de la liberación continua "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
+" (de 2017-01-30 a 2024-06-30)"
 
 #: ../../release_notes.rst:70 ../../release_notes.rst:73
 msgid "Known bugs"
