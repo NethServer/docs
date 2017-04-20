@@ -251,12 +251,19 @@ Some possible values:
 * ``!10.2.10.4``: enable port forward  for all IPs except 10.2.10.4
 * ``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for 192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9
 
-NAT 1:1
+sNAT 1:1
 =======
 
 One-to-one NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
 
 If you have a bunch of public IP addresses and if you want to associate one of these to a specific network host, :index:`NAT 1:1` is the way.
+
+This feature only applies to traffic from the network specific host to internet.
+
+It doesn't affect in any way the traffic from internet toward the Alias IP, if you need to route some specific traffic to the internal host use the port forward as usual.
+
+If you need to route all traffic to the internal host (not recommended!) use a port forward with protocol TCP & UDP and source port 1:65535.
+
 
 Example
 -------
