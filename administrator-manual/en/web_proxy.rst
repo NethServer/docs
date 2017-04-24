@@ -23,7 +23,19 @@ Supported modes are:
 * Transparent: all clients are automatically forced to use the proxy for HTTP connections
 * Transparent SSL: all clients are automatically forced to use the proxy for HTTP and HTTPS connections
 
-.. note:: If you plan to use authenticate mode, please make sure to configure an Account provider.
+Authenticated mode
+==================
+
+Before enabling the web proxy in authenticated mode,
+please make sure to configure a local or remote account provider.
+
+When Samba Active Directory is installed, or the server is joined to a remote
+Active Directory, Windows machines can use integrated authentication with Kerberos.
+All Windows clients **must** access the proxy server using the FQDN.
+
+All other clients can use basic authentication mechanism.
+
+.. note:: NTLM authentications is deprecated and it's not supported.
 
 Client configuration
 ====================
