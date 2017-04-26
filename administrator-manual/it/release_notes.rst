@@ -7,7 +7,7 @@ Note di rilascio
 .. include:: changelog.rst.inc
 
 
-Aggiornamento della versione 6.7
+Aggiornamento della versione 6.8
 ================================
 
 Aggiornare il sistema come di consueto dalla pagina :guilabel:`Software Center`. È

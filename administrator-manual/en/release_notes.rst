@@ -6,7 +6,7 @@ Release notes
 
 .. include:: changelog.rst.inc
   
-Upgrade of version 6.7
+Upgrade of version 6.8
 ======================
 
 Start the update as usual from the :guilabel:`Software Center` page.  It is
