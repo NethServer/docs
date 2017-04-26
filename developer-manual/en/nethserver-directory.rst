@@ -170,6 +170,8 @@ Before running the event, assign a free IP address to the ``nsdc`` Linux
 container, installed by ``nethserver-dc`` RPM. Ensure it is **a free IP
 address** of a **green network**.
 
-    config set nsdc '' IpAddress A.B.C.D
+::
+
+    config set nsdc service IpAddress A.B.C.D
     signal-event nethserver-directory-ns6upgrade
 
