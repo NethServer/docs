@@ -252,7 +252,7 @@ Some possible values:
 * ``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for 192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9
 
 sNAT 1:1
-=======
+========
 
 One-to-one NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
 
