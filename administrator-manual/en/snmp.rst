@@ -2,16 +2,20 @@
 SNMP
 ====
 
-SNMP (Simple Network Management Protocol) protocol allows to manage and monitor devices connected to the network.
+The SNMP (Simple Network Management Protocol) protocol allows to manage and monitor devices connected to the network.
 The :index:`SNMP` server can reply to specific queries about current system status.
 
 The server is disabled by default.
 
-During first configuration. you should set three main options:
+To enable it, you should set three main options:
 
 * the SNMP community name
 * the location name where the server is located
-* the name and mail address of system administrator
+* the name and email address of system administrator
+
+The implementation is based on the Net-SNMP project. Please refer to the official project page for more information:
+
+http://www.net-snmp.org/
 
 .. rubric:: References
 
