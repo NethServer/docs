@@ -125,6 +125,25 @@ defined by |product| as the default system administrative account. It is member
 of the AD "domain admins" group. See :ref:`admin-account-section`
 section for more details.
 
+DNS and domain names
+~~~~~~~~~~~~~~~~~~~~
+
+The DNS domain and the Active directory domain are not the same thing,
+but they are tightly linked.
+When configuring a domain for Samba (or Microsoft) Active Directory,
+the Active Directory server will become an authoritative DNS server for that domain.
+
+When chooising a domain for the Active Directory:
+
+* register the external domain on a public DNS
+* use an internal domain which is a subdomain of the external domain
+
+Example:
+
+* public domain: nethserver.org
+* server FQDN: mail.nethserver.org
+* Active Directory domain: ad.nethserver.org
+
 
 Installing on a virtual machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
