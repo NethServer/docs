@@ -196,9 +196,9 @@ command: ::
 Hyper-V
 +++++++
 
-Configure MAC Address Spoofing for Virtual Network Adapters
+Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 
-https://technet.microsoft.com/en-us/library/ff458341.aspx
+.. [#MsMacSpoofing] https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
 Local accounts provider uninstallation
@@ -216,7 +216,7 @@ account is erased.
   :ref:`import-users_section`.
 
 * Existing files owned by users and groups must be removed manually. This is a
-  brief list of system directories containing users and groups data:
+  brief list of system directories containing users and groups data: ::
 
     /var/lib/nethserver/home
     /var/lib/nethserver/vmail
@@ -254,6 +254,11 @@ After the prerequisite is fulfilled, proceed to the page
 * Provide the :guilabel:`User name` and :guilabel:`Password` of an AD account
   with the privilege of joining a computer to the domain. Remember that the
   default *administrator* account could be disabled!
+
+.. index::
+     pair: service; account
+
+.. _ad-dedicated-service-account:
 
 Some additional modules, like Nextcloud, WebTop, Roundcube, SOGo, Ejabberd
 require read-only access to AD LDAP services. To be fully operational they
@@ -451,8 +456,11 @@ shared folders, printers (by Samba) and other domain computers.
 
 .. _import-users_section:
 
+Import accounts from plain-text files
+=====================================
+
 Import users
-============
+------------
 
 It is possible to create user accounts from a TSV (Tab Separated Values) file with the following format: ::
 
@@ -464,7 +472,7 @@ Example: ::
 
 then execute: ::
 
-  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+  /usr/share/doc/nethserver-sssd-<ver>/import_users <youfilename>
 
 For example, if the user’s file is /root/users.tsv, execute following command: ::
 
@@ -474,7 +482,7 @@ Alternative separator character: ::
 
   import_users users.tsv ','
 
-Import Emails
+Import emails
 -------------
 
 It is possible to create mail aliases from a TSV (Tab Separated Values) file with the following format: ::
@@ -483,7 +491,7 @@ It is possible to create mail aliases from a TSV (Tab Separated Values) file wit
 
 Then you can use the ``import_emails`` script. See :ref:`import-users_section` for a sample script invocation.
 
-Import Groups
+Import groups
 -------------
 
 Group management is available from the command line through ``group-create`` and ``group-modify`` events ::
