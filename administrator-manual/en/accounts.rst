@@ -102,8 +102,18 @@ Therefore the additional IP address must satisfy three conditions:
 To install a local Active Directory accounts provider, go to page
 :guilabel:`Accounts provider > Active Directory > Create a new domain`.
 
-Fill in the :guilabel:`Domain Controller IP address` with the **additional IP
-address** explained above then press the :guilabel:`Create domain` button.
+The :guilabel:`DNS domain name` defines the DNS suffix of the new domain.
+|product| acts as an authoritative DNS server for that domain. See also
+:ref:`dns-and-ad-domains`.
+
+The :guilabel:`NetBIOS domain name` (also known as "domain short name", "NT
+domain name") is the alternative Active Directory domain identifier, compatible
+with older clients. See also :ref:`network-access`.
+
+The :guilabel:`Domain Controller IP address` field must be filled with the
+**additional IP address** explained above.
+
+When all fields are filled, press the :guilabel:`Create domain` button.
 
 .. tip::
 
@@ -125,25 +135,28 @@ defined by |product| as the default system administrative account. It is member
 of the AD "domain admins" group. See :ref:`admin-account-section`
 section for more details.
 
-DNS and domain names
-~~~~~~~~~~~~~~~~~~~~
+.. _dns-and-ad-domain:
 
-The DNS domain and the Active directory domain are not the same thing,
-but they are tightly linked.
-When configuring a domain for Samba (or Microsoft) Active Directory,
-the Active Directory server will become an authoritative DNS server for that domain.
+DNS and AD domain
+~~~~~~~~~~~~~~~~~
 
-When chooising a domain for the Active Directory:
-
-* register the external domain on a public DNS
-* use an internal domain which is a subdomain of the external domain
+An Active Directory domain requires a reserved DNS domain to work. It is a good 
+choice to allocate a subdomain of the public DNS domain for it. The AD subdomain
+can be accessible only from LAN (green) networks.
 
 Example:
 
-* public domain: nethserver.org
-* server FQDN: mail.nethserver.org
-* Active Directory domain: ad.nethserver.org
+* public (*external*) domain: ``nethserver.org``
+* server FQDN: ``mail.nethserver.org``
+* Active Directory (*internal* LAN only) domain: ``ad.nethserver.org``
+* domain controller FQDN (assigned by default): ``nsdc-mail.ad.nethserver.org``
 
+.. tip::
+
+    When choosing a domain for Active Directory use an *internal* domain which
+    is a subdomain of the *external* domain [#MsDnsBestPratices]_
+
+.. [#MsDnsBestPratices] https://social.technet.microsoft.com/wiki/contents/articles/34981.active-directory-best-practices-for-internal-domain-and-network-names.aspx#Recommendation
 
 Installing on a virtual machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -263,7 +276,7 @@ Type the LDAP server IP address in the field :guilabel:`Host name or IP`. If
 the LDAP service runs on a non-standard TCP port, specify it in :guilabel:`TCP
 port`.
 
-The a LDAP _rootDSE_ query is sent to the specified host and a form is filled
+Then an LDAP *rootDSE* query is sent to the specified host and a form is filled
 with returned data.  Check the values are correct then press the
 :guilabel:`Save` button to confirm.
 
