@@ -14,9 +14,6 @@ the **backup and restore** procedure.
     Before running the migration procedure, read carefully all the sections of this
     chapter.
 
-    All template-custom will also be restored, make sure all modifications are
-    compatibile with new configuration files for version |version|.
-
     Please also read :ref:`discontinued-section`.
 
 #. Make sure to have an updated backup of the original installation.
@@ -39,6 +36,10 @@ the **backup and restore** procedure.
 #. Check the restore log: ::
 
     cat /var/log/restore-data.log
+
+#. Each file under file:`/etc/e-smith/templates-custom/` must be manually checked for 
+   compatibility with version |version|.
+
 
 Accounts provider
 =================
