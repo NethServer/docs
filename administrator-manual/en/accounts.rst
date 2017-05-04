@@ -104,7 +104,7 @@ To install a local Active Directory accounts provider, go to page
 
 The :guilabel:`DNS domain name` defines the DNS suffix of the new domain.
 |product| acts as an authoritative DNS server for that domain. See also
-:ref:`dns-and-ad-domains`.
+:ref:`dns-and-ad-domain`.
 
 The :guilabel:`NetBIOS domain name` (also known as "domain short name", "NT
 domain name") is the alternative Active Directory domain identifier, compatible
