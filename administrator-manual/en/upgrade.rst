@@ -12,9 +12,7 @@ the **backup and restore** procedure.
 .. warning::
 
     Before running the migration procedure, read carefully all the sections of this
-    chapter.
-
-    Please also read :ref:`discontinued-section`.
+    chapter. Please also read :ref:`discontinued-section`.
 
 #. Make sure to have an updated backup of the original installation.
 
@@ -37,7 +35,7 @@ the **backup and restore** procedure.
 
     cat /var/log/restore-data.log
 
-#. Each file under file:`/etc/e-smith/templates-custom/` must be manually checked for 
+#. Each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for 
    compatibility with version |version|.
 
 
