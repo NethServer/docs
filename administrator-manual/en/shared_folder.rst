@@ -85,3 +85,24 @@ If :guilabel:`Browseable` is enabled, the shared folder is listed publicly.
 This does not affect the permission to use this resource.
 
 
+Home share
+==========
+
+Each |product| user has a personal shared folder that is mapped to his Unix home
+directory. The SMB share name correspond to the **user short name**. For example:
+
+* user short name ``john.smith``
+* server name ``MYSERVER``
+* server address ``192.168.1.2``
+
+The SMB network address is: ::
+
+ \\MYSERVER\john.smith
+ \\192.168.1.2\john.smith
+
+Provide John's credentials as explained in :ref:`smb-access-section`.
+
+.. tip::
+
+    The Unix home directory is created the first time the user accesses it by
+    either SMB or SFTP/SSH protocol.
