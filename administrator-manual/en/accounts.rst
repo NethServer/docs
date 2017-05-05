@@ -245,7 +245,7 @@ Joining an Active Directory domain has the following pre-requisite:
 After the prerequisite is fulfilled, proceed to the page
 :guilabel:`Accounts provider > Active Directory > Join a domain`.
 
-* Enter the :guilabel:`DNS domain name` of the AD domain (long domain name). The
+* Enter the :guilabel:`DNS domain name` of the AD domain. The
   NetBIOS domain name (short domain name) is probed automatically.
 
 * Fill the :guilabel:`AD DNS server` field. Usually it is the
