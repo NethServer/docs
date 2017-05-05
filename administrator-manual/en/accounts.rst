@@ -342,10 +342,10 @@ also the *short* form.
 
 For instance if the domain is *example.com* and the user is *goofy*:
 
-Long user name form
+User long name form
     *goofy@example.com*
 
-Short user name form
+User short name form
     *goofy*
 
 To access a shared folder, see also :ref:`smb-access-section`.

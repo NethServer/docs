@@ -59,7 +59,7 @@ For instance, the SMB network addresses of the ``docs`` share could be ::
   accounts provider. LDAP provider allows guest access only.
 
 When accessing a SMB share, some user interfaces provide a single user name
-field. In that case, specify the **short user name** prefixed with the **NetBIOS
+field. In that case, specify the **user short name** prefixed with the **NetBIOS
 domain name**.  For instance, if the NetBIOS domain name is "COMPANY" and the
 user name is "john.smith", the domain-prefixed user name to access a SMB share
 is: ::
