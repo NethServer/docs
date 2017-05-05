@@ -108,7 +108,7 @@ The :guilabel:`DNS domain name` defines the DNS suffix of the new domain.
 
 The :guilabel:`NetBIOS domain name` (also known as "domain short name", "NT
 domain name") is the alternative Active Directory domain identifier, compatible
-with older clients. See also :ref:`network-access`.
+with older clients. See also :ref:`smb-access-section`.
 
 The :guilabel:`Domain Controller IP address` field must be filled with the
 **additional IP address** explained above.
