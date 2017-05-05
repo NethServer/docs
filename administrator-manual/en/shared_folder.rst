@@ -13,7 +13,7 @@ To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
 page.
 
 Authorizations
---------------
+==============
 
 If **Active directory** is selected as account provider, a shared folder is
 owned by a group of users (:guilabel:`Owning group`). Each member of the group
@@ -43,7 +43,7 @@ everyone is allowed to read and write its content.
 .. _smb-access-section:
 
 Network access
---------------
+==============
 
 SMB/CIFS is a widely adopted protocol that allows to share files
 across a computer network. The shared folder name becomes the SMB "share name".
@@ -71,7 +71,7 @@ domain name and the user name; in that case fill in the input fields
 individually.
 
 Network recycle bin
--------------------
+===================
 
 If the option :guilabel:`Network recycle bin` is enabled, removed
 files are actually moved into a special "wastebasket" directory. The
@@ -79,7 +79,7 @@ files are actually moved into a special "wastebasket" directory. The
 the wastebasket directory, preventing overwrites.
 
 Hide a shared folder
---------------------
+====================
 
 If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. 
 This does not affect the permission to use this resource.
