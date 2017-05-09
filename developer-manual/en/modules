@@ -8,6 +8,7 @@ nethserver-mail-filter
 nethserver-directory
 nethserver-dc
 nethserver-hylafax
+nethserver-iaxmodem
 nethserver-ntp
 nethserver-sssd
 nethserver-ejabberd
