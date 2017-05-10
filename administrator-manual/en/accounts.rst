@@ -83,7 +83,7 @@ Samba Active Directory local provider installation
 --------------------------------------------------
 
 When installing Samba Active Directory as local account provider, the system
-needs an **additional IP address** and a working internet connection.
+needs an **additional IP address** and a **working internet connection**.
 
 The additional IP is assigned to a Linux Container that runs the Active
 Directory Domain Controller roles and must be accessible from the LAN (green
@@ -115,10 +115,13 @@ The :guilabel:`Domain Controller IP address` field must be filled with the
 
 When all fields are filled, press the :guilabel:`Create domain` button.
 
-.. tip::
+.. warning::
 
-    The Active Directory configuration procedure might require some time to run.
-    It creates the Linux Container chroot, by downloading additional packages.
+    The Active Directory :guilabel:`DNS domain name` and  :guilabel:`NetBIOS
+    domain name` values cannot be changed once that the domain has been created
+
+The Active Directory configuration procedure might require some time to run.
+It creates the Linux Container chroot, by downloading additional packages.
 
 At the end of the Active Directory configuration procedure,  the |product| host
 machine is automatically configured to join the Active Directory domain. Go to 
@@ -215,8 +218,8 @@ account is erased.
   :file:`/var/lib/nethserver/backup/groups.tsv`. See also
   :ref:`import-users_section`.
 
-* Existing files owned by users and groups must be removed manually. This is a
-  brief list of system directories containing users and groups data: ::
+* Existing files owned by users and groups must be removed manually. This is
+  the list of system directories containing users and groups data: ::
 
     /var/lib/nethserver/home
     /var/lib/nethserver/vmail
@@ -246,7 +249,7 @@ After the prerequisite is fulfilled, proceed to the page
 :guilabel:`Accounts provider > Active Directory > Join a domain`.
 
 * Enter the :guilabel:`DNS domain name` of the AD domain. The
-  NetBIOS domain name (short domain name) is probed automatically.
+  NetBIOS domain name (domain short name) is probed automatically.
 
 * Fill the :guilabel:`AD DNS server` field. Usually it is the
   IP address of an AD domain controller.
@@ -285,12 +288,15 @@ Then an LDAP *rootDSE* query is sent to the specified host and a form is filled
 with returned data.  Check the values are correct then press the
 :guilabel:`Save` button to confirm.
 
-
 If the LDAP server requires authentication, fill in the fields under
-:guilabel:`Authenticated bind`. When connecting a remote |product| LDAP server
-through the green network, :guilabel:`Anonymous bind` should be enough.  
+:guilabel:`Authenticated bind`. Enable either ``ldaps://`` or STARTTLS to 
+encrypt the connection.
 
-In any case, enable either ``ldaps://`` or STARTTLS to encrypt the connection.
+.. tip::
+
+    If the remote LDAP server is also a |product| installation and
+    it is in the LAN (green) network, select :guilabel:`Anonymous bind`
+    
 
 Users
 =====
