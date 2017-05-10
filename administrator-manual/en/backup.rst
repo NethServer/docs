@@ -106,6 +106,7 @@ It is possible to restore the directories by clicking on **Restore** button.
 
 .. note:: Multiple selection can be done with Ctrl key pressed.
 
+.. _disaster-recovery-section:
 
 Disaster recovery
 =================
