@@ -103,11 +103,11 @@ For more information about the local Active Directory accounts provider, see
 Active Directory member upgrade
 -------------------------------
 
-After restoring the configuration, join the server to the existing Active Directory
-domain from the web interface.
-For more information see :ref:`join-existing-ad-section`.
+After **restoring the configuration**, join the server to the existing Active
+Directory domain from the web interface. For more information see
+:ref:`join-existing-ad-section`.
 
-At the end, proceed with data restore.
+At the end, proceed with **data restore**.
 
 .. warning:: Mail aliases from AD server are not imported automatically!
 
@@ -125,15 +125,17 @@ Shared folders have been split into two packages:
 - The "Virtual hosts" panel provides HTTP and FTP access, it has been designed
   to host web sites and web applications
 
+.. _upgrade-smb-access:
+
 SMB access
 ----------
 
 In |product| |version| the SMB security model is based on Active Directory. As
-consequence when upgrading a file server in Primary Domain Controller (PDC) or
-Standalone Workstation (WS) role the following rules apply:
+consequence when upgrading (or migrating) a file server in Primary Domain
+Controller (PDC) or Standalone Workstation (WS) role the following rule apply:
 
   When connecting to a shared folder, the NetBIOS domain name must be either
-  prefixed to the user name (i.e. "MYDOMAIN\username"), or inserted in the
+  prefixed to the user name (i.e. ``MYDOMAIN\username``), or inserted in the
   specific form field.
 
 HTTP access
@@ -176,9 +178,10 @@ However Owncloud 7 is still available to avoid service disruption after the upgr
 
 .. note::
 
-   In case of upgrade from local LDAP to Samba AD (:ref:`pdc-upgrade-section`),
+   In case of :ref:`upgrade from local LDAP to Samba AD <pdc-upgrade-section>`,
    user data inside Owncloud will not be accessible either from the
-   web interface or desktop/mobile clients.
+   web interface or desktop/mobile clients. In such case, install and migrate to
+   Nextcloud after the upgrade to Samba Active Directory has been completed.
 
 
 Migration from Owncloud to Nextcloud is manual and can be arranged according
@@ -190,5 +193,8 @@ To migrate users and data, use following command: ::
 
     /usr/share/doc/$(rpm -q --queryformat "%{NAME}-%{VERSION}" nethserver-nextcloud)/owncloud-migrate
 
-After the migration, please replace Owncloud clients with Nextcloud ones,
+After the migration, please replace Owncloud clients with Nextcloud ones [#DownloadNC]_,
 then make sure to set the new application URL: ``https://<your_server_address>/nextcloud``.
+
+.. [#DownloadNC] Nextcloud clients download https://nextcloud.com/install/#install-clients
+
