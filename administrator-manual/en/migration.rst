@@ -118,9 +118,15 @@ Ibays
 The *ibay* concept has been superseded by :ref:`shared_folders-section`.
 Supported protocols for accessing Shared folders are:
 
+- SFTP, provided by the ``sshd`` daemon
+
 - SMB file sharing protocol, typical of Windows networking, implemented by Samba
 
-- SFTP, provided by the ``sshd`` daemon
+.. warning::
+
+    Read carefully the :ref:`upgrade-shared-folders` section in the
+    :ref:`upgrade-section` chapter, because the connection credentials may change when
+    migrating to |product| |version|.
 
 Starting from |product| |version|, Shared folders are not configurable for HTTP
 access. After ``migration-import`` event, old ibays could be migrated according 

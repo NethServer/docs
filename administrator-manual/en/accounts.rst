@@ -19,32 +19,26 @@ Supported provider types are:
 * Local Samba 4 Active Directory Domain Controller
 * Remote Active Directory (both Microsoft and Samba)
 
-Be aware of the following rules about account providers:
+The root user can configure any type of accounts provider from the
+:guilabel:`Accounts provider` page.
 
-1. Once |product| has been bound to an account provider the FQDN cannot be
+Be aware of the following rule about account providers:
+
+   Once |product| has been bound to an account provider the FQDN cannot be
    changed any more
 
-2. Local account providers cannot be uninstalled
-
-Remote providers
-    A clean |product| installation is ready to connect to a **remote** account
-    provider of both types (LDAP, AD). The root user can configure the remote
-    account provider from the :guilabel:`Accounts provider` page. 
-    
+Remote providers    
     After |product| has been bound to a remote account provider the
     :guilabel:`User and groups` page shows the domain accounts in *read-only*
     mode.
 
 Local providers
-    To run a **local** account provider go to :guilabel:`Software center` page
-    and install either OpenLDAP **or** Samba 4 account provider from the modules list.
-
     After installing a local provider (either Samba 4 or OpenLDAP), the administrator
     can create, modify and delete the users and groups.
 
 .. warning::
 
-  Please choose wisely your account provider because **the choice is not
+  Please choose wisely your account provider because **the choice could not be
   reversible**. Also the system will forbid any change to the FQDN after the
   account provider has been configured.
 
@@ -53,7 +47,7 @@ Choosing the right account provider
 -----------------------------------
 
 Beside choosing to bind a remote provider or install a local one, the
-administrator has to decide which backend type suits he needs.
+administrator has to decide which backend type suits his needs.
 
 The *File server* module of |product|, which enables the :guilabel:`Shared
 folders` page, can authenticate SMB/CIFS clients only if |product| is bound to an
@@ -66,15 +60,22 @@ configure.
 In the end, if the SMB file sharing protocol support is not required, an
 LDAP provider is the best choice.
 
+
 .. _ldap-local-accounts-provider-section:
 
 OpenLDAP local provider installation
 ------------------------------------
 
-From the :guilabel:`Software Center` install the module named
-*Account provider: OpenLDAP*. At the end of the installation the
-package is automatically configured and the administrator will be able to manage
-users and groups from the :guilabel:`User and groups` page.
+To install and configure an OpenLDAP local accounts provider, go to page
+:guilabel:`Accounts provider > LDAP > Install locally`. The system needs a
+working internet connection to download additional packages.
+
+At the end of the installation the package is automatically configured and the
+administrator will be able to manage users and groups from the :guilabel:`User
+and groups` page.
+
+See :ref:`admin-account-section` section for more details about default
+administrative user and group.
 
 .. _ad-local-accounts-provider-section:
 
@@ -82,7 +83,7 @@ Samba Active Directory local provider installation
 --------------------------------------------------
 
 When installing Samba Active Directory as local account provider, the system
-needs an **additional IP address** and a working internet connection.
+needs an **additional IP address** and a **working internet connection**.
 
 The additional IP is assigned to a Linux Container that runs the Active
 Directory Domain Controller roles and must be accessible from the LAN (green
@@ -94,22 +95,33 @@ Therefore the additional IP address must satisfy three conditions:
 
 2. the IP address has to be in the same subnet range of a green network
 
-3. the green network has to be bound to a bridged interface where the Linux
-   Container can attach its virtual interface to; the installation procedure can create the
+3. the green network has to be bound to a bridge interface where the Linux
+   Container can attach its virtual interface; the installation procedure can create the
    bridge interface automatically, if it is missing
 
-From the :guilabel:`Software center` page install the module named *Account
-provider: Samba Active Directory*.
+To install a local Active Directory accounts provider, go to page
+:guilabel:`Accounts provider > Active Directory > Create a new domain`.
 
-After the account provider installation, the :guilabel:`Accounts provider` page
-shows a configuration panel.  Insert the **additional IP address** as explained
-above and press the :guilabel:`Start DC` button. If needed, enable the automatic
-bridge interface creation for the green network.
+The :guilabel:`DNS domain name` defines the DNS suffix of the new domain.
+|product| acts as an authoritative DNS server for that domain. See also
+:ref:`dns-and-ad-domain`.
 
-.. tip::
+The :guilabel:`NetBIOS domain name` (also known as "domain short name", "NT
+domain name") is the alternative Active Directory domain identifier, compatible
+with older clients. See also :ref:`smb-access-section`.
 
-    The Active Directory configuration procedure might require some time to run.
-    It creates the Linux Container chroot, by downloading additional packages.
+The :guilabel:`Domain Controller IP address` field must be filled with the
+**additional IP address** explained above.
+
+When all fields are filled, press the :guilabel:`Create domain` button.
+
+.. warning::
+
+    The Active Directory :guilabel:`DNS domain name` and  :guilabel:`NetBIOS
+    domain name` values cannot be changed once that the domain has been created
+
+The Active Directory configuration procedure might require some time to run.
+It creates the Linux Container chroot, by downloading additional packages.
 
 At the end of the Active Directory configuration procedure,  the |product| host
 machine is automatically configured to join the Active Directory domain. Go to 
@@ -126,6 +138,28 @@ defined by |product| as the default system administrative account. It is member
 of the AD "domain admins" group. See :ref:`admin-account-section`
 section for more details.
 
+.. _dns-and-ad-domain:
+
+DNS and AD domain
+~~~~~~~~~~~~~~~~~
+
+An Active Directory domain requires a reserved DNS domain to work. It is a good 
+choice to allocate a subdomain of the public DNS domain for it. The AD subdomain
+can be accessible only from LAN (green) networks.
+
+Example:
+
+* public (*external*) domain: ``nethserver.org``
+* server FQDN: ``mail.nethserver.org``
+* Active Directory (*internal* LAN only) domain: ``ad.nethserver.org``
+* domain controller FQDN (assigned by default): ``nsdc-mail.ad.nethserver.org``
+
+.. tip::
+
+    When choosing a domain for Active Directory use an *internal* domain which
+    is a subdomain of the *external* domain [#MsDnsBestPratices]_
+
+.. [#MsDnsBestPratices] https://social.technet.microsoft.com/wiki/contents/articles/34981.active-directory-best-practices-for-internal-domain-and-network-names.aspx#Recommendation
 
 Installing on a virtual machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -165,9 +199,32 @@ command: ::
 Hyper-V
 +++++++
 
-Configure MAC Address Spoofing for Virtual Network Adapters
+Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 
-https://technet.microsoft.com/en-us/library/ff458341.aspx
+.. [#MsMacSpoofing] https://technet.microsoft.com/en-us/library/ff458341.aspx
+
+
+Local accounts provider uninstallation
+--------------------------------------
+
+Both LDAP and AD local accounts provider can be uninstalled from the
+:guilabel:`Accounts provider > Uninstall` page. 
+
+When the local accounts provider DB is uninstalled, any user, group and computer
+account is erased. 
+
+* A list of users and groups in TSV format is dumped to
+  :file:`/var/lib/nethserver/backup/users.tsv` and
+  :file:`/var/lib/nethserver/backup/groups.tsv`. See also
+  :ref:`import-users_section`.
+
+* Existing files owned by users and groups must be removed manually. This is
+  the list of system directories containing users and groups data: ::
+
+    /var/lib/nethserver/home
+    /var/lib/nethserver/vmail
+    /var/lib/nethserver/ibay
+
 
 .. _join-existing-ad-section:
 
@@ -181,56 +238,65 @@ accessing a |product| resource from a domain workstation, user credentials are
 checked against one of the domain controllers, and the access to the resource is
 granted.
 
-Joining an Active Directory domain has the following pre-requisites:
+Joining an Active Directory domain has the following pre-requisite:
 
-1. The Kerberos protocol requires the difference between systems clocks in the
+   The Kerberos protocol requires the difference between systems clocks in the
    network is less than 5 minutes. Configure the network clients to align their
    clocks to a common time source.  For |product| go to :guilabel:`Date and time`
    page.
+ 
+After the prerequisite is fulfilled, proceed to the page
+:guilabel:`Accounts provider > Active Directory > Join a domain`.
 
-2. The system assumes the default NetBIOS domain name is the
-   leftmost label in the DNS domain suffix up to the first 15 characters.
+* Enter the :guilabel:`DNS domain name` of the AD domain. The
+  NetBIOS domain name (domain short name) is probed automatically.
 
-   **Example**
-
-   - FQDN: test.local.nethserver.org
-   - Domain: local.nethserver.org
-   - Default NetBIOS domain: LOCAL
-
-   If the default NetBIOS domain is not good for your environment,
-   you can change it from command line: ::
-
-      config set smb service Workgroup <your_netbios_domain>
-
-3. (Only for Microsoft Active Directory) The default machine account cannot perform
-   simple LDAP binds due to AD security policies. To be fully operational |product|
-   requires an additional account to perform simple LDAP binds.  Create a **dedicated
-   user account** in AD, and set a complex *non-expiring* password for it.
-
-After all the prerequisites are fulfilled, proceed with the join from the
-:guilabel:`Accounts provider` page:
-
-* Fill :guilabel:`DNS server IP address` field which usually is the
+* Fill the :guilabel:`AD DNS server` field. Usually it is the
   IP address of an AD domain controller.
 
-* (only for Microsoft Active Directory) specify the **dedicated user account**
-  credentials under the :guilabel:`Advanced settings` panel.
+* Provide the :guilabel:`User name` and :guilabel:`Password` of an AD account
+  with the privilege of joining a computer to the domain. Remember that the
+  default *administrator* account could be disabled!
 
-* Push the :guilabel:`Submit` button. You will be prompted for an user name and a
-  password: provide AD ``administrator`` or any other account
-  credentials with permissions to join a new machine to the domain 
-  (i.e. ``admin`` on |product|).
+.. index::
+     pair: service; account
+
+.. _ad-dedicated-service-account:
+
+Some additional modules, like Nextcloud, WebTop, Roundcube, SOGo, Ejabberd
+require read-only access to AD LDAP services. To be fully operational they
+require an additional account to perform simple LDAP binds.  Create a
+**dedicated user account** in AD, and set a complex *non-expiring* password for
+it.
+
+Once |product| has successfuly joined AD, specify the **dedicated user account**
+credentials in :guilabel:`Accounts provider > Read-only bind credentials`.
 
 .. _bind-remote-ldap-section:
 
 Bind to a remote LDAP server
 ----------------------------
 
-If the remote server is a |product|, only its IP address is required in
-:guilabel:`Accounts provider` page.
+To configure a remote LDAP accounts provider, go to page :guilabel:`Accounts
+provider > LDAP > Bind remotely`.
 
-For other implementations, change the bind credentials, Base DN and encryption
-settings under the :guilabel:`Advanced settings` panel.
+Type the LDAP server IP address in the field :guilabel:`Host name or IP`. If
+the LDAP service runs on a non-standard TCP port, specify it in :guilabel:`TCP
+port`.
+
+Then an LDAP *rootDSE* query is sent to the specified host and a form is filled
+with returned data.  Check the values are correct then press the
+:guilabel:`Save` button to confirm.
+
+If the LDAP server requires authentication, fill in the fields under
+:guilabel:`Authenticated bind`. Enable either ``ldaps://`` or STARTTLS to 
+encrypt the connection.
+
+.. tip::
+
+    If the remote LDAP server is also a |product| installation and
+    it is in the LAN (green) network, select :guilabel:`Anonymous bind`
+    
 
 Users
 =====
@@ -282,10 +348,10 @@ also the *short* form.
 
 For instance if the domain is *example.com* and the user is *goofy*:
 
-Long user name form
+User long name form
     *goofy@example.com*
 
-Short user name form
+User short name form
     *goofy*
 
 To access a shared folder, see also :ref:`smb-access-section`.
@@ -396,8 +462,11 @@ shared folders, printers (by Samba) and other domain computers.
 
 .. _import-users_section:
 
+Import accounts from plain-text files
+=====================================
+
 Import users
-============
+------------
 
 It is possible to create user accounts from a TSV (Tab Separated Values) file with the following format: ::
 
@@ -409,7 +478,7 @@ Example: ::
 
 then execute: ::
 
-  /usr/share/doc/nethserver-directory-<ver>/import_users <youfilename>
+  /usr/share/doc/nethserver-sssd-<ver>/import_users <youfilename>
 
 For example, if the user’s file is /root/users.tsv, execute following command: ::
 
@@ -419,7 +488,7 @@ Alternative separator character: ::
 
   import_users users.tsv ','
 
-Import Emails
+Import emails
 -------------
 
 It is possible to create mail aliases from a TSV (Tab Separated Values) file with the following format: ::
@@ -428,7 +497,7 @@ It is possible to create mail aliases from a TSV (Tab Separated Values) file wit
 
 Then you can use the ``import_emails`` script. See :ref:`import-users_section` for a sample script invocation.
 
-Import Groups
+Import groups
 -------------
 
 Group management is available from the command line through ``group-create`` and ``group-modify`` events ::

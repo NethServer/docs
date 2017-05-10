@@ -25,6 +25,17 @@ The implementation can work in two modes:
 * read-only: if users and groups are read from a remote source, the system will
   be able to consume them only using passwd database
 
+Realm and workgroup
+-------------------
+
+When the system is configured to use an Active Directory provider (``Provider=ad``),
+make sure to correctly set both ``Realm`` and ``Workgroup`` properties:
+
+- Realm: this is the Kerberos realm and it's case sensitive, but it's usually configured in upper case
+  as best practice.
+  When the realm is used for DNS queries, it's automatically forced to lower case.
+
+- Workgroup: Samba NetBIOS name, maximum length is 15 characters. It's usually the first part of the Realm in upper case
 
 Events
 ------
@@ -134,6 +145,18 @@ Parameters
 
   The duration of a password can be  passwordstrength{MaxPassAge}
 
+nethserver-sssd-remove-provider
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This event removes any installed local account provider and also
+wipes the configuration of any remote account provider.
+
+Before resetting the configuration, all accounts are dumped inside the
+following files in tsv format:
+
+- /var/lib/nethserver/backup/users.tsv
+- /var/lib/nethserver/backup/accounts.tsv
+
 System users and groups
 -----------------------
 
@@ -220,7 +243,8 @@ Leave and Re-Join Active Directory
 
 To leave a remote AD go to the :guilabel:`Accounts provider` page. For local AD
 provider, this is the **manual leave procedure** ::
-    
+
+    config setprop sssd Realm '' Workgroup '' Provider none
     signal-event nethserver-sssd-leave
 
 If the machine password or system keytab get corrputed, joining again the DC can fix them: ::
@@ -317,6 +341,22 @@ Sample invocation: ::
 Alternative separator character: ::
 
   import_users users.csv ','
+
+import_groups
+^^^^^^^^^^^^^
+
+It is possible to create groups from a TSV (Tab Separated Values) file with the following format: ::
+
+  groupname <TAB> member1 <TAB> ... <TAB> memberN <NEWLINE>
+
+Sample invocation: ::
+
+  import_users groups.tsv
+
+Alternative separator character: ::
+
+  import_groups groups.csv ','
+
 
 
 import_emails

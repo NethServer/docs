@@ -1,19 +1,11 @@
-===
-VPN
-===
+========
+OpenVPN
+========
 
-VPN implementation is splitted into various packages:
+Supported VPN are:
 
-* nethserver-vpn: general package containing common code for various VPN types, including certificate management
-* nethserver-openvpn: OpenVPN implementation
-* nethserver-ipsec: IPsec implementation
-
-All VPN networks are consider as trusted networks.
-Allowed traffic:
-
-* Local network to VPN
-* VPN to local network
-* VPN to firewall
+* Client to server (roadwarrior)
+* Network to network (net2net)
 
 Certificates
 ============
@@ -51,8 +43,8 @@ Certificate revocation is done via the command: ::
 The ``commonName`` parameter is an unique name stored inside the certificate. 
 If '-d' option is enabled, also delete ``crt``, ``csr``, ``pem`` and key files
 
-Certificate renew
------------------
+Certificate renewal
+-------------------
 
 All certificates will expire after ``X`` days, where ``X`` is the value of ``CertificateDuration`` property inside ``pki`` key.
 Renew is done via the command: ::
@@ -75,11 +67,11 @@ Accounts
 
 Accounts are used to identify clients connecting to the server itself. There are two types of account:
 
-* user account: system user with ``VPNClientAccess`` set to ``yes``
-* vpn-only account: simple account with only vpn access
+* user account: system user with VPN access using username and password
+* vpn-only account: simple account with only VPN access
 
 Each account can be used in a roadwarrior connection (host to net). 
-If a net to net tunnel (OpenVPN only) is needed, ``VPNRemoteNetwork`` and ``VPNRemoteNetmask`` 
+If a net to net tunnel is needed, ``VPNRemoteNetwork`` and ``VPNRemoteNetmask`` 
 properties must be set to inform the server about remote routes.
 When a new account is created, a certificate with same name is generated inside ``/var/lib/nethserver/certs`` directory.
 
@@ -87,28 +79,30 @@ Properties:
 
 * ``VPNRemoteNetwork``: remote network
 * ``VPNRemoteNetmask``: remote netmask
+* ``OpenVpnIp``: reserved IP for the client
 
 Database reference
 ------------------
 
-Database: ``accounts``
+Database: ``vpn``
 
 ::
 
  <name>=vpn
     VPNRemoteNetwork=
     VPNRemoteNetmask=
+    OpenVpnIp=
 
- <name>=user
+ <name>=vpn-user
     ...
     VPNRemoteNetwork=
     VPNRemoteNetmask=
-    VPNClientAccess=yes
+    OpenVpnIp=
 
-Clients (OpenVPN)
-=================
+Clients
+=======
 
-OpenVPN clients are used to connect the server with other network, typically to create a net 2 net tunnel. 
+OpenVPN clients are used to connect the server with other network, typically to create a net2net tunnel. 
 
 Common properties:
 
@@ -123,7 +117,6 @@ Common properties:
 * ``Psk``: pre-shared key user for authentication, if ``AuthMode`` is ``psk``. Pre-shared key is saved ``/var/lib/nethserver/certs/clients/<name>.key`` 
 * ``RemoteHost``: remote server hostname or ip address
 * ``RemotePort``: remote host port
-* ``VPNType``: VPN type, can be ``openvpn`` or ``ipsec``
 * ``VPNRemoteNetwork``: remote network (behind remote firewall), used for a net to net tunnel
 * ``VPNRemoteNetmask``: remote netmask, used for a net to net tunnel
 * ``Compression``: can be ``enabled`` or ``disabled``, default is ``enabled``. Enable/disable adaptive LZO compression.
@@ -145,29 +138,28 @@ Database: ``vpn``
     RemoteHost=1.2.3.4
     RemotePort=1234
     User=
-    VPNType=openvpn
     VPNRemoteNetmask=255.255.255.0
     VPNRemoteNetwork=192.168.4.0
     Compression=enabled
 
 
-OpenVPN
-=======
+Roadwarrior server
+==================
 
-Client configuration is generated using :file:`/usr/libexec/nethserver/openvpn-local-client` command. 
+Client configuration is generated using ``/usr/libexec/nethserver/openvpn-local-client`` command. 
 The file will contain the CA certificate inside the <ca>.
 
 Example: ::
 
   /usr/libexec/nethserver/openvpn-local-client myuser
 
-The OpenVPN server listens on a management socket: :file:`/var/spool/openvpn/host-to-net`.
+The OpenVPN server listens on a management socket: ``/var/spool/openvpn/host-to-net``.
 It's possible to retrieve server status and execute commands using the socket.
 
 Available scripts:
 
-* :file:`/usr/libexec/nethserver/openvpn-status`: retrieve status of connected clients and return result in JSON format
-* :file:`/usr/libexec/nethserver/openvpn-kill`: kill a connected client, exits 0 on success, 1 otherwise
+* ``/usr/libexec/nethserver/openvpn-status``: retrieve status of connected clients and return result in JSON format
+* ``/usr/libexec/nethserver/openvpn-kill``: kill a connected client, exits 0 on success, 1 otherwise
 
 Example with netcat: ::
 
@@ -187,8 +179,8 @@ See more on management option: http://openvpn.net/index.php/open-source/document
 Log files
 ---------
 
-Host to net status: :file:`/var/log/openvpn/host-to-net-status.log`.
-Server and client output: :file:`/var/log/messages`.
+Host to net status: ``/var/log/openvpn/host-to-net-status.log``.
+Server and client output: ``/var/log/messages``.
 
 Configuration database
 ----------------------
@@ -236,16 +228,6 @@ Example: ::
     RouteToVPN=disabled
     TapInterfaces=tap0
     UDPPort=1194
-    access=public
+    access=green,red
     status=enabled
-
-
-IPsec
-=====
-
-This packages implements:
-
-* a common layer for IPsec daemons
-* roadwarrior clients with L2TP and PPP
-* tunnel connections (net2net)
 

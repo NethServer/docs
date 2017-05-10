@@ -1,13 +1,13 @@
-.. _virtual_hosts-section:
-
 .. index:: virtual hosts
    single: HTTP
+
+.. _virtual_hosts-section:
 
 ==============
 Virtual hosts
 ==============
 
-Virtual hosting allows to host multiple domain names on a single server. On |product|, from `Virtual hosts` page, is possible to configure web sites as Apache named virtual hosts. 
+Virtual hosting allows to host multiple domain names on a single server. On |product|, from :guilabel:`Virtual hosts` page, is possible to configure web sites as Apache named virtual hosts. 
 
 Virtual host names (FQDN)
 -------------------------

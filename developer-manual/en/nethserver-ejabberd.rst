@@ -29,4 +29,12 @@ Properties:
 When enabled, web-based adminsitration interface listens on 5280 port.
 You need a user inside jabberadmins group to login.
 
-Default access to server ports is set to public on following ports: 5280, 5222, 5223. 
+Default access to server ports is set to public on following ports: 5280, 5222, 5223.
+
+
+The jabber server can be accessed using BOSH protocol (https://xmpp.org/extensions/xep-0206.html) at URL ``/http-bind``.
+
+Example:
+
+* server FQDN: mail.nethserver.org
+* BOSH URL: https://mail.nethserver.org/http-bind

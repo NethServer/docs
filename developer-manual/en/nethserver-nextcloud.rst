@@ -37,10 +37,10 @@ Please, remember to change the default password after the first login!
 Backup
 ======
 
-The ownCloud backup includes the configuration file and all data of the users: ::
+The Nextcloud backup includes the configuration file and all data of the users: ::
 
  /var/lib/nethserver/nextcloud
- /var/www/html/nextcloud/config/config.php
+ /usr/share/nextcloud/config/config.php
 
 The database is automatically saved by ``nethserver-mysql``.
 

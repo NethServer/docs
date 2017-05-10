@@ -13,18 +13,12 @@ Example: ::
 
  smb=service
     ...
-    Workgroup=
     NetbiosAliasList=
     DeadTime=10080
     WinsServerStatus=disabled
     WinsServerIP=
     UseCups=enabled
     UseClientDriver=yes
-
-* ``Workgroup``
-  The old workgroup name or NT-style domain name, depending on the actual
-  security mode (see also nethserver-sssd for implementation); if empty use the
-  first domain name component from the machine FQDN.
 
 * ``NetbiosAliasList``
   See ``netbios aliases`` parameter in smb.conf(5) manpage.

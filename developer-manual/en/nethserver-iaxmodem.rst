@@ -1,6 +1,6 @@
-=========
-IAX modem
-=========
+===================
+nethserver-iaxmodem
+===================
 
 The module uses ``modems`` database to store record describing a iax modem.
 After a new record is created, the system will generate all configuration files in ``/etc/iaxmodem`` using the action ``nethserver-iaxmodem-modemsetup``.
@@ -36,3 +36,4 @@ Configuration database: ::
     extension=351
     password=351
     server=192.168.1.1
+

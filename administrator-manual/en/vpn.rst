@@ -69,4 +69,33 @@ Steps to be performed on the slave:
 * Create a client from the :guilabel:`Client` page, specifying the connection data to the master server.
 
 * Copy and paste the content of downloaded certificates from the master configuration page.
+IPsec
+=====
+
+:index:`IPsec` (IP Security) protocol is usually used to create tunnels with devices from other manufacturers.
+
+
+Tunnel (net2net)
+----------------
+
+IPsec is extremely reliable and compatible with many devices.
+In fact, it is an obvious choice when you need to create net2net connections
+between firewalls of different manufacturers.
+
+Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered peers.
+
+If you are creating a tunnel between two |product|, given the firewalls A and B:
+
+1. Configure the server A and specify the remote address and LAN of server B. 
+   If the :guilabel:`Remote IP` field is set to the special value ``%any``, 
+   the server waits for connections from the other endpoint.
+
+2. Configure the second firewall B by mirroring the configuration from A inside the remote section.
+   The special value ``%any`` is allowed in one side only!
+
+If an endpoint is behind a NAT, the values for :guilabel:`Local
+identifier` and :guilabel:`Remote identifier` fields must be set to
+custom unique names prepended with ``@``.  Common names are the
+geographic locations of the servers, such as the state or city name.
+
 

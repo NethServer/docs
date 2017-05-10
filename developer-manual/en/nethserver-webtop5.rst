@@ -54,6 +54,11 @@ Troubleshooting
 Please note that nethserver-webtop5 is composed by many parts.
 Each part has its own logs and troubleshooting best practices.
 
+Web application
+---------------
+
+The web application logs are inside ``/var/log/webtop/webtop.log``.
+
 Tomcat
 ------
 

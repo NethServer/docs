@@ -8,6 +8,7 @@ nethserver-mail-filter
 nethserver-directory
 nethserver-dc
 nethserver-hylafax
+nethserver-iaxmodem
 nethserver-ntp
 nethserver-sssd
 nethserver-ejabberd
@@ -22,3 +23,4 @@ nethserver-squid
 nethserver-suricata
 nethserver-webtop5
 nethserver-ipsec-tunnels
+nethserver-openvpn

@@ -34,7 +34,7 @@ tab and push the :guilabel:`Edit` button on a listed entry.
 
     .. warning::
 
-        Installed packages **cannot be removed frome the Software Center!**
+        Installed packages **cannot be removed from the Software Center!**
         Please contact customer support if you need to remove an installed module.
 
 .. index::

@@ -102,6 +102,21 @@ Uninstall nethserver-dc
 
     yum remove nethserver-dc
 
+Upgrade the containter
+----------------------
+
+The upgrade procedure will:
+
+- stop the container
+- upgrade the chroot base system
+- upgrade samba
+- restart the container
+
+To upgrade, execute: ::
+
+    signal-event nethserver-dc-upgrade
+
+
 Changing the IP address of DC
 -----------------------------
 
@@ -110,66 +125,44 @@ Changing the IP address of DC
     Before applying this procedure, read carefully the `official Samba wiki page
     <https://wiki.samba.org/index.php/Changing_the_IP_Address_of_a_Samba_AD_DC>`_.
 
-Example, change the network address ("122" becomes "101"):
+The IP address of nsdc containter must be in the same network of the bridged green interface.
+If needed, first change the address of the green interface, then proceed with the following.
 
-* domain ``dpnet.nethesis.it``, realm ``DPNET.NETHESIS.IT``
-* bridge is ``br0``
-* current host IP: 192.168.122.7
-* current gateway IP: 192.168.122.1
+Example, change the network address:
+
+* current host IP: 192.168.101.7
 * current nsdc container IP: 192.168.122.77
-* new host IP: 192.168.101.7
-* new gateway IP: 192.168.101.1
 * new nsdc container IP: 192.168.101.77
 
-.. warning::
-    
-    This procedure must be run from the system console. **Do not it run
-    remotely!** The server can become unreachable!
+Execute the ``nethserver-dc-change-ip`` with the new ip address: ::
 
-1. Shut down the nsdc Linux container ::
+    signal-event nethserver-dc-change-ip <new_ip_address>
 
-    systemctl stop nsdc
+Example: ::
 
-2. Set the new host and gateway IP addresses ::
-    
-    db networks setprop br0 ipaddr 192.168.101.7 gateway 192.168.101.1 netmask 255.255.255.0
+    signal-event nethserver-dc-change-ip 192.168.101.77
 
-3. Set the new nsdc IP address ::
-    
-    config setprop nsdc IpAddress 192.168.101.77
-    config setprop sssd AdDns 192.168.101.77
+Note that the event will fail if the new nsdc ip address is not in the same network
+of the green interface.
 
-4. Expand the templates from nethserver-dc-save event ::
+Alternate UPN suffix
+--------------------
 
-    for F in $(find /etc/e-smith/events/nethserver-dc-save/templates2expand -type f); do
-        expand-template ${F##/etc/e-smith/events/nethserver-dc-save/templates2expand}
-    done
+The default UPN (User Principal Name) suffix for a user account is the SSSD realm, but
+the nsdc containter is configured to use also an extra UPN suffix set
+to the FQDN of the host machine.
 
-5. Apply the changes ::
+Example:
 
-    signal-event interface-update
-    signal-event nethserver-dnsmasq-save
+- Host FQDN: nethserver.org
+- SSSD realm: ad.nethserver.org
+- Default UPN: ad.nethserver.org
+- Extra UPN: nethserver.org
 
-6. Start nsdc ::
+If required, the administrator can use RSAT tools to select the extra UPN for a specific user.
 
-    systemctl start nsdc
 
-7. Edit ``/var/lib/machines/nsdc/var/lib/samba/private/krb5.conf`` and append a "realms" section like the following::
+References:
 
-    [realms]
-    DPNET.NETHESIS.IT = {
-       kdc = 192.168.101.77
-    }
-
-8. Install additional dependencies for ``samba_dnsupdate`` in nsdc container ::
-
-    yum --installroot=/var/lib/machines/nsdc/ -y install bind-utils
-
-8. Run ``samba_dnsupdate`` in nsdc container ::
-
-    systemd-run -t -M nsdc /usr/sbin/samba_dnsupdate --verbose
-
-8. Run again the last command, until it outputs *"No DNS updates needed"*.
-
-9. Clean up ``/var/lib/machines/nsdc/var/lib/samba/private/krb5.conf``, by removing the section appended at step 7
-
+- https://technet.microsoft.com/en-us/library/cc772007%28v=ws.11%29.aspx
+- https://msdn.microsoft.com/en-us/library/ms680537%28v=vs.85%29.aspx
