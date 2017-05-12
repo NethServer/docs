@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 09:17+0200\n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,17 +134,17 @@ msgstr ""
 #: ../../shared_folder.rst:68 ../../shared_folder.rst:71
 msgid ""
 "When accessing a SMB share, some user interfaces provide a single user name "
-"field. In that case, specify the **short user name** prefixed with the "
+"field. In that case, specify the **user short name** prefixed with the "
 "**NetBIOS domain name**.  For instance, if the NetBIOS domain name is "
 "\"COMPANY\" and the user name is \"john.smith\", the domain-prefixed user "
 "name to access a SMB share is: ::"
 msgstr ""
-"Quando si accede ad una condivisione SMB, alcune interfacce utente mostrano "
-"un unico campo per il nome utente. In questo caso, specificare il **nome "
-"utente breve** con il **nome di dominio NetBIOS** come prefisso. Per "
-"esempio, se il nome di dominio NetBIOS è \"COMPANY\" e il nome utente è "
-"\"john.smith\", il nome utente con prefisso dominio per accedere alla "
-"condivisione SMB è: ::"
+"Quando si accede ad una condivisione SMB, alcune interfacce utente "
+"forniscono un unico campo per indicare lo username. In questi casi fornire "
+"lo **user short name** anteposto dal **nome di dominio NetBIOS**. Ad "
+"esempio, se il nome di dominio NetBIOS fosse \"COMPANY\" ed il nome utente "
+"fosse \"john.smith\", la stringa da utilizzare per accedere alla "
+"condivisione SMB sarebbe: ::"
 
 #: ../../shared_folder.rst:76 ../../shared_folder.rst:79
 msgid ""
@@ -185,3 +185,47 @@ msgstr ""
 "Se è attiva l'opzione :guilabel:`Visibile`, la cartella condivisa sarà "
 "elencata fra le cartelle disponibili. Questa opzione non influisce sui "
 "permessi di accesso della cartella."
+
+#: ../../shared_folder.rst:96 ../../shared_folder.rst:99
+msgid "Home share"
+msgstr "Share home"
+
+#: ../../shared_folder.rst:98 ../../shared_folder.rst:101
+msgid ""
+"Each |product| user has a personal shared folder that is mapped to his Unix "
+"home directory. The SMB share name correspond to the **user short name**. "
+"For example:"
+msgstr ""
+"Ciascun utente di |product| ha una condivisione personale mappata sulla sua "
+"home directory Unix. Il nome SMB della share corrisponde allo **user short "
+"name**. Ad esempio:"
+
+#: ../../shared_folder.rst:101 ../../shared_folder.rst:104
+msgid "user short name ``john.smith``"
+msgstr "user short name ``john.smith``"
+
+#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
+msgid "server name ``MYSERVER``"
+msgstr "nome server ``MYSERVER``"
+
+#: ../../shared_folder.rst:103 ../../shared_folder.rst:106
+msgid "server address ``192.168.1.2``"
+msgstr "indirizzo server ``192.168.1.2``"
+
+#: ../../shared_folder.rst:105 ../../shared_folder.rst:108
+msgid "The SMB network address is: ::"
+msgstr "L'indirizzo di rete SMB è: ::"
+
+#: ../../shared_folder.rst:110 ../../shared_folder.rst:113
+msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
+msgstr ""
+"Fornire le credenziali dell'utente John come spiegato nella sezione :ref"
+":`smb-access-section`."
+
+#: ../../shared_folder.rst:114 ../../shared_folder.rst:117
+msgid ""
+"The Unix home directory is created the first time the user accesses it by "
+"either SMB or SFTP/SSH protocol."
+msgstr ""
+"La directory home Unix viene creata al primo accesso dell'utente tramite SMB"
+" o via SFTP/SSH."

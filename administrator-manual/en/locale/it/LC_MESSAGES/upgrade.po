@@ -1,0 +1,432 @@
+# #-#-#-#-#  upgrade.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  upgrade.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../upgrade.rst:14 ../../upgrade.rst:17
+msgid "Upgrade from |product| 6"
+msgstr "Aggiornamento da |product| 6"
+
+#: ../../upgrade.rst:16 ../../upgrade.rst:19
+msgid ""
+"The upgrade from |product| 6 to |product| |version| can be achieved using "
+"the :ref:`disaster-recovery-section` procedure."
+msgstr ""
+"L'upgrade da |product| 6 a |product| |version| può essere effettuato "
+"utilizzando la procedura di ref:`disaster-recovery-section`"
+
+#: ../../upgrade.rst:21 ../../upgrade.rst:24
+msgid ""
+"Before running the migration procedure, read carefully all the sections of "
+"this chapter. Please also read :ref:`discontinued-section`."
+msgstr ""
+"Prima di proseguire con la prodecura di migrazione, leggere attentamente "
+"tutte le sezioni di questo capitolo. Fare anche riferimento alla sezione "
+":ref:`discontinued-section`."
+
+#: ../../upgrade.rst:24 ../../upgrade.rst:27
+msgid "Make sure to have an updated backup of the original installation."
+msgstr "Assicurarsi di avere un backup recente del sistema di origine."
+
+#: ../../upgrade.rst:26 ../../upgrade.rst:29
+msgid ""
+"Install |product| |version| and complete the initial steps using the first "
+"configuration wizard. The new machine must have the same hostname of the old"
+" one, to access the backup set correctly. Install and configure the backup "
+"module."
+msgstr ""
+"Installare |product| |version| e completare gli step iniziali utilizzando il"
+" wizard di prima configurazione. La nuova macchina deve avere lo stesso "
+"hostname della vecchia per poter accedere correttamente al set di backup. "
+"Installare e configurare il modulo del backup."
+
+#: ../../upgrade.rst:30 ../../upgrade.rst:33
+msgid ""
+"Restore the configuration backup using the web interface. The network "
+"configuration is restored, too! If any error occurs, check the "
+":file:`/var/log/messages` log file for further information: ::"
+msgstr ""
+"Ripristinare il backup della configurazione utilizzando l'interfaccia web. "
+"Anche la configurazione della rete verrà ripristinata! Se dovesse "
+"verificarsi qualche problema, controllare il file di log "
+":file:`/var/log/messages` per informazioni più approfondite: ::"
+
+#: ../../upgrade.rst:35 ../../upgrade.rst:38
+msgid ""
+"If needed, go to :guilabel:`Network` page and fix the network configuration "
+"accordingly to the new hardware. If the machine was joined to an existing "
+"Active Directory domain, read :ref:`ads-upgrade-section`."
+msgstr ""
+"Se necessario, spostarsi nel menu :guilabel:`Network` e correggere la "
+"configurazione di rete conformemente al nuovo hardware. Se la macchina era "
+"attestata ad un dominio Active Directory esistente, leggere :ref:`ads-"
+"upgrade-section`."
+
+#: ../../upgrade.rst:40 ../../upgrade.rst:43
+msgid "Complete the restore procedure with the following command: ::"
+msgstr "Completare la procedura di ripristino con i seguenti comandi: ::"
+
+#: ../../upgrade.rst:44 ../../upgrade.rst:47
+msgid "Check the restore logs: ::"
+msgstr "Verificare i log del ripristino: ::"
+
+#: ../../upgrade.rst:49 ../../upgrade.rst:52
+msgid ""
+"Each file under :file:`/etc/e-smith/templates-custom/` must be manually "
+"checked for compatibility with version |version|."
+msgstr ""
+"La compatibilità con la versione  |version| di ciascun file contenuto nel "
+"percorso :file:`/etc/e-smith/templates-custom/` dovrà essere verificata "
+"manualmente."
+
+#: ../../upgrade.rst:54 ../../upgrade.rst:57
+msgid ""
+"During the whole upgrade process, all network services will be inaccessible."
+msgstr ""
+"Per l'intera durata del processo di upgrade tutti i servizi di rete saranno "
+"inaccessibili."
+
+#: ../../upgrade.rst:57 ../../upgrade.rst:60
+msgid "Accounts provider"
+msgstr "Account provider"
+
+#: ../../upgrade.rst:59 ../../upgrade.rst:62
+msgid ""
+"There are different upgrade scenarios, depending on how the source machine "
+"was configured."
+msgstr ""
+"Esistono differenti scenari di aggiornamento, a seconda di come è "
+"configurata la macchina di origine."
+
+#: ../../upgrade.rst:61 ../../upgrade.rst:64
+msgid ""
+"If the source system was a NT Primary Domain Controller (Samba server role "
+"was :guilabel:`Primary Domain Controller` -- PDC) or a standalone file "
+"server (role was :guilabel:`Workstation` -- WS), refer to :ref:`pdc-upgrade-"
+"section`."
+msgstr ""
+"In caso di sistema di origine Primary Domain Controller NT (ruolo del server"
+" Samba :guilabel:`Primary Domain Controller` -- PDC) o di file server "
+"standalone (ruolo :guilabel:`Workstation` -- WS), fare riferimento alla "
+"sezione ref:`pdc-upgrade-section`."
+
+#: ../../upgrade.rst:65 ../../upgrade.rst:68
+msgid ""
+"If the source system was joined to an Active Directory domain (Samba server "
+"role was :guilabel:`Active Directory member` -- ADS), refer to :ref:`ads-"
+"upgrade-section`."
+msgstr ""
+"In caso di sistema origine attestato ad un dominio Active Directory (ruolo "
+"server Samba :guilabel:`Active Directory member` -- ADS), fare riferimento "
+"alla sezione :ref:`ads-upgrade-section`."
+
+#: ../../upgrade.rst:69 ../../upgrade.rst:72
+msgid ""
+"In any other case, the LDAP server is upgraded automatically to *local LDAP "
+"accounts provider*, preserving existing users, passwords and groups."
+msgstr ""
+"In tutti gli altri casi il server LDAP viene automaticamente aggiornato a "
+"\"Account provider LDAP locale\", preservando utenti, password e gruppi "
+"preesistenti."
+
+#: ../../upgrade.rst:75 ../../upgrade.rst:78
+msgid "Primary Domain Controller and Workstation upgrade"
+msgstr "Aggiornamento Primary Domain Controller e Workstation"
+
+#: ../../upgrade.rst:77 ../../upgrade.rst:80
+msgid ""
+"After the restore procedure, go to :guilabel:`Accounts provider` page and "
+"select the :guilabel:`Upgrade to Active Directory` procedure. The button "
+"will be available only if network configuration has already been fixed "
+"accordingly to the new hardware."
+msgstr ""
+"Successivamente alla procedura di ripristino, spostarsi nella pagina "
+":guilabel:`Accounts provider` e selezionare la procedura :guilabel:`Upgrade "
+"to Active Directory`. Il bottone sarà disponibile unicamente se la "
+"configurazione di rete sarà stata adattata al nuovo hardware."
+
+#: ../../upgrade.rst:82 ../../upgrade.rst:85
+msgid ""
+"An additional, free, IP address from the *green* network is required by the "
+"Linux container to run the local Active Directory accounts provider."
+msgstr ""
+"E' necessario fornire un indirizzo IP, aggiuntivo e libero, della rete "
+"*green* al container Linux per attivare l'account provider Active Directory "
+"locale."
+
+#: ../../upgrade.rst:85 ../../upgrade.rst:88
+msgid ""
+"The upgrade procedure preserves user, group and computer accounts and their "
+"passwords. However shared folder connections may require further adjustment."
+msgstr ""
+"La procedura di upgrade preserva utenti, gruppi e computer account comprese "
+"le loro password. In ogni caso le connessioni alle cartelle condivise "
+"potrebbero richiedere ulteriori modifiche."
+
+#: ../../upgrade.rst:88 ../../upgrade.rst:91
+msgid "For instance:"
+msgstr "Ad esempio:"
+
+#: ../../upgrade.rst:90 ../../upgrade.rst:93
+msgid "server IP (green): ``192.168.98.252``"
+msgstr "IP server (green): ``192.168.98.252``"
+
+#: ../../upgrade.rst:91 ../../upgrade.rst:94
+msgid "free additional IP in green network: ``192.168.98.7``"
+msgstr "IP aggiuntivo e libero della rete green: `192.168.98.7``"
+
+#: ../../upgrade.rst:93 ../../upgrade.rst:96
+msgid "Ensure there is a working Internet connection:"
+msgstr "Assicurarsi che sia attiva una connessione internet:"
+
+#: ../../upgrade.rst:100 ../../upgrade.rst:103
+msgid ""
+"For more information about the local Active Directory accounts provider, see"
+" :ref:`ad-local-accounts-provider-section`."
+msgstr ""
+"Per maggiori informazioni relative all'account provider Active Directory "
+"locale, fare riferimento alla sezione :ref:`ad-local-accounts-provider-"
+"section`."
+
+#: ../../upgrade.rst:105 ../../upgrade.rst:108
+msgid ""
+"Read carefully the :ref:`upgrade-shared-folders` section, because the "
+"connection credentials may change when upgrading to |product| |version|."
+msgstr ""
+"Leggere attentamente la sezione :ref:`upgrade-shared-folders`, le "
+"credenziali per la connessione potrebbero variare a seguito dell'upgrade a "
+"|product| |version|."
+
+#: ../../upgrade.rst:111 ../../upgrade.rst:114
+msgid "Active Directory member upgrade"
+msgstr "Aggiornamento membro Active Directory"
+
+#: ../../upgrade.rst:113 ../../upgrade.rst:116
+msgid ""
+"After **restoring the configuration**, join the server to the existing "
+"Active Directory domain from the web interface. For more information see "
+":ref:`join-existing-ad-section`."
+msgstr ""
+"Successivamente al **ripristino della configurazione**, attestare il server "
+"ad un dominio Active Directory esistente tramite l'interfaccia web. PEr "
+"ulteriori informazioni consultare la sezione :ref:`join-existing-ad-"
+"section`."
+
+#: ../../upgrade.rst:117 ../../upgrade.rst:120
+msgid "At the end, proceed with **data restore**."
+msgstr "Al termine, procedere con il **ripristino dei dati**."
+
+#: ../../upgrade.rst:119 ../../upgrade.rst:122
+msgid "Mail aliases from AD server are not imported automatically!"
+msgstr "Gli alias e-mail non vengono importati automaticamente da AD!"
+
+#: ../../upgrade.rst:124 ../../upgrade.rst:127
+msgid "Shared folders"
+msgstr "Cartelle condivise"
+
+#: ../../upgrade.rst:126 ../../upgrade.rst:129
+msgid "Shared folders have been split into two packages:"
+msgstr "Le cartelle condivise sono state separate in due pacchetti:"
+
+#: ../../upgrade.rst:128 ../../upgrade.rst:131
+msgid ""
+"\"Shared folders\" page configures only Samba SMB shares; it provides data "
+"access using CIFS/SMB protocol and can be used to share files among Windows "
+"and Linux workstations"
+msgstr ""
+"La pagina \"Cartelle condivise\" permette di configurare solamente delle "
+"condivisioni SMB; fornisce l'accesso ai dati utilizzando il protocollo "
+"CIFS/SMB e può essere utilizzata per condividere file tra workstation "
+"Windows e Linux"
+
+#: ../../upgrade.rst:132 ../../upgrade.rst:135
+msgid ""
+"The \"Virtual hosts\" panel provides HTTP and FTP access, it has been "
+"designed to host web sites and web applications"
+msgstr ""
+"Il pannello \"Virtual host\" fornisce l'accesso via HTTP ed FTP ed è stato "
+"concepito per ospitare siti ed applicazioni web"
+
+#: ../../upgrade.rst:138 ../../upgrade.rst:141
+msgid "SMB access"
+msgstr "Accesso SMB"
+
+#: ../../upgrade.rst:140 ../../upgrade.rst:143
+msgid ""
+"In |product| |version| the SMB security model is based on Active Directory. "
+"As consequence when upgrading (or migrating) a file server in Primary Domain"
+" Controller (PDC) or Standalone Workstation (WS) role the following rule "
+"apply:"
+msgstr ""
+"In | product | | Versione | il modello di protezione SMB adottato si basa su"
+" Active Directory. Di conseguenza, quando si esegue l'aggiornamento (o la "
+"migrazione) di un file server nel ruolo del controller di dominio primario "
+"(PDC) o di standalone workstation (WS), si applica la seguente "
+"regola:javascript:;"
+
+#: ../../upgrade.rst:144 ../../upgrade.rst:147
+msgid ""
+"When connecting to a shared folder, the NetBIOS domain name must be either "
+"prefixed to the user name (i.e. ``MYDOMAIN\\username``), or inserted in the "
+"specific form field."
+msgstr ""
+"Quando ci si connette a una cartella condivisa, il nome di dominio NetBIOS "
+"deve essere anteposto al nome utente (ad esempio ``MYDOMAIN\\username``) o "
+"inserito nel campo specifico del modulo di autenticazione."
+
+#: ../../upgrade.rst:149 ../../upgrade.rst:152
+msgid "HTTP access"
+msgstr "Accesso HTTP"
+
+#: ../../upgrade.rst:151 ../../upgrade.rst:154
+msgid ""
+"Every shared folder with web access configured in |product| 6 can be "
+"migrated to a virtual host directly from the web interface by selecting the "
+"action :guilabel:`Migrate to virtual host`. After the migration, data inside"
+" the new virtual host will be accessible using only FTP and HTTP protocols."
+msgstr ""
+"Ogni cartella condivisa con accesso web configurata in |product| 6 può "
+"essere migrata a virtual host direttamente dall'interfaccia web selezionando"
+" l'azione guilabel:`Migra a virtual host`. Dopo la migrazione, i dati "
+"contenuti nel nuovo virtual host saranno accessibili solamente tramite i "
+"protocolli FTP ed HTTP."
+
+#: ../../upgrade.rst:156 ../../upgrade.rst:159
+msgid ""
+"See also :ref:`virtual_hosts-section` for more information about "
+":guilabel:`Virtual hosts` page."
+msgstr ""
+"Fare riferimento alla sezione :ref:`virtual_hosts-section` per ulteriori "
+"informazioni relative alla pagina :guilabel:`Virtual hosts`"
+
+#: ../../upgrade.rst:160 ../../upgrade.rst:163
+msgid "Mail server"
+msgstr "Server mail"
+
+#: ../../upgrade.rst:162 ../../upgrade.rst:165
+msgid ""
+"All mailboxes options like SPAM retention and quota, along with ACLs, user "
+"shared mailboxes and subscriptions are preserved."
+msgstr ""
+"Tutte le opzioni delle cassette postali come la SPAM retention e la quota, "
+"così come le ACL, le cassette postali condivise dall'utente e le "
+"sottoscrizioni vengono conservate."
+
+#: ../../upgrade.rst:165 ../../upgrade.rst:168
+msgid ""
+"Mailboxes associated to groups with :guilabel:`Deliver the message into a "
+"shared folder` option enabled, will be converted to public shared mailboxes."
+" The public shared folder will be automatically subscribed by all group "
+"members, but all messages will be markes as unread."
+msgstr ""
+"Le cassette postali associate a gruppi con l'opzione :guilabel:`Deliver the "
+"message into a shared folder` abilitata, verranno convertite in cassette "
+"postali pubbliche condivise. La cartella condivisa pubblica verrà "
+"automaticamente sottoscritta da tutti i membri del gruppo, ma tutti i "
+"messaggi saranno contrassegnati come non letti."
+
+#: ../../upgrade.rst:171 ../../upgrade.rst:174
+msgid "Let's Encrypt"
+msgstr "Let's Encrypt"
+
+#: ../../upgrade.rst:173 ../../upgrade.rst:176
+msgid ""
+"Let's Encrypt certificates are restored during the process, but will not be "
+"automatically renewed."
+msgstr ""
+"i certificati Let's Encrypt vengono ripristinati durante il processo, ma non"
+" verranno automaticamente rinnovati."
+
+#: ../../upgrade.rst:176 ../../upgrade.rst:179
+msgid ""
+"After the upgrade process has been completed, access the web interface and "
+"reconfigure Let's Encrypt from the :guilabel:`Server certificate` page."
+msgstr ""
+"Dopo aver completato il processo di aggiornamento, accedere all'interfaccia "
+"web e riconfigurare Let's Encrypt dalla pagina :guilabel:`Server "
+"certificate`."
+
+#: ../../upgrade.rst:180 ../../upgrade.rst:183
+msgid "Owncloud and Nextcloud"
+msgstr "Owncloud e Nextcloud"
+
+#: ../../upgrade.rst:182 ../../upgrade.rst:185
+msgid ""
+"In |product| |version|, Owncloud has officially been replaced by Nextcloud."
+msgstr ""
+"In product| |version|, Owncloud è stato ufficialmente sostituito da "
+"Nextcloud."
+
+#: ../../upgrade.rst:184 ../../upgrade.rst:187
+msgid ""
+"However Owncloud 7 is still available to avoid service disruption after the "
+"upgrade."
+msgstr ""
+"Tuttavia Owncloud 7 è ancora disponibile per evitare interruzioni del "
+"servizio dopo l'aggiornamento."
+
+#: ../../upgrade.rst:188 ../../upgrade.rst:191
+msgid ""
+"In case of :ref:`upgrade from local LDAP to Samba AD <pdc-upgrade-section>`,"
+" user data inside Owncloud will not be accessible either from the web "
+"interface or desktop/mobile clients. In such case, install and migrate to "
+"Nextcloud after the upgrade to Samba Active Directory has been completed."
+msgstr ""
+"In caso di `upgrade from local LDAP to Samba AD <pdc-upgrade-section>`, i "
+"dati utente all'interno di Owncloud non saranno accessibili né "
+"dall'interfaccia web né dai client desktop/mobile. In tal caso, installare e"
+" migrare a Nextcloud dopo che è stato completato l'aggiornamento a Samba "
+"Active Directory."
+
+#: ../../upgrade.rst:194 ../../upgrade.rst:197
+msgid ""
+"Migration from Owncloud to Nextcloud is manual and can be arranged according"
+" to user's need. The migration script will import all files and users from "
+"LDAP to Nextcloud, but shared resources **will not** be migrated."
+msgstr ""
+"La migrazione da Owncloud a Nextcloud è manuale e può essere organizzata "
+"secondo la necessità dell'utente. Lo script di migrazione importerà tutti i "
+"file e gli utenti da LDAP a Nextcloud, ma le risorse condivise *non verranno"
+" migrate*."
+
+#: ../../upgrade.rst:199 ../../upgrade.rst:202
+msgid "To migrate users and data, use following command: ::"
+msgstr "Per migrare utenti e dati, utilizzare il seguente comando: ::"
+
+#: ../../upgrade.rst:203 ../../upgrade.rst:206
+msgid ""
+"After the migration, please replace Owncloud clients with Nextcloud ones "
+"[#DownloadNC]_, then make sure to set the new application URL: "
+"``https://<your_server_address>/nextcloud``."
+msgstr ""
+"Dopo la migrazione, sostituire i client Owncloud con Nextcloud [#DownloadNC]"
+" _, quindi assicurarsi di impostare il nuovo URL dell'applicazione: ``https:"
+" // <indirizzo_del_server>/nextcloud``."
+
+#: ../../upgrade.rst:206 ../../upgrade.rst:209
+msgid ""
+"Nextcloud clients download https://nextcloud.com/install/#install-clients"
+msgstr ""
+"download client Nextcloud https://nextcloud.com/install/#install-clients"

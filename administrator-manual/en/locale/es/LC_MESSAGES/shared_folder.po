@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 09:17+0200\n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -134,17 +134,11 @@ msgstr ""
 #: ../../shared_folder.rst:68 ../../shared_folder.rst:71
 msgid ""
 "When accessing a SMB share, some user interfaces provide a single user name "
-"field. In that case, specify the **short user name** prefixed with the "
+"field. In that case, specify the **user short name** prefixed with the "
 "**NetBIOS domain name**.  For instance, if the NetBIOS domain name is "
 "\"COMPANY\" and the user name is \"john.smith\", the domain-prefixed user "
 "name to access a SMB share is: ::"
 msgstr ""
-"Cuando se accede a un recurso compartido SMB, algunas interfaces de usuario "
-"solo proveen el nombre de usuario en el campo. En este caso, especifique el"
-"  **nombre de usuario corto** con el prefijo **Nombre de dominio NetBIOS**. "
-"Por ejemplo, si el nombre de dominio NetBIOS es \"COMPANY\", y el usuario es"
-" \"jhon.smith\", el nombre de usuario con el prefijo de dominio para acceder"
-" al recurso compartido SMB es: ::"
 
 #: ../../shared_folder.rst:76 ../../shared_folder.rst:79
 msgid ""
@@ -184,3 +178,40 @@ msgid ""
 msgstr ""
 "Si :guilabel:`Navegable` está habilitado, la carpeta compartida aparece "
 "públicamente. Esto no afecta al permiso para usar este recurso."
+
+#: ../../shared_folder.rst:96 ../../shared_folder.rst:99
+msgid "Home share"
+msgstr ""
+
+#: ../../shared_folder.rst:98 ../../shared_folder.rst:101
+msgid ""
+"Each |product| user has a personal shared folder that is mapped to his Unix "
+"home directory. The SMB share name correspond to the **user short name**. "
+"For example:"
+msgstr ""
+
+#: ../../shared_folder.rst:101 ../../shared_folder.rst:104
+msgid "user short name ``john.smith``"
+msgstr ""
+
+#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
+msgid "server name ``MYSERVER``"
+msgstr ""
+
+#: ../../shared_folder.rst:103 ../../shared_folder.rst:106
+msgid "server address ``192.168.1.2``"
+msgstr ""
+
+#: ../../shared_folder.rst:105 ../../shared_folder.rst:108
+msgid "The SMB network address is: ::"
+msgstr ""
+
+#: ../../shared_folder.rst:110 ../../shared_folder.rst:113
+msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
+msgstr ""
+
+#: ../../shared_folder.rst:114 ../../shared_folder.rst:117
+msgid ""
+"The Unix home directory is created the first time the user accesses it by "
+"either SMB or SFTP/SSH protocol."
+msgstr ""
