@@ -36,7 +36,6 @@ Developer Manual
    filesystem_options
    dns
    dhcp
-   logs
    random_url
    migration
    certificate_management

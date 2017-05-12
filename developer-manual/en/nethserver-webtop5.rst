@@ -29,6 +29,7 @@ Available properties:
 
 * ``ActiveSync``: if set to ``enabled``, it enables /Microsoft-Server-ActiveSync url.  Default is ``enabled``
 * ``ActiveSyncLog``: log level of z-push implementation. As default z-push will log only relevant errors.
+* ``Debug``: if set to ``true``, enable debug for the web application. Default is ``false``
 * ``DefaultLocale``: default locale for WebTop users. To list available locales execute: ``/etc/e-smith/events/actions/nethserver-webtop5-locale-tz``
 * ``DefaultTimezone``: default timezone for WebTop users. To list available timezones: ``JAVA_HOME=/usr/share/webtop/ java ListTimeZones``
 * ``MinMemory`` and ``MaxMemory``: minimun and maximum memory of Tomcat instance. Values are expressed in MB.
@@ -39,6 +40,7 @@ Example: ::
   webtop=configuration
       ActiveSync=enabled
       ActiveSyncLog=LOGLEVEL_ERROR
+      Debug=false
       DefaultLocale=en_US
       DefaultTimezone=Etc/UTC
       MaxMemory=1024
