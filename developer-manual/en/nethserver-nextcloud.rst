@@ -44,3 +44,11 @@ The Nextcloud backup includes the configuration file and all data of the users: 
 
 The database is automatically saved by ``nethserver-mysql``.
 
+OCC
+===
+
+When using ``occ`` command, PHP 5.6 should be enabled inside the environment.
+
+Invocation example: ::
+
+  su - apache -s /bin/bash -c "source /opt/rh/rh-php56/enable; cd /usr/share/nextcloud/; php occ " ldap:show-config
