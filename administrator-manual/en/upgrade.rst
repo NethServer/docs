@@ -198,3 +198,23 @@ then make sure to set the new application URL: ``https://<your_server_address>/n
 
 .. [#DownloadNC] Nextcloud clients download https://nextcloud.com/install/#install-clients
 
+Phonebook
+=========
+
+In |product| |version|, perl library ``NethServer::Directory`` has been replaced
+by ``NethServer::Password``.
+Please update your custom scripts accordingly.
+
+Example of old code: ::
+
+  use NethServer::Directory;
+  NethServer::Directory::getUserPassword('myservice', 0);
+
+New code: ::
+
+  use NethServer::Password;
+  my $password = NethServer::Password::store('myservice');
+
+Documentation available via perldoc command: ::
+
+   perldoc NethServer::Password
