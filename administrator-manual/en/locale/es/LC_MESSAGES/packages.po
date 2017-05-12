@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 09:17+0200\n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -86,12 +86,9 @@ msgstr ""
 
 #: ../../packages.rst:44 ../../packages.rst:47
 msgid ""
-"Installed packages **cannot be removed frome the Software Center!** Please "
+"Installed packages **cannot be removed from the Software Center!** Please "
 "contact customer support if you need to remove an installed module."
 msgstr ""
-"¡Los paquetes instalados **no se pueden quitar del Centro de software!** "
-"Póngase en contacto con el servicio de atención al cliente si necesita "
-"quitar un módulo instalado."
 
 #: ../../packages.rst:54 ../../packages.rst:57
 msgid "Software updates"
