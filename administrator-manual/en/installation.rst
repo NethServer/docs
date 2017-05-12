@@ -208,7 +208,7 @@ System language
 ^^^^^^^^^^^^^^^
 
 The system language of |product| installations is *English (United States)*.
-Additional languages can be installed later. See :ref:`installation-next-steps`.
+Additional languages can be installed later. See :ref:`Next steps <installation-next-steps>`.
 
 .. _installation-manual:
 
@@ -304,6 +304,7 @@ To install the base system, run: ::
     Proceed with :ref:`registration <registration-section>` then run the following command: ::
         
         yum update @nethserver-iso
+
 
 .. _installation-next-steps:
 
