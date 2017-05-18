@@ -98,6 +98,12 @@ For more information about the local Active Directory accounts provider, see
     Read carefully the :ref:`upgrade-shared-folders` section, because the connection
     credentials may change when upgrading to |product| |version|.
 
+.. note::
+
+   Users not enabled for Samba in |product| 6 will be migrated as
+   locked users. To enable these locked users, the administrator
+   will have to set a new password.
+
 .. _ads-upgrade-section:
 
 Active Directory member upgrade
