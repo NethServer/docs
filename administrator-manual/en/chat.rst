@@ -18,6 +18,10 @@ The main features are:
 
 All system users can access the chat using their own credentials.
 
+.. note::       If |product| is bound to a remote Active Directory account provider
+                a dedicated user account in AD is required by the module to be fully
+                operational! See :ref:`join-existing-ad-section`.
+
 Client
 ======
 
