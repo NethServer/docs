@@ -75,9 +75,6 @@ fixed accordingly to the new hardware.
 An additional, free, IP address from the *green* network is required by the
 Linux container to run the local Active Directory accounts provider.
 
-The upgrade procedure preserves user, group and computer accounts and their
-passwords. However shared folder connections may require further adjustment.
-
 For instance:
 
 * server IP (green): ``192.168.98.252``
@@ -93,12 +90,16 @@ Ensure there is a working Internet connection:
 For more information about the local Active Directory accounts provider, see
 :ref:`ad-local-accounts-provider-section`.
 
+Shared folder connections may require further adjustment.
+
 .. warning::
 
     Read carefully the :ref:`upgrade-shared-folders` section, because the connection
     credentials may change when upgrading to |product| |version|.
 
-.. note::
+The upgrade procedure preserves user, group and computer accounts.
+
+.. warning::
 
    Users not enabled for Samba in |product| 6 will be migrated as
    locked users. To enable these locked users, the administrator
