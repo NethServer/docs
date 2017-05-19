@@ -11,7 +11,7 @@ the :ref:`disaster-recovery-section` procedure.
 
 .. warning::
 
-    Before running the migration procedure, read carefully all the sections of this
+    Before running the upgrade procedure, read carefully all the sections of this
     chapter. Please also read :ref:`discontinued-section`.
 
 #. Make sure to have an updated backup of the original installation.
