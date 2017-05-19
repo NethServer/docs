@@ -263,12 +263,13 @@ After the prerequisite is fulfilled, proceed to the page
 
 .. _ad-dedicated-service-account:
 
-Some additional modules, like Nextcloud, WebTop, Roundcube, SOGo, Ejabberd
-require read-only access to AD LDAP services. To be fully operational they
-require an additional account to perform simple LDAP binds.  Create a
-**dedicated user account** in AD, and set a complex *non-expiring* password for
-it.
-
+.. warning::    Some additional modules, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*
+                require read-only access to AD LDAP services. To be fully operational they
+                require an additional account to perform simple LDAP binds.
+                
+                Create a **dedicated user account** in AD, and set a complex *non-expiring*
+                password for it.
+                
 Once |product| has successfuly joined AD, specify the **dedicated user account**
 credentials in :guilabel:`Accounts provider > Read-only bind credentials`.
 
