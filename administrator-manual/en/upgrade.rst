@@ -145,6 +145,20 @@ Controller (PDC) or Standalone Workstation (WS) role the following rule apply:
   prefixed to the user name (i.e. ``MYDOMAIN\username``), or inserted in the
   specific form field.
 
+The upgrade procedure enables the deprecated [#badlock]_ NTLM authentication method to
+preserve backward compatibility with legacy network clients, like printers and
+scanners.
+
+.. warning::
+
+  Fix the legacy SMB clients configuration, then disable NTLM authentication.
+
+  * Edit ``/var/lib/machines/nsdc/etc/samba/smb.conf``
+  * Remove the ``ntlm auth = yes`` line
+  * Restart the samba DC with ``systemctl -M nsdc restart samba``
+
+.. [#badlock] Badlock vulnerability http://badlock.org/
+
 HTTP access
 -----------
 
