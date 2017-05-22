@@ -3,10 +3,21 @@
 Administrator Manual 
 ====================
 
-.. image:: ../../_static/logo.png
-      :alt: |product|
+.. only:: nscom
 
-**Official site**: `www.nethserver.org <http://www.nethserver.org>`_
+    .. image:: nscom/_static/logo.png
+          :alt: |product|
+
+    **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
+
+.. only:: nsent
+
+    .. sidebar:: Contacts
+
+        Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_
+
+        Official site: `www.nethesis.it <http://www.nethesis.it>`_
+
 
 Release notes |release|
 -----------------------
@@ -97,15 +108,15 @@ Appendix
    license
 
 
-Indices
-=======
+.. only:: nscom
 
-* :ref:`genindex`
-* :ref:`search`
+   Indices
+   -------
 
+   * :ref:`General index <genindex>`
+   * :ref:`Search <search>`
 
-
-.. image:: ../../_static/by-nc-sa_small.png
+.. image:: nscom/_static/by-nc-sa_small.png
    :alt: CC by-nc-sa
    :align: right
    :target: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

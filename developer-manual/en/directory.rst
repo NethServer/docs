@@ -72,7 +72,7 @@ The process of user/group creations is:
 
 The `__state` property keeps of the user status as shown below:
 
-.. figure:: ../../_static/user-account-sm.png
+.. figure:: _static/user-account-sm.png
    :alt: User account state machine
 
 Password policy

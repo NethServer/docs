@@ -265,9 +265,7 @@ DNS
 End of installation procedure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After parameters input, the procedure will start the installation.
-
-.. include:: installation_interactive_end.inc
+After parameters input, the procedure will start the installation. See also :ref:`next-steps-section`.
 
 
 .. index::
@@ -303,12 +301,24 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
-Enterprise promotion
-====================
+.. only:: nsent
 
-To promote to NethServer Enterprise version follow the istructions `available here`_.
+    Enterprise promotion
+    ====================
 
-.. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062689-promozione-nethserver-enterprise-6-x-community-ad-enterprise
+    To promote to NethServer Enterprise version follow the istructions `available here`_.
 
-.. include:: installation_centos_end.inc
+    .. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062689-promozione-nethserver-enterprise-6-x-community-ad-enterprise
+
+.. only:: nscom
+
+    .. _next-steps-section:
+
+    Next steps
+    ==========
+
+    At the end of the installation procedure, :ref:`access the
+    server-manager <access-section>` to :ref:`install additional software
+    <package_manager-section>`.
+
 

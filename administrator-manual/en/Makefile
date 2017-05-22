@@ -132,7 +132,9 @@ info:
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
 
 gettext:
-	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	for SPIN in nscom nsent; do $(SPHINXBUILD) -t $${SPIN} -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale-$${SPIN}; done
+	mkdir -p $(BUILDDIR)/locale
+	for CATALOG in $$(find $(BUILDDIR)/locale-{nscom,nsent} -name '*.pot' -printf  "%f\n" | sort | uniq); do msgcat -o $(BUILDDIR)/locale/$${CATALOG} $$(find $(BUILDDIR)/locale-{nscom,nsent}/$${CATALOG} 2>/dev/null); done
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 

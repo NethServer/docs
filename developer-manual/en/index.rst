@@ -6,7 +6,7 @@
 Developer Manual
 ================
 
-.. image:: ../../_static/logo.png
+.. image:: _static/logo.png
       :alt: NethServer
 
 .. rubric:: NethServer is an operating system designed for small offices and medium enterprises. It's simple, secure and flexible. 
@@ -151,7 +151,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`search`
 
-.. image:: ../../_static/by-nc-sa_small.png
+.. image:: _static/by-nc-sa_small.png
    :alt: CC by-nc-sa
    :align: right
    :target: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

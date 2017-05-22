@@ -30,7 +30,7 @@ Key features:
 *NethServer Web User Interface* is built upon Nethgui framework.
 
 
-.. figure::  ../../_static/nethgui_stack.png
+.. figure::  _static/nethgui_stack.png
 
 
 Design goals
