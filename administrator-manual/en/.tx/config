@@ -9,298 +9,298 @@ type = PO
 
 
 [docs-v7.pop3_connector]
-file_filter = ./locale/<lang>/LC_MESSAGES/pop3_connector.po
+file_filter = locale/<lang>/LC_MESSAGES/pop3_connector.po
 source_file = _build/locale/pop3_connector.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.snmp]
-file_filter = ./locale/<lang>/LC_MESSAGES/snmp.po
+file_filter = locale/<lang>/LC_MESSAGES/snmp.po
 source_file = _build/locale/snmp.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.pop3_proxy]
-file_filter = ./locale/<lang>/LC_MESSAGES/pop3_proxy.po
+file_filter = locale/<lang>/LC_MESSAGES/pop3_proxy.po
 source_file = _build/locale/pop3_proxy.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.shared_folder]
-file_filter = ./locale/<lang>/LC_MESSAGES/shared_folder.po
+file_filter = locale/<lang>/LC_MESSAGES/shared_folder.po
 source_file = _build/locale/shared_folder.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.web_proxy]
-file_filter = ./locale/<lang>/LC_MESSAGES/web_proxy.po
+file_filter = locale/<lang>/LC_MESSAGES/web_proxy.po
 source_file = _build/locale/web_proxy.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.virtual_hosts]
-file_filter = ./locale/<lang>/LC_MESSAGES/virtual_hosts.po
+file_filter = locale/<lang>/LC_MESSAGES/virtual_hosts.po
 source_file = _build/locale/virtual_hosts.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.installation]
-file_filter = ./locale/<lang>/LC_MESSAGES/installation.po
+file_filter = locale/<lang>/LC_MESSAGES/installation.po
 source_file = _build/locale/installation.pot
 source_lang = en
 type = PO
 
 [docs-v7.dhcp]
-file_filter = ./locale/<lang>/LC_MESSAGES/dhcp.po
+file_filter = locale/<lang>/LC_MESSAGES/dhcp.po
 source_file = _build/locale/dhcp.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.accounts]
-file_filter = ./locale/<lang>/LC_MESSAGES/accounts.po
+file_filter = locale/<lang>/LC_MESSAGES/accounts.po
 source_file = _build/locale/accounts.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.ups]
-file_filter = ./locale/<lang>/LC_MESSAGES/ups.po
+file_filter = locale/<lang>/LC_MESSAGES/ups.po
 source_file = _build/locale/ups.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.firewall]
-file_filter = ./locale/<lang>/LC_MESSAGES/firewall.po
+file_filter = locale/<lang>/LC_MESSAGES/firewall.po
 source_file = _build/locale/firewall.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.suricata]
-file_filter = ./locale/<lang>/LC_MESSAGES/suricata.po
+file_filter = locale/<lang>/LC_MESSAGES/suricata.po
 source_file = _build/locale/suricata.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.proxy_pass]
-file_filter = ./locale/<lang>/LC_MESSAGES/proxy_pass.po
+file_filter = locale/<lang>/LC_MESSAGES/proxy_pass.po
 source_file = _build/locale/proxy_pass.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.ftp]
-file_filter = ./locale/<lang>/LC_MESSAGES/ftp.po
+file_filter = locale/<lang>/LC_MESSAGES/ftp.po
 source_file = _build/locale/ftp.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.bandwidth_monitor]
-file_filter = ./locale/<lang>/LC_MESSAGES/bandwidth_monitor.po
+file_filter = locale/<lang>/LC_MESSAGES/bandwidth_monitor.po
 source_file = _build/locale/bandwidth_monitor.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.packages]
-file_filter = ./locale/<lang>/LC_MESSAGES/packages.po
+file_filter = locale/<lang>/LC_MESSAGES/packages.po
 source_file = _build/locale/packages.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.vpn]
-file_filter = ./locale/<lang>/LC_MESSAGES/vpn.po
+file_filter = locale/<lang>/LC_MESSAGES/vpn.po
 source_file = _build/locale/vpn.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.webtop4]
-file_filter = ./locale/<lang>/LC_MESSAGES/webtop4.po
+file_filter = locale/<lang>/LC_MESSAGES/webtop4.po
 source_file = _build/locale/webtop4.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.webmail]
-file_filter = ./locale/<lang>/LC_MESSAGES/webmail.po
+file_filter = locale/<lang>/LC_MESSAGES/webmail.po
 source_file = _build/locale/webmail.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.migration]
-file_filter = ./locale/<lang>/LC_MESSAGES/migration.po
+file_filter = locale/<lang>/LC_MESSAGES/migration.po
 source_file = _build/locale/migration.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.index]
-file_filter = ./locale/<lang>/LC_MESSAGES/index.po
+file_filter = locale/<lang>/LC_MESSAGES/index.po
 source_file = _build/locale/index.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.content_filter]
-file_filter = ./locale/<lang>/LC_MESSAGES/content_filter.po
+file_filter = locale/<lang>/LC_MESSAGES/content_filter.po
 source_file = _build/locale/content_filter.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.third_party]
-file_filter = ./locale/<lang>/LC_MESSAGES/third_party.po
+file_filter = locale/<lang>/LC_MESSAGES/third_party.po
 source_file = _build/locale/third_party.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.license]
-file_filter = ./locale/<lang>/LC_MESSAGES/license.po
+file_filter = locale/<lang>/LC_MESSAGES/license.po
 source_file = _build/locale/license.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.release_notes]
-file_filter = ./locale/<lang>/LC_MESSAGES/release_notes.po
+file_filter = locale/<lang>/LC_MESSAGES/release_notes.po
 source_file = _build/locale/release_notes.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.phone_home]
-file_filter = ./locale/<lang>/LC_MESSAGES/phone_home.po
+file_filter = locale/<lang>/LC_MESSAGES/phone_home.po
 source_file = _build/locale/phone_home.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.webvirtmgr]
-file_filter = ./locale/<lang>/LC_MESSAGES/webvirtmgr.po
+file_filter = locale/<lang>/LC_MESSAGES/webvirtmgr.po
 source_file = _build/locale/webvirtmgr.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.backup]
-file_filter = ./locale/<lang>/LC_MESSAGES/backup.po
+file_filter = locale/<lang>/LC_MESSAGES/backup.po
 source_file = _build/locale/backup.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.nextcloud]
-file_filter = ./locale/<lang>/LC_MESSAGES/nextcloud.po
+file_filter = locale/<lang>/LC_MESSAGES/nextcloud.po
 source_file = _build/locale/nextcloud.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.mail]
-file_filter = ./locale/<lang>/LC_MESSAGES/mail.po
+file_filter = locale/<lang>/LC_MESSAGES/mail.po
 source_file = _build/locale/mail.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.statistics]
-file_filter = ./locale/<lang>/LC_MESSAGES/statistics.po
+file_filter = locale/<lang>/LC_MESSAGES/statistics.po
 source_file = _build/locale/statistics.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.fax_server]
-file_filter = ./locale/<lang>/LC_MESSAGES/fax_server.po
+file_filter = locale/<lang>/LC_MESSAGES/fax_server.po
 source_file = _build/locale/fax_server.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.dns]
-file_filter = ./locale/<lang>/LC_MESSAGES/dns.po
+file_filter = locale/<lang>/LC_MESSAGES/dns.po
 source_file = _build/locale/dns.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.base_system]
-file_filter = ./locale/<lang>/LC_MESSAGES/base_system.po
+file_filter = locale/<lang>/LC_MESSAGES/base_system.po
 source_file = _build/locale/base_system.pot
 source_lang = en
 type = PO
 
 
 [docs-v7.chat]
-file_filter = ./locale/<lang>/LC_MESSAGES/chat.po
+file_filter = locale/<lang>/LC_MESSAGES/chat.po
 source_file = _build/locale/chat.pot
 source_lang = en
 type = PO
 
 [docs-v7.registration]
-file_filter = ./locale/<lang>/LC_MESSAGES/registration.po
+file_filter = locale/<lang>/LC_MESSAGES/registration.po
 source_file = _build/locale/registration.pot
 source_lang = en
 type = PO
 
 [docs-v7.weekly_report]
-file_filter = ./locale/<lang>/LC_MESSAGES/weekly_report.po
+file_filter = locale/<lang>/LC_MESSAGES/weekly_report.po
 source_file = _build/locale/weekly_report.pot
 source_lang = en
 type = PO
 
 [docs-v7.phonebook-mysql]
-file_filter = ./locale/<lang>/LC_MESSAGES/phonebook-mysql.po
+file_filter = locale/<lang>/LC_MESSAGES/phonebook-mysql.po
 source_file = _build/locale/phonebook-mysql.pot
 source_lang = en
 type = PO
 
 [docs-v7.nethvoice_intro]
-file_filter = ./locale/<lang>/LC_MESSAGES/nethvoice_intro.po
+file_filter = locale/<lang>/LC_MESSAGES/nethvoice_intro.po
 source_file = _build/locale/nethvoice_intro.pot
 source_lang = en
 type = PO
 
 [docs-v7.nethcti_intro]
-file_filter = ./locale/<lang>/LC_MESSAGES/nethcti_intro.po
+file_filter = locale/<lang>/LC_MESSAGES/nethcti_intro.po
 source_file = _build/locale/nethcti_intro.pot
 source_lang = en
 type = PO
 
 [docs-v7.hotspot]
-file_filter = ./locale/<lang>/LC_MESSAGES/hotspot.po
+file_filter = locale/<lang>/LC_MESSAGES/hotspot.po
 source_file = _build/locale/hotspot.pot
 source_lang = en
 type = PO
 
 [docs-v7.sphinx]
-file_filter = ./locale/<lang>/LC_MESSAGES/sphinx.po
+file_filter = locale/<lang>/LC_MESSAGES/sphinx.po
 source_file = _build/locale/sphinx.pot
 source_lang = en
 type = PO
 
 [docs-v7.webtop5]
-file_filter = ./locale/<lang>/LC_MESSAGES/webtop5.po
+file_filter = locale/<lang>/LC_MESSAGES/webtop5.po
 source_file = _build/locale/webtop5.pot
 source_lang = en
 type = PO
 
 [docs-v7.upgrade]
-file_filter = ./locale/<lang>/LC_MESSAGES/upgrade.po
+file_filter = locale/<lang>/LC_MESSAGES/upgrade.po
 source_file = _build/locale/upgrade.pot
 source_lang = en
 type = PO

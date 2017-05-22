@@ -11,7 +11,7 @@ the :ref:`disaster-recovery-section` procedure.
 
 .. warning::
 
-    Before running the migration procedure, read carefully all the sections of this
+    Before running the upgrade procedure, read carefully all the sections of this
     chapter. Please also read :ref:`discontinued-section`.
 
 #. Make sure to have an updated backup of the original installation.
@@ -75,9 +75,6 @@ fixed accordingly to the new hardware.
 An additional, free, IP address from the *green* network is required by the
 Linux container to run the local Active Directory accounts provider.
 
-The upgrade procedure preserves user, group and computer accounts and their
-passwords. However shared folder connections may require further adjustment.
-
 For instance:
 
 * server IP (green): ``192.168.98.252``
@@ -93,10 +90,20 @@ Ensure there is a working Internet connection:
 For more information about the local Active Directory accounts provider, see
 :ref:`ad-local-accounts-provider-section`.
 
+Shared folder connections may require further adjustment.
+
 .. warning::
 
     Read carefully the :ref:`upgrade-shared-folders` section, because the connection
     credentials may change when upgrading to |product| |version|.
+
+The upgrade procedure preserves user, group and computer accounts.
+
+.. warning::
+
+   Users not enabled for Samba in |product| 6 will be migrated as
+   locked users. To enable these locked users, the administrator
+   will have to set a new password.
 
 .. _ads-upgrade-section:
 
@@ -137,6 +144,20 @@ Controller (PDC) or Standalone Workstation (WS) role the following rule apply:
   When connecting to a shared folder, the NetBIOS domain name must be either
   prefixed to the user name (i.e. ``MYDOMAIN\username``), or inserted in the
   specific form field.
+
+The upgrade procedure enables the deprecated [#badlock]_ NTLM authentication method to
+preserve backward compatibility with legacy network clients, like printers and
+scanners.
+
+.. warning::
+
+  Fix the legacy SMB clients configuration, then disable NTLM authentication.
+
+  * Edit ``/var/lib/machines/nsdc/etc/samba/smb.conf``
+  * Remove the ``ntlm auth = yes`` line
+  * Restart the samba DC with ``systemctl -M nsdc restart samba``
+
+.. [#badlock] Badlock vulnerability http://badlock.org/
 
 HTTP access
 -----------
@@ -198,3 +219,23 @@ then make sure to set the new application URL: ``https://<your_server_address>/n
 
 .. [#DownloadNC] Nextcloud clients download https://nextcloud.com/install/#install-clients
 
+Phonebook
+=========
+
+In |product| |version|, perl library ``NethServer::Directory`` has been replaced
+by ``NethServer::Password``.
+Please update your custom scripts accordingly.
+
+Example of old code: ::
+
+  use NethServer::Directory;
+  NethServer::Directory::getUserPassword('myservice', 0);
+
+New code: ::
+
+  use NethServer::Password;
+  my $password = NethServer::Password::store('myservice');
+
+Documentation available via perldoc command: ::
+
+   perldoc NethServer::Password

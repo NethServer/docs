@@ -6,6 +6,11 @@ WebTop is a full-featured groupware which implements ActiveSync protocol.
 
 Access to web interface is: ``https://<server_name>/webtop``.
 
+.. note::       If |product| is bound to a remote Active Directory account provider
+                a dedicated user account in AD is required by the module to be fully
+                operational! See :ref:`join-existing-ad-section`.
+
+
 Authentication
 ==============
 

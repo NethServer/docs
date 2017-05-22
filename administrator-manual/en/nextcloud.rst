@@ -36,6 +36,10 @@ All users are listed inside the administrator panel of NextCloud using a unique 
 This is because the system ensures that there are no duplicate internal user names as reported 
 in section `Internal Username` of `Official NextCloud documentation <https://docs.nextcloud.com>`_.
 
+.. note::       If |product| is bound to a remote Active Directory account provider
+                a dedicated user account in AD is required by the module to be fully
+                operational! See :ref:`join-existing-ad-section`.
+
 Trusted Domains
 ===============
 

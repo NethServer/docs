@@ -23,6 +23,10 @@ For example, given a server with IP address *192.168.1.1* and name *mail.mydomai
 * http://mail.mydomain.com/webmail
 * http://mail.mydomain.com/roundcubemail
 
+.. note::       If |product| is bound to a remote Active Directory account provider
+                a dedicated user account in AD is required by the module to be fully
+                operational! See :ref:`join-existing-ad-section`.
+
 Plugins
 =======
 
