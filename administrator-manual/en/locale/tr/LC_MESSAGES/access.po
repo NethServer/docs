@@ -1,0 +1,121 @@
+# #-#-#-#-#  access.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  access.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../access.rst:16 ../../access.rst:19
+msgid "Accessing the Server Manager"
+msgstr "Sunucu Yönetimine Erişmek"
+
+#: ../../access.rst:18 ../../access.rst:21
+msgid ""
+"|product| can be configured using the :dfn:`Server Manager` web interface. "
+"You need a web browser like Mozilla Firefox or Google Chrome to access the "
+"web interface using the address (URL) ``https://a.b.c.d:980`` or "
+"``https://server_name:980`` where *a.b.c.d* and *server_name* respectively "
+"are the server IP address and name configured during installation."
+msgstr ""
+"|product|, :dfn:`Sunucu Yönetimi` web arayüzü üzerinden ayarlanabilir. Web "
+"arayüzüne erişmek için Mozilla Firefox ya da Google Chrome gibi bir web "
+"tarayıcısında ``https://a.b.c.d:980`` ya da ``https://sunucu_adi:980`` "
+"adresini yazın. *a.b.c.d* sunucunun IP adresi, *sunucu_adi* ie yükleme "
+"sırasında sunucuya verilen addır."
+
+#: ../../access.rst:23 ../../access.rst:26
+msgid ""
+"If the web server module is installed, you can also access the web interface"
+" using this address ``https://server_name/server-manager``."
+msgstr ""
+"Web sunucusu modülü kurulmuş ise, web ara yüzüne ``https://sunucu_adi"
+"/server-manager`` adresini yazarak da erişebilirsiniz."
+
+#: ../../access.rst:25 ../../access.rst:28
+msgid ""
+"The Server Manager uses self-signed SSL certificates. You should explicitly "
+"accept them the first time you access the server. The connection is safe and"
+" encrypted."
+msgstr ""
+"Sunucu Yönetimi için kendinden imzalı SSL sertifikaları kullanılır. Sunucuya"
+" ilk kez eriştiğinizde bu sertifikayı onaylamanız gerekir. Böylece bağlantı "
+"güvenli ve şifrelenmiş olur."
+
+#: ../../access.rst:30 ../../access.rst:33
+msgid "Login"
+msgstr "Oturum Açma"
+
+#: ../../access.rst:32 ../../access.rst:35
+msgid ""
+"The login page will give you a trusted access to the web interface. Log in "
+"as **root** and type the password chosen during |product| installation."
+msgstr ""
+"Oturum açma sayfası size güvenili bir web arayüzü erişimi sağlar. **root** "
+"kullanıcısı ve |product| kurulumu sırasında belirlediğiniz parola ile oturum"
+" açın."
+
+#: ../../access.rst:37 ../../access.rst:40
+msgid ""
+"The *unattended* install procedure sets the root password to the default "
+"``Nethesis,1234``."
+msgstr ""
+"*Sorusuz* kurulum işlemi sırasında root parolası varsayılan olarak "
+"``Nethesis,1234`` olarak atanır."
+
+#: ../../access.rst:41 ../../access.rst:44
+msgid "Change the current password"
+msgstr "Geçerli parolayı değiştirin"
+
+#: ../../access.rst:43 ../../access.rst:46
+msgid ""
+"You can change the root password from the web interface by going to the "
+":guilabel:`root@host.domain.com` label on the upper right corner of the "
+"screen and clicking on :guilabel:`Profile`."
+msgstr ""
+"Ekranın sağ üst köşesindeki :guilabel:`root@sunucu.etkialani.com` etiketine "
+"gidip :guilabel:`Profil` üzerine tıklayarak root parolasını "
+"değiştirebilirsiniz."
+
+#: ../../access.rst:47 ../../access.rst:50
+msgid ""
+"The login page allows selecting an alternative language among those already "
+"installed on the system. After logging in, go to the :ref:`software-center-"
+"section` page to install additional languages."
+msgstr ""
+"Oturum açma sayfasında kurulmuş olan dillerin yanında başka bir dil "
+"seçilebilir. Oturum açtıktan sonra ek diller yüklemek için :ref:`software-"
+"center-section` bölümüne gidin."
+
+#: ../../access.rst:52 ../../access.rst:55
+msgid "Logout"
+msgstr "Oturumu Kapatma"
+
+#: ../../access.rst:54 ../../access.rst:57
+msgid ""
+"Terminate the current Server Manager session by going to the "
+":guilabel:`root@host.domain.com` label on the upper right corner of the "
+"screen and by clicking on :guilabel:`Logout`."
+msgstr ""
+"Ekranın sağ üst köşesindeki :guilabel:`root@sunucu.etkialani.com` etiketine "
+"gidip :guilabel:`Oturumu Kapat` üzerine tıklayarak geçerli sunucu yöneticisi"
+" oturumunu sonlandırabilirsiniz."

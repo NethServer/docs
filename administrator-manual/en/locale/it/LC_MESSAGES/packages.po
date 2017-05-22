@@ -1,0 +1,159 @@
+# #-#-#-#-#  packages.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  packages.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../packages.rst:13 ../../packages.rst:16
+msgid "Software center"
+msgstr "Software center"
+
+#: ../../packages.rst:15 ../../packages.rst:18
+msgid ""
+"|product| is highly modular.  At the end of the installation a bare minimum "
+"set of modules are ready to be used. The basic system includes modules like "
+"*network configuration* and *log viewer*. Additionally, the administrator "
+"can install additional modules, like :ref:`email-section`, :ref:`dhcp-"
+"section`, :ref:`firewall-section`..."
+msgstr ""
+"|product| è altamente modulare: al termine dell’installazione il sistema "
+"contiene solo i moduli di base (es. *configurazione di rete*, "
+"*visualizzazione log*). L’amministratore può quindi decidere quali "
+"componenti installare in base alle proprie esigenze (es. :ref:`email-"
+"section`, :ref:`dhcp-section`, :ref:`firewall-section`, ecc.)."
+
+#: ../../packages.rst:21 ../../packages.rst:24
+msgid ""
+"The :guilabel:`Available` tab lists all of the modules that can be "
+"installed. This list can be filtered by category."
+msgstr ""
+"Il tab :guilabel:`Disponibili` elenca tutti i moduli disponibili per "
+"l'installazione. La lista può essere filtrata per categoria."
+
+#: ../../packages.rst:24 ../../packages.rst:27
+msgid ""
+"To **install a module**, check the corresponding box and click on "
+":guilabel:`Add`. Some modules suggest optional packages that can be "
+"installed whether at the same or at a later time."
+msgstr ""
+"Per **installare un modulo**, aggiungere il segno di spunta e premere il "
+"pulsante :guilabel:`AGGIUNGI`. Alcuni moduli suggeriscono dei pacchetti "
+"opzionali, installabili contestualmente o in seguito."
+
+#: ../../packages.rst:28 ../../packages.rst:31
+msgid ""
+"To **install optional packages** at a later time, select "
+":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
+"entry."
+msgstr ""
+"Per **installare i pacchetti opzionali** in seguito, selezionare il tab "
+":guilabel:`Installati` e premere il pulsante :guilabel:`Modifica` di una "
+"voce della lista."
+
+#: ../../packages.rst:33 ../../packages.rst:36
+msgid "To **remove a module**, push the :guilabel:`Remove` button."
+msgstr "Per **rimuovere un modulo**, premere il pulsante :guilabel:`Rimuovi`."
+
+#: ../../packages.rst:37 ../../packages.rst:40
+msgid ""
+"When removing a module other modules could be removed, too! Read carefully "
+"the list of affected packages to avoid removing required features."
+msgstr ""
+"In fase di rimozione, alcuni moduli collegati potrebbe essere rimossi "
+"indirettamente! Leggere attentamente la lista dei pacchetti in rimozione per"
+" evitare di rimuovere delle funzionalità necessarie."
+
+#: ../../packages.rst:44 ../../packages.rst:47
+msgid ""
+"Installed packages **cannot be removed from the Software Center!** Please "
+"contact customer support if you need to remove an installed module."
+msgstr ""
+"I pacchetti installati **non possono essere rimossi dal Software Center!** "
+"Se dovesse essere necessario rimuovere un modulo installato vi invitiamo a "
+"contattare il supporto tecnico."
+
+#: ../../packages.rst:54 ../../packages.rst:57
+msgid "Software updates"
+msgstr "Aggiornamenti software"
+
+#: ../../packages.rst:56 ../../packages.rst:59
+msgid ""
+"Updates for the installed software are listed under the :guilabel:`Updates` "
+"tab. A message appears when software updates are available."
+msgstr ""
+"Gli aggiornamenti sono elencati nel tab :guilabel:`Aggiornamenti`. Quando ci"
+" sono aggiornamenti disponibili appare un messaggio apposito."
+
+#: ../../packages.rst:61 ../../packages.rst:64
+msgid ""
+"Regularly update the installed software to fix bugs, security issues and "
+"receive new features."
+msgstr ""
+"Applicare regolarmente gli aggiornamenti per fissare bug, problemi di "
+"sicurezza  e installare nuove funzionalità."
+
+#: ../../packages.rst:65 ../../packages.rst:68
+msgid "Updates will be automatically installed by a scheduled procedure."
+msgstr ""
+"Gli update disponibili verranno installati da una procedura automatica."
+
+#: ../../packages.rst:72 ../../packages.rst:75
+msgid "List of installed packages"
+msgstr "Lista dei pacchetti installati"
+
+#: ../../packages.rst:74 ../../packages.rst:77
+msgid ""
+"The complete list of installed RPM packages is available under "
+":guilabel:`Installed > Packages`."
+msgstr ""
+"La lista completa dei pacchetti RPM installati è disponibile nel tab "
+":guilabel:`Installati`."
+
+#: ../../packages.rst:77 ../../packages.rst:80
+msgid ""
+"The section :guilabel:`Installed software` displays all packages already "
+"installed into the system with the full package version."
+msgstr ""
+"La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
+"installati con la versione completa del pacchetto."
+
+#: ../../packages.rst:83 ../../packages.rst:86
+msgid "Additional languages"
+msgstr "Lingue aggiuntive"
+
+#: ../../packages.rst:85 ../../packages.rst:88
+msgid ""
+"The Server Manager allows selecting the interface language at the login "
+"screen. Only installed languages are listed."
+msgstr ""
+"Il Server Manager permette di selezionare la lingue dell'interfaccia al "
+"momento del login. Sono elencate solo le lingue installate."
+
+#: ../../packages.rst:88 ../../packages.rst:91
+msgid ""
+"In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
+"install the desired languages."
+msgstr ""
+"Nel tab :guilabel:`Disponibili`, selezionare la categoria :guilabel:`Lingue`"
+" e installare le lingue desiderate."

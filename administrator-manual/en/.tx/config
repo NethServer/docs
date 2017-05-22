@@ -1,0 +1,273 @@
+[main]
+host = https://www.transifex.com
+
+[docs-v6.access]
+file_filter = locale/<lang>/LC_MESSAGES/access.po
+source_file = _build/locale/access.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.pop3_connector]
+file_filter = locale/<lang>/LC_MESSAGES/pop3_connector.po
+source_file = _build/locale/pop3_connector.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.snmp]
+file_filter = locale/<lang>/LC_MESSAGES/snmp.po
+source_file = _build/locale/snmp.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.pop3_proxy]
+file_filter = locale/<lang>/LC_MESSAGES/pop3_proxy.po
+source_file = _build/locale/pop3_proxy.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.shared_folder]
+file_filter = locale/<lang>/LC_MESSAGES/shared_folder.po
+source_file = _build/locale/shared_folder.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.web_proxy]
+file_filter = locale/<lang>/LC_MESSAGES/web_proxy.po
+source_file = _build/locale/web_proxy.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.installation]
+file_filter = locale/<lang>/LC_MESSAGES/installation.po
+source_file = _build/locale/installation.pot
+source_lang = en
+type = PO
+
+[docs-v6.dhcp]
+file_filter = locale/<lang>/LC_MESSAGES/dhcp.po
+source_file = _build/locale/dhcp.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.accounts]
+file_filter = locale/<lang>/LC_MESSAGES/accounts.po
+source_file = _build/locale/accounts.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.ups]
+file_filter = locale/<lang>/LC_MESSAGES/ups.po
+source_file = _build/locale/ups.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.firewall]
+file_filter = locale/<lang>/LC_MESSAGES/firewall.po
+source_file = _build/locale/firewall.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.proxy_pass]
+file_filter = locale/<lang>/LC_MESSAGES/proxy_pass.po
+source_file = _build/locale/proxy_pass.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.ftp]
+file_filter = locale/<lang>/LC_MESSAGES/ftp.po
+source_file = _build/locale/ftp.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.bandwidth_monitor]
+file_filter = locale/<lang>/LC_MESSAGES/bandwidth_monitor.po
+source_file = _build/locale/bandwidth_monitor.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.packages]
+file_filter = locale/<lang>/LC_MESSAGES/packages.po
+source_file = _build/locale/packages.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.vpn]
+file_filter = locale/<lang>/LC_MESSAGES/vpn.po
+source_file = _build/locale/vpn.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.webtop4]
+file_filter = locale/<lang>/LC_MESSAGES/webtop4.po
+source_file = _build/locale/webtop4.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.webmail]
+file_filter = locale/<lang>/LC_MESSAGES/webmail.po
+source_file = _build/locale/webmail.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.migration]
+file_filter = locale/<lang>/LC_MESSAGES/migration.po
+source_file = _build/locale/migration.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = _build/locale/index.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.content_filter]
+file_filter = locale/<lang>/LC_MESSAGES/content_filter.po
+source_file = _build/locale/content_filter.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.third_party]
+file_filter = locale/<lang>/LC_MESSAGES/third_party.po
+source_file = _build/locale/third_party.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.license]
+file_filter = locale/<lang>/LC_MESSAGES/license.po
+source_file = _build/locale/license.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.release_notes]
+file_filter = locale/<lang>/LC_MESSAGES/release_notes.po
+source_file = _build/locale/release_notes.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.phone_home]
+file_filter = locale/<lang>/LC_MESSAGES/phone_home.po
+source_file = _build/locale/phone_home.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.webvirtmgr]
+file_filter = locale/<lang>/LC_MESSAGES/webvirtmgr.po
+source_file = _build/locale/webvirtmgr.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.backup]
+file_filter = locale/<lang>/LC_MESSAGES/backup.po
+source_file = _build/locale/backup.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.mail]
+file_filter = locale/<lang>/LC_MESSAGES/mail.po
+source_file = _build/locale/mail.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.statistics]
+file_filter = locale/<lang>/LC_MESSAGES/statistics.po
+source_file = _build/locale/statistics.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.fax_server]
+file_filter = locale/<lang>/LC_MESSAGES/fax_server.po
+source_file = _build/locale/fax_server.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.dns]
+file_filter = locale/<lang>/LC_MESSAGES/dns.po
+source_file = _build/locale/dns.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.base_system]
+file_filter = locale/<lang>/LC_MESSAGES/base_system.po
+source_file = _build/locale/base_system.pot
+source_lang = en
+type = PO
+
+
+[docs-v6.chat]
+file_filter = locale/<lang>/LC_MESSAGES/chat.po
+source_file = _build/locale/chat.pot
+source_lang = en
+type = PO
+
+[docs-v6.registration]
+file_filter = locale/<lang>/LC_MESSAGES/registration.po
+source_file = _build/locale/registration.pot
+source_lang = en
+type = PO
+
+[docs-v6.weekly_report]
+file_filter = locale/<lang>/LC_MESSAGES/weekly_report.po
+source_file = _build/locale/weekly_report.pot
+source_lang = en
+type = PO
+
+[docs-v6.phonebook-mysql]
+file_filter = locale/<lang>/LC_MESSAGES/phonebook-mysql.po
+source_file = _build/locale/phonebook-mysql.pot
+source_lang = en
+type = PO
+
+[docs-v6.nethvoice_intro]
+file_filter = locale/<lang>/LC_MESSAGES/nethvoice_intro.po
+source_file = _build/locale/nethvoice_intro.pot
+source_lang = en
+type = PO
+
+[docs-v6.nethcti_intro]
+file_filter = locale/<lang>/LC_MESSAGES/nethcti_intro.po
+source_file = _build/locale/nethcti_intro.pot
+source_lang = en
+type = PO
+
+[docs-v6.hotspot]
+file_filter = locale/<lang>/LC_MESSAGES/hotspot.po
+source_file = _build/locale/hotspot.pot
+source_lang = en
+type = PO
+
+[docs-v6.sphinx]
+file_filter = locale/<lang>/LC_MESSAGES/sphinx.po
+source_file = _build/locale/sphinx.pot
+source_lang = en
+type = PO

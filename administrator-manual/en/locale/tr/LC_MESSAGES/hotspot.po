@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../hotspot.rst:13
+msgid "Hotspot"
+msgstr ""
+
+#: ../../hotspot.rst:15
+msgid ""
+"The hotspot service allows the regulation, accountability and pricing of "
+"Internet access in public places, like internet points, hotels and fairs."
+msgstr ""
+
+#: ../../hotspot.rst:18
+msgid "Main features:"
+msgstr ""
+
+#: ../../hotspot.rst:20
+msgid "Network isolation between corporate and guests"
+msgstr ""
+
+#: ../../hotspot.rst:21
+msgid "Access management with user / password"
+msgstr ""
+
+#: ../../hotspot.rst:22
+msgid ""
+"Pricing based on prepaid credit, date expiration, traffic usage or freely "
+"accessible"
+msgstr ""
+
+#: ../../hotspot.rst:23
+msgid "Login manager from web panel"
+msgstr ""
+
+#: ../../hotspot.rst:24
+msgid "Creation of users and  coupons to be delivered to the customer"
+msgstr ""
+
+#: ../../hotspot.rst:25
+msgid "Bulk user creation and SMS/email registration"
+msgstr ""
+
+#: ../../hotspot.rst:26
+msgid "Billing report"
+msgstr ""
+
+#: ../../hotspot.rst:27
+msgid "Limiting the bandwidth used by users"
+msgstr ""
+
+#: ../../hotspot.rst:28
+msgid "Export account list and connections report"
+msgstr ""
+
+#: ../../hotspot.rst:31
+msgid "Configuration"
+msgstr ""
+
+#: ../../hotspot.rst:35
+msgid "You need a server with at least 3 ethernet interfaces."
+msgstr ""
+
+#: ../../hotspot.rst:38
+msgid ""
+"The server must be connected to network access points. User and billing "
+"management can be accessed at: http://hotspot.nethesis.it"
+msgstr ""
+
+#: ../../hotspot.rst:41
+msgid "How to proceed:"
+msgstr ""
+
+#: ../../hotspot.rst:43
+msgid ""
+"Make sure you have at least one free interface (no role) which will be "
+"assigned to the hotspot"
+msgstr ""
+
+#: ../../hotspot.rst:44
+msgid ""
+"Ensure that the system can communicate over the Internet to the Operation "
+"Center using  1812 and 1813 TCP/UDP ports"
+msgstr ""
+
+#: ../../hotspot.rst:45
+msgid ""
+"Access the :guilabel:`Hotspot` page to define the interface to use and "
+"configure the parameters of the service"
+msgstr ""
+
+#: ../../hotspot.rst:46
+msgid "Connect the ethernet interface to the access point"
+msgstr ""
+
+#: ../../hotspot.rst:49
+msgid "Web interface"
+msgstr ""
+
+#: ../../hotspot.rst:51
+msgid ""
+"The web interface allows you to enable and disable the HotSpot service."
+msgstr ""
+
+#: ../../hotspot.rst:53
+msgid "You can:"
+msgstr ""
+
+#: ../../hotspot.rst:55
+msgid "select the network interface associated with the HotSpot service"
+msgstr ""
+
+#: ../../hotspot.rst:56
+msgid "modify the network address reserved to clients"
+msgstr ""
+
+#: ../../hotspot.rst:57
+msgid "enable the transparent proxy and content filtering"
+msgstr ""
+
+#: ../../hotspot.rst:58
+msgid ""
+"customize title, footers, disclaimers, and sites accessible without "
+"authentication"
+msgstr ""
+
+#: ../../hotspot.rst:62
+msgid "Access Point"
+msgstr ""
+
+#: ../../hotspot.rst:64
+msgid ""
+"The Access Point (AP) must perform the sole function of enabling the "
+"connection with the firewall, they should behave like an ordinary network "
+"switch. Follow these recommendations:"
+msgstr ""
+
+#: ../../hotspot.rst:67
+msgid "configure the access point without authentication and without DHCP"
+msgstr ""
+
+#: ../../hotspot.rst:68
+msgid ""
+"disable any service (security services, etc.) in order to avoid interference"
+" with hotspot behavior"
+msgstr ""
+
+#: ../../hotspot.rst:69
+msgid ""
+"if you use more AP configure them with different SSID (eg: 1-SCHOOL / "
+"SCHOOL-2 / ...) in order to easily identify any malfunctioning AP"
+msgstr ""
+
+#: ../../hotspot.rst:70
+msgid ""
+"configure the AP with a static IP address on a network segment (rfc-1918) "
+"different from the one used by the hotspot"
+msgstr ""
+
+#: ../../hotspot.rst:71
+msgid ""
+"if possible, enable the \"client isolation\", to avoid traffic between "
+"clients connected to the access point"
+msgstr ""
+
+#: ../../hotspot.rst:72
+msgid ""
+"configure the AP to work on different channels to minimize interference, a "
+"good AP allow you to manage the channels automatically or manually select "
+"them"
+msgstr ""
+
+#: ../../hotspot.rst:73
+msgid ""
+"do not use too shoddy products, low quality AP can cause frequent "
+"disconnections which impact on the quality of the overall service, the "
+"recommendation is even more important if you are using repeaters"
+msgstr ""
+
+#: ../../hotspot.rst:77
+msgid "Access the service"
+msgstr ""
+
+#: ../../hotspot.rst:79
+msgid ""
+"Access to Operation Center, create a new hotspot instance (or use an "
+"existing one), than associate it to the firewall:"
+msgstr ""
+
+#: ../../hotspot.rst:81
+msgid "https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot"
+msgstr ""
+
+#: ../../hotspot.rst:83
+msgid ""
+"Then, you will be able to manage the hotspot using at "
+"https://hotspot.nethesis.it. You must access the site using the credentials "
+"of the hotspot instance."
+msgstr ""
+
+#: ../../hotspot.rst:86
+msgid "Administrator manual:"
+msgstr ""
+
+#: ../../hotspot.rst:88
+msgid ""
+"https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi"
+msgstr ""
+
+#: ../../hotspot.rst:91
+msgid "Disconnecting an account"
+msgstr ""
+
+#: ../../hotspot.rst:93
+msgid ""
+"You can disconnect an account from the web interface, if the following "
+"conditions are met:"
+msgstr ""
+
+#: ../../hotspot.rst:95
+msgid "the firewall must accept traffic from Internet at UDP port 3779"
+msgstr ""
+
+#: ../../hotspot.rst:96
+msgid ""
+"the firewall must accept connections on UDP port 3779 from "
+"hotspot.nethesis.it"
+msgstr ""
+
+#: ../../hotspot.rst:98
+msgid "You can do it by executing the following command: ::"
+msgstr ""

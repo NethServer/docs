@@ -1,0 +1,95 @@
+# #-#-#-#-#  pop3_proxy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  pop3_proxy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../pop3_proxy.rst:10 ../../pop3_proxy.rst:13
+msgid "POP3 proxy"
+msgstr "POP3 proxy"
+
+#: ../../pop3_proxy.rst:12 ../../pop3_proxy.rst:15
+msgid ""
+"A user on the LAN can configure an email client in order to connect to an "
+"external POP3 server and download mail messages. Please note that fetched "
+"mail could contain viruses that may infect computer on the network."
+msgstr ""
+"Un usuario de la LAN puede configurar un cliente de correo electrónico para "
+"conectarse a un servidor POP3 externo y descargar mensajes de correo. Tenga "
+"en cuenta que el correo recuperado podría contener virus que pueden infectar"
+" cualquier equipo en la red."
+
+#: ../../pop3_proxy.rst:16 ../../pop3_proxy.rst:19
+msgid ""
+"The POP3 proxy intercepts connection to external servers on port 110, then "
+"it scans all incoming email, in order to block viruses and tag spam. The "
+"process is absolutely transparent to mail clients. The user will believe "
+"that they are connected directly to the provider's POP3 server, but the "
+"proxy will intercept all traffic and handle the connection to the server."
+msgstr ""
+"El proxy POP3 intercepta la conexión a servidores externos en el puerto 110,"
+" luego analiza todo el correo electrónico entrante, con el fin de bloquear "
+"los virus y etiquetar el spam. El proceso es absolutamente transparente para"
+" los clientes de correo. El usuario creerá que están conectados directamente"
+" al servidor POP3 del proveedor, pero el proxy interceptará todo el tráfico "
+"y gestionará la conexión al servidor."
+
+#: ../../pop3_proxy.rst:21 ../../pop3_proxy.rst:24
+msgid "It's possible to selectively activate the following controls:"
+msgstr "Es posible activar selectivamente los siguientes controles:"
+
+#: ../../pop3_proxy.rst:23 ../../pop3_proxy.rst:26
+msgid ""
+"antivirus: messages containing virus are rejected and a notification email "
+"is sent to the user"
+msgstr ""
+"antivirus: los mensajes que contienen virus son rechazados y se envía un "
+"correo electrónico de notificación al usuario"
+
+#: ../../pop3_proxy.rst:24 ../../pop3_proxy.rst:27
+msgid "spam: messages will be marked with the appropriate anti-spam scores"
+msgstr ""
+"spam: los mensajes serán marcados con las puntuaciones anti-spam apropiadas"
+
+#: ../../pop3_proxy.rst:28 ../../pop3_proxy.rst:31
+msgid "POP3s"
+msgstr "POP3s"
+
+#: ../../pop3_proxy.rst:30 ../../pop3_proxy.rst:33
+msgid ""
+"The proxy can also intercept POP3s connections on port 995. The proxy will "
+"establish a secure connection to the external server, but data exchange with"
+" LAN client will be in the clear text."
+msgstr ""
+"El proxy también puede interceptar conexiones POP3 en el puerto 995. El "
+"proxy establecerá una conexión segura con el servidor externo, pero el "
+"intercambio de datos con el cliente LAN estará en texto claro."
+
+#: ../../pop3_proxy.rst:34 ../../pop3_proxy.rst:37
+msgid ""
+"Mail clients must be configured to connect to port 995 and will have to turn"
+" off encryption."
+msgstr ""
+"Los clientes de correo deben estar configurados para conectarse al puerto "
+"995 y tendrán que desactivar el cifrado."

@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../phonebook-mysql.rst:13
+msgid "Phonebook"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:15
+msgid ""
+"The |product| phonebook allows to collect contacts from multiple sources. "
+"After collecting the data, the contacts will be accessible in read-only mode"
+" from many clients."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:18
+msgid ""
+"You should add or edit any contacts inside the source, not inside the "
+"phonebook itself."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:20
+msgid ""
+"Synchronization of contacts from various external sources is performed by "
+"default every night, the command to force it: ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:25
+msgid ""
+"If during synchronizations the data source are unreachable, the phonebook "
+"will be empty."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:27
+msgid ""
+"The phonebook is accessible using LDAP, only if enabled, using this base DN:"
+" ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:31
+msgid "The web interface allows to enable the import from:"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:33
+msgid "publicly shared SOGo address book"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:34
+msgid "shared contacts from |product_cti|"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:35
+msgid "speed dial from  |product_voice|"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:37
+msgid ""
+"You can import contacts from other source using custom scripts inside: ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:41
+msgid ""
+"Custom scripts can be written in any language, but each script must be "
+"executable. Example: ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:46
+msgid ""
+"The ``/usr/share/phonebooks/scripts`` is already part of configuration "
+"backup. Inside the ``/usr/share/phonebooks/samples/`` directory, you can "
+"find many custom script examples."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:49
+msgid ""
+"If you need to access external databases (Mysql,PostgreSQL), you can create "
+"a new ODBC record."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:52
+msgid "ODBC configuration"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:54
+msgid "Define the ODBC record describing the database connection"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:56
+msgid "Example MySql: ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:60
+msgid "Example PostgreSQL ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:64
+msgid "Example MSSQL ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:68
+msgid "Execute:"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:75
+msgid "Test"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:77
+msgid "To test if the configuration is working: ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:91
+msgid "Then, try to execute a query ::"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:99
+msgid "Database details"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:106
+msgid "Display phonebook fields: ::"
+msgstr ""

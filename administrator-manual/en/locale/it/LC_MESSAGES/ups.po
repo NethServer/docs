@@ -1,0 +1,124 @@
+# #-#-#-#-#  ups.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  ups.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ups.rst:12 ../../ups.rst:15
+msgid "UPS"
+msgstr "UPS"
+
+#: ../../ups.rst:14 ../../ups.rst:17
+msgid ""
+"|product| supports the management of :index:`UPS` (Uninterruptible Power "
+"Supply) connected to the system."
+msgstr ""
+"|product| supporta la gestione di :index:`UPS` (Uninterruptible Power "
+"Supply) collegati al sistema."
+
+#: ../../ups.rst:16 ../../ups.rst:19
+msgid "The server can be configured in two ways:"
+msgstr "Il server può essere configurato in due modalità:"
+
+#: ../../ups.rst:18 ../../ups.rst:21
+msgid ""
+"*master*: UPS is directly connected to the server, the server accepts "
+"connections from slaves"
+msgstr ""
+"*master*: l'UPS è direttamente collegato al server, il server accetta "
+"connessioni dagli slave"
+
+#: ../../ups.rst:19 ../../ups.rst:22
+msgid ""
+"*slave*: UPS is connected to another server accessible over the network"
+msgstr "*slave*: l'UPS è collegato ad un altro server raggiungibile via rete"
+
+#: ../../ups.rst:21 ../../ups.rst:24
+msgid ""
+"You should consult the list of supported models before buying. Via "
+"*Administration > Software center* install the UPS package. In "
+"*Configuration* appears the new entry *UPS* where can be find the supported "
+"model by typing in *Search driver for model* field."
+msgstr ""
+"Si consiglia di consultare la lista dei modelli supportati prima "
+"dell'acquisto. Installare il pacchetto UPS da *Amministrazione > Software "
+"center*. In *Configurazione* appare la nuova voce di menù *UPS* dove si può "
+"trovare il dispositivo supportato inserendo il modello all'interno del campo"
+" di ricerca *Cerca driver per modello*."
+
+#: ../../ups.rst:26 ../../ups.rst:29
+msgid "In :index:`master` mode, the UPS can be connected to the server:"
+msgstr "Nella modalità :index:`master`, l'UPS può essere collegato al server:"
+
+#: ../../ups.rst:28 ../../ups.rst:31
+msgid "on a serial port"
+msgstr "su una porta seriale"
+
+#: ../../ups.rst:29 ../../ups.rst:32
+msgid "on a USB port"
+msgstr "su una porta USB"
+
+#: ../../ups.rst:30 ../../ups.rst:33
+msgid "with a USB to serial adapter"
+msgstr "con un adattatore da USB a seriale"
+
+#: ../../ups.rst:33 ../../ups.rst:36
+msgid ""
+"In :index:`slave` mode, you will need to provide the IP address of the "
+"master server."
+msgstr ""
+"Nella modalità :index:`slave` sarà necessario fornire l'indirizzo IP del server\n"
+"master."
+
+#: ../../ups.rst:35 ../../ups.rst:38
+msgid ""
+"The default configuration provides a controlled shutdown in the event of the"
+" absence of power."
+msgstr ""
+"La configurazione di default prevede uno spegnimento controllato in caso di "
+"assenza di alimentazione."
+
+#: ../../ups.rst:39 ../../ups.rst:42
+msgid "Custom device"
+msgstr "Device personalizzato"
+
+#: ../../ups.rst:41 ../../ups.rst:44
+msgid ""
+"If the UPS is connected to a port that is not listed in the web interface, "
+"you can configure a custom device with the following commands: ::"
+msgstr ""
+"Se l'UPS è collegato ad una porta non elencata nell'interfaccia web, è "
+"possibile configurare un device personalizzato con i seguenti comandi: ::"
+
+#: ../../ups.rst:47 ../../ups.rst:50
+msgid "UPS statistics"
+msgstr "Statistiche UPS"
+
+#: ../../ups.rst:49 ../../ups.rst:52
+msgid ""
+"If the statistics module (collectd) is installed and running, the module "
+"will automatically collect statistic data about UPS status."
+msgstr ""
+"Se il modulo statistiche (collectd) è installato e funzionante, il modulo "
+"raccoglierà automaticamente statistiche sullo stato dell'UPS."

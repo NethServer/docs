@@ -1,0 +1,262 @@
+# #-#-#-#-#  web_proxy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  web_proxy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../web_proxy.rst:12 ../../web_proxy.rst:15
+msgid "Web proxy"
+msgstr "Web vekil sunucusu"
+
+#: ../../web_proxy.rst:15 ../../web_proxy.rst:18
+msgid ""
+"The :index:`web proxy` is a server that sits between the LAN PCs and "
+"Internet sites. Clients make requests to the proxy which communicates with "
+"external sites, then send the response back to the client."
+msgstr ""
+
+#: ../../web_proxy.rst:19 ../../web_proxy.rst:22
+msgid "The advantages of a web proxy are:"
+msgstr ""
+
+#: ../../web_proxy.rst:21 ../../web_proxy.rst:24
+msgid "ability to filter content"
+msgstr ""
+
+#: ../../web_proxy.rst:22 ../../web_proxy.rst:25
+msgid "reduce bandwidth usage by caching the pages you visit"
+msgstr ""
+
+#: ../../web_proxy.rst:25 ../../web_proxy.rst:28
+msgid ""
+"The proxy can be enabled only on green and blue zones. Supported modes are:"
+msgstr ""
+
+#: ../../web_proxy.rst:28 ../../web_proxy.rst:31
+msgid "Manual: all clients must be configured manually"
+msgstr ""
+
+#: ../../web_proxy.rst:29 ../../web_proxy.rst:32
+msgid ""
+"Authenticated users must enter a user name and password in order to navigate"
+msgstr ""
+
+#: ../../web_proxy.rst:30 ../../web_proxy.rst:33
+msgid ""
+"Transparent: all clients are automatically forced to use the proxy for HTTP "
+"connections"
+msgstr ""
+
+#: ../../web_proxy.rst:31 ../../web_proxy.rst:34
+msgid ""
+"Transparent SSL: all clients are automatically forced to use the proxy for "
+"HTTP and HTTPS connections"
+msgstr ""
+
+#: ../../web_proxy.rst:34 ../../web_proxy.rst:37
+msgid "Authenticated mode"
+msgstr ""
+
+#: ../../web_proxy.rst:36 ../../web_proxy.rst:39
+msgid ""
+"Before enabling the web proxy in authenticated mode, please make sure to "
+"configure a local or remote account provider."
+msgstr ""
+
+#: ../../web_proxy.rst:39 ../../web_proxy.rst:42
+msgid ""
+"When Samba Active Directory is installed, or the server is joined to a "
+"remote Active Directory, Windows machines can use integrated authentication "
+"with Kerberos. All Windows clients **must** access the proxy server using "
+"the FQDN."
+msgstr ""
+
+#: ../../web_proxy.rst:43 ../../web_proxy.rst:46
+msgid "All other clients can use basic authentication mechanism."
+msgstr ""
+
+#: ../../web_proxy.rst:45 ../../web_proxy.rst:48
+msgid "NTLM authentications is deprecated and it's not supported."
+msgstr ""
+
+#: ../../web_proxy.rst:48 ../../web_proxy.rst:51
+msgid "Client configuration"
+msgstr ""
+
+#: ../../web_proxy.rst:50 ../../web_proxy.rst:53
+msgid ""
+"The proxy is always listening on port **3128**. When using manual or "
+"authenticated modes, all clients must be explicitly configured to use the "
+"proxy. The configuration panel is accessible from the browser settings. By "
+"the way, most clients will be automatically configured using WPAD protocol. "
+"In this case it is useful to enable :guilabel:`Block HTTP and HTTPS ports` "
+"option to avoid proxy bypass."
+msgstr ""
+
+#: ../../web_proxy.rst:56 ../../web_proxy.rst:59
+msgid ""
+"If the proxy is installed in transparent mode, all web traffic coming from "
+"clients is diverted through the proxy. No configuration is required on "
+"individual clients."
+msgstr ""
+
+#: ../../web_proxy.rst:59 ../../web_proxy.rst:62
+msgid ""
+"To make the WPAD file accessible from guest network, add the address of blue"
+" network inside the :guilabel:`Allow hosts` field for httpd service from the"
+" :guilabel:`Network services` page."
+msgstr ""
+
+#: ../../web_proxy.rst:65 ../../web_proxy.rst:68
+msgid "SSL Proxy"
+msgstr ""
+
+#: ../../web_proxy.rst:67 ../../web_proxy.rst:70
+msgid ""
+"In transparent SSL mode, the proxy implements the so-called \"peek and "
+"splice\" behavior: it establishes the SSL connection with remote sites and "
+"checks the validity of certificates without decrypting the traffic. Then the"
+" server can filter requested URLs using the web filter and return back the "
+"response to the client."
+msgstr ""
+
+#: ../../web_proxy.rst:73 ../../web_proxy.rst:76
+msgid "Bypass"
+msgstr ""
+
+#: ../../web_proxy.rst:75 ../../web_proxy.rst:78
+msgid ""
+"In some cases it may be necessary to ensure that traffic originating from "
+"specific IP or destined to some sites it's not routed through the HTTP/HTTPS"
+" proxy."
+msgstr ""
+
+#: ../../web_proxy.rst:78 ../../web_proxy.rst:81
+msgid "The proxy allows you to create:"
+msgstr ""
+
+#: ../../web_proxy.rst:80 ../../web_proxy.rst:83
+msgid ""
+"bypass by source, configurable from :guilabel:`Hosts without proxy` section"
+msgstr ""
+
+#: ../../web_proxy.rst:81 ../../web_proxy.rst:84
+msgid ""
+"bypass by destination, configurable from :guilabel:`Sites without proxy` "
+"section"
+msgstr ""
+
+#: ../../web_proxy.rst:83 ../../web_proxy.rst:86
+msgid "Bypass rules are also configured inside the WPAD file."
+msgstr ""
+
+#: ../../web_proxy.rst:86 ../../web_proxy.rst:89
+msgid "Report"
+msgstr ""
+
+#: ../../web_proxy.rst:88 ../../web_proxy.rst:91
+msgid ""
+"Install ``nethserver-lightsquid`` package to generate :index:`web proxy "
+"stats`."
+msgstr ""
+
+#: ../../web_proxy.rst:90 ../../web_proxy.rst:93
+msgid ""
+"LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs "
+"and generates new HTML report every day, summarizing browsing habits of the "
+"proxy's users. Lightsquid web interface can be found at the "
+":guilabel:`Applications` tab inside the :guilabel:`Dashboard`."
+msgstr ""
+
+#: ../../web_proxy.rst:94 ../../web_proxy.rst:97
+msgid "Cache"
+msgstr ""
+
+#: ../../web_proxy.rst:96 ../../web_proxy.rst:99
+msgid ""
+"Under tab :guilabel:`Cache` there is a form to configure cache parameters:"
+msgstr ""
+
+#: ../../web_proxy.rst:98 ../../web_proxy.rst:101
+msgid "The cache can be enabled or disabled (*disabled* by default)"
+msgstr ""
+
+#: ../../web_proxy.rst:99 ../../web_proxy.rst:102
+msgid "**Disk cache size**: maximum value of squid cache on disk (in MB)"
+msgstr ""
+
+#: ../../web_proxy.rst:100 ../../web_proxy.rst:103
+msgid ""
+"**Min object size**: can be left at 0 to cache everything, but may be raised"
+" if small objects are not desired in the cache (in kB)"
+msgstr ""
+
+#: ../../web_proxy.rst:101 ../../web_proxy.rst:104
+msgid ""
+"**Max object size**: objects larger than this setting will not be saved on "
+"disk. If speed is more desirable than saving bandwidth, this should be set "
+"to a low value (in kB)"
+msgstr ""
+
+#: ../../web_proxy.rst:103 ../../web_proxy.rst:106
+msgid ""
+"The button :guilabel:`Empty cache` also works if squid is disabled, it might"
+" be useful to free space on disk."
+msgstr ""
+
+#: ../../web_proxy.rst:106 ../../web_proxy.rst:109
+msgid "Sites without cache"
+msgstr ""
+
+#: ../../web_proxy.rst:108 ../../web_proxy.rst:111
+msgid ""
+"Sometime the proxy can't correctly handle some bad crafted sites. To exclude"
+" one or more domain from the cache, use the ``NoCache`` property."
+msgstr ""
+
+#: ../../web_proxy.rst:111 ../../web_proxy.rst:114
+msgid "Example: ::"
+msgstr ""
+
+#: ../../web_proxy.rst:117 ../../web_proxy.rst:120
+msgid "Safe ports"
+msgstr ""
+
+#: ../../web_proxy.rst:119 ../../web_proxy.rst:122
+msgid ""
+"Safe ports are a list of ports accessible using the proxy. If a port is not "
+"inside the safe port list, the proxy will refuse to contact the server. For "
+"example, given a HTTP service running on port 1234, the server can't be "
+"accessed using the proxy."
+msgstr ""
+
+#: ../../web_proxy.rst:123 ../../web_proxy.rst:126
+msgid ""
+"The ``SafePorts`` property is a comma-separated list of ports. Listed ports "
+"will be added to the default list of safe ports."
+msgstr ""
+
+#: ../../web_proxy.rst:126 ../../web_proxy.rst:129
+msgid "Eg. Access extra ports 446 and 1234: ::"
+msgstr ""

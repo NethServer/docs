@@ -1,0 +1,115 @@
+# #-#-#-#-#  dns.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  dns.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../dns.rst:12 ../../dns.rst:15
+msgid "DNS"
+msgstr ""
+
+#: ../../dns.rst:14 ../../dns.rst:17
+msgid ""
+"|product| can be configured as :dfn:`DNS` (Domain Name System) server inside"
+" the network. A :index:`DNS` server is responsible for the resolution of "
+"domain names (eg. *www.example.com*) to their corresponding numeric "
+"addresses (eg. 10.11.12.13) and vice versa."
+msgstr ""
+
+#: ../../dns.rst:18 ../../dns.rst:21
+msgid ""
+"The server performs DNS name resolution requests on behalf of local clients,"
+" and it is accessible only from the LAN network (green) and the guest's "
+"network (blue)."
+msgstr ""
+
+#: ../../dns.rst:21 ../../dns.rst:24
+msgid "During a name lookup the server will:"
+msgstr ""
+
+#: ../../dns.rst:23 ../../dns.rst:26
+msgid "search for the name between hosts configured locally"
+msgstr ""
+
+#: ../../dns.rst:24 ../../dns.rst:27
+msgid ""
+"perform a query on external dns: requests are stored in cache to speed up "
+"subsequent queries"
+msgstr ""
+
+#: ../../dns.rst:26 ../../dns.rst:29
+msgid ""
+"You must specify at least one external DNS server inside the "
+":guilabel:`Network > DNS servers` page."
+msgstr ""
+
+#: ../../dns.rst:28 ../../dns.rst:31
+msgid ""
+"If |product| is also the DHCP server on the network, all the machines will "
+"be configured to use the server itself for name resolution."
+msgstr ""
+
+#: ../../dns.rst:31 ../../dns.rst:34
+msgid "Hosts"
+msgstr ""
+
+#: ../../dns.rst:33 ../../dns.rst:36
+msgid ""
+"The :guilabel:`Hosts` page allows you to map host names to IP addresses, "
+"whether they are local or remote."
+msgstr ""
+
+#: ../../dns.rst:35 ../../dns.rst:38
+msgid ""
+"For example, if you have an internal web server, you can associate the name "
+"*www.mysite.com* with the IP of the web server. Then all clients can reach "
+"the website by typing the chosen name."
+msgstr ""
+
+#: ../../dns.rst:38 ../../dns.rst:41
+msgid ""
+"Locally configured names always take precedence over DNS records from "
+"external servers. In fact, if the provider inserts *www.mydomain.com* with "
+"an IP address corresponding to the official web server, but inside |product|"
+" the IP of *www.mydomain.com* is configured with another address, hosts "
+"inside the LAN will not be able to see the site."
+msgstr ""
+
+#: ../../dns.rst:44 ../../dns.rst:47
+msgid "Alias"
+msgstr ""
+
+#: ../../dns.rst:46 ../../dns.rst:49
+msgid ""
+"An :dfn:`alias` is an alternative name used to reach the local server. For "
+"example, if the server is called *mail.example.com*, you can create a "
+":index:`DNS alias` *myname.example.com*. The server will then be accessible "
+"from clients on the LAN even using the name you just defined."
+msgstr ""
+
+#: ../../dns.rst:50 ../../dns.rst:53
+msgid ""
+"Aliases are only valid for the internal LAN. If you want the server is "
+"reachable from the outside with the same name you need to ask the provider "
+"to associate the public address of the server to the desired name."
+msgstr ""

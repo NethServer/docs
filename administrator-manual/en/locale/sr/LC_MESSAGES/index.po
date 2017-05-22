@@ -1,0 +1,81 @@
+# #-#-#-#-#  index.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  index.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../index.rst:11 ../../index.rst:14
+msgid "Administrator Manual"
+msgstr ""
+
+#: ../../index.rst:18 ../../index.rst:21
+msgid "**Official site**: `www.nethserver.org <http://www.nethserver.org>`_"
+msgstr ""
+
+#: ../../index.rst:24 ../../index.rst:27
+msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
+msgstr ""
+
+#: ../../index.rst:26 ../../index.rst:29
+msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
+msgstr ""
+
+#: ../../index.rst:29 ../../index.rst:32
+msgid "Release notes |version|"
+msgstr ""
+
+#: ../../index.rst:37 ../../index.rst:40
+msgid "Installation"
+msgstr ""
+
+#: ../../index.rst:47 ../../index.rst:50
+msgid "Configuration"
+msgstr ""
+
+#: ../../index.rst:59 ../../index.rst:62
+msgid "Modules"
+msgstr ""
+
+#: ../../index.rst:97 ../../index.rst:100
+msgid "NethForge modules"
+msgstr ""
+
+#: ../../index.rst:105 ../../index.rst:108
+msgid "Best practices"
+msgstr ""
+
+#: ../../index.rst:113 ../../index.rst:116
+msgid "Appendix"
+msgstr ""
+
+#: ../../index.rst:126 ../../index.rst:129
+msgid "Indices"
+msgstr ""
+
+#: ../../index.rst:128 ../../index.rst:131
+msgid ":ref:`General index <genindex>`"
+msgstr ""
+
+#: ../../index.rst:129 ../../index.rst:132
+msgid ":ref:`Search <search>`"
+msgstr ""

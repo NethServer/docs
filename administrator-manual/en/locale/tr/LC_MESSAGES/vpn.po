@@ -1,0 +1,230 @@
+# #-#-#-#-#  vpn.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  vpn.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../vpn.rst:10 ../../vpn.rst:13
+msgid "VPN"
+msgstr "VPN"
+
+#: ../../vpn.rst:12 ../../vpn.rst:15
+msgid ""
+"A :index:`VPN` (Virtual Private Network) allows you to establish a secure "
+"and encrypted connection between two or more systems using a public network,"
+" like the Internet."
+msgstr ""
+
+#: ../../vpn.rst:15 ../../vpn.rst:18
+msgid "The system supports two types of VPNs:"
+msgstr ""
+
+#: ../../vpn.rst:17 ../../vpn.rst:20
+msgid ":index:`roadwarrior`: connect a remote client to the internal network"
+msgstr ""
+
+#: ../../vpn.rst:19 ../../vpn.rst:22
+msgid ":index:`net2net` or :index:`tunnel`: connect two remote networks"
+msgstr ""
+
+#: ../../vpn.rst:23 ../../vpn.rst:26
+msgid "OpenVPN"
+msgstr ""
+
+#: ../../vpn.rst:25 ../../vpn.rst:28
+msgid ""
+"OpenVPN lets you easily create VPN connections, It brings with numerous "
+"advantages including:"
+msgstr ""
+
+#: ../../vpn.rst:28 ../../vpn.rst:31
+msgid ""
+"Availability of clients for various operating systems: Windows, Linux, "
+"Apple, Android, iOS"
+msgstr ""
+
+#: ../../vpn.rst:29 ../../vpn.rst:32
+msgid ""
+"Multiple NAT traversal, you do not need a dedicated static IP on the "
+"firewall"
+msgstr ""
+
+#: ../../vpn.rst:30 ../../vpn.rst:33
+msgid "High stability"
+msgstr ""
+
+#: ../../vpn.rst:31 ../../vpn.rst:34
+msgid "Simple configuration"
+msgstr ""
+
+#: ../../vpn.rst:34 ../../vpn.rst:37
+msgid "Roadwarrior"
+msgstr ""
+
+#: ../../vpn.rst:36 ../../vpn.rst:39
+msgid ""
+"The OpenVPN server in roadwarrior mode allows connection of multiple "
+"clients."
+msgstr ""
+
+#: ../../vpn.rst:38 ../../vpn.rst:41
+msgid "Supported authentication methods are:"
+msgstr ""
+
+#: ../../vpn.rst:40 ../../vpn.rst:43
+msgid "System user and password"
+msgstr ""
+
+#: ../../vpn.rst:41 ../../vpn.rst:44
+msgid "Certificate"
+msgstr ""
+
+#: ../../vpn.rst:42 ../../vpn.rst:45
+msgid "System user, password and certificate"
+msgstr ""
+
+#: ../../vpn.rst:44 ../../vpn.rst:47
+msgid ""
+"The server can operate in two modes: :index:`routed` or :index:`bridged`. "
+"You should choose bridged mode only if the tunnel must carry non-IP traffic."
+msgstr ""
+
+#: ../../vpn.rst:47 ../../vpn.rst:50
+msgid "To allow a client to establish a VPN:"
+msgstr ""
+
+#: ../../vpn.rst:49 ../../vpn.rst:52
+msgid ""
+"Create a new account: it is recommended to use a dedicated VPN account with "
+"certificate, avoiding the need to create a system user."
+msgstr ""
+
+#: ../../vpn.rst:52 ../../vpn.rst:55
+msgid ""
+"On the other hand, it's mandatory to choose a system account if you want to "
+"use authentication with user name and password."
+msgstr ""
+
+#: ../../vpn.rst:55 ../../vpn.rst:58
+msgid "Download the file containing the configuration and certificates."
+msgstr ""
+
+#: ../../vpn.rst:57 ../../vpn.rst:60
+msgid "Import the file into the client and start the VPN."
+msgstr ""
+
+#: ../../vpn.rst:61 ../../vpn.rst:86 ../../vpn.rst:64 ../../vpn.rst:89
+msgid "Tunnel (net2net)"
+msgstr ""
+
+#: ../../vpn.rst:63 ../../vpn.rst:66
+msgid ""
+"When creating an OpenVPN net2net connection, you must choose a master "
+"between involved servers. All other servers are considered as slaves "
+"(clients)."
+msgstr ""
+
+#: ../../vpn.rst:66 ../../vpn.rst:69
+msgid "Steps to be performed on the master server:"
+msgstr ""
+
+#: ../../vpn.rst:68 ../../vpn.rst:71
+msgid "Enable roadwarrior server"
+msgstr ""
+
+#: ../../vpn.rst:70 ../../vpn.rst:73
+msgid "Create a VPN-only account for each slave"
+msgstr ""
+
+#: ../../vpn.rst:72 ../../vpn.rst:75
+msgid ""
+"During the account creation remember to specify the remote network "
+"configured behind the slave"
+msgstr ""
+
+#: ../../vpn.rst:74 ../../vpn.rst:77
+msgid "Steps to be performed on the slave:"
+msgstr ""
+
+#: ../../vpn.rst:76 ../../vpn.rst:79
+msgid ""
+"Create a client from the :guilabel:`Client` page, specifying the connection "
+"data to the master server."
+msgstr ""
+
+#: ../../vpn.rst:78 ../../vpn.rst:81
+msgid ""
+"Copy and paste the content of downloaded certificates from the master "
+"configuration page."
+msgstr ""
+
+#: ../../vpn.rst:80 ../../vpn.rst:83
+msgid "IPsec"
+msgstr ""
+
+#: ../../vpn.rst:82 ../../vpn.rst:85
+msgid ""
+":index:`IPsec` (IP Security) protocol is usually used to create tunnels with"
+" devices from other manufacturers."
+msgstr ""
+
+#: ../../vpn.rst:88 ../../vpn.rst:91
+msgid ""
+"IPsec is extremely reliable and compatible with many devices. In fact, it is"
+" an obvious choice when you need to create net2net connections between "
+"firewalls of different manufacturers."
+msgstr ""
+
+#: ../../vpn.rst:92 ../../vpn.rst:95
+msgid ""
+"Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered "
+"peers."
+msgstr ""
+
+#: ../../vpn.rst:94 ../../vpn.rst:97
+msgid ""
+"If you are creating a tunnel between two |product|, given the firewalls A "
+"and B:"
+msgstr ""
+
+#: ../../vpn.rst:96 ../../vpn.rst:99
+msgid ""
+"Configure the server A and specify the remote address and LAN of server B. "
+"If the :guilabel:`Remote IP` field is set to the special value ``%any``, the"
+" server waits for connections from the other endpoint."
+msgstr ""
+
+#: ../../vpn.rst:100 ../../vpn.rst:103
+msgid ""
+"Configure the second firewall B by mirroring the configuration from A inside"
+" the remote section. The special value ``%any`` is allowed in one side only!"
+msgstr ""
+
+#: ../../vpn.rst:103 ../../vpn.rst:106
+msgid ""
+"If an endpoint is behind a NAT, the values for :guilabel:`Local identifier` "
+"and :guilabel:`Remote identifier` fields must be set to custom unique names "
+"prepended with ``@``.  Common names are the geographic locations of the "
+"servers, such as the state or city name."
+msgstr ""

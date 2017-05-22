@@ -1,0 +1,177 @@
+# #-#-#-#-#  shared_folder.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  shared_folder.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../shared_folder.rst:14 ../../shared_folder.rst:17
+msgid "Shared folders"
+msgstr ""
+
+#: ../../shared_folder.rst:16 ../../shared_folder.rst:19
+msgid ""
+"A *shared folder* is a place where files can be accessed by a group of "
+"people using Samba (SMB/CIFS)."
+msgstr ""
+
+#: ../../shared_folder.rst:19 ../../shared_folder.rst:22
+msgid ""
+"To create, edit and delete a shared folder go to the :guilabel:`Shared "
+"folders` page."
+msgstr ""
+
+#: ../../shared_folder.rst:23 ../../shared_folder.rst:26
+msgid "Authorizations"
+msgstr ""
+
+#: ../../shared_folder.rst:25 ../../shared_folder.rst:28
+msgid ""
+"If **Active directory** is selected as account provider, a shared folder is "
+"owned by a group of users (:guilabel:`Owning group`). Each member of the "
+"group is allowed to read the folder contents. Optionally the group can be "
+"entitled to modify the folder contents and the read permission can be "
+"extended to everyone accessing the system.  This simple permission model is "
+"based on the traditional UNIX file system permissions."
+msgstr ""
+
+#: ../../shared_folder.rst:32 ../../shared_folder.rst:35
+msgid ""
+"Access privileges can be refined further with the :guilabel:`ACL` tab, "
+"allowing individual users and other groups to gain read and write "
+"permissions."
+msgstr ""
+
+#: ../../shared_folder.rst:35 ../../shared_folder.rst:38
+msgid ""
+"At any time, the :guilabel:`Reset permissions` button propagates the shared "
+"folder UNIX permissions and Posix ACLs to its contents."
+msgstr ""
+
+#: ../../shared_folder.rst:43 ../../shared_folder.rst:46
+msgid ""
+"If :guilabel:`Guest access` is enabled, any provided authentication "
+"credentials are considered valid."
+msgstr ""
+
+#: ../../shared_folder.rst:46 ../../shared_folder.rst:49
+msgid ""
+"If an **LDAP** account provider is selected or there is no account provider "
+"at all, any access to shared folders is considered as *Guest access* so that"
+" everyone is allowed to read and write its content."
+msgstr ""
+
+#: ../../shared_folder.rst:53 ../../shared_folder.rst:56
+msgid "Network access"
+msgstr ""
+
+#: ../../shared_folder.rst:55 ../../shared_folder.rst:58
+msgid ""
+"SMB/CIFS is a widely adopted protocol that allows to share files across a "
+"computer network. The shared folder name becomes the SMB \"share name\"."
+msgstr ""
+
+#: ../../shared_folder.rst:58 ../../shared_folder.rst:61
+msgid ""
+"For instance, the SMB network addresses of the ``docs`` share could be ::"
+msgstr ""
+
+#: ../../shared_folder.rst:65 ../../shared_folder.rst:68
+msgid ""
+"Authenticated access to shared folders is available with an Active Directory"
+" accounts provider. LDAP provider allows guest access only."
+msgstr ""
+
+#: ../../shared_folder.rst:68 ../../shared_folder.rst:71
+msgid ""
+"When accessing a SMB share, some user interfaces provide a single user name "
+"field. In that case, specify the **user short name** prefixed with the "
+"**NetBIOS domain name**.  For instance, if the NetBIOS domain name is "
+"\"COMPANY\" and the user name is \"john.smith\", the domain-prefixed user "
+"name to access a SMB share is: ::"
+msgstr ""
+
+#: ../../shared_folder.rst:76 ../../shared_folder.rst:79
+msgid ""
+"On the contrary, some applications provide separate input fields for the "
+"NetBIOS domain name and the user name; in that case fill in the input fields"
+" individually."
+msgstr ""
+
+#: ../../shared_folder.rst:81 ../../shared_folder.rst:84
+msgid "Network recycle bin"
+msgstr ""
+
+#: ../../shared_folder.rst:83 ../../shared_folder.rst:86
+msgid ""
+"If the option :guilabel:`Network recycle bin` is enabled, removed files are "
+"actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
+" copies of files with the same name` keeps distinct file names inside the "
+"wastebasket directory, preventing overwrites."
+msgstr ""
+
+#: ../../shared_folder.rst:89 ../../shared_folder.rst:92
+msgid "Hide a shared folder"
+msgstr ""
+
+#: ../../shared_folder.rst:91 ../../shared_folder.rst:94
+msgid ""
+"If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
+"This does not affect the permission to use this resource."
+msgstr ""
+
+#: ../../shared_folder.rst:96 ../../shared_folder.rst:99
+msgid "Home share"
+msgstr ""
+
+#: ../../shared_folder.rst:98 ../../shared_folder.rst:101
+msgid ""
+"Each |product| user has a personal shared folder that is mapped to his Unix "
+"home directory. The SMB share name correspond to the **user short name**. "
+"For example:"
+msgstr ""
+
+#: ../../shared_folder.rst:101 ../../shared_folder.rst:104
+msgid "user short name ``john.smith``"
+msgstr ""
+
+#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
+msgid "server name ``MYSERVER``"
+msgstr ""
+
+#: ../../shared_folder.rst:103 ../../shared_folder.rst:106
+msgid "server address ``192.168.1.2``"
+msgstr ""
+
+#: ../../shared_folder.rst:105 ../../shared_folder.rst:108
+msgid "The SMB network address is: ::"
+msgstr ""
+
+#: ../../shared_folder.rst:110 ../../shared_folder.rst:113
+msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
+msgstr ""
+
+#: ../../shared_folder.rst:114 ../../shared_folder.rst:117
+msgid ""
+"The Unix home directory is created the first time the user accesses it by "
+"either SMB or SFTP/SSH protocol."
+msgstr ""

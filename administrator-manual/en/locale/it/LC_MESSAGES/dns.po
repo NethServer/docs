@@ -1,0 +1,147 @@
+# #-#-#-#-#  dns.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  dns.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../dns.rst:12 ../../dns.rst:15
+msgid "DNS"
+msgstr "DNS"
+
+#: ../../dns.rst:14 ../../dns.rst:17
+msgid ""
+"|product| can be configured as :dfn:`DNS` (Domain Name System) server inside"
+" the network. A :index:`DNS` server is responsible for the resolution of "
+"domain names (eg. *www.example.com*) to their corresponding numeric "
+"addresses (eg. 10.11.12.13) and vice versa."
+msgstr ""
+"|product| può essere configurato come server :dfn:`DNS` (Domain Name System)"
+" della rete. Un server :index:`DNS` si occupa della risoluzione dei nomi di "
+"dominio (es. *www.esempio.com*) nei loro corrispettivi indirizzi numerici "
+"(es. 10.11.12.13) e viceversa."
+
+#: ../../dns.rst:18 ../../dns.rst:21
+msgid ""
+"The server performs DNS name resolution requests on behalf of local clients,"
+" and it is accessible only from the LAN network (green) and the guest's "
+"network (blue)."
+msgstr ""
+"Il server DNS esegue le richieste di risoluzione nomi per conto dei client "
+"locali, ed è accessibile solo dalla LAN (rete green) e dalla rete ospiti "
+"(blue)."
+
+#: ../../dns.rst:21 ../../dns.rst:24
+msgid "During a name lookup the server will:"
+msgstr "Quando si effettua una risoluzione nomi, il server potrà:"
+
+#: ../../dns.rst:23 ../../dns.rst:26
+msgid "search for the name between hosts configured locally"
+msgstr "ricercare il nome all’interno degli host configurati localmente"
+
+#: ../../dns.rst:24 ../../dns.rst:27
+msgid ""
+"perform a query on external dns: requests are stored in cache to speed up "
+"subsequent queries"
+msgstr ""
+"effettuare una query sui dns esterni: le richieste vengono salvate in cache "
+"per velocizzare le successive query"
+
+#: ../../dns.rst:26 ../../dns.rst:29
+msgid ""
+"You must specify at least one external DNS server inside the "
+":guilabel:`Network > DNS servers` page."
+msgstr ""
+"E’ obbligatorio specificare almeno un DNS esterno all’interno della scheda "
+":guilabel:`Network > Server DNS`"
+
+#: ../../dns.rst:28 ../../dns.rst:31
+msgid ""
+"If |product| is also the DHCP server on the network, all the machines will "
+"be configured to use the server itself for name resolution."
+msgstr ""
+"Se |product| è anche il server DHCP della rete, tutte le macchine saranno "
+"configurare per utilizzare il server stesso anche per la risoluzione nomi."
+
+#: ../../dns.rst:31 ../../dns.rst:34
+msgid "Hosts"
+msgstr "Hosts"
+
+#: ../../dns.rst:33 ../../dns.rst:36
+msgid ""
+"The :guilabel:`Hosts` page allows you to map host names to IP addresses, "
+"whether they are local or remote."
+msgstr ""
+"La pagina :guilabel:`Hosts` consente di associare i nomi host ad indirizzi "
+"IP, siano essi locali o remoti."
+
+#: ../../dns.rst:35 ../../dns.rst:38
+msgid ""
+"For example, if you have an internal web server, you can associate the name "
+"*www.mysite.com* with the IP of the web server. Then all clients can reach "
+"the website by typing the chosen name."
+msgstr ""
+"Ad esempio, se si possiede un server web interno, è possibile associare il "
+"nome host *www.miosito.com* con l’IP del server web stesso. Tutti i client "
+"potranno quindi raggiungere il sito web digitando il nome scelto."
+
+#: ../../dns.rst:38 ../../dns.rst:41
+msgid ""
+"Locally configured names always take precedence over DNS records from "
+"external servers. In fact, if the provider inserts *www.mydomain.com* with "
+"an IP address corresponding to the official web server, but inside |product|"
+" the IP of *www.mydomain.com* is configured with another address, hosts "
+"inside the LAN will not be able to see the site."
+msgstr ""
+"I nomi configurati localmente hanno sempre la precedenza sui record DNS dei "
+"server esterni. Infatti se il provider inserisce *www.dominio.it* con IP "
+"corrispondente al server web ufficiale, ma in |product| *www.dominio.it* è "
+"configurato un ip diverso, i pc della LAN non saranno in grado di vedere il "
+"sito in questione."
+
+#: ../../dns.rst:44 ../../dns.rst:47
+msgid "Alias"
+msgstr "Alias"
+
+#: ../../dns.rst:46 ../../dns.rst:49
+msgid ""
+"An :dfn:`alias` is an alternative name used to reach the local server. For "
+"example, if the server is called *mail.example.com*, you can create a "
+":index:`DNS alias` *myname.example.com*. The server will then be accessible "
+"from clients on the LAN even using the name you just defined."
+msgstr ""
+"Un :dfn:`alias` è un nome alternativo usato per raggiungere il server "
+"stesso. Ad esempio, se il server si chiama *mail.example.com*, è possibile "
+"creare un :index:`alias DNS`  *myname.example.com*. Il server sarà quindi "
+"raggiungibile dai client della LAN anche usando il nome appena definito."
+
+#: ../../dns.rst:50 ../../dns.rst:53
+msgid ""
+"Aliases are only valid for the internal LAN. If you want the server is "
+"reachable from the outside with the same name you need to ask the provider "
+"to associate the public address of the server to the desired name."
+msgstr ""
+"Gli alias valgono solo per la LAN interna. Se si desidera che il server sia "
+"raggiungibile con lo stesso nome anche dall’esterno è necessario chiedere al"
+" provider di associare l’indirizzo pubblico del nostro server al nome "
+"desiderato."

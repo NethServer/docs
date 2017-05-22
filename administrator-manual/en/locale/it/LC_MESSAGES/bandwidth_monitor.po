@@ -1,0 +1,100 @@
+# #-#-#-#-#  bandwidth_monitor.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  bandwidth_monitor.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../bandwidth_monitor.rst:10 ../../bandwidth_monitor.rst:13
+msgid "Bandwidth monitor"
+msgstr "Monitor banda"
+
+#: ../../bandwidth_monitor.rst:13 ../../bandwidth_monitor.rst:16
+msgid "BandwidthD"
+msgstr "BandwidthD"
+
+#: ../../bandwidth_monitor.rst:15 ../../bandwidth_monitor.rst:18
+msgid ""
+"BandwidthD tracks usage of TCP/IP network subnets and builds graphs to "
+"display utilization. After installation, BandwidthD is automatically "
+"started. Graphs can be accessed using the Server Manager."
+msgstr ""
+"BandwidthD tiene traccia del traffico di rete e crea grafici che ne mostrano"
+" l'utilizzo. BandwidthD viene automaticamente avviato dopo l'installazione. "
+"I grafici sono consultabili dal Server Manager."
+
+#: ../../bandwidth_monitor.rst:20 ../../bandwidth_monitor.rst:23
+msgid "ntopng"
+msgstr "ntopng"
+
+#: ../../bandwidth_monitor.rst:22 ../../bandwidth_monitor.rst:25
+msgid ""
+"ntopng is a powerful tool that allows you to analyze real-time network "
+"traffic. It allows you to evaluate the bandwidth used by individual hosts "
+"and to identify the most commonly used network protocols."
+msgstr ""
+"ntopng è un potente strumento che permette di analizzare in tempo reale il "
+"traffico di rete. Consente di valutare la banda utilizzata dai singoli host "
+"e di individuare i protocolli di rete maggiormente usati."
+
+#: ../../bandwidth_monitor.rst:28 ../../bandwidth_monitor.rst:31
+msgid "Enable ntopng"
+msgstr "Abilita ntopng"
+
+#: ../../bandwidth_monitor.rst:27 ../../bandwidth_monitor.rst:30
+msgid ""
+"Enabling ntopng, all traffic passing through the network interfaces will be "
+"analyzed. It can cause a slowdown of the network and an increased in system "
+"load."
+msgstr ""
+"Abilitando ntopng, tutto il traffico passante per le interfacce di rete "
+"verrà analizzato. Può causare un rallentamento della rete e un aumento del "
+"carico di sistema."
+
+#: ../../bandwidth_monitor.rst:30 ../../bandwidth_monitor.rst:33
+msgid "Port"
+msgstr "Porta"
+
+#: ../../bandwidth_monitor.rst:31 ../../bandwidth_monitor.rst:34
+msgid "The port where to view the ntopng web interface."
+msgstr "Porta su cui raggiungere l'interfaccia web di ntopng."
+
+#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+msgid "Password for 'admin' user"
+msgstr "Password per l'utente 'admin'"
+
+#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+msgid ""
+"Admin user password. This password is not related to the |product| admin "
+"password."
+msgstr ""
+"Password dell'utente amministratore. Questa password non è legata inalcun "
+"modo alla password di admin di |product|."
+
+#: ../../bandwidth_monitor.rst:35 ../../bandwidth_monitor.rst:38
+msgid "Interfaces"
+msgstr "Interfacce"
+
+#: ../../bandwidth_monitor.rst:36 ../../bandwidth_monitor.rst:39
+msgid "Interfaces on which ntopng will listens to."
+msgstr "Interfacce su cui ntopng sarà in ascolto per eventuali richieste."

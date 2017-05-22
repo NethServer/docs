@@ -1,0 +1,126 @@
+# #-#-#-#-#  license.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  license.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../license.rst:10 ../../license.rst:13
+msgid "Documentation license"
+msgstr "Licenza della documentazione"
+
+#: ../../license.rst:12 ../../license.rst:15
+msgid ""
+"This documentation is distributed under the terms of **Creative Commons - "
+"Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** "
+"license."
+msgstr ""
+"La documentazione è distribuita sotto i termini di licenza **Creative "
+"Commons - Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-"
+"SA 4.0)**"
+
+#: ../../license.rst:20 ../../license.rst:23
+msgid "You are free to:"
+msgstr "Sei libero di:"
+
+#: ../../license.rst:22 ../../license.rst:25
+msgid "**Share** — copy and redistribute the material in any medium or format"
+msgstr ""
+"**Condividere** — riprodurre, distribuire questo materiale con qualsiasi "
+"mezzo e formato"
+
+#: ../../license.rst:23 ../../license.rst:26
+msgid "**Adapt** — remix, transform, and build upon the material"
+msgstr ""
+"**Modificare** — remixare, trasformare il materiale e basarti su di esso per"
+" le tue opere"
+
+#: ../../license.rst:25 ../../license.rst:28
+msgid ""
+"The licensor cannot revoke these freedoms as long as you follow the license "
+"terms."
+msgstr ""
+"Il licenziante non può revocare questi diritti fintanto che tu rispetti i "
+"termini della licenza."
+
+#: ../../license.rst:27 ../../license.rst:30
+msgid "Under the following terms:"
+msgstr "Alle seguenti condizioni:"
+
+#: ../../license.rst:29 ../../license.rst:32
+msgid ""
+"**Attribution** — You must give appropriate credit, provide a link to the "
+"license, and indicate if changes were made. You may do so in any reasonable "
+"manner, but not in any way that suggests the licensor endorses you or your "
+"use."
+msgstr ""
+"**Attribuzione** — Devi riconoscere una menzione di paternità adeguata, "
+"fornire un link alla licenza e indicare se sono state effettuate delle "
+"modifiche. Puoi fare ciò in qualsiasi maniera ragionevole possibile, ma non "
+"con modalità tali da suggerire che il licenziante avalli te o il tuo "
+"utilizzo del materiale."
+
+#: ../../license.rst:31 ../../license.rst:34
+msgid ""
+"**NonCommercial** — You may not use the material for commercial purposes."
+msgstr ""
+"**NonCommerciale** — Non puoi utilizzare il materiale per scopi commerciali."
+
+#: ../../license.rst:32 ../../license.rst:35
+msgid ""
+"**ShareAlike** — If you remix, transform, or build upon the material, you "
+"must distribute your contributions under the same license as the original."
+msgstr ""
+"**StessaLicenza** — Se remixi, trasformi il materiale o ti basi su di esso, "
+"devi distribuire i tuoi contributi con la stessa licenza del materiale "
+"originario."
+
+#: ../../license.rst:34 ../../license.rst:37
+msgid ""
+"*No additional restrictions* — You may not apply legal terms or "
+"technological measures that legally restrict others from doing anything the "
+"license permits."
+msgstr ""
+"*Divieto di restrizioni aggiuntive* — Non puoi applicare termini legali o "
+"misure tecnologiche che impongano ad altri soggetti dei vincoli giuridici su"
+" quanto la licenza consente loro di fare."
+
+#: ../../license.rst:36 ../../license.rst:39
+msgid ""
+"This is a human-readable summary of (and not a substitute for) the full "
+"license available at: http://creativecommons.org/licenses/by-nc-sa/4.0/"
+msgstr ""
+"Questo è un riassunto in linguaggio accessibile a tutti (e non un sostituto)"
+" della licenza. La licenza completa è accessibile a: "
+"http://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+#: ../../license.rst:39 ../../license.rst:42
+msgid ""
+"Architecture documentation is from SME Server project and is licensed under "
+"GNU Free Documentation License 1.3 (http://www.gnu.org/copyleft/fdl.html). "
+"See http://wiki.contribs.org/ for original documentation."
+msgstr ""
+"La documentazione sull'architettura deriva dal progetto SME Server e "
+"concessa con licenza GNU Free Documentation 1.3 "
+"(http://www.gnu.org/copyleft/fdl.html). Si veda http://wiki.contribs.org/ "
+"per la documentazione originale."

@@ -1,0 +1,91 @@
+# #-#-#-#-#  virtual_hosts.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  virtual_hosts.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../virtual_hosts.rst:15 ../../virtual_hosts.rst:18
+msgid "Virtual hosts"
+msgstr "Sanal sunucular"
+
+#: ../../virtual_hosts.rst:17 ../../virtual_hosts.rst:20
+msgid ""
+"Virtual hosting allows to host multiple domain names on a single server. On "
+"|product|, from :guilabel:`Virtual hosts` page, is possible to configure web"
+" sites as Apache named virtual hosts."
+msgstr ""
+
+#: ../../virtual_hosts.rst:20 ../../virtual_hosts.rst:23
+msgid "Virtual host names (FQDN)"
+msgstr ""
+
+#: ../../virtual_hosts.rst:22 ../../virtual_hosts.rst:25
+msgid ""
+"Is the list of Fully Qualified Domain Names that are associated to the "
+"virtual host. Values must be separated with a \",\" (comma). To access "
+"virtual host, is also needed a DNS record. If enabled under \"Additional "
+"actions\" an alias for the server is automatically created on \"DNS > Server"
+" alias\", but it's useful only for clients that use the server as DNS."
+msgstr ""
+
+#: ../../virtual_hosts.rst:26 ../../virtual_hosts.rst:29
+msgid "Configuring a web application"
+msgstr ""
+
+#: ../../virtual_hosts.rst:28 ../../virtual_hosts.rst:31
+msgid ""
+"When a new virtual host is created, also the folder "
+"/var/lib/nethserver/vhost/`NAME` is created. If FTP access is enabled, is "
+"possible to upload files to this folder using an FTP client and, virtual "
+"host name as username."
+msgstr ""
+
+#: ../../virtual_hosts.rst:31 ../../virtual_hosts.rst:34
+msgid ""
+"FTP access is disabled by default, you also need to enable it from FTP "
+"configuration page"
+msgstr ""
+
+#: ../../virtual_hosts.rst:33 ../../virtual_hosts.rst:36
+msgid ""
+"HTTP authentication password should be different from FTP ones, because FTP "
+"is used for upload content on virtual host and HTTP to read content."
+msgstr ""
+
+#: ../../virtual_hosts.rst:36 ../../virtual_hosts.rst:39
+msgid "Apache permissions"
+msgstr ""
+
+#: ../../virtual_hosts.rst:38 ../../virtual_hosts.rst:41
+msgid ""
+"FTP uploaded files are owned by the \"apache\" group. If you need to allow "
+"apache write or execution access, you can change group permissions using the"
+" FTP client"
+msgstr ""
+
+#: ../../virtual_hosts.rst:40 ../../virtual_hosts.rst:43
+msgid ""
+"If a virtual host contains executable code, such as PHP scripts, user "
+"permissions and security implications must be evaluated carefully."
+msgstr ""

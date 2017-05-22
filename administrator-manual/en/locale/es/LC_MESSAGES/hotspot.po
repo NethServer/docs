@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../hotspot.rst:13
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: ../../hotspot.rst:15
+msgid ""
+"The hotspot service allows the regulation, accountability and pricing of "
+"Internet access in public places, like internet points, hotels and fairs."
+msgstr ""
+"El servicio de puntos de acceso, Hotspot,  permite la regulación, la "
+"rendición de cuentas y los precios del acceso a Internet en lugares "
+"públicos, como puntos de Internet, hoteles y ferias."
+
+#: ../../hotspot.rst:18
+msgid "Main features:"
+msgstr "Principales características:"
+
+#: ../../hotspot.rst:20
+msgid "Network isolation between corporate and guests"
+msgstr "Aislamiento de red entre empresas e invitados"
+
+#: ../../hotspot.rst:21
+msgid "Access management with user / password"
+msgstr "Gestión de acceso con usuario / contraseña"
+
+#: ../../hotspot.rst:22
+msgid ""
+"Pricing based on prepaid credit, date expiration, traffic usage or freely "
+"accessible"
+msgstr ""
+"Precios basados en crédito prepagado, vencimiento de la fecha, uso del "
+"tráfico o acceso libre"
+
+#: ../../hotspot.rst:23
+msgid "Login manager from web panel"
+msgstr "Administrador de inicio de sesión desde el panel web"
+
+#: ../../hotspot.rst:24
+msgid "Creation of users and  coupons to be delivered to the customer"
+msgstr "Creación de usuarios y cupones a entregar al cliente"
+
+#: ../../hotspot.rst:25
+msgid "Bulk user creation and SMS/email registration"
+msgstr "Creación de usuarios a granel y registro por SMS/correo electrónico"
+
+#: ../../hotspot.rst:26
+msgid "Billing report"
+msgstr "Informe de facturación"
+
+#: ../../hotspot.rst:27
+msgid "Limiting the bandwidth used by users"
+msgstr "Limitación del ancho de banda utilizado por los usuarios"
+
+#: ../../hotspot.rst:28
+msgid "Export account list and connections report"
+msgstr "Exportar lista de cuentas e informe de conexiones"
+
+#: ../../hotspot.rst:31
+msgid "Configuration"
+msgstr "Configuración"
+
+#: ../../hotspot.rst:35
+msgid "You need a server with at least 3 ethernet interfaces."
+msgstr "Necesita un servidor con al menos 3 interfaces ethernet."
+
+#: ../../hotspot.rst:38
+msgid ""
+"The server must be connected to network access points. User and billing "
+"management can be accessed at: http://hotspot.nethesis.it"
+msgstr ""
+"El servidor debe estar conectado a puntos de acceso a la red. Se puede "
+"acceder a la administración de usuarios y facturación en: "
+"http://hotspot.nethesis.it"
+
+#: ../../hotspot.rst:41
+msgid "How to proceed:"
+msgstr "Cómo proceder:"
+
+#: ../../hotspot.rst:43
+msgid ""
+"Make sure you have at least one free interface (no role) which will be "
+"assigned to the hotspot"
+msgstr ""
+"Asegúrese de tener al menos una interfaz gratuita (sin función) que se "
+"asignará al hotspot"
+
+#: ../../hotspot.rst:44
+msgid ""
+"Ensure that the system can communicate over the Internet to the Operation "
+"Center using  1812 and 1813 TCP/UDP ports"
+msgstr ""
+"Asegúrese de que el sistema pueda comunicarse a través del Internet al "
+"Centro de Operaciones utilizando los puertos 1812 y 1813 TCP/UDP"
+
+#: ../../hotspot.rst:45
+msgid ""
+"Access the :guilabel:`Hotspot` page to define the interface to use and "
+"configure the parameters of the service"
+msgstr ""
+"Acceda a la página :guilabel:`Hotspot` para definir la interfaz, usar y "
+"configurar los parámetros del servicio"
+
+#: ../../hotspot.rst:46
+msgid "Connect the ethernet interface to the access point"
+msgstr "Conecte la interfaz ethernet al punto de acceso"
+
+#: ../../hotspot.rst:49
+msgid "Web interface"
+msgstr "Interfaz web"
+
+#: ../../hotspot.rst:51
+msgid ""
+"The web interface allows you to enable and disable the HotSpot service."
+msgstr ""
+"La interfaz web le permite habilitar y deshabilitar el servicio HotSpot."
+
+#: ../../hotspot.rst:53
+msgid "You can:"
+msgstr "Usted puede:"
+
+#: ../../hotspot.rst:55
+msgid "select the network interface associated with the HotSpot service"
+msgstr "Seleccione la interfaz de red asociada con el servicio HotSpot"
+
+#: ../../hotspot.rst:56
+msgid "modify the network address reserved to clients"
+msgstr "Modificar la dirección de red reservada a los clientes"
+
+#: ../../hotspot.rst:57
+msgid "enable the transparent proxy and content filtering"
+msgstr "Habilitar el proxy transparente y el filtrado de contenido"
+
+#: ../../hotspot.rst:58
+msgid ""
+"customize title, footers, disclaimers, and sites accessible without "
+"authentication"
+msgstr ""
+"Personalizar título, pies de página, renuncias y sitios accesibles sin "
+"autenticación"
+
+#: ../../hotspot.rst:62
+msgid "Access Point"
+msgstr "Punto de acceso"
+
+#: ../../hotspot.rst:64
+msgid ""
+"The Access Point (AP) must perform the sole function of enabling the "
+"connection with the firewall, they should behave like an ordinary network "
+"switch. Follow these recommendations:"
+msgstr ""
+"El punto de acceso (AP) debe realizar la única función de habilitar la "
+"conexión con el cortafuegos, que debe comportarse como un interruptor de red"
+" ordinaria. Siga estas recomendaciones:"
+
+#: ../../hotspot.rst:67
+msgid "configure the access point without authentication and without DHCP"
+msgstr "Configurar el punto de acceso sin autenticación y sin DHCP"
+
+#: ../../hotspot.rst:68
+msgid ""
+"disable any service (security services, etc.) in order to avoid interference"
+" with hotspot behavior"
+msgstr ""
+"Desactivar cualquier servicio (servicios de seguridad, etc.) con el fin de "
+"evitar la interferencia con el comportamiento del hotspot"
+
+#: ../../hotspot.rst:69
+msgid ""
+"if you use more AP configure them with different SSID (eg: 1-SCHOOL / "
+"SCHOOL-2 / ...) in order to easily identify any malfunctioning AP"
+msgstr ""
+"Si usas más AP, configúralos con diferentes SSID (por ejemplo: 1-SCHOOL / "
+"SCHOOL-2 / ...) para identificar fácilmente cualquier AP defectuoso"
+
+#: ../../hotspot.rst:70
+msgid ""
+"configure the AP with a static IP address on a network segment (rfc-1918) "
+"different from the one used by the hotspot"
+msgstr ""
+"Configurar el AP con una dirección IP estática en un segmento de red "
+"(rfc-1918) diferente de la utilizada por el hotspot"
+
+#: ../../hotspot.rst:71
+msgid ""
+"if possible, enable the \"client isolation\", to avoid traffic between "
+"clients connected to the access point"
+msgstr ""
+"Si es posible, habilitar el \"aislamiento del cliente\", para evitar el "
+"tráfico entre clientes conectados al punto de acceso"
+
+#: ../../hotspot.rst:72
+msgid ""
+"configure the AP to work on different channels to minimize interference, a "
+"good AP allow you to manage the channels automatically or manually select "
+"them"
+msgstr ""
+"Configurar el AP para trabajar en diferentes canales para minimizar la "
+"interferencia, un buen AP le permite administrar los canales automáticamente"
+" o manualmente seleccionarlos"
+
+#: ../../hotspot.rst:73
+msgid ""
+"do not use too shoddy products, low quality AP can cause frequent "
+"disconnections which impact on the quality of the overall service, the "
+"recommendation is even more important if you are using repeaters"
+msgstr ""
+"no utilice productos de mala calidad, AP de baja calidad puede causar "
+"desconexiones frecuentes que afectan a la calidad del servicio en general, "
+"la recomendación es aún más importante si utiliza repetidores"
+
+#: ../../hotspot.rst:77
+msgid "Access the service"
+msgstr "Acceda al servicio"
+
+#: ../../hotspot.rst:79
+msgid ""
+"Access to Operation Center, create a new hotspot instance (or use an "
+"existing one), than associate it to the firewall:"
+msgstr ""
+"Acceda al Centro de Operaciones, cree una nueva instancia de hotspot (o "
+"utilice una existente), que asociar al cortafuegos:"
+
+#: ../../hotspot.rst:81
+msgid "https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot"
+msgstr "https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot"
+
+#: ../../hotspot.rst:83
+msgid ""
+"Then, you will be able to manage the hotspot using at "
+"https://hotspot.nethesis.it. You must access the site using the credentials "
+"of the hotspot instance."
+msgstr ""
+"A continuación, podrá administrar el hotspot mediante "
+"https://hotspot.nethesis.it. Debe acceder al sitio utilizando las "
+"credenciales de la instancia de hotspot."
+
+#: ../../hotspot.rst:86
+msgid "Administrator manual:"
+msgstr "Manual del Administrador"
+
+#: ../../hotspot.rst:88
+msgid ""
+"https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi"
+msgstr ""
+"https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi"
+
+#: ../../hotspot.rst:91
+msgid "Disconnecting an account"
+msgstr "Desconexión de una cuenta"
+
+#: ../../hotspot.rst:93
+msgid ""
+"You can disconnect an account from the web interface, if the following "
+"conditions are met:"
+msgstr ""
+"Puede desconectar una cuenta de la interfaz web si se cumplen las siguientes"
+" condiciones:"
+
+#: ../../hotspot.rst:95
+msgid "the firewall must accept traffic from Internet at UDP port 3779"
+msgstr ""
+"El cortafuegos debe aceptar el tráfico de Internet en el puerto UDP 3779"
+
+#: ../../hotspot.rst:96
+msgid ""
+"the firewall must accept connections on UDP port 3779 from "
+"hotspot.nethesis.it"
+msgstr ""
+"El firewall debe aceptar conexiones en el puerto UDP 3779 de "
+"hotspot.nethesis.it"
+
+#: ../../hotspot.rst:98
+msgid "You can do it by executing the following command: ::"
+msgstr "Puede hacerlo ejecutando el siguiente comando: ::"

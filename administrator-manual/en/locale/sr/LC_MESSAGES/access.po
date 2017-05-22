@@ -1,0 +1,121 @@
+# #-#-#-#-#  access.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  access.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Bojan Bogdanović (Бојан Богдановић) <bojce@ubuntusrbija.org>, 2017\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../access.rst:16 ../../access.rst:19
+msgid "Accessing the Server Manager"
+msgstr "Приступање Управнику Сервера"
+
+#: ../../access.rst:18 ../../access.rst:21
+msgid ""
+"|product| can be configured using the :dfn:`Server Manager` web interface. "
+"You need a web browser like Mozilla Firefox or Google Chrome to access the "
+"web interface using the address (URL) ``https://a.b.c.d:980`` or "
+"``https://server_name:980`` where *a.b.c.d* and *server_name* respectively "
+"are the server IP address and name configured during installation."
+msgstr ""
+"|product| може бити конфигурисан коришћењем веб интерфејса :dfn:`Управник "
+"Сервера`. Потребан вам је веб прегледач Mozilla Firefox или Google Chrome да"
+" приступите веб интерфејсу коришћењем адресе (УРЛ) ``https://a.b.c.d:980`` "
+"или ``https://server_name:980`` где су *a.b.c.d* и *server_name* респективно"
+" ИП адреса сервера и име конфигурисано током инсталације."
+
+#: ../../access.rst:23 ../../access.rst:26
+msgid ""
+"If the web server module is installed, you can also access the web interface"
+" using this address ``https://server_name/server-manager``."
+msgstr ""
+"Ако је модул веб сервера инсталиран, такође можете приступити веб интерфејсу"
+" корисшћењем адресе ``https://server_name/server-manager``."
+
+#: ../../access.rst:25 ../../access.rst:28
+msgid ""
+"The Server Manager uses self-signed SSL certificates. You should explicitly "
+"accept them the first time you access the server. The connection is safe and"
+" encrypted."
+msgstr ""
+"Управник Сервера користи самопотписан ССЛ сертификат. Морате експлицитно "
+"прихватити сертификат када први пут приступате серверу. Конекција је сигурна"
+" и енкриптована."
+
+#: ../../access.rst:30 ../../access.rst:33
+msgid "Login"
+msgstr "Пријава"
+
+#: ../../access.rst:32 ../../access.rst:35
+msgid ""
+"The login page will give you a trusted access to the web interface. Log in "
+"as **root** and type the password chosen during |product| installation."
+msgstr ""
+"Страница за пријаву пружа вам сигурносни приступ веб интерфејсу. Пријавите "
+"се као **root** и укуцајте лозинку коју сте изабрали током инсталације "
+"|product|."
+
+#: ../../access.rst:37 ../../access.rst:40
+msgid ""
+"The *unattended* install procedure sets the root password to the default "
+"``Nethesis,1234``."
+msgstr ""
+"Инсталациона процедура *без надзора* подесиће рут лозинку на подразумевану "
+"``Nethesis,1234``."
+
+#: ../../access.rst:41 ../../access.rst:44
+msgid "Change the current password"
+msgstr "Измените текућу лозинку"
+
+#: ../../access.rst:43 ../../access.rst:46
+msgid ""
+"You can change the root password from the web interface by going to the "
+":guilabel:`root@host.domain.com` label on the upper right corner of the "
+"screen and clicking on :guilabel:`Profile`."
+msgstr ""
+"Можете променити рут лозинку из веб интерфејса ако одете на "
+":guilabel:`root@host.domain.com` етикету у горњем десном углу екрана и "
+"кликнете на :guilabel:`Профил`."
+
+#: ../../access.rst:47 ../../access.rst:50
+msgid ""
+"The login page allows selecting an alternative language among those already "
+"installed on the system. After logging in, go to the :ref:`software-center-"
+"section` page to install additional languages."
+msgstr ""
+"Страница за пријаву омогућава да одаберете и алтернативне језике између већ "
+"инсталираних на систему. Након пријаве, идите на страницу :ref:`software-"
+"center-section` да инсталирате додатне језике."
+
+#: ../../access.rst:52 ../../access.rst:55
+msgid "Logout"
+msgstr "Одјава"
+
+#: ../../access.rst:54 ../../access.rst:57
+msgid ""
+"Terminate the current Server Manager session by going to the "
+":guilabel:`root@host.domain.com` label on the upper right corner of the "
+"screen and by clicking on :guilabel:`Logout`."
+msgstr ""
+"Прекините тренутну сесију Управника Сервера ако одете на "
+":guilabel:`root@host.domain.com` етикету у горњем десном углу екрана и "
+"кликнете на :guilabel:`Одјава`."

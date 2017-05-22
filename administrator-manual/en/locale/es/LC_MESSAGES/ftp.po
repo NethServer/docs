@@ -1,0 +1,122 @@
+# #-#-#-#-#  ftp.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  ftp.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ftp.rst:10 ../../ftp.rst:13
+msgid "FTP"
+msgstr "FTP"
+
+#: ../../ftp.rst:12 ../../ftp.rst:15
+msgid "The FTP protocol is insecure: password are sent in clear text."
+msgstr "El protocolo FTP es inseguro: la contraseña se envía en texto claro."
+
+#: ../../ftp.rst:14 ../../ftp.rst:17
+msgid ""
+"The :index:`FTP` server allows to transfer files between client and server."
+msgstr ""
+"El servidor :index:`FTP` permite transferir archivos entre cliente y "
+"servidor."
+
+#: ../../ftp.rst:16 ../../ftp.rst:19
+msgid ""
+"A FTP user can be :dfn:`virtual` or a system users. Virtual users can access"
+" only the FTP server. This is the recommended configuration. The web "
+"interface allows the configuration only of virtual users."
+msgstr ""
+"Un usuario FTP puede ser :dfn:`virtual` o un sistema de usuarios. Los "
+"usuarios virtuales sólo pueden acceder al servidor FTP. Esta es la "
+"configuración recomendada. La interfaz web sólo permite la configuración de "
+"usuarios virtuales."
+
+#: ../../ftp.rst:20 ../../ftp.rst:23
+msgid ""
+"When accessing the FTP server, a user can explore the entire filesystem "
+"accordingly to its own privileges. To avoid information disclosure, the FTP "
+"user can be configured in a jail using the :dfn:`chroot` option: the user "
+"will not be able to exit the jail directory."
+msgstr ""
+"Al acceder al servidor FTP, un usuario puede explorar todo el sistema de "
+"archivos según sus propios privilegios. Para evitar la divulgación de "
+"información, el usuario FTP puede configurarse en una jaula mediante la "
+"opción :dfn:`chroot`: el usuario no podrá salir del directorio de la jaula."
+
+#: ../../ftp.rst:24 ../../ftp.rst:27
+msgid ""
+"This behavior can be useful in case a shared folder is used as part of a "
+"simple web hosting. Insert the shared folder path inside the custom field. "
+"For example, given a shared folder called *mywebsite*, fill the field with: "
+"::"
+msgstr ""
+"Este comportamiento puede ser útil en caso de que una carpeta compartida se "
+"utilice como parte de un simple alojamiento web. Inserte la ruta de la "
+"carpeta compartida dentro del campo personalizado. Por ejemplo, dada una "
+"carpeta compartida llamada *mysite*, rellene el campo con: ::"
+
+#: ../../ftp.rst:29 ../../ftp.rst:32
+msgid ""
+"The FTP virtual user will be able to access only the specified directory."
+msgstr "El usuario FTP virtual sólo podrá acceder al directorio especificado."
+
+#: ../../ftp.rst:33 ../../ftp.rst:36
+msgid "System users"
+msgstr "Usuarios del sistema"
+
+#: ../../ftp.rst:35 ../../ftp.rst:38
+msgid "This configuration is highly discouraged"
+msgstr "Esta configuración es sumamente desalentadora"
+
+#: ../../ftp.rst:37 ../../ftp.rst:40
+msgid ""
+"After enabling system users, all virtual users will be disabled. All "
+"configuration must be done using the command line."
+msgstr ""
+"Después de habilitar los usuarios del sistema, todos los usuarios virtuales "
+"se desactivarán. Toda la configuración debe hacerse utilizando la línea de "
+"comandos."
+
+#: ../../ftp.rst:40 ../../ftp.rst:43
+msgid "Enable system users: ::"
+msgstr "Habilitar usuarios del sistema: ::"
+
+#: ../../ftp.rst:45 ../../ftp.rst:48
+msgid ""
+"Given a user name *goofy*, first make sure the user has Remote shell access."
+" Then, enable the FTP access: ::"
+msgstr ""
+"Dado un nombre de usuario *goofy*, primero asegúrese de que el usuario tiene"
+" acceso a shell remoto. A continuación, habilite el acceso FTP: ::"
+
+#: ../../ftp.rst:52 ../../ftp.rst:55
+msgid "To disable an already enabled user: ::"
+msgstr "Para deshabilitar un usuario ya habilitado: ::"
+
+#: ../../ftp.rst:57 ../../ftp.rst:60
+msgid ""
+"If not explicitly disabled, all system users are chrooted. To disable a "
+"chroot for a system user: ::"
+msgstr ""
+"Si no se deshabilita explícitamente, todos los usuarios del sistema son "
+"chrooted. Para deshabilitar un chroot por un usuario del sistema: ::"

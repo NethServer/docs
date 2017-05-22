@@ -1,0 +1,94 @@
+# #-#-#-#-#  pop3_proxy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  pop3_proxy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../pop3_proxy.rst:10 ../../pop3_proxy.rst:13
+msgid "POP3 proxy"
+msgstr "POP3 vekil sunucusu"
+
+#: ../../pop3_proxy.rst:12 ../../pop3_proxy.rst:15
+msgid ""
+"A user on the LAN can configure an email client in order to connect to an "
+"external POP3 server and download mail messages. Please note that fetched "
+"mail could contain viruses that may infect computer on the network."
+msgstr ""
+"Yerel ağ üzerindeki bir kullanıcı bir e-posta istemcisini dışarıdaki bir "
+"POP3 sunucusuna bağlanarak e-posta almak için ayarlayabilir. Lütfen alınan "
+"postalarda bulunabilecek zararlı yazılımların bilgisayar ve ağa "
+"bulaşabileceğini unutmayın."
+
+#: ../../pop3_proxy.rst:16 ../../pop3_proxy.rst:19
+msgid ""
+"The POP3 proxy intercepts connection to external servers on port 110, then "
+"it scans all incoming email, in order to block viruses and tag spam. The "
+"process is absolutely transparent to mail clients. The user will believe "
+"that they are connected directly to the provider's POP3 server, but the "
+"proxy will intercept all traffic and handle the connection to the server."
+msgstr ""
+"POP3 vekil sunucusu dışarıdaki sunuculara 110 numaralı kapıyı kullanarak "
+"bağlanır. Ardından tüm gelen e-postaları zararlı yazılımlara karşı tarayarak"
+" bunları engeller ve spam olarak işaretler. Bu işlem e-posta istemcileri "
+"açısından tamamen saydam olarak yapılır. Kullanıcı doğrudan hizmet "
+"sağlayıcının POP3 sunucusuna bağlandığını düşünür, ancak gerçekte tüm trafik"
+" ve sunucuya olan bağlantılar vekil sunucu üzerinden geçer."
+
+#: ../../pop3_proxy.rst:21 ../../pop3_proxy.rst:24
+msgid "It's possible to selectively activate the following controls:"
+msgstr "İsteğe göre şu denetimler etkinleştirilebilir:"
+
+#: ../../pop3_proxy.rst:23 ../../pop3_proxy.rst:26
+msgid ""
+"antivirus: messages containing virus are rejected and a notification email "
+"is sent to the user"
+msgstr ""
+"antivirus: zararlı yazılım içeren iletiler reddedilir ve kullanıcıya bir "
+"bildirim e-postası gönderilir"
+
+#: ../../pop3_proxy.rst:24 ../../pop3_proxy.rst:27
+msgid "spam: messages will be marked with the appropriate anti-spam scores"
+msgstr "spam: iletiler hesaplanan spam skoruna göre işaretlenir"
+
+#: ../../pop3_proxy.rst:28 ../../pop3_proxy.rst:31
+msgid "POP3s"
+msgstr "POP3s"
+
+#: ../../pop3_proxy.rst:30 ../../pop3_proxy.rst:33
+msgid ""
+"The proxy can also intercept POP3s connections on port 995. The proxy will "
+"establish a secure connection to the external server, but data exchange with"
+" LAN client will be in the clear text."
+msgstr ""
+"Vekil sunucu ayrıca 995 numaralı kapıyı kullanarak POP3s bağlantıları da "
+"kurabilir. Vekil sunucu dışarıdaki sunucu ile güvenli bir bağlantı kurar "
+"ancak yerel ağ istemcisi ile veri aktarımı düz metin olarak yapılır."
+
+#: ../../pop3_proxy.rst:34 ../../pop3_proxy.rst:37
+msgid ""
+"Mail clients must be configured to connect to port 995 and will have to turn"
+" off encryption."
+msgstr ""
+"Posta istemcileri 995 numaralı kapıyı kullanacak şekilde ayarlanmalı ve "
+"şifreleme kapatılmalıdır."

@@ -1,0 +1,106 @@
+# #-#-#-#-#  ups.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  ups.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../ups.rst:12 ../../ups.rst:15
+msgid "UPS"
+msgstr ""
+
+#: ../../ups.rst:14 ../../ups.rst:17
+msgid ""
+"|product| supports the management of :index:`UPS` (Uninterruptible Power "
+"Supply) connected to the system."
+msgstr ""
+
+#: ../../ups.rst:16 ../../ups.rst:19
+msgid "The server can be configured in two ways:"
+msgstr ""
+
+#: ../../ups.rst:18 ../../ups.rst:21
+msgid ""
+"*master*: UPS is directly connected to the server, the server accepts "
+"connections from slaves"
+msgstr ""
+
+#: ../../ups.rst:19 ../../ups.rst:22
+msgid ""
+"*slave*: UPS is connected to another server accessible over the network"
+msgstr ""
+
+#: ../../ups.rst:21 ../../ups.rst:24
+msgid ""
+"You should consult the list of supported models before buying. Via "
+"*Administration > Software center* install the UPS package. In "
+"*Configuration* appears the new entry *UPS* where can be find the supported "
+"model by typing in *Search driver for model* field."
+msgstr ""
+
+#: ../../ups.rst:26 ../../ups.rst:29
+msgid "In :index:`master` mode, the UPS can be connected to the server:"
+msgstr ""
+
+#: ../../ups.rst:28 ../../ups.rst:31
+msgid "on a serial port"
+msgstr ""
+
+#: ../../ups.rst:29 ../../ups.rst:32
+msgid "on a USB port"
+msgstr ""
+
+#: ../../ups.rst:30 ../../ups.rst:33
+msgid "with a USB to serial adapter"
+msgstr ""
+
+#: ../../ups.rst:33 ../../ups.rst:36
+msgid ""
+"In :index:`slave` mode, you will need to provide the IP address of the "
+"master server."
+msgstr ""
+
+#: ../../ups.rst:35 ../../ups.rst:38
+msgid ""
+"The default configuration provides a controlled shutdown in the event of the"
+" absence of power."
+msgstr ""
+
+#: ../../ups.rst:39 ../../ups.rst:42
+msgid "Custom device"
+msgstr ""
+
+#: ../../ups.rst:41 ../../ups.rst:44
+msgid ""
+"If the UPS is connected to a port that is not listed in the web interface, "
+"you can configure a custom device with the following commands: ::"
+msgstr ""
+
+#: ../../ups.rst:47 ../../ups.rst:50
+msgid "UPS statistics"
+msgstr ""
+
+#: ../../ups.rst:49 ../../ups.rst:52
+msgid ""
+"If the statistics module (collectd) is installed and running, the module "
+"will automatically collect statistic data about UPS status."
+msgstr ""
