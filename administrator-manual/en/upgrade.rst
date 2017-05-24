@@ -152,7 +152,7 @@ mailboxes and subscriptions are preserved.
 Mailboxes associated to groups with :guilabel:`Deliver the message into a shared folder` option enabled,
 will be converted to public shared mailboxes.
 The public shared folder will be automatically subscribed by all group members,
-but all messages will be markes as unread.
+but all messages will be marked as unread.
 
 Let's Encrypt
 =============
