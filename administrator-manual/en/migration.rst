@@ -8,33 +8,15 @@ Migration from NethService/SME Server
 
 Migration is the process to convert a SME Server/NethService
 machine (:dfn:`source`) into a |product| (:dfn:`destination`).
+It can be achieved from a :ref:`backup <backup_migration-section>` or :ref:`using rsync <migrate_with_rsync-section>`.
+
+.. note:: No custom template is migrated during the migration process.
+   Check the new template files before copying any custom fragment from the old backup.
 
 .. warning:: 
     
     Before running the migration procedure, read carefully all the sections of this
     chapter.
-
-#. In the source host, create a full backup archive and move it
-   to the destination host.
-
-#. In the destination host, install all packages that cover the same
-   features of the source.
-
-#. Explode the full backup archive into some directory; for instance,
-   create the directory :file:`/var/lib/migration`.
-
-#. In destination host, signal the event ``migration-import``::
-
-     signal-event migration-import /var/lib/migration
-
-   This step will require some time.
-
-#. Check for any error message in :file:`/var/log/messages`::
- 
-     grep -E '(FAIL|ERROR)' /var/log/messages
-
-.. note:: No custom template is migrated during the migration process.
-   Check the new template files before copying any custom fragment from the old backup.
 
 .. _migration_account:
 
@@ -74,7 +56,7 @@ Before running |product| in production, some considerations about the
 network and existing mail client configurations are required: what
 ports are in use, if SMTPAUTH and TLS are enabled.  Refer to
 :ref:`email_clients` and :ref:`email_policies` sections for more
-informations.
+information.
 
 In a mail server migration, the source mail server could be on
 production even after the backup has been done, and email messages
@@ -148,3 +130,92 @@ to the following rules of thumb:
         chmod -c -R o+rX /var/www/html/ibayname
         db accounts delete ibayname
         signal-event nethserver-samba-update
+
+.. _backup_migration-section:
+
+Migration from backup
+=====================
+
+#. In the source host, create a full backup archive and move it
+   to the destination host.
+
+#. In the destination host, install all packages that cover the same
+   features of the source.
+
+#. Explode the full backup archive into some directory; for instance,
+   create the directory :file:`/var/lib/migration`.
+
+#. In destination host, signal the event ``migration-import``::
+
+     signal-event migration-import /var/lib/migration
+
+   This step will require some time.
+
+#. Check for any error message in :file:`/var/log/messages`::
+ 
+     grep -E '(FAIL|ERROR)' /var/log/messages
+
+
+
+.. _migrate_with_rsync-section:
+
+Migration with rsync
+====================
+
+The process is much faster than migrating from a backup.
+
+Before starting make sure to have:
+
+- a running NethService/SME installation, we will call it original server or source server
+- a running |product| 7 installation with at least the same disk space of the source server, we will call it destination server
+- a working network connection between the two severs
+
+Please also make sure the source server allows root login via SSH key and password.
+
+Sync files
+----------
+
+The synchronization script copies all data using rsync over SSH.
+Files are saved inside :file:`/var/lib/migration` directory.
+If the destination server doesn't have any SSH keys, the script will also a pair of RSA keys and copy the public key to the source server.
+All directories excluded from the backup data will not be synced.
+
+On the target machine, execute the following command: ::
+
+  screen rsync-migrate <source_server_name> [ssh_port]
+
+Where
+
+- ``source_server_name`` is the host name or IP of the original server
+- ``ssh_port`` is the SSH port of the original server (default is 22)
+
+Example: ::
+
+    screen rsync-migrate mail.nethserver.org 2222
+
+When asked, insert the root password of the source server, make a coffee and wait patiently.
+
+The script will not perform any action on the source machine and can be invoked multiple times.
+
+Sync and migrate
+----------------
+
+If called with ``-m`` option, ``rsync-migrate`` will execute a final synchronization and upgrade
+the target machine.
+
+Example: ::
+
+    screen rsync-migrate -m mail.nethserver.org 2222
+
+The script will:
+
+- stop every service on the source machine (except for SSH)
+- execute the ``pre-backup`` event on the source machine
+- sync all remaining data
+- execute the ``migration-import`` event on the destination machine
+
+
+At the end, check for any error message in :file:`/var/log/messages`::
+ 
+     grep -E '(FAIL|ERROR)' /var/log/messages
+
