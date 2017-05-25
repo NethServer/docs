@@ -6,41 +6,14 @@
 Upgrade from |product| 6
 ========================
 
-The upgrade from |product| 6 to |product| |version| can be achieved using
-the :ref:`disaster-recovery-section` procedure.
+The upgrade from |product| 6 to |product| |version| can be achieved 
+from a :ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-recovery-section` )
+or :ref:`using rsync <upgrade_with_rsync-section>`.
 
 .. warning::
 
     Before running the upgrade procedure, read carefully all the sections of this
     chapter. Please also read :ref:`discontinued-section`.
-
-#. Make sure to have an updated backup of the original installation.
-
-#. Install |product| |version| and complete the initial steps using the first configuration wizard.
-   The new machine must have the same hostname of the old one, to access the backup set correctly. 
-   Install and configure the backup module.
-
-#. Restore the configuration backup using the web interface. The network configuration is restored, too!
-   If any error occurs, check the :file:`/var/log/messages` log file for further information: ::
-
-       grep -E '(FAIL|ERROR)' /var/log/messages
-
-#. If needed, go to :guilabel:`Network` page and fix the network configuration
-   accordingly to the new hardware.
-   If the machine was joined to an existing Active Directory domain,
-   read :ref:`ads-upgrade-section`.
-
-#. Complete the restore procedure with the following command: ::
-
-    restore-data
-
-#. Check the restore logs: ::
-
-    /var/log/restore-data.log
-    /var/log/messages
-
-#. Each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for 
-   compatibility with version |version|.
 
 .. note::
 
@@ -179,7 +152,7 @@ mailboxes and subscriptions are preserved.
 Mailboxes associated to groups with :guilabel:`Deliver the message into a shared folder` option enabled,
 will be converted to public shared mailboxes.
 The public shared folder will be automatically subscribed by all group members,
-but all messages will be markes as unread.
+but all messages will be marked as unread.
 
 Let's Encrypt
 =============
@@ -239,3 +212,105 @@ New code: ::
 Documentation available via perldoc command: ::
 
    perldoc NethServer::Password
+
+
+.. _upgrade_from_backup-section:
+
+Upgrade from backup
+===================
+
+#. Make sure to have an updated backup of the original installation.
+
+#. Install |product| |version| and complete the initial steps using the first configuration wizard.
+   The new machine must have the same hostname of the old one, to access the backup set correctly.
+   Install and configure the backup module.
+
+#. Restore the configuration backup using the web interface. The network configuration is restored, too!
+   If any error occurs, check the :file:`/var/log/messages` log file for further information: ::
+
+       grep -E '(FAIL|ERROR)' /var/log/messages
+
+#. If needed, go to :guilabel:`Network` page and fix the network configuration
+   accordingly to the new hardware.
+   If the machine was joined to an existing Active Directory domain,
+   read :ref:`ads-upgrade-section`.
+
+#. Complete the restore procedure with the following command: ::
+
+    restore-data
+
+#. Check the restore logs: ::
+
+    /var/log/restore-data.log
+    /var/log/messages
+
+#. Each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for
+   compatibility with version |version|.
+
+.. _upgrade_with_rsync-section:
+
+Upgrade with rsync
+==================
+
+The process is much faster than a traditional backup and restore, also it minimizes the downtime for the users.
+
+Before starting make sure to have:
+
+- a running |product| 6 installation, we will call it original server or source server
+- a running |product| 7 installation with at least the same disk space of the source server, we will call it destination server
+- a working network connection between the two severs
+
+Please also make sure the source server allows root login via SSH key and password.
+
+Sync files
+----------
+
+The synchronization script copies all data using rsync over SSH.
+If the destination server doesn't have any SSH keys, the script will also a pair of RSA keys and copy the public key to the source server.
+All directories excluded from the backup data will not be synced.
+
+On the target machine, execute the following command: ::
+
+  screen rsync-upgrade <source_server_name> [ssh_port]
+
+Where
+
+- ``source_server_name`` is the host name or IP of the original server
+- ``ssh_port`` is the SSH port of the original server (default is 22)
+
+Example: ::
+
+    screen rsync-upgrade mail.nethserver.org 2222
+
+When asked, insert the root password of the source server, make a coffee and wait patiently.
+
+The script will not perform any action on the source machine and can be invoked multiple times.
+
+Sync and upgrade
+----------------
+
+If called with ``-u`` option, ``rsync-upgrade`` will execute a final synchronization and upgrade
+the target machine.
+
+Example: ::
+
+    screen rsync-upgrade -u mail.nethserver.org 2222
+
+The script will:
+
+- close access to every network service on the source machine (except for SSH and httpd-admin)
+- execute ``pre-backup-config`` and ``pre-backup-data`` event on the source machine
+- sync all remaining data
+- execute ``restore-config`` on the destination machine
+
+If the network can be automatically reconfigured, the script will also call ``post-restore-data`` event on the destination machine,
+otherwise follow the instructions generated by the script.
+
+At the end, check the restore logs: ::
+
+    /var/log/restore-data.log
+    /var/log/messages
+
+Also each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for
+compatibility with version |version|.
+
