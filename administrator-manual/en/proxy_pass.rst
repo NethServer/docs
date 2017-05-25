@@ -14,7 +14,7 @@ Scenario:
 
 * |product| is the firewall of your LAN
 * You have a domain http://mydomain.com
-* You would like http://mydomain.com/mysite to forward to the internal server (internal IP: 192.168.2.00)
+* You would like http://mydomain.com/mysite to forward to the internal server (internal IP: 192.168.2.100)
 
 Commands for this example: ::
 
