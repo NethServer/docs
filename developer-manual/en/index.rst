@@ -41,8 +41,6 @@ Developer Manual
    certificate_management
    yum_plugin
    backup
-   gateway
-   ips
 
 .. toctree::
    :maxdepth: 2
@@ -70,13 +68,8 @@ Developer Manual
    ftp
    ups
    tftp
-   pop3_proxy
-   owncloud
-   roundcube
    collectd
    phone_home
-   web_proxy
-   web_antivirus
    content_filter
    webvirtmgr
    duc
@@ -84,8 +77,6 @@ Developer Manual
    tomcat7
    postgresql
    unixodbc
-   vpn
-   unbound
    ntopng
    samba_audit
    redis
@@ -93,8 +84,6 @@ Developer Manual
    smartd
    cups
    antivirus
-   c-icap
-   iaxmodem
    mysql
 
 .. toctree::
