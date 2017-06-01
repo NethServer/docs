@@ -79,12 +79,12 @@ Bypass by domains
 
 Bypass by domains can be configured from :guilabel:`Domains without proxy` section.
 All domains listed inside this page can be directly accessed from LAN clients.
-No antivirus or content filtering is applied to this domains.
+No antivirus or content filtering is applied to these domains.
 
-Every domain listed will be expanded also for its own sub-domain.
+Every domain listed will be expanded also for its own sub-domains.
 For example, adding *nethserver.org* will bypass also *www.nethserver.org*, *mirror.nethserver.org*, etc.
 
-.. note:: All LAN clients must use the server itself as DNS.
+.. note:: All LAN clients must use the server itself as DNS, either directly or as a forwarder.
 
 Bypass by source and destinations
 ---------------------------------
