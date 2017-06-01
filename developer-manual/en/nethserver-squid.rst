@@ -124,15 +124,15 @@ Domains bypass
 All requests to domains listed inside the ``BypassDomains`` property will not
 be redirect to the transparent proxy.
 
-The implementation uses the ipset feature of DNSMasq.
-Each time a listed domain is accessed from the client, DNSMasq resolves the IP
+The implementation uses the ipset feature of Dnsmasq.
+Each time a listed domain is accessed from the client, Dnsmasq resolves the IP
 and add it to ``squid-bypass`` ipset.
 The ``squid-bypass`` ipset is then used as exception inside Shorewall REDIRECT rule.
 
 Notes:
 
 * all clients must use the server as DNS
-* DNSMasq name resolution works for the listed domains and all sub-domains
+* Dnsmasq name resolution works for the listed domains and all sub-domains
 
 Cache
 =====
