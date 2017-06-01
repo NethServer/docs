@@ -70,10 +70,34 @@ from specific IP or destined to some sites it's not routed through the HTTP/HTTP
 
 The proxy allows you to create:
 
-* bypass by source, configurable from :guilabel:`Hosts without proxy` section
-* bypass by destination, configurable from :guilabel:`Sites without proxy` section
+* bypass by domains
+* bypass by source
+* bypass by destination
 
-Bypass rules are also configured inside the WPAD file.
+Bypass by domains
+-----------------
+
+Bypass by domains can be configured from :guilabel:`Domains without proxy` section.
+All domains listed inside this page can be directly accessed from LAN clients.
+No antivirus or content filtering is applied to these domains.
+
+Every domain listed will be expanded also for its own sub-domains.
+For example, adding *nethserver.org* will bypass also *www.nethserver.org*, *mirror.nethserver.org*, etc.
+
+.. note:: All LAN clients must use the server itself as DNS, either directly or as a forwarder.
+
+Bypass by source and destinations
+---------------------------------
+
+A source bypass allows direct access to any HTTP/HTTPS sites from 
+selected hosts, host groups, IP ranges and network CIDR.
+Source bypasses are configurable from :guilabel:`Hosts without proxy` section.
+
+A destination bypass allows direct access from any LAN clients to HTTP/HTTPS sites hosted on specific hosts, 
+host groups or network CIDR.
+Destination bypasses are configurable from :guilabel:`Sites without proxy` section.
+
+These bypass rules are also configured inside the WPAD file.
 
 Report
 ======
