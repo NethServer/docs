@@ -14,6 +14,7 @@ All properties are saved in the ``squid`` key under the ``configuration`` databa
 Properties:
 
 * *BlueMode*: change Squid operation mode on blue networks. It has same values and defaults of ``GreenMode``
+* *BypassDomains*: comma separeted list of domains bypassed when the proxy is set in transparent mode
 * *DiskCache*: disabled by default, if enabled it actives the disk caching system for squid
 * *DiskCacheSize*: maximum value of squid cache on disk
 * *GreenMode*: change Squid operation mode on green networks.
@@ -89,6 +90,15 @@ Authentication schema depends on system configuration:
 Bypasses
 ========
 
+The implementation supports 3 kind of bypass:
+
+- source bypass
+- destination bypass
+- domains bypass
+
+Source and destination bypass
+-----------------------------
+
 Bypass rules are saved inside the ``fwrules`` databases.
 A bypass can be of two types:
 
@@ -108,8 +118,25 @@ Bypass example: ::
     Host=host;bosspc
     status=enabled
 
+Domains bypass
+---------------
+
+All requests to domains listed inside the ``BypassDomains`` property will not
+be redirect to the transparent proxy.
+
+The implementation uses the ipset feature of DNSMasq.
+Each time a listed domain is accessed from the client, DNSMasq resolves the IP
+and add it to ``squid-bypass`` ipset.
+The ``squid-bypass`` ipset is then used as exception inside Shorewall REDIRECT rule.
+
+Notes:
+
+* all clients must use the server as DNS
+* DNSMasq name resolution works for the listed domains and all sub-domains
+
 Cache
 =====
+
 There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
 
 WPAD
