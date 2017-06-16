@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -522,62 +522,66 @@ msgstr ""
 
 #: ../../accounts.rst:273 ../../accounts.rst:276
 msgid ""
-"Some additional modules, like Nextcloud, WebTop, Roundcube, SOGo, Ejabberd "
-"require read-only access to AD LDAP services. To be fully operational they "
-"require an additional account to perform simple LDAP binds.  Create a "
-"**dedicated user account** in AD, and set a complex *non-expiring* password "
-"for it."
+"Some additional modules, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*"
+" require read-only access to AD LDAP services. To be fully operational they "
+"require an additional account to perform simple LDAP binds."
 msgstr ""
 
-#: ../../accounts.rst:279 ../../accounts.rst:282
+#: ../../accounts.rst:277 ../../accounts.rst:280
+msgid ""
+"Create a **dedicated user account** in AD, and set a complex *non-expiring* "
+"password for it."
+msgstr ""
+
+#: ../../accounts.rst:280 ../../accounts.rst:283
 msgid ""
 "Once |product| has successfuly joined AD, specify the **dedicated user "
 "account** credentials in :guilabel:`Accounts provider > Read-only bind "
 "credentials`."
 msgstr ""
 
-#: ../../accounts.rst:285 ../../accounts.rst:288
+#: ../../accounts.rst:286 ../../accounts.rst:289
 msgid "Bind to a remote LDAP server"
 msgstr "Vincular a un servidor LDAP remoto"
 
-#: ../../accounts.rst:287 ../../accounts.rst:290
+#: ../../accounts.rst:288 ../../accounts.rst:291
 msgid ""
 "To configure a remote LDAP accounts provider, go to page :guilabel:`Accounts"
 " provider > LDAP > Bind remotely`."
 msgstr ""
 
-#: ../../accounts.rst:290 ../../accounts.rst:293
+#: ../../accounts.rst:291 ../../accounts.rst:294
 msgid ""
 "Type the LDAP server IP address in the field :guilabel:`Host name or IP`. If"
 " the LDAP service runs on a non-standard TCP port, specify it in "
 ":guilabel:`TCP port`."
 msgstr ""
 
-#: ../../accounts.rst:294 ../../accounts.rst:297
+#: ../../accounts.rst:295 ../../accounts.rst:298
 msgid ""
 "Then an LDAP *rootDSE* query is sent to the specified host and a form is "
 "filled with returned data.  Check the values are correct then press the "
 ":guilabel:`Save` button to confirm."
 msgstr ""
 
-#: ../../accounts.rst:298 ../../accounts.rst:301
+#: ../../accounts.rst:299 ../../accounts.rst:302
 msgid ""
 "If the LDAP server requires authentication, fill in the fields under "
 ":guilabel:`Authenticated bind`. Enable either ``ldaps://`` or STARTTLS to "
 "encrypt the connection."
 msgstr ""
 
-#: ../../accounts.rst:304 ../../accounts.rst:307
+#: ../../accounts.rst:305 ../../accounts.rst:308
 msgid ""
 "If the remote LDAP server is also a |product| installation and it is in the "
 "LAN (green) network, select :guilabel:`Anonymous bind`"
 msgstr ""
 
-#: ../../accounts.rst:309 ../../accounts.rst:312
+#: ../../accounts.rst:310 ../../accounts.rst:313
 msgid "Users"
 msgstr "Usuarios"
 
-#: ../../accounts.rst:311 ../../accounts.rst:314
+#: ../../accounts.rst:312 ../../accounts.rst:315
 msgid ""
 "A newly created user account remains locked until it has set a password. "
 "Disabled users are denied to access system services."
@@ -586,19 +590,19 @@ msgstr ""
 "sido configurada. Los usuarios deshabilitados tienen denegado el accesos a "
 "los servicios del sistema."
 
-#: ../../accounts.rst:314 ../../accounts.rst:317
+#: ../../accounts.rst:315 ../../accounts.rst:318
 msgid "When creating a user, following fields are mandatory:"
 msgstr "Cuando se crea un usuario, los siguientes campos son obligatorios."
 
-#: ../../accounts.rst:316 ../../accounts.rst:319
+#: ../../accounts.rst:317 ../../accounts.rst:320
 msgid "User name"
 msgstr "Nombre de usuario"
 
-#: ../../accounts.rst:317 ../../accounts.rst:320
+#: ../../accounts.rst:318 ../../accounts.rst:321
 msgid "Full name (name and surname)"
 msgstr "Nombre completo (nombre y apellido)"
 
-#: ../../accounts.rst:319 ../../accounts.rst:322
+#: ../../accounts.rst:320 ../../accounts.rst:323
 msgid ""
 "A user can be added to one or more group from the :guilabel:`Users` page or "
 "from the :guilabel:`Groups` one."
@@ -606,7 +610,7 @@ msgstr ""
 "Un usuario puede ser agregado a uno o mas grupos de la pagina "
 ":guilabel:`Usuarios` o de la pagina :guilabel:`Grupos` ."
 
-#: ../../accounts.rst:321 ../../accounts.rst:324
+#: ../../accounts.rst:322 ../../accounts.rst:325
 msgid ""
 "Sometimes you need to block user's access to services without deleting the "
 "account. This can be achieved using the :guilabel:`Lock` and "
@@ -616,17 +620,17 @@ msgstr ""
 "servicio, sin tener que borrar la cuenta. Esto se puede realizar usando las "
 "opciones  :guilabel:`Bloquear` y :guilabel:`Desbloquear`"
 
-#: ../../accounts.rst:325 ../../accounts.rst:328
+#: ../../accounts.rst:326 ../../accounts.rst:329
 msgid "When a user is deleted, all user data will be also deleted."
 msgstr ""
 "Cuando se elimina un usuario, también se eliminarán todos los datos del "
 "usuario."
 
-#: ../../accounts.rst:330 ../../accounts.rst:333
+#: ../../accounts.rst:331 ../../accounts.rst:334
 msgid "Changing the password"
 msgstr "Cambio de la contraseña"
 
-#: ../../accounts.rst:332 ../../accounts.rst:335
+#: ../../accounts.rst:333 ../../accounts.rst:336
 msgid ""
 "If there wasn't given an initial password during user creation, the user "
 "account is disabled. To enable it, set a password using the "
@@ -636,7 +640,7 @@ msgstr ""
 "la cuenta del usuario es deshabilitada. Para habilitarla, configure una "
 "contraseña utilizando el botón :guilabel:`Cambiar contraseña`."
 
-#: ../../accounts.rst:335 ../../accounts.rst:338
+#: ../../accounts.rst:336 ../../accounts.rst:339
 msgid ""
 "When a user is enabled, the user can access the Server Manager and change "
 "his/her own password by going to the :guilabel:`user@domain.com` label on "
@@ -647,7 +651,7 @@ msgstr ""
 "etiqueta :guilabel:`user@domain.com` en la esquina superior derecha de la "
 "pantalla y cliqueando en :guilabel:`Perfil`."
 
-#: ../../accounts.rst:339 ../../accounts.rst:342
+#: ../../accounts.rst:340 ../../accounts.rst:343
 msgid ""
 "If the system is bound to an Active Directory account provider, users can "
 "change their password also using the Windows tools.  In this case you can "
@@ -663,11 +667,11 @@ msgstr ""
 "windows envían la contraseña al servidor donde son evaluados de acuerdo a "
 ":ref:`políticas configuradas <password-management-section>`."
 
-#: ../../accounts.rst:347 ../../accounts.rst:350
+#: ../../accounts.rst:348 ../../accounts.rst:351
 msgid "Credentials for services"
 msgstr "Credenciales de servicios"
 
-#: ../../accounts.rst:349 ../../accounts.rst:352
+#: ../../accounts.rst:350 ../../accounts.rst:353
 msgid ""
 "The user's credentials are the **user name** and his **password**.  "
 "Credentials are required to access the services installed on the system."
@@ -676,7 +680,7 @@ msgstr ""
 "credenciales son requeridas para acceder a los servicios instalados en el "
 "sistema."
 
-#: ../../accounts.rst:352 ../../accounts.rst:355
+#: ../../accounts.rst:353 ../../accounts.rst:356
 msgid ""
 "The user name can be issued in two forms: *long* (default) and *short*.  The"
 " *long* form is always accepted by services. It depends on the service to "
@@ -686,37 +690,37 @@ msgstr ""
 " y *corto*. El formulario *largo* siempre es aceptado por los servicios. "
 "Depende del servicio aceptar también el formulario *corto*."
 
-#: ../../accounts.rst:356 ../../accounts.rst:359
+#: ../../accounts.rst:357 ../../accounts.rst:360
 msgid "For instance if the domain is *example.com* and the user is *goofy*:"
 msgstr "Por ejemplo si el dominio es *example.com* y el usuario es *goofy*:"
 
-#: ../../accounts.rst:359 ../../accounts.rst:362
+#: ../../accounts.rst:360 ../../accounts.rst:363
 msgid "User long name form"
 msgstr ""
 
-#: ../../accounts.rst:359 ../../accounts.rst:362
+#: ../../accounts.rst:360 ../../accounts.rst:363
 msgid "*goofy@example.com*"
 msgstr "*goofy@example.com*"
 
-#: ../../accounts.rst:362 ../../accounts.rst:365
+#: ../../accounts.rst:363 ../../accounts.rst:366
 msgid "User short name form"
 msgstr ""
 
-#: ../../accounts.rst:362 ../../accounts.rst:365
+#: ../../accounts.rst:363 ../../accounts.rst:366
 msgid "*goofy*"
 msgstr "*goofy*"
 
-#: ../../accounts.rst:364 ../../accounts.rst:367
+#: ../../accounts.rst:365 ../../accounts.rst:368
 msgid "To access a shared folder, see also :ref:`smb-access-section`."
 msgstr ""
 "Para acceder a una carpeta compartida, vea también :ref:`smb-access-"
 "section`."
 
-#: ../../accounts.rst:369 ../../accounts.rst:372
+#: ../../accounts.rst:370 ../../accounts.rst:373
 msgid "Groups"
 msgstr "Grupos"
 
-#: ../../accounts.rst:371 ../../accounts.rst:374
+#: ../../accounts.rst:372 ../../accounts.rst:375
 msgid ""
 "A group of users can be granted some permission, such as authorize access "
 "over a :ref:`shared folder <shared_folders-section>`. The granted permission"
@@ -726,7 +730,7 @@ msgstr ""
 " acceso a través de :ref:`Carpetas compartidas <shared_folders-section>`. El"
 " permiso concedido se propaga a todos los miembros del grupo."
 
-#: ../../accounts.rst:375 ../../accounts.rst:378
+#: ../../accounts.rst:376 ../../accounts.rst:379
 msgid ""
 "Two special groups can be created.  Members of these groups are granted "
 "access to the panels of the Server Manager:"
@@ -734,7 +738,7 @@ msgstr ""
 "Se pueden crear dos grupos especiales. Los miembros de estos grupos tienen "
 "acceso a los paneles del Administrador de servidores:"
 
-#: ../../accounts.rst:378 ../../accounts.rst:381
+#: ../../accounts.rst:379 ../../accounts.rst:382
 msgid ""
 ":dfn:`domain admins`: members of this group have the same permissions as the"
 " *root* user from the Server Manager."
@@ -742,7 +746,7 @@ msgstr ""
 ":dfn:`administradores de dominio`: los miembros de este grupo tienen los "
 "mismos permisos que el usuario *root* del Administrador de servidores."
 
-#: ../../accounts.rst:381 ../../accounts.rst:384
+#: ../../accounts.rst:382 ../../accounts.rst:385
 msgid ""
 ":dfn:`managers`: members of this group are granted access to the "
 "*Management* section of the Server Manager."
@@ -750,11 +754,11 @@ msgstr ""
 ":dfn:`managers`: los miembros de este grupo tienen acceso a la sección "
 "*Administración* del Administrador de servidores."
 
-#: ../../accounts.rst:389 ../../accounts.rst:392
+#: ../../accounts.rst:390 ../../accounts.rst:393
 msgid "Admin account"
 msgstr "Cuenta de administrador"
 
-#: ../../accounts.rst:391 ../../accounts.rst:394
+#: ../../accounts.rst:392 ../../accounts.rst:395
 msgid ""
 "If a **local AD or LDAP provider** is installed, an *admin* user, member of "
 "the *domain admins* group is created automatically. This account allows "
@@ -767,11 +771,11 @@ msgstr ""
 "Administrador del servidor. El acceso está inicialmente *deshabilitado* y no"
 " tiene acceso desde la consola."
 
-#: ../../accounts.rst:396 ../../accounts.rst:399
+#: ../../accounts.rst:397 ../../accounts.rst:400
 msgid "To enable the *admin* account set its password."
 msgstr "Para habilitar la cuenta *admin*, establezca su contraseña."
 
-#: ../../accounts.rst:398 ../../accounts.rst:401
+#: ../../accounts.rst:399 ../../accounts.rst:402
 msgid ""
 "Where applicable, the *admin* account is granted special privileges on some "
 "specific services, such as joining a workstation to an Active Directory "
@@ -781,7 +785,7 @@ msgstr ""
 "servicios específicos, como unirse a una estación de trabajo a un dominio de"
 " Active Directory."
 
-#: ../../accounts.rst:401 ../../accounts.rst:404
+#: ../../accounts.rst:402 ../../accounts.rst:405
 msgid ""
 "If |product| is bound to a **remote account provider**, the *admin* user and"
 " *domain admins* group could be created manually, if they do not already "
@@ -790,7 +794,7 @@ msgstr ""
 "La gestión de grupos está disponible desde la línea de comandos a través de "
 "los eventos ``group-create`` y ``group-modify`` ::"
 
-#: ../../accounts.rst:404 ../../accounts.rst:407
+#: ../../accounts.rst:405 ../../accounts.rst:408
 msgid ""
 "If a user or group with a similar purpose is already present in the remote "
 "account provider database, but it is named differently, |product| can be "
@@ -801,11 +805,11 @@ msgstr ""
 "diferente, |product| puede ser configurado para confiar en él con los "
 "siguientes comandos: ::"
 
-#: ../../accounts.rst:414 ../../accounts.rst:417
+#: ../../accounts.rst:415 ../../accounts.rst:418
 msgid "Password management"
 msgstr "Gestión de contraseñas"
 
-#: ../../accounts.rst:416 ../../accounts.rst:419
+#: ../../accounts.rst:417 ../../accounts.rst:420
 msgid ""
 "The system provides the ability to set constraints on password "
 ":dfn:`complexity` and :dfn:`expiration`."
@@ -813,16 +817,16 @@ msgstr ""
 "El sistema proporciona la capacidad de establecer restricciones en la "
 "contraseña :dfn:`complejidad` y :dfn:`expiración`."
 
-#: ../../accounts.rst:418 ../../accounts.rst:421
+#: ../../accounts.rst:419 ../../accounts.rst:422
 msgid "Password policies can be changed from web interface."
 msgstr ""
 "Las directivas de contraseñas se pueden cambiar desde la interfaz web."
 
-#: ../../accounts.rst:421 ../../accounts.rst:424
+#: ../../accounts.rst:422 ../../accounts.rst:425
 msgid "Complexity"
 msgstr "Complejidad"
 
-#: ../../accounts.rst:423 ../../accounts.rst:426
+#: ../../accounts.rst:424 ../../accounts.rst:427
 msgid ""
 "The :index:`password` complexity is a set of minimum conditions for password"
 " to be accepted by the system: You can choose between two different "
@@ -833,7 +837,7 @@ msgstr ""
 "dos políticas de administración diferentes sobre la complejidad de la "
 "contraseña:"
 
-#: ../../accounts.rst:426 ../../accounts.rst:429
+#: ../../accounts.rst:427 ../../accounts.rst:430
 msgid ""
 ":dfn:`none`: there is no specific control over the password entered, but "
 "minimum length is 7 characters"
@@ -841,11 +845,11 @@ msgstr ""
 ":dfn:`none`: no hay control específico sobre la contraseña introducida, pero"
 " la longitud mínima es de 7 caracteres"
 
-#: ../../accounts.rst:427 ../../accounts.rst:430
+#: ../../accounts.rst:428 ../../accounts.rst:431
 msgid ":dfn:`strong`"
 msgstr ":dfn:`strong`"
 
-#: ../../accounts.rst:429 ../../accounts.rst:432
+#: ../../accounts.rst:430 ../../accounts.rst:433
 msgid ""
 "The :index:`strong` policy requires that the password must comply with the "
 "following rules:"
@@ -853,39 +857,39 @@ msgstr ""
 "La directiva :index:`strong` requiere que la contraseña cumpla con las "
 "siguientes reglas:"
 
-#: ../../accounts.rst:431 ../../accounts.rst:434
+#: ../../accounts.rst:432 ../../accounts.rst:435
 msgid "Minimum length of 7 characters"
 msgstr "Longitud mínima de 7 caracteres"
 
-#: ../../accounts.rst:432 ../../accounts.rst:435
+#: ../../accounts.rst:433 ../../accounts.rst:436
 msgid "Contain at least 1 number"
 msgstr "Contiene al menos 1 número"
 
-#: ../../accounts.rst:433 ../../accounts.rst:436
+#: ../../accounts.rst:434 ../../accounts.rst:437
 msgid "Contain at least 1 uppercase character"
 msgstr "Contiene al menos 1 carácter en mayúscula"
 
-#: ../../accounts.rst:434 ../../accounts.rst:437
+#: ../../accounts.rst:435 ../../accounts.rst:438
 msgid "Contain at least 1 lowercase character"
 msgstr "Contiene al menos 1 carácter minúscula"
 
-#: ../../accounts.rst:435 ../../accounts.rst:438
+#: ../../accounts.rst:436 ../../accounts.rst:439
 msgid "Contain at least 1 special character"
 msgstr "Contiene al menos 1 carácter especial"
 
-#: ../../accounts.rst:436 ../../accounts.rst:439
+#: ../../accounts.rst:437 ../../accounts.rst:440
 msgid "At least 5 different characters"
 msgstr "Al menos 5 caracteres diferentes"
 
-#: ../../accounts.rst:437 ../../accounts.rst:440
+#: ../../accounts.rst:438 ../../accounts.rst:441
 msgid "Must be not present in the dictionaries of common words"
 msgstr "No debe estar presente en los diccionarios de palabras comunes"
 
-#: ../../accounts.rst:438 ../../accounts.rst:441
+#: ../../accounts.rst:439 ../../accounts.rst:442
 msgid "Must be different from the username"
 msgstr "Debe ser diferente del nombre de usuario"
 
-#: ../../accounts.rst:439 ../../accounts.rst:442
+#: ../../accounts.rst:440 ../../accounts.rst:443
 msgid ""
 "Can not have repetitions of patterns formed by 3 or more characters (for "
 "example the password As1.$ AS1. $ is invalid)"
@@ -893,7 +897,7 @@ msgstr ""
 "No se pueden realizar repeticiones de patrones formados por 3 o más "
 "caracteres (por ejemplo, la contraseña As1.$ AS1. $ No es válida)"
 
-#: ../../accounts.rst:440 ../../accounts.rst:443
+#: ../../accounts.rst:441 ../../accounts.rst:444
 msgid ""
 "If Samba Active Directory is installed, also the system will enable password"
 " history"
@@ -901,11 +905,11 @@ msgstr ""
 "Si se instala Samba Active Directory, también el sistema habilitará el "
 "historial de contraseñas"
 
-#: ../../accounts.rst:442 ../../accounts.rst:445
+#: ../../accounts.rst:443 ../../accounts.rst:446
 msgid "The default policy is :dfn:`strong`."
 msgstr "La directiva predeterminada es: dfn:`strong`."
 
-#: ../../accounts.rst:444 ../../accounts.rst:447
+#: ../../accounts.rst:445 ../../accounts.rst:448
 msgid ""
 "Changing the default policies is highly discouraged. The use of weak "
 "passwords often lead to compromised servers by external attackers."
@@ -914,11 +918,11 @@ msgstr ""
 "contraseñas débiles a menudo conduce a servidores comprometidos por "
 "atacantes externos."
 
-#: ../../accounts.rst:448 ../../accounts.rst:451
+#: ../../accounts.rst:449 ../../accounts.rst:452
 msgid "Expiration"
 msgstr "Vencimiento"
 
-#: ../../accounts.rst:450 ../../accounts.rst:453
+#: ../../accounts.rst:451 ../../accounts.rst:454
 msgid ""
 "The  :index:`password expiration` is enabled by default to 6 months from the"
 " time when the password is set. The system will send an e-mail to inform the"
@@ -929,7 +933,7 @@ msgstr ""
 "enviará un correo electrónico para informar a los usuarios cuando su "
 "contraseña está a punto de expirar."
 
-#: ../../accounts.rst:453 ../../accounts.rst:456
+#: ../../accounts.rst:454 ../../accounts.rst:457
 msgid ""
 "The system will refer to the date of the last password change, if password "
 "is older than 6 months, the server will send an email to indicate that "
@@ -945,11 +949,11 @@ msgstr ""
 "realizó en enero y la activación de la fecha límite en octubre, el sistema "
 "asumirá que la contraseña cambiada en enero expiró y notifica al usuario."
 
-#: ../../accounts.rst:463 ../../accounts.rst:466
+#: ../../accounts.rst:464 ../../accounts.rst:467
 msgid "Effects of expired passwords"
 msgstr "Efectos de contraseñas caducadas"
 
-#: ../../accounts.rst:465 ../../accounts.rst:468
+#: ../../accounts.rst:466 ../../accounts.rst:469
 msgid ""
 "After password expiration, the user is still able to read and send email "
 "messages."
@@ -957,7 +961,7 @@ msgstr ""
 "Después de la expiración de la contraseña, el usuario sigue siendo capaz de "
 "leer y enviar mensajes de correo electrónico."
 
-#: ../../accounts.rst:467 ../../accounts.rst:470
+#: ../../accounts.rst:468 ../../accounts.rst:471
 msgid ""
 "If |product| has an Active Directory account provider, the user cannot "
 "access shared folders, printers (by Samba) and other domain computers."
@@ -966,15 +970,15 @@ msgstr ""
 " puede tener acceso a carpetas compartidas, impresoras (por Samba) y otros "
 "equipos de dominio."
 
-#: ../../accounts.rst:473 ../../accounts.rst:476
+#: ../../accounts.rst:474 ../../accounts.rst:477
 msgid "Import accounts from plain-text files"
 msgstr ""
 
-#: ../../accounts.rst:476 ../../accounts.rst:479
+#: ../../accounts.rst:477 ../../accounts.rst:480
 msgid "Import users"
 msgstr "Importar usuarios"
 
-#: ../../accounts.rst:478 ../../accounts.rst:481
+#: ../../accounts.rst:479 ../../accounts.rst:482
 msgid ""
 "It is possible to create user accounts from a TSV (Tab Separated Values) "
 "file with the following format: ::"
@@ -982,15 +986,15 @@ msgstr ""
 "Es posible crear cuentas de usuario desde un archivo TSV (Tab Separated "
 "Values, valores separados por tabulación) con el siguiente formato: ::"
 
-#: ../../accounts.rst:482 ../../accounts.rst:485
+#: ../../accounts.rst:483 ../../accounts.rst:486
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../accounts.rst:486 ../../accounts.rst:489
+#: ../../accounts.rst:487 ../../accounts.rst:490
 msgid "then execute: ::"
 msgstr "Luego ejecutar: ::"
 
-#: ../../accounts.rst:490 ../../accounts.rst:493
+#: ../../accounts.rst:491 ../../accounts.rst:494
 msgid ""
 "For example, if the user’s file is /root/users.tsv, execute following "
 "command: ::"
@@ -998,15 +1002,15 @@ msgstr ""
 "Por ejemplo, si el archivo del usuario es /root/users.tsv, ejecute el "
 "siguiente comando: ::"
 
-#: ../../accounts.rst:494 ../../accounts.rst:497
+#: ../../accounts.rst:495 ../../accounts.rst:498
 msgid "Alternative separator character: ::"
 msgstr "Carácter de separador alternativo: ::"
 
-#: ../../accounts.rst:499 ../../accounts.rst:502
+#: ../../accounts.rst:500 ../../accounts.rst:503
 msgid "Import emails"
 msgstr ""
 
-#: ../../accounts.rst:501 ../../accounts.rst:504
+#: ../../accounts.rst:502 ../../accounts.rst:505
 msgid ""
 "It is possible to create mail aliases from a TSV (Tab Separated Values) file"
 " with the following format: ::"
@@ -1014,7 +1018,7 @@ msgstr ""
 "Es posible crear alias de correo desde un archivo TSV (Tab Separated Values,"
 " valores separados por tabulación) con el siguiente formato: ::"
 
-#: ../../accounts.rst:505 ../../accounts.rst:508
+#: ../../accounts.rst:506 ../../accounts.rst:509
 msgid ""
 "Then you can use the ``import_emails`` script. See :ref:`import-"
 "users_section` for a sample script invocation."
@@ -1022,11 +1026,11 @@ msgstr ""
 "A continuación, puede utilizar el script ``import_emails``. Ver :ref"
 ":`import-users_section` para una invocación del script de ejemplo."
 
-#: ../../accounts.rst:508 ../../accounts.rst:511
+#: ../../accounts.rst:509 ../../accounts.rst:512
 msgid "Import groups"
 msgstr ""
 
-#: ../../accounts.rst:510 ../../accounts.rst:513
+#: ../../accounts.rst:511 ../../accounts.rst:514
 msgid ""
 "Group management is available from the command line through ``group-create``"
 " and ``group-modify`` events ::"

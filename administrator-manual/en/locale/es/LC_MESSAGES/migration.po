@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -32,57 +32,12 @@ msgstr "Migración del servidor NethService/SME"
 #: ../../migration.rst:16 ../../migration.rst:19
 msgid ""
 "Migration is the process to convert a SME Server/NethService machine "
-"(:dfn:`source`) into a |product| (:dfn:`destination`)."
+"(:dfn:`source`) into a |product| (:dfn:`destination`). It can be achieved "
+"from a :ref:`backup <backup_migration-section>` or :ref:`using rsync "
+"<migrate_with_rsync-section>`."
 msgstr ""
-"La migración es el proceso para convertir una máquina SME Server/NethService"
-" (:dfn:`source`) en un |product| (:dfn:`destination`)."
 
-#: ../../migration.rst:21 ../../migration.rst:24
-msgid ""
-"Before running the migration procedure, read carefully all the sections of "
-"this chapter."
-msgstr ""
-"Antes de ejecutar el procedimiento de migración, lea atentamente todas las "
-"secciones de este capítulo. "
-
-#: ../../migration.rst:24 ../../migration.rst:27
-msgid ""
-"In the source host, create a full backup archive and move it to the "
-"destination host."
-msgstr ""
-"En el host de origen, cree un archivo de copia de seguridad completo y "
-"muévalo al host de destino."
-
-#: ../../migration.rst:27 ../../migration.rst:30
-msgid ""
-"In the destination host, install all packages that cover the same features "
-"of the source."
-msgstr ""
-"En el host de destino, instale todos los paquetes que cubran las mismas "
-"características del origen."
-
-#: ../../migration.rst:30 ../../migration.rst:33
-msgid ""
-"Explode the full backup archive into some directory; for instance, create "
-"the directory :file:`/var/lib/migration`."
-msgstr ""
-"Descargar el archivo de copia de seguridad completo en algún directorio; Por"
-" ejemplo, cree el directorio :file:`/var/lib/migration`."
-
-#: ../../migration.rst:33 ../../migration.rst:36
-msgid "In destination host, signal the event ``migration-import``::"
-msgstr "En el host de destino, señale el evento ``migration-import``::"
-
-#: ../../migration.rst:37 ../../migration.rst:40
-msgid "This step will require some time."
-msgstr "Este paso requerirá algún tiempo."
-
-#: ../../migration.rst:39 ../../migration.rst:42
-msgid "Check for any error message in :file:`/var/log/messages`::"
-msgstr ""
-"Compruebe si hay algún mensaje de error en :file:`/var/log/messages`::"
-
-#: ../../migration.rst:43 ../../migration.rst:46
+#: ../../migration.rst:20 ../../migration.rst:23
 msgid ""
 "No custom template is migrated during the migration process. Check the new "
 "template files before copying any custom fragment from the old backup."
@@ -91,11 +46,19 @@ msgstr ""
 " Compruebe los archivos de la plantilla nueva antes de copiar cualquier "
 "fragmento personalizado de la copia de seguridad antigua."
 
-#: ../../migration.rst:49 ../../migration.rst:52
+#: ../../migration.rst:25 ../../migration.rst:28
+msgid ""
+"Before running the migration procedure, read carefully all the sections of "
+"this chapter."
+msgstr ""
+"Antes de ejecutar el procedimiento de migración, lea atentamente todas las "
+"secciones de este capítulo. "
+
+#: ../../migration.rst:31 ../../migration.rst:34
 msgid "Accounts provider"
 msgstr "Proveedor de cuentas"
 
-#: ../../migration.rst:51 ../../migration.rst:54
+#: ../../migration.rst:33 ../../migration.rst:36
 msgid ""
 "You should configure an :ref:`accounts provider <account-providers>` before "
 "starting the migration procedure."
@@ -103,7 +66,7 @@ msgstr ""
 "Debe configurar un :ref:`proveedor de cuentas <account-providers>` antes de "
 "iniciar el procedimiento de migración."
 
-#: ../../migration.rst:54 ../../migration.rst:57
+#: ../../migration.rst:36 ../../migration.rst:39
 msgid ""
 "If the source system was joined to an Active Directory domain (Samba server "
 "role was ADS), configure a *remote Active Directory* accounts provider."
@@ -112,7 +75,7 @@ msgstr ""
 " de servidor Samba era ADS), configure un proveedor de cuentas *remoto de "
 "Active Directory*."
 
-#: ../../migration.rst:57 ../../migration.rst:60
+#: ../../migration.rst:39 ../../migration.rst:42
 msgid ""
 "If the source system was a NT Primary Domain Controller (Samba server role "
 "was PDC) install a *local Active Directory* accounts provider."
@@ -121,7 +84,7 @@ msgstr ""
 "servidor de Samba era PDC), instale un proveedor de cuentas *Active "
 "Directory local*."
 
-#: ../../migration.rst:60 ../../migration.rst:63
+#: ../../migration.rst:42 ../../migration.rst:45
 msgid ""
 "If access to Shared Folders on the destination system requires user "
 "authentication, install a *local Active Directory* accounts provider."
@@ -130,11 +93,11 @@ msgstr ""
 "autenticación de usuario, instale un proveedor de cuentas *Active Directory "
 "local*."
 
-#: ../../migration.rst:63 ../../migration.rst:66
+#: ../../migration.rst:45 ../../migration.rst:48
 msgid "In any other case, install a *local LDAP* accounts provider."
 msgstr "En cualquier otro caso, instale un proveedor de cuentas *LDAP local*."
 
-#: ../../migration.rst:67 ../../migration.rst:70
+#: ../../migration.rst:49 ../../migration.rst:52
 msgid ""
 "If you choose a local Active Directory accounts provider, remember to fully "
 "configure and start the DC before executing the ``migration-import`` event. "
@@ -144,24 +107,19 @@ msgstr ""
 "configurar e iniciar completamente el controlador de dominio antes de "
 "ejecutar el evento ``migration-import``. Véase :ref:`account-providers`."
 
-#: ../../migration.rst:78 ../../migration.rst:81
+#: ../../migration.rst:60 ../../migration.rst:63
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: ../../migration.rst:80 ../../migration.rst:83
+#: ../../migration.rst:62 ../../migration.rst:65
 msgid ""
 "Before running |product| in production, some considerations about the "
 "network and existing mail client configurations are required: what ports are"
 " in use, if SMTPAUTH and TLS are enabled.  Refer to :ref:`email_clients` and"
-" :ref:`email_policies` sections for more informations."
+" :ref:`email_policies` sections for more information."
 msgstr ""
-"Antes de ejecutar el |product| en producción, se requieren algunas "
-"consideraciones sobre la red y las configuraciones de cliente de correo "
-"existentes: qué puertos están en uso, si SMTPAUTH y TLS están habilitados. "
-"Consulte las secciones :ref:`email_clients` y :ref:`email_policies` para "
-"obtener más información."
 
-#: ../../migration.rst:86 ../../migration.rst:89
+#: ../../migration.rst:68 ../../migration.rst:71
 msgid ""
 "In a mail server migration, the source mail server could be on production "
 "even after the backup has been done, and email messages continue to be "
@@ -172,7 +130,7 @@ msgstr ""
 " de seguridad y los mensajes de correo electrónico continúan siendo "
 "entregados hasta que se borran permanentemente."
 
-#: ../../migration.rst:90 ../../migration.rst:93
+#: ../../migration.rst:72 ../../migration.rst:75
 msgid ""
 "An helper script based on ``rsync`` is provided by package ``nethserver-"
 "mail-server``. It runs on the destination host and synchronizes destination "
@@ -182,7 +140,7 @@ msgstr ""
 "``nethserver-mail-server``. Se ejecuta en el host de destino y sincroniza "
 "los buzones de destino con el host de origen:"
 
-#: ../../migration.rst:104 ../../migration.rst:107
+#: ../../migration.rst:86 ../../migration.rst:89
 msgid ""
 "The source host at ``IPADDR`` must be accessible by the ``root`` user, "
 "through ``ssh`` with public key authentication."
@@ -190,11 +148,11 @@ msgstr ""
 "El host de origen en ``IPADDR`` debe ser accesible por el usuario ``root``, "
 "a través de ``ssh`` con autenticación de clave pública."
 
-#: ../../migration.rst:110 ../../migration.rst:113
+#: ../../migration.rst:92 ../../migration.rst:95
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../migration.rst:112 ../../migration.rst:115
+#: ../../migration.rst:94 ../../migration.rst:97
 msgid ""
 "The SSL cipher suite configuration is not migrated automatically because the"
 " source system uses a weak cipher suite by default. To migrate it manually, "
@@ -205,11 +163,11 @@ msgstr ""
 "predeterminada. Para migrarlo manualmente, ejecute los siguientes comandos: "
 "::"
 
-#: ../../migration.rst:123 ../../migration.rst:126
+#: ../../migration.rst:105 ../../migration.rst:108
 msgid "Ibays"
 msgstr "Ibays"
 
-#: ../../migration.rst:125 ../../migration.rst:128
+#: ../../migration.rst:107 ../../migration.rst:110
 msgid ""
 "The *ibay* concept has been superseded by :ref:`shared_folders-section`. "
 "Supported protocols for accessing Shared folders are:"
@@ -217,11 +175,11 @@ msgstr ""
 "El concepto *ibay* ha sido reemplazado por :ref:`shared_folders-section`. "
 "Los protocolos soportados para acceder a Carpetas compartidas son:"
 
-#: ../../migration.rst:128 ../../migration.rst:131
+#: ../../migration.rst:110 ../../migration.rst:113
 msgid "SFTP, provided by the ``sshd`` daemon"
 msgstr "SFTP, proporcionado por el demonio ``sshd``"
 
-#: ../../migration.rst:130 ../../migration.rst:133
+#: ../../migration.rst:112 ../../migration.rst:115
 msgid ""
 "SMB file sharing protocol, typical of Windows networking, implemented by "
 "Samba"
@@ -229,14 +187,14 @@ msgstr ""
 "Protocolo de intercambio de archivos SMB, típico de las redes de Windows, "
 "implementado por Samba"
 
-#: ../../migration.rst:134 ../../migration.rst:137
+#: ../../migration.rst:116 ../../migration.rst:119
 msgid ""
 "Read carefully the :ref:`upgrade-shared-folders` section in the :ref"
 ":`upgrade-section` chapter, because the connection credentials may change "
 "when migrating to |product| |version|."
 msgstr ""
 
-#: ../../migration.rst:138 ../../migration.rst:141
+#: ../../migration.rst:120 ../../migration.rst:123
 msgid ""
 "Starting from |product| |version|, Shared folders are not configurable for "
 "HTTP access. After ``migration-import`` event, old ibays could be migrated "
@@ -247,7 +205,7 @@ msgstr ""
 "los ibays antiguos podrían migrarse de acuerdo con las siguientes reglas "
 "empíricas:"
 
-#: ../../migration.rst:142 ../../migration.rst:145
+#: ../../migration.rst:124 ../../migration.rst:127
 msgid ""
 "If the ibay was a **virtual host**, install the \"Web server\" module from "
 "the :guilabel:`Software center` page. Copy the ibay contents to the virtual "
@@ -257,7 +215,7 @@ msgstr ""
 " la página :guilabel:`Centro de software`. Copie el contenido ibay en el "
 "directorio raíz del host virtual. Refiérase a :ref:`virtual_hosts-section`."
 
-#: ../../migration.rst:146 ../../migration.rst:149
+#: ../../migration.rst:128 ../../migration.rst:131
 msgid ""
 "If the ibay access was restricted with a **secret password** (for instance, "
 "to share contents with a group of people across the internet), the :ref"
@@ -270,7 +228,7 @@ msgstr ""
 "característica. También el módulo :ref:`Nextcloud <nextcloud-section>` "
 "podría ser un buen sustituto."
 
-#: ../../migration.rst:151 ../../migration.rst:154
+#: ../../migration.rst:133 ../../migration.rst:136
 msgid ""
 "If the ibay contents were accessible with an URL like "
 "``http://<IP>/ibayname`` the easiest procedure to keep it working is moving "
@@ -279,3 +237,158 @@ msgstr ""
 "Si el contenido ibay era accesible con una URL como "
 "``http://<IP>/ibayname``, el procedimiento más sencillo para mantenerlo "
 "funcionando es trasladarlo a la raíz del documento Apache: ::"
+
+#: ../../migration.rst:144 ../../migration.rst:147
+msgid "Migration from backup"
+msgstr ""
+
+#: ../../migration.rst:146 ../../migration.rst:149
+msgid ""
+"In the source host, create a full backup archive and move it to the "
+"destination host."
+msgstr ""
+"En el host de origen, cree un archivo de copia de seguridad completo y "
+"muévalo al host de destino."
+
+#: ../../migration.rst:149 ../../migration.rst:152
+msgid ""
+"In the destination host, install all packages that cover the same features "
+"of the source."
+msgstr ""
+"En el host de destino, instale todos los paquetes que cubran las mismas "
+"características del origen."
+
+#: ../../migration.rst:152 ../../migration.rst:155
+msgid ""
+"Explode the full backup archive into some directory; for instance, create "
+"the directory :file:`/var/lib/migration`."
+msgstr ""
+"Descargar el archivo de copia de seguridad completo en algún directorio; Por"
+" ejemplo, cree el directorio :file:`/var/lib/migration`."
+
+#: ../../migration.rst:155 ../../migration.rst:158
+msgid "In destination host, signal the event ``migration-import``::"
+msgstr "En el host de destino, señale el evento ``migration-import``::"
+
+#: ../../migration.rst:159 ../../migration.rst:162
+msgid "This step will require some time."
+msgstr "Este paso requerirá algún tiempo."
+
+#: ../../migration.rst:161 ../../migration.rst:164
+msgid "Check for any error message in :file:`/var/log/messages`::"
+msgstr ""
+"Compruebe si hay algún mensaje de error en :file:`/var/log/messages`::"
+
+#: ../../migration.rst:170 ../../migration.rst:173
+msgid "Migration with rsync"
+msgstr ""
+
+#: ../../migration.rst:172 ../../migration.rst:175
+msgid "The process is much faster than migrating from a backup."
+msgstr ""
+
+#: ../../migration.rst:174 ../../migration.rst:177
+msgid "Before starting make sure to have:"
+msgstr ""
+
+#: ../../migration.rst:176 ../../migration.rst:179
+msgid ""
+"a running NethService/SME installation, we will call it original server or "
+"source server"
+msgstr ""
+
+#: ../../migration.rst:177 ../../migration.rst:180
+msgid ""
+"a running |product| 7 installation with at least the same disk space of the "
+"source server, we will call it destination server"
+msgstr ""
+
+#: ../../migration.rst:178 ../../migration.rst:181
+msgid "a working network connection between the two severs"
+msgstr ""
+
+#: ../../migration.rst:180 ../../migration.rst:183
+msgid ""
+"Please also make sure the source server allows root login via SSH key and "
+"password."
+msgstr ""
+
+#: ../../migration.rst:183 ../../migration.rst:186
+msgid "Sync files"
+msgstr ""
+
+#: ../../migration.rst:185 ../../migration.rst:188
+msgid ""
+"The synchronization script copies all data using rsync over SSH. Files are "
+"saved inside :file:`/var/lib/migration` directory. If the destination server"
+" doesn't have any SSH keys, the script will also a pair of RSA keys and copy"
+" the public key to the source server. All directories excluded from the "
+"backup data will not be synced."
+msgstr ""
+
+#: ../../migration.rst:190 ../../migration.rst:193
+msgid "On the target machine, execute the following command: ::"
+msgstr ""
+
+#: ../../migration.rst:194 ../../migration.rst:197
+msgid "Where"
+msgstr ""
+
+#: ../../migration.rst:196 ../../migration.rst:199
+msgid "``source_server_name`` is the host name or IP of the original server"
+msgstr ""
+
+#: ../../migration.rst:197 ../../migration.rst:200
+msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
+msgstr ""
+
+#: ../../migration.rst:199 ../../migration.rst:213 ../../migration.rst:202
+#: ../../migration.rst:216
+msgid "Example: ::"
+msgstr ""
+
+#: ../../migration.rst:203 ../../migration.rst:206
+msgid ""
+"When asked, insert the root password of the source server, make a coffee and"
+" wait patiently."
+msgstr ""
+
+#: ../../migration.rst:205 ../../migration.rst:208
+msgid ""
+"The script will not perform any action on the source machine and can be "
+"invoked multiple times."
+msgstr ""
+
+#: ../../migration.rst:208 ../../migration.rst:211
+msgid "Sync and migrate"
+msgstr ""
+
+#: ../../migration.rst:210 ../../migration.rst:213
+msgid ""
+"If called with ``-m`` option, ``rsync-migrate`` will execute a final "
+"synchronization and upgrade the target machine."
+msgstr ""
+
+#: ../../migration.rst:217 ../../migration.rst:220
+msgid "The script will:"
+msgstr ""
+
+#: ../../migration.rst:219 ../../migration.rst:222
+msgid "stop every service on the source machine (except for SSH)"
+msgstr ""
+
+#: ../../migration.rst:220 ../../migration.rst:223
+msgid "execute the ``pre-backup`` event on the source machine"
+msgstr ""
+
+#: ../../migration.rst:221 ../../migration.rst:224
+msgid "sync all remaining data"
+msgstr ""
+
+#: ../../migration.rst:222 ../../migration.rst:225
+msgid "execute the ``migration-import`` event on the destination machine"
+msgstr ""
+
+#: ../../migration.rst:225 ../../migration.rst:228
+msgid "At the end, check for any error message in :file:`/var/log/messages`::"
+msgstr ""
