@@ -263,10 +263,15 @@ outgoing message.
 .. warning:: On some countries, enabling the *Always send a copy
              (Bcc)* can be against privacy laws.
 
+.. _smarthost-configuration:
+
 .. index:: 
    pair: email; smarthost
 
-The :guilabel:`Send using a smarthost` option, forces all outgoing
+Smarthost
+=========
+
+The :guilabel:`Email > Smarthost` page, configures all outgoing
 messages to be directed through a special SMTP server, technically
 named :dfn:`smarthost`.  A smarthost accepts to relay messages under
 some restrictions. It could check:

@@ -10,14 +10,15 @@ The system handles two kinds of backup:
 * :index:`configuration backup`
 * :index:`data backup`
 
-Configuration backup contains only system configuration files. 
-It's scheduled to be executed every night and it will create a new archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, only if any file is changed in the last 24 hours.
-The configuration backup also saves a list of installed modules. All modules will be reinstalled during the configuration restore process.
-The purpose of this kind of backup is to quickly restore a machine in case of disaster recovery. 
-When the machine is functional, a full data restore can be done even if the machine is already in production.
+**Configuration backup** contains only system configuration files. 
+The purpose of this kind of backup is to quickly restore a machine in case of
+:ref:`disaster recovery <disaster-recovery-section>`.  When the machine is functional, a full data restore can be
+done even if the machine is already in production.
 
-Data backup is enabled installing "backup" module and contains all data like user's home directories and mails. It runs every night and can be full or incremental on a weekly basis. 
-This backup also contains the archive of the configuration backup.
+**Data backup** is enabled by installing the "Backup" module and contains all
+data like user's home directories and mails. It runs every night and can be
+full or incremental on a weekly basis.  This backup also contains the archive of
+the configuration backup.
 
 Data backup can be saved on different destinations:
 
@@ -32,79 +33,24 @@ The backup status can be notified to the system administrator or to an external 
    FQDN change, the administrator should take care to copy backup data from
    the old directory to the new one.
 
-Data restore
-============
+.. _backup_config_rpms:
+.. _backup_config-section:
 
-Make sure that backup destination is reachable (for example, USB disk must be connected).
+Configuration backup
+====================
 
-Command line
-------------
+From page :guilabel:`Backup (configuration)` the system
+configuration can be saved, downloaded, uploaded and restored again.
 
-Listing files
-^^^^^^^^^^^^^
+Furthermore an automated task runs every night at 00.15 and creates a new
+archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, if the
+configuration was changed during the previous 24 hours. Under :guilabel:`Backup
+(configuration) > Configure` page, specify the number of :guilabel:`Automatic
+backups to keep`.
 
-It's possible to list all files inside the last backup using this command: ::
+The list of installed modules is included in the backup archive. The
+restore procedure can download and install the listed modules automatically.
 
- backup-data-list
-
-The command can take some times depending on the backup size.
-
-File and directory
-^^^^^^^^^^^^^^^^^^
-
-All relevant files are saved under :file:`/var/lib/nethserver/` directory:
-
-* Mails: :file:`/var/lib/nethserver/vmail/<user>`
-* Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
-* User's home: :file:`/var/lib/nethserver/home/<user>`
-
-To restore a file/directory, use the command: ::
-
-  restore-file <position> <file>
-
-Example, restore *test* mail account to :file:`/tmp` directory: ::
-
-  restore-file /tmp /var/lib/nethserver/vmail/test
-
-Example, restore *test* mail account to original position: ::
-
-  restore-file / /var/lib/nethserver/vmail/test
-
-
-The system can restore a previous version of directory (or file).
-
-Example, restore the version of a file from 15 days ago: ::
-
-  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
-
-The ``-t`` option allows to specify the number of days (15 in this scenario).
-
-.. note:: When you are using *CIFS* to access the share, and the command doesn't work
-          as expected, verify that user and password for the network share are correct.
-          If user or password are wrong, you will find NT_STATUS_LOGON_FAILURE errors in
-          :file:`/var/log/messages`.
-          Also, you can use the :command:`backup-data-list` to check if the backup is accessible.
-
-Graphic interface
------------------
-
-In the :menuselection:`Restore files` menu section it is possible to search, select and restore
-one or more directories from backup, navigating the graphical tree with all paths included in the backup.
-
-By default, last backup tree is shown. If you want to restore a file from a previous backup, select the backup date from *"Backup File"* selector.
-
-There are two options to restore:
-
-* Restore files in the original path, the current files in the filesystem are overwritten by the restored files from backup.
-* Restore files in original path but the restored files from backup are moved on a new directory (the files are not overwritten) in this path: ::
-
-  /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
-
-To use the search field, simply insert at least 3 chars and the searching starts automatically, highlighting the matched directories
-
-It is possible to restore the directories by clicking on **Restore** button.
-
-.. note:: Multiple selection can be done with Ctrl key pressed.
 
 .. _disaster-recovery-section:
 
@@ -125,14 +71,23 @@ Other restored configurations:
 
 Steps to be executed:
 
-1. Install the new machine with the same host name as the old one
-2. Configure a data backup, so the system can retrieve saved data and configuration
-3. Restore the configuration backup from page :guilabel:`Backup
-   (configuration) > Restore` in Server Manager, or executing:
-   :command:`restore-config`
-4. If a warning message requires it, reconfigure the network roles assignment. See :ref:`restore-roles-section` below.
+1. Install the new machine. If possible, enable a network connection at
+   boot (refer to :ref:`installation-manual` section) to automatically reinstall
+   the required modules
+
+2. Access the Server Manager and follow the :ref:`first-configuration-wizard-section` procedure
+
+3. At step :guilabel:`Restore configuration`, upload the configuration archive.
+   The option :guilabel:`Download modules automatically` should be enabled.
+
+4. If a warning message requires it, reconfigure the network roles assignment.
+   See :ref:`restore-roles-section` below.
+
 5. Verify the system is functional
-6. Restore data backup executing: :command:`restore-data`
+
+6. Restore data backup executing on the console ::
+
+    restore-data
 
 
 .. _restore-roles-section:
@@ -169,21 +124,84 @@ Click the :guilabel:`Submit` button to apply the changes.
 .. warning:: Choose carefully the new interfaces assignment: doing a mistake
              here could lead to a system isolated from the network!
 
-If the missing role is ``green`` an interactive procedure asks to fix
+If the missing role is ``green`` an automatic procedure attempts to fix
 the configuration at boot-time, to ensure a minimal network
 connectivity and login again on the Server Manager.
 
-.. _backup_config_rpms:
+.. _data_restore:
 
-Restore installed modules
--------------------------
+Selective restore of files
+==========================
 
-By default the process of configuration restore will also restore all previously installed modules.
+Make sure that backup destination is reachable (for example, USB disk must be
+connected).
 
-To skip the automatic installation, execute the command with the
-``--no-reinstall`` argument: ::
+In the :guilabel:`Restore files` menu section it is possible to search,
+select and restore one or more directories from backup, navigating the graphical
+tree with all paths included in the backup.
 
-    restore-config --no-reinstall
+By default, last backup tree is shown. If you want to restore a file from a
+previous backup, select the backup date from :guilabel:`Backup File` selector.
+
+There are two options to restore:
+
+* Restore files in the original path, the current files in the filesystem are
+  overwritten by the restored files from backup.
+
+* Restore files in original path but the restored files from backup are moved on
+  a new directory (the files are not overwritten) in this path: ::
+
+    /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
+
+To use the search field, simply insert at least 3 chars and the searching starts
+automatically, highlighting the matched directories.
+
+It is possible to restore the directories by clicking on **Restore** button.
+
+.. note:: Multiple selection can be done with :kbd:`Ctrl` key pressed.
+
+Command line procedure
+----------------------
+
+All relevant files are saved under :file:`/var/lib/nethserver/` directory:
+
+* Mails: :file:`/var/lib/nethserver/vmail/<user>`
+* Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
+* User's home: :file:`/var/lib/nethserver/home/<user>`
+
+It is possible to list all files inside the last backup using this command: ::
+
+ backup-data-list
+
+The command can take some time depending on the backup size.
+
+To restore a file/directory, use the command: ::
+
+  restore-file <position> <file>
+
+Example, restore *test* mail account to :file:`/tmp` directory: ::
+
+  restore-file /tmp /var/lib/nethserver/vmail/test
+
+Example, restore *test* mail account to original position: ::
+
+  restore-file / /var/lib/nethserver/vmail/test
+
+
+The system can restore a previous version of directory (or file).
+
+Example, restore the version of a file from 15 days ago: ::
+
+  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
+
+The ``-t`` option allows to specify the number of days (15 in this scenario).
+
+.. note:: When you are using *CIFS* to access the share, and the command doesn't work
+          as expected, verify that user and password for the network share are correct.
+          If user or password are wrong, you will find NT_STATUS_LOGON_FAILURE errors in
+          :file:`/var/log/messages`.
+          Also, you can use the :command:`backup-data-list` to check if the backup is accessible.
+
 
 .. _backup_customization-section:
 
@@ -193,8 +211,7 @@ Data backup customization
 If additional software is installed, the administrator can edit
 the list of files and directories included (or excluded).
 
-Inclusion
----------
+**Inclusion**
 
 If you wish to add a file or directory to data backup, add a line to the file :file:`/etc/backup-data.d/custom.include`.
 
@@ -202,8 +219,7 @@ For example, to backup a software installed inside :file:`/opt` directory, add t
 
   /opt/mysoftware
 
-Exclusion
----------
+**Exclusion**
 
 If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
 
@@ -219,7 +235,7 @@ To exclude a mail directory called *test*, add this line: ::
 Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
 
 
-.. note:: Make sure not to leave empty lines inside edited files.
+.. warning:: Make sure not to leave empty lines inside edited files.
 
 
 Configuration backup customization
@@ -229,8 +245,7 @@ In most cases it is not necessary to change the configuration backup.
 But it can be useful, for example, if you have a custom httpd configuration.
 In this case you can add the file that contains the customization to the list of files to backup.
 
-Inclusion
----------
+**Inclusion**
 
 If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
 
@@ -240,12 +255,11 @@ For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add this l
 
 Do not add big directories or files to configuration backup.
 
-Exclusion
----------
+**Exclusion**
 
 If you wish to exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
 
-.. note:: 
+.. warning:: 
    Make sure not to leave empty lines inside edited files.
    The syntax of the configuration backup supports only simple file and directory paths.
 
