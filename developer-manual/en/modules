@@ -1,4 +1,6 @@
 nethserver-base
+nethserver-backup-data
+nethserver-backup-config
 nethserver-lightsquid
 nethserver-webtop4
 nethserver-avahi
