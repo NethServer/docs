@@ -173,7 +173,7 @@ It is possible to list all files inside the last backup using this command: ::
 
  backup-data-list
 
-The command can take some times depending on the backup size.
+The command can take some time depending on the backup size.
 
 To restore a file/directory, use the command: ::
 

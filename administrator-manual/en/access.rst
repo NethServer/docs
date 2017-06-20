@@ -39,7 +39,7 @@ as **root** and type the password chosen during |product| installation.
 First configuration wizard
 ==========================
 
-The first time **root** logs in the *First configuration wizard* procedure is
+The first time **root** logs in, the *First configuration wizard* procedure is
 displayed.
 
 If the root password is still at the default value, a password change is required.
