@@ -53,8 +53,74 @@ To allow a client to establish a VPN:
 Tunnel (net2net)
 ----------------
 
-When creating an OpenVPN net2net connection, you must choose a master between involved servers.
+When creating an OpenVPN net2net connection, a server will have the master role.
 All other servers are considered as slaves (clients).
+
+A client can be connected to another |product| or any other firewall which uses OpenVPN.
+
+All tunnels use OpenVPN routed mode, but there are two kind of topologies: *subnet* and *p2p* (Point to Point)
+
+**Topology: subnet**
+
+This is the recommended topology.
+In :index:`subnet topology`, the server will accept connections and will act as DHCP server for every connected clients.
+
+In this scenario
+
+* the server will authenticate clients using TLS certificates
+* the server can push local routes to remote clients
+* the client will be able to authenticate with TLS certificates or user name and password
+
+**Topology: P2P**
+
+In :index:`p2p topology`, the administrator must configure one server for each client.
+
+In this scenario:
+
+* the only supported authentication method is the PSK (Pre-Shared Key).
+  Please make sure to exchange the PSK using a secure channel (like SSH or HTTPS)
+* the administrator must select an IP for both end points
+* routes to remote networks must be configured on each end point
+
+
+
+To configure a tunnel, proceed as follow:
+
+1. Access the tunnel server and open the :guilabel:`OpenVPN tunnels` page,
+   move to :guilabel:`Tunnel servers` tab and click on :guilabel:`Create new` button
+
+2. Insert all required fields, but please note:
+
+   - :guilabel:`Public IPs and/or public FQDN`, it's a list of public IP addresses or host names which will be used 
+     by clients to connect to the server over the public Internet
+   - :guilabel:`Local networks`, it's a list of local networks which will be accessible from the remote server.
+     If topology is set to p2p, the same list will be reported inside the client :guilabel:`Remote networks` field
+   - :guilabel:`Remote networks`, it's a list of networks behind the remote server which will be accessible
+     from hosts in the local network
+
+3. After the configuration is saved, click on the :guilabel:`Download` action and select :guilabel:`Client configuration`
+
+4. Access the tunnel client, open the :guilabel:`OpenVPN tunnels` page, move to :guilabel:`Tunnel clients` tab,
+   click on :guilabel:`Upload` button
+
+Advanced features
+~~~~~~~~~~~~~~~~~
+
+The web interface allows the configuration of advanced features like:
+
+* on the client, multiple addresses can be specified inside the :guilabel:`Remote hosts` field for redundancy; the OpenVPN client will try to connect to each host in the given order
+* :index:`WAN priority`: if the client has multiple WAN (red interfaces), the option allows to select the order in which the WAN will be used to connect
+  to the remote server
+* protocol: please bear in mind that OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
+* cipher: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher
+  available on both sides
+* LZO compression: enabled by default, can be disabled when using legacy servers or clients
+
+
+Legacy mode
+^^^^^^^^^^^
+
+Tunnels can still be created also using Roadwarriors accounts.
 
 Steps to be performed on the master server:
 
@@ -69,6 +135,8 @@ Steps to be performed on the slave:
 * Create a client from the :guilabel:`Client` page, specifying the connection data to the master server.
 
 * Copy and paste the content of downloaded certificates from the master configuration page.
+
+
 IPsec
 =====
 
