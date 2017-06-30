@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 15:52+0200\n"
+"POT-Creation-Date: 2017-06-30 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -69,6 +69,16 @@ msgstr "Iniciar sesión"
 
 #: ../../access.rst:32 ../../access.rst:35
 msgid ""
+"The login page allows selecting an alternative language among those already "
+"installed on the system. After logging in, go to the :ref:`software-center-"
+"section` page to install additional languages."
+msgstr ""
+"La página de inicio de sesión permite seleccionar un idioma alternativo "
+"entre los ya instalados en el sistema. Después de iniciar sesión, vaya a la "
+"página :ref:`software-center-section` para instalar idiomas adicionales."
+
+#: ../../access.rst:36 ../../access.rst:39
+msgid ""
 "The login page will give you a trusted access to the web interface. Log in "
 "as **root** and type the password chosen during |product| installation."
 msgstr ""
@@ -76,7 +86,7 @@ msgstr ""
 " Inicie sesión como **root** y escriba la contraseña elegida durante la "
 "instalación de |product|."
 
-#: ../../access.rst:37 ../../access.rst:40
+#: ../../access.rst:41 ../../access.rst:44
 msgid ""
 "The *unattended* install procedure sets the root password to the default "
 "``Nethesis,1234``."
@@ -84,11 +94,57 @@ msgstr ""
 "El procedimiento de instalación *desatendida* establece la contraseña "
 "predeterminada de root como ``Nethesis,1234``."
 
-#: ../../access.rst:41 ../../access.rst:44
+#: ../../access.rst:47 ../../access.rst:50
+msgid "First configuration wizard"
+msgstr ""
+
+#: ../../access.rst:49 ../../access.rst:52
+msgid ""
+"The first time **root** logs in, the *First configuration wizard* procedure "
+"is displayed."
+msgstr ""
+
+#: ../../access.rst:52 ../../access.rst:55
+msgid ""
+"If the root password is still at the default value, a password change is "
+"required."
+msgstr ""
+
+#: ../../access.rst:54 ../../access.rst:57
+msgid ""
+"It is possible to restore a **configuration backup**. Refer to :ref"
+":`disaster-recovery-section` for more information."
+msgstr ""
+
+#: ../../access.rst:57 ../../access.rst:60
+msgid "Otherwise the wizard procedure helps on setting up:"
+msgstr ""
+
+#: ../../access.rst:59 ../../access.rst:62
+msgid "Host name"
+msgstr ""
+
+#: ../../access.rst:60 ../../access.rst:63
+msgid ":ref:`Date and time zone <date-time-section>`"
+msgstr ""
+
+#: ../../access.rst:61 ../../access.rst:64
+msgid "SSH port"
+msgstr ""
+
+#: ../../access.rst:62 ../../access.rst:65
+msgid ":ref:`Smarthost configuration <smarthost-configuration>`"
+msgstr ""
+
+#: ../../access.rst:63 ../../access.rst:66
+msgid ":ref:`Usage statistics <phonehome-section>`"
+msgstr ""
+
+#: ../../access.rst:66 ../../access.rst:69
 msgid "Change the current password"
 msgstr "Cambiar la contraseña actual"
 
-#: ../../access.rst:43 ../../access.rst:46
+#: ../../access.rst:68 ../../access.rst:71
 msgid ""
 "You can change the root password from the web interface by going to the "
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
@@ -98,21 +154,11 @@ msgstr ""
 "etiqueta :guilabel:`root@host.domain.com` en la esquina superior derecha de "
 "la pantalla y haciendo clic en: guilabel:` Profile`."
 
-#: ../../access.rst:47 ../../access.rst:50
-msgid ""
-"The login page allows selecting an alternative language among those already "
-"installed on the system. After logging in, go to the :ref:`software-center-"
-"section` page to install additional languages."
-msgstr ""
-"La página de inicio de sesión permite seleccionar un idioma alternativo "
-"entre los ya instalados en el sistema. Después de iniciar sesión, vaya a la "
-"página :ref:`software-center-section` para instalar idiomas adicionales."
-
-#: ../../access.rst:52 ../../access.rst:55
+#: ../../access.rst:74 ../../access.rst:77
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-#: ../../access.rst:54 ../../access.rst:57
+#: ../../access.rst:76 ../../access.rst:79
 msgid ""
 "Terminate the current Server Manager session by going to the "
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "

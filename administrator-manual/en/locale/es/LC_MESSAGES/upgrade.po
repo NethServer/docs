@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 15:52+0200\n"
+"POT-Creation-Date: 2017-06-30 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -421,47 +421,51 @@ msgid ""
 "checked for compatibility with version |version|."
 msgstr ""
 
-#: ../../upgrade.rst:260 ../../upgrade.rst:263
+#: ../../upgrade.rst:259 ../../upgrade.rst:262
+msgid "Do not reboot the machine before executing the restore-data procedure."
+msgstr ""
+
+#: ../../upgrade.rst:264 ../../upgrade.rst:267
 msgid "Upgrade with rsync"
 msgstr ""
 
-#: ../../upgrade.rst:262 ../../upgrade.rst:265
+#: ../../upgrade.rst:266 ../../upgrade.rst:269
 msgid ""
 "The process is much faster than a traditional backup and restore, also it "
 "minimizes the downtime for the users."
 msgstr ""
 
-#: ../../upgrade.rst:264 ../../upgrade.rst:267
+#: ../../upgrade.rst:268 ../../upgrade.rst:271
 msgid "Before starting make sure to have:"
 msgstr ""
 
-#: ../../upgrade.rst:266 ../../upgrade.rst:269
+#: ../../upgrade.rst:270 ../../upgrade.rst:273
 msgid ""
 "a running |product| 6 installation, we will call it original server or "
 "source server"
 msgstr ""
 
-#: ../../upgrade.rst:267 ../../upgrade.rst:270
+#: ../../upgrade.rst:271 ../../upgrade.rst:274
 msgid ""
 "a running |product| 7 installation with at least the same disk space of the "
 "source server, we will call it destination server"
 msgstr ""
 
-#: ../../upgrade.rst:268 ../../upgrade.rst:271
+#: ../../upgrade.rst:272 ../../upgrade.rst:275
 msgid "a working network connection between the two severs"
 msgstr ""
 
-#: ../../upgrade.rst:270 ../../upgrade.rst:273
+#: ../../upgrade.rst:274 ../../upgrade.rst:277
 msgid ""
 "Please also make sure the source server allows root login via SSH key and "
 "password."
 msgstr ""
 
-#: ../../upgrade.rst:273 ../../upgrade.rst:276
+#: ../../upgrade.rst:277 ../../upgrade.rst:280
 msgid "Sync files"
 msgstr ""
 
-#: ../../upgrade.rst:275 ../../upgrade.rst:278
+#: ../../upgrade.rst:279 ../../upgrade.rst:282
 msgid ""
 "The synchronization script copies all data using rsync over SSH. If the "
 "destination server doesn't have any SSH keys, the script will also a pair of"
@@ -469,86 +473,90 @@ msgid ""
 "excluded from the backup data will not be synced."
 msgstr ""
 
-#: ../../upgrade.rst:279 ../../upgrade.rst:282
+#: ../../upgrade.rst:283 ../../upgrade.rst:286
 msgid "On the target machine, execute the following command: ::"
 msgstr ""
 
-#: ../../upgrade.rst:283 ../../upgrade.rst:286
+#: ../../upgrade.rst:287 ../../upgrade.rst:290
 msgid "Where"
 msgstr ""
 
-#: ../../upgrade.rst:285 ../../upgrade.rst:288
+#: ../../upgrade.rst:289 ../../upgrade.rst:292
 msgid "``source_server_name`` is the host name or IP of the original server"
 msgstr ""
 
-#: ../../upgrade.rst:286 ../../upgrade.rst:289
+#: ../../upgrade.rst:290 ../../upgrade.rst:293
 msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 
-#: ../../upgrade.rst:288 ../../upgrade.rst:302 ../../upgrade.rst:291
-#: ../../upgrade.rst:305
+#: ../../upgrade.rst:292 ../../upgrade.rst:306 ../../upgrade.rst:295
+#: ../../upgrade.rst:309
 msgid "Example: ::"
 msgstr ""
 
-#: ../../upgrade.rst:292 ../../upgrade.rst:295
+#: ../../upgrade.rst:296 ../../upgrade.rst:299
 msgid ""
 "When asked, insert the root password of the source server, make a coffee and"
 " wait patiently."
 msgstr ""
 
-#: ../../upgrade.rst:294 ../../upgrade.rst:297
+#: ../../upgrade.rst:298 ../../upgrade.rst:301
 msgid ""
 "The script will not perform any action on the source machine and can be "
 "invoked multiple times."
 msgstr ""
 
-#: ../../upgrade.rst:297 ../../upgrade.rst:300
+#: ../../upgrade.rst:301 ../../upgrade.rst:304
 msgid "Sync and upgrade"
 msgstr ""
 
-#: ../../upgrade.rst:299 ../../upgrade.rst:302
+#: ../../upgrade.rst:303 ../../upgrade.rst:306
 msgid ""
 "If called with ``-u`` option, ``rsync-upgrade`` will execute a final "
 "synchronization and upgrade the target machine."
 msgstr ""
 
-#: ../../upgrade.rst:306 ../../upgrade.rst:309
+#: ../../upgrade.rst:310 ../../upgrade.rst:313
 msgid "The script will:"
 msgstr ""
 
-#: ../../upgrade.rst:308 ../../upgrade.rst:311
+#: ../../upgrade.rst:312 ../../upgrade.rst:315
 msgid ""
 "close access to every network service on the source machine (except for SSH "
 "and httpd-admin)"
 msgstr ""
 
-#: ../../upgrade.rst:309 ../../upgrade.rst:312
+#: ../../upgrade.rst:313 ../../upgrade.rst:316
 msgid ""
 "execute ``pre-backup-config`` and ``pre-backup-data`` event on the source "
 "machine"
 msgstr ""
 
-#: ../../upgrade.rst:310 ../../upgrade.rst:313
+#: ../../upgrade.rst:314 ../../upgrade.rst:317
 msgid "sync all remaining data"
 msgstr ""
 
-#: ../../upgrade.rst:311 ../../upgrade.rst:314
+#: ../../upgrade.rst:315 ../../upgrade.rst:318
 msgid "execute ``restore-config`` on the destination machine"
 msgstr ""
 
-#: ../../upgrade.rst:313 ../../upgrade.rst:316
+#: ../../upgrade.rst:317 ../../upgrade.rst:320
 msgid ""
-"If the network can be automatically reconfigured, the script will also call "
-"``post-restore-data`` event on the destination machine, otherwise follow the"
-" instructions generated by the script."
-msgstr ""
-
-#: ../../upgrade.rst:316 ../../upgrade.rst:319
-msgid "At the end, check the restore logs: ::"
+"At the end call the ``post-restore-data`` event on the destination machine: "
+"::"
 msgstr ""
 
 #: ../../upgrade.rst:321 ../../upgrade.rst:324
+msgid "At the end, check the restore logs: ::"
+msgstr ""
+
+#: ../../upgrade.rst:326 ../../upgrade.rst:329
 msgid ""
 "Also each file under :file:`/etc/e-smith/templates-custom/` must be manually"
 " checked for compatibility with version |version|."
+msgstr ""
+
+#: ../../upgrade.rst:331 ../../upgrade.rst:334
+msgid ""
+"Do not reboot the machine before executing the post-restore-data event."
 msgstr ""

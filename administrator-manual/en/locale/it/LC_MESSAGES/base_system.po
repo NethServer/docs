@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 15:52+0200\n"
+"POT-Creation-Date: 2017-06-30 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -689,11 +689,11 @@ msgstr "visualizzare un singolo log"
 msgid "follow the content of a log in real time"
 msgstr "seguire in tempo reale il contenuto di un log"
 
-#: ../../base_system.rst:273 ../../base_system.rst:276
+#: ../../base_system.rst:275 ../../base_system.rst:278
 msgid "Date and time"
 msgstr "Data e ora"
 
-#: ../../base_system.rst:275 ../../base_system.rst:278
+#: ../../base_system.rst:277 ../../base_system.rst:280
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -703,7 +703,7 @@ msgstr ""
 " il corretto fuso orario. L'orologio della macchina può essere configurato "
 "manualmente o automaticamente usando server NTP pubblici (consigliato)."
 
-#: ../../base_system.rst:278 ../../base_system.rst:281
+#: ../../base_system.rst:280 ../../base_system.rst:283
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -712,11 +712,11 @@ msgstr ""
 "di molti protocolli. Per evitare problemi, tutti gli host della LAN possono "
 "essere configurati per usare il server stesso come server NTP."
 
-#: ../../base_system.rst:282 ../../base_system.rst:285
+#: ../../base_system.rst:284 ../../base_system.rst:287
 msgid "Inline help"
 msgstr "Aiuto in linea"
 
-#: ../../base_system.rst:284 ../../base_system.rst:287
+#: ../../base_system.rst:286 ../../base_system.rst:289
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -725,24 +725,24 @@ msgstr ""
 "contengono un :index:`manuale in linea` che spiega l'utilizzo base e tutti i"
 " campi contenuti nella pagina."
 
-#: ../../base_system.rst:287 ../../base_system.rst:290
+#: ../../base_system.rst:289 ../../base_system.rst:292
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Il manuale in linea è consultabile in tutte le lingue in cui è tradotto il "
 "Server Manager."
 
-#: ../../base_system.rst:289 ../../base_system.rst:292
+#: ../../base_system.rst:291 ../../base_system.rst:294
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Una lista di tutti i manuali installati nel sistema è disponibile "
 "all'indirizzo: ::"
 
-#: ../../base_system.rst:293 ../../base_system.rst:296
+#: ../../base_system.rst:295 ../../base_system.rst:298
 msgid "**Example**"
 msgstr "**Esempio**"
 
-#: ../../base_system.rst:295 ../../base_system.rst:298
+#: ../../base_system.rst:297 ../../base_system.rst:300
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"
