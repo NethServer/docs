@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -118,11 +118,18 @@ msgstr ""
 "duplicados como se informó en la sección `Nombre de usuario interno` de "
 "`Official NextCloud documentation <https://docs.nextcloud.com>`_."
 
-#: ../../nextcloud.rst:47 ../../nextcloud.rst:50
+#: ../../nextcloud.rst:46 ../../nextcloud.rst:49
+msgid ""
+"If |product| is bound to a remote Active Directory account provider a "
+"dedicated user account in AD is required by the module to be fully "
+"operational! See :ref:`join-existing-ad-section`."
+msgstr ""
+
+#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
 msgid "Trusted Domains"
 msgstr "Dominios confiables"
 
-#: ../../nextcloud.rst:49 ../../nextcloud.rst:52
+#: ../../nextcloud.rst:53 ../../nextcloud.rst:56
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -130,18 +137,18 @@ msgstr ""
 "Los dominios de confianza son una lista de dominios en los que los usuarios "
 "pueden iniciar sesión. Los dominios de confianza predeterminados son:"
 
-#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
+#: ../../nextcloud.rst:55 ../../nextcloud.rst:58
 msgid "domain name"
 msgstr "nombre de dominio"
 
-#: ../../nextcloud.rst:52 ../../nextcloud.rst:55
+#: ../../nextcloud.rst:56 ../../nextcloud.rst:59
 msgid "ip address"
 msgstr "dirección ip"
 
-#: ../../nextcloud.rst:54 ../../nextcloud.rst:57
+#: ../../nextcloud.rst:58 ../../nextcloud.rst:61
 msgid "To add a new one use: ::"
 msgstr "Para añadir uno nuevo use: ::"
 
-#: ../../nextcloud.rst:59 ../../nextcloud.rst:62
+#: ../../nextcloud.rst:63 ../../nextcloud.rst:66
 msgid "To add more than one, concatenate the names with a comma."
 msgstr "Para agregar más de uno, concatene los nombres con una coma."

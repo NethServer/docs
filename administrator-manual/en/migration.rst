@@ -177,7 +177,7 @@ Sync files
 
 The synchronization script copies all data using rsync over SSH.
 Files are saved inside :file:`/var/lib/migration` directory.
-If the destination server doesn't have any SSH keys, the script will also a pair of RSA keys and copy the public key to the source server.
+If the destination server doesn't have any SSH keys, the script will also create a pair of RSA keys and copy the public key to the source server.
 All directories excluded from the backup data will not be synced.
 
 On the target machine, execute the following command: ::

@@ -262,6 +262,8 @@ This module allows to:
 * display a single log
 * follow the content of a log in real time
 
+.. _date-time-section:
+
 Date and time
 =============
 

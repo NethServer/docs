@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,32 +81,43 @@ msgstr ""
 "Tutti gli utenti di sistema possono accedere alla chat usando le proprie "
 "credenziali."
 
-#: ../../chat.rst:29 ../../chat.rst:32
+#: ../../chat.rst:28 ../../chat.rst:31
+msgid ""
+"If |product| is bound to a remote Active Directory account provider a "
+"dedicated user account in AD is required by the module to be fully "
+"operational! See :ref:`join-existing-ad-section`."
+msgstr ""
+"Se |product| è attestato ad un account provider remoto Active Directory, un "
+"account utente AD aggiuntivo e dedicato è necessario al modulo per essere "
+"pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
+"section`."
+
+#: ../../chat.rst:33 ../../chat.rst:36
 msgid "Client"
 msgstr "Client"
 
-#: ../../chat.rst:31 ../../chat.rst:34
+#: ../../chat.rst:35 ../../chat.rst:38
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 "I client Jabber sono disponibili per tutte le piattaforme desktop e mobile."
 
-#: ../../chat.rst:33 ../../chat.rst:36
+#: ../../chat.rst:37 ../../chat.rst:40
 msgid "Some widespread clients:"
 msgstr "Fra i client più diffusi:"
 
-#: ../../chat.rst:35 ../../chat.rst:38
+#: ../../chat.rst:39 ../../chat.rst:42
 msgid "Pidgin is available for Windows and Linux"
 msgstr "Pidgin disponibile per Windows e Linux"
 
-#: ../../chat.rst:36 ../../chat.rst:39
+#: ../../chat.rst:40 ../../chat.rst:43
 msgid "Adium for Mac OS X"
 msgstr "Adium per Mac OS X"
 
-#: ../../chat.rst:37 ../../chat.rst:40
+#: ../../chat.rst:41 ../../chat.rst:44
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr "BeejibelIM per Android e iOS, o Xabber solo Android"
 
-#: ../../chat.rst:39 ../../chat.rst:42
+#: ../../chat.rst:43 ../../chat.rst:46
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
@@ -114,7 +125,7 @@ msgstr ""
 "Quando si configura il client, assicurarsi che sia abilitato TLS (o SSL). "
 "Inserire il nome utente e il dominio della macchina."
 
-#: ../../chat.rst:42 ../../chat.rst:45
+#: ../../chat.rst:46 ../../chat.rst:49
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
@@ -125,11 +136,11 @@ msgstr ""
 "preconfigurati. In caso contrario, specificare l'indirizzo del server nelle "
 "opzioni avanzate."
 
-#: ../../chat.rst:46 ../../chat.rst:49
+#: ../../chat.rst:50 ../../chat.rst:53
 msgid "Administrators"
 msgstr "Amministratori"
 
-#: ../../chat.rst:48 ../../chat.rst:51
+#: ../../chat.rst:52 ../../chat.rst:55
 msgid ""
 "All users within the group ``jabberadmins`` are considered administrators of"
 " the chat server."
@@ -137,19 +148,19 @@ msgstr ""
 "Tutti gli utenti all'interno del gruppo ``jabberadmins`` sono considerati "
 "amministratori del server di chat."
 
-#: ../../chat.rst:50 ../../chat.rst:53
+#: ../../chat.rst:54 ../../chat.rst:57
 msgid "Administrators can:"
 msgstr "Gli amministratori possono:"
 
-#: ../../chat.rst:52 ../../chat.rst:55
+#: ../../chat.rst:56 ../../chat.rst:59
 msgid "Send broadcast messages"
 msgstr "inviare messaggi broadcast"
 
-#: ../../chat.rst:53 ../../chat.rst:56
+#: ../../chat.rst:57 ../../chat.rst:60
 msgid "Check the status of connected users"
 msgstr "controllare lo stato degli utenti collegati"
 
-#: ../../chat.rst:56 ../../chat.rst:59
+#: ../../chat.rst:60 ../../chat.rst:63
 msgid ""
 "The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
 msgstr ""

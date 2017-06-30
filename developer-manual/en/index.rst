@@ -40,7 +40,6 @@ Developer Manual
    migration
    certificate_management
    yum_plugin
-   backup
 
 .. toctree::
    :maxdepth: 2

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -191,28 +191,68 @@ msgid "The proxy allows you to create:"
 msgstr "El proxy le permite crear: "
 
 #: ../../web_proxy.rst:80 ../../web_proxy.rst:83
-msgid ""
-"bypass by source, configurable from :guilabel:`Hosts without proxy` section"
+msgid "bypass by domains"
 msgstr ""
-"bypass por origen, configurable desde la sección :guilabel:`Hosts sin proxy`"
 
 #: ../../web_proxy.rst:81 ../../web_proxy.rst:84
-msgid ""
-"bypass by destination, configurable from :guilabel:`Sites without proxy` "
-"section"
+msgid "bypass by source"
 msgstr ""
-"bypass por destino, configurable desde la sección :guilabel:`Sitios sin "
-"proxy`"
 
-#: ../../web_proxy.rst:83 ../../web_proxy.rst:86
-msgid "Bypass rules are also configured inside the WPAD file."
-msgstr "Las reglas de bypass también se configuran dentro del archivo WPAD."
+#: ../../web_proxy.rst:82 ../../web_proxy.rst:85
+msgid "bypass by destination"
+msgstr ""
 
-#: ../../web_proxy.rst:86 ../../web_proxy.rst:89
+#: ../../web_proxy.rst:85 ../../web_proxy.rst:88
+msgid "Bypass by domains"
+msgstr ""
+
+#: ../../web_proxy.rst:87 ../../web_proxy.rst:90
+msgid ""
+"Bypass by domains can be configured from :guilabel:`Domains without proxy` "
+"section. All domains listed inside this page can be directly accessed from "
+"LAN clients. No antivirus or content filtering is applied to these domains."
+msgstr ""
+
+#: ../../web_proxy.rst:91 ../../web_proxy.rst:94
+msgid ""
+"Every domain listed will be expanded also for its own sub-domains. For "
+"example, adding *nethserver.org* will bypass also *www.nethserver.org*, "
+"*mirror.nethserver.org*, etc."
+msgstr ""
+
+#: ../../web_proxy.rst:94 ../../web_proxy.rst:97
+msgid ""
+"All LAN clients must use the server itself as DNS, either directly or as a "
+"forwarder."
+msgstr ""
+
+#: ../../web_proxy.rst:97 ../../web_proxy.rst:100
+msgid "Bypass by source and destinations"
+msgstr ""
+
+#: ../../web_proxy.rst:99 ../../web_proxy.rst:102
+msgid ""
+"A source bypass allows direct access to any HTTP/HTTPS sites from selected "
+"hosts, host groups, IP ranges and network CIDR. Source bypasses are "
+"configurable from :guilabel:`Hosts without proxy` section."
+msgstr ""
+
+#: ../../web_proxy.rst:103 ../../web_proxy.rst:106
+msgid ""
+"A destination bypass allows direct access from any LAN clients to HTTP/HTTPS"
+" sites hosted on specific hosts, host groups or network CIDR. Destination "
+"bypasses are configurable from :guilabel:`Sites without proxy` section."
+msgstr ""
+
+#: ../../web_proxy.rst:107 ../../web_proxy.rst:110
+msgid "These bypass rules are also configured inside the WPAD file."
+msgstr ""
+
+#: ../../web_proxy.rst:110 ../../web_proxy.rst:113
 msgid "Report"
 msgstr "Reporte"
 
-#: ../../web_proxy.rst:88 ../../web_proxy.rst:91
+#: ../../web_proxy.rst:112 ../../web_proxy.rst:115
 msgid ""
 "Install ``nethserver-lightsquid`` package to generate :index:`web proxy "
 "stats`."
@@ -220,7 +260,7 @@ msgstr ""
 "Instale el paquete ``nethserver-lightsquid`` para generar "
 ":index:`estadística proxy web`."
 
-#: ../../web_proxy.rst:90 ../../web_proxy.rst:93
+#: ../../web_proxy.rst:114 ../../web_proxy.rst:117
 msgid ""
 "LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs "
 "and generates new HTML report every day, summarizing browsing habits of the "
@@ -233,28 +273,28 @@ msgstr ""
 "Lightsquid se puede encontrar en la pestaña :guilabel:`Aplicaciones` dentro "
 "de :guilabel:` Dashboard`."
 
-#: ../../web_proxy.rst:94 ../../web_proxy.rst:97
+#: ../../web_proxy.rst:118 ../../web_proxy.rst:121
 msgid "Cache"
 msgstr "Cache"
 
-#: ../../web_proxy.rst:96 ../../web_proxy.rst:99
+#: ../../web_proxy.rst:120 ../../web_proxy.rst:123
 msgid ""
 "Under tab :guilabel:`Cache` there is a form to configure cache parameters:"
 msgstr ""
 "En la pestaña :guilabel:`Cache` hay un formulario para configurar los "
 "parámetros del caché:"
 
-#: ../../web_proxy.rst:98 ../../web_proxy.rst:101
+#: ../../web_proxy.rst:122 ../../web_proxy.rst:125
 msgid "The cache can be enabled or disabled (*disabled* by default)"
 msgstr "El caché puede ser activado o desactivado (*desactivado* por defecto)"
 
-#: ../../web_proxy.rst:99 ../../web_proxy.rst:102
+#: ../../web_proxy.rst:123 ../../web_proxy.rst:126
 msgid "**Disk cache size**: maximum value of squid cache on disk (in MB)"
 msgstr ""
 "**Tamaño de caché de disco**: valor máximo de caché de squid en disco (en "
 "MB)"
 
-#: ../../web_proxy.rst:100 ../../web_proxy.rst:103
+#: ../../web_proxy.rst:124 ../../web_proxy.rst:127
 msgid ""
 "**Min object size**: can be left at 0 to cache everything, but may be raised"
 " if small objects are not desired in the cache (in kB)"
@@ -263,7 +303,7 @@ msgstr ""
 "todo, pero puede ser elevado si no se desean objetos pequeños en la caché "
 "(en kB)"
 
-#: ../../web_proxy.rst:101 ../../web_proxy.rst:104
+#: ../../web_proxy.rst:125 ../../web_proxy.rst:128
 msgid ""
 "**Max object size**: objects larger than this setting will not be saved on "
 "disk. If speed is more desirable than saving bandwidth, this should be set "
@@ -273,7 +313,7 @@ msgstr ""
 "guardarán en el disco. Si la velocidad es más deseable que ahorrar ancho de "
 "banda, esto debería establecerse en un valor bajo (en kB)"
 
-#: ../../web_proxy.rst:103 ../../web_proxy.rst:106
+#: ../../web_proxy.rst:127 ../../web_proxy.rst:130
 msgid ""
 "The button :guilabel:`Empty cache` also works if squid is disabled, it might"
 " be useful to free space on disk."
@@ -281,11 +321,11 @@ msgstr ""
 "El botón :guilabel:`Vaciar caché 'también funciona si el squid está "
 "deshabilitado, puede ser útil para liberar espacio en el disco."
 
-#: ../../web_proxy.rst:106 ../../web_proxy.rst:109
+#: ../../web_proxy.rst:130 ../../web_proxy.rst:133
 msgid "Sites without cache"
 msgstr "Sitios sin caché"
 
-#: ../../web_proxy.rst:108 ../../web_proxy.rst:111
+#: ../../web_proxy.rst:132 ../../web_proxy.rst:135
 msgid ""
 "Sometime the proxy can't correctly handle some bad crafted sites. To exclude"
 " one or more domain from the cache, use the ``NoCache`` property."
@@ -294,15 +334,15 @@ msgstr ""
 "diseñados. Para excluir uno o varios dominios de la caché, utilice la "
 "propiedad ``NoCache``."
 
-#: ../../web_proxy.rst:111 ../../web_proxy.rst:114
+#: ../../web_proxy.rst:135 ../../web_proxy.rst:138
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../web_proxy.rst:117 ../../web_proxy.rst:120
+#: ../../web_proxy.rst:141 ../../web_proxy.rst:144
 msgid "Safe ports"
 msgstr "Puertos seguros"
 
-#: ../../web_proxy.rst:119 ../../web_proxy.rst:122
+#: ../../web_proxy.rst:143 ../../web_proxy.rst:146
 msgid ""
 "Safe ports are a list of ports accessible using the proxy. If a port is not "
 "inside the safe port list, the proxy will refuse to contact the server. For "
@@ -315,7 +355,7 @@ msgstr ""
 "HTTP que se ejecuta en el puerto 1234, no se puede acceder al servidor "
 "mediante el proxy."
 
-#: ../../web_proxy.rst:123 ../../web_proxy.rst:126
+#: ../../web_proxy.rst:147 ../../web_proxy.rst:150
 msgid ""
 "The ``SafePorts`` property is a comma-separated list of ports. Listed ports "
 "will be added to the default list of safe ports."
@@ -323,6 +363,6 @@ msgstr ""
 "La propiedad ``SafePorts`` es una lista de puertos separados por comas. Los "
 "puertos listados se agregarán a la lista predeterminada de puertos seguros."
 
-#: ../../web_proxy.rst:126 ../../web_proxy.rst:129
+#: ../../web_proxy.rst:150 ../../web_proxy.rst:153
 msgid "Eg. Access extra ports 446 and 1234: ::"
 msgstr "P.ej. Acceda a puertos adicionales 446 y 1234: ::"

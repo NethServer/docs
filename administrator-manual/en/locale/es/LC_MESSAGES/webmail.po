@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -53,8 +53,8 @@ msgstr "Soporte para mensajes HTML"
 msgid "Shared folders support"
 msgstr "Soporte para carpetas compartidas"
 
-#: ../../webmail.rst:19 ../../webmail.rst:34 ../../webmail.rst:22
-#: ../../webmail.rst:37
+#: ../../webmail.rst:19 ../../webmail.rst:38 ../../webmail.rst:22
+#: ../../webmail.rst:41
 msgid "Plugins"
 msgstr "Plugins"
 
@@ -94,7 +94,14 @@ msgstr "http://mail.mydomain.com/webmail"
 msgid "http://mail.mydomain.com/roundcubemail"
 msgstr "http://mail.mydomain.com/roundcubemail"
 
-#: ../../webmail.rst:36 ../../webmail.rst:39
+#: ../../webmail.rst:33 ../../webmail.rst:36
+msgid ""
+"If |product| is bound to a remote Active Directory account provider a "
+"dedicated user account in AD is required by the module to be fully "
+"operational! See :ref:`join-existing-ad-section`."
+msgstr ""
+
+#: ../../webmail.rst:40 ../../webmail.rst:43
 msgid ""
 "Roundcube supports many plugins that are already bundled within the "
 "installation."
@@ -102,15 +109,15 @@ msgstr ""
 "Roundcube soporta muchos complementos que ya están incluidos en la "
 "instalación."
 
-#: ../../webmail.rst:38 ../../webmail.rst:41
+#: ../../webmail.rst:42 ../../webmail.rst:45
 msgid "The plugins that are enabled by default are:"
 msgstr "Los complementos habilitados por defecto son:"
 
-#: ../../webmail.rst:40 ../../webmail.rst:43
+#: ../../webmail.rst:44 ../../webmail.rst:47
 msgid "Manage sieve: manage filters for incoming mail"
 msgstr "Administrar filtros: gestionar filtros para el correo entrante"
 
-#: ../../webmail.rst:41 ../../webmail.rst:44
+#: ../../webmail.rst:45 ../../webmail.rst:48
 msgid ""
 "Mark as junk: mark the selected messages as Junk and move them to the "
 "configured Junk folder"
@@ -118,23 +125,23 @@ msgstr ""
 "Marcar como basura: marque los mensajes seleccionados como basura y muévalos"
 " a la carpeta de correo no deseado configurada"
 
-#: ../../webmail.rst:43 ../../webmail.rst:46
+#: ../../webmail.rst:47 ../../webmail.rst:50
 msgid "Recommended plugins:"
 msgstr "Complementos recomendados:"
 
-#: ../../webmail.rst:45 ../../webmail.rst:48
+#: ../../webmail.rst:49 ../../webmail.rst:52
 msgid "New mail notifier"
 msgstr "Notificador de nuevo correo"
 
-#: ../../webmail.rst:46 ../../webmail.rst:49
+#: ../../webmail.rst:50 ../../webmail.rst:53
 msgid "Emoticons"
 msgstr "Emoticonos"
 
-#: ../../webmail.rst:47 ../../webmail.rst:50
+#: ../../webmail.rst:51 ../../webmail.rst:54
 msgid "VCard support"
 msgstr "Soporte VCard"
 
-#: ../../webmail.rst:50 ../../webmail.rst:53
+#: ../../webmail.rst:54 ../../webmail.rst:57
 msgid ""
 "Plugins can be added or removed by editing the comma-separated list inside "
 "the ``Plugins`` property. For example, to enable \"mail notification\", "
@@ -145,7 +152,7 @@ msgstr ""
 "\"notificación de correo\", \"marcar como basura\" y \"administrar "
 "filtrado\", ejecute desde la línea de comandos: ::"
 
-#: ../../webmail.rst:56 ../../webmail.rst:59
+#: ../../webmail.rst:60 ../../webmail.rst:63
 msgid ""
 "A list of bundled plugins can be found inside "
 "``/usr/share/roundcubemail/plugins`` directory. To get the list, just "
@@ -154,11 +161,11 @@ msgstr ""
 "Se puede encontrar una lista de complementos agrupados dentro del directorio"
 " ``/usr/share/roundcubemail/plugins``. Para obtener la lista, ejecute: ::"
 
-#: ../../webmail.rst:62 ../../webmail.rst:65
+#: ../../webmail.rst:66 ../../webmail.rst:69
 msgid "Access"
 msgstr "Acceso"
 
-#: ../../webmail.rst:64 ../../webmail.rst:67
+#: ../../webmail.rst:68 ../../webmail.rst:71
 msgid ""
 "With default configuration webmail is accessible using HTTPS from any "
 "network."
@@ -166,7 +173,7 @@ msgstr ""
 "Con la configuración predeterminada webmail es accesible mediante HTTPS "
 "desde cualquier red."
 
-#: ../../webmail.rst:66 ../../webmail.rst:69
+#: ../../webmail.rst:70 ../../webmail.rst:73
 msgid ""
 "If you want to restrict the access only from green and trusted networks, "
 "execute: ::"
@@ -174,15 +181,15 @@ msgstr ""
 "Si desea restringir el acceso sólo a redes verdes y de confianza, ejecute: "
 "::"
 
-#: ../../webmail.rst:71 ../../webmail.rst:74
+#: ../../webmail.rst:75 ../../webmail.rst:78
 msgid "If you want to open the access from any network: ::"
 msgstr "Si desea abrir el acceso desde cualquier red: ::"
 
-#: ../../webmail.rst:77 ../../webmail.rst:80
+#: ../../webmail.rst:81 ../../webmail.rst:84
 msgid "Removing"
 msgstr "Quitar"
 
-#: ../../webmail.rst:79 ../../webmail.rst:82
+#: ../../webmail.rst:83 ../../webmail.rst:86
 msgid ""
 "If you want remove Roundcube, run the following command on the server "
 "command line. ::"

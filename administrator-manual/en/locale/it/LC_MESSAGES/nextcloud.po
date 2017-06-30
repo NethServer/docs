@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2017-06-01 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -118,11 +118,22 @@ msgstr ""
 "spiegato nella sezione `Internal Username` della `Documentazione ufficiale "
 "di NextCloud <https://docs.nextcloud.com>`_."
 
-#: ../../nextcloud.rst:47 ../../nextcloud.rst:50
+#: ../../nextcloud.rst:46 ../../nextcloud.rst:49
+msgid ""
+"If |product| is bound to a remote Active Directory account provider a "
+"dedicated user account in AD is required by the module to be fully "
+"operational! See :ref:`join-existing-ad-section`."
+msgstr ""
+"Se |product| è attestato ad un account provider remoto Active Directory, un "
+"account utente AD aggiuntivo e dedicato è necessario al modulo per essere "
+"pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
+"section`."
+
+#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
 msgid "Trusted Domains"
 msgstr "Trusted Domains"
 
-#: ../../nextcloud.rst:49 ../../nextcloud.rst:52
+#: ../../nextcloud.rst:53 ../../nextcloud.rst:56
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -130,19 +141,19 @@ msgstr ""
 "I Trusted domains sono una lista di domini su cui l’utente può effettuare il"
 " login. Quelli presenti di default sono:"
 
-#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
+#: ../../nextcloud.rst:55 ../../nextcloud.rst:58
 msgid "domain name"
 msgstr "nome dominio"
 
-#: ../../nextcloud.rst:52 ../../nextcloud.rst:55
+#: ../../nextcloud.rst:56 ../../nextcloud.rst:59
 msgid "ip address"
 msgstr "indirizzo ip"
 
-#: ../../nextcloud.rst:54 ../../nextcloud.rst:57
+#: ../../nextcloud.rst:58 ../../nextcloud.rst:61
 msgid "To add a new one use: ::"
 msgstr "Per aggiungerne uno nuovo eseguire: ::"
 
-#: ../../nextcloud.rst:59 ../../nextcloud.rst:62
+#: ../../nextcloud.rst:63 ../../nextcloud.rst:66
 msgid "To add more than one, concatenate the names with a comma."
 msgstr ""
 "Per aggiungerne più di uno è sufficiente concatenare i nomi con una virgola."
