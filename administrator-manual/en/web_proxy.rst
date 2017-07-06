@@ -99,6 +99,25 @@ Destination bypasses are configurable from :guilabel:`Sites without proxy` secti
 
 These bypass rules are also configured inside the WPAD file.
 
+Priority and divert rules
+=========================
+
+Firewall rules for routing traffic to a specific provider, or decrease/increase priority, are applied only to network traffic which traverse the gateway.
+These rules don't apply if the traffic goes through the proxy because the traffic is generated from the gateway itself.
+
+In a scenario where the web proxy is enabled in transparent mode and the firewall 
+contains a rule to lower the priority for a given host, the rule applies only to non-HTTP services like SSH.
+
+The :guilabel:`Rules` tab allows the creation of priority and divert rules also for the traffic
+intercepted by the proxy.
+
+The web interface allow the creation of rules for HTTP/S traffic to:
+
+- raise the priority of an host or network
+- lower the priority of an host or network
+- divert the source to a specific provider with automatic fail over if the provider fails
+- force the source to a specific provider without automatic fail over
+
 Report
 ======
 
