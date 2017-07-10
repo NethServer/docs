@@ -60,11 +60,11 @@ For instance, the SMB network addresses of the ``docs`` share could be ::
 
 When accessing a SMB share, some user interfaces provide a single user name
 field. In that case, specify the **user short name** prefixed with the **NetBIOS
-domain name**.  For instance, if the NetBIOS domain name is "COMPANY" and the
+domain name**.  For instance, if the NetBIOS domain name is "DOMAIN" and the
 user name is "john.smith", the domain-prefixed user name to access a SMB share
 is: ::
 
-    COMPANY\john.smith
+    DOMAIN\john.smith
 
 On the contrary, some applications provide separate input fields for the NetBIOS
 domain name and the user name; in that case fill in the input fields
