@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-30 11:44+0200\n"
+"POT-Creation-Date: 2017-07-14 12:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -31,22 +31,18 @@ msgstr "SNMP"
 
 #: ../../snmp.rst:12 ../../snmp.rst:15
 msgid ""
-"SNMP (Simple Network Management Protocol) protocol allows to manage and "
+"The SNMP (Simple Network Management Protocol) protocol allows to manage and "
 "monitor devices connected to the network. The :index:`SNMP` server can reply"
 " to specific queries about current system status."
 msgstr ""
-"El protocolo SNMP (Simple Network Management Protocol) permite administrar y"
-" monitorizar dispositivos conectados a la red. El servidor :index:`SNMP` "
-"puede responder a consultas específicas sobre el estado actual del sistema."
 
 #: ../../snmp.rst:15 ../../snmp.rst:18
 msgid "The server is disabled by default."
 msgstr "El servidor está deshabilitado de manera predeterminada"
 
 #: ../../snmp.rst:17 ../../snmp.rst:20
-msgid "During first configuration. you should set three main options:"
+msgid "To enable it, you should set three main options:"
 msgstr ""
-"Durante la primera configuración. Debe establecer tres opciones principales:"
 
 #: ../../snmp.rst:19 ../../snmp.rst:22
 msgid "the SNMP community name"
@@ -57,14 +53,24 @@ msgid "the location name where the server is located"
 msgstr "El nombre de la ubicación donde se encuentra el servidor"
 
 #: ../../snmp.rst:21 ../../snmp.rst:24
-msgid "the name and mail address of system administrator"
-msgstr "El nombre y la dirección de correo del administrador del sistema"
+msgid "the name and email address of system administrator"
+msgstr ""
 
-#: ../../snmp.rst:24 ../../snmp.rst:27
+#: ../../snmp.rst:23 ../../snmp.rst:26
+msgid ""
+"The implementation is based on the Net-SNMP project. Please refer to the "
+"official project page for more information:"
+msgstr ""
+
+#: ../../snmp.rst:25 ../../snmp.rst:28
+msgid "http://www.net-snmp.org/"
+msgstr ""
+
+#: ../../snmp.rst:28 ../../snmp.rst:31
 msgid "References"
 msgstr "Referencias"
 
-#: ../../snmp.rst:25 ../../snmp.rst:28
+#: ../../snmp.rst:29 ../../snmp.rst:32
 msgid ""
 "Simple Network Management Protocol "
 "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"

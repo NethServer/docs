@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-30 11:44+0200\n"
+"POT-Creation-Date: 2017-07-14 12:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Import the file into the client and start the VPN."
 msgstr "Importe el archivo en el cliente e inicie la VPN."
 
-#: ../../vpn.rst:61 ../../vpn.rst:154 ../../vpn.rst:64 ../../vpn.rst:157
+#: ../../vpn.rst:61 ../../vpn.rst:155 ../../vpn.rst:64 ../../vpn.rst:158
 msgid "Tunnel (net2net)"
 msgstr "Túnel (net2net)"
 
@@ -376,43 +376,46 @@ msgstr ""
 
 #: ../../vpn.rst:150 ../../vpn.rst:153
 msgid ""
-":index:`IPsec` (IP Security) protocol is usually used to create tunnels with"
-" devices from other manufacturers."
+":index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN "
+"tunnels, it's tipically used to create net to net tunnels and it's supported"
+" from all manufacturers. You can use this protocol to create VPN tunnels "
+"between a NethServer and a device from another manufacturer as well as VPN "
+"tunnels between 2 NethServers."
 msgstr ""
 
-#: ../../vpn.rst:156 ../../vpn.rst:159
+#: ../../vpn.rst:157 ../../vpn.rst:160
 msgid ""
 "IPsec is extremely reliable and compatible with many devices. In fact, it is"
 " an obvious choice when you need to create net2net connections between "
 "firewalls of different manufacturers."
 msgstr ""
 
-#: ../../vpn.rst:160 ../../vpn.rst:163
+#: ../../vpn.rst:161 ../../vpn.rst:164
 msgid ""
 "Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered "
 "peers."
 msgstr ""
 
-#: ../../vpn.rst:162 ../../vpn.rst:165
+#: ../../vpn.rst:163 ../../vpn.rst:166
 msgid ""
 "If you are creating a tunnel between two |product|, given the firewalls A "
 "and B:"
 msgstr ""
 
-#: ../../vpn.rst:164 ../../vpn.rst:167
+#: ../../vpn.rst:165 ../../vpn.rst:168
 msgid ""
 "Configure the server A and specify the remote address and LAN of server B. "
 "If the :guilabel:`Remote IP` field is set to the special value ``%any``, the"
 " server waits for connections from the other endpoint."
 msgstr ""
 
-#: ../../vpn.rst:168 ../../vpn.rst:171
+#: ../../vpn.rst:169 ../../vpn.rst:172
 msgid ""
 "Configure the second firewall B by mirroring the configuration from A inside"
 " the remote section. The special value ``%any`` is allowed in one side only!"
 msgstr ""
 
-#: ../../vpn.rst:171 ../../vpn.rst:174
+#: ../../vpn.rst:172 ../../vpn.rst:175
 msgid ""
 "If an endpoint is behind a NAT, the values for :guilabel:`Local identifier` "
 "and :guilabel:`Remote identifier` fields must be set to custom unique names "
