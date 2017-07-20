@@ -128,6 +128,21 @@ machine is automatically configured to join the Active Directory domain. Go to
 the page :guilabel:`User and groups` to see the default accounts.
 
 .. index::
+
+    pair: active directory; change IP
+
+.. _nsdc-change-ip:
+
+The previously assigned IP address can be changed from :guilabel:`Accounts
+provider > Change IP`.
+
+.. warning::
+
+     Changing the Domain Controller IP address can cause problems to Active
+     Directory clients. If they use an external DNS server, update it to use the
+     new IP address.
+
+.. index::
   pair: active directory; default accounts
 
 After installing Samba Active Directory, the :guilabel:`Users and groups` page
