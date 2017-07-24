@@ -141,7 +141,7 @@ IPsec
 =====
 
 :index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN tunnels, it's tipically used to create net to net tunnels and it's supported from all manufacturers.
-You can use this protocol to create VPN tunnels between a NethServer and a device from another manufacturer as well as VPN tunnels between 2 NethServers.
+You can use this protocol to create VPN tunnels between a |product| and a device from another manufacturer as well as VPN tunnels between 2 |product|.
 
 
 Tunnel (net2net)

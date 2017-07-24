@@ -62,7 +62,7 @@ it establishes the SSL connection with remote sites and
 checks the validity of certificates without decrypting the traffic.
 Then the server can filter requested URLs using the web filter and return back the response to the client.
 
-.. note:: Is not necessary to install any certificate into the clients, 
+.. note:: There is no need to install any certificate into the clients,
    just enabling the SSL proxy is enough.
 
 Bypass

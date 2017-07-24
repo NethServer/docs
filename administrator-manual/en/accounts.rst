@@ -128,7 +128,6 @@ machine is automatically configured to join the Active Directory domain. Go to
 the page :guilabel:`User and groups` to see the default accounts.
 
 .. index::
-
     pair: active directory; change IP
 
 .. _nsdc-change-ip:
