@@ -81,14 +81,12 @@ not a partition (such as /dev/sdc1).
 On a Windows machine, make sure to format the USB drive then unmount it.
 Use one of the following tools to write the USB stick:
 
-* `Rufus`_
-* `Fedora LiveUSB Creator`_
+* `Etcher`_
 * `Win32 Disk Imager`_
 * `Rawrite32`_
 * `dd for Windows`_
 
-.. _`Rufus`: https://rufus.akeo.ie/ 
-.. _`Fedora LiveUSB Creator`: https://fedorahosted.org/liveusb-creator/ 
+.. _`Etcher`: https://etcher.io/ 
 .. _`Win32 Disk Imager`: http://sourceforge.net/projects/win32diskimager/ 
 .. _`Rawrite32`: http://www.netbsd.org/~martin/rawrite32/ 
 .. _`dd for Windows`: http://www.chrysocome.net/dd 
