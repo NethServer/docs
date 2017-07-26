@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-14 12:07+0200\n"
+"POT-Creation-Date: 2017-07-18 12:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -79,7 +79,7 @@ msgstr "le credenziali dall'account"
 
 #: ../../pop3_connector.rst:31 ../../pop3_connector.rst:34
 msgid "the local user account where to deliver messages"
-msgstr "l’utente o il gruppo locale dove consegnare i messaggi"
+msgstr "l’utente locale a cui consegnare i messaggi"
 
 #: ../../pop3_connector.rst:32 ../../pop3_connector.rst:35
 msgid "if a message has to be deleted from the remote server after delivery"
