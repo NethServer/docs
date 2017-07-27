@@ -59,6 +59,105 @@ domain part of server FQDN.
 * User: admin
 * Login: admin@mightydomain.com
 
+Importing from Outlook PST
+==========================
+
+You can import email, calendars and address books from an :index:`Outlook` :index:`PST` archive.
+
+Before using followings scripts, you will need to install *libpst* package: ::
+
+   yum install libpst -y
+
+Also make sure the PHP timezone corresponds to the server timezone: ::
+
+  config getprop php DateTimezone
+
+PHP time zone can be updated using the following command: ::
+
+  config setprop php DateTimezone Europe/Rome
+  signal-event nethserver-php-update
+
+
+Mail
+----
+
+Initial script to import mail messages: :file:`/usr/share/webtop/doc/pst2webtop.sh`
+
+To start the import, run the script specifying the PST file and the system user: ::
+
+   /usr/share/webtop/doc/pst2webtop.sh <filename.pst> <user>
+
+Example: ::
+
+  # /usr/share/webtop/doc/pst2webtop.sh data.pst goofy
+  Do you wish to import email? [Y]es/[N]o:
+
+All mail messages will be imported. Contacts and calendars will be saved inside a
+temporary and the script will output further commands to import contacts and calendars.
+
+Example: ::
+
+  Events Folder found: Outlook/Calendar/calendar
+  pst2webtop_cal.php goody '/tmp/tmp.Szorhi5nUJ/Outlook/Calendar/calendar' <foldername>
+
+  ...
+
+  log created: /tmp/pst2webtop14271.log
+
+All commands are saved also in the reported log.
+
+Contacts
+--------
+
+Script for contacts import: :file:`/usr/share/webtop/doc/pst2webtop_card.php`.
+
+The script will use files generated from mail import phase: ::
+
+        /usr/share/webtop/doc/pst2webtop_card.php <user> <file_to_import> <phonebook_category>
+
+**Example**
+
+Let us assume that the pst2webtop.sh script has generated following output from mail import: ::
+
+   Contacts Folder found: Personal folders/Contacts/contacts
+    Import to webtop:
+   ./pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Personal folders/Contacts/contacts' <foldername>
+
+To import the default address book (WebTop) of *foo* user: ::
+
+   /usr/share/webtop/doc/pst2webtop_card.php foo '/tmp/tmp.0vPbWYf8Uo/Personal folders/Contacts/contacts' WebTop
+
+Calendars
+---------
+
+Script for calendars import: :file:`/usr/share/webtop/doc/pst2webtop_cal.php`
+
+The script will use files generated from mail import phase: ::
+
+        /usr/share/webtop/doc/pst2webtop_cal.php <user> <file_to_import> <foldername>
+
+**Example**
+
+Let us assume that the pst2webtop.sh script has generated following output from mail import: ::
+
+   Events Folder found: Personal folders/Calendar/calendar
+    Import to webtop:
+   ./pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Personal folders/Calendar/calendar' <foldername>
+
+To import the default calendar (WebTop) of *foo* user: ::
+
+        /usr/share/webtop/doc/pst2webtop_cal.php foo '/tmp/tmp.0vPbWYf8Uo/Personal folders/Calendar/calendar' WebTop
+
+Known limitations:
+
+* only the first occurrence of recurrent events will be imported
+* Outlook reminders will be ignored
+
+.. note::
+   The script will import all events using the timezone selected by the user inside WebTop, if set.
+   Otherwise system timezone will be used.
+
+
 .. only:: nscom
 
   WebTop vs SOGo
@@ -124,5 +223,4 @@ domain part of server FQDN.
 
 
   If you need to raise the user limit, please read the official Dropbox documentation.
-
 
