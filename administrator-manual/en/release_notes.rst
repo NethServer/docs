@@ -80,4 +80,4 @@ removed in 7:
 * nethserver-fetchmail: replaced by getmail
 * nethserver-ocsinventory, nethserver-adagios: due to compatibility problems with Nagios, these modules will be
   mantained only on |product| 6 release
-
+* nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-tunnels, L2TP function has been dropped
