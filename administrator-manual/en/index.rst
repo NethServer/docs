@@ -83,6 +83,7 @@ Modules
    phonebook-mysql
    weekly_report
    hotspot
+   freepbx
 
 .. only:: nscom
 
