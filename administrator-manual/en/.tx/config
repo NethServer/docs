@@ -304,3 +304,10 @@ file_filter = locale/<lang>/LC_MESSAGES/upgrade.po
 source_file = _build/locale/upgrade.pot
 source_lang = en
 type = PO
+
+[docs-v7.freepbx]
+file_filter = locale/<lang>/LC_MESSAGES/freepbx.po
+source_file = _build/locale/freepbx.pot
+source_lang = en
+type = PO
+
