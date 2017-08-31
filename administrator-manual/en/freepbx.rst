@@ -17,7 +17,7 @@ All FreePBX configurations and data are saved inside configuration and data back
 Web Access
 ==========
 
-After installe, FreePBX will be accessible at ``https://ip_address/freepbx`` from
+After installed, FreePBX will be accessible at ``https://ip_address/freepbx`` from
 green interfaces.
 You can also configure the access from the red interface under the "PBX Access"
 page of the |product| Server Manager.
