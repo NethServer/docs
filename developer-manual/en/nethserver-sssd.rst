@@ -13,7 +13,7 @@ It includes the following parts:
 * SSSD configuration
 * events for users and  groups management
 * web interface for user management
-* password expiration notification (not yet implemented)
+* password policy management
 * system validators for users and groups
 * SSSD perl library to ease the implementation of e-smith templates
 
@@ -367,3 +367,34 @@ It is possible to create mail aliases from a TSV (Tab Separated Values) file wit
   username <TAB> emailaddress <NEWLINE>
 
 See ``import_users`` section for a sample script invocation.
+
+
+Password policy
+---------------
+
+The system can handle global or per-user policies. All policies are enforced by
+PAM and saved under ``passwordstrength`` inside the ``configuration`` database.
+
+Available properties are:
+
+* ``Users``: change strength password for all users, can be:
+
+  * ``strong``: (default) strong passwords must conform to cracklib checks
+  * ``none``: no strength check
+* ``PassExpires``: can be ``yes`` (default) or ``no``. If set to ``no`` password will not expire, if set to ``yes``,
+    following properties apply:
+
+  * ``MaxPassAge``: minimum number of days for which the user is forced to keep the same password (default 0)
+  * ``MinPassAge``: maximum number of days for which the user can keep the same password (default: 180)
+  * ``PassWarning``: a shell warning is displayed to the user X days before password expiration
+
+Configuration can be applied using the :command:`password-policy-update` event.
+
+DB example: ::
+
+ passwordstrength=configuration
+    MaxPassAge=180
+    MinPassAge=0
+    PassExpires=no
+    PassWarning=7
+    Users=none

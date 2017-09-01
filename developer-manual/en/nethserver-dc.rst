@@ -95,12 +95,9 @@ If a full DC reinstall is desired, after factory reset event, run also ::
 Uninstall nethserver-dc
 -----------------------
 
-* Run the DC factory reset procedure and remove the :file:`/var/lib/machines/nsdc`
-  directory.
+Execute: ::
 
-* Uninstall the package ::
-
-    yum remove nethserver-dc
+  signal-event nethserver-sssd-remove-provider
 
 Upgrade the containter
 ----------------------

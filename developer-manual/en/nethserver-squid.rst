@@ -139,6 +139,48 @@ Cache
 
 There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
 
+Priority and divert rules
+=========================
+
+The ``squid`` database contains multiple records of type ``rule``.
+
+Each rule has following properties:
+
+* ``key``: it's a numeric uniq id
+* ``Action``:
+
+  * ``priority;low``: add low priority packet marker using ``tcp_outgoing_mark``
+  * ``priority;high``: add high priority packet marker using ``tcp_outgoing_mark``
+  * ``provider;<name>``: add packet marker for provider ``<name>`` using ``tcp_outgoing_mark``
+  * ``force;<name>``: force output traffic to ``<name>`` provider using ``tcp_outgoing_address``
+
+* ``Description``: optional description
+* ``Dst``: comma-separeted list of domains, this is converted to a ``dstdomain`` ACL
+* ``Src``: firewall object, supported objects are: role, host, zone, ip range and cidr . This is converted to ``src`` ACL
+* ``status``: can be ``enabled`` or ``disabled``
+
+Example: ::
+
+ 1=rule
+    Action=priority;low
+    Description=
+    Dst=yahoo.com
+    Src=host;giacomo
+    status=enabled
+ 2=rule
+    Action=provider;fast
+    Description=
+    Dst=nethserver.org,nethesis.it
+    Src=host;birro
+    status=enabled
+ 3=rule
+    Action=force;slow
+    Description=
+    Dst=
+    Src=cidr;cidr1
+    status=enabled
+
+
 WPAD
 ====
 
