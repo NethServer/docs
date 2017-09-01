@@ -59,6 +59,35 @@ domain part of server FQDN.
 * User: admin
 * Login: admin@mightydomain.com
 
+Nextcloud integration
+=====================
+
+Nextcloud installation is disabled by default for all users.
+To enable Nextcloud integration:
+
+1. Install "Nextcloud" module from :guilabel:`Software Center`.
+
+2. Access WebTop as admin user then enable the Nextcloud authorization:
+
+   - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
+   - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> Resource --> STORE_CLOUD --> Action --> CREATE`
+   - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> Resource --> STORE_OTHER --> Action --> CREATE
+   - Click :guilabel:`OK` then save and close
+
+Chat integration
+================
+
+Web chat integration installation is disabled by default for all users.
+To enable chat integration:
+
+1. Install "Instant messaging"" module from :guilabel:`Software Center`.
+
+2. Access WebTop as admin user then enable the web chat authorization:
+
+   - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
+   - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
+   - Click :guilabel:`OK` then save and close
+
 Importing from Outlook PST
 ==========================
 
