@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-14 12:07+0200\n"
+"POT-Creation-Date: 2017-09-01 14:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -64,8 +64,9 @@ msgstr ""
 "Utilizzare sempre il formato utente completo ``<utente>@<dominio>`` per il "
 "login sia all'applicazione web, sia per Active Sync."
 
-#: ../../webtop5.rst:27 ../../webtop5.rst:63 ../../webtop5.rst:30
-#: ../../webtop5.rst:66
+#: ../../webtop5.rst:27 ../../webtop5.rst:63 ../../webtop5.rst:154
+#: ../../webtop5.rst:175 ../../webtop5.rst:30 ../../webtop5.rst:66
+#: ../../webtop5.rst:157 ../../webtop5.rst:178
 msgid "**Example**"
 msgstr "**Esempio**"
 
@@ -154,15 +155,245 @@ msgstr "Utente: admin"
 msgid "Login: admin@mightydomain.com"
 msgstr "Login: admin@mightydomain.com"
 
+#: ../../webtop5.rst:70 ../../webtop5.rst:73
+msgid "Nextcloud integration"
+msgstr "Integrazione con Nextcloud"
+
 #: ../../webtop5.rst:72 ../../webtop5.rst:75
+msgid ""
+"Nextcloud installation is disabled by default for all users. To enable "
+"Nextcloud integration:"
+msgstr ""
+"L'integrazione con Nextcloud è disabilitata di default per tutti gli utenti."
+" Per abilitarla:"
+
+#: ../../webtop5.rst:75 ../../webtop5.rst:78
+msgid "Install \"Nextcloud\" module from :guilabel:`Software Center`."
+msgstr "Installare il modulo \"Nextcloud\" dal :guilabel:`Software Center`."
+
+#: ../../webtop5.rst:77 ../../webtop5.rst:80
+msgid "Access WebTop as admin user then enable the Nextcloud authorization:"
+msgstr ""
+"Accedere a WebTop con l'utente admin quindi abilitare l'autorizzazione per "
+"Nextcloud:"
+
+#: ../../webtop5.rst:79 ../../webtop5.rst:94 ../../webtop5.rst:82
+#: ../../webtop5.rst:97
+msgid ""
+"Access the :guilabel:`Administration` menu, then :menuselection:`Domains -->"
+" NethServer --> Groups --> Users --> Authorizations`"
+msgstr ""
+"Accedere al menu :guilabel:`Administration`, quindi  scegliere "
+":menuselection:`Domains --> NethServer --> Groups --> Users --> "
+"Authorizations`"
+
+#: ../../webtop5.rst:80 ../../webtop5.rst:83
+msgid ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> "
+"Resource --> STORE_CLOUD --> Action --> CREATE`"
+msgstr ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> "
+"Resource --> STORE_CLOUD --> Action --> CREATE`"
+
+#: ../../webtop5.rst:81 ../../webtop5.rst:84
+msgid ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> "
+"Resource --> STORE_OTHER --> Action --> CREATE"
+msgstr ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> "
+"Resource --> STORE_OTHER --> Action --> CREATE"
+
+#: ../../webtop5.rst:82 ../../webtop5.rst:96 ../../webtop5.rst:85
+#: ../../webtop5.rst:99
+msgid "Click :guilabel:`OK` then save and close"
+msgstr "Cliccare  :guilabel:`OK` quindi salvare ed uscire"
+
+#: ../../webtop5.rst:85 ../../webtop5.rst:88
+msgid "Chat integration"
+msgstr "Integrazione chat"
+
+#: ../../webtop5.rst:87 ../../webtop5.rst:90
+msgid ""
+"Web chat integration installation is disabled by default for all users. To "
+"enable chat integration:"
+msgstr ""
+"L'integrazione con la chat è disabilitata di default per tutti gli utenti. "
+"Per abilitarla:"
+
+#: ../../webtop5.rst:90 ../../webtop5.rst:93
+msgid "Install \"Instant messaging\"\" module from :guilabel:`Software Center`."
+msgstr ""
+"Installare il modulo \"Messaggistica istantanea\" dal :guilabel:`Software "
+"Center`."
+
+#: ../../webtop5.rst:92 ../../webtop5.rst:95
+msgid "Access WebTop as admin user then enable the web chat authorization:"
+msgstr ""
+"Accedere a WebTop con l'utente admin quindi abilitare l'autorizzazione per "
+"la chat:"
+
+#: ../../webtop5.rst:95 ../../webtop5.rst:98
+msgid ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) "
+"--> Resource --> WEBCHAT --> Action --> ACCESS`"
+msgstr ""
+":menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) "
+"--> Resource --> WEBCHAT --> Action --> ACCESS`"
+
+#: ../../webtop5.rst:99 ../../webtop5.rst:102
+msgid "Importing from Outlook PST"
+msgstr "Importazione da PST Outlook"
+
+#: ../../webtop5.rst:101 ../../webtop5.rst:104
+msgid ""
+"You can import email, calendars and address books from an :index:`Outlook` "
+":index:`PST` archive."
+msgstr ""
+"E' possibile importare email, calendari e rubriche da un archivio "
+":index:`PST` di :index:`Outlook` ."
+
+#: ../../webtop5.rst:103 ../../webtop5.rst:106
+msgid ""
+"Before using followings scripts, you will need to install *libpst* package: "
+"::"
+msgstr ""
+"Prima di procedere con i seguenti script, è necessario installare il "
+"pacchetto *libpst*: ::"
+
+#: ../../webtop5.rst:107 ../../webtop5.rst:110
+msgid "Also make sure the PHP timezone corresponds to the server timezone: ::"
+msgstr ""
+"Assicurarsi inoltre che la timezone di PHP corrisponda a quella del server: "
+"::"
+
+#: ../../webtop5.rst:111 ../../webtop5.rst:114
+msgid "PHP time zone can be updated using the following command: ::"
+msgstr ""
+"La time zone di PHP può essere modificata utilizzando il comando seguente: "
+"::"
+
+#: ../../webtop5.rst:118 ../../webtop5.rst:121
+msgid "Mail"
+msgstr "Mail"
+
+#: ../../webtop5.rst:120 ../../webtop5.rst:123
+msgid ""
+"Initial script to import mail messages: "
+":file:`/usr/share/webtop/doc/pst2webtop.sh`"
+msgstr ""
+"Script iniziale per l'importazione dei messaggi mail: "
+":file:`/usr/share/webtop/doc/pst2webtop.sh`"
+
+#: ../../webtop5.rst:122 ../../webtop5.rst:125
+msgid ""
+"To start the import, run the script specifying the PST file and the system "
+"user: ::"
+msgstr ""
+"Per iniziare l'importazione, lanciare lo script specificando il file PST e "
+"l'utente di sistema: ::"
+
+#: ../../webtop5.rst:126 ../../webtop5.rst:134 ../../webtop5.rst:129
+#: ../../webtop5.rst:137
+msgid "Example: ::"
+msgstr "Esempio: ::"
+
+#: ../../webtop5.rst:131 ../../webtop5.rst:134
+msgid ""
+"All mail messages will be imported. Contacts and calendars will be saved "
+"inside a temporary and the script will output further commands to import "
+"contacts and calendars."
+msgstr ""
+"Tutti i messaggi mail saranno importati. Contatti e calendari saranno "
+"salvati in un file temporaneo e lo script genererà a schermo gli ulteriori "
+"comandi da utilizzare per importare contatti e calendari."
+
+#: ../../webtop5.rst:143 ../../webtop5.rst:146
+msgid "All commands are saved also in the reported log."
+msgstr ""
+"Tutti i comandi saranno riportati anche nel file di log generato dallo "
+"script."
+
+#: ../../webtop5.rst:146 ../../webtop5.rst:149
+msgid "Contacts"
+msgstr "Contatti"
+
+#: ../../webtop5.rst:148 ../../webtop5.rst:151
+msgid ""
+"Script for contacts import: "
+":file:`/usr/share/webtop/doc/pst2webtop_card.php`."
+msgstr ""
+"Script importazione Contatti: "
+":file:`/usr/share/webtop/doc/pst2webtop_card.php`."
+
+#: ../../webtop5.rst:150 ../../webtop5.rst:171 ../../webtop5.rst:153
+#: ../../webtop5.rst:174
+msgid "The script will use files generated from mail import phase: ::"
+msgstr ""
+"Lo script utilizzerà i file generati nella fase di importazione della posta:"
+" ::"
+
+#: ../../webtop5.rst:156 ../../webtop5.rst:177 ../../webtop5.rst:159
+#: ../../webtop5.rst:180
+msgid ""
+"Let us assume that the pst2webtop.sh script has generated following output "
+"from mail import: ::"
+msgstr ""
+"Ipotizziamo che lo script pst2webtop.sh abbia generato il seguente output a "
+"seguito dell'importazione delle mail: ::"
+
+#: ../../webtop5.rst:162 ../../webtop5.rst:165
+msgid "To import the default address book (WebTop) of *foo* user: ::"
+msgstr ""
+"Per importare nella Rubrica predefinita (WebTop) dell’utente *foo*: ::"
+
+#: ../../webtop5.rst:167 ../../webtop5.rst:170
+msgid "Calendars"
+msgstr "Calendari"
+
+#: ../../webtop5.rst:169 ../../webtop5.rst:172
+msgid ""
+"Script for calendars import: "
+":file:`/usr/share/webtop/doc/pst2webtop_cal.php`"
+msgstr ""
+"Script importazione Calendari: "
+":file:`/usr/share/webtop/doc/pst2webtop_cal.php`"
+
+#: ../../webtop5.rst:183 ../../webtop5.rst:186
+msgid "To import the default calendar (WebTop) of *foo* user: ::"
+msgstr ""
+"Per importare gli eventi nel Calendario predefinito (WebTop) dell’utente "
+"*foo*: ::"
+
+#: ../../webtop5.rst:187 ../../webtop5.rst:190
+msgid "Known limitations:"
+msgstr "Limitazioni note:"
+
+#: ../../webtop5.rst:189 ../../webtop5.rst:192
+msgid "only the first occurrence of recurrent events will be imported"
+msgstr "verrà importata solamente la prima occorrenza di eventi ricorrenti"
+
+#: ../../webtop5.rst:190 ../../webtop5.rst:193
+msgid "Outlook reminders will be ignored"
+msgstr "I promemoria di Outlook verranno ignorati"
+
+#: ../../webtop5.rst:193 ../../webtop5.rst:196
+msgid ""
+"The script will import all events using the timezone selected by the user "
+"inside WebTop, if set. Otherwise system timezone will be used."
+msgstr ""
+"Lo script importerà gli eventi utilizzando il fuso orario dall’utente "
+"WebTop, se configurato. Altrimenti verrà utilizzato il fuso orario del "
+"sistema."
+
+#: ../../webtop5.rst:200 ../../webtop5.rst:203
 msgid "WebTop vs SOGo"
 msgstr "WebTop vs SOGo"
 
-#: ../../webtop5.rst:74 ../../webtop5.rst:77
+#: ../../webtop5.rst:202 ../../webtop5.rst:205
 msgid "WebTop and SOGo can be installed on the same machine."
 msgstr "WebTop e SOGo possono essere installati sulla stessa macchina."
 
-#: ../../webtop5.rst:76 ../../webtop5.rst:79
+#: ../../webtop5.rst:204 ../../webtop5.rst:207
 msgid ""
 "ActiveSync is enabled by default on SOGo and WebTop, but if both packages "
 "are installed, SOGo will take precedence."
@@ -170,15 +401,15 @@ msgstr ""
 "ActiveSync è abilitato di default sia su SOGo che su WebTop, ma se sono "
 "entrambi installati, SOGo avrà la precedenza."
 
-#: ../../webtop5.rst:79 ../../webtop5.rst:82
+#: ../../webtop5.rst:207 ../../webtop5.rst:210
 msgid "To disable ActiveSync on SOGo: ::"
 msgstr "Per disabilitare ActiveSync su SOGo: ::"
 
-#: ../../webtop5.rst:84 ../../webtop5.rst:87
+#: ../../webtop5.rst:212 ../../webtop5.rst:215
 msgid "To disable ActiveSync on WebTop: ::"
 msgstr "Per disabilitare ActiveSync su WebTop: ::"
 
-#: ../../webtop5.rst:90 ../../webtop5.rst:93
+#: ../../webtop5.rst:218 ../../webtop5.rst:221
 msgid ""
 "All incoming mail filters configured within SOGo, must be manually recreated"
 " inside WebTop interface. This also applies if the user is switching from "
@@ -188,11 +419,11 @@ msgstr ""
 "manualmente all’interno dell’interfaccia di WebTop. La stessa cosa si "
 "applica se l’utente sta effettuando il passaggio inverso da WebTop a SOGo."
 
-#: ../../webtop5.rst:95 ../../webtop5.rst:98
+#: ../../webtop5.rst:223 ../../webtop5.rst:226
 msgid "Google and Dropbox integration"
 msgstr "Integrazione Google e Dropbox"
 
-#: ../../webtop5.rst:97 ../../webtop5.rst:100
+#: ../../webtop5.rst:225 ../../webtop5.rst:228
 msgid ""
 "Users can add their own Google Drive and Dropbox accounts inside WebTop. "
 "Before proceeding, the administrator must create a pair of API access "
@@ -202,11 +433,11 @@ msgstr ""
 "all’interno di WebTop. Prima di procedere, l’amministratore deve creare una "
 "coppia di credenziali per l’accesso alle API."
 
-#: ../../webtop5.rst:101 ../../webtop5.rst:104
+#: ../../webtop5.rst:229 ../../webtop5.rst:232
 msgid "Google API"
 msgstr "Google API"
 
-#: ../../webtop5.rst:103 ../../webtop5.rst:106
+#: ../../webtop5.rst:231 ../../webtop5.rst:234
 msgid ""
 "Access https://console.developers.google.com/project and create a new "
 "project"
@@ -214,7 +445,7 @@ msgstr ""
 "Accedere a https://console.developers.google.com/project e creare un nuovo "
 "progetto"
 
-#: ../../webtop5.rst:104 ../../webtop5.rst:107
+#: ../../webtop5.rst:232 ../../webtop5.rst:235
 msgid ""
 "Create new credentials by selecting \"OAuth 2.0 clientID\" type and remember"
 " to compile \"OAuth consent screen\" section"
@@ -222,7 +453,7 @@ msgstr ""
 "Creare una nuova coppia di credenziali di tipo “OAuth 2.0 clientID” avendo "
 "cura di compilare la sezione “OAuth consent screen”"
 
-#: ../../webtop5.rst:106 ../../webtop5.rst:109
+#: ../../webtop5.rst:234 ../../webtop5.rst:237
 msgid ""
 "Insert new credentials (Client ID e Client Secret) inside WebTop "
 "configuration"
@@ -230,13 +461,13 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (Client ID e Client Secret) "
 "nella configurazione di WebTop"
 
-#: ../../webtop5.rst:108 ../../webtop5.rst:123 ../../webtop5.rst:111
-#: ../../webtop5.rst:126
+#: ../../webtop5.rst:236 ../../webtop5.rst:251 ../../webtop5.rst:239
+#: ../../webtop5.rst:254
 msgid "From shell, access webtop database: ::"
 msgstr "Da shell accedere al database webtop: ::"
 
-#: ../../webtop5.rst:112 ../../webtop5.rst:127 ../../webtop5.rst:115
-#: ../../webtop5.rst:130
+#: ../../webtop5.rst:240 ../../webtop5.rst:255 ../../webtop5.rst:243
+#: ../../webtop5.rst:258
 msgid ""
 "Execute the queries, using the corresponding value in place of ``__value__``"
 " variable: ::"
@@ -244,16 +475,16 @@ msgstr ""
 "Eseguire le query, sostituendo al campo ``__value__`` il valore "
 "corrispondente: ::"
 
-#: ../../webtop5.rst:118 ../../webtop5.rst:121
+#: ../../webtop5.rst:246 ../../webtop5.rst:249
 msgid "Dropbox API"
 msgstr "Dropbox API"
 
-#: ../../webtop5.rst:120 ../../webtop5.rst:123
+#: ../../webtop5.rst:248 ../../webtop5.rst:251
 msgid "Access https://www.dropbox.com/developers/apps and create a new app"
 msgstr ""
 "Accedere a https://www.dropbox.com/developers/apps e creare una nuova app"
 
-#: ../../webtop5.rst:121 ../../webtop5.rst:124
+#: ../../webtop5.rst:249 ../../webtop5.rst:252
 msgid ""
 "Insert the new credential key pair (App key e App secret) inside WebTop "
 "configuration"
@@ -261,7 +492,7 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (App key e App secret) nella"
 " configurazione di WebTop."
 
-#: ../../webtop5.rst:133 ../../webtop5.rst:136
+#: ../../webtop5.rst:261 ../../webtop5.rst:264
 msgid ""
 "If you need to raise the user limit, please read the official Dropbox "
 "documentation."

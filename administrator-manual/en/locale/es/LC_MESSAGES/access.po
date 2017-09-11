@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-14 12:07+0200\n"
+"POT-Creation-Date: 2017-07-27 15:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,33 +96,39 @@ msgstr ""
 
 #: ../../access.rst:47 ../../access.rst:50
 msgid "First configuration wizard"
-msgstr ""
+msgstr "Asistente de Primera Configuracion"
 
 #: ../../access.rst:49 ../../access.rst:52
 msgid ""
 "The first time **root** logs in, the *First configuration wizard* procedure "
 "is displayed."
 msgstr ""
+"La primera vez que  **root** ingresa al sistema, el  procedimiento de *First"
+" configuration wizard* es desplegado"
 
 #: ../../access.rst:52 ../../access.rst:55
 msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
 msgstr ""
+"El password root todavia esta en el valor por defecto, un cambio de password"
+" es requerido."
 
 #: ../../access.rst:54 ../../access.rst:57
 msgid ""
 "It is possible to restore a **configuration backup**. Refer to :ref"
 ":`disaster-recovery-section` for more information."
 msgstr ""
+"Es posible recuperar un **configuration backup**. Refierase a ref:`disaster-"
+"recovery-section` para mas informacion."
 
 #: ../../access.rst:57 ../../access.rst:60
 msgid "Otherwise the wizard procedure helps on setting up:"
-msgstr ""
+msgstr "De otro modo el procedimiento de asistente ayuda en la configuracion:"
 
 #: ../../access.rst:59 ../../access.rst:62
 msgid "Host name"
-msgstr ""
+msgstr "Nombre de Equipo"
 
 #: ../../access.rst:60 ../../access.rst:63
 msgid ":ref:`Date and time zone <date-time-section>`"
@@ -130,7 +136,7 @@ msgstr ""
 
 #: ../../access.rst:61 ../../access.rst:64
 msgid "SSH port"
-msgstr ""
+msgstr "Puerto SSH"
 
 #: ../../access.rst:62 ../../access.rst:65
 msgid ":ref:`Smarthost configuration <smarthost-configuration>`"

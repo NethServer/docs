@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-14 12:07+0200\n"
+"POT-Creation-Date: 2017-08-31 12:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -57,26 +57,26 @@ msgstr "Configurazione"
 msgid "Modules"
 msgstr "Moduli"
 
-#: ../../index.rst:97 ../../index.rst:100
+#: ../../index.rst:98 ../../index.rst:101
 msgid "NethForge modules"
 msgstr "Moduli NethForge"
 
-#: ../../index.rst:105 ../../index.rst:108
+#: ../../index.rst:106 ../../index.rst:109
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:113 ../../index.rst:116
+#: ../../index.rst:114 ../../index.rst:117
 msgid "Appendix"
 msgstr "Appendice"
 
-#: ../../index.rst:126 ../../index.rst:129
+#: ../../index.rst:127 ../../index.rst:130
 msgid "Indices"
 msgstr "Indici"
 
-#: ../../index.rst:128 ../../index.rst:131
+#: ../../index.rst:129 ../../index.rst:132
 msgid ":ref:`General index <genindex>`"
 msgstr ":ref:`Indice generale <genindex>`"
 
-#: ../../index.rst:129 ../../index.rst:132
+#: ../../index.rst:130 ../../index.rst:133
 msgid ":ref:`Search <search>`"
 msgstr ":ref:`Ricerca <search>`"
