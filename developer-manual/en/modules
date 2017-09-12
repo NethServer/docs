@@ -29,3 +29,5 @@ nethserver-openvpn
 nethserver-roundcubemail
 nethserver-unbound
 nethserver-freepbx
+nethserver-pulledpork
+nethserver-evebox
