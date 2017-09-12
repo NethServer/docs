@@ -14,7 +14,7 @@ FreePBX is now reachable at https://IP_ADDRESS/freepbx from green interfaces. To
 Backup
 ======
 
-Since FreePBX configuration is stored in MariaDB, database dump are split inside data and configuration backip:
+Since FreePBX configuration is stored in MariaDB, database dump are split inside data and configuration backup:
 
 * configuration backup: contains the ``asterisk`` db with all configurations (extensions, trunks, etc.)
 * data backup: contanins the ``asteriskcdrdb`` db containg all PBX events
@@ -24,7 +24,7 @@ Open services from external networks
 
 IAX and WebRTC access can be opened to external networks from server manager web gui -> PBX Access
 
-SIP and other ports, from command line
+SIP and other ports, from command line (Dangerous! Do it only if you know what you're doing)
 
 ::
 
@@ -124,3 +124,5 @@ If you remove ``NethServer [AD|LDAP]`` string, another entry will be created by 
 To check user synchronization, use this command: ::
 
  /usr/bin/scl enable rh-php56 -- /usr/sbin/fwconsole userman --syncall --force --verbose
+
+Syncronization need a secure connection, use SSL or enable ``STARTTLS`` in ``Account Provider`` configuration in NethServer Web GUI
