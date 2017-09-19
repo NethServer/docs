@@ -1,6 +1,6 @@
-==========
-PostgreSQL
-==========
+===================
+nethserver-postgres
+===================
 
 PostgreSQL is a database server and it listens on standard port 5432.
 

@@ -31,3 +31,4 @@ nethserver-unbound
 nethserver-freepbx
 nethserver-pulledpork
 nethserver-evebox
+nethserver-postgresql
