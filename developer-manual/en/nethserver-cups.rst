@@ -1,16 +1,16 @@
-.. _cups-section:
+===============
+nethserver-cups
+===============
 
-====
-CUPS
-====
-
-CUPS is the printer server. It converts the page descriptions produced by your application (put a paragraph here, draw a line there, and so forth) into something your printer can understand and then sends the information to the printer for printing.
+CUPS is the printer server. 
+It converts the page descriptions produced by your application 
+(put a paragraph here, draw a line there, and so forth) into something your printer can understand and then sends the information to the printer for printing.
 
 
 Configuration
 =============
 
-Use the web configuration tool http://server:631
+Use the web configuration tool: ``http://<server>:631``
 
 You'll need to create 2 printers:
 
@@ -24,13 +24,6 @@ Printer discovery
 
 CUPS uses avahi to discover network-attached printer. If you wish to use this features, just install the optional package *nethserver-avahi*.
 See :ref:`avahi-section`.
-
-Old Windows clients
-===================
-
-If you have Windows NT/2000 client, you should use this option which enable "use client driver" in smb.conf:
-
- config setprop smb UseClientDriver yes
 
 Configuration DB
 ================
@@ -48,4 +41,3 @@ Links
 
 * Offical CUPS web site: http://www.cups.org/
 * Offical AVAHI web site: http://avahi.org/
-  
