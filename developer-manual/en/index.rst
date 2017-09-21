@@ -9,7 +9,16 @@ Developer Manual
 .. image:: _static/logo.png
       :alt: NethServer
 
-**Official site**: `http://www.nethserver.org <http://www.nethserver.org>`_
+.. sidebar:: See also
+
+   * `Web site <http://www.nethserver.org>`_
+
+   * `Community <http://community.nethserver.org>`_
+
+   * `Wiki <https://wiki.nethserver.org>`_
+
+   * `Administrator manual <http://docs.nethserver.org>`_
+
 
 .. toctree::
    :maxdepth: 2

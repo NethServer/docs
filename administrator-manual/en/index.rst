@@ -8,7 +8,15 @@ Administrator Manual
     .. image:: nscom/_static/logo.png
           :alt: |product|
 
-    **Official site**: `www.nethserver.org <http://www.nethserver.org>`_
+    .. sidebar:: See also
+
+        * `Web site <http://www.nethserver.org>`_
+
+        * `Community <http://community.nethserver.org>`_
+
+        * `Wiki <https://wiki.nethserver.org>`_
+
+        * `Developer manual <http://docs.nethserver.org/projects/nethserver-devel>`_
 
 .. only:: nsent
 
