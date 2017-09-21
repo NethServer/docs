@@ -32,11 +32,11 @@ Sometime you may need to point a server to a specific release **only for testing
 NethServer
 ----------
 
-Add the specific release to ``/etc/yum/vars/nsrlease`` file.
+Add the specific release to ``/etc/yum/vars/nsrelease`` file.
 
 Example: ::
 
-  echo 7.3.1611 > /etc/yum/vars/nsrlease
+  echo 7.3.1611 > /etc/yum/vars/nsrelease
 
 CentOS
 ------
