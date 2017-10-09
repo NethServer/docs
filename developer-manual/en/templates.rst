@@ -192,6 +192,9 @@ override the existing templates by placing files in the
 ``templates-custom`` tree. This is a parallel tree to the normal templates
 hierarchy, and is normally empty. There is also a ``template-user-custom``
 tree for overriding entries in the templates-user tree.
+Be aware of overwriting all settings of a template if you copy the whole template to custom templates.
+This means, if there is an update at the original template it is overritten with your old version at custom template.
+If you only want to add a line to the config create an empty custom template and do it there.
 
 .. warning: The template-custom trees is reserved for local system overrides. Software MUST NOT install files in this tree.
 
