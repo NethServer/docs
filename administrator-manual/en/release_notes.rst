@@ -33,11 +33,32 @@ Major changes on 2017-10-XX
 
 * ISO release 7.4.1708 replaces the old ISO 7.3.1611 "update 1"
 
-* The local AD account provider applies security updates to the Samba DC
-  instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_).
-  To disable automatic updates, run the following command ::
+* The local AD account provider applies updates to the Samba DC
+  instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)
+  
+* Squid has been patched for a smoother web navigation experience when using SSL transparent proxy
 
-    config setprop nsdc AutoUpdateType disabled
+* Ntopng 3 replaces Bandwidthd, the Server Manager has a new "top talkers" 
+  page which tracks hosts network usage
+
+* Suricata can be configured with multiple categories rules
+
+* EveBox can report traffic anomalies detected by Suricata
+
+* Patched version of sssd-libwbclient package which fixes upstream bug on shared 
+  folders access
+
+* Nextcloud 12.0.3
+
+* Web antivirus based on ICAP instead of ECAP
+
+* Web filters: ufdbGuard updated to 1.33.4, small UI improvements on web
+
+* Diagtools: added speedtest
+
+* ufdbGuard updated to release 1.33.4
+
+* WebTop4 has been removed
 
 Major changes on 2017-07-31
 ---------------------------
