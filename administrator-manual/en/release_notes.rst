@@ -4,11 +4,90 @@ Release notes |version|
 
 |product| release |version|
 
-This release is based on CentOS 7.3:
-https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7
+.. only:: nscom
 
-Relevant changes since RC4:
+    - ISO release 7.4.1708 - 2017-10-XX
 
+    - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+
+    - CentOS 7 will receive security updates until 2024-06-30
+
+    - `List of changes <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_ (since 2017-01-30)
+
+    - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
+
+    - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
+
+
+.. only:: nsent
+
+    - ISO release 7.4.1708 - 2017-10-XX
+
+    - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+
+    - CentOS 7 will receive security updates until 2024-06-30
+
+
+Major changes on 2017-10-XX
+---------------------------
+
+* ISO release 7.4.1708 replaces the old ISO 7.3.1611 "update 1"
+
+* The local AD account provider applies updates to the Samba DC
+  instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)
+  Latest Samba DC version is 4.6.8
+  
+* Squid has been patched for a smoother web navigation experience when using SSL transparent proxy
+
+* Ntopng 3 replaces Bandwidthd, the Server Manager has a new "top talkers" 
+  page which tracks hosts network usage
+
+* Suricata can be configured with multiple categories rules
+
+* EveBox can report traffic anomalies detected by Suricata
+
+* Patched version of sssd-libwbclient package which fixes upstream bug on shared 
+  folders access
+
+* Nextcloud 12.0.3
+
+* Web antivirus based on ICAP instead of ECAP
+
+* Web filters: ufdbGuard updated to 1.33.4, small UI improvements on web
+
+* Diagtools: added speedtest
+
+* ufdbGuard updated to release 1.33.4
+
+* WebTop4 has been removed
+
+Major changes on 2017-07-31
+---------------------------
+
+* ISO release 7.3.1611 "update 1" replaces the previous ISO 7.3.1611 "Final"
+
+* Configuration backup page enhancement
+
+* Accounts provider page enhancement
+
+* OpenvPN: improve net2net tunnels
+
+* WebTop 5.0.7 
+
+* Backup data: basic WebDAV support for backups and storage stats
+
+* UI tweaks for IPSec tunnels
+
+* Web proxy: support divert and priority rules
+
+* NextCloud 12
+
+* Network diagnostic tools page
+
+Major changes on 2017-01-30
+---------------------------
+
+* ISO release 7.3.1611 "Final" replaces the previous ISO 7.3.1611 "RC4"
 * Installer: added new manual installation method
 * Account providers: "administrators" group has been replaced by "domain admins" group (:ref:`server_manager-section`)
 * Mail server: fix pseudonym expansion for groups
@@ -19,11 +98,6 @@ Relevant changes since RC4:
 * Firewall: fix selection of time conditions
 * IPS: update configuration for latest pulledpork release
 
-Upgrading RC4 to Final
-----------------------
-
-To upgrade a RC4 installation to Final, go to the :guilabel:`Software Center`
-page and follow Server Manager instructions.
 
 Upgrading |product| 6 to |product| |version|
 --------------------------------------------
@@ -52,24 +126,10 @@ If you want to enable user shared mailbox, execute: ::
   config setprop dovecot SharedMailboxesStatus enabled
   signal-event nethserver-mail-server-update
 
-
-Changelog
----------
-
-* `ISO Final changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_ (from 2017-01-17 to 2017-01-30)
-* `Rolling release changelog <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_ (from 2017-01-30 to 2024-06-30)
-
-Known bugs
-----------
-
-* List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
-
-* Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
-
 .. _discontinued-section:
 
 Discontinued packages
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The following packages were available in the previous 6 release and have been
 removed in 7:
