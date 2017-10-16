@@ -35,6 +35,7 @@ Major changes on 2017-10-XX
 
 * The local AD account provider applies updates to the Samba DC
   instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)
+  Latest Samba DC version is 4.6.8
   
 * Squid has been patched for a smoother web navigation experience when using SSL transparent proxy
 
