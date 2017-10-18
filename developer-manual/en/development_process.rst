@@ -245,6 +245,31 @@ Updates to RPM packages must obey the following rules:
 * RPM packages must support updates from any previous release of the same branch
 
 
+Minor release from upstream
+---------------------------
+
+On every upstream (CentOS) minor release, the QA team should check the following
+hot points before clearing the way to the new release:
+
+- Samba: authenticated access to file shares
+
+- Mail server 
+  
+  - sending and receiving mail
+  - antivirus filter on received mail
+
+- Groupware
+
+  - basic mail features
+  - access to calendars and contacts
+
+- Web proxy
+
+  - web access with transparent proxy
+  - antivirus filter on using EICAR test
+
+- Web applications (eg. NextCloud)
+
 .. _iso-releases-section:
 
 ISO releases

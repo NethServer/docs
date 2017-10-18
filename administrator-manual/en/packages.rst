@@ -51,6 +51,21 @@ message appears when software updates are available.
 
 .. only:: nscom
 
+    Updates released from upstream (CentOS) are automatically available on |product|.
+    On every minor release of CentOS, for example when updating from 7.3.1611 to 7.4.1708,
+    a banner is shown inside the Software Center to inform the user about the new release.
+    
+    Even if upstream updates can be considered safe, users should check Community forum (https://community.nethserver.org),
+    to be informed about new changes.
+
+    More info on upstream updates:
+
+    - https://wiki.centos.org/FAQ/General
+    - https://access.redhat.com/support/policy/updates/errata/
+    - https://access.redhat.com/security/updates/backporting
+    - https://access.redhat.com/security/
+
+
     .. hint:: Regularly update the installed software to fix bugs, security issues and receive new features.
     
 .. only:: nsent
