@@ -270,6 +270,8 @@ hot points before clearing the way to the new release:
 
 - Web applications (eg. NextCloud)
 
+- Asterisk with dahdi kernel modules and FreePBX 
+
 .. _iso-releases-section:
 
 ISO releases
