@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FabLab MZY <fablabmzy@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -755,7 +755,7 @@ msgstr ""
 
 #: ../../firewall.rst:262 ../../firewall.rst:265
 msgid "sNAT 1:1"
-msgstr ""
+msgstr "sNAT 1:1"
 
 #: ../../firewall.rst:264 ../../firewall.rst:267
 msgid ""
@@ -779,6 +779,8 @@ msgid ""
 "This feature only applies to traffic from the network specific host to "
 "internet."
 msgstr ""
+"Esta característica sólo se aplica al tráfico hacia internet desde un host "
+"específico"
 
 #: ../../firewall.rst:270 ../../firewall.rst:273
 msgid ""
@@ -786,12 +788,18 @@ msgid ""
 "if you need to route some specific traffic to the internal host use the port"
 " forward as usual."
 msgstr ""
+"No afecta de ningún modo al tráfico específico desde internet hacia el alias"
+" IP, pero, si necesitas enrutar tráfico hacia un host específico de la red "
+"interna, utiliza el reenvío de puertos, como de siempre."
 
 #: ../../firewall.rst:272 ../../firewall.rst:275
 msgid ""
 "If you need to route all traffic to the internal host (not recommended!) use"
 " a port forward with protocol TCP & UDP and source port 1:65535."
 msgstr ""
+"Si necesitas enrutar todo el tráfico hacia el host de la red interna (no "
+"recomendado), utiliza un reenvío de puertos con protocolos TCP/UDP y puerto "
+"de entrada 1:65535"
 
 #: ../../firewall.rst:278 ../../firewall.rst:281
 msgid ""

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -96,35 +96,35 @@ msgstr ""
 
 #: ../../access.rst:47 ../../access.rst:50
 msgid "First configuration wizard"
-msgstr "Asistente de Primera Configuracion"
+msgstr "Asistente de configuracion rápida"
 
 #: ../../access.rst:49 ../../access.rst:52
 msgid ""
 "The first time **root** logs in, the *First configuration wizard* procedure "
 "is displayed."
 msgstr ""
-"La primera vez que  **root** ingresa al sistema, el  procedimiento de *First"
-" configuration wizard* es desplegado"
+"La primera vez que  **root** acceda al sistema, el *First configuration "
+"wizard*, le guiará a través del proceso de instalación"
 
 #: ../../access.rst:52 ../../access.rst:55
 msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
 msgstr ""
-"El password root todavia esta en el valor por defecto, un cambio de password"
-" es requerido."
+"Si no ha cambiado la contraseña por defecto para el usuario root, se le "
+"pedirá que la cambie por una nueva."
 
 #: ../../access.rst:54 ../../access.rst:57
 msgid ""
 "It is possible to restore a **configuration backup**. Refer to :ref"
 ":`disaster-recovery-section` for more information."
 msgstr ""
-"Es posible recuperar un **configuration backup**. Refierase a ref:`disaster-"
-"recovery-section` para mas informacion."
+"Es posible recuperar un **configuration backup**. Consulte en ref:`disaster-"
+"recovery-section` para más información."
 
 #: ../../access.rst:57 ../../access.rst:60
 msgid "Otherwise the wizard procedure helps on setting up:"
-msgstr "De otro modo el procedimiento de asistente ayuda en la configuracion:"
+msgstr "De cualquier manera, el Asistente le ayudará en la configuración"
 
 #: ../../access.rst:59 ../../access.rst:62
 msgid "Host name"
@@ -132,7 +132,7 @@ msgstr "Nombre de Equipo"
 
 #: ../../access.rst:60 ../../access.rst:63
 msgid ":ref:`Date and time zone <date-time-section>`"
-msgstr ""
+msgstr "Fecha y zona horaria"
 
 #: ../../access.rst:61 ../../access.rst:64
 msgid "SSH port"
@@ -140,11 +140,11 @@ msgstr "Puerto SSH"
 
 #: ../../access.rst:62 ../../access.rst:65
 msgid ":ref:`Smarthost configuration <smarthost-configuration>`"
-msgstr ""
+msgstr "Configuración de Smarthost"
 
 #: ../../access.rst:63 ../../access.rst:66
 msgid ":ref:`Usage statistics <phonehome-section>`"
-msgstr ""
+msgstr "Estadísticas de uso"
 
 #: ../../access.rst:66 ../../access.rst:69
 msgid "Change the current password"

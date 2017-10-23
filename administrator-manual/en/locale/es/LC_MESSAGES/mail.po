@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -515,7 +515,7 @@ msgstr ""
 
 #: ../../mail.rst:279 ../../mail.rst:282
 msgid "Smarthost"
-msgstr ""
+msgstr "Smarthost"
 
 #: ../../mail.rst:281 ../../mail.rst:284
 msgid ""
@@ -524,6 +524,10 @@ msgid ""
 ":dfn:`smarthost`.  A smarthost accepts to relay messages under some "
 "restrictions. It could check:"
 msgstr ""
+"La página :guilabel:`Email > Smarthost` configura todos los mensajes "
+"salientes para ser dirigidos a través de un servidor SMTP especial, "
+"técnicamente llamado :dfn:`smarthost`. Un smarthost acepta reenviar los "
+"mensajes bajo algunas restricciones. Puede comprobar:"
 
 #: ../../mail.rst:286 ../../mail.rst:289
 msgid "the client IP address,"

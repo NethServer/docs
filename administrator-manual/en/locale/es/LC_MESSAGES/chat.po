@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -48,73 +48,65 @@ msgid "Messaging between users of the system"
 msgstr "Messaging between users of the system"
 
 #: ../../chat.rst:19 ../../chat.rst:22
-msgid ""
-"Possibility to divide the users into groups, according to the company or "
-"department / office"
-msgstr ""
-"Posibilidad de dividir a los usuarios en grupos, de acuerdo a la empresa o "
-"departamento / oficina"
-
-#: ../../chat.rst:20 ../../chat.rst:23
 msgid "Chat server administration"
 msgstr "Administración del servidor de Chat"
 
-#: ../../chat.rst:21 ../../chat.rst:24
+#: ../../chat.rst:20 ../../chat.rst:23
 msgid "Broadcast messages"
 msgstr "Mensajes de difusión"
 
-#: ../../chat.rst:22 ../../chat.rst:25
+#: ../../chat.rst:21 ../../chat.rst:24
 msgid "Group chat"
 msgstr "Grupo de chat"
 
-#: ../../chat.rst:23 ../../chat.rst:26
+#: ../../chat.rst:22 ../../chat.rst:25
 msgid "Offline messages"
 msgstr "Mensajes sin conexión"
 
-#: ../../chat.rst:24 ../../chat.rst:27
+#: ../../chat.rst:23 ../../chat.rst:26
 msgid "Transfer files over LAN"
 msgstr "Transferencia de archivos a través de LAN"
 
-#: ../../chat.rst:26 ../../chat.rst:29
+#: ../../chat.rst:25 ../../chat.rst:28
 msgid "All system users can access the chat using their own credentials."
 msgstr ""
 "Todos los usuarios del sistema pueden acceder al chat usando sus propias "
 "credenciales."
 
-#: ../../chat.rst:28 ../../chat.rst:31
+#: ../../chat.rst:27 ../../chat.rst:30
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
 "operational! See :ref:`join-existing-ad-section`."
 msgstr ""
 
-#: ../../chat.rst:33 ../../chat.rst:36
+#: ../../chat.rst:32 ../../chat.rst:35
 msgid "Client"
 msgstr "Cliente"
 
-#: ../../chat.rst:35 ../../chat.rst:38
+#: ../../chat.rst:34 ../../chat.rst:37
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 "Los clientes Jabber están disponibles para todas las plataformas de "
 "escritorio y móviles."
 
-#: ../../chat.rst:37 ../../chat.rst:40
+#: ../../chat.rst:36 ../../chat.rst:39
 msgid "Some widespread clients:"
 msgstr "Algunos clientes comunes:"
 
-#: ../../chat.rst:39 ../../chat.rst:42
+#: ../../chat.rst:38 ../../chat.rst:41
 msgid "Pidgin is available for Windows and Linux"
 msgstr "Pidgin está disponible para Windows y Linux"
 
-#: ../../chat.rst:40 ../../chat.rst:43
+#: ../../chat.rst:39 ../../chat.rst:42
 msgid "Adium for Mac OS X"
 msgstr "Adium para Mac OS X"
 
-#: ../../chat.rst:41 ../../chat.rst:44
+#: ../../chat.rst:40 ../../chat.rst:43
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr "BeejibelIM para Android e iOS, Xabber sólo para Android"
 
-#: ../../chat.rst:43 ../../chat.rst:46
+#: ../../chat.rst:42 ../../chat.rst:45
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
@@ -122,7 +114,7 @@ msgstr ""
 "Cuando configure el cliente, asegúrese de que TLS (o SSL) esté habilitado. "
 "Introduzca el nombre de usuario y el dominio de la máquina."
 
-#: ../../chat.rst:46 ../../chat.rst:49
+#: ../../chat.rst:45 ../../chat.rst:48
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
@@ -133,11 +125,11 @@ msgstr ""
 "especiales preconfigurados. De lo contrario, especifique la dirección del "
 "servidor en las opciones avanzadas."
 
-#: ../../chat.rst:50 ../../chat.rst:53
+#: ../../chat.rst:49 ../../chat.rst:52
 msgid "Administrators"
 msgstr "Administradores"
 
-#: ../../chat.rst:52 ../../chat.rst:55
+#: ../../chat.rst:51 ../../chat.rst:54
 msgid ""
 "All users within the group ``jabberadmins`` are considered administrators of"
 " the chat server."
@@ -145,19 +137,19 @@ msgstr ""
 "Todos los usuarios dentro del grupo ``jabberadmins`` son considerados "
 "administradores del servidor de chat."
 
-#: ../../chat.rst:54 ../../chat.rst:57
+#: ../../chat.rst:53 ../../chat.rst:56
 msgid "Administrators can:"
 msgstr "Los administradores pueden:"
 
-#: ../../chat.rst:56 ../../chat.rst:59
+#: ../../chat.rst:55 ../../chat.rst:58
 msgid "Send broadcast messages"
 msgstr "Enviar mensajes de difusión"
 
-#: ../../chat.rst:57 ../../chat.rst:60
+#: ../../chat.rst:56 ../../chat.rst:59
 msgid "Check the status of connected users"
 msgstr "Compruebe el estatus de los usuarios conectados"
 
-#: ../../chat.rst:60 ../../chat.rst:63
+#: ../../chat.rst:59 ../../chat.rst:62
 msgid ""
 "The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
 msgstr ""

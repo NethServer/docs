@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -105,23 +105,58 @@ msgstr ""
 
 #: ../../packages.rst:61 ../../packages.rst:64
 msgid ""
+"Updates released from upstream (CentOS) are automatically available on "
+"|product|. On every minor release of CentOS, for example when updating from "
+"7.3.1611 to 7.4.1708, a banner is shown inside the Software Center to inform"
+" the user about the new release."
+msgstr ""
+
+#: ../../packages.rst:65 ../../packages.rst:68
+msgid ""
+"Even if upstream updates can be considered safe, users should check "
+"Community forum (https://community.nethserver.org), to be informed about new"
+" changes."
+msgstr ""
+
+#: ../../packages.rst:68 ../../packages.rst:71
+msgid "More info on upstream updates:"
+msgstr ""
+
+#: ../../packages.rst:70 ../../packages.rst:73
+msgid "https://wiki.centos.org/FAQ/General"
+msgstr ""
+
+#: ../../packages.rst:71 ../../packages.rst:74
+msgid "https://access.redhat.com/support/policy/updates/errata/"
+msgstr ""
+
+#: ../../packages.rst:72 ../../packages.rst:75
+msgid "https://access.redhat.com/security/updates/backporting"
+msgstr ""
+
+#: ../../packages.rst:73 ../../packages.rst:76
+msgid "https://access.redhat.com/security/"
+msgstr ""
+
+#: ../../packages.rst:76 ../../packages.rst:79
+msgid ""
 "Regularly update the installed software to fix bugs, security issues and "
 "receive new features."
 msgstr ""
 "Actualiza regularmente el software instalado para corregir errores, "
 "problemas de seguridad y recibir nuevas funciones."
 
-#: ../../packages.rst:65 ../../packages.rst:68
+#: ../../packages.rst:80 ../../packages.rst:83
 msgid "Updates will be automatically installed by a scheduled procedure."
 msgstr ""
 "Las actualizaciones se instalarán automáticamente mediante un procedimiento "
 "programado."
 
-#: ../../packages.rst:72 ../../packages.rst:75
+#: ../../packages.rst:87 ../../packages.rst:90
 msgid "List of installed packages"
 msgstr "Lista de paquetes instalados"
 
-#: ../../packages.rst:74 ../../packages.rst:77
+#: ../../packages.rst:89 ../../packages.rst:92
 msgid ""
 "The complete list of installed RPM packages is available under "
 ":guilabel:`Installed > Packages`."
@@ -129,7 +164,7 @@ msgstr ""
 "La lista completa de los paquetes RPM instalados está disponible en "
 ":guilabel:`Instalado > Paquetes`."
 
-#: ../../packages.rst:77 ../../packages.rst:80
+#: ../../packages.rst:92 ../../packages.rst:95
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
 "installed into the system with the full package version."
@@ -137,11 +172,11 @@ msgstr ""
 "La sección :guilabel:`Software instalado` muestra todos los paquetes ya "
 "instalados en el sistema con la versión completa del paquete."
 
-#: ../../packages.rst:83 ../../packages.rst:86
+#: ../../packages.rst:98 ../../packages.rst:101
 msgid "Additional languages"
 msgstr "Idiomas adicionales"
 
-#: ../../packages.rst:85 ../../packages.rst:88
+#: ../../packages.rst:100 ../../packages.rst:103
 msgid ""
 "The Server Manager allows selecting the interface language at the login "
 "screen. Only installed languages are listed."
@@ -149,7 +184,7 @@ msgstr ""
 "El Administrador de servidores permite seleccionar el idioma de la interfaz "
 "en la pantalla de inicio de sesión. Sólo se muestran los idiomas instalados."
 
-#: ../../packages.rst:88 ../../packages.rst:91
+#: ../../packages.rst:103 ../../packages.rst:106
 msgid ""
 "In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
 "install the desired languages."

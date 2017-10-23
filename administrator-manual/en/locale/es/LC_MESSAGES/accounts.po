@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2017-10-23 16:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,10 +66,13 @@ msgid ""
 "The root user can configure any type of accounts provider from the "
 ":guilabel:`Accounts provider` page."
 msgstr ""
+"El usuario root puede configurar cualquier tipo de proveedor de cuentas "
+"desde la página :guilabel:`Accounts provider`."
 
 #: ../../accounts.rst:32 ../../accounts.rst:35
 msgid "Be aware of the following rule about account providers:"
 msgstr ""
+"Tenga precaución con la siguiente regla sobre el proveedor de cuentas:"
 
 #: ../../accounts.rst:34 ../../accounts.rst:37
 msgid ""
@@ -111,6 +114,9 @@ msgid ""
 " reversible**. Also the system will forbid any change to the FQDN after the "
 "account provider has been configured."
 msgstr ""
+"Por favor, elige correctamente el proveedor de cuentas, ya que, ésa opción, "
+"podría ser irreversible. Además, el sistema podría rechazar cualquier cambio"
+" en el FQDN después de que el proveedor de cuentas se haya configurado."
 
 #: ../../accounts.rst:54 ../../accounts.rst:57
 msgid "Choosing the right account provider"
@@ -121,6 +127,9 @@ msgid ""
 "Beside choosing to bind a remote provider or install a local one, the "
 "administrator has to decide which backend type suits his needs."
 msgstr ""
+"Aparate de elegir entre un proveedor de cuentas local o uno remoto, el "
+"administrador tiene que decidir qué tipo de backend necesita en base a sus "
+"necesidades."
 
 #: ../../accounts.rst:59 ../../accounts.rst:62
 msgid ""
@@ -162,6 +171,10 @@ msgid ""
 ":guilabel:`Accounts provider > LDAP > Install locally`. The system needs a "
 "working internet connection to download additional packages."
 msgstr ""
+"Para instalar y configurar un proveedor de cuentas local OpenLDAP, visita "
+":guilabel:`Accounts provider > LDAP > Install locally`. El sistema necesita "
+"una conexión a Internet estable para descargar paquetes adicionales durante "
+"la instalación."
 
 #: ../../accounts.rst:80 ../../accounts.rst:83
 msgid ""
@@ -169,12 +182,16 @@ msgid ""
 "the administrator will be able to manage users and groups from the "
 ":guilabel:`User and groups` page."
 msgstr ""
+"Al finalizar la instalación, el paquete es configurado automáticamente y el "
+"administrador podrá administrar los :guilabel:`User and groups`."
 
 #: ../../accounts.rst:84 ../../accounts.rst:87
 msgid ""
 "See :ref:`admin-account-section` section for more details about default "
 "administrative user and group."
 msgstr ""
+"Consulta la sección :ref:`admin-account-section` para más detalles sobre los"
+" usuarios y grupos administrativos."
 
 #: ../../accounts.rst:90 ../../accounts.rst:93
 msgid "Samba Active Directory local provider installation"
@@ -185,6 +202,9 @@ msgid ""
 "When installing Samba Active Directory as local account provider, the system"
 " needs an **additional IP address** and a **working internet connection**."
 msgstr ""
+"Durante el proceso de instalación de Samba Active Directory como proveedor "
+"de cuentas local, el sistema necesitará un direccíon IP adicional y una "
+"conexión a Internet estable."
 
 #: ../../accounts.rst:95 ../../accounts.rst:98
 msgid ""
@@ -219,12 +239,17 @@ msgid ""
 "Container can attach its virtual interface; the installation procedure can "
 "create the bridge interface automatically, if it is missing"
 msgstr ""
+"La red verde debe ser montada sobre una interfaz puente donde un contenedor "
+"Linux puede unir la interfaz virtual. El proceso de instalación podría crear"
+" esa interfaz puente automáticamente si ésta no existe"
 
 #: ../../accounts.rst:109 ../../accounts.rst:112
 msgid ""
 "To install a local Active Directory accounts provider, go to page "
 ":guilabel:`Accounts provider > Active Directory > Create a new domain`."
 msgstr ""
+"Para instalar un proveedor local de cuentas AD, ve a la página "
+":guilabel:`Accounts provider > Active Directory > Create a new domain`."
 
 #: ../../accounts.rst:112 ../../accounts.rst:115
 msgid ""
@@ -232,6 +257,9 @@ msgid ""
 "|product| acts as an authoritative DNS server for that domain. See also :ref"
 ":`dns-and-ad-domain`."
 msgstr ""
+"El nombre :guilabel:`DNS domain name` define el sufijo DNS del nuevo "
+"dominio. |product| actúa como un servidor DNS autoritario de ese dominio. "
+"Ver también :ref:`dns-and-ad-domain`."
 
 #: ../../accounts.rst:116 ../../accounts.rst:119
 msgid ""
