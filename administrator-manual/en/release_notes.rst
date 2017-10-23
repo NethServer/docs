@@ -6,13 +6,15 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.4.1708 - 2017-10-XX
+    - ISO release 7.4.1708 - 2017-10-23
 
     - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+    
+    - List of `NethServer 7 ISO releases <http://nethserver.github.io/dev/releases.html>`_
 
-    - `List of changes <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_ (since 2017-01-30)
+    - List of `changes since 2017-01-30 <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
 
     - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
 
@@ -21,21 +23,26 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.4.1708 - 2017-10-XX
+    - ISO release 7.4.1708
 
     - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2017-10-XX
+Major changes on 2017-10-23
 ---------------------------
 
-* ISO release 7.4.1708 replaces the old ISO 7.3.1611 "update 1"
+* ISO release 7.4.1708 "final" replaces the old ISOs 7.4.1708 "beta1" and 7.3.1611 "update 1"
 
 * The local AD account provider applies updates to the Samba DC
   instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)
   Latest Samba DC version is 4.6.8
+
+* The Software center page warns when a new upstream release is available 
+  (`#5355 <https://github.com/NethServer/dev/issues/5355>`_)
+  
+* Added FreePBX 14 module
   
 * Squid has been patched for a smoother web navigation experience when using SSL transparent proxy
 
@@ -45,9 +52,6 @@ Major changes on 2017-10-XX
 * Suricata can be configured with multiple categories rules
 
 * EveBox can report traffic anomalies detected by Suricata
-
-* Patched version of sssd-libwbclient package which fixes upstream bug on shared 
-  folders access
 
 * Nextcloud 12.0.3
 
@@ -69,6 +73,8 @@ Major changes on 2017-07-31
 * Configuration backup page enhancement
 
 * Accounts provider page enhancement
+
+* Migration from sme8 and upgrade from ns6 procedures
 
 * OpenvPN: improve net2net tunnels
 
