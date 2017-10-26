@@ -6,7 +6,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.4.1708 - 2017-10-23
+    - ISO release 7.4.1708 - 2017-10-26
 
     - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -30,7 +30,7 @@ Release notes |version|
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2017-10-23
+Major changes on 2017-10-26
 ---------------------------
 
 * ISO release 7.4.1708 "final" replaces the old ISOs 7.4.1708 "beta1" and 7.3.1611 "update 1"
