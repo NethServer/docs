@@ -297,18 +297,11 @@ To install the base system, run: ::
 
     To promote to the Enterprise version run the following command: ::
     
-        yum localinstall http://update.nethesis.it/nethserver/7/nethserver-register.rpm
+        yum localinstall http://update.nethesis.it/nethserver/7.4.1708/nethserver-register.rpm
 
     Proceed with :ref:`registration <registration-section>` then run the following command: ::
         
         yum update @nethserver-iso
-
-    If YUM reports problems with RPM dependencies, the system probably has installed RPMs from
-    different CentOS release. In this case, please upgade to 7.4 (beta): ::
-
-        yum install http://packages.nethserver.org/nethserver/7.4.1708/base/x86_64/Packages/nethserver-release-7-4.ns7.noarch.rpm
-        yum install http://update.nethesis.it/nethserver/7.4.1708/nethserver-register.rpm
-        /etc/cron.daily/00fixyumrepos
 
 
 .. _installation-next-steps:
