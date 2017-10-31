@@ -13,7 +13,7 @@ Bug
   resolution of the problem. For example, a process crashing under certain
   conditions.
 
-Enhancement
+Feature/Enhancement
   describe an improvement of the current code or an entire new
   feature. For example, remove an harmless warning of a running process or
   designing a new UI panel.
@@ -40,23 +40,27 @@ something like an `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
 issue only when you’re ready to write a formal description and produce
 some output object.
 
-A process for a new feature, can be something like this:
+A process for a new feature, should be something like this:
 
 * Open a new topic on http://community.nethserver.org and discuss it.
+* If the feature is complex, a dedicated wiki page could be written on 
+  https://github.com/NethServer/dev/wiki (or http://wiki.nethserver.org/).
+
+  * Create a wiki page with notes and thoughts (team contributions are welcome!).
+  * If the wiki page is a feature design document, the feature can
+    simply point to the wiki page.
+  * The wiki page should become a changelog for a new release.
+  * When the wiki page is pretty “stable” and the whole thing is well
+    outlined, a team member will create one or more new issues.
+
 * Open the issue on GitHub https://github.com/NethServer/dev/issues/new.
 
-If the feature is very complex, a dedicated wiki page could be written on
-http://wiki.nethserver.org/.
+Feature planning is kept inside https://github.com/orgs/NethServer/projects/.
+For any new feature, create a new card under the *Future* column.
+The card should contain a brief description of the feature, the link to the discussion
+and eventually links to related wiki page and issue.
 
-* Create a wiki page with notes and thoughts (team contributions are welcome!).
-* When the wiki page is pretty “stable” and the whole thing is well
-  outlined, a team member will create one or more new issues.
-* If the wiki page is a feature design document, the feature can
-  simply point to the wiki page.
-* The wiki page should become a technical documentation of the
-  feature, or a changelog for a new release.
-
-At any point in time, make sure the issue status reflects actual work.
+At any point in time, make sure the card and the issue reflect the status of actual work.
 
 Writing issues
 --------------
@@ -86,6 +90,15 @@ More information:
 * http://fedoraproject.org/wiki/Bugs_and_feature_requests
 * http://fedoraproject.org/wiki/How_to_file_a_bug_report
 
+Issue priority
+--------------
+
+Bugs should always have priority over features.
+
+The priority of a bug depends on:
+
+* security: if it's a security bug, it should have maximum priority
+* number of affected users: more affected users means more priority
 
 
 Issue tracker
