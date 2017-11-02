@@ -72,6 +72,10 @@ Current Events
   often these will be simple sigs for the Storm binary URL of the day, sigs to catch CLSID's of
   newly found vulnerable apps where we don't have any detail on the exploit, etc.
 
+Decoder-events
+  Suricata specific. These rules log normalization events related to
+  decoding.
+
 Deleted
   Rules removed from the rule set.
 
@@ -98,6 +102,9 @@ Exploit
   exploits. Generally if you're looking for a windows exploit, Veritas, etc, they'll be here.
   Things like SQL injection and the like, whie they are exploits, have their own category.
 
+Files
+  Example rules for using the file handling and extraction functionality in Suricata.
+
 FTP
   Rules for attacks, exploits, and vulnerabilities regarding FTP. Also includes basic
   none malicious FTP activity for logging purposes, such as login, etc.
@@ -106,6 +113,9 @@ Games
   Rules for the Identification of gaming traffic and attacks against those games.
   World of Warcraft, Starcraft, and other popular online games have sigs here. We don't
   intend to label these things evil, just that they're not appropriate for all environments.
+
+HTTP-Events
+  Rules to log HTTP protocol specific events, typically normal operation.
 
 Info
   General rules to track suspicious host network traffic.
@@ -171,6 +181,9 @@ SMTP
   Rules for attacks, exploits, and vulnerabilities regarding SMTP. Also included are
   rules detecting basic activity of the protocol for logging purposes.
 
+SMTP-events
+  Rules that will log SMTP operations.
+
 SNMP
   Rules for attacks, exploits, and vulnerabilities regarding SNMP. Also included are
   rules detecting basic activity of the protocol for logging purposes.
@@ -178,6 +191,9 @@ SNMP
 SQL
   Rules for attacks, exploits, and vulnerabilities regarding SQL. Also included are rules
   detecting basic activity of the protocol for logging purposes.
+
+Stream-events
+  Rules for matching TCP stream engine events.
 
 TELNET
   Rules for attacks and vulnerabilities regarding the TELNET service. Also
@@ -187,6 +203,8 @@ TFTP
   Rules for attacks and vulnerabilities regarding the TFTP service. Also included are
   rules detecting basic activity of the protocol for logging purposes.
 
+TLS-Events
+  Rules for matching on TLS events and anomal
 
 TOR
   IP Based rules for the identification of traffic to and from TOR exit nodes.
