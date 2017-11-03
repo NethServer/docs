@@ -12,7 +12,7 @@ Release notes |version|
 
     - CentOS 7 will receive security updates until 2024-06-30
     
-    - List of `NethServer 7 ISO releases <http://nethserver.github.io/dev/releases.html>`_
+    - :ref:`nscom-releases-section`
 
     - List of `changes since 2017-01-30 <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
 

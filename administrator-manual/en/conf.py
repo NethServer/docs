@@ -85,7 +85,8 @@ if tags.has('nsent'):
     html_favicon = 'nsent/_static/favicon.ico' 
     html_static_path = ['nsent/_static']
     exclude_patterns.extend([
-        'webvirtmgr.rst'
+        'webvirtmgr.rst',
+        'nscom_*.rst'
     ])
     rst_prolog = """
 .. |product| replace:: NethServer Enterprise
@@ -160,7 +161,3 @@ elif tags.has('nscom'):
         ('index', 'nethserver', u'NethServer Documentation',
          [u'Nethesis'], 1)
     ]
-
-
-
-
