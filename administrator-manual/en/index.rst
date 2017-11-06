@@ -120,7 +120,7 @@ Appendix
    migration
    upgrade
    license
-
+   nscom_releases
 
 .. only:: nscom
 
