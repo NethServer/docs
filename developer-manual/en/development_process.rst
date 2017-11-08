@@ -14,14 +14,14 @@ Bug
   conditions.
 
 Feature/Enhancement
-  describe an improvement of the current code or an entire new
-  feature. For example, remove an harmless warning of a running process or
+  describes an improvement of the current code or an entirely new
+  feature. For example, remove a harmless warning of a running process or
   designing a new UI panel.
 
 Bugs and enhancements will always produce some code changes inside one or more
 git repositories.
 
-Each repository is associated to one or more RPM packages. Changes to the code
+Each repository is associated with one or more RPM packages. Changes to the code
 produce new releases of RPM packages.
 
 
@@ -35,12 +35,12 @@ occasional small fixes, like typos in translations.
 Issues are not a TODO list. Issues track the status changes of a job, the
 output of the job will be a new RPM implementing the issue itself.
 If you are exploring some esoteric paths for new feature or hunting
-something like an `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
+something like a `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
 , please write a draft wiki page with your thoughts, then create a new
 issue only when you’re ready to write a formal description and produce
 some output object.
 
-A process for a new feature, should be something like this:
+A process for a new feature should be something like this:
 
 * Open a new topic on http://community.nethserver.org and discuss it.
 * If the feature is complex, a dedicated wiki page could be written on 
@@ -173,7 +173,7 @@ After the *QA member* has completed the testing phase:
 
 * Uploads the RPM to *updates* (or *base*) repository.
 
-* Pushes the *release tag* and commit to SCM
+* Pushes the *release tag* and commits to GitHub
 
 * Closes the issue, specifying the list of released RPMs
 
@@ -322,11 +322,11 @@ are not finished, furthermore upgrade to the final release will not be supported
 (but may be possible).
 
 **Beta** releases could be used in production, especially if new features are
-not used on mission critical systems. Upgrades to the final release is
+not used on mission-critical systems. Upgrades to the final release are
 supported.
 
 **Release candidates** (RC) can be run in production, all features are supposed
-to be complete and bug free. The upgrade to the final release will be minor
+to be complete and bug-free. The upgrade to the final release will be minor
 or less.
 
 
