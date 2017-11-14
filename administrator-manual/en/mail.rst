@@ -57,6 +57,12 @@ enabled by the :guilabel:`Always send a copy (Bcc)` check box.
 .. warning:: On some countries, enabling the *Always send a copy
              (Bcc)* can be against privacy laws.
 
+If the final recipient cannot be established (i.e. the recipient address does
+not exist), the message is normally rejected. Sometimes (i.e. when a mail domain
+is migrated) it could be useful to accept it and silently deliver the message to
+a catch-all mailbox. This behavior can be obtained by enabling the
+:guilabel:`Accept unknown recipients` option.
+
 .. index::
    pair: email; disclaimer
    pair: email; signature
