@@ -16,14 +16,14 @@ The purpose of this kind of backup is to quickly restore a machine in case of
 done even if the machine is already in production.
 
 **Data backup** is enabled by installing the "Backup" module and contains all
-data like user's home directories and mails. It runs every night and can be
+data such as user's home directories and mails. It runs every night and can be
 full or incremental on a weekly basis.  This backup also contains the archive of
 the configuration backup.
 
-Data backup can be saved on different destinations:
+Data backup can be saved on one destination chosen between:
 
 * USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
-* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage)(Credentials for example are: MyBindUser,domain=mydomain.com)
+* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
 * WebDAV: available on many NAS and remote servers (Use a server with a valid SSL certificate as webDAV target, otherwise the system will fail mounting the filesystem)
 
