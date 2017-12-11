@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2017-10-26 18:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../../installation.rst:91 ../../installation.rst:94
 msgid "`Etcher`_"
-msgstr ""
+msgstr "`Etcher`_"
 
 #: ../../installation.rst:92 ../../installation.rst:95
 msgid "`Win32 Disk Imager`_"
@@ -411,6 +411,9 @@ msgid ""
 " Additional languages can be installed later. See :ref:`Next steps "
 "<installation-next-steps>`."
 msgstr ""
+"El idioma por defecto en la instalación de |product| es *English (United "
+"States)*. Puedes instalar más idiomas al sistema más tarde. Ver :ref:`Next "
+"steps `."
 
 #: ../../installation.rst:223 ../../installation.rst:226
 msgid "Interactive and Manual modes"
@@ -578,6 +581,9 @@ msgid ""
 "installed RPMs from different CentOS release. In this case, please upgade to"
 " 7.4 (beta): ::"
 msgstr ""
+"Si YUM reporta problemas con las dependencias RPM, posiblemente sea debido a"
+" que el sistema haya instalado RPMs para una distribución de CentOS "
+"distinta. En ese caso, por favor, actualiza el sistema a 7.4 (beta): ::"
 
 #: ../../installation.rst:324 ../../installation.rst:327
 msgid "Next steps"

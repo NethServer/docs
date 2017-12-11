@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2017-10-26 18:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,7 +187,7 @@ msgstr ""
 
 #: ../../shared_folder.rst:96 ../../shared_folder.rst:99
 msgid "Home share"
-msgstr ""
+msgstr "Carpeta de usuario compartida"
 
 #: ../../shared_folder.rst:98 ../../shared_folder.rst:101
 msgid ""
@@ -195,29 +195,36 @@ msgid ""
 "home directory. The SMB share name correspond to the **user short name**. "
 "For example:"
 msgstr ""
+"Cada usuario de |product| tiene una carpeta personal y compartida que es "
+"mapeada a su directorio home en Unix. El nombre de la carpeta de usuario "
+"compartida corresponde al **user short name**. Por ejemplo:"
 
 #: ../../shared_folder.rst:101 ../../shared_folder.rst:104
 msgid "user short name ``john.smith``"
-msgstr ""
+msgstr "nombre de usuario ``john.smith``"
 
 #: ../../shared_folder.rst:102 ../../shared_folder.rst:105
 msgid "server name ``MYSERVER``"
-msgstr ""
+msgstr "nombre del servidor ``MYSERVER``"
 
 #: ../../shared_folder.rst:103 ../../shared_folder.rst:106
 msgid "server address ``192.168.1.2``"
-msgstr ""
+msgstr "dirección del servidor ``192.168.1.2``"
 
 #: ../../shared_folder.rst:105 ../../shared_folder.rst:108
 msgid "The SMB network address is: ::"
-msgstr ""
+msgstr "La dirección de la red SMB es: ::"
 
 #: ../../shared_folder.rst:110 ../../shared_folder.rst:113
 msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
 msgstr ""
+"Provee las credenciales de John's como se explica en :ref:`smb-access-"
+"section`"
 
 #: ../../shared_folder.rst:114 ../../shared_folder.rst:117
 msgid ""
 "The Unix home directory is created the first time the user accesses it by "
 "either SMB or SFTP/SSH protocol."
 msgstr ""
+"El directorio de usuario compartido Unix es creado la primera vez que se "
+"accede mediante los protocolos SMB o SFTP/SSH"

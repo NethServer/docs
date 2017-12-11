@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2017-10-26 18:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -34,7 +34,7 @@ msgid "|product| release |version|"
 msgstr "|product| versión |version|"
 
 #: ../../release_notes.rst:16 ../../release_notes.rst:19
-msgid "ISO release 7.4.1708 - 2017-10-23"
+msgid "ISO release 7.4.1708 - 2017-10-26"
 msgstr ""
 
 #: ../../release_notes.rst:18 ../../release_notes.rst:35
@@ -81,7 +81,7 @@ msgid "ISO release 7.4.1708"
 msgstr ""
 
 #: ../../release_notes.rst:41 ../../release_notes.rst:44
-msgid "Major changes on 2017-10-23"
+msgid "Major changes on 2017-10-26"
 msgstr ""
 
 #: ../../release_notes.rst:43 ../../release_notes.rst:46

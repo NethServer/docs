@@ -15,8 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2017-10-26 18:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr ""
 
 #: ../../freepbx.rst:10 ../../freepbx.rst:13
 msgid "FreePBX"
-msgstr ""
+msgstr "FreePBX"
 
 #: ../../freepbx.rst:12 ../../freepbx.rst:15
 msgid ""
@@ -34,26 +35,33 @@ msgid ""
 "that controls and manages :index:`Asterisk` (PBX), an open source "
 "communication server (https://www.freepbx.org/)."
 msgstr ""
+":index:`FreePBX` es un GUI (Interfaz Gráfica de Usuario) de código abierto "
+"basado en web, que controla y administra :index:`Asterisk` (PBX), un "
+"servidor de comunicaciones Open Source (https://www.freepbx.org/)."
 
 #: ../../freepbx.rst:17 ../../freepbx.rst:20
 msgid "Installation"
-msgstr ""
+msgstr "Instalación"
 
 #: ../../freepbx.rst:19 ../../freepbx.rst:22
 msgid ""
 "You can install FreePBX from the package manager of NethServer, the module "
 "named \"FreePBX\"."
 msgstr ""
+"Puedes instalar FreePBX desde el Centro de Software de NethServer, marcando "
+"el módulo llamado \"FreePBX\"."
 
 #: ../../freepbx.rst:22 ../../freepbx.rst:25
 msgid ""
 "All FreePBX configurations and data are saved inside configuration and data "
 "backup."
 msgstr ""
+"Todos los datos y configuraciones de FreePBX se guardan en la copia de "
+"seguridad de datos y configuración."
 
 #: ../../freepbx.rst:25 ../../freepbx.rst:28
 msgid "Web Access"
-msgstr ""
+msgstr "Acceso Web"
 
 #: ../../freepbx.rst:27 ../../freepbx.rst:30
 msgid ""
@@ -62,10 +70,14 @@ msgid ""
 " the access from the red interface under the \"PBX Access\" page of the "
 "|product| Server Manager."
 msgstr ""
+"Después de ser instalado, puedes acceder a FreePBX en "
+"``https://ip_address/freepbx`` desde redes verdes. También puedes configurar"
+" el acceso desde redes rojas desde la página \"PBX Access\" desde el Panel "
+"de Control de |product|."
 
 #: ../../freepbx.rst:33 ../../freepbx.rst:36
 msgid "FwConsole"
-msgstr ""
+msgstr "FwConsole"
 
 #: ../../freepbx.rst:35 ../../freepbx.rst:38
 msgid ""
@@ -78,10 +90,12 @@ msgstr ""
 
 #: ../../freepbx.rst:43 ../../freepbx.rst:46
 msgid "Advanced Documentation"
-msgstr ""
+msgstr "Documentación avanzada"
 
 #: ../../freepbx.rst:45 ../../freepbx.rst:48
 msgid ""
 "For further information you can read the FreePBX documentation at: "
 "https://wiki.freepbx.org"
 msgstr ""
+"Para más información, puedes leer la documentación de FreePBX en: "
+"https://wiki.freepbx.org"

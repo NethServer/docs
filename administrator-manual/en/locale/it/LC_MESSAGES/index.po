@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2017-10-26 18:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,20 +31,22 @@ msgstr "Manuale amministratore"
 
 #: ../../index.rst:20 ../../index.rst:23
 msgid "`Web site <http://www.nethserver.org>`_"
-msgstr ""
+msgstr "`Sito web <http://www.nethserver.org>`_"
 
 #: ../../index.rst:22 ../../index.rst:25
 msgid "`Community <http://community.nethserver.org>`_"
-msgstr ""
+msgstr "`Community <http://community.nethserver.org>`_"
 
 #: ../../index.rst:24 ../../index.rst:27
 msgid "`Wiki <https://wiki.nethserver.org>`_"
-msgstr ""
+msgstr "`Wiki <https://wiki.nethserver.org>`_"
 
 #: ../../index.rst:26 ../../index.rst:29
 msgid ""
 "`Developer manual <http://docs.nethserver.org/projects/nethserver-devel>`_"
 msgstr ""
+"`Manuale sviluppatore <http://docs.nethserver.org/projects/nethserver-"
+"devel>`_"
 
 #: ../../index.rst:32 ../../index.rst:35
 msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
