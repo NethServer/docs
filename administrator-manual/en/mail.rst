@@ -372,7 +372,7 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 **ham**.
 
 The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`Junk folder` or marking it as spam. As
+simply moving a message in and out of the :dfn:`Junk folder` or marking it as spam if your client provides such feature. As
 prerequisite, the Junk folder must be enabled from
 :guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
 "Junk" folder"` option.
