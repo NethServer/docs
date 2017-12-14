@@ -372,7 +372,7 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 **ham**.
 
 The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`Junk folder`. As
+simply moving a message in and out of the :dfn:`Junk folder` or marking it as spam if your client provides such feature. As
 prerequisite, the Junk folder must be enabled from
 :guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
 "Junk" folder"` option.
@@ -386,6 +386,16 @@ prerequisite, the Junk folder must be enabled from
 By default, all users can train the filters using this technique.  If
 a group called ``spamtrainers`` exists, only users in this group
 will be allowed to train the filters.
+
+The bayesian filter training applies to all users on the system, not only the user that marked an email as spam or ham.
+
+It is important to understand how the Bayesian tests really work:
+
+* It does not outright flag messages as spam if they contain a specific subject, or sender address. It is only collecting specific characteristics of the message.
+
+* A message can only be flagged one time. If the same message is flagged multiple times, it will not affect anything as the dynamic tests have already been trained by that message.
+
+* The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).** 
 
 .. note:: It is a good habit to frequently check the Junk folder
           in order to not losing email wrongly recognized as spam.
