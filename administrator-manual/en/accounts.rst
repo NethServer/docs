@@ -285,7 +285,7 @@ After the prerequisite is fulfilled, proceed to the page
                 password for it.
                 
 Once |product| has successfuly joined AD, specify the **dedicated user account**
-credentials in :guilabel:`Accounts provider > Read-only bind credentials`.
+credentials in :guilabel:`Accounts provider > Authentication credentials for LDAP applications`.
 
 .. _bind-remote-ldap-section:
 
