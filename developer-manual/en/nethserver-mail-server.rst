@@ -52,6 +52,7 @@ Dovecot example: ::
         SpamFolder=Junk
         SpamRetentionTime=15d
         TlsSecurity=required
+        RestrictedAccessGroup=
 
 
 Properties:
@@ -72,7 +73,7 @@ Properties:
 * ``SpamRetentionTime Nd`` Expunge messages in SpamFolder if older than the given time span. "d" is for days.
 * ``TlsSecurity {optional,required}`` 
   controls dovecot ``disable_plaintext_auth`` parameter: if set to ``required`` clear-text authentication methods are disabled, while ``optional`` enables them.
-
+* ``RestrictedAccessGroup`` The value is a long group name, like ``domain admins@mydomain.tld``. Members of the given group can login to dovecot services only from trusted networks.
 
 
 Domains database
@@ -216,3 +217,21 @@ Example: allow insert and expunge to user goofy on public mailbox testshare (dom
 
   doveadm acl set -u goofy@local.nethserver.org Public/testshare "user=goofy@local.nethserver.org" insert expunge
 
+The /etc/dovecot/ipaccess.conf file
+-----------------------------------
+
+The ``dovecot-postlogin`` script enforces an IP-based access policy to dovecot
+services when the file ``/etc/dovecot/ipaccess.conf`` exists and is readable.
+
+The file is composed by comments and records. Comments are line starting with ``#``,
+whilst records have the following syntax: ::
+
+    <long group name> = <cidr list>
+
+A *long group name* is the group name with domain suffix, like ``domain
+admins@mydomain.tld``.
+
+The *cidr list* is a comma-separated list of IP and network addresses in CIDR
+format, like ``127.0.0.1, 192.168.1.0/24, 10.1.1.2``. The binary conversion is
+implemented by the ``NetAddr::IP`` Perl module. See ``perldoc NetAddr::IP`` for
+details.

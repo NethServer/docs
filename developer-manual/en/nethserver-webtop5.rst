@@ -50,6 +50,20 @@ Example: ::
 
 Configuration can be applied using the ``nethserver-webtop5-update`` event.
 
+Reset admin password
+====================
+
+1. Access the database ::
+
+     su - postgres -c 'psql webtop5'
+
+2. Copy & paste the following query: ::
+
+     UPDATE "core"."local_vault" SET "password_type"='PLAIN', "password"='admin' WHERE ("domain_id"='*') AND ("user_id"='admin');
+
+3. Access the web interface using ``admin`` user with password ``admin``.
+
+
 Troubleshooting
 ===============
 
