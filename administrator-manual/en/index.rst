@@ -92,6 +92,7 @@ Modules
    weekly_report
    hotspot
    freepbx
+   hotsync
 
 .. only:: nscom
 
