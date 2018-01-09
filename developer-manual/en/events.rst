@@ -369,8 +369,4 @@ Invoking a validator::
 
 Eg::
 
-  validate user-name goofy</pre>
-
-h2. Implementation
-
-See #303.
+  validate user-name goofy
