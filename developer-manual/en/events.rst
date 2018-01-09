@@ -220,8 +220,7 @@ add the user.
 
 .. note:: Action scripts should normally take at most two
   arguments. The first is always the event name. The second optional
-  argument is a key into one of the databases. Events are not function
-  calls.
+  argument is a key into one of the databases.
 
 Events are not currently serialized. In most cases overlapping events
 will not cause issues, but caution should be exercised when events are
