@@ -111,7 +111,7 @@ Best practices
    :maxdepth: 2
 
    third_party
-
+   
 Appendix
 --------
 
@@ -129,7 +129,12 @@ Appendix
     -------
 
     * :ref:`General index <genindex>`
-    * :ref:`Search <search>`
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   ui/*
 
 
 
