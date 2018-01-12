@@ -9,13 +9,119 @@ Building RPMs
 =============
 
 To build NethServer RPMs a few methods are provided:
+ - ``travis-ci.org`` automated build with a ``.travis.yml`` file inside each repository
  - ``nethserver-mock`` with the Mock [#Mock]_ configuration files pointing to NethServer YUM repositories
- - ``travis-ci.org`` automating build with a ``.travis.yml`` file inside each repository
+
+travis-ci.org
+=============
+
+`travis-ci.org <https://travis-ci.org>`_ automatically builds RPMs and uploads
+them to ``packages.nethserver.org``.
+
+Configuration
+-------------
+
+To automate the RPM build process using Travis CI
+
+* create a ``.travis.yml`` file inside the source code repository hosted on
+  GitHub
+
+* the `NethServer repository <https://travis-ci.org/NethServer/>`_ must
+  have Travis CI builds enabled
+
+The list of enabled repositories is available at `NethServer page on
+travis-ci.org <https://travis-ci.org/NethServer/>`_.
+
+This is an example of ``.travis.yml`` contents: ::
+
+  ---
+  language: ruby
+  services:
+      - docker
+  branches:
+      only:
+          - master
+  env:
+    global:
+      - DEST_ID=core
+      - NSVER=7
+      - DOCKER_IMAGE=nethserver/makerpms:${NSVER}
+      - >
+          EVARS="
+          -e DEST_ID
+          -e TRAVIS_BRANCH
+          -e TRAVIS_BUILD_ID
+          -e TRAVIS_PULL_REQUEST_BRANCH
+          -e TRAVIS_PULL_REQUEST
+          -e TRAVIS_REPO_SLUG
+          -e TRAVIS_TAG
+          -e NSVER
+          -e VERSIONS_PACK
+          -e STAGES_PACK
+          -e UPLOAD_DEST
+          "
+  script: >
+      docker run -ti --name makerpms ${EVARS}
+      --hostname b${TRAVIS_BUILD_NUMBER}.nethserver.org
+      --volume $PWD:/srv/makerpms/src:ro ${DOCKER_IMAGE} makerpms-travis -s *.spec
+      && docker commit makerpms nethserver/build
+      && docker run -ti ${EVARS}
+      -e SECRET
+      -e SECRET_URL
+      -e AUTOBUILD_SECRET
+      -e AUTOBUILD_SECRET_URL
+      nethserver/build uploadrpms-travis
+
+Usage
+-----
+
+Travis CI builds are triggered automatically when:
+
+* one or more commits are pushed to the `master` branch of the NethServer repository, as
+  stated in the ``.travis.yml`` file above by the ``branches`` key
+
+* A *pull request* is opened from a NethServer repository fork or it is updated
+  by submitting new commits
+
+After a successful build, the RPM is uploaded to ``packages.nethserver.org``,
+according to the ``DEST_ID`` variable value. Supported values are ``core`` for
+NethServer core packages, and ``forge`` for NethForge packages.
+
+If ``DEST_ID=core``:
+
+* Builds triggered by pull requests are uploaded to the ``autobuild`` [#Autobuild]_ repository
+
+* Builds triggered by commits pushed to master are uploaded to the ``testing``
+  [#Testing]_ repository. If a git tag is on the last available commit,
+  the upload destination is the ``updates`` repository.
+
+If ``DEST_ID=forge``:
+
+* Pull requests are uploaded to ``nethforge-autobuild``
+
+* Branch builds are uploaded to ``nethforge-testing``, whilst tagged builds are uploaded to ``nethforge``
+
+Pull requests are commented automatically by ``nethbot``
+[#NethBot]_ with the links to available RPMs.
+
+Also issues are commented by ``nethbot`` if the following rules are respected in git commit messages:
+
+1. The issue reference (e.g. ``NethServer/dev#1234``) is present in the merge
+   commit of pull requests
+
+2. The issue reference is added to standalone commits (should be rarely used)
+
+.. index::
+   pair: Sign; RPM
+
 
 .. _rpm_prepare_env:
 
 nethserver-mock
 ===============
+
+The ``nethserver-mock`` package provides some scripts to ease the process of
+building and releasing RPMs.
 
 Configuring the environment
 ---------------------------
@@ -27,7 +133,9 @@ On **NethServer**, install ``nethserver-mock`` package, by typing: ::
 On **Fedora**, and other RPM-based distros run the command: ::
 
   yum localinstall <URL>
-  or
+
+Or ::
+
   dnf install <URL>
 
 where <URL> is http://packages.nethserver.org/nethserver/7.3.1611/base/x86_64/Packages/nethserver-mock-1.3.2-1.ns7.noarch.rpm at the time of writing.
@@ -95,59 +203,8 @@ fetched by the ``spectool`` command.
 If the file :file:`SHA1SUM` exists in the same directory of the
 :file:`.spec` file the tarballs are checked against it.
 
-travis-ci.org
-=============
-
-To automate the build process using travis-ci.org platform create a ``.travis.yml`` file inside
-your github repository that containts the minimal steps to build your package: ::
-  ---
-  language: ruby
-  services:
-      - docker
-  branches:
-      only:
-          - master
-  env:
-    global:
-      - DEST_ID=core
-      - NSVER=7
-      - DOCKER_IMAGE=nethserver/makerpms:${NSVER}
-      - >
-          EVARS="
-          -e DEST_ID
-          -e TRAVIS_BRANCH
-          -e TRAVIS_BUILD_ID
-          -e TRAVIS_PULL_REQUEST_BRANCH
-          -e TRAVIS_PULL_REQUEST
-          -e TRAVIS_REPO_SLUG
-          -e TRAVIS_TAG
-          -e NSVER
-          -e VERSIONS_PACK
-          -e STAGES_PACK
-          -e UPLOAD_DEST
-          "
-  script: >
-      docker run -ti --name makerpms ${EVARS}
-      --hostname b${TRAVIS_BUILD_NUMBER}.nethserver.org
-      --volume $PWD:/srv/makerpms/src:ro ${DOCKER_IMAGE} makerpms-travis -s *.spec
-      && docker commit makerpms nethserver/build
-      && docker run -ti ${EVARS}
-      -e SECRET
-      -e SECRET_URL
-      -e AUTOBUILD_SECRET
-      -e AUTOBUILD_SECRET_URL
-      nethserver/build uploadrpms-travis
-
-This kind of builds are triggered automatically when a `pull request` is created from a `fork` of your github repository,
-and the travis-ci platform upload the builded rpms inside the ``autobuild`` [#Autobuild]_ repository.
-
-If the owner of the ``nethserver`` github repository, merge your `pull request` in the ``master`` branch, another automatic build is triggered
-and the builded rpms are uploaded inside the ``testing`` [#Testing]_ repository.
-
-Both github's pull requests and issues are commented by our ``nethbot`` [#NethBot]_ with the list of builded RPMs with their urls.
-
 Development and Release builds
-==============================
+------------------------------
 
 During the development, a package can be rebuilt frequently:
 incrementing build numbers and unique release identifiers are useful
@@ -173,11 +230,8 @@ Other differences in *development* from *release* are
   hash are extracted from ``git describe`` and prepended to the
   ``%dist`` macro.
 
-.. index::
-   pair: Sign; RPM
-
 Signing RPMs
-============
+------------
 
 The command ``sign-rpms`` is a wrapper around ``rpm --resign``
 command.  Its advantage is it can read a password for the GPG
@@ -185,17 +239,18 @@ signature from the filesystem. Sample invocation::
 
    sign-rpms -f ~/.secret -k ABCDABCD
 
+The signature is added automatically by ``packages.nethserver.org``.
 
 Creating a release tag
 ======================
 
-The :command:`release-tag` command executes the following workflow:
+The :command:`release-tag` command, provided by the ``nethserver-mock`` RPM, executes the following workflow:
 
-* Reads the git log history and fetches related issues from the issue
+* reads the git log history and fetches related issues from the issue
   tracker web site.
-* Update the ``%changelog`` section in the :file:`spec` file.
-* Commit changes to the :file:`spec` file.
-* Tag the commit (with GPG signature).
+* updates the ``%changelog`` section in the :file:`spec` file.
+* commits changes to the :file:`spec` file.
+* tags the commit (with optional GPG signature).
 
 This is the help output::
 
@@ -214,7 +269,15 @@ Usage of ``-k`` option is optional.
 The :file:`.spec` argument is optional: if not provided the first
 :file:`.spec` file in the current directory is processed.
 
+To push the tagged release to GitHub (and possibly trigger an automated build)
+ensure to add the ``--follow-tags`` option to ``git push`` invocation. For
+instance: ::
 
+  git push --follow-tags
+
+To make ``--follow-tags`` permanent run this command: ::
+  
+  git config --global push.followTags true
 
 .. rubric:: References
 

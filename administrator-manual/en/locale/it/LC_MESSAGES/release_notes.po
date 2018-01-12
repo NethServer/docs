@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-10 15:19+0100\n"
+"POT-Creation-Date: 2018-01-12 11:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +53,7 @@ msgstr "CentOS 7 riceverà aggiornamenti di sicurezza fino al 30/06/2024"
 
 #: ../../release_notes.rst:22 ../../release_notes.rst:25
 msgid ":ref:`nscom-releases-section`"
-msgstr ""
+msgstr ":ref:`nscom-releases-section`"
 
 #: ../../release_notes.rst:24 ../../release_notes.rst:27
 msgid ""
