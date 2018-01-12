@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-10 15:19+0100\n"
+"POT-Creation-Date: 2018-01-12 11:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -385,15 +385,15 @@ msgstr ""
 "WebTop, se configurato. Altrimenti verrà utilizzato il fuso orario del "
 "sistema."
 
-#: ../../webtop5.rst:200 ../../webtop5.rst:203
+#: ../../webtop5.rst:202 ../../webtop5.rst:205
 msgid "WebTop vs SOGo"
 msgstr "WebTop vs SOGo"
 
-#: ../../webtop5.rst:202 ../../webtop5.rst:205
+#: ../../webtop5.rst:204 ../../webtop5.rst:207
 msgid "WebTop and SOGo can be installed on the same machine."
 msgstr "WebTop e SOGo possono essere installati sulla stessa macchina."
 
-#: ../../webtop5.rst:204 ../../webtop5.rst:207
+#: ../../webtop5.rst:206 ../../webtop5.rst:209
 msgid ""
 "ActiveSync is enabled by default on SOGo and WebTop, but if both packages "
 "are installed, SOGo will take precedence."
@@ -401,15 +401,15 @@ msgstr ""
 "ActiveSync è abilitato di default sia su SOGo che su WebTop, ma se sono "
 "entrambi installati, SOGo avrà la precedenza."
 
-#: ../../webtop5.rst:207 ../../webtop5.rst:210
+#: ../../webtop5.rst:209 ../../webtop5.rst:212
 msgid "To disable ActiveSync on SOGo: ::"
 msgstr "Per disabilitare ActiveSync su SOGo: ::"
 
-#: ../../webtop5.rst:212 ../../webtop5.rst:215
+#: ../../webtop5.rst:214 ../../webtop5.rst:217
 msgid "To disable ActiveSync on WebTop: ::"
 msgstr "Per disabilitare ActiveSync su WebTop: ::"
 
-#: ../../webtop5.rst:218 ../../webtop5.rst:221
+#: ../../webtop5.rst:220 ../../webtop5.rst:223
 msgid ""
 "All incoming mail filters configured within SOGo, must be manually recreated"
 " inside WebTop interface. This also applies if the user is switching from "
@@ -419,11 +419,11 @@ msgstr ""
 "manualmente all’interno dell’interfaccia di WebTop. La stessa cosa si "
 "applica se l’utente sta effettuando il passaggio inverso da WebTop a SOGo."
 
-#: ../../webtop5.rst:223 ../../webtop5.rst:226
+#: ../../webtop5.rst:225 ../../webtop5.rst:228
 msgid "Google and Dropbox integration"
 msgstr "Integrazione Google e Dropbox"
 
-#: ../../webtop5.rst:225 ../../webtop5.rst:228
+#: ../../webtop5.rst:227 ../../webtop5.rst:230
 msgid ""
 "Users can add their own Google Drive and Dropbox accounts inside WebTop. "
 "Before proceeding, the administrator must create a pair of API access "
@@ -433,11 +433,11 @@ msgstr ""
 "all’interno di WebTop. Prima di procedere, l’amministratore deve creare una "
 "coppia di credenziali per l’accesso alle API."
 
-#: ../../webtop5.rst:229 ../../webtop5.rst:232
+#: ../../webtop5.rst:231 ../../webtop5.rst:234
 msgid "Google API"
 msgstr "Google API"
 
-#: ../../webtop5.rst:231 ../../webtop5.rst:234
+#: ../../webtop5.rst:233 ../../webtop5.rst:236
 msgid ""
 "Access https://console.developers.google.com/project and create a new "
 "project"
@@ -445,7 +445,7 @@ msgstr ""
 "Accedere a https://console.developers.google.com/project e creare un nuovo "
 "progetto"
 
-#: ../../webtop5.rst:232 ../../webtop5.rst:235
+#: ../../webtop5.rst:234 ../../webtop5.rst:237
 msgid ""
 "Create new credentials by selecting \"OAuth 2.0 clientID\" type and remember"
 " to compile \"OAuth consent screen\" section"
@@ -453,7 +453,7 @@ msgstr ""
 "Creare una nuova coppia di credenziali di tipo “OAuth 2.0 clientID” avendo "
 "cura di compilare la sezione “OAuth consent screen”"
 
-#: ../../webtop5.rst:234 ../../webtop5.rst:237
+#: ../../webtop5.rst:236 ../../webtop5.rst:239
 msgid ""
 "Insert new credentials (Client ID e Client Secret) inside WebTop "
 "configuration"
@@ -461,13 +461,13 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (Client ID e Client Secret) "
 "nella configurazione di WebTop"
 
-#: ../../webtop5.rst:236 ../../webtop5.rst:251 ../../webtop5.rst:239
-#: ../../webtop5.rst:254
+#: ../../webtop5.rst:238 ../../webtop5.rst:253 ../../webtop5.rst:241
+#: ../../webtop5.rst:256
 msgid "From shell, access webtop database: ::"
 msgstr "Da shell accedere al database webtop: ::"
 
-#: ../../webtop5.rst:240 ../../webtop5.rst:255 ../../webtop5.rst:243
-#: ../../webtop5.rst:258
+#: ../../webtop5.rst:242 ../../webtop5.rst:257 ../../webtop5.rst:245
+#: ../../webtop5.rst:260
 msgid ""
 "Execute the queries, using the corresponding value in place of ``__value__``"
 " variable: ::"
@@ -475,16 +475,16 @@ msgstr ""
 "Eseguire le query, sostituendo al campo ``__value__`` il valore "
 "corrispondente: ::"
 
-#: ../../webtop5.rst:246 ../../webtop5.rst:249
+#: ../../webtop5.rst:248 ../../webtop5.rst:251
 msgid "Dropbox API"
 msgstr "Dropbox API"
 
-#: ../../webtop5.rst:248 ../../webtop5.rst:251
+#: ../../webtop5.rst:250 ../../webtop5.rst:253
 msgid "Access https://www.dropbox.com/developers/apps and create a new app"
 msgstr ""
 "Accedere a https://www.dropbox.com/developers/apps e creare una nuova app"
 
-#: ../../webtop5.rst:249 ../../webtop5.rst:252
+#: ../../webtop5.rst:251 ../../webtop5.rst:254
 msgid ""
 "Insert the new credential key pair (App key e App secret) inside WebTop "
 "configuration"
@@ -492,7 +492,7 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (App key e App secret) nella"
 " configurazione di WebTop."
 
-#: ../../webtop5.rst:261 ../../webtop5.rst:264
+#: ../../webtop5.rst:263 ../../webtop5.rst:266
 msgid ""
 "If you need to raise the user limit, please read the official Dropbox "
 "documentation."
