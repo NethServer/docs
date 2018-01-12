@@ -31,7 +31,7 @@ Terminology
 Installation
 ============
 
-Install nethserver-hosync on both MASTER and SLAVE
+Install nethserver-hotsync on both MASTER and SLAVE
 
 Configuration
 =============
