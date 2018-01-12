@@ -40,9 +40,9 @@ Install nethserver-hotsync on both MASTER and SLAVE, execute from command line: 
 
   yum install nethserver-hotsync
 
-If you want to install Cockpit-based web interface, execute also: ::
+If you want to tests the Cockpit-based web interface, execute also: ::
 
-  yum install nethserver-cockpit-hotsync
+  yum --enablerepo=nethserver-testing install nethserver-cockpit-hotsync
 
 Configuration
 =============
