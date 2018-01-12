@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 18:26+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -45,11 +45,11 @@ msgstr ""
 "Per creare, modificare e rimuovere una cartella condivisa andare alla pagina"
 " :guilabel:`Cartelle condivise`."
 
-#: ../../shared_folder.rst:23 ../../shared_folder.rst:26
+#: ../../shared_folder.rst:25 ../../shared_folder.rst:28
 msgid "Authorizations"
 msgstr "Permessi di accesso"
 
-#: ../../shared_folder.rst:25 ../../shared_folder.rst:28
+#: ../../shared_folder.rst:27 ../../shared_folder.rst:30
 msgid ""
 "If **Active directory** is selected as account provider, a shared folder is "
 "owned by a group of users (:guilabel:`Owning group`). Each member of the "
@@ -66,7 +66,7 @@ msgstr ""
 "semplice modello di permessi è basato sui tradizionali permessi del "
 "filesystem di UNIX."
 
-#: ../../shared_folder.rst:32 ../../shared_folder.rst:35
+#: ../../shared_folder.rst:34 ../../shared_folder.rst:37
 msgid ""
 "Access privileges can be refined further with the :guilabel:`ACL` tab, "
 "allowing individual users and other groups to gain read and write "
@@ -76,15 +76,36 @@ msgstr ""
 ":guilabel:`ACL`, consentendo a singoli utenti o ad altri gruppi i permessi "
 "di lettura o scrittura."
 
-#: ../../shared_folder.rst:35 ../../shared_folder.rst:38
+#: ../../shared_folder.rst:37 ../../shared_folder.rst:40
 msgid ""
-"At any time, the :guilabel:`Reset permissions` button propagates the shared "
-"folder UNIX permissions and Posix ACLs to its contents."
+"ACLs can also be set on individual files and directories from a Windows "
+"client, if the user has enough permissions -- see section  :ref:`smb-perms-"
+"section` for details."
 msgstr ""
-"In ogni momento, il pulsante :guilabel:`Reimposta permessi` propaga i "
-"permessi UNIX e ACL POSIX della cartella condivisa alle sottodirectory."
+"Le ACL possono anche essere impostate su singoli file e directory da un "
+"client Windows, se l'utente dispone delle sufficienti autorizzazioni - fare "
+"riferimento alla sezione :ref:`smb-perms-section` per i dettagli."
 
 #: ../../shared_folder.rst:43 ../../shared_folder.rst:46
+msgid ""
+"Some ACLs settings supported by Windows clients cannot be translated to "
+"POSIX ACLs supported by |product|, thus they will be lost when they are "
+"applied"
+msgstr ""
+"Alcune impostazioni ACL supportate dai client Windows non possono essere "
+"convertite in ACL POSIX supportate da |product|, quindi andranno perse in "
+"fase di propagazione"
+
+#: ../../shared_folder.rst:46 ../../shared_folder.rst:49
+msgid ""
+"At any time, the :guilabel:`Reset permissions` button propagates the shared "
+"folder UNIX permissions and POSIX ACLs to its contents."
+msgstr ""
+"In qualsiasi momento, il pulsante :guilabel:`Reimposta permessi` propaga le "
+"autorizzazioni UNIX e le ACL POSIX alla cartella condivisa ai suoi "
+"contenuti."
+
+#: ../../shared_folder.rst:49 ../../shared_folder.rst:52
 msgid ""
 "If :guilabel:`Guest access` is enabled, any provided authentication "
 "credentials are considered valid."
@@ -92,7 +113,7 @@ msgstr ""
 "Se è attiva l’opzione :guilabel:`Accesso guest`, sono considerate valide "
 "qualsiasi credenziali vengano presentate."
 
-#: ../../shared_folder.rst:46 ../../shared_folder.rst:49
+#: ../../shared_folder.rst:52 ../../shared_folder.rst:55
 msgid ""
 "If an **LDAP** account provider is selected or there is no account provider "
 "at all, any access to shared folders is considered as *Guest access* so that"
@@ -102,11 +123,11 @@ msgstr ""
 "c'è autenticazione per le cartelle condivise, che saranno leggibili e "
 "scrivibili da tutti."
 
-#: ../../shared_folder.rst:53 ../../shared_folder.rst:56
+#: ../../shared_folder.rst:59 ../../shared_folder.rst:62
 msgid "Network access"
 msgstr "Accesso alla rete"
 
-#: ../../shared_folder.rst:55 ../../shared_folder.rst:58
+#: ../../shared_folder.rst:61 ../../shared_folder.rst:64
 msgid ""
 "SMB/CIFS is a widely adopted protocol that allows to share files across a "
 "computer network. The shared folder name becomes the SMB \"share name\"."
@@ -115,14 +136,14 @@ msgstr ""
 "una rete di computer.  Il nome della cartella condivisa diventa il nome "
 "della condivisione SMB."
 
-#: ../../shared_folder.rst:58 ../../shared_folder.rst:61
+#: ../../shared_folder.rst:64 ../../shared_folder.rst:67
 msgid ""
 "For instance, the SMB network addresses of the ``docs`` share could be ::"
 msgstr ""
 "Per esempio, l'indirizzo di rete SMB per la condivisione ``docs`` potrebbe "
 "essere ::"
 
-#: ../../shared_folder.rst:65 ../../shared_folder.rst:68
+#: ../../shared_folder.rst:71 ../../shared_folder.rst:74
 msgid ""
 "Authenticated access to shared folders is available with an Active Directory"
 " accounts provider. LDAP provider allows guest access only."
@@ -131,7 +152,7 @@ msgstr ""
 "provider Active Directory. Il provider LDAP consente solo l'accesso come "
 "guest."
 
-#: ../../shared_folder.rst:68 ../../shared_folder.rst:71
+#: ../../shared_folder.rst:74 ../../shared_folder.rst:77
 msgid ""
 "When accessing a SMB share, some user interfaces provide a single user name "
 "field. In that case, specify the **user short name** prefixed with the "
@@ -146,7 +167,7 @@ msgstr ""
 "fosse \"john.smith\", la stringa da utilizzare per accedere alla "
 "condivisione SMB sarebbe: ::"
 
-#: ../../shared_folder.rst:76 ../../shared_folder.rst:79
+#: ../../shared_folder.rst:82 ../../shared_folder.rst:85
 msgid ""
 "On the contrary, some applications provide separate input fields for the "
 "NetBIOS domain name and the user name; in that case fill in the input fields"
@@ -156,11 +177,11 @@ msgstr ""
 " nome di dominio NetBIOS e per il nome utente; in tal caso riempire i campi "
 "separatamente."
 
-#: ../../shared_folder.rst:81 ../../shared_folder.rst:84
+#: ../../shared_folder.rst:87 ../../shared_folder.rst:90
 msgid "Network recycle bin"
 msgstr "Cestino di rete"
 
-#: ../../shared_folder.rst:83 ../../shared_folder.rst:86
+#: ../../shared_folder.rst:89 ../../shared_folder.rst:92
 msgid ""
 "If the option :guilabel:`Network recycle bin` is enabled, removed files are "
 "actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
@@ -173,11 +194,11 @@ msgstr ""
 "nome` assicura che i file nel cestino abbiano sempre nomi distinti, "
 "impedendo la sovrascrittura."
 
-#: ../../shared_folder.rst:89 ../../shared_folder.rst:92
+#: ../../shared_folder.rst:95 ../../shared_folder.rst:98
 msgid "Hide a shared folder"
 msgstr "Nascondere una cartella condivisa"
 
-#: ../../shared_folder.rst:91 ../../shared_folder.rst:94
+#: ../../shared_folder.rst:97 ../../shared_folder.rst:100
 msgid ""
 "If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
 "This does not affect the permission to use this resource."
@@ -186,11 +207,11 @@ msgstr ""
 "elencata fra le cartelle disponibili. Questa opzione non influisce sui "
 "permessi di accesso della cartella."
 
-#: ../../shared_folder.rst:96 ../../shared_folder.rst:99
+#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
 msgid "Home share"
 msgstr "Share home"
 
-#: ../../shared_folder.rst:98 ../../shared_folder.rst:101
+#: ../../shared_folder.rst:104 ../../shared_folder.rst:107
 msgid ""
 "Each |product| user has a personal shared folder that is mapped to his Unix "
 "home directory. The SMB share name correspond to the **user short name**. "
@@ -200,32 +221,139 @@ msgstr ""
 "home directory Unix. Il nome SMB della share corrisponde allo **user short "
 "name**. Ad esempio:"
 
-#: ../../shared_folder.rst:101 ../../shared_folder.rst:104
+#: ../../shared_folder.rst:107 ../../shared_folder.rst:110
 msgid "user short name ``john.smith``"
 msgstr "user short name ``john.smith``"
 
-#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
+#: ../../shared_folder.rst:108 ../../shared_folder.rst:111
 msgid "server name ``MYSERVER``"
 msgstr "nome server ``MYSERVER``"
 
-#: ../../shared_folder.rst:103 ../../shared_folder.rst:106
+#: ../../shared_folder.rst:109 ../../shared_folder.rst:112
 msgid "server address ``192.168.1.2``"
 msgstr "indirizzo server ``192.168.1.2``"
 
-#: ../../shared_folder.rst:105 ../../shared_folder.rst:108
+#: ../../shared_folder.rst:111 ../../shared_folder.rst:114
 msgid "The SMB network address is: ::"
 msgstr "L'indirizzo di rete SMB è: ::"
 
-#: ../../shared_folder.rst:110 ../../shared_folder.rst:113
+#: ../../shared_folder.rst:116 ../../shared_folder.rst:119
 msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
 msgstr ""
 "Fornire le credenziali dell'utente John come spiegato nella sezione :ref"
 ":`smb-access-section`."
 
-#: ../../shared_folder.rst:114 ../../shared_folder.rst:117
+#: ../../shared_folder.rst:120 ../../shared_folder.rst:123
 msgid ""
 "The Unix home directory is created the first time the user accesses it by "
 "either SMB or SFTP/SSH protocol."
 msgstr ""
 "La directory home Unix viene creata al primo accesso dell'utente tramite SMB"
 " o via SFTP/SSH."
+
+#: ../../shared_folder.rst:126 ../../shared_folder.rst:129
+msgid "Change resource permissions from Windows clients"
+msgstr "Modifica autorizzazioni delle risorse dai client Windows"
+
+#: ../../shared_folder.rst:128 ../../shared_folder.rst:131
+msgid ""
+"When an user connects to a shared folder with a Windows client, he can "
+"change permissions on individual files and directories. Permissions are "
+"expressed by Access Control Lists (ACLs)."
+msgstr ""
+"Quando un utente si connette a una cartella condivisa con un client Windows,"
+" può modificare le autorizzazioni su singoli file e directory. Le "
+"autorizzazioni sono espresse dagli elenchi di controllo di accesso (ACL)."
+
+#: ../../shared_folder.rst:134 ../../shared_folder.rst:137
+msgid ""
+"Some ACLs settings supported by Windows clients cannot be translated to "
+"POSIX ACLs implemented by |product|, thus they will be lost when they are "
+"applied"
+msgstr ""
+"Alcune impostazioni ACL supportate dai client Windows non possono essere "
+"convertite in ACL POSIX implementate da |product|, quindi andranno perse in "
+"fase di propagazione"
+
+#: ../../shared_folder.rst:137 ../../shared_folder.rst:140
+msgid ""
+"Only the owner of a resource (being it either file or directory) has full "
+"control over it (read, write, change permissions). The permission to delete "
+"a resource is granted to users with write permissions on the parent "
+"directory. The only exception to this rule is described in the :ref:`smb-"
+"admins-section` section."
+msgstr ""
+"Solo il proprietario di una risorsa (che sia file o directory) ha il pieno "
+"controllo su di essa (lettura, scrittura, modifica delle autorizzazioni). "
+"L'autorizzazione per eliminare una risorsa è concessa agli utenti con "
+"permessi di scrittura sulla directory principale. L'unica eccezione a questa"
+" regola è descritta nella sezione :ref:`smb-admins-section`."
+
+#: ../../shared_folder.rst:143 ../../shared_folder.rst:146
+msgid ""
+"When a new resource is created, the owner can be defined by one of the "
+"following rules:"
+msgstr ""
+"Quando viene creata una nuova risorsa, il proprietario può essere definito "
+"da una delle seguenti regole:"
+
+#: ../../shared_folder.rst:146 ../../shared_folder.rst:149
+msgid "the owner is the user that creates the resource"
+msgstr "il proprietario è l'utente che crea la risorsa"
+
+#: ../../shared_folder.rst:147 ../../shared_folder.rst:150
+msgid "the owner is inherited from the parent directory"
+msgstr "il proprietario viene ereditato dalla directory padre"
+
+#: ../../shared_folder.rst:149 ../../shared_folder.rst:152
+msgid ""
+"To enforce one of those rules, go to :ref:`FileServer-section` page and "
+"select the corresponding radio button under :guilabel:`When a new file or "
+"directory is created in a shared folder` section."
+msgstr ""
+"Per applicare una di queste regole, spostarsi nel menu :ref:`FileServer-"
+"section` e selezionare l'opzione corrispondente nella sezione "
+":guilabel:`Quando viene creato un nuovo file o directory in una cartella "
+"condivisa`."
+
+#: ../../shared_folder.rst:155 ../../shared_folder.rst:158
+msgid ""
+"The :guilabel:`Owning group` setting of a shared folder does not affect the "
+"owner of a resource. See also the :ref:`smb-auth-section` section above"
+msgstr ""
+"L'impostazione :guilabel:`Owning group` di una cartella condivisa non "
+"influisce sul proprietario di una risorsa. Vedi anche la sezione :ref:`smb-"
+"auth-section` qui sopra"
+
+#: ../../shared_folder.rst:161 ../../shared_folder.rst:164
+msgid "Administrative access"
+msgstr "Accesso amministrativo"
+
+#: ../../shared_folder.rst:163 ../../shared_folder.rst:166
+msgid ""
+"The :ref:`FileServer-section` page allows to grant special privileges to "
+"members of the ``Domain Admins`` group:"
+msgstr ""
+"La pagina :ref:`FileServer-section` consente di concedere privilegi speciali"
+" ai membri del gruppo ``Domain Admins``:"
+
+#: ../../shared_folder.rst:166 ../../shared_folder.rst:169
+msgid ""
+"extend the owner permission by enabling the :guilabel:`Grant full control on"
+" shared folders to Domain Admins group` checkbox"
+msgstr ""
+"estendere l'autorizzazione del proprietario abilitando il :guilabel:`Assegna"
+" il controllo completo sulle cartelle condivise al gruppo Domain Admins`"
+
+#: ../../shared_folder.rst:169 ../../shared_folder.rst:172
+msgid ""
+"access other users' home directories by enabling the :guilabel:`Grant full "
+"control on home directories to Domain Admins group (home$ share)` checkbox. "
+"To access home directories connect to the hidden share ``home$``. For "
+"instance, the SMB network address is: ::"
+msgstr ""
+"accedere alle home directory degli altri utenti abilitando "
+":guilabel:`Concedi il pieno controllo sulle home directory al gruppo Domain "
+"Admins (home $ share)`. Per accedere alle home directory, è sufficiente "
+"connettersi alla condivisione nascosta ``home $``. Ad esempio, l'indirizzo "
+"di rete SMB è: ::"

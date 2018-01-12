@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 18:26+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -32,8 +32,8 @@ msgstr "IPS (Suricata)"
 #: ../../suricata.rst:14 ../../suricata.rst:17
 msgid ""
 "Suricata is a :dfn:`IPS` (:index:`Intrusion Prevention System`), a system "
-"for the network intrusion analysis. The software analyzes all traffic "
-"through the firewall searching for known attacks and anomalies."
+"for the network intrusion analysis. The software analyzes all traffic on the"
+" firewall searching for known attacks and anomalies."
 msgstr ""
 "Suricata è un :dfn:`IPS` (:index:`Intrusion Prevention System`), un sistema "
 "per la prevenzione delle intrusioni in rete. Il software analizza tutto il "
@@ -52,52 +52,40 @@ msgstr ""
 
 #: ../../suricata.rst:20 ../../suricata.rst:23
 msgid ""
-":index:`Suricata` can be configured accordingly to following policies. Each "
-"policy consists of several rules:"
+":index:`Suricata` can be configured using sets of rules organized in uniform"
+" categories. Each category can be set to:"
 msgstr ""
-":index:`Suricata` può essere configurato secondo le policy riportate. Ogni "
-"policy è composta da più regole:"
-
-#: ../../suricata.rst:22 ../../suricata.rst:25
-msgid ""
-"Connectivity: check a large number of vulnerabilities, do not impact on non-"
-"realtime applications (eg VoIP)"
-msgstr ""
-"Connectivity: controlla un vasto numero di vulnerabilità, non impatta su "
-"applicazioni realtime (es. VoIP)"
+":index:`Suricata` può essere configurato utilizzando set di regole "
+"organizzati per categorie specifiche. Ogni categoria può essere configurata "
+"come:"
 
 #: ../../suricata.rst:23 ../../suricata.rst:26
-msgid ""
-"Balanced: suitable for most scenarios, it is a good compromise between "
-"security and usability (recommended)"
+msgid "Enable: traffic matching rules from this categories will be reported"
 msgstr ""
-"Balanced: adatta alla maggior parte degli scenari, è un buon compromesso fra"
-" sicurezza e usabilità (consigliata)"
+"Abilitato: il traffico che intercetta le regole della categoria verrà "
+"segnalato"
 
 #: ../../suricata.rst:24 ../../suricata.rst:27
-msgid ""
-"Security: safe mode but very invasive, may impact on chat and peer-to-peer "
-"applications"
+msgid "Block: traffic matching rules from this categories will be dropped"
 msgstr ""
-"Security: modalità molto sicura ma invasiva, può impattare sul funzionamento"
-" di applicazioni di chat e peer to peer"
+"Bloccato:  il traffico che intercetta le regole della categoria verrà "
+"rifiutato"
 
 #: ../../suricata.rst:25 ../../suricata.rst:28
-msgid ""
-"Expert: the administrator must manually select the rules from the command "
-"line"
-msgstr ""
-"Esperto: l'amministratore deve procedere a selezionare manualmente le regole"
-" da linea di comando"
+msgid "Disable: rules from this categories are ignored"
+msgstr "Disabilitato: le regole della categoria verranno ignorate"
 
-#: ../../suricata.rst:28 ../../suricata.rst:31
+#: ../../suricata.rst:27 ../../suricata.rst:30
 msgid ""
-"The use of an IPS impacts on all traffic passing through the firewall. Make "
-"sure you fully understand all the implications before enabling it."
+"The use of an IPS impacts on all traffic passing on the firewall. Make sure "
+"you fully understand all the implications before enabling it. In particular,"
+" pay attention to blocking rules that may stop updates to the system itself."
 msgstr ""
-"L'utilizzo di un IPS impatta su tutto il traffico passante per il firewall. "
-"Assicurarsi di aver compreso a fondo tutte le problematiche prima di "
-"attivarlo."
+"L'utilizzo di un IPS impatta su tutto il traffico che attraversa il "
+"firewall. Assicurarsi di aver compreso a fondo tutte le possibili "
+"implicazioni prima di attivare la funzionalità. In particolare, prestare "
+"attenzione alle regole di blocco che potrebbero interrompere gli "
+"aggiornamenti al sistema stesso."
 
 #: ../../suricata.rst:32 ../../suricata.rst:35
 msgid "Rule categories"
@@ -239,19 +227,29 @@ msgstr ""
 "newly found vulnerable apps where we don't have any detail on the exploit, "
 "etc."
 
+#: ../../suricata.rst:84 ../../suricata.rst:87
+msgid "Decoder-events"
+msgstr "Decoder-events"
+
 #: ../../suricata.rst:83 ../../suricata.rst:86
+msgid ""
+"Suricata specific. These rules log normalization events related to decoding."
+msgstr ""
+"Suricata specific. These rules log normalization events related to decoding."
+
+#: ../../suricata.rst:87 ../../suricata.rst:90
 msgid "Deleted"
 msgstr "Deleted"
 
-#: ../../suricata.rst:83 ../../suricata.rst:86
+#: ../../suricata.rst:87 ../../suricata.rst:90
 msgid "Rules removed from the rule set."
 msgstr "Rules removed from the rule set."
 
-#: ../../suricata.rst:87 ../../suricata.rst:90
+#: ../../suricata.rst:91 ../../suricata.rst:94
 msgid "DNS"
 msgstr "DNS"
 
-#: ../../suricata.rst:86 ../../suricata.rst:89
+#: ../../suricata.rst:90 ../../suricata.rst:93
 msgid ""
 "Rules for attacks and vulnerabilities regarding DNS. Also category for abuse"
 " of the service for things such as tunneling."
@@ -259,11 +257,11 @@ msgstr ""
 "Rules for attacks and vulnerabilities regarding DNS. Also category for abuse"
 " of the service for things such as tunneling."
 
-#: ../../suricata.rst:91 ../../suricata.rst:94
+#: ../../suricata.rst:95 ../../suricata.rst:98
 msgid "DOS"
 msgstr "DOS"
 
-#: ../../suricata.rst:90 ../../suricata.rst:93
+#: ../../suricata.rst:94 ../../suricata.rst:97
 msgid ""
 "Denial of Service attempt detection. Intended to catch inbound DOS activity,"
 " and outbound indications."
@@ -271,11 +269,11 @@ msgstr ""
 "Denial of Service attempt detection. Intended to catch inbound DOS activity,"
 " and outbound indications."
 
-#: ../../suricata.rst:96 ../../suricata.rst:99
+#: ../../suricata.rst:100 ../../suricata.rst:103
 msgid "Drop"
 msgstr "Drop"
 
-#: ../../suricata.rst:94 ../../suricata.rst:97
+#: ../../suricata.rst:98 ../../suricata.rst:101
 msgid ""
 "Rules to block spamhaus “drop” listed networks. IP based. This is a daily "
 "updated list of the Spamhaus DROP (Don't Route or Peer) list. Primarily "
@@ -285,11 +283,11 @@ msgstr ""
 "updated list of the Spamhaus DROP (Don't Route or Peer) list. Primarily "
 "known professional spammers. More info at http://www.spamhaus.org."
 
-#: ../../suricata.rst:101 ../../suricata.rst:104
+#: ../../suricata.rst:105 ../../suricata.rst:108
 msgid "Dshield"
 msgstr "Dshield"
 
-#: ../../suricata.rst:99 ../../suricata.rst:102
+#: ../../suricata.rst:103 ../../suricata.rst:106
 msgid ""
 "IP based rules for Dshield Identified attackers. Daily updated list of the "
 "DShield top attackers list. Also very reliable. More information can be "
@@ -299,11 +297,11 @@ msgstr ""
 "DShield top attackers list. Also very reliable. More information can be "
 "found at http://www.dshield.org."
 
-#: ../../suricata.rst:106 ../../suricata.rst:109
+#: ../../suricata.rst:110 ../../suricata.rst:113
 msgid "Exploit"
 msgstr "Exploit"
 
-#: ../../suricata.rst:104 ../../suricata.rst:107
+#: ../../suricata.rst:108 ../../suricata.rst:111
 msgid ""
 "Exploits that are not covered in specific service category. Rules to detect "
 "direct exploits. Generally if you're looking for a windows exploit, Veritas,"
@@ -315,26 +313,38 @@ msgstr ""
 " etc, they'll be here. Things like SQL injection and the like, whie they are"
 " exploits, have their own category."
 
-#: ../../suricata.rst:110 ../../suricata.rst:113
-msgid "FTP"
-msgstr "FTP"
-
-#: ../../suricata.rst:109 ../../suricata.rst:112
-msgid ""
-"Rules for attacks, exploits, and vulnerabilities regarding FTP. Also "
-"includes basic none malicious FTP activity for logging purposes, such as "
-"login, etc."
-msgstr ""
-"Rules for attacks, exploits, and vulnerabilities regarding FTP. Also "
-"includes basic none malicious FTP activity for logging purposes, such as "
-"login, etc."
-
-#: ../../suricata.rst:115 ../../suricata.rst:118
-msgid "Games"
-msgstr "Games"
+#: ../../suricata.rst:113 ../../suricata.rst:116
+msgid "Files"
+msgstr "Files"
 
 #: ../../suricata.rst:113 ../../suricata.rst:116
 msgid ""
+"Example rules for using the file handling and extraction functionality in "
+"Suricata."
+msgstr ""
+"Example rules for using the file handling and extraction functionality in "
+"Suricata."
+
+#: ../../suricata.rst:117 ../../suricata.rst:120
+msgid "FTP"
+msgstr "FTP"
+
+#: ../../suricata.rst:116 ../../suricata.rst:119
+msgid ""
+"Rules for attacks, exploits, and vulnerabilities regarding FTP. Also "
+"includes basic none malicious FTP activity for logging purposes, such as "
+"login, etc."
+msgstr ""
+"Rules for attacks, exploits, and vulnerabilities regarding FTP. Also "
+"includes basic none malicious FTP activity for logging purposes, such as "
+"login, etc."
+
+#: ../../suricata.rst:122 ../../suricata.rst:125
+msgid "Games"
+msgstr "Games"
+
+#: ../../suricata.rst:120 ../../suricata.rst:123
+msgid ""
 "Rules for the Identification of gaming traffic and attacks against those "
 "games. World of Warcraft, Starcraft, and other popular online games have "
 "sigs here. We don't intend to label these things evil, just that they're not"
@@ -345,19 +355,29 @@ msgstr ""
 "sigs here. We don't intend to label these things evil, just that they're not"
 " appropriate for all environments."
 
-#: ../../suricata.rst:118 ../../suricata.rst:121
+#: ../../suricata.rst:125 ../../suricata.rst:128
+msgid "HTTP-Events"
+msgstr "HTTP-Events"
+
+#: ../../suricata.rst:125 ../../suricata.rst:128
+msgid ""
+"Rules to log HTTP protocol specific events, typically normal operation."
+msgstr ""
+"Rules to log HTTP protocol specific events, typically normal operation."
+
+#: ../../suricata.rst:128 ../../suricata.rst:131
 msgid "Info"
 msgstr "Info"
 
-#: ../../suricata.rst:118 ../../suricata.rst:121
+#: ../../suricata.rst:128 ../../suricata.rst:131
 msgid "General rules to track suspicious host network traffic."
 msgstr "General rules to track suspicious host network traffic."
 
-#: ../../suricata.rst:124 ../../suricata.rst:127
+#: ../../suricata.rst:134 ../../suricata.rst:137
 msgid "Inappropriate"
 msgstr "Inappropriate"
 
-#: ../../suricata.rst:121 ../../suricata.rst:124
+#: ../../suricata.rst:131 ../../suricata.rst:134
 msgid ""
 "Rules for the identification of pornography related activity. Includes Porn,"
 " Kiddy porn, sites you shouldn't visit at work, etc. Warning: These are "
@@ -369,11 +389,11 @@ msgstr ""
 "generally quite Regex heavy and thus high load and frequent false positives."
 " Only run these if you're really interested."
 
-#: ../../suricata.rst:134 ../../suricata.rst:137
+#: ../../suricata.rst:144 ../../suricata.rst:147
 msgid "Malware"
 msgstr "Malware"
 
-#: ../../suricata.rst:127 ../../suricata.rst:130
+#: ../../suricata.rst:137 ../../suricata.rst:140
 msgid ""
 "Malware and Spyware related, no clear criminal intent. The threshold for "
 "inclusion in this set is typically some form of tracking that stops short of"
@@ -395,19 +415,19 @@ msgstr ""
 "PC. There are URL hooks for known update schemed, User-Agent strings of "
 "known malware, and a load of others."
 
-#: ../../suricata.rst:137 ../../suricata.rst:140
+#: ../../suricata.rst:147 ../../suricata.rst:150
 msgid "Misc."
 msgstr "Misc."
 
-#: ../../suricata.rst:137 ../../suricata.rst:140
+#: ../../suricata.rst:147 ../../suricata.rst:150
 msgid "Miscellaneous rules for those rules not covered in other categories."
 msgstr "Miscellaneous rules for those rules not covered in other categories."
 
-#: ../../suricata.rst:141 ../../suricata.rst:144
+#: ../../suricata.rst:151 ../../suricata.rst:154
 msgid "Mobile Malware"
 msgstr "Mobile Malware"
 
-#: ../../suricata.rst:140 ../../suricata.rst:143
+#: ../../suricata.rst:150 ../../suricata.rst:153
 msgid ""
 "Specific to mobile platforms: Malware and Spyware related, no clear criminal"
 " intent."
@@ -415,11 +435,11 @@ msgstr ""
 "Specific to mobile platforms: Malware and Spyware related, no clear criminal"
 " intent."
 
-#: ../../suricata.rst:146 ../../suricata.rst:149
+#: ../../suricata.rst:156 ../../suricata.rst:159
 msgid "Netbios"
 msgstr "Netbios"
 
-#: ../../suricata.rst:144 ../../suricata.rst:147
+#: ../../suricata.rst:154 ../../suricata.rst:157
 msgid ""
 "Rules for the identification, as well as attacks, exploits and "
 "vulnerabilities regarding Netbios. Also included are rules detecting basic "
@@ -429,11 +449,11 @@ msgstr ""
 "vulnerabilities regarding Netbios. Also included are rules detecting basic "
 "activity of the protocol for logging purposes."
 
-#: ../../suricata.rst:151 ../../suricata.rst:154
+#: ../../suricata.rst:161 ../../suricata.rst:164
 msgid "P2P"
 msgstr "P2P"
 
-#: ../../suricata.rst:149 ../../suricata.rst:152
+#: ../../suricata.rst:159 ../../suricata.rst:162
 msgid ""
 "Rules for the identification of Peer-to-Peer traffic and attacks against. "
 "Including torrents, edonkey, Bittorrent, Gnutella, Limewire, etc. We're not "
@@ -445,11 +465,11 @@ msgstr ""
 "labeling these things malicious, just not appropriate for all networks and "
 "environments."
 
-#: ../../suricata.rst:157 ../../suricata.rst:160
+#: ../../suricata.rst:167 ../../suricata.rst:170
 msgid "Policy"
 msgstr "Policy"
 
-#: ../../suricata.rst:154 ../../suricata.rst:157
+#: ../../suricata.rst:164 ../../suricata.rst:167
 msgid ""
 "Application Identification category. Includes signatures for applications "
 "like DropBox and Google Apps, etc. Also covers off port protocols, basic DLP"
@@ -463,11 +483,11 @@ msgstr ""
 "set are rules for things that are often disallowed by company or "
 "organizational policy. Myspace, Ebay, etc."
 
-#: ../../suricata.rst:161 ../../suricata.rst:164
+#: ../../suricata.rst:171 ../../suricata.rst:174
 msgid "SCADA"
 msgstr "SCADA"
 
-#: ../../suricata.rst:160 ../../suricata.rst:163
+#: ../../suricata.rst:170 ../../suricata.rst:173
 msgid ""
 "Signatures for SCADA attacks, exploits and vulnerabilities, as well as "
 "protocol detection."
@@ -475,11 +495,11 @@ msgstr ""
 "Signatures for SCADA attacks, exploits and vulnerabilities, as well as "
 "protocol detection."
 
-#: ../../suricata.rst:165 ../../suricata.rst:168
+#: ../../suricata.rst:175 ../../suricata.rst:178
 msgid "SCAN"
 msgstr "SCAN"
 
-#: ../../suricata.rst:164 ../../suricata.rst:167
+#: ../../suricata.rst:174 ../../suricata.rst:177
 msgid ""
 "Things to detect reconnaissance and probing. Nessus, Nikto, portscanning, "
 "etc. Early warning stuff."
@@ -487,11 +507,11 @@ msgstr ""
 "Things to detect reconnaissance and probing. Nessus, Nikto, portscanning, "
 "etc. Early warning stuff."
 
-#: ../../suricata.rst:175 ../../suricata.rst:178
+#: ../../suricata.rst:185 ../../suricata.rst:188
 msgid "Shellcode"
 msgstr "Shellcode"
 
-#: ../../suricata.rst:168 ../../suricata.rst:171
+#: ../../suricata.rst:178 ../../suricata.rst:181
 msgid ""
 "Remote Shellcode detection. Remote shellcode is used when an attacker wants "
 "to target a vulnerable process running on another machine on a local network"
@@ -513,11 +533,11 @@ msgstr ""
 "connection, it is called a \"reverse shell\" or a connect-back shellcode "
 "because the shellcode connects back to the attacker's machine."
 
-#: ../../suricata.rst:179 ../../suricata.rst:182
+#: ../../suricata.rst:189 ../../suricata.rst:192
 msgid "SMTP"
 msgstr "SMTP"
 
-#: ../../suricata.rst:178 ../../suricata.rst:181
+#: ../../suricata.rst:188 ../../suricata.rst:191
 msgid ""
 "Rules for attacks, exploits, and vulnerabilities regarding SMTP. Also "
 "included are rules detecting basic activity of the protocol for logging "
@@ -527,11 +547,19 @@ msgstr ""
 "included are rules detecting basic activity of the protocol for logging "
 "purposes."
 
-#: ../../suricata.rst:183 ../../suricata.rst:186
+#: ../../suricata.rst:192 ../../suricata.rst:195
+msgid "SMTP-events"
+msgstr "SMTP-events"
+
+#: ../../suricata.rst:192 ../../suricata.rst:195
+msgid "Rules that will log SMTP operations."
+msgstr "Rules that will log SMTP operations."
+
+#: ../../suricata.rst:196 ../../suricata.rst:199
 msgid "SNMP"
 msgstr "SNMP"
 
-#: ../../suricata.rst:182 ../../suricata.rst:185
+#: ../../suricata.rst:195 ../../suricata.rst:198
 msgid ""
 "Rules for attacks, exploits, and vulnerabilities regarding SNMP. Also "
 "included are rules detecting basic activity of the protocol for logging "
@@ -541,11 +569,11 @@ msgstr ""
 "included are rules detecting basic activity of the protocol for logging "
 "purposes."
 
-#: ../../suricata.rst:187 ../../suricata.rst:190
+#: ../../suricata.rst:200 ../../suricata.rst:203
 msgid "SQL"
 msgstr "SQL"
 
-#: ../../suricata.rst:186 ../../suricata.rst:189
+#: ../../suricata.rst:199 ../../suricata.rst:202
 msgid ""
 "Rules for attacks, exploits, and vulnerabilities regarding SQL. Also "
 "included are rules detecting basic activity of the protocol for logging "
@@ -555,11 +583,19 @@ msgstr ""
 "included are rules detecting basic activity of the protocol for logging "
 "purposes."
 
-#: ../../suricata.rst:191 ../../suricata.rst:194
+#: ../../suricata.rst:203 ../../suricata.rst:206
+msgid "Stream-events"
+msgstr "Stream-events"
+
+#: ../../suricata.rst:203 ../../suricata.rst:206
+msgid "Rules for matching TCP stream engine events."
+msgstr "Rules for matching TCP stream engine events."
+
+#: ../../suricata.rst:207 ../../suricata.rst:210
 msgid "TELNET"
 msgstr "TELNET"
 
-#: ../../suricata.rst:190 ../../suricata.rst:193
+#: ../../suricata.rst:206 ../../suricata.rst:209
 msgid ""
 "Rules for attacks and vulnerabilities regarding the TELNET service. Also "
 "included are rules detecting basic activity of the protocol for logging "
@@ -569,11 +605,11 @@ msgstr ""
 "included are rules detecting basic activity of the protocol for logging "
 "purposes."
 
-#: ../../suricata.rst:196 ../../suricata.rst:199
+#: ../../suricata.rst:211 ../../suricata.rst:214
 msgid "TFTP"
 msgstr "TFTP"
 
-#: ../../suricata.rst:194 ../../suricata.rst:197
+#: ../../suricata.rst:210 ../../suricata.rst:213
 msgid ""
 "Rules for attacks and vulnerabilities regarding the TFTP service. Also "
 "included are rules detecting basic activity of the protocol for logging "
@@ -583,21 +619,29 @@ msgstr ""
 "included are rules detecting basic activity of the protocol for logging "
 "purposes."
 
-#: ../../suricata.rst:199 ../../suricata.rst:202
+#: ../../suricata.rst:214 ../../suricata.rst:217
+msgid "TLS-Events"
+msgstr "TLS-Events"
+
+#: ../../suricata.rst:214 ../../suricata.rst:217
+msgid "Rules for matching on TLS events and anomal"
+msgstr "Rules for matching on TLS events and anomal"
+
+#: ../../suricata.rst:217 ../../suricata.rst:220
 msgid "TOR"
 msgstr "TOR"
 
-#: ../../suricata.rst:199 ../../suricata.rst:202
+#: ../../suricata.rst:217 ../../suricata.rst:220
 msgid ""
 "IP Based rules for the identification of traffic to and from TOR exit nodes."
 msgstr ""
 "IP Based rules for the identification of traffic to and from TOR exit nodes."
 
-#: ../../suricata.rst:204 ../../suricata.rst:207
+#: ../../suricata.rst:222 ../../suricata.rst:225
 msgid "Trojan"
 msgstr "Trojan"
 
-#: ../../suricata.rst:202 ../../suricata.rst:205
+#: ../../suricata.rst:220 ../../suricata.rst:223
 msgid ""
 "Malicious software that has clear criminal intent. Rules here detect "
 "malicious software that is in transit, active, infecting, attacking, "
@@ -609,19 +653,19 @@ msgstr ""
 "updating, and whatever else we can detect on the wire. This is also a highly"
 " important ruleset to run if you have to choose."
 
-#: ../../suricata.rst:207 ../../suricata.rst:210
+#: ../../suricata.rst:225 ../../suricata.rst:228
 msgid "User Agents"
 msgstr "User Agents"
 
-#: ../../suricata.rst:207 ../../suricata.rst:210
+#: ../../suricata.rst:225 ../../suricata.rst:228
 msgid "User agent identification and detection."
 msgstr "User agent identification and detection."
 
-#: ../../suricata.rst:211 ../../suricata.rst:214
+#: ../../suricata.rst:229 ../../suricata.rst:232
 msgid "VOIP"
 msgstr "VOIP"
 
-#: ../../suricata.rst:210 ../../suricata.rst:213
+#: ../../suricata.rst:228 ../../suricata.rst:231
 msgid ""
 "Rules for attacks and vulnerabilities regarding the VOIP environment. SIP, "
 "h.323, RTP, etc."
@@ -629,43 +673,43 @@ msgstr ""
 "Rules for attacks and vulnerabilities regarding the VOIP environment. SIP, "
 "h.323, RTP, etc."
 
-#: ../../suricata.rst:214 ../../suricata.rst:217
+#: ../../suricata.rst:232 ../../suricata.rst:235
 msgid "Web Client"
 msgstr "Web Client"
 
-#: ../../suricata.rst:214 ../../suricata.rst:217
+#: ../../suricata.rst:232 ../../suricata.rst:235
 msgid "Web client side attacks and vulnerabilities."
 msgstr "Web client side attacks and vulnerabilities."
 
-#: ../../suricata.rst:217 ../../suricata.rst:220
+#: ../../suricata.rst:235 ../../suricata.rst:238
 msgid "Web Server"
 msgstr "Web Server"
 
-#: ../../suricata.rst:217 ../../suricata.rst:220
+#: ../../suricata.rst:235 ../../suricata.rst:238
 msgid "Rules for attacks and vulnerabilities against web servers."
 msgstr "Rules for attacks and vulnerabilities against web servers."
 
-#: ../../suricata.rst:220 ../../suricata.rst:223
+#: ../../suricata.rst:238 ../../suricata.rst:241
 msgid "Web Specific Apps"
 msgstr "Web Specific Apps"
 
-#: ../../suricata.rst:220 ../../suricata.rst:223
+#: ../../suricata.rst:238 ../../suricata.rst:241
 msgid "Rules for very specific web applications."
 msgstr "Rules for very specific web applications."
 
-#: ../../suricata.rst:225 ../../suricata.rst:228
+#: ../../suricata.rst:243 ../../suricata.rst:246
 msgid "WORM"
 msgstr "WORM"
 
-#: ../../suricata.rst:223 ../../suricata.rst:226
+#: ../../suricata.rst:241 ../../suricata.rst:244
 msgid "Traffic indicative of network based worm activity."
 msgstr "Traffic indicative of network based worm activity."
 
-#: ../../suricata.rst:228 ../../suricata.rst:231
+#: ../../suricata.rst:246 ../../suricata.rst:249
 msgid "EveBox"
 msgstr "EveBox"
 
-#: ../../suricata.rst:230 ../../suricata.rst:233
+#: ../../suricata.rst:248 ../../suricata.rst:251
 msgid ""
 ":index:`EveBox` is a web based :index:`alert` and event management tool for "
 "events generated by the Suricata."
@@ -673,7 +717,7 @@ msgstr ""
 ":index:`EveBox` è uno strumento web per la gestione di :index:`allarmi` ed "
 "eventi generati da Suricata."
 
-#: ../../suricata.rst:232 ../../suricata.rst:235
+#: ../../suricata.rst:250 ../../suricata.rst:253
 msgid ""
 "It can be accessed from the Server Manager under the "
 ":guilabel:`Applications` page."
@@ -681,7 +725,7 @@ msgstr ""
 "Il modulo è accessibile dal Server Manager, attraverso il link nella pagina "
 ":guilabel:`Applicazioni`"
 
-#: ../../suricata.rst:236 ../../suricata.rst:239
+#: ../../suricata.rst:254 ../../suricata.rst:257
 msgid ""
 "Categories documentation source: `proofpoint <https://www.proofpoint.com>`_ "
 "- `ETPro Category Descriptions "

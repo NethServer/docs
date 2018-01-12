@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 18:26+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -52,12 +52,8 @@ msgid "CentOS 7 will receive security updates until 2024-06-30"
 msgstr "CentOS 7 riceverà aggiornamenti di sicurezza fino al 30/06/2024"
 
 #: ../../release_notes.rst:22 ../../release_notes.rst:25
-msgid ""
-"List of `NethServer 7 ISO releases "
-"<http://nethserver.github.io/dev/releases.html>`_"
+msgid ":ref:`nscom-releases-section`"
 msgstr ""
-"Lista delle `ISO di NethServer 7 rilasciate "
-"<http://nethserver.github.io/dev/releases.html>`_"
 
 #: ../../release_notes.rst:24 ../../release_notes.rst:27
 msgid ""
