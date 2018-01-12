@@ -189,6 +189,8 @@ Known limitations:
 
 .. only:: nscom
 
+  .. _webtop-vs-sogo:
+
   WebTop vs SOGo
   ==============
 

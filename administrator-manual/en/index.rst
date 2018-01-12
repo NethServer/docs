@@ -103,6 +103,7 @@ Modules
        :maxdepth: 1
 
        webvirtmgr
+       sogo
 
 Best practices
 --------------
