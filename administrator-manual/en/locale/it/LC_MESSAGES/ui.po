@@ -1,0 +1,95 @@
+# #-#-#-#-#  ui.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  ui.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ui/FileServer.rst:12 ../../ui/FileServer.rst:15
+msgid "Windows file server"
+msgstr "Windows file server"
+
+#: ../../ui/FileServer.rst:14 ../../ui/FileServer.rst:17
+msgid "See also :ref:`shared_folders-section`"
+msgstr "Vedere anche :ref:`shared_folders-section`"
+
+#: ../../ui/FileServer.rst:20 ../../ui/FileServer.rst:23
+msgid "Workgroup/NetBIOS domain name"
+msgstr "Workgroup/Nome dominio NetBIOS"
+
+#: ../../ui/FileServer.rst:17 ../../ui/FileServer.rst:20
+msgid ""
+"The value can be changed only with LDAP accounts provider and defines the "
+"Windows workgroup name visible from Network neighborhood panel in Windows "
+"systems. With Active Directory accounts provider the value is determined by "
+"the joined domain"
+msgstr ""
+"Il valore può essere modificato solo con se il provider account è LDAP e "
+"definisce il nome del gruppo di lavoro di Windows visibile dal pannello "
+"Risorse di rete nei sistemi Windows. Con l'account provider Active Directory"
+" il valore è determinato dal dominio a cui il server è attestato"
+
+#: ../../ui/FileServer.rst:25 ../../ui/FileServer.rst:28
+msgid "When a new file or directory is created in a shared folder"
+msgstr ""
+"Quando un nuovo file o directory viene creato in una cartella condivisa"
+
+#: ../../ui/FileServer.rst:23 ../../ui/FileServer.rst:26
+msgid ""
+"Decide who owns a newly created file or directory: either the resource "
+"creator or the current owner of the directory containing the new resource "
+"(also known as parent directory)"
+msgstr ""
+"Stabilisce chi possiede un file o una directory appena creati: il creatore "
+"della risorsa o il proprietario della directory che contiene la nuova "
+"risorsa (nota anche come directory principale)"
+
+#: ../../ui/FileServer.rst:29 ../../ui/FileServer.rst:32
+msgid ""
+"Grant full control on home directories to Domain Admins group (home$ share)"
+msgstr ""
+"Concedere il controllo completo sulle home directory al gruppo Domain Admins"
+" (home$ share)"
+
+#: ../../ui/FileServer.rst:28 ../../ui/FileServer.rst:31
+msgid ""
+"Allow members of ``Domain Admins`` group to connect the hidden ``home$`` "
+"share and grant them administrative access to any home folder inside of it"
+msgstr ""
+"Permetti ai membri del gruppo ``Domain Admins`` di collegare la condivisione"
+" nascosta ``home$`` e concede loro l'accesso amministrativo a qualsiasi "
+"cartella home"
+
+#: ../../ui/FileServer.rst:32 ../../ui/FileServer.rst:35
+msgid "Grant full control on shared folders to Domain Admins group"
+msgstr ""
+"Concede il pieno controllo sulle cartelle condivise al gruppo Domain Admins"
+
+#: ../../ui/FileServer.rst:32 ../../ui/FileServer.rst:35
+msgid ""
+"Allow members of ``Domain Admins`` group to connect any shared folder and "
+"grant them administrative access on its content"
+msgstr ""
+"Consente ai membri del gruppo ``Domain Admins`` di connettere qualsiasi "
+"cartella condivisa e concedere loro l'accesso amministrativo sul suo "
+"contenuto"

@@ -8,16 +8,17 @@
 Building RPMs
 =============
 
-To build NethServer RPMs a few helper scripts are provided by the
-``nethserver-mock`` package along with the Mock [#Mock]_ configuration
-files pointing to NethServer YUM repositories.
-
-
+To build NethServer RPMs a few methods are provided:
+ - ``nethserver-mock`` with the Mock [#Mock]_ configuration files pointing to NethServer YUM repositories
+ - ``travis-ci.org`` automating build with a ``.travis.yml`` file inside each repository
 
 .. _rpm_prepare_env:
 
+nethserver-mock
+===============
+
 Configuring the environment
-===========================
+---------------------------
 
 On **NethServer**, install ``nethserver-mock`` package, by typing: ::
 
@@ -26,6 +27,8 @@ On **NethServer**, install ``nethserver-mock`` package, by typing: ::
 On **Fedora**, and other RPM-based distros run the command: ::
 
   yum localinstall <URL>
+  or
+  dnf install <URL>
 
 where <URL> is http://packages.nethserver.org/nethserver/7.3.1611/base/x86_64/Packages/nethserver-mock-1.3.2-1.ns7.noarch.rpm at the time of writing.
 The build process uses Mock and must be run as a non privileged user,
@@ -33,10 +36,9 @@ member of the ``mock`` system group.  Add your user to the ``mock``
 group: ::
 
   usermod -a -G mock <username>
-  
 
 Running the scripts
-===================
+-------------------
 
 The ``make-rpms`` command eases building of the NethServer RPMs by
 hiding the complexity of other commands.  It is designed to work
@@ -65,7 +67,7 @@ To clean up the git repository directory, ``git clean`` may help: ::
   git clean -x -n
 
 Substitute ``-n`` with ``-f`` to actually remove the files!
-  
+
 .. note::
 
    The ``make-rpms`` command is sensible to ``dist`` and ``mockcfg``
@@ -80,7 +82,7 @@ The ``make-rpms`` command in turn relies on other scripts
 
 ``make-srpm``
   Builds the :file:`.src.rpm` file.
-  
+
 ``prep-sources``
   Extracts and/or fetches the source tarballs.
 
@@ -93,7 +95,57 @@ fetched by the ``spectool`` command.
 If the file :file:`SHA1SUM` exists in the same directory of the
 :file:`.spec` file the tarballs are checked against it.
 
-      
+travis-ci.org
+=============
+
+To automate the build process using travis-ci.org platform create a ``.travis.yml`` file inside
+your github repository that containts the minimal steps to build your package: ::
+  ---
+  language: ruby
+  services:
+      - docker
+  branches:
+      only:
+          - master
+  env:
+    global:
+      - DEST_ID=core
+      - NSVER=7
+      - DOCKER_IMAGE=nethserver/makerpms:${NSVER}
+      - >
+          EVARS="
+          -e DEST_ID
+          -e TRAVIS_BRANCH
+          -e TRAVIS_BUILD_ID
+          -e TRAVIS_PULL_REQUEST_BRANCH
+          -e TRAVIS_PULL_REQUEST
+          -e TRAVIS_REPO_SLUG
+          -e TRAVIS_TAG
+          -e NSVER
+          -e VERSIONS_PACK
+          -e STAGES_PACK
+          -e UPLOAD_DEST
+          "
+  script: >
+      docker run -ti --name makerpms ${EVARS}
+      --hostname b${TRAVIS_BUILD_NUMBER}.nethserver.org
+      --volume $PWD:/srv/makerpms/src:ro ${DOCKER_IMAGE} makerpms-travis -s *.spec
+      && docker commit makerpms nethserver/build
+      && docker run -ti ${EVARS}
+      -e SECRET
+      -e SECRET_URL
+      -e AUTOBUILD_SECRET
+      -e AUTOBUILD_SECRET_URL
+      nethserver/build uploadrpms-travis
+
+This kind of builds are triggered automatically when a `pull request` is created from a `fork` of your github repository,
+and the travis-ci platform upload the builded rpms inside the ``autobuild`` [#Autobuild]_ repository.
+
+If the owner of the ``nethserver`` github repository, merge your `pull request` in the ``master`` branch, another automatic build is triggered
+and the builded rpms are uploaded inside the ``testing`` [#Testing]_ repository.
+
+Both github's pull requests and issues are commented by our ``nethbot`` [#NethBot]_ with the list of builded RPMs with their urls.
+
 Development and Release builds
 ==============================
 
@@ -106,7 +158,7 @@ to decide what kind of build is required: *development* or *release*.
 
 Release builds produce a traditional RPM file name, i.e.: ::
 
-  nethserver-mail-server-1.8.4-1.ns6.noarch.rpm 
+  nethserver-mail-server-1.8.4-1.ns6.noarch.rpm
 
 Development builds produces a *marked* RPM, i.e: ::
 
@@ -116,14 +168,14 @@ Other differences in *development* from *release* are
 
 * the ``%changelog`` section in :file:`.spec` is replaced by the git
   log history since the last tag
-  
+
 * the number of commits since the last tag, and the latest git commit
   hash are extracted from ``git describe`` and prepended to the
   ``%dist`` macro.
 
 .. index::
    pair: Sign; RPM
-  
+
 Signing RPMs
 ============
 
@@ -168,3 +220,6 @@ The :file:`.spec` argument is optional: if not provided the first
 
 .. [#Mock] Mock is a tool for building packages. http://fedoraproject.org/wiki/Projects/Mock
 .. [#FedoraPG] Referencing Source http://fedoraproject.org/wiki/Packaging:SourceURL
+.. [#Autobuild] Is a particular kind of repository in ``packages.nethserver.org`` that hosts the rpms builded automatically from travis-ci.org. http://packages.nethserver.org/nethserver/7.4.1708/autobuild/x86_64/Packages/
+.. [#Testing] Is a repository in ``packages.nethserver.org`` that hosts the rpms builded automatically from travis-ci.org started form official ``nethserver`` github repository. http://packages.nethserver.org/nethserver/7.4.1708/testing/x86_64/Packages/
+.. [#NethBot] Is our bot that comments the issues and pull request with the list of automated RPMs builds. https://github.com/nethbot

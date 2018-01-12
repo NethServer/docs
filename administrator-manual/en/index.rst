@@ -92,6 +92,7 @@ Modules
    weekly_report
    hotspot
    freepbx
+   hotsync
 
 .. only:: nscom
 
@@ -102,6 +103,7 @@ Modules
        :maxdepth: 1
 
        webvirtmgr
+       sogo
 
 Best practices
 --------------
@@ -110,7 +112,7 @@ Best practices
    :maxdepth: 2
 
    third_party
-
+   
 Appendix
 --------
 
@@ -128,7 +130,12 @@ Appendix
     -------
 
     * :ref:`General index <genindex>`
-    * :ref:`Search <search>`
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   ui/*
 
 
 

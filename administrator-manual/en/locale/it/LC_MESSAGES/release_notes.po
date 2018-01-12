@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -34,8 +34,8 @@ msgid "|product| release |version|"
 msgstr "|product| versione |version|"
 
 #: ../../release_notes.rst:16 ../../release_notes.rst:19
-msgid "ISO release 7.4.1708 - 2017-10-23"
-msgstr ""
+msgid "ISO release 7.4.1708 - 2017-10-26"
+msgstr "Rilascio ISO 7.4.1708 - 26/10/2017"
 
 #: ../../release_notes.rst:18 ../../release_notes.rst:35
 #: ../../release_notes.rst:21 ../../release_notes.rst:38
@@ -43,16 +43,16 @@ msgid ""
 "This release is based on `CentOS 7.4 "
 "<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 msgstr ""
+"Questa versione è basata su `CentOS 7.4 "
+"<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 
 #: ../../release_notes.rst:20 ../../release_notes.rst:37
 #: ../../release_notes.rst:23 ../../release_notes.rst:40
 msgid "CentOS 7 will receive security updates until 2024-06-30"
-msgstr ""
+msgstr "CentOS 7 riceverà aggiornamenti di sicurezza fino al 30/06/2024"
 
 #: ../../release_notes.rst:22 ../../release_notes.rst:25
-msgid ""
-"List of `NethServer 7 ISO releases "
-"<http://nethserver.github.io/dev/releases.html>`_"
+msgid ":ref:`nscom-releases-section`"
 msgstr ""
 
 #: ../../release_notes.rst:24 ../../release_notes.rst:27
@@ -60,6 +60,8 @@ msgid ""
 "List of `changes since 2017-01-30 "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 msgstr ""
+"Lista delle `principali modifiche dal 30/01/2017 "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 
 #: ../../release_notes.rst:26 ../../release_notes.rst:29
 msgid ""
@@ -76,17 +78,19 @@ msgstr "Analisi dei `possibili bug <http://community.nethserver.org/c/bug>`_"
 
 #: ../../release_notes.rst:33 ../../release_notes.rst:36
 msgid "ISO release 7.4.1708"
-msgstr ""
+msgstr "Rilascio ISO 7.4.1708"
 
 #: ../../release_notes.rst:41 ../../release_notes.rst:44
-msgid "Major changes on 2017-10-23"
-msgstr ""
+msgid "Major changes on 2017-10-26"
+msgstr "Cambiamenti principali al 26/10/2017"
 
 #: ../../release_notes.rst:43 ../../release_notes.rst:46
 msgid ""
 "ISO release 7.4.1708 \"final\" replaces the old ISOs 7.4.1708 \"beta1\" and "
 "7.3.1611 \"update 1\""
 msgstr ""
+"Rilascio della ISO 7.4.1708 \"final\" che sostituisce le precedenti ISO "
+"7.4.1708 \"beta1\" e 7.3.1611 \"update 1\""
 
 #: ../../release_notes.rst:45 ../../release_notes.rst:48
 msgid ""
@@ -94,116 +98,130 @@ msgid ""
 "automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_) "
 "Latest Samba DC version is 4.6.8"
 msgstr ""
+"Il provider di account AD locale applica automaticamente gli aggiornamenti all'istanza Samba DC (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)\n"
+"La versione più recente di Samba DC è la 4.6.8"
 
 #: ../../release_notes.rst:49 ../../release_notes.rst:52
 msgid ""
 "The Software center page warns when a new upstream release is available "
 "(`#5355 <https://github.com/NethServer/dev/issues/5355>`_)"
 msgstr ""
+"La pagina del Softeware center avvisa quando una nuova upstream release è "
+"disponibile (`#5355 <https://github.com/NethServer/dev/issues/5355>`_)"
 
 #: ../../release_notes.rst:52 ../../release_notes.rst:55
 msgid "Added FreePBX 14 module"
-msgstr ""
+msgstr "Aggiunto il modulo FreePBX 14"
 
 #: ../../release_notes.rst:54 ../../release_notes.rst:57
 msgid ""
 "Squid has been patched for a smoother web navigation experience when using "
 "SSL transparent proxy"
 msgstr ""
+"Squid è stato patchato per una migliore esperienza di navigazione web in "
+"caso di utilizzo del proxy trasparente SSL"
 
 #: ../../release_notes.rst:56 ../../release_notes.rst:59
 msgid ""
 "Ntopng 3 replaces Bandwidthd, the Server Manager has a new \"top talkers\" "
 "page which tracks hosts network usage"
 msgstr ""
+"Ntopng 3 sostituisce Bandwidthd, il Server Manager contiene una nuova pagina"
+" \"top talkers\" che traccia l'utilizzo della banda da parte degli host"
 
 #: ../../release_notes.rst:59 ../../release_notes.rst:62
 msgid "Suricata can be configured with multiple categories rules"
-msgstr ""
+msgstr "Suricata può essere configurato con molteplici categorie di regole"
 
 #: ../../release_notes.rst:61 ../../release_notes.rst:64
 msgid "EveBox can report traffic anomalies detected by Suricata"
-msgstr ""
+msgstr "EveBox può segnalare anomalie di traffico rilevate da Suricata"
 
 #: ../../release_notes.rst:63 ../../release_notes.rst:66
 msgid "Nextcloud 12.0.3"
-msgstr ""
+msgstr "Nextcloud 12.0.3"
 
 #: ../../release_notes.rst:65 ../../release_notes.rst:68
 msgid "Web antivirus based on ICAP instead of ECAP"
-msgstr ""
+msgstr "Web antivirus basato su ICAP invece che su ECAP"
 
 #: ../../release_notes.rst:67 ../../release_notes.rst:70
 msgid "Web filters: ufdbGuard updated to 1.33.4, small UI improvements on web"
 msgstr ""
+"Filtri web: ufdbGuard aggiornato alla versione 1.33.4, apportati piccoli "
+"miglioramenti UI all'interfaccia web"
 
 #: ../../release_notes.rst:69 ../../release_notes.rst:72
 msgid "Diagtools: added speedtest"
-msgstr ""
+msgstr "Strumenti di diagnostica: aggiunto speedtest"
 
 #: ../../release_notes.rst:71 ../../release_notes.rst:74
 msgid "ufdbGuard updated to release 1.33.4"
-msgstr ""
+msgstr "ufdbGuard aggiornato alla versione 1.33.4"
 
 #: ../../release_notes.rst:73 ../../release_notes.rst:76
 msgid "WebTop4 has been removed"
-msgstr ""
+msgstr "WebTop4 è stato rimosso"
 
 #: ../../release_notes.rst:76 ../../release_notes.rst:79
 msgid "Major changes on 2017-07-31"
-msgstr ""
+msgstr "Cambiamenti principali dal 31/07/2017"
 
 #: ../../release_notes.rst:78 ../../release_notes.rst:81
 msgid "ISO release 7.3.1611 \"update 1\" replaces the previous ISO 7.3.1611 \"Final\""
 msgstr ""
+"Rilascio della ISO 7.3.1611 \"update 1\" che sostituisce la precedente ISO "
+"7.3.1611 \"Final\""
 
 #: ../../release_notes.rst:80 ../../release_notes.rst:83
 msgid "Configuration backup page enhancement"
-msgstr ""
+msgstr "Miglioramento della pagina di backup della configurazione"
 
 #: ../../release_notes.rst:82 ../../release_notes.rst:85
 msgid "Accounts provider page enhancement"
-msgstr ""
+msgstr "Miglioramento della pagina degli Account provider"
 
 #: ../../release_notes.rst:84 ../../release_notes.rst:87
 msgid "Migration from sme8 and upgrade from ns6 procedures"
-msgstr ""
+msgstr "Procedure di migrazione da sme8 e di aggiornamento da ns6"
 
 #: ../../release_notes.rst:86 ../../release_notes.rst:89
 msgid "OpenvPN: improve net2net tunnels"
-msgstr ""
+msgstr "OpenVPN: migliorati tunnel net2net"
 
 #: ../../release_notes.rst:88 ../../release_notes.rst:91
 msgid "WebTop 5.0.7"
-msgstr ""
+msgstr "WebTop 5.0.7"
 
 #: ../../release_notes.rst:90 ../../release_notes.rst:93
 msgid "Backup data: basic WebDAV support for backups and storage stats"
-msgstr ""
+msgstr "Backup dati: supporto base per backup su WebDAV e statistiche storage"
 
 #: ../../release_notes.rst:92 ../../release_notes.rst:95
 msgid "UI tweaks for IPSec tunnels"
-msgstr ""
+msgstr "Ritocchi UI per tunnel IPSec"
 
 #: ../../release_notes.rst:94 ../../release_notes.rst:97
 msgid "Web proxy: support divert and priority rules"
-msgstr ""
+msgstr "Proxy web: supporto instradamenti e regole di priorità"
 
 #: ../../release_notes.rst:96 ../../release_notes.rst:99
 msgid "NextCloud 12"
-msgstr ""
+msgstr "NextCloud 12"
 
 #: ../../release_notes.rst:98 ../../release_notes.rst:101
 msgid "Network diagnostic tools page"
-msgstr ""
+msgstr "Pagina strumenti diagnostici di rete"
 
 #: ../../release_notes.rst:101 ../../release_notes.rst:104
 msgid "Major changes on 2017-01-30"
-msgstr ""
+msgstr "Cambiamenti principali dal 30/01/2017"
 
 #: ../../release_notes.rst:103 ../../release_notes.rst:106
 msgid "ISO release 7.3.1611 \"Final\" replaces the previous ISO 7.3.1611 \"RC4\""
 msgstr ""
+"Rilascio della ISO 7.3.1611 \"Final\" che sostituisce la precedente ISO "
+"7.3.1611 \"RC4\""
 
 #: ../../release_notes.rst:104 ../../release_notes.rst:107
 msgid "Installer: added new manual installation method"

@@ -407,10 +407,9 @@ Assumptions and limitations
    If a priority rule uses a role (interface) as source, the rule can't be added 
    to postrouting chain since the packet is already natted: Shorewall will move the rule on top of forwarding chain.
 
-3. nDPI rules can't block http/https traffic if web proxy is enabled. Selected internet domains excluded from proxy
-   can be inspected by nDPI.
+3. nDPI rules can't block the http/https traffic if web proxy is enabled in transparent mode.
 
-4. All nDPI markers are read from ``/proc/net/xt_ndpi/proto`` and left shifted by 8 bits.
+4. All nDPI markers are read from ``/proc/net/xt_ndpi/proto`` and shifted by 8 bits.
 
 5. Divert rules can't be used with nDPI, because an established TCP connection can't be moved between providers.
 

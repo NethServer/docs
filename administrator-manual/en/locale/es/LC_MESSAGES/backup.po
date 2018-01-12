@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Rubén Rothermel <ruben_rothermel@yahoo.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -57,14 +57,14 @@ msgstr ""
 #: ../../backup.rst:25 ../../backup.rst:28
 msgid ""
 "**Data backup** is enabled by installing the \"Backup\" module and contains "
-"all data like user's home directories and mails. It runs every night and can"
-" be full or incremental on a weekly basis.  This backup also contains the "
-"archive of the configuration backup."
+"all data such as user's home directories and mails. It runs every night and "
+"can be full or incremental on a weekly basis.  This backup also contains the"
+" archive of the configuration backup."
 msgstr ""
 
 #: ../../backup.rst:30 ../../backup.rst:33
-msgid "Data backup can be saved on different destinations:"
-msgstr "Los datos de respaldo pueden ser guardados en destinos diferentes"
+msgid "Data backup can be saved on one destination chosen between:"
+msgstr ""
 
 #: ../../backup.rst:32 ../../backup.rst:35
 msgid ""
@@ -77,10 +77,8 @@ msgstr ""
 #: ../../backup.rst:33 ../../backup.rst:36
 msgid ""
 "CIFS: Windows shared folder, it's available on all NAS (Network Attached "
-"Storage)"
+"Storage). Use access credentials like: MyBindUser,domain=mydomain.com"
 msgstr ""
-"CIFS: Carpeta compartida de Windows, está disponible en todas las NAS "
-"(Network Attached Storage)"
 
 #: ../../backup.rst:34 ../../backup.rst:37
 msgid ""

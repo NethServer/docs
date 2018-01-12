@@ -12,6 +12,8 @@ people using Samba (SMB/CIFS).
 To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
 page.
 
+.. _smb-auth-section:
+
 Authorizations
 ==============
 
@@ -25,13 +27,17 @@ UNIX file system permissions.
 Access privileges can be refined further with the :guilabel:`ACL` tab, allowing
 individual users and other groups to gain read and write permissions.
 
+ACLs can also be set on individual files and directories from a Windows client,
+if the user has enough permissions -- see section  :ref:`smb-perms-section` for
+details.
+
+.. warning::
+
+  Some ACLs settings supported by Windows clients cannot be translated to POSIX
+  ACLs supported by |product|, thus they will be lost when they are applied
+
 At any time, the :guilabel:`Reset permissions` button propagates the shared
-folder UNIX permissions and Posix ACLs to its contents.
-
-.. warning: 
-
-  Compatible SMB clients can be used to set special ACLs on a specific file or
-  sub-directory only if the File server is configured with Kerberos authentication.
+folder UNIX permissions and POSIX ACLs to its contents.
 
 If :guilabel:`Guest access` is enabled, any provided authentication
 credentials are considered valid.
@@ -106,3 +112,57 @@ Provide John's credentials as explained in :ref:`smb-access-section`.
 
     The Unix home directory is created the first time the user accesses it by
     either SMB or SFTP/SSH protocol.
+
+.. _smb-perms-section:
+
+Change resource permissions from Windows clients
+================================================
+
+When an user connects to a shared folder with a Windows client, he can change
+permissions on individual files and directories. Permissions are expressed by
+Access Control Lists (ACLs).
+
+.. warning::
+
+  Some ACLs settings supported by Windows clients cannot be translated to POSIX
+  ACLs implemented by |product|, thus they will be lost when they are applied
+
+Only the owner of a resource (being it either file or directory) has full
+control over it (read, write, change permissions). The permission to delete a
+resource is granted to users with write permissions on the parent directory. The
+only exception to this rule is described in the :ref:`smb-admins-section`
+section.
+
+When a new resource is created, the owner can be defined by one of the following
+rules:
+
+* the owner is the user that creates the resource
+* the owner is inherited from the parent directory
+
+To enforce one of those rules, go to :ref:`FileServer-section` page and select
+the corresponding radio button under :guilabel:`When a new file or directory is
+created in a shared folder` section.
+
+.. warning::
+    
+    The :guilabel:`Owning group` setting of a shared folder does not affect the
+    owner of a resource. See also the :ref:`smb-auth-section` section above
+
+.. _smb-admins-section:
+
+Administrative access
+=====================
+
+The :ref:`FileServer-section` page allows to grant special privileges to
+members of the ``Domain Admins`` group:
+
+* extend the owner permission by enabling the :guilabel:`Grant
+  full control on shared folders to Domain Admins group` checkbox
+
+* access other users' home directories by enabling the
+  :guilabel:`Grant full control on home directories to Domain Admins group
+  (home$ share)` checkbox. To access home directories connect to the hidden
+  share ``home$``. For instance, the SMB network address is: ::
+
+    \\MYSERVER\home$
+    \\192.168.1.2\home$

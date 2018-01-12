@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../../installation.rst:91 ../../installation.rst:94
 msgid "`Etcher`_"
-msgstr ""
+msgstr "`Etcher`_"
 
 #: ../../installation.rst:92 ../../installation.rst:95
 msgid "`Win32 Disk Imager`_"
@@ -411,6 +411,9 @@ msgid ""
 " Additional languages can be installed later. See :ref:`Next steps "
 "<installation-next-steps>`."
 msgstr ""
+"El idioma por defecto en la instalación de |product| es *English (United "
+"States)*. Puedes instalar más idiomas al sistema más tarde. Ver :ref:`Next "
+"steps `."
 
 #: ../../installation.rst:223 ../../installation.rst:226
 msgid "Interactive and Manual modes"
@@ -572,18 +575,11 @@ msgstr ""
 "Proceda con el :ref:`registro <registration-section>` y luego ejecute el "
 "siguiente comando: ::"
 
-#: ../../installation.rst:313 ../../installation.rst:316
-msgid ""
-"If YUM reports problems with RPM dependencies, the system probably has "
-"installed RPMs from different CentOS release. In this case, please upgade to"
-" 7.4 (beta): ::"
-msgstr ""
-
-#: ../../installation.rst:324 ../../installation.rst:327
+#: ../../installation.rst:317 ../../installation.rst:320
 msgid "Next steps"
 msgstr "Próximos pasos"
 
-#: ../../installation.rst:326 ../../installation.rst:329
+#: ../../installation.rst:319 ../../installation.rst:322
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

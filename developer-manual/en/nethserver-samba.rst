@@ -19,6 +19,9 @@ Example: ::
     WinsServerIP=
     UseCups=enabled
     UseClientDriver=yes
+    HomeAdmStatus=disabled
+    ShareAdmStatus=disabled
+    InheritOwner=yes
 
 * ``NetbiosAliasList``
   See ``netbios aliases`` parameter in smb.conf(5) manpage.
@@ -40,6 +43,11 @@ Example: ::
 * ``UseClientDriver {yes,no}``
   See ``use client driver`` parameter in smb.conf(5) manpage.
 
+* ``HomeAdmStatus {enabled,disabled}`` Enable home$ hidden, administrative share
+
+* ``ShareAdmStatus {enabled,disabled}`` Set ``admin users = "@domain admins"`` on every shared folder
+
+* ``InheritOwner {yes,no}`` Mapped to ``inherit owner`` property of smb.conf
 
 Accounts database
 =================

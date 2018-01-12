@@ -311,3 +311,14 @@ source_file = _build/locale/freepbx.pot
 source_lang = en
 type = PO
 
+[docs-v7.ui]
+file_filter = locale/<lang>/LC_MESSAGES/ui.po
+source_file = _build/locale/ui.pot
+source_lang = en
+type = PO
+
+[docs-v7.hotsync]
+file_filter = locale/<lang>/LC_MESSAGES/hotsync.po
+source_file = _build/locale/hotsync.pot
+source_lang = en
+type = PO

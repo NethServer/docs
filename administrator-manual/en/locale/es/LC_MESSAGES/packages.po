@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: JѳƝ Ҝᶖμ <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,23 +120,23 @@ msgstr ""
 
 #: ../../packages.rst:68 ../../packages.rst:71
 msgid "More info on upstream updates:"
-msgstr ""
+msgstr "Más información sobre las actualizaciones más recientes"
 
 #: ../../packages.rst:70 ../../packages.rst:73
 msgid "https://wiki.centos.org/FAQ/General"
-msgstr ""
+msgstr "https://wiki.centos.org/FAQ/General"
 
 #: ../../packages.rst:71 ../../packages.rst:74
 msgid "https://access.redhat.com/support/policy/updates/errata/"
-msgstr ""
+msgstr "https://access.redhat.com/support/policy/updates/errata/"
 
 #: ../../packages.rst:72 ../../packages.rst:75
 msgid "https://access.redhat.com/security/updates/backporting"
-msgstr ""
+msgstr "https://access.redhat.com/security/updates/backporting"
 
 #: ../../packages.rst:73 ../../packages.rst:76
 msgid "https://access.redhat.com/security/"
-msgstr ""
+msgstr "https://access.redhat.com/security/"
 
 #: ../../packages.rst:76 ../../packages.rst:79
 msgid ""

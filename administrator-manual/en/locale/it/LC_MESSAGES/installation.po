@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 16:42+0200\n"
+"POT-Creation-Date: 2018-01-10 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -569,18 +569,11 @@ msgstr ""
 "Procedere alla :ref:`registrazione <registration-section>` quindi eseguire "
 "il comando: ::"
 
-#: ../../installation.rst:313 ../../installation.rst:316
-msgid ""
-"If YUM reports problems with RPM dependencies, the system probably has "
-"installed RPMs from different CentOS release. In this case, please upgade to"
-" 7.4 (beta): ::"
-msgstr ""
-
-#: ../../installation.rst:324 ../../installation.rst:327
+#: ../../installation.rst:317 ../../installation.rst:320
 msgid "Next steps"
 msgstr "Passi successivi"
 
-#: ../../installation.rst:326 ../../installation.rst:329
+#: ../../installation.rst:319 ../../installation.rst:322
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

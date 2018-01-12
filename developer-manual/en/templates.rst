@@ -72,7 +72,7 @@ two fragments::
  [root@test hosts]$ ls /etc/e-smith/templates/etc/hosts
  10localhost  20hostname
 
-Fragments can have static content. For example::
+Fragments can have static content. For example, the first fragment::
 
  127.0.0.1       localhost
 
