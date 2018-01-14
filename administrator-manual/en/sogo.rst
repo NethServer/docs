@@ -24,8 +24,6 @@ SOGo is the missing component of your infrastructure; it sits in the middle of y
  ``nethserver-sogo`` doesn't integrate OpenChange and Samba4 for native MAPI support, so SOGo groupware doesn't provide full support for Microsoft Outlook clients, Mac OS X Mail.app and all iOS devices, don't try to add your mail account as an Exchange account in these mail clients. You have to add account as POP3/IMAP account, caldav/carddav account instead.
 
 
-**Maintainer** : Stephane de Labrusse at `stephdl@de-labrusse.fr <mailto:stephdl@de-labrusse.fr>`_
-
 Installation
 ============
 
@@ -360,7 +358,7 @@ Nightly build
 SOGo is built by the community, if you look to the last version, then you must use the nightly built. 
 This version is not considered as stable, but bugs are fixed quicker than in stable version. You are the QA testers :)
 
-|product| 7 - SOGo 2
+|product| 7 - SOGo 3
 --------------------
 
 Execute: ::
