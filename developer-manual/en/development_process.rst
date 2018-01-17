@@ -119,8 +119,7 @@ The *Developer*.
 
 * Sets the *Assignee* to himself.
 
-* Bundle his commits as one or more GitHub *pull requests*, reporting the
-  issue number reference on them (see also `Commit message style guide`_).
+* Bundle his commits as one or more GitHub :ref:`pull_request-section`
 
 * For *enhancements*, writes the test case (for *bugs* the procedure to
   reproduce the problem should be already set).
@@ -179,6 +178,89 @@ After the *QA member* has completed the testing phase:
 
 When the package is CLOSED, all related `documentation`_ must be in place.
 
+.. _pull_request-section:
+
+Pull requests
+=============
+
+A Pull Request (PR) is the main method of submitting code contributions to NethServer.
+
+You can find an overview of the whole workflow here: https://guides.github.com/introduction/flow/
+
+Submitting a pull request
+-------------------------
+
+When submitting a PR, check that:
+
+1. PR is submitted against ``master`` (for current stable release)
+
+2. PR title contains a brief explanation of the feature, fix or enhancement
+
+3. PR comment contains a link to the related issue, in the form ``NethServer/dev#<number>``, eg: NethServer/dev#1122
+
+4. PR comment describes the changes and how the feature is supposed to work
+
+5. Multiple dependant PRs in multiple repositories must include the dependency between them in the description
+
+Managing an open pull request
+-----------------------------
+
+After submitting a PR, before it is merged:
+
+1. If enabled, automated build process must pass
+   
+   - If the build fails, check the error and try to narrow down the reason
+   - If the failure is due to an infrastructure problem, please contact a developer who whill help you
+
+2. Another developer must review the pull request to make sure it:
+
+   - Works as expected
+   - Doesn't break existing stuff
+   - The code is reasonably readable by others developers
+   - The commit history is clean and adhere to :ref:`commit_message-section`
+
+3. The PR must be approved by a core developer:
+
+   - Any comment raised by a developer has been addressed before the pull request is ready to merge
+
+
+Merging a pull request
+----------------------
+
+When merging a PR, make sure to copy the issue reference inside the merge commit comment body, this step will be used by automation tools:
+
+- to write notification about published RPMs inside the referenced issue
+- to automatically create RPMs changelog
+
+If the commit history is not clear enough, or you want to easily revert the whole work, it's acceptable
+to squash before merge. Please make sure the issue reference is present inside the comment of squashed commit.
+
+Also, avoid to add the issue references directly inside non-merge commit message to have a clean GitHub reference graph.
+
+Example of good merge commit: ::
+
+  commit xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Merge: xxxxxxx yyyyyyy
+  Author: Mighty Developer <mighty.developer@netheserver.org>
+  Date:   Thu Dec 14 17:12:19 2017 +0100
+
+      Merge pull request #87 from OtherDev/branchXY
+
+      Add new excellent feature 
+
+      NethServer/dev#1122
+
+Example of merged PR with squash: ::
+
+  commit xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Author: Mighty Developer <mighty.developer@netheserver.org>
+  Date:   Thu Dec 14 17:12:19 2017 +0100
+
+    Another feature (#89)
+
+    NethServer/dev#1133
+
+
 RPM Version numbering rules
 ===========================
 
@@ -193,6 +275,8 @@ Packages have a version number in the form **X.Y.Z-N** (Eg.
 * Z: bug fixes - small enhancements
 * N: spec modifications inside the current release - hotfixes
 
+.. _commit_message-section:
+
 Commit message style guide
 ==========================
 
@@ -206,6 +290,9 @@ Individual commits should contain a cohesive set of changes to the code. These
 5. Use the imperative mood in the subject line
 6. Wrap the body at 72 characters
 7. Use the body to explain what and why vs. how
+
+For merge commits, and commits pushed directly to master branch (*avoid whenever possible!*),
+also add the issue reference inside the commit body.
 
 .. _`seven rules`: http://chris.beams.io/posts/git-commit/#seven-rules
 
