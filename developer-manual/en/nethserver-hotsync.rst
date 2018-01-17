@@ -1,4 +1,7 @@
-============
+==================
+nethserver-hotsync
+==================
+
 What is it ?
 ============
 
@@ -10,7 +13,6 @@ NethServer HotSync aims to reduce downtime in case of failure. Normally, when an
 
 In summary, users are able to start working again with data from the night before failure after a few hours or days. Using HotSync, time 1 and 3 become 0 and 2 becomes 5 minutes (time to activate the slave server). Users are able to start working again in few minutes, using data from a few minutes before the crash.
 
-============
 Requirements
 ============
 
@@ -19,13 +21,11 @@ Two server machines are needed:
 * MASTER: active server on production
 * SLAVE: warm backup server
 
-============
 How it works
 ============
 
 **MASTER** machine is the currently production server and it makes a backup in the **SLAVE** machine every *"n"* minutes. When a crash occurs on the master, slave becomes active taking the same IP address of the master. Doing so the downtime is minimal, only the time to launch some commands on the SLAVE.
 
-============
 Installation
 ============
 
@@ -33,7 +33,6 @@ On both MASTER and SLAVE, install nethserver-hotsync: ::
 
     # yum install nethserver-hotsync
 
-=============
 Configuration
 =============
 
@@ -58,7 +57,6 @@ If *MySQL* or *PostgreSQL* are installed, they will be synchronized by default. 
     [root@master]# config setprop hotsync databases disabled
     [root@master]# signal-event nethserver-hotsync-update
 
-==============
 How to restore
 ==============
 
@@ -73,7 +71,6 @@ The following procedure are to put the SLAVE in production when the master has b
 4. connect backup HD to SLAVE
 5. connect the router
 
-==============================
 How to restore original server
 ==============================
 
@@ -89,7 +86,6 @@ To put again in production original crashed server:
 5. restore configuration backup
 
 
-===============================
 How to synchronize custom paths
 ===============================
 
@@ -99,7 +95,6 @@ It is possible to customize HotSync adding all kind of data through the use of *
 
 If you want to add files to the synchronization, append them to the INCLUDE_FILE. Append them to EXCLUDE_FILE to remove from the synchronization.
 
-=================================================
 How to force synchronization from MASTER to SLAVE
 =================================================
 
@@ -107,7 +102,6 @@ From MASTER bash launch the command: ::
 
     # hotsync
 
-===========================================
 How to force packages installation on SLAVE
 ===========================================
 
@@ -117,12 +111,11 @@ executing bash command: ::
 
     # hotsync-slave
 
-==========
 Components
 ==========
 
 hotsync
-=======
+-------
 
 - is a shell script launched by cron every 15 minutes
 - uses a lockfile to ensure that only one instance at a time is executed
@@ -137,12 +130,11 @@ hotsync
 
 
 hotsync-slave
-=============
+-------------
 
 Automatically executed on SLAVE every 60 minutes, extracts from MASTER
 configuration backup the list of packages to install and install them.
 
-==================
 Supported packages
 ==================
 
@@ -174,7 +166,6 @@ Not supported packages
 - nethserver-ntopng
 
 
-====================================================
 HotSync management using Cockpit Graphical Interface
 ====================================================
 
@@ -182,13 +173,13 @@ It can be possible to administrate HotSync from cockpit web graphical interface 
 
 
 Configuration using Cockpit Web Gui
-===================================
+-----------------------------------
 
 - On both MASTER and SLAVE browse to cockpit web gui -> "Applications" -> "NethServer Hotsync" -> "Settings"
 - select the "role", then insert the requested data and click "Save" button
 
 Restore using Cockpit Web Gui
-=============================
+-----------------------------
 
 - From SLAVE browse to cockpit web gui -> "Applications" -> "NethServer Hotsync" -> "Settings"
 - click on "Promote to Master" button
