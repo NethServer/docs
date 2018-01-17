@@ -23,6 +23,7 @@ nethserver-getmail
 nethserver-nextcloud
 nethserver-samba
 nethserver-squid
+nethserver-squidguard
 nethserver-suricata
 nethserver-webtop5
 nethserver-ipsec-tunnels
