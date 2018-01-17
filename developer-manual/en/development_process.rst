@@ -33,7 +33,7 @@ By the way, it’s perfectly reasonable not to fill issues for
 occasional small fixes, like typos in translations.
 
 Issues are not a TODO list. Issues track the status changes of a job, the
-output of the job will be a new RPM implementing the issue itself.
+output of the job will be a new RPM resolving the issue itself.
 If you are exploring some esoteric paths for new feature or hunting
 something like a `heisenbug <http://en.wikipedia.org/wiki/Heisenbug>`__
 , please write a draft wiki page with your thoughts, then create a new
@@ -200,7 +200,7 @@ When submitting a PR, check that:
 
 4. PR comment describes the changes and how the feature is supposed to work
 
-5. Multiple dependant PRs in multiple repositories must include the dependency between them in the description
+5. Multiple dependant PRs in multiple repositories must include the dependencies between them in the description
 
 Managing an open pull request
 -----------------------------
@@ -210,16 +210,16 @@ After submitting a PR, before it is merged:
 1. If enabled, automated build process must pass
    
    - If the build fails, check the error and try to narrow down the reason
-   - If the failure is due to an infrastructure problem, please contact a developer who whill help you
+   - If the failure is due to an infrastructure problem, please contact a developer who will help you
 
 2. Another developer must review the pull request to make sure it:
 
    - Works as expected
    - Doesn't break existing stuff
    - The code is reasonably readable by others developers
-   - The commit history is clean and adhere to :ref:`commit_message-section`
+   - The commit history is clean and adheres to :ref:`commit_message-section`
 
-3. The PR must be approved by a core developer:
+3. The PR must be approved by a developer with commit access to NethServer on GitHub:
 
    - Any comment raised by a developer has been addressed before the pull request is ready to merge
 
@@ -233,11 +233,11 @@ When merging a PR, make sure to copy the issue reference inside the merge commit
 - to automatically create RPMs changelog
 
 If the commit history is not clear enough, or you want to easily revert the whole work, it's acceptable
-to squash before merge. Please make sure the issue reference is present inside the comment of squashed commit.
+to squash before merge. Please make sure the issue reference is present inside the comment of the squashed commit.
 
-Also, avoid to add the issue references directly inside non-merge commit message to have a clean GitHub reference graph.
+Also, avoid adding the issue references directly inside non-merge commit messages to have a clean GitHub reference graph.
 
-Example of good merge commit: ::
+Example of a good merge commit: ::
 
   commit xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   Merge: xxxxxxx yyyyyyy
@@ -250,7 +250,7 @@ Example of good merge commit: ::
 
       NethServer/dev#1122
 
-Example of merged PR with squash: ::
+Example of a merged PR with squash: ::
 
   commit xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   Author: Mighty Developer <mighty.developer@netheserver.org>
