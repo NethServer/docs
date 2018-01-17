@@ -1,17 +1,46 @@
-==================
-Web content filter
-==================
+=====================
+nethserver-squidguard
+=====================
 
-The nethserver-squidguard package configures the web content filter based on SquidGuard url-rewriter.
-
-The configuration is based on profiles.
-Each profile is composed by:
+The package configures ufdbGuard, a URL filter for squid. The configuration is
+based on *profiles*. Each profile is composed by:
 
 * a user, group of users, host or group of hosts accessing the web page
 * a filter which includes allowed and denied sites
 * a time frame within the filter is active
 
-The system comes with a default profile which is applied to any host/user who doesn't fit on a specific profile.
+The system comes with a default profile which is applied to any host/user who
+doesn't fit on a specific profile.
+
+Features of ufdbGuard:
+
+-  3-4 times faster than squidGuard
+-  a multithreaded daemon with one copy of the database in memory
+-  detects HTTPS proxy tunnels
+-  detects SSH-based tunnels
+-  blocks HTTPS for URLs without FQDN
+-  blocks HTTPS for sites without a properly signed SSL certificate
+-  uses in-memory databases
+-  enforce the SafeSearch feature on Google and other search engines
+-  a test mode (-T option) allows you to test a URL filter database without actually blocking sites
+
+
+
+Inner workings
+==============
+
+For each request, squid sends the URL to one ``ufdbgclient`` redirector (which runs as user squid),
+which in turn asks to the ``ufdb`` daemon (which runs as user ufdb).
+
+
+Known limitations
+=================
+
+- Transparent URL filtering on HTTPS websites can only block whole domains, because ufdbGuard can only receive
+the domain name, not the full URL
+
+- Redirected HTTPS show an error instead of the block page
+
 
 Blacklists
 ==========
@@ -25,10 +54,10 @@ Databases
 The package uses the ``squidguard`` key inside the ``configuration`` database, also it creates a new ``contentfilter`` database
 for profiles and filters configuration.
 
-Common configuration
---------------------
+configuration
+-------------
 
-Properties for ``squidguard`` key:
+The key ``squidguard`` contains all settings. Properties are:
 
 * *BlockedFileTypes*: comma separated list of blocked file extensions
 * *CustomListURL*: URL to download a custom blacklist. The blacklist must follow SquidGuard standard
@@ -45,7 +74,8 @@ Properties for ``squidguard`` key:
 * *UrlWhitelist*: comma separated URL list, this URLs are always allowed
 
 
-.. note:: Modifying following parameters can greatly affect memory usage: IdleChildren, MaxChildren, StartupChildren
+.. note:: Modifying following parameters can greatly affect memory usage:
+          IdleChildren, MaxChildren, StartupChildren
 
 Example: ::
 
@@ -64,8 +94,12 @@ Example: ::
     UrlWhitelist=
     status=enabled
 
-Contentfilter database
-----------------------
+The service key ``ufdb`` has enabled/disabled ``state`` according to the status prop of the squidguard
+(see nethserver-squidguard-ufdb-status action).
+
+
+contentfilter
+-------------
 
 The ``contentfilter`` database can contain three kind of records:
 
@@ -130,6 +164,7 @@ Properties:
   * *f*: Friday
   * *a*: Saturday
   * *s*: Sunday 
+
 * *Description*: optional description
 * *EndTime*: hour of the day in 24h format or empty
 * *StartTime*: our of the day in 24h format or empty
@@ -149,38 +184,46 @@ Profiles
 Properties:
 
 * *Filter*: a filter object
+* *FilterElse: an optional filter object, applied when none of the referenced Time rules apply
 * *Src*: it can be an object of type user, user group, host, host group, zone or role. Otherwise, if it is a string, the system will
   assume the profile is associated with an user from Active Directory; the system must be joined to a domain
-* *Time*: a time object (optional)
+* *Time*: a CSV list time object references (optional)
 * *Description*: optional description
 * *Removable*: can be ``yes`` or ``no``. If set to ``no`` the record can't be removed from web interface 
-
 
 Profile example: ::
 
  myprofile=profile
     Description=My profile
     Filter=filter;badboys
+    FilterElse=filter;enjoy
     Src=host;demo
-    Time=time;worktime
+    Time=time;worktime-am,time;worktime-pm
 
 
+.. _ufdbguard-blockpage-section:
 .. _squidguard-blockpage-section:
 
 Block page
 ==========
 
 The block page is a CGI used to inform the user about the block reason.
-It's a single page which can handle requests from SquidGuard and SquidClamav (:ref:`squidclamav-section`).
+It's a single page which can handle requests from ufdbGuard and SquidClamav (:ref:`squidclamav-section`).
 
 The page is localized depending on browser language.
 
 This configuration can be overwritten using ``RedirectUrl`` property.
 
+Troubleshooting
+===============
 
-Log files
-=========
+Some commands: ::
 
-Blocked page logs:
+  echo "http://bit.ly 10.10.0.1/ - - GET" | /usr/sbin/ufdbgclient -d
+  echo "http://bit.ly 10.10.0.1/ user@mydomain.com - GET" | /usr/sbin/ufdbgclient -d
+  /etc/init.d/ufdb testconfig 2>&1 | grep FATAL
 
-* SquidGuard: :file:`/var/log/squidGuard/urlfilter.log`
+Logfiles: ::
+
+  /var/ufdbguard/logs/ufdbguardd.log
+  
