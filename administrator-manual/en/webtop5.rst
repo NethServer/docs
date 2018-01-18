@@ -59,25 +59,94 @@ domain part of server FQDN.
 * User: admin
 * Login: admin@mightydomain.com
 
+Device synchronization with ActiveSync (EAS)
+============================================
+
+Multiple calendars and contacts
+-------------------------------
+
+With the recent Upgrade pack 3 of WebTop 5, support on ActiveSync has been added in order to synchronize even calendars and rubrics received in sharing.
+
+Shared resources (calendars and address books) are displayed with the owner's name and category, with the internal code added in square brackets.
+The private elements of the shares are completely ignored and not passed.
+
+Mobile devices based on Apple iOS fully support folders / categories for calendar, contacts and activities (called reminders), including original colors.
+
+Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
+but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
+
+Installing and using the CloudCal application: https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=en
+you can change the colors associated with each calendar, including shared ones.
+
+On Android devices the contacts from shared phonebooks arrive in a single indistinguishable container, 
+where it is still possible to modify the individual elements, which will be saved by z-push in the correct categories.
+
+
+.. note::
+
+  In order to receive data via EAS on mobile devices, it is necessary to verify 
+  that the shared resources (Calendars and Sections) have synchronization enabled (Complete or Read only):
+
+  .. image:: _static/webtop-multiple_sync.png
+               :alt: Multiple synchronization
+
 Nextcloud integration
 =====================
 
-Nextcloud installation is disabled by default for all users.
-To enable Nextcloud integration:
+.. note::
 
-1. Install "Nextcloud" module from :guilabel:`Software Center`.
+   Before proceeding, verify that the "Nextcloud" module has been installed 
+   from :guilabel:`Software Center`
 
-2. Access WebTop as admin user then enable the Nextcloud authorization:
+By default the Nextcloid integration is disabled for all users.
+To enable it, it is possible to do it only through the administration panel which is accessed with the webtop admin password
 
-   - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
-   - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> Resource --> STORE_CLOUD --> Action --> CREATE`
-   - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.vfs (Cloud) --> Resource --> STORE_OTHER --> Action --> CREATE
-   - Click :guilabel:`OK` then save and close
+For example, if you want to activate the service for all webtop users, proceed as follows:
+
+1. access the administrative panel and select "Groups":
+
+   .. image:: _static/webtop-admin_panel_groups.png
+
+2. modify the properties of the "users" group by double clicking and select the button related to the Authorizations:
+   
+   .. image:: _static/webtop-admin_panel_permission.png
+
+3. add to existing authorizations those relating to both the ``STORE_CLOUD`` and ``STORE_OTHER`` resources by selecting the items as shown below:
+
+   .. image:: _static/webtop-admin_panel_nextcloud_auth_1.png
+
+   .. image:: _static/webtop-admin_panel_nextcloud_auth_2.png
+
+
+   so get this:
+
+   .. image:: _static/webtop-admin_panel_nextcloud_auth_3.png
+
+
+4. save and close.
+
+At this point from any user it will be possible to insert the Nextcloud resource (local or remote) in your personal Cloud.
+
+To do this, simply select the Cloud button and add a new **"Nextcloud"** resource by right clicking on **"My resources"** and then **"Add resource"** in this way:
+
+.. image:: _static/webtop-nextcloud_1.png
+
+A precompiled wizard will open:
+
+.. image:: _static/webtop-nextcloud_2.png
+
+.. note::
+
+   Remember to fill in the Username and Password fields related to access to the Nextcloud resource,
+   otherwise it will not be possible to use the public link to the shared files
+
+Proceed with the Next button until the Wizard is complete.
 
 Chat integration
 ================
 
 Web chat integration installation is disabled by default for all users.
+
 To enable chat integration:
 
 1. Install "Instant messaging"" module from :guilabel:`Software Center`.
@@ -87,6 +156,175 @@ To enable chat integration:
    - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
+
+Browser notifications
+=====================
+
+With WebTop, the desktop notification mode integrated with the browser was introduced.
+
+To activate it, simply access the general settings of your user:
+
+.. image:: _static/webtop-desktop_notifications.png
+
+It is possible to enable desktop notification in two modes:
+
+- **Always**: notifications will always be shown, even with the browser open
+- **Auto (in background only)**: notifications will be shown only when the browser is in the background
+
+Once the mode is selected, a browser consent request will appear at the top left:
+
+.. image:: _static/webtop-chrome_notifications.png
+
+If you need to enable this consent later on a different browser just click on the appropriate button:
+
+.. image:: _static/webtop-button_desktop_notifications.png
+
+
+Mailcards of user and domain
+============================
+
+One of the main features of managing signatures on WebTop is the opportunity to integrate images or custom fields profiled per user.
+
+To use the images you need to upload them to the public cloud through the WebTop admin user like this:
+
+.. image:: _static/webtop-public_images.png
+
+You can use the :guilabel:`Upload` button to load an image which is at the bottom or simply via a drag & drop.
+
+.. note::
+
+  Remember that the public images inserted in the signature are actually connected with a public link.
+  To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
+
+To change your signature, each user can access the :menuselection:`Settings -> Mail -> Editing -> Edit User mailcard`:
+
+.. image:: _static/webtop-edit_mailcard.png
+
+The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
+
+.. image:: _static/webtop-public_signature.png
+
+.. note::
+
+   The personal mailcard can be associated with the user or his email:
+   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
+
+Through the :ref:`webtop5_impersonate-section` you can also set a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard:
+
+.. image:: _static/webtop-domain_mailcard.png
+
+Furthermore, it will also be possible to modify personal information:
+
+.. image:: _static/webtop-personal_information.png
+
+that can be used within the parameterized fields within the domain mailcard editor:
+
+.. image:: _static/webtop-domain_mailcard.png
+
+In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
+
+
+Subscribing remote resources
+============================
+
+WebTop supports subscription to remote calendars and contacts (directory) using cardDAV, calDav and iCal.
+
+Remote calenders
+----------------
+
+An Internet Calendar can be added and synchronized.
+To do so just click the right button on personal calendars, :guilabel:`Add Internet Calendar`.
+Two types of remote calendars are supported: Webcal (ics format) and CalDAV.
+
+.. note::
+
+   Synchronization of Webcal calendars (ics) is always done by downloading every event on the remote resource every time, while only the differences are synchronized with the CalDAV mode
+   
+Example of Google Cal remote calendar (Webcal only - ICS)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1) Take the public access ICS link from your Google calendar: :guilabel:`Calendar options -> Settings and sharing -> Secret address in iCal format`
+
+2) On WebTop add an Internet calendar of type Webcal and paste the copied url without entering the authentication credentials in step 1 of the wizard.
+
+3) The wizard in the next steps will connect to the calendar, giving the possibility to change the name and color, and then perform the first synchronization.
+
+.. note::
+
+   The first synchronization may fail due to Google's security settings.
+   If you receive a notification that warns you about accessing your resources you need to allow them to be used confirming that it is a legitimate attempt.
+
+Remote contacts (directory)
+---------------------------
+
+Example of Google CardDAV remote address book
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1) On Webtop configure a new Internet address book, right-click on :guilabel:`Personal Categories -> Add Internet address book` and enter a URL of this type in step 1 of the wizard:
+https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/default/
+(replace the X your gmail account)
+
+2) Enter the authentication credentials (as username use the full address of gmail):
+
+.. image:: _static/webtop-remote_phonebook.png
+
+3) The wizard in the following steps will connect to the phonebook, giving the possibility to change the name and color, and then perform the first synchronization.
+
+.. note::
+
+    To be able to complete the synchronization it is necessary to enable on your account Google,
+    in the security settings, the use of apps considered less secure (here a guide on how to do: https://support.google.com/accounts/answer/6010255?hl=it).
+
+Currently the successive synchronizations of address books and remote calendars are not automatic and can only be done manually.
+To update a remote address book, for example, click on it with the right mouse button and then select the item "Synchronize":
+
+.. image:: _static/webtop-sync_google.png
+
+For CardDav address books, as well as for remote CalDAV calendars, you can select whether to perform a full synchronization or only for changes.
+To do this, right-click on the phonebook (or on the calendar), :guilabel:`Edit Category`:
+
+.. image:: _static/webtop-edit_sync_google.png
+
+Select the desired mode next to the synchronization button:
+
+.. image:: _static/webtop-edit_sync_google2.png
+
+
+.. _webtop5_impersonate-section:
+
+Impersonate
+===========
+
+In WebTop the :index:`impersonate` function, with which it is possible to access the settings of each user without knowing the password, can be used by logging in as follows:
+
+* **Username**: admin!<username>
+* **Password**: <WebTop admin password>
+
+Changing the logo
+=================
+
+To modify and customize the initial logo that appears on the login page of WebTop,
+you must upload the custom image file on the public images of the admin user and rename it with "login.png".
+
+Proceed as follows:
+
+1. log in with the WebTop user admin
+
+2. select the cloud service and public images:
+
+   .. image:: _static/webtop-public_images.png
+
+3. upload the image (via the Upload button at the bottom left or simply dragging with a drag & drop)
+
+4. rename the loaded image so that its name is **"login.png"** (use right click -> Rename):
+
+   .. image:: _static/webtop-login_page.png
+
+5. the next login will show the new logo on the login page
+
+.. note:: 
+
+   To see the new logo displayed on the login page, it may be necessary to update the browser cache using the CTRL + F5 keys
 
 Importing from Outlook PST
 ==========================
