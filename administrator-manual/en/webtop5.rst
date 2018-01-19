@@ -59,8 +59,73 @@ domain part of server FQDN.
 * User: admin
 * Login: admin@mightydomain.com
 
+Two factor authentication (2FA)
+===============================
+
+WebTop support :index:`two factor authentication`.
+The user can choose between:
+
+- Google Authenticator: the code will be generated using Google Authenticator app (https://support.google.com/accounts/answer/1066447?co=GENIE.Platform%3DAndroid)
+- Secondary mail: the access code will be sent to selected mail address
+
+To enable 2FA:
+
+- Click on the menu button on the top-right corner and select the :guilabel:`Settings` icon
+- Then select :guilabel:`Security` and click on the :guilabel:`Activate button`.
+
+.. image:: _static/webtop-2fa.png 
+
+
 Device synchronization with ActiveSync (EAS)
 ============================================
+
+Devices can be synchonized unsig ActiveSync.
+:index:`ActiveSync` can be used only for **contacts** and **calendars**.
+
+.. note::
+
+   To synchronize **e-mails** you should configure and IMAP account.
+
+Apple iOS
+---------
+
+Access your :index:`iOS device`, navigate to Settings and add an Exchange account following the official guide: https://support.apple.com/en-us/HT201729
+
+Fill the required fields with:
+
+- **E-mail**: add your mail address, eg: goofy@nethserver.org
+- **Server**: add your server public name, eg: mail.nethserver.org
+- **Domain**: leave blank
+- **User name**: enter your full username, eg: goofy@nethserver.org
+- **Password**: enter your password
+
+Finally, *disable* Mail synchronization and create an IMAP account: https://support.apple.com/en-us/HT201320
+
+.. note::
+
+   iOS devices requires a valid SSL certificate on the server.
+   See :ref:`server_certificate-section`
+
+Google Android
+--------------
+
+Access you :index:`Android device`, navigate to Settings, then select :guilabel:`Add account` -> :guilabel:`Exchange` (or "Company" for older release).
+
+Fill the required fields with:
+
+- **User name**: enter your full username, eg: goofy@nethserver.org
+- **Password**: enter your password
+
+Then select :guilabel:`Manual configuration` and change the name of the *Server* field accordingly
+to your server public name.
+Finally, if you have a self-signed certificate on your server, make sure to select :guilabel:`SSL/TLS (accept all certificates)` option.
+
+Finally, *disable* Mail synchronization and create an IMAP account.
+
+.. note::
+
+   On some Android releases (like Samsung), the User name and Domain must be entered in the same line.
+   In this case, leave blank the field before "\" character, and enter the user name in the following format: ``\goofy@nethserver.org``
 
 Multiple calendars and contacts
 -------------------------------
@@ -89,6 +154,36 @@ where it is still possible to modify the individual elements, which will be save
 
   .. image:: _static/webtop-multiple_sync.png
                :alt: Multiple synchronization
+
+Mail tags
+=========
+
+You can tag each message with different colored labels.
+Just select a message, right-click and select :guilabel:`Tag`.
+
+You can edit existings tags or add new ones selecting :guilabel:`Manage tags`.
+
+Tags can be used to filter messages using the filter top bar.
+
+Mail inline preview
+===================
+
+As default, the mail page will display a preview of the content of latest received messages.
+
+This feature can be enabled or disabled from the :guilabel:`Settings` menu, under the :guilabel:`Mail` tab,
+the checkbox is named :guilabel:`Show quick preview on message row`.
+
+.. image:: _static/webtop-preview.png
+
+
+Export events (CSV)
+===================
+
+To export calendars events in CSV (Comma Separated Value) format, click on the icon on top right corner.
+
+.. image:: _static/webtop-export_calendar_csv.png
+
+Finally, select a time interval and click on :guilabel:`Next` to export into a CSV file.
 
 Nextcloud integration
 =====================
