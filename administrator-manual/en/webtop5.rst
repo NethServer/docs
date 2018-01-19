@@ -79,7 +79,7 @@ To enable 2FA:
 Device synchronization with ActiveSync (EAS)
 ============================================
 
-Devices can be synchonized unsig ActiveSync.
+Devices can be synchronized using ActiveSync.
 :index:`ActiveSync` can be used only for **contacts** and **calendars**.
 
 .. note::
@@ -96,7 +96,7 @@ Fill the required fields with:
 - **E-mail**: add your mail address, eg: goofy@nethserver.org
 - **Server**: add your server public name, eg: mail.nethserver.org
 - **Domain**: leave blank
-- **User name**: enter your full username, eg: goofy@nethserver.org
+- **User name**: enter your full user name, eg: goofy@nethserver.org
 - **Password**: enter your password
 
 Finally, *disable* Mail synchronization and create an IMAP account: https://support.apple.com/en-us/HT201320
@@ -113,7 +113,7 @@ Access you :index:`Android device`, navigate to Settings, then select :guilabel:
 
 Fill the required fields with:
 
-- **User name**: enter your full username, eg: goofy@nethserver.org
+- **User name**: enter your full user name, eg: goofy@nethserver.org
 - **Password**: enter your password
 
 Then select :guilabel:`Manual configuration` and change the name of the *Server* field accordingly
@@ -143,7 +143,7 @@ but only on the calendars are supported folders / categories, without including 
 Installing and using the CloudCal application: https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=en
 you can change the colors associated with each calendar, including shared ones.
 
-On Android devices the contacts from shared phonebooks arrive in a single indistinguishable container, 
+On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
 where it is still possible to modify the individual elements, which will be saved by z-push in the correct categories.
 
 
@@ -161,7 +161,7 @@ Mail tags
 You can tag each message with different colored labels.
 Just select a message, right-click and select :guilabel:`Tag`.
 
-You can edit existings tags or add new ones selecting :guilabel:`Manage tags`.
+You can edit existing tags or add new ones selecting :guilabel:`Manage tags`.
 
 Tags can be used to filter messages using the filter top bar.
 
@@ -171,7 +171,7 @@ Mail inline preview
 As default, the mail page will display a preview of the content of latest received messages.
 
 This feature can be enabled or disabled from the :guilabel:`Settings` menu, under the :guilabel:`Mail` tab,
-the checkbox is named :guilabel:`Show quick preview on message row`.
+the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
 
@@ -193,7 +193,7 @@ Nextcloud integration
    Before proceeding, verify that the "Nextcloud" module has been installed 
    from :guilabel:`Software Center`
 
-By default the Nextcloid integration is disabled for all users.
+By default the Nextcloud integration is disabled for all users.
 To enable it, it is possible to do it only through the administration panel which is accessed with the webtop admin password
 
 For example, if you want to activate the service for all webtop users, proceed as follows:
@@ -232,7 +232,7 @@ A precompiled wizard will open:
 
 .. note::
 
-   Remember to fill in the Username and Password fields related to access to the Nextcloud resource,
+   Remember to fill in the User name and Password fields related to access to the Nextcloud resource,
    otherwise it will not be possible to use the public link to the shared files
 
 Proceed with the Next button until the Wizard is complete.
@@ -324,7 +324,7 @@ Subscribing remote resources
 
 WebTop supports subscription to remote calendars and contacts (directory) using cardDAV, calDav and iCal.
 
-Remote calenders
+Remote calendars
 ----------------
 
 An Internet Calendar can be added and synchronized.
@@ -340,7 +340,7 @@ Example of Google Cal remote calendar (Webcal only - ICS)
 
 1) Take the public access ICS link from your Google calendar: :guilabel:`Calendar options -> Settings and sharing -> Secret address in iCal format`
 
-2) On WebTop add an Internet calendar of type Webcal and paste the copied url without entering the authentication credentials in step 1 of the wizard.
+2) On WebTop add an Internet calendar of type Webcal and paste the copied URL without entering the authentication credentials in step 1 of the wizard.
 
 3) The wizard in the next steps will connect to the calendar, giving the possibility to change the name and color, and then perform the first synchronization.
 
@@ -359,7 +359,7 @@ Example of Google CardDAV remote address book
 https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/default/
 (replace the X your gmail account)
 
-2) Enter the authentication credentials (as username use the full address of gmail):
+2) Enter the authentication credentials (as user name use the full address of gmail):
 
 .. image:: _static/webtop-remote_phonebook.png
 
@@ -392,7 +392,7 @@ Impersonate
 
 In WebTop the :index:`impersonate` function, with which it is possible to access the settings of each user without knowing the password, can be used by logging in as follows:
 
-* **Username**: admin!<username>
+* **User name**: admin!<username>
 * **Password**: <WebTop admin password>
 
 Changing the logo
@@ -518,6 +518,77 @@ Known limitations:
 .. note::
    The script will import all events using the timezone selected by the user inside WebTop, if set.
    Otherwise system timezone will be used.
+
+Troubleshooting
+===============
+
+After login a "mail account authentication error" is displayed
+--------------------------------------------------------------
+
+If an entire mail account is shared among different users, a Dovecot connection limit can be reached.
+This is the displayed error:
+
+.. image:: _static/webtop-dovecot_error.png
+
+In ``/var/log/imap`` there are are like this: ::
+
+  xxxxxx dovecot: imap-login: Maximum number of connections from user+IP exceeded (mail_max_userip_connections=12): user=<mail@dominio.com>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, secured, session=<zz/8iz1M1AB/AAAB>
+
+To list active IMAP connection per user, execute: ::
+
+  doveadm who
+
+
+To fix the problem, just raise the limit (eg. 50 connections for each user/IP): ::
+
+  config setprop dovecot MaxUserConnectionsPerIp 50
+  signal-event nethserver-mail-server-update
+
+At the end, execute logout and login again in WebTop.
+
+
+Blank page after login
+----------------------
+
+You can access WebTop using system admin user (|product| Administrator) using the full login name, eg: ``admin@nethserver.org``.
+
+If the login fails, mostly when upgrading from WebTop 4, it means that the admin user doesn't have a mail address.
+
+To fix the problem, execute the following command: ::
+
+    curl -s https://git.io/vNuPf | bash -x
+
+Synchronized events have different time
+---------------------------------------
+
+Sometimes calendar events created on mobile devices, and synchronized via EAS, are shown with a wrong time, for example with a difference of 1 or 2 hours.
+
+The problem is due to the PHP time zone which can be different from the system time zone.
+
+With this command you can see the current time zone set for PHP: ::
+
+  config getprop php DateTimezone
+
+Output example: ::
+
+  # config getprop php DateTimezone
+  UTC
+
+
+If the Time Zone is not the desired one, you can changed it using these commands: ::
+
+  config setprop php DateTimezone "Europe/Rome"
+  signal-event nethserver-php-update
+
+
+To apply the changes, execute: ::
+
+  signal-event nethserver-httpd-update
+  signal-event nethserver-webtop5-update
+
+
+List of PHP supported time zones: http://php.net/manual/it/timezones.php
+
 
 
 .. only:: nscom
