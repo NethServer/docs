@@ -417,9 +417,6 @@ Proceed as follows:
 
 5. the next login will show the new logo on the login page
 
-.. note:: 
-
-   To see the new logo displayed on the login page, it may be necessary to update the browser cache using the CTRL + F5 keys
 
 Importing from Outlook PST
 ==========================
