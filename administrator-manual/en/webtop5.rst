@@ -417,6 +417,56 @@ Proceed as follows:
 
 5. the next login will show the new logo on the login page
 
+Importing contacts and calendars
+================================
+
+WebTop supports importing contacts and calendars from various file formats.
+
+Contacts
+--------
+
+Supported contacts format:
+
+- CSV  - Comma Separated values (\*.txt, \*.csv)
+- Excel (\.*xls, \*.xlsx)
+- VCard (\*.vcf, \*.vcard)
+
+
+To import contacts:
+
+1. Right click on the target phone book, then select :guilabel:`Import contacts`
+
+   .. image:: _static/webtop-import_contacts1.png
+
+2. Select the import format and make sure that fields on the file match the ones available on WebTop
+
+   .. image:: _static/webtop-import_contacts2.png
+
+If you are importing a phone book exported from Outlook, make sure to set :guilabel:`Text qualifier` to ``"`` value.
+
+
+.. image:: _static/webtop-import_contacts3.png
+
+Calendars
+---------
+
+Supported calendar format: iCalendar (\*.ics, \*.ical, \*.icalendar)
+
+To import events:
+
+1. Right click on the target calendar, then select :guilabel:`Import events`
+
+   .. image:: _static/webtop-import_calendars1.png
+
+2. Select the import format
+   
+   .. image:: _static/webtop-import_calendars2.png
+
+3. Then choose if you want to delete all existings events and import new ones, or just append imported data to existing calendar events
+
+   .. image:: _static/webtop-import_calendars3.png
+
+
 
 Importing from Outlook PST
 ==========================
