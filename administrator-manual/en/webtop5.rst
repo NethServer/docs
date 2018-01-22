@@ -59,6 +59,27 @@ domain part of server FQDN.
 * User: admin
 * Login: admin@mightydomain.com
 
+Change admin password
+^^^^^^^^^^^^^^^^^^^^^
+
+Access WebTop using ``admin`` user, then open user settings by clicking on the menu in the to-right corner.
+
+.. image:: _static/webtop-settings.png
+
+Go to :guilabel:`Settings` then click on guilabel:`Change password`.
+
+
+If you want to reset the admin password from command line, use following commands: ::
+
+  curl -s https://git.io/vNaIl -o webtop-set-admin-password
+  bash webtop-set-admin-password <newpassword>
+
+Remember to replace ``<newpassword>`` with your actual new password, example: ::
+
+  bash webtop-set-admin-password VeryInsecurePass
+
+
+
 Two factor authentication (2FA)
 ===============================
 
