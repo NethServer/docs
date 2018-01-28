@@ -171,11 +171,19 @@ where it is still possible to modify the individual elements, which will be save
 .. note::
 
   In order to receive data via EAS on mobile devices, it is necessary to verify 
-  that the shared resources (Calendars and Sections) have synchronization enabled (Complete or Read only):
+  that the shared resources (Calendars and Contacts) have synchronization enabled (Complete or Read only):
 
   .. image:: _static/webtop-multiple_sync.png
                :alt: Multiple synchronization
 
+It is possible to enable and disable the synchronization for each single shared resource (calendars and contacts).
+The user can customize every single resource received in sharing by deciding the type of synchronization.
+ 
+To do so, just right click on the shared resource → Customize → Sync. devices:
+
+  .. image:: _static/webtop-sync_shared_eas.png
+               :alt: Sync shared EAS
+ 
 Mail tags
 =========
 
