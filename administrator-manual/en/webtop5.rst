@@ -452,6 +452,7 @@ Change default limit "Maximum file size"
 ========================================
 
 There are hard-coded configured limits related to the maximum file size:
+
 - Maximum file size for chat uploads (internal default = 10 MB)
 - Maximum file size single message attachment (internal default = 10 MB)
 - Maximum file size for cloud internal uploads (internal default = 500 MB)
@@ -460,20 +461,24 @@ There are hard-coded configured limits related to the maximum file size:
 To change these default values for all users, the following keys can be added via the admin interface: Properties (system) -> Add
 
 **Maximum file size for chat uploads**
-Service = com.sonicle.webtop.core
-Key = im.upload.maxfilesize
+
+  Service = com.sonicle.webtop.core
+  Key = im.upload.maxfilesize
 
 **Maximum file size for single message attachment**
-Service = com.sonicle.webtop.mail
-Key = attachment.maxfilesize
+
+  Service = com.sonicle.webtop.mail
+  Key = attachment.maxfilesize
 
 **Maximum file size for cloud internal uploads**
-Service = com.sonicle.webtop.vfs
-Key = upload.private.maxfilesize
+
+  Service = com.sonicle.webtop.vfs
+  Key = upload.private.maxfilesize
 
 **Maximum file size for cloud public uploads**
-Service = com.sonicle.webtop.vfs
-Key = upload.public.maxfilesize
+
+  Service = com.sonicle.webtop.vfs
+  Key = upload.public.maxfilesize
    
 .. note::
 The value must be expressed in Byte
