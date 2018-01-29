@@ -485,7 +485,8 @@ To change these default values for all users, the following keys can be added vi
   Key = upload.public.maxfilesize
    
 .. note::
-The value must be expressed in Byte
+
+  The value must be expressed in Byte (Example 10MB = 10485760)
    
 Importing contacts and calendars
 ================================
