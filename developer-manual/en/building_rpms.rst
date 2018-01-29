@@ -56,8 +56,6 @@ This is an example of ``.travis.yml`` contents: ::
           -e TRAVIS_REPO_SLUG
           -e TRAVIS_TAG
           -e NSVER
-          -e VERSIONS_PACK
-          -e STAGES_PACK
           -e ENDPOINTS_PACK
           "
   script: >
