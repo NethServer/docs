@@ -58,7 +58,7 @@ This is an example of ``.travis.yml`` contents: ::
           -e NSVER
           -e VERSIONS_PACK
           -e STAGES_PACK
-          -e UPLOAD_DEST
+          -e ENDPOINTS_PACK
           "
   script: >
       docker run -ti --name makerpms ${EVARS}
