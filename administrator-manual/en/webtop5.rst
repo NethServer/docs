@@ -463,21 +463,25 @@ To change these default values for all users, the following keys can be added vi
 **Maximum file size for chat uploads**
 
   Service = com.sonicle.webtop.core
+  
   Key = im.upload.maxfilesize
 
 **Maximum file size for single message attachment**
 
   Service = com.sonicle.webtop.mail
+  
   Key = attachment.maxfilesize
 
 **Maximum file size for cloud internal uploads**
 
   Service = com.sonicle.webtop.vfs
+  
   Key = upload.private.maxfilesize
 
 **Maximum file size for cloud public uploads**
 
   Service = com.sonicle.webtop.vfs
+  
   Key = upload.public.maxfilesize
    
 .. note::
