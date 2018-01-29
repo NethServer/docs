@@ -171,11 +171,19 @@ where it is still possible to modify the individual elements, which will be save
 .. note::
 
   In order to receive data via EAS on mobile devices, it is necessary to verify 
-  that the shared resources (Calendars and Sections) have synchronization enabled (Complete or Read only):
+  that the shared resources (Calendars and Contacts) have synchronization enabled (Complete or Read only):
 
   .. image:: _static/webtop-multiple_sync.png
                :alt: Multiple synchronization
 
+It is possible to enable and disable the synchronization for each single shared resource (calendars and contacts).
+The user can customize every single resource received in sharing by deciding the type of synchronization.
+ 
+To do so, just right click on the shared resource → Customize → Sync. devices:
+
+  .. image:: _static/webtop-sync_shared_eas.png
+               :alt: Sync shared EAS
+ 
 Mail tags
 =========
 
@@ -196,6 +204,26 @@ the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
 
+Subscription of IMAP folders
+============================
+
+On WebTop, by default, all IMAP folders on the server are all automatically subscribed and therefore all visible from the first login.
+
+If you want to hide from the view some folders, which is equivalent to removing the subscription,
+you can do so by simply clicking the right mouse button on the folder to hide and select from the interactive menu the item "Hide from the list".
+
+For example, if you want to hide the subfolder "folder1" from this list, just right-click on it and select "Hide from the list":
+
+.. image:: _statis/webtop-sub_imap_folder1.png
+
+It will then always be possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
+
+.. image:: _statis/webtop-sub_imap_folder2.png
+
+For example, if you want to restore the subscription of the "folder1" just hidden, just select it from the list of hidden folders
+and click on the icon on the left:  
+
+.. image:: _statis/webtop-sub_imap_folder3.png
 
 Export events (CSV)
 ===================
