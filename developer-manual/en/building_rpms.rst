@@ -85,6 +85,45 @@ After a successful build, the RPM is uploaded to ``packages.nethserver.org``,
 according to the ``DEST_ID`` variable value. Supported values are ``core`` for
 NethServer core packages, and ``forge`` for NethForge packages.
 
+Pull requests are commented automatically by ``nethbot``
+[#NethBot]_ with the links to available RPMs.
+
+Also issues are commented by ``nethbot`` if the following rules are respected in git commit messages:
+
+1. The issue reference (e.g. ``NethServer/dev#1234``) is present in the merge
+   commit of pull requests
+
+2. The issue reference is added to standalone commits (should be rarely used)
+
+
+Global variables
+^^^^^^^^^^^^^^^^
+
+The build environment supports the following variable:
+
+- ``NSVER``
+- ``DOCKER_IMAGE``
+- ``DEST_ID``
+
+NSVER
+~~~~~
+
+Select the target NethServer version for the build system.
+Currently the only supported value is ``7``.
+
+DOCKER_IMAGE
+~~~~~~~~~~~~
+
+The Docker build image can contain different RPMs depending on the tag:
+
+- ``latest`` or ``7``: contains only dependencies to build ``nethserver-*`` RPMS, like ``nethserver-base``.
+  It actually installs only nethserver-devtools and a basic RPM build environment without gcc compiler.
+- ``buildsys``: it s based on the previous environment. It also pulls in the dependencies for arch-dependant packages (like ``asterisk13`` or ``ns-samba``).
+  It actually installs the ``buildsys-build`` package group, which provides the ``gcc`` compiler among other packages.
+
+DEST_ID
+~~~~~~~
+
 If ``DEST_ID=core``:
 
 * Builds triggered by pull requests are uploaded to the ``autobuild`` [#Autobuild]_ repository
@@ -99,15 +138,7 @@ If ``DEST_ID=forge``:
 
 * Branch builds are uploaded to ``nethforge-testing``, whilst tagged builds are uploaded to ``nethforge``
 
-Pull requests are commented automatically by ``nethbot``
-[#NethBot]_ with the links to available RPMs.
 
-Also issues are commented by ``nethbot`` if the following rules are respected in git commit messages:
-
-1. The issue reference (e.g. ``NethServer/dev#1234``) is present in the merge
-   commit of pull requests
-
-2. The issue reference is added to standalone commits (should be rarely used)
 
 .. index::
    pair: Sign; RPM
