@@ -29,6 +29,10 @@ After the installation:
 All users configured inside any user provider (see :ref:`users_and_groups-section`) can automatically access the NextCloud installation.
 After the installation a new application widget is added to the |product| web interface dashboard.
 
+.. note::   Nextcloud update/upgrade procedure disables the apps to avoid incompatibility problems.
+            Server logs keep track of which apps were disabled. After a successful update/upgrade procedure
+            you can use the Applications page to update and re-enable the apps.
+
 User list
 ---------
 
