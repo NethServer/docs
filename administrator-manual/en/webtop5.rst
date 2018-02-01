@@ -186,6 +186,26 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
 The default setting is “Not active”.
 
+Sharing calendars and contacts
+==============================
+
+Sharing Calendar
+----------------
+
+you can share each personal calendar individually.
+Select the calendar to share -> right click -> "Sharing and permissions":
+
+.. image:: _static/webtop-sharing_cal_1.png
+
+Select the recipient user of the share (or Group) and enable permissions for both the folder and the individual items:
+
+.. image:: _static/webtop-sharing_cal_2.png
+
+Sharing Contacts
+----------------
+
+In the same way, you can always share your contacts by selecting the directory you want to share -> right click -> "Sharing and permissions".
+Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
 Mail tags
 =========
