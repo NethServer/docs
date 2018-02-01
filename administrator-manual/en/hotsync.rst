@@ -79,6 +79,26 @@ If mysql or postgresql are installed, they will be synchronized by default. To d
     [root@master]# signal-event nethserver-hotsync-update
 
 
+Enabling/Disabling
+-----
+
+Hotsync is enabled by default. To disable it:
+
+::
+
+    [root@slave]# config setprop hotsync status disabled
+    [root@slave]# signal-event nethserver-hotsync-update
+
+
+and to re-enable it:
+
+::
+
+    [root@slave]# config setprop hotsync status enabled
+    [root@slave]# signal-event nethserver-hotsync-update
+
+
+
 Restore: put SLAVE in production
 ================================
 
