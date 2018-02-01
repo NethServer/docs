@@ -765,7 +765,12 @@ To apply the changes, execute: ::
 
 List of PHP supported time zones: http://php.net/manual/it/timezones.php
 
+Delete automatically suggested email addresses
+----------------------------------------------
 
+When compiling the recipient of a mail, some automatically saved email addresses are suggested.
+If you need to delete someone because it is wrong, move with the arrow keys until you select the one you want to delete
+(without clicking on it), then delete it with :guilabel:`Shift + Canc`
 
 .. only:: nscom
 
