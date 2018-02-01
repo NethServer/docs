@@ -214,16 +214,16 @@ you can do so by simply clicking the right mouse button on the folder to hide an
 
 For example, if you want to hide the subfolder "folder1" from this list, just right-click on it and select "Hide from the list":
 
-.. image:: _statis/webtop-sub_imap_folder1.png
+.. image:: _static/webtop-sub_imap_folder1.png
 
 It will then always be possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
 
-.. image:: _statis/webtop-sub_imap_folder2.png
+.. image:: _static/webtop-sub_imap_folder2.png
 
 For example, if you want to restore the subscription of the "folder1" just hidden, just select it from the list of hidden folders
 and click on the icon on the left:  
 
-.. image:: _statis/webtop-sub_imap_folder3.png
+.. image:: _static/webtop-sub_imap_folder3.png
 
 Export events (CSV)
 ===================
