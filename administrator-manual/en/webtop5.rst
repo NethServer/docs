@@ -183,7 +183,10 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
   .. image:: _static/webtop-sync_shared_eas.png
                :alt: Sync shared EAS
- 
+
+The default setting is “Not active”.
+
+
 Mail tags
 =========
 
@@ -466,6 +469,42 @@ Proceed as follows:
 
 5. the next login will show the new logo on the login page
 
+Change default limit "Maximum file size"
+========================================
+
+There are hard-coded configured limits related to the maximum file size:
+
+- Maximum file size for chat uploads (internal default = 10 MB)
+- Maximum file size single message attachment (internal default = 10 MB)
+- Maximum file size for cloud internal uploads (internal default = 500 MB)
+- Maximum file size for cloud public uploads (internal default = 100 MB)
+
+To change these default values for all users, the following keys can be added via the admin interface: :guilabel:`Properties (system) -> Add`
+
+**Maximum file size for chat uploads**
+
+  - Service: ``com.sonicle.webtop.core``
+  - Key: ``im.upload.maxfilesize``
+
+**Maximum file size for single message attachment**
+
+  - Service: ``com.sonicle.webtop.mail``
+  - Key: ``attachment.maxfilesize``
+
+**Maximum file size for cloud internal uploads**
+
+  - Service: ``com.sonicle.webtop.vfs``
+  - Key: ``upload.private.maxfilesize``
+
+**Maximum file size for cloud public uploads**
+
+  - Service: ``com.sonicle.webtop.vfs``
+  - Key: ``upload.public.maxfilesize``
+   
+.. note::
+
+  The value must be expressed in Byte (Example 10MB = 10485760)
+   
 Importing contacts and calendars
 ================================
 
