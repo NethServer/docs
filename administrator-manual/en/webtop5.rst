@@ -186,6 +186,7 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
 The default setting is “Not active”.
 
+
 Mail tags
 =========
 
@@ -206,6 +207,26 @@ the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
 
+Subscription of IMAP folders
+============================
+
+On WebTop, by default, all IMAP folders on the server are all automatically subscribed and therefore all visible from the first login.
+
+If you want to hide from the view some folders, which is equivalent to removing the subscription,
+you can do so by simply clicking the right mouse button on the folder to hide and select from the interactive menu the item "Hide from the list".
+
+For example, if you want to hide the subfolder "folder1" from this list, just right-click on it and select "Hide from the list":
+
+.. image:: _static/webtop-sub_imap_folder1.png
+
+It will then always be possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
+
+.. image:: _static/webtop-sub_imap_folder2.png
+
+For example, if you want to restore the subscription of the "folder1" just hidden, just select it from the list of hidden folders
+and click on the icon on the left:  
+
+.. image:: _static/webtop-sub_imap_folder3.png
 
 Export events (CSV)
 ===================
