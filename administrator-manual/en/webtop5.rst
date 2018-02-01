@@ -228,6 +228,7 @@ Sharing Contacts
 In the same way, you can always share your contacts by selecting the directory you want to share -> right click -> "Sharing and permissions".
 Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
+
 Mail tags
 =========
 
