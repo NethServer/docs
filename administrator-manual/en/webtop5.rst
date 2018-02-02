@@ -186,6 +186,48 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
 The default setting is “Not active”.
 
+Sharing email folders or the entire account
+===========================================
+
+It is possible to share a single folder or the entire account with all the subfolders included.
+Select the folder to share -> right click -> "Manage sharing":
+
+.. image:: _static/webtop-sharing_mail_folder_1.png
+
+- select the user to share the resource (1).
+- select if you want to share your identity with the user and possibly even if you force your signature (2).
+- choose the level of permissions associated with this share (3).
+- if you need to change the permission levels more granularly, select "Advanced" (4).
+- finally, choose whether to apply sharing only to the folder from which you started, or only to the branch of subfolders or to the entire account (5).
+
+.. image:: _static/webtop-sharing_mail_folder_2.png
+
+.. note::
+
+   If you also select "Force signature", when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
+In this case, however, it is necessary that the personalized signature of the User from which it originates has been associated to the Email address and not to the User.
+
+Sharing calendars and contacts
+==============================
+
+Sharing Calendar
+----------------
+
+you can share each personal calendar individually.
+Select the calendar to share -> right click -> "Sharing and permissions":
+
+.. image:: _static/webtop-sharing_cal_1.png
+
+Select the recipient user of the share (or Group) and enable permissions for both the folder and the individual items:
+
+.. image:: _static/webtop-sharing_cal_2.png
+
+Sharing Contacts
+----------------
+
+In the same way, you can always share your contacts by selecting the directory you want to share -> right click -> "Sharing and permissions".
+Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
+
 
 Mail tags
 =========
@@ -724,7 +766,12 @@ To apply the changes, execute: ::
 
 List of PHP supported time zones: http://php.net/manual/it/timezones.php
 
+Delete automatically suggested email addresses
+----------------------------------------------
 
+When compiling the recipient of a mail, some automatically saved email addresses are suggested.
+If you need to delete someone because it is wrong, move with the arrow keys until you select the one you want to delete
+(without clicking on it), then delete it with :guilabel:`Shift + Canc`
 
 .. only:: nscom
 
