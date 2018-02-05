@@ -283,12 +283,26 @@ The :command:`release-tag` command, provided by the ``nethserver-mock`` RPM, exe
 * commits changes to the :file:`spec` file.
 * tags the commit (with optional GPG signature).
 
-This is the help output::
+To fetch issues from private GitHub repositories
+`create a private GitHub access token <https://github.com/settings/tokens/new>`_.
+Select the ``repo`` scope only.
+
+Copy it to :file:`~/.release_tag_token` and keep its content secret: ::
+
+  chmod 600  ~/.release_tag_token
+
+.. tip::
+
+    The private access token is useful also for public repositories
+    because authenticated requests have an higher API rate limit
+
+
+The :command:`release-tag` command is now ready for use. This is the help output::
 
   release-tag -h
   Usage: release-tag [-h] [-k KEYID] [-T <x.y.z>] [<file>.spec]
 
-For instance: ::
+Sample invocation: ::
 
   release-tag -k ABCDABCD -T 1.8.5 nethserver-mail-server.spec
 
