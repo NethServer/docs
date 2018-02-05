@@ -287,7 +287,9 @@ To fetch issues from private GitHub repositories
 `create a private GitHub access token <https://github.com/settings/tokens/new>`_.
 Select the ``repo`` scope only.
 
-Copy it to :file:`~/.release_tag_token` and keep its content secret.
+Copy it to :file:`~/.release_tag_token` and keep its content secret: ::
+
+  chmod 600  ~/.release_tag_token
 
 .. tip::
 
