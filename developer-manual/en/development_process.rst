@@ -202,6 +202,10 @@ When submitting a PR, check that:
 
 5. Multiple dependant PRs in multiple repositories must include the dependencies between them in the description
 
+6. Select at least one PR reviewer (GitHub suggestions are a usually good)
+
+7. Select yourself as the initial PR assignee
+
 Managing an open pull request
 -----------------------------
 
