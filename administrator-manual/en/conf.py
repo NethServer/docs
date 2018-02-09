@@ -84,6 +84,7 @@ if tags.has('nsent'):
     html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
     html_favicon = 'nsent/_static/favicon.ico' 
     html_static_path = ['nsent/_static']
+    html_extra_path = ['nsent/robots.txt']
     exclude_patterns.extend([
         'webvirtmgr.rst',
         'nscom_*.rst'
