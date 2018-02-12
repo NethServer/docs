@@ -12,6 +12,12 @@ background information refer to :ref:`email-section` page.
 Once installed from the :guilabel:`Software center` page, go to the
 :guilabel:`Email` page as usual.
 
+Features planned for final release
+==================================
+
+* Backward-compatible disclaimer signature (on development)
+* Integrate Rspamd UI in Server Manager (waiting for an upstream fix)
+
 Configuration options
 =====================
 
