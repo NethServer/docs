@@ -17,6 +17,9 @@ Features planned for final release
 
 * Backward-compatible disclaimer signature (on development)
 * Integrate Rspamd UI in Server Manager (waiting for an upstream fix)
+* Fix for ``X-Spam-Flag`` header when :guilabel:`Add a prefix to spam messages
+  subject` is enabled; without it, :guilabel:`Move to "Junk" folder` cannot work
+  properly.
 
 Configuration options
 =====================
