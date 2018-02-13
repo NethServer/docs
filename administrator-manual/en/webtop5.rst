@@ -77,8 +77,7 @@ If you want to reset the admin password from command line, use following command
 Remember to replace ``<newpassword>`` with your actual new password, example: ::
 
   bash webtop-set-admin-password VeryInsecurePass
-
-
+  
 
 Two factor authentication (2FA)
 ===============================
@@ -249,6 +248,38 @@ the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
 
+Mail archiving
+==============
+
+Archiving is useful for keeping your inbox folder organized by moving manually the messages.
+
+.. note::
+    Mail archiving is not a backup.
+
+The system automatically creates a new special Archives folder  
+
+.. image:: _static/webtop-archive_archive1.png
+
+If the :guilabel:`Archives` folder does not appear immediately upon login, it will appear at the first archiving.
+
+ There are three archiving criteria in :menuselection:`Settings -> Mail -> Archiving`
+
+* **Single folder:** a single root for all archived emails
+* **Per year:** a root for each year
+* **By year / month:** a root for each year and month
+
+.. image:: _static/webtop-archive_archive2.png
+
+To maintain the original structure of the folders is possible to activate :guilabel:`Keep folder structure` 
+
+.. image:: _static/webtop-archive_archive3.png
+
+The archiving operation is accessible from the contextual menu (right click). Click on :guilabel:`Archive`
+
+.. image:: _static/webtop-archive_archive4.png
+
+The system will process archiving according to the last settings chosen.
+
 Subscription of IMAP folders
 ============================
 
@@ -331,6 +362,60 @@ A precompiled wizard will open:
 
 Proceed with the Next button until the Wizard is complete.
 
+Use the personal Cloud to send and receive documents
+====================================================
+
+Cloud module allows you to send and receive documents throug web links.
+
+.. note::
+
+   The server must be reachable in HTTP on port 80
+   
+How to create a link to send a document
+---------------------------------------
+To create the link, select the button at the top right:
+
+.. image:: _static/webtop-doc_cloud1.png
+
+Follow the wizard to generate the link, use field :guilabel:`date` to set the deadline.
+
+.. image:: _static/webtop-doc_cloud2.png
+
+you can create a :guilabel:`password` to protect it:
+
+.. image:: _static/webtop-doc_cloud3.png
+
+The link will be generated and will be inserted in the new mail:
+
+.. image:: _static/webtop-doc_cloud4.png
+.. image:: _static/webtop-doc_cloud5.png
+
+Downloading the file, generates a notification to the sender:
+
+.. image:: _static/webtop-oc_cloud6.png
+
+Request for a document
+----------------------
+To create the request, insert the subject of the email than select the button at the top right:
+
+.. image:: _static/webtop-doc_cloud7.png
+
+Follow the wizard. You can set both an expiration date and a password. The link will be automatically inserted into the message:
+
+.. image:: _static/webtop-doc_cloud8.png
+
+A request email will be sent to upload the document to the Cloud:
+
+.. image:: _static/webtop-doc_cloud9.png
+
+ The sender will receive a notification for each file that will be uploaded:
+
+.. image:: _static/webtop-doc_clou10.png
+
+To download the files just access your personal :menuselection:`Cloud --> Uploads --> Folder` with date and name:
+
+.. image:: _static/webtop-doc_cloud11.png
+
 Chat integration
 ================
 
@@ -385,7 +470,7 @@ You can use the :guilabel:`Upload` button to load an image which is at the botto
   Remember that the public images inserted in the signature are actually connected with a public link.
   To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
 
-To change your signature, each user can access the :menuselection:`Settings -> Mail -> Editing -> Edit User mailcard`:
+To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
 
 .. image:: _static/webtop-edit_mailcard.png
 
@@ -412,6 +497,27 @@ that can be used within the parameterized fields within the domain mailcard edit
 
 In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
 
+Configure multiple mailcards for a single user
+==============================================
+
+It is possible to configure multiple mailcards (HTML signatures) for each individual user.
+
+Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
+
+.. image:: _static/webtop-sig_sig1.png
+
+To edit every single signature select :menuselection:`Settings --> Mail --> Identities` then select each individual signature and click on the :guilabel:`edit mailcard` button
+
+.. image:: _static/webtop-sig_sig2.png
+.. image:: _static/webtop-sig_sig3.png
+
+When finished, close the window and click YES:
+
+.. image:: _static/webtop-sig_sig4.png
+
+to use multiple mailcards, create a new email, and choose the signature:
+
+.. image:: _static/webtop-sig_sig5.png
 
 Subscribing remote resources
 ============================
@@ -510,6 +616,18 @@ Proceed as follows:
    .. image:: _static/webtop-login_page.png
 
 5. the next login will show the new logo on the login page
+
+Change the public URL
+=====================
+
+A special prop has been added to modify the public URL.
+
+If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
+
+execute these commands::
+
+  ``config setprop webtop PublicUrl http://mail.publicdomain.com/webtop``
+  ``signal-event nethserver-webtop5-update``
 
 Change default limit "Maximum file size"
 ========================================
