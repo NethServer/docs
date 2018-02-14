@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2018-02-12 12:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -100,11 +100,24 @@ msgstr ""
 ":`users_and_groups-section`). Dopo l’installazione sarà presente anche un "
 "nuovo widget applicazioni nella dashboard di |product|."
 
-#: ../../nextcloud.rst:40 ../../nextcloud.rst:43
+#: ../../nextcloud.rst:39 ../../nextcloud.rst:42
+msgid ""
+"Nextcloud update/upgrade procedure disables the apps to avoid "
+"incompatibility problems. Server logs keep track of which apps were "
+"disabled. After a successful update/upgrade procedure you can use the "
+"Applications page to update and re-enable the apps."
+msgstr ""
+"La procedura di aggiornamento/cambio di versione di Nextcloud disabilita le "
+"app per evitare problemi di compatibilità. I registri del server tengono "
+"traccia di quali app sono state disabilitate. Dopo una corretta procedura di"
+" aggiornamento / cambio di versione è possibile utilizzare la pagina "
+"Applicazioni per aggiornare e riattivare le app."
+
+#: ../../nextcloud.rst:44 ../../nextcloud.rst:47
 msgid "User list"
 msgstr "Lista utenti"
 
-#: ../../nextcloud.rst:42 ../../nextcloud.rst:45
+#: ../../nextcloud.rst:46 ../../nextcloud.rst:49
 msgid ""
 "All users are listed inside the administrator panel of NextCloud using a "
 "unique identifier containing letters and numbers. This is because the system"
@@ -118,7 +131,7 @@ msgstr ""
 "spiegato nella sezione `Internal Username` della `Documentazione ufficiale "
 "di NextCloud <https://docs.nextcloud.com>`_."
 
-#: ../../nextcloud.rst:46 ../../nextcloud.rst:49
+#: ../../nextcloud.rst:50 ../../nextcloud.rst:53
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -129,11 +142,11 @@ msgstr ""
 "pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../nextcloud.rst:51 ../../nextcloud.rst:54
+#: ../../nextcloud.rst:55 ../../nextcloud.rst:58
 msgid "Trusted Domains"
 msgstr "Trusted Domains"
 
-#: ../../nextcloud.rst:53 ../../nextcloud.rst:56
+#: ../../nextcloud.rst:57 ../../nextcloud.rst:60
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -141,19 +154,19 @@ msgstr ""
 "I Trusted domains sono una lista di domini su cui l’utente può effettuare il"
 " login. Quelli presenti di default sono:"
 
-#: ../../nextcloud.rst:55 ../../nextcloud.rst:58
+#: ../../nextcloud.rst:59 ../../nextcloud.rst:62
 msgid "domain name"
 msgstr "nome dominio"
 
-#: ../../nextcloud.rst:56 ../../nextcloud.rst:59
+#: ../../nextcloud.rst:60 ../../nextcloud.rst:63
 msgid "ip address"
 msgstr "indirizzo ip"
 
-#: ../../nextcloud.rst:58 ../../nextcloud.rst:61
+#: ../../nextcloud.rst:62 ../../nextcloud.rst:65
 msgid "To add a new one use: ::"
 msgstr "Per aggiungerne uno nuovo eseguire: ::"
 
-#: ../../nextcloud.rst:63 ../../nextcloud.rst:66
+#: ../../nextcloud.rst:67 ../../nextcloud.rst:70
 msgid "To add more than one, concatenate the names with a comma."
 msgstr ""
 "Per aggiungerne più di uno è sufficiente concatenare i nomi con una virgola."
