@@ -62,18 +62,18 @@ msgstr ""
 #: ../../suricata.rst:23 ../../suricata.rst:26
 msgid "Enable: traffic matching rules from this categories will be reported"
 msgstr ""
-"Abilitato: il traffico che intercetta le regole della categoria verrà "
+"Abilitata: il traffico che intercetta le regole della categoria verrà "
 "segnalato"
 
 #: ../../suricata.rst:24 ../../suricata.rst:27
 msgid "Block: traffic matching rules from this categories will be dropped"
 msgstr ""
-"Bloccato:  il traffico che intercetta le regole della categoria verrà "
+"Bloccata:  il traffico che intercetta le regole della categoria verrà "
 "rifiutato"
 
 #: ../../suricata.rst:25 ../../suricata.rst:28
 msgid "Disable: rules from this categories are ignored"
-msgstr "Disabilitato: le regole della categoria verranno ignorate"
+msgstr "Disabilitata: le regole della categoria verranno ignorate"
 
 #: ../../suricata.rst:27 ../../suricata.rst:30
 msgid ""
@@ -84,8 +84,8 @@ msgstr ""
 "L'utilizzo di un IPS impatta su tutto il traffico che attraversa il "
 "firewall. Assicurarsi di aver compreso a fondo tutte le possibili "
 "implicazioni prima di attivare la funzionalità. In particolare, prestare "
-"attenzione alle regole di blocco che potrebbero interrompere gli "
-"aggiornamenti al sistema stesso."
+"attenzione alle regole di blocco che potrebbero interferire con gli "
+"aggiornamenti del sistema stesso."
 
 #: ../../suricata.rst:32 ../../suricata.rst:35
 msgid "Rule categories"
