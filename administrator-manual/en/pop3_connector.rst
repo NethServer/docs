@@ -9,6 +9,10 @@ The :guilabel:`POP3 connector` page allows configuring a list of mail
 accounts that will be checked regularly. Messages coming from the remote
 accounts will be delivered to local users.
 
+.. warning::
+
+    This module must be upgraded if :ref:`email2-section` module is installed
+
 It is not recommended to use the POP3 connector as the primary method
 for managing email.  Mail delivery can be affected by disk space and
 connectivity problems of the provider's server. Also, the spam filter will
