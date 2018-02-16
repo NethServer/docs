@@ -6,11 +6,15 @@ Email 2 (Beta)
 
 The **Email 2** module is an alternative to :ref:`email-section`, based on the
 `Rspamd <https://rspamd.com/>`_ filter engine. It aims to be the  successor of
-the current Email module, by providing the same features plus new ones. For
-background information refer to :ref:`email-section` page.
+the current Email module, by providing the same old features plus new ones. For
+background information refer to the :ref:`email-section` chapter.
 
 Once installed from the :guilabel:`Software center` page, go to the
 :guilabel:`Email` page as usual.
+
+This new module provides the email filter engine for the
+:ref:`pop3_connector-section` module too, therefore an upgrade for that module
+is required. See :ref:`mail2-upgrade-procedures-section`.
 
 Features planned for final release
 ==================================
@@ -61,26 +65,31 @@ deliver the deferred message again; spammers are likely to give up instead.
 To adjust the threshold see :guilabel:`Email > Filter > Anti spam > Delay for
 suspicious threshold`.
 
+.. _mail2-upgrade-procedures-section:
 
 Upgrade procedures
 ==================
 
 It is possible to switch a running system to this new module, starting from
-the **Email** module, or a **SMTP proxy** module installation.
+the **Email** module, **SMTP proxy** or **POP3 connector**  module.
+
+If something is wrong with ``rspamd``, please report the issue on
+`community.nethserver.org <https://community.nethserver.org>`_.
+
+To switch an old mail server with ``amavisd-new`` filter engine to ``rspamd``
+run the upgrade commands reported on the following sections. It is possible
+to revert the upgrade too.
 
 From Email module
 -----------------
 
-To switch an old mail server with ``amavisd-new`` filter engine to ``rspamd``
-run the following command: ::
+Upgrade: ::
 
     yum swap \
         -- remove nethserver-mail-{common,filter,server} \
         -- install nethserver-mail2-{common,filter,server}
 
-If something is wrong with ``rspamd``, please report the issue on
-`community.nethserver.org <https://community.nethserver.org>`_. To switch back
-to the old engine: ::
+Revert upgrade: ::
 
     yum swap \
         -- install nethserver-mail-{common,filter,server} \
@@ -89,18 +98,34 @@ to the old engine: ::
 From SMTP proxy module
 ----------------------
 
-To switch an old SMTP proxy based on ``amavisd-new`` filter engine to ``rspamd``
-run the following command: ::
+Upgrade: ::
 
     yum swap \
         -- remove nethserver-mail-{common,filter} \
         -- install nethserver-mail2-{common,filter}
 
-If something is wrong with ``rspamd``, please report the issue on
-`community.nethserver.org <https://community.nethserver.org>`_. To switch back
-to the old engine: ::
+Revert upgrade: ::
 
     yum swap \
         -- install nethserver-mail-{common,filter} \
         -- remove nethserver-mail2-{common,filter}
 
+From POP3 connector module
+--------------------------
+
+When upgrading to **Email 2**, the POP3 connector settings of each account
+regarding :guilabel:`Check messages for SPAM` and :guilabel:`Check messages for
+virus` options are ignored and overridden by the new :guilabel:`Scan messages
+with email filter`.
+
+Upgrade: ::
+
+    yum swap \
+        -- remove nethserver-mail-{common,filter,server} nethserver-getmail nethserver-spamd \
+        -- install nethserver-mail2-{common,filter,server,getmail}
+
+Revert upgrade: ::
+
+    yum swap \
+        -- install nethserver-mail-{common,filter,server} nethserver-getmail \
+        -- remove nethserver-mail2-{common,filter,server,getmail}
