@@ -5,13 +5,15 @@
 POP3 connector
 ==============
 
+.. warning::
+
+    This module is provided by two alternative implementations, "POP3 connector"
+    and "POP3 connector 2 (Beta)". See :ref:`email2-section` for upgrade
+    instructions and more information
+
 The :guilabel:`POP3 connector` page allows configuring a list of mail
 accounts that will be checked regularly. Messages coming from the remote
 accounts will be delivered to local users.
-
-.. warning::
-
-    This module must be upgraded if :ref:`email2-section` module is installed
 
 It is not recommended to use the POP3 connector as the primary method
 for managing email.  Mail delivery can be affected by disk space and
@@ -27,7 +29,7 @@ Accounts` page. Each account can be specified:
 * the account credentials
 * the local user account where to deliver messages
 * if a message has to be deleted from the remote server after delivery
-* antiSPAM and antivirus checks
+* anti-spam and anti-virus checks
 
 .. note:: It is allowed to associate more than one external accounts to a local
           one.  Deleting an account will *not* delete already
@@ -37,7 +39,7 @@ After the account configuration has been completed, the account is automatically
 checked for new mail.
 
 .. index:: 
-   pair: Gethmail; software
+   pair: Getmail; software
 
 The underneath implementation is based on :dfn:`Getmail`
 [#Getmail]_. After fetching mail messages from the POP3/IMAP
