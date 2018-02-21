@@ -43,6 +43,9 @@ Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
 To work effectively, the public DNS must be configured properly. Follow the
 instructions provided by the configuration page itself.
 
+The DKIM signature headers are added only to messages sent through TCP ports 587
+(submission) and 465 (smtps).
+
 Rspamd web UI
 -------------
 
