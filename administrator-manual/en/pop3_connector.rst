@@ -5,13 +5,15 @@
 POP3 connector
 ==============
 
+.. warning::
+
+    This module is provided by two alternative implementations, "POP3 proxy" and
+    "POP3 proxy 2 (Beta)". See :ref:`email2-section` for upgrade instructions
+    and more information
+
 The :guilabel:`POP3 connector` page allows configuring a list of mail
 accounts that will be checked regularly. Messages coming from the remote
 accounts will be delivered to local users.
-
-.. warning::
-
-    This module must be upgraded if :ref:`email2-section` module is installed
 
 It is not recommended to use the POP3 connector as the primary method
 for managing email.  Mail delivery can be affected by disk space and

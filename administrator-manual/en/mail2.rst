@@ -13,8 +13,9 @@ Once installed from the :guilabel:`Software center` page, go to the
 :guilabel:`Email` page as usual.
 
 This new module provides the email filter engine for the
-:ref:`pop3_connector-section` module too, therefore an upgrade for that module
-is required. See :ref:`mail2-upgrade-procedures-section`.
+:ref:`pop3_connector-section` and :ref:`pop3_proxy-section` modules too,
+therefore an upgrade for those modules is required. See
+:ref:`mail2-upgrade-procedures-section`.
 
 Features planned for final release
 ==================================
@@ -132,3 +133,19 @@ Revert upgrade: ::
     yum swap \
         -- install nethserver-mail-{common,filter,server} nethserver-getmail \
         -- remove nethserver-mail2-{common,filter,server,getmail}
+
+From POP3 proxy module
+----------------------
+
+Upgrade: ::
+
+    yum swap \
+        -- remove nethserver-mail-{common,filter} nethserver-p3scan nethserver-spamd \
+        -- install nethserver-mail2-{common,filter,p3scan}
+
+Revert upgrade: ::
+
+    yum swap \
+        -- install nethserver-mail-{common,filter} nethserver-p3scan nethserver-spamd \
+        -- remove nethserver-mail2-{common,filter,p3scan}
+
