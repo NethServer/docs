@@ -412,6 +412,22 @@ that can be used within the parameterized fields within the domain mailcard edit
 
 In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
 
+Manage identities
+=================
+
+In :menuselection:`settings --> mail --> identities` click :guilabel:`Add`and fill in the fields
+
+.. image:: _static/webtop_manageident1.png
+
+it is possible to associate the new identity with a folder in your account or of a shared account
+
+**local account:**
+.. image:: _static/webtop_manageident2.png
+
+**shared account:**
+.. image:: _static/webtop_manageident3.png
+
+Otherwise the mails sent will always end up in the "Sent Items" folder of your personal account.
 
 Subscribing remote resources
 ============================
