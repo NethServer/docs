@@ -519,6 +519,26 @@ to use multiple mailcards, create a new email, and choose the signature:
 
 .. image:: _static/webtop-sig_sig5.png
 
+
+Manage identities
+=================
+
+In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` and fill in the fields
+
+.. image:: _static/webtop_manageident1.png
+
+It is possible to associate the new identity with a folder in your account or of a shared account
+
+**Local account:**
+
+.. image:: _static/webtop_manageident2.png
+
+**Shared account:**
+
+.. image:: _static/webtop_manageident3.png
+
+Otherwise the mails sent will always end up in the "Sent Items" folder of your personal account.
+
 Subscribing remote resources
 ============================
 
