@@ -392,7 +392,7 @@ The link will be generated and will be inserted in the new mail:
 
 Downloading the file, generates a notification to the sender:
 
-.. image:: _static/webtop-oc_cloud6.png
+.. image:: _static/webtop-doc_cloud6.png
 
 Request for a document
 ----------------------
@@ -410,7 +410,7 @@ A request email will be sent to upload the document to the Cloud:
 
  The sender will receive a notification for each file that will be uploaded:
 
-.. image:: _static/webtop-doc_clou10.png
+.. image:: _static/webtop-doc_cloud10.png
 
 To download the files just access your personal :menuselection:`Cloud --> Uploads --> Folder` with date and name:
 
