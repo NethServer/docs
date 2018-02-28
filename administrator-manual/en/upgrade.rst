@@ -307,7 +307,9 @@ The script will:
 - sync all remaining data
 - execute ``restore-config`` on the destination machine
 
-At the end call the ``post-restore-data`` event on the destination machine: ::
+At the end, access the server manager UI and fix the network configuration from the
+:guilabel:`Network` page. Then go back to the CLI and call the ``post-restore-data``
+event on the destination machine: ::
 
     signal-event post-restore-data
 
