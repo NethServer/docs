@@ -275,7 +275,7 @@ comes already installed by the VPS provider.
 
 Enable |product| software repositories with this command: ::
 
-  yum localinstall -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
+  yum install -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
 
 To install the base system, run: ::
 
@@ -297,7 +297,7 @@ To install the base system, run: ::
 
     To promote to the Enterprise version run the following command: ::
     
-        yum localinstall http://update.nethesis.it/nethserver/7.4.1708/nethserver-register.rpm
+        yum install http://update.nethesis.it/nethserver/7.4.1708/nethserver-register.rpm
 
     Proceed with :ref:`registration <registration-section>` then run the following command: ::
         
