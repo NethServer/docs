@@ -1,6 +1,15 @@
+
+.. _pop3_proxy-section:
+
 ==========
 POP3 proxy
 ==========
+
+.. warning::
+
+    This module is provided by two alternative implementations, "POP3 proxy" and
+    "POP3 proxy 2 (Beta)". See :ref:`email2-section` for upgrade instructions
+    and more information
 
 A user on the LAN can configure an email client 
 in order to connect to an external POP3 server and download mail messages. 

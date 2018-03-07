@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2018-02-28 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -657,17 +657,16 @@ msgstr "eseguire il comando ``restore-config`` sulla macchina destinazione"
 
 #: ../../upgrade.rst:317 ../../upgrade.rst:320
 msgid ""
-"At the end call the ``post-restore-data`` event on the destination machine: "
-"::"
+"At the end, access the server manager UI and fix the network configuration "
+"from the :guilabel:`Network` page. Then go back to the CLI and call the "
+"``post-restore-data`` event on the destination machine: ::"
 msgstr ""
-"Al termine scatenare l'evento ``post-restore-data`` sulla macchina "
-"destinazione: ::"
 
-#: ../../upgrade.rst:321 ../../upgrade.rst:324
+#: ../../upgrade.rst:323 ../../upgrade.rst:326
 msgid "At the end, check the restore logs: ::"
 msgstr "Al termine, verificare i log del ripristino: ::"
 
-#: ../../upgrade.rst:326 ../../upgrade.rst:329
+#: ../../upgrade.rst:328 ../../upgrade.rst:331
 msgid ""
 "Also each file under :file:`/etc/e-smith/templates-custom/` must be manually"
 " checked for compatibility with version |version|."
@@ -676,7 +675,7 @@ msgstr ""
 "percorso :file:`/etc/e-smith/templates-custom/` dovrà essere verificata "
 "manualmente."
 
-#: ../../upgrade.rst:331 ../../upgrade.rst:334
+#: ../../upgrade.rst:333 ../../upgrade.rst:336
 msgid ""
 "Do not reboot the machine before executing the post-restore-data event."
 msgstr ""

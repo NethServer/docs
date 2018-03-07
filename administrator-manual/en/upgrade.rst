@@ -307,17 +307,33 @@ The script will:
 - sync all remaining data
 - execute ``restore-config`` on the destination machine
 
-At the end call the ``post-restore-data`` event on the destination machine: ::
+At the end of ``rsync-upgrade`` run the following steps:
+
+#. Access the server manager UI and fix the network configuration from the :guilabel:`Network` page
+
+#. If the source system was a NT Primary Domain Controller (Samba server role was
+   :guilabel:`Primary Domain Controller` -- PDC) or a standalone file server
+   (role was :guilabel:`Workstation` -- WS), refer to :ref:`pdc-upgrade-section`.
+
+#. If the source system was joined to an Active Directory domain (Samba server
+   role was :guilabel:`Active Directory member` -- ADS), refer to
+   :ref:`ads-upgrade-section`.
+
+#. Go back to the CLI and call the ``post-restore-data`` event on the destination machine: ::
 
     signal-event post-restore-data
 
-At the end, check the restore logs: ::
+#. If you upgraded from PDC or WS to Active Directory, fix home directories permissions with the following command: ::
+    
+      getent group 'domain users' && { for D in /var/lib/nethserver/home/*; do chown -R $(basename D):'domain users' $D; done }
+
+#. Check the restore logs for any ``ERROR`` or ``FAIL`` message: ::
 
     /var/log/restore-data.log
     /var/log/messages
 
-Also each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for
-compatibility with version |version|.
+#. Each file under :file:`/etc/e-smith/templates-custom/` must be manually checked for 
+   compatibility with version |version|.
 
 .. warning::
 

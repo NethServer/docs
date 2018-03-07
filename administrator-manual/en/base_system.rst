@@ -241,6 +241,19 @@ configuring the network clients to use it. As alternatives, the
 .. [#CSM] Website http://www.canyouseeme.org/
 .. [#VDNS] Website http://viewdns.info/
 
+Disable Let's Encrypt
+---------------------
+
+Let's Encrypt certificate can be disabled following these steps:
+
+1. Access the guilabel:`Server certificate` page, set as default the self-signed certificate or an uploaded one
+2. Open the shell and execute the following commands: 
+
+   ::
+
+     rm -rf /etc/letsencrypt/*
+     config setprop pki LetsEncryptDomains ''
+
 Shutdown
 ========
 
