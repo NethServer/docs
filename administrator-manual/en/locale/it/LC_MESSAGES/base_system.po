@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2018-02-28 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -638,10 +638,29 @@ msgid "Website http://viewdns.info/"
 msgstr "Sito web http://viewdns.info/"
 
 #: ../../base_system.rst:252 ../../base_system.rst:255
+msgid "Disable Let's Encrypt"
+msgstr "Disattivare Let's Encrypt"
+
+#: ../../base_system.rst:254 ../../base_system.rst:257
+msgid "Let's Encrypt certificate can be disabled following these steps:"
+msgstr ""
+"Il certificato Let's Encrypt può essere disabilitato seguendo questi passi:"
+
+#: ../../base_system.rst:256 ../../base_system.rst:259
+msgid ""
+"Access the guilabel:`Server certificate` page, set as default the self-"
+"signed certificate or an uploaded one"
+msgstr ""
+
+#: ../../base_system.rst:257 ../../base_system.rst:260
+msgid "Open the shell and execute the following commands:"
+msgstr ""
+
+#: ../../base_system.rst:265 ../../base_system.rst:268
 msgid "Shutdown"
 msgstr "Arresto"
 
-#: ../../base_system.rst:254 ../../base_system.rst:257
+#: ../../base_system.rst:267 ../../base_system.rst:270
 msgid ""
 "The machine where |product| is installed can be rebooted or halted from the "
 ":menuselection:`Shutdown` page. Choose an option (reboot or halt) then click"
@@ -651,18 +670,18 @@ msgstr ""
 "dalla pagina :menuselection:`Arresto`. Selezionare l’opzione Riavvia oppure "
 "Spegni e fare click su :guilabel:`Arresta il sistema`."
 
-#: ../../base_system.rst:257 ../../base_system.rst:260
+#: ../../base_system.rst:270 ../../base_system.rst:273
 msgid ""
 "Always use this module to avoid bad shutdown which can cause data damages."
 msgstr ""
 "Al fine di evitare danni al sistema, utilizzare sempre questo modulo per "
 "effettuare una corretta procedura di riavvio o spegnimento del server."
 
-#: ../../base_system.rst:260 ../../base_system.rst:263
+#: ../../base_system.rst:273 ../../base_system.rst:276
 msgid "Log viewer"
 msgstr "Visualizza Log"
 
-#: ../../base_system.rst:262 ../../base_system.rst:265
+#: ../../base_system.rst:275 ../../base_system.rst:278
 msgid ""
 "All services will save operations inside files called :dfn:`logs`. The "
 ":index:`log` analysis is the main tool to find and resolve problems. To "
@@ -673,27 +692,27 @@ msgstr ""
 "individuare malfunzionamenti e problemi. Per visualizzare i file di log fare"
 " clic su :menuselection:`Visualizza Log`."
 
-#: ../../base_system.rst:266 ../../base_system.rst:269
+#: ../../base_system.rst:279 ../../base_system.rst:282
 msgid "This module allows to:"
 msgstr "Questo modulo consente di:"
 
-#: ../../base_system.rst:268 ../../base_system.rst:271
+#: ../../base_system.rst:281 ../../base_system.rst:284
 msgid "start search on all server's logs"
 msgstr "effettuare ricerche all'interno di tutti i log del server"
 
-#: ../../base_system.rst:269 ../../base_system.rst:272
+#: ../../base_system.rst:282 ../../base_system.rst:285
 msgid "display a single log"
 msgstr "visualizzare un singolo log"
 
-#: ../../base_system.rst:270 ../../base_system.rst:273
+#: ../../base_system.rst:283 ../../base_system.rst:286
 msgid "follow the content of a log in real time"
 msgstr "seguire in tempo reale il contenuto di un log"
 
-#: ../../base_system.rst:275 ../../base_system.rst:278
+#: ../../base_system.rst:288 ../../base_system.rst:291
 msgid "Date and time"
 msgstr "Data e ora"
 
-#: ../../base_system.rst:277 ../../base_system.rst:280
+#: ../../base_system.rst:290 ../../base_system.rst:293
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -703,7 +722,7 @@ msgstr ""
 " il corretto fuso orario. L'orologio della macchina può essere configurato "
 "manualmente o automaticamente usando server NTP pubblici (consigliato)."
 
-#: ../../base_system.rst:280 ../../base_system.rst:283
+#: ../../base_system.rst:293 ../../base_system.rst:296
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -712,11 +731,11 @@ msgstr ""
 "di molti protocolli. Per evitare problemi, tutti gli host della LAN possono "
 "essere configurati per usare il server stesso come server NTP."
 
-#: ../../base_system.rst:284 ../../base_system.rst:287
+#: ../../base_system.rst:297 ../../base_system.rst:300
 msgid "Inline help"
 msgstr "Aiuto in linea"
 
-#: ../../base_system.rst:286 ../../base_system.rst:289
+#: ../../base_system.rst:299 ../../base_system.rst:302
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -725,24 +744,24 @@ msgstr ""
 "contengono un :index:`manuale in linea` che spiega l'utilizzo base e tutti i"
 " campi contenuti nella pagina."
 
-#: ../../base_system.rst:289 ../../base_system.rst:292
+#: ../../base_system.rst:302 ../../base_system.rst:305
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Il manuale in linea è consultabile in tutte le lingue in cui è tradotto il "
 "Server Manager."
 
-#: ../../base_system.rst:291 ../../base_system.rst:294
+#: ../../base_system.rst:304 ../../base_system.rst:307
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Una lista di tutti i manuali installati nel sistema è disponibile "
 "all'indirizzo: ::"
 
-#: ../../base_system.rst:295 ../../base_system.rst:298
+#: ../../base_system.rst:308 ../../base_system.rst:311
 msgid "**Example**"
 msgstr "**Esempio**"
 
-#: ../../base_system.rst:297 ../../base_system.rst:300
+#: ../../base_system.rst:310 ../../base_system.rst:313
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"

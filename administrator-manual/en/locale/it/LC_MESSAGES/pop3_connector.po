@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2018-02-28 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,14 @@ msgstr ""
 msgid "POP3 connector"
 msgstr "Connettore POP3"
 
-#: ../../pop3_connector.rst:15 ../../pop3_connector.rst:18
+#: ../../pop3_connector.rst:17 ../../pop3_connector.rst:20
+msgid ""
+"This module is provided by two alternative implementations, \"POP3 "
+"connector\" and \"POP3 connector 2 (Beta)\". See :ref:`email2-section` for "
+"upgrade instructions and more information"
+msgstr ""
+
+#: ../../pop3_connector.rst:21 ../../pop3_connector.rst:24
 msgid ""
 "The :guilabel:`POP3 connector` page allows configuring a list of mail "
 "accounts that will be checked regularly. Messages coming from the remote "
@@ -39,7 +46,7 @@ msgstr ""
 "account di posta elettronica che il server scarica ad intervalli di tempo "
 "regolari, consegnando le email agli utenti locali."
 
-#: ../../pop3_connector.rst:19 ../../pop3_connector.rst:22
+#: ../../pop3_connector.rst:25 ../../pop3_connector.rst:28
 msgid ""
 "It is not recommended to use the POP3 connector as the primary method for "
 "managing email.  Mail delivery can be affected by disk space and "
@@ -53,7 +60,7 @@ msgstr ""
 " filtri antispam viene ridotta perché non sono più disponibili le "
 "informazioni sulla provenienza diretta della mail (SMTP envelope)."
 
-#: ../../pop3_connector.rst:24 ../../pop3_connector.rst:27
+#: ../../pop3_connector.rst:30 ../../pop3_connector.rst:33
 msgid ""
 "POP3/IMAP accounts are configured from :guilabel:`POP3 connector > Accounts`"
 " page. Each account can be specified:"
@@ -61,35 +68,35 @@ msgstr ""
 "Gli account POP3/IMAP sono configurati dalla pagina `POP3 connector > "
 "Indirizzi` esterni. Per ogni account possono essere specificati:"
 
-#: ../../pop3_connector.rst:27 ../../pop3_connector.rst:30
+#: ../../pop3_connector.rst:33 ../../pop3_connector.rst:36
 msgid "the email address (as unique account identifier)"
 msgstr "l'indirizzo mail (come identificatore univoco per l'account)"
 
-#: ../../pop3_connector.rst:28 ../../pop3_connector.rst:31
+#: ../../pop3_connector.rst:34 ../../pop3_connector.rst:37
 msgid "the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)"
 msgstr "il protocollo (IMAP/POP3/IMAP con SSL/POP3 con SSL)"
 
-#: ../../pop3_connector.rst:29 ../../pop3_connector.rst:32
+#: ../../pop3_connector.rst:35 ../../pop3_connector.rst:38
 msgid "the remote server address"
 msgstr "l’indirizzo del server remoto"
 
-#: ../../pop3_connector.rst:30 ../../pop3_connector.rst:33
+#: ../../pop3_connector.rst:36 ../../pop3_connector.rst:39
 msgid "the account credentials"
 msgstr "le credenziali dall'account"
 
-#: ../../pop3_connector.rst:31 ../../pop3_connector.rst:34
+#: ../../pop3_connector.rst:37 ../../pop3_connector.rst:40
 msgid "the local user account where to deliver messages"
 msgstr "l’utente locale a cui consegnare i messaggi"
 
-#: ../../pop3_connector.rst:32 ../../pop3_connector.rst:35
+#: ../../pop3_connector.rst:38 ../../pop3_connector.rst:41
 msgid "if a message has to be deleted from the remote server after delivery"
 msgstr "se un messaggio va eliminato dal server remoto dopo la consegna"
 
-#: ../../pop3_connector.rst:33 ../../pop3_connector.rst:36
-msgid "antiSPAM and antivirus checks"
-msgstr "controlli antiSPAM e antivirus"
+#: ../../pop3_connector.rst:39 ../../pop3_connector.rst:42
+msgid "anti-spam and anti-virus checks"
+msgstr "controlli anti-spam e anti-virus"
 
-#: ../../pop3_connector.rst:35 ../../pop3_connector.rst:38
+#: ../../pop3_connector.rst:41 ../../pop3_connector.rst:44
 msgid ""
 "It is allowed to associate more than one external accounts to a local one.  "
 "Deleting an account will *not* delete already delivered messages."
@@ -98,7 +105,7 @@ msgstr ""
 "gruppo o un utente di sistema. L’eliminazione di un account *non* comporta "
 "l’eliminazione dei messaggi già consegnati."
 
-#: ../../pop3_connector.rst:39 ../../pop3_connector.rst:42
+#: ../../pop3_connector.rst:45 ../../pop3_connector.rst:48
 msgid ""
 "After the account configuration has been completed, the account is "
 "automatically checked for new mail."
@@ -106,7 +113,7 @@ msgstr ""
 "Dopo aver completato la configurazione degli account, viene fatto un "
 "controllo automatico per l'eventuale presenza di nuove mail."
 
-#: ../../pop3_connector.rst:45 ../../pop3_connector.rst:48
+#: ../../pop3_connector.rst:51 ../../pop3_connector.rst:54
 msgid ""
 "The underneath implementation is based on :dfn:`Getmail` [#Getmail]_. After "
 "fetching mail messages from the POP3/IMAP provider Getmail applies all "
@@ -120,13 +127,13 @@ msgstr ""
 "messaggi vengono filtrati in base alle :ref:`regole configurate "
 "<email_filter>`."
 
-#: ../../pop3_connector.rst:51 ../../pop3_connector.rst:54
+#: ../../pop3_connector.rst:57 ../../pop3_connector.rst:60
 msgid "All operations are logged in :file:`/var/log/maillog`."
 msgstr ""
 "Tutte le operazioni di download sono riportate nel file "
 ":file:`/var/log/maillog`."
 
-#: ../../pop3_connector.rst:53 ../../pop3_connector.rst:56
+#: ../../pop3_connector.rst:59 ../../pop3_connector.rst:62
 msgid ""
 "If an account was selected for delivery and has been subsequently deleted "
 "the configuration becomes inconsistent. If this should happen then existing "
@@ -138,11 +145,11 @@ msgstr ""
 "esistente nella pagina :guilabel:`Connettore POP3` deve essere disabilitata "
 "o eliminata."
 
-#: ../../pop3_connector.rst:59 ../../pop3_connector.rst:62
+#: ../../pop3_connector.rst:65 ../../pop3_connector.rst:68
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../pop3_connector.rst:60 ../../pop3_connector.rst:63
+#: ../../pop3_connector.rst:66 ../../pop3_connector.rst:69
 msgid ""
 "Getmail is a remote-mail retrieval utility "
 "http://pyropus.ca/software/getmail/"
