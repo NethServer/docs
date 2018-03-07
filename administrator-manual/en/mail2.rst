@@ -5,8 +5,8 @@ Email 2 (Beta)
 ==============
 
 The **Email 2** module is an alternative to :ref:`email-section`, based on the
-`Rspamd <https://rspamd.com/>`_ filter engine. It aims to be the  successor of
-the current Email module, by providing the same old features plus new ones. For
+Rspamd [#RSPAMD]_ filter engine. It aims to be the  successor of
+the current Email module, by providing its old features plus new ones. For
 background information refer to the :ref:`email-section` chapter.
 
 Once installed from the :guilabel:`Software center` page, go to the
@@ -21,7 +21,6 @@ Features planned for final release
 ==================================
 
 * Backward-compatible disclaimer signature (on development)
-* Integrate Rspamd UI in Server Manager (waiting for an upstream fix)
 
 Configuration options
 =====================
@@ -30,13 +29,14 @@ New configuration options, specific to Email 2, are
 
 * DKIM signature
 * Rspamd web UI
-* :guilabel:`Delay for suspicious threshold` (greylisting)
+* Greylist threshold [#GREY]_
 
 DKIM signature
 --------------
 
-DomainKeys Identified Mail (DKIM) provides a way to validate the sending MTA, which
-adds a cryptographic signature to the outbound message MIME headers.
+DomainKeys Identified Mail (DKIM) [#DKIM]_ provides a way to validate the
+sending MTA, which adds a cryptographic signature to the outbound message MIME
+headers.
 
 To enable the DKIM signature for a mail domain, enable :guilabel:`Email >
 Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
@@ -50,24 +50,34 @@ The DKIM signature headers are added only to messages sent through TCP ports 587
 Rspamd web UI
 -------------
 
-The Rspamd web UI is available on a randomized URL via the administrative HTTPS
-port 980 (like Server Manager). For security reasons the connection is
-restricted to trusted networks only.
+The Rspamd web UI is available via the administrative HTTPS
+port 980 (the same of Server Manager) at the following URL: ::
+    
+    https://<HOST_IP>:980/rspamd
 
-The random URL and the password required to access Rspamd web UI are available
-under :guilabel:`Email > Filter > Rspamd user interface`.
+The actual URL is listed under the :guilabel:`Applications` page. By default
+access is granted to:
 
-The URL is also available listed under the :guilabel:`Applications` page.
+* ``admin`` user
+* members of ``domain admins`` group
+* builtin ``rspamd`` login
 
-Delay for suspicious threshold
-------------------------------
+A direct link with HTTP authentication credentials for ``rspamd`` login is
+available from :guilabel:`Email > Filter > Rspamd user interface`.
+
+.. warning::
+    
+    For security reasons, the ``root`` account is not granted access to Rspamd
+    web UI
+
+Greylist threshold
+------------------
 
 A new spam score threshold is provided by Rspamd. If the spam score is above it,
 the message is temporarily rejected. An SMTP-compliant MTA must attempt to
 deliver the deferred message again; spammers are likely to give up instead.
 
-To adjust the threshold see :guilabel:`Email > Filter > Anti spam > Delay for
-suspicious threshold`.
+To adjust the threshold see :guilabel:`Email > Filter > Anti spam > Greylist threshold`.
 
 .. _mail2-upgrade-procedures-section:
 
@@ -149,3 +159,19 @@ Revert upgrade: ::
         -- install nethserver-mail-{common,filter} nethserver-p3scan nethserver-spamd \
         -- remove nethserver-mail2-{common,filter,p3scan}
 
+.. rubric:: References
+
+.. [#RSPAMD]
+    Rspamd -- Fast, free and open-source spam filtering system.
+    https://rspamd.com/
+
+.. [#DKIM]
+    Domain Keys Identified Mail (DKIM) is an email authentication method
+    designed to detect email spoofing -- `Wikipedia
+    <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_
+
+.. [#GREY]
+    Greylisting is a method of defending e-mail users against spam. A mail
+    transfer agent (MTA) using greylisting will "temporarily reject" any email from
+    a sender it does not recognize -- `Wikipedia
+    <https://en.wikipedia.org/wiki/Greylisting>`_
