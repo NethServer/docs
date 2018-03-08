@@ -55,7 +55,7 @@ Master
     [root@master]# config setprop rsyncd password <PASSWORD>
     [root@master]# config setprop hotsync role master
     [root@master]# config setprop hotsync SlaveHost <SLAVE_IP>
-    [root@master]# signal-event nethserver-hotsync-update
+    [root@master]# signal-event nethserver-hotsync-save
 
 
 Slave
@@ -66,17 +66,17 @@ Slave
     [root@slave]# config setprop rsyncd password <PASSWORD>
     [root@slave]# config setprop hotsync role slave
     [root@slave]# config setprop hotsync MasterHost <MASTER_IP>
-    [root@slave]# signal-event nethserver-hotsync-update
+    [root@slave]# signal-event nethserver-hotsync-save
 
 
-<PASSWORD> must be the same on master and slave.
+The ``<PASSWORD>`` must be the same on master and slave.
 
 If mysql or postgresql are installed, they will be synchronized by default. To disable databases sync
 
 ::
 
     [root@master]# config setprop hotsync databases disabled
-    [root@master]# signal-event nethserver-hotsync-update
+    [root@master]# signal-event nethserver-hotsync-save
 
 
 Enabling/Disabling
@@ -87,7 +87,7 @@ Hotsync is enabled by default. To disable it:
 ::
 
     [root@slave]# config setprop hotsync status disabled
-    [root@slave]# signal-event nethserver-hotsync-update
+    [root@slave]# signal-event nethserver-hotsync-save
 
 
 and to re-enable it:
@@ -95,28 +95,27 @@ and to re-enable it:
 ::
 
     [root@slave]# config setprop hotsync status enabled
-    [root@slave]# signal-event nethserver-hotsync-update
+    [root@slave]# signal-event nethserver-hotsync-save
 
 
 
 Restore: put SLAVE in production
 ================================
 
-1. Switch off MASTER if it's on
-2. On SLAVE launch restore command:
+The following procedure puts the SLAVE in production when the master has crashed.
 
-::
-       
-    [root@slave]# signal-event nethserver-hotsync-restore
+1. switch off MASTER
+2. if the SLAVE machine must run as network gateway, connect it to the router/modem with a network cable
+3. on SLAVE launch command, and read carefully its output ::
 
+    [root@slave]# hotsync-promote
 
-Don't forget to:
+4. go to Server Manager page ``Network`` and reassign roles to network interfaces if required
+5. launch command ::
 
-- connect modem to spare if you have one
-- connect backup HD to spare
-- connect router
+    [root@slave]# /sbin/e-smith/signal-event post-restore-data
 
-To put again in production original server, configure it as SLAVE, sync it, switch off current MASTER and restore configuration backup.
+6. if an USB backup is configured on MASTER, connect the backup HD to SLAVE
 
 
 ==================
