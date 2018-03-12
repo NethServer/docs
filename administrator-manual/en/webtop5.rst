@@ -204,6 +204,7 @@ Select the folder to share -> right click -> "Manage sharing":
 .. note::
 
    If you also select "Force signature", when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
+
 In this case, however, it is necessary that the personalized signature of the User from which it originates has been associated to the Email address and not to the User.
 
 Sharing calendars and contacts
@@ -212,7 +213,7 @@ Sharing calendars and contacts
 Sharing Calendar
 ----------------
 
-you can share each personal calendar individually.
+You can share each personal calendar individually.
 Select the calendar to share -> right click -> "Sharing and permissions":
 
 .. image:: _static/webtop-sharing_cal_1.png
@@ -408,7 +409,7 @@ A request email will be sent to upload the document to the Cloud:
 
 .. image:: _static/webtop-doc_cloud9.png
 
- The sender will receive a notification for each file that will be uploaded:
+The sender will receive a notification for each file that will be uploaded:
 
 .. image:: _static/webtop-doc_cloud10.png
 
