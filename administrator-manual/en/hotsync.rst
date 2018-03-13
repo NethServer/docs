@@ -80,7 +80,7 @@ If mysql or postgresql are installed, they will be synchronized by default. To d
 
 
 Enabling/Disabling
------
+------------------
 
 Hotsync is enabled by default. To disable it:
 
