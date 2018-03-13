@@ -14,6 +14,7 @@ basic editing right on the web.
 * preconfigure :index:`Nextcloud` with MariaDB and default access credential
 * integration with |product| system users and groups
 * automatic backup data with nethserver-backup-data tool
+* free to customize https access url (custom virtual host)
 
 
 Installation
@@ -33,6 +34,11 @@ After the installation a new application widget is added to the |product| web in
             Server logs keep track of which apps were disabled. After a successful update/upgrade procedure
             you can use the Applications page to update and re-enable the apps.
 
+.. note::   Nextcloud version 13 uses new PHP 7.1 (`nethserver-rh-php71-php-fpm`) while older version uses PHP 5.6 (`nethserver-rh-php56-php-fpm`).
+            If you have upgraded Nextcloud from a previous version, both php packages are installed. So you can remove php56 version (if it is
+            not used for any other custom service) with command `"yum remove nethserver-rh-php56-php-fpm"`.
+
+
 User list
 ---------
 
@@ -43,6 +49,18 @@ in section `Internal Username` of `Official NextCloud documentation <https://doc
 .. note::       If |product| is bound to a remote Active Directory account provider
                 a dedicated user account in AD is required by the module to be fully
                 operational! See :ref:`join-existing-ad-section`.
+
+Custom Virtual Host
+===================
+
+It is used to customize web url to access nextcloud instance. To customize: ::
+
+    config setprop nextcloud VirtualHost mynextcloud.domain.com
+    config setprop nextcloud TrustedDomains mynextcloud.domain.com
+    signal-event nethserver-nextcloud-update
+
+If you use :ref:`let's encrypt <server_certificate-section>` remember to add the domain name to its list.
+
 
 Trusted Domains
 ===============
