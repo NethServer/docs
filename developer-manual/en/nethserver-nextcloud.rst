@@ -17,11 +17,14 @@ The package does the following:
 * set english as the default language
 * set the user data directory as ``/var/lib/nethserver/nextcloud``
 
-The configuration is stored inside the ``configuration`` db, under the ``nextcloud`` key.
+The configuration is stored inside the ``configuration`` db, under the ``nextcloud`` key. To show it: ::
+
+ config show nextcloud
 
 Properties:
 
 * ``TrustedDomains``: list of trusted domains added to Nextcloud config file
+* ``VirtualHost``: set custom virtual host, e.g. `mycloud.mydomain.it`
 
 
 Admin user
@@ -33,6 +36,16 @@ After installation the application is accesible using the following credentials:
 * Password: Nethesis,1234
 
 Please, remember to change the default password after the first login!
+
+Customize virtual host
+======================
+
+Set custom virtual host and add it to trusted domains as follow: ::
+
+ config setprop nextcloud VirtualHost <VHOST>.<DOMAIN_NAME>
+ config setprop nextcloud TrustedDomains <VHOST>.<DOMAIN_NAME>
+ signal-event nethserver-nextcloud-update
+
 
 Backup
 ======
@@ -47,8 +60,8 @@ The database is automatically saved by ``nethserver-mysql``.
 OCC
 ===
 
-When using ``occ`` command, PHP 5.6 should be enabled inside the environment.
+When using ``occ`` command, PHP 7.1 should be enabled inside the environment.
 
 Invocation example: ::
 
-  su - apache -s /bin/bash -c "source /opt/rh/rh-php56/enable; cd /usr/share/nextcloud/; php occ ldap:show-config"
+  su - apache -s /bin/bash -c "source /opt/rh/rh-php71/enable; cd /usr/share/nextcloud/; php occ ldap:show-config"
