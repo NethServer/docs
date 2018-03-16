@@ -36,3 +36,5 @@ nethserver-evebox
 nethserver-postgresql
 nethserver-cups
 nethserver-hotsync
+nethserver-subscription
+
