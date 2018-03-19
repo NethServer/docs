@@ -41,26 +41,41 @@ Example: ::
 Configuration
 =============
 
-* **NethServer Subscriptions** (by Nethesis) -- run ::
+* **NethServer Subscriptions** (by Nethesis) -- run
 
-  config setprop subscription AlertsUrl https://my.nethserver.com/api/machine/
-  config delprop subscription AlertsAutoUpdatesUrl
-  config setprop subscription InventoryUrl https://my.nethserver.com/api/machine/inventories/store/
-  signal-event nethserver-subscription-update
+  ::
 
-* **NethServer Enterprise partner program** (by Nethesis) -- run ::
+    config setprop subscription AlertsUrl https://my.nethserver.com/api/machine/
+    config delprop subscription AlertsAutoUpdatesUrl
+    config setprop subscription InventoryUrl https://my.nethserver.com/api/machine/inventories/store/
+    signal-event nethserver-subscription-update
 
-  config setprop subscription AlertsUrl https://my.nethesis.it/isa/
-  config setprop subscription AlertsAutoUpdatesUrl https://my.nethesis.it/api/
-  config setprop subscription InventoryUrl https://my.nethesis.it/isa/inventory/store/
-  signal-event nethserver-subscription-update
+* **NethServer Enterprise partner program** (by Nethesis) -- run
+
+  ::
+
+    config setprop subscription AlertsUrl https://my.nethesis.it/isa/
+    config setprop subscription AlertsAutoUpdatesUrl https://my.nethesis.it/api/
+    config setprop subscription InventoryUrl https://my.nethesis.it/isa/inventory/store/
+    signal-event nethserver-subscription-update
 
 
-Restore original NethServer repositories
-========================================
+YUM repositories
+================
 
 Once NethServer Subscriptions is activated, YUM configuration is changed to
-contact the subscribed repositories. To revert the system configuration to its
+contact the subscribed repositories.
+Every night the list of enabled repositores will be reset to meet the subscription requirements.
+
+The ``/etc/e-smith/events/actions/nethserver-subscription-eorepo`` action configures YUM 
+repositories based on subscription.
+The behavior of the script can be changed using ``/etc/nethserver/eorepo.conf`` file which 
+may contain the list of repositories to be enabled.
+
+Restore original NethServer repositories
+----------------------------------------
+
+To revert the system configuration to its
 initial state and use the original NethServer repositories run ::
 
   config setprop subscription SystemId '' Secret ''
