@@ -37,4 +37,4 @@ nethserver-postgresql
 nethserver-cups
 nethserver-hotsync
 nethserver-subscription
-
+nethserver-yum-cron
