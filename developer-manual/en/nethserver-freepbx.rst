@@ -126,3 +126,15 @@ To check user synchronization, use this command: ::
  /usr/bin/scl enable rh-php56 -- /usr/sbin/fwconsole userman --syncall --force --verbose
 
 Syncronization need a secure connection, use SSL or enable ``STARTTLS`` in ``Account Provider`` configuration in NethServer Web GUI
+
+Update from legacy OpenLDAP driver to OpenLDAP2 driver
+------------------------------------------------------
+
+Since nethserver-freepbx-14.0.5, if NethServer users are configured using OpenLDAP, FreePBX users are configured using FreePBX OpenLDAP 2 driver instead of legacy one.
+If you have installed nethserver-freepbx before 14.0.5, and your user provider is configured using LDAP, you're using legacy driver. You can check in FreePBX User Manager module interface if NethServer LDAP driver is "OpenLDAP Directory (Legacy)"
+
+Updating from legacy driver to the new one, allows to permit access to FreePBX interface and UCP to LDAP users, but migration isn't automatical because users would lose default extension associated and other custom options.
+The openldap_migration_from_legacy script, does the driver migration and restore users default_extensions. Other custom users options could be lost anyway.
+To execute migration, launch: ::
+
+  /usr/src/freepbx/openldap_migration_from_legacy

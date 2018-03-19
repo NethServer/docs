@@ -73,7 +73,10 @@ Properties:
 * ``SpamRetentionTime Nd`` Expunge messages in SpamFolder if older than the given time span. "d" is for days.
 * ``TlsSecurity {optional,required}`` 
   controls dovecot ``disable_plaintext_auth`` parameter: if set to ``required`` clear-text authentication methods are disabled, while ``optional`` enables them.
-* ``RestrictedAccessGroup`` The value is a long group name, like ``domain admins@mydomain.tld``. Members of the given group can login to dovecot services only from trusted networks.
+* ``RestrictedAccessGroup`` The value is a long group name, like ``domain
+  admins@mydomain.tld``. Members of the given group can login to dovecot
+  services only from trusted networks. Install the
+  ``nethserver-mail-server-ipaccess`` package to enable this feature.
 
 
 Domains database
@@ -235,3 +238,26 @@ The *cidr list* is a comma-separated list of IP and network addresses in CIDR
 format, like ``127.0.0.1, 192.168.1.0/24, 10.1.1.2``. The binary conversion is
 implemented by the ``NetAddr::IP`` Perl module. See ``perldoc NetAddr::IP`` for
 details.
+
+IP-based IMAP access restriction
+--------------------------------
+
+This feature allows to restrict IMAP access for a specific group.
+Members of the given group have IMAP access restricted to trusted networks.
+
+1. Install ``nethserver-mail-server-ipaccess`` package ::
+
+     yum install nethserver-mail-server-ipaccess
+
+2. Set the limited group, remember to use the full group name: ``<group>@<domain>`` ::
+
+     config setprop dovecot RestrictedAccessGroup <group>@<domain>
+
+   Example for group ``collaborators@nethserver.org``: ::
+
+     config setprop dovecot RestrictedAccessGroup collaborators@nethserver.org
+
+3. Apply the configuration ::
+
+     signal-event nethserver-mail-server-save
+

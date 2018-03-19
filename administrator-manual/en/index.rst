@@ -92,6 +92,7 @@ Modules
    phonebook-mysql
    weekly_report
    hotspot
+   dedalo
    freepbx
    hotsync
 
