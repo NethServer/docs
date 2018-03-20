@@ -38,3 +38,5 @@ nethserver-cups
 nethserver-hotsync
 nethserver-subscription
 nethserver-yum-cron
+nethserver-rh-php71-php-fpm
+nethserver-rh-php56-php-fpm
