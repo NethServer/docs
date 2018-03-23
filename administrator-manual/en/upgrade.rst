@@ -307,9 +307,26 @@ The script will:
 - sync all remaining data
 - execute ``restore-config`` on the destination machine
 
-At the end of ``rsync-upgrade`` run the following steps:
+If ``rsync-upgrade`` terminates without loosing the network connection,
+
+#. Disconnect the original ns6 from network, to avoid IP conflict with the destination server
 
 #. Access the server manager UI and fix the network configuration from the :guilabel:`Network` page
+
+Otherwise, if during ``rsync-upgrade`` **the network connection is lost**, it is likely
+that the source and destination servers have an **IP conflict**:
+
+#. Disconnect the original ns6 from network,
+
+#. From a ns7 root console run the command: ::
+
+    systemctl restart network
+
+#. Then grab the screen device: ::
+
+    screen -r -D
+
+At the end of ``rsync-upgrade`` run the following steps:
 
 #. If the source system was a NT Primary Domain Controller (Samba server role was
    :guilabel:`Primary Domain Controller` -- PDC) or a standalone file server
@@ -322,10 +339,6 @@ At the end of ``rsync-upgrade`` run the following steps:
 #. Go back to the CLI and call the ``post-restore-data`` event on the destination machine: ::
 
     signal-event post-restore-data
-
-#. If you upgraded from PDC or WS to Active Directory, fix home directories permissions with the following command: ::
-    
-      getent group 'domain users' && { for D in /var/lib/nethserver/home/*; do chown -R $(basename D):'domain users' $D; done }
 
 #. Check the restore logs for any ``ERROR`` or ``FAIL`` message: ::
 
