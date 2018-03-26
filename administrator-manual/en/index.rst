@@ -55,6 +55,7 @@ Configuration
    accounts
    dns
    dhcp
+   tlspolicy
 
 Modules
 -------
