@@ -45,6 +45,12 @@ select the :guilabel:`Upgrade to Active Directory` procedure.
 The button will be available only if network configuration has already been
 fixed accordingly to the new hardware.
 
+The following accounts are ignored by the upgrade procedure because they are
+already provided by Samba Active Directory:
+
+* ``administrator``
+* ``guest``
+
 An additional, free, IP address from the *green* network is required by the
 Linux container to run the local Active Directory accounts provider.
 
