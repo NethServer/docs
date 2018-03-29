@@ -322,3 +322,10 @@ file_filter = locale/<lang>/LC_MESSAGES/hotsync.po
 source_file = _build/locale/hotsync.pot
 source_lang = en
 type = PO
+
+[docs-v7.subscription]
+file_filter = locale/<lang>/LC_MESSAGES/subscription.po
+source_file = _build/locale/subscription.pot
+source_lang = en
+type = PO
+
