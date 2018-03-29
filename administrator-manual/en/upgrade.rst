@@ -50,6 +50,7 @@ already provided by Samba Active Directory:
 
 * ``administrator``
 * ``guest``
+* ``krbtgt``
 
 An additional, free, IP address from the *green* network is required by the
 Linux container to run the local Active Directory accounts provider.
