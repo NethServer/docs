@@ -323,6 +323,12 @@ source_file = _build/locale/hotsync.pot
 source_lang = en
 type = PO
 
+[docs-v7.tlspolicy]
+file_filter = locale/<lang>/LC_MESSAGES/tlspolicy.po
+source_file = _build/locale/tlspolicy.pot
+source_lang = en
+type = PO
+
 [docs-v7.subscription]
 file_filter = locale/<lang>/LC_MESSAGES/subscription.po
 source_file = _build/locale/subscription.pot
