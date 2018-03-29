@@ -178,16 +178,9 @@ However Owncloud 7 is still available to avoid service disruption after the upgr
    Nextcloud after the upgrade to Samba Active Directory has been completed.
 
 
-Migration from Owncloud to Nextcloud is manual and can be arranged according
-to user's need.
-The migration script will import all files and users from LDAP to Nextcloud,
-but shared resources **will not** be migrated.
+From Nextcloud 13, the migration from Owncloud to Nextcloud is not supported anymore.
 
-To migrate users and data, use following command: ::
-
-    /usr/share/doc/$(rpm -q --queryformat "%{NAME}-%{VERSION}" nethserver-nextcloud)/owncloud-migrate
-
-After the migration, please replace Owncloud clients with Nextcloud ones [#DownloadNC]_,
+Users should replace Owncloud clients with Nextcloud ones [#DownloadNC]_,
 then make sure to set the new application URL: ``https://<your_server_address>/nextcloud``.
 
 .. [#DownloadNC] Nextcloud clients download https://nextcloud.com/install/#install-clients
