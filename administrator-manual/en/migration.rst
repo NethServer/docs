@@ -37,12 +37,16 @@ starting the migration procedure.
 
 * In any other case, install a *local LDAP* accounts provider.
 
-.. warning:: 
+If you choose a *local Active Directory* accounts provider, remember to fully
+configure and start the DC before executing the ``migration-import`` event. See
+:ref:`account-providers`.
 
-    If you choose a local Active Directory accounts provider, remember to
-    fully configure and start the DC before executing the ``migration-import`` event.
-    See :ref:`account-providers`.
+Furthermore, the following accounts are ignored by the migration procedure
+because they are already provided by Active Directory:
 
+* ``administrator``
+* ``guest``
+* ``krbtgt``
 
 .. index::
    pair: migration; email
