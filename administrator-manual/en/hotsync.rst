@@ -36,9 +36,25 @@ Terminology
 Installation
 ============
 
-Install nethserver-hotsync on both MASTER and SLAVE, execute from command line: ::
+.. only:: nscom
 
-  yum install nethserver-hotsync
+    Install nethserver-hotsync on both MASTER and SLAVE, execute from command line: ::
+    
+      yum install nethserver-hotsync
+
+.. only:: nsent
+
+    Install nethserver-hotsync on both MASTER and SLAVE.
+
+    To install the module on MASTER execute from command line: ::
+
+      yum install nethserver-hotsync
+
+    To install the module on SLAVE execute from command line: ::
+
+      yum install --disablerepo=nethesis-updates,nethesis-upstream nethserver-hotsync
+
+
 
 If you want to tests the Cockpit-based web interface, execute also: ::
 
