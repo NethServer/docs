@@ -44,6 +44,13 @@ Installation
    access
    registration
 
+.. only:: nscom
+
+    .. toctree::
+       :maxdepth: 1
+
+       subscription
+
 Configuration
 -------------
 
@@ -55,6 +62,7 @@ Configuration
    accounts
    dns
    dhcp
+   tlspolicy
 
 Modules
 -------

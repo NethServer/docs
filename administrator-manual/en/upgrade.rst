@@ -45,6 +45,13 @@ select the :guilabel:`Upgrade to Active Directory` procedure.
 The button will be available only if network configuration has already been
 fixed accordingly to the new hardware.
 
+The following accounts are ignored by the upgrade procedure because they are
+already provided by Samba Active Directory:
+
+* ``administrator``
+* ``guest``
+* ``krbtgt``
+
 An additional, free, IP address from the *green* network is required by the
 Linux container to run the local Active Directory accounts provider.
 
@@ -178,16 +185,9 @@ However Owncloud 7 is still available to avoid service disruption after the upgr
    Nextcloud after the upgrade to Samba Active Directory has been completed.
 
 
-Migration from Owncloud to Nextcloud is manual and can be arranged according
-to user's need.
-The migration script will import all files and users from LDAP to Nextcloud,
-but shared resources **will not** be migrated.
+From Nextcloud 13, the migration from Owncloud to Nextcloud is not supported anymore.
 
-To migrate users and data, use following command: ::
-
-    /usr/share/doc/$(rpm -q --queryformat "%{NAME}-%{VERSION}" nethserver-nextcloud)/owncloud-migrate
-
-After the migration, please replace Owncloud clients with Nextcloud ones [#DownloadNC]_,
+Users should replace Owncloud clients with Nextcloud ones [#DownloadNC]_,
 then make sure to set the new application URL: ``https://<your_server_address>/nextcloud``.
 
 .. [#DownloadNC] Nextcloud clients download https://nextcloud.com/install/#install-clients
@@ -307,9 +307,26 @@ The script will:
 - sync all remaining data
 - execute ``restore-config`` on the destination machine
 
-At the end of ``rsync-upgrade`` run the following steps:
+If ``rsync-upgrade`` terminates without loosing the network connection,
+
+#. Disconnect the original ns6 from network, to avoid IP conflict with the destination server
 
 #. Access the server manager UI and fix the network configuration from the :guilabel:`Network` page
+
+Otherwise, if during ``rsync-upgrade`` **the network connection is lost**, it is likely
+that the source and destination servers have an **IP conflict**:
+
+#. Disconnect the original ns6 from network,
+
+#. From a ns7 root console run the command: ::
+
+    systemctl restart network
+
+#. Then grab the screen device: ::
+
+    screen -r -D
+
+At the end of ``rsync-upgrade`` run the following steps:
 
 #. If the source system was a NT Primary Domain Controller (Samba server role was
    :guilabel:`Primary Domain Controller` -- PDC) or a standalone file server
@@ -322,10 +339,6 @@ At the end of ``rsync-upgrade`` run the following steps:
 #. Go back to the CLI and call the ``post-restore-data`` event on the destination machine: ::
 
     signal-event post-restore-data
-
-#. If you upgraded from PDC or WS to Active Directory, fix home directories permissions with the following command: ::
-    
-      getent group 'domain users' && { for D in /var/lib/nethserver/home/*; do chown -R $(basename D):'domain users' $D; done }
 
 #. Check the restore logs for any ``ERROR`` or ``FAIL`` message: ::
 
