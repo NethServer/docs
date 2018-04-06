@@ -45,7 +45,7 @@ The command will:
 
 Please note that:
 
-- users disabled in the server manager or already existing in Mattermost will be skipped
+- users disabled in the Server Manager or already existing in Mattermost will be skipped
 - a random password will be generated for each user
 
 Invocation example: ::
