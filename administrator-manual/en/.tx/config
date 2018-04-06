@@ -335,3 +335,9 @@ source_file = _build/locale/subscription.pot
 source_lang = en
 type = PO
 
+[docs-v7.team_chat]
+file_filter = locale/<lang>/LC_MESSAGES/team_chat.po
+source_file = _build/locale/team_chat.pot
+source_lang = en
+type = PO
+
