@@ -11,11 +11,11 @@ Mattermost is an Open Source, private cloud :index:`Slack`-alternative. Check ou
 Configuration
 =============
 
-Mattermost installation needs a dedicated virtual host, a FQDN like ``chat.nethserver.org``.
+Mattermost installation needs a dedicated virtual host, an FQDN like ``chat.nethserver.org``.
  
-Before proceed with the configuration, make sure to create the corresponding DNS record. If |product| act as the DNS server of your LAN, please refer to :ref:`dns-section`.
+Before proceeding with the configuration, make sure to create the corresponding DNS record. If |product| act as the DNS server of your LAN, please refer to :ref:`dns-section`.
 
-If you're server is using Let's Encrypt certificate as default, make sure also to have a corresponding public DNS record. See :ref:`server_certificate-section` for more info.
+If your server is using a Let's Encrypt certificate as default, make also sure to have a corresponding public DNS record. See :ref:`server_certificate-section` for more info.
 
 How to configure:
 
@@ -35,7 +35,7 @@ Authentication
 ==============
 
 Mattermost authentication is *not* integrated with any Account Provider.
-The Mattermost administrator should take care of user and teams creation.
+The Mattermost administrator should take care of users and teams creation.
 To ease this task, the system administrator can use the ``mattermost-bulk-user-create`` command.
 
 The command will:
@@ -45,7 +45,7 @@ The command will:
 
 Please note that:
 
-- disabled or existing users will be skipped
+- users disabled in the server manager or already existing in Mattermost will be skipped
 - a random password will be generated for each user
 
 Invocation example: ::
