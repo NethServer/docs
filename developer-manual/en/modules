@@ -40,3 +40,4 @@ nethserver-subscription
 nethserver-yum-cron
 nethserver-rh-php71-php-fpm
 nethserver-rh-php56-php-fpm
+nethserver-mattermost
