@@ -197,8 +197,13 @@ img[alt="|product|"] {
     display: none;
 }
 .guilabel {
-    font-style: italic;
-    font-weight: bolder;
+    border: 1px solid #7fbbe3;
+    background: #e7f2fa;
+    font-size: 80%;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 2.4px 6px;
+    margin: auto 2px;
 }
 .table>tbody>tr>td, .table>tfoot>tr>td {
     word-break: break-word;
