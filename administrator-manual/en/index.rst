@@ -79,6 +79,7 @@ Modules
    pop3_proxy
    pop3_connector
    chat
+   team_chat
    ups
    fax_server
    firewall

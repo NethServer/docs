@@ -187,7 +187,7 @@ If you wish to build documentation locally on your machine, make sure to install
 
 On Fedora 24 or later use: ::
 
-  sudo dnf install python2-sphinx
+  sudo dnf install python2-sphinx python2-sphinx-bootstrap-theme
 
 Then, install all required modules: ::
 

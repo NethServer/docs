@@ -255,3 +255,25 @@ Keep logs for 6 months, rotate once a week: ::
   config setprop logrotate Times 24
   signal-event nethserver-base-update
 
+
+Transport Layer Security
+========================
+
+
+The ``TLS policy`` page controls how individual services configure the
+Transport Layer Security (TLS) protocol, by selecting a *policy identifier*.
+
+Each module implementation decides how to implement a specific policy
+identifier, providing a trade off between security and client compatibility.
+Newer policies are biased towards security, whilst older ones provide better
+compatibility with old clients.
+
+You can enforce the TLS policy (20180330), or choose the legacy one (empty policy property) if your 
+clients are not supported/maintained anymore (Windows XP for example).
+
+TLS db property in configuration database: ::
+  tls=configuration
+    policy=
+
+The event to expand the templates of all rpm which use TLS is ``tls-policy-save``
+

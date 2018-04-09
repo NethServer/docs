@@ -14,8 +14,8 @@ compatibility with old clients.
 
 The following sections describe each policy identifier.
 
-Policy ``2018-03-30``
----------------------
+Policy 2018-03-30
+-----------------
 
 Apache
     * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
@@ -24,6 +24,7 @@ Apache
         EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
         
     * Disabled SSLv2 and SSLv3
+    * Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`Default upstream policy`)
 
 Dovecot
     * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
@@ -41,8 +42,19 @@ OpenSSH
         MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,hmac-ripemd160
         KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1
 
+Postfix
+    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * Use TLS in outbound connections, if remote server supports it
+    * Disable SSLv2 and SSLv3 on submission ports
+    * Cipher suite ::
+        
+        EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA256:EECDH:+CAMELLIA128:+AES128:+SSLv3:kEDH:CAMELLIA128-SHA:AES128-SHA
+        
+    * Exclude ciphers ::
+        
+        aNULL:eNULL:LOW:3DES:MD5:EXP:PSK:DSS:RC4:SEED:IDEA:ECDSA
 
-Policy ``Legacy``
------------------
+Default upstream policy
+-----------------------
 
-Backward compatible settings, as implemented in |product| 7.4
+The goal of this policy is retaining upstream settings. This is the original goal since |product| 7.
