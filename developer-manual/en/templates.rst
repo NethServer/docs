@@ -359,18 +359,18 @@ full list of options can be seen with:
 Template deletion: templates.metadata
 =====================================
 
-A template once expanded in the system file cannot be deleted automatically, 
-you can only change its content. The template will still exists until you delete 
+A template once expanded in the file system cannot be deleted automatically, 
+you can only change its content. The template will still exist until you delete 
 it by a ``templates.medata`` file.
 
-For example to delete /etc/myExample, here the file 
-``/etc/e-smith/templates.metadata/etc/myExample`` with the content
+For example to delete ``/etc/myExample``, create the file 
+``/etc/e-smith/templates.metadata/etc/myExample`` with just the following line ::
 
-::
-     DELETE=1
+    DELETE=1
 
-Then
-	expand-template /etc/myExample
+Then ::
+
+    expand-template /etc/myExample
    
 
 
