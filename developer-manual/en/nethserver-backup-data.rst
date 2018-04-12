@@ -52,15 +52,15 @@ Logs:
 Indexing
 --------
 
-In the *pre-backup-data* event the disk analyzer (Duc) make an indexing of filesystem, useful to create the graphical tree.
+In the *pre-backup-data* event the disk analyzer (Duc) creates an index of the filesystem, needed to create the graphical tree.
 
-The name of the actions is ``/etc/e-smith/events/actions/nethserver-restore-data-duc-index`` and it compose the JSON file to create
-the navigable graphic tree.
+The name of the action is ``/etc/e-smith/events/actions/nethserver-restore-data-duc-index`` and it creates the JSON file to display
+the browsable graphic tree.
 
 Customization
 -------------
 
-Add custom include/exclude inside following files:
+Add custom include/exclude inside the following files:
 
 * /etc/backup-data.d/custom.include
 * /etc/backup-data.d/custom.exclude
@@ -68,10 +68,10 @@ Add custom include/exclude inside following files:
 Retention policy
 ~~~~~~~~~~~~~~~~
 
-All backups can be deleted after a certain amount of time. Cleanup process takes place in post-backup-data event.
+All backups can be deleted after a certain amount of time. The cleanup process takes place in post-backup-data event.
 See ``CleanupOlderThan`` property.
 
-A log of cleanup action is saved in ``/var/log/last-cleanup.log``.
+A log of the cleanup action is saved in ``/var/log/last-cleanup.log``.
 
 Duplicity
 ~~~~~~~~~
@@ -106,11 +106,11 @@ The main command is ``/sbin/e-smith/restore-data`` which starts the restore proc
 * *restore-data-<program>* action: search for a backup in the configuration database and restore it
 * *post-restore-data* event: used to inform programs about new available data (eg. mysql restart)
 
-Restore grahic interface
-------------------------
+Restore graphic interface
+-------------------------
 
-After the selection of the paths to restore, the main command called is ``/usr/libexec/nethserver/nethserver-restore-data-help`` that
-reads the list of paths to restore and creates a executable command to restore the directories. If the second option of restore was selected (Restored file without overwrite the existing files), after the restore in a temp directory, the script moves the restored directories in the correct paths.
+After the selection of the paths to restore, the main command called is ``/usr/libexec/nethserver/nethserver-restore-data-helper`` that
+reads the list of paths to restore and creates an executable command to restore the directories. If the *Restore files in new directory* has been selected, after the restore in a temporary directory, the script moves the restored directories in the correct path.
 
 Logs:
 
