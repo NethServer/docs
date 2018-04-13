@@ -456,7 +456,6 @@ Expiration
 ----------
 
 The  :index:`password expiration` is enabled by default to 6 months from the time when the password is set.
-The system will send an e-mail to inform the users when their password is about to expire.
 
 .. note:: The system will refer to the date of the last password change,
    if password is older than 6 months, the server will send an email to indicate that password has expired.
