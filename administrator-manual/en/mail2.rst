@@ -17,10 +17,12 @@ This new module provides the email filter engine for the
 therefore an upgrade for those modules is required. See
 :ref:`mail2-upgrade-procedures-section`.
 
-Features planned for final release
-==================================
-
-* Backward-compatible disclaimer signature (on development)
+The :guilabel:`Email > Domains > Append a legal note to sent messages` (also
+known as "Disclaimer") feature was split in a separate, optional package:
+``nethserver-mail2-disclaimer``. The upgrade procedures documented in this
+section install it for backward compatibility, however new installations should
+avoid it, as it relies on an old package [#ALTERMIME]_ that can be removed in
+future releases.
 
 Configuration options
 =====================
@@ -87,6 +89,9 @@ Upgrade procedures
 It is possible to switch a running system to this new module, starting from
 the **Email** module, **SMTP proxy** or **POP3 connector**  module.
 
+Make sure the system is updated with the latest packages before running the
+upgrade procedure.
+
 If something is wrong with ``rspamd``, please report the issue on
 `community.nethserver.org <https://community.nethserver.org>`_.
 
@@ -100,14 +105,14 @@ From Email module
 Upgrade: ::
 
     yum swap \
-        -- remove nethserver-mail-{common,filter,server} \
-        -- install nethserver-mail2-{common,filter,server}
+        -- remove nethserver-mail-{common,disclaimer,filter,server} \
+        -- install nethserver-mail2-{common,disclaimer,filter,server}
 
 Revert upgrade: ::
 
     yum swap \
-        -- install nethserver-mail-{common,filter,server} \
-        -- remove nethserver-mail2-{common,filter,server}
+        -- install nethserver-mail-{common,disclaimer,filter,server} \
+        -- remove nethserver-mail2-{common,disclaimer,filter,server}
 
 From SMTP proxy module
 ----------------------
@@ -115,14 +120,14 @@ From SMTP proxy module
 Upgrade: ::
 
     yum swap \
-        -- remove nethserver-mail-{common,filter} \
-        -- install nethserver-mail2-{common,filter}
+        -- remove nethserver-mail-{common,disclaimer,filter} \
+        -- install nethserver-mail2-{common,disclaimer,filter}
 
 Revert upgrade: ::
 
     yum swap \
-        -- install nethserver-mail-{common,filter} \
-        -- remove nethserver-mail2-{common,filter}
+        -- install nethserver-mail-{common,disclaimer,filter} \
+        -- remove nethserver-mail2-{common,disclaimer,filter}
 
 From POP3 connector module
 --------------------------
@@ -135,14 +140,14 @@ with email filter`.
 Upgrade: ::
 
     yum swap \
-        -- remove nethserver-mail-{common,filter,server} nethserver-getmail nethserver-spamd \
-        -- install nethserver-mail2-{common,filter,server,getmail}
+        -- remove nethserver-mail-{common,disclaimer,filter,server} nethserver-getmail nethserver-spamd \
+        -- install nethserver-mail2-{common,disclaimer,filter,server,getmail}
 
 Revert upgrade: ::
 
     yum swap \
-        -- install nethserver-mail-{common,filter,server} nethserver-getmail \
-        -- remove nethserver-mail2-{common,filter,server,getmail}
+        -- install nethserver-mail-{common,disclaimer,filter,server} nethserver-getmail \
+        -- remove nethserver-mail2-{common,disclaimer,filter,server,getmail}
 
 From POP3 proxy module
 ----------------------
@@ -150,14 +155,14 @@ From POP3 proxy module
 Upgrade: ::
 
     yum swap \
-        -- remove nethserver-mail-{common,filter} nethserver-p3scan nethserver-spamd \
-        -- install nethserver-mail2-{common,filter,p3scan}
+        -- remove nethserver-mail-{common,disclaimer,filter} nethserver-p3scan nethserver-spamd \
+        -- install nethserver-mail2-{common,disclaimer,filter,p3scan}
 
 Revert upgrade: ::
 
     yum swap \
-        -- install nethserver-mail-{common,filter} nethserver-p3scan nethserver-spamd \
-        -- remove nethserver-mail2-{common,filter,p3scan}
+        -- install nethserver-mail-{common,disclaimer,filter} nethserver-p3scan nethserver-spamd \
+        -- remove nethserver-mail2-{common,disclaimer,filter,p3scan}
 
 .. rubric:: References
 
@@ -175,3 +180,7 @@ Revert upgrade: ::
     transfer agent (MTA) using greylisting will "temporarily reject" any email from
     a sender it does not recognize -- `Wikipedia
     <https://en.wikipedia.org/wiki/Greylisting>`_
+
+.. [#ALTERMIME]
+    alterMIME is a small program which is used to alter your mime-encoded mailpack --
+    https://pldaniels.com/altermime/

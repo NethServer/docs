@@ -356,6 +356,24 @@ full list of options can be seen with:
 
 ``perldoc esmith::templates``
 
+Template deletion: templates.metadata
+=====================================
+
+A template once expanded in the file system cannot be deleted automatically, 
+you can only change its content. The template will still exist until you delete 
+it by a ``templates.medata`` file.
+
+For example to delete ``/etc/myExample``, create the file 
+``/etc/e-smith/templates.metadata/etc/myExample`` with just the following line ::
+
+    DELETE=1
+
+Then ::
+
+    expand-template /etc/myExample
+   
+
+
 Perl API: processTemplate
 ==========================
 
