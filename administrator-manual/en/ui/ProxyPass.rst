@@ -5,14 +5,15 @@ Reverse proxy
 =============
 
 This page configures certain paths and virtual host names under Apache to be
-served by forwarding the original web request to another URL.
+served by forwarding the original web request to another URL. See also
+:ref:`proxy_pass-section`.
 
 
 Create / Edit
 -------------
 
 Name
-    The URL path name or the virtual host name (an host FQDN). A path name will
+    The URL **path name** or the **virtual host name** (an host FQDN). A path name will
     match URLs like ``http://somehost/<path name>/...``, whilst a virtual host
     name will match an URL like ``http://<virtual host name>/...``.
     Matching URLs are forwarded to the :guilabel:`Target URL`.
