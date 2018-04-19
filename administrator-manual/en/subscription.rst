@@ -24,3 +24,12 @@ Monitoring and access to stable repositories are automatically enabeld.
 
 .. [#Dartagnan] Dartagnan documentation: https://nethesis.github.io/dartagnan/
 .. [#Nethesis] Nethesis official site: http://www.nethesis.it
+
+Removing a subscription
+=======================
+
+When the subscription expires, or at the end of a trial period, use the following command to
+revert any modification to repositories and access the community ones: ::
+
+  config setprop Secret '' SystemId ''
+  eorepo base centos-sclo-rh centos-sclo-sclo epel extras nethforge nethserver-base nethserver-updates updates
