@@ -78,7 +78,7 @@ By default, a Server Manager session does not terminate until the user runs the
 after some time has passed.
 
 The following shell command sets 15 minutes of idle timeout, and 24 hours of
-maximum session life time: ::
+maximum session life time. Time is expressed in seconds: ::
     
     config setprop httpd-admin MaxSessionIdleTime 900 MaxSessionLifeTime 86400
 
