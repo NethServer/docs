@@ -69,3 +69,22 @@ Logout
 Terminate the current Server Manager session by going to the
 :guilabel:`root@host.domain.com` label on the upper right corner of the screen
 and by clicking on :guilabel:`Logout`.
+
+Session timeouts
+================
+
+By default, a Server Manager session does not terminate until the user runs the
+:ref:`Logout` procedure. It is possible to terminate the session automatically
+after some time has passed.
+
+The following shell command sets 15 minutes of idle timeout, and 24 hours of
+maximum session life time: ::
+    
+    config setprop httpd-admin MaxSessionIdleTime 900 MaxSessionLifeTime 86400
+
+To disable the timeouts ::
+    
+    config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
+
+The new timeout values will affect new sessions. They does not change any active
+session.
