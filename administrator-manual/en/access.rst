@@ -86,5 +86,5 @@ To disable the timeouts ::
     
     config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
 
-The new timeout values will affect new sessions. They does not change any active
+The new timeout values will affect new sessions. They do not change any active
 session.
