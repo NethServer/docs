@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-12 11:06+0100\n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -966,15 +966,10 @@ msgstr "Vencimiento"
 #: ../../accounts.rst:465 ../../accounts.rst:468
 msgid ""
 "The  :index:`password expiration` is enabled by default to 6 months from the"
-" time when the password is set. The system will send an e-mail to inform the"
-" users when their password is about to expire."
+" time when the password is set."
 msgstr ""
-"La :index:`Caducidad de contraseña` está habilitada de forma predeterminada "
-"a 6 meses desde el momento en que se establece la contraseña. El sistema "
-"enviará un correo electrónico para informar a los usuarios cuando su "
-"contraseña está a punto de expirar."
 
-#: ../../accounts.rst:468 ../../accounts.rst:471
+#: ../../accounts.rst:467 ../../accounts.rst:470
 msgid ""
 "The system will refer to the date of the last password change, if password "
 "is older than 6 months, the server will send an email to indicate that "
@@ -990,11 +985,11 @@ msgstr ""
 "realizó en enero y la activación de la fecha límite en octubre, el sistema "
 "asumirá que la contraseña cambiada en enero expiró y notifica al usuario."
 
-#: ../../accounts.rst:478 ../../accounts.rst:481
+#: ../../accounts.rst:477 ../../accounts.rst:480
 msgid "Effects of expired passwords"
 msgstr "Efectos de contraseñas caducadas"
 
-#: ../../accounts.rst:480 ../../accounts.rst:483
+#: ../../accounts.rst:479 ../../accounts.rst:482
 msgid ""
 "After password expiration, the user is still able to read and send email "
 "messages."
@@ -1002,7 +997,7 @@ msgstr ""
 "Después de la expiración de la contraseña, el usuario sigue siendo capaz de "
 "leer y enviar mensajes de correo electrónico."
 
-#: ../../accounts.rst:482 ../../accounts.rst:485
+#: ../../accounts.rst:481 ../../accounts.rst:484
 msgid ""
 "If |product| has an Active Directory account provider, the user cannot "
 "access shared folders, printers (by Samba) and other domain computers."
@@ -1011,15 +1006,15 @@ msgstr ""
 " puede tener acceso a carpetas compartidas, impresoras (por Samba) y otros "
 "equipos de dominio."
 
-#: ../../accounts.rst:488 ../../accounts.rst:491
+#: ../../accounts.rst:487 ../../accounts.rst:490
 msgid "Import accounts from plain-text files"
 msgstr ""
 
-#: ../../accounts.rst:491 ../../accounts.rst:494
+#: ../../accounts.rst:490 ../../accounts.rst:493
 msgid "Import users"
 msgstr "Importar usuarios"
 
-#: ../../accounts.rst:493 ../../accounts.rst:496
+#: ../../accounts.rst:492 ../../accounts.rst:495
 msgid ""
 "It is possible to create user accounts from a TSV (Tab Separated Values) "
 "file with the following format: ::"
@@ -1027,15 +1022,15 @@ msgstr ""
 "Es posible crear cuentas de usuario desde un archivo TSV (Tab Separated "
 "Values, valores separados por tabulación) con el siguiente formato: ::"
 
-#: ../../accounts.rst:497 ../../accounts.rst:500
+#: ../../accounts.rst:496 ../../accounts.rst:499
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../accounts.rst:501 ../../accounts.rst:504
+#: ../../accounts.rst:500 ../../accounts.rst:503
 msgid "then execute: ::"
 msgstr "Luego ejecutar: ::"
 
-#: ../../accounts.rst:505 ../../accounts.rst:508
+#: ../../accounts.rst:504 ../../accounts.rst:507
 msgid ""
 "For example, if the user’s file is /root/users.tsv, execute following "
 "command: ::"
@@ -1043,15 +1038,15 @@ msgstr ""
 "Por ejemplo, si el archivo del usuario es /root/users.tsv, ejecute el "
 "siguiente comando: ::"
 
-#: ../../accounts.rst:509 ../../accounts.rst:512
+#: ../../accounts.rst:508 ../../accounts.rst:511
 msgid "Alternative separator character: ::"
 msgstr "Carácter de separador alternativo: ::"
 
-#: ../../accounts.rst:514 ../../accounts.rst:517
+#: ../../accounts.rst:513 ../../accounts.rst:516
 msgid "Import emails"
 msgstr ""
 
-#: ../../accounts.rst:516 ../../accounts.rst:519
+#: ../../accounts.rst:515 ../../accounts.rst:518
 msgid ""
 "It is possible to create mail aliases from a TSV (Tab Separated Values) file"
 " with the following format: ::"
@@ -1059,7 +1054,7 @@ msgstr ""
 "Es posible crear alias de correo desde un archivo TSV (Tab Separated Values,"
 " valores separados por tabulación) con el siguiente formato: ::"
 
-#: ../../accounts.rst:520 ../../accounts.rst:523
+#: ../../accounts.rst:519 ../../accounts.rst:522
 msgid ""
 "Then you can use the ``import_emails`` script. See :ref:`import-"
 "users_section` for a sample script invocation."
@@ -1067,11 +1062,11 @@ msgstr ""
 "A continuación, puede utilizar el script ``import_emails``. Ver :ref"
 ":`import-users_section` para una invocación del script de ejemplo."
 
-#: ../../accounts.rst:523 ../../accounts.rst:526
+#: ../../accounts.rst:522 ../../accounts.rst:525
 msgid "Import groups"
 msgstr ""
 
-#: ../../accounts.rst:525 ../../accounts.rst:528
+#: ../../accounts.rst:524 ../../accounts.rst:527
 msgid ""
 "Group management is available from the command line through ``group-create``"
 " and ``group-modify`` events ::"

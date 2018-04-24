@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -74,4 +74,18 @@ msgstr ""
 msgid ""
 "Allow members of ``Domain Admins`` group to connect any shared folder and "
 "grant them administrative access on its content"
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:12 ../../ui/TlsPolicy.rst:15
+msgid "TLS policy"
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:14 ../../ui/TlsPolicy.rst:17
+msgid "Enforced security level"
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:15 ../../ui/TlsPolicy.rst:18
+msgid ""
+"Configures the system services as described in the :ref:`tlspolicy-section` "
+"section"
 msgstr ""
