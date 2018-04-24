@@ -1,0 +1,100 @@
+# #-#-#-#-#  subscription.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  subscription.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../subscription.rst:10 ../../subscription.rst:13
+msgid "|product| subscription"
+msgstr "Suscripción a |product|"
+
+#: ../../subscription.rst:12 ../../subscription.rst:15
+msgid ""
+"A |product| installation can be registerd to a public or private Dartagnan "
+"[#Dartagnan]_ instance, getting access to monitoring portal and stable "
+"update repositories."
+msgstr ""
+"La instalación de |product| se puede registrar en una instancia Dartagnan "
+"[#Dartagnan]_ pública o privada, obteniendo acceso al portal de monitoreo y "
+"repositorios de actualización estables."
+
+#: ../../subscription.rst:15 ../../subscription.rst:18
+msgid ""
+"The |product| Subscription by Nethesis [#Nethesis]_ enables access to a "
+"public ready-to-use Dartagnan instance, along with immediate professional "
+"support services for your |product| deployments."
+msgstr ""
+"La suscripción de |product| por Nethesis [#Nethesis]_ permite el acceso a "
+"una instancia pública de Dartagnan lista para usar, junto con servicios de "
+"soporte profesional inmediatos para sus implementaciones en |product| ."
+
+#: ../../subscription.rst:18 ../../subscription.rst:21
+msgid "Detailed info available: https://my.nethserver.com"
+msgstr "Información detallada disponible en: https://my.nethserver.com"
+
+#: ../../subscription.rst:21 ../../subscription.rst:24
+msgid "Register an installation"
+msgstr "Registro e instalación"
+
+#: ../../subscription.rst:23 ../../subscription.rst:26
+msgid "Access :guilabel:`Subscription` page from the Server Manager"
+msgstr "Accede a la página :guilabel:`Subscription` desde el Panel de Control"
+
+#: ../../subscription.rst:24 ../../subscription.rst:27
+msgid "Click on :guilabel:`Subscribe`"
+msgstr "Haz clic en :guilabel:`Subscribe`"
+
+#: ../../subscription.rst:25 ../../subscription.rst:28
+msgid ""
+"Login or register to https://my.nethserver.com to obtain a registration code"
+msgstr ""
+"Inicia sesión o regístrate en https://my.nethserver.com para obtener un "
+"código de registro"
+
+#: ../../subscription.rst:26 ../../subscription.rst:29
+msgid ""
+"Copy and paste the code inside the :guilabel:`Registration token` field"
+msgstr "Copia y pega el código en el campo :guilabel:`Registration token`"
+
+#: ../../subscription.rst:27 ../../subscription.rst:30
+msgid "Click on :guilabel:`Register now` button"
+msgstr "Haz clic en el botón :guilabel:`Register now`"
+
+#: ../../subscription.rst:29 ../../subscription.rst:32
+msgid ""
+"At the end, the subscription plan name and validity are reported inside the "
+"page. Monitoring and access to stable repositories are automatically "
+"enabeld."
+msgstr ""
+"Al final, el nombre y la validez del plan de suscripción se informan dentro "
+"de la página. La supervisión y el acceso a los repositorios estables se "
+"activan automáticamente."
+
+#: ../../subscription.rst:32 ../../subscription.rst:35
+msgid "Dartagnan documentation: https://nethesis.github.io/dartagnan/"
+msgstr "Documentación Dartagnan: https://nethesis.github.io/dartagnan/"
+
+#: ../../subscription.rst:33 ../../subscription.rst:36
+msgid "Nethesis official site: http://www.nethesis.it"
+msgstr "Web oficial de Nethesis: http://www.nethesis.it"

@@ -1,0 +1,188 @@
+# #-#-#-#-#  team_chat.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  team_chat.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../team_chat.rst:12 ../../team_chat.rst:15
+msgid "Team chat (Mattermost)"
+msgstr "Team chat (Mattermost)"
+
+#: ../../team_chat.rst:14 ../../team_chat.rst:17
+msgid ""
+"The :index:`team chat` module installs Mattermost Team Edition platform "
+"inside |product|."
+msgstr ""
+"Il modulo :index:`team chat` installa la piattaforma Mattermost Team Edition"
+" all'interno di |product|."
+
+#: ../../team_chat.rst:16 ../../team_chat.rst:19
+msgid ""
+"Mattermost is an Open Source, private cloud :index:`Slack`-alternative. "
+"Check out the excellent official documentation: "
+"https://docs.mattermost.com/."
+msgstr ""
+"Mattermost è un cloud privato Open Source :index:`Slack`-alternative. "
+"L'eccellente documentazione ufficiale del progetto è disponibile qui: "
+"https://docs.mattermost.com/."
+
+#: ../../team_chat.rst:19 ../../team_chat.rst:22
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../team_chat.rst:21 ../../team_chat.rst:24
+msgid ""
+"Mattermost installation needs a dedicated virtual host, an FQDN like "
+"``chat.nethserver.org``."
+msgstr ""
+"L'installazione di Mattermost richiede un virtual host dedicato, un FQDN "
+"come ``chat.nethserver.org``."
+
+#: ../../team_chat.rst:23 ../../team_chat.rst:26
+msgid ""
+"Before proceeding with the configuration, make sure to create the "
+"corresponding DNS record. If |product| act as the DNS server of your LAN, "
+"please refer to :ref:`dns-section`."
+msgstr ""
+"Prima di procedere con la configurazione, assicurarsi di aver creato il "
+"record DNS corrispondente. Se |product| svolge il ruolo di server DNS della "
+"LAN, fare riferimento alla sezione :ref:`dns-section`."
+
+#: ../../team_chat.rst:25 ../../team_chat.rst:28
+msgid ""
+"If your server is using a Let's Encrypt certificate as default, make also "
+"sure to have a corresponding public DNS record. See :ref"
+":`server_certificate-section` for more info."
+msgstr ""
+"Se il server utilizza il certificato Let's Encrypt come predefinito, "
+"assicurarsi anche di avere un record DNS pubblico corrispondente. Vedi :ref"
+":`server_certificate-section` per maggiori informazioni."
+
+#: ../../team_chat.rst:27 ../../team_chat.rst:30
+msgid "How to configure:"
+msgstr "Come configurare:"
+
+#: ../../team_chat.rst:29 ../../team_chat.rst:32
+msgid "Access :guilabel:`Team chat` page inside the Server Manager"
+msgstr "Accedere alla pagina guilabel:`Team chat` del Server Manager"
+
+#: ../../team_chat.rst:30 ../../team_chat.rst:33
+msgid ""
+"Check :guilabel:`Enable Mattermost Team Edition`, then enter a valid FQDN "
+"inside :guilabel:`Virtual host name` field (eg. ``chat.nethserver.org``)"
+msgstr ""
+"Spuntare l'opzione :guilabel:`Abilita Mattermost Team Edition`, quindi "
+"inserire un FQDN valido nel campo :guilabel:`Nome virtual host` (ad esempio "
+"``chat.nethserver.org``)"
+
+#: ../../team_chat.rst:31 ../../team_chat.rst:34
+msgid ""
+"Open the entered host name inside the browser, eg: "
+"``https://chat.nethserver.org``. At first access, a wizard will create the "
+"administrator user"
+msgstr ""
+"Accedere al nome DNS indicato attraverso il browser, ad esempio "
+"``https://chat.nethserver.org``. Al primo accesso una procedura guidata "
+"creerà l'utente amministratore"
+
+#: ../../team_chat.rst:34 ../../team_chat.rst:37
+msgid "The following features are enabled by default:"
+msgstr "Le seguenti funzionalità sono abilitate di default:"
+
+#: ../../team_chat.rst:36 ../../team_chat.rst:39
+msgid "mail notifications"
+msgstr "notifiche mail"
+
+#: ../../team_chat.rst:37 ../../team_chat.rst:40
+msgid "push notifications for mobile apps"
+msgstr "notifiche push per le app mobile"
+
+#: ../../team_chat.rst:38 ../../team_chat.rst:41
+msgid "redirect from HTTP to HTTPS"
+msgstr "redirect da HTTP ad HTTPS"
+
+#: ../../team_chat.rst:42 ../../team_chat.rst:45
+msgid "Authentication"
+msgstr "Autenticazione"
+
+#: ../../team_chat.rst:44 ../../team_chat.rst:47
+msgid ""
+"Mattermost authentication is *not* integrated with any Account Provider. The"
+" Mattermost administrator should take care of users and teams creation. To "
+"ease this task, the system administrator can use the :guilabel:`Import "
+"users` button.."
+msgstr ""
+"L'autenticazione per Mattermost *non* è integrata con alcun Account "
+"Provider. L'amministratore di Mattermost dovrà occuparsi della creazione di "
+"utenti e team. Per facilitare questa operazione, l'amministratore di sistema"
+" può utilizzare il pulsante :guilabel:`Importa utenti` .."
+
+#: ../../team_chat.rst:48 ../../team_chat.rst:51
+msgid "The command will:"
+msgstr "Il comando provvederà a:"
+
+#: ../../team_chat.rst:50 ../../team_chat.rst:53
+msgid ""
+"create a default team named as the Company from :ref:`organization_contacts-"
+"section`"
+msgstr ""
+"creare il team di default utilizzando il nome dell'azienda definito nella "
+"sezione :ref:`organization_contacts-section`"
+
+#: ../../team_chat.rst:51 ../../team_chat.rst:54
+msgid ""
+"read all users from local or remote Account Providers and create them inside"
+" Mattermost"
+msgstr ""
+"leggere tutti gli utenti dall'Account Provider locale o remoto e  ri-crearli"
+" all'interno di Mattermost"
+
+#: ../../team_chat.rst:53 ../../team_chat.rst:56
+msgid "Please note that:"
+msgstr "Si noti che:"
+
+#: ../../team_chat.rst:55 ../../team_chat.rst:58
+msgid ""
+"users disabled in the Server Manager, or already existing in Mattermost, "
+"will be skipped"
+msgstr ""
+"gli utenti disabilitati nel Server Manager o già esistenti in Mattermost non"
+" verranno considerati"
+
+#: ../../team_chat.rst:56 ../../team_chat.rst:59
+msgid "a random password will be generated for each user"
+msgstr "per ogni utente verrà generata una password casuale"
+
+#: ../../team_chat.rst:60 ../../team_chat.rst:63
+msgid ""
+"Users are not automatically synced inside Mattermost. Each time a user is "
+"created or removed, remember to execute ``mattermost-bulk-user-create`` "
+"command or manually create the user using Mattermost administration web "
+"interface."
+msgstr ""
+"Gli utenti non vengono automaticamente sincronizzati all'interno di "
+"Mattermost. Ogni volta che un utente viene creato o rimosso, è necessario "
+"ricordarsi di eseguire il comando ``mattermost-bulk-user-create`` o di "
+"creare manualmente l'utente usando l'interfaccia web di amministrazione di "
+"Mattermost."
