@@ -76,6 +76,9 @@ Faxes will be sent using the sending user id. This information will be displayed
 Mail2Fax
 ========
 
+.. warning::
+   To enable this function, make sure that ``Email`` module is installed.
+
 All emails sent to the local network at ``sendfax@<domainname>`` will be transformed into a fax and sent to the recipient.
 
 The ``<domainname>`` must match a local mail domain configured for local delivery.
@@ -86,7 +89,7 @@ The email must comply with this format:
 * The email must be in plain text format
 * It may contain attachments such as PDF or PS which will be converted and sent with your fax
 
-.. Note :: This service is enabled only for clients that send email from the green network.
+.. Note :: This service is enabled only for clients that send mails from the green network.
 
 .. _iax-modem:
 

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Francesco Pari, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -30,24 +30,10 @@ msgid "Bandwidth monitor"
 msgstr "Monitor banda"
 
 #: ../../bandwidth_monitor.rst:13 ../../bandwidth_monitor.rst:16
-msgid "BandwidthD"
-msgstr "BandwidthD"
-
-#: ../../bandwidth_monitor.rst:15 ../../bandwidth_monitor.rst:18
-msgid ""
-"BandwidthD tracks usage of TCP/IP network subnets and builds graphs to "
-"display utilization. After installation, BandwidthD is automatically "
-"started. Graphs can be accessed using the Server Manager."
-msgstr ""
-"BandwidthD tiene traccia del traffico di rete e crea grafici che ne mostrano"
-" l'utilizzo. BandwidthD viene automaticamente avviato dopo l'installazione. "
-"I grafici sono consultabili dal Server Manager."
-
-#: ../../bandwidth_monitor.rst:20 ../../bandwidth_monitor.rst:23
 msgid "ntopng"
 msgstr "ntopng"
 
-#: ../../bandwidth_monitor.rst:22 ../../bandwidth_monitor.rst:25
+#: ../../bandwidth_monitor.rst:15 ../../bandwidth_monitor.rst:18
 msgid ""
 "ntopng is a powerful tool that allows you to analyze real-time network "
 "traffic. It allows you to evaluate the bandwidth used by individual hosts "
@@ -57,11 +43,11 @@ msgstr ""
 "traffico di rete. Consente di valutare la banda utilizzata dai singoli host "
 "e di individuare i protocolli di rete maggiormente usati."
 
-#: ../../bandwidth_monitor.rst:28 ../../bandwidth_monitor.rst:31
+#: ../../bandwidth_monitor.rst:21 ../../bandwidth_monitor.rst:24
 msgid "Enable ntopng"
 msgstr "Abilita ntopng"
 
-#: ../../bandwidth_monitor.rst:27 ../../bandwidth_monitor.rst:30
+#: ../../bandwidth_monitor.rst:20 ../../bandwidth_monitor.rst:23
 msgid ""
 "Enabling ntopng, all traffic passing through the network interfaces will be "
 "analyzed. It can cause a slowdown of the network and an increased in system "
@@ -71,19 +57,19 @@ msgstr ""
 "verrà analizzato. Può causare un rallentamento della rete e un aumento del "
 "carico di sistema."
 
-#: ../../bandwidth_monitor.rst:30 ../../bandwidth_monitor.rst:33
+#: ../../bandwidth_monitor.rst:23 ../../bandwidth_monitor.rst:26
 msgid "Port"
 msgstr "Porta"
 
-#: ../../bandwidth_monitor.rst:31 ../../bandwidth_monitor.rst:34
+#: ../../bandwidth_monitor.rst:24 ../../bandwidth_monitor.rst:27
 msgid "The port where to view the ntopng web interface."
 msgstr "Porta su cui raggiungere l'interfaccia web di ntopng."
 
-#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+#: ../../bandwidth_monitor.rst:26 ../../bandwidth_monitor.rst:29
 msgid "Password for 'admin' user"
 msgstr "Password per l'utente 'admin'"
 
-#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+#: ../../bandwidth_monitor.rst:26 ../../bandwidth_monitor.rst:29
 msgid ""
 "Admin user password. This password is not related to the |product| admin "
 "password."
@@ -91,10 +77,10 @@ msgstr ""
 "Password dell'utente amministratore. Questa password non è legata inalcun "
 "modo alla password di admin di |product|."
 
-#: ../../bandwidth_monitor.rst:35 ../../bandwidth_monitor.rst:38
+#: ../../bandwidth_monitor.rst:28 ../../bandwidth_monitor.rst:31
 msgid "Interfaces"
 msgstr "Interfacce"
 
-#: ../../bandwidth_monitor.rst:36 ../../bandwidth_monitor.rst:39
+#: ../../bandwidth_monitor.rst:29 ../../bandwidth_monitor.rst:32
 msgid "Interfaces on which ntopng will listens to."
 msgstr "Interfacce su cui ntopng sarà in ascolto per eventuali richieste."

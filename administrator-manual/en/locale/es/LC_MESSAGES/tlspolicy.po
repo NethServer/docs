@@ -1,0 +1,134 @@
+# #-#-#-#-#  tlspolicy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  tlspolicy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../tlspolicy.rst:12 ../../tlspolicy.rst:15
+msgid "TLS policy"
+msgstr "Política de TLS"
+
+#: ../../tlspolicy.rst:14 ../../tlspolicy.rst:17
+msgid ""
+"The :guilabel:`TLS policy` page controls how individual services configure "
+"the Transport Layer Security (TLS) protocol, by selecting a *policy "
+"identifier*."
+msgstr ""
+"La página :guilabel:`TLS policy` controla cómo los servicios individuales "
+"configuran el protocolo de seguridad de la capa de transporte (TLS), "
+"seleccionando un *identificador de política*."
+
+#: ../../tlspolicy.rst:17 ../../tlspolicy.rst:20
+msgid ""
+"Each module implementation decides how to implement a specific policy "
+"identifier, providing a trade off between security and client compatibility."
+" Newer policies are biased towards security, whilst older ones provide "
+"better compatibility with old clients."
+msgstr ""
+"Cada implementación de módulo decide cómo implementar un identificador de "
+"política específico, ofreciendo una compensación entre la seguridad y la "
+"compatibilidad del cliente. Las políticas más recientes están sesgadas hacia"
+" la seguridad, mientras que las más antiguas ofrecen una mejor "
+"compatibilidad con los clientes antiguos."
+
+#: ../../tlspolicy.rst:22 ../../tlspolicy.rst:25
+msgid "The following sections describe each policy identifier."
+msgstr "Las siguientes secciones describen cada identificador de política."
+
+#: ../../tlspolicy.rst:25 ../../tlspolicy.rst:28
+msgid "Policy 2018-03-30"
+msgstr "Política 2018-03-30"
+
+#: ../../tlspolicy.rst:34 ../../tlspolicy.rst:37
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:37 ../../tlspolicy.rst:53
+#: ../../tlspolicy.rst:31 ../../tlspolicy.rst:40 ../../tlspolicy.rst:56
+msgid ""
+"See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
+msgstr ""
+"Ver https://bettercrypto.org/static/applied-crypto-hardening.pdf categoría B"
+
+#: ../../tlspolicy.rst:29 ../../tlspolicy.rst:38 ../../tlspolicy.rst:56
+#: ../../tlspolicy.rst:32 ../../tlspolicy.rst:41 ../../tlspolicy.rst:59
+msgid "Cipher suite ::"
+msgstr "Suite de cifrado ::"
+
+#: ../../tlspolicy.rst:33 ../../tlspolicy.rst:42 ../../tlspolicy.rst:36
+#: ../../tlspolicy.rst:45
+msgid "Disabled SSLv2 and SSLv3"
+msgstr "Deshabilitados SSLv2 y SSLv3"
+
+#: ../../tlspolicy.rst:34 ../../tlspolicy.rst:37
+msgid ""
+"Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`Default "
+"upstream policy`)"
+msgstr ""
+"Ignorar la configuración de ``httpd/SSLCipherSuite`` (ver :ref:`Default "
+"upstream policy`)"
+
+#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:45
+msgid "Dovecot"
+msgstr "Dovecot"
+
+#: ../../tlspolicy.rst:50 ../../tlspolicy.rst:53
+msgid "OpenSSH"
+msgstr "OpenSSH"
+
+#: ../../tlspolicy.rst:45 ../../tlspolicy.rst:48
+msgid "See https://github.com/NethServer/nethserver-openssh/pull/6"
+msgstr "Ver https://github.com/NethServer/nethserver-openssh/pull/6"
+
+#: ../../tlspolicy.rst:46 ../../tlspolicy.rst:49
+msgid "Configuration snippet ::"
+msgstr "Snippet de configuración ::"
+
+#: ../../tlspolicy.rst:62 ../../tlspolicy.rst:65
+msgid "Postfix"
+msgstr "Postfix"
+
+#: ../../tlspolicy.rst:54 ../../tlspolicy.rst:57
+msgid "Use TLS in outbound connections, if remote server supports it"
+msgstr "Use TLS en las conexiones de salida, si el servidor remoto lo admite"
+
+#: ../../tlspolicy.rst:55 ../../tlspolicy.rst:58
+msgid "Disable SSLv2 and SSLv3 on submission ports"
+msgstr "Deshabilitar SSLv2 y SSLv3 en los puertos de envío"
+
+#: ../../tlspolicy.rst:60 ../../tlspolicy.rst:63
+msgid "Exclude ciphers ::"
+msgstr "Excluir cifrados ::"
+
+#: ../../tlspolicy.rst:65 ../../tlspolicy.rst:68
+msgid "Default upstream policy"
+msgstr "Política de subida predeterminada"
+
+#: ../../tlspolicy.rst:67 ../../tlspolicy.rst:70
+msgid ""
+"The goal of this policy is retaining upstream settings. This is the original"
+" goal since |product| 7."
+msgstr ""
+"El objetivo de esta política es mantener la configuración del caudal de "
+"subida. Este es el objetivo original desde |product| 7."

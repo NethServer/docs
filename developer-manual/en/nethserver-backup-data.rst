@@ -26,6 +26,7 @@ Properties:
 * ``LogFile`` : output of the backup process. Default is ``/var/log/last-backup.log``
 * ``VolSize`` : size of chunks in MB, if supported by ``Program``. Default is 250
 * ``CleanupOlderThan`` : time to retain backups, accept duplicity syntax (eg. 7D, 1M). Default is: never (keep all backups)
+* ``IncludeLogs``: if enabled, add ``/var/log`` directory to backup, can be ``enabled`` or ``disabled``. Default is ``disabled``.
 
 Supported VFSType:
 

@@ -18,7 +18,6 @@ nethserver-ejabberd
 nethserver-httpd
 nethserver-firewall-base
 nethserver-httpd-admin
-nethserver-virtualhosts
 nethserver-getmail
 nethserver-nextcloud
 nethserver-samba
