@@ -80,4 +80,4 @@ Create :file:`/etc/httpd/conf.d/myproxypass.conf` file with this content: ::
   </VirtualHost>
 
 
-Please refer to official Apache documentation for more information: http://httpd.apache.org/docs/2.2/mod/mod_proxy.html
+Please refer to official Apache documentation for more information: https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
