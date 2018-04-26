@@ -16,9 +16,7 @@ according to two types of matching rules:
 * Requests matching an URL path, like ``http://mydomain.com/mysite``
 * Requests matching a virtual host name, like ``http://my.secondary-domain.com``
 
-We will see how to set up the two types of rule with a couple of examples.
-
-The typical scenario for a path rule is the following:
+The typical scenario for a **URL path rule** is the following:
 
 * |product| is the firewall of your LAN
 
@@ -27,7 +25,7 @@ The typical scenario for a path rule is the following:
 * You would like ``http://mydomain.com/mysite`` to forward to the internal server
   (internal IP: 192.168.2.100)
 
-In this scenario create a new record under :guilabel:`Reverse proxy > Paths` page. Set
+In this scenario, create a new record under :guilabel:`Reverse proxy > Paths` page. Set
 the :guilabel:`Name` of the item to ``mysite`` and the :guilabel:`Target URL` to
 ``http://192.168.2.100``.
 
@@ -38,8 +36,8 @@ Only clients from certain networks can be allowed to connect, by specifying  a
 comma-separated list of CIDR networks under the :guilabel:`Access from CIDR
 networks`  field.
 
-Additional **virtual host names** can be forwarded to another web server with the
-:guilabel:`Reverse proxy > Virtual hosts` page. In this case:
+A **virtual host name rule** can be forward HTTP requests to another web server,
+and is defined in the :guilabel:`Reverse proxy > Virtual hosts` page. For instance:
 
 * |product| is the firewall of your LAN
 
@@ -48,7 +46,7 @@ Additional **virtual host names** can be forwarded to another web server with th
 * You would like ``http://my.secondary-domain.com`` to be forwarded to the internal web server
   ``192.168.2.101``, port 9000.
 
-In this scenario set the :guilabel:`Name` of a new virtual host item to
+In this scenario, set the :guilabel:`Name` of a new virtual host item to
 ``my.secondary-domain.com`` and the :guilabel:`Target URL` to
 ``http://192.168.2.101:9000``.
 
