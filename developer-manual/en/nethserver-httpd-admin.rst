@@ -130,6 +130,8 @@ Database example
 
  httpd-admin=service
     ForcedLoginModule=
+    MaxSessionLifeTime=
+    MaxSessionIdleTime=
     SSL=enabled
     TCPPort=980
     access=green,red
@@ -140,3 +142,20 @@ Database example
     menuBackground=
     status=enabled
 
+Session timeouts
+================
+
+The Server Manager session validity is subjected to forced logoff under the following conditions
+
+* after an idle/inactivity period. It occurs when no user activity is detected in a certain amount of time
+* after the maximum session lifetime has elapsed. It occurs if the user does not log out voluntarily
+
+To configure the timeouts (both expressed as seconds) run the following command: ::
+
+    config setprop httpd-admin MaxSessionIdleTime 900 MaxSessionLifeTime 86400
+
+To disable the session timeouts, set the values to ``0`` or the empty string: ::
+
+    config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
+
+The new timeout values will affect new sessions. They does not change any active session.
