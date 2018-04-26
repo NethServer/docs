@@ -53,7 +53,9 @@ In this scenario set the :guilabel:`Name` of a new virtual host item to
 ``http://192.168.2.101:9000``.
 
 Refer also to :ref:`the UI description of Reverse Proxy <ProxyPassUi-section>`
-for additional informations.
+for additional information about advanced features, like :guilabel:`Forward HTTP
+"Host" header to target` and :guilabel`Accept invalid SSL certificate from
+target`.
 
 Manual configuration
 ====================
