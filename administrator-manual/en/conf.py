@@ -93,7 +93,7 @@ if tags.has('nsent'):
 .. |product| replace:: NethServer Enterprise
 .. |product_voice| replace:: NethVoice
 .. |product_cti| replace:: NethCTI
-.. |download_site| replace:: `helpdesk.nethesis.it <http://helpdesk.nethesis.it/solution/folders/3000008164>`__
+.. |download_site| replace:: `helpdesk.nethesis.it <http://helpdesk.nethesis.it/solution/articles/3000073996-download-iso-nethserver-enterprise>`__
 .. |ks_keyboard| replace:: :samp:`us`
 .. |ks_timezone| replace:: :samp:`UTC`
 .. |ks_language| replace:: :samp:`en_US`
