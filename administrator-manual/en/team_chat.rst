@@ -36,7 +36,7 @@ Authentication
 
 Mattermost authentication is *not* integrated with any Account Provider.
 The Mattermost administrator should take care of users and teams creation.
-To ease this task, the system administrator can use the :guilabel:`Import users` button..
+To ease this task, the system administrator can use the ``mattermost-bulk-user-create`` command.
 
 The command will:
 
@@ -45,8 +45,19 @@ The command will:
 
 Please note that:
 
-- users disabled in the Server Manager, or already existing in Mattermost, will be skipped
+- users disabled in the Server Manager or already existing in Mattermost will be skipped
 - a random password will be generated for each user
+
+Invocation example: ::
+
+  mattermost-bulk-user-create
+
+  ...
+  Creating default team: example (Example Org) ... OK
+  Skipping locked user: 'goofy'
+  Skipping locked user: 'admin'
+  Creating user: 'pluto' with password '6aW221o7' ... OK
+  ...
 
 .. note::
 
@@ -54,3 +65,13 @@ Please note that:
    Each time a user is created or removed, remember to execute ``mattermost-bulk-user-create`` command or
    manually create the user using Mattermost administration web interface.
    
+Forcing a common default password
+---------------------------------
+
+It's possible to set a default password for each new Mattermost user, just append the default
+password to command invocation. 
+
+Example: ::
+
+  mattermost-bulk-user-create Password,1234
+
