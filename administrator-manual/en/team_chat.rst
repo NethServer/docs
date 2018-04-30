@@ -36,7 +36,16 @@ Authentication
 
 Mattermost authentication is *not* integrated with any Account Provider.
 The Mattermost administrator should take care of users and teams creation.
-To ease this task, the system administrator can use the ``mattermost-bulk-user-create`` command.
+
+.. note::
+
+   The administrator should always use Mattermost wizard to create the admin user,
+   then send team invitation link to each user.
+
+Importing users
+---------------
+
+If the system administrator still needs bulk user creation, he/she can rely on ``mattermost-bulk-user-create`` command.
 
 The command will:
 
@@ -47,6 +56,7 @@ Please note that:
 
 - users disabled in the Server Manager or already existing in Mattermost will be skipped
 - a random password will be generated for each user
+- the first imported user will be set as administrator if no admin has been already created 
 
 Invocation example: ::
 
