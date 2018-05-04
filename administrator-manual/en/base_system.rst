@@ -223,6 +223,10 @@ configuring the network clients to use it. As alternatives, the
 * uploading an existing certificate and private RSA key. Optionally a
   certificate chain file can be specified, too. All files must be PEM-encoded.
 
+.. note::
+   Always remember to add custom certificates to configuration backup.
+   Just add the paths inside `/etc/backup-config.d/custom.include` file.
+
 * requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is
   possible if the following requirements are met:
 
