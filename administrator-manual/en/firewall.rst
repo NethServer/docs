@@ -301,7 +301,7 @@ enabled for that interface.
 Configuration of traffic shaping is composed by 2 steps:
 
 - creation of traffic shaping classes
-- assigniment of network traffic to a specific class
+- assignment of network traffic to a specific class
 
 Classes
 -------
