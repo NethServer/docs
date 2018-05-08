@@ -345,7 +345,7 @@ Under :guilabel:`Configure` page, the following options are available:
 Prevent traffic starvation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This option is enabled by default and prevent traffic starvation under high network load.
+This option is enabled by default and prevents traffic starvation under high network load.
 
 If this options is disabled, classes are prioritized in alphabetical order.
 The priority controls only spare bandwidth allocation, so make sure to have the most important classes on the top.
@@ -368,7 +368,7 @@ This option is enabled by default and classify the traffic using TOS (Type Of Se
 The type of service field in the IPv4 header can identify the traffic type.
 It's used to specify a datagram's priority, request a route for low delay or maximize throughput.
 
-Bult-in traffic shaping classes apply to the following TOS categories:
+Built-in traffic shaping classes apply to the following TOS categories:
 
 - interactive
 - bulk
