@@ -331,6 +331,13 @@ The system provides two pre-configured classes:
 - :guilabel:`low`: low priority traffic, can be assigned to something like peer to peer file exchange
 
 
+The system always tries to prevent traffic starvation under high network load.
+
+Classes will get spare bandwidth proportionally to their committed rate.
+So if class A has 1Mbit committed rate and class B has 2Mbit committed rate, class B will get twice the spare bandwidth of class A.
+In all cases all spare bandwidth will be given to them.
+
+
 For more info, see [#]_ .
 
 Advanced options
@@ -338,27 +345,8 @@ Advanced options
 
 Under :guilabel:`Configure` page, the following options are available:
 
-- Prevent traffic starvation
 - Enable TOS optimizations
 - Reserve bandwidth for VoIP (%)
-
-Prevent traffic starvation
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This option is enabled by default and prevents traffic starvation under high network load.
-
-If this options is disabled, classes are prioritized in alphabetical order.
-The priority controls only spare bandwidth allocation, so make sure to have the most important classes on the top.
-
-Also, the following applies:
-
-- Two classes with the same priority will get spare bandwidth proportionally to their committed rate.
-  So if class A has 1Mbit committed rate and class B has 2Mbit committed rate, class B will get twice the spare bandwidth of class A.
-  In all cases all spare bandwidth will be given to them.
-
-- The class with highest priority will get all the spare bandwidth only when it needs it.
-
-- The class with lowest priority will get spare bandwidth only when all other classes (with higher priorities) do not need it
 
 Enable TOS optimizations
 ^^^^^^^^^^^^^^^^^^^^^^^^
