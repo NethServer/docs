@@ -238,7 +238,6 @@ provided as the second argument.
 Event                                  Arguments                               Description
 ====================================== ====================================== ============================================================================
 certificate-update                                                            The server public key certificate has been updated
-fstab-update                                                                  Update /etc/fstab according fo fstab key and remount all fileystems
 group-create                           Group key                              Called when a group is created
 group-delete                           Group key                              Called when a group is deleted
 group-modify                           Group key                              Called when a group is modified
