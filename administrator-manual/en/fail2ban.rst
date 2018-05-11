@@ -2,9 +2,9 @@
 Fail2ban
 ========
 
-Fail2ban scans log files (e.g. /var/log/apache/error_log) and bans IPs that show the malicious signs – too many password failures, seeking for exploits, etc. Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time, although any arbitrary other action (e.g. sending an email) could also be configured. Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).
+Fail2ban scans log files (e.g. :file:`/var/log/apache/error_log`) and bans IPs that show the malicious signs – too many password failures, seeking for exploits, etc. Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time, although any arbitrary other action (e.g. sending an email) could also be configured. Out of the box Fail2Ban comes with filters for various services (Apache, Dovecot, Ssh, Postfix, etc).
 
-Fail2Ban is able to reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factors or public/private authentication mechanisms if you really want to protect services.
+Fail2Ban is able to reduce the rate of incorrect authentications attempts however, it cannot eliminate the risk that weak authentication presents. To improve the security, open the access to service only for secure networks using the firewall.
 
 Installation
 ============
@@ -17,16 +17,12 @@ Install from the Software Center or use the command line: ::
 Settings
 ========
 
-Fail2ban is configurable in the security category of the server-manager. Most of settings can be changed in the ``Configuration`` tab, only really advanced settings must be configured by the terminal. The ``Ban status`` tab displays the statistic and the banned IPs.
-
-You can also activate changes and restart the fail2ban service by: ::
-
-  signal-event nethserver-fail2ban-save
+Fail2ban is configurable in the security category of the server-manager. Most of settings can be changed in the :guilabel:`Configuration` tab, only really advanced settings must be configured by the terminal. The :guilabel:`Ban status` tab displays the statistic and the banned IPs.
 
 Jails
 -----
 
-A jail is enabled and start to protect a service when you install a new module, the relevant jail (if existing) is automatically activated by the event 'runlevel-adjust' which is launched at the end of the yum process.
+A jail is enabled and start to protect a service when you install a new module, the relevant jail (if existing) is automatically activated after the package installation.
 
 
 All jails can be disabled individually in the Jails settings.
@@ -50,8 +46,8 @@ Allow bans on the LAN
     By default the failed attempts from your Local Network are ignored, except when you enabled the option.
 
 
-IP Whitelisting
-    Ip listed in the text area will be never banned by fail2ban (one IP per line).
+IP/Network Whitelisting
+    IP listed in the text area will be never banned by fail2ban (one IP per line). Network could be allowed in the Trusted-Network panel.
 
 Email
 -----
@@ -65,42 +61,10 @@ Administrators emails
 Notify jail start/stop events
     Send email notifications when a jail is started or stopped.
 
+Unban IP
+--------
 
-E-smith Database
-================
-
-You can set custom values for the MaxRetry property of each jail, once removed you go back to the default MaxRetry value. ::
-
-    config show fail2ban |grep -i '_maxretry'
-
-    Apache_MaxRetry=
-    Dovecot_MaxRetry=
-    Ejabber_MaxRetry=
-    HttpdAdmin_MaxRetry=
-    Mysqld_MaxRetry=
-    Nextcloud_MaxRetry=
-    Nginx_MaxRetry=
-    OpenVpn_MaxRetry=
-    Owncloud_MaxRetry=
-    PamGeneric_MaxRetry=
-    Postfix_MaxRetry=
-    Recidive_MaxRetry=
-    Roundcube_MaxRetry=
-    Sieve_MaxRetry=
-    Sogo_MaxRetry=
-    Sshd_MaxRetry=
-    Urbackup_MaxRetry=
-    Vsftpd_MaxRetry=
-
-Only available by a db command, to set it: ::
-
-  config setprop fail2ban Recidive_MaxRetry 6
-  signal-event nethserver-fail2ban-save
-
-If you delete the property you go back to the default MaxRetry value: ::
-
-  config setprop fail2ban Recidive_MaxRetry ''
-  signal-event nethserver-fail2ban-save
+IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Ban status` tab. ::
 
 Tools
 =====
@@ -123,7 +87,7 @@ To see which logfiles are monitored for a jail: ::
 Fail2ban-listban
 ----------------
 
-Fail2ban-listban counts the IPs currently and totally banned in all activated jails, at the end it shows you the IPs which are still banned by shorewall. ::
+Fail2ban-listban counts the IPs currently and totally banned in all activated jails, at the end it shows the IPs which are still banned by shorewall. ::
 
   fail2ban-listban
 
