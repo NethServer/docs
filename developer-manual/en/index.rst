@@ -79,7 +79,6 @@ Developer Manual
    collectd
    phone_home
    content_filter
-   webvirtmgr
    duc
    snmp
    tomcat7
