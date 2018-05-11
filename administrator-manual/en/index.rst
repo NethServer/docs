@@ -104,6 +104,7 @@ Modules
    dedalo
    freepbx
    hotsync
+   virtual_machines
 
 .. only:: nscom
 
