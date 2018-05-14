@@ -104,6 +104,7 @@ Modules
    dedalo
    freepbx
    hotsync
+   fail2ban
 
 .. only:: nscom
 
