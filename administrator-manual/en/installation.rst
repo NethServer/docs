@@ -128,7 +128,7 @@ Other |product| installation methods
         storage, time zone, keyboard... all settings must be provided
         explicitly.
 
-Standard CentOS installations
+Standard CentOS installation
 
     Use the standard CentOS installation procedure. You can then configure 
     |product| by following the :ref:`installation-centos` section.
@@ -239,6 +239,19 @@ settings at all.  Also the network and storage sections must be configured.
     installation guide`_.
 
 .. _`RHEL 7 installation guide`: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-network-hostname-configuration-x86.html
+
+Known issues
+^^^^^^^^^^^^
+
+- The Interactive install option will set the Real Time Clock (RTC) to the local timezone zone, 
+  if a non-UTC timezone has been selected.
+  As a side effect, on boot, the timestamps in :file:`/var/log/messages` will change from UTC to the local time zone.
+  To reset the RTC to UTC (preferred option) use the following command: ::
+
+     timedatectl set-local-rtc 0
+
+- When installing on machines with UEFI firmware and disks bigger than 4 TB, Anaconda could fail automatic partitioning.
+  To work around the problem, switch to :guilabel:`Standard CentOS installation` then follow :ref:`installation-centos`.
 
 .. _installation-unattended:
 
