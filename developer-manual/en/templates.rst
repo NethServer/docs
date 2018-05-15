@@ -13,7 +13,7 @@ templates which *generate*  the correct configuration.
 Configuration files are **over-written** 
 when templates are expanded. In a few specific cases, the existing
 configuration file is parsed and rewritten in-place. This is done where
-the configuration file (e.g. ``/etc/fstab``) is also automatically updated
+the configuration file is also automatically updated
 by some other process.
 
 Templates are stored under ``/etc/e-smith/templates/`` in a directory

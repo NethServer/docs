@@ -42,7 +42,6 @@ Developer Manual
    :maxdepth: 2
    :caption: Implementation
 
-   filesystem_options
    dns
    dhcp
    random_url
