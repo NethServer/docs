@@ -403,7 +403,7 @@ adjusted under :guilabel:`Email > Filter > Anti spam`.
 
 2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
    as spam** by adding the special header ``X-Spam-Flag: YES`` for specific
-   treatments, then it is delivered as other messages. As alternative, the
+   treatments, then it is delivered like other messages. As an alternative, the
    :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
    visible on the subject of the message, by prefixing the given string to the
    ``Subject`` header.
@@ -419,7 +419,7 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 **ham**.
 
 The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`Junk folder` or marking it as spam if your client provides such feature. As
+simply moving a message in and out of the :dfn:`Junk folder`. As a
 prerequisite, the Junk folder must be enabled from
 :guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
 "Junk" folder"` option.
@@ -430,7 +430,7 @@ prerequisite, the Junk folder must be enabled from
 * On the contrary, by *getting a message out of Junk*, the filters
   learn it is ham: next time a lower score will be assigned.
 
-By default, all users can train the filters using this technique.  If
+By default, all users can train the filters using this technique. If
 a group called ``spamtrainers`` exists, only users in this group
 will be allowed to train the filters.
 
@@ -445,7 +445,7 @@ It is important to understand how the Bayesian tests really work:
 * The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).** 
 
 .. note:: It is a good habit to frequently check the Junk folder
-          in order to not losing email wrongly recognized as spam.
+          in order not to lose email wrongly recognized as spam.
 
 .. index::
    pair: email; whitelist
@@ -523,7 +523,7 @@ that still does not support STARTTLS:
 .. warning::
 
     The standard SMTP port 25 is reserved for mail transfers between MTA
-    servers. Mail user agents (MUA) must use submission ports.
+    servers. Mail user agents (MUA) must use the submission port.
 
 
 .. _email_policies:
@@ -542,7 +542,7 @@ access policy.
 .. warning:: Do not change the default policy on new environments!
 
 For instance, there are some devices (printers, scanners, ...) that do
-not support SMTP authentication, encryption or port settings.  Those
+not support SMTP authentication, encryption or port settings. Those
 can be enabled to send email messages by listing their IP address in
 :guilabel:`Allow relay from IP addresses` text area.
 
@@ -590,7 +590,7 @@ Outlook deleted mail
 
 Unlike almost any IMAP client, Outlook does not move deleted messages to the trash folder, but simply marks them as "deleted".
 
-It's possibile to automatically move messages inside the trash using following commands: ::
+It's possibile to automatically move messages inside the trash folder using the following commands: ::
 
  config setprop dovecot DeletedToTrash enabled
  signal-event nethserver-mail-server-save
@@ -616,9 +616,6 @@ respectively
 * the host name,
 * the component name, and the process-id of the component instance
 * a text message detailing the operation
-
-|product| configuration uses Rspamd as milter. It runs an Rspamd proxy worker in
-"self-scan" mode [#SELFSCAN]_.
 
 The key to track the whole SMTP transaction, including Rspamd decisions is the
 message ID header, or the Postfix Queue ID (QID). Both are available from the
@@ -682,4 +679,3 @@ Yields ::
     <https://en.wikipedia.org/wiki/Greylisting>`_
 .. [#BAYES] Bayesian filtering https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
 .. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/
-.. [#SELFSCAN] https://rspamd.com/doc/workers/rspamd_proxy.html
