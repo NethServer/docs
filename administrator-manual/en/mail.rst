@@ -69,12 +69,38 @@ a catch-all mailbox. This behavior can be obtained by enabling the
    pair: email; signature
    pair: email; legal note
 
-|product| can automatically :guilabel:`append a legal notice to sent
-messages`. This text is called :dfn:`disclaimer` and it can be used to
-meet some legal requirements.  Please note :dfn:`signature` and
-disclaimer are very different concepts.
+Append a legal notice
+---------------------
 
-The signature should be inserted inside the message text only by the
+.. warning::
+
+    Since |product| 7.5.1804 this feature is shipped in a separate, optional
+    package: ``nethserver-mail2-disclaimer``. It is considered *deprecated*
+    because the alterMIME [#alterMIME]_ project which provides the actual
+    implementation is no longer developed and can stop working at any time.
+
+If the optional ``nethserver-mail2-disclaimer`` package was installed from the
+:guilabel:`Software center`, |product| can automatically :guilabel:`append a
+legal notice to sent messages`. This text is also known as "disclaimer" and
+it can be used to meet some legal requirements.
+
+The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
+
+Please note :dfn:`signature` and :dfn:`disclaimer` are very different concepts.
+
+In general, the **disclaimer** is a fixed text and should be *attached* (not
+added) to messages by the mail server. This technique helps in maintaining the
+integrity of the message in case of digital signature.
+
+Disclaimer example: ::
+
+  This email and any files transmitted with it are confidential and
+  intended solely for the use of the individual or entity to whom they
+  are addressed.  If you have received this email in error please
+  notify the system manager.  This message contains confidential
+  information and is intended only for the individual named.
+
+The **signature** should be inserted inside the message text only by the
 mail client (MUA): Outlook, Thunderbird, etc.  Usually it is a
 user-defined text containing information such as sender addresses and
 phone numbers.
@@ -85,21 +111,6 @@ Signature example: ::
  President | My Mighty Company | Middle Earth
  555-555-5555 | john@mydomain.com | http://www.mydomain.com
 
-The "disclaimer" is a fixed text and can only be *attached* (not
-added) to messages by the mail server.
-
-This technique allows maintaining the integrity of the message in case
-of digital signature.
-
-Disclaimer example: ::
-
-  This email and any files transmitted with it are confidential and
-  intended solely for the use of the individual or entity to whom they
-  are addressed.  If you have received this email in error please
-  notify the system manager.  This message contains confidential
-  information and is intended only for the individual named.
-
-The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
 
 DKIM signature
 --------------
@@ -629,6 +640,9 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
     designed to detect email spoofing -- `Wikipedia
     <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_
 .. [#MailDirFormat] The Maildir format, https://en.wikipedia.org/wiki/Maildir
+.. [#alterMIME]
+    alterMIME is a small program which is used to alter your mime-encoded mailpack --
+    https://pldaniels.com/altermime/
 .. [#Markdown] The Markdown plain text formatting syntax, https://en.wikipedia.org/wiki/Markdown
 .. [#IMAP] IMAP https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
 .. [#POP3] POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol
