@@ -8,7 +8,7 @@ The Email module is split into three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
-* Anti-spam filter, anti-virus and attachments blocker [#Amavis]_
+* Anti-spam filter, anti-virus and attachments blocker [#RSPAMD]_
 
 Benefits are
 
@@ -208,7 +208,7 @@ retention`.
 The ``root`` user can impersonate another user, gaining full rights
 to any mailbox contents and folder permissions.  The
 :guilabel:`Root can log in as another user` option controls this
-empowerment, known also as *master user* in [#Dovecot]_.
+empowerment, known also as *master user* in Dovecot [#Dovecot]_.
 
 When :guilabel:`Root can log in as another user` is enabled, the following
 credentials are accepted by the IMAP server:
@@ -597,7 +597,9 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
 .. [#Sieve] Sieve mail filtering language https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
-.. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
+.. [#RSPAMD]
+    Rspamd -- Fast, free and open-source spam filtering system.
+    https://rspamd.com/
 .. [#Email] Email, https://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, https://en.wikipedia.org/wiki/MX_record
 .. [#SMTP] SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
