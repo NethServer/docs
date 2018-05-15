@@ -377,24 +377,32 @@ is updated periodically.
 Anti-spam
 ---------
 
-The anti-spam component [#Spamassassin]_ analyzes emails by detecting
+The anti-spam component [#RSPAMD]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
-content of messages.  The rules are public and updated on a regular
-basis.
-The filter can also check if sender server is listed in one or more blacklists (:index:`DNSBL`).
-A score is associated to each rule.
+content of messages.
 
-Total spam score collected at the end of the analysis allows the
-server to decide whether to *reject* the message or *mark* it as spam
-and deliver it anyway.  The score thresholds are controlled by
-:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
-sliders in :guilabel:`Email > Filter` page.
+The filter can also check if sender server is listed in one or more blacklists
+(:index:`DNSBL` [#DNSBL]_). A score is associated to each rule.
 
-Messages marked as spam have a special header ``X-Spam-Flag: YES``.
-The :guilabel:`Add a prefix to spam messages subject` option makes the
-spam flag visible on the subject of the message, by prepending the
-given string to the ``Subject`` header.
+Total spam score collected at the end of the analysis allows the server to
+decide what to do with a message, according to three **thresholds** that can be
+adjusted under :guilabel:`Email > Filter > Anti spam`.
+
+1. If the spam score is above :guilabel:`Greylist threshold` the message is
+   **temporarily rejected**. The :dfn:`greylisting` [#GREY]_ technique assumes
+   that a spammer is in hurry and is likely to give up, whilst a
+   SMTP-compliant MTA will attempt to deliver the deferred message again.
+
+2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
+   as spam** by adding the special header ``X-Spam-Flag: YES`` for specific
+   treatments, then it is delivered as other messages. As alternative, the
+   :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
+   visible on the subject of the message, by prefixing the given string to the
+   ``Subject`` header.
+
+3. If the spam score is above :guilabel:`Deny message spam threshold` the
+   message is **rejected**.
 
 .. index::
    pair: email; spam training
@@ -648,6 +656,10 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 .. [#POP3] POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol
 .. [#DNSBL] DNSBL https://en.wikipedia.org/wiki/DNSBL
 .. [#SPAM] SPAM https://en.wikipedia.org/wiki/Spamming
-.. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
+.. [#GREY]
+    Greylisting is a method of defending e-mail users against spam. A mail
+    transfer agent (MTA) using greylisting will "temporarily reject" any email from
+    a sender it does not recognize -- `Wikipedia
+    <https://en.wikipedia.org/wiki/Greylisting>`_
 .. [#BAYES] Bayesian filtering https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
 .. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/
