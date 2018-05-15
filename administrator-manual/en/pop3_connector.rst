@@ -7,9 +7,10 @@ POP3 connector
 
 .. warning::
 
-    This module is provided by two alternative implementations, "POP3 connector"
-    and "POP3 connector 2 (Beta)". See :ref:`email2-section` for upgrade
-    instructions and more information
+    Since |product| 7.5.1804 new :ref:`email-section`,
+    :ref:`pop3_connector-section` and :ref:`pop3_proxy-section` installations
+    are based on the Rspamd filter engine. Previous |product| installations can
+    be manually upgraded to Rspamd as described in :ref:`email2-section`
 
 The :guilabel:`POP3 connector` page allows configuring a list of mail
 accounts that will be checked regularly. Messages coming from the remote

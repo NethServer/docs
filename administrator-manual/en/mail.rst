@@ -24,6 +24,13 @@ See also the following related topics:
 * Simple Mail Transfer Protocol (SMTP) [#SMTP]_
 * DKIM signature [#DKIM]_
 
+.. warning::
+
+    Since |product| 7.5.1804 new :ref:`email-section`,
+    :ref:`pop3_connector-section` and :ref:`pop3_proxy-section` installations
+    are based on the Rspamd filter engine. Previous |product| installations can
+    be manually upgraded to Rspamd as described in :ref:`email2-section`
+
 .. index::
    pair: email; relay
    pair: email; delivery
