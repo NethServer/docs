@@ -1,21 +1,33 @@
 .. _email2-section:
 
-==============
-Email 2 (Beta)
-==============
+=================================
+Email module transition to Rspamd
+=================================
 
-The **Email 2** module is an alternative to :ref:`email-section`, based on the
-Rspamd [#RSPAMD]_ filter engine. It aims to be the  successor of
-the current Email module, by providing its old features plus new ones. For
-background information refer to the :ref:`email-section` chapter.
+Since |product| 7.5.1804 new :ref:`email-section`, :ref:`pop3_connector-section`
+and :ref:`pop3_proxy-section` installations are based on the Rspamd [#RSPAMD]_
+filter engine. Previous |product| installations can be manually upgraded to
+Rspamd as described by this section.
 
-Once installed from the :guilabel:`Software center` page, go to the
-:guilabel:`Email` page as usual.
+New configuration features, specific to Rspamd-based implementation, are now
+documented in :ref:`email-section`. Here is a brief list:
 
-This new module provides the email filter engine for the
-:ref:`pop3_connector-section` and :ref:`pop3_proxy-section` modules too,
-therefore an upgrade for those modules is required. See
-:ref:`mail2-upgrade-procedures-section`.
+* DKIM signature
+* Rspamd web UI
+* Greylist threshold [#GREY]_
+
+Feature changes
+===============
+
+.. warning::
+
+    There are some changes that must be considered when manually upgrading to
+    the new Email implementation based on Rspamd.
+
+    Since |product| 7.5.1804 a new installation has different default settings.
+
+Append a legal notice
+---------------------
 
 The :guilabel:`Email > Domains > Append a legal note to sent messages` (also
 known as "Disclaimer") feature was split in a separate, optional package:
@@ -24,76 +36,62 @@ section install it for backward compatibility, however new installations should
 avoid it, as it relies on an old package [#ALTERMIME]_ that can be removed in
 future releases.
 
-Configuration options
-=====================
+.. index::
+   pair: port; imap
+   pair: port; imaps
+   pair: port; pop3
+   pair: port; pop3s
+   pair: port; smtp
+   pair: port; smtps
 
-New configuration options, specific to Email 2, are
+.. _email-port25:
 
-* DKIM signature
-* Rspamd web UI
-* Greylist threshold [#GREY]_
-
-DKIM signature
---------------
-
-DomainKeys Identified Mail (DKIM) [#DKIM]_ provides a way to validate the
-sending MTA, which adds a cryptographic signature to the outbound message MIME
-headers.
-
-To enable the DKIM signature for a mail domain, enable :guilabel:`Email >
-Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
-
-To work effectively, the public DNS must be configured properly. Follow the
-instructions provided by the configuration page itself.
-
-The DKIM signature headers are added only to messages sent through TCP ports 587
-(submission) and 465 (smtps).
-
-Rspamd web UI
+Block port 25
 -------------
 
-The Rspamd web UI is available via the administrative HTTPS
-port 980 (the same of Server Manager) at the following URL: ::
-    
-    https://<HOST_IP>:980/rspamd
+The block of port 25 can prevent abuse/misuse by LAN machines. If the system
+is acting as the LAN network gateway, the administrator can create a firewall
+rule inside the :ref:`firewall-rules-section` page.
 
-The actual URL is listed under the :guilabel:`Applications` page. By default
-access is granted to:
+Additional host name aliases
+----------------------------
 
-* ``admin`` user
-* members of ``domain admins`` group
-* builtin ``rspamd`` login
+The following host name aliases were automatically registered in the local DNS
+service, if the ``postfix/MxRecordStatus`` was ``enabled``:
 
-A direct link with HTTP authentication credentials for ``rspamd`` login is
-available from :guilabel:`Email > Filter > Rspamd user interface`.
+* ``smtp.<domain>``
+* ``imap.<domain>``
+* ``pop.<domain>``
+* ``pop3.<domain>``
 
-.. warning::
-    
-    For security reasons, the ``root`` account is not granted access to Rspamd
-    web UI
+When upgraded from an old Email module based on Amavisd, the
+``postfix/MxRecordStatus`` is removed and  those aliases are pushed as ``self``
+records in the ``hosts`` DB. They can be edited from :guilabel:`DNS > Server
+alias` page.
 
-Greylist threshold
-------------------
+MX record for LAN clients
+-------------------------
 
-A new spam score threshold is provided by Rspamd. If the spam score is above it,
-the message is temporarily rejected. An SMTP-compliant MTA must attempt to
-deliver the deferred message again; spammers are likely to give up instead.
-
-To adjust the threshold see :guilabel:`Email > Filter > Anti spam > Greylist threshold`.
+The new Email module implementation based on Rspamd does not push the MX record
+override for LAN hosts any more.  Ensure the LAN mail user agents are configured
+to use SMTP/AUTH or are listed in :guilabel:`Email > SMTP access > Allow relay
+from IP addresses` before upgrading.
 
 .. _mail2-upgrade-procedures-section:
 
 Upgrade procedures
 ==================
 
-It is possible to switch a running system to this new module, starting from
-the **Email** module, **SMTP proxy** or **POP3 connector**  module.
+It is possible to switch a running system to the new module, starting from
+the old **Email**, **SMTP proxy** and **POP3 connector** modules.
 
 Make sure the system is updated with the latest packages before running the
 upgrade procedure.
 
-If something is wrong with ``rspamd``, please report the issue on
-`community.nethserver.org <https://community.nethserver.org>`_.
+.. only:: nscom
+
+    If something is wrong with ``rspamd``, please report the issue on
+    `community.nethserver.org <https://community.nethserver.org>`_.
 
 To switch an old mail server with ``amavisd-new`` filter engine to ``rspamd``
 run the upgrade commands reported on the following sections. It is possible
@@ -132,7 +130,7 @@ Revert upgrade: ::
 From POP3 connector module
 --------------------------
 
-When upgrading to **Email 2**, the POP3 connector settings of each account
+When upgrading, the POP3 connector settings of each account
 regarding :guilabel:`Check messages for SPAM` and :guilabel:`Check messages for
 virus` options are ignored and overridden by the new :guilabel:`Scan messages
 with email filter`.

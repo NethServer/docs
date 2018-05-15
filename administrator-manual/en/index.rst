@@ -72,7 +72,6 @@ Modules
 
    backup
    mail
-   mail2
    webmail
    webtop4
    webtop5
@@ -104,6 +103,11 @@ Modules
    dedalo
    freepbx
    hotsync
+
+.. toctree::
+   :hidden:
+
+   mail2
 
 .. only:: nscom
 
