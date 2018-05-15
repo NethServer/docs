@@ -513,33 +513,10 @@ that still does not support STARTTLS:
 * pop3s/995
 * smtps/465
 
-.. warning:: The standard SMTP port 25 is reserved for mail transfers
-             between MTA servers. On clients use only submission ports.
+.. warning::
 
-If |product| acts also as DNS server on the LAN, it registers its name
-as MX record along with the following aliases:
-
-* ``smtp.<domain>``
-* ``imap.<domain>``
-* ``pop.<domain>``
-* ``pop3.<domain>``
-
-For example:
-
-* Domain: ``mysite.com``
-* Hostname: ``mail.mysite.com``
-* MX record: ``mail.mysite.com``
-* Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``,
-  ``pop.mysite.com``, ``pop3.mysite.com``.
-
-.. note:: Some email clients (e.g. Mozilla Thunderbird) are able to use DNS
-          aliases and MX record to automatically configure email accounts by
-          simply typing the email address.
-
-To disable local MX and aliases, access the root's console and type: ::
-
-  config setprop postfix MxRecordStatus disabled
-  signal-event nethserver-hosts-update
+    The standard SMTP port 25 is reserved for mail transfers between MTA
+    servers. Mail user agents (MUA) must use submission ports.
 
 
 .. _email_policies:
