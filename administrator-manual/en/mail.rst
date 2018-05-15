@@ -22,6 +22,7 @@ See also the following related topics:
 * How electronic mail works [#Email]_
 * MX DNS record [#MXRecord]_
 * Simple Mail Transfer Protocol (SMTP) [#SMTP]_
+* DKIM signature [#DKIM]_
 
 .. index::
    pair: email; relay
@@ -99,6 +100,26 @@ Disclaimer example: ::
   information and is intended only for the individual named.
 
 The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
+
+DKIM signature
+--------------
+
+DomainKeys Identified Mail (DKIM) [#DKIM]_ provides a way to validate the
+sending MTA, which adds a cryptographic signature to the outbound message MIME
+headers.
+
+To enable the DKIM signature for a mail domain, enable :guilabel:`Email >
+Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
+
+The DKIM signature headers are added only to messages sent through TCP ports 587
+(submission) and 465 (smtps).
+
+To work effectively, the public DNS must be configured properly. Refer to the
+instructions of your DNS provider to run the following steps:
+
+1. Add a TXT record to your public DNS service provider with key "default._domainKey"
+
+2. Copy and paste the given key text in the DNS record data (RDATA) section
 
 .. index:: email address, pseudonym
 
@@ -603,6 +624,10 @@ A picture of the whole system is available from *workaround.org* [#MailComponent
 .. [#Email] Email, https://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, https://en.wikipedia.org/wiki/MX_record
 .. [#SMTP] SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+.. [#DKIM]
+    Domain Keys Identified Mail (DKIM) is an email authentication method
+    designed to detect email spoofing -- `Wikipedia
+    <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_
 .. [#MailDirFormat] The Maildir format, https://en.wikipedia.org/wiki/Maildir
 .. [#Markdown] The Markdown plain text formatting syntax, https://en.wikipedia.org/wiki/Markdown
 .. [#IMAP] IMAP https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
