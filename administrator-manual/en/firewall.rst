@@ -201,7 +201,7 @@ When you create a port forward, you must specify at least the following paramete
 * The source port
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
-* It's possibile to specify a port range using a colon as separator in the source port field (eX: 1000:2000), in this case the field destination port must be left void
+* It's possible to specify a port range using a colon as separator in the source port field (eg: 1000:2000), in this case the field destination port must be left void
 
 Example
 -------
@@ -211,7 +211,7 @@ Given the following scenario:
 * Internal server with IP 192.168.1.10, named Server1
 * Web server listening on port 80 on Server1
 * SSH server listening on port 22 on Server1
-* Other services in the port range beetween 5000 and 6000  on Server1
+* Other services in the port range between 5000 and 6000  on Server1
 
 If you want to make the web server available directly from public networks, you must create a rule like this:
 
@@ -229,13 +229,13 @@ In case you want to make accessible from outside the SSH server on port 2222, yo
 
 All incoming traffic on firewall's red interfaces on port 2222, will be redirected to port 22 on Server1.
  
-In case you want to make accessible from outside the server on the whole port range beetween 5000 and 6000, you will have to create a port forward like this:
+In case you want to make accessible from outside the server on the whole port range between 5000 and 6000, you will have to create a port forward like this:
 
 * origin port: 5000:6000
 * destination port: 
 * host address: 192.168.1.10
 
-All incoming traffic on firewall's red interfaces on port range beetween 5000 and 6000 will be redirected to same ports on Server1.
+All incoming traffic on firewall's red interfaces on port range between 5000 and 6000 will be redirected to same ports on Server1.
 
 Limiting access
 ---------------
@@ -283,27 +283,96 @@ Traffic shaping
 In this way it is possible to optimize the transmission, check the latency and tune 
 the available bandwidth. 
 
-To enable traffic shaping it is necessary to know the amount of available bandwidth in both directions 
-and fill in the fields indicating the speed of the Internet link. Be aware 
-that in case of congestion by the provider there is nothing to do in order to improve performance. 
+To enable traffic shaping it is necessary to know the exact amount of available download and upload bandwidth.
+Access the :guilabel:`Network` page and carefully set bandwidth values.
 
-Traffic shaping rules can be configured from the :menuselection:`Firewall rules` page,
-while the available bandwidth can be set from the :menuselection:`Network` page for all red interfaces.
-
-The system provides two levels of priority, high and low: as default all traffic has medium priority.
-It is possible to assign high or low priority to certain services based on the port used (eg low traffic peer to peer). 
-
-The system works even without specifying  services to high or low priority, 
-because, by default, the interactive traffic is automatically run at high priority 
-(which means, for example, it is not necessary to specify ports for VoIP traffic or SSH). 
-Also ICMP ping traffic is guaranteed high priority. 
-
+If download and upload bandwidth are not set for a red interface, traffic shaping rules will not be
+enabled for that interface.
 
 .. note::
 
    Be sure to specify an accurate estimate of the bandwidth on network interfaces.
    To pick an appropriate setting, please do not trust the nominal value,
-   but use the online tools to test the real provider speed.
+   but use online tools to test the real provider speed.
+
+   In case of congestion by the provider, there is nothing to do in order to improve performance.
+
+
+Configuration of traffic shaping is composed by 2 steps:
+
+- creation of traffic shaping classes
+- assignment of network traffic to a specific class
+
+Classes
+-------
+
+Traffic shaping is achieved by controlling how bandwidth is allocated to classes.
+
+Each class can have a reserved rate. A reserved rate is the bandwidth a class will get only when it needs it.
+The spare bandwidth is the sum of not commited bandwidth, plus the committed bandwidth of a class but 
+not currently used by the class itself.
+
+Each class can have also a maximum rate. If set, the class can exceed its committed rate, up to the maximum rate.
+A class will exceed its committed rate only if there is spare bandwidth available.
+
+Traffic shaping classes can be defined under :guilabel:`Traffic shaping` page.
+When creating a new class, fill the following fields:
+
+* :guilabel:`Class name`: a representative name
+* :guilabel:`Min download (%)`: minimum reserved download bandwidth, if empty no download reservation will be created
+* :guilabel:`Max download (%)`: maximum allowed download bandwidth, if empty no upper limit will be set
+* :guilabel:`Min upload (%)`:  minimum reserved upload bandwidth, if empty no upload reservation will be created
+* :guilabel:`Max upload (%)`: maximum allowed download bandwidth, if empty no upper limit will be created
+* :guilabel:`Description`: optional description for the class
+
+The system provides two pre-configured classes:
+
+- :guilabel:`high`: generic high priority traffic, can be assigned to something like SSH
+- :guilabel:`low`: low priority traffic, can be assigned to something like peer to peer file exchange
+
+
+The system always tries to prevent traffic starvation under high network load.
+
+Classes will get spare bandwidth proportionally to their committed rate.
+So if class A has 1Mbit committed rate and class B has 2Mbit committed rate, class B will get twice the spare bandwidth of class A.
+In all cases all spare bandwidth will be given to them.
+
+
+For more info, see [#]_ .
+
+Advanced options
+----------------
+
+Under :guilabel:`Configure` page, the following options are available:
+
+- Enable TOS optimizations
+- Reserve bandwidth for VoIP (%)
+
+Enable TOS optimizations
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+This option is enabled by default and classify the traffic using TOS (Type Of Service) bits.
+
+The type of service field in the IPv4 header can identify the traffic type.
+It's used to specify a datagram's priority, request a route for low delay or maximize throughput.
+
+Built-in traffic shaping classes apply to the following TOS categories:
+
+- interactive
+- bulk
+
+
+Reserve bandwidth for VoIP (%)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This option is disabled by default.
+It takes a numeric value which identifies the percentage of total bandwidth reserved for VoIP traffic (SIP, RTP and STUN).
+
+Be sure to commit the right amount of bandwidth for each concurrent call. Each call requires:
+
+* ~32Kbps for G729 codec
+* ~40Kbps for GSM codec
+
 
 
 Firewall objects
@@ -325,7 +394,7 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 
 .. index:: zone
 
-* *Zone*: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
+* Zone: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
 
 .. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
@@ -367,3 +436,6 @@ To enable traffic only from well-known hosts, follow these steps:
 .. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
    otherwise no hosts will be able to manage the server using the web interface or SSH.
 
+.. [#]
+   FireQOS tutorial:
+   https://github.com/firehol/firehol/wiki/FireQOS-Tutorial
