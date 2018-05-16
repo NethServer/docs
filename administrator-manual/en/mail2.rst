@@ -53,6 +53,8 @@ The block of port 25 can prevent abuse/misuse by LAN machines. If the system
 is acting as the LAN network gateway, the administrator can create a firewall
 rule inside the :ref:`firewall-rules-section` page.
 
+.. _email-mxrecordstatus:
+
 Additional host name aliases
 ----------------------------
 

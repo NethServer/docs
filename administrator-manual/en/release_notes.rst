@@ -6,7 +6,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "beta" - 2018-05-16
+    - ISO release 7.5.1804 "beta" - (still not released)
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -14,7 +14,7 @@ Release notes |version|
     
     - :ref:`nscom-releases-section`
 
-    - List of `changes since 2018-05-XX <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
+    - List of `changes <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
 
     - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 
@@ -32,14 +32,16 @@ Release notes |version|
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-05-16
----------------------------
+Major changes on 2018-05
+------------------------
 
 * The :ref:`email-section` module is now based on Rspamd
 
-* MX DNS record override for LAN hosts has been removed. Removed ``postfix/MxRecordStatus`` prop.
+* MX DNS record override for LAN hosts has been removed. Removed ``postfix/MxRecordStatus`` prop
 
-* :file:`/etc/fstab` is no longer an expanded template. See :ref:`shared_folders_requirements-section` and :ref:`home_bind-section` for details.
+* Host name aliases are converted into ``hosts`` DB records. See :ref:`email-mxrecordstatus`
+
+* :file:`/etc/fstab` is no longer an expanded template. See :ref:`shared_folders_requirements-section` and :ref:`home_bind-section` for details
 
 * Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant full control to the creator`
 
@@ -49,7 +51,7 @@ Major changes on 2018-05-16
 
 * The WebVirtMgr project is no longer maintained and the corresponding module has been removed
   along with nethserver-libvirt package.
-  See :ref:`virtual_machines-section` chapter for details on how to use virtualization.
+  See :ref:`virtual_machines-section` chapter for details on how to use virtualization
 
 * The :guilabel:`NethServer subscription` module is available by default in new installations.
   Run the following command to update the base module set on existing installations: ::
