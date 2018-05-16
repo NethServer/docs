@@ -37,7 +37,7 @@ Major changes on 2018-05-XX
 
 * The :ref:`email-section` module is now based on Rspamd
 
-* MX DNS record override for LAN hosts was removed. Removed also ``postfix/MxRecordStatus`` prop.
+* MX DNS record override for LAN hosts has been removed. Removed ``postfix/MxRecordStatus`` prop.
 
 * :file:`/etc/fstab` is no longer an expanded template. See :ref:`shared_folders_requirements-section` and :ref:`home_bind-section` for details.
 
@@ -47,7 +47,7 @@ Major changes on 2018-05-XX
 
 * Default Server Manager session idle timeout is 15 minutes, session life time is 8 hours
 
-* The WebVirtMgr project is no longer maintained and the corresponding module was removed
+* The WebVirtMgr project is no longer maintained and the corresponding module has been removed
   along with nethserver-libvirt package.
   See :ref:`virtual_machines-section` chapter for details on how to use virtualization.
 
