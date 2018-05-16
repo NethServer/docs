@@ -12,6 +12,8 @@ people using Samba (SMB/CIFS).
 To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
 page.
 
+.. _shared_folders_requirements-section:
+
 Requirements
 ============
 

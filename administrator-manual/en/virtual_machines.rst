@@ -1,3 +1,7 @@
+.. index:: virtual machines
+
+.. _virtual_machines-section:
+
 ================
 Virtual machines
 ================
