@@ -73,9 +73,9 @@ and by clicking on :guilabel:`Logout`.
 Session timeouts
 ================
 
-By default, a Server Manager session does not terminate until the user runs the
-:ref:`Logout` procedure. It is possible to terminate the session automatically
-after some time has passed.
+By default (starting from |product| 7.5.1804), a Server Manager session
+terminates after **15 minutes of inactivity** and expires after **8 hours after
+the login**.
 
 The following shell command sets 15 minutes of idle timeout, and 24 hours of
 maximum session life time. Time is expressed in seconds: ::
