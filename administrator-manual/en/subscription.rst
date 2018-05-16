@@ -34,3 +34,4 @@ revert any modification to repositories and access the community ones: ::
   config setprop subscription Secret '' SystemId ''
   eorepo base centos-sclo-rh centos-sclo-sclo epel extras nethforge nethserver-base nethserver-updates updates
   yum clean all
+  echo "nethserver-updates" > /etc/nethserver/pkginfo.conf
