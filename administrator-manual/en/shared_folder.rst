@@ -12,6 +12,37 @@ people using Samba (SMB/CIFS).
 To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
 page.
 
+Requirements
+============
+
+Shared folders use ACL (Access Control List) to provide flexible permission on files
+and directories.
+
+To enable ACL, the filesystem must be mounted with the ``acl`` option.
+The ``acl`` option is already enabled on ``XFS``, the default CentOS filesystem,
+and usually even on ``Ext3`` and ``Ext4`` filesystems.
+
+Enabling ACL
+------------
+
+On Ext2/3/4 filesystems, use ``tune2fs`` command to check if ``acl`` option is already enabled: ::
+
+  tune2fs -l /dev/sdXY | grep "Default mount options:"
+
+Where ``sdXY`` is the name of your partition, the output should look like this: ::
+
+  Default mount options:    user_xattr acl
+
+If the ``acl`` option is not enabled, add the option inside the :file:`/etc/fstab`: ::
+
+  /dev/mapper/VolGroup-lv_root /                       ext4     defaults,acl        0
+
+Or use ``tune2fs`` to enable as default mount option: ::
+
+  tune2fs -o acl /dev/sdXY
+
+
+
 .. _smb-auth-section:
 
 Authorizations
