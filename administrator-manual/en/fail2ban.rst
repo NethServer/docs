@@ -64,7 +64,7 @@ Notify jail start/stop events
 Unban IP
 --------
 
-IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Ban status` tab. ::
+IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Ban status` tab.
 
 Tools
 =====
