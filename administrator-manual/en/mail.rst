@@ -8,7 +8,7 @@ The Email module is split into three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
-* Anti-spam filter, anti-virus and attachments blocker [#Amavis]_
+* Anti-spam filter, anti-virus and attachments blocker [#RSPAMD]_
 
 Benefits are
 
@@ -22,6 +22,14 @@ See also the following related topics:
 * How electronic mail works [#Email]_
 * MX DNS record [#MXRecord]_
 * Simple Mail Transfer Protocol (SMTP) [#SMTP]_
+* DKIM signature [#DKIM]_
+
+.. warning::
+
+    Since |product| 7.5.1804 new :ref:`email-section`,
+    :ref:`pop3_connector-section` and :ref:`pop3_proxy-section` installations
+    are based on the Rspamd filter engine. Previous |product| installations can
+    be manually upgraded to Rspamd as described in :ref:`email2-section`
 
 .. index::
    pair: email; relay
@@ -68,12 +76,38 @@ a catch-all mailbox. This behavior can be obtained by enabling the
    pair: email; signature
    pair: email; legal note
 
-|product| can automatically :guilabel:`append a legal notice to sent
-messages`. This text is called :dfn:`disclaimer` and it can be used to
-meet some legal requirements.  Please note :dfn:`signature` and
-disclaimer are very different concepts.
+Append a legal notice
+---------------------
 
-The signature should be inserted inside the message text only by the
+.. warning::
+
+    Since |product| 7.5.1804 this feature is shipped in a separate, optional
+    package: ``nethserver-mail2-disclaimer``. It is considered *deprecated*
+    because the alterMIME [#alterMIME]_ project which provides the actual
+    implementation is no longer developed and can stop working at any time.
+
+If the optional ``nethserver-mail2-disclaimer`` package was installed from the
+:guilabel:`Software center`, |product| can automatically :guilabel:`append a
+legal notice to sent messages`. This text is also known as "disclaimer" and
+it can be used to meet some legal requirements.
+
+The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
+
+Please note :dfn:`signature` and :dfn:`disclaimer` are very different concepts.
+
+In general, the **disclaimer** is a fixed text and should be *attached* (not
+added) to messages by the mail server. This technique helps in maintaining the
+integrity of the message in case of digital signature.
+
+Disclaimer example: ::
+
+  This email and any files transmitted with it are confidential and
+  intended solely for the use of the individual or entity to whom they
+  are addressed.  If you have received this email in error please
+  notify the system manager.  This message contains confidential
+  information and is intended only for the individual named.
+
+The **signature** should be inserted inside the message text only by the
 mail client (MUA): Outlook, Thunderbird, etc.  Usually it is a
 user-defined text containing information such as sender addresses and
 phone numbers.
@@ -84,21 +118,26 @@ Signature example: ::
  President | My Mighty Company | Middle Earth
  555-555-5555 | john@mydomain.com | http://www.mydomain.com
 
-The "disclaimer" is a fixed text and can only be *attached* (not
-added) to messages by the mail server.
 
-This technique allows maintaining the integrity of the message in case
-of digital signature.
+DKIM signature
+--------------
 
-Disclaimer example: ::
+DomainKeys Identified Mail (DKIM) [#DKIM]_ provides a way to validate the
+sending MTA, which adds a cryptographic signature to the outbound message MIME
+headers.
 
-  This email and any files transmitted with it are confidential and
-  intended solely for the use of the individual or entity to whom they
-  are addressed.  If you have received this email in error please
-  notify the system manager.  This message contains confidential
-  information and is intended only for the individual named.
+To enable the DKIM signature for a mail domain, enable :guilabel:`Email >
+Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
 
-The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
+The DKIM signature headers are added only to messages sent through TCP ports 587
+(submission) and 465 (smtps).
+
+To work effectively, the public DNS must be configured properly. Refer to the
+instructions of your DNS provider to run the following steps:
+
+1. Add a TXT record to your public DNS service provider with key "default._domainKey"
+
+2. Copy and paste the given key text in the DNS record data (RDATA) section
 
 .. index:: email address, pseudonym
 
@@ -208,7 +247,7 @@ retention`.
 The ``root`` user can impersonate another user, gaining full rights
 to any mailbox contents and folder permissions.  The
 :guilabel:`Root can log in as another user` option controls this
-empowerment, known also as *master user* in [#Dovecot]_.
+empowerment, known also as *master user* in Dovecot [#Dovecot]_.
 
 When :guilabel:`Root can log in as another user` is enabled, the following
 credentials are accepted by the IMAP server:
@@ -345,24 +384,32 @@ is updated periodically.
 Anti-spam
 ---------
 
-The anti-spam component [#Spamassassin]_ analyzes emails by detecting
+The anti-spam component [#RSPAMD]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
-content of messages.  The rules are public and updated on a regular
-basis.
-The filter can also check if sender server is listed in one or more blacklists (:index:`DNSBL`).
-A score is associated to each rule.
+content of messages.
 
-Total spam score collected at the end of the analysis allows the
-server to decide whether to *reject* the message or *mark* it as spam
-and deliver it anyway.  The score thresholds are controlled by
-:guilabel:`Spam threshold` and :guilabel:`Deny message spam threshold`
-sliders in :guilabel:`Email > Filter` page.
+The filter can also check if sender server is listed in one or more blacklists
+(:index:`DNSBL` [#DNSBL]_). A score is associated to each rule.
 
-Messages marked as spam have a special header ``X-Spam-Flag: YES``.
-The :guilabel:`Add a prefix to spam messages subject` option makes the
-spam flag visible on the subject of the message, by prepending the
-given string to the ``Subject`` header.
+Total spam score collected at the end of the analysis allows the server to
+decide what to do with a message, according to three **thresholds** that can be
+adjusted under :guilabel:`Email > Filter > Anti spam`.
+
+1. If the spam score is above :guilabel:`Greylist threshold` the message is
+   **temporarily rejected**. The :dfn:`greylisting` [#GREY]_ technique assumes
+   that a spammer is in hurry and is likely to give up, whilst a
+   SMTP-compliant MTA will attempt to deliver the deferred message again.
+
+2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
+   as spam** by adding the special header ``X-Spam-Flag: YES`` for specific
+   treatments, then it is delivered like other messages. As an alternative, the
+   :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
+   visible on the subject of the message, by prefixing the given string to the
+   ``Subject`` header.
+
+3. If the spam score is above :guilabel:`Deny message spam threshold` the
+   message is **rejected**.
 
 .. index::
    pair: email; spam training
@@ -372,7 +419,7 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 **ham**.
 
 The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`Junk folder` or marking it as spam if your client provides such feature. As
+simply moving a message in and out of the :dfn:`Junk folder`. As a
 prerequisite, the Junk folder must be enabled from
 :guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
 "Junk" folder"` option.
@@ -383,7 +430,7 @@ prerequisite, the Junk folder must be enabled from
 * On the contrary, by *getting a message out of Junk*, the filters
   learn it is ham: next time a lower score will be assigned.
 
-By default, all users can train the filters using this technique.  If
+By default, all users can train the filters using this technique. If
 a group called ``spamtrainers`` exists, only users in this group
 will be allowed to train the filters.
 
@@ -398,7 +445,7 @@ It is important to understand how the Bayesian tests really work:
 * The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).** 
 
 .. note:: It is a good habit to frequently check the Junk folder
-          in order to not losing email wrongly recognized as spam.
+          in order not to lose email wrongly recognized as spam.
 
 .. index::
    pair: email; whitelist
@@ -424,24 +471,27 @@ It's possible to create an 'Allow' or 'Block' rule even for a complete email dom
 
 .. note:: Antivirus checks are enforced despite *whitelist* settings.
 
-.. index::
-   pair: port; imap
-   pair: port; imaps
-   pair: port; pop3
-   pair: port; pop3s
-   pair: port; smtp
-   pair: port; smtps
+Rspamd web interface
+--------------------
 
-.. _email-port25:
+The anti-spam component is implemented by Rspamd [#RSPAMD]_ which provides its
+administrative web interface at ::
 
-Block port 25
-=============
+  https://<HOST_IP>:980/rspamd
 
-If the system is acting as the network gateway, green and blue zones 
-will not be able to send mail to external servers through port 25 (SMTP).
-Blocking port 25 could prevent remotely controlled machines inside the LAN from sending SPAM.
+The actual URL is listed under the :guilabel:`Applications` page. By default
+access is granted to members of the ``domain admins`` group and to the ``admin``
+user (see also :ref:`admin-account-section`). An additional special login
+``rspamd`` can be used to access it. Its credentials are available from
+:guilabel:`Email > Filter > Rspamd user interface (Web URL)`: just follow the
+given link.
 
-The administrator can change this policy creating a custom firewall rule inside the :ref:`firewall-rules-section` page.
+The Rspamd web UI:
+
+* displays messages and actions counters,
+* shows the server configuration,
+* tracks the history of recent messages,
+* allows training the Bayes filter by submitting a message from the web form.
 
 .. _email_clients:
 
@@ -470,33 +520,10 @@ that still does not support STARTTLS:
 * pop3s/995
 * smtps/465
 
-.. warning:: The standard SMTP port 25 is reserved for mail transfers
-             between MTA servers. On clients use only submission ports.
+.. warning::
 
-If |product| acts also as DNS server on the LAN, it registers its name
-as MX record along with the following aliases:
-
-* ``smtp.<domain>``
-* ``imap.<domain>``
-* ``pop.<domain>``
-* ``pop3.<domain>``
-
-For example:
-
-* Domain: ``mysite.com``
-* Hostname: ``mail.mysite.com``
-* MX record: ``mail.mysite.com``
-* Available aliases: ``smtp.mysite.com``, ``imap.mysite.com``,
-  ``pop.mysite.com``, ``pop3.mysite.com``.
-
-.. note:: Some email clients (e.g. Mozilla Thunderbird) are able to use DNS
-          aliases and MX record to automatically configure email accounts by
-          simply typing the email address.
-
-To disable local MX and aliases, access the root's console and type: ::
-
-  config setprop postfix MxRecordStatus disabled
-  signal-event nethserver-hosts-update
+    The standard SMTP port 25 is reserved for mail transfers between MTA
+    servers. Mail user agents (MUA) must use the submission port.
 
 
 .. _email_policies:
@@ -515,7 +542,7 @@ access policy.
 .. warning:: Do not change the default policy on new environments!
 
 For instance, there are some devices (printers, scanners, ...) that do
-not support SMTP authentication, encryption or port settings.  Those
+not support SMTP authentication, encryption or port settings. Those
 can be enabled to send email messages by listing their IP address in
 :guilabel:`Allow relay from IP addresses` text area.
 
@@ -563,7 +590,7 @@ Outlook deleted mail
 
 Unlike almost any IMAP client, Outlook does not move deleted messages to the trash folder, but simply marks them as "deleted".
 
-It's possibile to automatically move messages inside the trash using following commands: ::
+It's possibile to automatically move messages inside the trash folder using the following commands: ::
 
  config setprop dovecot DeletedToTrash enabled
  signal-event nethserver-mail-server-save
@@ -590,23 +617,69 @@ respectively
 * the component name, and the process-id of the component instance
 * a text message detailing the operation
 
-A picture of the whole system is available from *workaround.org* [#MailComponents]_.
+|product| configuration uses Rspamd as milter. It runs an Rspamd proxy worker in
+"self-scan" mode [#SELFSCAN]_.
+
+The key to track the whole SMTP transaction, including Rspamd decisions is the
+message ID header, or the Postfix Queue ID (QID). Both are available from the
+message source. The ``Message-ID`` header is generated by the sender, whilst the
+QID is assigned by the receiving MTA. For instance ::
+
+  Received: from my.example.com (my.example.com [10.154.200.17])
+        by mail.mynethserver.org (Postfix) with ESMTP id A785B308622AB
+        for <jsmith@example.com>; Tue, 15 May 2018 02:05:02 +0200 (CEST)
+  ...
+  Message-ID: <5afa242e.hP5p/mry+fTNNjms%no-reply@example.com>
+  User-Agent: Heirloom mailx 12.5 7/5/10
+
+Here ``A785B308622AB`` is the QID, whilst
+``5afa242e.hP5p/mry+fTNNjms%no-reply@example.com`` is the Message ID.
+
+Both strings can be used with the ``grep`` command to find relevant log lines in
+``/var/log/maillog*`` (note the ending "*" to search also in archived log
+files). For instance ::
+
+    grep -F 'A785B308622AB' /var/log/maillog*
+
+Yields ::
+
+  /var/log/maillog:May 15 02:05:02 mail postfix/smtpd[25846]: A785B308622AB: client=my.example.com[10.154.200.17]
+  /var/log/maillog:May 15 02:05:02 mail postfix/cleanup[25849]: A785B308622AB: message-id=<5afa242e.hP5p/mry+fTNNjms%no-reply@example.com>
+  /var/log/maillog:May 15 02:05:02 mail rspamd[27538]: <8ae27d>; proxy; rspamd_message_parse: loaded message; id: <5afa242e.hP5p/mry+fTNNjms%no-reply@example.com>; queue-id: <A785B308622AB>; size: 2348; checksum: <b1035f4fb07162ba88053d9e38df9c93>
+  /var/log/maillog:May 15 02:05:03 mail rspamd[27538]: <8ae27d>; proxy; rspamd_task_write_log: id: <5afa242e.hP5p/mry+fTNNjms%no-reply@example.com>, qid: <A785B308622AB>, ip: 10.154.200.17, from: <no-reply@example.com>, (default: F (no action): [-0.64/20.00] [BAYES_HAM(-3.00){100.00%;},AUTH_NA(1.00){},MID_CONTAINS_FROM(1.00){},MX_INVALID(0.50){},MIME_GOOD(-0.10){text/plain;},IP_SCORE(-0.04){ip: (0.22), ipnet: 10.154.192.0/20(0.18), asn: 14061(0.23), country: US(-0.81);},ASN(0.00){asn:14061, ipnet:10.154.192.0/20, country:US;},DMARC_NA(0.00){example.com;},FROM_EQ_ENVFROM(0.00){},FROM_NO_DN(0.00){},NEURAL_HAM(-0.00){-0.656;0;},RCPT_COUNT_ONE(0.00){1;},RCVD_COUNT_TWO(0.00){2;},RCVD_NO_TLS_LAST(0.00){},R_DKIM_NA(0.00){},R_SPF_NA(0.00){},TO_DN_NONE(0.00){},TO_DOM_EQ_FROM_DOM(0.00){},TO_MATCH_ENVRCPT_ALL(0.00){}]), len: 2348, time: 750.636ms real, 5.680ms virtual, dns req: 47, digest: <b1035f4fb07162ba88053d9e38df9c93>, rcpts: <jsmith@example.com>, mime_rcpts: <jsmith@example.com>
+  /var/log/maillog:May 15 02:05:03 mail postfix/qmgr[27757]: A785B308622AB: from=<no-reply@example.com>, size=2597, nrcpt=1 (queue active)
+  /var/log/maillog:May 15 02:05:03 mail postfix/lmtp[25854]: A785B308622AB: to=<vmail+jsmith@mail.mynethserver.org>, orig_to=<jsmith@example.com>, relay=mail.mynethserver.org[/var/run/dovecot/lmtp], delay=0.82, delays=0.8/0.01/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 <vmail+jsmith@mail.mynethserver.org> gK8pHS8k+lr/ZAAAJc5BcA Saved)
+  /var/log/maillog:May 15 02:05:03 mail postfix/qmgr[27757]: A785B308622AB: removed
 
 .. rubric:: References
 
 .. [#Postfix] Postfix mail server http://www.postfix.org/
 .. [#Dovecot] Dovecot Secure IMAP server http://www.dovecot.org/
 .. [#Sieve] Sieve mail filtering language https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)
-.. [#Amavis] MTA/content-checker interface http://www.ijs.si/software/amavisd/
+.. [#RSPAMD]
+    Rspamd -- Fast, free and open-source spam filtering system.
+    https://rspamd.com/
 .. [#Email] Email, https://en.wikipedia.org/wiki/Email
 .. [#MXRecord] The MX DNS record, https://en.wikipedia.org/wiki/MX_record
 .. [#SMTP] SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+.. [#DKIM]
+    Domain Keys Identified Mail (DKIM) is an email authentication method
+    designed to detect email spoofing -- `Wikipedia
+    <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_
 .. [#MailDirFormat] The Maildir format, https://en.wikipedia.org/wiki/Maildir
+.. [#alterMIME]
+    alterMIME is a small program which is used to alter your mime-encoded mailpack --
+    https://pldaniels.com/altermime/
 .. [#Markdown] The Markdown plain text formatting syntax, https://en.wikipedia.org/wiki/Markdown
 .. [#IMAP] IMAP https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
 .. [#POP3] POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol
 .. [#DNSBL] DNSBL https://en.wikipedia.org/wiki/DNSBL
 .. [#SPAM] SPAM https://en.wikipedia.org/wiki/Spamming
-.. [#Spamassassin] Spamassassin home page http://wiki.apache.org/spamassassin/Spam
+.. [#GREY]
+    Greylisting is a method of defending e-mail users against spam. A mail
+    transfer agent (MTA) using greylisting will "temporarily reject" any email from
+    a sender it does not recognize -- `Wikipedia
+    <https://en.wikipedia.org/wiki/Greylisting>`_
 .. [#BAYES] Bayesian filtering https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering
 .. [#MailComponents] The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-picture/
+.. [#SELFSCAN] https://rspamd.com/doc/workers/rspamd_proxy.html

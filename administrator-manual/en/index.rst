@@ -72,7 +72,6 @@ Modules
 
    backup
    mail
-   mail2
    webmail
    webtop4
    webtop5
@@ -106,6 +105,11 @@ Modules
    hotsync
    virtual_machines
    fail2ban
+
+.. toctree::
+   :hidden:
+
+   mail2
 
 .. only:: nscom
 
