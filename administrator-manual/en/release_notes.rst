@@ -6,29 +6,55 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.4.1708 - 2017-10-26
+    - ISO release 7.5.1804 "beta" - 2018-05-16
 
-    - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
     - :ref:`nscom-releases-section`
 
-    - List of `changes since 2017-01-30 <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
+    - List of `changes since 2018-05-XX <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_
 
-    - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_
+    - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 
     - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
+
+    - `Project board <https://github.com/orgs/NethServer/projects/1>`_
 
 
 .. only:: nsent
 
-    - ISO release 7.4.1708
+    - ISO release 7.5.1804 beta
 
-    - This release is based on `CentOS 7.4 <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
+
+Major changes on 2018-05-16
+---------------------------
+
+* The :ref:`email-section` module is now based on Rspamd
+
+* MX DNS record override for LAN hosts has been removed. Removed ``postfix/MxRecordStatus`` prop.
+
+* :file:`/etc/fstab` is no longer an expanded template. See :ref:`shared_folders_requirements-section` and :ref:`home_bind-section` for details.
+
+* Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant full control to the creator`
+
+* Default :ref:`tlspolicy-section` is ``2018-03-30``
+
+* Default Server Manager session idle timeout is 15 minutes, session life time is 8 hours
+
+* The WebVirtMgr project is no longer maintained and the corresponding module has been removed
+  along with nethserver-libvirt package.
+  See :ref:`virtual_machines-section` chapter for details on how to use virtualization.
+
+* The :guilabel:`NethServer subscription` module is available by default in new installations.
+  Run the following command to update the base module set on existing installations: ::
+
+    yum update @nethserver-iso
 
 Major changes on 2017-10-26
 ---------------------------
@@ -116,7 +142,7 @@ with a backup/restore strategy. See the :ref:`upgrade-section` for details.
 Server Manager access
 ^^^^^^^^^^^^^^^^^^^^^
 
-If you want to grant Server Manager access to other users than root,
+If you want to grant :ref:`Server Manager access to other users than root <admin-account-section>`,
 please add the users to the "domain admins" group and execute: ::
 
   config delete admins
@@ -147,3 +173,4 @@ removed in 7:
 * nethserver-ocsinventory, nethserver-adagios: due to compatibility problems with Nagios, these modules will be
   mantained only on |product| 6 release
 * nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-tunnels, L2TP function has been dropped
+* nethserver-webvirtmgr

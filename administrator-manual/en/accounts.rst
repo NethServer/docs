@@ -371,6 +371,7 @@ User short name form
 
 To access a shared folder, see also :ref:`smb-access-section`.
 
+.. _home_bind-section:
 
 User home directories
 ---------------------
