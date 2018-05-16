@@ -119,7 +119,6 @@ Modules
     .. toctree::
        :maxdepth: 1
 
-       webvirtmgr
        sogo
 
 Best practices
