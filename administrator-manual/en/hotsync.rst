@@ -143,8 +143,6 @@ The following procedure puts the SLAVE in production when the master has crashed
 
 7. if an USB backup is configured on MASTER, connect the backup HD to SLAVE
 
-
-==================
 Supported packages
 ==================
 
