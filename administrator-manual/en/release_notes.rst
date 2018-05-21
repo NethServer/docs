@@ -49,6 +49,9 @@ Major changes on 2018-05
 
 * Default Server Manager session idle timeout is 15 minutes, session life time is 8 hours
 
+* Quality of Service (QoS) implementation now uses `FireQOS <https://github.com/firehol/firehol/wiki/FireQOS>`_,
+  current configuration is automatically migrated. See :ref:`traffic-shaping-section`
+
 * The WebVirtMgr project is no longer maintained and the corresponding module has been removed
   along with nethserver-libvirt package.
   See :ref:`virtual_machines-section` chapter for details on how to use virtualization
