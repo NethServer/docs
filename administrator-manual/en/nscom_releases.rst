@@ -11,7 +11,7 @@ See also the `ISO releases`_ on Developer's manual.
 7.5.1804
 --------
 
-* 2018-05-17 `beta <beta_75>`_
+* 2018-05-21 `beta <beta_75>`_
 
 .. _beta_75: https://github.com/NethServer/dev/issues?page=6&q=is%3Aissue+is%3Aclosed+closed%3A2017-09-21..2018-05-17&utf8=%E2%9C%93
 
