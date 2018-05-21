@@ -2,13 +2,16 @@
 |product| subscription
 ======================
 
-A |product| installation can be registerd to a public or private Dartagnan [#Dartagnan]_ instance,
+A |product| installation can be registered to a public or private Dartagnan [#Dartagnan]_ instance,
 getting access to monitoring portal and stable update repositories.
 
 The |product| Subscription by Nethesis [#Nethesis]_ enables access to a public ready-to-use Dartagnan instance,
 along with immediate professional support services for your |product| deployments.
-
 Detailed info available: https://my.nethserver.com
+
+Activating a subscription will enable the stable YUM repositories, but will disable any other repositories you may have added.
+You can re-enable any other repositories by editing :file:`/etc/nethserver/eorepo.conf`,
+but |product| will accept no responsibility for contents of those repositories.
 
 Register an installation
 ========================
@@ -20,7 +23,7 @@ Register an installation
 5. Click on :guilabel:`Register now` button
 
 At the end, the subscription plan name and validity are reported inside the page.
-Monitoring and access to stable repositories are automatically enabeld.
+Monitoring and access to stable repositories are automatically enabled.
 
 .. [#Dartagnan] Dartagnan documentation: https://nethesis.github.io/dartagnan/
 .. [#Nethesis] Nethesis official site: http://www.nethesis.it
