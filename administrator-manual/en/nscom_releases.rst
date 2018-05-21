@@ -8,6 +8,13 @@ See also the `ISO releases`_ on Developer's manual.
 
 .. _ISO releases: http://docs.nethserver.org/projects/nethserver-devel/en/v7/development_process.html#iso-releases-section
 
+7.5.1804
+--------
+
+* 2018-05-21 `beta <beta_75>`_
+
+.. _beta_75: https://github.com/NethServer/dev/issues?page=6&q=is%3Aissue+is%3Aclosed+closed%3A2017-09-21..2018-05-21&utf8=%E2%9C%93
+
 7.4.1708
 --------
 
