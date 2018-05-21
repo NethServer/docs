@@ -35,8 +35,6 @@ Release notes |version|
 Major changes on 2018-05-21
 ---------------------------
 
-* ISO release 7.5.1804 "beta" replaces previous alpha ISO
-
 * The :ref:`email-section` module is now based on Rspamd
 
 * MX DNS record override for LAN hosts has been removed. Removed ``postfix/MxRecordStatus`` prop
