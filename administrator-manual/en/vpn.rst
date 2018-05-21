@@ -145,7 +145,7 @@ You can use this protocol to create VPN tunnels between a |product| and a device
 
 .. note::
 
- IPSec is not designed to connect single hosts but for net2net configuration, this implies two gateways on both ends (at least one red and one green interfaces).
+ IPSec is not designed to connect single hosts but for net2net configuration, this implies two gateways on both ends (at least one red and one green interface).
 
 
 Tunnel (net2net)
