@@ -6,7 +6,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "beta" - 2018-05-17
+    - ISO release 7.5.1804 "beta" - 2018-05-21
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -32,7 +32,7 @@ Release notes |version|
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-05-17
+Major changes on 2018-05-21
 ---------------------------
 
 * ISO release 7.5.1804 "beta" replaces previous alpha ISO
