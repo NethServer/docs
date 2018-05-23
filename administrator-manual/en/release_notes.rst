@@ -1,3 +1,5 @@
+.. _release-notes-section:
+
 =======================
 Release notes |version|
 =======================
