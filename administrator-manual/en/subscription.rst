@@ -10,7 +10,7 @@ along with immediate professional support services for your |product| deployment
 Detailed info available: https://my.nethserver.com
 
 Activating a subscription will enable the stable YUM repositories, but will disable any other repositories you may have added.
-You can re-enable any other repositories by editing :file:`/etc/nethserver/eorepo.conf`,
+You can re-enable any other repositories by creating a template-custom for :file:`/etc/nethserver/eorepo.conf`,
 but |product| will accept no responsibility for contents of those repositories.
 
 Register an installation
@@ -35,6 +35,4 @@ When the subscription expires, or at the end of a trial period, use the followin
 revert any modification to repositories and access the community ones: ::
 
   config setprop subscription Secret '' SystemId ''
-  eorepo base centos-sclo-rh centos-sclo-sclo epel extras nethforge nethserver-base nethserver-updates updates
-  yum clean all
-  echo "nethserver-updates" > /etc/nethserver/pkginfo.conf
+  signal-event software-repos-save

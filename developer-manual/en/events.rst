@@ -274,6 +274,7 @@ user-create-pseudonyms                 User key                               Ca
 user-lock                              User key                               Called when a user account is locked
 user-unlock                            User key                               Called when a user account is unlocked
 system-initialization                                                         Initialize all system after installation
+software-repos-save                                                           Configure software repositories
 ====================================== ====================================== ============================================================================
 
 Handling deletions
