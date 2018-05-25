@@ -18,10 +18,10 @@ Virtualization software can be installed and started using the command line, jus
 If |product| is used as DHCP server, the Dnsmasq instance launched by libvirtd will conflict with the default one.
 To avoid such conflict, remove ``default`` libvirt NAT network: ::
 
-  systemct stop dnsmasq
+  systemctl stop dnsmasq
   systemctl start libvirtd
   virsh net-destroy default
-  systemct start dnsmasq
+  systemctl start dnsmasq
 
 Finally, the system is ready to be managed using `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_,
 a Linux desktop user interface for managing virtual machines through libvirt.
