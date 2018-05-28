@@ -79,8 +79,7 @@ To revert the system configuration to its
 initial state and use the original NethServer repositories run ::
 
   config setprop subscription SystemId '' Secret ''
-  signal-event nethserver-subscription-update
-  eorepo base updates extras epel centos-sclo-rh centos-sclo-sclo nethserver-base nethserver-updates
+  signal-event software-repos-save
 
 Events
 ======

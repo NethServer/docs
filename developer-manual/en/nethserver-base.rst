@@ -104,7 +104,7 @@ For more information use: ::
 
  perldoc esmith::NetworksDB
 
-If you need to access the local ip address within a template, use this code snippet:
+If you need to access the local IP address within a template, use this code snippet:
 
 .. code-block:: perl
 
@@ -114,7 +114,7 @@ If you need to access the local ip address within a template, use this code snip
 
 
 .. note:: Old templates used a variable called *LocalIP* to access the green
-   ipaddress. *This variable is no more available.*
+   IP address. *This variable is no more available.*
 
 Events
 ------
@@ -140,7 +140,7 @@ When configuring a red interface in DHCP mode, enable also the above options:
 * ``peer_dns`` to avoid resolv.conf overwriting from dhclient
 * ``persistent_dhclient`` to enforce dhclient to retry in case of lease request errors
 
-Remember also to remove all gateway ip address from green devices. 
+Remember also to remove all gateway IP address from green devices. 
 This configuration will create the correct routes and correctly set DHCP options on dnsmasq.
 
 Bridge
@@ -276,4 +276,88 @@ TLS db property in configuration database: ::
     policy=
 
 The event to expand the templates of all rpm which use TLS is ``tls-policy-save``
+
+Repositories
+============
+
+Main repositories are:
+
+* ``nethserver-base``: it contains packages and dependencies from core modules. It is updated when a new milestone is released. Enabled by default.
+* ``nethserver-updates``: it contains updated packages. If needed, these updates can be applied without requiring manual intervention. Enabled by default.
+* ``nethforge``: communty provided modules for NethServer. Enabled by default.
+* ``nethserver-testing``: contains packages under QA process. Disabled by default.
+* ``base``: base packages from CentOS. Enabled by default.
+* ``updates``: updated packages from CentOS. Enabled by default.
+* ``centos-sclo-rh`` and ``centos-sclo-sclo``: SCL repositories. Both enabled by default.
+* ``extras``: extra RPMs. Enabled by default.
+
+A standard installation should have the following enabled repositories:
+
+* base
+* updates
+* nethserver-base
+* nethserver-updates
+* nethforge
+* centos-sclo-rh
+* centos-sclo-sclo
+* extras
+
+Packages published in above repositories should always allow a non-disruptive automatic update.
+
+NS Release Lock
+---------------
+
+As default |product| is configured to access latest upstream repositories using the
+"Rolling release" approach.
+
+It is possibile to lock repositories to che current minor release using ``NS release lock`` feature: ::
+
+  config setprop sysconfig NsReleaseLock enabled
+  signal-event software-repos-save
+
+
+When NS Release Lock is enabled, the following repositories are available (where ``ce`` stands for CentOS):
+
+- ``ce-base``
+- ``ce-updates``
+- ``ce-extras``
+
+These repositories point to a fixed CentOS release, the configuration is stored inside :file:`/etc/yum.repos.d/NsReleaseLock.repo`.
+
+Configuration of enabled repositories is stored inside:
+
+- :file:`/etc/nethserver/pkginfo.conf`: list of YUM repositories that have their groups listed
+   on the Software Center
+- :file:`/etc/nethserver/eorepo.conf`: list of YUM repositories enabled by ``software-repos-save``
+  event, every non-listed repository will be disabled
+
+Please note that *NS Release Lock* is mutually exclusive with subscription:
+when a subscription is enabled, ``NSReleaseLock`` will be disabled.
+
+Some *third-party repositories* don't support accessing RPMs using a minor release like ``7.5.1804``
+but only using a major release like ``7``.
+Actually, this limitation is present for:
+
+- ``epel``
+- ``centos-sclo-rh``
+- ``centos-sclo-sclo``
+
+
+When ``NsReleaseLock`` is set to ``enabled``:
+
+- installation from the Software Center will enable all upstream repositories otherwise
+  YUM will not be able to resolve package dependencies
+- updates from the Software Center will disable repositories which doesn't support locking to minor
+- updates from the command line will enable all upstream repositories
+- ``yum-cron`` has access to a special repository configuration stored inside :file:`/etc/nethserver/yum-update.d/`
+  and enabled using ``reposdir`` options inside ``/etc/yum/yum-cron.conf``
+
+
+Third party repositories
+------------------------
+
+It's possible to install third party repositories, using standard CentOS methods.
+
+If such repositories support access using minor release, they can be safely added
+to :file:`eorepo.conf` and :file:`pkginfo.conf` using a template-custom.
 

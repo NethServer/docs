@@ -65,7 +65,6 @@ Developer Manual
    
    building_rpms
    building_iso
-   repositories
    package_groups
 
 .. toctree::
