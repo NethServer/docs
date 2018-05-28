@@ -250,8 +250,9 @@ Known issues
 
      timedatectl set-local-rtc 0
 
-- When installing on machines with UEFI firmware and disks bigger than 4 TB, Anaconda could fail automatic partitioning.
+- When installing on machines with UEFI firmware and disks bigger than 4 TB, Anaconda could fail on automatic partitioning.
   To work around the problem, switch to :guilabel:`Standard CentOS installation` then follow :ref:`installation-centos`.
+  In case of installation with software RAID, make sure to manually create UEFI partitions on all boot disks.
 
 .. _installation-unattended:
 
