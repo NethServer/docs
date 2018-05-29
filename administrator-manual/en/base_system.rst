@@ -246,7 +246,7 @@ Disable Let's Encrypt
 
 Let's Encrypt certificate can be disabled following these steps:
 
-1. Access the guilabel:`Server certificate` page, set as default the self-signed certificate or an uploaded one
+1. Access the :guilabel:`Server certificate` page, set as default the self-signed certificate or an uploaded one
 2. Open the shell and execute the following commands: 
 
    ::
