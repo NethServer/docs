@@ -1,3 +1,5 @@
+.. _subscription-section:
+
 ======================
 |product| subscription
 ======================
@@ -5,16 +7,27 @@
 A |product| installation can be registered to a public or private Dartagnan [#Dartagnan]_ instance,
 getting access to monitoring portal and stable update repositories.
 
-The |product| Subscription by Nethesis [#Nethesis]_ enables access to a public ready-to-use Dartagnan instance,
-along with immediate professional support services for your |product| deployments.
-Detailed info available: https://my.nethserver.com
+.. hint::
 
-Activating a subscription will enable the stable YUM repositories, but will disable any other repositories you may have added.
-You can re-enable any other repositories by creating a template-custom for :file:`/etc/nethserver/eorepo.conf`,
-but |product| will accept no responsibility for contents of those repositories.
+    The |product| Subscription by Nethesis [#Nethesis]_ enables access to a
+    public ready-to-use Dartagnan instance, along with immediate professional
+    support services for your |product| deployments. Detailed info available at
+    https://my.nethserver.com
 
-Register an installation
-========================
+
+Activating a subscription will enable the stable YUM repositories, but will
+disable any other repositories you may have added. You can re-enable any other
+repositories by creating a "template-custom" for
+:file:`/etc/nethserver/eorepo.conf`.
+
+The subscription provider may not accept support requests for the contents of
+custom repositories.
+
+
+.. _register-an-installation:
+
+Registering the system
+======================
 
 1. Access :guilabel:`Subscription` page from the Server Manager
 2. Click on :guilabel:`Subscribe`
@@ -36,3 +49,5 @@ revert any modification to repositories and access the community ones: ::
 
   config setprop subscription Secret '' SystemId ''
   signal-event software-repos-save
+
+Refer to :ref:`software-updates-section` for more information about the community updates origin.
