@@ -47,7 +47,7 @@ Software updates
     more information about NethServer updates.
 
     Updates released by the CentOS project are immediately available on
-    NethServer. More info about CentOS updates:
+    NethServer directly from the CentOS mirrors. More info about CentOS updates:
 
     - https://wiki.centos.org/FAQ/General
     - https://access.redhat.com/support/policy/updates/errata/
@@ -66,18 +66,21 @@ Software updates
         test the updates in a non-production system. For any doubt ask the
         NethServer community forum! [#NSCOM]_
 
-    The first time the Software center page is opened, it is required to select
-    **the origin of software updates**. This decision can be changed at any
-    later time from :guilabel:`Software center > Configure`:
+    Every day an **automated scheduled task** checks if a new distribution
+    release of CentOS is available; when this happens it sends an email
+    notification message to the system administrator and changes the
+    :guilabel:`Software updates origin`. The system administrator can
+    temporarily change the software updates origin from :guilabel:`Software
+    center > Configure`. The available choices are:
 
-    :dfn:`Unlocked`
+    :dfn:`Unlocked` (default)
 
         The Software center considers updates from all available software
         repositories. It ensures every installed package is at its latest
         version.
 
-        When a new release of CentOS is available, a warning message is shown to
-        inform the user about the new upstream distribution release.
+        The "unlocked" origin is automatically selected by the :dfn:`system
+        upgrade` procedure that can be started only by the system administrator.
 
     :dfn:`Locked`
 
@@ -88,16 +91,11 @@ Software updates
         with "7" (like EPEL) are considered only when new modules are installed;
         once they have been installed they are never updated.
 
-        When the NethServer project releases a new version, the Software center
-        asks to start a :dfn:`system upgrade`.
-
-    .. hint::
-
-        Choosing the *right* updates origin depends on the system
-        administrator's needs. As a rule of thumb, the **unlocked** origin
-        receives more updates that correct bugs and security issues so it needs
-        more time to review them. On the other hand the **locked** origin
-        receives less updates so it is more predictable.
+        The "locked" origin is automatically selected when a new CentOS
+        distribution release is available. When also the NethServer project
+        releases a new version, the Software center asks to start the
+        :dfn:`system upgrade`. The upgrade procedure switches to the "unlocked"
+        origin at the end.
 
     .. warning::
 
