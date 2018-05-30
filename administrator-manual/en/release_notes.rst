@@ -47,7 +47,7 @@ Major changes on 2018-05-21
 
 * Default :ref:`tlspolicy-section` is ``2018-03-30``
 
-* Default Server Manager session idle timeout is 15 minutes, session life time is 8 hours
+* Default Server Manager session idle timeout is 60 minutes, session life time is 8 hours
 
 * Quality of Service (QoS) implementation now uses `FireQOS <https://github.com/firehol/firehol/wiki/FireQOS>`_,
   current configuration is automatically migrated. See :ref:`traffic-shaping-section`
