@@ -15,7 +15,7 @@ A *module* is usually constituted by multiple *packages*. It extends the system
 functionality. For instance a module can transform |product| into an Email
 server, or a Web proxy.
 
-A software *package* is an atomic unit of software. It published by a public
+A software *package* is an atomic unit of software. It is published by a public
 software repository. |product| packages are files in the RPM [#RPM]_ file
 format. Thus within this context the terms *package* and *RPM* can be used as
 synonyms.
@@ -60,11 +60,11 @@ Software updates
     .. hint::
 
         Even if the above projects strive for software stability, care is
-        necessary to check the updates fit well together. Every time the system
-        is going to be updated, **create a backup of the data and review the
-        updates changelog** to understand what is going to happen. If possible,
-        test the updates in a non-production system. For any doubt ask the
-        NethServer community forum! [#NSCOM]_
+        necessary to check if the updates fit well together. Every time the
+        system is going to be updated, **create a backup of the data and review
+        the updates changelog** to understand what is going to happen. If
+        possible, test the updates in a non-production system. For any doubt ask
+        the NethServer community forum! [#NSCOM]_
 
     Every day an **automated scheduled task** checks if a new distribution
     release of CentOS is available; when this happens it sends an email
@@ -85,7 +85,7 @@ Software updates
     :dfn:`Locked`
 
         The Software center prevents to install the updates coming from a CentOS
-        release different than the current system version. For example it
+        release different than the current system version. For example, it
         prevents to install updates from CentOS 7.6 if NethServer version is
         7.5. Packages from other repositories which are generically compatible
         with "7" (like EPEL) are considered only when new modules are installed;
@@ -97,10 +97,11 @@ Software updates
         :dfn:`system upgrade`. The upgrade procedure switches to the "unlocked"
         origin at the end.
 
-    .. warning::
+        .. warning::
 
-        Using ``yum update`` from the command line works like selecting the
-        "unlocked" origin
+            When ``yum`` is run from the command line and the software origin is
+            "locked", EPEL and other repositories which are generically
+            compatible with "7" are **enabled**
 
 .. _manual-updates:
 
@@ -138,8 +139,8 @@ The updates availability is checked by a task that runs at a random time overnig
 
 .. hint::
 
-    If the notification email is not delivered or is marked as spam it is possible to configure a 
-    :ref:`smarthost <smarthost-configuration>`
+    If the notification email is not delivered or is marked as spam, it is
+    possible to configure a  :ref:`smarthost <smarthost-configuration>`
 
 
 Modules installation
