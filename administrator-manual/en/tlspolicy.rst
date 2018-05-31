@@ -17,6 +17,10 @@ The following sections describe each policy identifier.
 Policy 2018-03-30
 -----------------
 
+The goal of this policy is to harden the cipher set provided by the default
+upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25
+clients. It does not support ECC certificates.
+
 Apache
     * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
     * Cipher suite ::
