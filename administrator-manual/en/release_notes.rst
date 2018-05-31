@@ -8,7 +8,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "beta" - 2018-05-21
+    - ISO release 7.5.1804 "rc" - 2018-05-31
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -27,14 +27,14 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.5.1804 beta
+    - ISO release 7.5.1804 rc
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-05-21
+Major changes on 2018-05-31
 ---------------------------
 
 * The :ref:`email-section` module is now based on Rspamd
@@ -54,14 +54,16 @@ Major changes on 2018-05-21
 * Quality of Service (QoS) implementation now uses `FireQOS <https://github.com/firehol/firehol/wiki/FireQOS>`_,
   current configuration is automatically migrated. See :ref:`traffic-shaping-section`
 
+* The menu entry :guilabel:`Automatic updates` in Server Manager was removed. Automatic 
+  updates are now configured from :guilabel:`Software center > Configure`. From the same panel
+  it is possible to select the :guilabel:`Software updates origin`. See :ref:`software-updates-section`
+
+* The :guilabel:`NethServer subscription` module is available by default in new installations.
+  Run the following command to update the base module set on existing installations: ``yum update @nethserver-iso``
+
 * The WebVirtMgr project is no longer maintained and the corresponding module has been removed
   along with nethserver-libvirt package.
   See :ref:`virtual_machines-section` chapter for details on how to use virtualization
-
-* The :guilabel:`NethServer subscription` module is available by default in new installations.
-  Run the following command to update the base module set on existing installations: ::
-
-    yum update @nethserver-iso
 
 Major changes on 2017-10-26
 ---------------------------
