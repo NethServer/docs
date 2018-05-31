@@ -243,15 +243,8 @@ settings at all.  Also the network and storage sections must be configured.
 Known issues
 ^^^^^^^^^^^^
 
-- The Interactive install option will set the Real Time Clock (RTC) to the local timezone zone, 
-  if a non-UTC timezone has been selected.
-  As a side effect, on boot, the timestamps in :file:`/var/log/messages` will change from UTC to the local time zone.
-  To reset the RTC to UTC (preferred option) use the following command: ::
-
-     timedatectl set-local-rtc 0
-
-- When installing on machines with UEFI firmware and disks bigger than 4 TB, Anaconda could fail on automatic partitioning.
-  To work around the problem, switch to :guilabel:`Standard CentOS installation` then follow :ref:`installation-centos`.
+- When installing on machines with UEFI firmware, Anaconda could fail on automatic partitioning.
+  To work around the problem, switch to :guilabel:`Manual installation`, or :guilabel:`Standard CentOS installation` then follow :ref:`installation-centos`.
   In case of installation with software RAID, make sure to manually create UEFI partitions on all boot disks.
 
 .. _installation-unattended:
