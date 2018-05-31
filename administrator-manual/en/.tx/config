@@ -182,13 +182,6 @@ source_lang = en
 type = PO
 
 
-[docs-v7.webvirtmgr]
-file_filter = locale/<lang>/LC_MESSAGES/webvirtmgr.po
-source_file = _build/locale/webvirtmgr.pot
-source_lang = en
-type = PO
-
-
 [docs-v7.backup]
 file_filter = locale/<lang>/LC_MESSAGES/backup.po
 source_file = _build/locale/backup.pot
