@@ -28,7 +28,7 @@ Apache
         EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
         
     * Disabled SSLv2 and SSLv3
-    * Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`Default upstream policy`)
+    * Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-default`)
 
 Dovecot
     * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
@@ -58,7 +58,16 @@ Postfix
         
         aNULL:eNULL:LOW:3DES:MD5:EXP:PSK:DSS:RC4:SEED:IDEA:ECDSA
 
+.. _tlspolicy-default:
+
 Default upstream policy
 -----------------------
 
-The goal of this policy is retaining upstream settings. This is the original goal since |product| 7.
+The goal of this policy is retaining upstream settings. This is the original
+goal since |product| 7.
+
+This policy allows to customize ``httpd`` (Apache) with a given cipher list, by
+issuing the following  commands: ::
+
+    config setprop httpd SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
+    signal-event nethserver-httpd-update
