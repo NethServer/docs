@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -24,19 +24,19 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../ui/FileServer.rst:12 ../../ui/FileServer.rst:15
+#: ../../ui/FileServer.rst:5
 msgid "Windows file server"
 msgstr ""
 
-#: ../../ui/FileServer.rst:14 ../../ui/FileServer.rst:17
+#: ../../ui/FileServer.rst:7
 msgid "See also :ref:`shared_folders-section`"
 msgstr ""
 
-#: ../../ui/FileServer.rst:20 ../../ui/FileServer.rst:23
+#: ../../ui/FileServer.rst:13
 msgid "Workgroup/NetBIOS domain name"
 msgstr ""
 
-#: ../../ui/FileServer.rst:17 ../../ui/FileServer.rst:20
+#: ../../ui/FileServer.rst:10
 msgid ""
 "The value can be changed only with LDAP accounts provider and defines the "
 "Windows workgroup name visible from Network neighborhood panel in Windows "
@@ -44,47 +44,141 @@ msgid ""
 "the joined domain"
 msgstr ""
 
-#: ../../ui/FileServer.rst:25 ../../ui/FileServer.rst:28
+#: ../../ui/FileServer.rst:18
 msgid "When a new file or directory is created in a shared folder"
 msgstr ""
 
-#: ../../ui/FileServer.rst:23 ../../ui/FileServer.rst:26
+#: ../../ui/FileServer.rst:16
 msgid ""
 "Decide who owns a newly created file or directory: either the resource "
 "creator or the current owner of the directory containing the new resource "
 "(also known as parent directory)"
 msgstr ""
 
-#: ../../ui/FileServer.rst:29 ../../ui/FileServer.rst:32
+#: ../../ui/FileServer.rst:22
 msgid ""
 "Grant full control on home directories to Domain Admins group (home$ share)"
 msgstr ""
 
-#: ../../ui/FileServer.rst:28 ../../ui/FileServer.rst:31
+#: ../../ui/FileServer.rst:21
 msgid ""
 "Allow members of ``Domain Admins`` group to connect the hidden ``home$`` "
 "share and grant them administrative access to any home folder inside of it"
 msgstr ""
 
-#: ../../ui/FileServer.rst:32 ../../ui/FileServer.rst:35
+#: ../../ui/FileServer.rst:25
 msgid "Grant full control on shared folders to Domain Admins group"
 msgstr ""
 
-#: ../../ui/FileServer.rst:32 ../../ui/FileServer.rst:35
+#: ../../ui/FileServer.rst:25
 msgid ""
 "Allow members of ``Domain Admins`` group to connect any shared folder and "
 "grant them administrative access on its content"
 msgstr ""
 
-#: ../../ui/TlsPolicy.rst:12 ../../ui/TlsPolicy.rst:15
+#: ../../ui/ProxyPass.rst:5
+msgid "Reverse proxy"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:7
+msgid ""
+"This page configures certain paths and virtual host names under Apache to be"
+" served by forwarding the original web request to another URL. See also :ref"
+":`proxy_pass-section`."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:13
+msgid "Create / Edit"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:19
+msgid "Name"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:16
+msgid ""
+"The URL **path name** or the **virtual host name** (an host FQDN). A path "
+"name will match URLs like ``http://somehost/<path name>/...``, whilst a "
+"virtual host name will match an URL like ``http://<virtual host name>/...``."
+" Matching URLs are forwarded to the :guilabel:`Target URL`."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:23
+msgid "Access from CIDR networks"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:22
+msgid ""
+"Restrict the access from the given list of CIDR networks. Elements must be "
+"separated with a \",\" (comma)."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:26
+msgid "SSL/TLS certificate"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:26
+msgid "Select a certificate that is compatible with the virtual host name."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:30
+msgid "Require SSL encrypted connection"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:29
+msgid ""
+"If enabled, the URL path or virtual host name can be accessed only with an "
+"SSL/TLS connection."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:34
+msgid "Target URL"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:33
+msgid ""
+"The URL where the original request is forwarded. An URL has the form "
+"``<scheme>://<hostname>:<port>/<path>``."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:38
+msgid "Accept invalid SSL certificate from target"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:37
+msgid ""
+"If the :guilabel:`Target URL` has the ``https`` scheme, accept its "
+"certificate even if it is not valid."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:43
+msgid "Forward HTTP \"Host\" header to target"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:41
+msgid ""
+"When enabled, this option will pass the HTTP \"Host\" header line from the "
+"incoming request to the proxied host, instead of the \"hostname\" specified "
+"in the :guilabel:`Target URL` field."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:46
+msgid "Delete"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:48
+msgid "Removes the selected entry."
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:5
 msgid "TLS policy"
 msgstr ""
 
-#: ../../ui/TlsPolicy.rst:14 ../../ui/TlsPolicy.rst:17
+#: ../../ui/TlsPolicy.rst:7
 msgid "Enforced security level"
 msgstr ""
 
-#: ../../ui/TlsPolicy.rst:15 ../../ui/TlsPolicy.rst:18
+#: ../../ui/TlsPolicy.rst:8
 msgid ""
 "Configures the system services as described in the :ref:`tlspolicy-section` "
 "section"

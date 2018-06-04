@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,80 +25,97 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../subscription.rst:10 ../../subscription.rst:13
+#: ../../subscription.rst:5
 msgid "|product| subscription"
 msgstr "|product| subscription"
 
-#: ../../subscription.rst:12 ../../subscription.rst:15
+#: ../../subscription.rst:7
 msgid ""
-"A |product| installation can be registerd to a public or private Dartagnan "
+"A |product| installation can be registered to a public or private Dartagnan "
 "[#Dartagnan]_ instance, getting access to monitoring portal and stable "
 "update repositories."
 msgstr ""
-"Una installazione di |product| può essere registrata su un'istanza pubblica "
-"o privata Dartagnan [#Dartagnan]_, ottenendo l'accesso al portale di "
-"monitoraggio ed ai repository di aggiornamento stabili."
 
-#: ../../subscription.rst:15 ../../subscription.rst:18
+#: ../../subscription.rst:12
 msgid ""
 "The |product| Subscription by Nethesis [#Nethesis]_ enables access to a "
 "public ready-to-use Dartagnan instance, along with immediate professional "
-"support services for your |product| deployments."
-msgstr ""
-"La |product| Subscription di Nethesis [#Nethesis]_ consente l'accesso a "
-"un'istanza Dartagnan pubblica pronta all'uso, insieme a servizi di supporto "
-"professionale immediati per le proprie implementazioni di |product|."
-
-#: ../../subscription.rst:18 ../../subscription.rst:21
-msgid "Detailed info available: https://my.nethserver.com"
-msgstr ""
-"Informazioni dettagliate disponibili a questo link: "
+"support services for your |product| deployments. Detailed info available at "
 "https://my.nethserver.com"
+msgstr ""
 
-#: ../../subscription.rst:21 ../../subscription.rst:24
-msgid "Register an installation"
-msgstr "Registrazione di una installazione"
+#: ../../subscription.rst:18
+msgid ""
+"Activating a subscription will enable the stable YUM repositories, but will "
+"disable any other repositories you may have added. You can re-enable any "
+"other repositories by creating a \"template-custom\" for "
+":file:`/etc/nethserver/eorepo.conf`."
+msgstr ""
 
-#: ../../subscription.rst:23 ../../subscription.rst:26
+#: ../../subscription.rst:23
+msgid ""
+"The subscription provider may not accept support requests for the contents "
+"of custom repositories."
+msgstr ""
+
+#: ../../subscription.rst:30
+msgid "Registering the system"
+msgstr ""
+
+#: ../../subscription.rst:32
 msgid "Access :guilabel:`Subscription` page from the Server Manager"
 msgstr "Accedere alla pagina :guilabel:`Sottoscrizione` del Server Manager"
 
-#: ../../subscription.rst:24 ../../subscription.rst:27
+#: ../../subscription.rst:33
 msgid "Click on :guilabel:`Subscribe`"
 msgstr "Cliccare su :guilabel:`Sottoscrivi`"
 
-#: ../../subscription.rst:25 ../../subscription.rst:28
+#: ../../subscription.rst:34
 msgid ""
 "Login or register to https://my.nethserver.com to obtain a registration code"
 msgstr ""
 "Accedere o registrarsi su https://my.nethserver.com per ottenere un codice "
 "di registrazione"
 
-#: ../../subscription.rst:26 ../../subscription.rst:29
+#: ../../subscription.rst:35
 msgid ""
 "Copy and paste the code inside the :guilabel:`Registration token` field"
 msgstr ""
 "Copiare e incollare il codice all'interno del campo :guilabel:`Registrazione"
 " token`"
 
-#: ../../subscription.rst:27 ../../subscription.rst:30
+#: ../../subscription.rst:36
 msgid "Click on :guilabel:`Register now` button"
 msgstr "Cliccare su bottone :guilabel:`Registra ora`"
 
-#: ../../subscription.rst:29 ../../subscription.rst:32
+#: ../../subscription.rst:38
 msgid ""
 "At the end, the subscription plan name and validity are reported inside the "
 "page. Monitoring and access to stable repositories are automatically "
-"enabeld."
+"enabled."
 msgstr ""
-"Al termine della procedura, il nome e la validità del piano di abbonamento "
-"sottoscritto saranno riportati all'interno della pagina. Il monitoraggio e "
-"l'accesso ai repository stabili saranno automaticamente abilitati."
 
-#: ../../subscription.rst:32 ../../subscription.rst:35
+#: ../../subscription.rst:41
 msgid "Dartagnan documentation: https://nethesis.github.io/dartagnan/"
 msgstr "Documentazione Dartagnan: https://nethesis.github.io/dartagnan/"
 
-#: ../../subscription.rst:33 ../../subscription.rst:36
+#: ../../subscription.rst:42
 msgid "Nethesis official site: http://www.nethesis.it"
 msgstr "Sito ufficiale Nethesis: http://www.nethesis.it"
+
+#: ../../subscription.rst:45
+msgid "Removing a subscription"
+msgstr ""
+
+#: ../../subscription.rst:47
+msgid ""
+"When the subscription expires, or at the end of a trial period, use the "
+"following command to revert any modification to repositories and access the "
+"community ones: ::"
+msgstr ""
+
+#: ../../subscription.rst:53
+msgid ""
+"Refer to :ref:`software-updates-section` for more information about the "
+"community updates origin."
+msgstr ""

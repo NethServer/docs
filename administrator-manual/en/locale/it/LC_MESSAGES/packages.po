@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,43 +25,254 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../packages.rst:13 ../../packages.rst:16
+#: ../../packages.rst:6
 msgid "Software center"
 msgstr "Software center"
 
-#: ../../packages.rst:15 ../../packages.rst:18
+#: ../../packages.rst:8
 msgid ""
-"|product| is highly modular.  At the end of the installation a bare minimum "
-"set of modules are ready to be used. The basic system includes modules like "
-"*network configuration* and *log viewer*. Additionally, the administrator "
-"can install additional modules, like :ref:`email-section`, :ref:`dhcp-"
-"section`, :ref:`firewall-section`..."
+"|product| is highly modular: at the end of the installation a bare minimum "
+"set of features like *network configuration* and *log viewer* is installed. "
+"The :guilabel:`Software center` page allows the administrator to select and "
+"**install** additional  :dfn:`modules`, and also list and **update** the "
+"already installed software :dfn:`packages`."
 msgstr ""
-"|product| è altamente modulare: al termine dell’installazione il sistema "
-"contiene solo i moduli di base (es. *configurazione di rete*, "
-"*visualizzazione log*). L’amministratore può quindi decidere quali "
-"componenti installare in base alle proprie esigenze (es. :ref:`email-"
-"section`, :ref:`dhcp-section`, :ref:`firewall-section`, ecc.)."
 
-#: ../../packages.rst:21 ../../packages.rst:24
+#: ../../packages.rst:14
+msgid ""
+"A *module* is usually constituted by multiple *packages*. It extends the "
+"system functionality. For instance a module can transform |product| into an "
+"Email server, or a Web proxy."
+msgstr ""
+
+#: ../../packages.rst:18
+msgid ""
+"A software *package* is an atomic unit of software. It is published by a "
+"public software repository. |product| packages are files in the RPM [#RPM]_ "
+"file format. Thus within this context the terms *package* and *RPM* can be "
+"used as synonyms."
+msgstr ""
+
+#: ../../packages.rst:26
+msgid "Software updates"
+msgstr "Aggiornamenti software"
+
+#: ../../packages.rst:30
+msgid ""
+"|product| receives controlled updates from a set of managed software "
+"repositories. See :ref:`automatic-updates` to receive new features and fix "
+"bugs and security issues."
+msgstr ""
+
+#: ../../packages.rst:36
+msgid ""
+"A NethServer 7 system receives updates from different software projects:"
+msgstr ""
+
+#: ../../packages.rst:38
+msgid "the NethServer project itself [#NETHSERVER]_"
+msgstr ""
+
+#: ../../packages.rst:39
+msgid "the CentOS project [#CENTOS]_"
+msgstr ""
+
+#: ../../packages.rst:40
+msgid "the EPEL repository [#EPEL]_"
+msgstr ""
+
+#: ../../packages.rst:42
+msgid ""
+"Each project releases software updates according to its specific rules and "
+"development cycle, but all of them prefer software stability over bleeding "
+"edge features."
+msgstr ""
+
+#: ../../packages.rst:46
+msgid ""
+"Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for "
+"more information about NethServer updates."
+msgstr ""
+
+#: ../../packages.rst:49
+msgid ""
+"Updates released by the CentOS project are immediately available on "
+"NethServer directly from the CentOS mirrors. More info about CentOS updates:"
+msgstr ""
+
+#: ../../packages.rst:52
+msgid "https://wiki.centos.org/FAQ/General"
+msgstr "https://wiki.centos.org/FAQ/General"
+
+#: ../../packages.rst:53
+msgid "https://access.redhat.com/support/policy/updates/errata/"
+msgstr "https://access.redhat.com/support/policy/updates/errata/"
+
+#: ../../packages.rst:54
+msgid "https://access.redhat.com/security/updates/backporting"
+msgstr "https://access.redhat.com/security/updates/backporting"
+
+#: ../../packages.rst:55
+msgid "https://access.redhat.com/security/"
+msgstr "https://access.redhat.com/security/"
+
+#: ../../packages.rst:57
+msgid ""
+"Updates released by EPEL are available only if the **unlocked** software "
+"updates origin is selected, as explained below."
+msgstr ""
+
+#: ../../packages.rst:62
+msgid ""
+"Even if the above projects strive for software stability, care is necessary "
+"to check if the updates fit well together. Every time the system is going to"
+" be updated, **create a backup of the data and review the updates "
+"changelog** to understand what is going to happen. If possible, test the "
+"updates in a non-production system. For any doubt ask the NethServer "
+"community forum! [#NSCOM]_"
+msgstr ""
+
+#: ../../packages.rst:69
+msgid ""
+"Every day an **automated scheduled task** checks if a new distribution "
+"release of CentOS is available; when this happens it sends an email "
+"notification message to the system administrator and changes the "
+":guilabel:`Software updates origin`. The system administrator can "
+"temporarily change the software updates origin from :guilabel:`Software "
+"center > Configure`. The available choices are:"
+msgstr ""
+
+#: ../../packages.rst:76
+msgid ":dfn:`Unlocked` (default)"
+msgstr ""
+
+#: ../../packages.rst:78
+msgid ""
+"The Software center considers updates from all available software "
+"repositories. It ensures every installed package is at its latest version."
+msgstr ""
+
+#: ../../packages.rst:82
+msgid ""
+"The \"unlocked\" origin is automatically selected by the :dfn:`system "
+"upgrade` procedure that can be started only by the system administrator."
+msgstr ""
+
+#: ../../packages.rst:85
+msgid ":dfn:`Locked`"
+msgstr ""
+
+#: ../../packages.rst:87
+msgid ""
+"The Software center prevents to install the updates coming from a CentOS "
+"release different than the current system version. For example, it prevents "
+"to install updates from CentOS 7.6 if NethServer version is 7.5. Packages "
+"from other repositories which are generically compatible with \"7\" (like "
+"EPEL) are considered only when new modules are installed; once they have "
+"been installed they are never updated."
+msgstr ""
+
+#: ../../packages.rst:94
+msgid ""
+"The \"locked\" origin is automatically selected when a new CentOS "
+"distribution release is available. When also the NethServer project releases"
+" a new version, the Software center asks to start the :dfn:`system upgrade`."
+" The upgrade procedure switches to the \"unlocked\" origin at the end."
+msgstr ""
+
+#: ../../packages.rst:102
+msgid ""
+"When ``yum`` is run from the command line and the software origin is "
+"\"locked\", EPEL and other repositories which are generically compatible "
+"with \"7\" are **enabled**"
+msgstr ""
+
+#: ../../packages.rst:109
+msgid "Manual update procedure"
+msgstr ""
+
+#: ../../packages.rst:111
+msgid ""
+"When updates are available, a warning message appears in the "
+":guilabel:`Software center` page."
+msgstr ""
+
+#: ../../packages.rst:114
+msgid ""
+"Updates for the installed software are listed under the :guilabel:`Updates` "
+"tab. Further details about them are available under :guilabel:`Updates "
+"CHANGELOG`."
+msgstr ""
+
+#: ../../packages.rst:117
+msgid ""
+"To start the system update click the :guilabel:`Download and install` "
+"button."
+msgstr ""
+
+#: ../../packages.rst:123
+msgid ""
+"Regularly update the installed software to fix bugs, security issues and "
+"receive new features"
+msgstr ""
+
+#: ../../packages.rst:130
+msgid "Automatic update procedure"
+msgstr ""
+
+#: ../../packages.rst:132
+msgid ""
+"It is possible to perform some automatic actions when new software updates "
+"are available."
+msgstr ""
+
+#: ../../packages.rst:134
+msgid "Download and (optionally) install the updates"
+msgstr ""
+
+#: ../../packages.rst:136
+msgid ""
+"Send an email to the system administrator (root) and to an additional list "
+"of recipients"
+msgstr ""
+
+#: ../../packages.rst:138
+msgid ""
+"The updates availability is checked by a task that runs at a random time "
+"overnight."
+msgstr ""
+
+#: ../../packages.rst:142
+msgid ""
+"If the notification email is not delivered or is marked as spam, it is "
+"possible to configure a  :ref:`smarthost <smarthost-configuration>`"
+msgstr ""
+
+#: ../../packages.rst:147
+msgid "Modules installation"
+msgstr ""
+
+#: ../../packages.rst:149
 msgid ""
 "The :guilabel:`Available` tab lists all of the modules that can be "
-"installed. This list can be filtered by category."
+"installed. This list can be filtered by category. See also :ref:`additional-"
+"languages`."
 msgstr ""
-"Il tab :guilabel:`Disponibili` elenca tutti i moduli disponibili per "
-"l'installazione. La lista può essere filtrata per categoria."
 
-#: ../../packages.rst:24 ../../packages.rst:27
+#: ../../packages.rst:152
 msgid ""
 "To **install a module**, check the corresponding box and click on "
 ":guilabel:`Add`. Some modules suggest optional packages that can be "
-"installed whether at the same or at a later time."
+"installed also at a later time."
 msgstr ""
-"Per **installare un modulo**, aggiungere il segno di spunta e premere il "
-"pulsante :guilabel:`AGGIUNGI`. Alcuni moduli suggeriscono dei pacchetti "
-"opzionali, installabili contestualmente o in seguito."
 
-#: ../../packages.rst:28 ../../packages.rst:31
+#: ../../packages.rst:156
+msgid ""
+"Once a module has been installed, it is listed under the "
+":guilabel:`Installed` tab."
+msgstr ""
+
+#: ../../packages.rst:158
 msgid ""
 "To **install optional packages** at a later time, select "
 ":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
@@ -71,11 +282,13 @@ msgstr ""
 ":guilabel:`Installati` e premere il pulsante :guilabel:`Modifica` di una "
 "voce della lista."
 
-#: ../../packages.rst:33 ../../packages.rst:36
-msgid "To **remove a module**, push the :guilabel:`Remove` button."
-msgstr "Per **rimuovere un modulo**, premere il pulsante :guilabel:`Rimuovi`."
+#: ../../packages.rst:163
+msgid ""
+"To **remove a module**, go to the :guilabel:`Installed` tab and push the "
+"corresponding :guilabel:`Remove` button."
+msgstr ""
 
-#: ../../packages.rst:37 ../../packages.rst:40
+#: ../../packages.rst:168
 msgid ""
 "When removing a module other modules could be removed, too! Read carefully "
 "the list of affected packages to avoid removing required features."
@@ -84,7 +297,7 @@ msgstr ""
 "indirettamente! Leggere attentamente la lista dei pacchetti in rimozione per"
 " evitare di rimuovere delle funzionalità necessarie."
 
-#: ../../packages.rst:44 ../../packages.rst:47
+#: ../../packages.rst:175
 msgid ""
 "Installed packages **cannot be removed from the Software Center!** Please "
 "contact customer support if you need to remove an installed module."
@@ -93,80 +306,11 @@ msgstr ""
 "Se dovesse essere necessario rimuovere un modulo installato vi invitiamo a "
 "contattare il supporto tecnico."
 
-#: ../../packages.rst:54 ../../packages.rst:57
-msgid "Software updates"
-msgstr "Aggiornamenti software"
-
-#: ../../packages.rst:56 ../../packages.rst:59
-msgid ""
-"Updates for the installed software are listed under the :guilabel:`Updates` "
-"tab. A message appears when software updates are available."
-msgstr ""
-"Gli aggiornamenti sono elencati nel tab :guilabel:`Aggiornamenti`. Quando ci"
-" sono aggiornamenti disponibili appare un messaggio apposito."
-
-#: ../../packages.rst:61 ../../packages.rst:64
-msgid ""
-"Updates released from upstream (CentOS) are automatically available on "
-"|product|. On every minor release of CentOS, for example when updating from "
-"7.3.1611 to 7.4.1708, a banner is shown inside the Software Center to inform"
-" the user about the new release."
-msgstr ""
-"Gli aggiornamenti rilasciati upstream (CentOS) sono automaticamente "
-"disponibili su |product|. Ad ogni minor release di CentOS, ad esempio quando"
-" si aggiorna dal 7.3.1611 al 7.4.1708, viene mostrato un banner all'interno "
-"del Software Center per informare l'utente del rilascio della nuova "
-"versione."
-
-#: ../../packages.rst:65 ../../packages.rst:68
-msgid ""
-"Even if upstream updates can be considered safe, users should check "
-"Community forum (https://community.nethserver.org), to be informed about new"
-" changes."
-msgstr ""
-"Anche se gli aggiornamenti upstream possono essere considerati sicuri, gli "
-"utenti dovrebbero consultare il forum Community "
-"(https://community.nethserver.org) per raccogliere informazioni relative "
-"alle nuove modifiche introdotte."
-
-#: ../../packages.rst:68 ../../packages.rst:71
-msgid "More info on upstream updates:"
-msgstr "Maggiori informazioni sugli aggiornamenti upstream:"
-
-#: ../../packages.rst:70 ../../packages.rst:73
-msgid "https://wiki.centos.org/FAQ/General"
-msgstr "https://wiki.centos.org/FAQ/General"
-
-#: ../../packages.rst:71 ../../packages.rst:74
-msgid "https://access.redhat.com/support/policy/updates/errata/"
-msgstr "https://access.redhat.com/support/policy/updates/errata/"
-
-#: ../../packages.rst:72 ../../packages.rst:75
-msgid "https://access.redhat.com/security/updates/backporting"
-msgstr "https://access.redhat.com/security/updates/backporting"
-
-#: ../../packages.rst:73 ../../packages.rst:76
-msgid "https://access.redhat.com/security/"
-msgstr "https://access.redhat.com/security/"
-
-#: ../../packages.rst:76 ../../packages.rst:79
-msgid ""
-"Regularly update the installed software to fix bugs, security issues and "
-"receive new features."
-msgstr ""
-"Applicare regolarmente gli aggiornamenti per fissare bug, problemi di "
-"sicurezza  e installare nuove funzionalità."
-
-#: ../../packages.rst:80 ../../packages.rst:83
-msgid "Updates will be automatically installed by a scheduled procedure."
-msgstr ""
-"Gli update disponibili verranno installati da una procedura automatica."
-
-#: ../../packages.rst:87 ../../packages.rst:90
+#: ../../packages.rst:183
 msgid "List of installed packages"
 msgstr "Lista dei pacchetti installati"
 
-#: ../../packages.rst:89 ../../packages.rst:92
+#: ../../packages.rst:185
 msgid ""
 "The complete list of installed RPM packages is available under "
 ":guilabel:`Installed > Packages`."
@@ -174,7 +318,7 @@ msgstr ""
 "La lista completa dei pacchetti RPM installati è disponibile nel tab "
 ":guilabel:`Installati`."
 
-#: ../../packages.rst:92 ../../packages.rst:95
+#: ../../packages.rst:188
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
 "installed into the system with the full package version."
@@ -182,11 +326,11 @@ msgstr ""
 "La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
 "installati con la versione completa del pacchetto."
 
-#: ../../packages.rst:98 ../../packages.rst:101
+#: ../../packages.rst:194
 msgid "Additional languages"
 msgstr "Lingue aggiuntive"
 
-#: ../../packages.rst:100 ../../packages.rst:103
+#: ../../packages.rst:196
 msgid ""
 "The Server Manager allows selecting the interface language at the login "
 "screen. Only installed languages are listed."
@@ -194,10 +338,37 @@ msgstr ""
 "Il Server Manager permette di selezionare la lingue dell'interfaccia al "
 "momento del login. Sono elencate solo le lingue installate."
 
-#: ../../packages.rst:103 ../../packages.rst:106
+#: ../../packages.rst:199
 msgid ""
 "In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
 "install the desired languages."
 msgstr ""
 "Nel tab :guilabel:`Disponibili`, selezionare la categoria :guilabel:`Lingue`"
 " e installare le lingue desiderate."
+
+#: ../../packages.rst:204
+msgid "References"
+msgstr ""
+
+#: ../../packages.rst:205
+msgid "RPM Package Manager -- http://rpm.org"
+msgstr ""
+
+#: ../../packages.rst:206
+msgid "NethServer -- http://www.nethserver.org"
+msgstr ""
+
+#: ../../packages.rst:207
+msgid ""
+"CentOS -- Community ENTerprise Operating System https://www.centos.org/"
+msgstr ""
+
+#: ../../packages.rst:208
+msgid ""
+"EPEL -- Extra Packages for Enterprise Linux "
+"https://fedoraproject.org/wiki/EPEL"
+msgstr ""
+
+#: ../../packages.rst:212
+msgid "NethServer community forum -- http://community.nethserver.org"
+msgstr ""
