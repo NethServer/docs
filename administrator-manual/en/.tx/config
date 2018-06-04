@@ -126,13 +126,6 @@ source_lang = en
 type = PO
 
 
-[docs-v7.webtop4]
-file_filter = locale/<lang>/LC_MESSAGES/webtop4.po
-source_file = _build/locale/webtop4.pot
-source_lang = en
-type = PO
-
-
 [docs-v7.webmail]
 file_filter = locale/<lang>/LC_MESSAGES/webmail.po
 source_file = _build/locale/webmail.pot
@@ -185,13 +178,6 @@ type = PO
 [docs-v7.phone_home]
 file_filter = locale/<lang>/LC_MESSAGES/phone_home.po
 source_file = _build/locale/phone_home.pot
-source_lang = en
-type = PO
-
-
-[docs-v7.webvirtmgr]
-file_filter = locale/<lang>/LC_MESSAGES/webvirtmgr.po
-source_file = _build/locale/webvirtmgr.pot
 source_lang = en
 type = PO
 

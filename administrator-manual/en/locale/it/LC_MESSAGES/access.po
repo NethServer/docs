@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../access.rst:16 ../../access.rst:19
+#: ../../access.rst:9
 msgid "Accessing the Server Manager"
 msgstr "Accesso al Server Manager"
 
-#: ../../access.rst:18 ../../access.rst:21
+#: ../../access.rst:11
 msgid ""
 "|product| can be configured using the :dfn:`Server Manager` web interface. "
 "You need a web browser like Mozilla Firefox or Google Chrome to access the "
@@ -44,7 +44,7 @@ msgstr ""
 "*a.b.c.d* e *server_name* rispettivamente con l'indirizzo IP del server e il"
 " nome del server utilizzato durante l'installazione."
 
-#: ../../access.rst:23 ../../access.rst:26
+#: ../../access.rst:16
 msgid ""
 "If the web server module is installed, you can also access the web interface"
 " using this address ``https://server_name/server-manager``."
@@ -52,7 +52,7 @@ msgstr ""
 "Se il modulo web server è installato, l’interfaccia web è raggiungibile "
 "anche all’indirizzo ``https://server_name/server-manager``."
 
-#: ../../access.rst:25 ../../access.rst:28
+#: ../../access.rst:18
 msgid ""
 "The Server Manager uses self-signed SSL certificates. You should explicitly "
 "accept them the first time you access the server. The connection is safe and"
@@ -62,11 +62,11 @@ msgstr ""
 "necessario accettare esplicitamente tali certificati la prima volta che si "
 "accede al server. La connessione è comunque sicura e cifrata."
 
-#: ../../access.rst:30 ../../access.rst:33
+#: ../../access.rst:23
 msgid "Login"
 msgstr "Login"
 
-#: ../../access.rst:32 ../../access.rst:35
+#: ../../access.rst:25
 msgid ""
 "The login page allows selecting an alternative language among those already "
 "installed on the system. After logging in, go to the :ref:`software-center-"
@@ -77,7 +77,7 @@ msgstr ""
 ":ref:`software-center-section` per installare il supporto a lingue "
 "aggiuntive."
 
-#: ../../access.rst:36 ../../access.rst:39
+#: ../../access.rst:29
 msgid ""
 "The login page will give you a trusted access to the web interface. Log in "
 "as **root** and type the password chosen during |product| installation."
@@ -86,7 +86,7 @@ msgstr ""
 "Accedere come **root** e digitare la password scelta durante l'installazione"
 " di |product|."
 
-#: ../../access.rst:41 ../../access.rst:44
+#: ../../access.rst:34
 msgid ""
 "The *unattended* install procedure sets the root password to the default "
 "``Nethesis,1234``."
@@ -94,11 +94,11 @@ msgstr ""
 "La procedura di installazione *unattended* imposta la password di *root* al "
 "valore ``Nethesis,1234``."
 
-#: ../../access.rst:47 ../../access.rst:50
+#: ../../access.rst:40
 msgid "First configuration wizard"
 msgstr "Wizard di prima configurazione"
 
-#: ../../access.rst:49 ../../access.rst:52
+#: ../../access.rst:42
 msgid ""
 "The first time **root** logs in, the *First configuration wizard* procedure "
 "is displayed."
@@ -106,7 +106,7 @@ msgstr ""
 "La procedura *Wizard di prima configurazione* viene mostra al primo accesso "
 "all'interfaccia dell'utente *root*."
 
-#: ../../access.rst:52 ../../access.rst:55
+#: ../../access.rst:45
 msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
@@ -114,7 +114,7 @@ msgstr ""
 "Se la password di root è ancora quella predefinito, è necessario "
 "modificarla."
 
-#: ../../access.rst:54 ../../access.rst:57
+#: ../../access.rst:47
 msgid ""
 "It is possible to restore a **configuration backup**. Refer to :ref"
 ":`disaster-recovery-section` for more information."
@@ -123,35 +123,35 @@ msgstr ""
 "della configurazione*. Fare rifermento alla sezione :ref:`disaster-recovery-"
 "section` per maggiori dettagli."
 
-#: ../../access.rst:57 ../../access.rst:60
+#: ../../access.rst:50
 msgid "Otherwise the wizard procedure helps on setting up:"
 msgstr "In alternativa la procedura consente di configurare:"
 
-#: ../../access.rst:59 ../../access.rst:62
+#: ../../access.rst:52
 msgid "Host name"
 msgstr "Nome host"
 
-#: ../../access.rst:60 ../../access.rst:63
+#: ../../access.rst:53
 msgid ":ref:`Date and time zone <date-time-section>`"
 msgstr ":ref:`Data e fuso orario<date-time-section>`"
 
-#: ../../access.rst:61 ../../access.rst:64
+#: ../../access.rst:54
 msgid "SSH port"
 msgstr "Porta SSH"
 
-#: ../../access.rst:62 ../../access.rst:65
+#: ../../access.rst:55
 msgid ":ref:`Smarthost configuration <smarthost-configuration>`"
 msgstr ":ref:`La configurazione dello smarthost <smarthost-configuration>`"
 
-#: ../../access.rst:63 ../../access.rst:66
+#: ../../access.rst:56
 msgid ":ref:`Usage statistics <phonehome-section>`"
 msgstr ":ref:`Statistiche d'uso <phonehome-section>`"
 
-#: ../../access.rst:66 ../../access.rst:69
+#: ../../access.rst:59
 msgid "Change the current password"
 msgstr "Cambiare la password"
 
-#: ../../access.rst:68 ../../access.rst:71
+#: ../../access.rst:61
 msgid ""
 "You can change the root password from the web interface by going to the "
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
@@ -161,11 +161,11 @@ msgstr ""
 "sull'etichetta :guilabel:`root@host.domain.com` nell'angolo in alto a destra"
 " dello schermo e cliccando su :guilabel:`Profilo`."
 
-#: ../../access.rst:74 ../../access.rst:77
+#: ../../access.rst:67
 msgid "Logout"
 msgstr "Logout"
 
-#: ../../access.rst:76 ../../access.rst:79
+#: ../../access.rst:69
 msgid ""
 "Terminate the current Server Manager session by going to the "
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
@@ -174,3 +174,30 @@ msgstr ""
 "Per terminare la sessione corrente del Server Manager andare sull'etichetta "
 ":guilabel:`root@host.domain.com` nell'angolo in alto a destra dello schermo "
 "e cliccare su :guilabel:`Logout`."
+
+#: ../../access.rst:74
+msgid "Session timeouts"
+msgstr ""
+
+#: ../../access.rst:76
+msgid ""
+"By default (starting from |product| 7.5.1804), a Server Manager session "
+"terminates after **15 minutes of inactivity** and expires after **8 hours "
+"after the login**."
+msgstr ""
+
+#: ../../access.rst:80
+msgid ""
+"The following shell command sets 15 minutes of idle timeout, and 24 hours of"
+" maximum session life time. Time is expressed in seconds: ::"
+msgstr ""
+
+#: ../../access.rst:85
+msgid "To disable the timeouts ::"
+msgstr ""
+
+#: ../../access.rst:89
+msgid ""
+"The new timeout values will affect new sessions. They do not change any "
+"active session."
+msgstr ""

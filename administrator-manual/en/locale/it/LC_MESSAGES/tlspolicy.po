@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"POT-Creation-Date: 2018-06-01 09:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../tlspolicy.rst:12 ../../tlspolicy.rst:15
+#: ../../tlspolicy.rst:5
 msgid "TLS policy"
 msgstr "TLS policy"
 
-#: ../../tlspolicy.rst:14 ../../tlspolicy.rst:17
+#: ../../tlspolicy.rst:7
 msgid ""
 "The :guilabel:`TLS policy` page controls how individual services configure "
 "the Transport Layer Security (TLS) protocol, by selecting a *policy "
@@ -39,7 +39,7 @@ msgstr ""
 "configurano il protocollo TLS (Transport Layer Security), selezionando un "
 "*identificativo di policy*."
 
-#: ../../tlspolicy.rst:17 ../../tlspolicy.rst:20
+#: ../../tlspolicy.rst:10
 msgid ""
 "Each module implementation decides how to implement a specific policy "
 "identifier, providing a trade off between security and client compatibility."
@@ -52,84 +52,92 @@ msgstr ""
 "alla sicurezza, mentre quelle più vecchie offrono una migliore compatibilità"
 " con i vecchi client."
 
-#: ../../tlspolicy.rst:22 ../../tlspolicy.rst:25
+#: ../../tlspolicy.rst:15
 msgid "The following sections describe each policy identifier."
 msgstr "Le seguenti sezioni descrivono ciascun identificatore di policy."
 
-#: ../../tlspolicy.rst:25 ../../tlspolicy.rst:28
+#: ../../tlspolicy.rst:18
 msgid "Policy 2018-03-30"
 msgstr "Policy 2018-03-30"
 
-#: ../../tlspolicy.rst:34 ../../tlspolicy.rst:37
+#: ../../tlspolicy.rst:20
+msgid ""
+"The goal of this policy is to harden the cipher set provided by the default "
+"upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25 "
+"clients. It does not support ECC certificates."
+msgstr ""
+
+#: ../../tlspolicy.rst:31
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:37 ../../tlspolicy.rst:53
-#: ../../tlspolicy.rst:31 ../../tlspolicy.rst:40 ../../tlspolicy.rst:56
+#: ../../tlspolicy.rst:25 ../../tlspolicy.rst:34 ../../tlspolicy.rst:50
 msgid ""
 "See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 msgstr ""
 "Vedi https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 
-#: ../../tlspolicy.rst:29 ../../tlspolicy.rst:38 ../../tlspolicy.rst:56
-#: ../../tlspolicy.rst:32 ../../tlspolicy.rst:41 ../../tlspolicy.rst:59
+#: ../../tlspolicy.rst:26 ../../tlspolicy.rst:35 ../../tlspolicy.rst:53
 msgid "Cipher suite ::"
 msgstr "Cipher suite ::"
 
-#: ../../tlspolicy.rst:33 ../../tlspolicy.rst:42 ../../tlspolicy.rst:36
-#: ../../tlspolicy.rst:45
+#: ../../tlspolicy.rst:30 ../../tlspolicy.rst:39
 msgid "Disabled SSLv2 and SSLv3"
 msgstr "Disabilita SSLv2 e SSLv3"
 
-#: ../../tlspolicy.rst:34 ../../tlspolicy.rst:37
+#: ../../tlspolicy.rst:31
 msgid ""
-"Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`Default "
-"upstream policy`)"
+"Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-"
+"default`)"
 msgstr ""
-"Ignora le impostazioni di ``httpd/SSLCipherSuite`` (vedi :ref:`Default "
-"upstream policy`)"
 
-#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:45
+#: ../../tlspolicy.rst:39
 msgid "Dovecot"
 msgstr "Dovecot"
 
-#: ../../tlspolicy.rst:50 ../../tlspolicy.rst:53
+#: ../../tlspolicy.rst:47
 msgid "OpenSSH"
 msgstr "OpenSSH"
 
-#: ../../tlspolicy.rst:45 ../../tlspolicy.rst:48
+#: ../../tlspolicy.rst:42
 msgid "See https://github.com/NethServer/nethserver-openssh/pull/6"
 msgstr "Vedi https://github.com/NethServer/nethserver-openssh/pull/6"
 
-#: ../../tlspolicy.rst:46 ../../tlspolicy.rst:49
+#: ../../tlspolicy.rst:43
 msgid "Configuration snippet ::"
 msgstr "Configuration snippet ::"
 
-#: ../../tlspolicy.rst:62 ../../tlspolicy.rst:65
+#: ../../tlspolicy.rst:59
 msgid "Postfix"
 msgstr "Postfix"
 
-#: ../../tlspolicy.rst:54 ../../tlspolicy.rst:57
+#: ../../tlspolicy.rst:51
 msgid "Use TLS in outbound connections, if remote server supports it"
 msgstr ""
 "Utilizza TLS per le connessioni in uscita, se il server remoto lo supporta"
 
-#: ../../tlspolicy.rst:55 ../../tlspolicy.rst:58
+#: ../../tlspolicy.rst:52
 msgid "Disable SSLv2 and SSLv3 on submission ports"
 msgstr "Disabilita SSLv2 e SSLv3 sulle porte di submission"
 
-#: ../../tlspolicy.rst:60 ../../tlspolicy.rst:63
+#: ../../tlspolicy.rst:57
 msgid "Exclude ciphers ::"
 msgstr "Exclude ciphers ::"
 
-#: ../../tlspolicy.rst:65 ../../tlspolicy.rst:68
+#: ../../tlspolicy.rst:64
 msgid "Default upstream policy"
 msgstr "Politica upstream predefinita"
 
-#: ../../tlspolicy.rst:67 ../../tlspolicy.rst:70
+#: ../../tlspolicy.rst:66
 msgid ""
 "The goal of this policy is retaining upstream settings. This is the original"
 " goal since |product| 7."
 msgstr ""
 "L'obiettivo di questa policy è mantenere le impostazioni upstream. Questo è "
 "l'obiettivo principale dall'avvento di |product| 7."
+
+#: ../../tlspolicy.rst:69
+msgid ""
+"This policy allows to customize ``httpd`` (Apache) with a given cipher list,"
+" by issuing the following  commands: ::"
+msgstr ""

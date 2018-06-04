@@ -35,11 +35,10 @@ The firewall has the following built-in zones, ordered from the most to the leas
 * *blue*: guest network.  Hosts in this network can access orange and red zones, can't access green zone
 * *orange*: DMZ network. Hosts in this network can access red zone, can't access green and blue zones
 * *red*: external/internet networks.  Hosts in this network can access only firewall zone
-* a: (not implemented yet) traffic from/to this zone must be explicitly allowed
 
 There is also a special *firewall* zone which represents the firewall itself. The firewall can access any other zone. 
 
-Each network interface with a configured role is a firewall zone. Roles are mapped to Shorewall zone as:
+Each network interface with a configured role is a firewall zone. Roles are mapped to Shorewall zones as:
 
 * green -> loc
 * red -> net
@@ -58,7 +57,6 @@ General configuration
 Properties of ``firewall`` key inside ``configuration`` db:
 
 * ``event``: event to call when ``firewall-adjust`` event is fired
-* ``tc``: traffic shape mode (see below)
 * ``ExternalPing``: if enabled, allow ping responses on external interface
 * ``WanMode``: multi-wan mode. Default is ``balance``, can be:
 
@@ -76,18 +74,30 @@ Properties of ``firewall`` key inside ``configuration`` db:
 * ``NotifyWan``: can be ``enabled`` or ``disabled``, if ``enabled`` a mail is sent every time a provider changes its own state
 * ``NotifyWanFrom``: sender address for mails sent if NotifyWAN is set to enabled
 * ``NotifyWanTo``: recipient address for mails sent if NotifyWAN is set to enabled
+* ``TCLinklayer``: default empty (map to ``ethernet``), can contains all information about connections overheads
+  See https://firehol.org/fireqos-manual/fireqos-params-class/#linklayer-linklayer-name-ethernet-atm
 
 
 Example
 
 ::
 
-  firewall=configuration
-      event=nethserver-firewall-base-save
-      tc=Simple
-      nfq=disabled
-      WanMode=balance
-      Policy=permissive
+ firewall=configuration
+    CheckIP=8.8.8.8,208.67.222.222
+    Docker=disabled
+    ExternalPing=enabled
+    HairpinNat=disabled
+    MACValidation=disabled
+    MACValidationPolicy=drop
+    MaxNumberPacketLoss=10
+    MaxPercentPacketLoss=50
+    NotifyWan=disabled
+    NotifyWanFrom=root@localhost
+    NotifyWanTo=root@localhost
+    PingInterval=5
+    Policy=permissive
+    TCLinklayer=
+    WanMode=balance
 
 
 Events
@@ -344,8 +354,8 @@ Each record has:
 * ``oriDst``: original destination ip, for example alias for a wan interface. If empty, the port forward is valid for all red interface
 * ``description``: optional description
 
-NAT 1:1
-=======
+Source NAT (sNAT)
+=================
 
 All NAT one-to-one configurations are stored in ``networks`` db.
 
@@ -366,18 +376,16 @@ More information are available here: http://shorewall.net/NAT.htm
 Traffic shaping
 ================
 
-Traffic shaping is implemented using the Shorewall simple traffic shaping. See: http://www.shorewall.net/simple_traffic_shaping.html
-
-The feature is controlled by ``tc`` property in ``firewall`` key from ``configuration`` db. Possible values are:
-
-* Simple: default
-* No: disabled
-
-See TC_ENABLED at http://shorewall.net/manpages/shorewall.conf.html .
+Traffic shaping is implemented using Shorewall mangle and FireQOS: each mangle rule sets a well-known marker,
+markers are used to match traffic inside FireQOS tc classes. 
 
 The firewall needs to know how much inbound and outbound bandwidth has a red interface.
 The bandwidth value (expressed in kbit) is stored inside ``FwInBandwidth`` and ``FwOutBandwidth`` properties, wich are
 parts of the network interface record inside the ``networks`` db.
+
+FireQOS tutorial suggests to use 90% of the declared bandwidth to shape the inbound traffic faster.
+
+On red interfaces with ``FwInBandwidth`` and ``FwOutBandwidth`` set, ethernet offloading is automatically disabled.
 
 Example: ::
 
@@ -394,11 +402,39 @@ Example: ::
 All traffic shaping rules are saved inside the ``fwrules`` database with the same format.
 Valid actions for traffic shaping rules are:
 
-- ``priority;high``: set the priority to high (actually the value is normalized to 2 - medium)
-- ``priority;low``: set the priority to low
+- ``class;<name>``: set associated tc class. There are 2 built-in classes:
+  - ``high``: set the priority to high
+  - ``low``: set the priority to low
 - ``provider;<name>``: force the traffic to the provider specified by ``name``
 
+tc classess
+-----------
+
+tc classes are saved inside the ``tc`` database with type ``class``.
+
+Each tc class has the following properties:
+
+- ``Description``: optional class description (used only in the UI)
+- ``Mark``: integer value which identify the marker used for this class. Maximum is ``63``
+- ``MaxInputRate``: maximum download rate, expressed in percentage of the total download bandwidth
+- ``MaxOutputRate``: maximum upload rate, expressed in percentage of the total upload bandwidth
+- ``MinInputRate``: reserved download rate, expressed in percentage of the total download bandwidth
+- ``MinOutputRate``: reserved upload rate, expressed in percentage of the total upload bandwidth
+
+
+Example: ::
+
+ high=class
+    Description=
+    Mark=2
+    MaxInputRate=
+    MaxOutputRate=
+    MinInputRate=10
+    MinOutputRate=10
+
+
 Assumptions and limitations
+---------------------------
 
 1. All nDPI traffic is marked in forward chain.
    When a nDPI protocol is found, the whole connection is marked.
@@ -415,6 +451,11 @@ Assumptions and limitations
 
 6. Prerouting table is reserved by Shorewall for handlind the multi wan scenario.
 
+See also: 
+
+* https://github.com/firehol/firehol/wiki/FireQOS
+* https://github.com/firehol/firehol/wiki/FireQOS-Tutorial
+* http://shorewall.net/manpages/shorewall.conf.html
 
 Divert rules
 ------------

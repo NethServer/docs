@@ -42,7 +42,6 @@ Developer Manual
    :maxdepth: 2
    :caption: Implementation
 
-   filesystem_options
    dns
    dhcp
    random_url
@@ -66,7 +65,6 @@ Developer Manual
    
    building_rpms
    building_iso
-   repositories
    package_groups
 
 .. toctree::
@@ -79,7 +77,6 @@ Developer Manual
    collectd
    phone_home
    content_filter
-   webvirtmgr
    duc
    snmp
    tomcat7

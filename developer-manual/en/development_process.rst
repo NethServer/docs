@@ -384,10 +384,10 @@ ISO releases
 Usually, the NethServer project releases a new ISO image in the following cases:
 
 * when the upstream project releases a new ISO image. The NethServer ISO is
-rebased on it.
+  rebased on it.
 
 * when packages bundled in the ISO receive new features that affect the
-installation procedure and/or the initial system configuration.
+  installation procedure and/or the initial system configuration.
 
 The NethServer ISO is almost equivalent to the upstream one, except for the
 following points:

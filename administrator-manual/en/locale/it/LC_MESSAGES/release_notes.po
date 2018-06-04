@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,66 +25,134 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../release_notes.rst:10 ../../release_notes.rst:13
+#: ../../release_notes.rst:5
 msgid "Release notes |version|"
 msgstr "Note di rilascio |version|"
 
-#: ../../release_notes.rst:12 ../../release_notes.rst:15
+#: ../../release_notes.rst:7
 msgid "|product| release |version|"
 msgstr "|product| versione |version|"
 
-#: ../../release_notes.rst:16 ../../release_notes.rst:19
-msgid "ISO release 7.4.1708 - 2017-10-26"
-msgstr "Rilascio ISO 7.4.1708 - 26/10/2017"
+#: ../../release_notes.rst:11
+msgid "ISO release 7.5.1804 \"rc\" - 2018-05-31"
+msgstr ""
 
-#: ../../release_notes.rst:18 ../../release_notes.rst:35
-#: ../../release_notes.rst:21 ../../release_notes.rst:38
+#: ../../release_notes.rst:13 ../../release_notes.rst:32
 msgid ""
-"This release is based on `CentOS 7.4 "
+"This release is based on `CentOS 7 (1804) "
 "<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 msgstr ""
-"Questa versione è basata su `CentOS 7.4 "
-"<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 
-#: ../../release_notes.rst:20 ../../release_notes.rst:37
-#: ../../release_notes.rst:23 ../../release_notes.rst:40
+#: ../../release_notes.rst:15 ../../release_notes.rst:34
 msgid "CentOS 7 will receive security updates until 2024-06-30"
 msgstr "CentOS 7 riceverà aggiornamenti di sicurezza fino al 30/06/2024"
 
-#: ../../release_notes.rst:22 ../../release_notes.rst:25
+#: ../../release_notes.rst:17
 msgid ":ref:`nscom-releases-section`"
 msgstr ":ref:`nscom-releases-section`"
 
-#: ../../release_notes.rst:24 ../../release_notes.rst:27
+#: ../../release_notes.rst:19
 msgid ""
-"List of `changes since 2017-01-30 "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
+"List of `changes "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 msgstr ""
-"Lista delle `principali modifiche dal 30/01/2017 "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 
-#: ../../release_notes.rst:26 ../../release_notes.rst:29
+#: ../../release_notes.rst:21
 msgid ""
 "List of `known bugs "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 msgstr ""
-"Lista di `bug noti "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
 
-#: ../../release_notes.rst:28 ../../release_notes.rst:31
+#: ../../release_notes.rst:23
 msgid ""
 "Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_"
 msgstr "Analisi dei `possibili bug <http://community.nethserver.org/c/bug>`_"
 
-#: ../../release_notes.rst:33 ../../release_notes.rst:36
-msgid "ISO release 7.4.1708"
-msgstr "Rilascio ISO 7.4.1708"
+#: ../../release_notes.rst:25
+msgid "`Project board <https://github.com/orgs/NethServer/projects/1>`_"
+msgstr ""
 
-#: ../../release_notes.rst:41 ../../release_notes.rst:44
+#: ../../release_notes.rst:30
+msgid "ISO release 7.5.1804 rc"
+msgstr ""
+
+#: ../../release_notes.rst:38
+msgid "Major changes on 2018-05-31"
+msgstr ""
+
+#: ../../release_notes.rst:40
+msgid "The :ref:`email-section` module is now based on Rspamd"
+msgstr ""
+
+#: ../../release_notes.rst:42
+msgid ""
+"MX DNS record override for LAN hosts has been removed. Removed "
+"``postfix/MxRecordStatus`` prop"
+msgstr ""
+
+#: ../../release_notes.rst:44
+msgid ""
+"Host name aliases are converted into ``hosts`` DB records. See :ref:`email-"
+"mxrecordstatus`"
+msgstr ""
+
+#: ../../release_notes.rst:46
+msgid ""
+":file:`/etc/fstab` is no longer an expanded template. See :ref"
+":`shared_folders_requirements-section` and :ref:`home_bind-section` for "
+"details"
+msgstr ""
+
+#: ../../release_notes.rst:48
+msgid ""
+"Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant "
+"full control to the creator`"
+msgstr ""
+
+#: ../../release_notes.rst:50
+msgid "Default :ref:`tlspolicy-section` is ``2018-03-30``"
+msgstr ""
+
+#: ../../release_notes.rst:52
+msgid ""
+"Default Server Manager session idle timeout is 60 minutes, session life time"
+" is 8 hours"
+msgstr ""
+
+#: ../../release_notes.rst:54
+msgid ""
+"Quality of Service (QoS) implementation now uses `FireQOS "
+"<https://github.com/firehol/firehol/wiki/FireQOS>`_, current configuration "
+"is automatically migrated. See :ref:`traffic-shaping-section`"
+msgstr ""
+
+#: ../../release_notes.rst:57
+msgid ""
+"The menu entry :guilabel:`Automatic updates` in Server Manager was removed. "
+"Automatic updates are now configured from :guilabel:`Software center > "
+"Configure`. From the same panel it is possible to select the "
+":guilabel:`Software updates origin`. See :ref:`software-updates-section`"
+msgstr ""
+
+#: ../../release_notes.rst:61
+msgid ""
+"The :guilabel:`NethServer subscription` module is available by default in "
+"new installations. Run the following command to update the base module set "
+"on existing installations: ``yum update @nethserver-iso``"
+msgstr ""
+
+#: ../../release_notes.rst:64
+msgid ""
+"The WebVirtMgr project is no longer maintained and the corresponding module "
+"has been removed along with nethserver-libvirt package. See :ref"
+":`virtual_machines-section` chapter for details on how to use virtualization"
+msgstr ""
+
+#: ../../release_notes.rst:69
 msgid "Major changes on 2017-10-26"
 msgstr "Cambiamenti principali al 26/10/2017"
 
-#: ../../release_notes.rst:43 ../../release_notes.rst:46
+#: ../../release_notes.rst:71
 msgid ""
 "ISO release 7.4.1708 \"final\" replaces the old ISOs 7.4.1708 \"beta1\" and "
 "7.3.1611 \"update 1\""
@@ -92,7 +160,7 @@ msgstr ""
 "Rilascio della ISO 7.4.1708 \"final\" che sostituisce le precedenti ISO "
 "7.4.1708 \"beta1\" e 7.3.1611 \"update 1\""
 
-#: ../../release_notes.rst:45 ../../release_notes.rst:48
+#: ../../release_notes.rst:73
 msgid ""
 "The local AD account provider applies updates to the Samba DC instance "
 "automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_) "
@@ -101,7 +169,7 @@ msgstr ""
 "Il provider di account AD locale applica automaticamente gli aggiornamenti all'istanza Samba DC (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)\n"
 "La versione più recente di Samba DC è la 4.6.8"
 
-#: ../../release_notes.rst:49 ../../release_notes.rst:52
+#: ../../release_notes.rst:77
 msgid ""
 "The Software center page warns when a new upstream release is available "
 "(`#5355 <https://github.com/NethServer/dev/issues/5355>`_)"
@@ -109,11 +177,11 @@ msgstr ""
 "La pagina del Softeware center avvisa quando una nuova upstream release è "
 "disponibile (`#5355 <https://github.com/NethServer/dev/issues/5355>`_)"
 
-#: ../../release_notes.rst:52 ../../release_notes.rst:55
+#: ../../release_notes.rst:80
 msgid "Added FreePBX 14 module"
 msgstr "Aggiunto il modulo FreePBX 14"
 
-#: ../../release_notes.rst:54 ../../release_notes.rst:57
+#: ../../release_notes.rst:82
 msgid ""
 "Squid has been patched for a smoother web navigation experience when using "
 "SSL transparent proxy"
@@ -121,7 +189,7 @@ msgstr ""
 "Squid è stato patchato per una migliore esperienza di navigazione web in "
 "caso di utilizzo del proxy trasparente SSL"
 
-#: ../../release_notes.rst:56 ../../release_notes.rst:59
+#: ../../release_notes.rst:84
 msgid ""
 "Ntopng 3 replaces Bandwidthd, the Server Manager has a new \"top talkers\" "
 "page which tracks hosts network usage"
@@ -129,105 +197,105 @@ msgstr ""
 "Ntopng 3 sostituisce Bandwidthd, il Server Manager contiene una nuova pagina"
 " \"top talkers\" che traccia l'utilizzo della banda da parte degli host"
 
-#: ../../release_notes.rst:59 ../../release_notes.rst:62
+#: ../../release_notes.rst:87
 msgid "Suricata can be configured with multiple categories rules"
 msgstr "Suricata può essere configurato con molteplici categorie di regole"
 
-#: ../../release_notes.rst:61 ../../release_notes.rst:64
+#: ../../release_notes.rst:89
 msgid "EveBox can report traffic anomalies detected by Suricata"
 msgstr "EveBox può segnalare anomalie di traffico rilevate da Suricata"
 
-#: ../../release_notes.rst:63 ../../release_notes.rst:66
+#: ../../release_notes.rst:91
 msgid "Nextcloud 12.0.3"
 msgstr "Nextcloud 12.0.3"
 
-#: ../../release_notes.rst:65 ../../release_notes.rst:68
+#: ../../release_notes.rst:93
 msgid "Web antivirus based on ICAP instead of ECAP"
 msgstr "Web antivirus basato su ICAP invece che su ECAP"
 
-#: ../../release_notes.rst:67 ../../release_notes.rst:70
+#: ../../release_notes.rst:95
 msgid "Web filters: ufdbGuard updated to 1.33.4, small UI improvements on web"
 msgstr ""
 "Filtri web: ufdbGuard aggiornato alla versione 1.33.4, apportati piccoli "
 "miglioramenti UI all'interfaccia web"
 
-#: ../../release_notes.rst:69 ../../release_notes.rst:72
+#: ../../release_notes.rst:97
 msgid "Diagtools: added speedtest"
 msgstr "Strumenti di diagnostica: aggiunto speedtest"
 
-#: ../../release_notes.rst:71 ../../release_notes.rst:74
+#: ../../release_notes.rst:99
 msgid "ufdbGuard updated to release 1.33.4"
 msgstr "ufdbGuard aggiornato alla versione 1.33.4"
 
-#: ../../release_notes.rst:73 ../../release_notes.rst:76
+#: ../../release_notes.rst:101
 msgid "WebTop4 has been removed"
 msgstr "WebTop4 è stato rimosso"
 
-#: ../../release_notes.rst:76 ../../release_notes.rst:79
+#: ../../release_notes.rst:104
 msgid "Major changes on 2017-07-31"
 msgstr "Cambiamenti principali dal 31/07/2017"
 
-#: ../../release_notes.rst:78 ../../release_notes.rst:81
+#: ../../release_notes.rst:106
 msgid "ISO release 7.3.1611 \"update 1\" replaces the previous ISO 7.3.1611 \"Final\""
 msgstr ""
 "Rilascio della ISO 7.3.1611 \"update 1\" che sostituisce la precedente ISO "
 "7.3.1611 \"Final\""
 
-#: ../../release_notes.rst:80 ../../release_notes.rst:83
+#: ../../release_notes.rst:108
 msgid "Configuration backup page enhancement"
 msgstr "Miglioramento della pagina di backup della configurazione"
 
-#: ../../release_notes.rst:82 ../../release_notes.rst:85
+#: ../../release_notes.rst:110
 msgid "Accounts provider page enhancement"
 msgstr "Miglioramento della pagina degli Account provider"
 
-#: ../../release_notes.rst:84 ../../release_notes.rst:87
+#: ../../release_notes.rst:112
 msgid "Migration from sme8 and upgrade from ns6 procedures"
 msgstr "Procedure di migrazione da sme8 e di aggiornamento da ns6"
 
-#: ../../release_notes.rst:86 ../../release_notes.rst:89
+#: ../../release_notes.rst:114
 msgid "OpenvPN: improve net2net tunnels"
 msgstr "OpenVPN: migliorati tunnel net2net"
 
-#: ../../release_notes.rst:88 ../../release_notes.rst:91
+#: ../../release_notes.rst:116
 msgid "WebTop 5.0.7"
 msgstr "WebTop 5.0.7"
 
-#: ../../release_notes.rst:90 ../../release_notes.rst:93
+#: ../../release_notes.rst:118
 msgid "Backup data: basic WebDAV support for backups and storage stats"
 msgstr "Backup dati: supporto base per backup su WebDAV e statistiche storage"
 
-#: ../../release_notes.rst:92 ../../release_notes.rst:95
+#: ../../release_notes.rst:120
 msgid "UI tweaks for IPSec tunnels"
 msgstr "Ritocchi UI per tunnel IPSec"
 
-#: ../../release_notes.rst:94 ../../release_notes.rst:97
+#: ../../release_notes.rst:122
 msgid "Web proxy: support divert and priority rules"
 msgstr "Proxy web: supporto instradamenti e regole di priorità"
 
-#: ../../release_notes.rst:96 ../../release_notes.rst:99
+#: ../../release_notes.rst:124
 msgid "NextCloud 12"
 msgstr "NextCloud 12"
 
-#: ../../release_notes.rst:98 ../../release_notes.rst:101
+#: ../../release_notes.rst:126
 msgid "Network diagnostic tools page"
 msgstr "Pagina strumenti diagnostici di rete"
 
-#: ../../release_notes.rst:101 ../../release_notes.rst:104
+#: ../../release_notes.rst:129
 msgid "Major changes on 2017-01-30"
 msgstr "Cambiamenti principali dal 30/01/2017"
 
-#: ../../release_notes.rst:103 ../../release_notes.rst:106
+#: ../../release_notes.rst:131
 msgid "ISO release 7.3.1611 \"Final\" replaces the previous ISO 7.3.1611 \"RC4\""
 msgstr ""
 "Rilascio della ISO 7.3.1611 \"Final\" che sostituisce la precedente ISO "
 "7.3.1611 \"RC4\""
 
-#: ../../release_notes.rst:104 ../../release_notes.rst:107
+#: ../../release_notes.rst:132
 msgid "Installer: added new manual installation method"
 msgstr "Installatore: aggiunta modalità di installazione manuale"
 
-#: ../../release_notes.rst:105 ../../release_notes.rst:108
+#: ../../release_notes.rst:133
 msgid ""
 "Account providers: \"administrators\" group has been replaced by \"domain "
 "admins\" group (:ref:`server_manager-section`)"
@@ -235,11 +303,11 @@ msgstr ""
 "Account provider: il gruppo “administrators” è stato sostituito dal gruppo "
 "“domain admins” (:ref:`server_manager-section`)"
 
-#: ../../release_notes.rst:106 ../../release_notes.rst:109
+#: ../../release_notes.rst:134
 msgid "Mail server: fix pseudonym expansion for groups"
 msgstr "Mail server: sistemata l’espansione di pseudonimi per i gruppi"
 
-#: ../../release_notes.rst:107 ../../release_notes.rst:110
+#: ../../release_notes.rst:135
 msgid ""
 "Mail server: enable user shared mailbox by default (:ref"
 ":`enable_shared_folders-section`)"
@@ -247,33 +315,33 @@ msgstr ""
 "Mail server: le caselle di posta condivise sono ora abilitate per default "
 "(:ref:`enable_shared_folders-section`)"
 
-#: ../../release_notes.rst:108 ../../release_notes.rst:111
+#: ../../release_notes.rst:136
 msgid "Mail server: specific per-domain pseudonym now override generic ones"
 msgstr ""
 "Mail server: gli pseudonimi specifici per dominio hanno ora la precedenza su"
 " quelli generici"
 
-#: ../../release_notes.rst:109 ../../release_notes.rst:112
+#: ../../release_notes.rst:137
 msgid "OpenVPN: start VPN clients on boot"
 msgstr "OpenVPN: abilitato l’avvio automatico dei client VPN al boot"
 
-#: ../../release_notes.rst:110 ../../release_notes.rst:113
+#: ../../release_notes.rst:138
 msgid "Web filter: fix group-based profiles"
 msgstr "Filtro web: corretti i profili basati su gruppi"
 
-#: ../../release_notes.rst:111 ../../release_notes.rst:114
+#: ../../release_notes.rst:139
 msgid "Firewall: fix selection of time conditions"
 msgstr "Firewall: corretta la selezione delle condizioni temporali"
 
-#: ../../release_notes.rst:112 ../../release_notes.rst:115
+#: ../../release_notes.rst:140
 msgid "IPS: update configuration for latest pulledpork release"
 msgstr "IPS: configurazione aggiornata per l’ultima release di pulledpork"
 
-#: ../../release_notes.rst:116 ../../release_notes.rst:119
+#: ../../release_notes.rst:144
 msgid "Upgrading |product| 6 to |product| |version|"
 msgstr "Aggiornare |product| 6 a |product| |version|"
 
-#: ../../release_notes.rst:118 ../../release_notes.rst:121
+#: ../../release_notes.rst:146
 msgid ""
 "It is possible to upgrade the previous major release of |product| to "
 "|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
@@ -283,33 +351,32 @@ msgstr ""
 "|version| con la strategia backup/restore. Vedere :ref:`upgrade-section` per"
 " dettagli."
 
-#: ../../release_notes.rst:124 ../../release_notes.rst:127
+#: ../../release_notes.rst:152
 msgid "Server Manager access"
 msgstr "Accesso al Server Manager"
 
-#: ../../release_notes.rst:126 ../../release_notes.rst:129
+#: ../../release_notes.rst:154
 msgid ""
-"If you want to grant Server Manager access to other users than root, please "
-"add the users to the \"domain admins\" group and execute: ::"
+"If you want to grant :ref:`Server Manager access to other users than root "
+"<admin-account-section>`, please add the users to the \"domain admins\" "
+"group and execute: ::"
 msgstr ""
-"Se si desidera abilitare l’accesso al Server Manager ad altri utenti oltre "
-"root, aggiungere gli utenti al gruppo “domain admins” ed eseguire: ::"
 
-#: ../../release_notes.rst:135 ../../release_notes.rst:138
+#: ../../release_notes.rst:163
 msgid "User shared mailbox"
 msgstr "Caselle di posta condivise"
 
-#: ../../release_notes.rst:137 ../../release_notes.rst:140
+#: ../../release_notes.rst:165
 msgid "If you want to enable user shared mailbox, execute: ::"
 msgstr ""
 "Se si desidera abilitare le caselle di posta condivise dagli utenti, "
 "eseguire: ::"
 
-#: ../../release_notes.rst:145 ../../release_notes.rst:148
+#: ../../release_notes.rst:173
 msgid "Discontinued packages"
 msgstr "Pacchetti rimossi"
 
-#: ../../release_notes.rst:147 ../../release_notes.rst:150
+#: ../../release_notes.rst:175
 msgid ""
 "The following packages were available in the previous 6 release and have "
 "been removed in 7:"
@@ -317,15 +384,15 @@ msgstr ""
 "I seguenti pacchetti erano disponibili nella precedente release 6 e sono "
 "stati rimossi nella 7:"
 
-#: ../../release_notes.rst:150 ../../release_notes.rst:153
+#: ../../release_notes.rst:178
 msgid "nethserver-collectd-web: replaced by nethserver-cgp"
 msgstr "nethserver-collectd-web: sostituito con nethserver-cgp"
 
-#: ../../release_notes.rst:151 ../../release_notes.rst:154
+#: ../../release_notes.rst:179
 msgid "nethserver-password: integrated inside nethserver-sssd"
 msgstr "nethserver-password: integrato in nethserver-sssd"
 
-#: ../../release_notes.rst:152 ../../release_notes.rst:155
+#: ../../release_notes.rst:180
 msgid ""
 "nethserver-faxweb2: see the discussion `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
@@ -333,11 +400,11 @@ msgstr ""
 "nethserver-faxweb2: vedere la discussione `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
 
-#: ../../release_notes.rst:153 ../../release_notes.rst:156
+#: ../../release_notes.rst:181
 msgid "nethserver-fetchmail: replaced by getmail"
 msgstr "nethserver-fetchmail: sostituito con getmail"
 
-#: ../../release_notes.rst:154 ../../release_notes.rst:157
+#: ../../release_notes.rst:182
 msgid ""
 "nethserver-ocsinventory, nethserver-adagios: due to compatibility problems "
 "with Nagios, these modules will be mantained only on |product| 6 release"
@@ -346,10 +413,14 @@ msgstr ""
 "compatibilità con Nagios, questi moduli verranno supportati solo su "
 "NethServer 6"
 
-#: ../../release_notes.rst:156 ../../release_notes.rst:159
+#: ../../release_notes.rst:184
 msgid ""
 "nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-"
 "tunnels, L2TP function has been dropped"
 msgstr ""
 "nethserver-ipsec: i tunnel IPSec sono ora implementati in nethserver-ipsec-"
 "tunnels, la funzione L2TP è stata eliminata"
+
+#: ../../release_notes.rst:185
+msgid "nethserver-webvirtmgr"
+msgstr ""

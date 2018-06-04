@@ -128,7 +128,7 @@ Other |product| installation methods
         storage, time zone, keyboard... all settings must be provided
         explicitly.
 
-Standard CentOS installations
+Standard CentOS installation
 
     Use the standard CentOS installation procedure. You can then configure 
     |product| by following the :ref:`installation-centos` section.
@@ -240,6 +240,13 @@ settings at all.  Also the network and storage sections must be configured.
 
 .. _`RHEL 7 installation guide`: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-network-hostname-configuration-x86.html
 
+Known issues
+^^^^^^^^^^^^
+
+- When installing on machines with UEFI firmware, Anaconda could fail on automatic partitioning.
+  To work around the problem, switch to :guilabel:`Manual installation`, or :guilabel:`Standard CentOS installation` then follow :ref:`installation-centos`.
+  In case of installation with software RAID, make sure to manually create UEFI partitions on all boot disks.
+
 .. _installation-unattended:
 
 Unattended mode
@@ -297,7 +304,7 @@ To install the base system, run: ::
 
     To promote to the Enterprise version run the following command: ::
     
-        yum install http://update.nethesis.it/nethserver/7.4.1708/nethserver-register.rpm
+        yum install http://update.nethesis.it/nethserver/7/nethserver-register.rpm
 
     Proceed with :ref:`registration <registration-section>` then run the following command: ::
         

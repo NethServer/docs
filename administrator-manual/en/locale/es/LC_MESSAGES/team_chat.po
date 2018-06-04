@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -24,130 +24,168 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../team_chat.rst:12 ../../team_chat.rst:15
+#: ../../team_chat.rst:5
 msgid "Team chat (Mattermost)"
 msgstr ""
 
-#: ../../team_chat.rst:14 ../../team_chat.rst:17
+#: ../../team_chat.rst:7
 msgid ""
 "The :index:`team chat` module installs Mattermost Team Edition platform "
 "inside |product|."
 msgstr ""
 
-#: ../../team_chat.rst:16 ../../team_chat.rst:19
+#: ../../team_chat.rst:9
 msgid ""
 "Mattermost is an Open Source, private cloud :index:`Slack`-alternative. "
 "Check out the excellent official documentation: "
 "https://docs.mattermost.com/."
 msgstr ""
 
-#: ../../team_chat.rst:19 ../../team_chat.rst:22
+#: ../../team_chat.rst:12
 msgid "Configuration"
 msgstr ""
 
-#: ../../team_chat.rst:21 ../../team_chat.rst:24
+#: ../../team_chat.rst:14
 msgid ""
 "Mattermost installation needs a dedicated virtual host, an FQDN like "
 "``chat.nethserver.org``."
 msgstr ""
 
-#: ../../team_chat.rst:23 ../../team_chat.rst:26
+#: ../../team_chat.rst:16
 msgid ""
 "Before proceeding with the configuration, make sure to create the "
 "corresponding DNS record. If |product| act as the DNS server of your LAN, "
 "please refer to :ref:`dns-section`."
 msgstr ""
 
-#: ../../team_chat.rst:25 ../../team_chat.rst:28
+#: ../../team_chat.rst:18
 msgid ""
 "If your server is using a Let's Encrypt certificate as default, make also "
 "sure to have a corresponding public DNS record. See :ref"
 ":`server_certificate-section` for more info."
 msgstr ""
 
-#: ../../team_chat.rst:27 ../../team_chat.rst:30
+#: ../../team_chat.rst:20
 msgid "How to configure:"
 msgstr ""
 
-#: ../../team_chat.rst:29 ../../team_chat.rst:32
+#: ../../team_chat.rst:22
 msgid "Access :guilabel:`Team chat` page inside the Server Manager"
 msgstr ""
 
-#: ../../team_chat.rst:30 ../../team_chat.rst:33
+#: ../../team_chat.rst:23
 msgid ""
 "Check :guilabel:`Enable Mattermost Team Edition`, then enter a valid FQDN "
 "inside :guilabel:`Virtual host name` field (eg. ``chat.nethserver.org``)"
 msgstr ""
 
-#: ../../team_chat.rst:31 ../../team_chat.rst:34
+#: ../../team_chat.rst:24
 msgid ""
 "Open the entered host name inside the browser, eg: "
 "``https://chat.nethserver.org``. At first access, a wizard will create the "
 "administrator user"
 msgstr ""
 
-#: ../../team_chat.rst:34 ../../team_chat.rst:37
+#: ../../team_chat.rst:27
 msgid "The following features are enabled by default:"
 msgstr ""
 
-#: ../../team_chat.rst:36 ../../team_chat.rst:39
+#: ../../team_chat.rst:29
 msgid "mail notifications"
 msgstr ""
 
-#: ../../team_chat.rst:37 ../../team_chat.rst:40
+#: ../../team_chat.rst:30
 msgid "push notifications for mobile apps"
 msgstr ""
 
-#: ../../team_chat.rst:38 ../../team_chat.rst:41
+#: ../../team_chat.rst:31
 msgid "redirect from HTTP to HTTPS"
 msgstr ""
 
-#: ../../team_chat.rst:42 ../../team_chat.rst:45
+#: ../../team_chat.rst:35
 msgid "Authentication"
 msgstr ""
 
-#: ../../team_chat.rst:44 ../../team_chat.rst:47
+#: ../../team_chat.rst:37
 msgid ""
 "Mattermost authentication is *not* integrated with any Account Provider. The"
-" Mattermost administrator should take care of users and teams creation. To "
-"ease this task, the system administrator can use the :guilabel:`Import "
-"users` button.."
+" Mattermost administrator should take care of users and teams creation."
 msgstr ""
 
-#: ../../team_chat.rst:48 ../../team_chat.rst:51
+#: ../../team_chat.rst:42
+msgid ""
+"The administrator should always use Mattermost wizard to create the admin "
+"user, then send team invitation link to each user."
+msgstr ""
+
+#: ../../team_chat.rst:46
+msgid "Importing users"
+msgstr ""
+
+#: ../../team_chat.rst:48
+msgid ""
+"If the system administrator still needs bulk user creation, he/she can rely "
+"on ``mattermost-bulk-user-create`` command."
+msgstr ""
+
+#: ../../team_chat.rst:50
 msgid "The command will:"
 msgstr ""
 
-#: ../../team_chat.rst:50 ../../team_chat.rst:53
+#: ../../team_chat.rst:52
 msgid ""
 "create a default team named as the Company from :ref:`organization_contacts-"
 "section`"
 msgstr ""
 
-#: ../../team_chat.rst:51 ../../team_chat.rst:54
+#: ../../team_chat.rst:53
 msgid ""
 "read all users from local or remote Account Providers and create them inside"
 " Mattermost"
 msgstr ""
 
-#: ../../team_chat.rst:53 ../../team_chat.rst:56
+#: ../../team_chat.rst:55
 msgid "Please note that:"
 msgstr ""
 
-#: ../../team_chat.rst:55 ../../team_chat.rst:58
+#: ../../team_chat.rst:57
 msgid ""
-"users disabled in the Server Manager, or already existing in Mattermost, "
-"will be skipped"
+"users disabled in the Server Manager or already existing in Mattermost will "
+"be skipped"
 msgstr ""
 
-#: ../../team_chat.rst:56 ../../team_chat.rst:59
+#: ../../team_chat.rst:58
 msgid "a random password will be generated for each user"
 msgstr ""
 
-#: ../../team_chat.rst:60 ../../team_chat.rst:63
+#: ../../team_chat.rst:59
+msgid ""
+"the first imported user will be set as administrator if no admin has been "
+"already created"
+msgstr ""
+
+#: ../../team_chat.rst:61
+msgid "Invocation example: ::"
+msgstr ""
+
+#: ../../team_chat.rst:74
 msgid ""
 "Users are not automatically synced inside Mattermost. Each time a user is "
 "created or removed, remember to execute ``mattermost-bulk-user-create`` "
 "command or manually create the user using Mattermost administration web "
 "interface."
+msgstr ""
+
+#: ../../team_chat.rst:79
+msgid "Forcing a common default password"
+msgstr ""
+
+#: ../../team_chat.rst:81
+msgid ""
+"It's possible to set a default password for each new Mattermost user, just "
+"append the default password to command invocation."
+msgstr ""
+
+#: ../../team_chat.rst:84
+msgid "Example: ::"
 msgstr ""

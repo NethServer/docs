@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../proxy_pass.rst:10 ../../proxy_pass.rst:13
+#: ../../proxy_pass.rst:5
 msgid "Reverse proxy"
 msgstr "Proxy inverso"
 
-#: ../../proxy_pass.rst:12 ../../proxy_pass.rst:15
+#: ../../proxy_pass.rst:7
 msgid ""
 "The :index:`reverse proxy` feature is useful when you want to access "
 "internal sites from the outside network."
@@ -37,37 +37,52 @@ msgstr ""
 "La característica :index:`proxy inverso` es útil cuando se desea acceder a "
 "sitios internos desde la red externa."
 
-#: ../../proxy_pass.rst:15 ../../proxy_pass.rst:18
-msgid "Typical scenario:"
-msgstr "Escenario típico"
+#: ../../proxy_pass.rst:11
+msgid "Path and virtual host rules"
+msgstr ""
 
-#: ../../proxy_pass.rst:17 ../../proxy_pass.rst:20
+#: ../../proxy_pass.rst:13
+msgid ""
+"A web client request can be forwarded to another web server transparently, "
+"according to two types of matching rules:"
+msgstr ""
+
+#: ../../proxy_pass.rst:16
+msgid "Requests matching an URL path, like ``http://mydomain.com/mysite``"
+msgstr ""
+
+#: ../../proxy_pass.rst:17
+msgid ""
+"Requests matching a virtual host name, like ``http://my.secondary-"
+"domain.com``"
+msgstr ""
+
+#: ../../proxy_pass.rst:19
+msgid "The typical scenario for a **URL path rule** is the following:"
+msgstr ""
+
+#: ../../proxy_pass.rst:21 ../../proxy_pass.rst:42
 msgid "|product| is the firewall of your LAN"
 msgstr "|product| es el cortafuegos de su LAN"
 
-#: ../../proxy_pass.rst:19 ../../proxy_pass.rst:22
-msgid "You have a domain http://mydomain.com"
-msgstr "Usted tiene un dominio http://mydomain.com"
-
-#: ../../proxy_pass.rst:21 ../../proxy_pass.rst:24
-msgid ""
-"You would like http://mydomain.com/mysite to forward to the internal server "
-"(internal IP: 192.168.2.100)"
+#: ../../proxy_pass.rst:23
+msgid "You have a domain ``http://mydomain.com``"
 msgstr ""
-"Usted desea que http://mydomain.com/mysite reenvíe al servidor interno (IP "
-"interno: 192.168.2.100)"
 
-#: ../../proxy_pass.rst:24 ../../proxy_pass.rst:27
+#: ../../proxy_pass.rst:25
 msgid ""
-"In this scenario create a new record under :guilabel:`Reverse proxy` page. "
-"Set the :guilabel:`Name` of the item to ``mysite`` and the :guilabel:`Target"
-" URL` to ``http://192.168.2.100``."
+"You would like ``http://mydomain.com/mysite`` to forward to the internal "
+"server (internal IP: 192.168.2.100)"
 msgstr ""
-"En este escenario, cree un nuevo registro en la página :guilabel:`Proxy "
-"inverso`. Configure el :guilabel:`Nombre` del elemento a ``mysite`` y el "
-":guilabel:`URL de destino` a ``http://192.168.2.100``."
 
-#: ../../proxy_pass.rst:28 ../../proxy_pass.rst:31
+#: ../../proxy_pass.rst:28
+msgid ""
+"In this scenario, create a new record under :guilabel:`Reverse proxy > "
+"Paths` page. Set the :guilabel:`Name` of the item to ``mysite`` and the "
+":guilabel:`Target URL` to ``http://192.168.2.100``."
+msgstr ""
+
+#: ../../proxy_pass.rst:32
 msgid ""
 "If only encrypted connections are allowed, enable the :guilabel:`Require SSL"
 " encrypted connection`."
@@ -75,7 +90,7 @@ msgstr ""
 "Si sólo se permiten las conexiones cifradas, habilite :guilabel:`Requiere "
 "conexión cifrada SSL`."
 
-#: ../../proxy_pass.rst:31 ../../proxy_pass.rst:34
+#: ../../proxy_pass.rst:35
 msgid ""
 "Only clients from certain networks can be allowed to connect, by specifying"
 "  a comma-separated list of CIDR networks under the :guilabel:`Access from "
@@ -85,11 +100,43 @@ msgstr ""
 "especificando una lista separada por comas de las redes CIDR bajo el campo "
 ":guilabel:`Acceso desde las redes CIDR`."
 
-#: ../../proxy_pass.rst:37 ../../proxy_pass.rst:40
+#: ../../proxy_pass.rst:39
+msgid ""
+"A **virtual host name rule** can be forward HTTP requests to another web "
+"server, and is defined in the :guilabel:`Reverse proxy > Virtual hosts` "
+"page. For instance:"
+msgstr ""
+
+#: ../../proxy_pass.rst:44
+msgid "You have a domain ``http://my.secondary-domain.com``"
+msgstr ""
+
+#: ../../proxy_pass.rst:46
+msgid ""
+"You would like ``http://my.secondary-domain.com`` to be forwarded to the "
+"internal web server ``192.168.2.101``, port 9000."
+msgstr ""
+
+#: ../../proxy_pass.rst:49
+msgid ""
+"In this scenario, set the :guilabel:`Name` of a new virtual host item to "
+"``my.secondary-domain.com`` and the :guilabel:`Target URL` to "
+"``http://192.168.2.101:9000``."
+msgstr ""
+
+#: ../../proxy_pass.rst:53
+msgid ""
+"Refer also to :ref:`the UI description of Reverse Proxy <ProxyPassUi-"
+"section>` for additional information about advanced features, like "
+":guilabel:`Forward HTTP \"Host\" header to target` and :guilabel`Accept "
+"invalid SSL certificate from target`."
+msgstr ""
+
+#: ../../proxy_pass.rst:59
 msgid "Manual configuration"
 msgstr "Configuración manual"
 
-#: ../../proxy_pass.rst:39 ../../proxy_pass.rst:42
+#: ../../proxy_pass.rst:61
 msgid ""
 "If :guilabel:`Reverse proxy` page is not enough, you can always configure "
 "Apache manually, by creating a new file inside :file:`/etc/httpd/conf.d/` "
@@ -99,21 +146,19 @@ msgstr ""
 "configurar Apache manualmente, mediante la creación de un nuevo archivo "
 "dentro del directorio :file:`/etc/httpd/conf.d/`."
 
-#: ../../proxy_pass.rst:42 ../../proxy_pass.rst:45
+#: ../../proxy_pass.rst:64
 msgid "**Example**"
 msgstr "**Ejemplo**"
 
-#: ../../proxy_pass.rst:44 ../../proxy_pass.rst:47
+#: ../../proxy_pass.rst:66
 msgid ""
 "Create :file:`/etc/httpd/conf.d/myproxypass.conf` file with this content: ::"
 msgstr ""
 "Crear archivo :file:`/etc/httpd/conf.d/myproxypass.conf` con este contenido:"
 " ::"
 
-#: ../../proxy_pass.rst:61 ../../proxy_pass.rst:64
+#: ../../proxy_pass.rst:83
 msgid ""
 "Please refer to official Apache documentation for more information: "
-"http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"
+"https://httpd.apache.org/docs/2.4/mod/mod_proxy.html"
 msgstr ""
-"Consulte la documentación oficial de Apache para obtener más información: "
-"http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"

@@ -1,17 +1,33 @@
+.. _subscription-section:
+
 ======================
 |product| subscription
 ======================
 
-A |product| installation can be registerd to a public or private Dartagnan [#Dartagnan]_ instance,
+A |product| installation can be registered to a public or private Dartagnan [#Dartagnan]_ instance,
 getting access to monitoring portal and stable update repositories.
 
-The |product| Subscription by Nethesis [#Nethesis]_ enables access to a public ready-to-use Dartagnan instance,
-along with immediate professional support services for your |product| deployments.
+.. hint::
 
-Detailed info available: https://my.nethserver.com
+    The |product| Subscription by Nethesis [#Nethesis]_ enables access to a
+    public ready-to-use Dartagnan instance, along with immediate professional
+    support services for your |product| deployments. Detailed info available at
+    https://my.nethserver.com
 
-Register an installation
-========================
+
+Activating a subscription will enable the stable YUM repositories, but will
+disable any other repositories you may have added. You can re-enable any other
+repositories by creating a "template-custom" for
+:file:`/etc/nethserver/eorepo.conf`.
+
+The subscription provider may not accept support requests for the contents of
+custom repositories.
+
+
+.. _register-an-installation:
+
+Registering the system
+======================
 
 1. Access :guilabel:`Subscription` page from the Server Manager
 2. Click on :guilabel:`Subscribe`
@@ -20,7 +36,7 @@ Register an installation
 5. Click on :guilabel:`Register now` button
 
 At the end, the subscription plan name and validity are reported inside the page.
-Monitoring and access to stable repositories are automatically enabeld.
+Monitoring and access to stable repositories are automatically enabled.
 
 .. [#Dartagnan] Dartagnan documentation: https://nethesis.github.io/dartagnan/
 .. [#Nethesis] Nethesis official site: http://www.nethesis.it
@@ -32,5 +48,6 @@ When the subscription expires, or at the end of a trial period, use the followin
 revert any modification to repositories and access the community ones: ::
 
   config setprop subscription Secret '' SystemId ''
-  eorepo base centos-sclo-rh centos-sclo-sclo epel extras nethforge nethserver-base nethserver-updates updates
-  yum clean all
+  signal-event software-repos-save
+
+Refer to :ref:`software-updates-section` for more information about the community updates origin.

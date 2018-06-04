@@ -72,9 +72,7 @@ Modules
 
    backup
    mail
-   mail2
    webmail
-   webtop4
    webtop5
    pop3_proxy
    pop3_connector
@@ -104,6 +102,13 @@ Modules
    dedalo
    freepbx
    hotsync
+   virtual_machines
+   fail2ban
+
+.. toctree::
+   :hidden:
+
+   mail2
 
 .. only:: nscom
 
@@ -113,7 +118,6 @@ Modules
     .. toctree::
        :maxdepth: 1
 
-       webvirtmgr
        sogo
 
 Best practices

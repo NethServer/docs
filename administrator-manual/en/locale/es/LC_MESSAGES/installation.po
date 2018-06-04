@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-12 11:06+0100\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,31 +25,31 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../installation.rst:14 ../../installation.rst:17
+#: ../../installation.rst:7
 msgid "Installation"
 msgstr "Tipos de instalación"
 
-#: ../../installation.rst:20 ../../installation.rst:23
+#: ../../installation.rst:13
 msgid "Minimum requirements"
 msgstr "Requerimientos mínimos"
 
-#: ../../installation.rst:22 ../../installation.rst:25
+#: ../../installation.rst:15
 msgid "Minimum requirements are:"
 msgstr "Los requisitos mínimos son:"
 
-#: ../../installation.rst:24 ../../installation.rst:27
+#: ../../installation.rst:17
 msgid "64 bit CPU (x86_64)"
 msgstr "64 bit CPU (x86_64)"
 
-#: ../../installation.rst:25 ../../installation.rst:28
+#: ../../installation.rst:18
 msgid "1 GB of RAM"
 msgstr "1 GB de RAM"
 
-#: ../../installation.rst:26 ../../installation.rst:29
+#: ../../installation.rst:19
 msgid "10 GB of disk space"
 msgstr "10 GB de espacio en disco"
 
-#: ../../installation.rst:29 ../../installation.rst:32
+#: ../../installation.rst:22
 msgid ""
 "We recommend to use at least 2 disks to setup a RAID 1.  The RAID software "
 "will ensure data integrity in case of a disk failure."
@@ -58,11 +58,11 @@ msgstr ""
 "software RAID garantizará la integridad de los datos en caso de fallo del "
 "disco."
 
-#: ../../installation.rst:37 ../../installation.rst:40
+#: ../../installation.rst:30
 msgid "Hardware compatibility"
 msgstr "Compatibilidad de hardware"
 
-#: ../../installation.rst:39 ../../installation.rst:42
+#: ../../installation.rst:32
 msgid ""
 "|product| is compatible with any hardware certified by Red Hat® Enterprise "
 "Linux® (RHEL®), listed on `hardware.redhat.com "
@@ -72,60 +72,60 @@ msgstr ""
 "Enterprise Linux® (RHEL®), que aparezca en `hardware.redhat.com "
 "<http://hardware.redhat.com/>`__"
 
-#: ../../installation.rst:45 ../../installation.rst:48
+#: ../../installation.rst:38
 msgid "Installation types"
 msgstr "Tipos de instalación"
 
-#: ../../installation.rst:47 ../../installation.rst:50
+#: ../../installation.rst:40
 msgid "|product| supports two installation modes. In short:"
 msgstr "|product| admite dos modos de instalación. En resumen:"
 
-#: ../../installation.rst:49 ../../installation.rst:52
+#: ../../installation.rst:42
 msgid "**Installing from ISO**"
 msgstr "**Instalación desde ISO**"
 
-#: ../../installation.rst:51 ../../installation.rst:54
+#: ../../installation.rst:44
 msgid "Download the ISO image"
 msgstr "Descargar la imagen ISO"
 
-#: ../../installation.rst:52 ../../installation.rst:55
+#: ../../installation.rst:45
 msgid "Prepare a DVD or USB stick"
 msgstr "Preparar un DVD o una memoria USB"
 
-#: ../../installation.rst:53 ../../installation.rst:56
+#: ../../installation.rst:46
 msgid "Follow the wizard"
 msgstr "Seguir el asistente"
 
-#: ../../installation.rst:55 ../../installation.rst:58
+#: ../../installation.rst:48
 msgid "**Installing from YUM**"
 msgstr "**Instalación desde YUM**"
 
-#: ../../installation.rst:57 ../../installation.rst:60
+#: ../../installation.rst:50
 msgid "Install CentOS Minimal"
 msgstr "Instalar CentOS Minimal"
 
-#: ../../installation.rst:58 ../../installation.rst:61
+#: ../../installation.rst:51
 msgid "Configure the network"
 msgstr "Configurar la red"
 
-#: ../../installation.rst:59 ../../installation.rst:62
+#: ../../installation.rst:52
 msgid "Install from network"
 msgstr "Instalar desde la red"
 
-#: ../../installation.rst:65 ../../installation.rst:68
+#: ../../installation.rst:58
 msgid "Installing from ISO"
 msgstr "Instalación desde ISO"
 
-#: ../../installation.rst:67 ../../installation.rst:70
+#: ../../installation.rst:60
 msgid "The ISO installation will erase all existing data on hard drives!"
 msgstr ""
 "¡La instalación ISO borrará todos los datos existentes en los discos duros!"
 
-#: ../../installation.rst:71 ../../installation.rst:74
+#: ../../installation.rst:64
 msgid "Media creation"
 msgstr "Creación de medios"
 
-#: ../../installation.rst:73 ../../installation.rst:76
+#: ../../installation.rst:66
 msgid ""
 "**Download the ISO file** from official site |download_site|.  The "
 "downloaded ISO file can be used to **create a bootable media** such as DVD "
@@ -135,15 +135,15 @@ msgstr ""
 "archivo ISO descargado se puede utilizar para **crear un medio de arranque**"
 " tal como DVD o memoria USB."
 
-#: ../../installation.rst:78 ../../installation.rst:81
+#: ../../installation.rst:71
 msgid "USB stick"
 msgstr "Memoria USB"
 
-#: ../../installation.rst:80 ../../installation.rst:83
+#: ../../installation.rst:73
 msgid "On a Linux machine, open the shell and execute: ::"
 msgstr "En una máquina Linux, abra el shell y ejecute: ::"
 
-#: ../../installation.rst:84 ../../installation.rst:87
+#: ../../installation.rst:77
 msgid ""
 "Where `NethServer.iso` is the file name of the downloaded ISO and `/dev/sdc`"
 " is the destination device corresponding to the USB key and not a partition "
@@ -153,7 +153,7 @@ msgstr ""
 "`/dev/sdc` es el dispositivo de destino correspondiente a la llave USB y no "
 "a una partición (como /dev/sdc1)."
 
-#: ../../installation.rst:88 ../../installation.rst:91
+#: ../../installation.rst:81
 msgid ""
 "On a Windows machine, make sure to format the USB drive then unmount it. Use"
 " one of the following tools to write the USB stick:"
@@ -162,27 +162,27 @@ msgstr ""
 "desmontarla. Utilice una de las siguientes herramientas para escribir la "
 "memoria USB:"
 
-#: ../../installation.rst:91 ../../installation.rst:94
+#: ../../installation.rst:84
 msgid "`Etcher`_"
 msgstr "`Etcher`_"
 
-#: ../../installation.rst:92 ../../installation.rst:95
+#: ../../installation.rst:85
 msgid "`Win32 Disk Imager`_"
 msgstr "`Win32 Disk Imager`_"
 
-#: ../../installation.rst:93 ../../installation.rst:96
+#: ../../installation.rst:86
 msgid "`Rawrite32`_"
 msgstr "`Rawrite32`_"
 
-#: ../../installation.rst:94 ../../installation.rst:97
+#: ../../installation.rst:87
 msgid "`dd for Windows`_"
 msgstr "`dd for Windows`_"
 
-#: ../../installation.rst:102 ../../installation.rst:105
+#: ../../installation.rst:95
 msgid "DVD"
 msgstr "DVD"
 
-#: ../../installation.rst:104 ../../installation.rst:107
+#: ../../installation.rst:97
 msgid ""
 "The creation of a bootable DVD is different from writing files into USB "
 "stick, and it requires the use of a dedicated function (e.g. *write* or "
@@ -196,11 +196,11 @@ msgstr ""
 " de arranque de la ISO están fácilmente disponibles en Internet o en la "
 "documentación de su sistema operativo."
 
-#: ../../installation.rst:112 ../../installation.rst:115
+#: ../../installation.rst:105
 msgid "Install modes"
 msgstr "Modos de instalación"
 
-#: ../../installation.rst:114 ../../installation.rst:117
+#: ../../installation.rst:107
 msgid ""
 "**Start the machine using the freshly backed media**.  If the machine will "
 "not start from the DVD or USB stick, please refer to the documentation of "
@@ -213,15 +213,15 @@ msgstr ""
 "configura la prioridad del dispositivo de arranque. El primer dispositivo de"
 " arranque debe ser el lector de DVD o memoria USB."
 
-#: ../../installation.rst:119 ../../installation.rst:122
+#: ../../installation.rst:112
 msgid "On start a menu will display different types of installation:"
 msgstr "Al iniciar un menú se mostrarán diferentes tipos de instalación:"
 
-#: ../../installation.rst:121 ../../installation.rst:124
+#: ../../installation.rst:114
 msgid "|product| :ref:`interactive installation <installation-interactive>`"
 msgstr "|product| :ref:`instalación interactiva <installation-interactive>`"
 
-#: ../../installation.rst:123 ../../installation.rst:126
+#: ../../installation.rst:116
 msgid ""
 "Requires only keyboard and time zone settings. By default, tries to "
 "configure the network interfaces with DHCP and the first two available disks"
@@ -231,11 +231,11 @@ msgstr ""
 "intenta configurar las interfaces de red con DHCP y los dos primeros discos "
 "disponibles con RAID-1."
 
-#: ../../installation.rst:127 ../../installation.rst:130
+#: ../../installation.rst:120
 msgid "Other |product| installation methods"
 msgstr "Otros métodos de instalación |product| "
 
-#: ../../installation.rst:129 ../../installation.rst:132
+#: ../../installation.rst:122
 msgid ""
 ":ref:`Unattended installation <installation-unattended>` -- A set of default"
 " parameters is applied to the system with no human intervention."
@@ -243,7 +243,7 @@ msgstr ""
 ":ref:`Instalación desatendida <installation-unattended>` -- Se aplica un "
 "conjunto de parámetros por defecto al sistema sin intervención humana."
 
-#: ../../installation.rst:133 ../../installation.rst:136
+#: ../../installation.rst:126
 msgid ""
 ":ref:`Manual installation <installation-manual>` -- This is the opposite of "
 "*unattended*. No defaults are applied: network, storage, time zone, "
@@ -254,11 +254,11 @@ msgstr ""
 "zona horaria, teclado ... todos los ajustes deben proporcionarse "
 "explícitamente."
 
-#: ../../installation.rst:138 ../../installation.rst:141
-msgid "Standard CentOS installations"
-msgstr "Las instalaciones estándar de CentOS"
+#: ../../installation.rst:131
+msgid "Standard CentOS installation"
+msgstr ""
 
-#: ../../installation.rst:140 ../../installation.rst:143
+#: ../../installation.rst:133
 msgid ""
 "Use the standard CentOS installation procedure. You can then configure "
 "|product| by following the :ref:`installation-centos` section."
@@ -266,11 +266,11 @@ msgstr ""
 "Utilice el procedimiento de instalación estándar de CentOS. A continuación, "
 "puede configurar |product| siguiendo la sección :ref:`installation-centos`."
 
-#: ../../installation.rst:143 ../../installation.rst:146
+#: ../../installation.rst:136
 msgid "Tools"
 msgstr "Herramientas"
 
-#: ../../installation.rst:145 ../../installation.rst:148
+#: ../../installation.rst:138
 msgid ""
 "Start the system in *rescue* (recovery) mode, execute a memory test or start"
 " the hardware detection tool."
@@ -278,15 +278,15 @@ msgstr ""
 "Inicie el sistema en el modo *rescate* (recuperación), ejecute una prueba de"
 " memoria o inicie la herramienta de detección de hardware."
 
-#: ../../installation.rst:148 ../../installation.rst:151
+#: ../../installation.rst:141
 msgid "Boot from local drive"
 msgstr "Arranque desde una unidad local"
 
-#: ../../installation.rst:150 ../../installation.rst:153
+#: ../../installation.rst:143
 msgid "Attempts to boot a system that is already installed on the hard disk."
 msgstr "Intente iniciar un sistema que ya esté instalado en el disco duro."
 
-#: ../../installation.rst:154 ../../installation.rst:157
+#: ../../installation.rst:147
 msgid ""
 "At the end of the installation process you will be asked to reboot the "
 "machine. Be sure to remove the installation media before restarting."
@@ -294,11 +294,11 @@ msgstr ""
 "Al final del proceso de instalación, se le pedirá que reinicie la máquina. "
 "Asegúrese de retirar el soporte de instalación antes de reiniciar."
 
-#: ../../installation.rst:158 ../../installation.rst:161
+#: ../../installation.rst:151
 msgid "Optional boot parameters"
 msgstr "Parámetros de arranque opcionales"
 
-#: ../../installation.rst:160 ../../installation.rst:163
+#: ../../installation.rst:153
 msgid ""
 "At the boot menu, you can add extra parameters by pressing :kbd:`TAB` and "
 "editing the kernel command line. This can be useful in *unattended* mode."
@@ -307,21 +307,21 @@ msgstr ""
 ":kbd:`TAB` y editando la línea de comandos del kernel. Esto puede ser útil "
 "en modo *desatendido*."
 
-#: ../../installation.rst:163 ../../installation.rst:166
+#: ../../installation.rst:156
 msgid "To disable raid, just add this option to the command line: ::"
 msgstr ""
 "Para deshabilitar la raid, simplemente añada esta opción a la línea de "
 "comandos: ::"
 
-#: ../../installation.rst:167 ../../installation.rst:170
+#: ../../installation.rst:160
 msgid "If you need to select installation hard drives, use: ::"
 msgstr "Si necesita seleccionar los discos duros de instalación, utilice: ::"
 
-#: ../../installation.rst:174 ../../installation.rst:177
+#: ../../installation.rst:167
 msgid "To enable *file system encryption*, use: ::"
 msgstr "Para activar *el cifrado del sistema de archivos*, utilice: ::"
 
-#: ../../installation.rst:178 ../../installation.rst:181
+#: ../../installation.rst:171
 msgid ""
 "When enabling this option, all data written to the disk will be encrypted "
 "using symmetric encryption.  In case of theft, an attacker will not be able "
@@ -331,30 +331,30 @@ msgstr ""
 "mediante cifrado simétrico. En caso de robo, un atacante no podrá leer los "
 "datos sin la clave de cifrado."
 
-#: ../../installation.rst:182 ../../installation.rst:185
+#: ../../installation.rst:175
 msgid "You will need to enter the encryption password at every system boot!"
 msgstr ""
 "¡Tendrá que introducir la contraseña de cifrado en cada arranque del "
 "sistema!"
 
-#: ../../installation.rst:184 ../../installation.rst:187
+#: ../../installation.rst:177
 msgid "Other available options (*unattended* mode only):"
 msgstr "Otras opciones disponibles (modo *desatendido* solamente):"
 
-#: ../../installation.rst:186 ../../installation.rst:189
+#: ../../installation.rst:179
 msgid "``keyboard``, keyboard layout, default is ``keyboard=us``"
 msgstr ""
 "``keyboard`, la disposición del teclado, por defecto es ``keyboard=us``"
 
-#: ../../installation.rst:187 ../../installation.rst:190
+#: ../../installation.rst:180
 msgid "``timezone``, default is ``timezone=UTC``"
 msgstr "``timezone``, por defecto es ``timezone=UTC``"
 
-#: ../../installation.rst:192 ../../installation.rst:195
+#: ../../installation.rst:185
 msgid "Fallback IP configuration"
 msgstr "Configuración IP de fallo"
 
-#: ../../installation.rst:194 ../../installation.rst:197
+#: ../../installation.rst:187
 msgid ""
 "If no IP is assigned by DHCP or by other means, during the first system boot"
 " the following IP configuration is applied to the **first** network "
@@ -364,19 +364,19 @@ msgstr ""
 " primera inicialización del sistema se aplica la siguiente configuración IP "
 "a la **primera** interfaz de red"
 
-#: ../../installation.rst:197 ../../installation.rst:200
+#: ../../installation.rst:190
 msgid "IP 192.168.1.1"
 msgstr "IP 192.168.1.1"
 
-#: ../../installation.rst:198 ../../installation.rst:201
+#: ../../installation.rst:191
 msgid "netmask 255.255.255.0"
 msgstr "Máscara de red 255.255.255.0"
 
-#: ../../installation.rst:201 ../../installation.rst:204
+#: ../../installation.rst:194
 msgid "System administrator password"
 msgstr "Contraseña del administrador del sistema"
 
-#: ../../installation.rst:203 ../../installation.rst:206
+#: ../../installation.rst:196
 msgid ""
 "You are strongly advised to choose a secure password for the ``root`` user. "
 "A good password:"
@@ -384,28 +384,28 @@ msgstr ""
 "Se recomienda encarecidamente elegir una contraseña segura para el usuario "
 "``root``. Una buena contraseña:"
 
-#: ../../installation.rst:206 ../../installation.rst:209
+#: ../../installation.rst:199
 msgid "is at least 8 characters long"
 msgstr "Tiene al menos 8 caracteres"
 
-#: ../../installation.rst:207 ../../installation.rst:210
+#: ../../installation.rst:200
 msgid "contains uppercase and lowercase letters"
 msgstr "contiene letras mayúsculas y minúsculas"
 
-#: ../../installation.rst:208 ../../installation.rst:211
+#: ../../installation.rst:201
 msgid "contains symbols and numbers"
 msgstr "contiene símbolos y números"
 
-#: ../../installation.rst:210 ../../installation.rst:213
+#: ../../installation.rst:203
 msgid "The default password in *unattended* mode is ``Nethesis,1234``."
 msgstr ""
 "La contraseña predeterminada en el modo *desatendido* es ``Nethesis,1234``."
 
-#: ../../installation.rst:213 ../../installation.rst:216
+#: ../../installation.rst:206
 msgid "System language"
 msgstr "Idioma del sistema"
 
-#: ../../installation.rst:215 ../../installation.rst:218
+#: ../../installation.rst:208
 msgid ""
 "The system language of |product| installations is *English (United States)*."
 " Additional languages can be installed later. See :ref:`Next steps "
@@ -415,11 +415,11 @@ msgstr ""
 "States)*. Puedes instalar más idiomas al sistema más tarde. Ver :ref:`Next "
 "steps `."
 
-#: ../../installation.rst:223 ../../installation.rst:226
+#: ../../installation.rst:216
 msgid "Interactive and Manual modes"
 msgstr "Modos interactivo y manual"
 
-#: ../../installation.rst:225 ../../installation.rst:228
+#: ../../installation.rst:218
 msgid ""
 "The **interactive** mode allows you to make a few simple choices on the "
 "system configuration."
@@ -427,23 +427,23 @@ msgstr ""
 "El modo **interactivo** le permite realizar algunas elecciones sencillas en "
 "la configuración del sistema."
 
-#: ../../installation.rst:228 ../../installation.rst:231
+#: ../../installation.rst:221
 msgid "Required choices are:"
 msgstr "Las opciones requeridas son:"
 
-#: ../../installation.rst:230 ../../installation.rst:233
+#: ../../installation.rst:223
 msgid "Language"
 msgstr "Idioma"
 
-#: ../../installation.rst:231 ../../installation.rst:234
+#: ../../installation.rst:224
 msgid "Keyboard layout"
 msgstr "Diseño del teclado"
 
-#: ../../installation.rst:232 ../../installation.rst:235
+#: ../../installation.rst:225
 msgid "Root password"
 msgstr "Contraseña de root"
 
-#: ../../installation.rst:234 ../../installation.rst:237
+#: ../../installation.rst:227
 msgid ""
 "All other options are set to a reasonable default accordingly to current "
 "hardware (see the :ref:`installation-unattended` section for details), but "
@@ -454,7 +454,7 @@ msgstr ""
 "obtener detalles), pero puede editar cualquier configuración de instalación "
 "disponible."
 
-#: ../../installation.rst:238 ../../installation.rst:241
+#: ../../installation.rst:231
 msgid ""
 "On the other hand, the **manual** mode starts the installer with no default "
 "settings at all.  Also the network and storage sections must be configured."
@@ -463,7 +463,7 @@ msgstr ""
 "configuración predeterminada. También se deben configurar las secciones de "
 "red y almacenamiento."
 
-#: ../../installation.rst:243 ../../installation.rst:246
+#: ../../installation.rst:236
 msgid ""
 "Under the :guilabel:`Network > General` section, only the interfaces marked "
 "as :guilabel:`Automatically connect to this network when it is available` "
@@ -475,11 +475,25 @@ msgstr ""
 "están habilitadas al arrancar en el sistema instalado. Para más información,"
 " consulte `Guía de instalación de RHEL 7`."
 
-#: ../../installation.rst:253 ../../installation.rst:256
+#: ../../installation.rst:244
+msgid "Known issues"
+msgstr ""
+
+#: ../../installation.rst:246
+msgid ""
+"When installing on machines with UEFI firmware, Anaconda could fail on "
+"automatic partitioning. To work around the problem, switch to "
+":guilabel:`Manual installation`, or :guilabel:`Standard CentOS installation`"
+" then follow :ref:`installation-centos`. In case of installation with "
+"software RAID, make sure to manually create UEFI partitions on all boot "
+"disks."
+msgstr ""
+
+#: ../../installation.rst:253
 msgid "Unattended mode"
 msgstr "Modo desatendido"
 
-#: ../../installation.rst:255 ../../installation.rst:258
+#: ../../installation.rst:255
 msgid ""
 "The *unattended* mode requires no human intervention. After installation, "
 "the system is rebooted and the following configuration is applied:"
@@ -487,19 +501,19 @@ msgstr ""
 "El modo *desatendido* no requiere intervención humana. Después de la "
 "instalación, se reinicia el sistema y se aplica la siguiente configuración:"
 
-#: ../../installation.rst:258 ../../installation.rst:261
+#: ../../installation.rst:258
 msgid "Keyboard layout: ``us``"
 msgstr "Disposición del teclado: ``us``"
 
-#: ../../installation.rst:259 ../../installation.rst:262
+#: ../../installation.rst:259
 msgid "Time zone: ``UTC``"
 msgstr "Zona horaria: UTC"
 
-#: ../../installation.rst:260 ../../installation.rst:263
+#: ../../installation.rst:260
 msgid "Default ``root`` password: ``Nethesis,1234``"
 msgstr "Contraseña predeterminada de``root``: ``Nethesis,1234``"
 
-#: ../../installation.rst:261 ../../installation.rst:264
+#: ../../installation.rst:261
 msgid ""
 "DHCP enabled on all network interfaces; if no DHCP lease is received the "
 ":ref:`fallback IP configuration <fallback-ip-configuration>` is applied"
@@ -508,7 +522,7 @@ msgstr ""
 "concesión DHCP, se aplica la opción :ref:`Configuración IP alternativa "
 "<fallback-ip-configuration>"
 
-#: ../../installation.rst:263 ../../installation.rst:266
+#: ../../installation.rst:263
 msgid ""
 "if there are two or more disks, a RAID 1 will be created on first two disks "
 "and LVM volumes are created on it"
@@ -516,7 +530,7 @@ msgstr ""
 "Si hay dos o más discos, se creará un RAID 1 en los dos primeros discos y se"
 " crearán volúmenes LVM en él"
 
-#: ../../installation.rst:265 ../../installation.rst:268
+#: ../../installation.rst:265
 msgid ""
 "*swap* and *root* partitions are allocated automatically; 1GB is assigned to"
 " *boot*"
@@ -524,11 +538,11 @@ msgstr ""
 "Las particiones *swap* y *root* se asignan automáticamente; 1GB está "
 "asignado a *boot*"
 
-#: ../../installation.rst:276 ../../installation.rst:279
+#: ../../installation.rst:276
 msgid "Install on CentOS"
 msgstr "Instalar en CentOS"
 
-#: ../../installation.rst:278 ../../installation.rst:281
+#: ../../installation.rst:278
 msgid ""
 "It is possible to install |product| on a fresh CentOS minimal installation "
 "using a couple of commands to download the additional software packages. "
@@ -541,15 +555,15 @@ msgstr ""
 "privados virtuales (VPS) donde CentOS viene ya instalado por el proveedor de"
 " VPS."
 
-#: ../../installation.rst:283 ../../installation.rst:286
+#: ../../installation.rst:283
 msgid "Enable |product| software repositories with this command: ::"
 msgstr "Habilitar repositorios de software |product| con este comando: ::"
 
-#: ../../installation.rst:287 ../../installation.rst:290
+#: ../../installation.rst:287
 msgid "To install the base system, run: ::"
 msgstr "Para instalar el sistema base, ejecute: ::"
 
-#: ../../installation.rst:293 ../../installation.rst:296
+#: ../../installation.rst:293
 msgid ""
 "Alternatively, to install base system *and* additional modules, pass the "
 "name of the module as a parameter to the install script.  Example: ::"
@@ -558,16 +572,16 @@ msgstr ""
 "pase el nombre del módulo como parámetro al script de instalación. Ejemplo: "
 "::"
 
-#: ../../installation.rst:303 ../../installation.rst:306
+#: ../../installation.rst:303
 msgid "Enterprise promotion"
 msgstr "Promoción de Enterprise"
 
-#: ../../installation.rst:305 ../../installation.rst:308
+#: ../../installation.rst:305
 msgid "To promote to the Enterprise version run the following command: ::"
 msgstr ""
 "Para promocionar a la versión Enterprise, ejecute el siguiente comando: ::"
 
-#: ../../installation.rst:309 ../../installation.rst:312
+#: ../../installation.rst:309
 msgid ""
 "Proceed with :ref:`registration <registration-section>` then run the "
 "following command: ::"
@@ -575,11 +589,11 @@ msgstr ""
 "Proceda con el :ref:`registro <registration-section>` y luego ejecute el "
 "siguiente comando: ::"
 
-#: ../../installation.rst:317 ../../installation.rst:320
+#: ../../installation.rst:317
 msgid "Next steps"
 msgstr "Próximos pasos"
 
-#: ../../installation.rst:319 ../../installation.rst:322
+#: ../../installation.rst:319
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

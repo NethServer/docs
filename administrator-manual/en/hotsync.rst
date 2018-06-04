@@ -141,10 +141,12 @@ The following procedure puts the SLAVE in production when the master has crashed
 
     [root@slave]# /sbin/e-smith/signal-event post-restore-data
 
-7. if an USB backup is configured on MASTER, connect the backup HD to SLAVE
+7. update the system to the latest packages version ::
 
+    [root@slave]# yum clean all && yum -y update
 
-==================
+8. if an USB backup is configured on MASTER, connect the backup HD to SLAVE
+
 Supported packages
 ==================
 

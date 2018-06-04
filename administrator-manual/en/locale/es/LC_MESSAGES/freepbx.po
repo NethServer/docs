@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-01 14:34+0200\n"
+"POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../freepbx.rst:10 ../../freepbx.rst:13
+#: ../../freepbx.rst:3
 msgid "FreePBX"
 msgstr "FreePBX"
 
-#: ../../freepbx.rst:12 ../../freepbx.rst:15
+#: ../../freepbx.rst:5
 msgid ""
 ":index:`FreePBX` is a web-based open source GUI (graphical user interface) "
 "that controls and manages :index:`Asterisk` (PBX), an open source "
@@ -39,11 +39,11 @@ msgstr ""
 "basado en web, que controla y administra :index:`Asterisk` (PBX), un "
 "servidor de comunicaciones Open Source (https://www.freepbx.org/)."
 
-#: ../../freepbx.rst:17 ../../freepbx.rst:20
+#: ../../freepbx.rst:10
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../freepbx.rst:19 ../../freepbx.rst:22
+#: ../../freepbx.rst:12
 msgid ""
 "You can install FreePBX from the package manager of NethServer, the module "
 "named \"FreePBX\"."
@@ -51,7 +51,7 @@ msgstr ""
 "Puedes instalar FreePBX desde el Centro de Software de NethServer, marcando "
 "el módulo llamado \"FreePBX\"."
 
-#: ../../freepbx.rst:22 ../../freepbx.rst:25
+#: ../../freepbx.rst:15
 msgid ""
 "All FreePBX configurations and data are saved inside configuration and data "
 "backup."
@@ -59,11 +59,11 @@ msgstr ""
 "Todos los datos y configuraciones de FreePBX se guardan en la copia de "
 "seguridad de datos y configuración."
 
-#: ../../freepbx.rst:25 ../../freepbx.rst:28
+#: ../../freepbx.rst:18
 msgid "Web Access"
 msgstr "Acceso Web"
 
-#: ../../freepbx.rst:27 ../../freepbx.rst:30
+#: ../../freepbx.rst:20
 msgid ""
 "After installed, FreePBX will be accessible at "
 "``https://ip_address/freepbx`` from green interfaces. You can also configure"
@@ -75,11 +75,11 @@ msgstr ""
 " el acceso desde redes rojas desde la página \"PBX Access\" desde el Panel "
 "de Control de |product|."
 
-#: ../../freepbx.rst:33 ../../freepbx.rst:36
+#: ../../freepbx.rst:26
 msgid "FwConsole"
 msgstr "FwConsole"
 
-#: ../../freepbx.rst:35 ../../freepbx.rst:38
+#: ../../freepbx.rst:28
 msgid ""
 "The ``fwconsole`` is a tool that allows the user to perform some FreePBX "
 "administrative tasks (see `FreePBX wiki "
@@ -87,12 +87,16 @@ msgid ""
 "order to use it with |product| you have to use it in conjunction with scl: "
 "::"
 msgstr ""
+"La ``fwconsole`` es una herramienta que permite al usuario realizar algunas "
+"tareas administrativas de FreePBX (consulte `wiki de FreePBX "
+"<https://wiki.freepbx.org/pages/viewpage.action?pageId=37912685>`_). Para "
+"usarlo con |producto| tienes que usarlo junto con scl: ::"
 
-#: ../../freepbx.rst:43 ../../freepbx.rst:46
+#: ../../freepbx.rst:36
 msgid "Advanced Documentation"
 msgstr "Documentación avanzada"
 
-#: ../../freepbx.rst:45 ../../freepbx.rst:48
+#: ../../freepbx.rst:38
 msgid ""
 "For further information you can read the FreePBX documentation at: "
 "https://wiki.freepbx.org"

@@ -371,6 +371,20 @@ User short name form
 
 To access a shared folder, see also :ref:`smb-access-section`.
 
+.. _home_bind-section:
+
+User home directories
+---------------------
+
+User home directories are stored inside :file:`/var/lib/nethserver/home` directory,
+in order to simplify the deployment of a single-growing partition system.
+
+The administrator can still restore the well-known :file:`/home` path using the bind mount: ::
+
+   echo "/var/lib/nethserver/home	/home	none	defaults,bind	0 0" >> /etc/fstab
+   mount -a
+
+
 .. _groups-section:
 
 Groups
