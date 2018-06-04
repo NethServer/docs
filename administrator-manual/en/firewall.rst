@@ -340,41 +340,6 @@ In all cases all spare bandwidth will be given to them.
 
 For more info, see [#]_ .
 
-Advanced options
-----------------
-
-Under :guilabel:`Configure` page, the following options are available:
-
-- Enable TOS optimizations
-- Reserve bandwidth for VoIP (%)
-
-Enable TOS optimizations
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-This option is enabled by default and classify the traffic using TOS (Type Of Service) bits.
-
-The type of service field in the IPv4 header can identify the traffic type.
-It's used to specify a datagram's priority, request a route for low delay or maximize throughput.
-
-Built-in traffic shaping classes apply to the following TOS categories:
-
-- interactive
-- bulk
-
-
-Reserve bandwidth for VoIP (%)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This option is disabled by default.
-It takes a numeric value which identifies the percentage of total bandwidth reserved for VoIP traffic (SIP, RTP and STUN).
-
-Be sure to commit the right amount of bandwidth for each concurrent call. Each call requires:
-
-* ~32Kbps for G729 codec
-* ~40Kbps for GSM codec
-
-
-
 Firewall objects
 ================
 
