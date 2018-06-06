@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,13 +35,15 @@ msgstr "|product| versione |version|"
 
 #: ../../release_notes.rst:11
 msgid "ISO release 7.5.1804 \"rc\" - 2018-05-31"
-msgstr ""
+msgstr "Rilascio ISO  7.5.1804 \"rc\" - 2018-05-31"
 
 #: ../../release_notes.rst:13 ../../release_notes.rst:32
 msgid ""
 "This release is based on `CentOS 7 (1804) "
 "<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 msgstr ""
+"Questa versione è basata su `CentOS 7 (1804) "
+"<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 
 #: ../../release_notes.rst:15 ../../release_notes.rst:34
 msgid "CentOS 7 will receive security updates until 2024-06-30"
@@ -56,12 +58,16 @@ msgid ""
 "List of `changes "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 msgstr ""
+"Lista delle `principali modifiche "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
 
 #: ../../release_notes.rst:21
 msgid ""
 "List of `known bugs "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 msgstr ""
+"Lista di bug noti "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 
 #: ../../release_notes.rst:23
 msgid ""
@@ -70,31 +76,35 @@ msgstr "Analisi dei `possibili bug <http://community.nethserver.org/c/bug>`_"
 
 #: ../../release_notes.rst:25
 msgid "`Project board <https://github.com/orgs/NethServer/projects/1>`_"
-msgstr ""
+msgstr "`Project board <https://github.com/orgs/NethServer/projects/1>`_"
 
 #: ../../release_notes.rst:30
 msgid "ISO release 7.5.1804 rc"
-msgstr ""
+msgstr "Rilascio ISO 7.5.1804 rc"
 
 #: ../../release_notes.rst:38
 msgid "Major changes on 2018-05-31"
-msgstr ""
+msgstr "Cambiamenti principali dal 2018-05-31"
 
 #: ../../release_notes.rst:40
 msgid "The :ref:`email-section` module is now based on Rspamd"
-msgstr ""
+msgstr "Il modulo :ref:`email-section`  ora è basato su  Rspamd"
 
 #: ../../release_notes.rst:42
 msgid ""
 "MX DNS record override for LAN hosts has been removed. Removed "
 "``postfix/MxRecordStatus`` prop"
 msgstr ""
+"La sovrascrittura dei record DNS MX per gli host LAN è stata rimossa. "
+"Rimosso `` postfix / MxRecordStatus`` prop"
 
 #: ../../release_notes.rst:44
 msgid ""
 "Host name aliases are converted into ``hosts`` DB records. See :ref:`email-"
 "mxrecordstatus`"
 msgstr ""
+"Gli alias dei nomi host sono convertiti in record DB \"hosts\". Vedi :ref"
+":`email-mxrecordstatus`"
 
 #: ../../release_notes.rst:46
 msgid ""
@@ -102,22 +112,29 @@ msgid ""
 ":`shared_folders_requirements-section` and :ref:`home_bind-section` for "
 "details"
 msgstr ""
+": file:`/etc/fstab` non è più un template espanso. Vedi: ref"
+":`shared_folders_requirements-section` e: ref:`home_bind-section` per più "
+"dettagli"
 
 #: ../../release_notes.rst:48
 msgid ""
 "Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant "
 "full control to the creator`"
 msgstr ""
+"Autorizzazioni predefinite per: ref: `shared_folders-section` is: guilabel:`"
+" Concedi il pieno controllo al creatore`"
 
 #: ../../release_notes.rst:50
 msgid "Default :ref:`tlspolicy-section` is ``2018-03-30``"
-msgstr ""
+msgstr "Default :ref:`tlspolicy-section` è ``2018-03-30``"
 
 #: ../../release_notes.rst:52
 msgid ""
 "Default Server Manager session idle timeout is 60 minutes, session life time"
 " is 8 hours"
 msgstr ""
+"Il timeout di inattività della sessione di Gestione server predefinito è 60 "
+"minuti, la durata della sessione è di 8 ore"
 
 #: ../../release_notes.rst:54
 msgid ""
@@ -125,6 +142,9 @@ msgid ""
 "<https://github.com/firehol/firehol/wiki/FireQOS>`_, current configuration "
 "is automatically migrated. See :ref:`traffic-shaping-section`"
 msgstr ""
+"L'implementazione QoS (Quality of Service) ora utilizza `FireQOS "
+"<https://github.com/firehol/firehol/wiki/FireQOS>` _, la configurazione "
+"corrente viene migrata automaticamente. Vedi: ref: `traffic-shaping-section`"
 
 #: ../../release_notes.rst:57
 msgid ""
@@ -133,6 +153,11 @@ msgid ""
 "Configure`. From the same panel it is possible to select the "
 ":guilabel:`Software updates origin`. See :ref:`software-updates-section`"
 msgstr ""
+"La voce del menu :guilabel:`Automatic updates` nel Server Manager è stata "
+"rimossa. Gli aggiornamenti automatici sono ora configurati da "
+":guilabel:`Software center > Configure`. Dallo stesso pannello è possibile "
+"selezionare :guilabel:`Software updates origin`. Vedi :ref: `software-"
+"updates-section`"
 
 #: ../../release_notes.rst:61
 msgid ""
@@ -140,6 +165,9 @@ msgid ""
 "new installations. Run the following command to update the base module set "
 "on existing installations: ``yum update @nethserver-iso``"
 msgstr ""
+"Il modulo :guilabel:`NethServer subscription` è disponibile di default nelle"
+" nuove installazioni. Eseguire il comando seguente per aggiornare il modulo "
+"di base impostato su installazioni esistenti: ``yum update @nethserver-iso``"
 
 #: ../../release_notes.rst:64
 msgid ""
@@ -147,6 +175,9 @@ msgid ""
 "has been removed along with nethserver-libvirt package. See :ref"
 ":`virtual_machines-section` chapter for details on how to use virtualization"
 msgstr ""
+"Il progetto WebVirtMgr non viene più mantenuto e il modulo corrispondente è "
+"stato rimosso insieme al pacchetto nethserver-libvirt. Vedi :ref"
+":`virtual_machines-section` per dettagli su come usare la virtualizzazione"
 
 #: ../../release_notes.rst:69
 msgid "Major changes on 2017-10-26"
@@ -361,6 +392,9 @@ msgid ""
 "<admin-account-section>`, please add the users to the \"domain admins\" "
 "group and execute: ::"
 msgstr ""
+"Se si desidera abilitare l’accesso :ref:`Server Manager access to other "
+"users than root <admin-account-section>`, aggiungere gli utenti al gruppo "
+"“domain admins” ed eseguire: ::"
 
 #: ../../release_notes.rst:163
 msgid "User shared mailbox"
@@ -423,4 +457,4 @@ msgstr ""
 
 #: ../../release_notes.rst:185
 msgid "nethserver-webvirtmgr"
-msgstr ""
+msgstr "nethserver-webvirtmgr"

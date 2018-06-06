@@ -36,6 +36,10 @@ msgid ""
 " filter engine. Previous |product| installations can be manually upgraded to"
 " Rspamd as described in :ref:`email2-section`"
 msgstr ""
+"Da |product| 7.5.1804 nuovo :ref:`email-section`, :ref:`pop3_connector-"
+"section` e :ref:`pop3_proxy-section` installazioni sono basate sul motore di"
+" filtro Rspamd.Installazioni precedenti di |product| possono essere "
+"aggiornate manualmente a Rspamd come descritto in :ref:`email2-section`"
 
 #: ../../pop3_connector.rst:15
 msgid ""

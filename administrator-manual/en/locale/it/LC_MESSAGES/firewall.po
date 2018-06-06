@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -606,6 +606,9 @@ msgid ""
 "source port field (eg: 1000:2000), in this case the field destination port "
 "must be left void"
 msgstr ""
+"è possibile specificare un range di porte utilizzando i due punti come "
+"separatore nella porta di origine (es: 1000:2000), in tale caso particolare "
+"il campo porta di destinazione dovrà rimanere vuoto"
 
 #: ../../firewall.rst:209
 msgid "Given the following scenario:"
@@ -625,7 +628,7 @@ msgstr "Server SSH in ascolto sulla porta 22 su Server1"
 
 #: ../../firewall.rst:214
 msgid "Other services in the port range between 5000 and 6000  on Server1"
-msgstr ""
+msgstr "Altri servizi nell'intervallo di porte tra 5000 e 6000 sul Server1"
 
 #: ../../firewall.rst:216
 msgid ""
@@ -685,6 +688,9 @@ msgid ""
 "port range between 5000 and 6000, you will have to create a port forward "
 "like this:"
 msgstr ""
+"Nel caso in cui si desideri rendere il server accessibile dall'esterno usare"
+" un intervallo di porte tra 5000 e 6000, sarà necessario creare un port "
+"forward come questo:"
 
 #: ../../firewall.rst:234
 msgid "origin port: 5000:6000"
@@ -699,6 +705,9 @@ msgid ""
 "All incoming traffic on firewall's red interfaces on port range between 5000"
 " and 6000 will be redirected to same ports on Server1."
 msgstr ""
+"Tutto il traffico che arriva sulle reti red del firewall per il range di "
+"porte compreso tra 5000 e 6000 verrà redirezionato alle stesse porte sul "
+"Server1."
 
 #: ../../firewall.rst:241
 msgid "Limiting access"
@@ -858,12 +867,18 @@ msgid ""
 "available download and upload bandwidth. Access the :guilabel:`Network` page"
 " and carefully set bandwidth values."
 msgstr ""
+"Per abilitare il traffic shaping è necessario conoscere l'esatta quantità di"
+" banda disponibile in download  e upload. Accedi alla pagina guilabel "
+":guilabel:`Network` e imposta attentamente i valori di larghezza di banda."
 
 #: ../../firewall.rst:289
 msgid ""
 "If download and upload bandwidth are not set for a red interface, traffic "
 "shaping rules will not be enabled for that interface."
 msgstr ""
+"Se la larghezza di banda di download e upload non è impostata per "
+"un'interfaccia red, le regole di shaping non saranno abilitate per "
+"quell'interfaccia."
 
 #: ../../firewall.rst:294
 msgid ""
@@ -871,34 +886,42 @@ msgid ""
 "interfaces. To pick an appropriate setting, please do not trust the nominal "
 "value, but use online tools to test the real provider speed."
 msgstr ""
+"Assicurati di specificare una stima accurata della larghezza di banda sulle "
+"interfacce di rete. Per scegliere un'impostazione appropriata, si prega di "
+"non fidarsi del valore nominale, ma utilizzare strumenti online per "
+"verificare la reale velocità del provider."
 
 #: ../../firewall.rst:298
 msgid ""
 "In case of congestion by the provider, there is nothing to do in order to "
 "improve performance."
 msgstr ""
+"In caso di congestione da parte del provider, non c'è nulla da fare per "
+"migliorare le prestazioni."
 
 #: ../../firewall.rst:301
 msgid "Configuration of traffic shaping is composed by 2 steps:"
-msgstr ""
+msgstr "La configurazione del traffic shaping è composta da 2 passaggi:"
 
 #: ../../firewall.rst:303
 msgid "creation of traffic shaping classes"
-msgstr ""
+msgstr "Creazione di classi per gestione della banda"
 
 #: ../../firewall.rst:304
 msgid "assignment of network traffic to a specific class"
-msgstr ""
+msgstr "assegnazione del traffico di rete a una classe specifica"
 
 #: ../../firewall.rst:307
 msgid "Classes"
-msgstr ""
+msgstr "Classi"
 
 #: ../../firewall.rst:309
 msgid ""
 "Traffic shaping is achieved by controlling how bandwidth is allocated to "
 "classes."
 msgstr ""
+"Il traffic shaping viene ottenuto controllando il modo in cui la larghezza "
+"di banda viene allocata alle classi."
 
 #: ../../firewall.rst:311
 msgid ""
@@ -907,6 +930,11 @@ msgid ""
 "commited bandwidth, plus the committed bandwidth of a class but not "
 "currently used by the class itself."
 msgstr ""
+"Ogni classe può avere un rate riservataìo. Un rate riservato è la larghezza "
+"di banda che una classe otterrà solo quando ne ha bisogno. La larghezza di "
+"banda di riserva è la somma della larghezza di banda non impegnata, più la "
+"larghezza di banda impegnata di una classe, ma non attualmente utilizzata "
+"dalla classe stessa."
 
 #: ../../firewall.rst:315
 msgid ""
@@ -914,66 +942,86 @@ msgid ""
 "committed rate, up to the maximum rate. A class will exceed its committed "
 "rate only if there is spare bandwidth available."
 msgstr ""
+"Ogni classe può avere anche una banda massima. Se impostato, la classe può "
+"superare la  banda stabilita,fino al banda massima. Una classe supererà la "
+"sua banda riservata solo se è disponibile abbastanza banda."
 
 #: ../../firewall.rst:318
 msgid ""
 "Traffic shaping classes can be defined under :guilabel:`Traffic shaping` "
 "page. When creating a new class, fill the following fields:"
 msgstr ""
+"Le classi di traffic shaping possono essere definite nella pagina "
+":guilabel:`Traffic shaping`. Quando crei una nuova classe, compila i "
+"seguenti campi:"
 
 #: ../../firewall.rst:321
 msgid ":guilabel:`Class name`: a representative name"
-msgstr ""
+msgstr ":guilabel:`Class name`: un nome rappresentativo"
 
 #: ../../firewall.rst:322
 msgid ""
 ":guilabel:`Min download (%)`: minimum reserved download bandwidth, if empty "
 "no download reservation will be created"
 msgstr ""
+":guilabel:`Min download (%)`: Download minimo consentito, se vuoto non verrà"
+" creato alcun limite"
 
 #: ../../firewall.rst:323
 msgid ""
 ":guilabel:`Max download (%)`: maximum allowed download bandwidth, if empty "
 "no upper limit will be set"
 msgstr ""
+":guilabel:`Max download (%)`: Download massimo consentito, se vuoto non "
+"verrà creato alcun limite"
 
 #: ../../firewall.rst:324
 msgid ""
 ":guilabel:`Min upload (%)`:  minimum reserved upload bandwidth, if empty no "
 "upload reservation will be created"
 msgstr ""
+":guilabel:`Min upload (%)`: Upload minimo consentito, se vuoto non verrà "
+"creato alcun limite"
 
 #: ../../firewall.rst:325
 msgid ""
 ":guilabel:`Max upload (%)`: maximum allowed download bandwidth, if empty no "
 "upper limit will be created"
 msgstr ""
+":guilabel:`Max upload (%)`: Upload massimo consentito, se vuoto non verrà "
+"creato alcun limite"
 
 #: ../../firewall.rst:326
 msgid ":guilabel:`Description`: optional description for the class"
-msgstr ""
+msgstr ": guilabel: `Description`: descrizione facoltativa per la classe"
 
 #: ../../firewall.rst:328
 msgid "The system provides two pre-configured classes:"
-msgstr ""
+msgstr "Il sistema fornisce due classi preconfigurate:"
 
 #: ../../firewall.rst:330
 msgid ""
 ":guilabel:`high`: generic high priority traffic, can be assigned to "
 "something like SSH"
 msgstr ""
+": guilabel: `high`: traffico ad alta priorità generico, può essere assegnato"
+" tipo ad  SSH"
 
 #: ../../firewall.rst:331
 msgid ""
 ":guilabel:`low`: low priority traffic, can be assigned to something like "
 "peer to peer file exchange"
 msgstr ""
+": guilabel: `low`: traffico a bassa priorità, può essere assegnato a un "
+"servizio come scambio di file peer to peer"
 
 #: ../../firewall.rst:334
 msgid ""
 "The system always tries to prevent traffic starvation under high network "
 "load."
 msgstr ""
+"Il sistema cerca sempre di previnire la saturazione della banda quando ci "
+"sta un carico di rete elevato."
 
 #: ../../firewall.rst:336
 msgid ""
@@ -982,32 +1030,40 @@ msgid ""
 "class B will get twice the spare bandwidth of class A. In all cases all "
 "spare bandwidth will be given to them."
 msgstr ""
+"Le classi ricevono la banda non allocata in proporzione alla loro banda "
+"minima . Per esempio, se una la classe A ha 1Mbit di banda minima e la "
+"classe B ha 2Mbit, allora la classe B riceverà il doppio della banda non "
+"allocata rispetto alla classe A. In ogni caso, tutta la banda non allocata "
+"verrà utilizzata dalle classi."
 
 #: ../../firewall.rst:341
 msgid "For more info, see [#]_ ."
-msgstr ""
+msgstr "Per più info,vedere [#]_ ."
 
 #: ../../firewall.rst:344
 msgid "Advanced options"
-msgstr ""
+msgstr "Opzioni avanzate"
 
 #: ../../firewall.rst:346
 msgid "Under :guilabel:`Configure` page, the following options are available:"
 msgstr ""
+"Nella pagina  :guilabel: `Configure` , sono disponibili le seguenti opzioni:"
 
 #: ../../firewall.rst:348 ../../firewall.rst:352
 msgid "Enable TOS optimizations"
-msgstr ""
+msgstr "Abilita ottimizzazioni TOS"
 
 #: ../../firewall.rst:349 ../../firewall.rst:366
 msgid "Reserve bandwidth for VoIP (%)"
-msgstr ""
+msgstr "Banda riservata per il VoIP (%)"
 
 #: ../../firewall.rst:354
 msgid ""
 "This option is enabled by default and classify the traffic using TOS (Type "
 "Of Service) bits."
 msgstr ""
+"Questa opzione è abilitata di default e classifica il traffico utilizzando i"
+" bit TOS (Type Of Service)."
 
 #: ../../firewall.rst:356
 msgid ""
@@ -1015,19 +1071,25 @@ msgid ""
 "It's used to specify a datagram's priority, request a route for low delay or"
 " maximize throughput."
 msgstr ""
+"Il tipo di campo del servizio nell'intestazione IPv4 può identificare il "
+"tipo di traffico. È usato per specificare la priorità di un datagramma, "
+"richiedere una rotta per un basso ritardo o massimizzare la velocità "
+"effettiva."
 
 #: ../../firewall.rst:359
 msgid ""
 "Built-in traffic shaping classes apply to the following TOS categories:"
 msgstr ""
+"Le classi di traffic shaping prestabilite si applicano alle seguenti "
+"categorie TOS:"
 
 #: ../../firewall.rst:361
 msgid "interactive"
-msgstr ""
+msgstr "interattivo"
 
 #: ../../firewall.rst:362
 msgid "bulk"
-msgstr ""
+msgstr "bulk"
 
 #: ../../firewall.rst:368
 msgid ""
@@ -1035,20 +1097,25 @@ msgid ""
 "identifies the percentage of total bandwidth reserved for VoIP traffic (SIP,"
 " RTP and STUN)."
 msgstr ""
+"Questa opzione è disabilitata di default. Prende un valore numerico che "
+"identifica la percentuale della larghezza di banda totale riservata al "
+"traffico VoIP (SIP, RTP e STUN)."
 
 #: ../../firewall.rst:371
 msgid ""
 "Be sure to commit the right amount of bandwidth for each concurrent call. "
 "Each call requires:"
 msgstr ""
+"Assicurati di assegnare la giusta quantità di larghezza di banda per ogni "
+"chiamata simultanea. Ogni chiamata richiede:"
 
 #: ../../firewall.rst:373
 msgid "~32Kbps for G729 codec"
-msgstr ""
+msgstr "~32Kbps per  G729 codec"
 
 #: ../../firewall.rst:374
 msgid "~40Kbps for GSM codec"
-msgstr ""
+msgstr "~40Kbps per  GSM codec"
 
 #: ../../firewall.rst:379
 msgid "Firewall objects"
@@ -1116,6 +1183,10 @@ msgid ""
 "firewall rules from those of the nominal interface. They are used for very "
 "specific needs."
 msgstr ""
+"*Zone*: rappresentano reti di host, vanno espresse in notazione CIDR, utili "
+"se si vuole definire un segmento di rete con caratteristiche differenti "
+"dalla zona di cui fa parte. Solitamente utilizzate per esigenze molto "
+"specifiche."
 
 #: ../../firewall.rst:399
 msgid ""
@@ -1238,3 +1309,4 @@ msgstr ""
 msgid ""
 "FireQOS tutorial: https://github.com/firehol/firehol/wiki/FireQOS-Tutorial"
 msgstr ""
+"FireQOS tutorial: https://github.com/firehol/firehol/wiki/FireQOS-Tutorial"

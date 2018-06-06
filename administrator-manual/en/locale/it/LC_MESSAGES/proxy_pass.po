@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,27 +39,33 @@ msgstr ""
 
 #: ../../proxy_pass.rst:11
 msgid "Path and virtual host rules"
-msgstr ""
+msgstr "Regole di virtual host e path"
 
 #: ../../proxy_pass.rst:13
 msgid ""
 "A web client request can be forwarded to another web server transparently, "
 "according to two types of matching rules:"
 msgstr ""
+"Una richiesta di un  client Web può essere inoltrata a un altro server Web "
+"in modo trasparente, in base a due tipi di regole di corrispondenza:"
 
 #: ../../proxy_pass.rst:16
 msgid "Requests matching an URL path, like ``http://mydomain.com/mysite``"
 msgstr ""
+"Richieste che corrispondono a un percorso URL, come "
+"\"http://mydomain.com/mysite``"
 
 #: ../../proxy_pass.rst:17
 msgid ""
 "Requests matching a virtual host name, like ``http://my.secondary-"
 "domain.com``"
 msgstr ""
+"Richieste che corrispondono a un nome virtual host , come `http://my"
+".secondary-domain.com``"
 
 #: ../../proxy_pass.rst:19
 msgid "The typical scenario for a **URL path rule** is the following:"
-msgstr ""
+msgstr "Lo scenario tipico per una **URL path rule** è la seguente:"
 
 #: ../../proxy_pass.rst:21 ../../proxy_pass.rst:42
 msgid "|product| is the firewall of your LAN"
@@ -67,13 +73,15 @@ msgstr "|product| è il firewall della LAN"
 
 #: ../../proxy_pass.rst:23
 msgid "You have a domain ``http://mydomain.com``"
-msgstr ""
+msgstr "Si possiede il dominio http://mydomain.com"
 
 #: ../../proxy_pass.rst:25
 msgid ""
 "You would like ``http://mydomain.com/mysite`` to forward to the internal "
 "server (internal IP: 192.168.2.100)"
 msgstr ""
+"Si desidera che http://mydomain.com/mysite inoltri le richieste al server "
+"interno (IP privato: 192.168.2.100)"
 
 #: ../../proxy_pass.rst:28
 msgid ""
@@ -81,6 +89,9 @@ msgid ""
 "Paths` page. Set the :guilabel:`Name` of the item to ``mysite`` and the "
 ":guilabel:`Target URL` to ``http://192.168.2.100``."
 msgstr ""
+"In questo scenario creare un nuovo record nella pagina :guilabel:`Reverse "
+"proxy`. Impostare il :guilabel:`Name` dell’elemento a ``mysite`` e "
+":guilabel:`Target URL`  a ``http://192.168.2.100``."
 
 #: ../../proxy_pass.rst:32
 msgid ""
@@ -106,16 +117,21 @@ msgid ""
 "server, and is defined in the :guilabel:`Reverse proxy > Virtual hosts` "
 "page. For instance:"
 msgstr ""
+"Una **virtual host name rule** può inoltrare richieste HTTP a un altro "
+"server Web ed è definita nella pagina :guilabel:`Reverse proxy > Virtual "
+"hosts`. Per esempio:"
 
 #: ../../proxy_pass.rst:44
 msgid "You have a domain ``http://my.secondary-domain.com``"
-msgstr ""
+msgstr "Hai un dominio ``http://my.secondary-domain.com``"
 
 #: ../../proxy_pass.rst:46
 msgid ""
 "You would like ``http://my.secondary-domain.com`` to be forwarded to the "
 "internal web server ``192.168.2.101``, port 9000."
 msgstr ""
+"Si desidera che ``http://my.secondary-domain.com`` inoltri le richieste al "
+"server web  interno ``192.168.2.101``, porta 9000."
 
 #: ../../proxy_pass.rst:49
 msgid ""
@@ -123,6 +139,9 @@ msgid ""
 "``my.secondary-domain.com`` and the :guilabel:`Target URL` to "
 "``http://192.168.2.101:9000``."
 msgstr ""
+"In questo scenario creare un nuovo record nella pagina :guilabel:`Reverse "
+"proxy`. Impostare il :guilabel:`Name` dell’elemento a ``my.secondary-"
+"domain.com`` e :guilabel:`Target URL`  a ``http://192.168.2.101:9000``."
 
 #: ../../proxy_pass.rst:53
 msgid ""
@@ -131,6 +150,10 @@ msgid ""
 ":guilabel:`Forward HTTP \"Host\" header to target` and :guilabel`Accept "
 "invalid SSL certificate from target`."
 msgstr ""
+"Fare riferimento anche a  :ref:`the UI description of Reverse Proxy "
+"<ProxyPassUi-section>` per ulteriori informazioni sulle funzionalità "
+"avanzate, come :guilabel:`Forward HTTP \"Host\" header to target`  e "
+":guilabel`Accept invalid SSL certificate from target`."
 
 #: ../../proxy_pass.rst:59
 msgid "Manual configuration"
@@ -162,3 +185,5 @@ msgid ""
 "Please refer to official Apache documentation for more information: "
 "https://httpd.apache.org/docs/2.4/mod/mod_proxy.html"
 msgstr ""
+"Per ulteriori informazioni, consultare la documentazione ufficiale di "
+"Apache: https://httpd.apache.org/docs/2.4/mod/mod_proxy.html"

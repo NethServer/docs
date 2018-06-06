@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -832,7 +832,7 @@ msgstr ""
 
 #: ../../accounts.rst:377
 msgid "User home directories"
-msgstr ""
+msgstr "Cartelle home dell'utente"
 
 #: ../../accounts.rst:379
 msgid ""
@@ -840,12 +840,17 @@ msgid ""
 "directory, in order to simplify the deployment of a single-growing partition"
 " system."
 msgstr ""
+"Le directory home degli utenti sono memorizzate all'interno della directory "
+":file: /var/lib/ nethserver/home`, al fine di semplificare la distribuzione "
+"di un sistema di partizione a crescita singola."
 
 #: ../../accounts.rst:382
 msgid ""
 "The administrator can still restore the well-known :file:`/home` path using "
 "the bind mount: ::"
 msgstr ""
+"L'amministratore può comunque ripristinare il  noto :file:`/home` usando il "
+"bind mount: ::"
 
 #: ../../accounts.rst:391
 msgid "Groups"

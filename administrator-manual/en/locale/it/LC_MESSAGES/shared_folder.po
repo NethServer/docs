@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,13 +47,15 @@ msgstr ""
 
 #: ../../shared_folder.rst:19
 msgid "Requirements"
-msgstr ""
+msgstr "Requisiti"
 
 #: ../../shared_folder.rst:21
 msgid ""
 "Shared folders use ACL (Access Control List) to provide flexible permission "
 "on files and directories."
 msgstr ""
+"Le cartelle condivise utilizzano ACL (Access Control List) per fornire "
+"permessi flessibili su file e directory."
 
 #: ../../shared_folder.rst:24
 msgid ""
@@ -61,32 +63,42 @@ msgid ""
 "``acl`` option is already enabled on ``XFS``, the default CentOS filesystem,"
 " and usually even on ``Ext3`` and ``Ext4`` filesystems."
 msgstr ""
+"Per abilitare ACL, il filesystem deve essere montato con l'opzione `` acl``."
+" L'opzione `` acl`` è già abilitata su `` XFS``, il filesystem CentOS "
+"predefinito, e di solito anche su `` Ext3`` e `` Ext4`` filesystems."
 
 #: ../../shared_folder.rst:29
 msgid "Enabling ACL"
-msgstr ""
+msgstr "Abilitazione ACL"
 
 #: ../../shared_folder.rst:31
 msgid ""
 "On Ext2/3/4 filesystems, use ``tune2fs`` command to check if ``acl`` option "
 "is already enabled: ::"
 msgstr ""
+"Sui filesystem Ext2 / 3/4, usa il comando `` tune2fs`` per verificare se "
+"l'opzione `` acl`` è già abilitata: ::"
 
 #: ../../shared_folder.rst:35
 msgid ""
 "Where ``sdXY`` is the name of your partition, the output should look like "
 "this: ::"
 msgstr ""
+"Dove `` sdXY`` è il nome della tua partizione, l'output dovrebbe "
+"assomigliare a questo: ::"
 
 #: ../../shared_folder.rst:39
 msgid ""
 "If the ``acl`` option is not enabled, add the option inside the "
 ":file:`/etc/fstab`: ::"
 msgstr ""
+"Se l'opzione `` acl`` non è abilitata, aggiungi l'opzione all'interno del "
+"file:: / etc / fstab`: ::"
 
 #: ../../shared_folder.rst:43
 msgid "Or use ``tune2fs`` to enable as default mount option: ::"
 msgstr ""
+"Oppure usa \"tune2fs`` per abilitare come opzione di mount predefinita: ::"
 
 #: ../../shared_folder.rst:52
 msgid "Authorizations"

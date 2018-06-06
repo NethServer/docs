@@ -651,6 +651,8 @@ msgid ""
 "Access the :guilabel:`Server certificate` page, set as default the self-"
 "signed certificate or an uploaded one"
 msgstr ""
+"Accedere alla pagina  :guilabel:`Server certificate`, impostare come "
+"predefinito il certificato autofirmato o uno caricato"
 
 #: ../../base_system.rst:250
 msgid "Open the shell and execute the following commands:"

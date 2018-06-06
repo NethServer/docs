@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../access.rst:74
 msgid "Session timeouts"
-msgstr ""
+msgstr "Timeout della sessione"
 
 #: ../../access.rst:76
 msgid ""
@@ -185,19 +185,26 @@ msgid ""
 "terminates after **15 minutes of inactivity** and expires after **8 hours "
 "after the login**."
 msgstr ""
+"Per default (a partire da |product| 7.5.1804), una sessione di Server "
+"Manager termina dopo **15 minutes of inactivity** e scade dopo **8 hours "
+"after the login**."
 
 #: ../../access.rst:80
 msgid ""
 "The following shell command sets 15 minutes of idle timeout, and 24 hours of"
 " maximum session life time. Time is expressed in seconds: ::"
 msgstr ""
+"Il segeunte comando shell imposta un timeout di idle di 15 minuti, e 24 ore "
+"come durata massima di una sessione. Il tempo è espresso in secondi: ::"
 
 #: ../../access.rst:85
 msgid "To disable the timeouts ::"
-msgstr ""
+msgstr "Per disabilitare i timeout ::"
 
 #: ../../access.rst:89
 msgid ""
 "The new timeout values will affect new sessions. They do not change any "
 "active session."
 msgstr ""
+"I nuovi valori di timeout saranno effettivi  sulle nuove sessioni. Invece "
+"non alterano le sessione attive."

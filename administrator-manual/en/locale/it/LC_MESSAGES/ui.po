@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-31 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../ui/ProxyPass.rst:5
 msgid "Reverse proxy"
-msgstr ""
+msgstr "Reverse proxy"
 
 #: ../../ui/ProxyPass.rst:7
 msgid ""
@@ -104,14 +104,17 @@ msgid ""
 " served by forwarding the original web request to another URL. See also :ref"
 ":`proxy_pass-section`."
 msgstr ""
+"Questa pagina configura determinati paths e nomi di Virtual Host in Apache "
+"per essere offerti inoltrando la richiesta Web originale a un altro URL. "
+"Vedi anche :ref:`proxy_pass-section`."
 
 #: ../../ui/ProxyPass.rst:13
 msgid "Create / Edit"
-msgstr ""
+msgstr "Creare /Modificare"
 
 #: ../../ui/ProxyPass.rst:19
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ../../ui/ProxyPass.rst:16
 msgid ""
@@ -120,58 +123,71 @@ msgid ""
 "virtual host name will match an URL like ``http://<virtual host name>/...``."
 " Matching URLs are forwarded to the :guilabel:`Target URL`."
 msgstr ""
+"L'URL **path name** o il **virtual host name** (FQDN di un host). Un nome di"
+" percorso corrisponderà a URL come ``http://somehost /<path name>/ ... ``,  "
+"mentre un nome di un virtual host corrisponderà a un URL come ``http: "
+"//<virtual host name>/ ...``. Gli URL corrispondenti vengono inoltrati a  "
+":guilabel:`Target URL`."
 
 #: ../../ui/ProxyPass.rst:23
 msgid "Access from CIDR networks"
-msgstr ""
+msgstr "Accesso dalle reti CIDR"
 
 #: ../../ui/ProxyPass.rst:22
 msgid ""
 "Restrict the access from the given list of CIDR networks. Elements must be "
 "separated with a \",\" (comma)."
 msgstr ""
+"Limita l'accesso dall'elenco fornito di reti CIDR. Gli elementi devono "
+"essere separati con una \",\" (virgola)."
 
 #: ../../ui/ProxyPass.rst:26
 msgid "SSL/TLS certificate"
-msgstr ""
+msgstr "Certificato SSL / TLS"
 
 #: ../../ui/ProxyPass.rst:26
 msgid "Select a certificate that is compatible with the virtual host name."
-msgstr ""
+msgstr "Seleziona un certificato compatibile con il nome dell virtual host"
 
 #: ../../ui/ProxyPass.rst:30
 msgid "Require SSL encrypted connection"
-msgstr ""
+msgstr "Richiede una  connessione crittografata SSL"
 
 #: ../../ui/ProxyPass.rst:29
 msgid ""
 "If enabled, the URL path or virtual host name can be accessed only with an "
 "SSL/TLS connection."
 msgstr ""
+"Se abilitato, è possibile accedere al percorso dell'URL o al nome dell' "
+"virtual host solo con una connessione SSL/TLS."
 
 #: ../../ui/ProxyPass.rst:34
 msgid "Target URL"
-msgstr ""
+msgstr "URL di destinazione"
 
 #: ../../ui/ProxyPass.rst:33
 msgid ""
 "The URL where the original request is forwarded. An URL has the form "
 "``<scheme>://<hostname>:<port>/<path>``."
 msgstr ""
+"L'URL in cui è inoltrata la richiesta originale. L'URL è formato come  "
+"``<scheme>://<hostname>:<port>/<path>``."
 
 #: ../../ui/ProxyPass.rst:38
 msgid "Accept invalid SSL certificate from target"
-msgstr ""
+msgstr "Accetta il certificato SSL non valido dalla destinazione"
 
 #: ../../ui/ProxyPass.rst:37
 msgid ""
 "If the :guilabel:`Target URL` has the ``https`` scheme, accept its "
 "certificate even if it is not valid."
 msgstr ""
+"Se il :guilabel:`Target URL` ha lo schema ``https``, accetta il suo "
+"certificato anche se non è valido."
 
 #: ../../ui/ProxyPass.rst:43
 msgid "Forward HTTP \"Host\" header to target"
-msgstr ""
+msgstr "Forward HTTP  \"Host\"  intestazione a destinazione"
 
 #: ../../ui/ProxyPass.rst:41
 msgid ""
@@ -179,14 +195,17 @@ msgid ""
 "incoming request to the proxied host, instead of the \"hostname\" specified "
 "in the :guilabel:`Target URL` field."
 msgstr ""
+"Se abilitata, questa opzione passerà l'header  \"Host\" HTTP dalla richiesta"
+" in entrata all'host proxy, invece del \"hostname\" specificato nel campo "
+":guilabel:`Target URL` field."
 
 #: ../../ui/ProxyPass.rst:46
 msgid "Delete"
-msgstr ""
+msgstr "Eliminare"
 
 #: ../../ui/ProxyPass.rst:48
 msgid "Removes the selected entry."
-msgstr ""
+msgstr "Rimuove la voce selezionata."
 
 #: ../../ui/TlsPolicy.rst:5
 msgid "TLS policy"
