@@ -8,7 +8,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "rc" - 2018-05-31
+    - ISO release 7.5.1804 "final" - 2018-06-11
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -27,15 +27,17 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.5.1804 rc
+    - ISO release 7.5.1804
 
     - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-05-31
+Major changes on 2018-06-11
 ---------------------------
+
+* ISO release 7.5.1804 "final" replaces any previous ISO 7.5.1804 "rc" and "beta"
 
 * The :ref:`email-section` module is now based on Rspamd
 
@@ -49,7 +51,7 @@ Major changes on 2018-05-31
 
 * Default :ref:`tlspolicy-section` is ``2018-03-30``
 
-* Default Server Manager session idle timeout is 60 minutes, session life time is 8 hours
+* Default Server Manager :ref:`session idle timeout <session-timeouts-section>` is 60 minutes, session life time is 8 hours
 
 * Quality of Service (QoS) implementation now uses `FireQOS <https://github.com/firehol/firehol/wiki/FireQOS>`_,
   current configuration is automatically migrated. See :ref:`traffic-shaping-section`

@@ -11,9 +11,11 @@ See also the `ISO releases`_ on Developer's manual.
 7.5.1804
 --------
 
+* 2018-06-11 `final <final75_>`_
 * 2018-05-31 `rc <rc75_>`_
 * 2018-05-21 `beta <beta75_>`_
 
+.. _final75: https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+closed%3A2018-05-31..2018-06-11+is%3Aclosed
 .. _rc75: https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+closed%3A2018-05-21..2018-05-31+is%3Aclosed
 .. _beta75: https://github.com/NethServer/dev/milestone/11?closed=1
 
