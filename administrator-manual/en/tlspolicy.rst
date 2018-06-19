@@ -17,8 +17,8 @@ The following sections describe each policy identifier.
 Policy 2018-06-21
 -----------------
 
-This policy fixes the previous one, ``2018-03-30`` by adding support to ECC
-certificates.
+This policy extends ``2018-03-30`` by adding the support for ECC certificates.
+
 
 Policy 2018-03-30
 -----------------
