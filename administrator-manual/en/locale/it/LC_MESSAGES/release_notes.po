@@ -96,7 +96,7 @@ msgid ""
 "``postfix/MxRecordStatus`` prop"
 msgstr ""
 "La sovrascrittura dei record DNS MX per gli host LAN è stata rimossa. "
-"Rimosso `` postfix / MxRecordStatus`` prop"
+"Rimossa la prop ``postfix / MxRecordStatus``"
 
 #: ../../release_notes.rst:44
 msgid ""
@@ -112,17 +112,17 @@ msgid ""
 ":`shared_folders_requirements-section` and :ref:`home_bind-section` for "
 "details"
 msgstr ""
-": file:`/etc/fstab` non è più un template espanso. Vedi: ref"
-":`shared_folders_requirements-section` e: ref:`home_bind-section` per più "
-"dettagli"
+":file:`/etc/fstab` non è più un template espanso. Fare riferimento a :ref"
+":`shared_folders_requirements-section` e :ref:`home_bind-section` per "
+"maggiori dettagli"
 
 #: ../../release_notes.rst:48
 msgid ""
 "Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant "
 "full control to the creator`"
 msgstr ""
-"Autorizzazioni predefinite per: ref: `shared_folders-section` is: guilabel:`"
-" Concedi il pieno controllo al creatore`"
+"Autorizzazioni predefinite per :ref:`shared_folders-section` is "
+":guilabel:`Concedi il pieno controllo al creatore`"
 
 #: ../../release_notes.rst:50
 msgid "Default :ref:`tlspolicy-section` is ``2018-03-30``"
@@ -143,8 +143,8 @@ msgid ""
 "is automatically migrated. See :ref:`traffic-shaping-section`"
 msgstr ""
 "L'implementazione QoS (Quality of Service) ora utilizza `FireQOS "
-"<https://github.com/firehol/firehol/wiki/FireQOS>` _, la configurazione "
-"corrente viene migrata automaticamente. Vedi: ref: `traffic-shaping-section`"
+"<https://github.com/firehol/firehol/wiki/FireQOS>`_, la configurazione "
+"corrente viene migrata automaticamente. Vedi :ref:`traffic-shaping-section`"
 
 #: ../../release_notes.rst:57
 msgid ""
@@ -156,7 +156,7 @@ msgstr ""
 "La voce del menu :guilabel:`Automatic updates` nel Server Manager è stata "
 "rimossa. Gli aggiornamenti automatici sono ora configurati da "
 ":guilabel:`Software center > Configure`. Dallo stesso pannello è possibile "
-"selezionare :guilabel:`Software updates origin`. Vedi :ref: `software-"
+"selezionare :guilabel:`Software updates origin`. Vedi :ref:`software-"
 "updates-section`"
 
 #: ../../release_notes.rst:61
@@ -175,8 +175,8 @@ msgid ""
 "has been removed along with nethserver-libvirt package. See :ref"
 ":`virtual_machines-section` chapter for details on how to use virtualization"
 msgstr ""
-"Il progetto WebVirtMgr non viene più mantenuto e il modulo corrispondente è "
-"stato rimosso insieme al pacchetto nethserver-libvirt. Vedi :ref"
+"Il progetto WebVirtMgr non viene più mantenuto ed il modulo corrispondente è"
+" stato rimosso insieme al pacchetto nethserver-libvirt. Vedi :ref"
 ":`virtual_machines-section` per dettagli su come usare la virtualizzazione"
 
 #: ../../release_notes.rst:69
