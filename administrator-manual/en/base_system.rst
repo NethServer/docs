@@ -243,7 +243,7 @@ The :guilabel:`Server certificate` page also allows:
   The :guilabel:`Notification email` will be used by Let's Encrypt to send
   notifications about the certificate.
 
-  The Let's Encrypt certificate is automatically updated every 60 days.
+  The Let's Encrypt certificate is automatically renewd 30 days before expiration date.
 
 .. note::
    To avoid problems while importing the certificate in Internet Explorer,
