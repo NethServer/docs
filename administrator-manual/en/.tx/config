@@ -202,6 +202,12 @@ source_file = _build/locale/mail.pot
 source_lang = en
 type = PO
 
+[docs-v7.mail2]
+file_filter = locale/<lang>/LC_MESSAGES/mail2.po
+source_file = _build/locale/mail2.pot
+source_lang = en
+type = PO
+
 
 [docs-v7.statistics]
 file_filter = locale/<lang>/LC_MESSAGES/statistics.po
