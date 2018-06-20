@@ -211,16 +211,21 @@ The :guilabel:`Server certificate` page shows the currently installed X.509
 certificates, and the default one provided by system services for TLS/SSL
 encrypted communications.
 
+|product| checks the certificates validity and sends an email to the root user
+if a certificate is near to expire.
+
 The :guilabel:`Set as default` button allows choosing the default certificate.
 When a new certificate is chosen, all services using TLS/SSL are restarted
 and network clients will be required to accept the new certificate.
 
-When |product| is installed a temporary default self-signed certificate is
-generated automatically.  It should be edited by inserting proper values before
-configuring the network clients to use it. As alternatives, the
-:guilabel:`Server certificate` page allows:
+When |product| is installed a default RSA self-signed certificate is generated.
+It should be edited by inserting proper values before configuring the network
+clients to use it. When the self-signed certificate is due to expire a new one
+is automatically generated from the same RSA key and with the same attributes.
 
-* uploading an existing certificate and private RSA key. Optionally a
+The :guilabel:`Server certificate` page also allows:
+
+* uploading an existing certificate and private RSA/ECC key. Optionally a
   certificate chain file can be specified, too. All files must be PEM-encoded.
 
 * requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is
@@ -232,6 +237,13 @@ configuring the network clients to use it. As alternatives, the
   2. The domains that you want the certificate for must be public domain names
      associated to server own public IP. Make sure you have public DNS name
      pointing to your server (you can check with sites like [#VDNS]_).
+
+     Wildcard certificates (i.e. ``*.nethserver.org``) are not supported.
+
+  The :guilabel:`Notification email` will be used by Let's Encrypt to send
+  notifications about the certificate.
+
+  The Let's Encrypt certificate is automatically updated every 60 days.
 
 .. note::
    To avoid problems while importing the certificate in Internet Explorer,
