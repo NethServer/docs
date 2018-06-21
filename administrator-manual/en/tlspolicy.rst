@@ -19,6 +19,12 @@ Policy 2018-06-21
 
 This policy extends ``2018-03-30`` by adding the support for ECC certificates.
 
+Slapd (openldap-servers)
+    * Reference https://access.redhat.com/articles/1474813
+    * Disabled SSLv3 and TLSv1.0
+    * Cipher suite ::
+
+        ECDHE:EDH:CAMELLIA:ECDH:RSA:ECDSA:!eNULL:!SSLv2:!RC4:!DES:!EXP:!SEED:!IDEA:!3DES:!ADH
 
 Policy 2018-03-30
 -----------------
