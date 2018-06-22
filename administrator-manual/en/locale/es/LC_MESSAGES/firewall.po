@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-06-20 14:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -972,73 +972,10 @@ msgid "For more info, see [#]_ ."
 msgstr ""
 
 #: ../../firewall.rst:344
-msgid "Advanced options"
-msgstr ""
-
-#: ../../firewall.rst:346
-msgid "Under :guilabel:`Configure` page, the following options are available:"
-msgstr ""
-
-#: ../../firewall.rst:348 ../../firewall.rst:352
-msgid "Enable TOS optimizations"
-msgstr ""
-
-#: ../../firewall.rst:349 ../../firewall.rst:366
-msgid "Reserve bandwidth for VoIP (%)"
-msgstr ""
-
-#: ../../firewall.rst:354
-msgid ""
-"This option is enabled by default and classify the traffic using TOS (Type "
-"Of Service) bits."
-msgstr ""
-
-#: ../../firewall.rst:356
-msgid ""
-"The type of service field in the IPv4 header can identify the traffic type. "
-"It's used to specify a datagram's priority, request a route for low delay or"
-" maximize throughput."
-msgstr ""
-
-#: ../../firewall.rst:359
-msgid ""
-"Built-in traffic shaping classes apply to the following TOS categories:"
-msgstr ""
-
-#: ../../firewall.rst:361
-msgid "interactive"
-msgstr ""
-
-#: ../../firewall.rst:362
-msgid "bulk"
-msgstr ""
-
-#: ../../firewall.rst:368
-msgid ""
-"This option is disabled by default. It takes a numeric value which "
-"identifies the percentage of total bandwidth reserved for VoIP traffic (SIP,"
-" RTP and STUN)."
-msgstr ""
-
-#: ../../firewall.rst:371
-msgid ""
-"Be sure to commit the right amount of bandwidth for each concurrent call. "
-"Each call requires:"
-msgstr ""
-
-#: ../../firewall.rst:373
-msgid "~32Kbps for G729 codec"
-msgstr ""
-
-#: ../../firewall.rst:374
-msgid "~40Kbps for GSM codec"
-msgstr ""
-
-#: ../../firewall.rst:379
 msgid "Firewall objects"
 msgstr "Objetos del cortafuego"
 
-#: ../../firewall.rst:381
+#: ../../firewall.rst:346
 msgid ""
 ":index:`Firewall objects` are representations of network components and are "
 "useful to simplify the creation of rules."
@@ -1046,19 +983,19 @@ msgstr ""
 "Los :index:`Objetos del cortafuego` son representaciones de componentes de "
 "red y son útiles para simplificar la creación de reglas."
 
-#: ../../firewall.rst:384
+#: ../../firewall.rst:349
 msgid ""
 "There are 6 types of objects, 5 of them represent sources and destinations:"
 msgstr "Hay 6 tipos de objetos, 5 de ellos representan fuentes y destinos:"
 
-#: ../../firewall.rst:386
+#: ../../firewall.rst:351
 msgid ""
 "Host: representing local and remote computers. Example: web_server, pc_boss"
 msgstr ""
 "Host: representa los ordenadores locales y remotos. Ejemplo: web_server, "
 "pc_boss"
 
-#: ../../firewall.rst:387
+#: ../../firewall.rst:352
 msgid ""
 "Groups of hosts: representing homogeneous groups of computers. Hosts in a "
 "host group should always be reachable using the same interface. Example: "
@@ -1068,7 +1005,7 @@ msgstr ""
 "hosts de un grupo siempre deben ser accesibles utilizando la misma interfaz."
 " Ejemplo: servidores, pc_secretaria"
 
-#: ../../firewall.rst:389
+#: ../../firewall.rst:354
 msgid ""
 "CIDR Networks: You can express a CIDR network in order to simplify firewall "
 "rules."
@@ -1076,7 +1013,7 @@ msgstr ""
 "Redes CIDR: Puede expresar una red CIDR para simplificar las reglas del "
 "firewall."
 
-#: ../../firewall.rst:391
+#: ../../firewall.rst:356
 msgid ""
 "Example 1 : last 14 IP address of the network are assigned to servers "
 "(192.168.0.240/28)."
@@ -1084,7 +1021,7 @@ msgstr ""
 "Ejemplo 1 : los últimos 14 direcciones IP de la red se asignan a servidores "
 "(192.168.0.240/28)."
 
-#: ../../firewall.rst:393
+#: ../../firewall.rst:358
 msgid ""
 "Example 2 : you have multiple green interfaces but you want to create "
 "firewall rules only for one green (192.168.2.0/24)."
@@ -1092,7 +1029,7 @@ msgstr ""
 "Ejemplo 2 : tiene varias interfaces verdes pero desea crear reglas de "
 "firewall sólo para una verde (192.168.2.0/24)."
 
-#: ../../firewall.rst:397
+#: ../../firewall.rst:362
 msgid ""
 "Zone: representing networks of hosts, they must be expressed in CIDR "
 "notation. Their usage is for defining a part of a network with different "
@@ -1100,7 +1037,7 @@ msgid ""
 "specific needs."
 msgstr ""
 
-#: ../../firewall.rst:399
+#: ../../firewall.rst:364
 msgid ""
 "By default, all hosts belonging to a zone are not allowed to do any type of "
 "traffic. It's necessary to create all the rules on the firewall in order to "
@@ -1110,7 +1047,7 @@ msgstr ""
 " realizar ningún tipo de tráfico. Es necesario crear todas las reglas en el "
 "cortafuegos para obtener el comportamiento deseado."
 
-#: ../../firewall.rst:403
+#: ../../firewall.rst:368
 msgid ""
 "Time conditions: can be associated to firewall rules to limit their "
 "effectiveness to a given period of time."
@@ -1118,12 +1055,12 @@ msgstr ""
 "Condiciones de tiempo: se pueden asociar a las reglas de firewall para "
 "limitar su eficacia a un período de tiempo determinado."
 
-#: ../../firewall.rst:405
+#: ../../firewall.rst:370
 msgid "The last type of object is used to specify the type of traffic:"
 msgstr ""
 "El último tipo de objeto se utiliza para especificar el tipo de tráfico:"
 
-#: ../../firewall.rst:407
+#: ../../firewall.rst:372
 msgid ""
 "Services: a service listening on a host with at least one port and protocol."
 " Example: ssh, https"
@@ -1131,7 +1068,7 @@ msgstr ""
 "Servicios: un servicio de escucha en un host con al menos un puerto y "
 "protocolo. Ejemplo: ssh, https"
 
-#: ../../firewall.rst:409
+#: ../../firewall.rst:374
 msgid ""
 "When creating rules, you can use the records defined in :ref:`dns-section` "
 "and :ref:`dhcp-section` like host objects. In addition, each network "
@@ -1143,7 +1080,7 @@ msgstr ""
 "red con un rol asociado se lista automáticamente entre las zonas "
 "disponibles."
 
-#: ../../firewall.rst:414
+#: ../../firewall.rst:379
 msgid ""
 "Rules which have time conditions are enforced only for new connections. "
 "Example: if you are blocking HTTP connections from 09:00 to 18:00, "
@@ -1155,11 +1092,11 @@ msgstr ""
 "las conexiones establecidas antes de las 09:00 serán permitidas hasta que se"
 " cierre. Cualquier nueva conexión después de las 09:00 será eliminada."
 
-#: ../../firewall.rst:420
+#: ../../firewall.rst:385
 msgid "IP/MAC binding"
 msgstr "Enlace IP/MAC"
 
-#: ../../firewall.rst:422
+#: ../../firewall.rst:387
 msgid ""
 "When the system is acting as DHCP server, the firewall can use the list of "
 "DHCP reservations to strictly check all traffic generated from hosts inside "
@@ -1178,16 +1115,16 @@ msgstr ""
 "En este caso, los hosts sin reserva no podrán acceder al cortafuego ni a la "
 "red externa."
 
-#: ../../firewall.rst:428
+#: ../../firewall.rst:393
 msgid "To enable traffic only from well-known hosts, follow these steps:"
 msgstr ""
 "Para habilitar el tráfico sólo desde hosts bien conocidos, siga estos pasos:"
 
-#: ../../firewall.rst:430
+#: ../../firewall.rst:395
 msgid "Create a DHCP reservation for a host"
 msgstr "Crear una reserva DHCP para un host"
 
-#: ../../firewall.rst:431
+#: ../../firewall.rst:396
 msgid ""
 "Go to :menuselection:`Firewall rules` page and select from "
 ":guilabel:`Configure` from the button menu"
@@ -1195,18 +1132,18 @@ msgstr ""
 "Vaya a la página :menuselection:`Reglas firewall` y seleccione "
 ":guilabel:`Configurar` en el menú de botones"
 
-#: ../../firewall.rst:432
+#: ../../firewall.rst:397
 msgid "Select :guilabel:`MAC validation (IP/MAC binding)`"
 msgstr "Seleccione :guilabel:`Validación MAC (enlace IP/MAC)`"
 
-#: ../../firewall.rst:433
+#: ../../firewall.rst:398
 msgid ""
 "Choose :guilabel:`Block traffic` as policy to apply to unregistered hosts"
 msgstr ""
 "Elija :guilabel:`Bloquear tráfico` como directiva para aplicar a hosts no "
 "registrados"
 
-#: ../../firewall.rst:436
+#: ../../firewall.rst:401
 msgid ""
 "Remember to create at least one DHCP reservation before enabling the IP/MAC "
 "binding mode, otherwise no hosts will be able to manage the server using the"
@@ -1216,7 +1153,7 @@ msgstr ""
 "IP/MAC, de lo contrario ningún host será capaz de administrar el servidor "
 "utilizando la interfaz web o SSH."
 
-#: ../../firewall.rst:440
+#: ../../firewall.rst:405
 msgid ""
 "FireQOS tutorial: https://github.com/firehol/firehol/wiki/FireQOS-Tutorial"
 msgstr ""

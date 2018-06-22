@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-06-20 14:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -175,33 +175,28 @@ msgstr ""
 ":guilabel:`root@host.domain.com` nell'angolo in alto a destra dello schermo "
 "e cliccare su :guilabel:`Logout`."
 
-#: ../../access.rst:74
+#: ../../access.rst:76
 msgid "Session timeouts"
 msgstr "Timeout della sessione"
 
-#: ../../access.rst:76
+#: ../../access.rst:78
 msgid ""
 "By default (starting from |product| 7.5.1804), a Server Manager session "
-"terminates after **15 minutes of inactivity** and expires after **8 hours "
-"after the login**."
+"terminates after **60 minutes of inactivity** (idle timeout) and **expires 8"
+" hours after the login** (session life time)."
 msgstr ""
-"Per default (a partire da |product| 7.5.1804), una sessione di Server "
-"Manager termina dopo **15 minutes of inactivity** e scade dopo **8 hours "
-"after the login**."
 
-#: ../../access.rst:80
+#: ../../access.rst:82
 msgid ""
-"The following shell command sets 15 minutes of idle timeout, and 24 hours of"
-" maximum session life time. Time is expressed in seconds: ::"
+"The following shell command sets 2 hours of idle timeout, and 16 hours of "
+"maximum session life time. Time is expressed in seconds: ::"
 msgstr ""
-"Il segeunte comando shell imposta un timeout di idle di 15 minuti, e 24 ore "
-"come durata massima di una sessione. Il tempo è espresso in secondi: ::"
 
-#: ../../access.rst:85
+#: ../../access.rst:87
 msgid "To disable the timeouts ::"
 msgstr "Per disabilitare i timeout ::"
 
-#: ../../access.rst:89
+#: ../../access.rst:91
 msgid ""
 "The new timeout values will affect new sessions. They do not change any "
 "active session."
