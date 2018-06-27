@@ -185,6 +185,56 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
 The default setting is “Not active”.
 
+Synchronize calendars and contacts with CalDAV and CardDAV server
+=================================================================
+
+From version 5.2.1 of WebTop a DAV server based on Sabre/DAV has been inserted that allows synchronization of Calendars and Contacts with external clients through CalDAV and CardDAV protocols.
+
+It is possible to download the link to the resource to be synchronized (Calendar or Addres Book) by right clicking on the calendar (or on the contacts) and selecting "Links to this calendar" (or links to this addressbook).
+
+The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
+
+To synchronize mobile devices, you can use a common URL and take advantage of the self-scans of the resources to be synchronized.
+
+For Google Android:
+-------------------
+
+- install the "Opensync" application (https://play.google.com/store/apps/details?id=com.deependhulla.opensync&hl=it)
+- add a new account to synchronize (+ key) and select "Login with URL and username":
+- enter in the URL field: https://<server_name>
+- enter user (complete with @domain) and password and continue with the "LOGIN" key
+- once the configuration is completed, it will be enough to select which resource to synchronize between those detected.
+
+For Apple iOS:
+--------------
+
+- Settings -> Account and Password -> Add account
+- select "Other" -> Add CalDAV or CardDAV account
+- enter the server name (Ex. server.domain.it), the username (complete with @domain) and password
+
+.. note::
+
+Currently, synchronization with mobile devices is only supported for personal resources.
+It is planned to add support also for calendars and contacts shared in an upcoming release.
+
+By default, the link to the resource links includes the server principal name (FQDN).
+Should it be necessary to change this name with a different public name, execute these two shell commands: ::
+
+ config setprop webtop DavServerUrl https://<new_name_server>/webtop-dav/server.php
+ signal-event nethserver-webtop5-update
+
+Tips for using some desktop clients:
+------------------------------------
+
+**Thunderbird**
+
+- Lightning has no autodiscovery support: each calendar must be added manually using the URL obtained via WebTop menu “Calendar Links”.
+- Thunderbird has no native support for CardDAV: the Cardbook add-on works fine, with easy setup and autodiscovery.
+
+**Outlook**
+
+- Use opensource Outlook CalDav Synchronizer, supporting both CardDAV and CalDAV
+
 Sharing email folders or the entire account
 ===========================================
 
