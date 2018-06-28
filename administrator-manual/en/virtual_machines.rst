@@ -1,8 +1,8 @@
 .. index:: virtual machines
 
-.. note::
-
-  This package is not supported in NethServer Enterprise 
+.. only:: nsent
+    
+    .. note:: This package is not supported in |product|
 
 .. _virtual_machines-section:
 

@@ -2,9 +2,10 @@
 SOGo
 ====
 
-.. note::
+.. only:: nsent
 
-  This package is not supported in NethServer Enterprise 
+    .. note:: This package is not supported in |product|
+
 
 SOGo is a fully supported and trusted groupware server with a focus on scalability and open standards. SOGo is released under the GNU GPL/LGPL v2 and above.
 SOGo provides a rich AJAX-based Web interface and supports multiple native clients through the use of standard protocols such as CalDAV, CardDAV and GroupDAV, as well as Microsoft ActiveSync.
