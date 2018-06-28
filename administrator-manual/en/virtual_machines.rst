@@ -1,5 +1,9 @@
 .. index:: virtual machines
 
+.. note::
+
+  This package is not supported in NethServer Enterprise 
+
 .. _virtual_machines-section:
 
 ================
