@@ -24,6 +24,22 @@
                 {% endif %}
             {% endblock %}
             <li><a href="{{ pathto('index') }}">{{ gettext('Index') }}</a></li>
+            <li class="dropdown">
+                <a role="button" id="dLabelLanguages" data-toggle="dropdown" data-target="#" href="#" aria-expanded="false">{{ gettext('Languages') }} <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabelLanguages">
+                    {%- for mlang in alt_languages.split(',') %}
+                    <li><a class="reference internal" href="../../{{ mlang }}/{{ current_version }}/{{ pagename }}.html">{{ mlang }}</a></li>
+                    {%- endfor %}
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a role="button" id="dLabelVersions" data-toggle="dropdown" data-target="#" href="#" aria-expanded="false">{{ gettext('Versions') }} <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabelVersions">
+                    {%- for mver in alt_versions.split(',') %}
+                    <li><a class="reference internal" href="../../{{ language }}/{{ mver }}/{{ pagename }}.html">{{ mver }}</a></li>
+                    {%- endfor %}
+                </ul>
+            </li>
             <li><a href="{{ pathto('http://helpdesk.nethesis.it/', True) }}">{{ gettext('Support') }}</a></li>
             {% if theme_navbar_links %}
               {%- for link in theme_navbar_links %}
