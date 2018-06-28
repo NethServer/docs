@@ -1,0 +1,36 @@
+---
+language: python
+python:
+    - "2.7"
+
+env:
+    global:
+        - SSH_RSYNC="ssh -oIdentityFile=~/.ssh/id_nethbot -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+        - BUILD_DIR=administrator-manual/en
+        - TARGET_DIR=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_TAG:-${TRAVIS_BRANCH}}}
+        - SPHINX_OPTS="-b html -A current_version=${TARGET_DIR}"
+
+before_install:
+    - openssl aes-256-cbc -K $encrypted_8883a3d2bda9_key -iv $encrypted_8883a3d2bda9_iv -in id_nethbot_nethserver.enc -out ~/.ssh/id_nethbot -d
+    - chmod -c 600 ~/.ssh/id_nethbot
+
+install:
+    - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt sphinx==1.7.4
+
+script:
+    - pushd ${BUILD_DIR}/
+    - sphinx-build -t nscom -D language=it ${SPHINX_OPTS} -d _build/doctrees/it . _build/webroot/nscom/it/${TARGET_DIR}
+    - sphinx-build -t nscom -D language=en ${SPHINX_OPTS} -d _build/doctrees/en . _build/webroot/nscom/en/${TARGET_DIR}
+    - sphinx-build -t nscom -D language=es ${SPHINX_OPTS} -d _build/doctrees/es . _build/webroot/nscom/es/${TARGET_DIR}
+    - rm -rf _build/doctrees
+    - sphinx-build -t nsent -D language=it ${SPHINX_OPTS} -d _build/doctrees/it . _build/webroot/nsent/it/${TARGET_DIR}
+    - sphinx-build -t nsent -D language=en ${SPHINX_OPTS} -d _build/doctrees/en . _build/webroot/nsent/en/${TARGET_DIR}
+    - sphinx-build -t nsent -D language=es ${SPHINX_OPTS} -d _build/doctrees/es . _build/webroot/nsent/es/${TARGET_DIR}
+    - popd
+
+deploy:
+    provider: script
+    skip_cleanup: true
+    script: rsync -ai --no-super --filter="+ /*/*/${TARGET_DIR}/**" --filter='-r *' --delete-after -e "${SSH_RSYNC}" ${BUILD_DIR}/_build/webroot/* nethbot@docs1.nethserver.com:.
+    on:
+        all_branches: true
