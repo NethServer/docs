@@ -21,6 +21,7 @@ To avoid such conflict, remove ``default`` libvirt NAT network: ::
   systemctl stop dnsmasq
   systemctl start libvirtd
   virsh net-destroy default
+  virsh net-autostart default --disable
   systemctl start dnsmasq
 
 Finally, the system is ready to be managed using `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_,
