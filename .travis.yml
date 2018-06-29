@@ -5,16 +5,13 @@ python:
 
 env:
     global:
-        - SSH_RSYNC="ssh -oIdentityFile=~/.ssh/id_nethbot -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+        - SSH_RSYNC="sshpass -e ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
         - BUILD_DIR=administrator-manual/en
         - TARGET_DIR=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_TAG:-${TRAVIS_BRANCH}}}
         - SPHINX_OPTS="-b html -A current_version=${TARGET_DIR}"
 
-before_install:
-    - openssl aes-256-cbc -K $encrypted_8883a3d2bda9_key -iv $encrypted_8883a3d2bda9_iv -in id_nethbot_nethserver.enc -out ~/.ssh/id_nethbot -d
-    - chmod -c 600 ~/.ssh/id_nethbot
-
 install:
+    - sudo apt-get install sshpass
     - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt sphinx==1.7.4
 
 script:
@@ -31,6 +28,6 @@ script:
 deploy:
     provider: script
     skip_cleanup: true
-    script: rsync -ai --no-super --filter="+ /*/*/${TARGET_DIR}/**" --filter='-r *' --delete-after -e "${SSH_RSYNC}" ${BUILD_DIR}/_build/webroot/* nethbot@docs1.nethserver.com:.
+    script: rsync -ai --no-super --filter="+ /*/*/${TARGET_DIR}/**" --filter='-r *' --delete-after -e "${SSH_RSYNC}" ${BUILD_DIR}/_build/webroot/* nethserver@docs1.nethserver.com:.
     on:
         all_branches: true
