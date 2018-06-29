@@ -167,7 +167,7 @@ Or ::
 
   dnf install <URL>
 
-where <URL> is http://packages.nethserver.org/nethserver/7.3.1611/base/x86_64/Packages/nethserver-mock-1.3.2-1.ns7.noarch.rpm at the time of writing.
+where <URL> is http://packages.nethserver.org/nethserver/7/base/x86_64/Packages/nethserver-mock-1.5.0-1.ns7.noarch.rpm at the time of writing.
 The build process uses Mock and must be run as a non privileged user,
 member of the ``mock`` system group.  Add your user to the ``mock``
 group: ::
