@@ -194,6 +194,11 @@ It is possible to download the link to the resource to be synchronized (Calendar
 
 The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
 
+To the authentication request fill the required fields with:
+
+- **User name**: enter your full user name, eg: goofy@nethserver.org
+- **Password**: enter your password
+
 To synchronize mobile devices, you can use a common URL and take advantage of the self-scans of the resources to be synchronized.
 
 For Google Android:
