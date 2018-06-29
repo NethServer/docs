@@ -97,7 +97,9 @@ To put again in production original crashed server:
 How to synchronize custom paths
 ===============================
 
-It is possible to customize HotSync adding all kind of data through the use of **plugins**. The directory of plugins is `/etc/hotsync.d`. Executable files in this directory, are executed before the synchronization.
+By default, all path of backup-data are synced. All paths in /etc/backup-data.d/\*.include are included and /etc/backup-data.d/\*.exclude are excluded. If you want to just add a custom path, create a custom include file for backup-data.
+
+But if you want to do more complex operations, it is possible to customize HotSync adding all kind of data through the use of **plugins**. A plugin is a script that is launched during HotSync execution and is able to add path to include or exclude. The directory of plugins is `/etc/hotsync.d`. Executable files in this directory, are executed before the synchronization.
 
 `INCLUDE_FILE` and `EXCLUDE_FILE` are the files that contain the list of paths to include and to exclude to/from HotSync. Those two variables are passed as arguments to the scripts of this directory when they are executed.
 
