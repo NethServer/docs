@@ -120,6 +120,7 @@ if tags.has('nsent'):
         'navbar_fixed_top': "false",
         'source_link_position': "none",
         'bootswatch_theme': "cerulean",
+        'nosidebar': "1",
     }
 
 elif tags.has('nscom'):
@@ -161,6 +162,18 @@ elif tags.has('nscom'):
          [u'Nethesis'], 1)
     ]
 
+#
+# Define context default values for HTML templates
+#
+context = {
+    'alt_languages': 'it,en,es',
+    'alt_versions': 'v7,v6,dev',
+    'current_version': 'def',
+    'user_analytics_code': 'UA-37499928-4',
+}
 
-
-
+if 'html_context' in globals():
+    for key in context:
+        html_context.setdefault(k, context[k])
+else:
+    html_context = context
