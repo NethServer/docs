@@ -20,19 +20,6 @@ data such as user's home directories and mails. It runs every night and can be
 full or incremental on a weekly basis.  This backup also contains the archive of
 the configuration backup.
 
-Data backup can be saved on one destination chosen between:
-
-* USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
-* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
-* NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
-* WebDAV: available on many NAS and remote servers (Use a server with a valid SSL certificate as webDAV target, otherwise the system will fail mounting the filesystem)
-
-The backup status can be notified to the system administrator or to an external mail address.
-
-.. note:: The destination directory is based on the server host name: in case of
-   FQDN change, the administrator should take care to copy backup data from
-   the old directory to the new one.
-
 .. _backup_config_rpms:
 .. _backup_config-section:
 
@@ -51,82 +38,446 @@ backups to keep`.
 The list of installed modules is included in the backup archive. The
 restore procedure can download and install the listed modules automatically.
 
+Configuration backup customization
+----------------------------------
 
-.. _disaster-recovery-section:
+In most cases it is not necessary to change the configuration backup. 
+But it can be useful, for example, if you have a custom httpd configuration.
+In this case you can add the file that contains the customization to the list of files to backup.
 
-Disaster recovery
-=================
+**Inclusion**
 
-The system is restored in two phases: configuration first, then data. 
-Right after configuration restore, the system is ready to be used if proper packages are installed. 
-You can install additional packages before or after restore.
-For example, if mail-server is installed, the system can send and receive mail.
+If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
 
-Other restored configurations:
+For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add this line: ::
 
-* Users and groups
-* SSL certificates
+  /etc/httpd/conf.d/mycustom.conf
 
-.. note:: The root/admin password is not restored.
+Do not add big directories or files to configuration backup.
 
-Steps to be executed:
+**Exclusion**
 
-1. Install the new machine. If possible, enable a network connection at
-   boot (refer to :ref:`installation-manual` section) to automatically reinstall
-   the required modules
+If you wish to exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
 
-2. Access the Server Manager and follow the :ref:`first-configuration-wizard-section` procedure
+.. warning:: 
+   Make sure not to leave empty lines inside edited files.
+   The syntax of the configuration backup supports only simple file and directory paths.
 
-3. At step :guilabel:`Restore configuration`, upload the configuration archive.
-   The option :guilabel:`Download modules automatically` should be enabled.
-
-4. If a warning message requires it, reconfigure the network roles assignment.
-   See :ref:`restore-roles-section` below.
-
-5. Verify the system is functional
-
-6. Restore data backup executing on the console ::
-
-    restore-data
+.. _backup_usb_disk-section:
 
 
-.. _restore-roles-section:
-   
-Restore network roles 
----------------------
+.. _backup_data-section:
 
-If a role configuration points to a missing network interface, the
-:guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore`
-and :guilabel:`Network` pages pop up a warning. This happens for
-instance in the following cases:
+Data backup
+===========
 
-* configuration backup has been restored on a new hardware
-* one or more network cards have been substituted
-* system disks are moved to a new machine
+The data backup can be performed using different engines:
 
-The warning points to a page that lists the network cards present in
-the system, highlighting those not having an assigned :ref:`role
-<network-section>`. Such cards have a drop down menu where to select a
-role available for restoring.
+* duplicity (default) - http://duplicity.nongnu.org/
+* restic - https://restic.net/
+* rsync - https://rsync.samba.org/
 
-For instance, if a card with the *orange* role has been replaced, the
-drop down menu will list an element ``orange``, near the new
-network card.
+When selecting an engine, the system administrator should carefully evaluate multiple aspects:
 
-The same applies if the old card was a component of a logical
-interface, such as a bridge or bond.
+like the space and speed of storage backend and privacy constraints:
 
-By picking an element from the drop down menu, the old role is
-transferred to the new physical interface.
+* Compression: data are compressed on the destination, the disk usage can vary in function
+  of compression efficiency which depends also from the data set.
+* Deduplication: instead of compressing files, split data into chunks and keep only a copy
+  of each chunk. Efficiency depends highly on the data set
+* Encryption: data saved inside the destination storage are encrypted.
+  Usually the data are encrypted before transfer
+* Size: occupied size of target storage for each backup, may be smaller or equal than the original data set.
+  When using engines without encryption support, the destination should always be bigger than
+  the source
+* Retention: the policy which sets the amount of time in which a given set of data will remain available for restore
+* Integrity: it's the engine ability to check if the performed backup is valid in case of restore
+* Type: a backup can be full, incremental or snapshot based (incremental-forever):
 
-Click the :guilabel:`Submit` button to apply the changes.
+  * full: all file are copied to the destination each time
+  * incremental: compare the data with last full backup and copy only changed or added items.
+    The full backup and all intermediate incremental are needed for the restore process.
+    A full backup is required on regular basis.
+  * snapshot: create a full backup only the first time, then create differential backups.
+    Snapshots can be deleted and consolidated and only a one full backup is needed
 
-.. warning:: Choose carefully the new interfaces assignment: doing a mistake
-             here could lead to a system isolated from the network!
 
-If the missing role is ``green`` an automatic procedure attempts to fix
-the configuration at boot-time, to ensure a minimal network
-connectivity and login again on the Server Manager.
+=============  =========== ============= ========== ========= ==================
+Engine         Compression Deduplication Encryption Integrity Type  
+=============  =========== ============= ========== ========= ==================
+**duplicity**  Yes         No            No         Yes       full / incremental
+**restic**     No          Yes           Yes        Yes       snapshot
+**rsync**      No          Partial       No         No        snapshot
+=============  =========== ============= ========== ========= ==================
+
+Engines
+-------
+
+Duplicity
+^^^^^^^^^
+
+:index:`Duplicity` is the well-known and default engine for |product|.
+It has a good compression algorithm which will reduce storage usage on the destination.
+Duplicity requires a full backup once a week, when the backup set is very big the process
+may take more than 24 hours to complete.
+The |product| implements doesn't support encryption.
+
+Supported storage backends:
+
+- CIFS
+- NFS
+- USB
+- WebDAV (only when used with standard backup)
+
+Restic
+^^^^^^
+
+:index:`Restic` implements a snapshot-based and always-encrypted backup.
+It implements deduplication and can perform backup on cloud services.
+Since Restic requires only one full backup, all next runs will be much more quicker;
+it is very fast and could be schedule multiple times a day.
+
+Supported storage backends:
+
+* CIFS
+* NFS
+* USB
+* WebDAV (only when used with standard backup)
+* sFTP (FTP over SSH)
+* Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
+* Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
+* Restic `REST server <https://github.com/restic/rest-server>`_
+
+
+Rsync
+^^^^^
+
+:index:`Time machine-style` backup engine using :index:`rsync`.
+After the first full backup, it copies only modified or new files using
+fast incremental file transfer.
+On the destination, partial deduplication is obtained using hard links.
+If the backup destination directory is full, the oldest backups are deleted until enough space is available.
+
+Supported storage backends:
+
+- CIFS
+- NFS
+- USB
+- WebDAV (only when used with standard backup)
+- sFTP (FTP over SSH)
+
+Rsync doesn't support encryption nor compression on the destination.
+But during data transfer, sFTP assures encryption and data are compressed to minimize bandwidth usage.
+
+Primary backup
+---------------
+
+This is the default system backup which can be configured and restored using the web interface.
+It can be scheduled once a day, can include system logs and implements notifications to system administrator
+or to an external mail address.
+
+Storage backends
+^^^^^^^^^^^^^^^^
+
+Primary backup can be saved on a destination chosen between:
+
+* USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
+* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
+* NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
+* WebDAV: available on many NAS and remote servers (Use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
+
+.. note:: The destination directory is based on the server host name: in case of
+   FQDN change, the administrator should take care to copy backup data from
+   the old directory to the new one.
+
+Change backup engine
+^^^^^^^^^^^^^^^^^^^^
+
+Duplicity is the default engine for the standard backup.
+You can change it executing one of the commands below.
+
+Use restic engine: ::
+
+  config setprop backup-data Program restic
+
+Use rsync engine: ::
+
+  config setprop backup-data Program rsync
+
+Use duplicity engine: ::
+
+  config setprop backup-data Program duplicity
+
+The backup will use the selected engine on next run.
+When the new engine has completed at least one backup, remember to cleanup the destination by removing
+data from the old engine.
+
+Multiple backup
+---------------
+
+The administrator can schedule multiple backups using different engines and destinations.
+A good policy could be creating a weekly backup to USB disk using duplicity, while scheduling
+a daily backup to a cloud storage using restic.
+
+.. note:: 
+   The multiple backup feature doesn't provide any type of web interface.
+   All operations should be performed from command line.
+
+When configuring multiple backup, please bear mind two golden rules:
+
+* always use different destinations for each engine
+* avoid scheduling concurrent backups, each backup should run
+* when the previous one has been completed
+
+Limitation of multiple backup:
+
+* disk usage report is not implemented
+* WebDAV can't be used as storage backend
+
+Every backup record is saved inside the ``backups`` database. Each record can have 3 different types:
+
+* ``duplicity``
+* ``restic``
+* ``rsync``
+
+Common properties:
+
+* ``status`` : enable or disable the backup, can be ``enabled`` or ``disabled``
+* ``Notify``: if set to ``always``, always send a notification with backup status; if set to ``error``, send a notification only on error; if set to ``never``, never send a notification
+* ``NotifyFrom``: set a different sender then ``root@localhost``
+* ``NotifyTo``: send the notification to given mail address, default is ``root@localhost``
+* ``VFSType`` : set the storage backend
+
+To list all configured backups: ::
+
+  db backups show
+
+Output example: ::
+
+  mybackup=rsync
+    BackupTime=1 7 * * *
+    Notify=error
+    NotifyFrom=
+    NotifyTo=root@localhost
+    SMBHost=192.168.1.234
+    SMBLogin=test
+    SMBPassword=test
+    SMBShare=test
+    VFSType=cifs
+    status=enabled
+  
+
+Schedule
+^^^^^^^^
+
+The backup schedule uses the cron syntax saved inside the ``BackupTime`` property.
+Below, some examples.
+
+
+Every night at 3: ::
+
+  db backups setprop mybackup BackupTime '0 3 * * 0'
+
+Every hour, at minute 15: ::
+
+  db backups setprop mybackup BackupTime '15 0 * * 0'
+
+At 04:05 on Sunday: ::
+
+  db backups setprop mybackup BackupTime '5 4 * * 0'
+
+
+For more examples, see:
+
+- https://crontab-generator.org/
+- https://crontab.guru
+
+Retention policy
+^^^^^^^^^^^^^^^^
+
+Each engine can implement its own retention policy.
+The policy can be set using the ``CleanupOlderThan`` property.
+
+The property takes a number followed by a D, M or Y  (days,months, or years respectively).
+
+Example: cleanup after 30 days: ::
+
+  db backups mybackup CleanupOlderThan 30D
+
+The retention policy is not supported by rsync backend.
+
+Storage backends
+^^^^^^^^^^^^^^^^
+
+A list of supported backend for multiple backup.
+Some backends are engine-specific.
+
+CIFS
+~~~~
+
+Samba or Windows share, ``VFSType`` is ``cifs``.
+Supported by all backends.
+
+Properties:
+
+* ``SMBShare``: Samba share name
+* ``SMBHost``: Samba server host name or IP address
+* ``SMBLogin``: Samba login user
+* ``SMBPassword``: Samba password for the given user
+
+USB
+~~~
+
+USB-attached disk, ``VFSType`` is ``usb``.
+Supported by all backends.
+
+Properties:
+
+* ``USBLabel``
+
+NFS
+~~~
+
+Unix Network FileSystem, ``VFSType`` is ``nfs``.
+Supported by all backends.
+
+Properties:
+
+* ``NFSHost``: NFS server host name or IP address
+* ``NFShare``: NFS share name
+
+sFTP
+~~~~
+
+FTP over SSH, ``VFSType`` is ``sftp``.
+Supported only from restic and rsync.
+
+Properties:
+
+* ``SftpHost``: SSH host name or IP address
+* ``SftpUser``: SSH user
+* ``SftpPort``: SSH port
+* ``SftpDirectory``: destination directory, must be writable by SSH user
+
+S3
+~~
+
+Amazon S3 (or compatible), ``VFSType`` is ``s3``.
+Supported only from restic. 
+
+Properties:
+
+* ``S3AccessKey``: user access key
+* ``S3Bucket``: bucket (directory) name
+* ``S3Host``: S3 host, use ``s3.amazonaws.com`` for Amazon
+* ``S3SecretKey``: secret access key
+
+How to setup Amazon S3 access keys: https://restic.readthedocs.io/en/stable/080_examples.html
+
+B2
+~~
+
+Backblaze B2, ``VFSType`` is ``b2``.
+Supported only from restic. 
+
+Properties:
+
+* ``B2AccountId``: B2 account name
+* ``B2AccountKey``: B2 account secret key
+* ``B2Bucket``: B2 bucket (directory)
+
+
+Rest
+~~~~
+
+Restic REST server, ``VFSType`` is ``rest``.
+Supported only from restic.
+
+Properties:
+
+* ``RestDirectory``: destination directory
+* ``RestHost``: REST server hostname or IP address
+* ``RestPort``: REST sever port (default for server is 8000)
+* ``RestProtocol``: REST protocol, can be ``http`` or ``https``
+* ``RestUser``: user for authentication (optional)
+* ``RestPassword``: password for authentication (optional)
+
+Examples
+^^^^^^^^
+
+Rsync backup, at 7:15 to a remote server, 30 days retention. The sFTP requires backend the password of the remote server to execute SSH key exchange. ::
+
+  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' CleanupOlderThan 30D Notify error NotifyFrom '' NotifyTo root@localhost \
+  VFSType sftp SftpHost 192.168.1.2 SftpUser root SftpPort 22 SftpDirectory /mnt/mybackup1 
+  echo -e "Nethesis,1234" > /tmp/mybackup1-password; signal-event nethserver-backup-data-save mybackup1  /tmp/mybackup1-password
+
+Restic backup at 3:00 to Amazon S3, no retention limit: ::
+
+  db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
+  S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  signal-event nethserver-backup-data-save mybackup1
+
+Duplicity backup ad 22:00 to CIFS, 10 days retention: ::
+
+  db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
+  SMBHost nas.localnethserver.org SMBUser myuser SMBPassword mypassword SMBShare mybackup
+  signal-event nethserver-backup-data-save mybackup1
+
+
+To manually stat a backup, execute: ::
+
+  backup-data -b <name>
+
+Where ``name`` is the backup name. For the examples above, the name is ``mybackup1``.
+
+.. _backup_customization-section:
+
+Data backup customization
+-------------------------
+
+If additional software is installed, the administrator can edit
+the list of files and directories included (or excluded).
+
+Primary backup
+^^^^^^^^^^^^^^
+
+**Inclusion**
+
+If you wish to add a file or directory to data backup, add a line to the file :file:`/etc/backup-data.d/custom.include`.
+
+For example, to backup a software installed inside :file:`/opt` directory, add this line: ::
+
+  /opt/mysoftware
+
+**Exclusion**
+
+If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
+
+For example, to exclude all directories called *Download*, add this line: ::
+
+  **Download**
+
+To exclude a mail directory called *test*, add this line: ::
+
+  /var/lib/nethserver/vmail/test/ 
+
+
+Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
+
+Multiple backup
+^^^^^^^^^^^^^^^
+
+The multiple backup reads the same configuration of the primary one.
+List of saved and excluded files can be customized using two special files (where name is the name of the multiple backup):
+
+- ``/etc/backup-data/<name>.include``
+- ``/etc/backup-data/<name>.exclude``
+
+Both file will override the list on included and excluded files from the primary backup.
+
+.. warning:: Make sure not to leave empty lines inside edited files.
+
+
 
 .. _data_restore:
 
@@ -169,6 +520,9 @@ All relevant files are saved under :file:`/var/lib/nethserver/` directory:
 * Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
 * User's home: :file:`/var/lib/nethserver/home/<user>`
 
+Primary backup
+^^^^^^^^^^^^^^
+
 It is possible to list all files inside the last backup using this command: ::
 
  backup-data-list
@@ -195,6 +549,23 @@ Example, restore the version of a file from 15 days ago: ::
   restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
 
 The ``-t`` option allows to specify the number of days (15 in this scenario).
+When used with snapshot-based engines, the ``-t`` option requires the name of the snapshot
+to restore.
+
+Multiple backup
+^^^^^^^^^^^^^^^
+
+To list data inside a multiple backup, use: ::
+
+  backup-data-list -b <name>
+
+To restore all data into the original location, use: ::
+
+  restore-data -b <name>
+
+To restore a file or directory, use: ::
+
+  restore-file -b <name> <position> <path>
 
 .. note:: When you are using *CIFS* to access the share, and the command doesn't work
           as expected, verify that user and password for the network share are correct.
@@ -203,72 +574,11 @@ The ``-t`` option allows to specify the number of days (15 in this scenario).
           Also, you can use the :command:`backup-data-list` to check if the backup is accessible.
 
 
-.. _backup_customization-section:
-
-Data backup customization
-=========================
-
-If additional software is installed, the administrator can edit
-the list of files and directories included (or excluded).
-
-**Inclusion**
-
-If you wish to add a file or directory to data backup, add a line to the file :file:`/etc/backup-data.d/custom.include`.
-
-For example, to backup a software installed inside :file:`/opt` directory, add this line: ::
-
-  /opt/mysoftware
-
-**Exclusion**
-
-If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
-
-For example, to exclude all directories called *Download*, add this line: ::
-
-  **Download**
-
-To exclude a mail directory called *test*, add this line: ::
-
-  /var/lib/nethserver/vmail/test/ 
-
-
-Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
-
-
-.. warning:: Make sure not to leave empty lines inside edited files.
-
-
-Configuration backup customization
-==================================
-
-In most cases it is not necessary to change the configuration backup. 
-But it can be useful, for example, if you have a custom httpd configuration.
-In this case you can add the file that contains the customization to the list of files to backup.
-
-**Inclusion**
-
-If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
-
-For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add this line: ::
-
-  /etc/httpd/conf.d/mycustom.conf
-
-Do not add big directories or files to configuration backup.
-
-**Exclusion**
-
-If you wish to exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
-
-.. warning:: 
-   Make sure not to leave empty lines inside edited files.
-   The syntax of the configuration backup supports only simple file and directory paths.
-
-.. _backup_usb_disk-section:
 
 USB disk configuration
 ======================
 
-The best filesystem for USB backup disks is EXT3. FAT filesystem is supported but *not recommended*,
+The best filesystem for USB backup disks are EXT3 and EXT4. FAT filesystem is supported but *not recommended*,
 while NTFS is **not supported**.
 
 Before formatting the disk, attach it to the server and find the device name: ::
@@ -302,9 +612,17 @@ In this scenario, the disk is accessibile as *sdc* device.
 
     echo "0," | sfdisk /dev/sdc
 
-* Create the filesystem on *sdc1* partition with a label named *backup*: ::
+* Create the filesystem on *sdc1* partition with a label named *backup*.
+  The filesystem should be tuned on the backup engine used: rsync and restic require a lot of
+  inodes, where duplicity performs better on file systems optimized for large files.
+
+  For duplicity use: ::
 
     mke2fs -v -T largefile4 -j /dev/sdc1 -L backup
+
+  For restic and restic use: ::
+
+    mkfs.ext4 -v /dev/sdc1 -L backup -E lazy_itable_init
 
 * Detach and reconnect the USB disk:
 
@@ -313,4 +631,83 @@ In this scenario, the disk is accessibile as *sdc* device.
     blockdev --rereadpt /dev/sdc
 
 * Now the *backup* label will be displayed inside the :guilabel:`Backup (data)` page.
+
+
+.. _disaster-recovery-section:
+
+Disaster recovery
+=================
+
+The system is restored in two phases: configuration first, then data.
+Right after configuration restore, the system is ready to be used if proper packages are installed. 
+You can install additional packages before or after restore.
+For example, if mail-server is installed, the system can send and receive mails.
+
+Other restored configurations:
+
+* Users and groups
+* SSL certificates
+
+.. note:: The root/admin password is not restored.
+
+Steps to be executed:
+
+1. Install the new machine. If possible, enable a network connection at
+   boot (refer to :ref:`installation-manual` section) to automatically re-install
+   the required modules
+
+2. Access the Server Manager and follow the :ref:`first-configuration-wizard-section` procedure
+
+3. At step :guilabel:`Restore configuration`, upload the configuration archive.
+   The option :guilabel:`Download modules automatically` should be enabled.
+
+4. If a warning message requires it, reconfigure the network roles assignment.
+   See :ref:`restore-roles-section` below.
+
+5. Verify the system is functional
+
+6. Restore data backup executing on the console ::
+
+    restore-data
+
+Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
+
+.. _restore-roles-section:
+   
+Restore network roles 
+---------------------
+
+If a role configuration points to a missing network interface, the
+:guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore`
+and :guilabel:`Network` pages pop up a warning. This happens for
+instance in the following cases:
+
+* configuration backup has been restored on a new hardware
+* one or more network cards have been substituted
+* system disks are moved to a new machine
+
+The warning points to a page that lists the network cards present in
+the system, highlighting those not having an assigned :ref:`role
+<network-section>`. Such cards have a drop down menu where to select a
+role available for restoring.
+
+For instance, if a card with the *orange* role has been replaced, the
+drop down menu will list an element ``orange``, near the new
+network card.
+
+The same applies if the old card was a component of a logical
+interface, such as a bridge or bond.
+
+By picking an element from the drop down menu, the old role is
+transferred to the new physical interface.
+
+Click the :guilabel:`Submit` button to apply the changes.
+
+.. warning:: Choose carefully the new interfaces assignment: doing a mistake
+             here could lead to a system isolated from the network!
+
+If the missing role is ``green`` an automatic procedure attempts to fix
+the configuration at boot-time, to ensure a minimal network
+connectivity and login again on the Server Manager.
+
 
