@@ -79,8 +79,6 @@ The data backup can be performed using different engines:
 
 When selecting an engine, the system administrator should carefully evaluate multiple aspects:
 
-like the space and speed of storage backend and privacy constraints:
-
 * Compression: data are compressed on the destination, the disk usage can vary in function
   of compression efficiency which depends also from the data set.
 * Deduplication: instead of compressing files, split data into chunks and keep only a copy
@@ -127,7 +125,7 @@ Supported storage backends:
 - CIFS
 - NFS
 - USB
-- WebDAV (only when used with standard backup)
+- WebDAV (only when used as primary backup)
 
 Restic
 ^^^^^^
@@ -142,7 +140,7 @@ Supported storage backends:
 * CIFS
 * NFS
 * USB
-* WebDAV (only when used with standard backup)
+* WebDAV (only when used as primary backup)
 * sFTP (FTP over SSH)
 * Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
 * Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
@@ -163,7 +161,7 @@ Supported storage backends:
 - CIFS
 - NFS
 - USB
-- WebDAV (only when used with standard backup)
+- WebDAV (only when used as primary backup)
 - sFTP (FTP over SSH)
 
 Rsync doesn't support encryption nor compression on the destination.
@@ -226,8 +224,7 @@ a daily backup to a cloud storage using restic.
 When configuring multiple backup, please bear mind two golden rules:
 
 * always use different destinations for each engine
-* avoid scheduling concurrent backups, each backup should run
-* when the previous one has been completed
+* avoid scheduling concurrent backups, each backup should run when the previous one has been completed
 
 Limitation of multiple backup:
 
@@ -350,7 +347,7 @@ sFTP
 ~~~~
 
 FTP over SSH, ``VFSType`` is ``sftp``.
-Supported only from restic and rsync.
+Supported only by restic and rsync.
 
 Properties:
 
@@ -363,7 +360,7 @@ S3
 ~~
 
 Amazon S3 (or compatible), ``VFSType`` is ``s3``.
-Supported only from restic. 
+Supported only by restic. 
 
 Properties:
 
@@ -467,13 +464,19 @@ Same syntax applies to configuration backup. Modification should be done inside 
 Multiple backup
 ^^^^^^^^^^^^^^^
 
-The multiple backup reads the same configuration of the primary one.
-List of saved and excluded files can be customized using two special files (where name is the name of the multiple backup):
+The multiple backup reads the same configuration of the primary one, but the list 
+of saved and excluded files can be customized using two special files, where ``name`` is the name of the multiple backup:
 
 - ``/etc/backup-data/<name>.include``
 - ``/etc/backup-data/<name>.exclude``
 
-Both file will override the list on included and excluded files from the primary backup.
+Both files will override the list on included and excluded data set from the primary backup.
+The accepted syntax is the same as the primary backup (see paragraph above).
+
+For example, given the a backup named ``mybackup1`` create the following files:
+
+- :file:`/etc/backup-data/mybackup1.include`
+- :file:`/etc/backup-data/mybackup1.exclude`
 
 .. warning:: Make sure not to leave empty lines inside edited files.
 
