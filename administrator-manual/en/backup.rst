@@ -375,7 +375,7 @@ B2
 ~~
 
 Backblaze B2, ``VFSType`` is ``b2``.
-Supported only from restic. 
+Supported only by restic. 
 
 Properties:
 
@@ -388,7 +388,7 @@ Rest
 ~~~~
 
 Restic REST server, ``VFSType`` is ``rest``.
-Supported only from restic.
+Supported only by restic.
 
 Properties:
 
