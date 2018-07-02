@@ -12,13 +12,14 @@ The system handles two kinds of backup:
 
 **Configuration backup** contains only system configuration files. 
 The purpose of this kind of backup is to quickly restore a machine in case of
-:ref:`disaster recovery <disaster-recovery-section>`.  When the machine is functional, a full data restore can be
+:ref:`disaster recovery <disaster-recovery-section>`. When the machine is functional, a full data restore can be
 done even if the machine is already in production.
 
-**Data backup** is enabled by installing the "Backup" module and contains all
-data such as user's home directories and mails. It runs every night and can be
-full or incremental on a weekly basis.  This backup also contains the archive of
-the configuration backup.
+**Data backup** is enabled by installing the "Backup" module and, by default, contains all
+the data stored in the system (user's home directories, shared folders, emails, etc).
+The primary backup runs once a day and can be full or incremental on a weekly basis.
+This backup also contains the archive of the configuration backup.
+More backups can be configured to save different data at different intervals.
 
 .. _backup_config_rpms:
 .. _backup_config-section:
@@ -29,9 +30,9 @@ Configuration backup
 From page :guilabel:`Backup (configuration)` the system
 configuration can be saved, downloaded, uploaded and restored again.
 
-Furthermore an automated task runs every night at 00.15 and creates a new
+Furthermore, an automated task runs every night at 00.15 and creates a new
 archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, if the
-configuration was changed during the previous 24 hours. Under :guilabel:`Backup
+configuration has changed during the previous 24 hours. Under :guilabel:`Backup
 (configuration) > Configure` page, specify the number of :guilabel:`Automatic
 backups to keep`.
 
@@ -49,15 +50,15 @@ In this case you can add the file that contains the customization to the list of
 
 If you wish to add a file or directory to configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.include`.
 
-For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add this line: ::
+For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file, add this line: ::
 
   /etc/httpd/conf.d/mycustom.conf
 
-Do not add big directories or files to configuration backup.
+Do not add big directories or files to the configuration backup.
 
 **Exclusion**
 
-If you wish to exclude a file or directory from configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
+If you wish to exclude a file or directory from the configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
 
 .. warning:: 
    Make sure not to leave empty lines inside edited files.
@@ -79,25 +80,25 @@ The data backup can be performed using different engines:
 
 When selecting an engine, the system administrator should carefully evaluate multiple aspects:
 
-* Compression: data are compressed on the destination, the disk usage can vary in function
-  of compression efficiency which depends also from the data set.
-* Deduplication: instead of compressing files, split data into chunks and keep only a copy
-  of each chunk. Efficiency depends highly on the data set
-* Encryption: data saved inside the destination storage are encrypted.
-  Usually the data are encrypted before transfer
-* Size: occupied size of target storage for each backup, may be smaller or equal than the original data set.
+* Compression: data is compressed on the destination, disk usage can vary in function
+  of compression efficiency which depends also on the data set
+* Deduplication: instead of compressing files, data is split into chunks and only a copy
+  of each chunk is kept. Efficiency depends highly on the data set
+* Encryption: data saved inside the destination storage is encrypted.
+  Usually data is encrypted before transfer
+* Size: space used on the destination for each backup, may be smaller or equal than the original data set.
   When using engines without encryption support, the destination should always be bigger than
   the source
 * Retention: the policy which sets the amount of time in which a given set of data will remain available for restore
 * Integrity: it's the engine ability to check if the performed backup is valid in case of restore
 * Type: a backup can be full, incremental or snapshot based (incremental-forever):
 
-  * full: all file are copied to the destination each time
+  * full: all files are copied to the destination each time
   * incremental: compare the data with last full backup and copy only changed or added items.
-    The full backup and all intermediate incremental are needed for the restore process.
-    A full backup is required on regular basis.
+    The full backup and all the intermediate incrementals are needed for the restore process.
+    A full backup is required on a regular basis.
   * snapshot: create a full backup only the first time, then create differential backups.
-    Snapshots can be deleted and consolidated and only a one full backup is needed
+    Snapshots can be deleted and consolidated and only one full backup is needed
 
 
 =============  =========== ============= ========== ========= ==================
@@ -114,11 +115,11 @@ Engines
 Duplicity
 ^^^^^^^^^
 
-:index:`Duplicity` is the well-known and default engine for |product|.
+:index:`Duplicity` is the well-known default engine for |product|.
 It has a good compression algorithm which will reduce storage usage on the destination.
 Duplicity requires a full backup once a week, when the backup set is very big the process
 may take more than 24 hours to complete.
-The |product| implements doesn't support encryption.
+|product| doesn't implement backup encryption if the engine is Duplicity.
 
 Supported storage backends:
 
@@ -131,9 +132,9 @@ Restic
 ^^^^^^
 
 :index:`Restic` implements a snapshot-based and always-encrypted backup.
-It implements deduplication and can perform backup on cloud services.
-Since Restic requires only one full backup, all next runs will be much more quicker;
-it is very fast and could be schedule multiple times a day.
+It has support for deduplication and can perform backup on cloud services.
+Since Restic requires only one full backup, all runs after the first should be fast
+and could be scheduled multiple times a day.
 
 Supported storage backends:
 
@@ -154,7 +155,8 @@ Rsync
 After the first full backup, it copies only modified or new files using
 fast incremental file transfer.
 On the destination, partial deduplication is obtained using hard links.
-If the backup destination directory is full, the oldest backups are deleted until enough space is available.
+If the backup destination directory is full, the oldest backups are 
+automatically deleted to make space.
 
 Supported storage backends:
 
@@ -165,13 +167,13 @@ Supported storage backends:
 - sFTP (FTP over SSH)
 
 Rsync doesn't support encryption nor compression on the destination.
-But during data transfer, sFTP assures encryption and data are compressed to minimize bandwidth usage.
+During data transfer, sFTP assures encryption and data is compressed to minimize bandwidth usage.
 
 Primary backup
 ---------------
 
 This is the default system backup which can be configured and restored using the web interface.
-It can be scheduled once a day, can include system logs and implements notifications to system administrator
+It can be scheduled once a day, can include system logs and implements notifications to the system administrator
 or to an external mail address.
 
 Storage backends
@@ -182,10 +184,10 @@ Primary backup can be saved on a destination chosen between:
 * USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
 * CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
-* WebDAV: available on many NAS and remote servers (Use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
+* WebDAV: available on many NAS and remote servers (use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
 
 .. note:: The destination directory is based on the server host name: in case of
-   FQDN change, the administrator should take care to copy backup data from
+   FQDN change, the administrator should take care to copy/move the backup data from
    the old directory to the new one.
 
 Change backup engine
@@ -194,15 +196,15 @@ Change backup engine
 Duplicity is the default engine for the standard backup.
 You can change it executing one of the commands below.
 
-Use restic engine: ::
+To use restic: ::
 
   config setprop backup-data Program restic
 
-Use rsync engine: ::
+To use rsync: ::
 
   config setprop backup-data Program rsync
 
-Use duplicity engine: ::
+To use duplicity: ::
 
   config setprop backup-data Program duplicity
 
@@ -210,15 +212,15 @@ The backup will use the selected engine on next run.
 When the new engine has completed at least one backup, remember to cleanup the destination by removing
 data from the old engine.
 
-Multiple backup
----------------
+Multiple backups
+----------------
 
 The administrator can schedule multiple backups using different engines and destinations.
-A good policy could be creating a weekly backup to USB disk using duplicity, while scheduling
+A good policy could be creating a weekly backup to a local destination using duplicity, while scheduling
 a daily backup to a cloud storage using restic.
 
 .. note:: 
-   The multiple backup feature doesn't provide any type of web interface.
+   Multiple backups can't be configured using the server-manager web user interface.
    All operations should be performed from command line.
 
 When configuring multiple backup, please bear mind two golden rules:
@@ -226,7 +228,7 @@ When configuring multiple backup, please bear mind two golden rules:
 * always use different destinations for each engine
 * avoid scheduling concurrent backups, each backup should run when the previous one has been completed
 
-Limitation of multiple backup:
+Limitation of multiple backups:
 
 * disk usage report is not implemented
 * WebDAV can't be used as storage backend
@@ -279,7 +281,7 @@ Every hour, at minute 15: ::
 
   db backups setprop mybackup BackupTime '15 0 * * 0'
 
-At 04:05 on Sunday: ::
+At 04:05 on every Sunday: ::
 
   db backups setprop mybackup BackupTime '5 4 * * 0'
 
@@ -295,18 +297,18 @@ Retention policy
 Each engine can implement its own retention policy.
 The policy can be set using the ``CleanupOlderThan`` property.
 
-The property takes a number followed by a D, M or Y  (days,months, or years respectively).
+The property takes a number followed by D, M or Y (Days, Months, or Years respectively).
 
 Example: cleanup after 30 days: ::
 
   db backups mybackup CleanupOlderThan 30D
 
-The retention policy is not supported by rsync backend.
+The retention policy is not supported by the rsync backend.
 
 Storage backends
 ^^^^^^^^^^^^^^^^
 
-A list of supported backend for multiple backup.
+Multiple backups support different storage backends.
 Some backends are engine-specific.
 
 CIFS
@@ -354,7 +356,7 @@ Properties:
 * ``SftpHost``: SSH host name or IP address
 * ``SftpUser``: SSH user
 * ``SftpPort``: SSH port
-* ``SftpDirectory``: destination directory, must be writable by SSH user
+* ``SftpDirectory``: destination directory, must be writable by the SSH user
 
 S3
 ~~
@@ -402,19 +404,19 @@ Properties:
 Examples
 ^^^^^^^^
 
-Rsync backup, at 7:15 to a remote server, 30 days retention. The sFTP requires backend the password of the remote server to execute SSH key exchange. ::
+Rsync backup, every day at 7:15 to a remote server. The sFTP backend requires the password of the remote server to execute SSH key exchange. ::
 
-  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' CleanupOlderThan 30D Notify error NotifyFrom '' NotifyTo root@localhost \
+  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
   VFSType sftp SftpHost 192.168.1.2 SftpUser root SftpPort 22 SftpDirectory /mnt/mybackup1 
-  echo -e "Nethesis,1234" > /tmp/mybackup1-password; signal-event nethserver-backup-data-save mybackup1  /tmp/mybackup1-password
+  echo -e "Nethesis,1234" > /tmp/mybackup1-password; signal-event nethserver-backup-data-save mybackup1 /tmp/mybackup1-password
 
-Restic backup at 3:00 to Amazon S3, no retention limit: ::
+Restic backup every day at 3:00 to Amazon S3, no retention limit: ::
 
   db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
   S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   signal-event nethserver-backup-data-save mybackup1
 
-Duplicity backup ad 22:00 to CIFS, 10 days retention: ::
+Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
 
   db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
   SMBHost nas.localnethserver.org SMBUser myuser SMBPassword mypassword SMBShare mybackup
@@ -459,18 +461,18 @@ To exclude a mail directory called *test*, add this line: ::
   /var/lib/nethserver/vmail/test/ 
 
 
-Same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
+The same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
 
-Multiple backup
-^^^^^^^^^^^^^^^
+Multiple backups
+^^^^^^^^^^^^^^^^
 
-The multiple backup reads the same configuration of the primary one, but the list 
+All multiple backups read the same configuration of the primary one, but the list 
 of saved and excluded files can be customized using two special files, where ``name`` is the name of the multiple backup:
 
 - ``/etc/backup-data/<name>.include``
 - ``/etc/backup-data/<name>.exclude``
 
-Both files will override the list on included and excluded data set from the primary backup.
+Both files will override the list of included and excluded data set from the primary backup.
 The accepted syntax is the same as the primary backup (see paragraph above).
 
 For example, given the a backup named ``mybackup1`` create the following files:
@@ -487,22 +489,22 @@ For example, given the a backup named ``mybackup1`` create the following files:
 Selective restore of files
 ==========================
 
-Make sure that backup destination is reachable (for example, USB disk must be
+Make sure that backup destination is reachable (for example, the USB disk must be
 connected).
 
 In the :guilabel:`Restore files` menu section it is possible to search,
-select and restore one or more directories from backup, navigating the graphical
+select and restore one or more directories from the backup, navigating the graphical
 tree with all paths included in the backup.
 
-By default, last backup tree is shown. If you want to restore a file from a
+By default, the latest backup tree is shown. If you want to restore a file from a
 previous backup, select the backup date from :guilabel:`Backup File` selector.
 
-There are two options to restore:
+There are two options when restoring:
 
 * Restore files in the original path, the current files in the filesystem are
-  overwritten by the restored files from backup.
+  overwritten by the restored files from backup
 
-* Restore files in original path but the restored files from backup are moved on
+* Restore files in original path but the restored files from backup are moved to
   a new directory (the files are not overwritten) in this path: ::
 
     /complete/path/of/file_YYYY-MM-DD (YYYY-MM-DD is the date of restore)
@@ -555,14 +557,14 @@ The ``-t`` option allows to specify the number of days (15 in this scenario).
 When used with snapshot-based engines, the ``-t`` option requires the name of the snapshot
 to restore.
 
-Multiple backup
-^^^^^^^^^^^^^^^
+Multiple backups
+^^^^^^^^^^^^^^^^
 
 To list data inside a multiple backup, use: ::
 
   backup-data-list -b <name>
 
-To restore all data into the original location, use: ::
+To restore all data in the original location, use: ::
 
   restore-data -b <name>
 
@@ -582,7 +584,7 @@ USB disk configuration
 ======================
 
 The best filesystem for USB backup disks are EXT3 and EXT4. FAT filesystem is supported but *not recommended*,
-while NTFS is **not supported**.
+while NTFS is **not supported**. EXT3 or EXT4 is mandatory for the rsync engine.
 
 Before formatting the disk, attach it to the server and find the device name: ::
 
@@ -623,7 +625,7 @@ In this scenario, the disk is accessibile as *sdc* device.
 
     mke2fs -v -T largefile4 -j /dev/sdc1 -L backup
 
-  For restic and restic use: ::
+  For rsync and restic use: ::
 
     mkfs.ext4 -v /dev/sdc1 -L backup -E lazy_itable_init
 
@@ -642,9 +644,9 @@ Disaster recovery
 =================
 
 The system is restored in two phases: configuration first, then data.
-Right after configuration restore, the system is ready to be used if proper packages are installed. 
-You can install additional packages before or after restore.
-For example, if mail-server is installed, the system can send and receive mails.
+Right after configuration restore, the system is ready to be used if the proper packages are installed. 
+You can install additional packages before or after the restore.
+For example, if the mail-server is installed, the system can send and receive mails.
 
 Other restored configurations:
 
