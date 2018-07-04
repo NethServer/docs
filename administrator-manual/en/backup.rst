@@ -17,7 +17,7 @@ done even if the machine is already in production.
 
 **Data backup** is enabled by installing the "Backup" module and, by default, contains all
 the data stored in the system (user's home directories, shared folders, emails, etc).
-The primary backup runs once a day and can be full or incremental on a weekly basis.
+The single backup runs once a day and can be full or incremental on a weekly basis.
 This backup also contains the archive of the configuration backup.
 More backups can be configured to save different data at different intervals.
 
@@ -71,6 +71,11 @@ If you wish to exclude a file or directory from the configuration backup, add a 
 
 Data backup
 ===========
+
+|product| implements 2 types of data backup:
+
+- Single backup (primary, default, backward compatible)
+- Multiple backups (multi-backup, multi-engine)
 
 The data backup can be performed using different engines:
 
@@ -126,7 +131,7 @@ Supported storage backends:
 - CIFS
 - NFS
 - USB
-- WebDAV (only when used as primary backup)
+- WebDAV (only when used as single backup)
 
 Restic
 ^^^^^^
@@ -141,7 +146,7 @@ Supported storage backends:
 * CIFS
 * NFS
 * USB
-* WebDAV (only when used as primary backup)
+* WebDAV (only when used as single backup)
 * sFTP (FTP over SSH)
 * Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
 * Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
@@ -163,13 +168,13 @@ Supported storage backends:
 - CIFS
 - NFS
 - USB
-- WebDAV (only when used as primary backup)
+- WebDAV (only when used as single backup)
 - sFTP (FTP over SSH)
 
 Rsync doesn't support encryption nor compression on the destination.
 During data transfer, sFTP assures encryption and data is compressed to minimize bandwidth usage.
 
-Primary backup
+Single backup
 ---------------
 
 This is the default system backup which can be configured and restored using the web interface.
@@ -179,7 +184,7 @@ or to an external mail address.
 Storage backends
 ^^^^^^^^^^^^^^^^
 
-Primary backup can be saved on a destination chosen between:
+Single backup can be saved on a destination chosen between:
 
 * USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
 * CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
@@ -437,7 +442,7 @@ Data backup customization
 If additional software is installed, the administrator can edit
 the list of files and directories included (or excluded).
 
-Primary backup
+Single backup
 ^^^^^^^^^^^^^^
 
 **Inclusion**
@@ -466,14 +471,14 @@ The same syntax applies to configuration backup. Modification should be done ins
 Multiple backups
 ^^^^^^^^^^^^^^^^
 
-All multiple backups read the same configuration of the primary one, but the list 
+All multiple backups read the same configuration of the single backup, but the list 
 of saved and excluded files can be customized using two special files, where ``name`` is the name of the multiple backup:
 
 - ``/etc/backup-data/<name>.include``
 - ``/etc/backup-data/<name>.exclude``
 
-Both files will override the list of included and excluded data set from the primary backup.
-The accepted syntax is the same as the primary backup (see paragraph above).
+Both files will override the list of included and excluded data set from the single backup.
+The accepted syntax is the same as the single backup (see paragraph above).
 
 For example, given the a backup named ``mybackup1`` create the following files:
 
@@ -525,8 +530,8 @@ All relevant files are saved under :file:`/var/lib/nethserver/` directory:
 * Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
 * User's home: :file:`/var/lib/nethserver/home/<user>`
 
-Primary backup
-^^^^^^^^^^^^^^
+Single backup
+^^^^^^^^^^^^^
 
 It is possible to list all files inside the last backup using this command: ::
 
