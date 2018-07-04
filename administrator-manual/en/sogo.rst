@@ -108,8 +108,8 @@ To make SOGo accessible with an exclusive DNS hostname:
 
 * Add the host name to sogod/VirtualHost prop list: ::
 
-   config setprop sogod VirtualHost 
-   signal-event nethserver-sogo-update
+    config setprop sogod VirtualHost webmail.example.com
+    signal-event nethserver-sogo-update
 
 Same rule applies if SOGo must be accessible using server IP address. For example: ::
 
