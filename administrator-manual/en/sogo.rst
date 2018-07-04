@@ -100,7 +100,7 @@ Terms highlighted in **bold** are documented in SOGo `installation and configura
 
 
 Access SOGo on an exclusive hostname
-=======================================
+====================================
 
 To make SOGo accessible with an exclusive DNS hostname:
 
@@ -116,7 +116,7 @@ Same rule applies if SOGo must be accessible using server IP address. For exampl
   config setprop sogod VirtualHost 192.168.1.1
   signal-event nethserver-sogo-update
 
-If the VirtualHost prop is set, requests the root (i.e. webmail.example.com) are redirected to the (mandatory) /SOGo subfolder (webmail.example.com/SOGo). 
+If the VirtualHost prop is set, requests to the root (i.e. webmail.example.com) are redirected to the (mandatory) /SOGo subfolder (webmail.example.com/SOGo). 
 
 It is also possible to use a custom certificate for this virtualhost: ::
 
@@ -240,17 +240,6 @@ and restart rsyslog ::
   systemctl restart rsyslog
 
 this solution comes from `RedHat solution <https://access.redhat.com/solutions/1564823>`_
-
-Redirect Sogo on the root domain
---------------------------------
-
-Following this `thread <http://community.nethserver.org/t/how-redirect-sogo-on-root-domain/2386>`_ you can redirect the sogo url to the default domain.
-Add index.php with the following content: ::
-
-  header('Location: /SOGo');
-
-in ``/var/www/html/`` without file server.
-
 
 Clients
 =======
