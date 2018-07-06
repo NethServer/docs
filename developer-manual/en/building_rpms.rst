@@ -118,7 +118,7 @@ The Docker build image can contain different RPMs depending on the tag:
 
 - ``latest`` or ``7``: contains only dependencies to build ``nethserver-*`` RPMS, like ``nethserver-base``.
   It actually installs only nethserver-devtools and a basic RPM build environment without gcc compiler.
-- ``buildsys``: it s based on the previous environment. It also pulls in the dependencies for arch-dependant packages (like ``asterisk13`` or ``ns-samba``).
+- ``buildsys7``: it s based on the previous environment. It also pulls in the dependencies for arch-dependant packages (like ``asterisk13`` or ``ns-samba``).
   It actually installs the ``buildsys-build`` package group, which provides the ``gcc`` compiler among other packages.
 
 DEST_ID
