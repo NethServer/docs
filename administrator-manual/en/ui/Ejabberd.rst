@@ -14,9 +14,9 @@ Administration web Interface
 Federation (S2S)
     XMPP allows for servers communicating seamlessly with each other, forming a global 'federated' IM network.
 
-File transfert maximum speed
-    Limit in Byte/second the maximum file transfert.
+File transfer maximum speed
+    Limit in Byte/second the maximum file transfer.
 
-File transfert normal speed
-    Limit in Byte/second the normal file transfert.
+File transfer normal speed
+    Limit in Byte/second the normal file transfer.
 
