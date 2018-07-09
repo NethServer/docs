@@ -174,6 +174,10 @@ Supported storage backends:
 Rsync doesn't support encryption nor compression on the destination.
 During data transfer, sFTP assures encryption and data is compressed to minimize bandwidth usage.
 
+.. note::
+   When using rsync engine, make sure the storage backend supports symbolic and hard links.
+   Please note that |product| doesn't support links on Samba shares due to security implications.
+
 Single backup
 ---------------
 
