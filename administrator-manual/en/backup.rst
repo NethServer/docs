@@ -5,7 +5,7 @@ Backup
 ======
 
 :index:`Backup` is the only way to restore a machine when disasters occur.
-The system handles two kinds of backup:
+The system handles two kinds of backups:
 
 * :index:`configuration backup`
 * :index:`data backup`
@@ -17,7 +17,7 @@ done even if the machine is already in production.
 
 **Data backup** is enabled by installing the "Backup" module and, by default, contains all
 the data stored in the system (user's home directories, shared folders, emails, etc).
-The single backup runs once a day and can be full or incremental on a weekly basis.
+The *single backup* runs once a day and can be full or incremental on a weekly basis.
 This backup also contains the archive of the configuration backup.
 More backups can be configured to save different data at different intervals.
 
@@ -122,7 +122,7 @@ Duplicity
 
 :index:`Duplicity` is the well-known default engine for |product|.
 It has a good compression algorithm which will reduce storage usage on the destination.
-Duplicity requires a full backup once a week, when the backup set is very big the process
+Duplicity requires a full backup once a week, when the data set is very big the process
 may take more than 24 hours to complete.
 |product| doesn't implement backup encryption if the engine is Duplicity.
 
@@ -146,8 +146,8 @@ Supported storage backends:
 * CIFS
 * NFS
 * USB
-* WebDAV (only when used as single backup)
-* sFTP (FTP over SSH)
+* WebDAV (only when used as *single backup*)
+* SFTP (SSH File Transfer Protocol)
 * Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
 * Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
 * Restic `REST server <https://github.com/restic/rest-server>`_
@@ -161,25 +161,25 @@ After the first full backup, it copies only modified or new files using
 fast incremental file transfer.
 On the destination, partial deduplication is obtained using hard links.
 If the backup destination directory is full, the oldest backups are 
-automatically deleted to make space.
+automatically deleted to free space.
 
 Supported storage backends:
 
 - CIFS
 - NFS
 - USB
-- WebDAV (only when used as single backup)
-- sFTP (FTP over SSH)
+- WebDAV (only when used as *single backup*)
+- SFTP (SSH File Transfer Protocol)
 
 Rsync doesn't support encryption nor compression on the destination.
-During data transfer, sFTP assures encryption and data is compressed to minimize bandwidth usage.
+During data transfer, SFTP assures encryption and data is compressed to minimize bandwidth usage.
 
 .. note::
    When using rsync engine, make sure the storage backend supports symbolic and hard links.
    Please note that |product| doesn't support links on Samba shares due to security implications.
 
 Single backup
----------------
+-------------
 
 This is the default system backup which can be configured and restored using the web interface.
 It can be scheduled once a day, can include system logs and implements notifications to the system administrator
@@ -202,7 +202,7 @@ Single backup can be saved on a destination chosen between:
 Change backup engine
 ^^^^^^^^^^^^^^^^^^^^
 
-Duplicity is the default engine for the standard backup.
+Duplicity is the default engine for the *single backup*.
 You can change it executing one of the commands below.
 
 To use restic: ::
@@ -225,14 +225,14 @@ Multiple backups
 ----------------
 
 The administrator can schedule multiple backups using different engines and destinations.
-A good policy could be creating a weekly backup to a local destination using duplicity, while scheduling
+A valid policy could be creating a weekly backup to a local destination using duplicity, while scheduling
 a daily backup to a cloud storage using restic.
 
 .. note:: 
    Multiple backups can't be configured using the server-manager web user interface.
    All operations should be performed from command line.
 
-When configuring multiple backup, please bear mind two golden rules:
+When configuring multiple backups, please bear in mind two golden rules:
 
 * always use different destinations for each engine
 * avoid scheduling concurrent backups, each backup should run when the previous one has been completed
@@ -346,7 +346,7 @@ Properties:
 NFS
 ~~~
 
-Unix Network FileSystem, ``VFSType`` is ``nfs``.
+Network File System, ``VFSType`` is ``nfs``.
 Supported by all backends.
 
 Properties:
@@ -354,10 +354,10 @@ Properties:
 * ``NFSHost``: NFS server host name or IP address
 * ``NFShare``: NFS share name
 
-sFTP
+SFTP
 ~~~~
 
-FTP over SSH, ``VFSType`` is ``sftp``.
+SSH File Transfer Protocol, ``VFSType`` is ``sftp``.
 Supported only by restic and rsync.
 
 Properties:
@@ -413,7 +413,7 @@ Properties:
 Examples
 ^^^^^^^^
 
-Rsync backup, every day at 7:15 to a remote server. The sFTP backend requires the password of the remote server to execute SSH key exchange. ::
+Rsync backup, every day at 7:15 to a remote server. The SFTP backend requires the password of the remote server to execute SSH key exchange. ::
 
   db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
   VFSType sftp SftpHost 192.168.1.2 SftpUser root SftpPort 22 SftpDirectory /mnt/mybackup1 
@@ -432,7 +432,7 @@ Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
   signal-event nethserver-backup-data-save mybackup1
 
 
-To manually stat a backup, execute: ::
+To manually start a backup, execute: ::
 
   backup-data -b <name>
 
@@ -447,7 +447,7 @@ If additional software is installed, the administrator can edit
 the list of files and directories included (or excluded).
 
 Single backup
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 **Inclusion**
 
@@ -470,7 +470,7 @@ To exclude a mail directory called *test*, add this line: ::
   /var/lib/nethserver/vmail/test/ 
 
 
-The same syntax applies to configuration backup. Modification should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
+The same syntax applies to configuration backup. Modifications should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
 
 Multiple backups
 ^^^^^^^^^^^^^^^^
@@ -484,7 +484,7 @@ of saved and excluded files can be customized using two special files, where ``n
 Both files will override the list of included and excluded data set from the single backup.
 The accepted syntax is the same as the single backup (see paragraph above).
 
-For example, given the a backup named ``mybackup1`` create the following files:
+For example, given a backup named ``mybackup1`` create the following files:
 
 - :file:`/etc/backup-data/mybackup1.include`
 - :file:`/etc/backup-data/mybackup1.exclude`
@@ -521,7 +521,7 @@ There are two options when restoring:
 To use the search field, simply insert at least 3 chars and the searching starts
 automatically, highlighting the matched directories.
 
-It is possible to restore the directories by clicking on **Restore** button.
+It is possible to restore the directories by clicking on the **Restore** button.
 
 .. note:: Multiple selection can be done with :kbd:`Ctrl` key pressed.
 
@@ -592,7 +592,7 @@ To restore a file or directory, use: ::
 USB disk configuration
 ======================
 
-The best filesystem for USB backup disks are EXT3 and EXT4. FAT filesystem is supported but *not recommended*,
+The best filesystem for USB backup disks is EXT3 or EXT4. FAT filesystem is supported but *not recommended*,
 while NTFS is **not supported**. EXT3 or EXT4 is mandatory for the rsync engine.
 
 Before formatting the disk, attach it to the server and find the device name: ::
