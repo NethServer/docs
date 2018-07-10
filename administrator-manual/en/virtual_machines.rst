@@ -23,11 +23,11 @@ To avoid the conflict, remove the ``default`` libvirt NAT network: ::
   virsh net-autostart default --disable
   systemctl start dnsmasq
 
-The recommended client to manage virtual machines is `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_
+The recommended client to manage virtual machines is `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_.
 
 Install virt-manager in your Linux desktop, then create a new connection to your |product| using the SSH protocol.
 
-Alternatively, virt-manager can be directly installed on |product|:
+Alternatively, virt-manager can be directly installed on |product|: ::
 
   yum -y install virt-manager
 
