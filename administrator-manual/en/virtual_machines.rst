@@ -6,27 +6,32 @@
 Virtual machines
 ================
 
-|product| is capable of running virtual machines using KVM and libvirt, but it
-doesn't provide a Web interface for it.
+|product| is capable of running virtual machines using KVM and libvirt.
 
-Virtualization software can be installed and started using the command line, just execute: ::
+Virtualization software can be installed and started using the command line: ::
 
-  yum install @virtualization-hypervisor @virtualization-tools @virtualization-platform
+  yum -y install qemu-kvm libvirt virt-install libvirt-client
   systemctl enable libvirtd
   systemctl start libvirtd
 
-If |product| is used as DHCP server, the Dnsmasq instance launched by libvirtd will conflict with the default one.
-To avoid such conflict, remove ``default`` libvirt NAT network: ::
+If |product| is used as DHCP server, the dnsmasq instance launched by libvirtd will conflict with the default one.
+To avoid the conflict, remove the ``default`` libvirt NAT network: ::
 
   systemctl stop dnsmasq
   systemctl start libvirtd
   virsh net-destroy default
+  virsh net-autostart default --disable
   systemctl start dnsmasq
 
-Finally, the system is ready to be managed using `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_,
-a Linux desktop user interface for managing virtual machines through libvirt.
+The recommended client to manage virtual machines is `Virtual Machine Manager (virt-manager) <https://virt-manager.org/>`_
 
-Access virt-manager in your Linux desktop, then create a new connection to your |product| using SSH protocol.
+Install virt-manager in your Linux desktop, then create a new connection to your |product| using the SSH protocol.
+
+Alternatively, virt-manager can be directly installed on |product|:
+
+  yum -y install virt-manager
+
+Then, use X11 Forwarding through SSH to view virt-manager graphical interface.
 
 External resources
 ==================
