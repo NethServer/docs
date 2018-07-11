@@ -160,7 +160,7 @@ Mobile devices based on Apple iOS fully support folders / categories for calenda
 Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
 but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
 
-Installing and using the CloudCal application: https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=en
+Installing and using the CloudCal application: .. _CloudCal: https://pselis.com/cloudcal/
 you can change the colors associated with each calendar, including shared ones.
 
 On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
