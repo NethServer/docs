@@ -76,18 +76,15 @@ Developer Manual
    tftp
    collectd
    phone_home
-   content_filter
    duc
    snmp
    tomcat7
-   postgresql
    unixodbc
    ntopng
    samba_audit
    redis
    memcached
    smartd
-   cups
    antivirus
    mysql
 

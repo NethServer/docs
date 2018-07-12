@@ -9,7 +9,7 @@ except for the *Rewrite* directives.
 In a clean installation the only defined virtual host is the one on port 443.
 When nethserver-httpd-virtualhosts is installed, the package adds a new default virtual host.
 This virtual host includes the ``/etc/httpd/conf.d/default-virtualhost.inc`` file
-to mimic the upstram behavior.
+to mimic the upstream behavior.
 
 See also "Certificate management" and "Virtualhosts" section for further information.
 
