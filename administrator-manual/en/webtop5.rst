@@ -99,7 +99,7 @@ To enable 2FA:
 Synchronization with ActiveSync (EAS)
 =====================================
 
-Devices mobile can be synchronized using ActiveSync.
+Mobile devices can be synchronized using ActiveSync.
 :index:`ActiveSync` can be used only for **contacts** and **calendars**.
 
 .. note::
@@ -160,7 +160,7 @@ Mobile devices based on Apple iOS fully support folders / categories for calenda
 Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
 but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
 
-Installing and using the CloudCal application (`CloudCal <https://pselis.com/cloudcal/>`_)
+Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ application.
 you can change the colors associated with each calendar, including shared ones.
 
 On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
@@ -208,44 +208,51 @@ synchronizable resources, as in the case of mobile devices clients (i.e. Android
 .. note::
 
    If you are using clients that do not support autodiscovery, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
-
+   
+   If you are using clients that support autodiscovery use URL: ``https://<server_name>``
 
 Google Android
 --------------
 
-- install the `Opensync <https://deependhulla.com/android-apps/opensync-app>`_ application from the market;
-- add a new account clicking on "``+``" key and select :guilabel:`Login with URL and username` method;
+A good, free, Android third-party client is `Opensync <https://deependhulla.com/android-apps/opensync-app>`_.
+
+- install the suggested app from the market;
+- add a new account clicking on :guilabel:`+` key and select :guilabel:`Login with URL and username` method;
 - insert the ``URL`` (``https://<server_name>``), complete username (i.e. *goofy@nethserver.org*) and password;
 - click on the new profile and select the resources you want to synchronize.
 
 Apple iOS
 ---------
 
-- Settings -> Account and Password -> Add account;
+CalDAV/CardDAV support is built-in on iOS, so to configure it:
+
+- go to Settings -> Account and Password -> Add account;
 - select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account;
 - insert the server name (i.e. *server.nethserver.org*), complete username (i.e. *goofy@nethserver.org*) and password.
 
-.. note::
-
-   At the moment mobile devices support **only personal resources synchronization**.
- 
 By default the syncronization ``URL`` uses the server principal name (``FQDN``), if you need to change it: ::
 
  config setprop webtop DavServerUrl https://<new_name_server>/webtop-dav/server.php
  signal-event nethserver-webtop5-update
 
 
-Tips for some desktop clients
+Desktop clients
 -----------------------------
 
 **Thunderbird**
 
-- Lightning doesn't support autodiscovery: any calendar must be manually added.
-- Thunderbird has no native CardDAV support: the ``Cardbook`` add-on works fine, with easy setup and autodiscovery support.
+To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guilabel:`Cardbook` (for contacts) and :guilabel:`Lightning` (for calendars).
+
+- :guilabel:`Cardbook` add-on works fine, with easy setup and autodiscovery support.
+- :guilabel:`Lightning` add-on doesn't support autodiscovery: any calendar must be manually added.
 
 **Outlook**
 
-- opensource ``Outlook CalDav Synchronizer`` client works fine, supporting both CardDAV and CalDAV.
+- open source :guilabel:`Outlook CalDav Synchronizer` client works fine, supporting both CardDAV and CalDAV.
+
+.. note::
+
+   At the moment CalDAV and CardDAV support **only personal resources synchronization**.
 
 .. warning::
 
