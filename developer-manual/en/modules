@@ -41,5 +41,3 @@ nethserver-rh-php71-php-fpm
 nethserver-rh-php56-php-fpm
 nethserver-mattermost
 nethserver-letsencrypt
-nethserver-restic
-nethserver-rsync
