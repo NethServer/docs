@@ -96,10 +96,10 @@ To enable 2FA:
 .. image:: _static/webtop-2fa.png 
 
 
-Device synchronization with ActiveSync (EAS)
-============================================
+Synchronization with ActiveSync (EAS)
+=====================================
 
-Devices can be synchronized using ActiveSync.
+Devices mobile can be synchronized using ActiveSync.
 :index:`ActiveSync` can be used only for **contacts** and **calendars**.
 
 .. note::
@@ -160,7 +160,7 @@ Mobile devices based on Apple iOS fully support folders / categories for calenda
 Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
 but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
 
-Installing and using the CloudCal application: .. _CloudCal: https://pselis.com/cloudcal/
+Installing and using the CloudCal application (`CloudCal <https://pselis.com/cloudcal/>`_)
 you can change the colors associated with each calendar, including shared ones.
 
 On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
@@ -185,13 +185,15 @@ To do so, just right click on the shared resource → Customize → Sync. device
 
 The default setting is “Not active”.
 
-Synchronize calendars and contacts with CalDAV and CardDAV server
-=================================================================
+Synchronization with CalDAV and CardDAV
+=======================================
 
-From version 5.2.1 of WebTop a DAV server based on Sabre/DAV has been inserted that allows synchronization of Calendars and Contacts with external clients through CalDAV and CardDAV protocols.
+Calendars and Contacts can be synchronized with external clients through :index:`CalDAV and CardDAV protocols`.
 
-It is possible to download the link to the resource to be synchronized (Calendar or Addres Book) by right clicking on the calendar (or on the contacts) and selecting "Links to this calendar" (or links to this addressbook).
+To synchronize a calendar, pick up the link by right-clicking on the calendar and selecting :guilabel:`Links to this calendar`
+The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
 
+To synchronize a addressbook, pick up the link by right-clicking on the addressbook and selecting :guilabel:`Links to this addressbook`
 The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
 
 To the authentication request fill the required fields with:
@@ -201,27 +203,27 @@ To the authentication request fill the required fields with:
 
 To synchronize mobile devices, you can use a common URL and take advantage of the self-scans of the resources to be synchronized.
 
-For Google Android:
--------------------
+Google Android:
+---------------
 
-- install the "Opensync" application (https://play.google.com/store/apps/details?id=com.deependhulla.opensync&hl=it)
-- add a new account to synchronize (+ key) and select "Login with URL and username":
-- enter in the URL field: https://<server_name>
-- enter user (complete with @domain) and password and continue with the "LOGIN" key
+- install the `Opensync <https://deependhulla.com/android-apps/opensync-app>`_ application
+- add a new account to synchronize (+ key) and select :guilable:`Login with URL and username`
+- enter in the URL field: ``https://<server_name>``
+- enter user (complete with @domain) and password and continue with the :guilabel:`LOGIN` key
 - once the configuration is completed, it will be enough to select which resource to synchronize between those detected.
 
-For Apple iOS:
---------------
+Apple iOS:
+----------
 
 - Settings -> Account and Password -> Add account
-- select "Other" -> Add CalDAV or CardDAV account
+- select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account
 - enter the server name (Ex. server.domain.it), the username (complete with @domain) and password
 
 .. note::
 
-Currently, synchronization with mobile devices is only supported for personal resources.
-It is planned to add support also for calendars and contacts shared in an upcoming release.
-
+   Currently, synchronization with mobile devices is only supported for personal resources.
+   In a future release, support is also added to synchronize shared calendars and address books.
+ 
 By default, the link to the resource links includes the server principal name (FQDN).
 Should it be necessary to change this name with a different public name, execute these two shell commands: ::
 
@@ -239,6 +241,11 @@ Tips for using some desktop clients:
 **Outlook**
 
 - Use opensource Outlook CalDav Synchronizer, supporting both CardDAV and CalDAV
+
+.. note::
+
+   If you are using clients that do not support autodiscovery resource, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
+
 
 Sharing email folders or the entire account
 ===========================================
