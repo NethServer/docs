@@ -188,63 +188,70 @@ The default setting is “Not active”.
 Synchronization with CalDAV and CardDAV
 =======================================
 
-Calendars and Contacts can be synchronized with external clients through :index:`CalDAV and CardDAV protocols`.
+Calendars and address books can be synchronized also through :index:`CalDAV and CardDAV protocols`.
 
-To synchronize a calendar, pick up the link by right-clicking on the calendar and selecting :guilabel:`Links to this calendar`
-The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
+To synchronize a calendar, pick up its ``URL`` link right-clicking on the calendar and selecting :guilabel:`Links to this calendar`,
+then use it to configure your third-party client.
 
-To synchronize a addressbook, pick up the link by right-clicking on the addressbook and selecting :guilabel:`Links to this addressbook`
-The window will show the URL to be copied and pasted to the external client that you are using for this synchronization.
+To synchronize an address book, pick up its ``URL`` link right-clicking on the address book and selecting :guilabel:`Links to this addressbook`,
+then use it to configure your third-party client.
 
-To the authentication request fill the required fields with:
+For the authentication provide your credentials in the following form:
 
-- **User name**: enter your full user name, eg: goofy@nethserver.org
+- **User name**: enter your full user name (i.e. *goofy@nethserver.org*)
 - **Password**: enter your password
 
-To synchronize mobile devices, you can use a common URL and take advantage of the self-scans of the resources to be synchronized.
+Some third-party clients allow to simplify the configuration through the *autodiscovery* feature that automatically discovers the 
+synchronizable resources, as in the case of mobile devices clients (i.e. Android or iOS devices).
 
-Google Android:
----------------
-
-- install the `Opensync <https://deependhulla.com/android-apps/opensync-app>`_ application
-- add a new account to synchronize (+ key) and select :guilable:`Login with URL and username`
-- enter in the URL field: ``https://<server_name>``
-- enter user (complete with @domain) and password and continue with the :guilabel:`LOGIN` key
-- once the configuration is completed, it will be enough to select which resource to synchronize between those detected.
-
-Apple iOS:
-----------
-
-- Settings -> Account and Password -> Add account
-- select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account
-- enter the server name (Ex. server.domain.it), the username (complete with @domain) and password
 
 .. note::
 
-   Currently, synchronization with mobile devices is only supported for personal resources.
-   In a future release, support is also added to synchronize shared calendars and address books.
+   If you are using clients that do not support autodiscovery, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
+
+
+Google Android
+--------------
+
+- install the `Opensync <https://deependhulla.com/android-apps/opensync-app>`_ application from the market;
+- add a new account clicking on "``+``" key and select :guilabel:`Login with URL and username` method;
+- insert the ``URL`` (``https://<server_name>``), complete username (i.e. *goofy@nethserver.org*) and password;
+- click on the new profile and select the resources you want to synchronize.
+
+Apple iOS
+---------
+
+- Settings -> Account and Password -> Add account;
+- select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account;
+- insert the server name (i.e. *server.nethserver.org*), complete username (i.e. *goofy@nethserver.org*) and password.
+
+.. note::
+
+   At the moment mobile devices support **only personal resources synchronization**.
  
-By default, the link to the resource links includes the server principal name (FQDN).
-Should it be necessary to change this name with a different public name, execute these two shell commands: ::
+By default the syncronization ``URL`` uses the server principal name (``FQDN``), if you need to change it: ::
 
  config setprop webtop DavServerUrl https://<new_name_server>/webtop-dav/server.php
  signal-event nethserver-webtop5-update
 
-Tips for using some desktop clients:
-------------------------------------
+
+Tips for some desktop clients
+-----------------------------
 
 **Thunderbird**
 
-- Lightning has no autodiscovery support: each calendar must be added manually using the URL obtained via WebTop menu “Calendar Links”.
-- Thunderbird has no native support for CardDAV: the Cardbook add-on works fine, with easy setup and autodiscovery.
+- Lightning doesn't support autodiscovery: any calendar must be manually added.
+- Thunderbird has no native CardDAV support: the ``Cardbook`` add-on works fine, with easy setup and autodiscovery support.
 
 **Outlook**
 
-- Use opensource Outlook CalDav Synchronizer, supporting both CardDAV and CalDAV
+- opensource ``Outlook CalDav Synchronizer`` client works fine, supporting both CardDAV and CalDAV.
 
-.. note::
+.. warning::
 
-   If you are using clients that do not support autodiscovery resource, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
+   Webtop is a **clientless groupware**: its functionality are fully available **only using the web interface**!
+
+   The use of CalDAV/CardDAV through third-party clients **can not be considered a web interface alternative**.
 
 
 Sharing email folders or the entire account
