@@ -1,5 +1,9 @@
 .. index:: virtual machines
 
+.. only:: nsent
+    
+    .. note:: This package is not supported in |product|
+
 .. _virtual_machines-section:
 
 ================

@@ -102,8 +102,14 @@ Modules
    dedalo
    freepbx
    hotsync
-   virtual_machines
    fail2ban
+
+.. only:: nscom
+
+    .. toctree::
+       :maxdepth: 1
+
+       virtual_machines
 
 .. toctree::
    :hidden:
