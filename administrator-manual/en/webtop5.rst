@@ -14,7 +14,7 @@ Access to web interface is: ``https://<server_name>/webtop``.
 Authentication
 ==============
 
-Always use the full user name format ``<user>@<domain>`` for login for the
+Always use the full user name format ``<user>@<domain>`` for login to the
 web application and Active Sync.
 
 **Example**
@@ -35,9 +35,9 @@ web application and Active Sync.
 Admin user
 ----------
 
-After installation, WebTop will be accessible via the administrator user.
-The administrator user can change global settings and login as all other users,
-however, it's not a system user and can't access any other services like Mail, Calendar, etc.
+After installation, WebTop will be accessible using the administrator user.
+The administrator user can change global settings and login as any other user,
+however, it's not a system user and can't access any other service like Mail, Calendar, etc.
 
 Default credentials are:
 
@@ -47,7 +47,7 @@ Default credentials are:
 The administrator user's password must be changed from within the WebTop interface.
 
 .. warning::
-   **Remember to change the admin password just after installation!**
+   **Remember to change the admin password after installation!**
 
 
 To check the mail of the system's user admin account use the following login: admin@<domain> where ``<domain>`` is the
@@ -62,14 +62,14 @@ domain part of server FQDN.
 Change admin password
 ^^^^^^^^^^^^^^^^^^^^^
 
-Access WebTop using ``admin`` user, then open user settings by clicking on the menu in the to-right corner.
+Access WebTop using the ``admin`` user, then open user settings by clicking on the menu in the top-right corner.
 
 .. image:: _static/webtop-settings.png
 
 Go to :guilabel:`Settings` then click on guilabel:`Change password`.
 
 
-If you want to reset the admin password from command line, use following commands: ::
+If you want to reset the admin password from command line, use the following commands: ::
 
   curl -s https://git.io/vNaIl -o webtop-set-admin-password
   bash webtop-set-admin-password <newpassword>
@@ -104,7 +104,7 @@ Mobile devices can be synchronized using ActiveSync.
 
 .. note::
 
-   To synchronize **e-mails** you should configure and IMAP account.
+   To synchronize **e-mails** you should configure an IMAP account.
 
 Apple iOS
 ---------
@@ -123,13 +123,13 @@ Finally, *disable* Mail synchronization and create an IMAP account: https://supp
 
 .. note::
 
-   iOS devices requires a valid SSL certificate on the server.
+   iOS devices require a valid SSL certificate on the server.
    See :ref:`server_certificate-section`
 
 Google Android
 --------------
 
-Access you :index:`Android device`, navigate to Settings, then select :guilabel:`Add account` -> :guilabel:`Exchange` (or "Company" for older release).
+Access your :index:`Android device`, navigate to Settings, then select :guilabel:`Add account` -> :guilabel:`Exchange` (or "Company" for older releases).
 
 Fill the required fields with:
 
@@ -144,41 +144,40 @@ Finally, *disable* Mail synchronization and create an IMAP account.
 
 .. note::
 
-   On some Android releases (like Samsung), the User name and Domain must be entered in the same line.
-   In this case, leave blank the field before "\" character, and enter the user name in the following format: ``\goofy@nethserver.org``
+   On some Android releases (notably Samsung), the User name and Domain must be entered in the same line.
+   In this case, leave blank the field before the backslash character (\), and enter the user name in the following format: ``\goofy@nethserver.org``
 
 Multiple calendars and contacts
 -------------------------------
 
-With the recent Upgrade pack 3 of WebTop 5, support on ActiveSync has been added in order to synchronize even calendars and rubrics received in sharing.
+Calendars and address books shared by others with the user can be synchronized using the ActiveSync protocol.
 
-Shared resources (calendars and address books) are displayed with the owner's name and category, with the internal code added in square brackets.
-The private elements of the shares are completely ignored and not passed.
+Shared resources are displayed with the owner's name and category (the number in square brackets is the internal id).
+Private events are not synchronized.
 
 Mobile devices based on Apple iOS fully support folders / categories for calendar, contacts and activities (called reminders), including original colors.
 
-Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
-but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
+Mobile devices based on Android support only calendars and contacts (activities are not supported), 
+but using the Google Calendar application all items will have the same colour.
 
-Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ application.
+Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ application,
 you can change the colors associated with each calendar, including shared ones.
 
-On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
-where it is still possible to modify the individual elements, which will be saved by z-push in the correct categories.
-
+On Android devices, contacts from shared phone books are merged with the personal phone book and displayed in 
+a single view. Contacts can be modified and changes will be saved it the original source.
 
 .. note::
 
   In order to receive data via EAS on mobile devices, it is necessary to verify 
-  that the shared resources (Calendars and Contacts) have synchronization enabled (Complete or Read only):
+  that the shared resources (Calendars and Contacts) have synchronization enabled (Full or Read only):
 
   .. image:: _static/webtop-multiple_sync.png
                :alt: Multiple synchronization
 
-It is possible to enable and disable the synchronization for each single shared resource (calendars and contacts).
-The user can customize every single resource received in sharing by deciding the type of synchronization.
+It is possible to enable or disable the synchronization for each shared resource (calendars and contacts).
+The user can customize every resource sharing with him by deciding the type of synchronization.
  
-To do so, just right click on the shared resource → Customize → Sync. devices:
+To do so, just right click on the shared resource → Customize → Devices sync.:
 
   .. image:: _static/webtop-sync_shared_eas.png
                :alt: Sync shared EAS
@@ -196,7 +195,7 @@ then use it to configure your third-party client.
 To synchronize an address book, pick up its ``URL`` link right-clicking on the address book and selecting :guilabel:`Links to this addressbook`,
 then use it to configure your third-party client.
 
-For the authentication provide your credentials in the following form:
+To authenticate, provide your credentials in the following form:
 
 - **User name**: enter your full user name (i.e. *goofy@nethserver.org*)
 - **Password**: enter your password
@@ -256,9 +255,9 @@ To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guil
 
 .. warning::
 
-   Webtop is a **clientless groupware**: its functionality are fully available **only using the web interface**!
+   Webtop is a **clientless groupware**: its functionalities are fully available **only using the web interface**!
 
-   The use of CalDAV/CardDAV through third-party clients **can not be considered a web interface alternative**.
+   The use of CalDAV/CardDAV through third-party clients **cannot be considered a web interface alternative**.
 
 
 Sharing email folders or the entire account
@@ -318,7 +317,7 @@ Tags can be used to filter messages using the filter top bar.
 Mail inline preview
 ===================
 
-As default, the mail page will display a preview of the content of latest received messages.
+By default, the mail page will display a preview of the content of latest received messages.
 
 This feature can be enabled or disabled from the :guilabel:`Settings` menu, under the :guilabel:`Mail` tab,
 the check box is named :guilabel:`Show quick preview on message row`.
@@ -328,7 +327,7 @@ the check box is named :guilabel:`Show quick preview on message row`.
 Mail archiving
 ==============
 
-Archiving is useful for keeping your inbox folder organized by moving manually the messages.
+Archiving is useful for keeping your inbox folder organized by manually moving messages.
 
 .. note::
     Mail archiving is not a backup.
@@ -360,7 +359,7 @@ The system will process archiving according to the last settings chosen.
 Subscription of IMAP folders
 ============================
 
-On WebTop, by default, all IMAP folders on the server are all automatically subscribed and therefore all visible from the first login.
+On WebTop, by default, all IMAP folders on the server are automatically subscribed and therefore visible since the first login.
 
 If you want to hide from the view some folders, which is equivalent to removing the subscription,
 you can do so by simply clicking the right mouse button on the folder to hide and select from the interactive menu the item "Hide from the list".
@@ -369,7 +368,7 @@ For example, if you want to hide the subfolder "folder1" from this list, just ri
 
 .. image:: _static/webtop-sub_imap_folder1.png
 
-It will then always be possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
+It is possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
 
 .. image:: _static/webtop-sub_imap_folder2.png
 
@@ -395,8 +394,8 @@ Nextcloud integration
    Before proceeding, verify that the "Nextcloud" module has been installed 
    from :guilabel:`Software Center`
 
-By default the Nextcloud integration is disabled for all users.
-To enable it, it is possible to do it only through the administration panel which is accessed with the webtop admin password
+By default, Nextcloud integration is disabled for all users.
+To enable it, use the administration panel which can be accessed using the webtop admin password
 
 For example, if you want to activate the service for all webtop users, proceed as follows:
 
@@ -614,7 +613,7 @@ It is possible to associate the new identity with a folder in your account or of
 
 .. image:: _static/webtop_manageident3.png
 
-Otherwise the mails sent will always end up in the "Sent Items" folder of your personal account.
+Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
 
 Subscribing remote resources
 ============================
@@ -637,9 +636,9 @@ Example of Google Cal remote calendar (Webcal only - ICS)
 
 1) Take the public access ICS link from your Google calendar: :guilabel:`Calendar options -> Settings and sharing -> Secret address in iCal format`
 
-2) On WebTop add an Internet calendar of type Webcal and paste the copied URL without entering the authentication credentials in step 1 of the wizard.
+2) On WebTop, add an Internet calendar of type Webcal and paste the copied URL without entering the authentication credentials in step 1 of the wizard.
 
-3) The wizard in the next steps will connect to the calendar, giving the possibility to change the name and color, and then perform the first synchronization.
+3) The wizard will connect to the calendar, giving the possibility to change the name and color, and then perform the first synchronization.
 
 .. note::
 
@@ -652,7 +651,7 @@ Remote contacts (directory)
 Example of Google CardDAV remote address book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1) On Webtop configure a new Internet address book, right-click on :guilabel:`Personal Categories -> Add Internet address book` and enter a URL of this type in step 1 of the wizard:
+1) On Webtop, configure a new Internet address book, right-click on :guilabel:`Personal Categories -> Add Internet address book` and enter a URL of this type in step 1 of the wizard:
 https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/default/
 (replace the X your gmail account)
 
@@ -760,7 +759,7 @@ To change these default values for all users, the following keys can be added vi
    
 .. note::
 
-  The value must be expressed in Byte (Example 10MB = 10485760)
+  The value must be expressed in Bytes (Example 10MB = 10485760)
    
 Importing contacts and calendars
 ================================
@@ -818,7 +817,7 @@ Importing from Outlook PST
 
 You can import email, calendars and address books from an :index:`Outlook` :index:`PST` archive.
 
-Before using followings scripts, you will need to install *libpst* package: ::
+Before using the followings scripts, you will need to install the *libpst* package: ::
 
    yum install libpst -y
 
@@ -847,7 +846,7 @@ Example: ::
   Do you wish to import email? [Y]es/[N]o:
 
 All mail messages will be imported. Contacts and calendars will be saved inside a
-temporary and the script will output further commands to import contacts and calendars.
+temporary file and the script will output further commands to import contacts and calendars.
 
 Example: ::
 
@@ -922,11 +921,11 @@ This is the displayed error:
 
 .. image:: _static/webtop-dovecot_error.png
 
-In ``/var/log/imap`` there are are like this: ::
+In ``/var/log/imap`` there are lines like the following: ::
 
   xxxxxx dovecot: imap-login: Maximum number of connections from user+IP exceeded (mail_max_userip_connections=12): user=<mail@dominio.com>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, secured, session=<zz/8iz1M1AB/AAAB>
 
-To list active IMAP connection per user, execute: ::
+To list active IMAP connections per user, execute: ::
 
   doveadm who
 
@@ -936,7 +935,7 @@ To fix the problem, just raise the limit (eg. 50 connections for each user/IP): 
   config setprop dovecot MaxUserConnectionsPerIp 50
   signal-event nethserver-mail-server-update
 
-At the end, execute logout and login again in WebTop.
+At the end, logout and login again in WebTop.
 
 
 Blank page after login
@@ -953,7 +952,7 @@ To fix the problem, execute the following command: ::
 Synchronized events have different time
 ---------------------------------------
 
-Sometimes calendar events created on mobile devices, and synchronized via EAS, are shown with a wrong time, for example with a difference of 1 or 2 hours.
+Sometimes calendar events created on mobile devices and synchronized via EAS, are shown with a wrong time, for example with a difference of 1 or 2 hours.
 
 The problem is due to the PHP time zone which can be different from the system time zone.
 
@@ -1029,7 +1028,7 @@ If you need to delete someone because it is wrong, move with the arrow keys unti
     "OAuth consent screen" section
   * Insert new credentials (Client ID e Client Secret) inside WebTop configuration
 
-  From shell, access webtop database: ::
+  From the shell, access webtop database: ::
 
     su - postgres -c "psql webtop"
 
