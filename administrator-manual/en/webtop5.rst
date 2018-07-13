@@ -96,10 +96,10 @@ To enable 2FA:
 .. image:: _static/webtop-2fa.png 
 
 
-Device synchronization with ActiveSync (EAS)
-============================================
+Synchronization with ActiveSync (EAS)
+=====================================
 
-Devices can be synchronized using ActiveSync.
+Mobile devices can be synchronized using ActiveSync.
 :index:`ActiveSync` can be used only for **contacts** and **calendars**.
 
 .. note::
@@ -160,7 +160,7 @@ Mobile devices based on Apple iOS fully support folders / categories for calenda
 Mobile devices based on Android instead only support calendars and contacts (activities are not natively supported), 
 but only on the calendars are supported folders / categories, without including colors using the native application Google Calendar.
 
-Installing and using the CloudCal application: https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=en
+Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ application.
 you can change the colors associated with each calendar, including shared ones.
 
 On Android devices the contacts from shared phone books arrive in a single indistinguishable container, 
@@ -184,6 +184,82 @@ To do so, just right click on the shared resource → Customize → Sync. device
                :alt: Sync shared EAS
 
 The default setting is “Not active”.
+
+Synchronization with CalDAV and CardDAV
+=======================================
+
+Calendars and address books can be synchronized also through :index:`CalDAV and CardDAV protocols`.
+
+To synchronize a calendar, pick up its ``URL`` link right-clicking on the calendar and selecting :guilabel:`Links to this calendar`,
+then use it to configure your third-party client.
+
+To synchronize an address book, pick up its ``URL`` link right-clicking on the address book and selecting :guilabel:`Links to this addressbook`,
+then use it to configure your third-party client.
+
+For the authentication provide your credentials in the following form:
+
+- **User name**: enter your full user name (i.e. *goofy@nethserver.org*)
+- **Password**: enter your password
+
+Some third-party clients allow to simplify the configuration through the *autodiscovery* feature that automatically discovers the 
+synchronizable resources, as in the case of mobile devices clients (i.e. Android or iOS devices).
+
+
+.. note::
+
+   If you are using clients that do not support autodiscovery, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
+   
+   If you are using clients that support autodiscovery use URL: ``https://<server_name>``
+
+Google Android
+--------------
+
+A good, free, Android third-party client is `Opensync <https://deependhulla.com/android-apps/opensync-app>`_.
+
+- install the suggested app from the market;
+- add a new account clicking on :guilabel:`+` key and select :guilabel:`Login with URL and username` method;
+- insert the ``URL`` (``https://<server_name>``), complete username (i.e. *goofy@nethserver.org*) and password;
+- click on the new profile and select the resources you want to synchronize.
+
+Apple iOS
+---------
+
+CalDAV/CardDAV support is built-in on iOS, so to configure it:
+
+- go to Settings -> Account and Password -> Add account;
+- select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account;
+- insert the server name (i.e. *server.nethserver.org*), complete username (i.e. *goofy@nethserver.org*) and password.
+
+By default the syncronization ``URL`` uses the server principal name (``FQDN``), if you need to change it: ::
+
+ config setprop webtop DavServerUrl https://<new_name_server>/webtop-dav/server.php
+ signal-event nethserver-webtop5-update
+
+
+Desktop clients
+-----------------------------
+
+**Thunderbird**
+
+To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guilabel:`Cardbook` (for contacts) and :guilabel:`Lightning` (for calendars).
+
+- :guilabel:`Cardbook` add-on works fine, with easy setup and autodiscovery support.
+- :guilabel:`Lightning` add-on doesn't support autodiscovery: any calendar must be manually added.
+
+**Outlook**
+
+- open source :guilabel:`Outlook CalDav Synchronizer` client works fine, supporting both CardDAV and CalDAV.
+
+.. note::
+
+   At the moment CalDAV and CardDAV support **only personal resources synchronization**.
+
+.. warning::
+
+   Webtop is a **clientless groupware**: its functionality are fully available **only using the web interface**!
+
+   The use of CalDAV/CardDAV through third-party clients **can not be considered a web interface alternative**.
+
 
 Sharing email folders or the entire account
 ===========================================
