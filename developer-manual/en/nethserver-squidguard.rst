@@ -36,8 +36,7 @@ which in turn asks to the ``ufdb`` daemon (which runs as user ufdb).
 Known limitations
 =================
 
-- Transparent URL filtering on HTTPS websites can only block whole domains, because ufdbGuard can only receive
-the domain name, not the full URL
+- Transparent URL filtering on HTTPS websites can only block whole domains, because ufdbGuard can only receive the domain name, not the full URL
 
 - Redirected HTTPS show an error instead of the block page
 
