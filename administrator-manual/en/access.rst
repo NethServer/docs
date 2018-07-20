@@ -37,3 +37,24 @@ and groups module is installed from the Software center, the ``admin``
 user is also available to access the web interface with same
 privileges as the ``root`` user. See :ref:`admin_user-section` for
 details.
+
+.. _session-timeouts-section:
+
+Session timeouts
+================
+
+By default (starting from |product| 6.10), a Server Manager session
+terminates after **60 minutes of inactivity** (idle timeout) and **expires
+8 hours after the login** (session life time).
+
+The following shell command sets 2 hours of idle timeout, and 16 hours of
+maximum session life time. Time is expressed in seconds: ::
+
+    config setprop httpd-admin MaxSessionIdleTime 7200 MaxSessionLifeTime 57600
+
+To disable the timeouts ::
+
+    config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
+
+The new timeout values will affect new sessions. They do not change any active
+session.
