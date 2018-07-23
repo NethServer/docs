@@ -5,6 +5,7 @@ Release notes
 |product| release |release|
 
 * Upstream release notes from `CentOS 6.10`_ and `RHEL 6.10`_
+* CentOS 6 will receive security updates until 2020-11-30
 * List of `updates of 6.10`_
 * All `updates of 6.9`_
 

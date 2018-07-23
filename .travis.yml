@@ -30,4 +30,4 @@ deploy:
     skip_cleanup: true
     script: rsync -ai --no-super --filter="+ /*/*/${TARGET_DIR}/**" --filter='-r *' --delete-after -e "${SSH_RSYNC}" ${BUILD_DIR}/_build/webroot/* nethserver@docs1.nethserver.com:.
     on:
-        all_branches: true
+        condition: $NETHSERVER_ENTERPRISE = 1
