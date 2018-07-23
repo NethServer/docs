@@ -14,7 +14,7 @@ Release notes
 .. _`updates of 6.10`: http://dev.nethserver.org/projects/nethserver/issues?query_id=67
 .. _`updates of 6.9`: http://dev.nethserver.org/projects/nethserver/issues?query_id=66
 
-Major changes on 2018-07-20
+Major changes on 2018-07-23
 ===========================
 
 * Default Server Manager session idle timeout is 60 minutes, session life time
