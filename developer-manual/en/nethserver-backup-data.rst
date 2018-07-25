@@ -31,9 +31,9 @@ Properties:
 * ``SMBPassword`` : password for the SMB server
 * ``USBLabel`` : contains the filesystem label 
 * ``NFSHost`` : host name of the NFS server
-* ``NFShare`` : contains the NFS share name
+* ``NFSShare`` : contains the NFS share name
 * ``Notify``: if set to ``always``, always send a notification with backup status; if set to ``error``, send a notication only on error; if set to ``never``, never send a notification
-* ``NotifyFrom``: set a different sender then ``root@localhost``
+* ``NotifyFrom``: set a different sender than ``root@localhost``
 * ``NotifyTo``: send the notification to given mail address, default is ``root@localhost``
 * ``WebDAVUrl`` : contains the WebDAV URL address
 * ``WebDAVLogin`` : login user for the WebDAV server
@@ -68,7 +68,7 @@ Multiple backups
 ================
 
 Multiple backups can be scheduled in different hours to multiple storage backends.
-Some features are still not implemented for multiple backupss:
+Some features are still not implemented for multiple backups:
 
 * configuration backup can't be directly extracted from data backup
 * WebDAV storage backend
@@ -81,11 +81,11 @@ Every backup record is saved inside the ``backups`` database. Each record can ha
 
 * ``duplicity``
 * ``restic``
-- ``rsync``
+* ``rsync``
 
 The key of the record is referred as the backup ``name``.
 
-Some properties are common to both backends and have the same behavior described under "Single backup" section, the only exception is ``BackupTime``:
+Some properties are common to all backends and have the same behavior described under "Single backup" section, the only exception is ``BackupTime``:
 
 * ``status``
 * ``BackupTime``: time of the scheduled backup. Must be in the cron-style syntax: Es. ``15 7 * * *``. Runs on 7:15.
@@ -95,8 +95,8 @@ Some properties are common to both backends and have the same behavior described
 * ``SMBPassword``
 * ``USBLabel``
 * ``NFSHost``
-* ``NFShare``
-* ``CleanupOlderThan``
+* ``NFSShare``
+* ``CleanupOlderThan``: not supported by the rsync backend
 * ``VFSType``: each backend can implement its own list of supported storage backends
 
 Each record should contains only the properties relative to the storage backend selected with ``VFSType``.
@@ -127,7 +127,7 @@ Backup
 The main command is ``/sbin/e-smith/backup-data`` which starts the backup process. The backup is composed of three parts:
 
 * *pre-backup-data* event: prepare the system and mount the destination share
-* */etc/e-smith/events/actions/backup-data-<program>* action: execute the backup. This actions must implement full/incremental logic. The backup is directly saved on the mounted share (or usb device).
+* */etc/e-smith/events/actions/backup-data-<program>* action: execute the backup. These actions must implement full/incremental logic. The backup is directly saved on the mounted share (or usb device).
 * *post-backup-data*: umount share and cleanup. Actions in this event can also implement retention policies (currently not implemented).
 
 
@@ -214,13 +214,14 @@ List of saved and excluded files can be customized using two special files (wher
 - ``/etc/backup-data/<name>.include``
 - ``/etc/backup-data/<name>.exclude``
 
-Both file will override the list on included and excluded files from the single backup.
+Both files will override the list on included and excluded files from the single backup.
 
 Retention policy
 ================
 
 All backups can be deleted after a certain amount of time. Cleanup process takes place in post-backup-data event.
 See ``CleanupOlderThan`` property.
+The retention policy is not supported by the rsync backend.
 
 Restore
 =======
@@ -274,7 +275,7 @@ reads the list of paths to restore and creates a executable command to restore t
 List backup contents
 ====================
 
-The list of file inside the single backup can be obtained using: ::
+The list of files inside the single backup can be obtained using: ::
 
   /sbin/e-smith/backup-data-list
 
@@ -286,7 +287,6 @@ Duplicity
 =========
 
 The default program used for backup is duplicity using the globbing file list feature. Encryption is disabled and duplicity cache is stored in ``/var/lib/nethserver/backup/duplicity/ directory``.
-We plan to support all duplicity features in the near future.
 
 See http://duplicity.nongnu.org/ for more information.
 
@@ -309,7 +309,7 @@ Just execute: ::
 Restic
 ======
 
-Implement backup enginge using restic (https://restic.net/), it can be used as duplicity replacement for standard
+Implement backup engine using restic (https://restic.net/), it can be used as duplicity replacement for standard
 backup or as multiple backup.
 
 Storage backends
@@ -399,7 +399,7 @@ Properties:
 
 * ``RestDirectory``: destination directory
 * ``RestHost``: REST server hostname or IP address
-* ``RestPort``: REST srver port (default for server is 8000)
+* ``RestPort``: REST server port (default for server is 8000)
 * ``RestProtocol``: REST protocol, can be ``http`` or ``https``
 * ``RestUser``: user for authentication (optional)
 * ``RestPassword``: password for authentication (optional)
@@ -456,8 +456,8 @@ Then configure it for NethServer: ::
   signal-event firewall-adjust
 
 
-nethserver-rsync
-================
+Rsync
+=====
 
 Implement Time machine-style backup engine using ``rsync_tmbackup.sh`` (https://github.com/laurent22/rsync-time-backup),
 based on rsync (https://rsync.samba.org/). It can be used as duplicity replacement for standard
