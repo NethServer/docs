@@ -310,7 +310,7 @@ The property takes a number followed by D, M or Y (Days, Months, or Years respec
 
 Example: cleanup after 30 days: ::
 
-  db backups mybackup CleanupOlderThan 30D
+  db backups setprop mybackup CleanupOlderThan 30D
 
 The retention policy is not supported by the rsync backend.
 
