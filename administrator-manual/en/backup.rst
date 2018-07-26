@@ -428,7 +428,7 @@ Restic backup every day at 3:00 to Amazon S3, no retention limit: ::
 Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
 
   db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
-  SMBHost nas.localnethserver.org SMBUser myuser SMBPassword mypassword SMBShare mybackup
+  SMBHost nas.localnethserver.org SMBLogin myuser SMBPassword mypassword SMBShare mybackup
   signal-event nethserver-backup-data-save mybackup1
 
 
