@@ -252,7 +252,7 @@ Common properties:
 
 * ``status`` : enable or disable the backup, can be ``enabled`` or ``disabled``
 * ``Notify``: if set to ``always``, always send a notification with backup status; if set to ``error``, send a notification only on error; if set to ``never``, never send a notification
-* ``NotifyFrom``: set a different sender then ``root@localhost``
+* ``NotifyFrom``: set a different sender than ``root@localhost``
 * ``NotifyTo``: send the notification to given mail address, default is ``root@localhost``
 * ``VFSType`` : set the storage backend
 
@@ -310,7 +310,7 @@ The property takes a number followed by D, M or Y (Days, Months, or Years respec
 
 Example: cleanup after 30 days: ::
 
-  db backups mybackup CleanupOlderThan 30D
+  db backups setprop mybackup CleanupOlderThan 30D
 
 The retention policy is not supported by the rsync backend.
 
@@ -352,7 +352,7 @@ Supported by all backends.
 Properties:
 
 * ``NFSHost``: NFS server host name or IP address
-* ``NFShare``: NFS share name
+* ``NFSShare``: NFS share name
 
 SFTP
 ~~~~
