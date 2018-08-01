@@ -320,8 +320,9 @@ Extra options
 -------------
 
 * ``Prune``: execute the pruning on the specified time. Valid values are:
-  - ``always``: run the prune everytime at the end of backup
-  - a number between ``0`` and ``6``: run the prune on the selected week day (0 is Sunday, 1 is Monday)
+
+  * ``always``: run the prune everytime at the end of backup
+  * a number between ``0`` and ``6``: run the prune on the selected week day (0 is Sunday, 1 is Monday)
 
 Storage backends
 ----------------
