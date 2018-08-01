@@ -423,7 +423,7 @@ Rsync backup, every day at 7:15 to a remote server. The SFTP backend requires th
 Restic backup every day at 3:00 to Amazon S3, no retention limit: ::
 
   db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
-  S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Prune 0
   signal-event nethserver-backup-data-save mybackup1
 
 Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
@@ -489,6 +489,30 @@ For example, given a backup named ``mybackup1`` create the following files:
 
 - :file:`/etc/backup-data/mybackup1.include`
 - :file:`/etc/backup-data/mybackup1.exclude`
+
+Example
+~~~~~~~
+
+It's possible to configure the single backup to save all data and create
+a multiple backup which includes only the mail and is scheduled each our.
+
+1. Configure the new ``mymai1backup``: ::
+
+     db backups set mymailbackup restic status enabled BackupTime '0 * * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
+     VFSType nfs NFSHost nsfs.server.loc NFSShare test CleanupOlderThan 1d Prune 0
+
+2. Create a custom include containing only the mail directory: ::
+
+     echo "/var/lib/nethserver/vmail" > /etc/backup-data/mymailbackup.include
+
+3. Create an empty custom exclude file: ::
+
+     touch /etc/backup-data/mymailbackup.exclude
+
+4. Apply the configuration: ::
+
+     signal-event nethserver-backup-save mymailbackup
+
 
 .. warning:: Make sure not to leave empty lines inside edited files.
 
