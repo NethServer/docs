@@ -496,7 +496,7 @@ Example
 It's possible to configure the single backup to save all data and create
 a multiple backup which includes only the mail and is scheduled each our.
 
-1. Configure the new ``mymai1backup``: ::
+1. Configure the new ``mymailbackup``: ::
 
      db backups set mymailbackup restic status enabled BackupTime '0 * * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
      VFSType nfs NFSHost nsfs.server.loc NFSShare test CleanupOlderThan 1d Prune 0
