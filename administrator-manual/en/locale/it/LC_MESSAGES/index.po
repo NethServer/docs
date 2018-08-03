@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,69 +25,73 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../index.rst:11 ../../index.rst:14
+#: ../../index.rst:4
 msgid "Administrator Manual"
 msgstr "Manuale amministratore"
 
-#: ../../index.rst:20 ../../index.rst:23
+#: ../../index.rst:13
 msgid "`Web site <http://www.nethserver.org>`_"
 msgstr "`Sito web <http://www.nethserver.org>`_"
 
-#: ../../index.rst:22 ../../index.rst:25
+#: ../../index.rst:15
 msgid "`Community <http://community.nethserver.org>`_"
 msgstr "`Community <http://community.nethserver.org>`_"
 
-#: ../../index.rst:24 ../../index.rst:27
+#: ../../index.rst:17
 msgid "`Wiki <https://wiki.nethserver.org>`_"
 msgstr "`Wiki <https://wiki.nethserver.org>`_"
 
-#: ../../index.rst:26 ../../index.rst:29
+#: ../../index.rst:19
 msgid ""
 "`Developer manual <http://docs.nethserver.org/projects/nethserver-devel>`_"
 msgstr ""
 "`Manuale sviluppatore <http://docs.nethserver.org/projects/nethserver-"
 "devel>`_"
 
-#: ../../index.rst:32 ../../index.rst:35
+#: ../../index.rstNone
+msgid "Contacts"
+msgstr "Contatti"
+
+#: ../../index.rst:25
 msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 
-#: ../../index.rst:34 ../../index.rst:37
+#: ../../index.rst:27
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
 
-#: ../../index.rst:37 ../../index.rst:40
+#: ../../index.rst:30
 msgid "Release notes |version|"
 msgstr "Note di rilascio |version|"
 
-#: ../../index.rst:45 ../../index.rst:48
+#: ../../index.rst:38
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:55 ../../index.rst:58
+#: ../../index.rst:55
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../index.rst:67 ../../index.rst:70
+#: ../../index.rst:68
 msgid "Modules"
 msgstr "Moduli"
 
-#: ../../index.rst:108 ../../index.rst:111
+#: ../../index.rst:116
 msgid "NethForge modules"
 msgstr "Moduli NethForge"
 
-#: ../../index.rst:117 ../../index.rst:120
+#: ../../index.rst:124
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:125 ../../index.rst:128
+#: ../../index.rst:132
 msgid "Appendix"
 msgstr "Appendice"
 
-#: ../../index.rst:138 ../../index.rst:141
+#: ../../index.rst:145
 msgid "Indices"
 msgstr "Indici"
 
-#: ../../index.rst:140 ../../index.rst:143
+#: ../../index.rst:147
 msgid ":ref:`General index <genindex>`"
 msgstr ":ref:`Indice generale <genindex>`"

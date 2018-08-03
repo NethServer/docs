@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 14:00+0200\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -35,7 +35,7 @@ msgstr "|product| versione |version|"
 
 #: ../../release_notes.rst:11
 msgid "ISO release 7.5.1804 \"final\" - 2018-06-11"
-msgstr ""
+msgstr "ISO release 7.5.1804 \"final\" - 2018-06-11"
 
 #: ../../release_notes.rst:13 ../../release_notes.rst:32
 msgid ""
@@ -66,7 +66,7 @@ msgid ""
 "List of `known bugs "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 msgstr ""
-"Lista di bug noti "
+"Lista di `bug noti "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 
 #: ../../release_notes.rst:23
@@ -80,17 +80,19 @@ msgstr "`Project board <https://github.com/orgs/NethServer/projects/1>`_"
 
 #: ../../release_notes.rst:30
 msgid "ISO release 7.5.1804"
-msgstr ""
+msgstr "ISO release 7.5.1804"
 
 #: ../../release_notes.rst:38
 msgid "Major changes on 2018-06-11"
-msgstr ""
+msgstr "Cambiamenti principali al 11/06/2018"
 
 #: ../../release_notes.rst:40
 msgid ""
 "ISO release 7.5.1804 \"final\" replaces any previous ISO 7.5.1804 \"rc\" and"
 " \"beta\""
 msgstr ""
+"ISO release 7.5.1804 \"final\" sostituisce le precedenti ISO 7.5.1804 \"rc\""
+" e \"beta\""
 
 #: ../../release_notes.rst:42
 msgid "The :ref:`email-section` module is now based on Rspamd"
@@ -139,6 +141,8 @@ msgid ""
 "Default Server Manager :ref:`session idle timeout <session-timeouts-"
 "section>` is 60 minutes, session life time is 8 hours"
 msgstr ""
+"il valore di default della :ref:`session idle timeout <session-timeouts-"
+"section>` del Server Manager è di 60 minute, la session life time è di 8 ore"
 
 #: ../../release_notes.rst:56
 msgid ""
@@ -268,7 +272,7 @@ msgstr "WebTop4 è stato rimosso"
 
 #: ../../release_notes.rst:106
 msgid "Major changes on 2017-07-31"
-msgstr "Cambiamenti principali dal 31/07/2017"
+msgstr "Cambiamenti principali al 31/07/2017"
 
 #: ../../release_notes.rst:108
 msgid "ISO release 7.3.1611 \"update 1\" replaces the previous ISO 7.3.1611 \"Final\""
@@ -318,7 +322,7 @@ msgstr "Pagina strumenti diagnostici di rete"
 
 #: ../../release_notes.rst:131
 msgid "Major changes on 2017-01-30"
-msgstr "Cambiamenti principali dal 30/01/2017"
+msgstr "Cambiamenti principali al 30/01/2017"
 
 #: ../../release_notes.rst:133
 msgid "ISO release 7.3.1611 \"Final\" replaces the previous ISO 7.3.1611 \"RC4\""
@@ -382,7 +386,7 @@ msgid ""
 "|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
 "for details."
 msgstr ""
-"E' possibile aggiornare la precedente *major release* di |product| a "
+"È possibile aggiornare la precedente *major release* di |product| a "
 "|version| con la strategia backup/restore. Vedere :ref:`upgrade-section` per"
 " dettagli."
 
