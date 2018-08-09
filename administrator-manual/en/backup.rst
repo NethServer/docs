@@ -285,11 +285,11 @@ Below, some examples.
 
 Every night at 3: ::
 
-  db backups setprop mybackup BackupTime '0 3 * * 0'
+  db backups setprop mybackup BackupTime '0 3 * * *'
 
 Every hour, at minute 15: ::
 
-  db backups setprop mybackup BackupTime '15 0 * * 0'
+  db backups setprop mybackup BackupTime '15 * * * *'
 
 At 04:05 on every Sunday: ::
 
