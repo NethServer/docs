@@ -69,7 +69,7 @@ IPs are banned when they are found several times in log, during a specific find 
 Statistics
 ==========
 
-The :guilabel:`Ban statistics` tab is available in the status category of the server-manager, it gives you the total number of banishment per jail as well as the total of all banishments.
+The :guilabel:`Ban statistics` tab is available in the status category of the server-manager, it gives you the total number of bans per jail as well as the total of all bans.
 
 Tools
 =====
