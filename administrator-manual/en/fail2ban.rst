@@ -17,7 +17,7 @@ Install from the Software Center or use the command line: ::
 Settings
 ========
 
-Fail2ban is configurable in the security category of the server-manager. Most of settings can be changed in the :guilabel:`Configuration` tab, only really advanced settings must be configured by the terminal. The :guilabel:`Ban status` tab displays the statistic and the banned IPs.
+Fail2ban is configurable in the security category of the server-manager. Most of settings can be changed in the :guilabel:`Configuration` tab, only really advanced settings must be configured by the terminal.
 
 Jails
 -----
@@ -62,9 +62,14 @@ Notify jail start/stop events
     Send email notifications when a jail is started or stopped.
 
 Unban IP
---------
+========
 
-IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Ban status` tab.
+IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Unban IP` tab in the status category of the server-manager.
+
+Statistics
+==========
+
+The :guilabel:`Ban statistics` tab is available in the status category of the server-manager, it gives you the total number of bans per jail as well as the total of all bans.
 
 Tools
 =====
