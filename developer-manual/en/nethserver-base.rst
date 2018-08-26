@@ -310,7 +310,7 @@ NS Release Lock
 As default |product| is configured to access latest upstream repositories using the
 "Rolling release" approach.
 
-It is possibile to lock repositories to che current minor release using ``NS release lock`` feature: ::
+It is possible to lock repositories to the current minor release using ``NS release lock`` feature: ::
 
   config setprop sysconfig NsReleaseLock enabled
   signal-event software-repos-save
