@@ -22,11 +22,15 @@ Configuration
 Properties:
 
 * *WebAdmin*: enable ejabberd built-in web interfac. Can be ``enabled`` or ``disabled``, default is ``disabled``
-* *WelcomeSubject*: subject to be shown in the welcome message, default value is empty
-* *WelcomeText*: welcome message, default value is empty
-* *XMPPAccess*: enable TLS access if value is ``tls``, which is the default value. If empty, TLS is disabled.
+* *S2S*: Enable the server-to-server (XMMP federation). can be ``enabled``, default is ``disabled``
+* *ModMamStatus*: the new message archive management (mod_mam). can be ``enabled``, default is ``disabled``
+* *ModMamPurgeDBStatus*: Purge the Mnesia database of old messages of mod_mam
+* *ModMamPurgeDBInterval*: Remove messages older than X days, default is ``30``
+* *ShaperFast*: Download speed limit in bytes/second for admin users, default is ``1000000``
+* *ShaperNormal*: Download speed limit in bytes/second for users, default is ``500000``
 
-When enabled, web-based adminsitration interface listens on 5280 port.
+
+When enabled, web-based administration interface listens on 5280 port.
 You need a user inside jabberadmins group to login.
 
 Default access to server ports is set to public on following ports: 5280, 5222, 5223.

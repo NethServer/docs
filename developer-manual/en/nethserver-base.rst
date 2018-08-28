@@ -129,9 +129,6 @@ the script: ``/usr/libexec/nethserver/update-networks-db`` .
 
 The *networks* database is updated Whenever an interface is plugged into the system.
 
-Best practices
---------------
-
 DHCP on red interfaces
 ----------------------
 
@@ -229,6 +226,14 @@ configuration by following these steps.
 
 6. Open the web interface and reconfigure accordingly to your needs
 
+Zeroconf network
+----------------
+
+Zeroconf network (http://www.zeroconf.org/) shouldn't be usefull on a server.
+It can be safely disabled using these commands: ::
+
+  config setprop sysconfig ZeroConf disabled
+  signal-event interface-update
 
 Log retention and rotation
 ==========================
@@ -290,6 +295,7 @@ Main repositories are:
 * ``updates``: updated packages from CentOS. Enabled by default.
 * ``centos-sclo-rh`` and ``centos-sclo-sclo``: SCL repositories. Both enabled by default.
 * ``extras``: extra RPMs. Enabled by default.
+* ``epel``: Extra Packages for Enterprise Linux. Enabled by default.
 
 A standard installation should have the following enabled repositories:
 
@@ -301,6 +307,7 @@ A standard installation should have the following enabled repositories:
 * centos-sclo-rh
 * centos-sclo-sclo
 * extras
+* epel
 
 Packages published in above repositories should always allow a non-disruptive automatic update.
 
@@ -310,7 +317,7 @@ NS Release Lock
 As default |product| is configured to access latest upstream repositories using the
 "Rolling release" approach.
 
-It is possibile to lock repositories to che current minor release using ``NS release lock`` feature: ::
+It is possible to lock repositories to the current minor release using ``NS release lock`` feature: ::
 
   config setprop sysconfig NsReleaseLock enabled
   signal-event software-repos-save
