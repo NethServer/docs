@@ -8,6 +8,7 @@ nethserver-avahi
 nethserver-mail-common
 nethserver-mail-server
 nethserver-mail-filter
+nethserver-mail
 nethserver-directory
 nethserver-dc
 nethserver-hylafax

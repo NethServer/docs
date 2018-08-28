@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -24,6 +24,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ui/Ejabberd.rst:5
+msgid "Chat"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:7
+msgid ""
+"The :index:`chat` service uses the standard protocol "
+":index:`Jabber`/:index:`XMPP`. See also :ref:`chat-section`."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:12
+msgid "Administration web Interface"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:12
+msgid ""
+"The Jaber server comes with a web administrative interface for members of "
+"the jabberadmins group."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:15
+msgid "Federation (S2S)"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:15
+msgid ""
+"XMPP allows for servers communicating seamlessly with each other, forming a "
+"global 'federated' IM network."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:18
+msgid "File transfer maximum speed"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:18
+msgid "Limit in Byte/second the maximum file transfer."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:21
+msgid "File transfer normal speed"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:21
+msgid "Limit in Byte/second the normal file transfer."
+msgstr ""
 
 #: ../../ui/FileServer.rst:5
 msgid "Windows file server"

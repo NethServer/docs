@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -18,14 +18,22 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../nsent/_templates/navbarsearchbox.html:4
-msgid "Search"
-msgstr "Buscar"
-
 #: ../../nsent/_templates/navbar.html:26
 msgid "Index"
 msgstr "Índice"
 
-#: ../../nsent/_templates/navbar.html:27
+#: ../../nsent/_templates/navbar.html:28
+msgid "Languages"
+msgstr ""
+
+#: ../../nsent/_templates/navbar.html:36
+msgid "Versions"
+msgstr ""
+
+#: ../../nsent/_templates/navbar.html:43
 msgid "Support"
 msgstr "Soporte"
+
+#: ../../nsent/_templates/navbarsearchbox.html:4
+msgid "Search"
+msgstr "Buscar"

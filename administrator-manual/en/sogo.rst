@@ -99,23 +99,30 @@ Terms highlighted in **bold** are documented in SOGo `installation and configura
 
 
 
-Access SOGo from the public network
-===================================
+Access SOGo on an exclusive hostname
+====================================
 
-To make SOGo accessible with a public DNS hostname:
+To make SOGo accessible with an exclusive DNS hostname:
 
-* In “DNS and DHCP” UI module (Hosts), create the DNS host name as a server alias (i.e. public.example.com)
+* In “DNS and DHCP” UI module (Hosts), create the DNS host name as a server alias (i.e. webmail.example.com)
 
-* Add the host name to sogod/VirtualHosts prop list:
-  ::
+* Add the host name to sogod/VirtualHost prop list: ::
 
-    config setprop sogod VirtualHosts public.example.com
+    config setprop sogod VirtualHost webmail.example.com
     signal-event nethserver-sogo-update
 
 Same rule applies if SOGo must be accessible using server IP address. For example: ::
 
-  config setprop sogod VirtualHosts 192.168.1.1
+  config setprop sogod VirtualHost 192.168.1.1
   signal-event nethserver-sogo-update
+
+If the VirtualHost prop is set, requests to the root (i.e. webmail.example.com) are redirected to the (mandatory) /SOGo subfolder (webmail.example.com/SOGo). 
+
+It is also possible to use a custom certificate for this virtualhost: ::
+
+  config setprop sogod Certificate example.crt
+  signal-event nethserver-sogo-update
+
 
 Maximum IMAP command
 ====================
@@ -132,7 +139,7 @@ ActiveSync
 
 According to this :ref:`webtop-vs-sogo`, WebTop and SOGo can be installed on the same machine.
 
-ActiveSync is enabled by default on SOGo and WebTop, but if both packages are installed, SOGo will take precedence.
+ActiveSync is enabled by default on SOGo and WebTop, but if both packages are installed, WebTop will take precedence.
 
 To disable ActiveSync on SOGo: ::
 
@@ -143,6 +150,11 @@ To disable ActiveSync on WebTop: ::
 
   config setprop webtop ActiveSync disabled
   signal-event nethserver-webtop5-update
+
+To enabale ActiveSync on SOGo again: ::
+
+  config setprop sogod ActiveSync enabled
+  signal-event nethserver-sogo-update
 
 Backup
 ======
@@ -228,17 +240,6 @@ and restart rsyslog ::
   systemctl restart rsyslog
 
 this solution comes from `RedHat solution <https://access.redhat.com/solutions/1564823>`_
-
-Redirect Sogo on the root domain
---------------------------------
-
-Following this `thread <http://community.nethserver.org/t/how-redirect-sogo-on-root-domain/2386>`_ you can redirect the sogo url to the default domain.
-Add index.php with the following content: ::
-
-  header('Location: /SOGo');
-
-in ``/var/www/html/`` without file server.
-
 
 Clients
 =======

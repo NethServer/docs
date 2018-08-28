@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 16:33+0200\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,23 +25,23 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../webtop5.rst:10 ../../webtop5.rst:13
+#: ../../webtop5.rst:3
 msgid "WebTop 5"
 msgstr "WebTop 5"
 
-#: ../../webtop5.rst:12 ../../webtop5.rst:15
+#: ../../webtop5.rst:5
 msgid ""
 "WebTop is a full-featured groupware which implements ActiveSync protocol."
 msgstr ""
 "WebTop è un groupware completo che implementa il protocollo ActiveSync."
 
-#: ../../webtop5.rst:14 ../../webtop5.rst:17
+#: ../../webtop5.rst:7
 msgid "Access to web interface is: ``https://<server_name>/webtop``."
 msgstr ""
 "L’indirizzo per accedere all’interfaccia web è: "
 "``https://<nome_server>/webtop``."
 
-#: ../../webtop5.rst:16 ../../webtop5.rst:19
+#: ../../webtop5.rst:9
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -52,42 +52,40 @@ msgstr ""
 "pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../webtop5.rst:22 ../../webtop5.rst:25
+#: ../../webtop5.rst:15
 msgid "Authentication"
 msgstr "Autenticazione"
 
-#: ../../webtop5.rst:24 ../../webtop5.rst:27
+#: ../../webtop5.rst:17
 msgid ""
-"Always use the full user name format ``<user>@<domain>`` for login for the "
+"Always use the full user name format ``<user>@<domain>`` for login to the "
 "web application and Active Sync."
 msgstr ""
-"Utilizzare sempre il formato utente completo ``<utente>@<dominio>`` per il "
-"login sia all'applicazione web, sia per Active Sync."
+"Usa sempre il nome utente completo in formato ``<user>@<domain>`` per "
+"accedere all'applicazione web e via Active Sync."
 
-#: ../../webtop5.rst:27 ../../webtop5.rst:63 ../../webtop5.rst:803
-#: ../../webtop5.rst:824 ../../webtop5.rst:30 ../../webtop5.rst:66
-#: ../../webtop5.rst:806 ../../webtop5.rst:827
+#: ../../webtop5.rst:20 ../../webtop5.rst:56 ../../webtop5.rst:871
+#: ../../webtop5.rst:892
 msgid "**Example**"
 msgstr "**Esempio**"
 
-#: ../../webtop5.rst:29 ../../webtop5.rst:65 ../../webtop5.rst:32
-#: ../../webtop5.rst:68
+#: ../../webtop5.rst:22 ../../webtop5.rst:58
 msgid "Server name: mymail.mightydomain.com"
 msgstr "Nome server: mymail.mightydomain.com"
 
-#: ../../webtop5.rst:30 ../../webtop5.rst:33
+#: ../../webtop5.rst:23
 msgid "Alternative mail domain: baddomain.net"
 msgstr "Dominio di posta alternativo: baddomain.net"
 
-#: ../../webtop5.rst:31 ../../webtop5.rst:34
+#: ../../webtop5.rst:24
 msgid "User: goofy"
 msgstr "Utente: goofy"
 
-#: ../../webtop5.rst:32 ../../webtop5.rst:35
+#: ../../webtop5.rst:25
 msgid "Login: goofy@mightydomain.com"
 msgstr "Login: goofy@mightydomain.com"
 
-#: ../../webtop5.rst:35 ../../webtop5.rst:38
+#: ../../webtop5.rst:28
 msgid ""
 "Active Sync protocol is supported only on Android and iOS devices. Outlook "
 "is not supported. Mail synchronization is currently not supported."
@@ -96,35 +94,35 @@ msgstr ""
 "Outlook non è supportato. La sincronizzazione della posta non è al momento "
 "supportata."
 
-#: ../../webtop5.rst:43 ../../webtop5.rst:46
+#: ../../webtop5.rst:36
 msgid "Admin user"
 msgstr "Utente admin"
 
-#: ../../webtop5.rst:45 ../../webtop5.rst:48
+#: ../../webtop5.rst:38
 msgid ""
-"After installation, WebTop will be accessible via the administrator user. "
-"The administrator user can change global settings and login as all other "
-"users, however, it's not a system user and can't access any other services "
+"After installation, WebTop will be accessible using the administrator user. "
+"The administrator user can change global settings and login as any other "
+"user, however, it's not a system user and can't access any other service "
 "like Mail, Calendar, etc."
 msgstr ""
-"Dopo l’installazione, WebTop è accessibile con un utente amministrativo. "
-"L’utente amministrativo può cambiare le impostazioni globali ed effettuare "
-"login come un altro utente, ma non è un utente di sistema e non può accedere"
-" agli altri servizi come Mail, Calendario, ecc."
+"Dopo l’installazione, WebTop sarà accessibile utilizzando il suo utente "
+"amministrativo. L’utente amministrativo può cambiare le impostazioni globali"
+" ed effettuare login come un altro utente, ma non è un utente di sistema e "
+"non può accedere agli altri servizi come Mail, Calendario, ecc."
 
-#: ../../webtop5.rst:49 ../../webtop5.rst:52
+#: ../../webtop5.rst:42
 msgid "Default credentials are:"
 msgstr "Le credenziali di default sono:"
 
-#: ../../webtop5.rst:51 ../../webtop5.rst:54
+#: ../../webtop5.rst:44
 msgid "User: *admin*"
 msgstr "Utente: admin"
 
-#: ../../webtop5.rst:52 ../../webtop5.rst:55
+#: ../../webtop5.rst:45
 msgid "Password: *admin*"
 msgstr "Password: admin"
 
-#: ../../webtop5.rst:54 ../../webtop5.rst:57
+#: ../../webtop5.rst:47
 msgid ""
 "The administrator user's password must be changed from within the WebTop "
 "interface."
@@ -132,13 +130,13 @@ msgstr ""
 "La password del’utente admin deve essere cambiata dall’interfaccia di "
 "WebTop."
 
-#: ../../webtop5.rst:57 ../../webtop5.rst:60
-msgid "**Remember to change the admin password just after installation!**"
+#: ../../webtop5.rst:50
+msgid "**Remember to change the admin password after installation!**"
 msgstr ""
-"**Ricordarsi di cambiare la password di amministratore subito dopo "
-"l’installazione!**"
+"**E' fondamentale cambiare la password dell'amministratore subito dopo "
+"l'installazione!**"
 
-#: ../../webtop5.rst:60 ../../webtop5.rst:63
+#: ../../webtop5.rst:53
 msgid ""
 "To check the mail of the system's user admin account use the following "
 "login: admin@<domain> where ``<domain>`` is the domain part of server FQDN."
@@ -147,41 +145,41 @@ msgstr ""
 " login: admin@<dominio> dove ``<dominio>`` è il dominio del server che fa "
 "parte del FQDN."
 
-#: ../../webtop5.rst:66 ../../webtop5.rst:69
+#: ../../webtop5.rst:59
 msgid "User: admin"
 msgstr "Utente: admin"
 
-#: ../../webtop5.rst:67 ../../webtop5.rst:70
+#: ../../webtop5.rst:60
 msgid "Login: admin@mightydomain.com"
 msgstr "Login: admin@mightydomain.com"
 
-#: ../../webtop5.rst:70 ../../webtop5.rst:73
+#: ../../webtop5.rst:63
 msgid "Change admin password"
 msgstr "Cambio della password di admin"
 
-#: ../../webtop5.rst:72 ../../webtop5.rst:75
+#: ../../webtop5.rst:65
 msgid ""
-"Access WebTop using ``admin`` user, then open user settings by clicking on "
-"the menu in the to-right corner."
+"Access WebTop using the ``admin`` user, then open user settings by clicking "
+"on the menu in the top-right corner."
 msgstr ""
-"Accedere a WebTop utilizzando l'utente ``admin``, quindi aprire le "
-"impostazioni utente facendo clic sul menu nell'angolo in alto a destra."
+"Accedere a WebTop usando l'utente ``admin``, quindi aprire le impostazioni "
+"utente facendo clic dal menu nell'angolo in alto a destra."
 
-#: ../../webtop5.rst:76 ../../webtop5.rst:79
+#: ../../webtop5.rst:69
 msgid "Go to :guilabel:`Settings` then click on guilabel:`Change password`."
 msgstr ""
 "Selezionare :guilabel:`Impostazioni` quindi cliccare sul tasto  "
 "guilabel:`Cambia password`."
 
-#: ../../webtop5.rst:79 ../../webtop5.rst:82
+#: ../../webtop5.rst:72
 msgid ""
-"If you want to reset the admin password from command line, use following "
-"commands: ::"
+"If you want to reset the admin password from command line, use the following"
+" commands: ::"
 msgstr ""
-"Se si desidera impostare la password dell'admin da riga di comando, "
-"utilizzare i seguenti comandi: ::"
+"Se si desidera reimpostare la password dell'amministratore da riga di "
+"comando, utilizzare i seguenti comandi: ::"
 
-#: ../../webtop5.rst:84 ../../webtop5.rst:87
+#: ../../webtop5.rst:77
 msgid ""
 "Remember to replace ``<newpassword>`` with your actual new password, "
 "example: ::"
@@ -189,11 +187,11 @@ msgstr ""
 "Ricordarsi di sostituire  ``<newpassword>`` con la nuova password che si "
 "vuole impostare, esempio: :: "
 
-#: ../../webtop5.rst:90 ../../webtop5.rst:93
+#: ../../webtop5.rst:83
 msgid "Two factor authentication (2FA)"
 msgstr "Autenticazione a due fattori (2FA)"
 
-#: ../../webtop5.rst:92 ../../webtop5.rst:95
+#: ../../webtop5.rst:85
 msgid ""
 "WebTop support :index:`two factor authentication`. The user can choose "
 "between:"
@@ -201,7 +199,7 @@ msgstr ""
 "WebTop supporta :index:`l'autenticazione a due fattori`. L'utente può "
 "scegliere tra:"
 
-#: ../../webtop5.rst:95 ../../webtop5.rst:98
+#: ../../webtop5.rst:88
 msgid ""
 "Google Authenticator: the code will be generated using Google Authenticator "
 "app "
@@ -211,17 +209,17 @@ msgstr ""
 "Authenticator "
 "(https://support.google.com/accounts/answer/1066447?co=GENIE.Platform%3DAndroid)"
 
-#: ../../webtop5.rst:96 ../../webtop5.rst:99
+#: ../../webtop5.rst:89
 msgid "Secondary mail: the access code will be sent to selected mail address"
 msgstr ""
 "Mail secondaria: il codice di accesso verrà inviato all'indirizzo di posta "
 "selezionato"
 
-#: ../../webtop5.rst:98 ../../webtop5.rst:101
+#: ../../webtop5.rst:91
 msgid "To enable 2FA:"
 msgstr "Per abilitare 2FA:"
 
-#: ../../webtop5.rst:100 ../../webtop5.rst:103
+#: ../../webtop5.rst:93
 msgid ""
 "Click on the menu button on the top-right corner and select the "
 ":guilabel:`Settings` icon"
@@ -229,7 +227,7 @@ msgstr ""
 "Fare clic sul pulsante del menu nell'angolo in alto a destra e selezionare "
 ":guilabel:`Impostazioni` "
 
-#: ../../webtop5.rst:101 ../../webtop5.rst:104
+#: ../../webtop5.rst:94
 msgid ""
 "Then select :guilabel:`Security` and click on the :guilabel:`Activate "
 "button`."
@@ -237,27 +235,29 @@ msgstr ""
 "Quini selezionare :guilabel:`Sicurezza (OTP)` e cliccare sul pulsante "
 ":guilabel:`Attiva`."
 
-#: ../../webtop5.rst:107 ../../webtop5.rst:110
-msgid "Device synchronization with ActiveSync (EAS)"
-msgstr "Sincronizzazione dei dispositivi mobili con ActiveSync (EAS)"
+#: ../../webtop5.rst:100
+msgid "Synchronization with ActiveSync (EAS)"
+msgstr "Sincronizzazione con ActiveSync (EAS)"
 
-#: ../../webtop5.rst:109 ../../webtop5.rst:112
+#: ../../webtop5.rst:102
 msgid ""
-"Devices can be synchronized using ActiveSync. :index:`ActiveSync` can be "
-"used only for **contacts** and **calendars**."
+"Mobile devices can be synchronized using ActiveSync. :index:`ActiveSync` can"
+" be used only for **contacts** and **calendars**."
 msgstr ""
-"I dispositivi possono essere sincronizzati utilizzando ActiveSync. "
-":index:`ActiveSync` può essere usato solo per **rubriche** e **calendari**."
+"I dispositivi mobili possono essere sincronizzati utilizzando ActiveSync. "
+":index:`ActiveSync` può essere utilizzato solo per **contatti** e "
+"**calendari**."
 
-#: ../../webtop5.rst:114 ../../webtop5.rst:117
-msgid "To synchronize **e-mails** you should configure and IMAP account."
-msgstr "Per sincronizzare **e-mail** bisogna configurare account IMAP."
+#: ../../webtop5.rst:107
+msgid "To synchronize **e-mails** you should configure an IMAP account."
+msgstr ""
+"Per sincronizzare le **e-mail** è necessario configurare un account IMAP."
 
-#: ../../webtop5.rst:117 ../../webtop5.rst:120
+#: ../../webtop5.rst:110 ../../webtop5.rst:224
 msgid "Apple iOS"
 msgstr "Apple iOS"
 
-#: ../../webtop5.rst:119 ../../webtop5.rst:122
+#: ../../webtop5.rst:112
 msgid ""
 "Access your :index:`iOS device`, navigate to Settings and add an Exchange "
 "account following the official guide: https://support.apple.com/en-"
@@ -267,36 +267,33 @@ msgstr ""
 " Exchange seguendo la guida ufficiale: https://support.apple.com/en-"
 "us/HT201729"
 
-#: ../../webtop5.rst:121 ../../webtop5.rst:141 ../../webtop5.rst:124
-#: ../../webtop5.rst:144
+#: ../../webtop5.rst:114 ../../webtop5.rst:134
 msgid "Fill the required fields with:"
 msgstr "Compilare i campi richiesti con:"
 
-#: ../../webtop5.rst:123 ../../webtop5.rst:126
+#: ../../webtop5.rst:116
 msgid "**E-mail**: add your mail address, eg: goofy@nethserver.org"
 msgstr "**E-mail**: aggiungere indirizzo e-mail, es: pippo@nethserver.org"
 
-#: ../../webtop5.rst:124 ../../webtop5.rst:127
+#: ../../webtop5.rst:117
 msgid "**Server**: add your server public name, eg: mail.nethserver.org"
 msgstr ""
 "**Server**: aggiungere il nome pubblico del server, es: mail.nethserver.org"
 
-#: ../../webtop5.rst:125 ../../webtop5.rst:128
+#: ../../webtop5.rst:118
 msgid "**Domain**: leave blank"
 msgstr "**Dominio**: lasciare vuoto"
 
-#: ../../webtop5.rst:126 ../../webtop5.rst:143 ../../webtop5.rst:129
-#: ../../webtop5.rst:146
+#: ../../webtop5.rst:119 ../../webtop5.rst:136
 msgid "**User name**: enter your full user name, eg: goofy@nethserver.org"
 msgstr ""
 "**User name**: Inserire il nome utente completo, es: pippo@nethserver.org"
 
-#: ../../webtop5.rst:127 ../../webtop5.rst:144 ../../webtop5.rst:130
-#: ../../webtop5.rst:147
+#: ../../webtop5.rst:120 ../../webtop5.rst:137 ../../webtop5.rst:201
 msgid "**Password**: enter your password"
 msgstr "**Password**: inserire la password"
 
-#: ../../webtop5.rst:129 ../../webtop5.rst:132
+#: ../../webtop5.rst:122
 msgid ""
 "Finally, *disable* Mail synchronization and create an IMAP account: "
 "https://support.apple.com/en-us/HT201320"
@@ -304,29 +301,29 @@ msgstr ""
 "Infine, *disabilitare* la sincronizzazione della Mail e creare un account "
 "IMAP: https://support.apple.com/en-us/HT201320"
 
-#: ../../webtop5.rst:133 ../../webtop5.rst:136
+#: ../../webtop5.rst:126
 msgid ""
-"iOS devices requires a valid SSL certificate on the server. See :ref"
+"iOS devices require a valid SSL certificate on the server. See :ref"
 ":`server_certificate-section`"
 msgstr ""
 "I device iOS richiedono un certificato SSL valido sul server. Vedi :ref"
 ":`server_certificate-section`"
 
-#: ../../webtop5.rst:137 ../../webtop5.rst:140
+#: ../../webtop5.rst:130 ../../webtop5.rst:214
 msgid "Google Android"
 msgstr "Google Android"
 
-#: ../../webtop5.rst:139 ../../webtop5.rst:142
+#: ../../webtop5.rst:132
 msgid ""
-"Access you :index:`Android device`, navigate to Settings, then select "
+"Access your :index:`Android device`, navigate to Settings, then select "
 ":guilabel:`Add account` -> :guilabel:`Exchange` (or \"Company\" for older "
-"release)."
+"releases)."
 msgstr ""
 "Accedere al :index:`device Android`, navigare su Impostazioni, quindi "
 "selezionare :guilabel:`Aggiungi account` -> :guilabel:`Exchange` (o "
 "\"Aziendale\" per vecchie versioni)."
 
-#: ../../webtop5.rst:146 ../../webtop5.rst:149
+#: ../../webtop5.rst:139
 msgid ""
 "Then select :guilabel:`Manual configuration` and change the name of the "
 "*Server* field accordingly to your server public name. Finally, if you have "
@@ -338,50 +335,47 @@ msgstr ""
 "certificato auto-firmato sul server, selezionare l'opzione "
 ":guilabel:`SSL/TLS (accetta ogni certificato)`."
 
-#: ../../webtop5.rst:150 ../../webtop5.rst:153
+#: ../../webtop5.rst:143
 msgid "Finally, *disable* Mail synchronization and create an IMAP account."
 msgstr ""
 "Infine, *disabilitare* la sincronizzazione della Mail e creare un account "
 "IMAP"
 
-#: ../../webtop5.rst:154 ../../webtop5.rst:157
+#: ../../webtop5.rst:147
 msgid ""
-"On some Android releases (like Samsung), the User name and Domain must be "
-"entered in the same line. In this case, leave blank the field before \"\\\" "
-"character, and enter the user name in the following format: "
+"On some Android releases (notably Samsung), the User name and Domain must be"
+" entered in the same line. In this case, leave blank the field before the "
+"backslash character (\\), and enter the user name in the following format: "
 "``\\goofy@nethserver.org``"
 msgstr ""
 "Su alcune versioni Android (es. Samsung), il nome utente e il dominio devono"
-" essere inseriti nella stessa riga. In questo caso, lasciare vuoto il campo "
-"prima del carattere \"\\\" e inserire il nome utente nel seguente formato: "
-"`` \\pippo@nethserver.org``"
+" essere inseriti sulla stessa riga. In questo caso, lasciare vuoto il campo "
+"prima del carattere backslash (\\) ed inserire il nome utente nel seguente "
+"formato: `` \\pippo@nethserver.org``"
 
-#: ../../webtop5.rst:158 ../../webtop5.rst:161
+#: ../../webtop5.rst:151
 msgid "Multiple calendars and contacts"
 msgstr "Calendari e Rubriche multiple"
 
-#: ../../webtop5.rst:160 ../../webtop5.rst:163
+#: ../../webtop5.rst:153
 msgid ""
-"With the recent Upgrade pack 3 of WebTop 5, support on ActiveSync has been "
-"added in order to synchronize even calendars and rubrics received in "
-"sharing."
+"Calendars and address books shared by others with the user can be "
+"synchronized using the ActiveSync protocol."
 msgstr ""
-"Con il recente Upgrade Pack 3 di WebTop 5, è stato aggiunto il supporto di "
-"ActiveSync per sincronizzare anche i calendari e le rubriche ricevute "
-"durante la condivisione."
+"Calendari e rubriche condivise con l'utente possono essere sincronizzati "
+"utilizzando il protocollo ActiveSync."
 
-#: ../../webtop5.rst:162 ../../webtop5.rst:165
+#: ../../webtop5.rst:155
 msgid ""
-"Shared resources (calendars and address books) are displayed with the "
-"owner's name and category, with the internal code added in square brackets. "
-"The private elements of the shares are completely ignored and not passed."
+"Shared resources are displayed with the owner's name and category (the "
+"number in square brackets is the internal id). Private events are not "
+"synchronized."
 msgstr ""
-"Le risorse condivise (calendari e rubriche) vengono visualizzate con il nome"
-" e la categoria del proprietario, con il codice interno aggiunto tra "
-"parentesi quadre. Gli elementi privati ​​delle condivisioni sono "
-"completamente ignorati e non vengono passati."
+"Le risorse condivise sono visualizzate con il nome e la categoria del "
+"proprietario (il numero tra parentesi quadre è l'ID interno). Gli eventi "
+"privati non vengono sincronizzati."
 
-#: ../../webtop5.rst:165 ../../webtop5.rst:168
+#: ../../webtop5.rst:158
 msgid ""
 "Mobile devices based on Apple iOS fully support folders / categories for "
 "calendar, contacts and activities (called reminders), including original "
@@ -391,78 +385,219 @@ msgstr ""
 "cartelle/categorie per calendario, contatti e attività (chiamati "
 "promemoria), inclusi i colori originali."
 
-#: ../../webtop5.rst:167 ../../webtop5.rst:170
+#: ../../webtop5.rst:160
 msgid ""
-"Mobile devices based on Android instead only support calendars and contacts "
-"(activities are not natively supported), but only on the calendars are "
-"supported folders / categories, without including colors using the native "
-"application Google Calendar."
+"Mobile devices based on Android support only calendars and contacts "
+"(activities are not supported), but using the Google Calendar application "
+"all items will have the same colour."
 msgstr ""
-"I device mobili basati su Android invece supportano solo calendari e "
-"contatti (non sono supportate nativamente le attività), ma solo sui "
-"calendari vengono supportate le cartelle/categorie, senza includere i colori"
-" se si utilizza l’applicazione nativa Google Calendar."
+"I dispositivi mobili basati su Android supportano solo calendari e contatti "
+"(le attività non sono supportate), ma utilizzando l'applicazione Google "
+"Calendar tutti gli elementi avranno lo stesso colore."
 
-#: ../../webtop5.rst:170 ../../webtop5.rst:173
+#: ../../webtop5.rst:163
 msgid ""
-"Installing and using the CloudCal application: "
-"https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=en you can"
-" change the colors associated with each calendar, including shared ones."
+"Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ "
+"application, you can change the colors associated with each calendar, "
+"including shared ones."
 msgstr ""
-"Installando e utilizzando l’applicazione CloudCal: "
-"https://play.google.com/store/apps/details?id=net.cloudcal.cal&hl=it è "
-"possibile modificare i colori associati ad ogni calendario, compresi quelli "
-"condivisi."
 
-#: ../../webtop5.rst:173 ../../webtop5.rst:176
+#: ../../webtop5.rst:166
 msgid ""
-"On Android devices the contacts from shared phone books arrive in a single "
-"indistinguishable container, where it is still possible to modify the "
-"individual elements, which will be saved by z-push in the correct "
-"categories."
+"On Android devices, contacts from shared phone books are merged with the "
+"personal phone book and displayed in a single view. Contacts can be modified"
+" and changes will be saved it the original source."
 msgstr ""
-"Sui device Android i contatti da rubriche condivise arrivano in unico "
-"contenitore indistinguibile, dove rimane possibile comunque modificare i "
-"singoli elementi, che verranno salvati da z-push nelle categorie corrette."
 
-#: ../../webtop5.rst:179 ../../webtop5.rst:182
+#: ../../webtop5.rst:171
 msgid ""
 "In order to receive data via EAS on mobile devices, it is necessary to "
 "verify that the shared resources (Calendars and Contacts) have "
-"synchronization enabled (Complete or Read only):"
+"synchronization enabled (Full or Read only):"
 msgstr ""
-"Per poter ricevere i dati tramite EAS sui device mobili è necessario "
-"verificare che le risorse condivise (Calendari e Rubriche) abbiano la "
-"sincronizzazione abilitata (Completa o Sola lettura):"
 
-#: ../../webtop5.rst:185 ../../webtop5.rst:188
+#: ../../webtop5.rst:177
 msgid ""
-"It is possible to enable and disable the synchronization for each single "
-"shared resource (calendars and contacts). The user can customize every "
-"single resource received in sharing by deciding the type of synchronization."
+"It is possible to enable or disable the synchronization for each shared "
+"resource (calendars and contacts). The user can customize every resource "
+"sharing with him by deciding the type of synchronization."
 msgstr ""
-"È possibile abilitare e disabilitare la sincronizzazione per ogni singola "
-"risorsa condivisa (calendari e contatti). L'utente può personalizzare ogni "
-"singola risorsa ricevuta in condivisione decidendo il tipo di "
-"sincronizzazione."
 
-#: ../../webtop5.rst:188 ../../webtop5.rst:191
+#: ../../webtop5.rst:180
 msgid ""
-"To do so, just right click on the shared resource → Customize → Sync. "
-"devices:"
+"To do so, just right click on the shared resource → Customize → Devices "
+"sync.:"
 msgstr ""
-"Per fare ciò, basta fare tasto destro sulla risorsa condivisa → Personalizza"
-" → Sincronizza dispositivi:"
 
-#: ../../webtop5.rst:193 ../../webtop5.rst:196
+#: ../../webtop5.rst:185
 msgid "The default setting is “Not active”."
 msgstr "L'impostazione predefinita è \"Disattiva\"."
 
-#: ../../webtop5.rst:196 ../../webtop5.rst:199
+#: ../../webtop5.rst:188
+msgid "Synchronization with CalDAV and CardDAV"
+msgstr ""
+
+#: ../../webtop5.rst:190
+msgid ""
+"Calendars and address books can be synchronized also through :index:`CalDAV "
+"and CardDAV protocols`."
+msgstr ""
+
+#: ../../webtop5.rst:192
+msgid ""
+"To synchronize a calendar, pick up its ``URL`` link right-clicking on the "
+"calendar and selecting :guilabel:`Links to this calendar`, then use it to "
+"configure your third-party client."
+msgstr ""
+
+#: ../../webtop5.rst:195
+msgid ""
+"To synchronize an address book, pick up its ``URL`` link right-clicking on "
+"the address book and selecting :guilabel:`Links to this addressbook`, then "
+"use it to configure your third-party client."
+msgstr ""
+
+#: ../../webtop5.rst:198
+msgid "To authenticate, provide your credentials in the following form:"
+msgstr ""
+
+#: ../../webtop5.rst:200
+msgid "**User name**: enter your full user name (i.e. *goofy@nethserver.org*)"
+msgstr ""
+
+#: ../../webtop5.rst:203
+msgid ""
+"Some third-party clients allow to simplify the configuration through the "
+"*autodiscovery* feature that automatically discovers the synchronizable "
+"resources, as in the case of mobile devices clients (i.e. Android or iOS "
+"devices)."
+msgstr ""
+
+#: ../../webtop5.rst:209
+msgid ""
+"If you are using clients that do not support autodiscovery, you need to use "
+"the full URL: ``https://<server_name>/webtop-dav/server.php``"
+msgstr ""
+
+#: ../../webtop5.rst:211
+msgid ""
+"If you are using clients that support autodiscovery use URL: "
+"``https://<server_name>``"
+msgstr ""
+
+#: ../../webtop5.rst:216
+msgid ""
+"A good, free, Android third-party client is `Opensync "
+"<https://deependhulla.com/android-apps/opensync-app>`_."
+msgstr ""
+
+#: ../../webtop5.rst:218
+msgid "install the suggested app from the market;"
+msgstr ""
+
+#: ../../webtop5.rst:219
+msgid ""
+"add a new account clicking on :guilabel:`+` key and select :guilabel:`Login "
+"with URL and username` method;"
+msgstr ""
+
+#: ../../webtop5.rst:220
+msgid ""
+"insert the ``URL`` (``https://<server_name>``), complete username (i.e. "
+"*goofy@nethserver.org*) and password;"
+msgstr ""
+
+#: ../../webtop5.rst:221
+msgid ""
+"click on the new profile and select the resources you want to synchronize."
+msgstr ""
+
+#: ../../webtop5.rst:226
+msgid "CalDAV/CardDAV support is built-in on iOS, so to configure it:"
+msgstr ""
+
+#: ../../webtop5.rst:228
+msgid "go to Settings -> Account and Password -> Add account;"
+msgstr ""
+
+#: ../../webtop5.rst:229
+msgid ""
+"select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` "
+"account;"
+msgstr ""
+
+#: ../../webtop5.rst:230
+msgid ""
+"insert the server name (i.e. *server.nethserver.org*), complete username "
+"(i.e. *goofy@nethserver.org*) and password."
+msgstr ""
+
+#: ../../webtop5.rst:232
+msgid ""
+"By default the syncronization ``URL`` uses the server principal name "
+"(``FQDN``), if you need to change it: ::"
+msgstr ""
+
+#: ../../webtop5.rst:239
+msgid "Desktop clients"
+msgstr ""
+
+#: ../../webtop5.rst:241
+msgid "**Thunderbird**"
+msgstr ""
+
+#: ../../webtop5.rst:243
+msgid ""
+"To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like "
+":guilabel:`Cardbook` (for contacts) and :guilabel:`Lightning` (for "
+"calendars)."
+msgstr ""
+
+#: ../../webtop5.rst:245
+msgid ""
+":guilabel:`Cardbook` add-on works fine, with easy setup and autodiscovery "
+"support."
+msgstr ""
+
+#: ../../webtop5.rst:246
+msgid ""
+":guilabel:`Lightning` add-on doesn't support autodiscovery: any calendar "
+"must be manually added."
+msgstr ""
+
+#: ../../webtop5.rst:248
+msgid "**Outlook**"
+msgstr ""
+
+#: ../../webtop5.rst:250
+msgid ""
+"open source :guilabel:`Outlook CalDav Synchronizer` client works fine, "
+"supporting both CardDAV and CalDAV."
+msgstr ""
+
+#: ../../webtop5.rst:254
+msgid ""
+"At the moment CalDAV and CardDAV support **only personal resources "
+"synchronization**."
+msgstr ""
+
+#: ../../webtop5.rst:258
+msgid ""
+"Webtop is a **clientless groupware**: its functionalities are fully "
+"available **only using the web interface**!"
+msgstr ""
+
+#: ../../webtop5.rst:260
+msgid ""
+"The use of CalDAV/CardDAV through third-party clients **cannot be considered"
+" a web interface alternative**."
+msgstr ""
+
+#: ../../webtop5.rst:264
 msgid "Sharing email folders or the entire account"
 msgstr "Condividere le cartelle e-mail o l'intero account"
 
-#: ../../webtop5.rst:198 ../../webtop5.rst:201
+#: ../../webtop5.rst:266
 msgid ""
 "It is possible to share a single folder or the entire account with all the "
 "subfolders included. Select the folder to share -> right click -> \"Manage "
@@ -472,11 +607,11 @@ msgstr ""
 " sottocartelle incluse. Selezionare la cartella da condividere -> tasto "
 "destro -> \"Gestisci condivisione\":"
 
-#: ../../webtop5.rst:203 ../../webtop5.rst:206
+#: ../../webtop5.rst:271
 msgid "select the user to share the resource (1)."
 msgstr "selezionare l'utente a cui condividere la risorsa (1)."
 
-#: ../../webtop5.rst:204 ../../webtop5.rst:207
+#: ../../webtop5.rst:272
 msgid ""
 "select if you want to share your identity with the user and possibly even if"
 " you force your signature (2)."
@@ -484,11 +619,11 @@ msgstr ""
 "selezionare se si vuole condividere anche l'identità con l'utente e se "
 "forzare la propria firma (2)."
 
-#: ../../webtop5.rst:205 ../../webtop5.rst:208
+#: ../../webtop5.rst:273
 msgid "choose the level of permissions associated with this share (3)."
 msgstr "scegliere il livello di permessi associati a questa condivisione (3)."
 
-#: ../../webtop5.rst:206 ../../webtop5.rst:209
+#: ../../webtop5.rst:274
 msgid ""
 "if you need to change the permission levels more granularly, select "
 "\"Advanced\" (4)."
@@ -496,7 +631,7 @@ msgstr ""
 "se è necessario modificare i livelli di autorizzazione in modo più "
 "granulare, selezionare \"Avanzate\" (4)."
 
-#: ../../webtop5.rst:207 ../../webtop5.rst:210
+#: ../../webtop5.rst:275
 msgid ""
 "finally, choose whether to apply sharing only to the folder from which you "
 "started, or only to the branch of subfolders or to the entire account (5)."
@@ -504,7 +639,7 @@ msgstr ""
 "infine, scegliere se applicare la condivisione solo alla cartella da cui si "
 "è iniziato, o solo al ramo di sottocartelle o all'intero account (5)."
 
-#: ../../webtop5.rst:213 ../../webtop5.rst:216
+#: ../../webtop5.rst:281
 msgid ""
 "If you also select \"Force signature\", when this identity is used, the user"
 " signature from which the shared mail was received will be automatically "
@@ -514,7 +649,7 @@ msgstr ""
 "identità, verrà automaticamente inserita la firma dell'utente da cui è stata"
 " ricevuta la posta condivisa."
 
-#: ../../webtop5.rst:215 ../../webtop5.rst:218
+#: ../../webtop5.rst:283
 msgid ""
 "In this case, however, it is necessary that the personalized signature of "
 "the User from which it originates has been associated to the Email address "
@@ -524,15 +659,15 @@ msgstr ""
 "dell'Utente da cui proviene sia stata associata all'indirizzo e-mail e non "
 "all'Utente."
 
-#: ../../webtop5.rst:218 ../../webtop5.rst:221
+#: ../../webtop5.rst:286
 msgid "Sharing calendars and contacts"
 msgstr "Condivisione di calendari e rubriche"
 
-#: ../../webtop5.rst:221 ../../webtop5.rst:224
+#: ../../webtop5.rst:289
 msgid "Sharing Calendar"
 msgstr "Condivisione Calendario"
 
-#: ../../webtop5.rst:223 ../../webtop5.rst:226
+#: ../../webtop5.rst:291
 msgid ""
 "You can share each personal calendar individually. Select the calendar to "
 "share -> right click -> \"Sharing and permissions\":"
@@ -541,7 +676,7 @@ msgstr ""
 "Selezionare il calendario da condividere -> tasto destro -> \"Condivisione e"
 " permessi\":"
 
-#: ../../webtop5.rst:228 ../../webtop5.rst:231
+#: ../../webtop5.rst:296
 msgid ""
 "Select the recipient user of the share (or Group) and enable permissions for"
 " both the folder and the individual items:"
@@ -549,11 +684,11 @@ msgstr ""
 "Selezionare l'utente destinatario della condivisione (o gruppo) e attivare "
 "le autorizzazioni sia per la cartella che per i singoli elementi:"
 
-#: ../../webtop5.rst:233 ../../webtop5.rst:236
+#: ../../webtop5.rst:301
 msgid "Sharing Contacts"
 msgstr "Condivisione Rubrica"
 
-#: ../../webtop5.rst:235 ../../webtop5.rst:238
+#: ../../webtop5.rst:303
 msgid ""
 "In the same way, you can always share your contacts by selecting the "
 "directory you want to share -> right click -> \"Sharing and permissions\". "
@@ -566,11 +701,11 @@ msgstr ""
 "e abilitare le autorizzazioni sia per la cartella che per i singoli "
 "elementi."
 
-#: ../../webtop5.rst:240 ../../webtop5.rst:243
+#: ../../webtop5.rst:308
 msgid "Mail tags"
 msgstr "Etichette sulle Mail"
 
-#: ../../webtop5.rst:242 ../../webtop5.rst:245
+#: ../../webtop5.rst:310
 msgid ""
 "You can tag each message with different colored labels. Just select a "
 "message, right-click and select :guilabel:`Tag`."
@@ -579,7 +714,7 @@ msgstr ""
 "Basta selezionare un messaggio, fare clic con il tasto destro e selezionare:"
 " guilabel: `Etichetta`."
 
-#: ../../webtop5.rst:245 ../../webtop5.rst:248
+#: ../../webtop5.rst:313
 msgid ""
 "You can edit existing tags or add new ones selecting :guilabel:`Manage "
 "tags`."
@@ -587,25 +722,23 @@ msgstr ""
 "Puoi modificare i tag esistenti o aggiungerne di nuovi selezionando "
 ":guilabel:`Gestisci etichette`."
 
-#: ../../webtop5.rst:247 ../../webtop5.rst:250
+#: ../../webtop5.rst:315
 msgid "Tags can be used to filter messages using the filter top bar."
 msgstr ""
 "Le etichette possono essere utilizzate per filtrare i messaggi utilizzando "
 "la barra superiore del filtro."
 
-#: ../../webtop5.rst:250 ../../webtop5.rst:253
+#: ../../webtop5.rst:318
 msgid "Mail inline preview"
 msgstr "Anteprima mail sulla riga del messaggio "
 
-#: ../../webtop5.rst:252 ../../webtop5.rst:255
+#: ../../webtop5.rst:320
 msgid ""
-"As default, the mail page will display a preview of the content of latest "
+"By default, the mail page will display a preview of the content of latest "
 "received messages."
 msgstr ""
-"Per impostazione predefinita, nella pagina di posta verrà visualizzata "
-"un'anteprima del contenuto degli ultimi messaggi ricevuti."
 
-#: ../../webtop5.rst:254 ../../webtop5.rst:257
+#: ../../webtop5.rst:322
 msgid ""
 "This feature can be enabled or disabled from the :guilabel:`Settings` menu, "
 "under the :guilabel:`Mail` tab, the check box is named :guilabel:`Show quick"
@@ -616,28 +749,26 @@ msgstr ""
 "controllo è denominata :guilabel:`Mostra anteprima sulla riga del "
 "messaggio`."
 
-#: ../../webtop5.rst:260 ../../webtop5.rst:263
+#: ../../webtop5.rst:328
 msgid "Mail archiving"
 msgstr "Archiviazione mail "
 
-#: ../../webtop5.rst:262 ../../webtop5.rst:265
+#: ../../webtop5.rst:330
 msgid ""
-"Archiving is useful for keeping your inbox folder organized by moving "
-"manually the messages."
+"Archiving is useful for keeping your inbox folder organized by manually "
+"moving messages."
 msgstr ""
-"L'archiviazione è utile per mantenere organizzata la cartella della posta in"
-" arrivo spostando manualmente i messaggi."
 
-#: ../../webtop5.rst:265 ../../webtop5.rst:268
+#: ../../webtop5.rst:333
 msgid "Mail archiving is not a backup."
 msgstr "Archivio mail non è un backup"
 
-#: ../../webtop5.rst:267 ../../webtop5.rst:270
+#: ../../webtop5.rst:335
 msgid "The system automatically creates a new special Archives folder"
 msgstr ""
 "Il sistema crea automaticamente una nuova cartella speciale di archivi "
 
-#: ../../webtop5.rst:271 ../../webtop5.rst:274
+#: ../../webtop5.rst:339
 msgid ""
 "If the :guilabel:`Archives` folder does not appear immediately upon login, "
 "it will appear at the first archiving."
@@ -645,7 +776,7 @@ msgstr ""
 "Se la cartella :guilabel:`Archivi` non viene visualizzata immediatamente al "
 "momento dell'accesso, verrà visualizzata alla prima archiviazione."
 
-#: ../../webtop5.rst:273 ../../webtop5.rst:276
+#: ../../webtop5.rst:341
 msgid ""
 "There are three archiving criteria in :menuselection:`Settings -> Mail -> "
 "Archiving`"
@@ -653,20 +784,20 @@ msgstr ""
 "Esistono tre criteri di archiviazione in :menuselection:`Impostazioni -> "
 "Posta -> Archiviazione`"
 
-#: ../../webtop5.rst:275 ../../webtop5.rst:278
+#: ../../webtop5.rst:343
 msgid "**Single folder:** a single root for all archived emails"
 msgstr ""
 "**Cartella singola** una cartella principale per tutte l'email archiviate"
 
-#: ../../webtop5.rst:276 ../../webtop5.rst:279
+#: ../../webtop5.rst:344
 msgid "**Per year:** a root for each year"
 msgstr "**Per anno** un  alberatura per ogni anno"
 
-#: ../../webtop5.rst:277 ../../webtop5.rst:280
+#: ../../webtop5.rst:345
 msgid "**By year / month:** a root for each year and month"
 msgstr "**Per anno/mese** un alberatura per ogni anno e mese"
 
-#: ../../webtop5.rst:281 ../../webtop5.rst:284
+#: ../../webtop5.rst:349
 msgid ""
 "To maintain the original structure of the folders is possible to activate "
 ":guilabel:`Keep folder structure`"
@@ -674,7 +805,7 @@ msgstr ""
 "Per mantenere la struttura originale delle cartelle è possibile attivare "
 ":guilabel:`Mantieni struttura cartelle`"
 
-#: ../../webtop5.rst:285 ../../webtop5.rst:288
+#: ../../webtop5.rst:353
 msgid ""
 "The archiving operation is accessible from the contextual menu (right "
 "click). Click on :guilabel:`Archive`"
@@ -682,27 +813,24 @@ msgstr ""
 "L'operazione di archiviazione è accessibile dal menu contestuale (tasto "
 "destro). Clicca su :guilabel: `Archivia`"
 
-#: ../../webtop5.rst:289 ../../webtop5.rst:292
+#: ../../webtop5.rst:357
 msgid ""
 "The system will process archiving according to the last settings chosen."
 msgstr ""
 "Il sistema elaborerà l'archiviazione in base alle ultime impostazioni "
 "scelte."
 
-#: ../../webtop5.rst:292 ../../webtop5.rst:295
+#: ../../webtop5.rst:360
 msgid "Subscription of IMAP folders"
 msgstr "Sottoscrizione di cartelle IMAP"
 
-#: ../../webtop5.rst:294 ../../webtop5.rst:297
+#: ../../webtop5.rst:362
 msgid ""
-"On WebTop, by default, all IMAP folders on the server are all automatically "
-"subscribed and therefore all visible from the first login."
+"On WebTop, by default, all IMAP folders on the server are automatically "
+"subscribed and therefore visible since the first login."
 msgstr ""
-"Su WebTop, per impostazione predefinita, tutte le cartelle IMAP sul server "
-"vengono tutte automaticamente sottoscritte e quindi tutte visibili dal primo"
-" accesso."
 
-#: ../../webtop5.rst:296 ../../webtop5.rst:299
+#: ../../webtop5.rst:364
 msgid ""
 "If you want to hide from the view some folders, which is equivalent to "
 "removing the subscription, you can do so by simply clicking the right mouse "
@@ -714,7 +842,7 @@ msgstr ""
 "destro del mouse sulla cartella per nasconderla e selezionare dal menu "
 "interattivo la voce \"Nascondi dall'elenco\"."
 
-#: ../../webtop5.rst:299 ../../webtop5.rst:302
+#: ../../webtop5.rst:367
 msgid ""
 "For example, if you want to hide the subfolder \"folder1\" from this list, "
 "just right-click on it and select \"Hide from the list\":"
@@ -723,15 +851,13 @@ msgstr ""
 "questo elenco, è sufficiente fare clic con il pulsante destro del mouse su "
 "di essa e selezionare \"Nascondi dall'elenco\":"
 
-#: ../../webtop5.rst:303 ../../webtop5.rst:306
+#: ../../webtop5.rst:371
 msgid ""
-"It will then always be possible to manage the visibility of hidden folders "
-"by selecting the \"Manage visibility\" function:"
+"It is possible to manage the visibility of hidden folders by selecting the "
+"\"Manage visibility\" function:"
 msgstr ""
-"Sarà quindi sempre possibile gestire la visibilità delle cartelle nascoste "
-"selezionando la funzione \"Gestisci visibilità\":"
 
-#: ../../webtop5.rst:307 ../../webtop5.rst:310
+#: ../../webtop5.rst:375
 msgid ""
 "For example, if you want to restore the subscription of the \"folder1\" just"
 " hidden, just select it from the list of hidden folders and click on the "
@@ -741,11 +867,11 @@ msgstr ""
 "\"cartella1\" appena nascosta, basta selezionarla dall'elenco delle cartelle"
 " nascoste e fare clic sull'icona a sinistra:"
 
-#: ../../webtop5.rst:313 ../../webtop5.rst:316
+#: ../../webtop5.rst:381
 msgid "Export events (CSV)"
 msgstr "Esportazione eventi (CSV)"
 
-#: ../../webtop5.rst:315 ../../webtop5.rst:318
+#: ../../webtop5.rst:383
 msgid ""
 "To export calendars events in CSV (Comma Separated Value) format, click on "
 "the icon on top right corner."
@@ -753,7 +879,7 @@ msgstr ""
 "Per esportare gli eventi dei calendari nel formato CSV (Comma Separated "
 "Value), fare clic sull'icona nell'angolo in alto a destra."
 
-#: ../../webtop5.rst:319 ../../webtop5.rst:322
+#: ../../webtop5.rst:387
 msgid ""
 "Finally, select a time interval and click on :guilabel:`Next` to export into"
 " a CSV file."
@@ -761,11 +887,11 @@ msgstr ""
 "Infine, seleziona un intervallo di tempo e clicca su: guilabel: `Avanti` per"
 " esportare in un file CSV."
 
-#: ../../webtop5.rst:322 ../../webtop5.rst:325
+#: ../../webtop5.rst:390
 msgid "Nextcloud integration"
 msgstr "Integrazione con Nextcloud"
 
-#: ../../webtop5.rst:326 ../../webtop5.rst:329
+#: ../../webtop5.rst:394
 msgid ""
 "Before proceeding, verify that the \"Nextcloud\" module has been installed "
 "from :guilabel:`Software Center`"
@@ -773,18 +899,14 @@ msgstr ""
 "Prima di procedere, verificare che il modulo \"Nextcloud\" sia stato "
 "installato da: guilabel:`Software Center`"
 
-#: ../../webtop5.rst:329 ../../webtop5.rst:332
+#: ../../webtop5.rst:397
 msgid ""
-"By default the Nextcloud integration is disabled for all users. To enable "
-"it, it is possible to do it only through the administration panel which is "
-"accessed with the webtop admin password"
+"By default, Nextcloud integration is disabled for all users. To enable it, "
+"use the administration panel which can be accessed using the webtop admin "
+"password"
 msgstr ""
-"Per impostazione predefinita, l'integrazione di Nextcloud è disabilitata per"
-" tutti gli utenti. Per abilitarla, è possibile farlo solo attraverso il "
-"pannello di amministrazione a cui si accede con la password "
-"dell'amministratore di WebTop"
 
-#: ../../webtop5.rst:332 ../../webtop5.rst:335
+#: ../../webtop5.rst:400
 msgid ""
 "For example, if you want to activate the service for all webtop users, "
 "proceed as follows:"
@@ -792,11 +914,11 @@ msgstr ""
 "Ad esempio, se si desidera attivare il servizio per tutti gli utenti di "
 "WebTop, procedere come segue:"
 
-#: ../../webtop5.rst:334 ../../webtop5.rst:337
+#: ../../webtop5.rst:402
 msgid "access the administrative panel and select \"Groups\":"
 msgstr "accedi al pannello di amministrazione e seleziona \"Gruppi\":"
 
-#: ../../webtop5.rst:338 ../../webtop5.rst:341
+#: ../../webtop5.rst:406
 msgid ""
 "modify the properties of the \"users\" group by double clicking and select "
 "the button related to the Authorizations:"
@@ -804,7 +926,7 @@ msgstr ""
 "modificare le proprietà del gruppo \"utenti\" facendo doppio clic e "
 "selezionare il pulsante relativo alle autorizzazioni:"
 
-#: ../../webtop5.rst:342 ../../webtop5.rst:345
+#: ../../webtop5.rst:410
 msgid ""
 "add to existing authorizations those relating to both the ``STORE_CLOUD`` "
 "and ``STORE_OTHER`` resources by selecting the items as shown below:"
@@ -813,15 +935,15 @@ msgstr ""
 " ``STORE_CLOUD`` che a ``STORE_OTHER`` selezionando le voci come illustrate "
 "qui sotto:"
 
-#: ../../webtop5.rst:349 ../../webtop5.rst:352
+#: ../../webtop5.rst:417
 msgid "so get this:"
 msgstr "in modo da ottenere questo:"
 
-#: ../../webtop5.rst:354 ../../webtop5.rst:357
+#: ../../webtop5.rst:422
 msgid "save and close."
 msgstr "salvare e chiudere."
 
-#: ../../webtop5.rst:356 ../../webtop5.rst:359
+#: ../../webtop5.rst:424
 msgid ""
 "At this point from any user it will be possible to insert the Nextcloud "
 "resource (local or remote) in your personal Cloud."
@@ -829,7 +951,7 @@ msgstr ""
 "A questo punto da qualsiasi utente sarà possibile inserire la risorsa "
 "Nextcloud (locale o remota) nel proprio Cloud personale."
 
-#: ../../webtop5.rst:358 ../../webtop5.rst:361
+#: ../../webtop5.rst:426
 msgid ""
 "To do this, simply select the Cloud button and add a new **\"Nextcloud\"** "
 "resource by right clicking on **\"My resources\"** and then **\"Add "
@@ -839,11 +961,11 @@ msgstr ""
 " nuova risorsa **\"Nextcloud\"** cliccando con il tasto destro su **\"My "
 "resources\"** e successivamente **\"Add resource\"** in questo modo:"
 
-#: ../../webtop5.rst:362 ../../webtop5.rst:365
+#: ../../webtop5.rst:430
 msgid "A precompiled wizard will open:"
 msgstr "Si aprirà una procedura guidata precompilata:"
 
-#: ../../webtop5.rst:368 ../../webtop5.rst:371
+#: ../../webtop5.rst:436
 msgid ""
 "Remember to fill in the User name and Password fields related to access to "
 "the Nextcloud resource, otherwise it will not be possible to use the public "
@@ -853,34 +975,34 @@ msgstr ""
 "alla risorsa Nextcloud, altrimenti non sarà possibile utilizzare il link "
 "pubblico ai file condivisi"
 
-#: ../../webtop5.rst:371 ../../webtop5.rst:374
+#: ../../webtop5.rst:439
 msgid "Proceed with the Next button until the Wizard is complete."
 msgstr "Procedere con il tasto Next fino a completamento del Wizard."
 
-#: ../../webtop5.rst:374 ../../webtop5.rst:377
+#: ../../webtop5.rst:442
 msgid "Use the personal Cloud to send and receive documents"
 msgstr "Usa il Cloud personale per inviare e ricevere documenti"
 
-#: ../../webtop5.rst:376 ../../webtop5.rst:379
+#: ../../webtop5.rst:444
 msgid ""
 "Cloud module allows you to send and receive documents throug web links."
 msgstr ""
 "Il modulo Cloud ti consente di inviare e ricevere documenti tramite link "
 "web."
 
-#: ../../webtop5.rst:380 ../../webtop5.rst:383
+#: ../../webtop5.rst:448
 msgid "The server must be reachable in HTTP on port 80"
 msgstr "Il server deve essere raggiungibile sulla porta HTTP 80"
 
-#: ../../webtop5.rst:383 ../../webtop5.rst:386
+#: ../../webtop5.rst:451
 msgid "How to create a link to send a document"
 msgstr "Come creare un link per inviare un documento"
 
-#: ../../webtop5.rst:384 ../../webtop5.rst:387
+#: ../../webtop5.rst:452
 msgid "To create the link, select the button at the top right:"
 msgstr "Per creare un link, selezionare  il pulsante in alto a destra:"
 
-#: ../../webtop5.rst:388 ../../webtop5.rst:391
+#: ../../webtop5.rst:456
 msgid ""
 "Follow the wizard to generate the link, use field :guilabel:`date` to set "
 "the deadline."
@@ -888,23 +1010,23 @@ msgstr ""
 "Seguire la procedura guidata per generare il collegamento, utilizzare il "
 "campo :guilabel:`date` per impostare la scadenza."
 
-#: ../../webtop5.rst:392 ../../webtop5.rst:395
+#: ../../webtop5.rst:460
 msgid "you can create a :guilabel:`password` to protect it:"
 msgstr "è possibile impostare una :guilabel:`password` per proteggerlo:"
 
-#: ../../webtop5.rst:396 ../../webtop5.rst:399
+#: ../../webtop5.rst:464
 msgid "The link will be generated and will be inserted in the new mail:"
 msgstr "Il link verrà generato e verrà inserito nella nuova mail:"
 
-#: ../../webtop5.rst:401 ../../webtop5.rst:404
+#: ../../webtop5.rst:469
 msgid "Downloading the file, generates a notification to the sender:"
 msgstr "Il download del file genera una notifica al mittente:"
 
-#: ../../webtop5.rst:406 ../../webtop5.rst:409
+#: ../../webtop5.rst:474
 msgid "Request for a document"
 msgstr "Richiesta di un documento"
 
-#: ../../webtop5.rst:407 ../../webtop5.rst:410
+#: ../../webtop5.rst:475
 msgid ""
 "To create the request, insert the subject of the email than select the "
 "button at the top right:"
@@ -912,7 +1034,7 @@ msgstr ""
 "Per creare la richiesta, inserire l'oggetto della e-mail quindi selezionare "
 "il pulsante in alto a destra:"
 
-#: ../../webtop5.rst:411 ../../webtop5.rst:414
+#: ../../webtop5.rst:479
 msgid ""
 "Follow the wizard. You can set both an expiration date and a password. The "
 "link will be automatically inserted into the message:"
@@ -920,17 +1042,17 @@ msgstr ""
 "Seguire il wizard. È possibile impostare sia una data di scadenza che una "
 "password. Il link verrà automaticamente inserito nel messaggio:"
 
-#: ../../webtop5.rst:415 ../../webtop5.rst:418
+#: ../../webtop5.rst:483
 msgid "A request email will be sent to upload the document to the Cloud:"
 msgstr ""
 "Una mail di richiesta verrà inviata per caricare il documento sul Cloud:"
 
-#: ../../webtop5.rst:419 ../../webtop5.rst:422
+#: ../../webtop5.rst:487
 msgid ""
 "The sender will receive a notification for each file that will be uploaded:"
 msgstr "Il mittente riceverà una notifica per ogni file che verrà caricato:"
 
-#: ../../webtop5.rst:423 ../../webtop5.rst:426
+#: ../../webtop5.rst:491
 msgid ""
 "To download the files just access your personal :menuselection:`Cloud --> "
 "Uploads --> Folder` with date and name:"
@@ -938,33 +1060,33 @@ msgstr ""
 "Per scaricare i file ricevuti accedere al :menuselection:`Cloud -> Uploads "
 "-> Cartella` con data e nome:"
 
-#: ../../webtop5.rst:428 ../../webtop5.rst:431
+#: ../../webtop5.rst:496
 msgid "Chat integration"
 msgstr "Integrazione chat"
 
-#: ../../webtop5.rst:430 ../../webtop5.rst:433
+#: ../../webtop5.rst:498
 msgid ""
 "Web chat integration installation is disabled by default for all users."
 msgstr ""
 "Per default il servizio di webchat è disabilitato per tutti gli utenti."
 
-#: ../../webtop5.rst:432 ../../webtop5.rst:435
+#: ../../webtop5.rst:500
 msgid "To enable chat integration:"
 msgstr "Per abilitare l'integrazione con il server chat:"
 
-#: ../../webtop5.rst:434 ../../webtop5.rst:437
+#: ../../webtop5.rst:502
 msgid "Install \"Instant messaging\"\" module from :guilabel:`Software Center`."
 msgstr ""
 "Installare il modulo \"Messaggistica istantanea\" dal :guilabel:`Software "
 "Center`."
 
-#: ../../webtop5.rst:436 ../../webtop5.rst:439
+#: ../../webtop5.rst:504
 msgid "Access WebTop as admin user then enable the web chat authorization:"
 msgstr ""
 "Accedere a WebTop con l'utente admin quindi abilitare l'autorizzazione per "
 "la chat:"
 
-#: ../../webtop5.rst:438 ../../webtop5.rst:441
+#: ../../webtop5.rst:506
 msgid ""
 "Access the :guilabel:`Administration` menu, then :menuselection:`Domains -->"
 " NethServer --> Groups --> Users --> Authorizations`"
@@ -973,7 +1095,7 @@ msgstr ""
 ":menuselection:`Domains --> NethServer --> Groups --> Users --> "
 "Authorizations`"
 
-#: ../../webtop5.rst:439 ../../webtop5.rst:442
+#: ../../webtop5.rst:507
 msgid ""
 ":menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) "
 "--> Resource --> WEBCHAT --> Action --> ACCESS`"
@@ -981,15 +1103,15 @@ msgstr ""
 ":menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) "
 "--> Resource --> WEBCHAT --> Action --> ACCESS`"
 
-#: ../../webtop5.rst:440 ../../webtop5.rst:443
+#: ../../webtop5.rst:508
 msgid "Click :guilabel:`OK` then save and close"
 msgstr "Cliccare  :guilabel:`OK` quindi salvare ed uscire"
 
-#: ../../webtop5.rst:443 ../../webtop5.rst:446
+#: ../../webtop5.rst:511
 msgid "Browser notifications"
 msgstr "Notifiche del browser"
 
-#: ../../webtop5.rst:445 ../../webtop5.rst:448
+#: ../../webtop5.rst:513
 msgid ""
 "With WebTop, the desktop notification mode integrated with the browser was "
 "introduced."
@@ -997,24 +1119,24 @@ msgstr ""
 "Con WebTop è stata introdotta la modalità di notifica desktop integrata con "
 "il browser."
 
-#: ../../webtop5.rst:447 ../../webtop5.rst:450
+#: ../../webtop5.rst:515
 msgid "To activate it, simply access the general settings of your user:"
 msgstr ""
 "Per attivarla, accedere semplicemente alle impostazioni generali "
 "dell'utente:"
 
-#: ../../webtop5.rst:451 ../../webtop5.rst:454
+#: ../../webtop5.rst:519
 msgid "It is possible to enable desktop notification in two modes:"
 msgstr "È possibile abilitare la notifica sul desktop in due modalità:"
 
-#: ../../webtop5.rst:453 ../../webtop5.rst:456
+#: ../../webtop5.rst:521
 msgid ""
 "**Always**: notifications will always be shown, even with the browser open"
 msgstr ""
 "**Sempre**: le notifiche verranno sempre mostrate, anche con il browser "
 "aperto"
 
-#: ../../webtop5.rst:454 ../../webtop5.rst:457
+#: ../../webtop5.rst:522
 msgid ""
 "**Auto (in background only)**: notifications will be shown only when the "
 "browser is in the background"
@@ -1022,7 +1144,7 @@ msgstr ""
 "**Auto (solo in background)**: le notifiche verranno visualizzate solo "
 "quando il browser è in background"
 
-#: ../../webtop5.rst:456 ../../webtop5.rst:459
+#: ../../webtop5.rst:524
 msgid ""
 "Once the mode is selected, a browser consent request will appear at the top "
 "left:"
@@ -1030,7 +1152,7 @@ msgstr ""
 "Una volta selezionata la modalità, verrà visualizzata una richiesta di "
 "autorizzazione del browser in alto a sinistra:"
 
-#: ../../webtop5.rst:460 ../../webtop5.rst:463
+#: ../../webtop5.rst:528
 msgid ""
 "If you need to enable this consent later on a different browser just click "
 "on the appropriate button:"
@@ -1038,11 +1160,11 @@ msgstr ""
 "Se è necessario abilitare questo consenso più tardi su un altro browser, "
 "basta fare clic sul pulsante appropriato:"
 
-#: ../../webtop5.rst:466 ../../webtop5.rst:469
+#: ../../webtop5.rst:534
 msgid "Mailcards of user and domain"
 msgstr "Gestione firme utenti e di dominio"
 
-#: ../../webtop5.rst:468 ../../webtop5.rst:471
+#: ../../webtop5.rst:536
 msgid ""
 "One of the main features of managing signatures on WebTop is the opportunity"
 " to integrate images or custom fields profiled per user."
@@ -1051,7 +1173,7 @@ msgstr ""
 " l'opportunità di integrare immagini o campi personalizzati profilati per "
 "utente."
 
-#: ../../webtop5.rst:470 ../../webtop5.rst:473
+#: ../../webtop5.rst:538
 msgid ""
 "To use the images you need to upload them to the public cloud through the "
 "WebTop admin user like this:"
@@ -1059,7 +1181,7 @@ msgstr ""
 "Per utilizzare le immagini è necessario caricarle sul cloud pubblico "
 "attraverso l'utente admin di WebTop in questo modo:"
 
-#: ../../webtop5.rst:474 ../../webtop5.rst:477
+#: ../../webtop5.rst:542
 msgid ""
 "You can use the :guilabel:`Upload` button to load an image which is at the "
 "bottom or simply via a drag & drop."
@@ -1067,7 +1189,7 @@ msgstr ""
 "Per caricare una immagine è possibile usare il tasto :guilabel:`Upload`  che"
 " si trova in basso oppure semplicemente tramite un drag & drop."
 
-#: ../../webtop5.rst:478 ../../webtop5.rst:481
+#: ../../webtop5.rst:546
 msgid ""
 "Remember that the public images inserted in the signature are actually "
 "connected with a public link. To be visible to email recipients, the server "
@@ -1079,7 +1201,7 @@ msgstr ""
 "mail è necessario che il server sia raggiungibile da remoto sulla porta 80 "
 "(http) e che il suo nome FQDN sia risolvibile pubblicamente."
 
-#: ../../webtop5.rst:481 ../../webtop5.rst:484
+#: ../../webtop5.rst:549
 msgid ""
 "To change your signature, each user can access the :menuselection:`Settings "
 "--> Mail --> Editing --> Edit User mailcard`:"
@@ -1088,7 +1210,7 @@ msgstr ""
 ":menuselection:`Impostazioni -> Posta Elettronica -> Composizione -> "
 "Modifica Firma utente`:"
 
-#: ../../webtop5.rst:485 ../../webtop5.rst:488
+#: ../../webtop5.rst:553
 msgid ""
 "The public image just uploaded will be able to recall it in the HTML editor "
 "of the mailcard with this button:"
@@ -1096,7 +1218,7 @@ msgstr ""
 "L'immagine pubblica appena caricata sarà possibile richiamarla all'interno "
 "dell'editor HTML della firma con questo pulsante:"
 
-#: ../../webtop5.rst:491 ../../webtop5.rst:494
+#: ../../webtop5.rst:559
 msgid ""
 "The personal mailcard can be associated with the user or his email: by "
 "associating it by email it will also be possible to share the mailcard to "
@@ -1106,7 +1228,7 @@ msgstr ""
 "associandola per email sarà anche possibile condividere la firma ad altri "
 "utenti con cui si condivide l'identità"
 
-#: ../../webtop5.rst:494 ../../webtop5.rst:497
+#: ../../webtop5.rst:562
 msgid ""
 "Through the :ref:`webtop5_impersonate-section` you can also set a general "
 "domain mailcard that will be automatically set for all users who have not "
@@ -1116,11 +1238,11 @@ msgstr ""
 " firma generale di dominio che verrà automaticamente impostata per tutti gli"
 " utenti che non abbiano configurato la propria firma personale."
 
-#: ../../webtop5.rst:498 ../../webtop5.rst:501
+#: ../../webtop5.rst:566
 msgid "Furthermore, it will also be possible to modify personal information:"
 msgstr "Inoltre, sarà anche possibile modificare le informazioni personali:"
 
-#: ../../webtop5.rst:502 ../../webtop5.rst:505
+#: ../../webtop5.rst:570
 msgid ""
 "that can be used within the parameterized fields within the domain mailcard "
 "editor:"
@@ -1128,7 +1250,7 @@ msgstr ""
 "che potranno essere utilizzate all'interno dei campi parametrizzati "
 "all'interno dell'editor della firma di dominio:"
 
-#: ../../webtop5.rst:506 ../../webtop5.rst:509
+#: ../../webtop5.rst:574
 msgid ""
 "In this way it is possible to create a single mailcard that will be "
 "automatically customized for every user who does not use his own mailcard."
@@ -1136,17 +1258,17 @@ msgstr ""
 "In questo modo è possibile creare un'unica firma che verrà automaticamente "
 "personalizzata per ogni utente che non utilizzi la propria firma."
 
-#: ../../webtop5.rst:509 ../../webtop5.rst:512
+#: ../../webtop5.rst:577
 msgid "Configure multiple mailcards for a single user"
 msgstr "Configurare più firme per un singolo utente"
 
-#: ../../webtop5.rst:511 ../../webtop5.rst:514
+#: ../../webtop5.rst:579
 msgid ""
 "It is possible to configure multiple mailcards (HTML signatures) for each "
 "individual user."
 msgstr "È possibile configurare più firme HTML per ogni singolo utente."
 
-#: ../../webtop5.rst:513 ../../webtop5.rst:516
+#: ../../webtop5.rst:581
 msgid ""
 "Access the :menuselection:`Settings --> Mail --> Identities` and create "
 "multiple identities:"
@@ -1154,7 +1276,7 @@ msgstr ""
 "Accedere a :menuselection:`Impostazioni -> Posta -> Identità` e creare "
 "identità multiple:"
 
-#: ../../webtop5.rst:517 ../../webtop5.rst:520
+#: ../../webtop5.rst:585
 msgid ""
 "To edit every single signature select :menuselection:`Settings --> Mail --> "
 "Identities` then select each individual signature and click on the "
@@ -1164,21 +1286,21 @@ msgstr ""
 "-> Posta Elettronica -> Identità`, quindi selezionare ogni singola firma e "
 "cliccare sul pulsante :guilabel:`modifica firma`"
 
-#: ../../webtop5.rst:522 ../../webtop5.rst:525
+#: ../../webtop5.rst:590
 msgid "When finished, close the window and click YES:"
 msgstr "Al termine, chiudere la finestra e fai clic su SÌ:"
 
-#: ../../webtop5.rst:526 ../../webtop5.rst:529
+#: ../../webtop5.rst:594
 msgid ""
 "to use multiple mailcards, create a new email, and choose the signature:"
 msgstr ""
 "per utilizzare più firme, creare una nuova e-mail e scegliere la firma:"
 
-#: ../../webtop5.rst:532 ../../webtop5.rst:535
+#: ../../webtop5.rst:600
 msgid "Manage identities"
 msgstr "Gestisci identità"
 
-#: ../../webtop5.rst:534 ../../webtop5.rst:537
+#: ../../webtop5.rst:602
 msgid ""
 "In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` "
 "and fill in the fields"
@@ -1186,7 +1308,7 @@ msgstr ""
 "In :menuselection:`Impostazioni --> Posta Elettronica --> Identità` cliccare"
 " su :guilabel:`Aggiungi` quindi compilare i campi"
 
-#: ../../webtop5.rst:538 ../../webtop5.rst:541
+#: ../../webtop5.rst:606
 msgid ""
 "It is possible to associate the new identity with a folder in your account "
 "or of a shared account"
@@ -1194,27 +1316,25 @@ msgstr ""
 "È possibile associare la nuova identità a una cartella del proprio account o"
 " di un account condiviso"
 
-#: ../../webtop5.rst:540 ../../webtop5.rst:543
+#: ../../webtop5.rst:608
 msgid "**Local account:**"
 msgstr "**Account Locale**"
 
-#: ../../webtop5.rst:544 ../../webtop5.rst:547
+#: ../../webtop5.rst:612
 msgid "**Shared account:**"
 msgstr "**Account condiviso**"
 
-#: ../../webtop5.rst:548 ../../webtop5.rst:551
+#: ../../webtop5.rst:616
 msgid ""
-"Otherwise the mails sent will always end up in the \"Sent Items\" folder of "
+"Otherwise the sent mails will always end up in the \"Sent Items\" folder of "
 "your personal account."
 msgstr ""
-"Altrimenti i messaggi inviati finiranno sempre nella cartella \"Posta "
-"inviata\" del tuo account personale."
 
-#: ../../webtop5.rst:551 ../../webtop5.rst:554
+#: ../../webtop5.rst:619
 msgid "Subscribing remote resources"
 msgstr "Sottoscrizione di risorse remote"
 
-#: ../../webtop5.rst:553 ../../webtop5.rst:556
+#: ../../webtop5.rst:621
 msgid ""
 "WebTop supports subscription to remote calendars and contacts (directory) "
 "using cardDAV, calDav and iCal."
@@ -1222,11 +1342,11 @@ msgstr ""
 "WebTop supporta la sottoscrizione di calendari e contatti remoti utilizzando"
 " cardDAV, CalDav e iCal."
 
-#: ../../webtop5.rst:556 ../../webtop5.rst:559
+#: ../../webtop5.rst:624
 msgid "Remote calendars"
 msgstr "Calendari remoti"
 
-#: ../../webtop5.rst:558 ../../webtop5.rst:561
+#: ../../webtop5.rst:626
 msgid ""
 "An Internet Calendar can be added and synchronized. To do so just click the "
 "right button on personal calendars, :guilabel:`Add Internet Calendar`. Two "
@@ -1237,7 +1357,7 @@ msgstr ""
 "calendario internet`. Sono supportate due tipologie di calendari remoti: "
 "Webcal (formato ics) e CalDAV."
 
-#: ../../webtop5.rst:564 ../../webtop5.rst:567
+#: ../../webtop5.rst:632
 msgid ""
 "Synchronization of Webcal calendars (ics) is always done by downloading "
 "every event on the remote resource every time, while only the differences "
@@ -1247,11 +1367,11 @@ msgstr ""
 "ogni evento sulla risorsa remota ogni volta, mentre solo le differenze sono "
 "sincronizzate con la modalità CalDAV"
 
-#: ../../webtop5.rst:567 ../../webtop5.rst:570
+#: ../../webtop5.rst:635
 msgid "Example of Google Cal remote calendar (Webcal only - ICS)"
 msgstr "Esempio di calendario remoto Google Cal (solo Webcal - ICS)"
 
-#: ../../webtop5.rst:569 ../../webtop5.rst:572
+#: ../../webtop5.rst:637
 msgid ""
 "Take the public access ICS link from your Google calendar: "
 ":guilabel:`Calendar options -> Settings and sharing -> Secret address in "
@@ -1261,26 +1381,19 @@ msgstr ""
 "accesso pubblico: :guilabel:`Opzioni del calendario -> Impostazioni e "
 "condivisione -> Indirizzo segreto in formato iCal`"
 
-#: ../../webtop5.rst:571 ../../webtop5.rst:574
+#: ../../webtop5.rst:639
 msgid ""
-"On WebTop add an Internet calendar of type Webcal and paste the copied URL "
+"On WebTop, add an Internet calendar of type Webcal and paste the copied URL "
 "without entering the authentication credentials in step 1 of the wizard."
 msgstr ""
-"Su WebTop aggiungere un calendario Internet di tipo Webcal e incollare l’url"
-" copiato senza inserire le credenziali di autenticazione nel passo 1 del "
-"wizard."
 
-#: ../../webtop5.rst:573 ../../webtop5.rst:576
+#: ../../webtop5.rst:641
 msgid ""
-"The wizard in the next steps will connect to the calendar, giving the "
-"possibility to change the name and color, and then perform the first "
-"synchronization."
+"The wizard will connect to the calendar, giving the possibility to change "
+"the name and color, and then perform the first synchronization."
 msgstr ""
-"Il wizard nei passi successivi effettuerà la connessione al calendario, "
-"dando la possibilità di modificare il nome e il colore, infine effettuerà la"
-" prima sincronizzazione."
 
-#: ../../webtop5.rst:577 ../../webtop5.rst:580
+#: ../../webtop5.rst:645
 msgid ""
 "The first synchronization may fail due to Google's security settings. If you"
 " receive a notification that warns you about accessing your resources you "
@@ -1291,29 +1404,24 @@ msgstr ""
 "accesso alle proprie risorse è necessario consentirne l’utilizzo confermando"
 " che si tratta di un tentativo legittimo. "
 
-#: ../../webtop5.rst:581 ../../webtop5.rst:584
+#: ../../webtop5.rst:649
 msgid "Remote contacts (directory)"
 msgstr "Rubrica remota"
 
-#: ../../webtop5.rst:584 ../../webtop5.rst:587
+#: ../../webtop5.rst:652
 msgid "Example of Google CardDAV remote address book"
 msgstr "Esempio di rubrica remota CarDAV Google"
 
-#: ../../webtop5.rst:586 ../../webtop5.rst:589
+#: ../../webtop5.rst:654
 msgid ""
-"1) On Webtop configure a new Internet address book, right-click on "
+"1) On Webtop, configure a new Internet address book, right-click on "
 ":guilabel:`Personal Categories -> Add Internet address book` and enter a URL"
 " of this type in step 1 of the wizard: "
 "https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/default/"
 " (replace the X your gmail account)"
 msgstr ""
-"1) Su WebTop configurare una nuova Rubrica Internet, tasto destro su "
-":guilabel:`Categorie Personali -> Aggiungi rubrica internet`  e inserire un "
-"URL di questo tipo nel passo 1 del wizard: "
-"https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/default/"
-" (sostituire alle X il proprio account gmail)"
 
-#: ../../webtop5.rst:590 ../../webtop5.rst:593
+#: ../../webtop5.rst:658
 msgid ""
 "Enter the authentication credentials (as user name use the full address of "
 "gmail):"
@@ -1321,7 +1429,7 @@ msgstr ""
 "Inserire le credenziali di autenticazione (come username usare l’indirizzo "
 "completo di gmail):"
 
-#: ../../webtop5.rst:594 ../../webtop5.rst:597
+#: ../../webtop5.rst:662
 msgid ""
 "The wizard in the following steps will connect to the phonebook, giving the "
 "possibility to change the name and color, and then perform the first "
@@ -1331,7 +1439,7 @@ msgstr ""
 " la possibilità di cambiare il nome e il colore, quindi eseguirà la prima "
 "sincronizzazione."
 
-#: ../../webtop5.rst:598 ../../webtop5.rst:601
+#: ../../webtop5.rst:666
 msgid ""
 "To be able to complete the synchronization it is necessary to enable on your"
 " account Google, in the security settings, the use of apps considered less "
@@ -1343,7 +1451,7 @@ msgstr ""
 "considerate meno sicure (a questo link una guida su come fare: "
 "https://support.google.com/accounts/answer/6010255?hl=it)."
 
-#: ../../webtop5.rst:601 ../../webtop5.rst:604
+#: ../../webtop5.rst:669
 msgid ""
 "Currently the successive synchronizations of address books and remote "
 "calendars are not automatic and can only be done manually. To update a "
@@ -1355,7 +1463,7 @@ msgstr ""
 " per aggiornare una rubrica remota, fare clic su di essa con il tasto destro"
 " del mouse e selezionare la voce \"Sincronizza\":"
 
-#: ../../webtop5.rst:606 ../../webtop5.rst:609
+#: ../../webtop5.rst:674
 msgid ""
 "For CardDav address books, as well as for remote CalDAV calendars, you can "
 "select whether to perform a full synchronization or only for changes. To do "
@@ -1367,16 +1475,16 @@ msgstr ""
 "modifiche. Per fare ciò, fare clic con il tasto destro sulla rubrica (o sul "
 "calendario), :guilabel:`Modifica categoria`:"
 
-#: ../../webtop5.rst:611 ../../webtop5.rst:614
+#: ../../webtop5.rst:679
 msgid "Select the desired mode next to the synchronization button:"
 msgstr ""
 "Selezionare la modalità desiderata accanto al pulsante di sincronizzazione:"
 
-#: ../../webtop5.rst:619 ../../webtop5.rst:622
+#: ../../webtop5.rst:687
 msgid "Impersonate"
 msgstr "Impersonate"
 
-#: ../../webtop5.rst:621 ../../webtop5.rst:624
+#: ../../webtop5.rst:689
 msgid ""
 "In WebTop the :index:`impersonate` function, with which it is possible to "
 "access the settings of each user without knowing the password, can be used "
@@ -1386,19 +1494,19 @@ msgstr ""
 "alle impostazioni di ciascun utente senza conoscere la password, può essere "
 "utilizzata accedendo come segue:"
 
-#: ../../webtop5.rst:623 ../../webtop5.rst:626
+#: ../../webtop5.rst:691
 msgid "**User name**: admin!<username>"
 msgstr "**User name**: admin!<username>"
 
-#: ../../webtop5.rst:624 ../../webtop5.rst:627
+#: ../../webtop5.rst:692
 msgid "**Password**: <WebTop admin password>"
 msgstr "**Password**: <WebTop admin password>"
 
-#: ../../webtop5.rst:627 ../../webtop5.rst:630
+#: ../../webtop5.rst:695
 msgid "Changing the logo"
 msgstr "Modifica del logo"
 
-#: ../../webtop5.rst:629 ../../webtop5.rst:632
+#: ../../webtop5.rst:697
 msgid ""
 "To modify and customize the initial logo that appears on the login page of "
 "WebTop, you must upload the custom image file on the public images of the "
@@ -1409,19 +1517,19 @@ msgstr ""
 "sulle immagini pubbliche dell'utente amministratore e rinominarlo con "
 "\"login.png\"."
 
-#: ../../webtop5.rst:632 ../../webtop5.rst:635
+#: ../../webtop5.rst:700
 msgid "Proceed as follows:"
 msgstr "Procedere come segue:"
 
-#: ../../webtop5.rst:634 ../../webtop5.rst:637
+#: ../../webtop5.rst:702
 msgid "log in with the WebTop user admin"
 msgstr "accedere con l'utente admin di WebTop"
 
-#: ../../webtop5.rst:636 ../../webtop5.rst:639
+#: ../../webtop5.rst:704
 msgid "select the cloud service and public images:"
 msgstr "selezionare il servizio cloud e le immagini pubbliche:"
 
-#: ../../webtop5.rst:640 ../../webtop5.rst:643
+#: ../../webtop5.rst:708
 msgid ""
 "upload the image (via the Upload button at the bottom left or simply "
 "dragging with a drag & drop)"
@@ -1429,7 +1537,7 @@ msgstr ""
 "caricare l'immagine (tramite il pulsante Upload in basso a sinistra o "
 "semplicemente trascinando con un drag & drop)"
 
-#: ../../webtop5.rst:642 ../../webtop5.rst:645
+#: ../../webtop5.rst:710
 msgid ""
 "rename the loaded image so that its name is **\"login.png\"** (use right "
 "click -> Rename):"
@@ -1437,19 +1545,19 @@ msgstr ""
 "rinominare l'immagine caricata in modo che il suo nome sia **\"login.png\"**"
 " (usare il tasto destro del mouse -> Rinomina):"
 
-#: ../../webtop5.rst:646 ../../webtop5.rst:649
+#: ../../webtop5.rst:714
 msgid "the next login will show the new logo on the login page"
 msgstr "il prossimo login mostrerà il nuovo logo sulla pagina di login"
 
-#: ../../webtop5.rst:649 ../../webtop5.rst:652
+#: ../../webtop5.rst:717
 msgid "Change the public URL"
 msgstr "Modifica dell'URL pubblico"
 
-#: ../../webtop5.rst:651 ../../webtop5.rst:654
+#: ../../webtop5.rst:719
 msgid "A special prop has been added to modify the public URL."
 msgstr "È stata aggiunta una prop speciale per modificare l'URL pubblico."
 
-#: ../../webtop5.rst:653 ../../webtop5.rst:656
+#: ../../webtop5.rst:721
 msgid ""
 "If you want to change URL from this: ``http://server.domain.local/webtop`` "
 "to: ``http://mail.publicdomain.com/webtop``"
@@ -1457,46 +1565,46 @@ msgstr ""
 "Per cambiare URL da: ``http://server.domain.local/webtop`` a: "
 "``http://mail.publicdomain.com/webtop``"
 
-#: ../../webtop5.rst:655 ../../webtop5.rst:658
+#: ../../webtop5.rst:723
 msgid "execute these commands ::"
 msgstr "eseguire i seguenti comandi :: "
 
-#: ../../webtop5.rst:661 ../../webtop5.rst:664
+#: ../../webtop5.rst:729
 msgid "Change default limit \"Maximum file size\""
 msgstr "Modifica il limite predefinito \"Dimensione massima del file\""
 
-#: ../../webtop5.rst:663 ../../webtop5.rst:666
+#: ../../webtop5.rst:731
 msgid ""
 "There are hard-coded configured limits related to the maximum file size:"
 msgstr ""
 "Esistono limiti configurati hard-coded relativi alla dimensione massima del "
 "file:"
 
-#: ../../webtop5.rst:665 ../../webtop5.rst:668
+#: ../../webtop5.rst:733
 msgid "Maximum file size for chat uploads (internal default = 10 MB)"
 msgstr ""
 "Dimensione massima del file per upload di chat (default interno = 10 MB)"
 
-#: ../../webtop5.rst:666 ../../webtop5.rst:669
+#: ../../webtop5.rst:734
 msgid "Maximum file size single message attachment (internal default = 10 MB)"
 msgstr ""
 "Massima dimensione del file allegato al singolo messaggio di posta "
 "(predefinito interno = 10 MB)"
 
-#: ../../webtop5.rst:667 ../../webtop5.rst:670
+#: ../../webtop5.rst:735
 msgid ""
 "Maximum file size for cloud internal uploads (internal default = 500 MB)"
 msgstr ""
 "Dimensione massima del file per i caricamenti interni al cloud (default "
 "interno = 500 MB)"
 
-#: ../../webtop5.rst:668 ../../webtop5.rst:671
+#: ../../webtop5.rst:736
 msgid "Maximum file size for cloud public uploads (internal default = 100 MB)"
 msgstr ""
 "Dimensione massima del file per i caricamenti pubblici (predefinito interno "
 "= 100 MB)"
 
-#: ../../webtop5.rst:670 ../../webtop5.rst:673
+#: ../../webtop5.rst:738
 msgid ""
 "To change these default values for all users, the following keys can be "
 "added via the admin interface: :guilabel:`Properties (system) -> Add`"
@@ -1505,93 +1613,91 @@ msgstr ""
 "aggiungere le seguenti chiavi tramite l'interfaccia di amministrazione: "
 ":guilabel: `Proprietà (sistema) -> Aggiungi`"
 
-#: ../../webtop5.rst:672 ../../webtop5.rst:675
+#: ../../webtop5.rst:740
 msgid "**Maximum file size for chat uploads**"
 msgstr "**Dimensione massima del file per i caricamenti della chat**"
 
-#: ../../webtop5.rst:674 ../../webtop5.rst:677
+#: ../../webtop5.rst:742
 msgid "Service: ``com.sonicle.webtop.core``"
 msgstr "Servizio: ``com.sonicle.webtop.core``"
 
-#: ../../webtop5.rst:675 ../../webtop5.rst:678
+#: ../../webtop5.rst:743
 msgid "Key: ``im.upload.maxfilesize``"
 msgstr "Chiave: ``im.upload.maxfilesize``"
 
-#: ../../webtop5.rst:677 ../../webtop5.rst:680
+#: ../../webtop5.rst:745
 msgid "**Maximum file size for single message attachment**"
 msgstr ""
 "**Dimensione massima del file allegato per un singolo messaggio di posta**"
 
-#: ../../webtop5.rst:679 ../../webtop5.rst:682
+#: ../../webtop5.rst:747
 msgid "Service: ``com.sonicle.webtop.mail``"
 msgstr "Servizio: ``com.sonicle.webtop.mail``"
 
-#: ../../webtop5.rst:680 ../../webtop5.rst:683
+#: ../../webtop5.rst:748
 msgid "Key: ``attachment.maxfilesize``"
 msgstr "Chiave: ``attachment.maxfilesize``"
 
-#: ../../webtop5.rst:682 ../../webtop5.rst:685
+#: ../../webtop5.rst:750
 msgid "**Maximum file size for cloud internal uploads**"
 msgstr "**Dimensione massima del file per i caricamenti interni al cloud**"
 
-#: ../../webtop5.rst:684 ../../webtop5.rst:689 ../../webtop5.rst:687
-#: ../../webtop5.rst:692
+#: ../../webtop5.rst:752 ../../webtop5.rst:757
 msgid "Service: ``com.sonicle.webtop.vfs``"
 msgstr "Servizio: ``com.sonicle.webtop.vfs``"
 
-#: ../../webtop5.rst:685 ../../webtop5.rst:688
+#: ../../webtop5.rst:753
 msgid "Key: ``upload.private.maxfilesize``"
 msgstr "Chiave: ``upload.private.maxfilesize``"
 
-#: ../../webtop5.rst:687 ../../webtop5.rst:690
+#: ../../webtop5.rst:755
 msgid "**Maximum file size for cloud public uploads**"
 msgstr "**Dimensione massima del file per i caricamenti pubblici su cloud**"
 
-#: ../../webtop5.rst:690 ../../webtop5.rst:693
+#: ../../webtop5.rst:758
 msgid "Key: ``upload.public.maxfilesize``"
 msgstr "Chaive: ``upload.public.maxfilesize``"
 
-#: ../../webtop5.rst:694 ../../webtop5.rst:697
-msgid "The value must be expressed in Byte (Example 10MB = 10485760)"
-msgstr "Il valore deve essere espresso in Byte (Esempio 10MB = 10485760)"
+#: ../../webtop5.rst:762
+msgid "The value must be expressed in Bytes (Example 10MB = 10485760)"
+msgstr ""
 
-#: ../../webtop5.rst:697 ../../webtop5.rst:700
+#: ../../webtop5.rst:765
 msgid "Importing contacts and calendars"
 msgstr "Importazione di contatti e calendari"
 
-#: ../../webtop5.rst:699 ../../webtop5.rst:702
+#: ../../webtop5.rst:767
 msgid ""
 "WebTop supports importing contacts and calendars from various file formats."
 msgstr ""
 "WebTop supporta l'importazione di contatti e calendari da vari formati di "
 "file."
 
-#: ../../webtop5.rst:702 ../../webtop5.rst:795 ../../webtop5.rst:705
-#: ../../webtop5.rst:798
+#: ../../webtop5.rst:770 ../../webtop5.rst:863
 msgid "Contacts"
 msgstr "Contatti"
 
-#: ../../webtop5.rst:704 ../../webtop5.rst:707
+#: ../../webtop5.rst:772
 msgid "Supported contacts format:"
 msgstr "Formato dei contatti supportati:"
 
-#: ../../webtop5.rst:706 ../../webtop5.rst:709
+#: ../../webtop5.rst:774
 msgid "CSV  - Comma Separated values (\\*.txt, \\*.csv)"
 msgstr "CSV  - Comma Separated values (\\*.txt, \\*.csv)"
 
-#: ../../webtop5.rst:707 ../../webtop5.rst:710
+#: ../../webtop5.rst:775
 msgid "Excel (\\.*xls, \\*.xlsx)"
 msgstr "Excel (\\.*xls, \\*.xlsx)"
 
-#: ../../webtop5.rst:708 ../../webtop5.rst:711
+#: ../../webtop5.rst:776
 msgid "VCard (\\*.vcf, \\*.vcard)"
 msgstr "VCard (\\*.vcf, \\*.vcard)"
 
-#: ../../webtop5.rst:711 ../../webtop5.rst:714
+#: ../../webtop5.rst:779
 msgid "To import contacts:"
 msgstr "Per importare i contatti:"
 
-#: ../../webtop5.rst:713 ../../webtop5.rst:716
+#: ../../webtop5.rst:781
 msgid ""
 "Right click on the target phone book, then select :guilabel:`Import "
 "contacts`"
@@ -1599,7 +1705,7 @@ msgstr ""
 "Fare clic con il tasto destro sulla rubrica di destinazione, quindi "
 "selezionare: :guilabel:`Importa contatti`"
 
-#: ../../webtop5.rst:717 ../../webtop5.rst:720
+#: ../../webtop5.rst:785
 msgid ""
 "Select the import format and make sure that fields on the file match the "
 "ones available on WebTop"
@@ -1607,7 +1713,7 @@ msgstr ""
 "Selezionare il formato di importazione assicurandosi che i campi del file "
 "corrispondano a quelli disponibili su WebTop"
 
-#: ../../webtop5.rst:721 ../../webtop5.rst:724
+#: ../../webtop5.rst:789
 msgid ""
 "If you are importing a phone book exported from Outlook, make sure to set "
 ":guilabel:`Text qualifier` to ``\"`` value."
@@ -1615,33 +1721,32 @@ msgstr ""
 "Se stai importando una rubrica esportata da Outlook, assicurarsi di "
 "impostare: guilabel: `Qualificatore di testo` con questo valore ``\"``."
 
-#: ../../webtop5.rst:727 ../../webtop5.rst:816 ../../webtop5.rst:730
-#: ../../webtop5.rst:819
+#: ../../webtop5.rst:795 ../../webtop5.rst:884
 msgid "Calendars"
 msgstr "Calendari"
 
-#: ../../webtop5.rst:729 ../../webtop5.rst:732
+#: ../../webtop5.rst:797
 msgid "Supported calendar format: iCalendar (\\*.ics, \\*.ical, \\*.icalendar)"
 msgstr ""
 "Formato del calendario supportato: iCalendar (\\*.ics, \\*.ical, "
 "\\*.icalendar)"
 
-#: ../../webtop5.rst:731 ../../webtop5.rst:734
+#: ../../webtop5.rst:799
 msgid "To import events:"
 msgstr "Per importare eventi:"
 
-#: ../../webtop5.rst:733 ../../webtop5.rst:736
+#: ../../webtop5.rst:801
 msgid ""
 "Right click on the target calendar, then select :guilabel:`Import events`"
 msgstr ""
 "Fare clic con il tasto destro sul calendario di destinazione, quindi "
 "selezionare  :guilabel:`Importa eventi`"
 
-#: ../../webtop5.rst:737 ../../webtop5.rst:740
+#: ../../webtop5.rst:805
 msgid "Select the import format"
 msgstr "Selezionare il formato di importazione"
 
-#: ../../webtop5.rst:741 ../../webtop5.rst:744
+#: ../../webtop5.rst:809
 msgid ""
 "Then choose if you want to delete all existings events and import new ones, "
 "or just append imported data to existing calendar events"
@@ -1650,11 +1755,11 @@ msgstr ""
 "importarne di nuovi o semplicemente aggiungere i dati importati agli eventi "
 "del calendario esistenti"
 
-#: ../../webtop5.rst:748 ../../webtop5.rst:751
+#: ../../webtop5.rst:816
 msgid "Importing from Outlook PST"
 msgstr "Importazione da PST Outlook"
 
-#: ../../webtop5.rst:750 ../../webtop5.rst:753
+#: ../../webtop5.rst:818
 msgid ""
 "You can import email, calendars and address books from an :index:`Outlook` "
 ":index:`PST` archive."
@@ -1662,31 +1767,29 @@ msgstr ""
 "E' possibile importare email, calendari e rubriche da un archivio "
 ":index:`PST` di :index:`Outlook` ."
 
-#: ../../webtop5.rst:752 ../../webtop5.rst:755
+#: ../../webtop5.rst:820
 msgid ""
-"Before using followings scripts, you will need to install *libpst* package: "
-"::"
+"Before using the followings scripts, you will need to install the *libpst* "
+"package: ::"
 msgstr ""
-"Prima di procedere con i seguenti script, è necessario installare il "
-"pacchetto *libpst*: ::"
 
-#: ../../webtop5.rst:756 ../../webtop5.rst:759
+#: ../../webtop5.rst:824
 msgid "Also make sure the PHP timezone corresponds to the server timezone: ::"
 msgstr ""
 "Assicurarsi inoltre che la timezone di PHP corrisponda a quella del server: "
 "::"
 
-#: ../../webtop5.rst:760 ../../webtop5.rst:763
+#: ../../webtop5.rst:828
 msgid "PHP time zone can be updated using the following command: ::"
 msgstr ""
 "La time zone di PHP può essere modificata utilizzando il comando seguente: "
 "::"
 
-#: ../../webtop5.rst:767 ../../webtop5.rst:770
+#: ../../webtop5.rst:835
 msgid "Mail"
 msgstr "Mail"
 
-#: ../../webtop5.rst:769 ../../webtop5.rst:772
+#: ../../webtop5.rst:837
 msgid ""
 "Initial script to import mail messages: "
 ":file:`/usr/share/webtop/doc/pst2webtop.sh`"
@@ -1694,7 +1797,7 @@ msgstr ""
 "Script iniziale per l'importazione dei messaggi mail: "
 ":file:`/usr/share/webtop/doc/pst2webtop.sh`"
 
-#: ../../webtop5.rst:771 ../../webtop5.rst:774
+#: ../../webtop5.rst:839
 msgid ""
 "To start the import, run the script specifying the PST file and the system "
 "user: ::"
@@ -1702,28 +1805,24 @@ msgstr ""
 "Per iniziare l'importazione, lanciare lo script specificando il file PST e "
 "l'utente di sistema: ::"
 
-#: ../../webtop5.rst:775 ../../webtop5.rst:783 ../../webtop5.rst:778
-#: ../../webtop5.rst:786
+#: ../../webtop5.rst:843 ../../webtop5.rst:851
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../webtop5.rst:780 ../../webtop5.rst:783
+#: ../../webtop5.rst:848
 msgid ""
 "All mail messages will be imported. Contacts and calendars will be saved "
-"inside a temporary and the script will output further commands to import "
-"contacts and calendars."
+"inside a temporary file and the script will output further commands to "
+"import contacts and calendars."
 msgstr ""
-"Tutti i messaggi mail saranno importati. Contatti e calendari saranno "
-"salvati in un file temporaneo e lo script genererà a schermo gli ulteriori "
-"comandi da utilizzare per importare contatti e calendari."
 
-#: ../../webtop5.rst:792 ../../webtop5.rst:795
+#: ../../webtop5.rst:860
 msgid "All commands are saved also in the reported log."
 msgstr ""
 "Tutti i comandi saranno riportati anche nel file di log generato dallo "
 "script."
 
-#: ../../webtop5.rst:797 ../../webtop5.rst:800
+#: ../../webtop5.rst:865
 msgid ""
 "Script for contacts import: "
 ":file:`/usr/share/webtop/doc/pst2webtop_card.php`."
@@ -1731,15 +1830,13 @@ msgstr ""
 "Script importazione Contatti: "
 ":file:`/usr/share/webtop/doc/pst2webtop_card.php`."
 
-#: ../../webtop5.rst:799 ../../webtop5.rst:820 ../../webtop5.rst:802
-#: ../../webtop5.rst:823
+#: ../../webtop5.rst:867 ../../webtop5.rst:888
 msgid "The script will use files generated from mail import phase: ::"
 msgstr ""
 "Lo script utilizzerà i file generati nella fase di importazione della posta:"
 " ::"
 
-#: ../../webtop5.rst:805 ../../webtop5.rst:826 ../../webtop5.rst:808
-#: ../../webtop5.rst:829
+#: ../../webtop5.rst:873 ../../webtop5.rst:894
 msgid ""
 "Let us assume that the pst2webtop.sh script has generated following output "
 "from mail import: ::"
@@ -1747,12 +1844,12 @@ msgstr ""
 "Ipotizziamo che lo script pst2webtop.sh abbia generato il seguente output a "
 "seguito dell'importazione delle mail: ::"
 
-#: ../../webtop5.rst:811 ../../webtop5.rst:814
+#: ../../webtop5.rst:879
 msgid "To import the default address book (WebTop) of *foo* user: ::"
 msgstr ""
 "Per importare nella Rubrica predefinita (WebTop) dell’utente *foo*: ::"
 
-#: ../../webtop5.rst:818 ../../webtop5.rst:821
+#: ../../webtop5.rst:886
 msgid ""
 "Script for calendars import: "
 ":file:`/usr/share/webtop/doc/pst2webtop_cal.php`"
@@ -1760,25 +1857,25 @@ msgstr ""
 "Script importazione Calendari: "
 ":file:`/usr/share/webtop/doc/pst2webtop_cal.php`"
 
-#: ../../webtop5.rst:832 ../../webtop5.rst:835
+#: ../../webtop5.rst:900
 msgid "To import the default calendar (WebTop) of *foo* user: ::"
 msgstr ""
 "Per importare gli eventi nel Calendario predefinito (WebTop) dell’utente "
 "*foo*: ::"
 
-#: ../../webtop5.rst:836 ../../webtop5.rst:839
+#: ../../webtop5.rst:904
 msgid "Known limitations:"
 msgstr "Limitazioni note:"
 
-#: ../../webtop5.rst:838 ../../webtop5.rst:841
+#: ../../webtop5.rst:906
 msgid "only the first occurrence of recurrent events will be imported"
 msgstr "verrà importata solamente la prima occorrenza di eventi ricorrenti"
 
-#: ../../webtop5.rst:839 ../../webtop5.rst:842
+#: ../../webtop5.rst:907
 msgid "Outlook reminders will be ignored"
 msgstr "I promemoria di Outlook verranno ignorati"
 
-#: ../../webtop5.rst:842 ../../webtop5.rst:845
+#: ../../webtop5.rst:910
 msgid ""
 "The script will import all events using the timezone selected by the user "
 "inside WebTop, if set. Otherwise system timezone will be used."
@@ -1787,16 +1884,16 @@ msgstr ""
 "WebTop, se configurato. Altrimenti verrà utilizzato il fuso orario del "
 "sistema."
 
-#: ../../webtop5.rst:846 ../../webtop5.rst:849
+#: ../../webtop5.rst:914
 msgid "Troubleshooting"
 msgstr "Troubleshooting"
 
-#: ../../webtop5.rst:849 ../../webtop5.rst:852
+#: ../../webtop5.rst:917
 msgid "After login a \"mail account authentication error\" is displayed"
 msgstr ""
 "Dopo l'accesso viene visualizzato un \"mail account authentication error\""
 
-#: ../../webtop5.rst:851 ../../webtop5.rst:854
+#: ../../webtop5.rst:919
 msgid ""
 "If an entire mail account is shared among different users, a Dovecot "
 "connection limit can be reached. This is the displayed error:"
@@ -1805,15 +1902,15 @@ msgstr ""
 "raggiungere un limite di connessione Dovecot. Questo è l'errore "
 "visualizzato:"
 
-#: ../../webtop5.rst:856 ../../webtop5.rst:859
-msgid "In ``/var/log/imap`` there are are like this: ::"
-msgstr "In ``/var/log/imap`` si rilevano questi messaggi: ::"
+#: ../../webtop5.rst:924
+msgid "In ``/var/log/imap`` there are lines like the following: ::"
+msgstr ""
 
-#: ../../webtop5.rst:860 ../../webtop5.rst:863
-msgid "To list active IMAP connection per user, execute: ::"
-msgstr "Per elencare la connessione IMAP attiva per utente, eseguire: ::"
+#: ../../webtop5.rst:928
+msgid "To list active IMAP connections per user, execute: ::"
+msgstr ""
 
-#: ../../webtop5.rst:865 ../../webtop5.rst:868
+#: ../../webtop5.rst:933
 msgid ""
 "To fix the problem, just raise the limit (eg. 50 connections for each "
 "user/IP): ::"
@@ -1821,15 +1918,15 @@ msgstr ""
 "Per risolvere il problema, basta aumentare il limite (es. 50 connessioni per"
 " ogni utente/IP):"
 
-#: ../../webtop5.rst:870 ../../webtop5.rst:873
-msgid "At the end, execute logout and login again in WebTop."
-msgstr "Infine, esegui il logout e il login di nuovo in WebTop."
+#: ../../webtop5.rst:938
+msgid "At the end, logout and login again in WebTop."
+msgstr ""
 
-#: ../../webtop5.rst:874 ../../webtop5.rst:877
+#: ../../webtop5.rst:942
 msgid "Blank page after login"
 msgstr "Pagina vuota dopo il login"
 
-#: ../../webtop5.rst:876 ../../webtop5.rst:879
+#: ../../webtop5.rst:944
 msgid ""
 "You can access WebTop using system admin user (|product| Administrator) "
 "using the full login name, eg: ``admin@nethserver.org``."
@@ -1838,7 +1935,7 @@ msgstr ""
 "  (|product| Administrator) utilizzando il nome di accesso completo, ad es "
 ".: `admin@nethserver.org``."
 
-#: ../../webtop5.rst:878 ../../webtop5.rst:881
+#: ../../webtop5.rst:946
 msgid ""
 "If the login fails, mostly when upgrading from WebTop 4, it means that the "
 "admin user doesn't have a mail address."
@@ -1846,25 +1943,22 @@ msgstr ""
 "Se l'accesso fallisce, soprattutto quando si aggiorna da WebTop 4, significa"
 " che l'utente admin non ha un indirizzo mail"
 
-#: ../../webtop5.rst:880 ../../webtop5.rst:883
+#: ../../webtop5.rst:948
 msgid "To fix the problem, execute the following command: ::"
 msgstr "Per risolvere il problema, eseguire il seguente comando: ::"
 
-#: ../../webtop5.rst:885 ../../webtop5.rst:888
+#: ../../webtop5.rst:953
 msgid "Synchronized events have different time"
 msgstr "Gli eventi sincronizzati mostrano una differenza di orario"
 
-#: ../../webtop5.rst:887 ../../webtop5.rst:890
+#: ../../webtop5.rst:955
 msgid ""
-"Sometimes calendar events created on mobile devices, and synchronized via "
+"Sometimes calendar events created on mobile devices and synchronized via "
 "EAS, are shown with a wrong time, for example with a difference of 1 or 2 "
 "hours."
 msgstr ""
-"Può capitare che gli eventi di calendario creati sui device mobili e "
-"sincronizzati tramite EAS vengano riportati sull'interfaccia con una "
-"differenza di orario di 1 o 2 ore."
 
-#: ../../webtop5.rst:889 ../../webtop5.rst:892
+#: ../../webtop5.rst:957
 msgid ""
 "The problem is due to the PHP time zone which can be different from the "
 "system time zone."
@@ -1872,17 +1966,17 @@ msgstr ""
 "Il problema è dovuto al Time Zone di PHP che può risultare disallineato "
 "rispetto a quello di sistema."
 
-#: ../../webtop5.rst:891 ../../webtop5.rst:894
+#: ../../webtop5.rst:959
 msgid "With this command you can see the current time zone set for PHP: ::"
 msgstr ""
 "Con questo comando è possibile vedere l'attuale Time Zone impostato per il "
 "PHP: ::"
 
-#: ../../webtop5.rst:895 ../../webtop5.rst:898
+#: ../../webtop5.rst:963
 msgid "Output example: ::"
 msgstr "Esempio di output: ::"
 
-#: ../../webtop5.rst:901 ../../webtop5.rst:904
+#: ../../webtop5.rst:969
 msgid ""
 "If the Time Zone is not the desired one, you can changed it using these "
 "commands: ::"
@@ -1890,22 +1984,22 @@ msgstr ""
 "Se il Time Zone non fosse quello desiderato (ad esempio Europe/Rome) è "
 "possibile correggere in questo modo:"
 
-#: ../../webtop5.rst:907 ../../webtop5.rst:910
+#: ../../webtop5.rst:975
 msgid "To apply the changes, execute: ::"
 msgstr "Per mettere in produzione la modifica eseguire: ::"
 
-#: ../../webtop5.rst:913 ../../webtop5.rst:916
+#: ../../webtop5.rst:981
 msgid ""
 "List of PHP supported time zones: http://php.net/manual/it/timezones.php"
 msgstr ""
 "Elenco dei time zone supportati da PHP: "
 "http://php.net/manual/it/timezones.php"
 
-#: ../../webtop5.rst:916 ../../webtop5.rst:919
+#: ../../webtop5.rst:984
 msgid "Delete automatically suggested email addresses"
 msgstr "Eliminare gli indirizzi email suggeriti automaticamente"
 
-#: ../../webtop5.rst:918 ../../webtop5.rst:921
+#: ../../webtop5.rst:986
 msgid ""
 "When compiling the recipient of a mail, some automatically saved email "
 "addresses are suggested. If you need to delete someone because it is wrong, "
@@ -1918,31 +2012,29 @@ msgstr ""
 "quello che si vuole eliminare (senza fare clic su di esso), quindi "
 "eliminarlo con :guilabel:`Shift + Canc`"
 
-#: ../../webtop5.rst:927 ../../webtop5.rst:930
+#: ../../webtop5.rst:995
 msgid "WebTop vs SOGo"
 msgstr "WebTop vs SOGo"
 
-#: ../../webtop5.rst:929 ../../webtop5.rst:932
+#: ../../webtop5.rst:997
 msgid "WebTop and SOGo can be installed on the same machine."
 msgstr "WebTop e SOGo possono essere installati sulla stessa macchina."
 
-#: ../../webtop5.rst:931 ../../webtop5.rst:934
+#: ../../webtop5.rst:999
 msgid ""
 "ActiveSync is enabled by default on SOGo and WebTop, but if both packages "
-"are installed, SOGo will take precedence."
+"are installed, WebTop will take precedence."
 msgstr ""
-"ActiveSync è abilitato di default sia su SOGo che su WebTop, ma se sono "
-"entrambi installati, SOGo avrà la precedenza."
 
-#: ../../webtop5.rst:934 ../../webtop5.rst:937
+#: ../../webtop5.rst:1002
 msgid "To disable ActiveSync on SOGo: ::"
 msgstr "Per disabilitare ActiveSync su SOGo: ::"
 
-#: ../../webtop5.rst:939 ../../webtop5.rst:942
+#: ../../webtop5.rst:1007
 msgid "To disable ActiveSync on WebTop: ::"
 msgstr "Per disabilitare ActiveSync su WebTop: ::"
 
-#: ../../webtop5.rst:945 ../../webtop5.rst:948
+#: ../../webtop5.rst:1013
 msgid ""
 "All incoming mail filters configured within SOGo, must be manually recreated"
 " inside WebTop interface. This also applies if the user is switching from "
@@ -1952,11 +2044,11 @@ msgstr ""
 "manualmente all’interno dell’interfaccia di WebTop. La stessa cosa si "
 "applica se l’utente sta effettuando il passaggio inverso da WebTop a SOGo."
 
-#: ../../webtop5.rst:950 ../../webtop5.rst:953
+#: ../../webtop5.rst:1018
 msgid "Google and Dropbox integration"
 msgstr "Integrazione Google e Dropbox"
 
-#: ../../webtop5.rst:952 ../../webtop5.rst:955
+#: ../../webtop5.rst:1020
 msgid ""
 "Users can add their own Google Drive and Dropbox accounts inside WebTop. "
 "Before proceeding, the administrator must create a pair of API access "
@@ -1966,11 +2058,11 @@ msgstr ""
 "all’interno di WebTop. Prima di procedere, l’amministratore deve creare una "
 "coppia di credenziali per l’accesso alle API."
 
-#: ../../webtop5.rst:956 ../../webtop5.rst:959
+#: ../../webtop5.rst:1024
 msgid "Google API"
 msgstr "Google API"
 
-#: ../../webtop5.rst:958 ../../webtop5.rst:961
+#: ../../webtop5.rst:1026
 msgid ""
 "Access https://console.developers.google.com/project and create a new "
 "project"
@@ -1978,7 +2070,7 @@ msgstr ""
 "Accedere a https://console.developers.google.com/project e creare un nuovo "
 "progetto"
 
-#: ../../webtop5.rst:959 ../../webtop5.rst:962
+#: ../../webtop5.rst:1027
 msgid ""
 "Create new credentials by selecting \"OAuth 2.0 clientID\" type and remember"
 " to compile \"OAuth consent screen\" section"
@@ -1986,7 +2078,7 @@ msgstr ""
 "Creare una nuova coppia di credenziali di tipo “OAuth 2.0 clientID” avendo "
 "cura di compilare la sezione “OAuth consent screen”"
 
-#: ../../webtop5.rst:961 ../../webtop5.rst:964
+#: ../../webtop5.rst:1029
 msgid ""
 "Insert new credentials (Client ID e Client Secret) inside WebTop "
 "configuration"
@@ -1994,13 +2086,11 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (Client ID e Client Secret) "
 "nella configurazione di WebTop"
 
-#: ../../webtop5.rst:963 ../../webtop5.rst:978 ../../webtop5.rst:966
-#: ../../webtop5.rst:981
-msgid "From shell, access webtop database: ::"
-msgstr "Da shell accedere al database webtop: ::"
+#: ../../webtop5.rst:1031
+msgid "From the shell, access webtop database: ::"
+msgstr ""
 
-#: ../../webtop5.rst:967 ../../webtop5.rst:982 ../../webtop5.rst:970
-#: ../../webtop5.rst:985
+#: ../../webtop5.rst:1035 ../../webtop5.rst:1050
 msgid ""
 "Execute the queries, using the corresponding value in place of ``__value__``"
 " variable: ::"
@@ -2008,16 +2098,16 @@ msgstr ""
 "Eseguire le query, sostituendo al campo ``__value__`` il valore "
 "corrispondente: ::"
 
-#: ../../webtop5.rst:973 ../../webtop5.rst:976
+#: ../../webtop5.rst:1041
 msgid "Dropbox API"
 msgstr "Dropbox API"
 
-#: ../../webtop5.rst:975 ../../webtop5.rst:978
+#: ../../webtop5.rst:1043
 msgid "Access https://www.dropbox.com/developers/apps and create a new app"
 msgstr ""
 "Accedere a https://www.dropbox.com/developers/apps e creare una nuova app"
 
-#: ../../webtop5.rst:976 ../../webtop5.rst:979
+#: ../../webtop5.rst:1044
 msgid ""
 "Insert the new credential key pair (App key e App secret) inside WebTop "
 "configuration"
@@ -2025,7 +2115,11 @@ msgstr ""
 "Inserire la coppia di credenziali appena create (App key e App secret) nella"
 " configurazione di WebTop."
 
-#: ../../webtop5.rst:988 ../../webtop5.rst:991
+#: ../../webtop5.rst:1046
+msgid "From shell, access webtop database: ::"
+msgstr "Da shell accedere al database webtop: ::"
+
+#: ../../webtop5.rst:1056
 msgid ""
 "If you need to raise the user limit, please read the official Dropbox "
 "documentation."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-08-02 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -553,6 +553,12 @@ msgstr ""
 
 #: ../../base_system.rst:214
 msgid ""
+"|product| checks the certificates validity and sends an email to the root "
+"user if a certificate is near to expire."
+msgstr ""
+
+#: ../../base_system.rst:217
+msgid ""
 "The :guilabel:`Set as default` button allows choosing the default "
 "certificate. When a new certificate is chosen, all services using TLS/SSL "
 "are restarted and network clients will be required to accept the new "
@@ -563,28 +569,26 @@ msgstr ""
 "servicios que utilizan TLS/SSL se reinician y los clientes de red deben "
 "aceptar el nuevo certificado."
 
-#: ../../base_system.rst:218
+#: ../../base_system.rst:221
 msgid ""
-"When |product| is installed a temporary default self-signed certificate is "
-"generated automatically.  It should be edited by inserting proper values "
-"before configuring the network clients to use it. As alternatives, the "
-":guilabel:`Server certificate` page allows:"
+"When |product| is installed a default RSA self-signed certificate is "
+"generated. It should be edited by inserting proper values before configuring"
+" the network clients to use it. When the self-signed certificate is due to "
+"expire a new one is automatically generated from the same RSA key and with "
+"the same attributes."
 msgstr ""
-"Cuando |product| se instala un certificado autofirmado predeterminado "
-"temporal se genera automáticamente. Debe ser editado insertando los valores "
-"correctos antes de configurar los clientes de la red para usarlos. Como "
-"alternativa, la página :guilabel:`Certificado del servidor` permite:"
-
-#: ../../base_system.rst:223
-msgid ""
-"uploading an existing certificate and private RSA key. Optionally a "
-"certificate chain file can be specified, too. All files must be PEM-encoded."
-msgstr ""
-"cargar un certificado existente y una clave RSA privada. También se puede "
-"especificar un archivo de cadena de certificados. Todos los archivos deben "
-"estar codificados con PEM."
 
 #: ../../base_system.rst:226
+msgid "The :guilabel:`Server certificate` page also allows:"
+msgstr ""
+
+#: ../../base_system.rst:228
+msgid ""
+"uploading an existing certificate and private RSA/ECC key. Optionally a "
+"certificate chain file can be specified, too. All files must be PEM-encoded."
+msgstr ""
+
+#: ../../base_system.rst:231
 msgid ""
 "requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is "
 "possible if the following requirements are met:"
@@ -592,7 +596,7 @@ msgstr ""
 "solicitar un nuevo certificado de *Let's Encrypt* [#Letsencrypt]_. Esto es "
 "posible si se cumplen los siguientes requisitos:"
 
-#: ../../base_system.rst:229
+#: ../../base_system.rst:234
 msgid ""
 "The server must be reachable from outside at port 80. Make sure your port 80"
 " is open to the public Internet (you can check with sites like [#CSM]_);"
@@ -601,7 +605,7 @@ msgstr ""
 "de que su puerto 80 está abierto a la Internet pública (puede consultar con "
 "sitios como [#CSM]_);"
 
-#: ../../base_system.rst:232
+#: ../../base_system.rst:237
 msgid ""
 "The domains that you want the certificate for must be public domain names "
 "associated to server own public IP. Make sure you have public DNS name "
@@ -612,7 +616,23 @@ msgstr ""
 "tiene un nombre DNS público que apunta a su servidor (puede consultar con "
 "sitios como [#VDNS]_)."
 
-#: ../../base_system.rst:237
+#: ../../base_system.rst:241
+msgid "Wildcard certificates (i.e. ``*.nethserver.org``) are not supported."
+msgstr ""
+
+#: ../../base_system.rst:243
+msgid ""
+"The :guilabel:`Notification email` will be used by Let's Encrypt to send "
+"notifications about the certificate."
+msgstr ""
+
+#: ../../base_system.rst:246
+msgid ""
+"The Let's Encrypt certificate is automatically renewd 30 days before "
+"expiration date."
+msgstr ""
+
+#: ../../base_system.rst:249
 msgid ""
 "To avoid problems while importing the certificate in Internet Explorer, the "
 "Common Name (CN) field should match the server FQDN."
@@ -620,42 +640,42 @@ msgstr ""
 "Para evitar problemas al importar el certificado en Internet Explorer, el "
 "campo Nombre Común (CN) debe coincidir con el FQDN de servidor."
 
-#: ../../base_system.rst:240
+#: ../../base_system.rst:252
 msgid "Let's Encrypt website https://letsencrypt.org/"
 msgstr "Sitio web Let's Encrypt https://letsencrypt.org/"
 
-#: ../../base_system.rst:241
+#: ../../base_system.rst:253
 msgid "Website http://www.canyouseeme.org/"
 msgstr "Sitio web http://www.canyouseeme.org/"
 
-#: ../../base_system.rst:242
+#: ../../base_system.rst:254
 msgid "Website http://viewdns.info/"
 msgstr "Sitio web http://viewdns.info/"
 
-#: ../../base_system.rst:245
+#: ../../base_system.rst:257
 msgid "Disable Let's Encrypt"
 msgstr "Deshabilitar Let's Encrypt"
 
-#: ../../base_system.rst:247
+#: ../../base_system.rst:259
 msgid "Let's Encrypt certificate can be disabled following these steps:"
 msgstr ""
 "El certificado Let's Encrypt se puede deshabilitar siguiendo estos pasos:"
 
-#: ../../base_system.rst:249
+#: ../../base_system.rst:261
 msgid ""
 "Access the :guilabel:`Server certificate` page, set as default the self-"
 "signed certificate or an uploaded one"
 msgstr ""
 
-#: ../../base_system.rst:250
+#: ../../base_system.rst:262
 msgid "Open the shell and execute the following commands:"
 msgstr "Abre el shell y ejecuta los siguientes comandos:"
 
-#: ../../base_system.rst:258
+#: ../../base_system.rst:270
 msgid "Shutdown"
 msgstr "Apagar"
 
-#: ../../base_system.rst:260
+#: ../../base_system.rst:272
 msgid ""
 "The machine where |product| is installed can be rebooted or halted from the "
 ":menuselection:`Shutdown` page. Choose an option (reboot or halt) then click"
@@ -665,18 +685,18 @@ msgstr ""
 "desde la página :menuselection:`Apagar`. Seleccione una opción (reiniciar o "
 "detener) y, a continuación, haga clic en el botón Enviar."
 
-#: ../../base_system.rst:263
+#: ../../base_system.rst:275
 msgid ""
 "Always use this module to avoid bad shutdown which can cause data damages."
 msgstr ""
 "Utilice siempre este módulo para evitar un apagado incorrecto que pueda "
 "causar daños en los datos."
 
-#: ../../base_system.rst:266
+#: ../../base_system.rst:278
 msgid "Log viewer"
 msgstr "Visor de registro"
 
-#: ../../base_system.rst:268
+#: ../../base_system.rst:280
 msgid ""
 "All services will save operations inside files called :dfn:`logs`. The "
 ":index:`log` analysis is the main tool to find and resolve problems. To "
@@ -687,27 +707,27 @@ msgstr ""
 "principal para encontrar y resolver problemas. Para analizar los archivos de"
 " registro, haga clic en :menuselection:`Visor de registro`."
 
-#: ../../base_system.rst:272
+#: ../../base_system.rst:284
 msgid "This module allows to:"
 msgstr "Este módulo permite:"
 
-#: ../../base_system.rst:274
+#: ../../base_system.rst:286
 msgid "start search on all server's logs"
 msgstr "Iniciar la búsqueda en todos los registros del servidor"
 
-#: ../../base_system.rst:275
+#: ../../base_system.rst:287
 msgid "display a single log"
 msgstr "Mostrar un solo registro"
 
-#: ../../base_system.rst:276
+#: ../../base_system.rst:288
 msgid "follow the content of a log in real time"
 msgstr "Seguir el contenido de un registro en tiempo real"
 
-#: ../../base_system.rst:281
+#: ../../base_system.rst:293
 msgid "Date and time"
 msgstr "Fecha y hora"
 
-#: ../../base_system.rst:283
+#: ../../base_system.rst:295
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -717,7 +737,7 @@ msgstr ""
 " la zona horaria correcta. El reloj de la máquina puede configurarse manual "
 "o automáticamente utilizando servidores públicos NTP (de preferencia)."
 
-#: ../../base_system.rst:286
+#: ../../base_system.rst:298
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -726,11 +746,11 @@ msgstr ""
 "problemas, todos los hosts en LAN se pueden configurar para utilizar el "
 "servidor como servidor NTP."
 
-#: ../../base_system.rst:290
+#: ../../base_system.rst:302
 msgid "Inline help"
 msgstr "Ayuda en línea"
 
-#: ../../base_system.rst:292
+#: ../../base_system.rst:304
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -739,24 +759,24 @@ msgstr ""
 ":index:`ayuda en línea`. La ayuda en línea explica cómo funciona el módulo y"
 " todas las opciones disponibles."
 
-#: ../../base_system.rst:295
+#: ../../base_system.rst:307
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Estas páginas de ayuda están disponibles en todos los idiomas del "
 "Administrador de servidores."
 
-#: ../../base_system.rst:297
+#: ../../base_system.rst:309
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Puede encontrar una lista de todas las páginas de ayuda en línea disponibles"
 " en la dirección: ::"
 
-#: ../../base_system.rst:301
+#: ../../base_system.rst:313
 msgid "**Example**"
 msgstr "**Ejemplo**"
 
-#: ../../base_system.rst:303
+#: ../../base_system.rst:315
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"

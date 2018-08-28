@@ -24,34 +24,6 @@ Exclusions are evaluated after all inclusions.
 
 All libraries are inside the ``nethserver-backup-config`` package.
 
-Log format
-==========
-
-Backup and restore actions will log all steps in a file using a parsable format. Each log line has the following format: ::
-
- <DATE_HOUR> - <TAG> - <MESSAGE> - <EXIT_STATUS>
-
-Fields:
-
-* DATE_HOUR: date in ISO 8601 format (%Y-%m-%d) and time in 24 hour notation (%H:%M:%S)
-* TAG: can be START, STEP, SUCCESS or ERROR
-* MESSAGE: log message
-* EXIT_STATUS: (optional) the exit status of the process
-
-
-Notifications
-=============
-
-Both nethserver-backup-config and nethserver-backup-data comes with two property to configure notification:
-
-* ``notify``: enable or disable notification. Possible values:
-
-  * ``always``: send notification regardless of backup exit status
-  * ``never``: do not send any notification regardless of backup exit status
-  * ``error``: send notification only if an error occurs
-
-* ``notifyTo``: notification mail destination address (default is: admin``localhost)
-
 Configuration backup
 ====================
 
@@ -83,10 +55,6 @@ using, for example, the SSH protocol.
 
 The configuration backup is included inside the data backup.
 
-Logs:
-
-* /var/log/backup-config.log: parsable log
-
 Restore
 -------
 
@@ -105,10 +73,6 @@ The ``restore-config`` options:
 
 * ``--no-reinstall`` : disable package reinstall during restore
 * ``--mask-unit=<name>`` : use systemd to mask the specified unit (example: disable httpd-admin restart during restore)
-
-Logs:
-
-* /var/log/restore-config.log: parsable log
 
 Customization
 -------------
