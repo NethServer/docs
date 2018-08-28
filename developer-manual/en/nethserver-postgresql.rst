@@ -12,7 +12,7 @@ From localhost:
 * the *postgres* user can access without password
 * all other users must use password authentication
 
-Form any other network:
+From any other network:
 
 * all users must use password authentication
 
