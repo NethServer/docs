@@ -1,3 +1,5 @@
+.. _SOGo-section:
+
 ====
 SOGo
 ====
