@@ -22,9 +22,9 @@ Allow Users to add other IMAP accounts
 Administrators
    List of users with administrative privileges over all the user datas.
 
-Make SOGO accessible only from this domain name
+Make SOGO reachable only from this domain name list
    SOGo is per default accessible from all server's virtualhosts, 
-   If you specify a domain name here, SOGo will be usable only from this domaine name.
+   If you specify a list of domain name here, SOGo will be usable only from this domaine name list.
 
 Number of workers
    This is the amount of instances of SOGo that will be spawned to handle multiple requests simultaneously. 
