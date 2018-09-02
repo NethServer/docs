@@ -29,3 +29,7 @@ Make SOGO reachable only from this domain name list
 Number of workers
    This is the amount of instances of SOGo that will be spawned to handle multiple requests simultaneously. 
    You should have at least one worker per activesync device connected.
+
+Maximum time in second
+   Parameter used to set the maximum amount of time, in seconds, SOGo will wait before doing an internal 
+   check for data changes (add, delete, and update).
