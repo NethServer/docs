@@ -4,9 +4,7 @@
 SOGo Groupware
 ==============
 
-The :index:`SOGo` groupware is the missing component of your infrastructure, 
-it sits in the middle of your servers to offer your users a uniform and 
-complete interface to access their information.. See also :ref:`SOGo-section`.
+See also :ref:`SOGo-section`.
 
 
 Enable CalDAV and CardDAV
