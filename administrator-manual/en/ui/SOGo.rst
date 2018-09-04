@@ -20,9 +20,12 @@ Allow Users to add other IMAP accounts
 Administrators
    List of users with administrative privileges over all the user datas.
 
-Make SOGO reachable only from this domain name list
+Notifications
+   Several different types of notifications(email-based) are available. Activate them according your needs.
+
+Make SOGO reachable only from this domain(FQDN)
    SOGo is per default accessible from all server's virtualhosts, 
-   If you specify a list of domain name here, SOGo will be usable only from this domaine name list.
+   If you specify a domain name here, SOGo will be usable only from this domaine name.
 
 Number of workers
    This is the amount of instances of SOGo that will be spawned to handle multiple requests simultaneously. 
