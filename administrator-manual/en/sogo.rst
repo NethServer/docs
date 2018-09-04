@@ -97,7 +97,7 @@ Terms highlighted in **bold** are documented in SOGo `installation and configura
 * ``AdminUsers`` comma separated list of accounts allowed to bypass SOGo ACLs. See **SOGoSuperUsernames** key
 * Notifications comma separated list of values (no spaces between commas). Known item names are ``ACLs``, ``Folders``, ``Appointments``. See **SOGoSendEMailNotifications**
 * ``{Drafts,Sent,Trash}Folder`` See respective **SOGoFolderName** parameters
-* ``VirtualHosts`` comma separated list of host keys in ``hosts`` DB, with ``type=self``. SOGo is reachable from the default host name plus any host listed here (see #2371).
+* ``VirtualHosts`` SOGo is reachable from the default host name plus the host (FQDN) listed here. The host key is generated/removed in ``hosts`` DB, with ``type=self`` automatically.
 
 
 
