@@ -1,10 +1,10 @@
-# #-#-#-#-#  release_notes.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  release_notes.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  release_notes.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  release_notes.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,203 +25,50 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../release_notes.rst:10 ../../release_notes.rst:13
-msgid "Release notes |version|"
-msgstr "Notas de lanzamiento |version|"
+#: ../../release_notes.rst:3
+msgid "Release notes"
+msgstr "Notas de la versión"
 
-#: ../../release_notes.rst:12 ../../release_notes.rst:15
-msgid "|product| release |version|"
-msgstr "|product| versión |version|"
+#: ../../release_notes.rst:5
+msgid "|product| release |release|"
+msgstr "|product| versión |release|"
 
-#: ../../release_notes.rst:14 ../../release_notes.rst:17
+#: ../../release_notes.rst:7
+msgid "Upstream release notes from `CentOS 6.10`_ and `RHEL 6.10`_"
+msgstr ""
+
+#: ../../release_notes.rst:8
+msgid "CentOS 6 will receive security updates until 2020-11-30"
+msgstr ""
+
+#: ../../release_notes.rst:9
+msgid "List of `updates of 6.10`_"
+msgstr ""
+
+#: ../../release_notes.rst:10
+msgid "All `updates of 6.9`_"
+msgstr ""
+
+#: ../../release_notes.rst:18
+msgid "Major changes on 2018-07-23"
+msgstr ""
+
+#: ../../release_notes.rst:20
 msgid ""
-"This release is based on CentOS 7.3: "
-"https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7"
+"Default Server Manager session idle timeout is 60 minutes, session life time"
+" is 8 hours. This new policy is enforced on upgraded installations too. See "
+":ref:`session-timeouts-section`."
 msgstr ""
-"Esta versión se basa en CentOS 7.3: "
-"https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7"
 
-#: ../../release_notes.rst:17 ../../release_notes.rst:20
-msgid "Relevant changes since RC4:"
-msgstr "Cambios relevantes desde RC4:"
+#: ../../release_notes.rst:25
+msgid "Upgrade of version 6.9 to 6.10"
+msgstr ""
 
-#: ../../release_notes.rst:19 ../../release_notes.rst:22
-msgid "Installer: added new manual installation method"
-msgstr "Instalador: nuevo método de instalación manual"
-
-#: ../../release_notes.rst:20 ../../release_notes.rst:23
+#: ../../release_notes.rst:27
 msgid ""
-"Account providers: \"administrators\" group has been replaced by \"domain "
-"admins\" group (:ref:`server_manager-section`)"
+"Start the update as usual from the :guilabel:`Software Center` page.  It is "
+"recommended to reboot the system at the end of the update procedure."
 msgstr ""
-"Proveedores de cuentas: el grupo \"administradores\" ha sido sustituido por "
-"el grupo \"administradores de dominio\" (:ref:`server_manager-section`)"
-
-#: ../../release_notes.rst:21 ../../release_notes.rst:24
-msgid "Mail server: fix pseudonym expansion for groups"
-msgstr "Servidor de correo: corrige la expansión del pseudónimo para grupos"
-
-#: ../../release_notes.rst:22 ../../release_notes.rst:25
-msgid ""
-"Mail server: enable user shared mailbox by default (:ref"
-":`enable_shared_folders-section`)"
-msgstr ""
-"Servidor de correo: habilita el buzón de correo compartido del usuario de "
-"forma predeterminada (:ref:`enable_shared_folders-section`)"
-
-#: ../../release_notes.rst:23 ../../release_notes.rst:26
-msgid "Mail server: specific per-domain pseudonym now override generic ones"
-msgstr ""
-"Servidor de correo: el seudónimo específico por dominio ahora sustituye a "
-"los genéricos"
-
-#: ../../release_notes.rst:24 ../../release_notes.rst:27
-msgid "OpenVPN: start VPN clients on boot"
-msgstr ""
-"Servidor de correo: el seudónimo específico por dominio ahora sustituye a "
-"los genéricos"
-
-#: ../../release_notes.rst:25 ../../release_notes.rst:28
-msgid "Web filter: fix group-based profiles"
-msgstr "Filtro Web: fijar perfiles basados en grupos"
-
-#: ../../release_notes.rst:26 ../../release_notes.rst:29
-msgid "Firewall: fix selection of time conditions"
-msgstr "Firewall: Selecciona correcciones según condiciones de tiempo"
-
-#: ../../release_notes.rst:27 ../../release_notes.rst:30
-msgid "IPS: update configuration for latest pulledpork release"
-msgstr "IPS: actualiza la configuración para la última liberación preferida"
-
-#: ../../release_notes.rst:30 ../../release_notes.rst:33
-msgid "Upgrading RC4 to Final"
-msgstr "Actualización de RC4 a Final"
-
-#: ../../release_notes.rst:32 ../../release_notes.rst:35
-msgid ""
-"To upgrade a RC4 installation to Final, go to the :guilabel:`Software "
-"Center` page and follow Server Manager instructions."
-msgstr ""
-"Para actualizar una instalación de RC4 a Final, vaya a la página "
-":guilabel:`Centro de software` y siga las instrucciones del Administrador "
-"del servidor"
-
-#: ../../release_notes.rst:36 ../../release_notes.rst:39
-msgid "Upgrading |product| 6 to |product| |version|"
-msgstr "Actualizando |product| 6 a |product| |version|"
-
-#: ../../release_notes.rst:38 ../../release_notes.rst:41
-msgid ""
-"It is possible to upgrade the previous major release of |product| to "
-"|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
-"for details."
-msgstr ""
-"Es posible actualizar completa la versión anterior de |product| a |version|,"
-" mediante una estrategia de respaldo/recuperación. Vea :ref:`upgrade-"
-"section` para más detalles."
-
-#: ../../release_notes.rst:44 ../../release_notes.rst:47
-msgid "Server Manager access"
-msgstr "Acceso al Administrador del servidor"
-
-#: ../../release_notes.rst:46 ../../release_notes.rst:49
-msgid ""
-"If you want to grant Server Manager access to other users than root, please "
-"add the users to the \"domain admins\" group and execute: ::"
-msgstr ""
-"Si desea conceder al Administrador del servidor acceso a otros usuarios que "
-"root, agregue los usuarios al grupo de \"administradores de dominio\" y "
-"ejecute: ::"
-
-#: ../../release_notes.rst:55 ../../release_notes.rst:58
-msgid "User shared mailbox"
-msgstr "Buzón de correo compartido del usuario"
-
-#: ../../release_notes.rst:57 ../../release_notes.rst:60
-msgid "If you want to enable user shared mailbox, execute: ::"
-msgstr ""
-"Si desea habilitar el buzón de correo compartido de usuario, ejecute: ::"
-
-#: ../../release_notes.rst:64 ../../release_notes.rst:67
-msgid "Changelog"
-msgstr "Registro de cambios"
-
-#: ../../release_notes.rst:66 ../../release_notes.rst:69
-msgid ""
-"`ISO Final changelog "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_"
-" (from 2017-01-17 to 2017-01-30)"
-msgstr ""
-"`Log de cambios final de la "
-"ISO<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-17T00%3A00%3A00Z..2017-01-30>`_"
-" (de 2017-01-17 a 2017-01-30)"
-
-#: ../../release_notes.rst:67 ../../release_notes.rst:70
-msgid ""
-"`Rolling release changelog "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
-" (from 2017-01-30 to 2024-06-30)"
-msgstr ""
-"`Registro de cambios de la liberación continua "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20milestone%3Av7%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
-" (de 2017-01-30 a 2024-06-30)"
-
-#: ../../release_notes.rst:70 ../../release_notes.rst:73
-msgid "Known bugs"
-msgstr "Errores conocidos"
-
-#: ../../release_notes.rst:72 ../../release_notes.rst:75
-msgid ""
-"List of `known bugs "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
-msgstr ""
-"Lista de `errores conocidos "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3Abug%20milestone%3Av7%20>`_"
-
-#: ../../release_notes.rst:74 ../../release_notes.rst:77
-msgid ""
-"Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_"
-msgstr ""
-"Discusiones sobre `posibles errores "
-"<http://community.nethserver.org/c/bug>`_"
-
-#: ../../release_notes.rst:79 ../../release_notes.rst:82
-msgid "Discontinued packages"
-msgstr "Paquetes descontinuados"
-
-#: ../../release_notes.rst:81 ../../release_notes.rst:84
-msgid ""
-"The following packages were available in the previous 6 release and have "
-"been removed in 7:"
-msgstr ""
-"Los siguientes paquetes estaban disponibles en la versión anterior 6 y se "
-"han eliminado en 7:"
-
-#: ../../release_notes.rst:84 ../../release_notes.rst:87
-msgid "nethserver-collectd-web: replaced by nethserver-cgp"
-msgstr "nethserver-collectd-web: reemplazado por nethserver-cgp"
-
-#: ../../release_notes.rst:85 ../../release_notes.rst:88
-msgid "nethserver-password: integrated inside nethserver-sssd"
-msgstr "nethserver-password: integrado en nethserver-sssd"
-
-#: ../../release_notes.rst:86 ../../release_notes.rst:89
-msgid ""
-"nethserver-faxweb2: see the discussion `faxweb2 vs avantfax "
-"<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
-msgstr ""
-"nethserver-faxweb2: vea la discusión `faxweb2 vs avantfax "
-"<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
-
-#: ../../release_notes.rst:87 ../../release_notes.rst:90
-msgid "nethserver-fetchmail: replaced by getmail"
-msgstr "nethserver-fetchmail: reemplazado por getmail"
-
-#: ../../release_notes.rst:88 ../../release_notes.rst:91
-msgid ""
-"nethserver-ocsinventory, nethserver-adagios: due to compatibility problems "
-"with Nagios, these modules will be mantained only on |product| 6 release"
-msgstr ""
-"nethserver-ocsinventory, nethserver-adagios: debido a problemas de "
-"compatibilidad con Nagios, estos módulos se mantendrán sólo en la liberación"
-" |product| 6"
+"Inicie la actualización como de costumbre en la página :guilabel:`Centro de "
+"software`. Se recomienda reiniciar el sistema al final del procedimiento de "
+"actualización."
