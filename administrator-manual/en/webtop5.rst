@@ -666,7 +666,18 @@ https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/defa
     To be able to complete the synchronization it is necessary to enable on your account Google,
     in the security settings, the use of apps considered less secure (here a guide on how to do: https://support.google.com/accounts/answer/6010255?hl=it).
 
-Currently the successive synchronizations of address books and remote calendars are not automatic and can only be done manually.
+Synchronization of remote resources can be performed manually or automatically.
+
+Automatic synchronization
+^^^^^^^^^^^^^^^^^^^^^^^^^
+To synchronize automatically you can choose between three time intervals: 15, 30 and 60 minutes.
+The choice of the time interval can be made in the creation phase or later by changing the options.
+To do this, right-click on the phonebook (or on the calendar), :guilabel:`Edit Category`, :guilabel:`Internet Addressbook` (or :guilabel:`Internet Calendar`):
+
+.. image:: _static/webtop-sync_automatic.png
+
+Manual synchronization
+^^^^^^^^^^^^^^^^^^^^^^
 To update a remote address book, for example, click on it with the right mouse button and then select the item "Synchronize":
 
 .. image:: _static/webtop-sync_google.png
