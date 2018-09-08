@@ -774,6 +774,7 @@ Supported contacts format:
 - CSV  - Comma Separated values (\*.txt, \*.csv)
 - Excel (\.*xls, \*.xlsx)
 - VCard (\*.vcf, \*.vcard)
+- LDIF (\*.ldif)
 
 
 To import contacts:
