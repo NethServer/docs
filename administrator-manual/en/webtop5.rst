@@ -691,16 +691,18 @@ Select the desired mode next to the synchronization button:
 
 .. image:: _static/webtop-edit_sync_google2.png
 
+User settings management
+========================
+Most user settings can be directly managed by the user itself via the settings menu.
+Locked settings reuquire administration privileges.
 
-.. _webtop5_impersonate-section:
-
-Impersonate
-===========
-
-In WebTop the :index:`impersonate` function, with which it is possible to access the settings of each user without knowing the password, can be used by logging in as follows:
+The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
 * **User name**: admin!<username>
 * **Password**: <WebTop admin password>
+
+With impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
+Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all unlocked.
 
 Changing the logo
 =================
