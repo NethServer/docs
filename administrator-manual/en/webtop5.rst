@@ -994,10 +994,10 @@ If you need to delete someone because it is wrong, move with the arrow keys unti
   WebTop vs SOGo
   ==============
 
-  WebTop and SOGo can be installed on the same machine.
+  WebTop and SOGo can be installed on the same machine, although it is discouraged to keep such setup on the long run.
 
   ActiveSync is enabled by default on SOGo and WebTop, but if both packages are
-  installed, WebTop will take precedence.
+  installed, SOGo will take precedence.
 
   To disable ActiveSync on SOGo: ::
 
