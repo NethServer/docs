@@ -458,6 +458,10 @@ For example, to backup a software installed inside :file:`/opt` directory, add t
 
   /opt/mysoftware
 
+
+The same syntax applies to configuration backup. Modifications should be done inside the file :file:`/etc/backup-config.d/custom.include`.
+
+
 **Exclusion**
 
 If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
