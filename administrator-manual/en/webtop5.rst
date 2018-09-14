@@ -704,6 +704,22 @@ The administrator can :index:`impersonate` users, to check the correctness and f
 With impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all unlocked.
 
+SMTP setting
+============
+
+The default configuration for sending mail to the SMTP server is anonymous and without encryption on port 587.
+It is possible to enable authenticated sending in this way: ::
+
+  config setprop webtop SmtpAuth enabled
+  
+to enable encryption also: ::
+
+  config setprop webtop SmtpStarttls enabled
+  
+To apply the new settings launch this event which will also restart application: ::
+
+  signal-event nethserver-webtop5-update
+
 Changing the logo
 =================
 
