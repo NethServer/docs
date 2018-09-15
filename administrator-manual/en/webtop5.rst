@@ -704,7 +704,7 @@ The administrator can :index:`impersonate` users, to check the correctness and f
 With impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all unlocked.
 
-It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click -> "Bulk update email domain".
+It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
 SMTP setting
 ============
