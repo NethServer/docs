@@ -747,7 +747,7 @@ Proceed as follows:
 Change the public URL
 =====================
 
-A special prop has been added to modify the public URL.
+By default, the public WebTop URL is configured with the FQDN name set to Nethserver.
 
 If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
 
