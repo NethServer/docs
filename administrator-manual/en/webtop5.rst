@@ -506,7 +506,57 @@ To enable chat integration:
    - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
-   
+
+Audio and video WebRTC calls with the chat (Beta)
+=================================================
+
+.. warning::
+   This feature is currently released in Beta.
+   When the final version is released it is likely that the configurations made previously will be reset.
+
+Configuration is currently only possible via the WebTop administration panel.
+The settings to be inserted are documented `here <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_ 
+In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown `here <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_
+
+From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``webrtc.ice.servers`` : defines the list of ICE servers as JSON arrays
+
+``xmpp.bosh.url`` : specifies the XMPP URL that can be accessed via the BOSH protocol
+
+
+For the key field ``webrtc.ice.servers`` as "Value" insert the content in json format that shows the values of these variables:
+
+``url`` : URL ice server
+
+``username`` : server username (optional)
+
+``credential`` : server password (optional)
+
+For example: ::
+
+ [
+  {
+    'url': 'stun:stun.l.google.com:19302'
+  }, {
+    'url': 'stun:stun.mystunserver.com:19302'
+  }, {
+    'url': 'turn:myturnserver.com:80?transport=tcp',
+    'username': 'my_turn_username',
+    'credential': 'my_turn_password'
+  }
+ ]
+
+For the key field ``xmpp.bosh.url`` as "Value" enter this type of URL: ``https://<public_server_name>/http-bind``
+
+With these configurations, every user authorized to use the **WEBCHAT** service can perform audio and video calls with other users that are available on the same chat server through the buttons available on the chat window.
+
+.. note::
+
+   If the buttons are not usable, the requirements for activating the call are not verified.
+   For example: XMPP BOSH URL unreachable or ICE server unreachable
+
+
 Send SMS from contacts
 ======================
 
@@ -521,13 +571,9 @@ It is possible to do this in two ways:
 1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
 ``sms.provider`` = smshosting or twilio
-
 ``sms.provider.webrest.user`` = API AUTH_KEY
-
 ``sms.provider.webrest.password`` = API AUTH_SECRET
-
 ``sms.sender`` = (default optional)
-
 
 2) through shell commands:
 
