@@ -506,6 +506,59 @@ To enable chat integration:
    - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
+   
+Send SMS from contacts
+======================
+
+It is possible to send SMS messages starting from a contact that has the mobile number entered in the addressbook.
+To activate sending SMS first you need to choose one of the two supported providers: `SMSHOSTING <https://www.smshosting.it/it>`_ or `TWILIO <https://www.twilio.com/>`_.
+
+Once registered to the service of the chosen provider, retrieve the API keys (AUTH_KEY and AUTH_SECRET) to be inserted in the WebTop configuration db.
+The settings to configure are those shown `here <https://www.sonicle.com/docs/webtop5/core.html#sms-settings>`_ .
+
+It is possible to do this in two ways:
+
+1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``sms.provider`` = smshosting or twilio
+
+``sms.provider.webrest.user`` = API AUTH_KEY
+
+``sms.provider.webrest.password`` = API AUTH_SECRET
+
+``sms.sender`` = (default optional)
+
+
+2) through shell commands:
+
+to configure the ``sms.provider`` key (smshosting for example): ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider','smshosting');\""
+ 
+to configure the ``sms.provider.webrest.user`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.user','API_AUTH_KEY');\""
+
+to configure the ``sms.provider.webrest.password`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.password','API AUTH_SECRET');\""
+  
+substituting the key obtained from the provider instead of 'API_AUTH_KEY' and 'API AUTH_SECRET'
+
+The ``sms.sender`` key is optional and is used to specify the default sender when sending SMS.
+It is possible to indicate a number (max 16 characters) or a text (max 11 characters).
+
+to configure the ``sms.sender`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.sender','XXXXXXXXXX');\""
+  
+replacing 'XXXXXXXXXX' with the number or text of the default sender.
+
+.. note::
+
+   Each user always has the possibility to overwrite this sender by customizing it as desired through its settings panel: :guilabel:`WebTop` -> :guilabel:`Switchboard VOIP and SMS` -> :guilabel:`SMS Hosting service configured` -> :guilabel:`Default sender`
+   
+To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
 
 Browser notifications
 =====================
