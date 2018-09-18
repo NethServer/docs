@@ -48,11 +48,11 @@ Installation
 
     To install the module on MASTER execute from command line: ::
 
-      yum install nethserver-hotsync
+      yum -y install nethserver-hotsync
 
     To install the module on SLAVE execute from command line: ::
 
-      yum install --disablerepo=nethesis-updates,nethesis-upstream nethserver-hotsync
+      yum -y install --disablerepo=nethesis-*,nh-* nethserver-hotsync
 
 
 
