@@ -610,6 +610,57 @@ replacing 'XXXXXXXXXX' with the number or text of the default sender.
    
 To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
 
+Custom link buttons in launcher (Beta)
+======================================
+
+.. warning::
+   This feature is currently released in Beta.
+   When the final version is released it is likely that the configurations made previously will be reset.
+   
+Configuration is currently only possible via the WebTop administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``launcher.links`` : json array of link objects
+
+In the "Value" field, enter the content in json format that shows the values of these variables:
+
+``href`` : URL opened in a new browser tab
+
+``text`` : descriptive text that appears with the mouse over
+
+``icon`` : icon image URL (to avoid scaling problems, it is necessary to use vector images)
+
+For example: ::
+
+ [
+  {
+    'href': 'https://www.google.it/',
+    'text': 'Google',
+    'icon': 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'
+  }, {
+    'href': 'https://the/url/to/open',
+    'text': 'The link text',
+    'icon': 'https://the/icon/url'
+  }
+ ]
+
+.. warning::
+   The URL of the icon from which to retrieve the vector image must always be publicly resolvable by the browser with which you connect.
+   
+If you can not retrieve an Internet link of the icon image, you can copy the image locally on the server in two different ways:
+
+1) copying the file (for example ``icon.svg``) directly into the ``/var/www/html/`` directory of the server and using this type of URL for the 'icon' field of the Json file: ::
+
+ 'icon': 'https://<public_name_server>/<icon.svg>'
+ 
+2) uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration panel -> :guilabel:`Cloud` -> :guilabel:`Public Images`and insert a URL of this type for the 'icon' field of the Json file: ::
+
+ 'icon': 'https://<public_name_server>/webtop/resources/156c0407/images/<icon.svg>'
+
+.. note::
+
+   The configured custom link buttons will be shown to all users at the next login.
+
+
 Browser notifications
 =====================
 
