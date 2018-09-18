@@ -571,9 +571,13 @@ It is possible to do this in two ways:
 1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
 ``sms.provider`` = smshosting or twilio
+
 ``sms.provider.webrest.user`` = API AUTH_KEY
+
 ``sms.provider.webrest.password`` = API AUTH_SECRET
+
 ``sms.sender`` = (default optional)
+
 
 2) through shell commands:
 
