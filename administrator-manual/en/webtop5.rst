@@ -507,6 +507,160 @@ To enable chat integration:
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
 
+Audio and video WebRTC calls with chat (Beta)
+=============================================
+
+.. warning::
+   This feature is currently released in Beta.
+   When the final version will be released it is likely that the configurations previously made will be reset.
+
+Configuration is currently only possible via the WebTop administration panel.
+The settings to be inserted are documented `here <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_ 
+In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown `here <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_
+
+From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``webrtc.ice.servers`` : defines the list of ICE servers as JSON arrays
+
+``xmpp.bosh.url`` : specifies the XMPP URL that can be accessed via the BOSH protocol
+
+
+For the key field ``webrtc.ice.servers`` as "Value" insert the content in json format that shows the values of these variables:
+
+``url`` : URL ice server
+
+``username`` : server username (optional)
+
+``credential`` : server password (optional)
+
+For example: ::
+
+ [
+  {
+    'url': 'stun:stun.l.google.com:19302'
+  }, {
+    'url': 'stun:stun.mystunserver.com:19302'
+  }, {
+    'url': 'turn:myturnserver.com:80?transport=tcp',
+    'username': 'my_turn_username',
+    'credential': 'my_turn_password'
+  }
+ ]
+
+For the key field ``xmpp.bosh.url`` as "Value" enter this type of URL: ``https://<public_server_name>/http-bind``
+
+With these configurations, every user authorized to use the **WEBCHAT** service can perform audio and video calls with other users that are available on the same chat server through the buttons available on the chat window.
+
+.. note::
+
+   If the buttons are grayed out, the requirements for activating the call are not satisfied.
+   For example: XMPP BOSH URL unreachable or ICE server unreachable.
+
+
+Send SMS from contacts
+======================
+
+It is possible to send SMS messages to a contact that has the mobile number in the addressbook.
+To activate sending SMS, first you need to choose one of the two supported providers: `SMSHOSTING <https://www.smshosting.it/it>`_ or `TWILIO <https://www.twilio.com/>`_.
+
+Once registered to the service of the chosen provider, retrieve the API keys (AUTH_KEY and AUTH_SECRET) to be inserted in the WebTop configuration db.
+The settings to configure are those shown `here <https://www.sonicle.com/docs/webtop5/core.html#sms-settings>`_ .
+
+It is possible to do this in two ways:
+
+1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``sms.provider`` = smshosting or twilio
+
+``sms.provider.webrest.user`` = API AUTH_KEY
+
+``sms.provider.webrest.password`` = API AUTH_SECRET
+
+``sms.sender`` = (default optional)
+
+
+2) through shell commands:
+
+to configure the ``sms.provider`` key (smshosting for example): ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider','smshosting');\""
+ 
+to configure the ``sms.provider.webrest.user`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.user','API_AUTH_KEY');\""
+
+to configure the ``sms.provider.webrest.password`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.password','API AUTH_SECRET');\""
+  
+substituting the key obtained from the provider instead of 'API_AUTH_KEY' and 'API AUTH_SECRET'
+
+The ``sms.sender`` key is optional and is used to specify the default sender when sending SMS.
+It is possible to indicate a number (max 16 characters) or a text (max 11 characters).
+
+to configure the ``sms.sender`` key: ::
+
+ su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.sender','XXXXXXXXXX');\""
+  
+replacing 'XXXXXXXXXX' with the number or text of the default sender.
+
+.. note::
+
+   Each user always has the possibility to overwrite the sender by customizing it as desired through its settings panel: :guilabel:`WebTop` -> :guilabel:`Switchboard VOIP and SMS` -> :guilabel:`SMS Hosting service configured` -> :guilabel:`Default sender`
+   
+To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
+
+Custom link buttons in launcher (Beta)
+======================================
+
+.. warning::
+   This feature is currently released in Beta.
+   When the final version will be released it is likely that the configurations previously made will be reset.
+
+Configuration is currently only possible via the WebTop administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``launcher.links`` : json array of link objects
+
+In the "Value" field, enter the content in json format that shows the values of these variables:
+
+``href`` : URL opened in a new browser tab
+
+``text`` : descriptive text that appears with mouseover
+
+``icon`` : icon image URL (to avoid scaling problems, use vector images)
+
+For example: ::
+
+ [
+  {
+    'href': 'https://www.google.it/',
+    'text': 'Google',
+    'icon': 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'
+  }, {
+    'href': 'https://the/url/to/open',
+    'text': 'The link text',
+    'icon': 'https://the/icon/url'
+  }
+ ]
+
+.. warning::
+   The URL of the icon from which to retrieve the vector image must always be publicly reachable by the browser with which you connect.
+   
+If you can not retrieve an Internet link of the icon image, you can copy the image locally on the server in two different ways:
+
+#. copying the file (for example ``icon.svg``) directly into the ``/var/www/html/`` directory of the server and using this type of URL for the 'icon' field of the Json file: ::
+
+       'icon': 'https://<public_name_server>/<icon.svg>'
+ 
+#. uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration panel -> :guilabel:`Cloud` -> :guilabel:`Public Images`and insert a URL of this type for the 'icon' field of the Json file: ::
+
+       'icon': 'https://<public_name_server>/webtop/resources/156c0407/images/<icon.svg>'
+
+.. note::
+
+   The configured custom link buttons will be shown to all users at the next login.
+
+
 Browser notifications
 =====================
 
@@ -666,7 +820,18 @@ https://www.googleapis.com/carddav/v1/principals/XXXXXXXXXX@gmail.XXX/lists/defa
     To be able to complete the synchronization it is necessary to enable on your account Google,
     in the security settings, the use of apps considered less secure (here a guide on how to do: https://support.google.com/accounts/answer/6010255?hl=it).
 
-Currently the successive synchronizations of address books and remote calendars are not automatic and can only be done manually.
+Synchronization of remote resources can be performed manually or automatically.
+
+Automatic synchronization
+^^^^^^^^^^^^^^^^^^^^^^^^^
+To synchronize automatically you can choose between three time intervals: 15, 30 and 60 minutes.
+The choice of the time interval can be made in the creation phase or later by changing the options.
+To do this, right-click on the phonebook (or on the calendar), :guilabel:`Edit Category`, :guilabel:`Internet Addressbook` (or :guilabel:`Internet Calendar`):
+
+.. image:: _static/webtop-sync_automatic.png
+
+Manual synchronization
+^^^^^^^^^^^^^^^^^^^^^^
 To update a remote address book, for example, click on it with the right mouse button and then select the item "Synchronize":
 
 .. image:: _static/webtop-sync_google.png
@@ -680,16 +845,36 @@ Select the desired mode next to the synchronization button:
 
 .. image:: _static/webtop-edit_sync_google2.png
 
+User settings management
+========================
+Most user settings can be directly managed by the user itself via the settings menu.
+Locked settings require administration privileges.
 
-.. _webtop5_impersonate-section:
-
-Impersonate
-===========
-
-In WebTop the :index:`impersonate` function, with which it is possible to access the settings of each user without knowing the password, can be used by logging in as follows:
+The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
 * **User name**: admin!<username>
 * **Password**: <WebTop admin password>
+
+While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
+Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
+
+It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
+
+SMTP setting
+============
+
+The default configuration for sending mail to the SMTP server is anonymous and without encryption on port 587.
+It is possible to enable authenticated sending in this way: ::
+
+  config setprop webtop SmtpAuth enabled
+  
+to enable encryption also: ::
+
+  config setprop webtop SmtpStarttls enabled
+  
+To apply the new settings launch this event which will also restart the application: ::
+
+  signal-event nethserver-webtop5-update
 
 Changing the logo
 =================
@@ -716,7 +901,7 @@ Proceed as follows:
 Change the public URL
 =====================
 
-A special prop has been added to modify the public URL.
+By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
 
 If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
 
@@ -774,6 +959,7 @@ Supported contacts format:
 - CSV  - Comma Separated values (\*.txt, \*.csv)
 - Excel (\.*xls, \*.xlsx)
 - VCard (\*.vcf, \*.vcard)
+- LDIF (\*.ldif)
 
 
 To import contacts:
