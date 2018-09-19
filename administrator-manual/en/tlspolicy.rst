@@ -14,6 +14,19 @@ compatibility with old clients.
 
 The following sections describe each policy identifier.
 
+Policy 2018-10-01
+-----------------
+
+This policy extends ``2018-10-01`` by securing the ejabberd service following the recommendation of the product's Company : https://blog.process-one.net/securing-ejabberd-with-tls-encryption/
+
+Ejabberd (XXMP)
+    * Only Tls1.2 is accepted
+    * Ciphers suite ::
+
+        ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305
+        ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256
+        ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
+
 Policy 2018-06-21
 -----------------
 
