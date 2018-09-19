@@ -507,12 +507,12 @@ To enable chat integration:
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
 
-Audio and video WebRTC calls with the chat (Beta)
-=================================================
+Audio and video WebRTC calls with chat (Beta)
+=============================================
 
 .. warning::
    This feature is currently released in Beta.
-   When the final version is released it is likely that the configurations made previously will be reset.
+   When the final version will be released it is likely that the configurations previously made will be reset.
 
 Configuration is currently only possible via the WebTop administration panel.
 The settings to be inserted are documented `here <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_ 
@@ -553,15 +553,15 @@ With these configurations, every user authorized to use the **WEBCHAT** service 
 
 .. note::
 
-   If the buttons are not usable, the requirements for activating the call are not verified.
-   For example: XMPP BOSH URL unreachable or ICE server unreachable
+   If the buttons are grayed out, the requirements for activating the call are not satisfied.
+   For example: XMPP BOSH URL unreachable or ICE server unreachable.
 
 
 Send SMS from contacts
 ======================
 
-It is possible to send SMS messages starting from a contact that has the mobile number entered in the addressbook.
-To activate sending SMS first you need to choose one of the two supported providers: `SMSHOSTING <https://www.smshosting.it/it>`_ or `TWILIO <https://www.twilio.com/>`_.
+It is possible to send SMS messages to a contact that has the mobile number in the addressbook.
+To activate sending SMS, first you need to choose one of the two supported providers: `SMSHOSTING <https://www.smshosting.it/it>`_ or `TWILIO <https://www.twilio.com/>`_.
 
 Once registered to the service of the chosen provider, retrieve the API keys (AUTH_KEY and AUTH_SECRET) to be inserted in the WebTop configuration db.
 The settings to configure are those shown `here <https://www.sonicle.com/docs/webtop5/core.html#sms-settings>`_ .
@@ -606,7 +606,7 @@ replacing 'XXXXXXXXXX' with the number or text of the default sender.
 
 .. note::
 
-   Each user always has the possibility to overwrite this sender by customizing it as desired through its settings panel: :guilabel:`WebTop` -> :guilabel:`Switchboard VOIP and SMS` -> :guilabel:`SMS Hosting service configured` -> :guilabel:`Default sender`
+   Each user always has the possibility to overwrite the sender by customizing it as desired through its settings panel: :guilabel:`WebTop` -> :guilabel:`Switchboard VOIP and SMS` -> :guilabel:`SMS Hosting service configured` -> :guilabel:`Default sender`
    
 To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
 
@@ -615,8 +615,8 @@ Custom link buttons in launcher (Beta)
 
 .. warning::
    This feature is currently released in Beta.
-   When the final version is released it is likely that the configurations made previously will be reset.
-   
+   When the final version will be released it is likely that the configurations previously made will be reset.
+
 Configuration is currently only possible via the WebTop administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
 ``launcher.links`` : json array of link objects
@@ -625,9 +625,9 @@ In the "Value" field, enter the content in json format that shows the values of 
 
 ``href`` : URL opened in a new browser tab
 
-``text`` : descriptive text that appears with the mouse over
+``text`` : descriptive text that appears with mouseover
 
-``icon`` : icon image URL (to avoid scaling problems, it is necessary to use vector images)
+``icon`` : icon image URL (to avoid scaling problems, use vector images)
 
 For example: ::
 
@@ -644,7 +644,7 @@ For example: ::
  ]
 
 .. warning::
-   The URL of the icon from which to retrieve the vector image must always be publicly resolvable by the browser with which you connect.
+   The URL of the icon from which to retrieve the vector image must always be publicly reachable by the browser with which you connect.
    
 If you can not retrieve an Internet link of the icon image, you can copy the image locally on the server in two different ways:
 
@@ -848,15 +848,15 @@ Select the desired mode next to the synchronization button:
 User settings management
 ========================
 Most user settings can be directly managed by the user itself via the settings menu.
-Locked settings reuquire administration privileges.
+Locked settings require administration privileges.
 
 The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
 * **User name**: admin!<username>
 * **Password**: <WebTop admin password>
 
-With impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
-Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all unlocked.
+While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
+Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
@@ -872,7 +872,7 @@ to enable encryption also: ::
 
   config setprop webtop SmtpStarttls enabled
   
-To apply the new settings launch this event which will also restart application: ::
+To apply the new settings launch this event which will also restart the application: ::
 
   signal-event nethserver-webtop5-update
 
@@ -901,7 +901,7 @@ Proceed as follows:
 Change the public URL
 =====================
 
-By default, the public WebTop URL is configured with the FQDN name set to Nethserver.
+By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
 
 If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
 
