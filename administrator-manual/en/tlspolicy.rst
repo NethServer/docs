@@ -7,6 +7,9 @@ TLS policy
 The :guilabel:`TLS policy` page controls how individual services configure the
 Transport Layer Security (TLS) protocol, by selecting a *policy identifier*.
 
+If not otherwise stated, the TLS settings of policies are always *cumulative*: 
+**newer policies extend older ones**.
+
 Each module implementation decides how to implement a specific policy
 identifier, providing a trade off between security and client compatibility.
 Newer policies are biased towards security, whilst older ones provide better
