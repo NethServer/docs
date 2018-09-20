@@ -17,10 +17,12 @@ The following sections describe each policy identifier.
 Policy 2018-10-01
 -----------------
 
-This policy extends ``2018-10-01`` by securing the ejabberd service following the recommendation of the product's Company : https://blog.process-one.net/securing-ejabberd-with-tls-encryption/
+This policy restricts the TLS settings of the default Ejabberd configuration. 
+It applies only to Ejabberd version 18 and greater.
 
-Ejabberd (XXMP)
-    * Only Tls1.2 is accepted
+Ejabberd (XMPP)
+    * Reference https://blog.process-one.net/securing-ejabberd-with-tls-encryption/
+    * Only TLSv1.2 is accepted
     * Ciphers suite ::
 
         ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305
