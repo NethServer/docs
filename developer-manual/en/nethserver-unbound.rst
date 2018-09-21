@@ -1,5 +1,5 @@
 ===================
-nethserver-unbonund
+nethserver-unbound
 ===================
 
 Unbound is a validating, recursive, and caching DNS resolver.
