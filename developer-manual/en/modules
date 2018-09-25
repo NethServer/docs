@@ -53,3 +53,4 @@ nethserver-phonehome
 nethserver-net-snmp
 nethserver-duc
 nethserver-mysql
+nethserver-dnsmasq

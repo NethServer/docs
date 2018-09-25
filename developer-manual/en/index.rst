@@ -42,8 +42,6 @@ Developer Manual
    :maxdepth: 2
    :caption: Implementation
 
-   dns
-   dhcp
    random_url
    migration
    certificate_management
