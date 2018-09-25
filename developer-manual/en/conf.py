@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import urllib
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -237,3 +238,12 @@ rst_prolog="""
 .. |product| replace:: NethServer
 .. |download_site| replace:: http://www.nethserver.org
 """
+
+def setup(app):
+    with open('modules') as fp:
+        line = fp.readline().strip()
+        while line:
+            url = "https://raw.githubusercontent.com/NethServer/%s/master/README.rst" % line
+            urllib.urlretrieve(url, line+".rst")
+            line = fp.readline().strip()
+    fp.close()
