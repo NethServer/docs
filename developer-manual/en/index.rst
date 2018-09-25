@@ -69,29 +69,8 @@ Developer Manual
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modules
-
-   ftp
-   ups
-   tftp
-   collectd
-   phone_home
-   duc
-   snmp
-   tomcat7
-   unixodbc
-   ntopng
-   samba_audit
-   redis
-   memcached
-   smartd
-   antivirus
-   mysql
-
-.. toctree::
-   :maxdepth: 2
    :glob:
-   :caption: Modules (new)
+   :caption: Modules
  
    nethserver-*
 

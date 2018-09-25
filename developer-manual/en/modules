@@ -41,3 +41,15 @@ nethserver-rh-php71-php-fpm
 nethserver-rh-php56-php-fpm
 nethserver-mattermost
 nethserver-letsencrypt
+nethserver-smartd
+nethserver-samba-audit
+nethserver-ntopng
+nethserver-unixODBC
+nethserver-vsftpd
+nethserver-dnsmasq
+nethserver-nut
+nethserver-collectd
+nethserver-phonehome
+nethserver-net-snmp
+nethserver-duc
+nethserver-mysql
