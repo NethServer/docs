@@ -245,5 +245,6 @@ def setup(app):
         while line:
             url = "https://raw.githubusercontent.com/NethServer/%s/master/README.rst" % line
             urllib.urlretrieve(url, line+".rst")
+            print "Downloading %s: %s" % (line, url)
             line = fp.readline().strip()
     fp.close()
