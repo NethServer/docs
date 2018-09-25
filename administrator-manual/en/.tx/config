@@ -333,3 +333,9 @@ source_file = _build/locale/team_chat.pot
 source_lang = en
 type = PO
 
+[docs-v7.dedalo]
+file_filter = locale/<lang>/LC_MESSAGES/dedalo.po
+source_file = _build/locale/dedalo.pot
+source_lang = en
+type = PO
+
