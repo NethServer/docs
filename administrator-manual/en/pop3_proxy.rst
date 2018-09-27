@@ -5,12 +5,12 @@
 POP3 proxy
 ==========
 
-.. warning::
+.. note::
 
     Since |product| 7.5.1804 new :ref:`email-section`,
     :ref:`pop3_connector-section` and :ref:`pop3_proxy-section` installations
-    are based on the Rspamd filter engine. Previous |product| installations can
-    be manually upgraded to Rspamd as described in :ref:`email2-section`
+    are based on the Rspamd filter engine. Previous |product| installations are
+    automatically upgraded to Rspamd as described in :ref:`email2-section`
 
 A user on the LAN can configure an email client 
 in order to connect to an external POP3 server and download mail messages. 
