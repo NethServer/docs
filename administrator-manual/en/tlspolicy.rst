@@ -24,18 +24,23 @@ This policy restricts the TLS settings of the default Ejabberd configuration.
 It applies only to Ejabberd version 18 and greater.
 
 Ejabberd (XMPP)
-    * Reference https://blog.process-one.net/securing-ejabberd-with-tls-encryption/
-    * Only TLSv1.2 is accepted
+    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * Disabled SSLv3 and TLSv1.0
+    * Cipher server priority
+    * ECC certificate
     * Ciphers suite ::
 
-        ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305
-        ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256
-        ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
+        ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:+CAMELLIA256:+AES256:+CAMELLIA128:+AES128:+SSLv3:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!DSS:!RC4:!SEED:CAMELLIA256-SHA:AES256-SHA:CAMELLIA128-SHA:AES128-SHA
 
 Policy 2018-06-21
 -----------------
 
-This policy extends ``2018-03-30`` by adding the support for ECC certificates.
+This policy extends ``2018-03-30`` by adding the support for ECC certificates to
+
+* Apache
+* Dovecot
+* OpenSSH
+* Postfix
 
 Slapd (openldap-servers)
     * Reference https://access.redhat.com/articles/1474813
