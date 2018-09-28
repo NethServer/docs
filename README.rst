@@ -2,22 +2,23 @@
 NethServer documentation
 ========================
 
-Sphinx documentation sources for www.nethserver.org_.
+Sphinx documentation sources for docs.nethserver.org_.
 
-You can find a directory for each available language.
-Inside each language directory there are some specials files:
+The docs sources are under ``administrator-manual/en/`` directory.  You can find
+only English (en) here because translated paragraphs are handled by Transifex.
+Under the same directory there are some specials files:
 
 * conf.py: Sphinx configuration
 * Makefile: Sphinx build makefile
 * index.rst: document structure
 
-All other .rst files are chapters of the manual. 
-If you wish to add a new chapter, create a new file and add it to the index.rst file.
+All other ``.rst`` files are chapters of the manual.  If you wish to add a new
+chapter, create a new file and add it to the index.rst file.
 
 Documentation available here:
 
-* Administrator manual (English and Italian): http://docs.nethserver.org
-* Developer manual (English only): http://docs.nethserver.org/projects/nethserver-devel
+* Administrator manual: http://docs.nethserver.org
+* Developer manual: http://docs.nethserver.org/projects/nethserver-devel
 
 .. _www.nethserver.org: http://www.nethserver.org
 
@@ -28,16 +29,16 @@ The easiest way to contribute is by forking and editing the repository
 directly on GitHub:
 
 * Create a GitHub account if you don't already have it
-* Go to https://github.com/nethesis/nethserver-docs and fork the project
+* Go to https://github.com/NethServer/docs and fork the project
 * You can now edit any page using GitHub web interface and see a live preview of the output
 * When you're done, simply create a new pull request
 * A new automatic build is launched after the pull request is merged by a developer
 
-You can also use the traditional way by cloning nethserver-docs 
-repository (https://github.com/nethesis/nethserver-docs ) to your 
+You can also use the traditional way by cloning the ``docs``
+repository (https://github.com/nethesis/nethserver-docs ) to your
 machine and sending patches to the mailing list.
 
-While editing, please follow below guidelines.
+While editing, please follow the guidelines below.
 
 Editing guidelines
 ------------------
@@ -231,18 +232,4 @@ resources to Transifex by manually editing ``.tx/config``.
 Upgrading developer manual
 ==========================
 
-Developer manual is built using files from this repository
-and READMEs files from other github repositories.
-
-To update the developer manual follow these steps:
-
-* Checkout this repository and move to developer-manual directory
-* If needed, add the name of new github repositories inside the ``modules`` file
-* Execute ``pull-modules`` script
-* Try to build the manual: ::
-
-   make html
-
-* After fixing errors and warnings, commit the changes
-
-
+Developer manual is now hosted at https://github.com/NethServer/dev
