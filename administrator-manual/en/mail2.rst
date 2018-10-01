@@ -6,35 +6,29 @@ Email module transition to Rspamd
 
 Since |product| 7.5.1804 new :ref:`email-section`, :ref:`pop3_connector-section`
 and :ref:`pop3_proxy-section` installations are based on the Rspamd [#RSPAMD]_
-filter engine. Previous |product| installations can be manually upgraded to
-Rspamd as described by this section.
+filter engine.
 
-New configuration features, specific to Rspamd-based implementation, are now
-documented in :ref:`email-section`. Here is a brief list:
+* Previous |product| installations are automatically upgraded to
+  Rspamd as described by this section.
 
-* DKIM signature
-* Rspamd web UI
-* Greylist threshold [#GREY]_
+* New configuration features, specific to the Rspamd-based implementation, are
+  documented in :ref:`email-section`. Here is a brief list:
+
+    * DKIM signature
+    * Rspamd web UI
+    * Greylist threshold [#GREY]_
 
 Feature changes
 ===============
 
-.. warning::
-
-    There are some changes that must be considered when manually upgrading to
-    the new Email implementation based on Rspamd.
-
-    Since |product| 7.5.1804 a new installation has different default settings.
 
 Append a legal notice
 ---------------------
 
 The :guilabel:`Email > Domains > Append a legal note to sent messages` (also
 known as "Disclaimer") feature was split in a separate, optional package:
-``nethserver-mail2-disclaimer``. The upgrade procedures documented in this
-section install it for backward compatibility, however new installations should
-avoid it, as it relies on an old package [#ALTERMIME]_ that can be removed in
-future releases.
+``nethserver-mail2-disclaimer``. New installations should avoid it, as it relies
+on an old package [#ALTERMIME]_ that can be removed in future releases.
 
 .. index::
    pair: port; imap
@@ -84,85 +78,8 @@ from IP addresses` before upgrading.
 Upgrade procedures
 ==================
 
-It is possible to switch a running system to the new module, starting from
-the old **Email**, **SMTP proxy** and **POP3 connector** modules.
+Manual upgrade procedures are no longer needed: upgrade occurs automatically.
 
-Make sure the system is updated with the latest packages before running the
-upgrade procedure.
-
-.. only:: nscom
-
-    If something is wrong with ``rspamd``, please report the issue on
-    `community.nethserver.org <https://community.nethserver.org>`_.
-
-To switch an old mail server with ``amavisd-new`` filter engine to ``rspamd``
-run the upgrade commands reported on the following sections. It is possible
-to revert the upgrade too.
-
-From Email module
------------------
-
-Upgrade: ::
-
-    yum swap \
-        -- remove nethserver-mail-{common,disclaimer,filter,server} \
-        -- install nethserver-mail2-{common,disclaimer,filter,server}
-
-Revert upgrade: ::
-
-    yum swap \
-        -- install nethserver-mail-{common,disclaimer,filter,server} \
-        -- remove nethserver-mail2-{common,disclaimer,filter,server}
-
-From SMTP proxy module
-----------------------
-
-Upgrade: ::
-
-    yum swap \
-        -- remove nethserver-mail-{common,disclaimer,filter} \
-        -- install nethserver-mail2-{common,disclaimer,filter}
-
-Revert upgrade: ::
-
-    yum swap \
-        -- install nethserver-mail-{common,disclaimer,filter} \
-        -- remove nethserver-mail2-{common,disclaimer,filter}
-
-From POP3 connector module
---------------------------
-
-When upgrading, the POP3 connector settings of each account
-regarding :guilabel:`Check messages for SPAM` and :guilabel:`Check messages for
-virus` options are ignored and overridden by the new :guilabel:`Scan messages
-with email filter`.
-
-Upgrade: ::
-
-    yum swap \
-        -- remove nethserver-mail-{common,disclaimer,filter,server} nethserver-getmail nethserver-spamd \
-        -- install nethserver-mail2-{common,disclaimer,filter,server,getmail}
-
-Revert upgrade: ::
-
-    yum swap \
-        -- install nethserver-mail-{common,disclaimer,filter,server} nethserver-getmail \
-        -- remove nethserver-mail2-{common,disclaimer,filter,server,getmail}
-
-From POP3 proxy module
-----------------------
-
-Upgrade: ::
-
-    yum swap \
-        -- remove nethserver-mail-{common,disclaimer,filter} nethserver-p3scan nethserver-spamd \
-        -- install nethserver-mail2-{common,disclaimer,filter,p3scan}
-
-Revert upgrade: ::
-
-    yum swap \
-        -- install nethserver-mail-{common,disclaimer,filter} nethserver-p3scan nethserver-spamd \
-        -- remove nethserver-mail2-{common,disclaimer,filter,p3scan}
 
 .. rubric:: References
 
