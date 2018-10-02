@@ -78,7 +78,18 @@ from IP addresses` before upgrading.
 Upgrade procedures
 ==================
 
-Manual upgrade procedures are no longer needed: upgrade occurs automatically.
+Manual RPM upgrade procedures are no longer needed: upgrade occurs automatically.
+
+
+Bayesian rules DB upgrade
+-------------------------
+
+The old Bayesian rules database from amavisd (SpamAssassin) is not compatible
+with Rspamd. However existing messages in ``Junk`` (or ``junkmail``) mail
+folders can be issued to Rspamd to train its Bayesian rules database. Run the
+following command to start the training procedure: ::
+
+  curl https://raw.githubusercontent.com/NethServer/nethserver-mail/master/migration/bayes_training.sh | bash -s -
 
 
 .. rubric:: References
