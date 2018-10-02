@@ -402,7 +402,7 @@ adjusted under :guilabel:`Email > Filter > Anti spam`.
    SMTP-compliant MTA will attempt to deliver the deferred message again.
 
 2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
-   as spam** by adding the special header ``X-Spam-Flag: YES`` for specific
+   as spam** by adding the special header ``X-Spam: Yes`` for specific
    treatments, then it is delivered like other messages. As an alternative, the
    :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
    visible on the subject of the message, by prefixing the given string to the
