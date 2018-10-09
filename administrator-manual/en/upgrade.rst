@@ -161,6 +161,21 @@ will be converted to public shared mailboxes.
 The public shared folder will be automatically subscribed by all group members,
 but all messages will be marked as unread.
 
+TLS policy
+==========
+
+In |product| |version| the services configuration can adhere to
+:ref:`tlspolicy-section`.  Before upgrading, the network clients must be checked
+against the available policy identifiers.
+
+.. warning::
+
+    An old network client can fail to connect if its TLS ciphers are considered
+    invalid
+
+The policy identifier selected by the upgrade procedure depends on the |product|
+version and is documented in :ref:`release-notes-section`.
+
 Let's Encrypt
 =============
 
