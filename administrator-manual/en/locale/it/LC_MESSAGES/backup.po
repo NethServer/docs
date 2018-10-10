@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 12:31+0200\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -53,7 +53,7 @@ msgid ""
 "functional, a full data restore can be done even if the machine is already "
 "in production."
 msgstr ""
-"** Il backup della configurazione ** contiene solo i file di configurazione "
+"**Il backup della configurazione** contiene solo i file di configurazione "
 "del sistema. Lo scopo di questo tipo di backup è ripristinare rapidamente "
 "una macchina in caso di :ref:`disaster recovery <disaster-recovery-"
 "section>`. Quando la macchina è funzionate, è possibile eseguire un "
@@ -155,7 +155,7 @@ msgstr ""
 "Non aggiungere mai directory e file voluminosi al backup della "
 "configurazione."
 
-#: ../../backup.rst:59 ../../backup.rst:461
+#: ../../backup.rst:59 ../../backup.rst:465
 msgid "**Exclusion**"
 msgstr "**Esclusione**"
 
@@ -305,7 +305,7 @@ msgid ""
 msgstr ""
 "snapshot: crea un backup completo solo la prima volta, successivamente crea "
 "solo backup differenziali. Le istantanee possono essere eliminate e "
-"consolidate e è necessario un solo backup completo"
+"consolidate ed è necessario un solo backup completo"
 
 #: ../../backup.rst:110
 msgid "Engine"
@@ -485,11 +485,11 @@ msgid ""
 "WebDAV."
 msgstr ""
 "Quando si utilizza l'engine rsync, assicurarsi che il backend di "
-"destinazione supporti link simbolici e fisici. Si prega di notare che "
-"|product| non supporta collegamenti su condivisioni Samba per implicazioni "
-"di sicurezza. Inoltre i link simbolici non sono supportati su WebDAV."
+"destinazione supporti link simbolici e fisici. Si rammenta che |product| non"
+" supporta collegamenti su condivisioni Samba per implicazioni di sicurezza. "
+"Inoltre i link simbolici non sono supportati su WebDAV."
 
-#: ../../backup.rst:183 ../../backup.rst:451 ../../backup.rst:563
+#: ../../backup.rst:183 ../../backup.rst:451 ../../backup.rst:567
 msgid "Single backup"
 msgstr "Backup singolo"
 
@@ -593,7 +593,7 @@ msgstr ""
 "liberare spazio nella destinazione rimuovendo i dati generati dal vecchio "
 "engine."
 
-#: ../../backup.rst:226 ../../backup.rst:477 ../../backup.rst:595
+#: ../../backup.rst:226 ../../backup.rst:481 ../../backup.rst:599
 msgid "Multiple backups"
 msgstr "Backup multipli"
 
@@ -1022,7 +1022,16 @@ msgstr ""
 "Ad esempio, per eseguire il backup di un software installato nella directory"
 " :file:`/opt`, aggiungere la linea: ::"
 
-#: ../../backup.rst:463
+#: ../../backup.rst:462
+msgid ""
+"The same syntax applies to configuration backup. Modifications should be "
+"done inside the file :file:`/etc/backup-config.d/custom.include`."
+msgstr ""
+"La stessa sintassi si applica al backup della configurazione. Le modifiche "
+"dovranno essere incluse all'interno del file :file:`/etc/backup-"
+"config.d/custom.include`."
+
+#: ../../backup.rst:467
 msgid ""
 "If you wish to exclude a file or directory from data backup, add a line to "
 "the file :file:`/etc/backup-data.d/custom.exclude`."
@@ -1030,18 +1039,18 @@ msgstr ""
 "Se si desidera escludere una directory o un file dal backup dei dati, "
 "aggiungere una linea al file  :file:`/etc/backup-data.d/custom.exclude`."
 
-#: ../../backup.rst:465
+#: ../../backup.rst:469
 msgid ""
 "For example, to exclude all directories called *Download*, add this line: ::"
 msgstr ""
 "Ad esempio, per escludere dal backup tutte le directory chiamate *Download*,"
 " aggiungere la linea: ::"
 
-#: ../../backup.rst:469
+#: ../../backup.rst:473
 msgid "To exclude a mail directory called *test*, add this line: ::"
 msgstr "Per escludere una casella di posta *test*, aggiungere la riga: ::"
 
-#: ../../backup.rst:474
+#: ../../backup.rst:478
 msgid ""
 "The same syntax applies to configuration backup. Modifications should be "
 "done inside the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -1050,7 +1059,7 @@ msgstr ""
 "dovrebbero essere fatte all’interno del file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup.rst:479
+#: ../../backup.rst:483
 msgid ""
 "All multiple backups read the same configuration of the single backup, but "
 "the list of saved and excluded files can be customized using two special "
@@ -1060,15 +1069,15 @@ msgstr ""
 "singolo, ma l'elenco dei file salvati ed esclusi può essere personalizzato "
 "utilizzando due file speciali, dove ``name`` è il nome del backup multiplo:"
 
-#: ../../backup.rst:482
+#: ../../backup.rst:486
 msgid "``/etc/backup-data/<name>.include``"
 msgstr "``/etc/backup-data/<name>.include``"
 
-#: ../../backup.rst:483
+#: ../../backup.rst:487
 msgid "``/etc/backup-data/<name>.exclude``"
 msgstr "``/etc/backup-data/<name>.exclude``"
 
-#: ../../backup.rst:485
+#: ../../backup.rst:489
 msgid ""
 "Both files will override the list of included and excluded data set from the"
 " single backup. The accepted syntax is the same as the single backup (see "
@@ -1078,25 +1087,25 @@ msgstr ""
 "backup. La sintassi accettata è la stessa del backup singolo (vedere il "
 "paragrafo precedente)."
 
-#: ../../backup.rst:488
+#: ../../backup.rst:492
 msgid ""
 "For example, given a backup named ``mybackup1`` create the following files:"
 msgstr ""
 "Ad esempio, dato un backup chiamato ``mybackup1`` creare i seguenti file:"
 
-#: ../../backup.rst:490
+#: ../../backup.rst:494
 msgid ":file:`/etc/backup-data/mybackup1.include`"
 msgstr ":file:`/etc/backup-data/mybackup1.include`"
 
-#: ../../backup.rst:491
+#: ../../backup.rst:495
 msgid ":file:`/etc/backup-data/mybackup1.exclude`"
 msgstr ":file:`/etc/backup-data/mybackup1.exclude`"
 
-#: ../../backup.rst:494
+#: ../../backup.rst:498
 msgid "Example"
 msgstr "Esempio"
 
-#: ../../backup.rst:496
+#: ../../backup.rst:500
 msgid ""
 "It's possible to configure the single backup to save all data and create a "
 "multiple backup which includes only the mail and is scheduled each our."
@@ -1105,32 +1114,32 @@ msgstr ""
 "creare un backup multiplo addizionale che include solo le email e viene "
 "eseguito ogni ora."
 
-#: ../../backup.rst:499
-msgid "Configure the new ``mymai1backup``: ::"
-msgstr "Configura il nuovo ``mymai1backup``: ::"
+#: ../../backup.rst:503
+msgid "Configure the new ``mymailbackup``: ::"
+msgstr "Configurare il nuovo backup ``mymailbackup``: ::"
 
-#: ../../backup.rst:504
+#: ../../backup.rst:508
 msgid "Create a custom include containing only the mail directory: ::"
 msgstr ""
 "Creare un file include custom contenente solo la directory delle email: ::"
 
-#: ../../backup.rst:508
+#: ../../backup.rst:512
 msgid "Create an empty custom exclude file: ::"
 msgstr "Creare un file exclude custom vuoto: ::"
 
-#: ../../backup.rst:512
+#: ../../backup.rst:516
 msgid "Apply the configuration: ::"
 msgstr "Applicare la configurazione: ::"
 
-#: ../../backup.rst:517
+#: ../../backup.rst:521
 msgid "Make sure not to leave empty lines inside edited files."
 msgstr "Assicurarsi di non lasciare linee vuote nei file modificati."
 
-#: ../../backup.rst:524
+#: ../../backup.rst:528
 msgid "Selective restore of files"
 msgstr "Ripristino selettivo dei file"
 
-#: ../../backup.rst:526
+#: ../../backup.rst:530
 msgid ""
 "Make sure that backup destination is reachable (for example, the USB disk "
 "must be connected)."
@@ -1138,7 +1147,7 @@ msgstr ""
 "Assicurarsi che la destinazione del backup sia raggiungibile (ad esempio, il"
 " disco USB deve essere collegato)."
 
-#: ../../backup.rst:529
+#: ../../backup.rst:533
 msgid ""
 "In the :guilabel:`Restore files` menu section it is possible to search, "
 "select and restore one or more directories from the backup, navigating the "
@@ -1148,7 +1157,7 @@ msgstr ""
 " ripristinare una o più directory dal backup, navigando tutti i percorsi "
 "inclusi nel backup nell'albero grafico."
 
-#: ../../backup.rst:533
+#: ../../backup.rst:537
 msgid ""
 "By default, the latest backup tree is shown. If you want to restore a file "
 "from a previous backup, select the backup date from :guilabel:`Backup File` "
@@ -1158,11 +1167,11 @@ msgstr ""
 "recente. Se si desidera ripristinare un file da un backup precedente, "
 "selezionare la data di backup dal selettore :guilabel:`Backup file`."
 
-#: ../../backup.rst:536
+#: ../../backup.rst:540
 msgid "There are two options when restoring:"
 msgstr "Sono disponibili due opzioni in fase di ripristino:"
 
-#: ../../backup.rst:538
+#: ../../backup.rst:542
 msgid ""
 "Restore files in the original path, the current files in the filesystem are "
 "overwritten by the restored files from backup"
@@ -1170,7 +1179,7 @@ msgstr ""
 "Ripristina i file nel percorso originale, i file correnti nel filesystem "
 "vengono sovrascritti dai file ripristinati dal backup"
 
-#: ../../backup.rst:541
+#: ../../backup.rst:545
 msgid ""
 "Restore files in original path but the restored files from backup are moved "
 "to a new directory (the files are not overwritten) in this path: ::"
@@ -1179,7 +1188,7 @@ msgstr ""
 "vengono spostati in una nuova directory (i file non vengono sovrascritti) in"
 " questo percorso: ::"
 
-#: ../../backup.rst:546
+#: ../../backup.rst:550
 msgid ""
 "To use the search field, simply insert at least 3 chars and the searching "
 "starts automatically, highlighting the matched directories."
@@ -1188,7 +1197,7 @@ msgstr ""
 "caratteri e la ricerca inizia automaticamente evidenziando le directory "
 "corrispondenti."
 
-#: ../../backup.rst:549
+#: ../../backup.rst:553
 msgid ""
 "It is possible to restore the directories by clicking on the **Restore** "
 "button."
@@ -1196,36 +1205,36 @@ msgstr ""
 "È possibile ripristinare le directory facendo clic sul pulsante "
 "**Ripristina**."
 
-#: ../../backup.rst:551
+#: ../../backup.rst:555
 msgid "Multiple selection can be done with :kbd:`Ctrl` key pressed."
 msgstr ""
 "E' possibile effettuare una selezione multipla mantenendo premuto il tasto "
 ":kbd:`Ctrl`."
 
-#: ../../backup.rst:554
+#: ../../backup.rst:558
 msgid "Command line procedure"
 msgstr "Procedura da riga di comando"
 
-#: ../../backup.rst:556
+#: ../../backup.rst:560
 msgid ""
 "All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
 msgstr ""
 "Tutti i dati sono sono posizionati nella directory "
 ":file:`/var/lib/nethserver/` :"
 
-#: ../../backup.rst:558
+#: ../../backup.rst:562
 msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
 msgstr "Cartelle di posta: :file:`/var/lib/nethserver/vmail/<user>`"
 
-#: ../../backup.rst:559
+#: ../../backup.rst:563
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
 msgstr "Cartelle condivise: :file:`/var/lib/nethserver/ibay/<name>`"
 
-#: ../../backup.rst:560
+#: ../../backup.rst:564
 msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
 msgstr "Home utenti: :file:`/var/lib/nethserver/home/<user>`"
 
-#: ../../backup.rst:565
+#: ../../backup.rst:569
 msgid ""
 "It is possible to list all files inside the last backup using this command: "
 "::"
@@ -1233,62 +1242,62 @@ msgstr ""
 "E' possibile elencare tutti i file all'interno dell'ultimo backup "
 "utilizzando il comando: ::"
 
-#: ../../backup.rst:569
+#: ../../backup.rst:573
 msgid "The command can take some time depending on the backup size."
 msgstr ""
 "L'esecuzione del comando può richiedere del tempo a seconda delle dimensioni"
 " del backup."
 
-#: ../../backup.rst:571
+#: ../../backup.rst:575
 msgid "To restore a file/directory, use the command: ::"
 msgstr "Dopo aver individuato il file da ripristinare, usare il comando:"
 
-#: ../../backup.rst:575
+#: ../../backup.rst:579
 msgid "Example, restore *test* mail account to :file:`/tmp` directory: ::"
 msgstr ""
 "Esempio, ripristinare nella directory :file:`/tmp` la cartella di posta "
 "*test*: ::"
 
-#: ../../backup.rst:579
+#: ../../backup.rst:583
 msgid "Example, restore *test* mail account to original position: ::"
 msgstr ""
 "Esempio, ripristinare la cartella di posta *test* nella posizione originale:"
 " ::"
 
-#: ../../backup.rst:584
+#: ../../backup.rst:588
 msgid "The system can restore a previous version of directory (or file)."
 msgstr ""
 "Il sistema supporta la possibilità di ripristinare directory (o file) ad una"
 " versione precedente rispetto all’ultimo backup."
 
-#: ../../backup.rst:586
+#: ../../backup.rst:590
 msgid "Example, restore the version of a file from 15 days ago: ::"
 msgstr "Esempio, ripristinare un file alla versione di 15 giorni fa: ::"
 
-#: ../../backup.rst:590
+#: ../../backup.rst:594
 msgid ""
 "The ``-t`` option allows to specify the number of days (15 in this "
 "scenario). When used with snapshot-based engines, the ``-t`` option requires"
 " the name of the snapshot to restore."
 msgstr ""
-"L'opzione `` -t`` consente di specificare il numero di giorni (15 in questo "
+"L'opzione ``-t`` consente di specificare il numero di giorni (15 in questo "
 "scenario). Quando viene utilizzato con engine basati su snapshot, l'opzione "
-"`` -t`` richiede il nome dello snapshot da ripristinare."
+"``-t`` richiede il nome dello snapshot da ripristinare."
 
-#: ../../backup.rst:597
+#: ../../backup.rst:601
 msgid "To list data inside a multiple backup, use: ::"
 msgstr "Per elencare i dati all'interno di un backup multiplo, utilizzare: ::"
 
-#: ../../backup.rst:601
+#: ../../backup.rst:605
 msgid "To restore all data in the original location, use: ::"
 msgstr ""
 "Per ripristinare tutti i dati nella posizione originale, utilizzare: ::"
 
-#: ../../backup.rst:605
+#: ../../backup.rst:609
 msgid "To restore a file or directory, use: ::"
 msgstr "Per ripristinare un file o una directory, utilizzare: ::"
 
-#: ../../backup.rst:609
+#: ../../backup.rst:613
 msgid ""
 "When you are using *CIFS* to access the share, and the command doesn't work "
 "as expected, verify that user and password for the network share are "
@@ -1303,11 +1312,11 @@ msgstr ""
 "NT_STATUS_LOGON_FAILURE. Allo stesso tempo il comando backup-data-list non "
 "andrà a buon fine e uscirà immediatamente riportando degli errori."
 
-#: ../../backup.rst:618
+#: ../../backup.rst:622
 msgid "USB disk configuration"
 msgstr "Configurazione disco USB"
 
-#: ../../backup.rst:620
+#: ../../backup.rst:624
 msgid ""
 "The best filesystem for USB backup disks is EXT3 or EXT4. FAT filesystem is "
 "supported but *not recommended*, while NTFS is **not supported**. EXT3 or "
@@ -1317,7 +1326,7 @@ msgstr ""
 "FAT è supportato ma *non raccomandato*, mentre NTFS **non è supportato**. "
 "EXT3 o EXT4 è obbligatorio per il engine rsync."
 
-#: ../../backup.rst:623
+#: ../../backup.rst:627
 msgid ""
 "Before formatting the disk, attach it to the server and find the device "
 "name: ::"
@@ -1325,19 +1334,19 @@ msgstr ""
 "Per eseguire la formattazione, è necessario collegare il disco e "
 "identificarlo correttamente: ::"
 
-#: ../../backup.rst:644
+#: ../../backup.rst:648
 msgid "Another good command could be: ::"
 msgstr "Un altro buon comando da utilizzare può essere: ::"
 
-#: ../../backup.rst:648
+#: ../../backup.rst:652
 msgid "In this scenario, the disk is accessibile as *sdc* device."
 msgstr "In questo esempio, il disco è stato riconosciuto come device *sdc*."
 
-#: ../../backup.rst:650
+#: ../../backup.rst:654
 msgid "Create a Linux partition on the whole disk: ::"
 msgstr "Creare una unica partizione Linux sull’intero disco sdc: ::"
 
-#: ../../backup.rst:654
+#: ../../backup.rst:658
 msgid ""
 "Create the filesystem on *sdc1* partition with a label named *backup*. The "
 "filesystem should be tuned on the backup engine used: rsync and restic "
@@ -1349,25 +1358,25 @@ msgstr ""
 "usato: rsync e restic richiedono molti inode, duplicity ha prestazioni "
 "migliori su file system ottimizzati per file di grandi dimensioni."
 
-#: ../../backup.rst:658
+#: ../../backup.rst:662
 msgid "For duplicity use: ::"
 msgstr "Per duplicity usare: ::"
 
-#: ../../backup.rst:662
+#: ../../backup.rst:666
 msgid "For rsync and restic use: ::"
 msgstr "Per rsync e restic usare: ::"
 
-#: ../../backup.rst:666
+#: ../../backup.rst:670
 msgid "Detach and reconnect the USB disk:"
 msgstr "Scollegare e ricollegare il disco USB:"
 
-#: ../../backup.rst:668
+#: ../../backup.rst:672
 msgid "You can simulate it with the following command: ::"
 msgstr ""
 "E’ possibile utilizzare il comando seguente per simulare il collegamento del"
 " disco: ::"
 
-#: ../../backup.rst:672
+#: ../../backup.rst:676
 msgid ""
 "Now the *backup* label will be displayed inside the :guilabel:`Backup "
 "(data)` page."
@@ -1375,11 +1384,11 @@ msgstr ""
 "A questo punto la voce *backup* sarà selezionabile dalla pagina "
 ":guilabel:`Backup (data)`."
 
-#: ../../backup.rst:678
+#: ../../backup.rst:682
 msgid "Disaster recovery"
 msgstr "Disaster recovery"
 
-#: ../../backup.rst:680
+#: ../../backup.rst:684
 msgid ""
 "The system is restored in two phases: configuration first, then data. Right "
 "after configuration restore, the system is ready to be used if the proper "
@@ -1393,29 +1402,29 @@ msgstr ""
 "installare pacchetti aggiuntivi prima o dopo il ripristino. Ad esempio, se "
 "il server di posta è installato, il sistema può inviare e ricevere posta."
 
-#: ../../backup.rst:685
+#: ../../backup.rst:689
 msgid "Other restored configurations:"
 msgstr "Altre configurazioni ripristinate:"
 
-#: ../../backup.rst:687
+#: ../../backup.rst:691
 msgid "Users and groups"
 msgstr "Utenti e gruppi"
 
-#: ../../backup.rst:688
+#: ../../backup.rst:692
 msgid "SSL certificates"
 msgstr "Certificati SSL"
 
-#: ../../backup.rst:690
+#: ../../backup.rst:694
 msgid "The root/admin password is not restored."
 msgstr ""
 "La password di root/admin non viene ripristinata, verrà mantenuta quella "
 "impostata nel nuovo sistema."
 
-#: ../../backup.rst:692
+#: ../../backup.rst:696
 msgid "Steps to be executed:"
 msgstr "I passi da eseguire sono:"
 
-#: ../../backup.rst:694
+#: ../../backup.rst:698
 msgid ""
 "Install the new machine. If possible, enable a network connection at boot "
 "(refer to :ref:`installation-manual` section) to automatically re-install "
@@ -1425,7 +1434,7 @@ msgstr ""
 "all'avvio (fare riferimento alla sezione: ref:`installation-manual`) per "
 "reinstallare automaticamente i moduli richiesti"
 
-#: ../../backup.rst:698
+#: ../../backup.rst:702
 msgid ""
 "Access the Server Manager and follow the :ref:`first-configuration-wizard-"
 "section` procedure"
@@ -1433,7 +1442,7 @@ msgstr ""
 "Accedere al Server Manager e seguire la procedura :ref:`first-configuration-"
 "wizard-section`"
 
-#: ../../backup.rst:700
+#: ../../backup.rst:704
 msgid ""
 "At step :guilabel:`Restore configuration`, upload the configuration archive."
 " The option :guilabel:`Download modules automatically` should be enabled."
@@ -1442,7 +1451,7 @@ msgstr ""
 "configurazione. L'opzione :guilabel:`Scarica automaticamente moduli` può "
 "essere abilitata."
 
-#: ../../backup.rst:703
+#: ../../backup.rst:707
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
@@ -1450,15 +1459,15 @@ msgstr ""
 "Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi :ref"
 ":`restore-roles-section`"
 
-#: ../../backup.rst:706
+#: ../../backup.rst:710
 msgid "Verify the system is functional"
 msgstr "Verificare che la macchina sia funzionante"
 
-#: ../../backup.rst:708
+#: ../../backup.rst:712
 msgid "Restore data backup executing on the console ::"
 msgstr "Ripristinare il backup dei dati eseguendo dalla console ::"
 
-#: ../../backup.rst:712
+#: ../../backup.rst:716
 msgid ""
 "Please note that the disaster recovery should be always performed from a "
 "local media (eg. NFS or USB) to speed up the process."
@@ -1466,11 +1475,11 @@ msgstr ""
 "Si noti che il disater recovery dovrebbe essere sempre eseguito da un "
 "supporto locale (ad esempio NFS o USB) per velocizzare il processo."
 
-#: ../../backup.rst:717
+#: ../../backup.rst:721
 msgid "Restore network roles"
 msgstr "Assegnamento delle interfacce di rete"
 
-#: ../../backup.rst:719
+#: ../../backup.rst:723
 msgid ""
 "If a role configuration points to a missing network interface, the "
 ":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
@@ -1482,20 +1491,20 @@ msgstr ""
 ":guilabel:`Network` mostrano un avviso. Questo può accadere per esempio nei "
 "seguenti casi:"
 
-#: ../../backup.rst:724
+#: ../../backup.rst:728
 msgid "configuration backup has been restored on a new hardware"
 msgstr ""
 "dopo il ripristino del backup della configurazione su un nuovo hardware"
 
-#: ../../backup.rst:725
+#: ../../backup.rst:729
 msgid "one or more network cards have been substituted"
 msgstr "una o più schede di rete sono state sostituite"
 
-#: ../../backup.rst:726
+#: ../../backup.rst:730
 msgid "system disks are moved to a new machine"
 msgstr "i dischi del sistema sono stati spostati su una nuova macchina"
 
-#: ../../backup.rst:728
+#: ../../backup.rst:732
 msgid ""
 "The warning points to a page that lists the network cards present in the "
 "system, highlighting those not having an assigned :ref:`role <network-"
@@ -1507,7 +1516,7 @@ msgstr ""
 "section>` assegnato. Per ogni scheda di questo tipo, un menù a discesa "
 "mostra i ruoli da assegnare."
 
-#: ../../backup.rst:733
+#: ../../backup.rst:737
 msgid ""
 "For instance, if a card with the *orange* role has been replaced, the drop "
 "down menu will list an element ``orange``, near the new network card."
@@ -1516,7 +1525,7 @@ msgstr ""
 "discesa elencherà un elemento ``orange`` in corrispondenza della nuova "
 "scheda di rete."
 
-#: ../../backup.rst:737
+#: ../../backup.rst:741
 msgid ""
 "The same applies if the old card was a component of a logical interface, "
 "such as a bridge or bond."
@@ -1524,7 +1533,7 @@ msgstr ""
 "Lo stesso accade se la vecchia scheda era il componente di una interfaccia "
 "logica, come un bridge o un bond."
 
-#: ../../backup.rst:740
+#: ../../backup.rst:744
 msgid ""
 "By picking an element from the drop down menu, the old role is transferred "
 "to the new physical interface."
@@ -1532,12 +1541,12 @@ msgstr ""
 "Selezionando un elemento dal menù a discesa, le impostazioni del ruolo sono "
 "trasferiti alla nuova scheda."
 
-#: ../../backup.rst:743
+#: ../../backup.rst:747
 msgid "Click the :guilabel:`Submit` button to apply the changes."
 msgstr ""
 "Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate."
 
-#: ../../backup.rst:745
+#: ../../backup.rst:749
 msgid ""
 "Choose carefully the new interfaces assignment: doing a mistake here could "
 "lead to a system isolated from the network!"
@@ -1545,7 +1554,7 @@ msgstr ""
 "Assegnare con attenzione i ruoli alle nuove interfacce. Un errore può "
 "portare ad un sistema isolato dalla rete."
 
-#: ../../backup.rst:748
+#: ../../backup.rst:752
 msgid ""
 "If the missing role is ``green`` an automatic procedure attempts to fix the "
 "configuration at boot-time, to ensure a minimal network connectivity and "

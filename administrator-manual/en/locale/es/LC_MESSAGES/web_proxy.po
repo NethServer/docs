@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../web_proxy.rst:12 ../../web_proxy.rst:15
+#: ../../web_proxy.rst:5
 msgid "Web proxy"
 msgstr "Proxy web"
 
-#: ../../web_proxy.rst:15 ../../web_proxy.rst:18
+#: ../../web_proxy.rst:8
 msgid ""
 "The :index:`web proxy` is a server that sits between the LAN PCs and "
 "Internet sites. Clients make requests to the proxy which communicates with "
@@ -39,39 +39,39 @@ msgstr ""
 " los sitios de Internet. Los clientes hacen peticiones al proxy que se "
 "comunica con sitios externos y luego envían la respuesta al cliente."
 
-#: ../../web_proxy.rst:19 ../../web_proxy.rst:22
+#: ../../web_proxy.rst:12
 msgid "The advantages of a web proxy are:"
 msgstr "Las ventajas de un proxy web son:"
 
-#: ../../web_proxy.rst:21 ../../web_proxy.rst:24
+#: ../../web_proxy.rst:14
 msgid "ability to filter content"
 msgstr "capacidad de filtrar contenido"
 
-#: ../../web_proxy.rst:22 ../../web_proxy.rst:25
+#: ../../web_proxy.rst:15
 msgid "reduce bandwidth usage by caching the pages you visit"
 msgstr ""
 "reducir el uso del ancho de banda mediante el almacenamiento en caché de las"
 " páginas que visita"
 
-#: ../../web_proxy.rst:25 ../../web_proxy.rst:28
+#: ../../web_proxy.rst:18
 msgid ""
 "The proxy can be enabled only on green and blue zones. Supported modes are:"
 msgstr ""
 "El proxy sólo se puede activar en zonas verdes y azules. Los modos admitidos"
 " son:"
 
-#: ../../web_proxy.rst:28 ../../web_proxy.rst:31
+#: ../../web_proxy.rst:21
 msgid "Manual: all clients must be configured manually"
 msgstr "Manual: todos los clientes deben configurarse manualmente"
 
-#: ../../web_proxy.rst:29 ../../web_proxy.rst:32
+#: ../../web_proxy.rst:22
 msgid ""
 "Authenticated users must enter a user name and password in order to navigate"
 msgstr ""
 "Los usuarios autenticados deben ingresar un nombre de usuario y una "
 "contraseña para navegar"
 
-#: ../../web_proxy.rst:30 ../../web_proxy.rst:33
+#: ../../web_proxy.rst:23
 msgid ""
 "Transparent: all clients are automatically forced to use the proxy for HTTP "
 "connections"
@@ -79,7 +79,7 @@ msgstr ""
 "Transparente: todos los clientes se ven obligados automáticamente a usar el "
 "proxy para las conexiones HTTP"
 
-#: ../../web_proxy.rst:31 ../../web_proxy.rst:34
+#: ../../web_proxy.rst:24
 msgid ""
 "Transparent SSL: all clients are automatically forced to use the proxy for "
 "HTTP and HTTPS connections"
@@ -87,17 +87,17 @@ msgstr ""
 "SSL transparente: todos los clientes se obligan automáticamente a utilizar "
 "el proxy para las conexiones HTTP y HTTPS"
 
-#: ../../web_proxy.rst:34 ../../web_proxy.rst:37
+#: ../../web_proxy.rst:27
 msgid "Authenticated mode"
 msgstr ""
 
-#: ../../web_proxy.rst:36 ../../web_proxy.rst:39
+#: ../../web_proxy.rst:29
 msgid ""
 "Before enabling the web proxy in authenticated mode, please make sure to "
 "configure a local or remote account provider."
 msgstr ""
 
-#: ../../web_proxy.rst:39 ../../web_proxy.rst:42
+#: ../../web_proxy.rst:32
 msgid ""
 "When Samba Active Directory is installed, or the server is joined to a "
 "remote Active Directory, Windows machines can use integrated authentication "
@@ -105,19 +105,19 @@ msgid ""
 "the FQDN."
 msgstr ""
 
-#: ../../web_proxy.rst:43 ../../web_proxy.rst:46
+#: ../../web_proxy.rst:36
 msgid "All other clients can use basic authentication mechanism."
 msgstr ""
 
-#: ../../web_proxy.rst:45 ../../web_proxy.rst:48
+#: ../../web_proxy.rst:38
 msgid "NTLM authentications is deprecated and it's not supported."
 msgstr ""
 
-#: ../../web_proxy.rst:48 ../../web_proxy.rst:51
+#: ../../web_proxy.rst:41
 msgid "Client configuration"
 msgstr "Configuración del cliente"
 
-#: ../../web_proxy.rst:50 ../../web_proxy.rst:53
+#: ../../web_proxy.rst:43
 msgid ""
 "The proxy is always listening on port **3128**. When using manual or "
 "authenticated modes, all clients must be explicitly configured to use the "
@@ -134,7 +134,7 @@ msgstr ""
 "es útil habilitar la opción :guilabel:`Bloquear puertos HTTP y HTTPS` para "
 "evitar el bypass de proxy."
 
-#: ../../web_proxy.rst:56 ../../web_proxy.rst:59
+#: ../../web_proxy.rst:49
 msgid ""
 "If the proxy is installed in transparent mode, all web traffic coming from "
 "clients is diverted through the proxy. No configuration is required on "
@@ -144,7 +144,7 @@ msgstr ""
 "procedente de clientes se desvía a través del proxy. No se requiere "
 "configuración en los clientes individuales."
 
-#: ../../web_proxy.rst:59 ../../web_proxy.rst:62
+#: ../../web_proxy.rst:52
 msgid ""
 "To make the WPAD file accessible from guest network, add the address of blue"
 " network inside the :guilabel:`Allow hosts` field for httpd service from the"
@@ -154,11 +154,11 @@ msgstr ""
 " dirección de la red azul dentro del campo :guilabel:`Permitir hosts` para "
 "el servicio httpd desde la página :guilabel:` Servicios de red`."
 
-#: ../../web_proxy.rst:65 ../../web_proxy.rst:68
+#: ../../web_proxy.rst:58
 msgid "SSL Proxy"
 msgstr "Proxy SSL"
 
-#: ../../web_proxy.rst:67 ../../web_proxy.rst:70
+#: ../../web_proxy.rst:60
 msgid ""
 "In transparent SSL mode, the proxy implements the so-called \"peek and "
 "splice\" behavior: it establishes the SSL connection with remote sites and "
@@ -166,23 +166,18 @@ msgid ""
 " server can filter requested URLs using the web filter and return back the "
 "response to the client."
 msgstr ""
-"En el modo SSL transparente, el proxy implementa el llamado comportamiento "
-"\"mirar y empalmar, peek and splice\": establece la conexión SSL con sitios "
-"remotos y comprueba la validez de los certificados sin descifrar el tráfico."
-" A continuación, el servidor puede filtrar las URL solicitadas utilizando el"
-" filtro web y devolver la respuesta al cliente."
 
-#: ../../web_proxy.rst:72 ../../web_proxy.rst:75
+#: ../../web_proxy.rst:65
 msgid ""
 "There is no need to install any certificate into the clients, just enabling "
 "the SSL proxy is enough."
 msgstr ""
 
-#: ../../web_proxy.rst:76 ../../web_proxy.rst:79
+#: ../../web_proxy.rst:69
 msgid "Bypass"
 msgstr "Bypass"
 
-#: ../../web_proxy.rst:78 ../../web_proxy.rst:81
+#: ../../web_proxy.rst:71
 msgid ""
 "In some cases it may be necessary to ensure that traffic originating from "
 "specific IP or destined to some sites it's not routed through the HTTP/HTTPS"
@@ -192,73 +187,73 @@ msgstr ""
 "de una dirección IP específica o destinado a algunos sitios no se enrute a "
 "través del proxy HTTP / HTTPS."
 
-#: ../../web_proxy.rst:81 ../../web_proxy.rst:84
+#: ../../web_proxy.rst:74
 msgid "The proxy allows you to create:"
 msgstr "El proxy le permite crear: "
 
-#: ../../web_proxy.rst:83 ../../web_proxy.rst:86
+#: ../../web_proxy.rst:76
 msgid "bypass by domains"
 msgstr ""
 
-#: ../../web_proxy.rst:84 ../../web_proxy.rst:87
+#: ../../web_proxy.rst:77
 msgid "bypass by source"
 msgstr ""
 
-#: ../../web_proxy.rst:85 ../../web_proxy.rst:88
+#: ../../web_proxy.rst:78
 msgid "bypass by destination"
 msgstr ""
 
-#: ../../web_proxy.rst:88 ../../web_proxy.rst:91
+#: ../../web_proxy.rst:81
 msgid "Bypass by domains"
 msgstr ""
 
-#: ../../web_proxy.rst:90 ../../web_proxy.rst:93
+#: ../../web_proxy.rst:83
 msgid ""
 "Bypass by domains can be configured from :guilabel:`Domains without proxy` "
 "section. All domains listed inside this page can be directly accessed from "
 "LAN clients. No antivirus or content filtering is applied to these domains."
 msgstr ""
 
-#: ../../web_proxy.rst:94 ../../web_proxy.rst:97
+#: ../../web_proxy.rst:87
 msgid ""
 "Every domain listed will be expanded also for its own sub-domains. For "
 "example, adding *nethserver.org* will bypass also *www.nethserver.org*, "
 "*mirror.nethserver.org*, etc."
 msgstr ""
 
-#: ../../web_proxy.rst:97 ../../web_proxy.rst:100
+#: ../../web_proxy.rst:90
 msgid ""
 "All LAN clients must use the server itself as DNS, either directly or as a "
 "forwarder."
 msgstr ""
 
-#: ../../web_proxy.rst:100 ../../web_proxy.rst:103
+#: ../../web_proxy.rst:93
 msgid "Bypass by source and destinations"
 msgstr ""
 
-#: ../../web_proxy.rst:102 ../../web_proxy.rst:105
+#: ../../web_proxy.rst:95
 msgid ""
 "A source bypass allows direct access to any HTTP/HTTPS sites from selected "
 "hosts, host groups, IP ranges and network CIDR. Source bypasses are "
 "configurable from :guilabel:`Hosts without proxy` section."
 msgstr ""
 
-#: ../../web_proxy.rst:106 ../../web_proxy.rst:109
+#: ../../web_proxy.rst:99
 msgid ""
 "A destination bypass allows direct access from any LAN clients to HTTP/HTTPS"
 " sites hosted on specific hosts, host groups or network CIDR. Destination "
 "bypasses are configurable from :guilabel:`Sites without proxy` section."
 msgstr ""
 
-#: ../../web_proxy.rst:110 ../../web_proxy.rst:113
+#: ../../web_proxy.rst:103
 msgid "These bypass rules are also configured inside the WPAD file."
 msgstr ""
 
-#: ../../web_proxy.rst:113 ../../web_proxy.rst:116
+#: ../../web_proxy.rst:106
 msgid "Priority and divert rules"
 msgstr ""
 
-#: ../../web_proxy.rst:115 ../../web_proxy.rst:118
+#: ../../web_proxy.rst:108
 msgid ""
 "Firewall rules for routing traffic to a specific provider, or "
 "decrease/increase priority, are applied only to network traffic which "
@@ -266,88 +261,81 @@ msgid ""
 "the proxy because the traffic is generated from the gateway itself."
 msgstr ""
 
-#: ../../web_proxy.rst:118 ../../web_proxy.rst:121
+#: ../../web_proxy.rst:111
 msgid ""
 "In a scenario where the web proxy is enabled in transparent mode and the "
 "firewall contains a rule to lower the priority for a given host, the rule "
 "applies only to non-HTTP services like SSH."
 msgstr ""
 
-#: ../../web_proxy.rst:121 ../../web_proxy.rst:124
+#: ../../web_proxy.rst:114
 msgid ""
 "The :guilabel:`Rules` tab allows the creation of priority and divert rules "
 "also for the traffic intercepted by the proxy."
 msgstr ""
 
-#: ../../web_proxy.rst:124 ../../web_proxy.rst:127
+#: ../../web_proxy.rst:117
 msgid "The web interface allow the creation of rules for HTTP/S traffic to:"
 msgstr ""
 
-#: ../../web_proxy.rst:126 ../../web_proxy.rst:129
+#: ../../web_proxy.rst:119
 msgid "raise the priority of an host or network"
 msgstr ""
 
-#: ../../web_proxy.rst:127 ../../web_proxy.rst:130
+#: ../../web_proxy.rst:120
 msgid "lower the priority of an host or network"
 msgstr ""
 
-#: ../../web_proxy.rst:128 ../../web_proxy.rst:131
+#: ../../web_proxy.rst:121
 msgid ""
 "divert the source to a specific provider with automatic fail over if the "
 "provider fails"
 msgstr ""
 
-#: ../../web_proxy.rst:129 ../../web_proxy.rst:132
+#: ../../web_proxy.rst:122
 msgid "force the source to a specific provider without automatic fail over"
 msgstr ""
 
-#: ../../web_proxy.rst:132 ../../web_proxy.rst:135
+#: ../../web_proxy.rst:125
 msgid "Report"
 msgstr "Reporte"
 
-#: ../../web_proxy.rst:134 ../../web_proxy.rst:137
+#: ../../web_proxy.rst:127
 msgid ""
 "Install ``nethserver-lightsquid`` package to generate :index:`web proxy "
 "stats`."
 msgstr ""
-"Instale el paquete ``nethserver-lightsquid`` para generar "
-":index:`estadística proxy web`."
 
-#: ../../web_proxy.rst:136 ../../web_proxy.rst:139
+#: ../../web_proxy.rst:129
 msgid ""
 "LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs "
 "and generates new HTML report every day, summarizing browsing habits of the "
 "proxy's users. Lightsquid web interface can be found at the "
 ":guilabel:`Applications` tab inside the :guilabel:`Dashboard`."
 msgstr ""
-"LightSquid es un analizador lite y rápido del registro para el proxy del "
-"Squid, analiza registros y genera el nuevo informe del HTML diario, "
-"resumiendo hábitos que hojean de los usuarios del proxy. La interfaz web de "
-"Lightsquid se puede encontrar en la pestaña :guilabel:`Aplicaciones` dentro "
-"de :guilabel:` Dashboard`."
 
-#: ../../web_proxy.rst:140 ../../web_proxy.rst:143
+#: ../../web_proxy.rst:133
 msgid "Cache"
 msgstr "Cache"
 
-#: ../../web_proxy.rst:142 ../../web_proxy.rst:145
+#: ../../web_proxy.rst:135
 msgid ""
 "Under tab :guilabel:`Cache` there is a form to configure cache parameters:"
 msgstr ""
 "En la pestaña :guilabel:`Cache` hay un formulario para configurar los "
 "parámetros del caché:"
 
-#: ../../web_proxy.rst:144 ../../web_proxy.rst:147
+#: ../../web_proxy.rst:137
 msgid "The cache can be enabled or disabled (*disabled* by default)"
 msgstr "El caché puede ser activado o desactivado (*desactivado* por defecto)"
 
-#: ../../web_proxy.rst:145 ../../web_proxy.rst:148
+#: ../../web_proxy.rst:138
 msgid "**Disk cache size**: maximum value of squid cache on disk (in MB)"
 msgstr ""
 "**Tamaño de caché de disco**: valor máximo de caché de squid en disco (en "
 "MB)"
 
-#: ../../web_proxy.rst:146 ../../web_proxy.rst:149
+#: ../../web_proxy.rst:139
 msgid ""
 "**Min object size**: can be left at 0 to cache everything, but may be raised"
 " if small objects are not desired in the cache (in kB)"
@@ -356,7 +344,7 @@ msgstr ""
 "todo, pero puede ser elevado si no se desean objetos pequeños en la caché "
 "(en kB)"
 
-#: ../../web_proxy.rst:147 ../../web_proxy.rst:150
+#: ../../web_proxy.rst:140
 msgid ""
 "**Max object size**: objects larger than this setting will not be saved on "
 "disk. If speed is more desirable than saving bandwidth, this should be set "
@@ -366,19 +354,17 @@ msgstr ""
 "guardarán en el disco. Si la velocidad es más deseable que ahorrar ancho de "
 "banda, esto debería establecerse en un valor bajo (en kB)"
 
-#: ../../web_proxy.rst:149 ../../web_proxy.rst:152
+#: ../../web_proxy.rst:142
 msgid ""
 "The button :guilabel:`Empty cache` also works if squid is disabled, it might"
 " be useful to free space on disk."
 msgstr ""
-"El botón :guilabel:`Vaciar caché 'también funciona si el squid está "
-"deshabilitado, puede ser útil para liberar espacio en el disco."
 
-#: ../../web_proxy.rst:152 ../../web_proxy.rst:155
+#: ../../web_proxy.rst:145
 msgid "Sites without cache"
 msgstr "Sitios sin caché"
 
-#: ../../web_proxy.rst:154 ../../web_proxy.rst:157
+#: ../../web_proxy.rst:147
 msgid ""
 "Sometime the proxy can't correctly handle some bad crafted sites. To exclude"
 " one or more domain from the cache, use the ``NoCache`` property."
@@ -387,15 +373,15 @@ msgstr ""
 "diseñados. Para excluir uno o varios dominios de la caché, utilice la "
 "propiedad ``NoCache``."
 
-#: ../../web_proxy.rst:157 ../../web_proxy.rst:160
+#: ../../web_proxy.rst:150
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../web_proxy.rst:163 ../../web_proxy.rst:166
+#: ../../web_proxy.rst:156
 msgid "Safe ports"
 msgstr "Puertos seguros"
 
-#: ../../web_proxy.rst:165 ../../web_proxy.rst:168
+#: ../../web_proxy.rst:158
 msgid ""
 "Safe ports are a list of ports accessible using the proxy. If a port is not "
 "inside the safe port list, the proxy will refuse to contact the server. For "
@@ -408,7 +394,7 @@ msgstr ""
 "HTTP que se ejecuta en el puerto 1234, no se puede acceder al servidor "
 "mediante el proxy."
 
-#: ../../web_proxy.rst:169 ../../web_proxy.rst:172
+#: ../../web_proxy.rst:162
 msgid ""
 "The ``SafePorts`` property is a comma-separated list of ports. Listed ports "
 "will be added to the default list of safe ports."
@@ -416,6 +402,6 @@ msgstr ""
 "La propiedad ``SafePorts`` es una lista de puertos separados por comas. Los "
 "puertos listados se agregarán a la lista predeterminada de puertos seguros."
 
-#: ../../web_proxy.rst:172 ../../web_proxy.rst:175
+#: ../../web_proxy.rst:165
 msgid "Eg. Access extra ports 446 and 1234: ::"
 msgstr "P.ej. Acceda a puertos adicionales 446 y 1234: ::"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../chat.rst:12 ../../chat.rst:15
+#: ../../chat.rst:5
 msgid "Chat"
 msgstr "Chat"
 
-#: ../../chat.rst:14 ../../chat.rst:17
+#: ../../chat.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
 ":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
@@ -39,41 +39,49 @@ msgstr ""
 ":index:`Jabber`/:index:`XMPP`, supporta TLS sulla porte :index:`XMPP` "
 "standard (5222 o 5223)."
 
-#: ../../chat.rst:16 ../../chat.rst:19
+#: ../../chat.rst:9
 msgid "The main features are:"
 msgstr "La principali funzionalità sono:"
 
-#: ../../chat.rst:18 ../../chat.rst:21
+#: ../../chat.rst:11
 msgid "Messaging between users of the system"
 msgstr "messaggi fra gli utenti del sistema"
 
-#: ../../chat.rst:19 ../../chat.rst:22
+#: ../../chat.rst:12
 msgid "Chat server administration"
 msgstr "amministratori chat"
 
-#: ../../chat.rst:20 ../../chat.rst:23
+#: ../../chat.rst:13
 msgid "Broadcast messages"
 msgstr "messaggi broadcast"
 
-#: ../../chat.rst:21 ../../chat.rst:24
+#: ../../chat.rst:14
 msgid "Group chat"
 msgstr "chat di gruppo"
 
-#: ../../chat.rst:22 ../../chat.rst:25
+#: ../../chat.rst:15
 msgid "Offline messages"
 msgstr "messaggi offline"
 
-#: ../../chat.rst:23 ../../chat.rst:26
+#: ../../chat.rst:16
 msgid "Transfer files over LAN"
 msgstr "trasferimenti file in LAN"
 
-#: ../../chat.rst:25 ../../chat.rst:28
+#: ../../chat.rst:17
+msgid "S2S"
+msgstr "S2S"
+
+#: ../../chat.rst:18
+msgid "Message archiving"
+msgstr "Archiviazione dei messaggi"
+
+#: ../../chat.rst:20
 msgid "All system users can access the chat using their own credentials."
 msgstr ""
 "Tutti gli utenti di sistema possono accedere alla chat usando le proprie "
 "credenziali."
 
-#: ../../chat.rst:27 ../../chat.rst:30
+#: ../../chat.rst:22
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -84,32 +92,58 @@ msgstr ""
 "pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../chat.rst:32 ../../chat.rst:35
+#: ../../chat.rst:27
+msgid "Server to server (S2S)"
+msgstr "Server to server (S2S)"
+
+#: ../../chat.rst:29
+msgid ""
+"The XMPP system is federated by nature. If :index:`S2S` is enabled, users "
+"with accounts on one server can communicate with users on remote servers. "
+"S2S allows for servers communicating seamlessly with each other, forming a "
+"global 'federated' IM network."
+msgstr ""
+"Il sistema XMPP è federato nativamente. Se :index:`S2S` è abilitato, gli "
+"utenti con account su un server possono comunicare con gli utenti su server "
+"remoti. S2S consente ai server di comunicare tra loro, formando una rete IM "
+"globale \"federata\"."
+
+#: ../../chat.rst:33
+msgid ""
+"For this purpose, the SRV DNS record must be configured for your domain "
+"(https://wiki.xmpp.org/web/SRV_Records#XMPP_SRV_records) and the server must"
+" have a valid SSL/TLS certificate."
+msgstr ""
+"A tale scopo, il record DNS SRV deve essere configurato per il proprio "
+"dominio (https://wiki.xmpp.org/web/SRV_Records#XMPP_SRV_records) e il server"
+" deve disporre di un certificato SSL/TLS valido."
+
+#: ../../chat.rst:37
 msgid "Client"
 msgstr "Client"
 
-#: ../../chat.rst:34 ../../chat.rst:37
+#: ../../chat.rst:39
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 "I client Jabber sono disponibili per tutte le piattaforme desktop e mobile."
 
-#: ../../chat.rst:36 ../../chat.rst:39
+#: ../../chat.rst:41
 msgid "Some widespread clients:"
 msgstr "Fra i client più diffusi:"
 
-#: ../../chat.rst:38 ../../chat.rst:41
+#: ../../chat.rst:43
 msgid "Pidgin is available for Windows and Linux"
 msgstr "Pidgin disponibile per Windows e Linux"
 
-#: ../../chat.rst:39 ../../chat.rst:42
+#: ../../chat.rst:44
 msgid "Adium for Mac OS X"
 msgstr "Adium per Mac OS X"
 
-#: ../../chat.rst:40 ../../chat.rst:43
+#: ../../chat.rst:45
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr "BeejibelIM per Android e iOS, o Xabber solo Android"
 
-#: ../../chat.rst:42 ../../chat.rst:45
+#: ../../chat.rst:47
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
@@ -117,7 +151,7 @@ msgstr ""
 "Quando si configura il client, assicurarsi che sia abilitato TLS (o SSL). "
 "Inserire il nome utente e il dominio della macchina."
 
-#: ../../chat.rst:45 ../../chat.rst:48
+#: ../../chat.rst:50
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
@@ -128,11 +162,27 @@ msgstr ""
 "preconfigurati. In caso contrario, specificare l'indirizzo del server nelle "
 "opzioni avanzate."
 
-#: ../../chat.rst:49 ../../chat.rst:52
+#: ../../chat.rst:53
+msgid ""
+"With TLS capabilities, strictly configured servers or clients could reject "
+"connections with your Ejabberd server if the SSL/TLS certificate doesn't "
+"match the domain name. Also, the certificate should contain two sub-domains "
+"``pubsub.*`` and ``conference.*``. This certificate can be obtained for free"
+" with Let's Encrypt (see :ref:`server_certificate-section`)."
+msgstr ""
+"Con le funzionalità TLS, server o client rigorosamente configurati "
+"potrebbero rifiutare la connessione con il server Ejabberd se nel "
+"certificato SSL/TLS non corrispondesse il nome di dominio. Inoltre, il "
+"certificato dovrebbe contenere due sottodomini ``pubub.*`` e "
+"``conference.*``. Un certificato con tali caratteristiche può essere "
+"generato gratuitamente con Let's Encrypt (vedi :ref:`server_certificate-"
+"section`)."
+
+#: ../../chat.rst:60
 msgid "Administrators"
 msgstr "Amministratori"
 
-#: ../../chat.rst:51 ../../chat.rst:54
+#: ../../chat.rst:62
 msgid ""
 "All users within the group ``jabberadmins`` are considered administrators of"
 " the chat server."
@@ -140,21 +190,58 @@ msgstr ""
 "Tutti gli utenti all'interno del gruppo ``jabberadmins`` sono considerati "
 "amministratori del server di chat."
 
-#: ../../chat.rst:53 ../../chat.rst:56
+#: ../../chat.rst:64
 msgid "Administrators can:"
 msgstr "Gli amministratori possono:"
 
-#: ../../chat.rst:55 ../../chat.rst:58
+#: ../../chat.rst:66
 msgid "Send broadcast messages"
 msgstr "inviare messaggi broadcast"
 
-#: ../../chat.rst:56 ../../chat.rst:59
+#: ../../chat.rst:67
 msgid "Check the status of connected users"
 msgstr "controllare lo stato degli utenti collegati"
 
-#: ../../chat.rst:59 ../../chat.rst:62
+#: ../../chat.rst:70
 msgid ""
 "The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
 msgstr ""
 "Il gruppo ``jabberadmins`` è configurabile dalla pagina :ref:`groups-"
 "section`."
+
+#: ../../chat.rst:73
+msgid "Message Archive Management"
+msgstr "Gestione archivio messaggi"
+
+#: ../../chat.rst:75
+msgid ""
+"Message Archive Management (mod_mam) implements Message Archive Management "
+"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
+" enabled, all messages will be stored inside the server and compatible XMPP "
+"clients can use it to store their chat history on the server."
+msgstr ""
+"Message Archive Management (mod_mam) implementa la gestione dell'archivio "
+"messaggi come descritto in `XEP-0313 "
+"<http://xmpp.org/extensions/xep-0313.html>` _. Se abilitato, tutti i "
+"messaggi verranno archiviati all'interno del server e i client XMPP "
+"compatibili potranno utilizzarlo per archiviare la propria cronologia chat "
+"sul server."
+
+#: ../../chat.rst:78
+msgid ""
+"The database can store a maximum of 2GB of messages, archived messages can "
+"be purged automatically. To configure message retention policy, set "
+":guilabel:`Clean messages older than X days` option."
+msgstr ""
+"Il database può memorizzare fino a 2 GB di messaggi, i messaggi archiviati "
+"possono essere eliminati automaticamente. Per configurare i criteri di "
+"conservazione dei messaggi, impostare l'opzione :guilabel:`Elimina messaggi "
+"più vecchi di X giorni`."
+
+#: ../../chat.rst:83
+msgid ""
+"If enabled, this module will store every message sent between users. This "
+"behavior will affect the privacy of your users."
+msgstr ""
+"Se abilitato, questo modulo memorizzerà ogni messaggio inviato tra gli "
+"utenti. Questa funzionalità impatterà sulla privacy degli utenti."

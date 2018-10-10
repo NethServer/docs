@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ilvo Marzano <tarpano@hotmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -39,9 +39,10 @@ msgid ""
 msgstr ""
 "|product| è altamente modulare: al termine dell’installazione il sistema "
 "contiene solo i moduli di base  *configurazione di rete*, *visualizzazione "
-"log*. La pagina  del :guilabel:`Software center`  consente  all' "
-"amministratore di selezionare  e **install** aggiuntive :dfn:`modules`, e "
-"anche **update** il software già installato :dfn:`packages`."
+"log*. La pagina  del :guilabel:`Software center`  consente  "
+"all'amministratore di selezionare e **installare** dei :dfn:`moduli` "
+"aggiuntivi, e anche di elencare e  **aggiornare** i :dfn:`pacchetti` "
+"software già installati."
 
 #: ../../packages.rst:14
 msgid ""
@@ -49,7 +50,7 @@ msgid ""
 "system functionality. For instance a module can transform |product| into an "
 "Email server, or a Web proxy."
 msgstr ""
-"Un *module*  è solitamente costituito da più *packages*. Estende le "
+"Un *modulo*  è solitamente costituito da più *pacchetti*. Estende le "
 "funzionalità del sistema. Ad esempio un modulo può trasformare |product| in "
 "un server di posta elettronica o un proxy Web."
 
@@ -87,11 +88,11 @@ msgstr ""
 
 #: ../../packages.rst:38
 msgid "the NethServer project itself [#NETHSERVER]_"
-msgstr "il progetto NethServer stesso [#NETHSERVER] _"
+msgstr "il progetto NethServer stesso [#NETHSERVER]_"
 
 #: ../../packages.rst:39
 msgid "the CentOS project [#CENTOS]_"
-msgstr "il progetto CentOS [#CENTOS] _"
+msgstr "il progetto CentOS [#CENTOS]_"
 
 #: ../../packages.rst:40
 msgid "the EPEL repository [#EPEL]_"
@@ -112,7 +113,7 @@ msgid ""
 "Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for "
 "more information about NethServer updates."
 msgstr ""
-"Fare riferimento al forum della community [#NSCOM] _ e: ref:`release-notes-"
+"Fare riferimento al forum della community [#NSCOM]_ e :ref:`release-notes-"
 "section` per ulteriori informazioni sugli aggiornamenti di NethServer."
 
 #: ../../packages.rst:49
@@ -164,7 +165,7 @@ msgstr ""
 " of the data and review the updates changelog** per capire cosa sta per "
 "succedere. Se possibile, prova gli aggiornamenti in un macchina non in "
 "produzione. Per qualsiasi dubbio chiedi al forum della community di "
-"NethServer! [#NSCOM] _"
+"NethServer! [#NSCOM]_"
 
 #: ../../packages.rst:69
 msgid ""
@@ -266,7 +267,7 @@ msgid ""
 "CHANGELOG`."
 msgstr ""
 "Gli aggiornamenti per il software installato sono elencati nella  scheda "
-":guilabel:  'Updates`. Ulteriori dettagli su i pacchetti installati sono "
+":guilabel:`Updates`. Ulteriori dettagli su i pacchetti installati sono "
 "disponibili in :guilabel:`Updates CHANGELOG`."
 
 #: ../../packages.rst:117
@@ -274,8 +275,8 @@ msgid ""
 "To start the system update click the :guilabel:`Download and install` "
 "button."
 msgstr ""
-"Per avviare l'aggiornamento del sistema, fai clic sul pulsante: guilabel: "
-"\"Scarica e installa\"."
+"Per avviare l'aggiornamento del sistema, fai clic sul pulsante "
+":guilabel:`Scarica e installa`."
 
 #: ../../packages.rst:123
 msgid ""

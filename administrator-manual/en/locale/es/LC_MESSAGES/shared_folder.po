@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2017\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,16 +34,12 @@ msgid ""
 "A *shared folder* is a place where files can be accessed by a group of "
 "people using Samba (SMB/CIFS)."
 msgstr ""
-"Una *carpeta compartida* es un lugar donde un grupo de personas puede "
-"acceder a los archivos mediante Samba (SMB/CIFS)."
 
 #: ../../shared_folder.rst:12
 msgid ""
 "To create, edit and delete a shared folder go to the :guilabel:`Shared "
 "folders` page."
 msgstr ""
-"Para crear, editar y borrar una carpeta compartida vaya a la pagina "
-":guilabel:`Carpetas compartidas` "
 
 #: ../../shared_folder.rst:19
 msgid "Requirements"
@@ -90,7 +86,7 @@ msgstr ""
 
 #: ../../shared_folder.rst:52
 msgid "Authorizations"
-msgstr "Autorizaciones"
+msgstr ""
 
 #: ../../shared_folder.rst:54
 msgid ""
@@ -101,13 +97,6 @@ msgid ""
 "extended to everyone accessing the system.  This simple permission model is "
 "based on the traditional UNIX file system permissions."
 msgstr ""
-"Si **Active directory** está seleccionado como proveedor de cuentas, una "
-"carpeta compartida pertenece a un grupo de usuarios (:guilabel:`Grupo "
-"propietario`). A cada miembro del grupo se le permite leer el contenido de "
-"la carpeta. Opcionalmente, el grupo puede tener derecho a modificar el "
-"contenido de la carpeta y el permiso de lectura se puede extender a todos "
-"los que acceden al sistema. Este modelo de permiso simple se basa en los "
-"permisos tradicionales del sistema de archivos UNIX."
 
 #: ../../shared_folder.rst:61
 msgid ""
@@ -115,9 +104,6 @@ msgid ""
 "allowing individual users and other groups to gain read and write "
 "permissions."
 msgstr ""
-"Los privilegios de acceso se pueden refinar aún más con la pestaña "
-":guilabel:`ACL`, que permite a los usuarios individuales ya otros grupos "
-"obtener permisos de lectura y escritura."
 
 #: ../../shared_folder.rst:64
 msgid ""
@@ -153,22 +139,16 @@ msgid ""
 "at all, any access to shared folders is considered as *Guest access* so that"
 " everyone is allowed to read and write its content."
 msgstr ""
-"Si se selecciona un proveedor de cuenta **LDAP** o no hay ningún proveedor "
-"de cuentas, el acceso a carpetas compartidas se considera como *Acceso de "
-"invitado* para que todos puedan leer y escribir su contenido."
 
 #: ../../shared_folder.rst:86
 msgid "Network access"
-msgstr "Acceso a la red"
+msgstr ""
 
 #: ../../shared_folder.rst:88
 msgid ""
 "SMB/CIFS is a widely adopted protocol that allows to share files across a "
 "computer network. The shared folder name becomes the SMB \"share name\"."
 msgstr ""
-"SMB/CIFS es un protocolo ampliamente utilizado que permite compartir "
-"archivos a través de una red de computadoras. El nombre de la carpeta "
-"compartida se convierte en el SMB \"nombre de recurso compartido\"."
 
 #: ../../shared_folder.rst:91
 msgid ""
@@ -182,9 +162,6 @@ msgid ""
 "Authenticated access to shared folders is available with an Active Directory"
 " accounts provider. LDAP provider allows guest access only."
 msgstr ""
-"El acceso autenticado a carpetas compartidas está disponible con un "
-"proveedor de cuentas de Active Directory. El proveedor LDAP sólo permite el "
-"acceso de invitados."
 
 #: ../../shared_folder.rst:101
 msgid ""
@@ -194,12 +171,6 @@ msgid ""
 "\"DOMAIN\" and the user name is \"john.smith\", the domain-prefixed user "
 "name to access a SMB share is: ::"
 msgstr ""
-"Cuando se accede a un recurso compartido SMB, algunas interfaces de usuario "
-"solo proveen el nombre de usuario en el campo. En este caso, especifique el"
-"  **nombre de usuario corto** con el prefijo **Nombre de dominio NetBIOS**. "
-"Por ejemplo, si el nombre de dominio NetBIOS es \"DOMAIN\", y el usuario es "
-"\"jhon.smith\", el nombre de usuario con el prefijo de dominio para acceder "
-"al recurso compartido SMB es: ::"
 
 #: ../../shared_folder.rst:109
 msgid ""
@@ -207,13 +178,10 @@ msgid ""
 "NetBIOS domain name and the user name; in that case fill in the input fields"
 " individually."
 msgstr ""
-"Por el contrario, algunas aplicaciones proveen campos separados para el "
-"nombre de dominio NetBIOS y el nombre de usuario; en este caso llene cada "
-"uno de los campos individualmente."
 
 #: ../../shared_folder.rst:114
 msgid "Network recycle bin"
-msgstr "Papelera de reciclaje en red"
+msgstr ""
 
 #: ../../shared_folder.rst:116
 msgid ""
@@ -222,15 +190,10 @@ msgid ""
 " copies of files with the same name` keeps distinct file names inside the "
 "wastebasket directory, preventing overwrites."
 msgstr ""
-"Si la opción :guilabel:`Papelera de reciclaje en red` está habilitada, los "
-"archivos removidos son reubicados en un directorio \"papelera\" especial . "
-"La opción :guilabel:`Guardar copias de archivos con el mismo nombre` "
-"mantiene distintos nombres de archivos en el directorio \"papelera\", "
-"evitando sobrescrituras."
 
 #: ../../shared_folder.rst:122
 msgid "Hide a shared folder"
-msgstr "Ocultar una carpeta compartida"
+msgstr ""
 
 #: ../../shared_folder.rst:124
 msgid ""
@@ -242,7 +205,7 @@ msgstr ""
 
 #: ../../shared_folder.rst:129
 msgid "Home share"
-msgstr "Carpeta de usuario compartida"
+msgstr ""
 
 #: ../../shared_folder.rst:131
 msgid ""
@@ -250,39 +213,32 @@ msgid ""
 "home directory. The SMB share name correspond to the **user short name**. "
 "For example:"
 msgstr ""
-"Cada usuario de |product| tiene una carpeta personal y compartida que es "
-"mapeada a su directorio home en Unix. El nombre de la carpeta de usuario "
-"compartida corresponde al **user short name**. Por ejemplo:"
 
 #: ../../shared_folder.rst:134
 msgid "user short name ``john.smith``"
-msgstr "nombre de usuario ``john.smith``"
+msgstr ""
 
 #: ../../shared_folder.rst:135
 msgid "server name ``MYSERVER``"
-msgstr "nombre del servidor ``MYSERVER``"
+msgstr ""
 
 #: ../../shared_folder.rst:136
 msgid "server address ``192.168.1.2``"
-msgstr "dirección del servidor ``192.168.1.2``"
+msgstr ""
 
 #: ../../shared_folder.rst:138
 msgid "The SMB network address is: ::"
-msgstr "La dirección de la red SMB es: ::"
+msgstr ""
 
 #: ../../shared_folder.rst:143
 msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
 msgstr ""
-"Provee las credenciales de John's como se explica en :ref:`smb-access-"
-"section`"
 
 #: ../../shared_folder.rst:147
 msgid ""
 "The Unix home directory is created the first time the user accesses it by "
 "either SMB or SFTP/SSH protocol."
 msgstr ""
-"El directorio de usuario compartido Unix es creado la primera vez que se "
-"accede mediante los protocolos SMB o SFTP/SSH"
 
 #: ../../shared_folder.rst:153
 msgid "Change resource permissions from Windows clients"

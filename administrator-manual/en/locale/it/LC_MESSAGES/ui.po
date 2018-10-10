@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 12:31+0200\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -27,49 +27,59 @@ msgstr ""
 
 #: ../../ui/Ejabberd.rst:5
 msgid "Chat"
-msgstr ""
+msgstr "Chat"
 
 #: ../../ui/Ejabberd.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
 ":index:`Jabber`/:index:`XMPP`. See also :ref:`chat-section`."
 msgstr ""
+"Il servizio :index:`chat` utilizza il protocollo standard "
+":index:`Jabber`/:index:`XMPP`. Vedi anche :ref:`chat-section`."
 
 #: ../../ui/Ejabberd.rst:12
 msgid "Administration web Interface"
-msgstr ""
+msgstr "Interfaccia web di amministrazione"
 
 #: ../../ui/Ejabberd.rst:12
 msgid ""
 "The Jaber server comes with a web administrative interface for members of "
 "the jabberadmins group."
 msgstr ""
+"Il server Jabber è dotato di un'interfaccia web amministrativa il cui "
+"accesso è consentito ai membri del gruppo jabberadmins."
 
 #: ../../ui/Ejabberd.rst:15
 msgid "Federation (S2S)"
-msgstr ""
+msgstr "Federation (S2S)"
 
 #: ../../ui/Ejabberd.rst:15
 msgid ""
 "XMPP allows for servers communicating seamlessly with each other, forming a "
 "global 'federated' IM network."
 msgstr ""
+"XMPP consente ai server di intercomunicare tra loro, formando una rete IM "
+"globale \"federata\"."
 
 #: ../../ui/Ejabberd.rst:18
 msgid "File transfer maximum speed"
-msgstr ""
+msgstr "Massima velocità trasferimento file"
 
 #: ../../ui/Ejabberd.rst:18
 msgid "Limit in Byte/second the maximum file transfer."
 msgstr ""
+"Limita la massima velocità per il trasferimento file al valore in "
+"Byte/secondo "
 
 #: ../../ui/Ejabberd.rst:21
 msgid "File transfer normal speed"
-msgstr ""
+msgstr "Velocità standard di trasferimento file"
 
 #: ../../ui/Ejabberd.rst:21
 msgid "Limit in Byte/second the normal file transfer."
 msgstr ""
+"Limita la velocità standard per il trasferimento file al valore in "
+"Byte/secondo "
 
 #: ../../ui/FileServer.rst:5
 msgid "Windows file server"
@@ -252,6 +262,112 @@ msgstr "Eliminare"
 #: ../../ui/ProxyPass.rst:48
 msgid "Removes the selected entry."
 msgstr "Rimuove la voce selezionata."
+
+#: ../../ui/SOGo.rst:5
+msgid "SOGo Groupware"
+msgstr "Groupware SOGo"
+
+#: ../../ui/SOGo.rst:7
+msgid "See also :ref:`SOGo-section`."
+msgstr "Vedere anche :ref:`SOGo-section`."
+
+#: ../../ui/SOGo.rst:12
+msgid "Enable CalDAV and CardDAV"
+msgstr "Abilitazione CalDAV e CardDAV"
+
+#: ../../ui/SOGo.rst:11
+msgid ""
+"CalDAV allow users to access and share calendar data on a server. CardDAV "
+"allows users to access and share contact data on a server."
+msgstr ""
+"CalDAV consente agli utenti di accedere e condividere i dati del calendario "
+"presenti su un server. CardDAV consente agli utenti di accedere e "
+"condividere i contatti presenti su un server."
+
+#: ../../ui/SOGo.rst:15
+msgid "Enable Microsoft ActiveSync"
+msgstr "Abilitazione Microsoft ActiveSync"
+
+#: ../../ui/SOGo.rst:15
+msgid ""
+"ActiveSync is a mobile data (email, calendar, task, contact) synchronization"
+" app developed by Microsoft."
+msgstr ""
+"ActiveSync è un'app per la sincronizzazione di dati mobili (e-mail, "
+"calendario, attività, contatti) sviluppata da Microsoft."
+
+#: ../../ui/SOGo.rst:18
+msgid "Allow Users to add other IMAP accounts"
+msgstr "Consente agli utenti di aggiungere altri account IMAP"
+
+#: ../../ui/SOGo.rst:18
+msgid ""
+"Allow users to add other IMAP accounts that will be visible from the SOGo "
+"Webmail interface."
+msgstr ""
+"Consente agli utenti di aggiungere altri account IMAP che saranno visibili "
+"dall'interfaccia di SOGo Webmail."
+
+#: ../../ui/SOGo.rst:21
+msgid "Administrators"
+msgstr "Amministratori"
+
+#: ../../ui/SOGo.rst:21
+msgid "List of users with administrative privileges over all the user datas."
+msgstr ""
+"Elenco degli utenti con privilegi amministrativi su tutti i dati utente."
+
+#: ../../ui/SOGo.rst:24
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: ../../ui/SOGo.rst:24
+msgid ""
+"Several different types of notifications(email-based) are available. "
+"Activate them according your needs."
+msgstr ""
+"Sono disponibili diversi tipi di notifiche (basate su email). E' possibile "
+"attivarle in base alle proprie esigenze."
+
+#: ../../ui/SOGo.rst:28
+msgid "Make SOGO reachable only from this domain(FQDN)"
+msgstr "Rende raggiungibile SOGO solo da questo dominio (FQDN)"
+
+#: ../../ui/SOGo.rst:27
+msgid ""
+"SOGo is per default accessible from all server's virtualhosts, If you "
+"specify a domain name here, SOGo will be usable only from this domaine name."
+msgstr ""
+"SOGo è accessibile per impostazione predefinita da tutti i virtualhost del "
+"server, se si specifica qui un nome di dominio, SOGo sarà utilizzabile solo "
+"da questo nome di dominio."
+
+#: ../../ui/SOGo.rst:32
+msgid "Number of workers"
+msgstr "Numero dei processi"
+
+#: ../../ui/SOGo.rst:31
+msgid ""
+"This is the amount of instances of SOGo that will be spawned to handle "
+"multiple requests simultaneously. You should have at least one worker per "
+"activesync device connected."
+msgstr ""
+"Questo parametro specifica il numero di istanze di SOGo che verranno "
+"generate per gestire più richieste contemporaneamente. E' consigliato almeno"
+" un worker per dispositivo activesync connesso."
+
+#: ../../ui/SOGo.rst:35
+msgid "Maximum time in second"
+msgstr "Tempo massimo in secondi"
+
+#: ../../ui/SOGo.rst:35
+msgid ""
+"Parameter used to set the maximum amount of time, in seconds, SOGo will wait"
+" before doing an internal check for data changes (add, delete, and update)."
+msgstr ""
+"Parametro utilizzato per impostare la quantità massima di tempo, in secondi,"
+" che SOGo attenderà prima di eseguire un controllo interno per le modifiche "
+"dei dati (aggiunta, eliminazione e aggiornamento)."
 
 #: ../../ui/TlsPolicy.rst:5
 msgid "TLS policy"

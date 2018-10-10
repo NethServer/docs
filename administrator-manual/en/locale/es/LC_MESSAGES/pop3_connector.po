@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 17:44+0200\n"
+"POT-Creation-Date: 2018-10-02 12:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jon M. <elnene.jonkiu@gmail.com>, 2018\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,8 +33,8 @@ msgstr "Conector POP3"
 msgid ""
 "Since |product| 7.5.1804 new :ref:`email-section`, :ref:`pop3_connector-"
 "section` and :ref:`pop3_proxy-section` installations are based on the Rspamd"
-" filter engine. Previous |product| installations can be manually upgraded to"
-" Rspamd as described in :ref:`email2-section`"
+" filter engine. Previous |product| installations are automatically upgraded "
+"to Rspamd as described in :ref:`email2-section`"
 msgstr ""
 
 #: ../../pop3_connector.rst:15
@@ -43,9 +43,6 @@ msgid ""
 "accounts that will be checked regularly. Messages coming from the remote "
 "accounts will be delivered to local users."
 msgstr ""
-"La página :guilabel:`Conector POP3` permite configurar una lista de cuentas "
-"de correo que se verán con regularidad. Los mensajes procedentes de las "
-"cuentas remotas se entregarán a los usuarios locales."
 
 #: ../../pop3_connector.rst:19
 msgid ""
@@ -55,66 +52,52 @@ msgid ""
 "be less effective due to the original email envelope information becoming "
 "lost."
 msgstr ""
-"No se recomienda utilizar el conector POP3 como método principal de "
-"administración de correo electrónico. La entrega de correo puede verse "
-"afectada por el espacio en disco y los problemas de conectividad del "
-"servidor del proveedor. Además, el filtro de spam será menos efectivo debido"
-" a la información original del sobre de correo electrónico que se pierde."
 
 #: ../../pop3_connector.rst:24
 msgid ""
 "POP3/IMAP accounts are configured from :guilabel:`POP3 connector > Accounts`"
 " page. Each account can be specified:"
 msgstr ""
-"Las cuentas POP3/IMAP se configuran desde la página :guilabel:'Conector POP3"
-" > Cuentas'. Cada cuenta se puede especificar:"
 
 #: ../../pop3_connector.rst:27
 msgid "the email address (as unique account identifier)"
 msgstr ""
-"la dirección de correo electrónico (como identificador de cuenta único)"
 
 #: ../../pop3_connector.rst:28
 msgid "the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)"
-msgstr "el protocolo (IMAP/POP3/IMAP con SSL/POP3 con SSL)"
+msgstr ""
 
 #: ../../pop3_connector.rst:29
 msgid "the remote server address"
-msgstr "La dirección del servidor remoto"
+msgstr ""
 
 #: ../../pop3_connector.rst:30
 msgid "the account credentials"
-msgstr "Las credenciales de la cuenta"
+msgstr ""
 
 #: ../../pop3_connector.rst:31
 msgid "the local user account where to deliver messages"
-msgstr "La cuenta de usuario local donde entregar mensajes"
+msgstr ""
 
 #: ../../pop3_connector.rst:32
 msgid "if a message has to be deleted from the remote server after delivery"
 msgstr ""
-"Si hay que borrar un mensaje desde el servidor remoto hacerlo después de la "
-"entrega"
 
 #: ../../pop3_connector.rst:33
 msgid "anti-spam and anti-virus checks"
-msgstr "comprobaciones de anti-spam y anti-virus"
+msgstr ""
 
 #: ../../pop3_connector.rst:35
 msgid ""
 "It is allowed to associate more than one external accounts to a local one.  "
 "Deleting an account will *not* delete already delivered messages."
 msgstr ""
-"Se permite asociar más de una cuenta externa a una local. La eliminación de "
-"una cuenta *no* eliminará los mensajes ya entregados."
 
 #: ../../pop3_connector.rst:39
 msgid ""
 "After the account configuration has been completed, the account is "
 "automatically checked for new mail."
 msgstr ""
-"Una vez completada la configuración de la cuenta, se comprueba "
-"automáticamente si hay correo nuevo."
 
 #: ../../pop3_connector.rst:45
 msgid ""
@@ -124,15 +107,10 @@ msgid ""
 "messages are filtered according to the :ref:`configured rules "
 "<email_filter>`."
 msgstr ""
-"La implementación en si se basa en :dfn:`Getmail` [#Getmail]_. Después de "
-"recuperar los mensajes de correo del proveedor POP3/IMAP Getmail aplica "
-"todos los filtros necesarios (SPAM y virus) antes de entregar el correo "
-"localmente. Todos los mensajes se filtran de acuerdo con :ref:`reglas "
-"configuradas <email_filter>`."
 
 #: ../../pop3_connector.rst:51
 msgid "All operations are logged in :file:`/var/log/maillog`."
-msgstr "Todas las operaciones se registran en :file:`/var/log/maillog`."
+msgstr ""
 
 #: ../../pop3_connector.rst:53
 msgid ""
@@ -141,10 +119,6 @@ msgid ""
 "account configuration in :guilabel:`POP3 connector` page must be disabled or"
 " deleted."
 msgstr ""
-"Si se seleccionó una cuenta para la entrega y se ha suprimido "
-"posteriormente, la configuración se vuelve incoherente. Si esto sucede, la "
-"configuración de la cuenta existente en :guilabel:`Conector POP3` debe estar"
-" deshabilitada o borrada."
 
 #: ../../pop3_connector.rst:59
 msgid "References"
@@ -155,5 +129,3 @@ msgid ""
 "Getmail is a remote-mail retrieval utility "
 "http://pyropus.ca/software/getmail/"
 msgstr ""
-"Getmail es una utilidad de recuperación remota de correo "
-"http://pyropus.ca/software/getmail/"

@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../snmp.rst:10 ../../snmp.rst:13
+#: ../../snmp.rst:3
 msgid "SNMP"
 msgstr "SNMP"
 
-#: ../../snmp.rst:12 ../../snmp.rst:15
+#: ../../snmp.rst:5
 msgid ""
 "The SNMP (Simple Network Management Protocol) protocol allows to manage and "
 "monitor devices connected to the network. The :index:`SNMP` server can reply"
@@ -37,30 +37,30 @@ msgid ""
 msgstr ""
 "Il protocollo SNMP (Simple Network Management Protocol) consente la gestione"
 " e il monitoraggio di apparati collegati in rete. Il server :index:`SNMP` è "
-"in grado di rispondere a richieste specifiche presentando lo stato attuale "
+"in grado di rispondere a richieste specifiche riportando lo stato attuale "
 "del sistema."
 
-#: ../../snmp.rst:15 ../../snmp.rst:18
+#: ../../snmp.rst:8
 msgid "The server is disabled by default."
 msgstr "Il server è disabilitato di default."
 
-#: ../../snmp.rst:17 ../../snmp.rst:20
+#: ../../snmp.rst:10
 msgid "To enable it, you should set three main options:"
 msgstr "Per abilitarlo è necessario configurare tre parametri principali:"
 
-#: ../../snmp.rst:19 ../../snmp.rst:22
+#: ../../snmp.rst:12
 msgid "the SNMP community name"
 msgstr "il nome della comunità SNMP"
 
-#: ../../snmp.rst:20 ../../snmp.rst:23
+#: ../../snmp.rst:13
 msgid "the location name where the server is located"
 msgstr "il nome del luogo in cui risiede il server"
 
-#: ../../snmp.rst:21 ../../snmp.rst:24
+#: ../../snmp.rst:14
 msgid "the name and email address of system administrator"
 msgstr "il nome e l’indirizzo mail dell’amministratore di sistema"
 
-#: ../../snmp.rst:23 ../../snmp.rst:26
+#: ../../snmp.rst:16
 msgid ""
 "The implementation is based on the Net-SNMP project. Please refer to the "
 "official project page for more information:"
@@ -68,15 +68,15 @@ msgstr ""
 "L'implementazione si basa sul progetto Net-SNMP. Per ulteriori informazioni,"
 " consultare la pagina ufficiale del progetto:"
 
-#: ../../snmp.rst:25 ../../snmp.rst:28
+#: ../../snmp.rst:18
 msgid "http://www.net-snmp.org/"
 msgstr "http://www.net-snmp.org/"
 
-#: ../../snmp.rst:28 ../../snmp.rst:31
+#: ../../snmp.rst:21
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../snmp.rst:29 ../../snmp.rst:32
+#: ../../snmp.rst:22
 msgid ""
 "Simple Network Management Protocol "
 "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"

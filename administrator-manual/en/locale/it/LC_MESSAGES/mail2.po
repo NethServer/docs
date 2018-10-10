@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 12:31+0200\n"
+"POT-Creation-Date: 2018-10-02 12:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -33,80 +33,68 @@ msgstr "Aggiornamento Email a Rspamd"
 msgid ""
 "Since |product| 7.5.1804 new :ref:`email-section`, :ref:`pop3_connector-"
 "section` and :ref:`pop3_proxy-section` installations are based on the Rspamd"
-" [#RSPAMD]_ filter engine. Previous |product| installations can be manually "
-"upgraded to Rspamd as described by this section."
+" [#RSPAMD]_ filter engine."
 msgstr ""
-"Da |product| 7.5.1804 le nuove installazioni di :ref:`email-section`, :ref"
-":`pop3_connector-section` e :ref:`pop3_proxy-section` sono basate sul motore"
-" di filtro Rspamd. Le installazioni precedenti di |product| possono essere "
-"aggiornate manualmente a Rspamd come descritto in :ref:`email2-section`."
+"Con il rilascio di |product| 7.5.1804 le nuove installazioni di :ref:`email-"
+"section`, :ref:`pop3_connector-section` e :ref:`pop3_proxy-section` sono "
+"basate sul motore di filtraggio Rspamd [#RSPAMD]_. "
 
-#: ../../mail2.rst:12
+#: ../../mail2.rst:11
 msgid ""
-"New configuration features, specific to Rspamd-based implementation, are now"
+"Previous |product| installations are automatically upgraded to Rspamd as "
+"described by this section."
+msgstr ""
+"Installazioni precedenti di |product| verranno automaticamente aggiornate "
+"con Rspamd come descritto in in questa sezione."
+
+#: ../../mail2.rst:14
+msgid ""
+"New configuration features, specific to the Rspamd-based implementation, are"
 " documented in :ref:`email-section`. Here is a brief list:"
 msgstr ""
-"Le nuove opzioni di configurazione, specifiche per Rspamd, sono documentate "
-"nel capitolo :ref:`email-section`. Ecco una lista:"
+"Le nuove funzionalità di configurazione, specifiche dell'implementazione "
+"basata su Rspamd, sono documentate nella sezione :ref:`email-section`. Ecco "
+"una breve lista:"
 
-#: ../../mail2.rst:15
+#: ../../mail2.rst:17
 msgid "DKIM signature"
 msgstr "Firma DKIM"
 
-#: ../../mail2.rst:16
+#: ../../mail2.rst:18
 msgid "Rspamd web UI"
 msgstr "Interfaccia web di Rspamd"
 
-#: ../../mail2.rst:17
+#: ../../mail2.rst:19
 msgid "Greylist threshold [#GREY]_"
 msgstr "Soglia Greylist [#GREY]_"
 
-#: ../../mail2.rst:20
+#: ../../mail2.rst:22
 msgid "Feature changes"
 msgstr "Funzionalità modificate"
 
-#: ../../mail2.rst:24
-msgid ""
-"There are some changes that must be considered when manually upgrading to "
-"the new Email implementation based on Rspamd."
-msgstr ""
-"E' necessario considerare alcune modifiche alla configurazione quando si "
-"aggiorna manualmente alla nuova implementazione della Email basata su "
-"Rspamd."
-
-#: ../../mail2.rst:27
-msgid ""
-"Since |product| 7.5.1804 a new installation has different default settings."
-msgstr ""
-"Da |product| 7.5.1804 le nuove installazioni hanno valori di default "
-"differenti."
-
-#: ../../mail2.rst:30
+#: ../../mail2.rst:26
 msgid "Append a legal notice"
 msgstr "Aggiungere un avviso legale"
 
-#: ../../mail2.rst:32
+#: ../../mail2.rst:28
 msgid ""
 "The :guilabel:`Email > Domains > Append a legal note to sent messages` (also"
 " known as \"Disclaimer\") feature was split in a separate, optional package:"
-" ``nethserver-mail2-disclaimer``. The upgrade procedures documented in this "
-"section install it for backward compatibility, however new installations "
-"should avoid it, as it relies on an old package [#ALTERMIME]_ that can be "
-"removed in future releases."
+" ``nethserver-mail2-disclaimer``. New installations should avoid it, as it "
+"relies on an old package [#ALTERMIME]_ that can be removed in future "
+"releases."
 msgstr ""
-"La funzionalità :guilabel:`Email > Domini > Aggiungi una nota legale ai "
-"messaggi inviati` (nota anche come \"Disclaimer\") è distribuita in un "
-"pacchetto separato e opzionale: ``nethserver-mail2-disclaimer``. Le "
-"procedure di aggiornamento documentate in questa sezione lo installano per "
-"compatibilità, ma le nuove installazioni dovrebbero evitarlo in quanto  "
-"*deprecato* perché il progetto alterMIME [#alterMIME]_ che provvede "
-"all'attuale implementazione, può essere rimosso in qualsiasi momento."
+"La funzionalità :guilabel:`Email> Domini> Aggiungi una nota legale ai "
+"messaggi inviati` (nota anche come\" Disclaimer \") è stata divisa in un "
+"pacchetto opzionale separato:` `nethserver-mail2-disclaimer``. Le nuove "
+"installazioni dovrebbero evitarne l'uso, poiché si basa su un vecchio "
+"pacchetto [#ALTERMIME] _ che potrebbe venire rimosso nelle versioni future."
 
-#: ../../mail2.rst:50
+#: ../../mail2.rst:44
 msgid "Block port 25"
 msgstr "Blocco porta 25"
 
-#: ../../mail2.rst:52
+#: ../../mail2.rst:46
 msgid ""
 "The block of port 25 can prevent abuse/misuse by LAN machines. If the system"
 " is acting as the LAN network gateway, the administrator can create a "
@@ -116,11 +104,11 @@ msgstr ""
 " sistema è il gateway della rete, l'amministratore può creare una regola di "
 "firewall in :ref:`firewall-rules-section`."
 
-#: ../../mail2.rst:59
+#: ../../mail2.rst:53
 msgid "Additional host name aliases"
 msgstr "Host alias addizionali"
 
-#: ../../mail2.rst:61
+#: ../../mail2.rst:55
 msgid ""
 "The following host name aliases were automatically registered in the local "
 "DNS service, if the ``postfix/MxRecordStatus`` was ``enabled``:"
@@ -128,23 +116,23 @@ msgstr ""
 "I seguenti nomi di host erano automaticamente registrati nel servizio DNS, "
 "se ``postfix/MxRecordStatus`` era ``enabled``:"
 
-#: ../../mail2.rst:64
+#: ../../mail2.rst:58
 msgid "``smtp.<domain>``"
 msgstr "``smtp.<dominio>``"
 
-#: ../../mail2.rst:65
+#: ../../mail2.rst:59
 msgid "``imap.<domain>``"
 msgstr "``imap.<dominio>``"
 
-#: ../../mail2.rst:66
+#: ../../mail2.rst:60
 msgid "``pop.<domain>``"
 msgstr "``pop.<dominio>``"
 
-#: ../../mail2.rst:67
+#: ../../mail2.rst:61
 msgid "``pop3.<domain>``"
 msgstr "``pop3.<dominio>``"
 
-#: ../../mail2.rst:69
+#: ../../mail2.rst:63
 msgid ""
 "When upgraded from an old Email module based on Amavisd, the "
 "``postfix/MxRecordStatus`` is removed and  those aliases are pushed as "
@@ -156,11 +144,11 @@ msgstr ""
 "record di tipo ``self`` nel DB ``hosts``. Possono essere modificati dalla "
 "pagina  :guilabel:`DNS > Alias server`."
 
-#: ../../mail2.rst:75
+#: ../../mail2.rst:69
 msgid "MX record for LAN clients"
 msgstr "Record MX per i client della LAN"
 
-#: ../../mail2.rst:77
+#: ../../mail2.rst:71
 msgid ""
 "The new Email module implementation based on Rspamd does not push the MX "
 "record override for LAN hosts any more.  Ensure the LAN mail user agents are"
@@ -173,87 +161,23 @@ msgstr ""
 " > Accesso SMTP > Consenti relay dai seguenti indirizzi IP` prima di "
 "aggiornare."
 
-#: ../../mail2.rst:85
+#: ../../mail2.rst:79
 msgid "Upgrade procedures"
 msgstr "Procedure di aggiornamento manuale"
 
-#: ../../mail2.rst:87
+#: ../../mail2.rst:81
 msgid ""
-"It is possible to switch a running system to the new module, starting from "
-"the old **Email**, **SMTP proxy** and **POP3 connector** modules."
+"Manual upgrade procedures are no longer needed: upgrade occurs "
+"automatically."
 msgstr ""
-"E' possibile aggiornare un sistema al nuovo modulo, avendo installati i "
-"vecchi moduli **Email**, **SMTP proxy** e **Connettore POP3**."
+"Le procedure di aggiornamento manuale non sono più necessarie: "
+"l'aggiornamento avviene automaticamente."
 
-#: ../../mail2.rst:90
-msgid ""
-"Make sure the system is updated with the latest packages before running the "
-"upgrade procedure."
-msgstr ""
-"Assicurarsi che il sistema sia aggiornato prima di iniziare la procedura di "
-"aggiornamento."
-
-#: ../../mail2.rst:95
-msgid ""
-"If something is wrong with ``rspamd``, please report the issue on "
-"`community.nethserver.org <https://community.nethserver.org>`_."
-msgstr ""
-"In caso di problemi con ``rspamd``, riportare il bug su "
-"`community.nethserver.org <https://community.nethserver.org>`_."
-
-#: ../../mail2.rst:98
-msgid ""
-"To switch an old mail server with ``amavisd-new`` filter engine to "
-"``rspamd`` run the upgrade commands reported on the following sections. It "
-"is possible to revert the upgrade too."
-msgstr ""
-"Per aggiornare un vecchio mail server basato su ``amavisd-new`` a "
-"``rspamd``, eseguire i comandi nelle sezioni seguenti. E' anche possibile "
-"tornare indietro dopo l'aggiornamento."
-
-#: ../../mail2.rst:103
-msgid "From Email module"
-msgstr "Dal modulo Email"
-
-#: ../../mail2.rst:105 ../../mail2.rst:120 ../../mail2.rst:140
-#: ../../mail2.rst:155
-msgid "Upgrade: ::"
-msgstr "Aggiornamento: ::"
-
-#: ../../mail2.rst:111 ../../mail2.rst:126 ../../mail2.rst:146
-#: ../../mail2.rst:161
-msgid "Revert upgrade: ::"
-msgstr "Ripristino: ::"
-
-#: ../../mail2.rst:118
-msgid "From SMTP proxy module"
-msgstr "Dal modulo Proxy SMTP"
-
-#: ../../mail2.rst:133
-msgid "From POP3 connector module"
-msgstr "Dal modulo Connettore POP3"
-
-#: ../../mail2.rst:135
-msgid ""
-"When upgrading, the POP3 connector settings of each account regarding "
-":guilabel:`Check messages for SPAM` and :guilabel:`Check messages for virus`"
-" options are ignored and overridden by the new :guilabel:`Scan messages with"
-" email filter`."
-msgstr ""
-"In caso di aggiornamento, le impostazioni di ogni account del Connettore "
-"POP3 relative a :guilabel:`Abilita controllo anti SPAM` e :guilabel:`Abilita"
-" controllo anti virus` vengono ignorate e sovrascritte dalla nuova opzione "
-":guilabel:`Analizza i messaggi con il filtro email`."
-
-#: ../../mail2.rst:153
-msgid "From POP3 proxy module"
-msgstr "Dal modulo Proxy POP3"
-
-#: ../../mail2.rst:168
+#: ../../mail2.rst:85
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../mail2.rst:170
+#: ../../mail2.rst:87
 msgid ""
 "Rspamd -- Fast, free and open-source spam filtering system. "
 "https://rspamd.com/"
@@ -261,7 +185,7 @@ msgstr ""
 "Rspamd -- Fast, free and open-source spam filtering system. "
 "https://rspamd.com/"
 
-#: ../../mail2.rst:174
+#: ../../mail2.rst:91
 msgid ""
 "Domain Keys Identified Mail (DKIM) is an email authentication method "
 "designed to detect email spoofing -- `Wikipedia "
@@ -271,7 +195,7 @@ msgstr ""
 "designed to detect email spoofing -- `Wikipedia "
 "<https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_"
 
-#: ../../mail2.rst:179
+#: ../../mail2.rst:96
 msgid ""
 "Greylisting is a method of defending e-mail users against spam. A mail "
 "transfer agent (MTA) using greylisting will \"temporarily reject\" any email"
@@ -283,7 +207,7 @@ msgstr ""
 " from a sender it does not recognize -- `Wikipedia "
 "<https://en.wikipedia.org/wiki/Greylisting>`_"
 
-#: ../../mail2.rst:185
+#: ../../mail2.rst:102
 msgid ""
 "alterMIME is a small program which is used to alter your mime-encoded "
 "mailpack -- https://pldaniels.com/altermime/"

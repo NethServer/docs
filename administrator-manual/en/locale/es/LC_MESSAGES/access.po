@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 14:00+0200\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2017\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,82 +73,68 @@ msgid ""
 "installed on the system. After logging in, go to the :ref:`software-center-"
 "section` page to install additional languages."
 msgstr ""
-"La página de inicio de sesión permite seleccionar un idioma alternativo "
-"entre los ya instalados en el sistema. Después de iniciar sesión, vaya a la "
-"página :ref:`software-center-section` para instalar idiomas adicionales."
 
 #: ../../access.rst:29
 msgid ""
 "The login page will give you a trusted access to the web interface. Log in "
 "as **root** and type the password chosen during |product| installation."
 msgstr ""
-"La página de inicio de sesión le dará un acceso confiable a la interfaz web."
-" Inicie sesión como **root** y escriba la contraseña elegida durante la "
-"instalación de |product|."
 
 #: ../../access.rst:34
 msgid ""
 "The *unattended* install procedure sets the root password to the default "
 "``Nethesis,1234``."
 msgstr ""
-"El procedimiento de instalación *desatendida* establece la contraseña "
-"predeterminada de root como ``Nethesis,1234``."
 
 #: ../../access.rst:40
 msgid "First configuration wizard"
-msgstr "Asistente de configuracion rápida"
+msgstr ""
 
 #: ../../access.rst:42
 msgid ""
 "The first time **root** logs in, the *First configuration wizard* procedure "
 "is displayed."
 msgstr ""
-"La primera vez que  **root** acceda al sistema, el *First configuration "
-"wizard*, le guiará a través del proceso de instalación"
 
 #: ../../access.rst:45
 msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
 msgstr ""
-"Si no ha cambiado la contraseña por defecto para el usuario root, se le "
-"pedirá que la cambie por una nueva."
 
 #: ../../access.rst:47
 msgid ""
 "It is possible to restore a **configuration backup**. Refer to :ref"
 ":`disaster-recovery-section` for more information."
 msgstr ""
-"Es posible recuperar un **configuration backup**. Consulte en ref:`disaster-"
-"recovery-section` para más información."
 
 #: ../../access.rst:50
 msgid "Otherwise the wizard procedure helps on setting up:"
-msgstr "De cualquier manera, el Asistente le ayudará en la configuración"
+msgstr ""
 
 #: ../../access.rst:52
 msgid "Host name"
-msgstr "Nombre de Equipo"
+msgstr ""
 
 #: ../../access.rst:53
 msgid ":ref:`Date and time zone <date-time-section>`"
-msgstr "Fecha y zona horaria"
+msgstr ""
 
 #: ../../access.rst:54
 msgid "SSH port"
-msgstr "Puerto SSH"
+msgstr ""
 
 #: ../../access.rst:55
 msgid ":ref:`Smarthost configuration <smarthost-configuration>`"
-msgstr "Configuración de Smarthost"
+msgstr ""
 
 #: ../../access.rst:56
 msgid ":ref:`Usage statistics <phonehome-section>`"
-msgstr "Estadísticas de uso"
+msgstr ""
 
 #: ../../access.rst:59
 msgid "Change the current password"
-msgstr "Cambiar la contraseña actual"
+msgstr ""
 
 #: ../../access.rst:61
 msgid ""
@@ -156,13 +142,10 @@ msgid ""
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
 "screen and clicking on :guilabel:`Profile`."
 msgstr ""
-"Puede cambiar la contraseña de root desde la interfaz web, accediendo a la "
-"etiqueta :guilabel:`root@host.domain.com` en la esquina superior derecha de "
-"la pantalla y haciendo clic en: guilabel:` Profile`."
 
 #: ../../access.rst:67
 msgid "Logout"
-msgstr "Cerrar sesión"
+msgstr ""
 
 #: ../../access.rst:69
 msgid ""
@@ -170,9 +153,6 @@ msgid ""
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
 "screen and by clicking on :guilabel:`Logout`."
 msgstr ""
-"Finalice la sesión actual del Administrador del Servidor acudiendo a la "
-"etiqueta :guilabel:`root@host.domain.com` en la esquina superior derecha de "
-"la pantalla y haciendo clic en :guilabel:`Logout`."
 
 #: ../../access.rst:76
 msgid "Session timeouts"
