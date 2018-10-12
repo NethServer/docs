@@ -381,7 +381,11 @@ Properties:
 * ``S3Host``: S3 host, use ``s3.amazonaws.com`` for Amazon
 * ``S3SecretKey``: secret access key
 
-How to setup Amazon S3 access keys: https://restic.readthedocs.io/en/stable/080_examples.html
+How to setup Amazon S3 access keys: |restic_link|.
+
+.. |restic_link| raw:: html
+
+   <a href="https://restic.readthedocs.io/en/stable/080_examples.html" target="_blank">documentation</a>
 
 B2
 ~~
