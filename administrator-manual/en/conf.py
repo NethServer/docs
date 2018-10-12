@@ -82,6 +82,13 @@ if tags.has("cockpit"):
     html_title = u"%s %s" % (project, release)
     html_theme = "traditional"
     html_add_permalinks=""
+    rst_prolog="""
+.. |product| replace:: NethServer
+.. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__
+.. |ks_keyboard| replace:: :samp:`en`
+.. |ks_timezone| replace:: :samp:`Greenwich`
+.. |ks_language| replace:: :samp:`en_US`
+"""
 elif tags.has('nsent'):
     templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
