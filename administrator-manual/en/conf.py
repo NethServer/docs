@@ -78,6 +78,8 @@ highlight_language = 'none'
 htmlhelp_basename = 'NethServer_enterprisedoc'
 
 if tags.has("cockpit"):
+    project = u'NethServer'
+    html_title = u"%s %s" % (project, release)
     html_theme = "traditional"
     html_add_permalinks=""
 elif tags.has('nsent'):
