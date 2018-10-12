@@ -80,6 +80,23 @@ Upgrade procedures
 
 Manual upgrade procedures are no longer needed: upgrade occurs automatically.
 
+.. note::
+
+  After the upgrade, amavisd and spammassassin (the old anti-spam engine) are  still installed but **the services are stopped**.
+  The softwares can be removed manually with the yum command line.
+
+* Remove all rpm no longer needed:
+
+  All rpms which are installed, but no longer a dependency of another rpm, will be removed. ::
+
+    yum autoremove
+
+
+* Remove only the old anti-spam rpm:
+
+  Only amavisd and spamassassin will be removed. ::
+
+    yum remove amavisd-new spamassassin
 
 .. rubric:: References
 
