@@ -21,7 +21,9 @@ except ImportError:
 
 copyright = u'2017, Nethesis Srl'
 
-if not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
+if 'READTHEDOCS_PROJECT' in os.environ and 'cockpit' in os.environ['READTHEDOCS_PROJECT']:
+    tags.add('cockpit')
+elif not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('nsent')
 elif not tags.has('nsent'):
     tags.add('nscom')
@@ -75,7 +77,10 @@ highlight_language = 'none'
 
 htmlhelp_basename = 'NethServer_enterprisedoc'
 
-if tags.has('nsent'):
+if tags.has("cockpit"):
+    html_theme = "traditional"
+    html_add_permalinks=""
+elif tags.has('nsent'):
     templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
