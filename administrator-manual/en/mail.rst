@@ -471,6 +471,8 @@ It's possible to create an 'Allow' or 'Block' rule even for a complete email dom
 
 .. note:: Antivirus checks are enforced despite *whitelist* settings.
 
+.. _rspamd-web-interface-section:
+
 Rspamd web interface
 --------------------
 
@@ -492,6 +494,8 @@ The Rspamd web UI:
 * shows the server configuration,
 * tracks the history of recent messages,
 * allows training the Bayes filter by submitting a message from the web form.
+
+For more specific informations on Rspamd settings, please read the :ref:`rspamd-section` page.
 
 .. _email_clients:
 
