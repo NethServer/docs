@@ -660,7 +660,7 @@ Quarantine
   The quarantined emails are available like any email account with a webmail or imap account.
 
 .. warning::
-  The mailbox used for quarantine, must be able to accept spam. This is true when you use an internal account, but must be valid for an account on other server.
+  The mailbox used for quarantine, must be able to accept spam. This is true when you use an internal account, but must be valid for an account on other server. Because the email account is dedicated to receive the unwanted spam, you must create and use an email account only for this purpose otherwise you will receive also the spam you do not want.
 
 Quarantine is a separate module called nethserver-mail-quarantine, you can use the software center to install it, once done you must set manually the parameters.
 
@@ -677,7 +677,7 @@ The properties are under the ``rspamd`` key (configuration database): ::
 * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected: enabled/disabled (default)
 * ``SpamNotificationStatus``: Enable the email notification when email are quarantined: enabled/disabled (default)
 
- For example, the following commands enable the quarantine and the mail notification to root: ::
+For example, the following commands enable the quarantine and the mail notification to root: ::
 
   config setprop rspamd QuarantineAccount spam@domain.org QuarantineStatus enabled SpamNotificationStatus enabled
   signal-event nethserver-mail-quarantine-save
