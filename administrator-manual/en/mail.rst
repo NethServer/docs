@@ -471,6 +471,8 @@ It's possible to create an 'Allow' or 'Block' rule even for a complete email dom
 
 .. note:: Antivirus checks are enforced despite *whitelist* settings.
 
+.. _rspamd-web-interface-section:
+
 Rspamd web interface
 --------------------
 
@@ -479,19 +481,7 @@ administrative web interface at ::
 
   https://<HOST_IP>:980/rspamd
 
-The actual URL is listed under the :guilabel:`Applications` page. By default
-access is granted to members of the ``domain admins`` group and to the ``admin``
-user (see also :ref:`admin-account-section`). An additional special login
-``rspamd`` can be used to access it. Its credentials are available from
-:guilabel:`Email > Filter > Rspamd user interface (Web URL)`: just follow the
-given link.
-
-The Rspamd web UI:
-
-* displays messages and actions counters,
-* shows the server configuration,
-* tracks the history of recent messages,
-* allows training the Bayes filter by submitting a message from the web form.
+For more informations on Rspamd, please read the :ref:`rspamd-section` page.
 
 .. _email_clients:
 

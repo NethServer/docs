@@ -104,6 +104,7 @@ Modules
    hotsync
    virtual_machines
    fail2ban
+   rspamd
 
 .. toctree::
    :hidden:
