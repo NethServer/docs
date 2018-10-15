@@ -512,7 +512,8 @@ The Rspamd web UI:
 
     .. warning::
 
-      The mailbox used for quarantine, must be able to accept spam. This is true
+      The mailbox used for quarantine, must be able to accept spam and must 
+      be a user mailbox or possibly a shared mailbox. This is true
       when you use an internal account, but must be valid for an account on
       other server. Because the email account is dedicated to receive the
       unwanted spam, you must create and use an email account only for this
@@ -531,7 +532,7 @@ The Rspamd web UI:
         SpamNotificationStatus=disabled
 
 
-    * ``QuarantineAccount``: The local email box where to send all spams (spam
+    * ``QuarantineAccount``: The user or the shared mailbox where to send all spams (spam
       check is automatically disabled on this account). You must create it
       manually. You could send it to an external mailbox  but then you must
       disable the spam check on this server
