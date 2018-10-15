@@ -80,6 +80,15 @@ Upgrade procedures
 
 Manual upgrade procedures are no longer needed: upgrade occurs automatically.
 
+.. only:: nscom
+
+    After the upgrade the old anti-spam engine services provided by amavisd 
+    and spamassassin are stopped and their packages can be removed.
+
+    To clean up the old anti-spam rpms type ::
+
+        yum remove amavisd-new spamassassin
+
 
 .. rubric:: References
 
