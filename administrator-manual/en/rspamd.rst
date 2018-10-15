@@ -4,13 +4,16 @@
 Rspamd
 ======
 
-Rspamd is the new anti-spam engine of |product|, it replaces spamassassin, 
-you need to install nethserver-mail-filter with the software center. The menu 
-where to activate it and modify scores is at :guilabel:`Email > Filter`, you 
-can read more at the :ref:`email_filter` page.
+Rspamd is the new anti-spam engine of |product|, it replaces SpamAssassin and
+Amavisd-new.
 
-Rspamd is an external project of |product|, you can find the documentation on the 
-main `website <https://rspamd.com/>`_.
+The official documentation of Rspamd is available at https://rspamd.com
+
+You need to install the :guilabel:`Email` module from the :guilabel:`Software
+center` page. The menu where to activate it and modify its settings is on the
+:guilabel:`Email > Filter` page. You can read more in the :ref:`Email filter
+<email_filter>` section.
+
 
 Rspamd Web Interface
 ====================
@@ -186,4 +189,5 @@ For a particular need, you can look the documentation with the
 Frequently asked questions
 ==========================
 
-The F.A.Q could have the answer of your `questions <https://rspamd.com/doc/faq.html>`_
+The official Rspamd FAQ could have the answer to your questions. Please see
+https://rspamd.com/doc/faq.html
