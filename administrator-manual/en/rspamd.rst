@@ -24,53 +24,55 @@ relevant to the module name.
 For a particular need, you can look the documentation with the 
 `list of modules <https://rspamd.com/doc/modules/>`_.
 
-Disable a module
-----------------
+.. only:: nscom
 
-You must disable a module only with a good reason. For example the ip_score module 
-could give a high spam score due to the IP of the email sender, if it is blacklisted.
+    Disable a module
+    ----------------
 
-In that example we could disable the module but many modules (like ip_score) implement 
-a white list to do not check an ip or a domain against the spam filter.
+    You must disable a module only with a good reason. For example the ip_score module 
+    could give a high spam score due to the IP of the email sender, if it is blacklisted.
 
-Create a file (relevant to the module name) :file:`/etc/rspamd/override.d/MODULE_NAME.conf` with ::
+    In that example we could disable the module but many modules (like ip_score) implement 
+    a white list to do not check an ip or a domain against the spam filter.
 
-    enabled = false;
+    Create a file (relevant to the module name) :file:`/etc/rspamd/override.d/MODULE_NAME.conf` with ::
 
-
-Restart Rspamd ::
-
-    systemctl restart rspamd
+        enabled = false;
 
 
-Modify the settings of a module
--------------------------------
+    Restart Rspamd ::
 
-All the default settings of a module are in :file:`/etc/rspamd/modules.d/MODULE_NAME.conf`, 
-|product| uses :file:`/etc/rspamd/local.d/MODULE_NAME.conf` to modify these parameters. 
-Therefore the prefered way is to use :file:`/etc/rspamd/override.d/MODULE_NAME.conf` 
-to either change the Rspamd and |product| default settings. The override file uses the 
-new parameter with a high preference, all former settings are kept.
+        systemctl restart rspamd
 
-Priority order::
 
-    modules.d/MODULE_NAME.conf < local.d/MODULE_NAME.conf < override.d/MODULE_NAME.conf
+    Modify the settings of a module
+    -------------------------------
 
-In that example we want to implement a list of IP to allow them in the ip_score module.
+    All the default settings of a module are in :file:`/etc/rspamd/modules.d/MODULE_NAME.conf`, 
+    |product| uses :file:`/etc/rspamd/local.d/MODULE_NAME.conf` to modify these parameters. 
+    Therefore the prefered way is to use :file:`/etc/rspamd/override.d/MODULE_NAME.conf` 
+    to either change the Rspamd and |product| default settings. The override file uses the 
+    new parameter with a high preference, all former settings are kept.
 
-Create a file :file:`/etc/rspamd/override.d/ip_score.conf` with ::
+    Priority order::
 
-    whitelist = "file:///var/lib/rspamd/ip_score_whitelist";
+        modules.d/MODULE_NAME.conf < local.d/MODULE_NAME.conf < override.d/MODULE_NAME.conf
 
-Restart rspamd ::
+    In that example we want to implement a list of IP to allow them in the ip_score module.
 
-    systemctl restart rspamd
+    Create a file :file:`/etc/rspamd/override.d/ip_score.conf` with ::
 
-The whitelist is editable in the rspamd UI at :guilabel:`Configuration > Lists > ip_score_whitelist`
+        whitelist = "file:///var/lib/rspamd/ip_score_whitelist";
 
-.. note::
+    Restart rspamd ::
 
-   The folder :file:`/var/lib/rspamd` is owned by Rspamd, all files here are modifiable by the software.
+        systemctl restart rspamd
+
+    The whitelist is editable in the rspamd UI at :guilabel:`Configuration > Lists > ip_score_whitelist`
+
+    .. note::
+
+       The folder :file:`/var/lib/rspamd` is owned by Rspamd, all files here are modifiable by the software
 
 
 Rspamd Web Interface
