@@ -493,6 +493,62 @@ The Rspamd web UI:
 * tracks the history of recent messages,
 * allows training the Bayes filter by submitting a message from the web form.
 
+.. only:: nscom
+
+    .. _quarantine:
+
+    Quarantine (beta)
+    -----------------
+
+    |product| can use a specific user mailbox, to move the rejected email as
+    spam to it. The purpose is to verify the email before to delete it, if
+    enabled a mail notification is sent to the postmaster (root alias) for each
+    quarantined email.
+
+    .. note::
+
+      The quarantined emails are available like any email account with a webmail
+      or IMAP account
+
+    .. warning::
+
+      The mailbox used for quarantine, must be able to accept spam. This is true
+      when you use an internal account, but must be valid for an account on
+      other server. Because the email account is dedicated to receive the
+      unwanted spam, you must create and use an email account only for this
+      purpose otherwise you will receive also the spam you do not want
+
+    Quarantine (beta) is provided by an optional module named
+    ``nethserver-mail-quarantine``. Once it has been installed from the
+    :guilabel:`Software center` you must manually set its database properties.
+
+    The properties are under the ``rspamd`` key (configuration database): ::
+
+        rspamd=service
+        ...
+        QuarantineAccount=spam@domain.org
+        QuarantineStatus=enabled
+        SpamNotificationStatus=disabled
+
+
+    * ``QuarantineAccount``: The local email box where to send all spams (spam
+      check is automatically disabled on this account). You must create it
+      manually. You could send it to an external mailbox  but then you must
+      disable the spam check on this server
+
+    * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected:
+      enabled/disabled (default)
+
+    * ``SpamNotificationStatus``: Enable the email notification when email are
+      quarantined: enabled/disabled (default)
+
+    For example, the following commands enable the quarantine and the mail
+    notification to root: ::
+
+      config setprop rspamd QuarantineAccount spam@domain.org QuarantineStatus enabled SpamNotificationStatus enabled
+      signal-event nethserver-mail-quarantine-save
+
+
 .. _email_clients:
 
 Client configuration
@@ -650,37 +706,6 @@ Yields ::
   /var/log/maillog:May 15 02:05:03 mail postfix/qmgr[27757]: A785B308622AB: from=<no-reply@example.com>, size=2597, nrcpt=1 (queue active)
   /var/log/maillog:May 15 02:05:03 mail postfix/lmtp[25854]: A785B308622AB: to=<vmail+jsmith@mail.mynethserver.org>, orig_to=<jsmith@example.com>, relay=mail.mynethserver.org[/var/run/dovecot/lmtp], delay=0.82, delays=0.8/0.01/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 <vmail+jsmith@mail.mynethserver.org> gK8pHS8k+lr/ZAAAJc5BcA Saved)
   /var/log/maillog:May 15 02:05:03 mail postfix/qmgr[27757]: A785B308622AB: removed
-
-Quarantine
-==========
-
-|product| can use a specific user mailbox, to move the rejected email as spam to it. The purpose is to verify the email before to delete it, if enabled a mail notification is sent to the postmaster (root alias) for each quarantined email.
-
-.. note::
-  The quarantined emails are available like any email account with a webmail or imap account.
-
-.. warning::
-  The mailbox used for quarantine, must be able to accept spam. This is true when you use an internal account, but must be valid for an account on other server. Because the email account is dedicated to receive the unwanted spam, you must create and use an email account only for this purpose otherwise you will receive also the spam you do not want.
-
-Quarantine is a separate module called nethserver-mail-quarantine, you can use the software center to install it, once done you must set manually the parameters.
-
-The properties are under the ``rspamd`` key (configuration database): ::
-
-    rspamd=service
-    ...
-    QuarantineAccount=spam@domain.org
-    QuarantineStatus=enabled
-    SpamNotificationStatus=disabled
-
-
-* ``QuarantineAccount``: The local email box where to send all spams (spam check is automatically disabled on this account). You must create it manually. You could send it to an external mailbox  but then you must disable the spam check on this server
-* ``QuarantineStatus``: Enable the quarantine, spam are no more rejected: enabled/disabled (default)
-* ``SpamNotificationStatus``: Enable the email notification when email are quarantined: enabled/disabled (default)
-
-For example, the following commands enable the quarantine and the mail notification to root: ::
-
-  config setprop rspamd QuarantineAccount spam@domain.org QuarantineStatus enabled SpamNotificationStatus enabled
-  signal-event nethserver-mail-quarantine-save
 
 
 .. rubric:: References
