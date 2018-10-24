@@ -515,7 +515,7 @@ a multiple backup which includes only the mail and is scheduled each our.
 
 4. Apply the configuration: ::
 
-     signal-event nethserver-backup-save mymailbackup
+     signal-event nethserver-backup-data-save mymailbackup
 
 
 .. warning:: Make sure not to leave empty lines inside edited files.
