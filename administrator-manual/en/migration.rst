@@ -141,7 +141,7 @@ To take advantage of new features, including Samba Audit, the ibay
 configuration must be switched to the new profile.
 From command line execute: ::
 
- db accounts ibay_name SmbProfileType default
+ db accounts setprop ibay_name SmbProfileType default
  signal-event ibay-mody ibay_name
 
 Where ``ibay_name`` is the name of the ibay to configure.
