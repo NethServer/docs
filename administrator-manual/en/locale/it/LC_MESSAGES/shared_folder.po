@@ -1,10 +1,10 @@
-# #-#-#-#-#  shared_folder.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  shared_folder.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  shared_folder.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  shared_folder.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -25,66 +25,282 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../shared_folder.rst:14 ../../shared_folder.rst:17
+#: ../../shared_folder.rst:10
 msgid "Shared folders"
 msgstr "Cartelle condivise"
 
-#: ../../shared_folder.rst:16 ../../shared_folder.rst:19
+#: ../../shared_folder.rst:12
 msgid ""
 "A *shared folder* is a place where files can be accessed by a group of "
-"people using Samba (SMB/CIFS)."
+"people using different methods, or *protocols*.  Since |product| is a "
+"modular system, the actual methods depends on what modules have been "
+"installed."
 msgstr ""
 "Una *cartella condivisa* è un posto dove i file sono accessibili da un "
-"gruppo di persone tramite Samba (SMB/CIFS)."
+"gruppo di persone, utilizzando diversi metodi, o *protocolli*. Poiché "
+"|product| è un sistema modulare, i metodi disponibili dipendono da quali "
+"moduli sono stati installati."
 
-#: ../../shared_folder.rst:19 ../../shared_folder.rst:22
-msgid ""
-"To create, edit and delete a shared folder go to the :guilabel:`Shared "
-"folders` page."
-msgstr ""
-"Per creare, modificare e rimuovere una cartella condivisa andare alla pagina"
-" :guilabel:`Cartelle condivise`."
+#: ../../shared_folder.rst:17
+msgid "The available methods/protocols are:"
+msgstr "I metodi/protocolli disponibili sono:"
 
-#: ../../shared_folder.rst:23 ../../shared_folder.rst:26
-msgid "Authorizations"
+#: ../../shared_folder.rst:19
+msgid "Web access (HTTP)"
+msgstr "Web access (HTTP)"
+
+#: ../../shared_folder.rst:20
+msgid "Samba (SMB/CIFS)"
+msgstr "Samba (SMB/CIFS)"
+
+#: ../../shared_folder.rst:23
+msgid "Access privileges"
 msgstr "Permessi di accesso"
 
-#: ../../shared_folder.rst:25 ../../shared_folder.rst:28
+#: ../../shared_folder.rst:25
 msgid ""
-"If **Active directory** is selected as account provider, a shared folder is "
-"owned by a group of users (:guilabel:`Owning group`). Each member of the "
-"group is allowed to read the folder contents. Optionally the group can be "
-"entitled to modify the folder contents and the read permission can be "
-"extended to everyone accessing the system.  This simple permission model is "
-"based on the traditional UNIX file system permissions."
+"A shared folder is always owned by a group of users (:guilabel:`Owning "
+"group`). Each member of the group is allowed to read the folder contents. "
+"Optionally the group can be entitled to modify the folder contents and the "
+"read permission can be extended to everyone accessing the system.  This "
+"simple permission model is based on the traditional UNIX file system "
+"permissions."
 msgstr ""
-"Se si è selezionato **Active Directory** come fornitore di autenticazione, è"
-" possibile scegliere un (:guilabel:`Gruppo proprietario`). Ogni membro del "
-"gruppo può leggere i contenuti della cartella. Opzionalmente, al gruppo può "
-"essere concesso di modificare il contenuto della cartella e i permessi di "
-"lettura possono essere estesi a chiunque abbia accesso al sistema. Questo "
-"semplice modello di permessi è basato sui tradizionali permessi del "
-"filesystem di UNIX."
+"Una cartella condivisa appartiene sempre ad un gruppo di utenti "
+"(:guilabel:`Gruppo proprietario`). Ogni membro del gruppo può leggere i "
+"contenuti della cartella. Opzionalmente, al gruppo può essere concesso di "
+"modificare il contenuto della cartella e i permessi di lettura possono "
+"essere estesi a chiunque abbia accesso al sistema. Questo semplice modello "
+"di permessi è basato sui tradizionali permessi del filesystem di UNIX."
 
-#: ../../shared_folder.rst:32 ../../shared_folder.rst:35
+#: ../../shared_folder.rst:32
 msgid ""
 "Access privileges can be refined further with the :guilabel:`ACL` tab, "
 "allowing individual users and other groups to gain read and write "
-"permissions."
+"permissions.  This extended permission model is based on the POSIX ACL "
+"specification."
 msgstr ""
-"I permessi di accesso possono essere ulteriormente raffinati utilizzando le "
+"I permessi di accesso possono essere ulteriormente raffinati dalla scheda "
 ":guilabel:`ACL`, consentendo a singoli utenti o ad altri gruppi i permessi "
-"di lettura o scrittura."
+"di lettura o scrittura. Questo modello di permessi esteso è basato sulla "
+"specifica POSIX ACL."
 
-#: ../../shared_folder.rst:35 ../../shared_folder.rst:38
+#: ../../shared_folder.rst:39
+msgid "Web access"
+msgstr "Accesso web"
+
+#: ../../shared_folder.rst:41
 msgid ""
-"At any time, the :guilabel:`Reset permissions` button propagates the shared "
-"folder UNIX permissions and Posix ACLs to its contents."
+"The :guilabel:`Web access` method allows the connection of a web browser to "
+"a shared folder using the HTTP protocol.  Web resources are identified by a "
+"string, the Uniform Resource Locator, or URL."
 msgstr ""
-"In ogni momento, il pulsante :guilabel:`Reimposta permessi` propaga i "
-"permessi UNIX e ACL POSIX della cartella condivisa alle sottodirectory."
+"Il metodo :guilabel:`Accesso web` consente la connessione di un browser web "
+"ad una cartella condivisa mediante il protocollo HTTP. Le risorse web sono "
+"identificate da una stringa, detta Uniform Resource Locator, o URL."
 
-#: ../../shared_folder.rst:43 ../../shared_folder.rst:46
+#: ../../shared_folder.rst:45
+msgid ""
+"For instance, if ``docs`` is the name of the shared folder, the URLs that "
+"allow the access to it could be: ::"
+msgstr ""
+"Per esempio, se il nome della cartella condivisa è ``docs`` gli URL per "
+"accedervi potrebbero essere: ::"
+
+#: ../../shared_folder.rst:54
+msgid "Each URL has three components:"
+msgstr "Ogni URL ha tre componenti:"
+
+#: ../../shared_folder.rst:56
+msgid "protocol (``http://`` or ``https://``),"
+msgstr "protocollo (``http://`` or ``https://``),"
+
+#: ../../shared_folder.rst:57
+msgid "host name (``192.168.1.1``, ``myserver``, ``www.domain.com``),"
+msgstr "nome host (``192.168.1.1``, ``myserver``, ``www.domain.com``),"
+
+#: ../../shared_folder.rst:58
+msgid "path (``docs``)."
+msgstr "percorso (``docs``)."
+
+#: ../../shared_folder.rst:60
+msgid "The :guilabel:`Web address` radio group defines the \"path\" component."
+msgstr "Il gruppo :guilabel:`Indirizzo web` definisce il componente \"percorso\"."
+
+#: ../../shared_folder.rst:63
+msgid ""
+":guilabel:`Folder name` is the default, the same as the shared folder name, "
+"as ``docs`` in the example above."
+msgstr ""
+":guilabel:`Nome cartella` è il default, lo stesso della cartella condivisa, "
+"come ``docs`` nell'esempio precedente."
+
+#: ../../shared_folder.rst:66
+msgid ""
+":guilabel:`Web site root` means no path at all. For instance "
+"``http://docs.domain.com``."
+msgstr ""
+":guilabel:`Radice del sito web` significa nessun percorso. Per esempio "
+"``http://docs.domain.com``."
+
+#: ../../shared_folder.rst:69
+msgid ":guilabel:`Custom` means an alternative name, to be detailed."
+msgstr ""
+":guilabel:`Personalizzato` significa un nome alternativo, da specificare."
+
+#: ../../shared_folder.rst:71
+msgid ""
+"The :guilabel:`Virtual host` selector lists all :guilabel:`Server alias` "
+"defined under the :guilabel:`DNS` page. \"Any\" means the host part is not "
+"considered to map the URL to the shared folder."
+msgstr ""
+"Il selettore :guilabel:`Host virtuale` elenca tutti gli :guilabel:`Alias "
+"server` definiti nella pagina :guilabel:`DNS`. \"Tutti\" significa che il "
+"nome host non è considerato nell'associare l'URL alla cartella condivisa."
+
+#: ../../shared_folder.rst:75
+msgid ""
+"The web access is anonymous and read-only. There are some options that can "
+"be tweaked to restrict the access."
+msgstr ""
+"L'accesso web è anonimo è in sola lettura. Ci sono alcune opzioni con cui "
+"restringere ulteriormente il permesso di accesso."
+
+#: ../../shared_folder.rst:78
+msgid ""
+":guilabel:`Allow access from trusted networks only`, restricts the access by"
+" looking at the IP address of the client,"
+msgstr ""
+":guilabel:`Consenti l'accesso solo dalle reti fidate`, restringe l'accesso "
+"in base all'indirizzo IP del client,"
+
+#: ../../shared_folder.rst:81
+msgid ""
+":guilabel:`Protect by password`, requires an unique password to gain read "
+"access (to be specified here),"
+msgstr ""
+":guilabel:`Richiedi la password`, limita l'accesso a chi conosce la password"
+" condivisa (da specificare)."
+
+#: ../../shared_folder.rst:83
+msgid ":guilabel:`Require SSL encrypted connection`."
+msgstr ":guilabel:`Richiedi connessione SSL cifrata`."
+
+#: ../../shared_folder.rst:87
+msgid "Configuring a web application"
+msgstr "Configurare un'applicazione web"
+
+#: ../../shared_folder.rst:89
+msgid ""
+"The :guilabel:`Allow .htaccess and write permissions overrides` check box "
+"activates a special Apache configuration designed to host a simple web "
+"application on a shared folder.  It allows overriding the default Apache "
+"configuration and grants Apache the write permissions on specific sub-"
+"directories."
+msgstr ""
+"La casella :guilabel:`Consenti override di .htaccess e dei permessi di "
+"scrittura` attiva una speciale configurazione di Apache pensata per ospitare"
+" una semplice applicazione web in una cartella condivisa. Consente di "
+"modificare la configurazione di default di Apache e di concedere i permessi "
+"di scrittura per specifice sub-directory."
+
+#: ../../shared_folder.rst:95
+msgid ""
+"If a shared folder contains executable code, such as PHP scripts, user "
+"permissions and security implications must be evaluated carefully."
+msgstr ""
+"Se una cartella condivisa contiene condice eseguibile, come ad esempio "
+"script PHP, i permessi degli utenti e le possibili implicazioni di sicurezza"
+" devono essere vaultati attentamente."
+
+#: ../../shared_folder.rst:99
+msgid "If the check box is enabled"
+msgstr "Se la casella è abilitata"
+
+#: ../../shared_folder.rst:101
+msgid ""
+"any file named :file:`.htaccess` is loaded as `configuration for Apache "
+"<http://httpd.apache.org/docs/2.2/howto/htaccess.html>`_."
+msgstr ""
+"i file con nome :file:`.htaccess` sono caricati come configurazione di "
+"Apache <http://httpd.apache.org/docs/2.2/howto/htaccess.html>`_."
+
+#: ../../shared_folder.rst:104
+msgid ""
+"a text file named :file:`.htwritable` positioned in the root level of the "
+"shared folder may contain a list of sub-directories where Apache is granted "
+"write permission.  The syntax of the file is one sub-directory for each "
+"line.  Lines beginning with ``#`` are comments.  When the content of "
+":file:`.htwritable` changes, the :guilabel:`Reset permission` button must be"
+" pressed again to propagate the file system permissions."
+msgstr ""
+"un file di testo con nome :file:`.htwritable` posizionato nella radice della"
+" cartella condivisa può contenere una lista di sotto-directory dove Apache "
+"ottiene i permessi di scrittura. La sintassi del file è una sotto-directory "
+"per ogni riga. Le righe che iniziano con # sono commenti. Quando il "
+"contenuto del file :file:`.htwritable` cambia il pulsante "
+":guilabel:`Reimposta permessi` deve essere premuto di nuovo per propagare i "
+"permessi al file system."
+
+#: ../../shared_folder.rst:112
+msgid ""
+"Shared folders are a powerful tool but are not meant to be a complete web "
+"hosting solution! For advanced Apache and virtual host setups drop a "
+"``.conf`` file under the :file:`/etc/httpd/conf.d/` directory. Refer to the "
+"official Apache documentation for this."
+msgstr ""
+"Le cartelle condivise sono uno strumento potente ma non vanno intese come "
+"una soluzione completa per il web hosting! Per configurare Apache e i "
+"virtual host in maniera più avanzata aggiungere un file ``.conf`` sotto la "
+"directory :file:`/etc/httpd/conf.d/`. Fare riferimento alla documentazione "
+"di Apache per questo."
+
+#: ../../shared_folder.rst:120
+msgid "Samba"
+msgstr "Samba"
+
+#: ../../shared_folder.rst:122
+msgid ""
+"SMB/CIFS is a widley adopted protocol that allows to share files across a "
+"computer network.  In a way similar to Web URLs above, the shared folder "
+"name becomes the SMB \"share name\"."
+msgstr ""
+"SMB/CIFS è un protocollo molto diffuso che consente di condividere file in "
+"una rete di computer. In un modo simile agli URL Web visti sopra, il nome "
+"della cartella condivisa diventa il \"nome della condivisione\" SMB."
+
+#: ../../shared_folder.rst:126
+msgid ""
+"For instance, the SMB network addresses of the ``docs`` share could be ::"
+msgstr ""
+"Per esempio, l'indirizzo di rete SMB per la condivisione ``docs`` potrebbe "
+"essere ::"
+
+#: ../../shared_folder.rst:131
+msgid ""
+"Compatible SMB clients can be used to set special ACLs on a specific file or"
+" sub-directory. At any time, the :guilabel:`Reset permissions` button "
+"restores UNIX and POSIX permissions according to what is defined in the "
+":guilabel:`General` and :guilabel:`ACL` pages."
+msgstr ""
+"I client compatibili con SMB possono essere utilizzati per impostare le ACL "
+"su specifici file o sotto-directory. In ogni momento, il pulsante "
+":guilabel:`Reimposta permessi` ripristina i permessi UNIX e POSIX secondo "
+"quanto definito nelle schede :guilabel:`Generale` e :guilabel:`ACL`."
+
+#: ../../shared_folder.rst:136
+msgid ""
+"If the option :guilabel:`Network recycle bin` is enabled, removed files are "
+"actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
+" omonym files` keeps distinct file names inside the wastebasket directory, "
+"preventing overwrites."
+msgstr ""
+"Se l'opzione :guilabel:`Cestino di rete` è abilitata, i file rimossi da una "
+"cartella condivisa sono in realtà spostati in una directory \"cestino\" "
+"speciale. L'opzione :guilabel:`Mantieni file omonimi` assicura che i file "
+"nel cestino abbiano sempre nomi distinti, impedendo la sovrascrittura."
+
+#: ../../shared_folder.rst:141
 msgid ""
 "If :guilabel:`Guest access` is enabled, any provided authentication "
 "credentials are considered valid."
@@ -92,92 +308,7 @@ msgstr ""
 "Se è attiva l’opzione :guilabel:`Accesso guest`, sono considerate valide "
 "qualsiasi credenziali vengano presentate."
 
-#: ../../shared_folder.rst:46 ../../shared_folder.rst:49
-msgid ""
-"If an **LDAP** account provider is selected or there is no account provider "
-"at all, any access to shared folders is considered as *Guest access* so that"
-" everyone is allowed to read and write its content."
-msgstr ""
-"Se non è stato scelto un metodo di autenticazione o si è scelto LDAP, non "
-"c'è autenticazione per le cartelle condivise, che saranno leggibili e "
-"scrivibili da tutti."
-
-#: ../../shared_folder.rst:53 ../../shared_folder.rst:56
-msgid "Network access"
-msgstr "Accesso alla rete"
-
-#: ../../shared_folder.rst:55 ../../shared_folder.rst:58
-msgid ""
-"SMB/CIFS is a widely adopted protocol that allows to share files across a "
-"computer network. The shared folder name becomes the SMB \"share name\"."
-msgstr ""
-"SMB/CIFS è un protocollo molto diffuso che consente di condividere file in "
-"una rete di computer.  Il nome della cartella condivisa diventa il nome "
-"della condivisione SMB."
-
-#: ../../shared_folder.rst:58 ../../shared_folder.rst:61
-msgid ""
-"For instance, the SMB network addresses of the ``docs`` share could be ::"
-msgstr ""
-"Per esempio, l'indirizzo di rete SMB per la condivisione ``docs`` potrebbe "
-"essere ::"
-
-#: ../../shared_folder.rst:65 ../../shared_folder.rst:68
-msgid ""
-"Authenticated access to shared folders is available with an Active Directory"
-" accounts provider. LDAP provider allows guest access only."
-msgstr ""
-"L'accesso autenticato alle cartelle condivise è disponibile con un account "
-"provider Active Directory. Il provider LDAP consente solo l'accesso come "
-"guest."
-
-#: ../../shared_folder.rst:68 ../../shared_folder.rst:71
-msgid ""
-"When accessing a SMB share, some user interfaces provide a single user name "
-"field. In that case, specify the **user short name** prefixed with the "
-"**NetBIOS domain name**.  For instance, if the NetBIOS domain name is "
-"\"COMPANY\" and the user name is \"john.smith\", the domain-prefixed user "
-"name to access a SMB share is: ::"
-msgstr ""
-"Quando si accede ad una condivisione SMB, alcune interfacce utente "
-"forniscono un unico campo per indicare lo username. In questi casi fornire "
-"lo **user short name** anteposto dal **nome di dominio NetBIOS**. Ad "
-"esempio, se il nome di dominio NetBIOS fosse \"COMPANY\" ed il nome utente "
-"fosse \"john.smith\", la stringa da utilizzare per accedere alla "
-"condivisione SMB sarebbe: ::"
-
-#: ../../shared_folder.rst:76 ../../shared_folder.rst:79
-msgid ""
-"On the contrary, some applications provide separate input fields for the "
-"NetBIOS domain name and the user name; in that case fill in the input fields"
-" individually."
-msgstr ""
-"Al contrario, altre applicazioni mostrano dei campi di input separati per il"
-" nome di dominio NetBIOS e per il nome utente; in tal caso riempire i campi "
-"separatamente."
-
-#: ../../shared_folder.rst:81 ../../shared_folder.rst:84
-msgid "Network recycle bin"
-msgstr "Cestino di rete"
-
-#: ../../shared_folder.rst:83 ../../shared_folder.rst:86
-msgid ""
-"If the option :guilabel:`Network recycle bin` is enabled, removed files are "
-"actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
-" copies of files with the same name` keeps distinct file names inside the "
-"wastebasket directory, preventing overwrites."
-msgstr ""
-"Se l'opzione :guilabel:`Cestino di rete` è abilitata, i file rimossi da una "
-"cartella condivisa sono in realtà spostati in una directory \"cestino\" "
-"speciale. L'opzione :guilabel:`Mantieni più copie dei file con lo stesso "
-"nome` assicura che i file nel cestino abbiano sempre nomi distinti, "
-"impedendo la sovrascrittura."
-
-#: ../../shared_folder.rst:89 ../../shared_folder.rst:92
-msgid "Hide a shared folder"
-msgstr "Nascondere una cartella condivisa"
-
-#: ../../shared_folder.rst:91 ../../shared_folder.rst:94
+#: ../../shared_folder.rst:144
 msgid ""
 "If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
 "This does not affect the permission to use this resource."
@@ -185,47 +316,3 @@ msgstr ""
 "Se è attiva l'opzione :guilabel:`Visibile`, la cartella condivisa sarà "
 "elencata fra le cartelle disponibili. Questa opzione non influisce sui "
 "permessi di accesso della cartella."
-
-#: ../../shared_folder.rst:96 ../../shared_folder.rst:99
-msgid "Home share"
-msgstr "Share home"
-
-#: ../../shared_folder.rst:98 ../../shared_folder.rst:101
-msgid ""
-"Each |product| user has a personal shared folder that is mapped to his Unix "
-"home directory. The SMB share name correspond to the **user short name**. "
-"For example:"
-msgstr ""
-"Ciascun utente di |product| ha una condivisione personale mappata sulla sua "
-"home directory Unix. Il nome SMB della share corrisponde allo **user short "
-"name**. Ad esempio:"
-
-#: ../../shared_folder.rst:101 ../../shared_folder.rst:104
-msgid "user short name ``john.smith``"
-msgstr "user short name ``john.smith``"
-
-#: ../../shared_folder.rst:102 ../../shared_folder.rst:105
-msgid "server name ``MYSERVER``"
-msgstr "nome server ``MYSERVER``"
-
-#: ../../shared_folder.rst:103 ../../shared_folder.rst:106
-msgid "server address ``192.168.1.2``"
-msgstr "indirizzo server ``192.168.1.2``"
-
-#: ../../shared_folder.rst:105 ../../shared_folder.rst:108
-msgid "The SMB network address is: ::"
-msgstr "L'indirizzo di rete SMB è: ::"
-
-#: ../../shared_folder.rst:110 ../../shared_folder.rst:113
-msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
-msgstr ""
-"Fornire le credenziali dell'utente John come spiegato nella sezione :ref"
-":`smb-access-section`."
-
-#: ../../shared_folder.rst:114 ../../shared_folder.rst:117
-msgid ""
-"The Unix home directory is created the first time the user accesses it by "
-"either SMB or SFTP/SSH protocol."
-msgstr ""
-"La directory home Unix viene creata al primo accesso dell'utente tramite SMB"
-" o via SFTP/SSH."

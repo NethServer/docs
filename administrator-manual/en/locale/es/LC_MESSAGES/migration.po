@@ -1,10 +1,10 @@
-# #-#-#-#-#  migration.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  migration.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  migration.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  migration.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../migration.rst:14 ../../migration.rst:17
+#: ../../migration.rst:7
 msgid "Migration from NethService/SME Server"
 msgstr "Migración del servidor NethService/SME"
 
-#: ../../migration.rst:16 ../../migration.rst:19
+#: ../../migration.rst:9
 msgid ""
 "Migration is the process to convert a SME Server/NethService machine "
 "(:dfn:`source`) into a |product| (:dfn:`destination`)."
@@ -37,15 +37,7 @@ msgstr ""
 "La migración es el proceso para convertir una máquina SME Server/NethService"
 " (:dfn:`source`) en un |product| (:dfn:`destination`)."
 
-#: ../../migration.rst:21 ../../migration.rst:24
-msgid ""
-"Before running the migration procedure, read carefully all the sections of "
-"this chapter."
-msgstr ""
-"Antes de ejecutar el procedimiento de migración, lea atentamente todas las "
-"secciones de este capítulo. "
-
-#: ../../migration.rst:24 ../../migration.rst:27
+#: ../../migration.rst:12
 msgid ""
 "In the source host, create a full backup archive and move it to the "
 "destination host."
@@ -53,7 +45,7 @@ msgstr ""
 "En el host de origen, cree un archivo de copia de seguridad completo y "
 "muévalo al host de destino."
 
-#: ../../migration.rst:27 ../../migration.rst:30
+#: ../../migration.rst:15
 msgid ""
 "In the destination host, install all packages that cover the same features "
 "of the source."
@@ -61,7 +53,7 @@ msgstr ""
 "En el host de destino, instale todos los paquetes que cubran las mismas "
 "características del origen."
 
-#: ../../migration.rst:30 ../../migration.rst:33
+#: ../../migration.rst:18
 msgid ""
 "Explode the full backup archive into some directory; for instance, create "
 "the directory :file:`/var/lib/migration`."
@@ -69,20 +61,20 @@ msgstr ""
 "Descargar el archivo de copia de seguridad completo en algún directorio; Por"
 " ejemplo, cree el directorio :file:`/var/lib/migration`."
 
-#: ../../migration.rst:33 ../../migration.rst:36
-msgid "In destination host, signal the event ``migration-import``::"
-msgstr "En el host de destino, señale el evento ``migration-import``::"
+#: ../../migration.rst:21
+msgid "In |product|, signal the event ``migration-import``::"
+msgstr ""
 
-#: ../../migration.rst:37 ../../migration.rst:40
+#: ../../migration.rst:25
 msgid "This step will require some time."
 msgstr "Este paso requerirá algún tiempo."
 
-#: ../../migration.rst:39 ../../migration.rst:42
+#: ../../migration.rst:27
 msgid "Check for any error message in :file:`/var/log/messages`::"
 msgstr ""
 "Compruebe si hay algún mensaje de error en :file:`/var/log/messages`::"
 
-#: ../../migration.rst:43 ../../migration.rst:46
+#: ../../migration.rst:31
 msgid ""
 "No custom template is migrated during the migration process. Check the new "
 "template files before copying any custom fragment from the old backup."
@@ -91,64 +83,11 @@ msgstr ""
 " Compruebe los archivos de la plantilla nueva antes de copiar cualquier "
 "fragmento personalizado de la copia de seguridad antigua."
 
-#: ../../migration.rst:49 ../../migration.rst:52
-msgid "Accounts provider"
-msgstr "Proveedor de cuentas"
-
-#: ../../migration.rst:51 ../../migration.rst:54
-msgid ""
-"You should configure an :ref:`accounts provider <account-providers>` before "
-"starting the migration procedure."
-msgstr ""
-"Debe configurar un :ref:`proveedor de cuentas <account-providers>` antes de "
-"iniciar el procedimiento de migración."
-
-#: ../../migration.rst:54 ../../migration.rst:57
-msgid ""
-"If the source system was joined to an Active Directory domain (Samba server "
-"role was ADS), configure a *remote Active Directory* accounts provider."
-msgstr ""
-"Si el sistema de origen se unió a un dominio de Active Directory (la función"
-" de servidor Samba era ADS), configure un proveedor de cuentas *remoto de "
-"Active Directory*."
-
-#: ../../migration.rst:57 ../../migration.rst:60
-msgid ""
-"If the source system was a NT Primary Domain Controller (Samba server role "
-"was PDC) install a *local Active Directory* accounts provider."
-msgstr ""
-"Si el sistema de origen era un Primary Domain Controller de NT (el rol del "
-"servidor de Samba era PDC), instale un proveedor de cuentas *Active "
-"Directory local*."
-
-#: ../../migration.rst:60 ../../migration.rst:63
-msgid ""
-"If access to Shared Folders on the destination system requires user "
-"authentication, install a *local Active Directory* accounts provider."
-msgstr ""
-"Si el acceso a carpetas compartidas en el sistema de destino requiere "
-"autenticación de usuario, instale un proveedor de cuentas *Active Directory "
-"local*."
-
-#: ../../migration.rst:63 ../../migration.rst:66
-msgid "In any other case, install a *local LDAP* accounts provider."
-msgstr "En cualquier otro caso, instale un proveedor de cuentas *LDAP local*."
-
-#: ../../migration.rst:67 ../../migration.rst:70
-msgid ""
-"If you choose a local Active Directory accounts provider, remember to fully "
-"configure and start the DC before executing the ``migration-import`` event. "
-"See :ref:`account-providers`."
-msgstr ""
-"Si elige un proveedor de cuentas de Active Directory local, recuerde "
-"configurar e iniciar completamente el controlador de dominio antes de "
-"ejecutar el evento ``migration-import``. Véase :ref:`account-providers`."
-
-#: ../../migration.rst:78 ../../migration.rst:81
+#: ../../migration.rst:40
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: ../../migration.rst:80 ../../migration.rst:83
+#: ../../migration.rst:42
 msgid ""
 "Before running |product| in production, some considerations about the "
 "network and existing mail client configurations are required: what ports are"
@@ -161,7 +100,7 @@ msgstr ""
 "Consulte las secciones :ref:`email_clients` y :ref:`email_policies` para "
 "obtener más información."
 
-#: ../../migration.rst:86 ../../migration.rst:89
+#: ../../migration.rst:48
 msgid ""
 "In a mail server migration, the source mail server could be on production "
 "even after the backup has been done, and email messages continue to be "
@@ -172,110 +111,18 @@ msgstr ""
 " de seguridad y los mensajes de correo electrónico continúan siendo "
 "entregados hasta que se borran permanentemente."
 
-#: ../../migration.rst:90 ../../migration.rst:93
+#: ../../migration.rst:52
 msgid ""
-"An helper script based on ``rsync`` is provided by package ``nethserver-"
-"mail-server``. It runs on the destination host and synchronizes destination "
-"mailboxes with the source host: ::"
+"An helper ``rsync`` script is provided by package ``nethserver-mail-"
+"server``, to re-synchronize destination mailboxes with the source host: "
+":file:`/usr/share/doc/nethserver-mail-server-<VERSION>/sync_maildirs.sh`. It"
+" runs on the destination host: ::"
 msgstr ""
-"Un script de ayuda basado en ``rsync`` es proporcionado por el paquete "
-"``nethserver-mail-server``. Se ejecuta en el host de destino y sincroniza "
-"los buzones de destino con el host de origen:"
 
-#: ../../migration.rst:104 ../../migration.rst:107
+#: ../../migration.rst:65
 msgid ""
 "The source host at ``IPADDR`` must be accessible by the ``root`` user, "
 "through ``ssh`` with public key authentication."
 msgstr ""
 "El host de origen en ``IPADDR`` debe ser accesible por el usuario ``root``, "
 "a través de ``ssh`` con autenticación de clave pública."
-
-#: ../../migration.rst:110 ../../migration.rst:113
-msgid "Apache"
-msgstr "Apache"
-
-#: ../../migration.rst:112 ../../migration.rst:115
-msgid ""
-"The SSL cipher suite configuration is not migrated automatically because the"
-" source system uses a weak cipher suite by default. To migrate it manually, "
-"execute the following commands: ::"
-msgstr ""
-"La configuración de la suite de cifrado SSL no se migra automáticamente "
-"porque el sistema de origen utiliza un conjunto de cifrado débil de forma "
-"predeterminada. Para migrarlo manualmente, ejecute los siguientes comandos: "
-"::"
-
-#: ../../migration.rst:123 ../../migration.rst:126
-msgid "Ibays"
-msgstr "Ibays"
-
-#: ../../migration.rst:125 ../../migration.rst:128
-msgid ""
-"The *ibay* concept has been superseded by :ref:`shared_folders-section`. "
-"Supported protocols for accessing Shared folders are:"
-msgstr ""
-"El concepto *ibay* ha sido reemplazado por :ref:`shared_folders-section`. "
-"Los protocolos soportados para acceder a Carpetas compartidas son:"
-
-#: ../../migration.rst:128 ../../migration.rst:131
-msgid "SFTP, provided by the ``sshd`` daemon"
-msgstr "SFTP, proporcionado por el demonio ``sshd``"
-
-#: ../../migration.rst:130 ../../migration.rst:133
-msgid ""
-"SMB file sharing protocol, typical of Windows networking, implemented by "
-"Samba"
-msgstr ""
-"Protocolo de intercambio de archivos SMB, típico de las redes de Windows, "
-"implementado por Samba"
-
-#: ../../migration.rst:134 ../../migration.rst:137
-msgid ""
-"Read carefully the :ref:`upgrade-shared-folders` section in the :ref"
-":`upgrade-section` chapter, because the connection credentials may change "
-"when migrating to |product| |version|."
-msgstr ""
-
-#: ../../migration.rst:138 ../../migration.rst:141
-msgid ""
-"Starting from |product| |version|, Shared folders are not configurable for "
-"HTTP access. After ``migration-import`` event, old ibays could be migrated "
-"according to the following rules of thumb:"
-msgstr ""
-"A partir de |product |version|, las carpetas compartidas no están "
-"configuradas para el acceso HTTP. Después del evento ``migration-import``, "
-"los ibays antiguos podrían migrarse de acuerdo con las siguientes reglas "
-"empíricas:"
-
-#: ../../migration.rst:142 ../../migration.rst:145
-msgid ""
-"If the ibay was a **virtual host**, install the \"Web server\" module from "
-"the :guilabel:`Software center` page. Copy the ibay contents to the virtual "
-"host root directory. Refer to :ref:`virtual_hosts-section`."
-msgstr ""
-"Si el ibay era un **host virtual**, instale el módulo \"Servidor web\" desde"
-" la página :guilabel:`Centro de software`. Copie el contenido ibay en el "
-"directorio raíz del host virtual. Refiérase a :ref:`virtual_hosts-section`."
-
-#: ../../migration.rst:146 ../../migration.rst:149
-msgid ""
-"If the ibay access was restricted with a **secret password** (for instance, "
-"to share contents with a group of people across the internet), the :ref"
-":`virtual_hosts-section` page still offers the same feature. Also the "
-":ref:`Nextcloud <nextcloud-section>` module could be a good replacement."
-msgstr ""
-"Si el acceso ibay estaba restringido con una **contraseña secreta** (por "
-"ejemplo, para compartir contenido con un grupo de personas a través de "
-"Internet), la página :ref:`virtual_hosts-section` todavía ofrece la misma "
-"característica. También el módulo :ref:`Nextcloud <nextcloud-section>` "
-"podría ser un buen sustituto."
-
-#: ../../migration.rst:151 ../../migration.rst:154
-msgid ""
-"If the ibay contents were accessible with an URL like "
-"``http://<IP>/ibayname`` the easiest procedure to keep it working is moving "
-"it to Apache document root: ::"
-msgstr ""
-"Si el contenido ibay era accesible con una URL como "
-"``http://<IP>/ibayname``, el procedimiento más sencillo para mantenerlo "
-"funcionando es trasladarlo a la raíz del documento Apache: ::"

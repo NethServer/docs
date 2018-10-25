@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../weekly_report.rst:14
+#: ../../weekly_report.rst:4
 msgid "Weekly report"
 msgstr "Report Settimanale"
 
-#: ../../weekly_report.rst:16
+#: ../../weekly_report.rst:6
 msgid ""
 "The Weekly report is a summary document generated weekly and emailed to a "
 "selected address. It displays useful statistical analysis on Internet "
@@ -40,17 +40,17 @@ msgstr ""
 "grafica e tabellare. Il report è componibile, ovvero l'utente può definire "
 "quali tabelle e/o grafici (widget) includere nel report."
 
-#: ../../weekly_report.rst:26
+#: ../../weekly_report.rst:16
 msgid "You can view current and all old reports the Server Manager."
 msgstr ""
 "È possibile consultare il report corrente e lo storico accedendo al Server "
 "Manager."
 
-#: ../../weekly_report.rst:29
+#: ../../weekly_report.rst:19
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../weekly_report.rst:31
+#: ../../weekly_report.rst:21
 msgid ""
 "Install the add-on by selection nethserver-report from the "
 ":guilabel:`Software center`."
@@ -58,11 +58,11 @@ msgstr ""
 "Installare l'add-on selezionando nethserver-report dal pannello "
 ":guilabel:`Software center`."
 
-#: ../../weekly_report.rst:34
+#: ../../weekly_report.rst:24
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../weekly_report.rst:36
+#: ../../weekly_report.rst:26
 msgid ""
 "The report configuration is located in the :guilabel:`Weekly report` "
 "section. The page displays the list of enabled/disabled widgets. You can "

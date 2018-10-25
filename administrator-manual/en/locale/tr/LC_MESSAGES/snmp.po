@@ -1,10 +1,10 @@
-# #-#-#-#-#  snmp.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  snmp.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  snmp.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  snmp.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
 "Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,48 +24,43 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../snmp.rst:10 ../../snmp.rst:13
+#: ../../snmp.rst:3
 msgid "SNMP"
-msgstr "SNMP"
+msgstr ""
 
-#: ../../snmp.rst:12 ../../snmp.rst:15
+#: ../../snmp.rst:5
 msgid ""
 "SNMP (Simple Network Management Protocol) protocol allows to manage and "
 "monitor devices connected to the network. The :index:`SNMP` server can reply"
 " to specific queries about current system status."
 msgstr ""
-"SNMP (Simple Network Management Protocol) iletişim kuralı ağa bağlı "
-"aygıtların yönetimi ve izlenmesi için kullanılır. :index:`SNMP` sunucusu "
-"geçerli sistem durumu hakkında belirli sorgulara yanıt verebilir."
 
-#: ../../snmp.rst:15 ../../snmp.rst:18
+#: ../../snmp.rst:8
 msgid "The server is disabled by default."
-msgstr "Sunucu varsayılan olarak devre dışıdır."
+msgstr ""
 
-#: ../../snmp.rst:17 ../../snmp.rst:20
+#: ../../snmp.rst:10
 msgid "During first configuration. you should set three main options:"
-msgstr "İlk ayarlama sırasında üç temel seçenek ayarlanmalıdır:"
+msgstr ""
 
-#: ../../snmp.rst:19 ../../snmp.rst:22
+#: ../../snmp.rst:12
 msgid "the SNMP community name"
-msgstr "SNMP topluluğu adı"
+msgstr ""
 
-#: ../../snmp.rst:20 ../../snmp.rst:23
+#: ../../snmp.rst:13
 msgid "the location name where the server is located"
-msgstr "sunucunun bulunduğu konum adı"
+msgstr ""
 
-#: ../../snmp.rst:21 ../../snmp.rst:24
+#: ../../snmp.rst:14
 msgid "the name and mail address of system administrator"
-msgstr "sistem yöneticisinin adı ve e-posta adresi"
+msgstr ""
 
-#: ../../snmp.rst:24 ../../snmp.rst:27
+#: ../../snmp.rst:17
 msgid "References"
-msgstr "Referanslar"
+msgstr ""
 
-#: ../../snmp.rst:25 ../../snmp.rst:28
+#: ../../snmp.rst:18
 msgid ""
 "Simple Network Management Protocol "
-"https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"
+"http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"
 msgstr ""
-"Simple Network Management Protocol "
-"https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"

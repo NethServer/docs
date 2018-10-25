@@ -1,10 +1,10 @@
-# #-#-#-#-#  proxy_pass.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  proxy_pass.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  proxy_pass.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  proxy_pass.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Borficchia <dado.borfi@hotmail.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,92 +25,80 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../proxy_pass.rst:10 ../../proxy_pass.rst:13
-msgid "Reverse proxy"
-msgstr "Reverse proxy"
+#: ../../proxy_pass.rst:3
+msgid "Proxy pass"
+msgstr "Proxy pass"
 
-#: ../../proxy_pass.rst:12 ../../proxy_pass.rst:15
+#: ../../proxy_pass.rst:5
 msgid ""
-"The :index:`reverse proxy` feature is useful when you want to access "
-"internal sites from the outside network."
+"The :index:`proxy pass` feature is useful when you want to access internal "
+"sites from the outside network."
 msgstr ""
-"La funzionalità :index:`reverse proxy` è utile quando si desidera accedere a"
-" siti interni dalla rete esterna."
+"La funzionalità :index:`proxy pass` è utile quando si desidera accedere a "
+"siti interni dall rete esterna."
 
-#: ../../proxy_pass.rst:15 ../../proxy_pass.rst:18
-msgid "Typical scenario:"
-msgstr "Scenario tipico:"
+#: ../../proxy_pass.rst:8
+msgid ""
+"Proxy pass configuration must be done via command line. Before proceed, make"
+" sure ``nethserver-httpd`` package in installed: ::"
+msgstr ""
+"La configurazione del proxy pass deve essere effettuata da linea di comando."
+" Prima di procedere, assicurarsi che il pacchetto ``nethserver-httpd`` sia "
+"installato: ::"
 
-#: ../../proxy_pass.rst:17 ../../proxy_pass.rst:20
+#: ../../proxy_pass.rst:13
+msgid "Scenario:"
+msgstr "Scenario:"
+
+#: ../../proxy_pass.rst:15
 msgid "|product| is the firewall of your LAN"
 msgstr "|product| è il firewall della LAN"
 
-#: ../../proxy_pass.rst:19 ../../proxy_pass.rst:22
+#: ../../proxy_pass.rst:16
 msgid "You have a domain http://mydomain.com"
 msgstr "Si possiede il dominio http://mydomain.com"
 
-#: ../../proxy_pass.rst:21 ../../proxy_pass.rst:24
+#: ../../proxy_pass.rst:17
 msgid ""
 "You would like http://mydomain.com/mysite to forward to the internal server "
 "(internal IP: 192.168.2.100)"
 msgstr ""
-"Si desidera che http://mydomain.com/mysite inoltri le richieste al server "
-"interno (IP privato: 192.168.2.100)"
+"Si desidera inoltrare le richieste per http://mydomain.com/mysite ad un "
+"server interno (IP interno: 192.168.2.100)"
 
-#: ../../proxy_pass.rst:24 ../../proxy_pass.rst:27
-msgid ""
-"In this scenario create a new record under :guilabel:`Reverse proxy` page. "
-"Set the :guilabel:`Name` of the item to ``mysite`` and the :guilabel:`Target"
-" URL` to ``http://192.168.2.100``."
-msgstr ""
-"In questo scenario creare un nuovo record nella pagina :guilabel:`Reverse "
-"proxy`. Impostare il :guilabel:`Nome` dell’elemento a ``mysite`` e "
-":guilabel:`Target URL` destinazione a ``http://192.168.2.100``."
+#: ../../proxy_pass.rst:19
+msgid "Commands for this example: ::"
+msgstr "Comandi per questo esempio: ::"
 
-#: ../../proxy_pass.rst:28 ../../proxy_pass.rst:31
-msgid ""
-"If only encrypted connections are allowed, enable the :guilabel:`Require SSL"
-" encrypted connection`."
-msgstr ""
-"Se sono consentite solo connessioni cifrate, abilitare l’opzione "
-":guilabel:`Richiedi connessione SSL cifrata`."
+#: ../../proxy_pass.rst:28
+msgid "You can also restrict the access to a list of IPs: ::"
+msgstr "E' possibile restringere l'accesso ad una lista di IP: ::"
 
-#: ../../proxy_pass.rst:31 ../../proxy_pass.rst:34
-msgid ""
-"Only clients from certain networks can be allowed to connect, by specifying"
-"  a comma-separated list of CIDR networks under the :guilabel:`Access from "
-"CIDR networks`  field."
-msgstr ""
-"Si può restringere l’accesso solo ai client appartenenti ad alcune reti, "
-"specificando un elenco separato da virgola di reti in notazione CIDR nel "
-"campo :guilabel:`Accedi da reti CIDR`."
-
-#: ../../proxy_pass.rst:37 ../../proxy_pass.rst:40
+#: ../../proxy_pass.rst:34
 msgid "Manual configuration"
 msgstr "Configurazione manuale"
 
-#: ../../proxy_pass.rst:39 ../../proxy_pass.rst:42
+#: ../../proxy_pass.rst:36
 msgid ""
-"If :guilabel:`Reverse proxy` page is not enough, you can always configure "
-"Apache manually, by creating a new file inside :file:`/etc/httpd/conf.d/` "
-"directory."
+"If this is not enough, you can always manually create your own proxy pass by"
+" creating a new file inside :file:`/etc/httpd/conf.d/` directory."
 msgstr ""
-"Se la pagina :guilabel:`Reverse proxy` non è abbastanza, è sempre possibile "
-"configurare Apache manualmente, creando un nuovo file nella directory "
+"Se questa configurazione non è abbastanza, è sempre possibile creare "
+"manualmente il proprio proxy pass creando un nuovo file nella directory "
 ":file:`/etc/httpd/conf.d/`."
 
-#: ../../proxy_pass.rst:42 ../../proxy_pass.rst:45
+#: ../../proxy_pass.rst:39
 msgid "**Example**"
 msgstr "**Esempio**"
 
-#: ../../proxy_pass.rst:44 ../../proxy_pass.rst:47
+#: ../../proxy_pass.rst:41
 msgid ""
 "Create :file:`/etc/httpd/conf.d/myproxypass.conf` file with this content: ::"
 msgstr ""
 "Creare il file :file:`/etc/httpd/conf.d/myproxypass.conf` con il seguente "
 "contenuto: ::"
 
-#: ../../proxy_pass.rst:61 ../../proxy_pass.rst:64
+#: ../../proxy_pass.rst:58
 msgid ""
 "Please refer to official Apache documentation for more information: "
 "http://httpd.apache.org/docs/2.2/mod/mod_proxy.html"

@@ -1,10 +1,10 @@
-# #-#-#-#-#  packages.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  packages.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  packages.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  packages.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,134 +25,59 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../packages.rst:13 ../../packages.rst:16
+#: ../../packages.rst:5
 msgid "Software center"
 msgstr "Centro de software"
 
-#: ../../packages.rst:15 ../../packages.rst:18
+#: ../../packages.rst:7
 msgid ""
-"|product| is highly modular.  At the end of the installation a bare minimum "
-"set of modules are ready to be used. The basic system includes modules like "
-"*network configuration* and *log viewer*. Additionally, the administrator "
-"can install additional modules, like :ref:`email-section`, :ref:`dhcp-"
-"section`, :ref:`firewall-section`..."
+"|product| is highly modular: at the end of the installation only base system"
+" will be ready to be used. Base system includes modules like network "
+"configuration and log viewer. The administrator can install additional "
+"modules like :ref:`email-section`, :ref:`dhcp-section` and :ref:`firewall-"
+"section`."
 msgstr ""
-"|product| es altamente modular. Al final de la instalación, un conjunto "
-"mínimo de módulos está listo para ser utilizado. El sistema básico incluye "
-"módulos como *configuración de red* y *visualizador de registro*. Además, el"
-" administrador puede instalar módulos adicionales, como :ref:`email-"
-"section`, :ref:`dhcp-section`, :ref:`firewall-section`..."
+"|product| es altamente modular: al final de la instalación sólo el sistema "
+"base estará listo para ser utilizado. El sistema básico incluye módulos como"
+" la configuración de la red y el visor de registros. El administrador puede "
+"instalar módulos adicionales como :ref:`email-section`, :ref:dhcp-section` y"
+" :ref:`firewall-section`."
 
-#: ../../packages.rst:21 ../../packages.rst:24
+#: ../../packages.rst:11
 msgid ""
-"The :guilabel:`Available` tab lists all of the modules that can be "
-"installed. This list can be filtered by category."
+"The main page shows all available and installed (checked) modules. The view "
+"can be filtered by category."
 msgstr ""
-"La pestaña :guilabel:`Disponible` enumera todos los módulos que se pueden "
-"instalar. Esta lista puede ser filtrada por categoría."
+"La página principal muestra todos los módulos disponibles e instalados "
+"(comprobados). La vista puede filtrarse por categoría."
 
-#: ../../packages.rst:24 ../../packages.rst:27
+#: ../../packages.rst:14
 msgid ""
-"To **install a module**, check the corresponding box and click on "
-":guilabel:`Add`. Some modules suggest optional packages that can be "
-"installed whether at the same or at a later time."
+"To install a module, check the corresponding box and click on "
+":guilabel:`Apply`. To remove a module, uncheck the corresponding box and "
+"click on :guilabel:`Apply`. Next page will resume all modifications and "
+"display all optional packages."
 msgstr ""
-"Para **instalar un módulo**, marque la casilla correspondiente y haga clic "
-"en :guilabel:`Añadir`. Algunos módulos sugieren paquetes opcionales que "
-"pueden instalarse ya sea al mismo tiempo o posteriormente."
+"Para instalar un módulo, marque la casilla correspondiente y haga clic en "
+":guilabel:`Aplicar`. Para quitar un módulo, desmarque la casilla "
+"correspondiente y haga clic en :guilabel: `Aplicar`. La página siguiente "
+"reanudará todas las modificaciones y mostrará todos los paquetes opcionales."
 
-#: ../../packages.rst:28 ../../packages.rst:31
+#: ../../packages.rst:21
 msgid ""
-"To **install optional packages** at a later time, select "
-":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
-"entry."
+"Optional packages can be added to the system *after* installation of the "
+"main component. Just click again on :guilabel:`Apply` and select optional "
+"packages from confirmation page."
 msgstr ""
-"Para **instalar paquetes opcionales** en un momento posterior, seleccione la"
-" pestaña :guilabel:`Instalado` y pulse el botón :guilabel:`Editar` en una "
-"entrada en la lista."
+"Los paquetes opcionales se pueden agregar al sistema *después* de la "
+"instalación del componente principal. Simplemente haga clic de nuevo en "
+":guilabel:`Aplicar` y seleccione paquetes opcionales desde la página de "
+"confirmación."
 
-#: ../../packages.rst:33 ../../packages.rst:36
-msgid "To **remove a module**, push the :guilabel:`Remove` button."
-msgstr "Para **eliminar un módulo**, pulse el botón :guilabel:`Eliminar`."
-
-#: ../../packages.rst:37 ../../packages.rst:40
-msgid ""
-"When removing a module other modules could be removed, too! Read carefully "
-"the list of affected packages to avoid removing required features."
-msgstr ""
-"¡Al quitar un módulo también se podrían quitar otros módulos! Lea "
-"cuidadosamente la lista de paquetes afectados para evitar la eliminación de "
-"las funciones necesarias."
-
-#: ../../packages.rst:44 ../../packages.rst:47
-msgid ""
-"Installed packages **cannot be removed from the Software Center!** Please "
-"contact customer support if you need to remove an installed module."
-msgstr ""
-
-#: ../../packages.rst:54 ../../packages.rst:57
-msgid "Software updates"
-msgstr "Actualizaciones de software"
-
-#: ../../packages.rst:56 ../../packages.rst:59
-msgid ""
-"Updates for the installed software are listed under the :guilabel:`Updates` "
-"tab. A message appears when software updates are available."
-msgstr ""
-"Las actualizaciones para el software instalado aparecen en la pestaña "
-":guilabel:`Actualizaciones`. Se mostrará un mensaje cuando hay "
-"actualizaciones de software disponibles."
-
-#: ../../packages.rst:61 ../../packages.rst:64
-msgid ""
-"Regularly update the installed software to fix bugs, security issues and "
-"receive new features."
-msgstr ""
-"Actualiza regularmente el software instalado para corregir errores, "
-"problemas de seguridad y recibir nuevas funciones."
-
-#: ../../packages.rst:65 ../../packages.rst:68
-msgid "Updates will be automatically installed by a scheduled procedure."
-msgstr ""
-"Las actualizaciones se instalarán automáticamente mediante un procedimiento "
-"programado."
-
-#: ../../packages.rst:72 ../../packages.rst:75
-msgid "List of installed packages"
-msgstr "Lista de paquetes instalados"
-
-#: ../../packages.rst:74 ../../packages.rst:77
-msgid ""
-"The complete list of installed RPM packages is available under "
-":guilabel:`Installed > Packages`."
-msgstr ""
-"La lista completa de los paquetes RPM instalados está disponible en "
-":guilabel:`Instalado > Paquetes`."
-
-#: ../../packages.rst:77 ../../packages.rst:80
+#: ../../packages.rst:27
 msgid ""
 "The section :guilabel:`Installed software` displays all packages already "
-"installed into the system with the full package version."
+"installed into the system."
 msgstr ""
 "La sección :guilabel:`Software instalado` muestra todos los paquetes ya "
-"instalados en el sistema con la versión completa del paquete."
-
-#: ../../packages.rst:83 ../../packages.rst:86
-msgid "Additional languages"
-msgstr "Idiomas adicionales"
-
-#: ../../packages.rst:85 ../../packages.rst:88
-msgid ""
-"The Server Manager allows selecting the interface language at the login "
-"screen. Only installed languages are listed."
-msgstr ""
-"El Administrador de servidores permite seleccionar el idioma de la interfaz "
-"en la pantalla de inicio de sesión. Sólo se muestran los idiomas instalados."
-
-#: ../../packages.rst:88 ../../packages.rst:91
-msgid ""
-"In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
-"install the desired languages."
-msgstr ""
-"En la pestaña :guilabel:`Disponible`, seleccione la categoría "
-":guilabel:`Idiomas` e instale los idiomas que desee."
+"instalados en el sistema."

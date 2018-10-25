@@ -1,10 +1,10 @@
-# #-#-#-#-#  base_system.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  base_system.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  base_system.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  base_system.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,107 +25,111 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../base_system.rst:12 ../../base_system.rst:15
+#: ../../base_system.rst:5
 msgid "Base system"
 msgstr "Sistema base"
 
-#: ../../base_system.rst:14 ../../base_system.rst:17
+#: ../../base_system.rst:7
 msgid ""
 "This chapter describes all available modules at the end of installation. All"
-" modules outside this section must be installed from the :ref:`software-"
-"center-section` page, including :ref:`backup-section`."
+" modules outside this section must be installed from :ref:`package_manager-"
+"section`, including backup and users support."
 msgstr ""
 "Questo capitolo descrive tutti i moduli disponibili al termine "
 "dell'installazione. Tutti i moduli al di fuori di questa sezione devono "
-"essere installati dalla pagina :ref:`software-center-section`, inclusi il "
-":ref:`backup <backup-section>` e il supporto per gli utenti."
+"essere installati dalla :ref:`package_manager-section`, inclusi il backup e "
+"il supporto per gli utenti."
 
-#: ../../base_system.rst:21 ../../base_system.rst:24
+#: ../../base_system.rst:14
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: ../../base_system.rst:23 ../../base_system.rst:26
+#: ../../base_system.rst:16
 msgid ""
 "The :index:`Dashboard` page is the landing page after a successful login. "
-"The page will display the :index:`status` and configuration of the system."
+"The page will display the :index:`status` and configurations of the system."
 msgstr ""
 "La pagina mostrata di default dopo il login è la :index:`Dashboard`; qui "
-"viene visualizzato un riepilogo dello :index:`stato` del sistema e delle sue"
-" impostazioni."
+"viene visualizzato un riepilogo dello :index:`status` del sistema e delle "
+"sue impostazioni."
 
-#: ../../base_system.rst:29 ../../base_system.rst:32
+#: ../../base_system.rst:22
 msgid "Disk analyzer"
 msgstr "Analizzatore disco"
 
-#: ../../base_system.rst:31 ../../base_system.rst:34
+#: ../../base_system.rst:24
 msgid ""
-"This tool is used to visualize :index:`disk usage` in a simple and nice "
-"graph in which you can interact with, click, and double click to navigate in"
-" the directories tree."
+"This tool is used to visualize :index:`disk usage` in a simply and nice "
+"graph in which you can interact with click and double click to navigate in "
+"the directories tree."
 msgstr ""
 "Questo strumento è usato per visualizzare l':index:`utilizzo del disco` in "
 "un semplice grafico in cui è possibile interagire con click e doppio click "
 "per navigare nelle cartelle."
 
-#: ../../base_system.rst:33 ../../base_system.rst:36
+#: ../../base_system.rst:26
 msgid ""
-"After installation go to the :guilabel:`Dashboard`, and then :guilabel:`Disk"
-" usage` tab, and click :guilabel:`Update` in order to index the root "
-"directory and display the graph. This process can take several minutes "
-"depending on the occupied disk space."
+"After installation go in :guilabel:`Dashboard` and then :guilabel:`Disk "
+"usage` tab and click :guilabel:`Update` to index the root directory and to "
+"display the graph. This process can take several minutes depending on "
+"occupied disk space."
 msgstr ""
 "Dopo l'installazione andare nella pagina :guilabel:`Dashboard` e poi nella "
 "scheda :guilabel:`Utilizzo disco`, quindi cliccare su :guilabel:`Aggiorna` "
 "per indicizzare la directory root e mostrare il grafico. Questo processo può"
 " durare diversi minuti in base allo spazio occupato su disco."
 
-#: ../../base_system.rst:36 ../../base_system.rst:39
+#: ../../base_system.rst:29
 msgid "Well known folders are:"
 msgstr "Alcune cartelle note sono:"
 
-#: ../../base_system.rst:38 ../../base_system.rst:41
+#: ../../base_system.rst:31
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay`"
 msgstr "Cartelle condivise: :file:`/var/lib/nethserver/ibay`"
 
-#: ../../base_system.rst:39 ../../base_system.rst:42
+#: ../../base_system.rst:32
 msgid "User home directories: :file:`/var/lib/nethserver/home`"
 msgstr "Home degli utenti: :file:`/var/lib/nethserver/home`"
 
-#: ../../base_system.rst:40 ../../base_system.rst:43
+#: ../../base_system.rst:33
+msgid "Windows roaming profiles: :file:`/var/lib/nethserver/profile`"
+msgstr "Profili roaming Windows: :file:`/var/lib/nethserver/profile`"
+
+#: ../../base_system.rst:34
 msgid "Mail: :file:`/var/lib/nethserver/vmail`"
 msgstr "Mail: :file:`/var/lib/nethserver/vmail`"
 
-#: ../../base_system.rst:41 ../../base_system.rst:44
+#: ../../base_system.rst:35
 msgid "Faxes: :file:`/var/lib/nethserver/fax`"
 msgstr "Fax: :file:`/var/lib/nethserver/fax`"
 
-#: ../../base_system.rst:42 ../../base_system.rst:45
+#: ../../base_system.rst:36
 msgid "MySQL databases: :file:`/var/lib/mysql`"
 msgstr "Database MySQL: :file:`/var/lib/mysql`"
 
-#: ../../base_system.rst:52 ../../base_system.rst:55
+#: ../../base_system.rst:46
 msgid "Network"
 msgstr "Rete"
 
-#: ../../base_system.rst:54 ../../base_system.rst:57
+#: ../../base_system.rst:48
 msgid ""
 "The :guilabel:`Network` page configures how the server is connected to the "
-"local network (LAN) and/or other networks (i.e. Internet)."
+"local network (LAN) or other ones (i.e. Internet)."
 msgstr ""
 "La pagina :guilabel:`Rete` consente di stabilire in quale modo il server è "
 "collegato alla rete locale (LAN) oppure alle reti pubbliche (Internet)."
 
-#: ../../base_system.rst:57 ../../base_system.rst:60
+#: ../../base_system.rst:51
 msgid ""
 "If the server has firewall and gateway functionality, it will handle extra "
-"networks with special functions like DMZ (DeMilitarized Zone) and guests "
+"networks with special function like DMZ (DeMilitarized Zone) and guests "
 "network."
 msgstr ""
 "Se il server svolge la funzionalità di firewall e gateway, sarà in grado di "
 "gestire reti aggiuntive con funzionalità speciali come DMZ (DeMilitarized "
 "Zone) o rete ospiti."
 
-#: ../../base_system.rst:60 ../../base_system.rst:63
+#: ../../base_system.rst:54
 msgid ""
 "|product| supports an unlimited number of network interfaces. Any network "
 "managed by the system must follow these rules:"
@@ -133,7 +137,7 @@ msgstr ""
 "|product| supporta un numero illimitato di schede di rete. Le reti gestite "
 "devono sottostare alle regole seguenti:"
 
-#: ../../base_system.rst:63 ../../base_system.rst:66
+#: ../../base_system.rst:57
 msgid ""
 "networks must be physically separated (multiple networks can't be connected "
 "to the same switch/hub)"
@@ -141,7 +145,7 @@ msgstr ""
 "le reti devono essere fisicamente separate (non possono essere collegate "
 "allo stesso switch/hub)"
 
-#: ../../base_system.rst:64 ../../base_system.rst:67
+#: ../../base_system.rst:58
 msgid ""
 "networks must be logically separated: each network must have different "
 "addresses"
@@ -149,64 +153,65 @@ msgstr ""
 "le reti devono essere logicamente separate (essere configurate su sotto-reti"
 " differenti)"
 
-#: ../../base_system.rst:65 ../../base_system.rst:68
+#: ../../base_system.rst:59
 msgid ""
 "private networks, like LANs, must follow address's convention from RFC1918 "
-"document See :ref:`RFC1918-section`"
+"document. See :ref:`RFC1918-section`"
 msgstr ""
-"le reti private (es. LAN) devono rispettare le regole per gli indirizzi "
-"specificate nel documento RFC1918. Vedi :ref:`RFC1918-section`"
+"le reti private, ed esempio le LAN, devono rispettare le regole per gli "
+"indirizzi specificate nel documento RFC1918. Vedi :ref:`RFC1918-section`"
 
-#: ../../base_system.rst:70 ../../base_system.rst:73
+#: ../../base_system.rst:64
 msgid ""
-"Every network interface has a specific *role* which determines its behavior."
-" All roles are identified by colors. Each role corresponds to a well-known "
-"*zone* with special network traffic rules:"
+"Every network interface has a specific *role* which determinates its "
+"behavior. Roles are identified by colors. Each role correspond to a well-"
+"known *zone* with special network traffic rules:"
 msgstr ""
 "Ogni interfaccia di rete ha un ruolo specifico che ne determina l'utilizzo e"
 " il comportamento. I ruoli sono indicati tramite colori. Ogni colore indica "
-"la zona di appartenenza della scheda di rete e le regole ad essa applicate:"
+"la *zona* di appartenenza della scheda di rete e le regole ad essa "
+"applicate:"
 
-#: ../../base_system.rst:73 ../../base_system.rst:76
+#: ../../base_system.rst:67
 msgid ""
-"*green*: local network (green role/zone). Hosts on this network can access "
-"any other configured network"
+"*green*: local network. Hosts on this network can access any other "
+"configured network"
 msgstr ""
-"green: rete locale. I computer su questa rete possono accedere a qualsiasi "
-"altra rete configurata sul server"
+"*green*: rete locale. I computer su questa rete possono accedere a qualsiasi"
+" altra rete configurata sul server"
 
-#: ../../base_system.rst:74 ../../base_system.rst:77
+#: ../../base_system.rst:68
 msgid ""
-"*blue*: guests network (blue role/zone). Hosts on this network can access "
-"orange and red networks, but can't access the green network"
+"*blue*: guests network. Hosts on this network can access orange and red "
+"network, but can't access to green zone"
 msgstr ""
-"blue: rete ospiti. I computer su questa rete possono accedere alle reti "
+"*blue*: rete ospiti. I computer su questa rete possono accedere alle reti "
 "orange e red, ma non possono accedere alla zona green"
 
-#: ../../base_system.rst:75 ../../base_system.rst:78
+#: ../../base_system.rst:69
 msgid ""
-"*orange*: DMZ network (orange role/zone).  Hosts on this network can access "
-"red network, but can't access to blue and green networks"
+"*orange*: DMZ network.  Hosts on this network can access red networks, but "
+"can't access to blue, orange and green zones"
 msgstr ""
-"orange: rete DMZ. I computer su questa rete possono accedere alle reti red, "
-"ma non possono accedere alle zone blue e green"
+"*orange*: rete DMZ. I computer su questa rete possono accedere alle reti "
+"red, ma non possono accedere alle zone blue e green"
 
-#: ../../base_system.rst:76 ../../base_system.rst:79
+#: ../../base_system.rst:70
 msgid ""
-"*red*: public network (red role/zone). Hosts on this network can access only"
-" the server itself"
+"*red*: public network. Hosts on this network can access only the server "
+"itself"
 msgstr ""
-"red: rete pubblica. I computer in questa rete possono accedere solo al "
+"*red*: rete pubblica. I computer in questa rete possono accedere solo al "
 "server stesso"
 
-#: ../../base_system.rst:78 ../../base_system.rst:81
+#: ../../base_system.rst:72
 msgid ""
 "See :ref:`policy-section` for more information on roles and firewall rules."
 msgstr ""
 "Si veda :ref:`policy-section` per maggiori informazioni sull'uso dei ruoli "
 "nelle regole del firewall."
 
-#: ../../base_system.rst:80 ../../base_system.rst:83
+#: ../../base_system.rst:74
 msgid ""
 "The server must have at least one network interface. When the server has "
 "only one interface, this interface must have green role."
@@ -214,7 +219,7 @@ msgstr ""
 "Il server deve avere almeno un'interfaccia di rete. Quando il server ha una "
 "sola scheda di rete, tale scheda deve avere il ruolo green."
 
-#: ../../base_system.rst:82 ../../base_system.rst:85
+#: ../../base_system.rst:76
 msgid ""
 "If the server is installed on a public VPS (Virtual Private Server), it "
 "should must be configured with a green interface. All critical services "
@@ -225,17 +230,17 @@ msgstr ""
 "di chiudere le porte dei servizi critici usando il pannello :ref"
 ":`network_services-section`."
 
-#: ../../base_system.rst:88 ../../base_system.rst:91
+#: ../../base_system.rst:82
 msgid "Alias IP"
 msgstr "Alias IP"
 
-#: ../../base_system.rst:90 ../../base_system.rst:93
+#: ../../base_system.rst:84
 msgid "Use alias IP to assign more IP addresses to the same NIC."
 msgstr ""
 "Per assegnare più indirizzi IP alla stessa scheda è possibile utilizzare gli"
 " alias IP."
 
-#: ../../base_system.rst:92 ../../base_system.rst:95
+#: ../../base_system.rst:86
 msgid ""
 "The most common use is with a red interface: when the ISP provides a pool of"
 " public IP addresses (within the same subnet) you can add some (or all) of "
@@ -246,7 +251,7 @@ msgstr ""
 "IP della stessa classe e gestirli in modo indipendente (ad esempio con dei "
 "port forward che discriminano in base allo specifico IP di destinazione)."
 
-#: ../../base_system.rst:94 ../../base_system.rst:97
+#: ../../base_system.rst:88
 msgid ""
 "Alias IP section can be found in the dropdown menu of the related network "
 "interface."
@@ -254,7 +259,7 @@ msgstr ""
 "L'alias è configurabile cliccando nel menu a tendina della specifica scheda "
 "di rete e avrà lo stesso ruolo della scheda fisica associata."
 
-#: ../../base_system.rst:96 ../../base_system.rst:99
+#: ../../base_system.rst:90
 msgid ""
 "Alias IPs on PPPoE interface could not work properly, due to different "
 "implementations of the service made by internet providers."
@@ -263,36 +268,36 @@ msgstr ""
 "correttamente a causa di differenze nella fornitura del servizio tra i vari "
 "provider internet."
 
-#: ../../base_system.rst:101 ../../base_system.rst:104
+#: ../../base_system.rst:95
 msgid "Logical interfaces"
 msgstr "Interfacce logiche"
 
-#: ../../base_system.rst:103 ../../base_system.rst:106
+#: ../../base_system.rst:97
 msgid ""
-"In :guilabel:`Network` page press the :guilabel:`New interface` button to "
-"create a logical interface. Supported logical interfaces are:"
+"In :guilabel:`Network` page press :guilabel:`New interface` button to create"
+" a logical interface. Supported logical interfaces are:"
 msgstr ""
 "Nella pagina :guilabel:`Network` premere il pulsante :guilabel:`Nuova "
 "interfaccia` per creare una interfaccia logica. I tipi di interfacce logiche"
 " supportate sono:"
 
-#: ../../base_system.rst:106 ../../base_system.rst:109
+#: ../../base_system.rst:100
 msgid ""
-":index:`bond`: arrange two or more network interfaces (provides load "
-"balancing and fault tolerance)"
+":index:`bond`: arrange two or more network interfaces, provides load "
+"balancing and fault tolerance"
 msgstr ""
 ":index:`bond`: combina due o più interfacce, garantisce bilanciamento del "
 "traffico e tolleranza ai guasti"
 
-#: ../../base_system.rst:107 ../../base_system.rst:110
+#: ../../base_system.rst:101
 msgid ""
-":index:`bridge`: connect two different networks (it's often used for bridged"
-" VPN and virtual machine)"
+":index:`bridge`: connect two different networks, it's often used for bridged"
+" VPN and virtual machine"
 msgstr ""
 ":index:`bridge`: collega due reti distinte, è spesso utilizzata per le VPN "
 "in bridge e le macchine virtuali"
 
-#: ../../base_system.rst:108 ../../base_system.rst:111
+#: ../../base_system.rst:102
 msgid ""
 ":index:`VLAN` (Virtual Local Area Network): create two or more logically "
 "separated networks using a single interface"
@@ -300,7 +305,7 @@ msgstr ""
 ":index:`VLAN` (Virtual Local Area Network): crea due o più reti fisicamente "
 "separate usando una singola interfaccia fisica"
 
-#: ../../base_system.rst:109 ../../base_system.rst:112
+#: ../../base_system.rst:103
 msgid ""
 ":index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet "
 "through a DSL modem"
@@ -308,27 +313,27 @@ msgstr ""
 ":index:`PPPoE` (Point-to-Point Protocol over Ethernet): collegamento a "
 "Internet attraverso un modem DSL"
 
-#: ../../base_system.rst:111 ../../base_system.rst:114
+#: ../../base_system.rst:105
 msgid ""
-"**Bonds** allow you to aggregate bandwidth or tolerate link faults. Bonds "
+"**Bonds** allow you to aggregate bandwidth or tollerate link faults. Bonds "
 "can be configured in multiple modes."
 msgstr ""
-"I bond consentono di aggregare banda o tollerare guasti. I bond posso essere"
-" configurati in varie modalità."
+"I **bond** consentono di aggregare banda o tollerare guasti. I bond posso "
+"essere configurati in varie modalità."
 
-#: ../../base_system.rst:113 ../../base_system.rst:116
+#: ../../base_system.rst:107
 msgid "Modes providing load balancing and fault tolerance:"
 msgstr "Modalità che supportano aggregazione di banda e tolleranza ai guasti:"
 
-#: ../../base_system.rst:115 ../../base_system.rst:118
+#: ../../base_system.rst:109
 msgid "Balance Round Robin (recommended)"
 msgstr "Balance Round Robin (raccomandato)"
 
-#: ../../base_system.rst:116 ../../base_system.rst:119
+#: ../../base_system.rst:110
 msgid "Balance XOR"
 msgstr "Balance XOR"
 
-#: ../../base_system.rst:117 ../../base_system.rst:120
+#: ../../base_system.rst:111
 msgid ""
 "802.3ad (LACP): it requires support at driver level and a switch with IEEE "
 "802.3ad Dynamic link aggregation mode enabled"
@@ -336,27 +341,27 @@ msgstr ""
 "802.3ad (LACP): richiede il supporto nel driver della scheda di rete ed uno "
 "switch in cui sia abilitata la modalità IEEE 802.3ad Dynamic link"
 
-#: ../../base_system.rst:118 ../../base_system.rst:121
+#: ../../base_system.rst:112
 msgid "Balance TLB: it requires support at driver level"
 msgstr "Balance TLB: richiede il supporto nel driver della scheda di rete"
 
-#: ../../base_system.rst:119 ../../base_system.rst:122
+#: ../../base_system.rst:113
 msgid "Balance ALB"
 msgstr "Balance ALB"
 
-#: ../../base_system.rst:121 ../../base_system.rst:124
+#: ../../base_system.rst:115
 msgid "Modes providing fault tolerance only:"
 msgstr "Modalità che supportano solo tolleranza ai guasti:"
 
-#: ../../base_system.rst:123 ../../base_system.rst:126
+#: ../../base_system.rst:117
 msgid "Active backup (recommended)"
 msgstr "Active backup (raccomandato)"
 
-#: ../../base_system.rst:124 ../../base_system.rst:127
+#: ../../base_system.rst:118
 msgid "Broadcast policy"
 msgstr "Broadcast policy"
 
-#: ../../base_system.rst:126 ../../base_system.rst:129
+#: ../../base_system.rst:120
 msgid ""
 "A **bridge** has the function to connect different network segments, for "
 "example by allowing virtual machines, or client connected using a VPN, to "
@@ -366,7 +371,7 @@ msgstr ""
 "esempio consentendo ai client collegati in VPN o macchine virtuali di "
 "accedere alla rete locale (green)."
 
-#: ../../base_system.rst:129 ../../base_system.rst:132
+#: ../../base_system.rst:123
 msgid ""
 "When it is not possible to physically separate two different networks, you "
 "can use a tagged **VLAN**. The traffic of the two networks can be "
@@ -380,7 +385,7 @@ msgstr ""
 "schede separate. L'utilizzo delle VLAN necessita di switch adeguatamente "
 "configurati."
 
-#: ../../base_system.rst:133 ../../base_system.rst:136
+#: ../../base_system.rst:127
 msgid ""
 "The **PPPoE** logical interface must be assigned the red role, thus requires"
 " the gateway functionality. See :ref:`firewall-section` for details."
@@ -389,11 +394,11 @@ msgstr ""
 "quindi richiede la funzionalità di gateway. Vedi :ref:`firewall-section` per"
 " i dettagli."
 
-#: ../../base_system.rst:140 ../../base_system.rst:143
+#: ../../base_system.rst:134
 msgid "Address for private networks (RFC1918)"
 msgstr "Numerazione delle reti private (RFC1918)"
 
-#: ../../base_system.rst:142 ../../base_system.rst:145
+#: ../../base_system.rst:136
 msgid ""
 "TCP/IP private networks not directly connected to Internet should use "
 "special addresses selected by Internet Assigned Numbers Authority (IANA)."
@@ -402,82 +407,148 @@ msgstr ""
 "utilizzare indirizzi speciali selezionati dall’Internet Assigned Numbers "
 "Authority (IANA) "
 
-#: ../../base_system.rst:146 ../../base_system.rst:149
+#: ../../base_system.rst:140
 msgid "Private network"
 msgstr "ID rete privata"
 
-#: ../../base_system.rst:146 ../../base_system.rst:149
+#: ../../base_system.rst:140
 msgid "Subnet mask"
 msgstr "Subnet mask"
 
-#: ../../base_system.rst:146 ../../base_system.rst:149
+#: ../../base_system.rst:140
 msgid "IP addresses interval"
 msgstr "Intervallo di indirizzi IP"
 
-#: ../../base_system.rst:148 ../../base_system.rst:151
+#: ../../base_system.rst:142
 msgid "10.0.0.0"
 msgstr "10.0.0.0"
 
-#: ../../base_system.rst:148 ../../base_system.rst:151
+#: ../../base_system.rst:142
 msgid "255.0.0.0"
 msgstr "255.0.0.0"
 
-#: ../../base_system.rst:148 ../../base_system.rst:151
+#: ../../base_system.rst:142
 msgid "10.0.0.1 - 10.255.255.254"
 msgstr "10.0.0.1 - 10.255.255.254"
 
-#: ../../base_system.rst:149 ../../base_system.rst:152
+#: ../../base_system.rst:143
 msgid "172.16.0.0"
 msgstr "172.16.0.0"
 
-#: ../../base_system.rst:149 ../../base_system.rst:152
+#: ../../base_system.rst:143
 msgid "255.240.0.0"
 msgstr "255.240.0.0"
 
-#: ../../base_system.rst:149 ../../base_system.rst:152
+#: ../../base_system.rst:143
 msgid "172.16.0.1 - 172.31.255.254"
 msgstr "172.16.0.1 - 172.31.255.254"
 
-#: ../../base_system.rst:150 ../../base_system.rst:153
+#: ../../base_system.rst:144
 msgid "192.168.0.0"
 msgstr "192.168.0.0"
 
-#: ../../base_system.rst:150 ../../base_system.rst:153
+#: ../../base_system.rst:144
 msgid "255.255.0.0"
 msgstr "255.255.0.0"
 
-#: ../../base_system.rst:150 ../../base_system.rst:153
+#: ../../base_system.rst:144
 msgid "192.168.0.1 - 192.168.255.254"
 msgstr "192.168.0.1 - 192.168.255.254"
 
-#: ../../base_system.rst:160 ../../base_system.rst:163
+#: ../../base_system.rst:154
 msgid "Network services"
 msgstr "Servizi di rete"
 
-#: ../../base_system.rst:162 ../../base_system.rst:165
+#: ../../base_system.rst:156
 msgid ""
 "A :index:`network service` is a service running on the firewall itself."
 msgstr ""
 "Un :index:`servizio di rete` è un servizio che viene eseguito sul firewall "
 "stesso."
 
-#: ../../base_system.rst:164 ../../base_system.rst:167
+#: ../../base_system.rst:158
 msgid ""
-"Each service has a list of \"open\" ports on which it answers to "
-"connections. Connections can be accepted from selected zones. Finer grained "
-"control of access to network services can be configured from the Firewall "
-"rules page."
+"These services are always available to hosts on green network (local "
+"network). Access policies can be modified from :guilabel:`Network services` "
+"page."
 msgstr ""
-"Ogni servizio ha una lista di porte \"aperte\" su cui risponde alle "
-"connessioni. Le connessioni possono essere accettate da zone selezionate. Un"
-" controllo più fine sull'accesso ai servizi di rete può essere configurato "
-"utilizzando le regole del firewall."
+"Tali servizi sono sempre accessibili da tutti i computer nella rete green "
+"(rete locale). E' possibile cambiare le politiche di accesso dalla pagina "
+":guilabel:`Servizi di rete`."
 
-#: ../../base_system.rst:174 ../../base_system.rst:177
+#: ../../base_system.rst:161
+msgid "Available policies are:"
+msgstr "Le politiche di accesso disponibili sono:"
+
+#: ../../base_system.rst:163
+msgid ""
+"Access only from green networks (private): all hosts from green networks and"
+" from VPNs"
+msgstr ""
+"Accesso solo dalle reti green (private): comprende tutti gli host sulla rete"
+" green e tutti i computer collegati in VPN"
+
+#: ../../base_system.rst:164
+msgid ""
+"Access from green and red networks (public): any host from green networks, "
+"VPNs and external networks. But not guests (blue) and DMZ (orange) networks"
+msgstr ""
+"Accesso dalle reti green e red (public): tutti gli host dalle reti green, "
+"VPN e reti esterne. Ma non dalla rete ospiti (blue) e dalla DMZ (orange)"
+
+#: ../../base_system.rst:165
+msgid ""
+"Access only from the server itself (none): no host can connect to selected "
+"service"
+msgstr ""
+"Accesso solo dal server stesso (none): nessun host può collegarsi al "
+"servizio selezionato"
+
+#: ../../base_system.rst:168
+msgid "Custom access"
+msgstr "Accesso personalizzato"
+
+#: ../../base_system.rst:170
+msgid ""
+"If selected policy is private or public, it’s possible to add hosts and "
+"networks which are always allowed (or blocked) using :guilabel:`Allow hosts`"
+" and :guilabel:`Deny hosts`. This rule also apply for blue and orange "
+"networks."
+msgstr ""
+"Se la politica selezionata è private o public, è possibile specificare una "
+"lista di host e reti che sono sempre consentiti (o bloccati) usando i campi "
+":guilabel:`Consenti host` e :guilabel:`Blocca host`. La regola di applica "
+"anche per le reti orange e blue."
+
+#: ../../base_system.rst:175
+msgid "Example"
+msgstr "Esempio"
+
+#: ../../base_system.rst:177
+msgid "Given the following configuration:"
+msgstr "Data la seguente configurazione:"
+
+#: ../../base_system.rst:179
+msgid "Orange network: 192.168.2.0/24"
+msgstr "Rete orange: 192.168.2.0/24"
+
+#: ../../base_system.rst:180
+msgid "Access for NTP server set to private"
+msgstr "Server NTP con politica di accesso private"
+
+#: ../../base_system.rst:182
+msgid ""
+"If hosts from DMZ must access NTP server, add 192.168.2.0/24 network inside "
+"the :guilabel:`Allow hosts` field."
+msgstr ""
+"Se gli host dalla DMZ devono accedere al server NTP, aggiungere la rete "
+"192.168.2.0/24 nel campo :guilabel:`Consenti host`."
+
+#: ../../base_system.rst:189
 msgid "Trusted networks"
 msgstr "Reti fidate"
 
-#: ../../base_system.rst:176 ../../base_system.rst:179
+#: ../../base_system.rst:191
 msgid ""
 "Trusted networks are special networks (local, VPNs or remote) allowed to "
 "access special server's services."
@@ -485,19 +556,19 @@ msgstr ""
 "Le reti fidate sono reti speciali (locali, VPN o remote) a cui è garantito "
 "l'accesso a servizi speciali del server."
 
-#: ../../base_system.rst:179 ../../base_system.rst:182
+#: ../../base_system.rst:194
 msgid "For example, hosts inside trusted networks can access to:"
 msgstr "Ad esempio, i computer sulle reti fidate possono accedere a:"
 
-#: ../../base_system.rst:181 ../../base_system.rst:184
+#: ../../base_system.rst:196
 msgid "Server Manager"
 msgstr "Server Manager"
 
-#: ../../base_system.rst:182 ../../base_system.rst:185
+#: ../../base_system.rst:197
 msgid "Shared folders (SAMBA)"
 msgstr "Cartelle condivise (SAMBA)"
 
-#: ../../base_system.rst:184 ../../base_system.rst:187
+#: ../../base_system.rst:199
 msgid ""
 "If the remote network is reachable using a router, remember to add a static "
 "route inside :ref:`static_routes-section` page."
@@ -505,11 +576,11 @@ msgstr ""
 "Se la rete remota è raggiungibile attraverso un router, ricordarsi di creare"
 " la rotta statica corrispondente nel pannello :ref:`static_routes-section`."
 
-#: ../../base_system.rst:192 ../../base_system.rst:195
+#: ../../base_system.rst:207
 msgid "Static routes"
 msgstr "Rotte statiche"
 
-#: ../../base_system.rst:194 ../../base_system.rst:197
+#: ../../base_system.rst:209
 msgid ""
 "This page allow to create special :index:`static routes` which will use the "
 "specified gateway. These routes are usually used to connect private network."
@@ -518,7 +589,7 @@ msgstr ""
 " statiche`) che non facciano uso del default gateway (ad esempio per "
 "raggiungere reti private collegate tramite linee dedicate o simili)."
 
-#: ../../base_system.rst:197 ../../base_system.rst:200
+#: ../../base_system.rst:212
 msgid ""
 "Remember to add the network to :ref:`trusted_networks-section`, if you wish "
 "to allow remote hosts to access local services."
@@ -526,11 +597,11 @@ msgstr ""
 "Ricordarsi di aggiungere la rete a :ref:`trusted_networks-section`, se si "
 "desidera consentire agli host remoti di accedere ai servizi locali."
 
-#: ../../base_system.rst:203 ../../base_system.rst:206
+#: ../../base_system.rst:218
 msgid "Organization contacts"
 msgstr "Indirizzo dell'organizzazione"
 
-#: ../../base_system.rst:205 ../../base_system.rst:208
+#: ../../base_system.rst:220
 msgid ""
 "The :guilabel:`Organization contacts` page fields are used as default values"
 " for user accounts.  The organization name and address are also displayed on"
@@ -541,82 +612,32 @@ msgstr ""
 "nome dell'organizzazione e l'indirizzo sono mostrati nella pagina di login "
 "del Server Manager."
 
-#: ../../base_system.rst:215 ../../base_system.rst:218
+#: ../../base_system.rst:230
 msgid "Server certificate"
 msgstr "Certificato del server"
 
-#: ../../base_system.rst:217 ../../base_system.rst:220
+#: ../../base_system.rst:232
 msgid ""
-"The :guilabel:`Server certificate` page shows the currently installed X.509 "
-"certificates, and the default one provided by system services for TLS/SSL "
-"encrypted communications."
+"The :guilabel:`Server certificate` page shows the currently installed SSL "
+"certificate that is provided by all system services."
 msgstr ""
-"La pagina :guilabel:`Certificato del server` mostra i certificati X.509 "
-"attualmente installati e il certificato di default fornito dal sistema per "
-"cifrare le comunicazioni TLS/SSL."
+"La pagina :guilabel:`Certificato del server` mostra il certificato SSL "
+"attualmente installato e che viene presentato da tutti i servizi presenti "
+"nel sistema."
 
-#: ../../base_system.rst:221 ../../base_system.rst:224
+#: ../../base_system.rst:235
 msgid ""
-"The :guilabel:`Set as default` button allows choosing the default "
-"certificate. When a new certificate is chosen, all services using TLS/SSL "
-"are restarted and network clients will be required to accept the new "
-"certificate."
+"The :guilabel:`Generate certificate` button allows generating a new self-"
+"signed SSL certificate.  When a new certificate is generated, all SSL "
+"services are restarted and network clients will be required to accept the "
+"new certificate."
 msgstr ""
-"Il pulsante :guilabel:`Imposta default` consente di scegliere il certificato"
-" di default. Quando viene scelto un nuovo certificato, tutti i servizi che "
-"utilizzano TLS/SSL vengono riavviati e i client di rete devono accettare il "
-"nuovo certificato."
+"Il pulsante :guilabel:`Nuovo certificato` consente di generare un nuovo "
+"certificato SSL auto-firmato. Se si genera un nuovo certificato, tutti i "
+"servizi SSL verranno riavviati e ai client di rete sarà richiesto di "
+"accettare il nuovo certificato."
 
-#: ../../base_system.rst:225 ../../base_system.rst:228
-msgid ""
-"When |product| is installed a temporary default self-signed certificate is "
-"generated automatically.  It should be edited by inserting proper values "
-"before configuring the network clients to use it. As alternatives, the "
-":guilabel:`Server certificate` page allows:"
-msgstr ""
-"Quando |product| è installato viene automaticamente generato un certificato "
-"auto-firmato. Dovrebbe essere modificato inserendo dei valori appropriati "
-"prima di utilizzarlo dai client di rete. Come alternative, la pagina "
-":guilabel:`Certificato del server` consente di:"
-
-#: ../../base_system.rst:230 ../../base_system.rst:233
-msgid ""
-"uploading an existing certificate and private RSA key. Optionally a "
-"certificate chain file can be specified, too. All files must be PEM-encoded."
-msgstr ""
-"caricare un certificato esistente e la chiave privata RSA. In aggiunta può "
-"essere specificato anche un chain file. Tutti i file devono essere "
-"codificati nel formato PEM."
-
-#: ../../base_system.rst:233 ../../base_system.rst:236
-msgid ""
-"requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is "
-"possible if the following requirements are met:"
-msgstr ""
-"richiedere un nuovo certificato di *Let's Encrypt* [#Letsencrypt]_. Questo è"
-" possibile se sono rispettati i seguenti requisiti:"
-
-#: ../../base_system.rst:236 ../../base_system.rst:239
-msgid ""
-"The server must be reachable from outside at port 80. Make sure your port 80"
-" is open to the public Internet (you can check with sites like [#CSM]_);"
-msgstr ""
-"il server deve essere raggiungibile dall'esterno alla porta 80. Assicurarsi "
-"che la porta 80 è aperta alle connessioni da Internet (si può effettuare un "
-"test da siti come [#CSM]_);"
-
-#: ../../base_system.rst:239 ../../base_system.rst:242
-msgid ""
-"The domains that you want the certificate for must be public domain names "
-"associated to server own public IP. Make sure you have public DNS name "
-"pointing to your server (you can check with sites like [#VDNS]_)."
-msgstr ""
-"i domini che si vogliono associare al certificato devono essere domini "
-"pubblici, associati all'indirizzo IP pubblico del server. Assicurarsi di "
-"avere un nome registrato nel DNS pubblico che punta correttamente al proprio"
-" server (si può effettuare un test da siti come [#VDNS]_)."
-
-#: ../../base_system.rst:244 ../../base_system.rst:247
+#: ../../base_system.rst:241
 msgid ""
 "To avoid problems while importing the certificate in Internet Explorer, the "
 "Common Name (CN) field should match the server FQDN."
@@ -625,23 +646,380 @@ msgstr ""
 "consiglia di configurare il campo CN (Common Name) o Nome Comune in modo che"
 " corrisponda al FQDN del server."
 
-#: ../../base_system.rst:247 ../../base_system.rst:250
-msgid "Let's Encrypt website https://letsencrypt.org/"
-msgstr "Sito web di Let's Encrypt https://letsencrypt.org/"
+#: ../../base_system.rst:248
+msgid "Install a custom certificate"
+msgstr "Installare un certificato personalizzato"
 
-#: ../../base_system.rst:248 ../../base_system.rst:251
-msgid "Website http://www.canyouseeme.org/"
-msgstr "Sito web http://www.canyouseeme.org/"
+#: ../../base_system.rst:250
+msgid ""
+":index:`Custom certificates` should be placed inside the following standard "
+"directories:"
+msgstr ""
+"I :index:`certificati personalizzati` devono essere salvati all'interno "
+"delle seguenti directory:"
 
-#: ../../base_system.rst:249 ../../base_system.rst:252
-msgid "Website http://viewdns.info/"
-msgstr "Sito web http://viewdns.info/"
+#: ../../base_system.rst:252
+msgid ":file:`/etc/pki/tls/certs`: public key"
+msgstr ":file:`/etc/pki/tls/certs`: chiave pubblica"
 
-#: ../../base_system.rst:252 ../../base_system.rst:255
+#: ../../base_system.rst:253
+msgid ":file:`/etc/pki/tls/private`: private key"
+msgstr ":file:`/etc/pki/tls/private`: chiave privata"
+
+#: ../../base_system.rst:256
+msgid "Set the private key and certificate file paths:"
+msgstr "Configurare i percorsi della chiave pubblica e privata:"
+
+#: ../../base_system.rst:263
+msgid "You can also set a SSL certificate chain file:"
+msgstr "E' possibile anche configurare il file di chain SSL:"
+
+#: ../../base_system.rst:269
+msgid "Notify registered daemons about certificate update:"
+msgstr "Segnalare il cambio di certificato a tutti i demoni:"
+
+#: ../../base_system.rst:276
+msgid "Custom certificate backup"
+msgstr "Backup certificato personalizzato"
+
+#: ../../base_system.rst:278
+msgid ""
+"Always remember to add custom certificates to configuration backup. Just add"
+" the paths inside :file:`/etc/backup-config.d/custom.include` file."
+msgstr ""
+"Ricordarsi sempre di aggiungere i certificati personalizzati al backup della"
+" configurazione. E' sufficiente aggiungere i percorsi nel file :file:`/etc"
+"/backup-config.d/custom.include`."
+
+#: ../../base_system.rst:281
+msgid ""
+"For example, if the certificate is :file:`/etc/pki/tls/certs/mycert.crt`, "
+"simply execute: ::"
+msgstr ""
+"Per esempio, se il certificato è :file:`/etc/pki/tls/certs/mycert.crt`, "
+"eseguire semplicemente: ::"
+
+#: ../../base_system.rst:286
+msgid "Let's Encrypt certificate"
+msgstr "Certificato Let's Encrypt"
+
+#: ../../base_system.rst:288
+msgid ""
+"Let's Encrypt is a free, automated, and open certificate authority brought "
+"to you by the non-profit Internet Security Research Group (ISRG). It can "
+"create free valid SSL certificate for you server."
+msgstr ""
+"Let's Encrypt è una certification authority gratuita e aperta, gestita "
+"dall'associazione non-profit Internet Security Research Group (ISRG). Può "
+"creare certificati SSL validi utilizzabili sul sistema."
+
+#: ../../base_system.rst:291
+msgid "From https://letsencrypt.readthedocs.org:"
+msgstr "Da https://letsencrypt.readthedocs.org:"
+
+#: ../../base_system.rst:293
+msgid ""
+"The Let’s Encrypt Client is a fully-featured, extensible client for the "
+"Let’s Encrypt CA (or any other CA that speaks the ACME protocol) that can "
+"automate the tasks of obtaining certificates and configuring webservers to "
+"use them."
+msgstr ""
+"Il Client Let’s Encrypt è un client estremamente funzionale e estensibile "
+"per la CA Let’s Encrypt  (o qualsiasi altra CA che parli il protocollo ACME)"
+" che consente di automatizzare le attività per ottenere certificati e "
+"configurare i server web per utilizzarli."
+
+#: ../../base_system.rst:299
+msgid "Prerequisites"
+msgstr "Prerequisiti"
+
+#: ../../base_system.rst:301
+msgid "The server must be reachable from outside at port 80."
+msgstr "Il server deve essere raggiungibile dall'esterno sulla porta 80."
+
+#: ../../base_system.rst:303
+msgid ""
+"Make sure your port 80 is open to the public Internet, you can check with "
+"sites like http://www.canyouseeme.org/"
+msgstr ""
+"Assicurarsi che la porta 80 sia aperta al pubblico da Internet, è possibile "
+"controllarlo usando questo sito: http://www.canyouseeme.org/."
+
+#: ../../base_system.rst:305
+msgid ""
+"The fully qualified name (FQDN) of the server must be a public domain name "
+"associated to its own public IP."
+msgstr ""
+"Il fully qualified name (FQDN) del server deve essere pubblico, associato "
+"all'indirizzo IP pubblico del server."
+
+#: ../../base_system.rst:307
+msgid ""
+"Make sure you have a public DNS name pointing to your server, you can check "
+"with sites like http://viewdns.info/"
+msgstr ""
+"Assicurarsi di avere un record DNS pubblico che punti al server, è possibile"
+" controllarlo con questo sito: http://viewdns.info/."
+
+#: ../../base_system.rst:310
+msgid "How it works"
+msgstr "Come funziona"
+
+#: ../../base_system.rst:312
+msgid ""
+"The system will release a single certificate for server FQDN (Fully "
+"Qualified Domain Name)."
+msgstr ""
+"Il sistema crea un singolo certificato per l'FQDN (Fully Qualified Domain "
+"Name) del server."
+
+#: ../../base_system.rst:314
+msgid ""
+"When you want to access your server, you MUST always use the FQDN, but "
+"sometimes the server has multiple aliases. Let's Encrypt can add extra valid"
+" names to the FQDN certificate, so you will be able to access the server "
+"with other names."
+msgstr ""
+"Quando si desidera accedere al server, è necessario usare l'FQDN. Se si "
+"desidera accedere al server usando alias multipli. Let's Encrypt può "
+"aggiungere altri nomi FQDN validi al certificato per consentire l'accesso al"
+" server con altri nomi."
+
+#: ../../base_system.rst:318 ../../base_system.rst:478
+msgid "**Example**"
+msgstr "**Esempio**"
+
+#: ../../base_system.rst:320
+msgid ""
+"The server FQDN is: ''server.nethserver.org'' with public IP ''1.2.3.4''. "
+"But you want to access the server also using this names (aliases):'' "
+"mail.nethserver.org'' and ''www.nethserver.org''."
+msgstr ""
+"L'FQDN del server: ''server.nethserver.org'' con IP pubblico ''1.2.3.4''. Si"
+" desidera accedere al server usando anche gli altri nomi associati (alias): "
+"''mail.nethserver.org'' e ''www.nethserver.org''."
+
+#: ../../base_system.rst:323
+msgid "The server must:"
+msgstr "Il server deve:"
+
+#: ../../base_system.rst:325
+msgid ""
+"have the port 80 open to the public internet: if you access http://1.2.3.4 "
+"from a remote site you must see NethServer landing page"
+msgstr ""
+"avere la porta 80 aperta su internet: accededendo all'indirizzo "
+"http://1.2.3.4 da un sito remoto, deve essere visibile la pagina di "
+"NethServer"
+
+#: ../../base_system.rst:326
+msgid ""
+"have a DNS public record for ''server.nethserver.org'', "
+"''mail.nethserver.org'' and ''www.nethserver.org''. All DNS records must "
+"point to the same server (it may have multiple public IP addresses, though)"
+msgstr ""
+"avere un record DNS pubblico per ''server.nethserver.org'', "
+"''mail.nethserver.org'' e ''www.nethserver.org''. Tutti i record DNS devono "
+"puntare allo stesso server (il server può avere anche indirizzi IP "
+"multipli)."
+
+#: ../../base_system.rst:329
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../base_system.rst:331
+msgid "Install the package from command line: ::"
+msgstr "Installare il pacchetto da linea di comando: ::"
+
+#: ../../base_system.rst:336
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../base_system.rst:338
+msgid ""
+"Let's Encrypt configuration must be done from command line using the root "
+"user. Access the server with a monitor or connect to it with SSH."
+msgstr ""
+"La configurazione di Let's Encrypt deve essere fatta da linea di comando "
+"dall'utente root. Accedere al server usando un monitor o collegandosi via "
+"SSH."
+
+#: ../../base_system.rst:342
+msgid "Certificate for FQDN"
+msgstr "Certificato per FQDN"
+
+#: ../../base_system.rst:344
+msgid ""
+"Enable Let's Encrypt globally, this will automatically enable the generation"
+" of a certificate for the FQDN. Execute: ::"
+msgstr ""
+"Abilitare Let's Encrypt globalmente, questa operazione abilita la "
+"generazione del certificato per l'FQDN. Eseguire:"
+
+#: ../../base_system.rst:350
+msgid "Certificate for server alias (optional)"
+msgstr "Certificato per alias (opzionale)"
+
+#: ../../base_system.rst:352
+msgid ""
+"The FQDN certificate can be extended to be valid also for extra domains "
+"configured as server alias. This feature is called SubjectAltName (SAN): "
+"https://en.wikipedia.org/wiki/SubjectAltName"
+msgstr ""
+"Il certificato FQDN può essere esteso per domini extra configurati come "
+"alias server. Questa funziona si chiama SubjectAltName (SAN): "
+"https://en.wikipedia.org/wiki/SubjectAltName"
+
+#: ../../base_system.rst:355
+msgid ""
+"Create a server alias inside the DNS page, then enable Let's Encrypt on the "
+"newly created record."
+msgstr ""
+"Creare un alias per il server all'interno della pagina DNS, quindi abilitare"
+" Let's Encrypt sul record appena creato."
+
+#: ../../base_system.rst:357
+msgid "Example for ''alias.mydomain.com'' alias: ::"
+msgstr "Esempio per l'alias ''alias.mydomain.com'': ::"
+
+#: ../../base_system.rst:363
+msgid "Options"
+msgstr "Opzioni"
+
+#: ../../base_system.rst:365
+msgid "You can customize the following options by using config command:"
+msgstr ""
+"E' possibile personalizzare le seguenti opzioni utilizzando il comando "
+"config:"
+
+#: ../../base_system.rst:367
+msgid ""
+"``LetsEncryptMail``: if set, Let's Encrypt will send notification about your"
+" certificate to this mail address (this must be set before executing the "
+"letsencrypt-certs script for the first time!)"
+msgstr ""
+"``LetsEncryptMail``: se impostato, Let's Encrypt invierà una mail di "
+"notifica all'indirizzo specificato quando il certificato è in scadenza (deve"
+" essere attivato prima di eseguire lo script letsencrypt-certs per la prima "
+"volta!)"
+
+#: ../../base_system.rst:368
+msgid ""
+"``LetsEncryptRenewDays``: minimum days before expiration to automatically "
+"renew certificate (default: 30)"
+msgstr ""
+"LetsEncryptRenewDays: minimo numero di giorni entro i quali il certificato "
+"sarà rinnovato (default: 30)"
+
+#: ../../base_system.rst:370
+msgid "Example: ::"
+msgstr "Esempio: ::"
+
+#: ../../base_system.rst:376
+msgid "Test certificate creation"
+msgstr "Test di generazione del certificato"
+
+#: ../../base_system.rst:378
+msgid ""
+"Since you can request the certificate maximum 5 times per week, make sure "
+"the configuration is correct by requesting a fake certificate. Execute: ::"
+msgstr ""
+"Dal momento che è possibile richiedere un certificato al massimo 5 volte in "
+"una settimana, assicurarsi che la configurazione sia corretta prima di "
+"procedere. Eseguire: ::"
+
+#: ../../base_system.rst:383
+msgid ""
+"This command will try to generate a fake certificate using Let's Encrypt "
+"server. If everything goes well, the output should be something like this: "
+"::"
+msgstr ""
+"Questo comando genera un certificato di test usando Let's Encrypt. Se tutto "
+"è configurato correttamente, l'output dovrebbe essere simile al seguente: ::"
+
+#: ../../base_system.rst:402
+msgid ""
+"Verify the presented certificate has been signed by Let's Encrypt CA on all "
+"SSL-enabled services like: If something goes wrong, please make sure all "
+"prerequisites are met."
+msgstr ""
+"Verificare la presenza del certificato rilasciato da Let's Encrypt CA per "
+"tutti i servizi che utilizzano SSL: se qualcosa dovesse andare storto, "
+"verificare che i prerequisiti siano soddisfatti."
+
+#: ../../base_system.rst:406
+msgid "Obtaining a valid certificate"
+msgstr "Ottenere un certificato valido"
+
+#: ../../base_system.rst:408
+msgid ""
+"If your configuration has been validated by the testing step, you're ready "
+"to request a new valid certificate. Execute the following script against the"
+" real Let's Encrypt server: ::"
+msgstr ""
+"Se la configurazione è stata validata con il test precedente, il sistema è "
+"pronto per richiedere un certificato valido. Eseguire il seguente script "
+"verso il server di Let's Encrypt: ::"
+
+#: ../../base_system.rst:414
+msgid "Access your http server and check your certificate is valid."
+msgstr "Accedere al server http e verificare che il certificato sia valido."
+
+#: ../../base_system.rst:420
+msgid "Change user password"
+msgstr "Cambio password utente"
+
+#: ../../base_system.rst:422
+msgid ""
+"All users can login to Server Manager using their own credentials and access"
+" the :index:`user profile`."
+msgstr ""
+"Ogni utente può collegarsi al Server Manager utilizzando le proprie "
+"credenziali ed accedere al :index:`profilo utente`."
+
+#: ../../base_system.rst:424
+msgid ""
+"After login, a user can :index:`change the password` and information about "
+"the account, like:"
+msgstr ""
+"Dopo l'accesso, l'utente potrà :index:`cambiare la propria password` e le "
+"informazioni associate al proprio account:"
+
+#: ../../base_system.rst:426
+msgid "Name and surname"
+msgstr "Nome e Cognome"
+
+#: ../../base_system.rst:427
+msgid "External mail address"
+msgstr "Indirizzo email esterno"
+
+#: ../../base_system.rst:429
+msgid "The user can also overwrite fields set by the administrator:"
+msgstr ""
+"L'utente può anche sovrascrivere i seguenti campi già impostati "
+"dall'amministratore:"
+
+#: ../../base_system.rst:431
+msgid "Company"
+msgstr "Società"
+
+#: ../../base_system.rst:432
+msgid "Office"
+msgstr "Ufficio"
+
+#: ../../base_system.rst:433
+msgid "Address"
+msgstr "Indirizzo"
+
+#: ../../base_system.rst:434
+msgid "City"
+msgstr "Città"
+
+#: ../../base_system.rst:437
 msgid "Shutdown"
 msgstr "Arresto"
 
-#: ../../base_system.rst:254 ../../base_system.rst:257
+#: ../../base_system.rst:439
 msgid ""
 "The machine where |product| is installed can be rebooted or halted from the "
 ":menuselection:`Shutdown` page. Choose an option (reboot or halt) then click"
@@ -651,18 +1029,18 @@ msgstr ""
 "dalla pagina :menuselection:`Arresto`. Selezionare l’opzione Riavvia oppure "
 "Spegni e fare click su :guilabel:`Arresta il sistema`."
 
-#: ../../base_system.rst:257 ../../base_system.rst:260
+#: ../../base_system.rst:442
 msgid ""
 "Always use this module to avoid bad shutdown which can cause data damages."
 msgstr ""
 "Al fine di evitare danni al sistema, utilizzare sempre questo modulo per "
 "effettuare una corretta procedura di riavvio o spegnimento del server."
 
-#: ../../base_system.rst:260 ../../base_system.rst:263
+#: ../../base_system.rst:445
 msgid "Log viewer"
 msgstr "Visualizza Log"
 
-#: ../../base_system.rst:262 ../../base_system.rst:265
+#: ../../base_system.rst:447
 msgid ""
 "All services will save operations inside files called :dfn:`logs`. The "
 ":index:`log` analysis is the main tool to find and resolve problems. To "
@@ -673,27 +1051,27 @@ msgstr ""
 "individuare malfunzionamenti e problemi. Per visualizzare i file di log fare"
 " clic su :menuselection:`Visualizza Log`."
 
-#: ../../base_system.rst:266 ../../base_system.rst:269
+#: ../../base_system.rst:451
 msgid "This module allows to:"
 msgstr "Questo modulo consente di:"
 
-#: ../../base_system.rst:268 ../../base_system.rst:271
+#: ../../base_system.rst:453
 msgid "start search on all server's logs"
 msgstr "effettuare ricerche all'interno di tutti i log del server"
 
-#: ../../base_system.rst:269 ../../base_system.rst:272
+#: ../../base_system.rst:454
 msgid "display a single log"
 msgstr "visualizzare un singolo log"
 
-#: ../../base_system.rst:270 ../../base_system.rst:273
+#: ../../base_system.rst:455
 msgid "follow the content of a log in real time"
 msgstr "seguire in tempo reale il contenuto di un log"
 
-#: ../../base_system.rst:273 ../../base_system.rst:276
+#: ../../base_system.rst:458
 msgid "Date and time"
 msgstr "Data e ora"
 
-#: ../../base_system.rst:275 ../../base_system.rst:278
+#: ../../base_system.rst:460
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -703,7 +1081,7 @@ msgstr ""
 " il corretto fuso orario. L'orologio della macchina può essere configurato "
 "manualmente o automaticamente usando server NTP pubblici (consigliato)."
 
-#: ../../base_system.rst:278 ../../base_system.rst:281
+#: ../../base_system.rst:463
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -712,11 +1090,11 @@ msgstr ""
 "di molti protocolli. Per evitare problemi, tutti gli host della LAN possono "
 "essere configurati per usare il server stesso come server NTP."
 
-#: ../../base_system.rst:282 ../../base_system.rst:285
+#: ../../base_system.rst:467
 msgid "Inline help"
 msgstr "Aiuto in linea"
 
-#: ../../base_system.rst:284 ../../base_system.rst:287
+#: ../../base_system.rst:469
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -725,24 +1103,20 @@ msgstr ""
 "contengono un :index:`manuale in linea` che spiega l'utilizzo base e tutti i"
 " campi contenuti nella pagina."
 
-#: ../../base_system.rst:287 ../../base_system.rst:290
+#: ../../base_system.rst:472
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Il manuale in linea è consultabile in tutte le lingue in cui è tradotto il "
 "Server Manager."
 
-#: ../../base_system.rst:289 ../../base_system.rst:292
+#: ../../base_system.rst:474
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Una lista di tutti i manuali installati nel sistema è disponibile "
 "all'indirizzo: ::"
 
-#: ../../base_system.rst:293 ../../base_system.rst:296
-msgid "**Example**"
-msgstr "**Esempio**"
-
-#: ../../base_system.rst:295 ../../base_system.rst:298
+#: ../../base_system.rst:480
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"

@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../nethcti_intro.rst:17
+#: ../../nethcti_intro.rst:7
 msgid "NethCTI"
 msgstr "NethCTI"
 
-#: ../../nethcti_intro.rst:19
+#: ../../nethcti_intro.rst:9
 msgid ""
 "NethCTI is the application that allows to view and control the status of the"
 " entire communication and phone system, using a simple web interface."
@@ -31,7 +31,7 @@ msgstr ""
 "completo in tempo reale dell’intero sistema telefonico attraverso una "
 "semplice e intuitiva interfaccia web."
 
-#: ../../nethcti_intro.rst:23
+#: ../../nethcti_intro.rst:13
 msgid ""
 "Full manual available at `nethcti.docs.nethesis.it "
 "<http://nethcti.docs.nethesis.it/>`_."

@@ -6,11 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Bojan Bogdanović (Бојан Богдановић) <bojce@ubuntusrbija.org>, 2017\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,14 +17,22 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../nsent/_templates/navbarsearchbox.html:4
-msgid "Search"
-msgstr "Претрага"
-
 #: ../../nsent/_templates/navbar.html:26
 msgid "Index"
-msgstr "Индекс"
+msgstr ""
 
-#: ../../nsent/_templates/navbar.html:27
+#: ../../nsent/_templates/navbar.html:28
+msgid "Languages"
+msgstr ""
+
+#: ../../nsent/_templates/navbar.html:36
+msgid "Versions"
+msgstr ""
+
+#: ../../nsent/_templates/navbar.html:43
 msgid "Support"
-msgstr "Подршка"
+msgstr ""
+
+#: ../../nsent/_templates/navbarsearchbox.html:4
+msgid "Search"
+msgstr ""

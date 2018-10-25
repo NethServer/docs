@@ -1,10 +1,10 @@
-# #-#-#-#-#  backup.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  backup.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  backup.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  backup.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -24,25 +24,25 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../backup.rst:12 ../../backup.rst:15
+#: ../../backup.rst:3
 msgid "Backup"
 msgstr ""
 
-#: ../../backup.rst:14 ../../backup.rst:17
+#: ../../backup.rst:5
 msgid ""
 ":index:`Backup` is the only way to restore a machine when disasters occur. "
 "The system handles two kinds of backup:"
 msgstr ""
 
-#: ../../backup.rst:17 ../../backup.rst:20
+#: ../../backup.rst:8
 msgid ":index:`configuration backup`"
 msgstr ""
 
-#: ../../backup.rst:18 ../../backup.rst:21
+#: ../../backup.rst:9
 msgid ":index:`data backup`"
 msgstr ""
 
-#: ../../backup.rst:20 ../../backup.rst:23
+#: ../../backup.rst:11
 msgid ""
 "Configuration backup contains only system configuration files. It's "
 "scheduled to be executed every night and it will create a new archive, "
@@ -54,7 +54,7 @@ msgid ""
 "full data restore can be done even if the machine is already in production."
 msgstr ""
 
-#: ../../backup.rst:26 ../../backup.rst:29
+#: ../../backup.rst:17
 msgid ""
 "Data backup is enabled installing \"backup\" module and contains all data "
 "like user's home directories and mails. It runs every night and can be full "
@@ -62,185 +62,163 @@ msgid ""
 "the configuration backup."
 msgstr ""
 
-#: ../../backup.rst:29 ../../backup.rst:32
-msgid "Data backup can be saved on different destinations:"
+#: ../../backup.rst:20
+msgid "Data backup can be saved on three different destinations:"
 msgstr ""
 
-#: ../../backup.rst:31 ../../backup.rst:34
+#: ../../backup.rst:22
 msgid ""
 "USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-"
 "section`)"
 msgstr ""
 
-#: ../../backup.rst:32 ../../backup.rst:35
+#: ../../backup.rst:23
 msgid ""
 "CIFS: Windows shared folder, it's available on all NAS (Network Attached "
 "Storage)"
 msgstr ""
 
-#: ../../backup.rst:33 ../../backup.rst:36
+#: ../../backup.rst:24
 msgid ""
 "NFS: Linux shared folder, it's available on all NAS, usually faster than "
 "CIFS"
 msgstr ""
 
-#: ../../backup.rst:34 ../../backup.rst:37
-msgid ""
-"WebDAV: available on many NAS and remote servers (Use a server with a valid "
-"SSL certificate as webDAV target, otherwise the system will fail mounting "
-"the filesystem)"
-msgstr ""
-
-#: ../../backup.rst:36 ../../backup.rst:39
+#: ../../backup.rst:26
 msgid ""
 "The backup status can be notified to the system administrator or to an "
 "external mail address."
 msgstr ""
 
-#: ../../backup.rst:38 ../../backup.rst:41
+#: ../../backup.rst:28
 msgid ""
 "The destination directory is based on the server host name: in case of FQDN "
 "change, the administrator should take care to copy backup data from the old "
 "directory to the new one."
 msgstr ""
 
-#: ../../backup.rst:43 ../../backup.rst:46
+#: ../../backup.rst:33
 msgid "Data restore"
 msgstr ""
 
-#: ../../backup.rst:45 ../../backup.rst:48
+#: ../../backup.rst:35
 msgid ""
 "Make sure that backup destination is reachable (for example, USB disk must "
 "be connected)."
 msgstr ""
 
-#: ../../backup.rst:48 ../../backup.rst:51
+#: ../../backup.rst:38
 msgid "Command line"
 msgstr ""
 
-#: ../../backup.rst:51 ../../backup.rst:54
+#: ../../backup.rst:41
 msgid "Listing files"
 msgstr ""
 
-#: ../../backup.rst:53 ../../backup.rst:56
+#: ../../backup.rst:43
 msgid ""
 "It's possible to list all files inside the last backup using this command: "
 "::"
 msgstr ""
 
-#: ../../backup.rst:57 ../../backup.rst:60
+#: ../../backup.rst:47
 msgid "The command can take some times depending on the backup size."
 msgstr ""
 
-#: ../../backup.rst:60 ../../backup.rst:63
+#: ../../backup.rst:50
 msgid "File and directory"
 msgstr ""
 
-#: ../../backup.rst:62 ../../backup.rst:65
+#: ../../backup.rst:52
 msgid ""
 "All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
 msgstr ""
 
-#: ../../backup.rst:64 ../../backup.rst:67
+#: ../../backup.rst:54
 msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
 msgstr ""
 
-#: ../../backup.rst:65 ../../backup.rst:68
+#: ../../backup.rst:55
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
 msgstr ""
 
-#: ../../backup.rst:66 ../../backup.rst:69
+#: ../../backup.rst:56
 msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
 msgstr ""
 
-#: ../../backup.rst:68 ../../backup.rst:71
+#: ../../backup.rst:58
 msgid "To restore a file/directory, use the command: ::"
 msgstr ""
 
-#: ../../backup.rst:72 ../../backup.rst:75
+#: ../../backup.rst:62
 msgid "Example, restore *test* mail account to :file:`/tmp` directory: ::"
 msgstr ""
 
-#: ../../backup.rst:76 ../../backup.rst:79
+#: ../../backup.rst:66
 msgid "Example, restore *test* mail account to original position: ::"
 msgstr ""
 
-#: ../../backup.rst:81 ../../backup.rst:84
+#: ../../backup.rst:71
 msgid "The system can restore a previous version of directory (or file)."
 msgstr ""
 
-#: ../../backup.rst:83 ../../backup.rst:86
+#: ../../backup.rst:73
 msgid "Example, restore the version of a file from 15 days ago: ::"
 msgstr ""
 
-#: ../../backup.rst:87 ../../backup.rst:90
+#: ../../backup.rst:77
 msgid ""
 "The ``-t`` option allows to specify the number of days (15 in this "
 "scenario)."
 msgstr ""
 
-#: ../../backup.rst:89 ../../backup.rst:92
-msgid ""
-"When you are using *CIFS* to access the share, and the command doesn't work "
-"as expected, verify that user and password for the network share are "
-"correct. If user or password are wrong, you will find "
-"NT_STATUS_LOGON_FAILURE errors in :file:`/var/log/messages`. Also, you can "
-"use the :command:`backup-data-list` to check if the backup is accessible."
-msgstr ""
-
-#: ../../backup.rst:96 ../../backup.rst:99
+#: ../../backup.rst:80
 msgid "Graphic interface"
 msgstr ""
 
-#: ../../backup.rst:98 ../../backup.rst:101
+#: ../../backup.rst:82
 msgid ""
-"In the :menuselection:`Restore files` menu section it is possible to search,"
-" select and restore one or more directories from backup, navigating the "
+"In the :menuselection:`Restore Data` menu section it is possible to search, "
+"select and restore one or more directories from backup, navigating the "
 "graphical tree with all paths included in the backup."
 msgstr ""
 
-#: ../../backup.rst:101 ../../backup.rst:104
-msgid ""
-"By default, last backup tree is shown. If you want to restore a file from a "
-"previous backup, select the backup date from *\"Backup File\"* selector."
-msgstr ""
-
-#: ../../backup.rst:103 ../../backup.rst:106
+#: ../../backup.rst:85
 msgid "There are two options to restore:"
 msgstr ""
 
-#: ../../backup.rst:105 ../../backup.rst:108
+#: ../../backup.rst:87
 msgid ""
-"Restore files in the original path, the current files in the filesystem are "
+"Restore data in the original path, the current files in the filesystem are "
 "overwritten by the restored files from backup."
 msgstr ""
 
-#: ../../backup.rst:106 ../../backup.rst:109
+#: ../../backup.rst:88
 msgid ""
-"Restore files in original path but the restored files from backup are moved "
+"Restore data in original path but the restored files from backup are moved "
 "on a new directory (the files are not overwritten) in this path: ::"
 msgstr ""
 
-#: ../../backup.rst:110 ../../backup.rst:113
+#: ../../backup.rst:92
 msgid ""
 "To use the search field, simply insert at least 3 chars and the searching "
 "starts automatically, highlighting the matched directories"
 msgstr ""
 
-#: ../../backup.rst:112 ../../backup.rst:115
+#: ../../backup.rst:94
 msgid ""
 "It is possible to restore the directories by clicking on **Restore** button."
 msgstr ""
 
-#: ../../backup.rst:114 ../../backup.rst:117
+#: ../../backup.rst:96
 msgid "Multiple selection can be done with Ctrl key pressed."
 msgstr ""
 
-#: ../../backup.rst:119 ../../backup.rst:122
+#: ../../backup.rst:100
 msgid "Disaster recovery"
 msgstr ""
 
-#: ../../backup.rst:121 ../../backup.rst:124
+#: ../../backup.rst:102
 msgid ""
 "The system is restored in two phases: configuration first, then data. Right "
 "after configuration restore, the system is ready to be used if proper "
@@ -249,61 +227,67 @@ msgid ""
 "receive mail."
 msgstr ""
 
-#: ../../backup.rst:126 ../../backup.rst:129
+#: ../../backup.rst:107
 msgid "Other restored configurations:"
 msgstr ""
 
-#: ../../backup.rst:128 ../../backup.rst:131
+#: ../../backup.rst:109
 msgid "Users and groups"
 msgstr ""
 
-#: ../../backup.rst:129 ../../backup.rst:132
+#: ../../backup.rst:110
 msgid "SSL certificates"
 msgstr ""
 
-#: ../../backup.rst:131 ../../backup.rst:134
+#: ../../backup.rst:112
 msgid "The root/admin password is not restored."
 msgstr ""
 
-#: ../../backup.rst:133 ../../backup.rst:136
+#: ../../backup.rst:114
 msgid "Steps to be executed:"
 msgstr ""
 
-#: ../../backup.rst:135 ../../backup.rst:138
+#: ../../backup.rst:116
 msgid "Install the new machine with the same host name as the old one"
 msgstr ""
 
-#: ../../backup.rst:136 ../../backup.rst:139
+#: ../../backup.rst:117
 msgid ""
 "Configure a data backup, so the system can retrieve saved data and "
 "configuration"
 msgstr ""
 
-#: ../../backup.rst:137 ../../backup.rst:140
+#: ../../backup.rst:118
+msgid ""
+"If the old machine was the network gateway, remember to re-install firewall "
+"module"
+msgstr ""
+
+#: ../../backup.rst:119
 msgid ""
 "Restore the configuration backup from page :guilabel:`Backup (configuration)"
 " > Restore` in Server Manager, or executing: :command:`restore-config`"
 msgstr ""
 
-#: ../../backup.rst:140 ../../backup.rst:143
+#: ../../backup.rst:122
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
 msgstr ""
 
-#: ../../backup.rst:141 ../../backup.rst:144
+#: ../../backup.rst:123
 msgid "Verify the system is functional"
 msgstr ""
 
-#: ../../backup.rst:142 ../../backup.rst:145
+#: ../../backup.rst:124
 msgid "Restore data backup executing: :command:`restore-data`"
 msgstr ""
 
-#: ../../backup.rst:148 ../../backup.rst:151
+#: ../../backup.rst:130
 msgid "Restore network roles"
 msgstr ""
 
-#: ../../backup.rst:150 ../../backup.rst:153
+#: ../../backup.rst:132
 msgid ""
 "If a role configuration points to a missing network interface, the "
 ":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
@@ -311,19 +295,19 @@ msgid ""
 " following cases:"
 msgstr ""
 
-#: ../../backup.rst:155 ../../backup.rst:158
+#: ../../backup.rst:137
 msgid "configuration backup has been restored on a new hardware"
 msgstr ""
 
-#: ../../backup.rst:156 ../../backup.rst:159
+#: ../../backup.rst:138
 msgid "one or more network cards have been substituted"
 msgstr ""
 
-#: ../../backup.rst:157 ../../backup.rst:160
+#: ../../backup.rst:139
 msgid "system disks are moved to a new machine"
 msgstr ""
 
-#: ../../backup.rst:159 ../../backup.rst:162
+#: ../../backup.rst:141
 msgid ""
 "The warning points to a page that lists the network cards present in the "
 "system, highlighting those not having an assigned :ref:`role <network-"
@@ -331,196 +315,192 @@ msgid ""
 " for restoring."
 msgstr ""
 
-#: ../../backup.rst:164 ../../backup.rst:167
+#: ../../backup.rst:146
 msgid ""
 "For instance, if a card with the *orange* role has been replaced, the drop "
 "down menu will list an element ``orange``, near the new network card."
 msgstr ""
 
-#: ../../backup.rst:168 ../../backup.rst:171
+#: ../../backup.rst:150
 msgid ""
 "The same applies if the old card was a component of a logical interface, "
 "such as a bridge or bond."
 msgstr ""
 
-#: ../../backup.rst:171 ../../backup.rst:174
+#: ../../backup.rst:153
 msgid ""
 "By picking an element from the drop down menu, the old role is transferred "
 "to the new physical interface."
 msgstr ""
 
-#: ../../backup.rst:174 ../../backup.rst:177
+#: ../../backup.rst:156
 msgid "Click the :guilabel:`Submit` button to apply the changes."
 msgstr ""
 
-#: ../../backup.rst:176 ../../backup.rst:179
+#: ../../backup.rst:158
 msgid ""
 "Choose carefully the new interfaces assignment: doing a mistake here could "
 "lead to a system isolated from the network!"
 msgstr ""
 
-#: ../../backup.rst:179 ../../backup.rst:182
+#: ../../backup.rst:161
 msgid ""
 "If the missing role is ``green`` an interactive procedure asks to fix the "
 "configuration at boot-time, to ensure a minimal network connectivity and "
 "login again on the Server Manager."
 msgstr ""
 
-#: ../../backup.rst:186 ../../backup.rst:189
+#: ../../backup.rst:168
 msgid "Restore installed modules"
 msgstr ""
 
-#: ../../backup.rst:188 ../../backup.rst:191
+#: ../../backup.rst:170
 msgid ""
 "By default the process of configuration restore will also restore all "
 "previously installed modules."
 msgstr ""
 
-#: ../../backup.rst:190 ../../backup.rst:193
+#: ../../backup.rst:172
 msgid ""
-"To skip the automatic installation, execute the command with the ``--no-"
-"reinstall`` argument: ::"
+"To avoid the reinstallation, execute this command before the restore: ::"
 msgstr ""
 
-#: ../../backup.rst:198 ../../backup.rst:201
+#: ../../backup.rst:179
 msgid "Data backup customization"
 msgstr ""
 
-#: ../../backup.rst:200 ../../backup.rst:203
+#: ../../backup.rst:181
 msgid ""
 "If additional software is installed, the administrator can edit the list of "
 "files and directories included (or excluded)."
 msgstr ""
 
-#: ../../backup.rst:204 ../../backup.rst:240 ../../backup.rst:207
-#: ../../backup.rst:243
+#: ../../backup.rst:185 ../../backup.rst:221
 msgid "Inclusion"
 msgstr ""
 
-#: ../../backup.rst:206 ../../backup.rst:209
+#: ../../backup.rst:187
 msgid ""
 "If you wish to add a file or directory to data backup, add a line to the "
 "file :file:`/etc/backup-data.d/custom.include`."
 msgstr ""
 
-#: ../../backup.rst:208 ../../backup.rst:211
+#: ../../backup.rst:189
 msgid ""
 "For example, to backup a software installed inside :file:`/opt` directory, "
 "add this line: ::"
 msgstr ""
 
-#: ../../backup.rst:213 ../../backup.rst:251 ../../backup.rst:216
-#: ../../backup.rst:254
+#: ../../backup.rst:194 ../../backup.rst:232
 msgid "Exclusion"
 msgstr ""
 
-#: ../../backup.rst:215 ../../backup.rst:218
+#: ../../backup.rst:196
 msgid ""
 "If you wish to exclude a file or directory from data backup, add a line to "
 "the file :file:`/etc/backup-data.d/custom.exclude`."
 msgstr ""
 
-#: ../../backup.rst:217 ../../backup.rst:220
+#: ../../backup.rst:198
 msgid ""
 "For example, to exclude all directories called *Download*, add this line: ::"
 msgstr ""
 
-#: ../../backup.rst:221 ../../backup.rst:224
+#: ../../backup.rst:202
 msgid "To exclude a mail directory called *test*, add this line: ::"
 msgstr ""
 
-#: ../../backup.rst:226 ../../backup.rst:229
+#: ../../backup.rst:207
 msgid ""
 "Same syntax applies to configuration backup. Modification should be done "
 "inside the file :file:`/etc/backup-config.d/custom.exclude`."
 msgstr ""
 
-#: ../../backup.rst:229 ../../backup.rst:232
+#: ../../backup.rst:210
 msgid "Make sure not to leave empty lines inside edited files."
 msgstr ""
 
-#: ../../backup.rst:233 ../../backup.rst:236
+#: ../../backup.rst:214
 msgid "Configuration backup customization"
 msgstr ""
 
-#: ../../backup.rst:235 ../../backup.rst:238
+#: ../../backup.rst:216
 msgid ""
 "In most cases it is not necessary to change the configuration backup. But it"
-" can be useful, for example, if you have a custom httpd configuration. In "
-"this case you can add the file that contains the customization to the list "
-"of files to backup."
+" can be useful, for example, if you have installed a custom SSL certificate."
+" In this case you can add the file that contains the certificate to the list"
+" of files to backup."
 msgstr ""
 
-#: ../../backup.rst:242 ../../backup.rst:245
+#: ../../backup.rst:223
 msgid ""
 "If you wish to add a file or directory to configuration backup, add a line "
 "to the file :file:`/etc/backup-config.d/custom.include`."
 msgstr ""
 
-#: ../../backup.rst:244 ../../backup.rst:247
+#: ../../backup.rst:225
 msgid ""
-"For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file , add "
-"this line: ::"
+"For example, to backup :file:`/etc/pki/mycert.pem` file , add this line: ::"
 msgstr ""
 
-#: ../../backup.rst:248 ../../backup.rst:251
+#: ../../backup.rst:229
 msgid "Do not add big directories or files to configuration backup."
 msgstr ""
 
-#: ../../backup.rst:253 ../../backup.rst:256
+#: ../../backup.rst:234
 msgid ""
 "If you wish to exclude a file or directory from configuration backup, add a "
 "line to the file :file:`/etc/backup-config.d/custom.exclude`."
 msgstr ""
 
-#: ../../backup.rst:256 ../../backup.rst:259
+#: ../../backup.rst:237
 msgid ""
 "Make sure not to leave empty lines inside edited files. The syntax of the "
 "configuration backup supports only simple file and directory paths."
 msgstr ""
 
-#: ../../backup.rst:262 ../../backup.rst:265
+#: ../../backup.rst:243
 msgid "USB disk configuration"
 msgstr ""
 
-#: ../../backup.rst:264 ../../backup.rst:267
+#: ../../backup.rst:245
 msgid ""
 "The best filesystem for USB backup disks is EXT3. FAT filesystem is "
 "supported but *not recommended*, while NTFS is **not supported**."
 msgstr ""
 
-#: ../../backup.rst:267 ../../backup.rst:270
+#: ../../backup.rst:248
 msgid ""
 "Before formatting the disk, attach it to the server and find the device "
 "name: ::"
 msgstr ""
 
-#: ../../backup.rst:288 ../../backup.rst:291
+#: ../../backup.rst:269
 msgid "Another good command could be: ::"
 msgstr ""
 
-#: ../../backup.rst:292 ../../backup.rst:295
+#: ../../backup.rst:273
 msgid "In this scenario, the disk is accessibile as *sdc* device."
 msgstr ""
 
-#: ../../backup.rst:294 ../../backup.rst:297
+#: ../../backup.rst:275
 msgid "Create a Linux partition on the whole disk: ::"
 msgstr ""
 
-#: ../../backup.rst:298 ../../backup.rst:301
+#: ../../backup.rst:279
 msgid ""
 "Create the filesystem on *sdc1* partition with a label named *backup*: ::"
 msgstr ""
 
-#: ../../backup.rst:302 ../../backup.rst:305
+#: ../../backup.rst:283
 msgid "Detach and reconnect the USB disk:"
 msgstr ""
 
-#: ../../backup.rst:304 ../../backup.rst:307
+#: ../../backup.rst:285
 msgid "You can simulate it with the following command: ::"
 msgstr ""
 
-#: ../../backup.rst:308 ../../backup.rst:311
+#: ../../backup.rst:289
 msgid ""
 "Now the *backup* label will be displayed inside the :guilabel:`Backup "
 "(data)` page."

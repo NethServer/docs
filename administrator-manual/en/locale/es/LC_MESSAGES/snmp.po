@@ -1,10 +1,10 @@
-# #-#-#-#-#  snmp.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  snmp.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  snmp.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  snmp.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../snmp.rst:10 ../../snmp.rst:13
+#: ../../snmp.rst:3
 msgid "SNMP"
 msgstr "SNMP"
 
-#: ../../snmp.rst:12 ../../snmp.rst:15
+#: ../../snmp.rst:5
 msgid ""
 "SNMP (Simple Network Management Protocol) protocol allows to manage and "
 "monitor devices connected to the network. The :index:`SNMP` server can reply"
@@ -39,35 +39,35 @@ msgstr ""
 " monitorizar dispositivos conectados a la red. El servidor :index:`SNMP` "
 "puede responder a consultas específicas sobre el estado actual del sistema."
 
-#: ../../snmp.rst:15 ../../snmp.rst:18
+#: ../../snmp.rst:8
 msgid "The server is disabled by default."
 msgstr "El servidor está deshabilitado de manera predeterminada"
 
-#: ../../snmp.rst:17 ../../snmp.rst:20
+#: ../../snmp.rst:10
 msgid "During first configuration. you should set three main options:"
 msgstr ""
 "Durante la primera configuración. Debe establecer tres opciones principales:"
 
-#: ../../snmp.rst:19 ../../snmp.rst:22
+#: ../../snmp.rst:12
 msgid "the SNMP community name"
 msgstr "el nombre de la comunidad SNMP"
 
-#: ../../snmp.rst:20 ../../snmp.rst:23
+#: ../../snmp.rst:13
 msgid "the location name where the server is located"
 msgstr "El nombre de la ubicación donde se encuentra el servidor"
 
-#: ../../snmp.rst:21 ../../snmp.rst:24
+#: ../../snmp.rst:14
 msgid "the name and mail address of system administrator"
 msgstr "El nombre y la dirección de correo del administrador del sistema"
 
-#: ../../snmp.rst:24 ../../snmp.rst:27
+#: ../../snmp.rst:17
 msgid "References"
 msgstr "Referencias"
 
-#: ../../snmp.rst:25 ../../snmp.rst:28
+#: ../../snmp.rst:18
 msgid ""
 "Simple Network Management Protocol "
-"https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"
+"http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"
 msgstr ""
 "Simple Network Management Protocol "
-"https://es.wikipedia.org/wiki/Simple_Network_Management_Protocol "
+"http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol"

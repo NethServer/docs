@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -17,121 +17,125 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../phonebook-mysql.rst:13
+#: ../../phonebook-mysql.rst:3
 msgid "Phonebook"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:15
+#: ../../phonebook-mysql.rst:5
 msgid ""
 "The |product| phonebook allows to collect contacts from multiple sources. "
 "After collecting the data, the contacts will be accessible in read-only mode"
 " from many clients."
 msgstr ""
 
-#: ../../phonebook-mysql.rst:18
+#: ../../phonebook-mysql.rst:8
 msgid ""
 "You should add or edit any contacts inside the source, not inside the "
 "phonebook itself."
 msgstr ""
 
-#: ../../phonebook-mysql.rst:20
+#: ../../phonebook-mysql.rst:10
 msgid ""
 "Synchronization of contacts from various external sources is performed by "
 "default every night, the command to force it: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:25
+#: ../../phonebook-mysql.rst:15
 msgid ""
 "If during synchronizations the data source are unreachable, the phonebook "
 "will be empty."
 msgstr ""
 
-#: ../../phonebook-mysql.rst:27
+#: ../../phonebook-mysql.rst:17
 msgid ""
 "The phonebook is accessible using LDAP, only if enabled, using this base DN:"
 " ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:31
+#: ../../phonebook-mysql.rst:21
 msgid "The web interface allows to enable the import from:"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:33
+#: ../../phonebook-mysql.rst:23
 msgid "publicly shared SOGo address book"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:34
+#: ../../phonebook-mysql.rst:24
 msgid "shared contacts from |product_cti|"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:35
+#: ../../phonebook-mysql.rst:25
 msgid "speed dial from  |product_voice|"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:37
+#: ../../phonebook-mysql.rst:27
 msgid ""
 "You can import contacts from other source using custom scripts inside: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:41
+#: ../../phonebook-mysql.rst:31
 msgid ""
 "Custom scripts can be written in any language, but each script must be "
 "executable. Example: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:46
+#: ../../phonebook-mysql.rst:36
 msgid ""
 "The ``/usr/share/phonebooks/scripts`` is already part of configuration "
 "backup. Inside the ``/usr/share/phonebooks/samples/`` directory, you can "
 "find many custom script examples."
 msgstr ""
 
-#: ../../phonebook-mysql.rst:49
+#: ../../phonebook-mysql.rst:39
 msgid ""
 "If you need to access external databases (Mysql,PostgreSQL), you can create "
 "a new ODBC record."
 msgstr ""
 
-#: ../../phonebook-mysql.rst:52
+#: ../../phonebook-mysql.rst:42
 msgid "ODBC configuration"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:54
+#: ../../phonebook-mysql.rst:44
 msgid "Define the ODBC record describing the database connection"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:56
+#: ../../phonebook-mysql.rst:46
 msgid "Example MySql: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:60
+#: ../../phonebook-mysql.rst:50
 msgid "Example PostgreSQL ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:64
+#: ../../phonebook-mysql.rst:54
 msgid "Example MSSQL ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:68
-msgid "Execute:"
+#: ../../phonebook-mysql.rst:58
+msgid "Execute: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:75
+#: ../../phonebook-mysql.rst:60
+msgid "signal-event nethserver-unixODBC-update"
+msgstr ""
+
+#: ../../phonebook-mysql.rst:63
 msgid "Test"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:77
+#: ../../phonebook-mysql.rst:65
 msgid "To test if the configuration is working: ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:91
+#: ../../phonebook-mysql.rst:79
 msgid "Then, try to execute a query ::"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:99
+#: ../../phonebook-mysql.rst:87
 msgid "Database details"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:106
+#: ../../phonebook-mysql.rst:94
 msgid "Display phonebook fields: ::"
 msgstr ""

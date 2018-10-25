@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../webvirtmgr.rst:10
+#: ../../webvirtmgr.rst:3
 msgid "WebVirtMgr"
 msgstr "WebVirtMgr"
 
-#: ../../webvirtmgr.rst:12
+#: ../../webvirtmgr.rst:5
 msgid ""
 "This tool is used to manage :index:`virtual machine` through a simple web "
 "interface:"
@@ -30,27 +30,27 @@ msgstr ""
 "Esta herramienta se utiliza para gestionar: index:`máquina virtual` a través"
 " de una sencilla interfaz web "
 
-#: ../../webvirtmgr.rst:14
+#: ../../webvirtmgr.rst:7
 msgid "Create and destroy new machines (:index:`KVM`)"
 msgstr "Crear y destruir nuevas máquinas (:index:`KVM`)"
 
-#: ../../webvirtmgr.rst:15
+#: ../../webvirtmgr.rst:8
 msgid "Create custom template of virtual machines"
 msgstr "Crear plantilla personalizada de máquinas virtuales"
 
-#: ../../webvirtmgr.rst:16
+#: ../../webvirtmgr.rst:9
 msgid "Easy shell remote access"
 msgstr "Acceso remoto a shell fácil"
 
-#: ../../webvirtmgr.rst:17
+#: ../../webvirtmgr.rst:10
 msgid "Amazing UI"
 msgstr "Increíble interfaz de usuario"
 
-#: ../../webvirtmgr.rst:20
+#: ../../webvirtmgr.rst:13
 msgid "Configuration"
 msgstr "Configuración"
 
-#: ../../webvirtmgr.rst:22
+#: ../../webvirtmgr.rst:15
 msgid ""
 "The web application listen on port **8000** of your host machine, for "
 "example: ``http://HOST_IP:8000/``."
@@ -58,25 +58,25 @@ msgstr ""
 "La aplicación web escucha en el puerto **8000** de su máquina host, por "
 "ejemplo: ``http://HOST_IP:8000/``."
 
-#: ../../webvirtmgr.rst:24
+#: ../../webvirtmgr.rst:17
 msgid "The service is disabled by default."
 msgstr "El servidor está deshabilitado de manera predeterminada"
 
-#: ../../webvirtmgr.rst:26
+#: ../../webvirtmgr.rst:19
 msgid "From the :guilabel:`Virtual machines` page you can:"
 msgstr "Desde la página :guilabel:`Máquinas virtuales` puede:"
 
-#: ../../webvirtmgr.rst:28
+#: ../../webvirtmgr.rst:21
 msgid "enable the virtual machines manager"
 msgstr "habilitar el administrador de máquinas virtuales"
 
-#: ../../webvirtmgr.rst:29
+#: ../../webvirtmgr.rst:22
 msgid "enable the virtual machines console access from web browser"
 msgstr ""
 "habilitar el acceso a la consola de máquinas virtuales desde el navegador "
 "web"
 
-#: ../../webvirtmgr.rst:31
+#: ../../webvirtmgr.rst:24
 msgid ""
 "To access the web interface you must login with credentials that can be "
 "found on the same page:"
@@ -84,15 +84,15 @@ msgstr ""
 "Para acceder a la interfaz web, debe iniciar sesión con credenciales que se "
 "pueden encontrar en la misma página:"
 
-#: ../../webvirtmgr.rst:33
+#: ../../webvirtmgr.rst:26
 msgid "*User:* admin"
 msgstr "*Usuario:* admin"
 
-#: ../../webvirtmgr.rst:34
+#: ../../webvirtmgr.rst:27
 msgid "*Password*: random alphanumeric (editable)"
 msgstr "*Contraseña*: aleatoria alfanumérica (editable)"
 
-#: ../../webvirtmgr.rst:38
+#: ../../webvirtmgr.rst:31
 msgid ""
 "Do not create network bridges using WebVirtManager interface. Just create "
 "the bridge inside :guilabel:`Network` page and use it under WebVirtManager."
@@ -101,14 +101,14 @@ msgstr ""
 "crear el puente dentro de la página :guilabel:`Red` y usarla en "
 "WebVirtManager."
 
-#: ../../webvirtmgr.rst:41
+#: ../../webvirtmgr.rst:34
 msgid "For more information, see official documentation:"
 msgstr "Para obtener más información, consulte la documentación oficial:"
 
-#: ../../webvirtmgr.rst:43
+#: ../../webvirtmgr.rst:36
 msgid "http://wiki.qemu.org/Manual"
 msgstr "http://wiki.qemu.org/Manual"
 
-#: ../../webvirtmgr.rst:44
+#: ../../webvirtmgr.rst:37
 msgid "http://www.linux-kvm.org/page/Documents"
 msgstr "http://www.linux-kvm.org/page/Documents"

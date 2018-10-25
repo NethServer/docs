@@ -1,10 +1,10 @@
-# #-#-#-#-#  ups.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  ups.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  ups.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  ups.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../ups.rst:12 ../../ups.rst:15
+#: ../../ups.rst:5
 msgid "UPS"
 msgstr "UPS"
 
-#: ../../ups.rst:14 ../../ups.rst:17
+#: ../../ups.rst:7
 msgid ""
 "|product| supports the management of :index:`UPS` (Uninterruptible Power "
 "Supply) connected to the system."
@@ -37,11 +37,11 @@ msgstr ""
 "|product| soporta la gestión de :index:`UPS` (Uninterruptible Power Supply -"
 " Fuente de Poder Ininterrumpible) conectado al sistema."
 
-#: ../../ups.rst:16 ../../ups.rst:19
+#: ../../ups.rst:9
 msgid "The server can be configured in two ways:"
 msgstr "El servidor se puede configurar de dos maneras:"
 
-#: ../../ups.rst:18 ../../ups.rst:21
+#: ../../ups.rst:11
 msgid ""
 "*master*: UPS is directly connected to the server, the server accepts "
 "connections from slaves"
@@ -49,43 +49,43 @@ msgstr ""
 "*maestro*: UPS está conectado directamente al servidor, el servidor acepta "
 "conexiones de esclavos"
 
-#: ../../ups.rst:19 ../../ups.rst:22
+#: ../../ups.rst:12
 msgid ""
 "*slave*: UPS is connected to another server accessible over the network"
 msgstr ""
 "*esclavo*: El UPS está conectado a otro servidor accesible a través de la "
 "red"
 
-#: ../../ups.rst:21 ../../ups.rst:24
+#: ../../ups.rst:14
 msgid ""
 "You should consult the list of supported models before buying. Via "
-"*Administration > Software center* install the UPS package. In "
-"*Configuration* appears the new entry *UPS* where can be find the supported "
-"model by typing in *Search driver for model* field."
+"*Administration/Software centre* install the UPS package. In *Configuration*"
+" appears the new entry *UPS* where can be find the supported model by typing"
+" in *Search driver for model* field."
 msgstr ""
-"Debe consultar la lista de modelos compatibles antes de comprar. Vía "
-"*Administración > Centro de software* instale el paquete UPS. En "
+"Debes consultar la lista de modelos compatibles antes de comprar uno. A "
+"través de *Administración/Centro de software* instala el paquete de UPS. En "
 "*Configuración* aparece la nueva entrada *UPS* donde se puede encontrar el "
-"modelo soportado escribiendo en el campo *Buscar  controlador para el "
+"modelo compatible escribiendo en el campo *Buscar controlador para el "
 "modelo*."
 
-#: ../../ups.rst:26 ../../ups.rst:29
+#: ../../ups.rst:19
 msgid "In :index:`master` mode, the UPS can be connected to the server:"
 msgstr "En modo :index:`maestro`, el UPS puede conectarse al servidor:"
 
-#: ../../ups.rst:28 ../../ups.rst:31
+#: ../../ups.rst:21
 msgid "on a serial port"
 msgstr "en un puerto serial"
 
-#: ../../ups.rst:29 ../../ups.rst:32
+#: ../../ups.rst:22
 msgid "on a USB port"
 msgstr "en un puerto USB"
 
-#: ../../ups.rst:30 ../../ups.rst:33
+#: ../../ups.rst:23
 msgid "with a USB to serial adapter"
 msgstr "con un adaptador USB a serial"
 
-#: ../../ups.rst:33 ../../ups.rst:36
+#: ../../ups.rst:26
 msgid ""
 "In :index:`slave` mode, you will need to provide the IP address of the "
 "master server."
@@ -93,7 +93,7 @@ msgstr ""
 "En modo :index:`esclavo`, deberá proporcionar la dirección IP del servidor "
 "maestro"
 
-#: ../../ups.rst:35 ../../ups.rst:38
+#: ../../ups.rst:28
 msgid ""
 "The default configuration provides a controlled shutdown in the event of the"
 " absence of power."
@@ -101,11 +101,11 @@ msgstr ""
 "La configuración predeterminada proporciona un apagado controlado en caso de"
 " ausencia de alimentación."
 
-#: ../../ups.rst:39 ../../ups.rst:42
+#: ../../ups.rst:32
 msgid "Custom device"
 msgstr "Dispositivo personalizado"
 
-#: ../../ups.rst:41 ../../ups.rst:44
+#: ../../ups.rst:34
 msgid ""
 "If the UPS is connected to a port that is not listed in the web interface, "
 "you can configure a custom device with the following commands: ::"
@@ -114,11 +114,11 @@ msgstr ""
 "puede configurar un dispositivo personalizado con los siguientes comandos: "
 "::"
 
-#: ../../ups.rst:47 ../../ups.rst:50
+#: ../../ups.rst:40
 msgid "UPS statistics"
 msgstr "Estadísticas del UPS"
 
-#: ../../ups.rst:49 ../../ups.rst:52
+#: ../../ups.rst:42
 msgid ""
 "If the statistics module (collectd) is installed and running, the module "
 "will automatically collect statistic data about UPS status."

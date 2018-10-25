@@ -1,10 +1,10 @@
-# #-#-#-#-#  bandwidth_monitor.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  bandwidth_monitor.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  bandwidth_monitor.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  bandwidth_monitor.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,30 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../bandwidth_monitor.rst:10 ../../bandwidth_monitor.rst:13
-msgid "Bandwidth monitor"
-msgstr "Monitor de ancho de banda"
-
-#: ../../bandwidth_monitor.rst:13 ../../bandwidth_monitor.rst:16
-msgid "BandwidthD"
-msgstr "BandwidthD"
-
-#: ../../bandwidth_monitor.rst:15 ../../bandwidth_monitor.rst:18
-msgid ""
-"BandwidthD tracks usage of TCP/IP network subnets and builds graphs to "
-"display utilization. After installation, BandwidthD is automatically "
-"started. Graphs can be accessed using the Server Manager."
+#: ../../bandwidth_monitor.rst:3
+msgid "Bandwidth monitor (ntopng)"
 msgstr ""
-"BandwidthD controla el uso de subredes de red TCP/IP y genera gráficos para "
-"mostrar su utilización. Después de la instalación, BandwidthD se inicia "
-"automáticamente. Se puede acceder a los gráficos mediante el Administrador "
-"del servidor."
 
-#: ../../bandwidth_monitor.rst:20 ../../bandwidth_monitor.rst:23
-msgid "ntopng"
-msgstr "ntopng"
-
-#: ../../bandwidth_monitor.rst:22 ../../bandwidth_monitor.rst:25
+#: ../../bandwidth_monitor.rst:5
 msgid ""
 "ntopng is a powerful tool that allows you to analyze real-time network "
 "traffic. It allows you to evaluate the bandwidth used by individual hosts "
@@ -58,33 +39,29 @@ msgstr ""
 "en tiempo real. Le permite evaluar el ancho de banda utilizado por los hosts"
 " individuales e identificar los protocolos de red más utilizados."
 
-#: ../../bandwidth_monitor.rst:28 ../../bandwidth_monitor.rst:31
+#: ../../bandwidth_monitor.rst:11
 msgid "Enable ntopng"
 msgstr "Habilitar ntopng"
 
-#: ../../bandwidth_monitor.rst:27 ../../bandwidth_monitor.rst:30
+#: ../../bandwidth_monitor.rst:10
 msgid ""
 "Enabling ntopng, all traffic passing through the network interfaces will be "
-"analyzed. It can cause a slowdown of the network and an increased in system "
-"load."
+"analyzed. It can cause a slowdown of the network and increase system load."
 msgstr ""
-"Al habilitar ntopng, se analizará todo el tráfico que pasa a través de las "
-"interfaces de red. Puede causar una ralentización de la red y un aumento en "
-"la carga del sistema."
 
-#: ../../bandwidth_monitor.rst:30 ../../bandwidth_monitor.rst:33
+#: ../../bandwidth_monitor.rst:13
 msgid "Port"
 msgstr "Puerto"
 
-#: ../../bandwidth_monitor.rst:31 ../../bandwidth_monitor.rst:34
+#: ../../bandwidth_monitor.rst:14
 msgid "The port where to view the ntopng web interface."
 msgstr "El puerto donde ver la interfaz web ntopng."
 
-#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+#: ../../bandwidth_monitor.rst:16
 msgid "Password for 'admin' user"
 msgstr "Contraseña para el usuario 'admin'"
 
-#: ../../bandwidth_monitor.rst:33 ../../bandwidth_monitor.rst:36
+#: ../../bandwidth_monitor.rst:16
 msgid ""
 "Admin user password. This password is not related to the |product| admin "
 "password."
@@ -92,10 +69,10 @@ msgstr ""
 "Contraseña del usuario administrador. Esta contraseña no está relacionada "
 "con la clave de administrador de |product| ."
 
-#: ../../bandwidth_monitor.rst:35 ../../bandwidth_monitor.rst:38
+#: ../../bandwidth_monitor.rst:18
 msgid "Interfaces"
 msgstr "Interfaces"
 
-#: ../../bandwidth_monitor.rst:36 ../../bandwidth_monitor.rst:39
-msgid "Interfaces on which ntopng will listens to."
-msgstr "Interfaces en las que ntopng escuchará."
+#: ../../bandwidth_monitor.rst:19
+msgid "Interfaces on which ntopng will listen to."
+msgstr ""

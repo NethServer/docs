@@ -1,10 +1,10 @@
-# #-#-#-#-#  access.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  access.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  access.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  access.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 09:17+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../access.rst:16 ../../access.rst:19
+#: ../../access.rst:9
 msgid "Accessing the Server Manager"
 msgstr "Accedere al Server Manager"
 
-#: ../../access.rst:18 ../../access.rst:21
+#: ../../access.rst:11
 msgid ""
 "|product| can be configured using the :dfn:`Server Manager` web interface. "
 "You need a web browser like Mozilla Firefox or Google Chrome to access the "
@@ -44,7 +44,7 @@ msgstr ""
 "*a.b.c.d* e *server_name* rispettivamente con l'indirizzo IP del server e il"
 " nome del server utilizzato durante l'installazione."
 
-#: ../../access.rst:23 ../../access.rst:26
+#: ../../access.rst:16
 msgid ""
 "If the web server module is installed, you can also access the web interface"
 " using this address ``https://server_name/server-manager``."
@@ -52,7 +52,7 @@ msgstr ""
 "Se il modulo web server è installato, l’interfaccia web è raggiungibile "
 "anche all’indirizzo ``https://server_name/server-manager``."
 
-#: ../../access.rst:25 ../../access.rst:28
+#: ../../access.rst:18
 msgid ""
 "The Server Manager uses self-signed SSL certificates. You should explicitly "
 "accept them the first time you access the server. The connection is safe and"
@@ -62,62 +62,78 @@ msgstr ""
 "necessario accettare esplicitamente tali certificati la prima volta che si "
 "accede al server. La connessione è comunque sicura e cifrata."
 
-#: ../../access.rst:30 ../../access.rst:33
+#: ../../access.rst:23
 msgid "Login"
 msgstr "Login"
 
-#: ../../access.rst:32 ../../access.rst:35
+#: ../../access.rst:25
 msgid ""
-"The login page will give you a trusted access to the web interface. Log in "
-"as **root** and type the password chosen during |product| installation."
+"The login page will gave you a trusted access to the web interface. Use "
+"following credentials:"
 msgstr ""
-"La pagina di login consente l'accesso autenticato al Server Manager. "
-"Accedere come **root** e digitare la password scelta durante l'installazione"
-" di |product|."
+"Prima di accedere, è necessario autenticarsi attraverso nome utente e "
+"password. Compilare i campi come segue:"
 
-#: ../../access.rst:37 ../../access.rst:40
+#: ../../access.rst:28
+msgid ":index:`Default user` name: **root**"
+msgstr ":index:`Nome utente di default`: **root**"
+
+#: ../../access.rst:29
+msgid ":index:`Default password`: **Nethesis,1234**"
+msgstr ":index:`Password di default`: Nethesis,1234"
+
+#: ../../access.rst:31
 msgid ""
-"The *unattended* install procedure sets the root password to the default "
-"``Nethesis,1234``."
+"Change the root's password as soon as possible, by picking a secure one, "
+"composed of a random sequence of mixed-case letters, digits and symbols."
 msgstr ""
-"La procedura di installazione *unattended* imposta la password di *root* al "
-"valore ``Nethesis,1234``."
+"Cambiare la password di root appena possibile, scegliendone una sicura, che "
+"sia composta da una sequenza casuale di lettere maiuscole, minuscole e da "
+"numeri e simboli."
 
-#: ../../access.rst:41 ../../access.rst:44
-msgid "Change the current password"
-msgstr "Cambiare la password"
-
-#: ../../access.rst:43 ../../access.rst:46
+#: ../../access.rst:35
 msgid ""
-"You can change the root password from the web interface by going to the "
-":guilabel:`root@host.domain.com` label on the upper right corner of the "
-"screen and clicking on :guilabel:`Profile`."
+"If the File server, Email server or any other module requiring Users and "
+"groups module is installed from the Software center, the ``admin`` user is "
+"also available to access the web interface with same privileges as the "
+"``root`` user. See :ref:`admin_user-section` for details."
 msgstr ""
-"Si può modificare la password di root dall'interfaccia web andando "
-"sull'etichetta :guilabel:`root@host.domain.com` nell'angolo in alto a destra"
-" dello schermo e cliccando su :guilabel:`Profilo`."
+"In caso di installazione tramite software Center del File server, del server"
+" Mail o di un qualunque altro modulo che preveda l'utilizzo di Utenti e "
+"Gruppi, sarà possibile abilitare l'utente ``admin`` ed utilizzarlo per "
+"accedere all'interfaccia web con gli stessi privilegi dell'utente root. Vedi"
+" :ref:`admin_user-section`."
 
-#: ../../access.rst:47 ../../access.rst:50
+#: ../../access.rst:44
+msgid "Session timeouts"
+msgstr "Timeout della sessione"
+
+#: ../../access.rst:46
 msgid ""
-"The login page allows selecting an alternative language among those already "
-"installed on the system. After logging in, go to the :ref:`software-center-"
-"section` page to install additional languages."
+"By default (starting from |product| 6.10), a Server Manager session "
+"terminates after **60 minutes of inactivity** (idle timeout) and **expires 8"
+" hours after the login** (session life time)."
 msgstr ""
-"La pagina di login consente di selezionare una lingua alternativa tra quelle"
-" già installate nel sistema. Dopo essersi autenticati, andare alla pagina "
-":ref:`software-center-section` per installare il supporto a lingue "
-"aggiuntive."
+"Di default (a partire da |product| 6.10), una sessione del Server Manager "
+"termina dopo **60 minuti di inattività** (idle timeout) e **scade dopo 8 ore"
+" dal login** (session life time)."
 
-#: ../../access.rst:52 ../../access.rst:55
-msgid "Logout"
-msgstr "Logout"
-
-#: ../../access.rst:54 ../../access.rst:57
+#: ../../access.rst:50
 msgid ""
-"Terminate the current Server Manager session by going to the "
-":guilabel:`root@host.domain.com` label on the upper right corner of the "
-"screen and by clicking on :guilabel:`Logout`."
+"The following shell command sets 2 hours of idle timeout, and 16 hours of "
+"maximum session life time. Time is expressed in seconds: ::"
 msgstr ""
-"Per terminare la sessione corrente del Server Manager andare sull'etichetta "
-":guilabel:`root@host.domain.com` nell'angolo in alto a destra dello schermo "
-"e cliccare su :guilabel:`Logout`."
+"I seguenti comandi impostano l'idle timeout a 2 ore e la session life time a"
+" 16 ore. Il tempo (Time) è espresso in secondi: ::"
+
+#: ../../access.rst:55
+msgid "To disable the timeouts ::"
+msgstr "Per disabilitare i timeout: ::"
+
+#: ../../access.rst:59
+msgid ""
+"The new timeout values will affect new sessions. They do not change any "
+"active session."
+msgstr ""
+"I nuovi valori di timeout saranno effettivi sulle nuove sessioni. Invece non"
+" alterano le sessione attive."

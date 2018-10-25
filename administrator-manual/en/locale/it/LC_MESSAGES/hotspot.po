@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Francesco Pari <francesco.pari@nethesis.it>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../hotspot.rst:13
+#: ../../hotspot.rst:3
 msgid "Hotspot"
 msgstr "Hotspot"
 
-#: ../../hotspot.rst:15
+#: ../../hotspot.rst:5
 msgid ""
 "The hotspot service allows the regulation, accountability and pricing of "
 "Internet access in public places, like internet points, hotels and fairs."
@@ -31,61 +31,61 @@ msgstr ""
 "tariffazione dell'accesso ad Internet nei luoghi pubblici, internet point, "
 "hotel, fiere, etc."
 
-#: ../../hotspot.rst:18
+#: ../../hotspot.rst:8
 msgid "Main features:"
 msgstr "Caratteristiche dell'hotspot:"
 
-#: ../../hotspot.rst:20
+#: ../../hotspot.rst:10
 msgid "Network isolation between corporate and guests"
 msgstr "Separazione rete aziendale e rete ospiti"
 
-#: ../../hotspot.rst:21
+#: ../../hotspot.rst:11
 msgid "Access management with user / password"
 msgstr "Gestione degli accessi con utente/password"
 
-#: ../../hotspot.rst:22
+#: ../../hotspot.rst:12
 msgid ""
 "Pricing based on prepaid credit, date expiration, traffic usage or freely "
 "accessible"
 msgstr "Tariffazione a consumo, scadenza, prepagata, a traffico o libera"
 
-#: ../../hotspot.rst:23
+#: ../../hotspot.rst:13
 msgid "Login manager from web panel"
 msgstr "Gestore degli accessi su Pannello Web"
 
-#: ../../hotspot.rst:24
+#: ../../hotspot.rst:14
 msgid "Creation of users and  coupons to be delivered to the customer"
 msgstr ""
 "Creazione degli utenti e stampa del tagliandino da consegnare al cliente"
 
-#: ../../hotspot.rst:25
+#: ../../hotspot.rst:15
 msgid "Bulk user creation and SMS/email registration"
 msgstr "Creazione seriale degli utenti e registrazione via SMS/email"
 
-#: ../../hotspot.rst:26
+#: ../../hotspot.rst:16
 msgid "Billing report"
 msgstr "Report per la fatturazione del servizio, filtri e ricerca"
 
-#: ../../hotspot.rst:27
+#: ../../hotspot.rst:17
 msgid "Limiting the bandwidth used by users"
 msgstr "Limitazione della banda utilizzata dagli utenti"
 
-#: ../../hotspot.rst:28
+#: ../../hotspot.rst:18
 msgid "Export account list and connections report"
 msgstr "Esportazione della lista account e dei report delle connessioni"
 
-#: ../../hotspot.rst:31
+#: ../../hotspot.rst:21
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../hotspot.rst:35
+#: ../../hotspot.rst:25
 msgid "You need a server with at least 3 ethernet interfaces."
 msgstr ""
 "Per poter installare l'hotspot è necessario che la macchina abbia almeno una"
 " scheda green ed una red configurate e che disponga almeno di 3 schede di "
 "rete."
 
-#: ../../hotspot.rst:38
+#: ../../hotspot.rst:28
 msgid ""
 "The server must be connected to network access points. User and billing "
 "management can be accessed at: http://hotspot.nethesis.it"
@@ -94,11 +94,11 @@ msgstr ""
 "gestire il traffico. La gestione degli utenti e della fatturazione risiede "
 "nel Centro Servizi: http://hotspot.nethesis.it"
 
-#: ../../hotspot.rst:41
+#: ../../hotspot.rst:31
 msgid "How to proceed:"
 msgstr "Come procedere:"
 
-#: ../../hotspot.rst:43
+#: ../../hotspot.rst:33
 msgid ""
 "Make sure you have at least one free interface (no role) which will be "
 "assigned to the hotspot"
@@ -106,7 +106,7 @@ msgstr ""
 "assicurarsi di avere almeno un'interfaccia libera (senza ruolo) che sarà "
 "assegnata esclusivamente all'hotspot"
 
-#: ../../hotspot.rst:44
+#: ../../hotspot.rst:34
 msgid ""
 "Ensure that the system can communicate over the Internet to the Operation "
 "Center using  1812 and 1813 TCP/UDP ports"
@@ -114,7 +114,7 @@ msgstr ""
 "assicurarsi che il sistema possa comunicare su Internet verso il Centro "
 "Servizi sulle porte TCP/UDP 1812 e 1813"
 
-#: ../../hotspot.rst:45
+#: ../../hotspot.rst:35
 msgid ""
 "Access the :guilabel:`Hotspot` page to define the interface to use and "
 "configure the parameters of the service"
@@ -122,38 +122,38 @@ msgstr ""
 "accedere alla sezione :guilabel:`Hotspot` per definire l'interfaccia da "
 "utilizzare e configurare i parametri del servizio"
 
-#: ../../hotspot.rst:46
+#: ../../hotspot.rst:36
 msgid "Connect the ethernet interface to the access point"
 msgstr "collegare l'interfaccia all'Access Point"
 
-#: ../../hotspot.rst:49
+#: ../../hotspot.rst:39
 msgid "Web interface"
 msgstr "Interfaccia web"
 
-#: ../../hotspot.rst:51
+#: ../../hotspot.rst:41
 msgid ""
 "The web interface allows you to enable and disable the HotSpot service."
 msgstr ""
 "L'interfaccia web consente di attivare e disattivare il servizio HotSpot "
 "configurandolo secondo le proprie esigenze."
 
-#: ../../hotspot.rst:53
+#: ../../hotspot.rst:43
 msgid "You can:"
 msgstr "È possibile:"
 
-#: ../../hotspot.rst:55
+#: ../../hotspot.rst:45
 msgid "select the network interface associated with the HotSpot service"
 msgstr "selezionare l'interfaccia di rete associata al servizio HotSpot"
 
-#: ../../hotspot.rst:56
+#: ../../hotspot.rst:46
 msgid "modify the network address reserved to clients"
 msgstr "modificare l'indirizzamento di rete dedicato ai client"
 
-#: ../../hotspot.rst:57
+#: ../../hotspot.rst:47
 msgid "enable the transparent proxy and content filtering"
 msgstr "abilitare il proxy trasparente e il filtro contenuti"
 
-#: ../../hotspot.rst:58
+#: ../../hotspot.rst:48
 msgid ""
 "customize title, footers, disclaimers, and sites accessible without "
 "authentication"
@@ -161,11 +161,11 @@ msgstr ""
 "personalizzare, titolo, piè di pagina, disclaimer e siti senza "
 "autenticazione"
 
-#: ../../hotspot.rst:62
+#: ../../hotspot.rst:52
 msgid "Access Point"
 msgstr "Access Point"
 
-#: ../../hotspot.rst:64
+#: ../../hotspot.rst:54
 msgid ""
 "The Access Point (AP) must perform the sole function of enabling the "
 "connection with the firewall, they should behave like an ordinary network "
@@ -175,11 +175,11 @@ msgstr ""
 "collegamento con il firewall, per cui devono comportarsi come un banale "
 "switch di rete, a tal fine è opportuno seguire queste raccomandazioni:"
 
-#: ../../hotspot.rst:67
+#: ../../hotspot.rst:57
 msgid "configure the access point without authentication and without DHCP"
 msgstr "configurare l’Access Point senza alcuna autenticazione e senza DHCP"
 
-#: ../../hotspot.rst:68
+#: ../../hotspot.rst:58
 msgid ""
 "disable any service (security services, etc.) in order to avoid interference"
 " with hotspot behavior"
@@ -187,7 +187,7 @@ msgstr ""
 "disabilitare qualsiasi servizio (servizi di sicurezza, etc.) al fine di "
 "evitare interferenze col funzionamento dell'hotspot"
 
-#: ../../hotspot.rst:69
+#: ../../hotspot.rst:59
 msgid ""
 "if you use more AP configure them with different SSID (eg: 1-SCHOOL / "
 "SCHOOL-2 / ...) in order to easily identify any malfunctioning AP"
@@ -196,7 +196,7 @@ msgstr ""
 "SCUOLA-1/SCUOLA-2/...) in modo da individuare facilmente eventuali AP "
 "malfunzionanti"
 
-#: ../../hotspot.rst:70
+#: ../../hotspot.rst:60
 msgid ""
 "configure the AP with a static IP address on a network segment (rfc-1918) "
 "different from the one used by the hotspot"
@@ -204,7 +204,7 @@ msgstr ""
 "configurare gli AP con un indirizzo IP statico su un segmento di rete "
 "(rfc-1918) differente da quello utilizzato dall'hotspot"
 
-#: ../../hotspot.rst:71
+#: ../../hotspot.rst:61
 msgid ""
 "if possible, enable the \"client isolation\", to avoid traffic between "
 "clients connected to the access point"
@@ -212,7 +212,7 @@ msgstr ""
 "se possibile abilitare la \"client isolation\", in modo che i vari client "
 "che si collegano all'access point non si vedano tra di loro"
 
-#: ../../hotspot.rst:72
+#: ../../hotspot.rst:62
 msgid ""
 "configure the AP to work on different channels to minimize interference, a "
 "good AP allow you to manage the channels automatically or manually select "
@@ -222,7 +222,7 @@ msgstr ""
 "le interferenze, gli AP di buon livello permettono di gestire i canali in "
 "automatico oppure di selezionarli manualmente"
 
-#: ../../hotspot.rst:73
+#: ../../hotspot.rst:63
 msgid ""
 "do not use too shoddy products, low quality AP can cause frequent "
 "disconnections which impact on the quality of the overall service, the "
@@ -233,11 +233,11 @@ msgstr ""
 "servizio generale, la raccomandazione è ancora più importante nel caso si "
 "utilizzino dei repeater"
 
-#: ../../hotspot.rst:77
+#: ../../hotspot.rst:67
 msgid "Access the service"
 msgstr "Utilizzo del servizio"
 
-#: ../../hotspot.rst:79
+#: ../../hotspot.rst:69
 msgid ""
 "Access to Operation Center, create a new hotspot instance (or use an "
 "existing one), than associate it to the firewall:"
@@ -245,11 +245,11 @@ msgstr ""
 "E' necessario accedere al centro servizi Nethesis, creare una nuova istanza "
 "hotspot (o utilizzarne una già presente) e associarla al firewall:"
 
-#: ../../hotspot.rst:81
+#: ../../hotspot.rst:71
 msgid "https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot"
 msgstr "https://docs.nethesis.it/Register_Amministrazione#Gestione_Hotspot"
 
-#: ../../hotspot.rst:83
+#: ../../hotspot.rst:73
 msgid ""
 "Then, you will be able to manage the hotspot using at "
 "https://hotspot.nethesis.it. You must access the site using the credentials "
@@ -259,21 +259,21 @@ msgstr ""
 "https://hotspot.nethesis.it accedendo con le credenziali ottenute al punto "
 "precedente."
 
-#: ../../hotspot.rst:86
+#: ../../hotspot.rst:76
 msgid "Administrator manual:"
 msgstr "Il manuale di amministrazione dell'Hotspot Manager è disponibile qui:"
 
-#: ../../hotspot.rst:88
+#: ../../hotspot.rst:78
 msgid ""
 "https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi"
 msgstr ""
 "https://docs.nethesis.it/Hotspot_NethSecurity#Configurazione_del_Centro_Servizi"
 
-#: ../../hotspot.rst:91
+#: ../../hotspot.rst:81
 msgid "Disconnecting an account"
 msgstr "Disconnessione di un account da hotspot Manager"
 
-#: ../../hotspot.rst:93
+#: ../../hotspot.rst:83
 msgid ""
 "You can disconnect an account from the web interface, if the following "
 "conditions are met:"
@@ -281,11 +281,11 @@ msgstr ""
 "Dalla dashboard dell'hotspot manager è possibile disconnettere singoli "
 "account dal servizio, per farlo è necessario che:"
 
-#: ../../hotspot.rst:95
+#: ../../hotspot.rst:85
 msgid "the firewall must accept traffic from Internet at UDP port 3779"
 msgstr "NethSecurity sia raggiungibile da internet sulla porta UDP 3779"
 
-#: ../../hotspot.rst:96
+#: ../../hotspot.rst:86
 msgid ""
 "the firewall must accept connections on UDP port 3779 from "
 "hotspot.nethesis.it"
@@ -293,6 +293,6 @@ msgstr ""
 "NethSecurity accetti le richieste sulla porta UDP 3779 provenienti da "
 "hotspot.nethesis.it"
 
-#: ../../hotspot.rst:98
+#: ../../hotspot.rst:88
 msgid "You can do it by executing the following command: ::"
 msgstr "Impartire i seguenti comandi: ::"

@@ -1,10 +1,10 @@
-# #-#-#-#-#  installation.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  installation.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  installation.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  installation.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-12 10:02+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
 "Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,478 +24,508 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../installation.rst:14 ../../installation.rst:17
+#: ../../installation.rst:7
 msgid "Installation"
-msgstr "Kurulum"
+msgstr ""
 
-#: ../../installation.rst:20 ../../installation.rst:23
+#: ../../installation.rst:13
 msgid "Minimum requirements"
-msgstr "En düşük gereksinimler"
+msgstr ""
 
-#: ../../installation.rst:22 ../../installation.rst:25
+#: ../../installation.rst:15
 msgid "Minimum requirements are:"
-msgstr "En düşük gereksinimler:"
+msgstr ""
 
-#: ../../installation.rst:24 ../../installation.rst:27
+#: ../../installation.rst:17
 msgid "64 bit CPU (x86_64)"
-msgstr "64 bit İşlemci (x86_64)"
+msgstr ""
 
-#: ../../installation.rst:25 ../../installation.rst:28
+#: ../../installation.rst:18
 msgid "1 GB of RAM"
-msgstr "1 GB RAM Bellek"
+msgstr ""
 
-#: ../../installation.rst:26 ../../installation.rst:29
-msgid "10 GB of disk space"
-msgstr "10 GB Disk Alanı"
+#: ../../installation.rst:19
+msgid "8 GB of disk space"
+msgstr ""
 
-#: ../../installation.rst:29 ../../installation.rst:32
+#: ../../installation.rst:22
 msgid ""
 "We recommend to use at least 2 disks to setup a RAID 1.  The RAID software "
 "will ensure data integrity in case of a disk failure."
 msgstr ""
-"RAID 1 kurulumu yapmak için en az 2 disk kullanmanız önerilir. RAID "
-"sayesinde bir disk bozulursa verilerinizin kaybolmaması ve sistemin "
-"çalışması sağlanır."
 
-#: ../../installation.rst:37 ../../installation.rst:40
+#: ../../installation.rst:30
 msgid "Hardware compatibility"
-msgstr "Donanım uyumluluğu"
+msgstr ""
 
-#: ../../installation.rst:39 ../../installation.rst:42
+#: ../../installation.rst:32
 msgid ""
 "|product| is compatible with any hardware certified by Red Hat® Enterprise "
 "Linux® (RHEL®), listed on `hardware.redhat.com "
 "<http://hardware.redhat.com/>`__"
 msgstr ""
-"|product|, Red Hat® Enterprise Linux® (RHEL®), tarafından "
-"sertifikalandırılmış ve `hardware.redhat.com "
-"<http://hardware.redhat.com/>`__ adresinde listelenmiş tüm donanımlar "
-"üzerinde çalışır."
 
-#: ../../installation.rst:45 ../../installation.rst:48
+#: ../../installation.rst:38
 msgid "Installation types"
-msgstr "Kurulum türleri"
+msgstr ""
 
-#: ../../installation.rst:47 ../../installation.rst:50
+#: ../../installation.rst:40
 msgid "|product| supports two installation modes. In short:"
 msgstr ""
 
-#: ../../installation.rst:49 ../../installation.rst:52
+#: ../../installation.rst:42
 msgid "**Installing from ISO**"
 msgstr ""
 
-#: ../../installation.rst:51 ../../installation.rst:54
+#: ../../installation.rst:44
 msgid "Download the ISO image"
 msgstr ""
 
-#: ../../installation.rst:52 ../../installation.rst:55
-msgid "Prepare a DVD or USB stick"
+#: ../../installation.rst:45
+msgid "Prepare a CD / DVD"
 msgstr ""
 
-#: ../../installation.rst:53 ../../installation.rst:56
+#: ../../installation.rst:46
 msgid "Follow the wizard"
 msgstr ""
 
-#: ../../installation.rst:55 ../../installation.rst:58
+#: ../../installation.rst:48
 msgid "**Installing from YUM**"
 msgstr ""
 
-#: ../../installation.rst:57 ../../installation.rst:60
+#: ../../installation.rst:50
 msgid "Install CentOS Minimal"
 msgstr ""
 
-#: ../../installation.rst:58 ../../installation.rst:61
+#: ../../installation.rst:51
 msgid "Configure the network"
 msgstr ""
 
-#: ../../installation.rst:59 ../../installation.rst:62
+#: ../../installation.rst:52
 msgid "Install from network"
 msgstr ""
 
-#: ../../installation.rst:65 ../../installation.rst:68
+#: ../../installation.rst:58
 msgid "Installing from ISO"
 msgstr ""
 
-#: ../../installation.rst:67 ../../installation.rst:70
+#: ../../installation.rst:60
 msgid "The ISO installation will erase all existing data on hard drives!"
 msgstr ""
 
-#: ../../installation.rst:71 ../../installation.rst:74
-msgid "Media creation"
-msgstr ""
-
-#: ../../installation.rst:73 ../../installation.rst:76
+#: ../../installation.rst:64
 msgid ""
 "**Download the ISO file** from official site |download_site|.  The "
-"downloaded ISO file can be used to **create a bootable media** such as DVD "
-"or USB stick."
-msgstr ""
-
-#: ../../installation.rst:78 ../../installation.rst:81
-msgid "USB stick"
-msgstr ""
-
-#: ../../installation.rst:80 ../../installation.rst:83
-msgid "On a Linux machine, open the shell and execute: ::"
-msgstr ""
-
-#: ../../installation.rst:84 ../../installation.rst:87
-msgid ""
-"Where `NethServer.iso` is the file name of the downloaded ISO and `/dev/sdc`"
-" is the destination device corresponding to the USB key and not a partition "
-"(such as /dev/sdc1)."
-msgstr ""
-
-#: ../../installation.rst:88 ../../installation.rst:91
-msgid ""
-"On a Windows machine, make sure to format the USB drive then unmount it. Use"
-" one of the following tools to write the USB stick:"
-msgstr ""
-
-#: ../../installation.rst:91 ../../installation.rst:94
-msgid "`Rufus`_"
-msgstr ""
-
-#: ../../installation.rst:92 ../../installation.rst:95
-msgid "`Fedora LiveUSB Creator`_"
-msgstr ""
-
-#: ../../installation.rst:93 ../../installation.rst:96
-msgid "`Win32 Disk Imager`_"
-msgstr ""
-
-#: ../../installation.rst:94 ../../installation.rst:97
-msgid "`Rawrite32`_"
-msgstr ""
-
-#: ../../installation.rst:95 ../../installation.rst:98
-msgid "`dd for Windows`_"
-msgstr ""
-
-#: ../../installation.rst:104 ../../installation.rst:107
-msgid "DVD"
-msgstr ""
-
-#: ../../installation.rst:106 ../../installation.rst:109
-msgid ""
-"The creation of a bootable DVD is different from writing files into USB "
-"stick, and it requires the use of a dedicated function (e.g. *write* or "
-"*burn ISO image*).  Instructions on how to create a bootable DVD from the "
-"ISO are easily available on the Internet or in the documentation of your "
+"downloaded ISO file can be used to **create a bootable media** such as CD or"
+" DVD.  The creation of a bootable disk is different from writing files into "
+"CD/DVD, and it requires the use of a dedicated function (e.g. *write* or "
+"*burn ISO image*).  Instructions on how to create a bootable CD/DVD from the"
+" ISO are easily available on the Internet or in the documentation of your "
 "operating system."
 msgstr ""
 
-#: ../../installation.rst:114 ../../installation.rst:117
-msgid "Install modes"
-msgstr ""
-
-#: ../../installation.rst:116 ../../installation.rst:119
+#: ../../installation.rst:72
 msgid ""
 "**Start the machine using the freshly backed media**.  If the machine will "
-"not start from the DVD or USB stick, please refer to the documentation of "
-"the motherboard BIOS. A typical problem is how boot device priority is "
-"configured.  First boot device should be the DVD reader or USB stick."
+"not start from the CD/DVD, please refer to the documentation of the "
+"motherboard BIOS. A typical problem is how boot device priority is "
+"configured.  First boot device should be the CD/DVD reader."
 msgstr ""
 
-#: ../../installation.rst:121 ../../installation.rst:124
+#: ../../installation.rst:77
 msgid "On start a menu will display different types of installation:"
 msgstr ""
 
-#: ../../installation.rst:123 ../../installation.rst:126
-msgid "|product| :ref:`interactive installation <installation-interactive>`"
+#: ../../installation.rst:79
+msgid "|product| interactive install"
 msgstr ""
 
-#: ../../installation.rst:125 ../../installation.rst:128
+#: ../../installation.rst:81
 msgid ""
-"Requires only keyboard and time zone settings. By default, tries to "
-"configure the network interfaces with DHCP and the first two available disks"
-" with RAID-1."
+"It allows you to select the language, configure RAID support, network, and "
+"encrypted file system.  It will be described in depth in the next paragraph."
 msgstr ""
 
-#: ../../installation.rst:129 ../../installation.rst:132
-msgid "Other |product| installation methods"
+#: ../../installation.rst:85
+msgid "Other / Unattended |product| install"
 msgstr ""
 
-#: ../../installation.rst:131 ../../installation.rst:134
+#: ../../installation.rst:87
 msgid ""
-":ref:`Unattended installation <installation-unattended>` -- A set of default"
-" parameters is applied to the system with no human intervention."
+"This installation mode does not require any kind of human intervention: a "
+"set of default parameters will be applied to the system."
 msgstr ""
 
-#: ../../installation.rst:135 ../../installation.rst:138
-msgid ""
-":ref:`Manual installation <installation-manual>` -- This is the opposite of "
-"*unattended*. No defaults are applied: network, storage, time zone, "
-"keyboard... all settings must be provided explicitly."
-msgstr ""
-
-#: ../../installation.rst:140 ../../installation.rst:143
+#: ../../installation.rst:91
 msgid "Standard CentOS installations"
 msgstr ""
 
-#: ../../installation.rst:142 ../../installation.rst:145
-msgid ""
-"Use the standard CentOS installation procedure. You can then configure "
-"|product| by following the :ref:`installation-centos` section."
+#: ../../installation.rst:93
+msgid "Use the standard CentOS installation procedure."
 msgstr ""
 
-#: ../../installation.rst:145 ../../installation.rst:148
+#: ../../installation.rst:95
 msgid "Tools"
 msgstr ""
 
-#: ../../installation.rst:147 ../../installation.rst:150
+#: ../../installation.rst:97
 msgid ""
 "Start the system in *rescue* (recovery) mode, execute a memory test or start"
 " the hardware detection tool."
 msgstr ""
 
-#: ../../installation.rst:150 ../../installation.rst:153
+#: ../../installation.rst:100
 msgid "Boot from local drive"
 msgstr ""
 
-#: ../../installation.rst:152 ../../installation.rst:155
+#: ../../installation.rst:102
 msgid "Attempts to boot a system that is already installed on the hard disk."
 msgstr ""
 
-#: ../../installation.rst:156 ../../installation.rst:159
+#: ../../installation.rst:106
 msgid ""
 "At the end of the installation process you will be asked to reboot the "
 "machine. Be sure to remove the installation media before restarting."
 msgstr ""
 
-#: ../../installation.rst:160 ../../installation.rst:163
-msgid "Optional boot parameters"
+#: ../../installation.rst:112
+msgid "Unattended mode"
 msgstr ""
 
-#: ../../installation.rst:162 ../../installation.rst:165
+#: ../../installation.rst:114
+msgid "After installation, the system will be configured as follows:"
+msgstr ""
+
+#: ../../installation.rst:116
+msgid "User name: :samp:`root`"
+msgstr ""
+
+#: ../../installation.rst:117
+msgid "Default password: :samp:`Nethesis,1234`"
+msgstr ""
+
+#: ../../installation.rst:118
+msgid "Network: DHCP enabled on all interfaces"
+msgstr ""
+
+#: ../../installation.rst:119
+msgid "Keyboard: |ks_keyboard|"
+msgstr ""
+
+#: ../../installation.rst:120
+msgid "Time zone: |ks_timezone|"
+msgstr ""
+
+#: ../../installation.rst:121
+msgid "Language: English"
+msgstr ""
+
+#: ../../installation.rst:122
 msgid ""
-"At the boot menu, you can add extra parameters by pressing :kbd:`TAB` and "
-"editing the kernel command line. This can be useful in *unattended* mode."
+"Disks: if there are two or more disks, a RAID 1 will be created on first two"
+" disks"
 msgstr ""
 
-#: ../../installation.rst:165 ../../installation.rst:168
+#: ../../installation.rst:126
+msgid "Install options"
+msgstr ""
+
+#: ../../installation.rst:128
+msgid ""
+"You can add extra parameters to unattended installation by pressing TAB and "
+"editing the boot loader command line."
+msgstr ""
+
+#: ../../installation.rst:131
 msgid "To disable raid, just add this option to the command line: ::"
 msgstr ""
 
-#: ../../installation.rst:169 ../../installation.rst:172
+#: ../../installation.rst:135
 msgid "If you need to select installation hard drives, use: ::"
 msgstr ""
 
-#: ../../installation.rst:176 ../../installation.rst:179
-msgid "To enable *file system encryption*, use: ::"
+#: ../../installation.rst:139
+msgid "Other available options:"
 msgstr ""
 
-#: ../../installation.rst:180 ../../installation.rst:183
+#: ../../installation.rst:141
+msgid "lang: system language, default is en_US"
+msgstr ""
+
+#: ../../installation.rst:142
+msgid "keyboard: keyboard layout, default is us"
+msgstr ""
+
+#: ../../installation.rst:143
+msgid "timezone: default is UTC Greenwich"
+msgstr ""
+
+#: ../../installation.rst:144
+msgid ""
+"fspassword: enable file system encryption with given password This option "
+"can be used even in Interactive Mode"
+msgstr ""
+
+#: ../../installation.rst:150
+msgid "Interactive Mode"
+msgstr ""
+
+#: ../../installation.rst:152
+msgid ""
+"The interactive mode allows you to make a few simple choices on the system "
+"configuration:"
+msgstr ""
+
+#: ../../installation.rst:155 ../../installation.rst:160
+msgid "Language"
+msgstr ""
+
+#: ../../installation.rst:156 ../../installation.rst:169
+msgid "Software RAID"
+msgstr ""
+
+#: ../../installation.rst:157 ../../installation.rst:233
+msgid "Network configuration"
+msgstr ""
+
+#: ../../installation.rst:162
+msgid ""
+"Select the language in which you want to use the interactive mode. Keyboard "
+"layout and time zone are changed accordingly and can be modified just after "
+"the first login to the web interface."
+msgstr ""
+
+#: ../../installation.rst:166
+msgid "System language is always set to English."
+msgstr ""
+
+#: ../../installation.rst:171
+msgid ""
+"RAID (Redundant Array of Independent Disks) allows you to combine all the "
+"disks in order to achieve fault tolerance and an increase in performance."
+msgstr ""
+
+#: ../../installation.rst:175
+msgid ""
+"This screen is displayed when two or more disks were detected at start."
+msgstr ""
+
+#: ../../installation.rst:178
+msgid "Available levels:"
+msgstr ""
+
+#: ../../installation.rst:180
+msgid ""
+"RAID 1: it creates an exact copy (mirror) of all the data on two or more "
+"disks. Minimum number of disks: 2"
+msgstr ""
+
+#: ../../installation.rst:183
+msgid ""
+"RAID 5: it uses a subdivision of the data at the block level, distributing "
+"the parity data evenly across all disks.  Minimum number of disks: 3"
+msgstr ""
+
+#: ../../installation.rst:188
+msgid "Spare disk"
+msgstr ""
+
+#: ../../installation.rst:190
+msgid ""
+"You can create a spare disk if disk number is greater than the minimum "
+"required by the selected level RAID, A spare disk will be added to the RAID "
+"in case a failure occurs."
+msgstr ""
+
+#: ../../installation.rst:196
+msgid "System administrator password"
+msgstr ""
+
+#: ../../installation.rst:198
+msgid ""
+"You can change the ``root`` user's password inside the first configuration "
+"wizard."
+msgstr ""
+
+#: ../../installation.rst:201
+msgid "A good password is:"
+msgstr ""
+
+#: ../../installation.rst:203
+msgid "at least 8 characters long"
+msgstr ""
+
+#: ../../installation.rst:204
+msgid "contain uppercase and lowercase letters"
+msgstr ""
+
+#: ../../installation.rst:205
+msgid "contain symbols and numbers"
+msgstr ""
+
+#: ../../installation.rst:207
+msgid "Default password is :samp:`Nethesis,1234`."
+msgstr ""
+
+#: ../../installation.rst:210
+msgid "Encrypted file system"
+msgstr ""
+
+#: ../../installation.rst:212
 msgid ""
 "When enabling this option, all data written to the disk will be encrypted "
 "using symmetric encryption.  In case of theft, an attacker will not be able "
 "to read the data without the encryption key."
 msgstr ""
 
-#: ../../installation.rst:184 ../../installation.rst:187
-msgid "You will need to enter the encryption password at every system boot!"
-msgstr ""
-
-#: ../../installation.rst:186 ../../installation.rst:189
-msgid "Other available options (*unattended* mode only):"
-msgstr ""
-
-#: ../../installation.rst:188 ../../installation.rst:191
-msgid "``keyboard``, keyboard layout, default is ``keyboard=us``"
-msgstr ""
-
-#: ../../installation.rst:189 ../../installation.rst:192
-msgid "``timezone``, default is ``timezone=UTC``"
-msgstr ""
-
-#: ../../installation.rst:194 ../../installation.rst:197
-msgid "Fallback IP configuration"
-msgstr ""
-
-#: ../../installation.rst:196 ../../installation.rst:199
+#: ../../installation.rst:216
 msgid ""
-"If no IP is assigned by DHCP or by other means, during the first system boot"
-" the following IP configuration is applied to the **first** network "
-"interface"
+"It is possible to choose a password for the encryption, otherwise the system"
+" administrator password will be used."
 msgstr ""
 
-#: ../../installation.rst:199 ../../installation.rst:202
-msgid "IP 192.168.1.1"
+#: ../../installation.rst:219
+msgid "You will need to enter the password at every system boot."
 msgstr ""
 
-#: ../../installation.rst:200 ../../installation.rst:203
-msgid "netmask 255.255.255.0"
-msgstr ""
-
-#: ../../installation.rst:203 ../../installation.rst:206
-msgid "System administrator password"
-msgstr ""
-
-#: ../../installation.rst:205 ../../installation.rst:208
+#: ../../installation.rst:221
 msgid ""
-"You are strongly advised to choose a secure password for the ``root`` user. "
-"A good password:"
+"Following characters are not supported inside the password: ``#``, ``=`` and"
+" ``$``."
 msgstr ""
 
-#: ../../installation.rst:208 ../../installation.rst:211
-msgid "is at least 8 characters long"
+#: ../../installation.rst:226
+msgid "Network interfaces"
 msgstr ""
 
-#: ../../installation.rst:209 ../../installation.rst:212
-msgid "contains uppercase and lowercase letters"
-msgstr ""
-
-#: ../../installation.rst:210 ../../installation.rst:213
-msgid "contains symbols and numbers"
-msgstr ""
-
-#: ../../installation.rst:212 ../../installation.rst:215
-msgid "The default password in *unattended* mode is ``Nethesis,1234``."
-msgstr ""
-
-#: ../../installation.rst:215 ../../installation.rst:218
-msgid "System language"
-msgstr ""
-
-#: ../../installation.rst:217 ../../installation.rst:220
+#: ../../installation.rst:228
 msgid ""
-"The system language of |product| installations is *English (United States)*."
-" Additional languages can be installed later. See :ref:`Next steps "
-"<installation-next-steps>`."
+"Select the network interface that will be used to access the LAN. This "
+"interface is also known as *green* interface."
 msgstr ""
 
-#: ../../installation.rst:225 ../../installation.rst:228
-msgid "Interactive and Manual modes"
+#: ../../installation.rst:235
+msgid "Host and Domain Name (FQDN)"
 msgstr ""
 
-#: ../../installation.rst:227 ../../installation.rst:230
+#: ../../installation.rst:237
 msgid ""
-"The **interactive** mode allows you to make a few simple choices on the "
-"system configuration."
+"Type the host name and domain in which the server will operate (e.g. "
+":samp:`server.mycompany.com`)."
 msgstr ""
 
-#: ../../installation.rst:230 ../../installation.rst:233
-msgid "Required choices are:"
+#: ../../installation.rst:241
+msgid "*Note:* Domain name can only contain letters, numbers and the"
 msgstr ""
 
-#: ../../installation.rst:232 ../../installation.rst:235
-msgid "Language"
+#: ../../installation.rst:241
+msgid "dash."
 msgstr ""
 
-#: ../../installation.rst:233 ../../installation.rst:236
-msgid "Keyboard layout"
+#: ../../installation.rst:243
+msgid "IP Address"
 msgstr ""
 
-#: ../../installation.rst:234 ../../installation.rst:237
-msgid "Root password"
-msgstr ""
-
-#: ../../installation.rst:236 ../../installation.rst:239
+#: ../../installation.rst:245
 msgid ""
-"All other options are set to a reasonable default accordingly to current "
-"hardware (see the :ref:`installation-unattended` section for details), but "
-"you are free to edit any install configuration available."
+"Type a private IP address (from RFC 1918) to be assigned to the server; if "
+"you want to install it in an existing network, you must provide a unused IP "
+"address valid for that network (in general you can use the first or last "
+"host inside the network range, e.g. 192.168.7.1 or 192.168.7.254)."
 msgstr ""
 
-#: ../../installation.rst:240 ../../installation.rst:243
+#: ../../installation.rst:251
+msgid "Netmask"
+msgstr ""
+
+#: ../../installation.rst:253
 msgid ""
-"On the other hand, the **manual** mode starts the installer with no default "
-"settings at all.  Also the network and storage sections must be configured."
+"Type the subnet mask of the network. You can safely leave the default value."
 msgstr ""
 
-#: ../../installation.rst:245 ../../installation.rst:248
+#: ../../installation.rst:256
+msgid "Gateway"
+msgstr ""
+
+#: ../../installation.rst:258
 msgid ""
-"Under the :guilabel:`Network > General` section, only the interfaces marked "
-"as :guilabel:`Automatically connect to this network when it is available` "
-"are enabled at boot in the installed system. For more info, refer to `RHEL 7"
-" installation guide`_."
+"Type the IP address of the gateway on which you are installing the server."
 msgstr ""
 
-#: ../../installation.rst:255 ../../installation.rst:258
-msgid "Unattended mode"
+#: ../../installation.rst:261
+msgid "DNS"
 msgstr ""
 
-#: ../../installation.rst:257 ../../installation.rst:260
+#: ../../installation.rst:263
+msgid "Type a valid DNS. Example: 8.8.8.8"
+msgstr ""
+
+#: ../../installation.rst:266
+msgid "End of installation procedure"
+msgstr ""
+
+#: ../../installation.rst:268
 msgid ""
-"The *unattended* mode requires no human intervention. After installation, "
-"the system is rebooted and the following configuration is applied:"
+"After parameters input, the procedure will start the installation. See also "
+":ref:`next-steps-section`."
 msgstr ""
 
-#: ../../installation.rst:260 ../../installation.rst:263
-msgid "Keyboard layout: ``us``"
-msgstr ""
-
-#: ../../installation.rst:261 ../../installation.rst:264
-msgid "Time zone: ``UTC``"
-msgstr ""
-
-#: ../../installation.rst:262 ../../installation.rst:265
-msgid "Default ``root`` password: ``Nethesis,1234``"
-msgstr ""
-
-#: ../../installation.rst:263 ../../installation.rst:266
-msgid ""
-"DHCP enabled on all network interfaces; if no DHCP lease is received the "
-":ref:`fallback IP configuration <fallback-ip-configuration>` is applied"
-msgstr ""
-
-#: ../../installation.rst:265 ../../installation.rst:268
-msgid ""
-"if there are two or more disks, a RAID 1 will be created on first two disks "
-"and LVM volumes are created on it"
-msgstr ""
-
-#: ../../installation.rst:267 ../../installation.rst:270
-msgid ""
-"*swap* and *root* partitions are allocated automatically; 1GB is assigned to"
-" *boot*"
-msgstr ""
-
-#: ../../installation.rst:278 ../../installation.rst:281
+#: ../../installation.rst:277
 msgid "Install on CentOS"
 msgstr ""
 
-#: ../../installation.rst:280 ../../installation.rst:283
+#: ../../installation.rst:279
 msgid ""
-"It is possible to install |product| on a fresh CentOS minimal installation "
-"using a couple of commands to download the additional software packages. "
-"This installation method is designed for virtual private servers (VPS) where"
-" CentOS comes already installed by the VPS provider."
+"It is possible to install |product| on a fresh CentOS installation using the"
+" :program:`yum` command to download software packages. This is the "
+"recommended installation method if you have"
 msgstr ""
 
-#: ../../installation.rst:285 ../../installation.rst:288
-msgid "Enable |product| software repositories with this command: ::"
+#: ../../installation.rst:283
+msgid "a virtual private server (VPS), or"
 msgstr ""
 
-#: ../../installation.rst:289 ../../installation.rst:292
+#: ../../installation.rst:284
+msgid "an USB stick."
+msgstr ""
+
+#: ../../installation.rst:286
+msgid ""
+"For example, if you wish to install |product| |version|, just start with a "
+"CentOS |version| on your system (many VPS providers offer CentOS pre-"
+"installed virtual machines), and then execute below commands to transform "
+"CentOS into |product|."
+msgstr ""
+
+#: ../../installation.rst:291
+msgid "Enable specific YUM repositories with this command: ::"
+msgstr ""
+
+#: ../../installation.rst:295
 msgid "To install the base system, run: ::"
 msgstr ""
 
-#: ../../installation.rst:295 ../../installation.rst:298
+#: ../../installation.rst:299
 msgid ""
 "Alternatively, to install base system *and* additional modules, pass the "
 "name of the module as a parameter to the install script.  Example: ::"
 msgstr ""
 
-#: ../../installation.rst:305 ../../installation.rst:308
+#: ../../installation.rst:307
 msgid "Enterprise promotion"
 msgstr ""
 
-#: ../../installation.rst:307 ../../installation.rst:310
-msgid "To promote to the Enterprise version run the following command: ::"
-msgstr ""
-
-#: ../../installation.rst:311 ../../installation.rst:314
+#: ../../installation.rst:309
 msgid ""
-"Proceed with :ref:`registration <registration-section>` then run the "
-"following command: ::"
+"To promote to NethServer Enterprise version follow the istructions "
+"`available here`_."
 msgstr ""
 
-#: ../../installation.rst:319 ../../installation.rst:322
+#: ../../installation.rst:318
 msgid "Next steps"
 msgstr ""
 
-#: ../../installation.rst:321 ../../installation.rst:324
+#: ../../installation.rst:320
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

@@ -1,10 +1,10 @@
-# #-#-#-#-#  webtop4.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  webtop4.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  webtop4.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  webtop4.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -24,374 +24,382 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../webtop4.rst:10 ../../webtop4.rst:13
+#: ../../webtop4.rst:3
 msgid "WebTop 4"
 msgstr ""
 
-#: ../../webtop4.rst:12 ../../webtop4.rst:15
+#: ../../webtop4.rst:5
 msgid ""
 "WebTop is a full-featured groupware which implements ActiveSync protocol."
 msgstr ""
 
-#: ../../webtop4.rst:14 ../../webtop4.rst:17
+#: ../../webtop4.rst:7
 msgid "Access to web interface is: ``https://<server_name>/webtop``."
 msgstr ""
 
-#: ../../webtop4.rst:17 ../../webtop4.rst:20
+#: ../../webtop4.rst:10
 msgid "Authentication"
 msgstr ""
 
-#: ../../webtop4.rst:21 ../../webtop4.rst:24
-msgid ""
-"When the server is configured to use a remote Account Provider, WebTop "
-"doesn't correctly fill name and surname of users. Every user should modify "
-"its own name and surname on first login."
-msgstr ""
-
-#: ../../webtop4.rst:26 ../../webtop4.rst:29
+#: ../../webtop4.rst:13
 msgid "Web interface"
 msgstr ""
 
-#: ../../webtop4.rst:28 ../../webtop4.rst:31
+#: ../../webtop4.rst:15
 msgid ""
-"The login method to the web application is with a simple user name and "
-"password, regardless of how many mail domains are configured."
+"The login to the web application is always with simple user name and "
+"password, no matters how many mail domains are configured."
 msgstr ""
 
-#: ../../webtop4.rst:31 ../../webtop4.rst:44 ../../webtop4.rst:83
-#: ../../webtop4.rst:177 ../../webtop4.rst:198 ../../webtop4.rst:34
-#: ../../webtop4.rst:47 ../../webtop4.rst:86 ../../webtop4.rst:180
-#: ../../webtop4.rst:201
+#: ../../webtop4.rst:18 ../../webtop4.rst:31 ../../webtop4.rst:70
+#: ../../webtop4.rst:179 ../../webtop4.rst:200
 msgid "**Example**"
 msgstr ""
 
-#: ../../webtop4.rst:33 ../../webtop4.rst:46 ../../webtop4.rst:85
-#: ../../webtop4.rst:36 ../../webtop4.rst:49 ../../webtop4.rst:88
+#: ../../webtop4.rst:20 ../../webtop4.rst:33 ../../webtop4.rst:72
 msgid "Server name: mymail.mightydomain.com"
 msgstr ""
 
-#: ../../webtop4.rst:34 ../../webtop4.rst:47 ../../webtop4.rst:37
-#: ../../webtop4.rst:50
+#: ../../webtop4.rst:21 ../../webtop4.rst:34
 msgid "Alternative mail domain: baddomain.net"
 msgstr ""
 
-#: ../../webtop4.rst:35 ../../webtop4.rst:48 ../../webtop4.rst:38
-#: ../../webtop4.rst:51
+#: ../../webtop4.rst:22 ../../webtop4.rst:35
 msgid "User: goofy"
 msgstr ""
 
-#: ../../webtop4.rst:36 ../../webtop4.rst:39
+#: ../../webtop4.rst:23
 msgid "Login: goofy"
 msgstr ""
 
-#: ../../webtop4.rst:39 ../../webtop4.rst:42
+#: ../../webtop4.rst:26
 msgid "Active Sync"
 msgstr ""
 
-#: ../../webtop4.rst:41 ../../webtop4.rst:44
+#: ../../webtop4.rst:28
 msgid ""
-"Logging in to the Active Sync account can be accomplished with "
-"<username>@<domain> where ``<domain>`` is the domain part of server FQDN."
+"Login to Active Sync account is with <username>@<domain> where ``<domain>`` "
+"is the domain part of server FQDN."
 msgstr ""
 
-#: ../../webtop4.rst:49 ../../webtop4.rst:52
+#: ../../webtop4.rst:36
 msgid "Login: goofy@mightydomain.com"
 msgstr ""
 
-#: ../../webtop4.rst:51 ../../webtop4.rst:54
+#: ../../webtop4.rst:38
 msgid ""
 "When configuring an Active Sync account, make sure to specify the server "
 "address and leave the domain field empty."
 msgstr ""
 
-#: ../../webtop4.rst:55 ../../webtop4.rst:58
+#: ../../webtop4.rst:42
 msgid ""
 "Active Sync protocol is supported only on Android and iOS devices. Outlook "
 "is not supported. Mail synchronization is currently not supported."
 msgstr ""
 
-#: ../../webtop4.rst:63 ../../webtop4.rst:66
+#: ../../webtop4.rst:50
 msgid "Admin user"
 msgstr ""
 
-#: ../../webtop4.rst:65 ../../webtop4.rst:68
+#: ../../webtop4.rst:52
 msgid ""
-"After installation, WebTop will be accessible via the administrator user. "
+"After installation, WebTop will be accessible with an administrator user. "
 "The administrator user can change global settings and login as all other "
-"users, however, it's not a system user and can't access any other services "
-"like Mail, Calendar, etc."
+"users, but it's not a system users and can't access any other services like "
+"Mail, Calendar, etc."
 msgstr ""
 
-#: ../../webtop4.rst:69 ../../webtop4.rst:72
+#: ../../webtop4.rst:56
 msgid "Default credentials are:"
 msgstr ""
 
-#: ../../webtop4.rst:71 ../../webtop4.rst:86 ../../webtop4.rst:74
-#: ../../webtop4.rst:89
+#: ../../webtop4.rst:58 ../../webtop4.rst:73
 msgid "User: admin"
 msgstr ""
 
-#: ../../webtop4.rst:72 ../../webtop4.rst:75
+#: ../../webtop4.rst:59
 msgid "Password: admin"
 msgstr ""
 
-#: ../../webtop4.rst:74 ../../webtop4.rst:77
+#: ../../webtop4.rst:61
+msgid "Admin user password must be changed from WebTop interface."
+msgstr ""
+
+#: ../../webtop4.rst:64
+msgid "Remember to change the admin password just after installation."
+msgstr ""
+
+#: ../../webtop4.rst:67
 msgid ""
-"The administrator user's password must be changed from within the WebTop "
-"interface."
+"To check the mail of the system user admin use the following login: "
+"admin@<domain> where ``<domain>`` is the domain part of server FQDN."
 msgstr ""
 
-#: ../../webtop4.rst:77 ../../webtop4.rst:80
-msgid "**Remember to change the admin password just after installation!**"
-msgstr ""
-
-#: ../../webtop4.rst:80 ../../webtop4.rst:83
-msgid ""
-"To check the mail of the system's user admin account use the following "
-"login: admin@<domain> where ``<domain>`` is the domain part of server FQDN."
-msgstr ""
-
-#: ../../webtop4.rst:87 ../../webtop4.rst:90
+#: ../../webtop4.rst:74
 msgid "Login: admin@mightydomain.com"
 msgstr ""
 
-#: ../../webtop4.rst:90 ../../webtop4.rst:93
+#: ../../webtop4.rst:77
 msgid "WebTop vs SOGo"
 msgstr ""
 
-#: ../../webtop4.rst:92 ../../webtop4.rst:95
+#: ../../webtop4.rst:79
 msgid "WebTop and SOGo can be installed on the same machine."
 msgstr ""
 
-#: ../../webtop4.rst:94 ../../webtop4.rst:97
+#: ../../webtop4.rst:81
 msgid ""
 "ActiveSync is enabled by default on SOGo and WebTop, but if both packages "
 "are installed, SOGo will take precedence."
 msgstr ""
 
-#: ../../webtop4.rst:97 ../../webtop4.rst:100
+#: ../../webtop4.rst:84
 msgid "To disable ActiveSync on SOGo: ::"
 msgstr ""
 
-#: ../../webtop4.rst:102 ../../webtop4.rst:105
+#: ../../webtop4.rst:89
 msgid "To disable ActiveSync on WebTop: ::"
 msgstr ""
 
-#: ../../webtop4.rst:108 ../../webtop4.rst:111
+#: ../../webtop4.rst:95
 msgid ""
 "All incoming mail filters configured within SOGo, must be manually recreated"
-" inside WebTop interface. This also applies if the user is switching from "
+" inside WebTop interface. The same apply if the user is switching from "
 "WebTop to SOGo."
 msgstr ""
 
-#: ../../webtop4.rst:112 ../../webtop4.rst:115
+#: ../../webtop4.rst:99
+msgid "Active Directory authentication"
+msgstr ""
+
+#: ../../webtop4.rst:101
+msgid ""
+"After performing the join to Active Directory domain, access WebTop "
+"administration page, then from tree menu on the left, select "
+":guilabel:`Domain` -> :guilabel:`NethServer`."
+msgstr ""
+
+#: ../../webtop4.rst:104
+msgid "Edit the following fields:"
+msgstr ""
+
+#: ../../webtop4.rst:106
+msgid ""
+"Authentication Uri: select ``ldapAD`` mode and insert the full FQDN of the "
+"server and port 389. Example: w2k8.nethserver.org:389"
+msgstr ""
+
+#: ../../webtop4.rst:109
+msgid "Admin LDAP: user name of AD domain administrator"
+msgstr ""
+
+#: ../../webtop4.rst:111
+msgid "LDAP Password: user password of AD domain administrator"
+msgstr ""
+
+#: ../../webtop4.rst:113
+msgid ""
+"After saving, the page :guilabel:`Users` will display users from Active "
+"Directory."
+msgstr ""
+
+#: ../../webtop4.rst:116
 msgid "Importing from SOGo"
 msgstr ""
 
-#: ../../webtop4.rst:114 ../../webtop4.rst:117
+#: ../../webtop4.rst:118
 msgid ""
-"**Please read all directions before importing any data to ensure import is "
-"successful**"
+"You can migrate some data from SOGo to WebTop using the following script:"
 msgstr ""
 
-#: ../../webtop4.rst:116 ../../webtop4.rst:119
-msgid ""
-"Migration of Calendar and Address book data from SOGo to WebTop can be "
-"accomplished by using the following scripts, and following the steps listed "
-"below:"
-msgstr ""
-
-#: ../../webtop4.rst:118 ../../webtop4.rst:121
+#: ../../webtop4.rst:120
 msgid "Calendars: :file:`/usr/share/webtop/doc/sogo2webtop_cal.php`"
 msgstr ""
 
-#: ../../webtop4.rst:119 ../../webtop4.rst:122
+#: ../../webtop4.rst:121
 msgid "Address books: :file:`/usr/share/webtop/doc/sogo2webtop_card.php`"
 msgstr ""
 
-#: ../../webtop4.rst:121 ../../webtop4.rst:124
+#: ../../webtop4.rst:123
 msgid "Before using the scripts you need to install this package: ::"
 msgstr ""
 
-#: ../../webtop4.rst:125 ../../webtop4.rst:128
+#: ../../webtop4.rst:127
 msgid ""
 "When launching the scripts, indicate the user name you want to import from "
 "SOGo: ::"
 msgstr ""
 
-#: ../../webtop4.rst:130 ../../webtop4.rst:133
+#: ../../webtop4.rst:132
 msgid "Where ``user`` can be a username or ``all``."
 msgstr ""
 
-#: ../../webtop4.rst:132 ../../webtop4.rst:135
+#: ../../webtop4.rst:134
 msgid "**Examples**"
 msgstr ""
 
-#: ../../webtop4.rst:134 ../../webtop4.rst:137
-msgid "To import all address books from SOGo: ::"
+#: ../../webtop4.rst:136
+msgid "Import all address books from SOGo: ::"
 msgstr ""
 
-#: ../../webtop4.rst:138 ../../webtop4.rst:141
-msgid "To import the calendar of user \"foo\": ::"
+#: ../../webtop4.rst:140
+msgid "Import the calendar of user \"foo\": ::"
 msgstr ""
 
-#: ../../webtop4.rst:143 ../../webtop4.rst:146
+#: ../../webtop4.rst:145
 msgid ""
 "If the script is executed multiple times, both calendars and address books "
 "will be imported multiple times. Import of distribution lists and recurring "
 "events are not currently supported."
 msgstr ""
 
-#: ../../webtop4.rst:147 ../../webtop4.rst:150
+#: ../../webtop4.rst:149
 msgid "Importing from Outlook PST"
 msgstr ""
 
-#: ../../webtop4.rst:149 ../../webtop4.rst:152
+#: ../../webtop4.rst:151
 msgid ""
 "You can import email, calendars and address books from an :index:`Outlook` "
 ":index:`PST` archive."
 msgstr ""
 
-#: ../../webtop4.rst:151 ../../webtop4.rst:154
+#: ../../webtop4.rst:153
 msgid ""
 "Before using followings scripts, you will need to install *libpst* package: "
 "::"
 msgstr ""
 
-#: ../../webtop4.rst:156 ../../webtop4.rst:159
+#: ../../webtop4.rst:158
 msgid "Mail"
 msgstr ""
 
-#: ../../webtop4.rst:158 ../../webtop4.rst:161
+#: ../../webtop4.rst:160
 msgid ""
 "Initial script to import mail messages: "
 ":file:`/usr/share/webtop/doc/pst2webtop.sh`"
 msgstr ""
 
-#: ../../webtop4.rst:160 ../../webtop4.rst:163
+#: ../../webtop4.rst:162
 msgid ""
 "To start the import, run the script specifying the PST file and the system "
 "user: ::"
 msgstr ""
 
-#: ../../webtop4.rst:164 ../../webtop4.rst:167
+#: ../../webtop4.rst:166
 msgid ""
 "All mail messages will be imported. Contacts and calendars will be saved "
 "inside a temporary files for later import. The script will list all created "
 "temporary files."
 msgstr ""
 
-#: ../../webtop4.rst:169 ../../webtop4.rst:172
+#: ../../webtop4.rst:171
 msgid "Contacts"
 msgstr ""
 
-#: ../../webtop4.rst:171 ../../webtop4.rst:174
+#: ../../webtop4.rst:173
 msgid ""
 "Script for contacts import: "
 ":file:`/usr/share/webtop/doc/pst2webtop_card.php`."
 msgstr ""
 
-#: ../../webtop4.rst:173 ../../webtop4.rst:194 ../../webtop4.rst:176
-#: ../../webtop4.rst:197
+#: ../../webtop4.rst:175 ../../webtop4.rst:196
 msgid "The script will use files generated from mail import phase: ::"
 msgstr ""
 
-#: ../../webtop4.rst:179 ../../webtop4.rst:200 ../../webtop4.rst:182
-#: ../../webtop4.rst:203
+#: ../../webtop4.rst:181 ../../webtop4.rst:202
 msgid ""
 "Let us assume that the pst2webtop.sh script has generated following output "
 "from mail import: ::"
 msgstr ""
 
-#: ../../webtop4.rst:185 ../../webtop4.rst:188
+#: ../../webtop4.rst:187
 msgid "To import the default address book (WebTop) of *foo* user: ::"
 msgstr ""
 
-#: ../../webtop4.rst:190 ../../webtop4.rst:193
+#: ../../webtop4.rst:192
 msgid "Calendars"
 msgstr ""
 
-#: ../../webtop4.rst:192 ../../webtop4.rst:195
+#: ../../webtop4.rst:194
 msgid ""
 "Script for calendars import: "
 ":file:`/usr/share/webtop/doc/pst2webtop_cal.php`"
 msgstr ""
 
-#: ../../webtop4.rst:206 ../../webtop4.rst:209
+#: ../../webtop4.rst:208
 msgid "To import the default calendar (WebTop) of *foo* user: ::"
 msgstr ""
 
-#: ../../webtop4.rst:211 ../../webtop4.rst:214
+#: ../../webtop4.rst:213
 msgid ""
 "The script will import all events using the timezone selected by the user "
 "inside WebTop, if set. Otherwise system timezone will be used."
 msgstr ""
 
-#: ../../webtop4.rst:215 ../../webtop4.rst:218
+#: ../../webtop4.rst:217
 msgid "Google and Dropbox integration"
 msgstr ""
 
-#: ../../webtop4.rst:217 ../../webtop4.rst:220
+#: ../../webtop4.rst:219
 msgid ""
 "Users can add their own Google Drive and Dropbox accounts inside WebTop. "
 "Before proceeding, the administrator must create a pair of API access "
 "credentials."
 msgstr ""
 
-#: ../../webtop4.rst:221 ../../webtop4.rst:224
+#: ../../webtop4.rst:223
 msgid "Google API"
 msgstr ""
 
-#: ../../webtop4.rst:223 ../../webtop4.rst:226
+#: ../../webtop4.rst:225
 msgid ""
 "Access https://console.developers.google.com/project and create a new "
 "project"
 msgstr ""
 
-#: ../../webtop4.rst:224 ../../webtop4.rst:227
+#: ../../webtop4.rst:226
 msgid ""
 "Create new credentials by selecting \"OAuth 2.0 clientID\" type and remember"
 " to compile \"OAuth consent screen\" section"
 msgstr ""
 
-#: ../../webtop4.rst:226 ../../webtop4.rst:229
+#: ../../webtop4.rst:228
 msgid ""
 "Insert new credentials (Client ID e Client Secret) inside WebTop "
 "configuration"
 msgstr ""
 
-#: ../../webtop4.rst:228 ../../webtop4.rst:243 ../../webtop4.rst:231
-#: ../../webtop4.rst:246
+#: ../../webtop4.rst:230 ../../webtop4.rst:245
 msgid "From shell, access webtop database: ::"
 msgstr ""
 
-#: ../../webtop4.rst:232 ../../webtop4.rst:247 ../../webtop4.rst:235
-#: ../../webtop4.rst:250
+#: ../../webtop4.rst:234 ../../webtop4.rst:249
 msgid ""
 "Execute the queries, using the corresponding value in place of ``__value__``"
 " variable: ::"
 msgstr ""
 
-#: ../../webtop4.rst:238 ../../webtop4.rst:241
+#: ../../webtop4.rst:240
 msgid "Dropbox API"
 msgstr ""
 
-#: ../../webtop4.rst:240 ../../webtop4.rst:243
+#: ../../webtop4.rst:242
 msgid "Access https://www.dropbox.com/developers/apps and create a new app"
 msgstr ""
 
-#: ../../webtop4.rst:241 ../../webtop4.rst:244
+#: ../../webtop4.rst:243
 msgid ""
 "Insert the new credential key pair (App key e App secret) inside WebTop "
 "configuration"
 msgstr ""
 
-#: ../../webtop4.rst:253 ../../webtop4.rst:256
+#: ../../webtop4.rst:255
 msgid ""
 "If you need to raise the user limit, please read the official Dropbox "
 "documentation."
 msgstr ""
 
-#: ../../webtop4.rst:257 ../../webtop4.rst:260
+#: ../../webtop4.rst:259
 msgid "The Enterprise version is already integrated with Google and Dropbox."
 msgstr ""

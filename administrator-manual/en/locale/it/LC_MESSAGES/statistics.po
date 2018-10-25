@@ -1,10 +1,10 @@
-# #-#-#-#-#  statistics.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  statistics.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  statistics.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  statistics.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,98 +25,107 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../statistics.rst:10 ../../statistics.rst:13
+#: ../../statistics.rst:3
 msgid "Statistics (collectd)"
 msgstr "Statistiche (collectd)"
 
-#: ../../statistics.rst:12 ../../statistics.rst:15
+#: ../../statistics.rst:5
 msgid ""
 ":index:`Collectd` is a daemon which collects system performance "
 ":index:`statistics` periodically and stores them in RRD files. Statistics "
-"will be displayed inside a web interface called"
+"will be displayed inside a web interface, named"
 msgstr ""
-":index:`Collectd` è un software che raccoglie periodicamente "
-":index:`statistiche` sulle performance del sistema e le salva in speciali "
-"file RRD. Le statistiche sono quindi consultabili attraverso un’interfaccia "
-"web."
+":index:`Collectd` è un demone che si occupa di raccogliere periodicamente le"
+" :index:`statistiche` di performance del sistema e li salva in file RRD. Le "
+"statistiche saranno visibili all'interno dell'interfaccia web chiamata"
 
-#: ../../statistics.rst:15 ../../statistics.rst:18
+#: ../../statistics.rst:8
 msgid "Collectd Graph Panel (CGP), package *nethserver-cgp*"
 msgstr "Collectd Graph Panel (CGP), pacchetto *nethserver-cgp*"
 
-#: ../../statistics.rst:17 ../../statistics.rst:20
-msgid "The web interface can be accessed from the :guilabel:`Graphs`."
-msgstr "L'interfaccia web è accessibile dalla pagina :guilabel:`Grafici`."
+#: ../../statistics.rst:10
+msgid ""
+"The web interface will create a random URL accessible from the "
+":guilabel:`Applications` tab inside the :guilabel:`Dashboard`. It's possible"
+" to share the random URL to let non-authenticated users view graphs. Access "
+"is allowed only from the zones and IP addresses of the http-admin service "
+"(see Network services)."
+msgstr ""
+"L'interfaccia web creerà un URL casuale accessibile dalla scheda "
+":guilabel:`Applicazioni` all'interno della :guilabel:`Dashboard`. E' "
+"possibile condividere l'URL casuale per consentire la visualizzazione dei "
+"grafici agli utenti non autenticati. L'accesso è consentito unicamente dalle"
+" zone e dagli indirizzi IP del servizio http-admin (vedi Servizi di rete)."
 
-#: ../../statistics.rst:19 ../../statistics.rst:22
+#: ../../statistics.rst:14
 msgid "After installation, the system will gather following statistics:"
 msgstr ""
 "Al termine dell’installazione, il sistema collezionerà le seguenti "
 "informazioni:"
 
-#: ../../statistics.rst:21 ../../statistics.rst:24
+#: ../../statistics.rst:16
 msgid "CPU usage"
 msgstr "utilizzo CPU"
 
-#: ../../statistics.rst:22 ../../statistics.rst:25
+#: ../../statistics.rst:17
 msgid "system load"
 msgstr "carico di sistema"
 
-#: ../../statistics.rst:23 ../../statistics.rst:26
+#: ../../statistics.rst:18
 msgid "number of processes"
 msgstr "numero di processi"
 
-#: ../../statistics.rst:24 ../../statistics.rst:27
+#: ../../statistics.rst:19
 msgid "RAM memory usage"
 msgstr "utilizzo memoria RAM"
 
-#: ../../statistics.rst:25 ../../statistics.rst:28
+#: ../../statistics.rst:20
 msgid "virtual memory (swap) usage"
 msgstr "utilizzo memoria virtuale (swap)"
 
-#: ../../statistics.rst:26 ../../statistics.rst:29
+#: ../../statistics.rst:21
 msgid "system uptime"
 msgstr "tempo di accensione"
 
-#: ../../statistics.rst:27 ../../statistics.rst:30
+#: ../../statistics.rst:22
 msgid "disk space usage"
 msgstr "utilizzo spazio su disco"
 
-#: ../../statistics.rst:28 ../../statistics.rst:31
+#: ../../statistics.rst:23
 msgid "disk read and write operations"
 msgstr "operazioni di lettura e scrittura su disco"
 
-#: ../../statistics.rst:29 ../../statistics.rst:32
+#: ../../statistics.rst:24
 msgid "network interfaces"
 msgstr "interfacce di rete"
 
-#: ../../statistics.rst:30 ../../statistics.rst:33
+#: ../../statistics.rst:25
 msgid ":index:`network latency`"
 msgstr ":index:`latenza di rete`"
 
-#: ../../statistics.rst:32 ../../statistics.rst:35
+#: ../../statistics.rst:27
 msgid ""
-"For each check, the web interface will display a graph containing last "
+"For each metric, the web interface will display a graph containing the last "
 "collected value and also minimum, maximum and average values."
 msgstr ""
-"Per ciascun controllo, l’interfaccia mostra un grafico che contiene sia "
-"l’ultimo valore raccolto, sia i valori minimi, massimi e medi."
+"Per ogni metrica, l'interfaccia web visualizzerà un grafico che contiene "
+"l'ultimo valore raccolto ed anche i valori minimi, massimi e medi."
 
-#: ../../statistics.rst:36 ../../statistics.rst:39
+#: ../../statistics.rst:31
 msgid "Network latency"
 msgstr "Latenza di rete"
 
-#: ../../statistics.rst:38 ../../statistics.rst:41
+#: ../../statistics.rst:33
 msgid ""
-"The :index:`ping` plugin measure the network latency. At regular intervals, "
-"it sends a ping to the configured upstream DNS. If the multi WAN module is "
-"configured, any enabled provider is also checked."
+"The :index:`ping` plugin measure network latency. At regular intervals, it "
+"sends an ICMP ping to the configured upstream DNS. If the multi WAN module "
+"is configured, any enabled provider is also checked."
 msgstr ""
 "Il plugin :index:`ping` misura la latenza di rete. Ad intervalli regolari, "
-"collectd invia un ping al DNS configurato. Se la multi WAN è attiva, anche "
-"tutti i provider abilitati verranno controllati."
+"invia un ping ICMP al DNS configurato a monte. Se il modulo multi WAN è "
+"configurato, viene anche verificato ciascuno dei provider abilitati."
 
-#: ../../statistics.rst:41 ../../statistics.rst:44
+#: ../../statistics.rst:36
 msgid ""
 "Additional hosts could be monitored (i.e. a web server) using a comma "
 "separated list of hosts inside the ``PingHosts`` property."
@@ -124,6 +133,6 @@ msgstr ""
 "Host aggiuntivi possono essere monitorati (es. server web) usando una lista "
 "separata da virgole all’interno della proprietà ``PingHosts``."
 
-#: ../../statistics.rst:43 ../../statistics.rst:46
+#: ../../statistics.rst:38
 msgid "Example: ::"
 msgstr "Esempio: ::"

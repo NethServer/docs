@@ -1,10 +1,10 @@
-# #-#-#-#-#  third_party.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  third_party.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  third_party.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  third_party.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -24,105 +24,105 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../third_party.rst:10 ../../third_party.rst:13
+#: ../../third_party.rst:3
 msgid "Third-party software"
 msgstr ""
 
-#: ../../third_party.rst:12 ../../third_party.rst:15
+#: ../../third_party.rst:5
 msgid ""
 "You can install any CentOS/RHEL certified :index:`third-party software` on "
 "|product|."
 msgstr ""
 
-#: ../../third_party.rst:14 ../../third_party.rst:17
+#: ../../third_party.rst:7
 msgid ""
 "If the software is 32-bit only, you should install compatibility libraries "
 "before installing the software. Relevant libraries should be:"
 msgstr ""
 
-#: ../../third_party.rst:17 ../../third_party.rst:20
+#: ../../third_party.rst:10
 msgid "glibc"
 msgstr ""
 
-#: ../../third_party.rst:18 ../../third_party.rst:21
+#: ../../third_party.rst:11
 msgid "glib"
 msgstr ""
 
-#: ../../third_party.rst:19 ../../third_party.rst:22
+#: ../../third_party.rst:12
 msgid "libstdc++"
 msgstr ""
 
-#: ../../third_party.rst:20 ../../third_party.rst:23
+#: ../../third_party.rst:13
 msgid "zlib"
 msgstr ""
 
-#: ../../third_party.rst:22 ../../third_party.rst:25
+#: ../../third_party.rst:15
 msgid "For example, to install the above mentioned packages: ::"
 msgstr ""
 
-#: ../../third_party.rst:27 ../../third_party.rst:30
+#: ../../third_party.rst:20
 msgid "Installation"
 msgstr ""
 
-#: ../../third_party.rst:29 ../../third_party.rst:32
+#: ../../third_party.rst:22
 msgid ""
 "If the software is an RPM package, please use :command:`yum` to install it: "
 "the system will take care to resolve all needed dependencies."
 msgstr ""
 
-#: ../../third_party.rst:32 ../../third_party.rst:35
+#: ../../third_party.rst:25
 msgid ""
 "In case a yum installation is not possible, the best target directory for "
 "additional software is under :file:`/opt`. For example, given a software "
 "named *mysoftware*, install it on :file:`/opt/mysoftware`."
 msgstr ""
 
-#: ../../third_party.rst:36 ../../third_party.rst:39
+#: ../../third_party.rst:29
 msgid "Backup"
 msgstr ""
 
-#: ../../third_party.rst:38 ../../third_party.rst:41
+#: ../../third_party.rst:31
 msgid ""
 "Directory containing relevant data should be included inside the backup by "
 "adding a line to :file:`/etc/backup-data.d/custom.include`. See :ref"
 ":`backup_customization-section`."
 msgstr ""
 
-#: ../../third_party.rst:42 ../../third_party.rst:45
+#: ../../third_party.rst:35
 msgid "Firewall"
 msgstr ""
 
-#: ../../third_party.rst:44 ../../third_party.rst:47
+#: ../../third_party.rst:37
 msgid ""
 "If the software needs some open ports on the firewall, create a new service "
 "named ``fw_<softwarename>``."
 msgstr ""
 
-#: ../../third_party.rst:46 ../../third_party.rst:49
+#: ../../third_party.rst:39
 msgid ""
 "For example, given the software *mysoftware* which needs ports 3344 and 5566"
 " on LAN, use the following commands: ::"
 msgstr ""
 
-#: ../../third_party.rst:53 ../../third_party.rst:56
+#: ../../third_party.rst:46
 msgid "Starting and stopping"
 msgstr ""
 
-#: ../../third_party.rst:55 ../../third_party.rst:58
-msgid "|product| uses the standard systemd multiuser target."
+#: ../../third_party.rst:48
+msgid "|product| uses the standard runlevel 3."
 msgstr ""
 
-#: ../../third_party.rst:57 ../../third_party.rst:60
+#: ../../third_party.rst:50
 msgid ""
-"Software installed with yum should already be configured to start at boot. "
-"To check the configuration, execute the :command:`systemctl` command. The "
-"command will display a list of services with their own status."
+"Software installed with yum should already be configured to start at boot on"
+" runlevel 3. To check the configuration, execute the :command:`chkconfig` "
+"command. The command will display a list of services with their own status."
 msgstr ""
 
-#: ../../third_party.rst:61 ../../third_party.rst:64
+#: ../../third_party.rst:54
 msgid "To enable a service on boot: ::"
 msgstr ""
 
-#: ../../third_party.rst:65 ../../third_party.rst:68
+#: ../../third_party.rst:58
 msgid "To disable a service on boot: ::"
 msgstr ""

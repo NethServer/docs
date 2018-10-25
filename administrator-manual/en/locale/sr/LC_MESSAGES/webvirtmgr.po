@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer 7\n"
+"Project-Id-Version: NethServer 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -17,86 +17,86 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../webvirtmgr.rst:10
+#: ../../webvirtmgr.rst:3
 msgid "WebVirtMgr"
 msgstr ""
 
-#: ../../webvirtmgr.rst:12
+#: ../../webvirtmgr.rst:5
 msgid ""
 "This tool is used to manage :index:`virtual machine` through a simple web "
 "interface:"
 msgstr ""
 
-#: ../../webvirtmgr.rst:14
+#: ../../webvirtmgr.rst:7
 msgid "Create and destroy new machines (:index:`KVM`)"
 msgstr ""
 
-#: ../../webvirtmgr.rst:15
+#: ../../webvirtmgr.rst:8
 msgid "Create custom template of virtual machines"
 msgstr ""
 
-#: ../../webvirtmgr.rst:16
+#: ../../webvirtmgr.rst:9
 msgid "Easy shell remote access"
 msgstr ""
 
-#: ../../webvirtmgr.rst:17
+#: ../../webvirtmgr.rst:10
 msgid "Amazing UI"
 msgstr ""
 
-#: ../../webvirtmgr.rst:20
+#: ../../webvirtmgr.rst:13
 msgid "Configuration"
 msgstr ""
 
-#: ../../webvirtmgr.rst:22
+#: ../../webvirtmgr.rst:15
 msgid ""
 "The web application listen on port **8000** of your host machine, for "
 "example: ``http://HOST_IP:8000/``."
 msgstr ""
 
-#: ../../webvirtmgr.rst:24
+#: ../../webvirtmgr.rst:17
 msgid "The service is disabled by default."
 msgstr ""
 
-#: ../../webvirtmgr.rst:26
+#: ../../webvirtmgr.rst:19
 msgid "From the :guilabel:`Virtual machines` page you can:"
 msgstr ""
 
-#: ../../webvirtmgr.rst:28
+#: ../../webvirtmgr.rst:21
 msgid "enable the virtual machines manager"
 msgstr ""
 
-#: ../../webvirtmgr.rst:29
+#: ../../webvirtmgr.rst:22
 msgid "enable the virtual machines console access from web browser"
 msgstr ""
 
-#: ../../webvirtmgr.rst:31
+#: ../../webvirtmgr.rst:24
 msgid ""
 "To access the web interface you must login with credentials that can be "
 "found on the same page:"
 msgstr ""
 
-#: ../../webvirtmgr.rst:33
+#: ../../webvirtmgr.rst:26
 msgid "*User:* admin"
 msgstr ""
 
-#: ../../webvirtmgr.rst:34
+#: ../../webvirtmgr.rst:27
 msgid "*Password*: random alphanumeric (editable)"
 msgstr ""
 
-#: ../../webvirtmgr.rst:38
+#: ../../webvirtmgr.rst:31
 msgid ""
 "Do not create network bridges using WebVirtManager interface. Just create "
 "the bridge inside :guilabel:`Network` page and use it under WebVirtManager."
 msgstr ""
 
-#: ../../webvirtmgr.rst:41
+#: ../../webvirtmgr.rst:34
 msgid "For more information, see official documentation:"
 msgstr ""
 
-#: ../../webvirtmgr.rst:43
+#: ../../webvirtmgr.rst:36
 msgid "http://wiki.qemu.org/Manual"
 msgstr ""
 
-#: ../../webvirtmgr.rst:44
+#: ../../webvirtmgr.rst:37
 msgid "http://www.linux-kvm.org/page/Documents"
 msgstr ""

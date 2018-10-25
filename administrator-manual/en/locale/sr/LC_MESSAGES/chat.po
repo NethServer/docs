@@ -1,10 +1,10 @@
-# #-#-#-#-#  chat.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  chat.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  chat.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  chat.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -24,115 +24,115 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../../chat.rst:12 ../../chat.rst:15
+#: ../../chat.rst:5
 msgid "Chat"
 msgstr ""
 
-#: ../../chat.rst:14 ../../chat.rst:17
+#: ../../chat.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
 ":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
 "5223)."
 msgstr ""
 
-#: ../../chat.rst:16 ../../chat.rst:19
+#: ../../chat.rst:9
 msgid "The main features are:"
 msgstr ""
 
-#: ../../chat.rst:18 ../../chat.rst:21
-msgid "Messaging between users of the system"
+#: ../../chat.rst:11
+msgid "Messages between users of the system"
 msgstr ""
 
-#: ../../chat.rst:19 ../../chat.rst:22
+#: ../../chat.rst:12
 msgid ""
 "Possibility to divide the users into groups, according to the company or "
 "department / office"
 msgstr ""
 
-#: ../../chat.rst:20 ../../chat.rst:23
-msgid "Chat server administration"
+#: ../../chat.rst:13
+msgid "Chat server's administrators"
 msgstr ""
 
-#: ../../chat.rst:21 ../../chat.rst:24
+#: ../../chat.rst:14
 msgid "Broadcast messages"
 msgstr ""
 
-#: ../../chat.rst:22 ../../chat.rst:25
+#: ../../chat.rst:15
 msgid "Group chat"
 msgstr ""
 
-#: ../../chat.rst:23 ../../chat.rst:26
+#: ../../chat.rst:16
 msgid "Offline messages"
 msgstr ""
 
-#: ../../chat.rst:24 ../../chat.rst:27
+#: ../../chat.rst:17
 msgid "Transfer files over LAN"
 msgstr ""
 
-#: ../../chat.rst:26 ../../chat.rst:29
+#: ../../chat.rst:19
 msgid "All system users can access the chat using their own credentials."
 msgstr ""
 
-#: ../../chat.rst:29 ../../chat.rst:32
+#: ../../chat.rst:22
 msgid "Client"
 msgstr ""
 
-#: ../../chat.rst:31 ../../chat.rst:34
+#: ../../chat.rst:24
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 
-#: ../../chat.rst:33 ../../chat.rst:36
+#: ../../chat.rst:26
 msgid "Some widespread clients:"
 msgstr ""
 
-#: ../../chat.rst:35 ../../chat.rst:38
+#: ../../chat.rst:28
 msgid "Pidgin is available for Windows and Linux"
 msgstr ""
 
-#: ../../chat.rst:36 ../../chat.rst:39
+#: ../../chat.rst:29
 msgid "Adium for Mac OS X"
 msgstr ""
 
-#: ../../chat.rst:37 ../../chat.rst:40
+#: ../../chat.rst:30
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr ""
 
-#: ../../chat.rst:39 ../../chat.rst:42
+#: ../../chat.rst:32
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
 msgstr ""
 
-#: ../../chat.rst:42 ../../chat.rst:45
+#: ../../chat.rst:35
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
 "records. Otherwise, specify the server address in the advanced options."
 msgstr ""
 
-#: ../../chat.rst:46 ../../chat.rst:49
+#: ../../chat.rst:39
 msgid "Administrators"
 msgstr ""
 
-#: ../../chat.rst:48 ../../chat.rst:51
+#: ../../chat.rst:41
 msgid ""
 "All users within the group ``jabberadmins`` are considered administrators of"
 " the chat server."
 msgstr ""
 
-#: ../../chat.rst:50 ../../chat.rst:53
+#: ../../chat.rst:43
 msgid "Administrators can:"
 msgstr ""
 
-#: ../../chat.rst:52 ../../chat.rst:55
+#: ../../chat.rst:45
 msgid "Send broadcast messages"
 msgstr ""
 
-#: ../../chat.rst:53 ../../chat.rst:56
+#: ../../chat.rst:46
 msgid "Check the status of connected users"
 msgstr ""
 
-#: ../../chat.rst:56 ../../chat.rst:59
+#: ../../chat.rst:49
 msgid ""
 "The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
 msgstr ""

@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../registration.rst:19
+#: ../../registration.rst:9
 msgid "Registration"
 msgstr "Registrazione"
 
-#: ../../registration.rst:21
+#: ../../registration.rst:11
 msgid ""
 "|product| offers the possibility to control the critical operating "
 "parameters using the :dfn:`Operation Center`, which is accessible by login "
@@ -37,7 +37,7 @@ msgstr ""
 ":index:`registrazione` per permettere una corretta identificazione nella "
 "comunicazione con la console web."
 
-#: ../../registration.rst:26
+#: ../../registration.rst:16
 msgid ""
 "Access the Server Manager (``https://server:980``), then click on "
 ":guilabel:`Software center` and follow the wizard:"
@@ -45,7 +45,7 @@ msgstr ""
 "Accedere all'interfaccia web del server (``https://server:980``), fare click"
 " su :guilabel:`Software center` e seguire la procedura guidata:"
 
-#: ../../registration.rst:28
+#: ../../registration.rst:18
 msgid ""
 "Please enter the reseller credentials used in the Operation Center "
 "|register_link|"
@@ -53,13 +53,13 @@ msgstr ""
 "Inserire le credenziali rivenditore utilizzate presso il Centro Servizi "
 "|register_link|"
 
-#: ../../registration.rst:29
+#: ../../registration.rst:19
 msgid "Select an existing server or choose the creation of new  one"
 msgstr ""
 "Selezionare un server esistente oppure scegliere la creazione di nuovo "
 "server"
 
-#: ../../registration.rst:30
+#: ../../registration.rst:20
 msgid ""
 "When creating make sure you enter a name that will help identify the server."
 " You should also enter a description"
@@ -68,7 +68,7 @@ msgstr ""
 "l'identificazione del server. Si consiglia anche di immettere una "
 "descrizione"
 
-#: ../../registration.rst:31
+#: ../../registration.rst:21
 msgid ""
 "Associate an existing customer to the new server, or fill in the fields for "
 "the creation of new customer"
@@ -76,11 +76,11 @@ msgstr ""
 "Associare un cliente esistente al nuovo server oppure compilare i campi per "
 "la creazione di nuovo cliente"
 
-#: ../../registration.rst:32
+#: ../../registration.rst:22
 msgid "Confirm your entries to finish the registration process"
 msgstr "Confermare i dati immessi per terminare la procedura di registrazione"
 
-#: ../../registration.rst:34
+#: ../../registration.rst:24
 msgid ""
 "At the end you will be able to :ref:`install additional software "
 "<package_manager-section>`."
@@ -88,16 +88,7 @@ msgstr ""
 "Al termine sarà possibile :ref:`installare il software aggiuntivo "
 "<package_manager-section>`."
 
-#: ../../registration.rst:36
-msgid ""
-"Run :ref:`software update <software-updates-section>` immediately after "
-"registration to get new features and security fixes!"
-msgstr ""
-"Eseguire :ref:`l'aggiornamento del sistema <software-updates-section>` "
-"immediatamente dopo aver terminato la procedura di registrazione per "
-"installare le nuove funzionalità e i fix di sicurezza!"
-
-#: ../../registration.rst:38
+#: ../../registration.rst:27
 msgid ""
 "The installation of additional software from the web interface is only "
 "allowed exclusively to the reseller credentials holders. The use of "
@@ -110,11 +101,11 @@ msgstr ""
 "limitazione. Pertanto si sconsiglia di consegnare la password di :dfn:`root`"
 " all'utente finale."
 
-#: ../../registration.rst:44
+#: ../../registration.rst:33
 msgid ":index:`Server key`"
 msgstr ":index:`Codice server`"
 
-#: ../../registration.rst:46
+#: ../../registration.rst:35
 msgid ""
 "The :dfn:`server key` allows to uniquely identify the server inside the "
 "Operation Center |register_link|. Inside the details page of each server, "
@@ -127,11 +118,11 @@ msgstr ""
 ":guilabel:`Libera Chiave` e :guilabel:`Elimina Server`, ognuno dei quali ha "
 "una funzione ben specifica."
 
-#: ../../registration.rst:50
+#: ../../registration.rst:39
 msgid ":index:`Delete server`"
 msgstr ":index:`Elimina Server`"
 
-#: ../../registration.rst:52
+#: ../../registration.rst:41
 msgid ""
 "The :guilabel:`Delete server` button will remove the server from the "
 "Operation Center. It's useful to remove old server or unused ones."
@@ -139,11 +130,11 @@ msgstr ""
 "Il pulsante :guilabel:`Elimina Server` serve per eliminare dal Centro "
 "Servizi Nethesis i server non più utilizzati o erroneamente creati."
 
-#: ../../registration.rst:56
+#: ../../registration.rst:45
 msgid ":index:`Free key`"
 msgstr ":index:`Libera chiave`"
 
-#: ../../registration.rst:58
+#: ../../registration.rst:47
 msgid ""
 "The :guilabel:`Free key` button allows another server to reuse the key "
 "during the registration process. It's used in case you need to re-install "

@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../nethvoice_intro.rst:18
+#: ../../nethvoice_intro.rst:8
 msgid "NethVoice"
 msgstr "NethVoice"
 
-#: ../../nethvoice_intro.rst:20
+#: ../../nethvoice_intro.rst:10
 msgid ""
 "NethVoice is an open and integrated solution for communication and "
 "collaboration services, capable of providing integration between data, voice"
@@ -31,7 +31,7 @@ msgstr ""
 "NethVoice es una solución abierta e integrada para servicios de comunicación"
 " y colaboración, capaz de proporcionar integración entre datos, voz y video."
 
-#: ../../nethvoice_intro.rst:24
+#: ../../nethvoice_intro.rst:14
 msgid ""
 "Full manuale available at `nethvoice.docs.nethesis.it "
 "<http://nethvoice.docs.nethesis.it/>`_."

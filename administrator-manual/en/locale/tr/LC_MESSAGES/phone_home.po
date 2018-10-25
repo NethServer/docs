@@ -1,10 +1,10 @@
-# #-#-#-#-#  phone_home.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  phone_home.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  phone_home.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  phone_home.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,9 +13,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -24,46 +24,55 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../phone_home.rst:12 ../../phone_home.rst:15
+#: ../../phone_home.rst:5
 msgid "Phone Home"
 msgstr ""
 
-#: ../../phone_home.rst:13 ../../phone_home.rst:16
+#: ../../phone_home.rst:6
 msgid ""
-"During the first configuration wizard, you can opt-out from contributing to "
-"usage statistics. Phone home is used to track all NethServer's installations"
-" around the world. Each time a new NethServer is installed, this tool sends "
-"some installation details to a central server. The information is stored in "
-"a database and used to display nice markers in a Google Map view with number"
-" of installation grouped by country and release."
+"This tool is used to track all NethServer's installations around the world. "
+"Each time a new NethServer is installed, this tool sends some installation "
+"information through comfortable APIs. The information are stored in database"
+" and used to display nice markers in a Google Map view with number of "
+"installation grouped by country and release."
 msgstr ""
 
-#: ../../phone_home.rst:17 ../../phone_home.rst:20
+#: ../../phone_home.rst:9
 msgid "Overview"
 msgstr ""
 
-#: ../../phone_home.rst:18 ../../phone_home.rst:21
-msgid "The tool is *enabled* by default."
+#: ../../phone_home.rst:10
+msgid "The tool is *disabled* by default."
 msgstr ""
 
-#: ../../phone_home.rst:20 ../../phone_home.rst:23
+#: ../../phone_home.rst:12
 msgid ""
-"To disable it at a later time, run: ``config setprop phone-home status "
-"disabled``"
+"To enable it simply run: ``config set phone-home configuration status "
+"enabled``"
 msgstr ""
 
-#: ../../phone_home.rst:24 ../../phone_home.rst:27
-msgid "If phone home is *enabled* the details sent are:"
+#: ../../phone_home.rst:16
+msgid "If the tool is *enabled* the information sent are:"
 msgstr ""
 
-#: ../../phone_home.rst:23 ../../phone_home.rst:26
+#: ../../phone_home.rst:15
 msgid "UUID: stored in ``/var/lib/yum/uuid``"
 msgstr ""
 
-#: ../../phone_home.rst:24 ../../phone_home.rst:27
-msgid "RELEASE: from ``/sbin/e-smith/config getprop sysconfig Version``"
+#: ../../phone_home.rst:16
+msgid "RELEASE: get by ``/sbin/e-smith/config getprop sysconfig Version``"
 msgstr ""
 
-#: ../../phone_home.rst:26 ../../phone_home.rst:29
-msgid "All the data is used to populate the map."
+#: ../../phone_home.rst:18
+msgid "All the infos are used to populate the map."
+msgstr ""
+
+#: ../../phone_home.rst:21
+msgid "Configuration"
+msgstr ""
+
+#: ../../phone_home.rst:22
+msgid ""
+"If you use a proxy edit the correct placeholders in file ``phone-home`` "
+"stored in ``/etc/sysconfig/`` : ::"
 msgstr ""

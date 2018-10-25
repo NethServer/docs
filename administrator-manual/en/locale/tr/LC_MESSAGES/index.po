@@ -1,10 +1,10 @@
-# #-#-#-#-#  index.pot (NethServer 7)  #-#-#-#-#
+# #-#-#-#-#  index.pot (NethServer 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# #-#-#-#-#  index.pot (NethServer Enterprise 7)  #-#-#-#-#
+# #-#-#-#-#  index.pot (NethServer Enterprise 6.10)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2017, Nethesis Srl
 # This file is distributed under the same license as the NethServer Enterprise package.
@@ -13,11 +13,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: NethServer Enterprise 7\n"
+"Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 14:30+0200\n"
+"POT-Creation-Date: 2018-09-07 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
 "Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,58 +24,58 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../index.rst:11 ../../index.rst:14
+#: ../../index.rst:4
 msgid "Administrator Manual"
-msgstr "Yönetici Kılavuzu"
-
-#: ../../index.rst:18 ../../index.rst:21
-msgid "**Official site**: `www.nethserver.org <http://www.nethserver.org>`_"
-msgstr "**Resmi site**: `www.nethserver.org <http://www.nethserver.org>`_"
-
-#: ../../index.rst:24 ../../index.rst:27
-msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
-msgstr "Destek: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
-
-#: ../../index.rst:26 ../../index.rst:29
-msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
-msgstr "Resmi site: `www.nethesis.it <http://www.nethesis.it>`_"
-
-#: ../../index.rst:29 ../../index.rst:32
-msgid "Release notes |version|"
 msgstr ""
 
-#: ../../index.rst:37 ../../index.rst:40
+#: ../../index.rst:11
+msgid "**Official site**: `www.nethserver.org <http://www.nethserver.org>`_"
+msgstr ""
+
+#: ../../index.rstNone
+msgid "Contacts"
+msgstr ""
+
+#: ../../index.rst:17
+msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
+msgstr ""
+
+#: ../../index.rst:19
+msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
+msgstr ""
+
+#: ../../index.rst:23
+msgid "Release notes |release|"
+msgstr ""
+
+#: ../../index.rst:31
 msgid "Installation"
-msgstr "Kurulum"
+msgstr ""
 
-#: ../../index.rst:47 ../../index.rst:50
+#: ../../index.rst:41
 msgid "Configuration"
-msgstr "Yapılandırma"
+msgstr ""
 
-#: ../../index.rst:59 ../../index.rst:62
+#: ../../index.rst:50
 msgid "Modules"
-msgstr "Modüller"
+msgstr ""
 
-#: ../../index.rst:97 ../../index.rst:100
-msgid "NethForge modules"
-msgstr "NethForge modülleri"
-
-#: ../../index.rst:105 ../../index.rst:108
+#: ../../index.rst:94
 msgid "Best practices"
-msgstr "En iyi uygulamalar"
+msgstr ""
 
-#: ../../index.rst:113 ../../index.rst:116
+#: ../../index.rst:102
 msgid "Appendix"
-msgstr "Kaynakça"
+msgstr ""
 
-#: ../../index.rst:126 ../../index.rst:129
+#: ../../index.rst:114
 msgid "Indices"
-msgstr "Göstergeler"
+msgstr ""
 
-#: ../../index.rst:128 ../../index.rst:131
+#: ../../index.rst:116
 msgid ":ref:`General index <genindex>`"
-msgstr ":ref:`Genel dizin <genindex>`"
+msgstr ""
 
-#: ../../index.rst:129 ../../index.rst:132
+#: ../../index.rst:117
 msgid ":ref:`Search <search>`"
-msgstr ":ref:`Arama <search>`"
+msgstr ""
