@@ -253,7 +253,6 @@ Common properties:
 
 * ``status`` : enable or disable the backup, can be ``enabled`` or ``disabled``
 * ``Notify``: if set to ``always``, always send a notification with backup status; if set to ``error``, send a notification only on error; if set to ``never``, never send a notification
-* ``NotifyFrom``: set a different sender than ``root@localhost``
 * ``NotifyTo``: send the notification to given mail address, default is ``root@localhost``
 * ``VFSType`` : set the storage backend
 
@@ -266,7 +265,6 @@ Output example: ::
   mybackup=rsync
     BackupTime=1 7 * * *
     Notify=error
-    NotifyFrom=
     NotifyTo=root@localhost
     SMBHost=192.168.1.234
     SMBLogin=test
@@ -420,19 +418,19 @@ Examples
 
 Rsync backup, every day at 7:15 to a remote server. The SFTP backend requires the password of the remote server to execute SSH key exchange. ::
 
-  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
+  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' Notify error NotifyTo root@localhost \
   VFSType sftp SftpHost 192.168.1.2 SftpUser root SftpPort 22 SftpDirectory /mnt/mybackup1 
   echo -e "Nethesis,1234" > /tmp/mybackup1-password; signal-event nethserver-backup-data-save mybackup1 /tmp/mybackup1-password
 
 Restic backup every day at 3:00 to Amazon S3, no retention limit: ::
 
-  db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
+  db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyTo root@localhost status enabled \
   S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Prune 0
   signal-event nethserver-backup-data-save mybackup1
 
 Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
 
-  db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyFrom '' NotifyTo root@localhost status enabled \
+  db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyTo root@localhost status enabled \
   SMBHost nas.localnethserver.org SMBLogin myuser SMBPassword mypassword SMBShare mybackup
   signal-event nethserver-backup-data-save mybackup1
 
@@ -506,7 +504,7 @@ a multiple backup which includes only the mail and is scheduled each our.
 
 1. Configure the new ``mymailbackup``: ::
 
-     db backups set mymailbackup restic status enabled BackupTime '0 * * * *' Notify error NotifyFrom '' NotifyTo root@localhost \
+     db backups set mymailbackup restic status enabled BackupTime '0 * * * *' Notify error NotifyTo root@localhost \
      VFSType nfs NFSHost nsfs.server.loc NFSShare test CleanupOlderThan 1d Prune 0
 
 2. Create a custom include containing only the mail directory: ::
