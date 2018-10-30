@@ -101,3 +101,8 @@ carefully.
   manually** after the automated procedure completes. Refer to the Upgrade
   documentation of |product| 7
 
+- During the upgrade any existing **custom template** is archived into
+  ``/root/templates-custom.upgrade/``. It is recommended to check the existing
+  customized templates before starting the upgrade procedure and decide if and
+  how to restore them
+
