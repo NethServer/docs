@@ -35,7 +35,7 @@ package download runs in background. It requires some time, depending on the
 available network bandwidth.
 
 The available disk space is checked twice, before and after the preparation
-step, to ensure the following steps do not run in short of disk space.
+step, to ensure the next steps do not run in short of disk space.
 
 At the end of the download the web page asks to abort the procedure or continue
 with the system reboot to the upgrade step.
