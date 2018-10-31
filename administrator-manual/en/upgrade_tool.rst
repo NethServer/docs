@@ -97,7 +97,7 @@ carefully.
 
 - Prepare a complete backup or snapshot of the whole system. A **power outage**
   or an **hardware fault** during the upgrade step, as long as an **unknown
-  bug** in this procedure would compromise the system
+  bug** in this procedure could compromise the system
 
 - Consider the **system downtime** and how it impacts on the end-users
 
