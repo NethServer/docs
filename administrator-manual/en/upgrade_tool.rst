@@ -32,7 +32,7 @@ page of the Server Manager.
 
 During the preparation step the system is still operational as usual. The
 package download runs in background. It requires some time, depending on the
-available network bandwidth. 
+available network bandwidth.
 
 The available disk space is checked twice, before and after the preparation
 step, to ensure the following steps do not run in short of disk space.
@@ -46,32 +46,36 @@ Upgrade step
 Estimated time: 30 minutes
 
 The (2) **upgrade** step starts at the next system reboot.  The upgrade
-procedure boots by default a Linux kernel from version 7: if some of the machine
-hardware is not compatible with it, the procedure probably fails at this point.
+procedure boots the Linux kernel of version 7 by default. If the disk controller
+is not compatible with it, the procedure fails at this point.
 
 .. notice::
 
     It is possible to select the old kernel and boot the system in the previous
-    state, actually canceling the upgrade.
+    state, actually canceling the upgrade
 
-If the new kernel boots and mounts the disks correctly the system is completely
-put offline and the packages upgrade starts. From this point there is no way
-back.
+If the new kernel boots and mounts the disks correctly the system is
+**disconnected from the network** and the packages upgrade starts. From this
+point there is no way back. During the upgrade the system can be accessed from
+the system console.
 
-At the end of the upgrade step the system is automatically rebooted. It takes
-some time to upgrade all the packages, depending on the system speed and the
-number of the packages.
+It takes some time to upgrade all the packages, depending on the system speed
+and the number of the packages. At the end of the upgrade step the system is
+automatically rebooted.
 
 Post-upgrade step
 -----------------
 
 Estimated time: 15 minutes
 
-The (3) **post-upgrade** step starts at the second reboot. The basic system was
-completely upgraded by the previous step: now it is fully reconfigured.
+The (3) **post-upgrade** step starts at the second reboot.
 
-In this last step faults can be recovered safely. At the end of the post-upgrade
-step the services are available again.
+The basic system was completely upgraded by the previous step; the post-upgrade
+step renames the network interfaces according to the new NIC naming rules and
+re-configures the installed modules.
+
+In this last step a fault can be recovered safely through the system console. At
+the end of the post-upgrade step SSH and the other services are available again.
 
 .. warning::
 
@@ -106,3 +110,6 @@ carefully.
   customized templates before starting the upgrade procedure and decide if and
   how to restore them
 
+- The system is **disconnected from the network** during the upgrade step and
+  until the post-upgrade step completes. If any error occurs during those steps
+  a direct **console access** is required.
