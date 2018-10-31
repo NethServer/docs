@@ -52,7 +52,7 @@ is not compatible with it, the procedure fails at this point.
 .. notice::
 
     It is possible to select the old kernel and boot the system in the previous
-    state, actually canceling the upgrade
+    state, actually aborting the upgrade
 
 If the new kernel boots and mounts the disks correctly the system is
 **disconnected from the network** and the packages upgrade starts. From this
