@@ -88,6 +88,7 @@ Modules
    phonebook-mysql
    weekly_report
    hotspot
+   upgrade_tool
 
 
 Best practices

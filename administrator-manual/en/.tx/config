@@ -271,3 +271,9 @@ file_filter = locale/<lang>/LC_MESSAGES/sphinx.po
 source_file = _build/locale/sphinx.pot
 source_lang = en
 type = PO
+
+[docs-v6.upgrade_tool]
+file_filter = locale/<lang>/LC_MESSAGES/upgrade_tool.po
+source_file = _build/locale/upgrade_tool.pot
+source_lang = en
+type = PO
