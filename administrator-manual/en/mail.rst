@@ -467,7 +467,7 @@ three types of rules:
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
 
-It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specificy the desired domain (e.g. : nethserver.org).
+It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specify the desired domain (e.g. : nethserver.org).
 
 .. note:: Antivirus checks are enforced despite *whitelist* settings.
 
@@ -481,7 +481,7 @@ administrative web interface at ::
 
   https://<HOST_IP>:980/rspamd
 
-For more informations on Rspamd, please read the :ref:`rspamd-section` page.
+For more information on Rspamd, please read the :ref:`rspamd-section` page.
 
 .. only:: nscom
 
@@ -490,26 +490,25 @@ For more informations on Rspamd, please read the :ref:`rspamd-section` page.
     Quarantine (beta)
     -----------------
 
-    |product| can use a specific user mailbox, to move the rejected email as
-    spam to it. The purpose is to verify the email before to delete it, if
-    enabled a mail notification is sent to the postmaster (root alias) for each
+    |product| scans all incomaing email messages before they are delivered to the user mailbox.
+    The messages that are identified as spam will be sent to a specific user mailbox.
+    The purpose of this feature is to verify the email before deleting it.
+    If enabled, a mail notification is also sent to the postmaster (root alias) for each
     quarantined email.
 
     .. note::
 
-      The quarantined emails are available like any email account with a webmail
-      or IMAP account
+      The quarantined messages can be accessed using a web mail or an IMAP account
 
     .. warning::
 
-      The mailbox used for quarantine, must be able to accept spam and must 
-      be a user mailbox or possibly a shared mailbox. This is true
-      when you use an internal account, but must be valid for an account on
-      other server. Because the email account is dedicated to receive the
-      unwanted spam, you must create and use an email account only for this
-      purpose otherwise you will receive also the spam you do not want
+      The mailbox used for quarantine, must be able to accept spam.
+      It should be a local shared mailbox or a user mailbox.
+      If an external account is used, make sure the account exists on the remote server.
+      Please make sure the quarantine mailbox has been created only for this specific purpose,
+      otherwise the mailbox will be overloaded with unwanted spam.
 
-    Quarantine (beta) is provided by an optional module named
+    Quarantine is provided by an optional module named
     ``nethserver-mail-quarantine``. Once it has been installed from the
     :guilabel:`Software center` you must manually set its database properties.
 
@@ -522,16 +521,16 @@ For more informations on Rspamd, please read the :ref:`rspamd-section` page.
         SpamNotificationStatus=disabled
 
 
-    * ``QuarantineAccount``: The user or the shared mailbox where to send all spams (spam
+    * ``QuarantineAccount``: The user or the shared mailbox where to send all spam messages (spam
       check is automatically disabled on this account). You must create it
-      manually. You could send it to an external mailbox  but then you must
-      disable the spam check on this server
+      manually. You could send it to an external mailbox  but then make sure to
+      disable the spam check on the remote server
 
     * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected:
-      enabled/disabled (default)
+      enabled/disabled. Disabled by default
 
     * ``SpamNotificationStatus``: Enable the email notification when email are
-      quarantined: enabled/disabled (default)
+      quarantined: enabled/disabled. Disabled by default
 
     For example, the following commands enable the quarantine and the mail
     notification to root: ::
