@@ -49,7 +49,7 @@ The (2) **upgrade** step starts at the next system reboot.  The upgrade
 procedure boots the Linux kernel of version 7 by default. If the disk controller
 is not compatible with it, the procedure fails at this point.
 
-.. notice::
+.. hint::
 
     It is possible to select the old kernel and boot the system in the previous
     state, actually aborting the upgrade
