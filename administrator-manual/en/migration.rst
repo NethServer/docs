@@ -218,6 +218,8 @@ Sync and migrate
 If called with ``-m`` option, ``rsync-migrate`` will execute a final synchronization and upgrade
 the target machine.
 
+Before executing the final migration, install all packages that cover the same features of the source.
+
 Example: ::
 
     screen rsync-migrate -m mail.nethserver.org 2222
