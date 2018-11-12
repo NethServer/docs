@@ -89,7 +89,7 @@ Post-upgrade checklist
        Refer to the Upgrade documentation of |product| 7
 
     2. Once the Server Manager is accessible again remember to refresh the
-       browser cache with :kbd:`Ctrl Shift R` to fix display issues caused by the
+       browser cache with :kbd:`Ctrl + Shift + R` to fix display issues caused by the
        upgraded style sheets (CSS)
 
 Upgrade completed check
