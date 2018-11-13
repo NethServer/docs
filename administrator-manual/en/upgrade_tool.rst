@@ -30,6 +30,14 @@ Estimated time: 1 hour
 The (1) **preparation** step can be started from the :guilabel:`Upgrade tool`
 page of the Server Manager.
 
+If the File server module is present and the Samba server role is
+:guilabel:`Primary Domain Controller` or :guilabel:`Workstation` the system has
+to be configured with a local Active Directory accounts provider. See
+:ref:`upgrade-to-ad`.
+
+The Upgrade tool does not work if the Samba server role is set to
+:guilabel:`Active Directory Member`.
+
 During the preparation step the system is still operational as usual. The
 package download runs in background. It requires some time, depending on the
 available network bandwidth.
@@ -114,6 +122,40 @@ A Let's Encrypt certificate, if present, must be requested again from the
 :guilabel:`Server certificate` page. Then set it as the default system
 certificate from the same page. For more information, refer to the "Server
 certificate"  manual page of |product| 7.
+
+.. _upgrade-to-ad:
+
+Upgrade to Active Directory
+---------------------------
+
+If the system requires a local Active Directory (AD) accounts provider, the
+Upgrade tool expects some additional parameters to be issued:
+
+* The AD :guilabel:`DNS domain name`
+
+* A green bridge interface
+
+* The :guilabel:`Domain Controller IP address`: an additional, free IP address
+  that AD services binds to. The IP must be in the same subnet of the green
+  bridge
+
+If a green bridge interface is not present go to the :guilabel:`Network` page
+and create one with :guilabel:`Create new logical interface`.
+
+The :guilabel:`NetBIOS domain name` is a read-only field. To change it, refer to
+the :guilabel:`Windows Network` page.
+
+.. warning::
+
+    In virtualized systems, remember to enable **promiscuous mode** in the
+    hypervisor settings, otherwise access to AD will be blocked from LAN clients
+
+For more information refer also to the |product| 7 documentation, especially:
+
+* the "Samba Active Directory local provider installation" section, under the 
+  "Users and groups" chapter
+
+* the "Upgrade from |product| 6" chapter
 
 .. _upgrade_risks_section:
 
