@@ -75,13 +75,45 @@ step renames the network interfaces according to the new NIC naming rules and
 re-configures the installed modules.
 
 In this last step a fault can be recovered safely through the system console. At
-the end of the post-upgrade step SSH and the other services are available again.
+the end of the post-upgrade step SSH, Server Manager and the other services are
+available again.
+
+.. _post-upgrade-checks:
+
+Post-upgrade checklist
+----------------------
 
 .. warning::
 
-    Some modules need to be upgraded or replaced manually. Refer to the Upgrade
-    documentation of |product| 7
+    1. Some modules, like ownCloud, need to be upgraded or replaced manually.
+       Refer to the Upgrade documentation of |product| 7
 
+    2. Once the Server Manager is accessible again remember to refresh the
+       browser cache with :kbd:`Ctrl + Shift + R` to fix display issues caused by the
+       upgraded style sheets (CSS)
+
+Upgrade completed check
+=======================
+
+To ensure the upgrade procedure has finished run ``systemd-analyze``. The output
+should begin like ::
+
+    Startup finished
+
+Upgrade errors check
+====================
+
+To check if any error occurred, run ::
+
+    grep -B 5 -E '(ERROR|FAILED)' /var/log/messages
+
+Let's Encrypt certificate check
+===============================
+
+A Let's Encrypt certificate, if present, must be requested again from the
+:guilabel:`Server certificate` page. Then set it as the default system
+certificate from the same page. For more information, refer to the "Server
+certificate"  manual page of |product| 7.
 
 .. _upgrade_risks_section:
 
