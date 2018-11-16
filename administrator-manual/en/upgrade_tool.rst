@@ -115,6 +115,16 @@ To check if any error occurred, run ::
 
     grep -B 5 -E '(ERROR|FAILED)' /var/log/messages
 
+Installed modules check
+=======================
+
+In :guilabel:`Software center`, check if the previously installed modules  are
+still marked as installed on the upgraded system. Each module is composed by
+some packages: as the module compositions has changed from version 6 to 7, some
+module may appear as not installed. To fix it, try to install it again with the
+:guilabel:`add` button.
+
+
 Let's Encrypt certificate check
 ===============================
 
