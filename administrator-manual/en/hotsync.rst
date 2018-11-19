@@ -4,11 +4,6 @@
 HotSync
 =======
 
-.. warning::
-
-   HotSync should be considered a `beta release <https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta>`_.
-   Please test it on your environment before using in production.
-
 HotSync aims to reduce downtime in case of failure, syncing your |product| with another one, that will be manually activated in case of master server failure.
 
 Normally, when a hardware damage occurs, the time needed to restore service is:
