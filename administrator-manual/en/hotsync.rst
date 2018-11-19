@@ -39,7 +39,7 @@ Installation
 
 .. only:: nsent
 
-    Install nethserver-hotsync on both MASTER and SLAVE. Only MASTER needs to be registered, SLAVE should be a |product| community: it will become an Enterprise automatically, with MASTER license key, when it is put in production with restore procedure
+    Install nethserver-hotsync on both MASTER and SLAVE. Only MASTER needs to be registered, SLAVE can be a |product| community on an unregistered Enterprise: it will become a registered Enterprise automatically, with MASTER license key, when it is put in production with restore procedure
 
     To install the module on MASTER execute from command line: ::
 
