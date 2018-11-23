@@ -276,7 +276,7 @@ The process is much faster than a traditional backup and restore, also it minimi
 Before starting make sure to have:
 
 - a running |product| 6 installation, we will call it original server or source server
-- a running |product| 7 installation with at least the same disk space of the source server, we will call it destination server
+- a running |product| 7 installation with at least the same disk space of the source server, and **latest updates installed**; we will call it destination server
 - a working network connection between the two severs
 
 Please also make sure the source server allows root login via SSH key and password.
