@@ -490,8 +490,8 @@ shared folders, printers (by Samba) and other domain computers.
 
 .. _import-users_section:
 
-Import accounts from plain-text files
-=====================================
+Import and delete accounts from plain-text files
+================================================
 
 Import users
 ------------
@@ -532,3 +532,30 @@ Group management is available from the command line through ``group-create`` and
 
   signal-event group-create group1 user1 user2 user3
   signal-event group-modify group1 user1 user3 user4
+
+Delete users
+------------
+
+It is possible to delete user accounts from a file with the following format: ::
+
+  username
+
+Example: ::
+
+  mario <NEWLINE>
+
+then execute: ::
+
+  /usr/share/doc/nethserver-sssd-<ver>/delete_users <youfilename>
+
+
+.. tip:: You can also use the same import users file to delete the users.
+
+For example, if the user’s file is /root/users.tsv, execute following command: ::
+
+  /usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/delete_users /root/users.tsv
+
+Alternative separator character: ::
+
+  delete_users users.tsv ','
+
