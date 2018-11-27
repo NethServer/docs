@@ -10,13 +10,17 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Adrián Prado Castro <adrian.prado@gmail.com>, 2017
+# Jose G. Jimenez S. <josegjimenez@gmail.com>, 2017
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jose G. Jimenez S. <josegjimenez@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +29,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../chat.rst:12 ../../chat.rst:15
+#: ../../chat.rst:5
 msgid "Chat"
 msgstr "Chat"
 
-#: ../../chat.rst:14 ../../chat.rst:17
+#: ../../chat.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
 ":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
@@ -39,41 +43,49 @@ msgstr ""
 "index:`Jabber`/:index:`XMPP` y soporta TLS en puertos estándar (5222 o "
 "5223)."
 
-#: ../../chat.rst:16 ../../chat.rst:19
+#: ../../chat.rst:9
 msgid "The main features are:"
 msgstr "Las características principales son:"
 
-#: ../../chat.rst:18 ../../chat.rst:21
+#: ../../chat.rst:11
 msgid "Messaging between users of the system"
 msgstr "Messaging between users of the system"
 
-#: ../../chat.rst:19 ../../chat.rst:22
+#: ../../chat.rst:12
 msgid "Chat server administration"
 msgstr "Administración del servidor de Chat"
 
-#: ../../chat.rst:20 ../../chat.rst:23
+#: ../../chat.rst:13
 msgid "Broadcast messages"
 msgstr "Mensajes de difusión"
 
-#: ../../chat.rst:21 ../../chat.rst:24
+#: ../../chat.rst:14
 msgid "Group chat"
 msgstr "Grupo de chat"
 
-#: ../../chat.rst:22 ../../chat.rst:25
+#: ../../chat.rst:15
 msgid "Offline messages"
 msgstr "Mensajes sin conexión"
 
-#: ../../chat.rst:23 ../../chat.rst:26
+#: ../../chat.rst:16
 msgid "Transfer files over LAN"
 msgstr "Transferencia de archivos a través de LAN"
 
-#: ../../chat.rst:25 ../../chat.rst:28
+#: ../../chat.rst:17
+msgid "S2S"
+msgstr ""
+
+#: ../../chat.rst:18
+msgid "Message archiving"
+msgstr ""
+
+#: ../../chat.rst:20
 msgid "All system users can access the chat using their own credentials."
 msgstr ""
 "Todos los usuarios del sistema pueden acceder al chat usando sus propias "
 "credenciales."
 
-#: ../../chat.rst:27 ../../chat.rst:30
+#: ../../chat.rst:22
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -83,33 +95,52 @@ msgstr ""
 "necesita una cuenta AD dedicada para que el módulo esté completamente "
 "operativo. Ver :ref:`join-existing-ad-section`."
 
-#: ../../chat.rst:32 ../../chat.rst:35
+#: ../../chat.rst:27
+msgid "Server to server (S2S)"
+msgstr ""
+
+#: ../../chat.rst:29
+msgid ""
+"The XMPP system is federated by nature. If :index:`S2S` is enabled, users "
+"with accounts on one server can communicate with users on remote servers. "
+"S2S allows for servers communicating seamlessly with each other, forming a "
+"global 'federated' IM network."
+msgstr ""
+
+#: ../../chat.rst:33
+msgid ""
+"For this purpose, the SRV DNS record must be configured for your domain "
+"(https://wiki.xmpp.org/web/SRV_Records#XMPP_SRV_records) and the server must"
+" have a valid SSL/TLS certificate."
+msgstr ""
+
+#: ../../chat.rst:37
 msgid "Client"
 msgstr "Cliente"
 
-#: ../../chat.rst:34 ../../chat.rst:37
+#: ../../chat.rst:39
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 "Los clientes Jabber están disponibles para todas las plataformas de "
 "escritorio y móviles."
 
-#: ../../chat.rst:36 ../../chat.rst:39
+#: ../../chat.rst:41
 msgid "Some widespread clients:"
 msgstr "Algunos clientes comunes:"
 
-#: ../../chat.rst:38 ../../chat.rst:41
+#: ../../chat.rst:43
 msgid "Pidgin is available for Windows and Linux"
 msgstr "Pidgin está disponible para Windows y Linux"
 
-#: ../../chat.rst:39 ../../chat.rst:42
+#: ../../chat.rst:44
 msgid "Adium for Mac OS X"
 msgstr "Adium para Mac OS X"
 
-#: ../../chat.rst:40 ../../chat.rst:43
+#: ../../chat.rst:45
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr "BeejibelIM para Android e iOS, Xabber sólo para Android"
 
-#: ../../chat.rst:42 ../../chat.rst:45
+#: ../../chat.rst:47
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
@@ -117,7 +148,7 @@ msgstr ""
 "Cuando configure el cliente, asegúrese de que TLS (o SSL) esté habilitado. "
 "Introduzca el nombre de usuario y el dominio de la máquina."
 
-#: ../../chat.rst:45 ../../chat.rst:48
+#: ../../chat.rst:50
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
@@ -128,11 +159,20 @@ msgstr ""
 "especiales preconfigurados. De lo contrario, especifique la dirección del "
 "servidor en las opciones avanzadas."
 
-#: ../../chat.rst:49 ../../chat.rst:52
+#: ../../chat.rst:53
+msgid ""
+"With TLS capabilities, strictly configured servers or clients could reject "
+"connections with your Ejabberd server if the SSL/TLS certificate doesn't "
+"match the domain name. Also, the certificate should contain two sub-domains "
+"``pubsub.*`` and ``conference.*``. This certificate can be obtained for free"
+" with Let's Encrypt (see :ref:`server_certificate-section`)."
+msgstr ""
+
+#: ../../chat.rst:60
 msgid "Administrators"
 msgstr "Administradores"
 
-#: ../../chat.rst:51 ../../chat.rst:54
+#: ../../chat.rst:62
 msgid ""
 "All users within the group ``jabberadmins`` are considered administrators of"
 " the chat server."
@@ -140,21 +180,46 @@ msgstr ""
 "Todos los usuarios dentro del grupo ``jabberadmins`` son considerados "
 "administradores del servidor de chat."
 
-#: ../../chat.rst:53 ../../chat.rst:56
+#: ../../chat.rst:64
 msgid "Administrators can:"
 msgstr "Los administradores pueden:"
 
-#: ../../chat.rst:55 ../../chat.rst:58
+#: ../../chat.rst:66
 msgid "Send broadcast messages"
 msgstr "Enviar mensajes de difusión"
 
-#: ../../chat.rst:56 ../../chat.rst:59
+#: ../../chat.rst:67
 msgid "Check the status of connected users"
 msgstr "Compruebe el estatus de los usuarios conectados"
 
-#: ../../chat.rst:59 ../../chat.rst:62
+#: ../../chat.rst:70
 msgid ""
 "The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
 msgstr ""
 "El grupo ``jabberadmins`` es configurable desde la página :ref:`groups-"
 "section`."
+
+#: ../../chat.rst:73
+msgid "Message Archive Management"
+msgstr ""
+
+#: ../../chat.rst:75
+msgid ""
+"Message Archive Management (mod_mam) implements Message Archive Management "
+"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
+" enabled, all messages will be stored inside the server and compatible XMPP "
+"clients can use it to store their chat history on the server."
+msgstr ""
+
+#: ../../chat.rst:78
+msgid ""
+"The database can store a maximum of 2GB of messages, archived messages can "
+"be purged automatically. To configure message retention policy, set "
+":guilabel:`Clean messages older than X days` option."
+msgstr ""
+
+#: ../../chat.rst:83
+msgid ""
+"If enabled, this module will store every message sent between users. This "
+"behavior will affect the privacy of your users."
+msgstr ""

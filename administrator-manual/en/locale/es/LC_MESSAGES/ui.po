@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 12:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2018-01-10 14:21+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -214,6 +214,93 @@ msgstr ""
 
 #: ../../ui/ProxyPass.rst:48
 msgid "Removes the selected entry."
+msgstr ""
+
+#: ../../ui/SOGo.rst:5
+msgid "SOGo Groupware"
+msgstr ""
+
+#: ../../ui/SOGo.rst:7
+msgid "See also :ref:`SOGo-section`."
+msgstr ""
+
+#: ../../ui/SOGo.rst:12
+msgid "Enable CalDAV and CardDAV"
+msgstr ""
+
+#: ../../ui/SOGo.rst:11
+msgid ""
+"CalDAV allow users to access and share calendar data on a server. CardDAV "
+"allows users to access and share contact data on a server."
+msgstr ""
+
+#: ../../ui/SOGo.rst:15
+msgid "Enable Microsoft ActiveSync"
+msgstr ""
+
+#: ../../ui/SOGo.rst:15
+msgid ""
+"ActiveSync is a mobile data (email, calendar, task, contact) synchronization"
+" app developed by Microsoft."
+msgstr ""
+
+#: ../../ui/SOGo.rst:18
+msgid "Allow Users to add other IMAP accounts"
+msgstr ""
+
+#: ../../ui/SOGo.rst:18
+msgid ""
+"Allow users to add other IMAP accounts that will be visible from the SOGo "
+"Webmail interface."
+msgstr ""
+
+#: ../../ui/SOGo.rst:21
+msgid "Administrators"
+msgstr ""
+
+#: ../../ui/SOGo.rst:21
+msgid "List of users with administrative privileges over all the user datas."
+msgstr ""
+
+#: ../../ui/SOGo.rst:24
+msgid "Notifications"
+msgstr ""
+
+#: ../../ui/SOGo.rst:24
+msgid ""
+"Several different types of notifications(email-based) are available. "
+"Activate them according your needs."
+msgstr ""
+
+#: ../../ui/SOGo.rst:28
+msgid "Make SOGO reachable only from this domain(FQDN)"
+msgstr ""
+
+#: ../../ui/SOGo.rst:27
+msgid ""
+"SOGo is per default accessible from all server's virtualhosts, If you "
+"specify a domain name here, SOGo will be usable only from this domaine name."
+msgstr ""
+
+#: ../../ui/SOGo.rst:32
+msgid "Number of workers"
+msgstr ""
+
+#: ../../ui/SOGo.rst:31
+msgid ""
+"This is the amount of instances of SOGo that will be spawned to handle "
+"multiple requests simultaneously. You should have at least one worker per "
+"activesync device connected."
+msgstr ""
+
+#: ../../ui/SOGo.rst:35
+msgid "Maximum time in second"
+msgstr ""
+
+#: ../../ui/SOGo.rst:35
+msgid ""
+"Parameter used to set the maximum amount of time, in seconds, SOGo will wait"
+" before doing an internal check for data changes (add, delete, and update)."
 msgstr ""
 
 #: ../../ui/TlsPolicy.rst:5

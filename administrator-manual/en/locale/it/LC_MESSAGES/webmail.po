@@ -10,13 +10,18 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Davide Borficchia <dado.borfi@hotmail.it>, 2017
+# Filippo Carletti <filippo.carletti@gmail.com>, 2017
+# Nicola <nicola.rauso@nethesis.it>, 2017
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +30,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../webmail.rst:10 ../../webmail.rst:13
+#: ../../webmail.rst:3
 msgid "Webmail"
 msgstr "Webmail"
 
-#: ../../webmail.rst:12 ../../webmail.rst:15
+#: ../../webmail.rst:5
 msgid ""
 "The default :index:`webmail` client is :index:`Roundcube`. Roundcube's main "
 "features are:"
@@ -37,40 +42,39 @@ msgstr ""
 ":index:`Roundcube` è il client :index:`webmail` predefinito. Le "
 "caratteristiche principali di Roundcube sono:"
 
-#: ../../webmail.rst:15 ../../webmail.rst:18
+#: ../../webmail.rst:8
 msgid "Simple and fast"
 msgstr "Semplice e veloce"
 
-#: ../../webmail.rst:16 ../../webmail.rst:19
+#: ../../webmail.rst:9
 msgid "Built-in address book integrated with internal LDAP"
 msgstr "Rubrica integrata con LDAP"
 
-#: ../../webmail.rst:17 ../../webmail.rst:20
+#: ../../webmail.rst:10
 msgid "Support for HTML messages"
 msgstr "Supporto per messaggi HTML"
 
-#: ../../webmail.rst:18 ../../webmail.rst:21
+#: ../../webmail.rst:11
 msgid "Shared folders support"
 msgstr "Cartelle condivise"
 
-#: ../../webmail.rst:19 ../../webmail.rst:38 ../../webmail.rst:22
-#: ../../webmail.rst:41
+#: ../../webmail.rst:12 ../../webmail.rst:31
 msgid "Plugins"
 msgstr "Plugins"
 
-#: ../../webmail.rst:21 ../../webmail.rst:24
+#: ../../webmail.rst:14
 msgid "The webmail is available at the following URLs:"
 msgstr "La webmail è raggiungibile ai seguenti indirizzi:"
 
-#: ../../webmail.rst:23 ../../webmail.rst:26
+#: ../../webmail.rst:16
 msgid "http://_server_/webmail"
 msgstr "http://_server_/webmail"
 
-#: ../../webmail.rst:24 ../../webmail.rst:27
+#: ../../webmail.rst:17
 msgid "http://_server_/roundcubemail"
 msgstr "http://_server_/roundcubemail"
 
-#: ../../webmail.rst:26 ../../webmail.rst:29
+#: ../../webmail.rst:19
 msgid ""
 "For example, given a server with IP address *192.168.1.1* and name "
 "*mail.mydomain.com*, valid addresses are:"
@@ -78,23 +82,23 @@ msgstr ""
 "Per esempio, dato un server con indirizzo IP *192.168.1.1* e nome "
 "*mail.miodominio.com*, gli indirizzi validi sono:"
 
-#: ../../webmail.rst:28 ../../webmail.rst:31
+#: ../../webmail.rst:21
 msgid "http://192.168.1.1/webmail"
 msgstr "http://192.168.1.1/webmail"
 
-#: ../../webmail.rst:29 ../../webmail.rst:32
+#: ../../webmail.rst:22
 msgid "http://192.168.1.1/roundcubemail"
 msgstr "http://192.168.1.1/roundcubemail"
 
-#: ../../webmail.rst:30 ../../webmail.rst:33
+#: ../../webmail.rst:23
 msgid "http://mail.mydomain.com/webmail"
 msgstr "http://mail.mydomain.com/webmail"
 
-#: ../../webmail.rst:31 ../../webmail.rst:34
+#: ../../webmail.rst:24
 msgid "http://mail.mydomain.com/roundcubemail"
 msgstr "http://mail.mydomain.com/roundcubemail"
 
-#: ../../webmail.rst:33 ../../webmail.rst:36
+#: ../../webmail.rst:26
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -105,44 +109,44 @@ msgstr ""
 "pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../webmail.rst:40 ../../webmail.rst:43
+#: ../../webmail.rst:33
 msgid ""
 "Roundcube supports many plugins that are already bundled within the "
 "installation."
 msgstr "Roundcube supporta molti plugin già inclusi nell’installazione."
 
-#: ../../webmail.rst:42 ../../webmail.rst:45
+#: ../../webmail.rst:35
 msgid "The plugins that are enabled by default are:"
 msgstr "I plugin abilitati di default sono:"
 
-#: ../../webmail.rst:44 ../../webmail.rst:47
+#: ../../webmail.rst:37
 msgid "Manage sieve: manage filters for incoming mail"
 msgstr "Manage sieve: gestione dei filtri sulla posta in arrivo"
 
-#: ../../webmail.rst:45 ../../webmail.rst:48
+#: ../../webmail.rst:38
 msgid ""
 "Mark as junk: mark the selected messages as Junk and move them to the "
 "configured Junk folder"
 msgstr ""
 "Mark as junk: marca i messaggi come spam e li sposta nell’apposita cartella"
 
-#: ../../webmail.rst:47 ../../webmail.rst:50
+#: ../../webmail.rst:40
 msgid "Recommended plugins:"
 msgstr "Altri plugin consigliati:"
 
-#: ../../webmail.rst:49 ../../webmail.rst:52
+#: ../../webmail.rst:42
 msgid "New mail notifier"
 msgstr "Notifica nuova mail"
 
-#: ../../webmail.rst:50 ../../webmail.rst:53
+#: ../../webmail.rst:43
 msgid "Emoticons"
 msgstr "Emoticon"
 
-#: ../../webmail.rst:51 ../../webmail.rst:54
+#: ../../webmail.rst:44
 msgid "VCard support"
 msgstr "Supporto VCard"
 
-#: ../../webmail.rst:54 ../../webmail.rst:57
+#: ../../webmail.rst:47
 msgid ""
 "Plugins can be added or removed by editing the comma-separated list inside "
 "the ``Plugins`` property. For example, to enable \"mail notification\", "
@@ -153,7 +157,7 @@ msgstr ""
 " i plugin “mail notification”, “mark as junk” e “manage sieve plugins” con "
 "il seguente comando: ::"
 
-#: ../../webmail.rst:60 ../../webmail.rst:63
+#: ../../webmail.rst:53
 msgid ""
 "A list of bundled plugins can be found inside "
 "``/usr/share/roundcubemail/plugins`` directory. To get the list, just "
@@ -162,11 +166,11 @@ msgstr ""
 "Una lista dei plugin inclusi può essere trovata nella directory file:  "
 "``/usr/share/roundcubemail/plugins``. Per recuperare la lista, eseguire: ::"
 
-#: ../../webmail.rst:66 ../../webmail.rst:69
+#: ../../webmail.rst:59
 msgid "Access"
 msgstr "Accesso"
 
-#: ../../webmail.rst:68 ../../webmail.rst:71
+#: ../../webmail.rst:61
 msgid ""
 "With default configuration webmail is accessible using HTTPS from any "
 "network."
@@ -174,7 +178,7 @@ msgstr ""
 "La configurazione di default prevede l’accesso HTTPS alla webmail da tutte "
 "le reti."
 
-#: ../../webmail.rst:70 ../../webmail.rst:73
+#: ../../webmail.rst:63
 msgid ""
 "If you want to restrict the access only from green and trusted networks, "
 "execute: ::"
@@ -182,15 +186,15 @@ msgstr ""
 "Se si desidera restringere l’accesso solo alla reti green e alle reti "
 "fidate, eseguire: ::"
 
-#: ../../webmail.rst:75 ../../webmail.rst:78
+#: ../../webmail.rst:68
 msgid "If you want to open the access from any network: ::"
 msgstr "Se si desidera aprire l’accesso da tutte le reti: ::"
 
-#: ../../webmail.rst:81 ../../webmail.rst:84
+#: ../../webmail.rst:74
 msgid "Removing"
 msgstr "Rimozione"
 
-#: ../../webmail.rst:83 ../../webmail.rst:86
+#: ../../webmail.rst:76
 msgid ""
 "If you want remove Roundcube, run the following command on the server "
 "command line. ::"

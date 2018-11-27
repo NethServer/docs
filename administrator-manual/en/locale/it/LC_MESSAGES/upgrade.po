@@ -10,14 +10,18 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Davide Principi <davide.principi@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 14:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"PO-Revision-Date: 2017-03-21 10:46+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -372,7 +376,7 @@ msgid ""
 msgstr ""
 "La configurazione dei servizi di |product| |version| può aderire a diverse "
 ":ref:`tlspolicy-section`. Prima dell'aggiornamento, è necessario verificare "
-"la compatibilità dei client di rete le caratteristiche delle policy "
+"la compatibilità dei client di rete con le caratteristiche delle policy "
 "disponibili."
 
 #: ../../upgrade.rst:173
@@ -380,8 +384,8 @@ msgid ""
 "An old network client can fail to connect if its TLS ciphers are considered "
 "invalid"
 msgstr ""
-"Un client di rete datato potrebbe non riesce a connettersi se i cifrari TLS "
-"da esso supportati sono considerati non validi"
+"Un client di rete datato potrebbe fallire la connessione se i cifrari TLS da"
+" esso supportati sono considerati non validi"
 
 #: ../../upgrade.rst:176
 msgid ""

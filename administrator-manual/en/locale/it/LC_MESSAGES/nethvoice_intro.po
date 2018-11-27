@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Francesco Pari, 2017
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 15:13+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Francesco Pari, 2017\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +21,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../nethvoice_intro.rst:18
+#: ../../nethvoice_intro.rst:8
 msgid "NethVoice"
 msgstr "NethVoice"
 
-#: ../../nethvoice_intro.rst:20
+#: ../../nethvoice_intro.rst:10
 msgid ""
 "NethVoice is an open and integrated solution for communication and "
 "collaboration services, capable of providing integration between data, voice"
@@ -32,7 +35,7 @@ msgstr ""
 "sistema informativo aziendale, in grado di fornire tutti i servizi di "
 "comunicazione e collaborazione: dati, voce e video."
 
-#: ../../nethvoice_intro.rst:24
+#: ../../nethvoice_intro.rst:14
 msgid ""
 "Full manuale available at `nethvoice.docs.nethesis.it "
 "<http://nethvoice.docs.nethesis.it/>`_."

@@ -10,14 +10,17 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Adrián Prado Castro <adrian.prado@gmail.com>, 2017
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2017-02-06 15:30+0000\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +28,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../third_party.rst:10 ../../third_party.rst:13
+#: ../../third_party.rst:3
 msgid "Third-party software"
 msgstr "Software de terceros"
 
-#: ../../third_party.rst:12 ../../third_party.rst:15
+#: ../../third_party.rst:5
 msgid ""
 "You can install any CentOS/RHEL certified :index:`third-party software` on "
 "|product|."
@@ -37,7 +40,7 @@ msgstr ""
 "Puede instalar cualquier certificado CentOS/RHEL :index:`software de "
 "terceros` en |product|."
 
-#: ../../third_party.rst:14 ../../third_party.rst:17
+#: ../../third_party.rst:7
 msgid ""
 "If the software is 32-bit only, you should install compatibility libraries "
 "before installing the software. Relevant libraries should be:"
@@ -46,31 +49,31 @@ msgstr ""
 "compatibilidad antes de instalar el software. Las bibliotecas relevantes "
 "deben ser:"
 
-#: ../../third_party.rst:17 ../../third_party.rst:20
+#: ../../third_party.rst:10
 msgid "glibc"
 msgstr "glibc"
 
-#: ../../third_party.rst:18 ../../third_party.rst:21
+#: ../../third_party.rst:11
 msgid "glib"
 msgstr "glib"
 
-#: ../../third_party.rst:19 ../../third_party.rst:22
+#: ../../third_party.rst:12
 msgid "libstdc++"
 msgstr "libstdc++"
 
-#: ../../third_party.rst:20 ../../third_party.rst:23
+#: ../../third_party.rst:13
 msgid "zlib"
 msgstr "zlib"
 
-#: ../../third_party.rst:22 ../../third_party.rst:25
+#: ../../third_party.rst:15
 msgid "For example, to install the above mentioned packages: ::"
 msgstr "Por ejemplo, para instalar los paquetes mencionados anteriormente: ::"
 
-#: ../../third_party.rst:27 ../../third_party.rst:30
+#: ../../third_party.rst:20
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../third_party.rst:29 ../../third_party.rst:32
+#: ../../third_party.rst:22
 msgid ""
 "If the software is an RPM package, please use :command:`yum` to install it: "
 "the system will take care to resolve all needed dependencies."
@@ -78,7 +81,7 @@ msgstr ""
 "Si el software es un paquete RPM, utilice :command:`yum` para instalarlo: el"
 " sistema se encargará de resolver todas las dependencias necesarias."
 
-#: ../../third_party.rst:32 ../../third_party.rst:35
+#: ../../third_party.rst:25
 msgid ""
 "In case a yum installation is not possible, the best target directory for "
 "additional software is under :file:`/opt`. For example, given a software "
@@ -88,11 +91,11 @@ msgstr ""
 " destino para software adicional está en :file:`/opt`. Por ejemplo, dado un "
 "software llamado *mysoftware*, instálelo en :file:`/opt/mysoftware`."
 
-#: ../../third_party.rst:36 ../../third_party.rst:39
+#: ../../third_party.rst:29
 msgid "Backup"
 msgstr "Copia de seguridad"
 
-#: ../../third_party.rst:38 ../../third_party.rst:41
+#: ../../third_party.rst:31
 msgid ""
 "Directory containing relevant data should be included inside the backup by "
 "adding a line to :file:`/etc/backup-data.d/custom.include`. See :ref"
@@ -102,11 +105,11 @@ msgstr ""
 "copia de seguridad añadiendo una línea a :file:`/etc/backup-"
 "data.d/custom.include`. Véase :ref:`backup_customization-section`."
 
-#: ../../third_party.rst:42 ../../third_party.rst:45
+#: ../../third_party.rst:35
 msgid "Firewall"
 msgstr "Firewall"
 
-#: ../../third_party.rst:44 ../../third_party.rst:47
+#: ../../third_party.rst:37
 msgid ""
 "If the software needs some open ports on the firewall, create a new service "
 "named ``fw_<softwarename>``."
@@ -114,7 +117,7 @@ msgstr ""
 "Si el software necesita algunos puertos abiertos en el firewall, cree un "
 "nuevo servicio llamado ``fw_<softwarename>``."
 
-#: ../../third_party.rst:46 ../../third_party.rst:49
+#: ../../third_party.rst:39
 msgid ""
 "For example, given the software *mysoftware* which needs ports 3344 and 5566"
 " on LAN, use the following commands: ::"
@@ -122,15 +125,15 @@ msgstr ""
 "Por ejemplo, dado el software *mysoftware* que necesita los puertos 3344 y "
 "5566 en LAN, utilice los siguientes comandos: ::"
 
-#: ../../third_party.rst:53 ../../third_party.rst:56
+#: ../../third_party.rst:46
 msgid "Starting and stopping"
 msgstr "Inicio y detención"
 
-#: ../../third_party.rst:55 ../../third_party.rst:58
+#: ../../third_party.rst:48
 msgid "|product| uses the standard systemd multiuser target."
 msgstr "|product| utiliza el destino multiusuario estándar para systemd."
 
-#: ../../third_party.rst:57 ../../third_party.rst:60
+#: ../../third_party.rst:50
 msgid ""
 "Software installed with yum should already be configured to start at boot. "
 "To check the configuration, execute the :command:`systemctl` command. The "
@@ -141,10 +144,10 @@ msgstr ""
 ":command:`systemctl`. Este mostrará una lista de servicios con su propio "
 "estado."
 
-#: ../../third_party.rst:61 ../../third_party.rst:64
+#: ../../third_party.rst:54
 msgid "To enable a service on boot: ::"
 msgstr "Para habilitar un servicio en boot: ::"
 
-#: ../../third_party.rst:65 ../../third_party.rst:68
+#: ../../third_party.rst:58
 msgid "To disable a service on boot: ::"
 msgstr "Para deshabilitar un servicio en boot: ::"

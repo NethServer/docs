@@ -10,14 +10,17 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Adrián Prado Castro <adrian.prado@gmail.com>, 2017
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 16:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Adrián Prado <adrian.prado@gmail.com>, 2017\n"
+"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"PO-Revision-Date: 2017-02-06 15:30+0000\n"
+"Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +28,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../license.rst:10 ../../license.rst:13
+#: ../../license.rst:3
 msgid "Documentation license"
 msgstr "Documentación de la licencia"
 
-#: ../../license.rst:12 ../../license.rst:15
+#: ../../license.rst:5
 msgid ""
 "This documentation is distributed under the terms of **Creative Commons - "
 "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** "
@@ -39,21 +42,21 @@ msgstr ""
 " Commons - Attribution-NonCommercial-ShareAlike 4.0 Internacional (CC BY-NC-"
 "SA 4.0)**."
 
-#: ../../license.rst:20 ../../license.rst:23
+#: ../../license.rst:13
 msgid "You are free to:"
 msgstr "Usted es libre de:"
 
-#: ../../license.rst:22 ../../license.rst:25
+#: ../../license.rst:15
 msgid "**Share** — copy and redistribute the material in any medium or format"
 msgstr ""
 "**Compartir** - copiar y redistribuir el material en cualquier medio o "
 "formato"
 
-#: ../../license.rst:23 ../../license.rst:26
+#: ../../license.rst:16
 msgid "**Adapt** — remix, transform, and build upon the material"
 msgstr "**Adaptar** - combinar, transformar y construir sobre el material"
 
-#: ../../license.rst:25 ../../license.rst:28
+#: ../../license.rst:18
 msgid ""
 "The licensor cannot revoke these freedoms as long as you follow the license "
 "terms."
@@ -61,11 +64,11 @@ msgstr ""
 "El licenciante no puede revocar estas libertades siempre y cuando siga los "
 "términos de la licencia."
 
-#: ../../license.rst:27 ../../license.rst:30
+#: ../../license.rst:20
 msgid "Under the following terms:"
 msgstr "Bajo los siguientes términos:"
 
-#: ../../license.rst:29 ../../license.rst:32
+#: ../../license.rst:22
 msgid ""
 "**Attribution** — You must give appropriate credit, provide a link to the "
 "license, and indicate if changes were made. You may do so in any reasonable "
@@ -77,13 +80,13 @@ msgstr ""
 "manera razonable, pero no de ninguna manera que sugiera que el licenciante "
 "lo respalda o su uso."
 
-#: ../../license.rst:31 ../../license.rst:34
+#: ../../license.rst:24
 msgid ""
 "**NonCommercial** — You may not use the material for commercial purposes."
 msgstr ""
 "**No comercial** - No puede utilizar el material con fines comerciales."
 
-#: ../../license.rst:32 ../../license.rst:35
+#: ../../license.rst:25
 msgid ""
 "**ShareAlike** — If you remix, transform, or build upon the material, you "
 "must distribute your contributions under the same license as the original."
@@ -91,7 +94,7 @@ msgstr ""
 "**Compartir igual** - Si combinas, transformas o construyes el material, "
 "debes distribuir tus contribuciones bajo la misma licencia que el original."
 
-#: ../../license.rst:34 ../../license.rst:37
+#: ../../license.rst:27
 msgid ""
 "*No additional restrictions* — You may not apply legal terms or "
 "technological measures that legally restrict others from doing anything the "
@@ -101,7 +104,7 @@ msgstr ""
 "medidas tecnológicas que restrinjan legalmente a otros de hacer cualquier "
 "cosa que la licencia permita."
 
-#: ../../license.rst:36 ../../license.rst:39
+#: ../../license.rst:29
 msgid ""
 "This is a human-readable summary of (and not a substitute for) the full "
 "license available at: http://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -109,7 +112,7 @@ msgstr ""
 "Este es un resumen legible (y no un sustituto) de la licencia completa "
 "disponible en: http://creativecommons.org/licenses/by-nc-sa/4.0/"
 
-#: ../../license.rst:39 ../../license.rst:42
+#: ../../license.rst:32
 msgid ""
 "Architecture documentation is from SME Server project and is licensed under "
 "GNU Free Documentation License 1.3 (http://www.gnu.org/copyleft/fdl.html). "
