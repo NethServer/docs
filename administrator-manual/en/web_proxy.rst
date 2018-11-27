@@ -167,3 +167,15 @@ Eg. Access extra ports 446 and 1234: ::
   config setprop squid SafePorts 446,1234
   signal-event nethserver-squid-save
 
+
+Logs
+====
+
+The default logrotate configuration for Squid preserves compressed logs for 5 weeks, such configuration prevent Squid from fill the disk space.
+Web proxy logs are big because they contain a lot of informations: around 350MB each week for a small office with 20/30 people. Also if logs are added to the backup, the size of the backup itself will increase very fast.
+
+.. note:: The default logorate configuration is the best choice to avoid possible service disruptions on existing machines.
+
+In environments where logs need to be preserved for more than 5 weeks, you could manually edit the logrotate configuration :file:`/etc/logrotate.d/squid`. Finally, remember to add :file:`/etc/logrotate.d/squid` to the configuration backup using the custom include. ::
+
+  echo '/etc/logrotate.d/squid' >> /etc/backup-config.d/custom.include
