@@ -19,7 +19,7 @@ try:
 except ImportError:
     pass
 
-copyright = u'2017, Nethesis Srl'
+copyright = u'2018, Nethesis Srl and the NethServer project contributors'
 
 if 'READTHEDOCS_PROJECT' in os.environ and 'cockpit' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('cockpit')
