@@ -538,7 +538,10 @@ Delete users
 
 It is possible to delete user accounts from a file with the following format: ::
 
-  username
+  user1
+  user2
+  ...
+  userN
 
 Example: ::
 
@@ -546,7 +549,7 @@ Example: ::
 
 then execute: ::
 
-  /usr/share/doc/nethserver-sssd-<ver>/delete_users <youfilename>
+  /usr/share/doc/nethserver-sssd-<ver>/scripts/delete_users <youfilename>
 
 
 .. tip:: You can also use the same import users file to delete the users.
