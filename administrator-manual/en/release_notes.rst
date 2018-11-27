@@ -41,7 +41,7 @@ Major changes on 2018-XX-YY
 
 * Default :ref:`tlspolicy-section` is ``2018-10-01``
 
-* Added support to TLS certificates based on Elliptic-curve Cryptography (ECC)
+* Added support for TLS certificates based on Elliptic-curve Cryptography (ECC)
 
 * Default systems log retention has been increased to 52 weeks
 
@@ -50,7 +50,7 @@ Major changes on 2018-XX-YY
 
 * The Zeroconf network protocol is now disabled by default
 
-* By default Evebox events are retained up to to 30 days. The new default is 
+* By default, Evebox events are retained for 30 days. The new default is 
   applied to upgraded systems as a bug fix
 
 
