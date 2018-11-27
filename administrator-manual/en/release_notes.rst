@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "final" - 2018-06-11
+    - ISO release 7.6.1810 "final" - 2018-XX-YY
 
-    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -27,11 +27,31 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.5.1804
+    - ISO release 7.6.1810
 
-    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+
+Major changes on 2018-XX-YY
+---------------------------
+
+* ISO release 7.6.1810 "final" replaces any previous ISO 7.5.1804
+
+* Default :ref:`tlspolicy-section` is ``2018-10-01``
+
+* Added support to TLS certificates based on Elliptic-curve Cryptography (ECC)
+
+* Default systems log retention has been increased to 52 weeks
+
+* The new Server Manager implementation based on Cockpit was released as *alpha*
+  and is available from the Software Center package
+
+* The Zeroconf network protocol is now disabled by default
+
+* By default Evebox events are retained up to to 30 days. The new default is 
+  applied to upgraded systems as a bug fix
 
 
 Major changes on 2018-06-11
