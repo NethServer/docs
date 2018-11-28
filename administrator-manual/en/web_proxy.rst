@@ -171,10 +171,8 @@ Eg. Access extra ports 446 and 1234: ::
 Logs
 ====
 
-The default logrotate configuration for Squid preserves compressed logs for 5 weeks, such configuration prevent Squid from fill the disk space.
-Web proxy logs are big because they contain a lot of informations: around 350MB each week for a small office with 20/30 people. Also if logs are added to the backup, the size of the backup itself will increase very fast.
-
-.. note:: The default logorate configuration is the best choice to avoid possible service disruptions on existing machines.
+Squid logs are kept for 4 weeks in compressed format, to control disk space usage.
+Web proxy logs are verbose to help troubleshoot problems. Web browsing activities are logged in aggregate and readable format by Lightsquid.
 
 In environments where logs need to be preserved for more than 5 weeks, you could manually edit the logrotate configuration :file:`/etc/logrotate.d/squid`. Finally, remember to add :file:`/etc/logrotate.d/squid` to the configuration backup using the custom include. ::
 
