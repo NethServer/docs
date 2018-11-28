@@ -146,6 +146,8 @@ Upgrade tool expects some additional parameters to be issued:
 
 * The AD :guilabel:`DNS domain name`
 
+* The :guilabel:`NetBIOS domain name` (read only)
+
 * A green bridge interface
 
 * The :guilabel:`Domain Controller IP address`: an additional, free IP address
