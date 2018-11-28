@@ -167,3 +167,13 @@ Eg. Access extra ports 446 and 1234: ::
   config setprop squid SafePorts 446,1234
   signal-event nethserver-squid-save
 
+
+Logs
+====
+
+Squid logs are kept for 5 weeks in compressed format, to control disk space usage.
+Web proxy logs are verbose to help troubleshoot problems. Web browsing activities are logged in aggregate and readable format by Lightsquid.
+
+In environments where logs need to be preserved for more than 5 weeks, you could manually edit the logrotate configuration :file:`/etc/logrotate.d/squid`. Finally, remember to add :file:`/etc/logrotate.d/squid` to the configuration backup using the custom include. ::
+
+  echo '/etc/logrotate.d/squid' >> /etc/backup-config.d/custom.include
