@@ -86,7 +86,7 @@ In this last step a fault can be recovered safely through the system console. At
 the end of the post-upgrade step SSH, Server Manager and the other services are
 available again.
 
-Any daily, weekly and monthly scheduled cron-job will be started again within
+Any daily, weekly and monthly scheduled cron job will be started again within
 one hour since the system boot ends.
 
 .. _post-upgrade-checks:
