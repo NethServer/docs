@@ -78,8 +78,7 @@ Available actions are:
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
 * :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
-* :dfn:`Hi-Prio`: mark the traffic as high priority. See :ref:`traffic-shaping-section`.
-* :dfn:`Low-Prio`: mark the traffic as low priority. See :ref:`traffic-shaping-section`.
+* :dfn:`Priority`: mark the traffic as high/low priority. See :ref:`traffic-shaping-section`.
 
 .. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
 
@@ -104,15 +103,35 @@ Deep Packet Inspection (DPI)
 
 The Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
 
-When the DPI module is active, new items for the :guilabel:`Service`
+When the :index:`DPI` module is active, new items for the :guilabel:`Service`
 field are available in the :guilabel:`Edit rule` form. Those items are
 labeled *DPI protocol*, among the usual *network service* and *service object*
 items.
 
-The complete list of available DPI protocols can be obtained from the Dashboard or with the following
-command: ::
+The DPI module uses the `nDPI library <https://www.ntop.org/products/deep-packet-inspection/ndpi/>`_
+which can identify around 250 types of network traffic divided in network protocols
+(eg. OpenVPN, DNS) and web applications (eg. Netflix, Spotify).
 
-    db NethServer::Database::Ndpi keys
+Firewall rules using DPI services are generated inside the mangle table, for this reason
+such rules have some limitations:
+
+- `reject` action is not supported, use `drop` instead
+- `any` and `firewall` can't be used as source nor destination
+- `route to provide X` action is not supported: the identification of the traffic
+  often begins after the connection has been already established, so routing decision can't be changed
+
+Even if DPI can identify traffic to/from specific sites like Facebook,
+it is better suited to block or shape protocols like VPN, FTP, etc.
+Site access should be regulated using :ref:`proxy-section`.
+
+Note that some DPI protocols (like Amazon) can match large `CDNs <https://it.wikipedia.org/wiki/Content_Delivery_Network>`_,
+so please do not block such protocols using DPI rules unless you want to prevent access to thousands of sites.
+
+DPI markers are automatically applied also to the traffic
+which is generated from the firewall itself, like HTTP traffic from the web proxy.
+
+The complete list of DPI protocols, along with counters for matched traffic, is available inside the :guilabel:`DPI` page
+under the :menuselection:`Status` category on the left menu.
 
 .. [#DPI] Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection
 
@@ -309,7 +328,7 @@ Classes
 Traffic shaping is achieved by controlling how bandwidth is allocated to classes.
 
 Each class can have a reserved rate. A reserved rate is the bandwidth a class will get only when it needs it.
-The spare bandwidth is the sum of not commited bandwidth, plus the committed bandwidth of a class but 
+The spare bandwidth is the sum of not committed bandwidth, plus the committed bandwidth of a class but 
 not currently used by the class itself.
 
 Each class can have also a maximum rate. If set, the class can exceed its committed rate, up to the maximum rate.
