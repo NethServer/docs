@@ -101,7 +101,7 @@ When a rule matches the ongoing traffic, it's possible to register the event on 
 Deep Packet Inspection (DPI)
 ----------------------------
 
-The Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
+Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
 
 When the :index:`DPI` module is active, new items for the :guilabel:`Service`
 field are available in the :guilabel:`Edit rule` form. Those items are
@@ -109,26 +109,26 @@ labeled *DPI protocol*, among the usual *network service* and *service object*
 items.
 
 The DPI module uses the `nDPI library <https://www.ntop.org/products/deep-packet-inspection/ndpi/>`_
-which can identify around 250 types of network traffic divided in network protocols
+which can identify around 250 types of network traffic split in network protocols
 (eg. OpenVPN, DNS) and web applications (eg. Netflix, Spotify).
 
 Firewall rules using DPI services are generated inside the mangle table, for this reason
 such rules have some limitations:
 
-- `reject` action is not supported, use `drop` instead
-- `any` and `firewall` can't be used as source nor destination
-- `route to provide X` action is not supported: the identification of the traffic
+- `reject` action is not supported, use `drop` to block traffic
+- `any` and `firewall` can't be used as source or destination
+- `route to provider X` action is not supported: the identification of the protocol
   often begins after the connection has been already established, so routing decision can't be changed
 
-Even if DPI can identify traffic to/from specific sites like Facebook,
+Even if DPI can identify traffic to/from specific web sites such as Facebook,
 it is better suited to block or shape protocols like VPN, FTP, etc.
-Site access should be regulated using :ref:`proxy-section`.
+Web site access should be regulated using :ref:`proxy-section`.
 
-Note that some DPI protocols (like Amazon) can match large `CDNs <https://it.wikipedia.org/wiki/Content_Delivery_Network>`_,
+Note that some DPI protocols (such as Amazon) can match large `CDNs <https://it.wikipedia.org/wiki/Content_Delivery_Network>`_,
 so please do not block such protocols using DPI rules unless you want to prevent access to thousands of sites.
 
 DPI markers are automatically applied also to the traffic
-which is generated from the firewall itself, like HTTP traffic from the web proxy.
+which originates from the firewall itself, like HTTP traffic from the web proxy.
 
 The complete list of DPI protocols, along with counters for matched traffic, is available inside the :guilabel:`DPI` page
 under the :menuselection:`Status` category on the left menu.
