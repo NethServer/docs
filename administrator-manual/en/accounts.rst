@@ -329,8 +329,9 @@ A user can be added to one or more group from the :guilabel:`Users` page or from
 Sometimes you need to block user access to services without deleting the
 account. The safest approach is:
 
-- changing the user password with a random one
 - lock the user using the :guilabel:`Lock` action
+- (optionally) change the user's password with a random one
+
 
 .. note:: When a user is deleted, the home directory and its own personal mail box will be also deleted.
 
