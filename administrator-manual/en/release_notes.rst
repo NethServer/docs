@@ -37,7 +37,7 @@ Release notes |version|
 Major changes on 2018-XX-YY
 ---------------------------
 
-* ISO release 7.6.1810 "final" replaces any previous ISO 7.5.1804
+* ISO release 7.6.1810 "beta" replaces any previous ISO 7.5.1804
 
 * Default :ref:`tlspolicy-section` is ``2018-10-01``
 
@@ -53,6 +53,18 @@ Major changes on 2018-XX-YY
 * By default, Evebox events are retained for 30 days. The new default is 
   applied to upgraded systems as a bug fix
 
+.. only:: nscom
+
+    * For repositories that support GPG metadata signature, YUM runs now an
+      integrity check (``repo_gpgcheck=1``) for additional security. This new
+      default setting is applied automatically unless a ``.repo`` file was changed
+      locally. In that case an ``.rpmnew`` file is created instead of overwriting
+      the local changes. Rename the ``.rpmnew`` to ``.repo`` to apply the new
+      defaults. This is the list of files to be checked:
+
+        - :file:`/etc/nethserver/yum-update.d/NsReleaseLock.repo`
+        - :file:`/etc/yum.repos.d/NethServer.repo`
+        - :file:`/etc/yum.repos.d/NsReleaseLock.repo`
 
 Major changes on 2018-06-11
 ---------------------------
