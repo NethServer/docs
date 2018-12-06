@@ -218,7 +218,7 @@ Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 .. [#MsMacSpoofing] https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
-Local accounts provider uninstallation
+Local accounts provider uninstall
 --------------------------------------
 
 Both LDAP and AD local accounts provider can be uninstalled from the
@@ -284,7 +284,7 @@ After the prerequisite is fulfilled, proceed to the page
                 Create a **dedicated user account** in AD, and set a complex *non-expiring*
                 password for it.
                 
-Once |product| has successfuly joined AD, specify the **dedicated user account**
+Once |product| has successfully joined AD, specify the **dedicated user account**
 credentials in :guilabel:`Accounts provider > Authentication credentials for LDAP applications`.
 
 .. _bind-remote-ldap-section:
@@ -326,11 +326,13 @@ When creating a user, following fields are mandatory:
 
 A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one.
 
-Sometimes you need to block user's access to services without deleting the
-account. This can be achieved using the :guilabel:`Lock` and :guilabel:`Unlock`
-actions.
+Sometimes you need to block user access to services without deleting the
+account. The safest approach is:
 
-.. note:: When a user is deleted, all user data will be also deleted.
+- changing the user password with a random one
+- lock the user using the :guilabel:`Lock` action
+
+.. note:: When a user is deleted, the home directory and its own personal mail box will be also deleted.
 
 .. index:: password
 
