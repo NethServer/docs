@@ -48,8 +48,8 @@ Major changes on 2018-12-10
 * By default, Evebox events are retained for 30 days. The new default is 
   applied to upgraded systems as a bug fix
   
-* NDPI module has been update to release 2.4 and some protocols have been removed.
-  See :ref:`dpw_ndpi24`
+* NDPI module has been updated to version 2.4 which no longer recognize some old protocols.
+  See :ref:`dpw_ndpi24` for the list of removed protocols
   
 * SMTP server can be directly accessed from trusted networks
 
@@ -233,7 +233,7 @@ The following protocols have been removed:
 * timrecarga
 * timbeta
 
-Rules using one of the above protocol, will be automatically disabled.
+Rules using the above protocols, will be automatically disabled.
 
 Upgrading |product| 6 to |product| |version|
 --------------------------------------------
