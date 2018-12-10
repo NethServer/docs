@@ -41,17 +41,19 @@ Major changes on 2018-12-10
 
 * Default TLS policy is ``2018-10-01``
 
-* Added support for TLS certificates based on Elliptic-curve Cryptography (ECC)
-
 * Default systems log retention has been increased to 52 weeks
-
-* The new Server Manager implementation based on Cockpit was released as *alpha*
-  and is available from the Software Center package
 
 * The Zeroconf network protocol is now disabled by default
 
 * By default, Evebox events are retained for 30 days. The new default is 
   applied to upgraded systems as a bug fix
+  
+* NDPI module has been update to release 2.4 and some protocols have been removed.
+  See :ref:`dpw_ndpi24`
+  
+* SMTP server can be directly accessed from trusted networks
+
+* PPPoE connections use rp-pppoe plugin by default to improve network speed
 
 .. only:: nscom
 
@@ -200,6 +202,38 @@ Developers are invited to update their modules, replacing
 ``nethserver-rh-php56-php-fpm`` with ``nethserver-rh-php71-php-fpm`` as soon as
 possible.
 
+... _dpw_ndp24:
+
+NDPI 2.4
+^^^^^^^^
+
+The following protocols have been removed:
+
+* tds
+* winmx
+* imesh
+* http_app_veohtv
+* quake
+* meebo
+* skyfile_prepaid
+* skyfile_rudics
+* skyfile_postpaid
+* socks4
+* timmeu
+* torcedor
+* tim
+* simet
+* opensignal
+* 99taxi
+* easytaxi
+* globotv
+* timsomdechamada
+* timmenu
+* timportasabertas
+* timrecarga
+* timbeta
+
+Rules using one of the above protocol, will be automatically disabled.
 
 Upgrading |product| 6 to |product| |version|
 --------------------------------------------
