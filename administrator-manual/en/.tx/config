@@ -339,3 +339,14 @@ source_file = _build/locale/dedalo.pot
 source_lang = en
 type = PO
 
+[docs-v7.rspamd]
+file_filter = locale/<lang>/LC_MESSAGES/rspamd.po
+source_file = _build/locale/rspamd.pot
+source_lang = en
+type = PO
+
+[docs-v7.fail2ban]
+file_filter = locale/<lang>/LC_MESSAGES/fail2ban.po
+source_file = _build/locale/fail2ban.pot
+source_lang = en
+type = PO
