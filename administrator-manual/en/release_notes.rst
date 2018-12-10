@@ -8,7 +8,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.6.1810 "final" - 2018-XX-YY
+    - ISO release 7.6.1810 "beta2" - 2018-12-10
 
     - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -22,12 +22,9 @@ Release notes |version|
 
     - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
-    - `Project board <https://github.com/orgs/NethServer/projects/1>`_
-
-
 .. only:: nsent
 
-    - ISO release 7.6.1810
+    - ISO release 7.6.1810 "beta2" - 2018-12-10
 
     - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -37,9 +34,12 @@ Release notes |version|
 Major changes on 2018-XX-YY
 ---------------------------
 
-* ISO release 7.6.1810 "beta" replaces any previous ISO 7.5.1804
+* ISO release 7.6.1810 "beta2" replaces any previous ISO 7.5.1804
 
-* Default :ref:`tlspolicy-section` is ``2018-10-01``
+* PHP 5.6 from SCL has reached end-of-life and is thus deprecated.
+  See :ref:`dpw_php56scl`
+
+* Default TLS policy is ``2018-10-01``
 
 * Added support for TLS certificates based on Elliptic-curve Cryptography (ECC)
 
@@ -173,6 +173,33 @@ Major changes on 2017-01-30
 * Firewall: fix selection of time conditions
 * IPS: update configuration for latest pulledpork release
 
+Deprecated features and packages
+--------------------------------
+
+.. _dpw_php56scl:
+
+PHP 5.6 SCL
+^^^^^^^^^^^
+
+PHP 5.6 from the SCL repository has reached end-of-life (EOL) [#PHP56RHEOL]_
+[#PHP56EOL]_.
+
+To avoid problems with existing legacy applications, the PHP 5.6 SCL packages
+from CentOS 7.5.1804 will be still available from |product| repositories during
+the 7.6.1810 lifetime.
+
+.. warning::
+
+    PHP 5.6 SCL packages will **not** receive any security update. Very limited
+    support will be provided as best-effort
+
+The ``nethserver-rh-php56-php-fpm`` package will be removed from the next
+|product| release.
+
+Developers are invited to update their modules, replacing
+``nethserver-rh-php56-php-fpm`` with ``nethserver-rh-php71-php-fpm`` as soon as
+possible.
+
 
 Upgrading |product| 6 to |product| |version|
 --------------------------------------------
@@ -217,3 +244,11 @@ removed in 7:
   mantained only on |product| 6 release
 * nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-tunnels, L2TP function has been dropped
 * nethserver-webvirtmgr
+
+
+----
+
+.. rubric:: References
+
+.. [#PHP56RHEOL] Red Hat Software Collections Product Life Cycle -- https://access.redhat.com/support/policy/updates/rhscl
+.. [#PHP56EOL] PHP supported versions -- http://php.net/supported-versions.php

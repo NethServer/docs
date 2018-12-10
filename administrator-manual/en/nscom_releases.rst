@@ -11,7 +11,7 @@ See also the `ISO releases`_ on Developer's manual.
 7.6.1810
 ---------
 
-* 2018-12-XX `beta <beta76_>`_
+* 2018-12-10 `beta2 <beta76_>`_
 
 .. _beta76: https://github.com/NethServer/dev/milestone/24?closed=1
 
