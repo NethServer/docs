@@ -56,10 +56,6 @@ Installation
 
 
 
-If you want to tests the Cockpit-based web interface, execute also: ::
-
-  yum --enablerepo=nethserver-testing install nethserver-cockpit-hotsync
-
 Configuration
 =============
 

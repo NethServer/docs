@@ -20,7 +20,7 @@ The phonebook is accessible using LDAP, only if enabled, using this base DN: ::
 
 The web interface allows to enable the import from:
 
-- publicly shared SOGo address book
+- publicly shared SOGo address book (|product| 6.x only!)
 - shared contacts from |product_cti|
 - speed dial from  |product_voice|
 
