@@ -31,7 +31,7 @@ Release notes |version|
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-XX-YY
+Major changes on 2018-12-10
 ---------------------------
 
 * ISO release 7.6.1810 "beta2" replaces any previous ISO 7.5.1804
