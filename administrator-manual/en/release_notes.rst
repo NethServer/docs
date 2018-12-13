@@ -8,7 +8,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.6.1810 "beta2" - 2018-12-10
+    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
 
     - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -24,17 +24,17 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.6.1810 "beta2" - 2018-12-10
+    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
 
     - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2018-12-10
+Major changes on 2018-17-10
 ---------------------------
 
-* ISO release 7.6.1810 "beta2" replaces any previous ISO 7.5.1804
+* ISO release 7.6.1810 "final" replaces any previous ISO 7.5.1804
 
 * PHP 5.6 from SCL has reached end-of-life and is thus deprecated.
   See :ref:`dpw_php56scl`
