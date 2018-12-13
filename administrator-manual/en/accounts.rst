@@ -142,7 +142,7 @@ If you wish to bypass the password expiration globally (also allow access for us
 To disable password expiration for a single user (replace username with the user) ::
 
   db accounts setprop <username> PassExpires no
-  signal event password-policy-update
+  signal-event password-policy-update
 
 
 Below are the commands to view enabled policies.
