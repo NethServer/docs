@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.5.1804 "final" - 2018-06-11
+    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -22,17 +22,51 @@ Release notes |version|
 
     - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
-    - `Project board <https://github.com/orgs/NethServer/projects/1>`_
-
-
 .. only:: nsent
 
-    - ISO release 7.5.1804
+    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1804) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
+
+Major changes on 2018-10-17
+---------------------------
+
+* ISO release 7.6.1810 "final" replaces any previous ISO 7.5.1804
+
+* PHP 5.6 from SCL has reached end-of-life and is thus deprecated.
+  See :ref:`dpw_php56scl`
+
+* Default TLS policy is ``2018-10-01``
+
+* Default systems log retention has been increased to 52 weeks
+
+* The Zeroconf network protocol is now disabled by default
+
+* By default, Evebox events are retained for 30 days. The new default is 
+  applied to upgraded systems as a bug fix
+  
+* NDPI module has been updated to version 2.4 which no longer recognize some old protocols.
+  See :ref:`dpw_ndpi24` for the list of removed protocols
+  
+* SMTP server can be directly accessed from trusted networks
+
+* PPPoE connections use rp-pppoe plugin by default to improve network speed
+
+.. only:: nscom
+
+    * For repositories that support GPG metadata signature, YUM runs now an
+      integrity check (``repo_gpgcheck=1``) for additional security. This new
+      default setting is applied automatically unless a ``.repo`` file was changed
+      locally. In that case an ``.rpmnew`` file is created instead of overwriting
+      the local changes. Rename the ``.rpmnew`` to ``.repo`` to apply the new
+      defaults. This is the list of files to be checked:
+
+        - :file:`/etc/nethserver/yum-update.d/NsReleaseLock.repo`
+        - :file:`/etc/yum.repos.d/NethServer.repo`
+        - :file:`/etc/yum.repos.d/NsReleaseLock.repo`
 
 Major changes on 2018-06-11
 ---------------------------
@@ -141,6 +175,65 @@ Major changes on 2017-01-30
 * Firewall: fix selection of time conditions
 * IPS: update configuration for latest pulledpork release
 
+Deprecated features and packages
+--------------------------------
+
+.. _dpw_php56scl:
+
+PHP 5.6 SCL
+^^^^^^^^^^^
+
+PHP 5.6 from the SCL repository has reached end-of-life (EOL) [#PHP56RHEOL]_
+[#PHP56EOL]_.
+
+To avoid problems with existing legacy applications, the PHP 5.6 SCL packages
+from CentOS 7.5.1804 will be still available from |product| repositories during
+the 7.6.1810 lifetime.
+
+.. warning::
+
+    PHP 5.6 SCL packages will **not** receive any security update. Very limited
+    support will be provided as best-effort
+
+The ``nethserver-rh-php56-php-fpm`` package will be removed from the next
+|product| release.
+
+Developers are invited to update their modules, replacing
+``nethserver-rh-php56-php-fpm`` with ``nethserver-rh-php71-php-fpm`` as soon as
+possible.
+
+... _dpw_ndp24:
+
+NDPI 2.4
+^^^^^^^^
+
+The following protocols have been removed:
+
+* tds
+* winmx
+* imesh
+* http_app_veohtv
+* quake
+* meebo
+* skyfile_prepaid
+* skyfile_rudics
+* skyfile_postpaid
+* socks4
+* timmeu
+* torcedor
+* tim
+* simet
+* opensignal
+* 99taxi
+* easytaxi
+* globotv
+* timsomdechamada
+* timmenu
+* timportasabertas
+* timrecarga
+* timbeta
+
+Rules using the above protocols, will be automatically disabled.
 
 Upgrading |product| 6 to |product| |version|
 --------------------------------------------
@@ -185,3 +278,11 @@ removed in 7:
   mantained only on |product| 6 release
 * nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-tunnels, L2TP function has been dropped
 * nethserver-webvirtmgr
+
+
+----
+
+.. rubric:: References
+
+.. [#PHP56RHEOL] Red Hat Software Collections Product Life Cycle -- https://access.redhat.com/support/policy/updates/rhscl
+.. [#PHP56EOL] PHP supported versions -- http://php.net/supported-versions.php
