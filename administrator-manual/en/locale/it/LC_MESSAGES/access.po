@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-06 14:48+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -96,8 +96,8 @@ msgid ""
 "The *unattended* install procedure sets the root password to the default "
 "``Nethesis,1234``."
 msgstr ""
-"La procedura di installazione *unattended* imposta la password di *root* a "
-"``Nethesis,1234``."
+"La procedura di installazione *unattended* imposta la password di *root* al "
+"valore ``Nethesis,1234``."
 
 #: ../../access.rst:40
 msgid "First configuration wizard"
@@ -116,7 +116,7 @@ msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
 msgstr ""
-"Se la password di root è ancora quella predefinito, è necessario "
+"Se la password di root è ancora quella predefinita, è necessario "
 "modificarla."
 
 #: ../../access.rst:47
@@ -150,11 +150,11 @@ msgstr ":ref:`Configurazione smarthost <smarthost-configuration>`"
 
 #: ../../access.rst:56
 msgid ":ref:`Usage statistics <phonehome-section>`"
-msgstr ":ref:`Statistiche d'uso <phonehome-section>`"
+msgstr ":ref:`Statistiche d'utilizzo <phonehome-section>`"
 
 #: ../../access.rst:59
 msgid "Change the current password"
-msgstr "Cambiare la password"
+msgstr "Cambiare la password attuale"
 
 #: ../../access.rst:61
 msgid ""

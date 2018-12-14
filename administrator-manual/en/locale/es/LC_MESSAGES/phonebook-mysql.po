@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -72,8 +72,8 @@ msgid "The web interface allows to enable the import from:"
 msgstr "La interfaz web permite habilitar la importación desde:"
 
 #: ../../phonebook-mysql.rst:23
-msgid "publicly shared SOGo address book"
-msgstr "Libreta de direcciones SOGo compartida públicamente"
+msgid "publicly shared SOGo address book (|product| 6.x only!)"
+msgstr ""
 
 #: ../../phonebook-mysql.rst:24
 msgid "shared contacts from |product_cti|"

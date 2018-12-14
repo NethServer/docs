@@ -7,15 +7,16 @@
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Francesco Pari, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
+# Nicola <nicola.rauso@nethesis.it>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,8 +78,8 @@ msgstr ""
 "da:"
 
 #: ../../phonebook-mysql.rst:23
-msgid "publicly shared SOGo address book"
-msgstr "tutte le rubriche di SOGo condivise a tutti gli utenti locali"
+msgid "publicly shared SOGo address book (|product| 6.x only!)"
+msgstr "rubriche di SOGo condivise pubblicamente (solo per |product| 6.x!)"
 
 #: ../../phonebook-mysql.rst:24
 msgid "shared contacts from |product_cti|"

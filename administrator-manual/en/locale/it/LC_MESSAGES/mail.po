@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 12:52+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -937,12 +937,12 @@ msgstr ""
 #: ../../mail.rst:470
 msgid ""
 "It's possible to create an 'Allow' or 'Block' rule even for a complete email"
-" domain, not just for a single email address : you just need to specificy "
-"the desired domain (e.g. : nethserver.org)."
+" domain, not just for a single email address : you just need to specify the "
+"desired domain (e.g. : nethserver.org)."
 msgstr ""
-"Benchè sconsigliato è possibile creare regole non solo sul singolo indirizzo"
-" email, ma su un intero dominio di posta, per farlo è sufficiente "
-"specificare solo il dominio nella regola (es: nethserver.org)."
+"Benché sconsigliato, è possibile creare regole 'Accetta'o 'Blocca' anche per"
+" un intero dominio di posta: per farlo è sufficiente specificare solo il "
+"dominio nella regola (es: nethserver.org)."
 
 #: ../../mail.rst:472
 msgid "Antivirus checks are enforced despite *whitelist* settings."
@@ -950,11 +950,11 @@ msgstr ""
 "Il controllo anti-virus è eseguito indipendentemente dalle impostazioni di "
 "*whitelist*."
 
-#: ../../mail.rst:475
+#: ../../mail.rst:477
 msgid "Rspamd web interface"
 msgstr "Interfaccia web di Rspamd"
 
-#: ../../mail.rst:477
+#: ../../mail.rst:479
 msgid ""
 "The anti-spam component is implemented by Rspamd [#RSPAMD]_ which provides "
 "its administrative web interface at ::"
@@ -962,50 +962,116 @@ msgstr ""
 "Il modulo anti-spam è implementato da Rspamd [#RSPAMD]_ che è corredato "
 "della sua interfaccia web di amministrazione all'URL ::"
 
-#: ../../mail.rst:482
+#: ../../mail.rst:484
 msgid ""
-"The actual URL is listed under the :guilabel:`Applications` page. By default"
-" access is granted to members of the ``domain admins`` group and to the "
-"``admin`` user (see also :ref:`admin-account-section`). An additional "
-"special login ``rspamd`` can be used to access it. Its credentials are "
-"available from :guilabel:`Email > Filter > Rspamd user interface (Web URL)`:"
-" just follow the given link."
+"For more information on Rspamd, please read the :ref:`rspamd-section` page."
 msgstr ""
-"L' URL è elencato nella pagina delle :guilabel:`Applicazioni`. Per default, "
-"l'accesso è garantito ai membri del gruppo ``domain admins`` e all'utente "
-"``admin`` (vedi anche :ref:`admin-account-section`). In aggiunta è possibile"
-" utilizzare uno speciale login ``rspamd`` per accedere. Le credenziali sono "
-"fornite nel pannello :guilabel:`Email > Filtri > Interfaccia utente "
-"Rspamd(Web URL)`: seguire poi il link visualizzato."
-
-#: ../../mail.rst:489
-msgid "The Rspamd web UI:"
-msgstr "Interfaccia utente Web di Rspamd"
+"Per maggiori informazioni su Rspamd, fare riferimento alla sezione :ref"
+":`rspamd-section`."
 
 #: ../../mail.rst:491
-msgid "displays messages and actions counters,"
-msgstr "visualizza  messaggi e contatori,"
-
-#: ../../mail.rst:492
-msgid "shows the server configuration,"
-msgstr "mostra la configurazione del server,"
+msgid "Quarantine (beta)"
+msgstr "Quarantena (beta)"
 
 #: ../../mail.rst:493
-msgid "tracks the history of recent messages,"
-msgstr "tiene traccia della cronologia dei messaggi recenti,"
-
-#: ../../mail.rst:494
 msgid ""
-"allows training the Bayes filter by submitting a message from the web form."
+"|product| scans all incomaing email messages before they are delivered to "
+"the user mailbox. The messages that are identified as spam will be sent to a"
+" specific user mailbox. The purpose of this feature is to verify the email "
+"before deleting it. If enabled, a mail notification is also sent to the "
+"postmaster (root alias) for each quarantined email."
 msgstr ""
-"consente di addestrare il filtro Bayes inviando un messaggio da un  form "
-"web."
+"|product| esegue la scansione di tutti i messaggi di posta elettronica in "
+"arrivo prima che vengano recapitati alla casella postale dell'utente. I "
+"messaggi identificati come spam verranno inviati a una casella di posta "
+"utente specifica. Lo scopo di questa funzione è di verificare l'e-mail prima"
+" di eliminarla. E' possibile inviare una notifica e-mail anche al postmaster"
+" (alias di root) per ogni e-mail in quarantena abilitando una opzione "
+"dedicata."
 
-#: ../../mail.rst:499
+#: ../../mail.rst:501
+msgid ""
+"The quarantined messages can be accessed using a web mail or an IMAP account"
+msgstr ""
+"È possibile accedere ai messaggi in quarantena tramite web mail o con un "
+"account IMAP"
+
+#: ../../mail.rst:505
+msgid ""
+"The mailbox used for quarantine, must be able to accept spam. It should be a"
+" local shared mailbox or a user mailbox. If an external account is used, "
+"make sure the account exists on the remote server. Please make sure the "
+"quarantine mailbox has been created only for this specific purpose, "
+"otherwise the mailbox will be overloaded with unwanted spam."
+msgstr ""
+"La cassetta postale utilizzata per la quarantena deve essere in grado di "
+"accettare lo spam. Dovrebbe essere una casella di posta condivisa locale o "
+"una casella di posta dell'utente. Se si utilizza un account esterno, "
+"assicurarsi che l'account esista sul server remoto. Sincerarsi che la "
+"casella di quarantena sia stata creata solo per questo scopo specifico, "
+"altrimenti la cassetta postale sarà sovraccaricata di spam indesiderato."
+
+#: ../../mail.rst:511
+msgid ""
+"Quarantine is provided by an optional module named ``nethserver-mail-"
+"quarantine``. Once it has been installed from the :guilabel:`Software "
+"center` you must manually set its database properties."
+msgstr ""
+"La quarantena è fornita da un modulo opzionale chiamato``nethserver-mail-"
+"quarantine``. Una volta installato dal :guilabel:`Software center` sarà "
+"necessario impostare manualmente le proprietà del suo database."
+
+#: ../../mail.rst:515
+msgid ""
+"The properties are under the ``rspamd`` key (configuration database): ::"
+msgstr ""
+"Le proprietà sono disponibili sotto la chiave ``rspamd`` (database di "
+"configurazione): ::"
+
+#: ../../mail.rst:524
+msgid ""
+"``QuarantineAccount``: The user or the shared mailbox where to send all spam"
+" messages (spam check is automatically disabled on this account). You must "
+"create it manually. You could send it to an external mailbox  but then make "
+"sure to disable the spam check on the remote server"
+msgstr ""
+"``QuarantineAccount``: L'utente o la casella di posta condivisa in cui "
+"inviare tutti i messaggi di spam (il controllo dello spam è disabilitato "
+"automaticamente su questo account). Va creato manualmente. È possibile "
+"utilizzare una casella di posta esterna, in tal caso accertarsi di "
+"disabilitare il controllo dello spam sul server remoto"
+
+#: ../../mail.rst:529
+msgid ""
+"``QuarantineStatus``: Enable the quarantine, spam are no more rejected: "
+"enabled/disabled. Disabled by default"
+msgstr ""
+"``QuarantineStatus``: abilita la quarantena, lo spam non viene più respinto."
+" I valori ammessi sono enabled/disabled. L'impostazione predefinita è "
+"disabled"
+
+#: ../../mail.rst:532
+msgid ""
+"``SpamNotificationStatus``: Enable the email notification when email are "
+"quarantined: enabled/disabled. Disabled by default"
+msgstr ""
+"``SpamNotificationStatus``: Abilita la notifica via email quando la posta "
+"elettronica viene messa in quarantena. I valori ammessi sono "
+"enabled/disabled. L'impostazione predefinita è disabled"
+
+#: ../../mail.rst:535
+msgid ""
+"For example, the following commands enable the quarantine and the mail "
+"notification to root: ::"
+msgstr ""
+"Ad esempio, i seguenti comandi abilitano la quarantena e la notifica a root:"
+" ::"
+
+#: ../../mail.rst:545
 msgid "Client configuration"
 msgstr "Configurazione client"
 
-#: ../../mail.rst:501
+#: ../../mail.rst:547
 msgid ""
 "The server supports standard-compliant email clients using the following "
 "IANA ports:"
@@ -1013,23 +1079,23 @@ msgstr ""
 "|product| supporta client per la posta elettronica aderenti agli standard "
 "che utilizzano le seguenti porte IANA:"
 
-#: ../../mail.rst:504
+#: ../../mail.rst:550
 msgid "imap/143"
 msgstr "imap/143"
 
-#: ../../mail.rst:505
+#: ../../mail.rst:551
 msgid "pop3/110"
 msgstr "pop3/110"
 
-#: ../../mail.rst:506
+#: ../../mail.rst:552
 msgid "smtp/587"
 msgstr "smtp/587"
 
-#: ../../mail.rst:507
+#: ../../mail.rst:553
 msgid "sieve/4190"
 msgstr "sieve/4190"
 
-#: ../../mail.rst:509
+#: ../../mail.rst:555
 msgid ""
 "Authentication requires the STARTTLS command and supports the following "
 "variants:"
@@ -1037,21 +1103,21 @@ msgstr ""
 "L'autenticazione richiede la cifratura in modalità STARTTLS e supporta le "
 "seguenti varianti:"
 
-#: ../../mail.rst:512
+#: ../../mail.rst:558
 msgid "LOGIN"
 msgstr "LOGIN"
 
-#: ../../mail.rst:513
+#: ../../mail.rst:559
 msgid "PLAIN"
 msgstr "PLAIN"
 
-#: ../../mail.rst:514
+#: ../../mail.rst:560
 msgid ""
 "GSSAPI (only if |product| is bound to Samba/Microsoft Active Directory)"
 msgstr ""
 "GSSAPI (solo se |product| è collegato con Samba/Microsoft Active Directory)"
 
-#: ../../mail.rst:516
+#: ../../mail.rst:562
 msgid ""
 "Also the following SSL-enabled ports are available for legacy software that "
 "still does not support STARTTLS:"
@@ -1059,19 +1125,19 @@ msgstr ""
 "Inoltre le seguenti porte SSL sono disponibili per software datato che "
 "ancora non supporta STARTTLS:"
 
-#: ../../mail.rst:519
+#: ../../mail.rst:565
 msgid "imaps/993"
 msgstr "imaps/993"
 
-#: ../../mail.rst:520
+#: ../../mail.rst:566
 msgid "pop3s/995"
 msgstr "pop3s/995"
 
-#: ../../mail.rst:521
+#: ../../mail.rst:567
 msgid "smtps/465"
 msgstr "smtps/465"
 
-#: ../../mail.rst:525
+#: ../../mail.rst:571
 msgid ""
 "The standard SMTP port 25 is reserved for mail transfers between MTA "
 "servers. Mail user agents (MUA) must use the submission port."
@@ -1080,11 +1146,11 @@ msgstr ""
 "MTA. I client di posta (MUA) devono utilizzare la porta submission per "
 "l'invio."
 
-#: ../../mail.rst:532
+#: ../../mail.rst:578
 msgid "Special SMTP access policies"
 msgstr "Politiche SMTP di invio speciali"
 
-#: ../../mail.rst:534
+#: ../../mail.rst:580
 msgid ""
 "The default |product| configuration requires that all clients use the "
 "submission port (587) with encryption and authentication enabled to send "
@@ -1094,7 +1160,7 @@ msgstr ""
 "utilizzino la porta submission (587) con cifratura e autenticazione "
 "abilitate per inviare messaggi attraverso il server SMTP."
 
-#: ../../mail.rst:538
+#: ../../mail.rst:584
 msgid ""
 "To ease the configuration of legacy environments, the :guilabel:`Email > "
 "SMTP access` page allows making some exceptions on the default SMTP access "
@@ -1104,12 +1170,12 @@ msgstr ""
 ":guilabel:`Email > Accesso SMTP` consente di specificare delle eccezioni ai "
 "criteri di accesso SMTP di default."
 
-#: ../../mail.rst:542
+#: ../../mail.rst:588
 msgid "Do not change the default policy on new environments!"
 msgstr ""
 "Non modificare i criteri di accesso di default in nuove installazioni!"
 
-#: ../../mail.rst:544
+#: ../../mail.rst:590
 msgid ""
 "For instance, there are some devices (printers, scanners, ...) that do not "
 "support SMTP authentication, encryption or port settings. Those can be "
@@ -1122,12 +1188,12 @@ msgstr ""
 "elencando il loro indirizzo IP nell'area di testo :guilabel:`Consenti relay "
 "dai seguenti indirizzi IP`."
 
-#: ../../mail.rst:549
+#: ../../mail.rst:595
 msgid ""
 "Moreover, under :guilabel:`Advanced options` there are further options:"
 msgstr "Sotto :guilabel:`Opzioni avanzate` si trovano inoltre"
 
-#: ../../mail.rst:551
+#: ../../mail.rst:597
 msgid ""
 "The :guilabel:`Allow relay from trusted networks` option allows any client "
 "in the trusted networks to send email messages without any restriction."
@@ -1135,7 +1201,7 @@ msgstr ""
 "L'opzione :guilabel:`Consenti relay dalle reti fidate`, che abilita la "
 "spedizione di messaggi da qualsiasi client connesso dalle reti fidate."
 
-#: ../../mail.rst:555
+#: ../../mail.rst:601
 msgid ""
 "The :guilabel:`Enable authentication on port 25` option allows authenticated"
 " SMTP clients to send email messages also on port 25."
@@ -1144,11 +1210,11 @@ msgstr ""
 "l'autenticazione dei client SMTP e l'invio (relay) di messaggi anche sulla "
 "porta 25."
 
-#: ../../mail.rst:565
+#: ../../mail.rst:611
 msgid "Custom HELO"
 msgstr "HELO personalizzato"
 
-#: ../../mail.rst:567
+#: ../../mail.rst:613
 msgid ""
 "The first step of an SMTP session is the exchange of :dfn:`HELO` command (or"
 " :dfn:`EHLO`).  This command takes a valid server name as required parameter"
@@ -1158,7 +1224,7 @@ msgstr ""
 ":dfn:`EHLO`). Tale comando richiede un parametro obbligatorio che l'RFC 1123"
 " definisce come il nome di dominio principale e valido del server."
 
-#: ../../mail.rst:571
+#: ../../mail.rst:617
 msgid ""
 "|product| and other mail servers try to reduce spam by not accepting HELO "
 "domains that are not registered on a public DNS."
@@ -1166,7 +1232,7 @@ msgstr ""
 "|product| ed altri server di posta, nel tentativo di ridurre lo spam, non "
 "accettano HELO con domini non registrati nel DNS pubblico."
 
-#: ../../mail.rst:574
+#: ../../mail.rst:620
 msgid ""
 "When talking to another mail server, |product| uses its full host name "
 "(FQDN) as the value for the HELO command.  If the FQDN is not registered in "
@@ -1180,7 +1246,7 @@ msgstr ""
 "*prop* speciale. Per esempio, assumendo che ``myhelo.example.com`` sia il "
 "record registrato nel DNS pubblico, digitare i seguenti comandi: ::"
 
-#: ../../mail.rst:583
+#: ../../mail.rst:629
 msgid ""
 "This configuration is also valuable if the mail server is using a free "
 "dynamic DNS service."
@@ -1190,11 +1256,11 @@ msgstr ""
 "gratuitamente un DNS dinamico, associarlo all'IP pubblico del server ed "
 "utilizzare questo dominio come parametro HeloHost del precedente comando."
 
-#: ../../mail.rst:589
+#: ../../mail.rst:635
 msgid "Outlook deleted mail"
 msgstr "Posta eliminata Outlook"
 
-#: ../../mail.rst:591
+#: ../../mail.rst:637
 msgid ""
 "Unlike almost any IMAP client, Outlook does not move deleted messages to the"
 " trash folder, but simply marks them as \"deleted\"."
@@ -1202,7 +1268,7 @@ msgstr ""
 "A differenza della quasi totalità dei client IMAP, Outlook non sposta i "
 "messaggi eliminati nel cestino, ma si limita a marcarli \"cancellati\"."
 
-#: ../../mail.rst:593
+#: ../../mail.rst:639
 msgid ""
 "It's possibile to automatically move messages inside the trash folder using "
 "the following commands: ::"
@@ -1210,7 +1276,7 @@ msgstr ""
 "È possibile forzare lo spostamento di tali messaggi nel cestino con questi "
 "comandi: ::"
 
-#: ../../mail.rst:598
+#: ../../mail.rst:644
 msgid ""
 "You should also change Outlook configuration to hide deleted messages from "
 "inbox folder. This configuration is available in the options menu."
@@ -1219,28 +1285,28 @@ msgstr ""
 "nasconda i messaggi eliminati dalla posta in arrivo. La funzione è "
 "disponibile nel menu delle opzioni di visualizzazione."
 
-#: ../../mail.rst:604
+#: ../../mail.rst:650
 msgid "Log"
 msgstr "Log"
 
-#: ../../mail.rst:606
+#: ../../mail.rst:652
 msgid "Every mail server operation is saved in the following log files:"
 msgstr ""
 "Ogni operazione eseguita dal server di posta è trascritta nei seguenti file "
 "di log:"
 
-#: ../../mail.rst:608
+#: ../../mail.rst:654
 msgid ":file:`/var/log/maillog` registers all mail transactions"
 msgstr ""
 ":file:`/var/log/maillog`: contiene tutte le operazioni di invio e consegna"
 
-#: ../../mail.rst:609
+#: ../../mail.rst:655
 msgid ":file:`/var/log/imap` contains users login and logout operations"
 msgstr ""
 ":file:`/var/log/imap`: contiene tutte le azioni di login/logout alle caselle"
 " di posta"
 
-#: ../../mail.rst:611
+#: ../../mail.rst:657
 msgid ""
 "A transaction recorded in the :file:`maillog` file usually involves "
 "different components of the mail server.  Each line contains respectively"
@@ -1248,23 +1314,23 @@ msgstr ""
 "Un transazione registrata nel file :file:`maillog` di solito coinvolge "
 "diversi componenti del server di posta. Ogni riga contiene rispettivamente:"
 
-#: ../../mail.rst:615
+#: ../../mail.rst:661
 msgid "the timestamp,"
 msgstr "la data e l'ora"
 
-#: ../../mail.rst:616
+#: ../../mail.rst:662
 msgid "the host name,"
 msgstr "il nome host"
 
-#: ../../mail.rst:617
+#: ../../mail.rst:663
 msgid "the component name, and the process-id of the component instance"
 msgstr "il nome del componente e l'id del processo dell'istanza"
 
-#: ../../mail.rst:618
+#: ../../mail.rst:664
 msgid "a text message detailing the operation"
 msgstr "il testo che descrive l'operazione"
 
-#: ../../mail.rst:620
+#: ../../mail.rst:666
 msgid ""
 "|product| configuration uses Rspamd as milter. It runs an Rspamd proxy "
 "worker in \"self-scan\" mode [#SELFSCAN]_."
@@ -1272,7 +1338,7 @@ msgstr ""
 "La configurazione di |product| utilizza Rspamd come milter. Esegue un  proxy"
 " worker Rspamd in modalità \"self-scan\" [#SELFSCAN]_."
 
-#: ../../mail.rst:623
+#: ../../mail.rst:669
 msgid ""
 "The key to track the whole SMTP transaction, including Rspamd decisions is "
 "the message ID header, or the Postfix Queue ID (QID). Both are available "
@@ -1285,7 +1351,7 @@ msgstr ""
 " generata dal mittente, mentre il QID è assegnato dal MTA ricevente. Per "
 "esempio ::"
 
-#: ../../mail.rst:635
+#: ../../mail.rst:681
 msgid ""
 "Here ``A785B308622AB`` is the QID, whilst ``5afa242e.hP5p/mry+fTNNjms%no-"
 "reply@example.com`` is the Message ID."
@@ -1293,7 +1359,7 @@ msgstr ""
 "Qui ``A785B308622AB`` e il QID, mentre ``5afa242e.hP5p/mry+fTNNjms%no-"
 "reply@example.com`` è il ID del messagio."
 
-#: ../../mail.rst:638
+#: ../../mail.rst:684
 msgid ""
 "Both strings can be used with the ``grep`` command to find relevant log "
 "lines in ``/var/log/maillog*`` (note the ending \"*\" to search also in "
@@ -1303,23 +1369,23 @@ msgstr ""
 "trovare righe di log rilevanti in ``/var/log/maillog* `` (notare il  \"*\" "
 "finale  per cercare anche nei file di log archiviati). Per esempio ::"
 
-#: ../../mail.rst:644
+#: ../../mail.rst:690
 msgid "Yields ::"
 msgstr "Resa ::"
 
-#: ../../mail.rst:655
+#: ../../mail.rst:702
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../mail.rst:656
+#: ../../mail.rst:703
 msgid "Postfix mail server http://www.postfix.org/"
 msgstr "Postfix mail server http://www.postfix.org/"
 
-#: ../../mail.rst:657
+#: ../../mail.rst:704
 msgid "Dovecot Secure IMAP server http://www.dovecot.org/"
 msgstr "(1, 2) Dovecot Secure IMAP server http://www.dovecot.org/"
 
-#: ../../mail.rst:658
+#: ../../mail.rst:705
 msgid ""
 "Sieve mail filtering language "
 "https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
@@ -1327,7 +1393,7 @@ msgstr ""
 "Sieve mail filtering language "
 "https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
 
-#: ../../mail.rst:660
+#: ../../mail.rst:707
 msgid ""
 "Rspamd -- Fast, free and open-source spam filtering system. "
 "https://rspamd.com/"
@@ -1335,19 +1401,19 @@ msgstr ""
 "Rspamd: sistema di filtraggio di spam veloce, gratuito e open source. "
 "https://rspamd.com/"
 
-#: ../../mail.rst:662
+#: ../../mail.rst:709
 msgid "Email, https://en.wikipedia.org/wiki/Email"
 msgstr "Posta elettronica, https://it.wikipedia.org/wiki/Posta_elettronica"
 
-#: ../../mail.rst:663
+#: ../../mail.rst:710
 msgid "The MX DNS record, https://en.wikipedia.org/wiki/MX_record"
 msgstr "Il record DNS MX, https://it.wikipedia.org/wiki/MX_record"
 
-#: ../../mail.rst:664
+#: ../../mail.rst:711
 msgid "SMTP, https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol"
 msgstr "SMTP, https://it.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol"
 
-#: ../../mail.rst:666
+#: ../../mail.rst:713
 msgid ""
 "Domain Keys Identified Mail (DKIM) is an email authentication method "
 "designed to detect email spoofing -- `Wikipedia "
@@ -1357,11 +1423,11 @@ msgstr ""
 "progettato per rilevare lo spoofing delle e-mail -- `Wikipedia "
 "<https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>` _"
 
-#: ../../mail.rst:669
+#: ../../mail.rst:716
 msgid "The Maildir format, https://en.wikipedia.org/wiki/Maildir"
 msgstr "The Maildir format, https://en.wikipedia.org/wiki/Maildir"
 
-#: ../../mail.rst:671
+#: ../../mail.rst:718
 msgid ""
 "alterMIME is a small program which is used to alter your mime-encoded "
 "mailpack -- https://pldaniels.com/altermime/"
@@ -1369,7 +1435,7 @@ msgstr ""
 "alterMIME è un piccolo programma che viene utilizzato per modificare il tuo "
 "mailpack con codifica mime -- https://pldaniels.com/altermime/"
 
-#: ../../mail.rst:673
+#: ../../mail.rst:720
 msgid ""
 "The Markdown plain text formatting syntax, "
 "https://en.wikipedia.org/wiki/Markdown"
@@ -1377,23 +1443,23 @@ msgstr ""
 "The Markdown plain text formatting syntax, "
 "https://en.wikipedia.org/wiki/Markdown"
 
-#: ../../mail.rst:674
+#: ../../mail.rst:721
 msgid "IMAP https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol"
 msgstr "IMAP https://it.wikipedia.org/wiki/Internet_Message_Access_Protocol"
 
-#: ../../mail.rst:675
+#: ../../mail.rst:722
 msgid "POP3 https://en.wikipedia.org/wiki/Post_Office_Protocol"
 msgstr "POP3 https://it.wikipedia.org/wiki/Post_Office_Protocol"
 
-#: ../../mail.rst:676
+#: ../../mail.rst:723
 msgid "DNSBL https://en.wikipedia.org/wiki/DNSBL"
 msgstr "DNSBL https://it.wikipedia.org/wiki/DNSBL"
 
-#: ../../mail.rst:677
+#: ../../mail.rst:724
 msgid "SPAM https://en.wikipedia.org/wiki/Spamming"
 msgstr "SPAM https://it.wikipedia.org/wiki/Spam"
 
-#: ../../mail.rst:679
+#: ../../mail.rst:726
 msgid ""
 "Greylisting is a method of defending e-mail users against spam. A mail "
 "transfer agent (MTA) using greylisting will \"temporarily reject\" any email"
@@ -1405,12 +1471,12 @@ msgstr ""
 "\"temporarily reject\" qualsiasi e-mail da un mittente che non riconosce "
 "--`Wikipedia <https://en.wikipedia.org/wiki/Greylisting>`_"
 
-#: ../../mail.rst:683
+#: ../../mail.rst:730
 msgid ""
 "Bayesian filtering https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering"
 msgstr "Filtro bayesiano https://it.wikipedia.org/wiki/Filtro_bayesiano"
 
-#: ../../mail.rst:684
+#: ../../mail.rst:731
 msgid ""
 "The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-"
 "picture/"
@@ -1418,6 +1484,6 @@ msgstr ""
 "The wondrous Ways of an Email https://workaround.org/ispmail/wheezybig-"
 "picture/"
 
-#: ../../mail.rst:685
+#: ../../mail.rst:732
 msgid "https://rspamd.com/doc/workers/rspamd_proxy.html"
 msgstr "https://rspamd.com/doc/workers/rspamd_proxy.html"

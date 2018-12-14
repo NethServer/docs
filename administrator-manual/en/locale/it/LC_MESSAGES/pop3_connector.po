@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 12:52+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -40,11 +40,11 @@ msgid ""
 " filter engine. Previous |product| installations are automatically upgraded "
 "to Rspamd as described in :ref:`email2-section`"
 msgstr ""
-"Con il rilascio di |product| 7.5.1804 le nuove installazioni di: ref: "
-"`email-section`,: ref:`pop3_connector-section` e :ref: `pop3_proxy-section` "
-"sono basate sul motore di filtraggio Rspamd. Le precedenti installazioni di"
-"  |product| verranno automaticamente aggiornate a Rspamd come descritto "
-"nella sezione :ref:`email2-section`"
+"Con il rilascio di |product| 7.5.1804 le nuove installazioni di :ref:`email-"
+"section`, :ref:`pop3_connector-section` e :ref:`pop3_proxy-section` sono "
+"basate sul motore di filtraggio Rspamd. Le precedenti installazioni di "
+"|product| verranno automaticamente aggiornate a Rspamd come descritto nella "
+"sezione :ref:`email2-section`"
 
 #: ../../pop3_connector.rst:15
 msgid ""
@@ -53,7 +53,7 @@ msgid ""
 "accounts will be delivered to local users."
 msgstr ""
 "La pagina :guilabel:`Connettore POP3` permette di configurare un elenco di "
-"account di posta elettronica che il server controlla ad intervalli di tempo "
+"account di posta elettronica che il server scarica ad intervalli di tempo "
 "regolari, consegnando le email agli utenti locali."
 
 #: ../../pop3_connector.rst:19
@@ -80,7 +80,7 @@ msgstr ""
 
 #: ../../pop3_connector.rst:27
 msgid "the email address (as unique account identifier)"
-msgstr "l’indirizzo email (come identificativo per l’account)"
+msgstr "l’indirizzo email (come identificativo univoco per l’account)"
 
 #: ../../pop3_connector.rst:28
 msgid "the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)"
@@ -100,7 +100,7 @@ msgstr "l’utente locale a cui consegnare i messaggi"
 
 #: ../../pop3_connector.rst:32
 msgid "if a message has to be deleted from the remote server after delivery"
-msgstr "se i messaggi vanno eliminati dal server remoto dopo la consegna"
+msgstr "se un messaggio vada eliminato dal server remoto dopo la consegna"
 
 #: ../../pop3_connector.rst:33
 msgid "anti-spam and anti-virus checks"
@@ -111,8 +111,8 @@ msgid ""
 "It is allowed to associate more than one external accounts to a local one.  "
 "Deleting an account will *not* delete already delivered messages."
 msgstr ""
-"È consentito associare più di un account esterni ad uno locale. "
-"L'eliminazione di un account *non* cancellerà i messaggi già consegnati."
+"È consentito associare più account esterni ad uno locale. L'eliminazione di "
+"un account *non* cancellerà i messaggi già consegnati."
 
 #: ../../pop3_connector.rst:39
 msgid ""
@@ -130,15 +130,17 @@ msgid ""
 "messages are filtered according to the :ref:`configured rules "
 "<email_filter>`."
 msgstr ""
-"L’implementazione  è basata su :dfn:`Getmail` [#Getmail]_. Dopo aver "
+"L’implementazione è basata su :dfn:`Getmail` [#Getmail]_. Dopo aver "
 "scaricato i messaggi dal provider POP3/IMAP remoto, Getmail applica tutti i "
-"filtri richiesti (spam e virus), quindi consegna il messaggio localmente. I "
+"filtri attivati (spam e virus), quindi consegna il messaggio localmente. I "
 "messaggi vengono filtrati in base alle :ref:`regole configurate "
 "<email_filter>`."
 
 #: ../../pop3_connector.rst:51
 msgid "All operations are logged in :file:`/var/log/maillog`."
-msgstr "Tutte le operazioni sono riportate nel file :file:`/var/log/maillog`."
+msgstr ""
+"Tutte le operazioni di download sono riportate nel file "
+":file:`/var/log/maillog`."
 
 #: ../../pop3_connector.rst:53
 msgid ""

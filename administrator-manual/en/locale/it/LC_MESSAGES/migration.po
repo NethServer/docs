@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -412,7 +412,7 @@ msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 "``ssh_port`` è la porta SSH del server origine (la porta di default è la 22)"
 
-#: ../../migration.rst:207 ../../migration.rst:221
+#: ../../migration.rst:207 ../../migration.rst:223
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
@@ -444,27 +444,36 @@ msgstr ""
 "Se impartito con l'opzione ``-m``, ``rsync-migrate`` eseguirà una "
 "sincronizzazione finale e l'aggiornamento della macchina destinazione."
 
-#: ../../migration.rst:225
+#: ../../migration.rst:221
+msgid ""
+"Before executing the final migration, install all packages that cover the "
+"same features of the source."
+msgstr ""
+"Prima di eseguire lo step finale di migrazione, verificare di avere "
+"installato tutti i pacchetti che coprono le stesse funzionalità del server "
+"d'origine."
+
+#: ../../migration.rst:227
 msgid "The script will:"
 msgstr "Lo script si incaricherà di:"
 
-#: ../../migration.rst:227
+#: ../../migration.rst:229
 msgid "stop every service on the source machine (except for SSH)"
 msgstr "fermare ogni servizio sulla macchina origine (ad eccetto di SSH)"
 
-#: ../../migration.rst:228
+#: ../../migration.rst:230
 msgid "execute the ``pre-backup`` event on the source machine"
 msgstr "eseguire l'evento di ``pre-backup`` sulla macchina origine"
 
-#: ../../migration.rst:229
+#: ../../migration.rst:231
 msgid "sync all remaining data"
 msgstr "sincronizzare tutti i dati rimanenti"
 
-#: ../../migration.rst:230
+#: ../../migration.rst:232
 msgid "execute the ``migration-import`` event on the destination machine"
 msgstr "eseguire l'evento ``migration-import`` sulla macchina destinazione"
 
-#: ../../migration.rst:233
+#: ../../migration.rst:235
 msgid "At the end, check for any error message in :file:`/var/log/messages`::"
 msgstr ""
 "Al termine della procedura verificare la presenza di eventuali errori in "

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -408,3 +408,24 @@ msgstr ""
 #: ../../web_proxy.rst:165
 msgid "Eg. Access extra ports 446 and 1234: ::"
 msgstr "P.ej. Acceda a puertos adicionales 446 y 1234: ::"
+
+#: ../../web_proxy.rst:172
+msgid "Logs"
+msgstr ""
+
+#: ../../web_proxy.rst:174
+msgid ""
+"Squid logs are kept for 5 weeks in compressed format, to control disk space "
+"usage. Web proxy logs are verbose to help troubleshoot problems. Web "
+"browsing activities are logged in aggregate and readable format by "
+"Lightsquid."
+msgstr ""
+
+#: ../../web_proxy.rst:177
+msgid ""
+"In environments where logs need to be preserved for more than 5 weeks, you "
+"could manually edit the logrotate configuration "
+":file:`/etc/logrotate.d/squid`. Finally, remember to add "
+":file:`/etc/logrotate.d/squid` to the configuration backup using the custom "
+"include. ::"
+msgstr ""
