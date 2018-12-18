@@ -1,0 +1,332 @@
+# #-#-#-#-#  fail2ban.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  fail2ban.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nicola <nicola.rauso@nethesis.it>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-10 14:27+0100\n"
+"PO-Revision-Date: 2018-12-10 13:30+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../fail2ban.rst:3
+msgid "Fail2ban"
+msgstr "Fail2ban"
+
+#: ../../fail2ban.rst:5
+msgid ""
+"Fail2ban scans log files (e.g. :file:`/var/log/apache/error_log`) and bans "
+"IPs that show the malicious signs – too many password failures, seeking for "
+"exploits, etc. Generally Fail2Ban is then used to update firewall rules to "
+"reject the IP addresses for a specified amount of time, although any "
+"arbitrary other action (e.g. sending an email) could also be configured. Out"
+" of the box Fail2Ban comes with filters for various services (Apache, "
+"Dovecot, Ssh, Postfix, etc)."
+msgstr ""
+"Fail2ban esegue la scansione dei file di log (ad esempio "
+":file:`/var/log/apache/error_log`) e blocca gli IP che manifestano "
+"comportamenti potenzialmente dannosi: troppi errori di password, ricerca di "
+"exploit, ecc. In generale Fail2Ban viene quindi utilizzato per aggiornare le"
+" regole del firewall per rifiutare le richieste da questi indirizzi IP per "
+"un determinato periodo di tempo, sebbene sia possibile configurare qualsiasi"
+" altra azione arbitraria (ad esempio l'invio di un'e-mail). Fail2Ban viene "
+"fornito con a bordo una serie filtri per vari servizi (Apache, Dovecot, Ssh,"
+" Postfix, ecc.)."
+
+#: ../../fail2ban.rst:7
+msgid ""
+"Fail2Ban is able to reduce the rate of incorrect authentications attempts "
+"however, it cannot eliminate the risk that weak authentication presents. To "
+"improve the security, open the access to service only for secure networks "
+"using the firewall."
+msgstr ""
+"Fail2Ban è in grado di ridurre il tasso di tentativi di autenticazione "
+"errati, tuttavia non può eliminare il rischio che presenta un'autenticazione"
+" debole. Per migliorare la sicurezza, aprire l'accesso ai servizi alle sole "
+"reti conosciute e protette utilizzando il firewall."
+
+#: ../../fail2ban.rst:10
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../fail2ban.rst:12
+msgid "Install from the Software Center or use the command line: ::"
+msgstr ""
+"Installare il modulo dal Software Center o usando la riga di comando: ::"
+
+#: ../../fail2ban.rst:18
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../../fail2ban.rst:20
+msgid ""
+"Fail2ban is configurable in the security category of the server-manager. "
+"Most of settings can be changed in the :guilabel:`Configuration` tab, only "
+"really advanced settings must be configured by the terminal."
+msgstr ""
+"Fail2ban è configurabile tramite una apposita voce presente nella categoria "
+"sicurezza del server-manager. La maggior parte delle impostazioni possono "
+"essere modificate nella scheda :guilabel:`Configurazione`, solo le "
+"impostazioni più avanzate devono essere configurate dal terminale."
+
+#: ../../fail2ban.rst:23
+msgid "Jails"
+msgstr "Jail"
+
+#: ../../fail2ban.rst:25
+msgid ""
+"A jail is enabled and start to protect a service when you install a new "
+"module, the relevant jail (if existing) is automatically activated after the"
+" package installation."
+msgstr ""
+"Le jail vengono abilitate e iniziano a proteggere i vari servizi non appena "
+"si installa un nuovo modulo, la jail relativa ad un servizio (se esistente) "
+"viene automaticamente attivata dopo l'installazione del pacchetto."
+
+#: ../../fail2ban.rst:28
+msgid "All jails can be disabled individually in the Jails settings."
+msgstr ""
+"Ogni jail può essere individualmente disabilitata dalle impostazioni Jail"
+
+#: ../../fail2ban.rst:31
+msgid "Number of attempts"
+msgstr "Numero di tentativi"
+
+#: ../../fail2ban.rst:31
+msgid ""
+"Number of matches (i.e. value of the counter) which triggers ban action on "
+"the IP."
+msgstr ""
+"Numero di corrispondenze (vale a dire il valore del contatore) che attiva "
+"l'azione di divieto sull'IP."
+
+#: ../../fail2ban.rst:34
+msgid "Time span"
+msgstr "Arco di tempo"
+
+#: ../../fail2ban.rst:34
+msgid ""
+"The counter is set to zero if no match is found within \"findtime\" seconds."
+msgstr ""
+"Il contatore viene impostato a zero se non viene trovata nei log alcuna "
+"corrispondenza entro i secondi di \"ricerca\" configurati."
+
+#: ../../fail2ban.rst:37
+msgid "Ban Time"
+msgstr "Tempo di ban"
+
+#: ../../fail2ban.rst:37
+msgid "Duration for IP to be banned for."
+msgstr "Periodo di permanenza in ban di un IP."
+
+#: ../../fail2ban.rst:40
+msgid "Recidive jail is perpetual"
+msgstr "La jail recidivo è permanente"
+
+#: ../../fail2ban.rst:40
+msgid ""
+"When an IP goes several time in jail, the recidive jail bans it for a much "
+"longer time. If enabled, it is perpetual."
+msgstr ""
+"Quando un IP passa più volte in una jail, la jail recidiva vieta l'IP per un"
+" tempo molto più lungo. Se abilitata l'opzione, il ban è perpetuo."
+
+#: ../../fail2ban.rst:43
+msgid "Network"
+msgstr "Consenti ban sulla LAN"
+
+#: ../../fail2ban.rst:47
+msgid "Allow bans on the LAN"
+msgstr "Consente i ban sulla LAN"
+
+#: ../../fail2ban.rst:46
+msgid ""
+"By default the failed attempts from your Local Network are ignored, except "
+"when you enabled the option."
+msgstr ""
+"Per impostazione predefinita, i tentativi falliti dalla rete locale vengono "
+"ignorati, tranne quando è stata attivata l'opzione."
+
+#: ../../fail2ban.rst:50
+msgid "IP/Network Whitelisting"
+msgstr "IP7reti in whitelist"
+
+#: ../../fail2ban.rst:50
+msgid ""
+"IP listed in the text area will be never banned by fail2ban (one IP per "
+"line). Network could be allowed in the Trusted-Network panel."
+msgstr ""
+"Gli IP elencati nell'area di testo non verranno mai bannato da fail2ban (va "
+"indicato un IP per riga). E' possibile consentire intere reti inserendole "
+"nel pannello Reti fidate."
+
+#: ../../fail2ban.rst:53
+msgid "Email"
+msgstr "Email"
+
+#: ../../fail2ban.rst:56
+msgid "Send email notifications"
+msgstr "Invia notifiche email"
+
+#: ../../fail2ban.rst:56
+msgid "Enable to send administrative emails."
+msgstr "Abilitando l'opzione verranno inviate email agli amministratori."
+
+#: ../../fail2ban.rst:59
+msgid "Administrators emails"
+msgstr "Email amministratori"
+
+#: ../../fail2ban.rst:59
+msgid "List of email addresses of administrators (one address per line)."
+msgstr ""
+"Elenco di indirizzi email degli amministratori (un indirizzo per riga)."
+
+#: ../../fail2ban.rst:62
+msgid "Notify jail start/stop events"
+msgstr "Notifica eventi di abilitazione/disabilitazione di una jail"
+
+#: ../../fail2ban.rst:62
+msgid "Send email notifications when a jail is started or stopped."
+msgstr "Invia notifiche via email all'avvio o all'arresto di una jail."
+
+#: ../../fail2ban.rst:65
+msgid "Unban IP"
+msgstr "Unban IP"
+
+#: ../../fail2ban.rst:67
+msgid ""
+"IPs are banned when they are found several times in log, during a specific "
+"find time. They are stored in a database to be banned again each time your "
+"restart the server or the service. To unban an IP you can use the "
+":guilabel:`Unban IP` tab in the status category of the server-manager."
+msgstr ""
+"Gli IP sono oggetto di ban quando vengono trovati più volte nei log, in uno "
+"specifico arco di tempo. Vengono archiviati in un database per essere "
+"nuovamente bannati ogni volta che si riavvia il server o il servizio. Per "
+"sbloccare un IP è possibile utilizzare la scheda :guilabel:`unban IP` "
+"disponibile nella categoria stato del server-manager."
+
+#: ../../fail2ban.rst:70
+msgid "Statistics"
+msgstr "Statistiche"
+
+#: ../../fail2ban.rst:72
+msgid ""
+"The :guilabel:`Ban statistics` tab is available in the status category of "
+"the server-manager, it gives you the total number of bans per jail as well "
+"as the total of all bans."
+msgstr ""
+"La scheda :guilabel:`Ban statistics`, disponibile nella categoria stato del "
+"server-manager, fornisce il numero di ban per jail e totale."
+
+#: ../../fail2ban.rst:75
+msgid "Tools"
+msgstr "Strumenti"
+
+#: ../../fail2ban.rst:78
+msgid "Fail2ban-client"
+msgstr "Fail2ban-client"
+
+#: ../../fail2ban.rst:80
+msgid ""
+"Fail2ban-client is part of the fail2ban rpm, it gives the state of fail2ban "
+"and all available jails: ::"
+msgstr ""
+"Fail2ban-client fa parte dell'rpm di fail2ban, fornisce lo stato di fail2ban"
+" e tutte le jail disponibili: ::"
+
+#: ../../fail2ban.rst:84
+msgid "To see a specific jail : ::"
+msgstr "Per ispezionare una jail specifica: ::"
+
+#: ../../fail2ban.rst:88
+msgid "To see which logfiles are monitored for a jail: ::"
+msgstr "Per verificare quali file di log siano monitorati da una jail: ::"
+
+#: ../../fail2ban.rst:93
+msgid "Fail2ban-listban"
+msgstr "Fail2ban-listban"
+
+#: ../../fail2ban.rst:95
+msgid ""
+"Fail2ban-listban counts the IPs currently and totally banned in all "
+"activated jails, at the end it shows the IPs which are still banned by "
+"shorewall. ::"
+msgstr ""
+"Fail2ban-listban permette di contare gli IP attualmente bannati nelle varie "
+"jail attivate e mostra anche gli IP che risultano bannati da shorewall. ::"
+
+#: ../../fail2ban.rst:100
+msgid "Fail2ban-regex"
+msgstr "Fail2ban-regex"
+
+#: ../../fail2ban.rst:102
+msgid ""
+"Fail2ban-regex is a tool which is used to test the regex on you logs, it is "
+"a part of fail2ban software. Only one filter is allowed per jail, but it is "
+"possible to specify several actions, on separate lines."
+msgstr ""
+"Fail2ban-regex è uno strumento che viene utilizzato per testare le regex sui"
+" log, è una parte del software fail2ban. È consentito un solo filtro per "
+"jail, ma è possibile specificare diverse azioni, su righe separate."
+
+#: ../../fail2ban.rst:104
+msgid ""
+"The documentation is `readable at the fail2ban project "
+"<http://fail2ban.readthedocs.io/en/latest/filters.html>`_."
+msgstr ""
+"La documentazione è `consultabile sul sito del progetto "
+"fail2ban<http://fail2ban.readthedocs.io/en/latest/filters.html>`_."
+
+#: ../../fail2ban.rst:110
+msgid "You can also test custom regex directly: ::"
+msgstr "E' possibile anche testare direttamente una regex personalizzata: ::"
+
+#: ../../fail2ban.rst:115
+msgid "Fail2ban-unban"
+msgstr "Fail2ban-unban"
+
+#: ../../fail2ban.rst:117
+msgid ""
+"Fail2ban-unban is used to unban an IP when the ban must be removed manually."
+" ::"
+msgstr ""
+"Fail2ban-unban è utilizzabile per sbloccare un IP nel caso in cui il ban "
+"debba essere rimosso manualmente. ::"
+
+#: ../../fail2ban.rst:121
+msgid "You can use also the built-in command with fail2ban-client: ::"
+msgstr ""
+"È possibile utilizzare anche il comando integrato con fail2ban-client: ::"
+
+#: ../../fail2ban.rst:126
+msgid "Whois"
+msgstr "Whois"
+
+#: ../../fail2ban.rst:128
+msgid ""
+"If you desire to query the IP ``whois`` database and obtain the origin of "
+"the banned IP by email, you could  Install the ``whois`` rpm."
+msgstr ""
+"Se si desidera ottenere informazioni sull'origine dell'IP bannato via "
+"e-mail, è possibile utilizzare il database ``whois`` installando l'rpm "
+"``whois``."
