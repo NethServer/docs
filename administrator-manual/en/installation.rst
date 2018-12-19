@@ -304,7 +304,7 @@ To install the base system, run: ::
 
     To promote to the Enterprise version run the following command: ::
     
-        yum install http://update.nethesis.it/nethserver/7.5.1804/nethserver-register.rpm
+        yum install http://update.nethesis.it/nethserver/7.6.1810/nethserver-register.rpm
 
     Proceed with :ref:`registration <registration-section>` then run the following command: ::
         
