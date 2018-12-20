@@ -696,6 +696,19 @@ You can use the :guilabel:`Upload` button to load an image which is at the botto
   Remember that the public images inserted in the signature are actually connected with a public link.
   To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
 
+Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
+
+It is possible to do this in two ways:
+
+1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``public.resource.links.as.inline.attachments`` = true (default = flase)
+
+2) through shell commands: ::
+
+     su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.mail','public.resource.links.as.inline.attachments','true');\""
+
+
 To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
 
 .. image:: _static/webtop-edit_mailcard.png
