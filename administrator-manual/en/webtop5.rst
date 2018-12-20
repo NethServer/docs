@@ -249,10 +249,6 @@ To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guil
 
 - open source :guilabel:`Outlook CalDav Synchronizer` client works fine, supporting both CardDAV and CalDAV.
 
-.. note::
-
-   At the moment CalDAV and CardDAV support **only personal resources synchronization**.
-
 .. warning::
 
    Webtop is a **clientless groupware**: its functionalities are fully available **only using the web interface**!
