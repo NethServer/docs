@@ -202,7 +202,7 @@ Developers are invited to update their modules, replacing
 ``nethserver-rh-php56-php-fpm`` with ``nethserver-rh-php71-php-fpm`` as soon as
 possible.
 
-... _dpw_ndp24:
+.. _dpw_ndpi24:
 
 NDPI 2.4
 ^^^^^^^^
