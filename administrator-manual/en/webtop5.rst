@@ -249,10 +249,6 @@ To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guil
 
 - open source :guilabel:`Outlook CalDav Synchronizer` client works fine, supporting both CardDAV and CalDAV.
 
-.. note::
-
-   At the moment CalDAV and CardDAV support **only personal resources synchronization**.
-
 .. warning::
 
    Webtop is a **clientless groupware**: its functionalities are fully available **only using the web interface**!
@@ -566,9 +562,7 @@ To activate sending SMS, first you need to choose one of the two supported provi
 Once registered to the service of the chosen provider, retrieve the API keys (AUTH_KEY and AUTH_SECRET) to be inserted in the WebTop configuration db.
 The settings to configure are those shown `here <https://www.sonicle.com/docs/webtop5/core.html#sms-settings>`_ .
 
-It is possible to do this in two ways:
-
-1) from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
 ``sms.provider`` = smshosting or twilio
 
@@ -578,31 +572,8 @@ It is possible to do this in two ways:
 
 ``sms.sender`` = (default optional)
 
-
-2) through shell commands:
-
-to configure the ``sms.provider`` key (smshosting for example): ::
-
- su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider','smshosting');\""
- 
-to configure the ``sms.provider.webrest.user`` key: ::
-
- su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.user','API_AUTH_KEY');\""
-
-to configure the ``sms.provider.webrest.password`` key: ::
-
- su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.provider.webrest.password','API AUTH_SECRET');\""
-  
-substituting the key obtained from the provider instead of 'API_AUTH_KEY' and 'API AUTH_SECRET'
-
 The ``sms.sender`` key is optional and is used to specify the default sender when sending SMS.
 It is possible to indicate a number (max 16 characters) or a text (max 11 characters).
-
-to configure the ``sms.sender`` key: ::
-
- su - postgres -c "psql webtop5 -c \"insert into core.settings (\"service_id\",\"key\",\"value\") values ('com.sonicle.webtop.core','sms.sender','XXXXXXXXXX');\""
-  
-replacing 'XXXXXXXXXX' with the number or text of the default sender.
 
 .. note::
 
@@ -700,6 +671,13 @@ You can use the :guilabel:`Upload` button to load an image which is at the botto
   Remember that the public images inserted in the signature are actually connected with a public link.
   To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
 
+Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
+
+It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``public.resource.links.as.inline.attachments`` = true (default = flase)
+
+
 To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
 
 .. image:: _static/webtop-edit_mailcard.png
@@ -713,7 +691,7 @@ The public image just uploaded will be able to recall it in the HTML editor of t
    The personal mailcard can be associated with the user or his email:
    by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
 
-Through the :ref:`webtop5_impersonate-section` you can also set a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard:
+By accessing the settings from the WebTop administrator panel you can also set a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard:
 
 .. image:: _static/webtop-domain_mailcard.png
 
@@ -1173,71 +1151,50 @@ When compiling the recipient of a mail, some automatically saved email addresses
 If you need to delete someone because it is wrong, move with the arrow keys until you select the one you want to delete
 (without clicking on it), then delete it with :guilabel:`Shift + Canc`
 
+
 .. only:: nscom
 
   .. _webtop-vs-sogo:
 
-  WebTop vs SOGo
-  ==============
+WebTop vs SOGo
+==============
 
-  WebTop and SOGo can be installed on the same machine, although it is discouraged to keep such setup on the long run.
+WebTop and SOGo can be installed on the same machine, although it is discouraged to keep such setup on the long run.
 
-  ActiveSync is enabled by default on SOGo and WebTop, but if both packages are
-  installed, SOGo will take precedence.
+ActiveSync is enabled by default on SOGo and WebTop, but if both packages are
+installed, SOGo will take precedence.
 
-  To disable ActiveSync on SOGo: ::
+To disable ActiveSync on SOGo: ::
 
-    config setprop sogod ActiveSync disabled
-    signal-event nethserver-sogo-update
+  config setprop sogod ActiveSync disabled
+  signal-event nethserver-sogo-update
 
-  To disable ActiveSync on WebTop: ::
+To disable ActiveSync on WebTop: ::
 
-    config setprop webtop ActiveSync disabled
-    signal-event nethserver-webtop5-update
-
-
-  All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
-  This also applies if the user is switching from WebTop to SOGo.
+  config setprop webtop ActiveSync disabled
+  signal-event nethserver-webtop5-update
 
 
-  Google and Dropbox integration
-  ==============================
-
-  Users can add their own Google Drive and Dropbox accounts inside WebTop.
-  Before proceeding, the administrator must create a pair of API access credentials.
-
-  Google API
-  ----------
-
-  * Access https://console.developers.google.com/project and create a new project
-  * Create new credentials by selecting "OAuth 2.0 clientID" type and remember to compile
-    "OAuth consent screen" section
-  * Insert new credentials (Client ID e Client Secret) inside WebTop configuration
-
-  From the shell, access webtop database: ::
-
-    su - postgres -c "psql webtop"
-
-  Execute the queries, using the corresponding value in place of ``__value__`` variable: ::
-
-    UPDATE core.settings SET value = '__value__' WHERE service_id = 'com.sonicle.webtop.core' AND key = 'googledrive.clientid';
-    UPDATE core.settings SET value = '__value__' WHERE service_id = 'com.sonicle.webtop.core' AND key = 'googledrive.clientsecret';
-
-  Dropbox API
-  -----------
-
-  * Access https://www.dropbox.com/developers/apps and create a new app
-  * Insert the new credential key pair (App key e App secret) inside WebTop configuration
-
-  From shell, access webtop database: ::
-
-    su - postgres -c "psql webtop"
-
-  Execute the queries, using the corresponding value in place of ``__value__`` variable: ::
-
-    UPDATE core.settings SET value = '__value__' WHERE service_id = 'com.sonicle.webtop.core' AND key = 'dropbox.appkey';
-    UPDATE core.settings SET value = '__value__' WHERE service_id = 'com.sonicle.webtop.core' AND key = 'dropbox.appsecret';
+All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
+This also applies if the user is switching from WebTop to SOGo.
 
 
-  If you need to raise the user limit, please read the official Dropbox documentation.
+Google integration
+==============================
 
+Users can add their own Google Drive accounts inside WebTop.
+Before proceeding, the administrator must create a pair of API access credentials.
+
+Google API
+----------
+
+* Access https://console.developers.google.com/project and create a new project
+* Create new credentials by selecting "OAuth 2.0 clientID" type and remember to compile
+  "OAuth consent screen" section
+* Insert new credentials (Client ID e Client Secret) inside WebTop configuration
+
+It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``googledrive.clientid`` = (Google API client_ID)
+
+``googledrive.clientsecret`` = (Google API client_secret) 
