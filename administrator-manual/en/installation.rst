@@ -300,7 +300,7 @@ comes already installed by the VPS provider.
 
     .. _installation-enterprise:
 
-    Just run the following on command line: ::
+    Simply type the following command: ::
 
         curl -sS http://go.nethesis.it/install/ns7.sh | bash
     

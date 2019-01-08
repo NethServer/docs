@@ -28,10 +28,21 @@ The installation of additional software from the web interface is only allowed e
 The use of :command:`yum` from the command line allows you to get around this limitation. 
 Therefore, do not hand over the password :dfn:`root` end user.
 
-Recovering authentication token
+Operation Center
+================
+￼
+The :dfn:`system id` uniquely identify the server and it is reported inside the details page of each server.
+There are also two special buttons :guilabel:`Free key` and :guilabel:`Delete server`.		
+
+The :guilabel:`Free key` button allows another server to reuse the key during the registration process.
+It's used in case you need to re-install the server for maintenance.
+
+The :guilabel:`Delete server` button will remove the server from the Operation Center.
+It's useful to remove old server or unused ones.
+
+Recover an authentication token
 -------------------------------
 
-The authentication token can be recovered at |register_link|.
-
 Access the :guilabel:`Server` page, select the server, then click on the :guilabel:`Show token` button on the right,
-just below the system id.
+just below the system id.￼
+￼
