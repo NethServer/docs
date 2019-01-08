@@ -276,40 +276,34 @@ Install on CentOS
 =================
 
 It is possible to install |product| on a fresh CentOS minimal installation using
-a couple of commands to download the additional software packages. This
+a couple of commands. This
 installation method is designed for virtual private servers (VPS) where CentOS
 comes already installed by the VPS provider.
 
-Enable |product| software repositories with this command: ::
-
-  yum install -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
-
-To install the base system, run: ::
-
-  nethserver-install
-
 .. only:: nscom
 
-    Alternatively, to install base system *and* additional modules, pass
-    the name of the module as a parameter to the install script.  Example: ::
+     Enable |product| software repositories with this command: ::
 
-      nethserver-install nethserver-mail nethserver-nextcloud
+         yum install -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
+
+     To install the base system, run: ::
+
+         nethserver-install
+
+
+     Alternatively, to install base system *and* additional modules, pass
+     the name of the module as a parameter to the install script.  Example: ::
+
+         nethserver-install nethserver-mail nethserver-nextcloud
 
 .. only:: nsent
 
     .. _installation-enterprise:
 
-    Enterprise promotion
-    ====================
+    Just run the following on command line: ::
 
-    To promote to the Enterprise version run the following command: ::
+        curl -sS http://go.nethesis.it/install/ns7.sh | bash
     
-        yum install http://update.nethesis.it/nethserver/7.6.1810/nethserver-register.rpm
-
-    Proceed with :ref:`registration <registration-section>` then run the following command: ::
-        
-        yum update @nethserver-iso
-
 
 .. _installation-next-steps:
 
