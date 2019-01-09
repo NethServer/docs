@@ -48,6 +48,8 @@ When the subscription expires, or at the end of a trial period, use the followin
 revert any modification to repositories and access the community ones: ::
 
   config setprop subscription Secret '' SystemId ''
-  signal-event software-repos-save
+  signal-event nethserver-subscription-save
+
+If you have installed the `new server manager` AKA `cockpit`, you can unsubscribe the machine in the `Subscription` page, clicking on **Unsubscribe** button.
 
 Refer to :ref:`software-updates-section` for more information about the community updates origin.
