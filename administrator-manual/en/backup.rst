@@ -697,13 +697,12 @@ Other restored configurations:
 
 Steps to be executed:
 
-1. Install the new machine, then access the Server Manager and start to follow the :ref:`first-configuration-wizard-section` procedure.
+1. Install the new machine.
 
-2. At step :guilabel:`Restore configuration`, if you need to change the network roles assignment, don't check the option :guilabel:`Restore configuration`, otherwise the previous network roles will be restored.
-   In this case, once the first configuration wizard will be finished, you'll be able to change the network roles from page :ref:`network`, then you will upload the backup from page :guilabel:`Backup (configuration)`.
+2. Once the new machine is installed, you'll need to enable an Internet connection, so that the restore procedure can donwload the request modules.
+   To do this, access the Server Manager (980 port), do NOT complete the first configuration wizard, and go immediatly to the page :ref:`network`.
 
-3. Instead, if you don't need to change the network roles assigment, at step :guilabel:`Restore configuration`, you can upload the configuration archive.
-   The option :guilabel:`Download modules automatically` should be enabled (if possible, enable a network configuration).
+3. Once the new machine can access to Internet, go to the page :guilabel:`Backup (configuration)` and upload your configuration backup (you can download it from My Nethesis).
 
 4. If a warning message requires it, reconfigure the network roles assignment.
    See :ref:`restore-roles-section` below.
