@@ -695,21 +695,24 @@ Other restored configurations:
 
 .. note:: The root/admin password is not restored.
 
+For the correct execution of the restore configuration, it's necessary that the server can access Internet (having an IP and gateway correctly configured).
+In this way, the procedure can download AUTOMATICALLY all modules that were previously installed.
 Steps to be executed:
 
 1. Install the new machine.
 
-2. Once the new machine is installed, you'll need to enable an Internet connection, so that the restore procedure can donwload the request modules.
-   To do this, access the Server Manager (980 port), do NOT complete the first configuration wizard, and go immediatly to the page :ref:`network`.
+2. Access the Server Manager (980 port), do NOT complete the first configuration wizard, and go immediatly to the Dashboard page (to leave the wizard, delete all the parts of the URL after the ":980").
 
-3. Once the new machine can access to Internet, go to the page :guilabel:`Backup (configuration)` and upload your configuration backup (you can download it from My Nethesis).
+3. Once arrived on the Dashboard page, go to the page :ref:`network` and configure the network so that the server can access to Internet.
 
-4. If a warning message requires it, reconfigure the network roles assignment.
+4. Next, go to the page :guilabel:`Backup (configuration)` and upload your configuration backup (you can download it from My Nethesis). The configuration will be restored.
+
+5. At the end, if a warning message requires it, reconfigure the network roles assignment.
    See :ref:`restore-roles-section` below.
 
-5. Verify the system is functional
+6. Verify the system is functional
 
-6. Restore data backup executing on the console ::
+7. Restore data backup executing on the console ::
 
     restore-data
 
