@@ -697,14 +697,13 @@ Other restored configurations:
 
 Steps to be executed:
 
-1. Install the new machine. If possible, enable a network connection at
-   boot (refer to :ref:`installation-manual` section) to automatically re-install
-   the required modules
+1. Install the new machine, then access the Server Manager and start to follow the :ref:`first-configuration-wizard-section` procedure.
 
-2. Access the Server Manager and follow the :ref:`first-configuration-wizard-section` procedure
+2. At step :guilabel:`Restore configuration`, if you need to change the network roles assignment, don't check the option :guilabel:`Restore configuration`, otherwise the previous network roles will be restored.
+   In this case, once the first configuration wizard will be finished, you'll be able to change the network roles from page :ref:`network`, then you will upload the backup from page :guilabel:`Backup (configuration)`.
 
-3. At step :guilabel:`Restore configuration`, upload the configuration archive.
-   The option :guilabel:`Download modules automatically` should be enabled.
+3. Instead, if you don't need to change the network roles assigment, at step :guilabel:`Restore configuration`, you can upload the configuration archive.
+   The option :guilabel:`Download modules automatically` should be enabled (if possible, enable a network configuration).
 
 4. If a warning message requires it, reconfigure the network roles assignment.
    See :ref:`restore-roles-section` below.
