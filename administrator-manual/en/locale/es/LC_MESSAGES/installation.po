@@ -1,12 +1,12 @@
 # #-#-#-#-#  installation.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  installation.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2019-01-08 18:26+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -550,25 +550,20 @@ msgstr "Instalar en CentOS"
 #: ../../installation.rst:278
 msgid ""
 "It is possible to install |product| on a fresh CentOS minimal installation "
-"using a couple of commands to download the additional software packages. "
-"This installation method is designed for virtual private servers (VPS) where"
-" CentOS comes already installed by the VPS provider."
+"using a couple of commands. This installation method is designed for virtual"
+" private servers (VPS) where CentOS comes already installed by the VPS "
+"provider."
 msgstr ""
-"Es posible instalar |product| En una nueva instalación mínima de CentOS "
-"utilizando un par de comandos para descargar los paquetes de software "
-"adicionales. Este método de instalación está diseñado para servidores "
-"privados virtuales (VPS) donde CentOS viene ya instalado por el proveedor de"
-" VPS."
 
-#: ../../installation.rst:283
+#: ../../installation.rst:285
 msgid "Enable |product| software repositories with this command: ::"
 msgstr "Habilitar repositorios de software |product| con este comando: ::"
 
-#: ../../installation.rst:287
+#: ../../installation.rst:289
 msgid "To install the base system, run: ::"
 msgstr "Para instalar el sistema base, ejecute: ::"
 
-#: ../../installation.rst:293
+#: ../../installation.rst:294
 msgid ""
 "Alternatively, to install base system *and* additional modules, pass the "
 "name of the module as a parameter to the install script.  Example: ::"
@@ -578,27 +573,14 @@ msgstr ""
 "::"
 
 #: ../../installation.rst:303
-msgid "Enterprise promotion"
-msgstr "Promoción de Enterprise"
-
-#: ../../installation.rst:305
-msgid "To promote to the Enterprise version run the following command: ::"
+msgid "Simply type the following command: ::"
 msgstr ""
-"Para promocionar a la versión Enterprise, ejecute el siguiente comando: ::"
 
-#: ../../installation.rst:309
-msgid ""
-"Proceed with :ref:`registration <registration-section>` then run the "
-"following command: ::"
-msgstr ""
-"Proceda con el :ref:`registro <registration-section>` y luego ejecute el "
-"siguiente comando: ::"
-
-#: ../../installation.rst:317
+#: ../../installation.rst:311
 msgid "Next steps"
 msgstr "Próximos pasos"
 
-#: ../../installation.rst:319
+#: ../../installation.rst:313
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"
