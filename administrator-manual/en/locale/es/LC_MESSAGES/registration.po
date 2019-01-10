@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2019-01-08 18:26+0100\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -28,59 +28,42 @@ msgstr "Registro"
 #: ../../registration.rst:11
 msgid ""
 "|product| offers the possibility to control the critical operating "
-"parameters using the :dfn:`Operation Center`, which is accessible by login "
-"at |register_link|. First, for each |product| installed, you must "
-":index:`register` the machine to allow proper server identification during "
-"the communication with the web console."
+"parameters using the :dfn:`Operation Center`, which is accessible at "
+"|register_link|. First, each |product| must be registered to access software"
+" repositories, support services and enable monitoring tools:"
 msgstr ""
-"|product| ofrece la posibilidad de controlar los parámetros críticos de "
-"funcionamiento utilizando el :dfn:`Centro de operaciones`, que es accesible "
-"mediante inicio de sesión en |register_link|. En primer lugar, por cada "
-"|product| instalado, debe :index:`registrar` la máquina para permitir la "
-"correcta identificación del servidor durante la comunicación con la consola "
-"web."
+
+#: ../../registration.rst:15
+msgid ""
+"Open :guilabel:`Registration` page from the Server Manager "
+"(``https://<server_name>:980``)"
+msgstr ""
 
 #: ../../registration.rst:16
-msgid ""
-"Access the Server Manager (``https://server:980``), then click on "
-":guilabel:`Software center` and follow the wizard:"
+msgid "Login to |register_link|"
 msgstr ""
-"Acceda al Administrador del servidor (``https://server:980``), luego haga "
-"clic en :guilabel:`Centro de software` y siga el asistente:"
 
-#: ../../registration.rst:18
+#: ../../registration.rst:17
 msgid ""
-"Please enter the reseller credentials used in the Operation Center "
-"|register_link|"
+"Click on :guilabel:`Create new server` from the Server Manager, or access "
+"the :guilabel:`Server` page inside |register_link|, click the :guilabel:`+` "
+"symbol under the :guilabel:`New server` section"
 msgstr ""
-"Introduzca las credenciales de distribuidor utilizadas en el Centro de "
-"operaciones |register_link|"
 
 #: ../../registration.rst:19
-msgid "Select an existing server or choose the creation of new  one"
-msgstr "Seleccione un servidor existente o elija la creación de uno nuevo"
+msgid "Choose a name for the server and select an existing customer"
+msgstr ""
 
 #: ../../registration.rst:20
 msgid ""
-"When creating make sure you enter a name that will help identify the server."
-" You should also enter a description"
+"Copy and paste the code inside the :guilabel:`authentication token` field"
 msgstr ""
-"Al crearlo asegúrese de introducir un nombre que le ayude a identificar el "
-"servidor. También debe introducir una descripción"
 
 #: ../../registration.rst:21
-msgid ""
-"Associate an existing customer to the new server, or fill in the fields for "
-"the creation of new customer"
+msgid "Click on :guilabel:`Register now` button"
 msgstr ""
-"Asocie un cliente existente al nuevo servidor, o rellene los campos para la "
-"creación de nuevos clientes"
 
-#: ../../registration.rst:22
-msgid "Confirm your entries to finish the registration process"
-msgstr "Confirme sus entradas para finalizar el proceso de registro"
-
-#: ../../registration.rst:24
+#: ../../registration.rst:23
 msgid ""
 "At the end you will be able to :ref:`install additional software "
 "<package_manager-section>`."
@@ -88,7 +71,7 @@ msgstr ""
 "Al final podrás :ref:`instalar software adicional <package_manager-"
 "section>`."
 
-#: ../../registration.rst:26
+#: ../../registration.rst:25
 msgid ""
 "Run :ref:`software update <software-updates-section>` immediately after "
 "registration to get new features and security fixes!"
@@ -97,7 +80,7 @@ msgstr ""
 "inmediatamente después del registro para obtener nuevas características y "
 "arreglos de seguridad!"
 
-#: ../../registration.rst:28
+#: ../../registration.rst:27
 msgid ""
 "The installation of additional software from the web interface is only "
 "allowed exclusively to the reseller credentials holders. The use of "
@@ -110,39 +93,18 @@ msgstr ""
 "limitación. Por lo tanto, no entregue la contraseña de usuario final "
 ":dfn:`root`."
 
-#: ../../registration.rst:34
-msgid ":index:`Server key`"
-msgstr ":index:`Server key`"
-
-#: ../../registration.rst:36
-msgid ""
-"The :dfn:`server key` allows to uniquely identify the server inside the "
-"Operation Center |register_link|. Inside the details page of each server, "
-"there are two special buttons :guilabel:`Free key` and :guilabel:`Delete "
-"server`."
+#: ../../registration.rst:32
+msgid "Operation Center"
 msgstr ""
-"El comando :dfn:`server key` permite identificar de forma única el servidor "
-"dentro del Centro de Operaciones |register_link|. Dentro de la página de "
-"detalles de cada servidor, hay dos botones especiales :guilabel:`Free key` y"
-" :guilabel:`Eliminar servidor`."
 
-#: ../../registration.rst:40
-msgid ":index:`Delete server`"
-msgstr ":index:`Eliminar servidor`"
-
-#: ../../registration.rst:42
+#: ../../registration.rst:33
 msgid ""
-"The :guilabel:`Delete server` button will remove the server from the "
-"Operation Center. It's useful to remove old server or unused ones."
+"￼ The :dfn:`system id` uniquely identify the server and it is reported "
+"inside the details page of each server. There are also two special buttons "
+":guilabel:`Free key` and :guilabel:`Delete server`."
 msgstr ""
-"El botón :guilabel:`Eliminar servidor` eliminará el servidor del Centro de "
-"operaciones. Es útil para eliminar un servidor antiguo o no utilizado."
 
-#: ../../registration.rst:46
-msgid ":index:`Free key`"
-msgstr ":index:`Free key`"
-
-#: ../../registration.rst:48
+#: ../../registration.rst:37
 msgid ""
 "The :guilabel:`Free key` button allows another server to reuse the key "
 "during the registration process. It's used in case you need to re-install "
@@ -151,3 +113,21 @@ msgstr ""
 "A través del botón :guilabel:`Liberar llave` es posible registrar el "
 "servidor recién restaurado con la misma llave que tenía antes de la "
 "restauración, sin tener que cambiar a otra."
+
+#: ../../registration.rst:40
+msgid ""
+"The :guilabel:`Delete server` button will remove the server from the "
+"Operation Center. It's useful to remove old server or unused ones."
+msgstr ""
+"El botón :guilabel:`Eliminar servidor` eliminará el servidor del Centro de "
+"operaciones. Es útil para eliminar un servidor antiguo o no utilizado."
+
+#: ../../registration.rst:44
+msgid "Recover an authentication token"
+msgstr ""
+
+#: ../../registration.rst:46
+msgid ""
+"Access the :guilabel:`Server` page, select the server, then click on the "
+":guilabel:`Show token` button on the right, just below the system id.￼ ￼"
+msgstr ""
