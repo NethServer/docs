@@ -302,8 +302,9 @@ comes already installed by the VPS provider.
 
     Simply type the following command: ::
 
-        curl -sS http://go.nethesis.it/install/ns7.sh | bash
-    
+        curl -sS https://go.nethesis.it/install/ns7.sh | bash
+
+    Installation log is saved inside ``/tmp/nethserver-enterprise-install/install.log`` file.
 
 .. _installation-next-steps:
 
