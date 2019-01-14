@@ -162,7 +162,7 @@ Supported storage backends:
 - WebDAV (only when used as single backup)
 
 .. note:: The destination directory is based on the server host name: in case of
-   FQDN change, the administrator should take care to copy/move the backup data from
+   FQDN change, the administrator should take care of copying/moving the backup data from
    the old directory to the new one.
 
 
