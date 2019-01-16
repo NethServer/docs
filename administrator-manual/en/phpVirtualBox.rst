@@ -10,7 +10,7 @@ PhpVirtualBox
 
 
 VirtualBox 
-  VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 2.
+  VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. It is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 2.
   Please see the `official website <https://www.virtualbox.org/>`_
 
 
@@ -23,13 +23,13 @@ phpVirtualBox
 Installation
 ============
 
-nethserver-virtualbox-X.X-phpvirtualbox has for dependencies nethserver-virtualbox-X.X-VirtualBox (rpm to install VirtualBox) The versions are bind: ::
+nethserver-virtualbox-X.X-phpvirtualbox requires nethserver-virtualbox-X.X-VirtualBox. The versions are bound togheter: ::
 
   nethserver-virtualbox-5.2-phpvirtualbox requires nethserver-virtualbox-5.2-VirtualBox
 
 .. warning::
 
-  VirtualBox compile its modules with the last kernel, you must have the most updated kernel and to start on it at boot. If the installer cannot compile the modules, then you should reboot your server and launch again the compilation by : ``/sbin/vboxconfig``
+  VirtualBox compile its modules with the latest kernel, you must have the most updated kernel and start on it at boot. If the installer cannot compile the modules, then you should reboot your server and launch again the compilation using : ``/sbin/vboxconfig``
 
 
 
@@ -40,12 +40,12 @@ Install from the Software Center or use the command line: ::
 Usage
 -----
 
-The URL of the phpVirtualBox application can be found at https://yourdomain.com/phpvirtualbox. The default credential is :
+The URL of the phpVirtualBox application can be found at https://yourdomain.com/phpvirtualbox. The default credentials are :
 
 * ``username``: ``admin``
 * ``password``: ``admin``
 
-More informations are available at the Authentication section
+More information are available at the Authentication section
 
 
 Network access
@@ -79,25 +79,15 @@ phpVirtualBox attempts to look like the user interface of VirtualBox, but you ca
 VM ownership and quota
 ----------------------
 
-The administrator users are not limited on the virtual machine quota and can manage VM of other users. The VMs are visible only by the owner, as long as the property ``VMOwnerShip`` is to true (default is ``true``). ::
+The administrator users are not limited on the virtual machine quota and can manage VM of other users. The VMs are visible only to the owner, as long as the property ``VMOwnerShip`` is to true (default is ``true``). ::
 
     config setprop phpvirtualhost VMOwnerShip false
     signal-event phpvirtualbox-update
 
-Number maximal of VMs allowed for non admin user (default is ``5``) ::
+Maximum number of VMs allowed for non admin user (default is ``5``) ::
 
     config setprop phpvirtualhost QuotaPerUser 10
     signal-event phpvirtualbox-update
-
-
-Documentation
-=============
-
-VirtualBox
-  The `official documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
-
-phpVirtualbox
-  The `official documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.
 
 
 User permissions
@@ -108,9 +98,9 @@ phpVirtualBox essentially has two access levels. ``admin`` and ``non-admin`` use
 Authentication
 ==============
 
-You can change the authentication method by the property ``Authentication`` (``internal``, ``LDAP``, ``AD``, default is ``internal``). For LDAP and AD, phpVirtualBox will ask to the NethServer Account providers and grant or not the authorization to the web application.
+You can change the authentication method by the property ``Authentication`` (``internal``, ``LDAP``, ``AD``, default is ``internal``). For LDAP and AD, phpVirtualBox will connect the |product| Account providers and grant or not the authorization to the web application.
 
-for example: ::
+Example: ::
 
   config setprop phpvirtualbox Authentication AD
   signal-event phpvirtualbox-update
@@ -118,14 +108,14 @@ for example: ::
 internal
 --------
 
-The default credential is :
+The default credentials are :
 
 * ``username``: ``admin`` 
 * ``password``: ``admin``
 
-Once logged in the first time, you should change the default password in the menu File -> Change Password.
+Once logged in the first time, you should change the default password in the menu :menuselection:`File -> Change Password`.
 
-In the phpvirtualbox user menu, you can create users, and set their permissions (only for the internal method)
+In the phpvirtualbox user menu, you can create users, and set their permissions (only for the internal authentication method).
 
 LDAP (openldap)
 ---------------
@@ -135,15 +125,15 @@ This authentication method is simple, all users from Openldap can login, but onl
 AD (active directory)
 ---------------------
 
-This authentication method is better implemented, group based (you have to create manually the two groups in the group panel of NethServer and associate members to these groups):
+This authentication method is the most complete, group based (you have to create manually the two groups in the group panel of |product| and associate members to these groups):
 
 * members of ``vboxadmin`` are administrators
 * members of ``vboxuser`` are non privilegied users
 
-The users who are not belong of these two groups ``vboxadmin`` or ``vboxuser``, cannot use the phpVirtualBox web application. You can change the group name with the properties ``UserGroup`` and ``AdminGroup``
+The users who do not belong to s ``vboxadmin`` or ``vboxuser`` groups, can't use the phpVirtualBox web application. You can change the group name with the properties ``UserGroup`` and ``AdminGroup``
 
-vboxweb: the user of virtualbox
-===============================
+Uploading ISOs
+==============
 
 The user who runs virtualbox is ``vboxweb``, a home is created (:file:`/home/vboxweb`) to store all the virtual machines (in VirtualBox VMs) and also the needed ISOs for creating your VM. The password of this user is stored in :file:`/var/lib/nethserver/secrets/virtualbox`.
 
@@ -176,7 +166,7 @@ You could use your own RDP software client for the installations of your guests,
     signal-event phpvirtualbox-update
 
 
-Network Helps
+VM networking
 =============
 
 The networking side is probably the most difficult part of the virtualization, you should consult the VirtualBox Documentation
@@ -187,7 +177,7 @@ Promiscuous way
 W10
   When you want to join a virtualized W10 to the sambaAD container, bridge the guest NIC to br0 and create a script
 
-script ::
+Example script ::
 
   VBoxTunctl -u root -g vboxusers -t vbox0
   ifconfig vbox0 up
@@ -197,7 +187,7 @@ script ::
 Esmith database
 ================
 
-You can modify the available properties of SOGo: ::
+You can modify the available properties of phpvirtualhost: ::
 
      AdminGroup=vboxadmin       # members of this group can authenticate in  `AD` as administrators
      AdminUser=admin            # User list (comma separated) of administrators that can authenticate in `LDAP`
@@ -215,8 +205,16 @@ You can modify the available properties of SOGo: ::
      status=enabled             # Enable phpvirtualbox (disabled, enabled)
 
 
-for example: ::
+Example: ::
 
   config setprop phpvirtualbox accessRDP red AdvancedSettings enabled
   signal-event phpvirtualbox-update
 
+Documentation
+=============
+
+VirtualBox
+  The `official documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
+
+phpVirtualbox
+  The `official documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.
