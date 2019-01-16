@@ -120,6 +120,7 @@ Modules
        :maxdepth: 1
 
        sogo
+       phpVirtualBox
 
 Best practices
 --------------
