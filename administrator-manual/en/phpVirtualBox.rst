@@ -23,9 +23,7 @@ phpVirtualBox
 Installation
 ============
 
-nethserver-virtualbox-X.X-phpvirtualbox requires nethserver-virtualbox-X.X-VirtualBox. The versions are bound togheter: ::
-
-  nethserver-virtualbox-5.2-phpvirtualbox requires nethserver-virtualbox-5.2-VirtualBox
+nethserver-virtualbox-X.X-phpvirtualbox requires nethserver-virtualbox-X.X-VirtualBox. The versions are bound togheter: nethserver-virtualbox-5.2-phpvirtualbox requires nethserver-virtualbox-5.2-VirtualBox
 
 .. warning::
 
@@ -42,8 +40,8 @@ Usage
 
 The URL of the phpVirtualBox application can be found at https://yourdomain.com/phpvirtualbox. The default credentials are :
 
-* ``username``: ``admin``
-* ``password``: ``admin``
+* username: ``admin``
+* password: ``admin``
 
 More information are available at the Authentication section
 
@@ -110,8 +108,8 @@ internal
 
 The default credentials are :
 
-* ``username``: ``admin`` 
-* ``password``: ``admin``
+* username: ``admin`` 
+* password: ``admin``
 
 Once logged in the first time, you should change the default password in the menu :menuselection:`File -> Change Password`.
 
