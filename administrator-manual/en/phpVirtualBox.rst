@@ -69,7 +69,7 @@ To make phpVirtualBox accessible with an exclusive DNS name, for example https:/
     signal-event phpvirtualbox-update
 
 Advanced settings
-----------------
+-----------------
 
 phpVirtualBox attempts to look like the user interface of VirtualBox, but you can enable the ``AdvancedSettings`` property (default is ``false``) and get more settings, only available by the command line ::
 
