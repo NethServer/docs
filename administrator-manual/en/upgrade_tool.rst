@@ -20,7 +20,16 @@ number of packages, internet connection, CPU and disks speed.
 
 .. warning::
 
-    Read carefully :ref:`upgrade_risks_section`
+   Read carefully :ref:`upgrade_risks_section`
+
+
+.. only:: nsent
+
+  .. note::
+
+     The *live upgrade* procedure **is not applicable on Nethesis appliances**, except
+     for the *S150 model* with an *active RAID1 software*.
+
 
 Preparation step
 ----------------
