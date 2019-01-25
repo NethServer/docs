@@ -27,7 +27,7 @@ number of packages, internet connection, CPU and disks speed.
 
   .. note::
 
-     The *live upgrade* procedure **is not applicable on Nethesis appliances**, except
+     The *in-place upgrade* procedure **is not applicable on Nethesis appliances**, except
      for the *S150 model* with an *active RAID1 software*.
 
 
