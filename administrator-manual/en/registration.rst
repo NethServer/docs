@@ -9,41 +9,40 @@ Registration
 ============
 
 |product| offers the possibility to control the critical operating parameters using the :dfn:`Operation Center`,
-which is accessible by login at |register_link|.
-First, for each |product| installed, you must :index:`register` the machine to 
-allow proper server identification during the communication with the web console.
+which is accessible at |register_link|.
+First, each |product| must be registered to access software repositories, support services and enable monitoring tools:
 
-Access the Server Manager (``https://server:980``), then click on :guilabel:`Software center` and follow the wizard:
-
-* Please enter the reseller credentials used in the Operation Center |register_link|
-* Select an existing server or choose the creation of new  one
-* When creating make sure you enter a name that will help identify the server. You should also enter a description
-* Associate an existing customer to the new server, or fill in the fields for the creation of new customer
-* Confirm your entries to finish the registration process
+1. Open :guilabel:`Software Center` page from the Server Manager (``https://<server_name>:980``)
+2. Login to |register_link|
+3. Click on :guilabel:`Create new server` from the Server Manager,
+   or access the :guilabel:`Server` page inside |register_link|, click the :guilabel:`+` symbol under the :guilabel:`New server` section
+4. Choose a name for the server and select an existing customer
+5. Copy and paste the code inside the :guilabel:`authentication token` field
+6. Click on :guilabel:`Register now` button
 
 At the end you will be able to :ref:`install additional software <package_manager-section>`.
 
+.. hint:: Run :ref:`software update <software-updates-section>` immediately after registration to get new features and security fixes!
 
 The installation of additional software from the web interface is only allowed exclusively to the reseller credentials holders.
 The use of :command:`yum` from the command line allows you to get around this limitation. 
 Therefore, do not hand over the password :dfn:`root` end user.
 
-
-:index:`Server key`
-===================
-
-The :dfn:`server key` allows to uniquely identify the server inside the Operation Center |register_link|.
-Inside the details page of each server, there are two special buttons :guilabel:`Free key` and :guilabel:`Delete server`.
-
-:index:`Delete server`
------------------------
-
-The :guilabel:`Delete server` button will remove the server from the Operation Center.
-It's useful to remove old server or unused ones.
-
-:index:`Free key`
------------------
+Operation Center
+================
+￼
+The :dfn:`system id` uniquely identify the server and it is reported inside the details page of each server.
+There are also two special buttons :guilabel:`Free key` and :guilabel:`Delete server`.
 
 The :guilabel:`Free key` button allows another server to reuse the key during the registration process.
 It's used in case you need to re-install the server for maintenance.
 
+The :guilabel:`Delete server` button will remove the server from the Operation Center.
+It's useful to remove old server or unused ones.
+
+Recover an authentication token
+-------------------------------
+
+Access the :guilabel:`Server` page, select the server, then click on the :guilabel:`Show token` button on the right,
+just below the system id.￼
+￼
