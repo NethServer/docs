@@ -60,7 +60,7 @@ Do not add big directories or files to the configuration backup.
 
 If you wish to exclude a file or directory from the configuration backup, add a line to the file :file:`/etc/backup-config.d/custom.exclude`.
 
-.. warning:: 
+.. warning::
    Make sure not to leave empty lines inside edited files.
    The syntax of the configuration backup supports only simple file and directory paths.
 
@@ -71,11 +71,6 @@ If you wish to exclude a file or directory from the configuration backup, add a 
 
 Data backup
 ===========
-
-|product| implements 2 types of data backup:
-
-- Single backup (primary, default, backward compatible)
-- Multiple backups (multi-backup, multi-engine)
 
 The data backup can be performed using different engines:
 
@@ -114,6 +109,39 @@ Engine         Compression Deduplication Encryption Integrity Type
 **rsync**      No          Partial       No         No        snapshot
 =============  =========== ============= ========== ========= ==================
 
+The administrator can schedule multiple backups using different engines and destinations.
+A valid policy could be creating a weekly backup to a local destination using duplicity, while scheduling
+a daily backup to a cloud storage using restic.
+
+When configuring backups, please bear in mind two golden rules:
+
+* always use different destinations for each engine
+* avoid scheduling concurrent backups, each backup should run when the previous one has been completed
+
+
+.. note::
+   While a single backup can be configured and restored from the Server Manager,
+   multiple backups must me configured using the New Server Manager (Cockpit).
+
+Storage backends
+----------------
+
+Supported by all engines:
+
+* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
+* NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
+* WebDAV: available on many NAS and remote servers (use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
+* USB: disk connected to a local USB/SATA port
+
+Supported by restic and rsync:
+
+* SFTP: SSH File Transfer Protocol
+
+Supported only by restic:
+
+* Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
+* Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
+
 Engines
 -------
 
@@ -132,6 +160,11 @@ Supported storage backends:
 - NFS
 - USB
 - WebDAV (only when used as single backup)
+
+.. note:: The destination directory is based on the server host name: in case of
+   FQDN change, the administrator should take care of copying/moving the backup data from
+   the old directory to the new one.
+
 
 Restic
 ^^^^^^
@@ -179,267 +212,6 @@ During data transfer, SFTP assures encryption and data is compressed to minimize
    Please note that |product| doesn't support links on Samba shares due to security implications.
    Also symlinks are not supported on WebDAV.
 
-Single backup
--------------
-
-This is the default system backup which can be configured and restored using the web interface.
-It can be scheduled once a day, can include system logs and implements notifications to the system administrator
-or to an external mail address.
-
-Storage backends
-^^^^^^^^^^^^^^^^
-
-Single backup can be saved on a destination chosen between:
-
-* USB: disk connected to a local USB port (See: :ref:`backup_usb_disk-section`)
-* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
-* NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
-* WebDAV: available on many NAS and remote servers (use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
-
-.. note:: The destination directory is based on the server host name: in case of
-   FQDN change, the administrator should take care to copy/move the backup data from
-   the old directory to the new one.
-
-Change backup engine
-^^^^^^^^^^^^^^^^^^^^
-
-Duplicity is the default engine for the *single backup*.
-You can change it executing one of the commands below.
-
-To use restic: ::
-
-  config setprop backup-data Program restic
-
-To use rsync: ::
-
-  config setprop backup-data Program rsync
-
-To use duplicity: ::
-
-  config setprop backup-data Program duplicity
-
-The backup will use the selected engine on next run.
-When the new engine has completed at least one backup, remember to cleanup the destination by removing
-data from the old engine.
-
-Multiple backups
-----------------
-
-The administrator can schedule multiple backups using different engines and destinations.
-A valid policy could be creating a weekly backup to a local destination using duplicity, while scheduling
-a daily backup to a cloud storage using restic.
-
-.. note:: 
-   Multiple backups can't be configured using the server-manager web user interface.
-   All operations should be performed from command line.
-
-When configuring multiple backups, please bear in mind two golden rules:
-
-* always use different destinations for each engine
-* avoid scheduling concurrent backups, each backup should run when the previous one has been completed
-
-Limitation of multiple backups:
-
-* disk usage report is not implemented
-* WebDAV can't be used as storage backend
-
-Every backup record is saved inside the ``backups`` database. Each record can have 3 different types:
-
-* ``duplicity``
-* ``restic``
-* ``rsync``
-
-Common properties:
-
-* ``status`` : enable or disable the backup, can be ``enabled`` or ``disabled``
-* ``Notify``: if set to ``always``, always send a notification with backup status; if set to ``error``, send a notification only on error; if set to ``never``, never send a notification
-* ``NotifyTo``: send the notification to given mail address, default is ``root@localhost``
-* ``VFSType`` : set the storage backend
-
-To list all configured backups: ::
-
-  db backups show
-
-Output example: ::
-
-  mybackup=rsync
-    BackupTime=1 7 * * *
-    Notify=error
-    NotifyTo=root@localhost
-    SMBHost=192.168.1.234
-    SMBLogin=test
-    SMBPassword=test
-    SMBShare=test
-    VFSType=cifs
-    status=enabled
-  
-
-Schedule
-^^^^^^^^
-
-The backup schedule uses the cron syntax saved inside the ``BackupTime`` property.
-Below, some examples.
-
-
-Every night at 3: ::
-
-  db backups setprop mybackup BackupTime '0 3 * * *'
-
-Every hour, at minute 15: ::
-
-  db backups setprop mybackup BackupTime '15 * * * *'
-
-At 04:05 on every Sunday: ::
-
-  db backups setprop mybackup BackupTime '5 4 * * 0'
-
-
-For more examples, see:
-
-- https://crontab-generator.org/
-- https://crontab.guru
-
-Retention policy
-^^^^^^^^^^^^^^^^
-
-Each engine can implement its own retention policy.
-The policy can be set using the ``CleanupOlderThan`` property.
-
-The property takes a number followed by D, M or Y (Days, Months, or Years respectively).
-
-Example: cleanup after 30 days: ::
-
-  db backups setprop mybackup CleanupOlderThan 30D
-
-The retention policy is not supported by the rsync backend.
-
-Storage backends
-^^^^^^^^^^^^^^^^
-
-Multiple backups support different storage backends.
-Some backends are engine-specific.
-
-CIFS
-~~~~
-
-Samba or Windows share, ``VFSType`` is ``cifs``.
-Supported by all backends.
-
-Properties:
-
-* ``SMBShare``: Samba share name
-* ``SMBHost``: Samba server host name or IP address
-* ``SMBLogin``: Samba login user
-* ``SMBPassword``: Samba password for the given user
-
-USB
-~~~
-
-USB-attached disk, ``VFSType`` is ``usb``.
-Supported by all backends.
-
-Properties:
-
-* ``USBLabel``
-
-NFS
-~~~
-
-Network File System, ``VFSType`` is ``nfs``.
-Supported by all backends.
-
-Properties:
-
-* ``NFSHost``: NFS server host name or IP address
-* ``NFSShare``: NFS share name
-
-SFTP
-~~~~
-
-SSH File Transfer Protocol, ``VFSType`` is ``sftp``.
-Supported only by restic and rsync.
-
-Properties:
-
-* ``SftpHost``: SSH host name or IP address
-* ``SftpUser``: SSH user
-* ``SftpPort``: SSH port
-* ``SftpDirectory``: destination directory, must be writable by the SSH user
-
-S3
-~~
-
-Amazon S3 (or compatible), ``VFSType`` is ``s3``.
-Supported only by restic. 
-
-Properties:
-
-* ``S3AccessKey``: user access key
-* ``S3Bucket``: bucket (directory) name
-* ``S3Host``: S3 host, use ``s3.amazonaws.com`` for Amazon
-* ``S3SecretKey``: secret access key
-
-How to setup Amazon S3 access keys: |restic_link|.
-
-.. |restic_link| raw:: html
-
-   <a href="https://restic.readthedocs.io/en/stable/080_examples.html" target="_blank">documentation</a>
-
-B2
-~~
-
-Backblaze B2, ``VFSType`` is ``b2``.
-Supported only by restic. 
-
-Properties:
-
-* ``B2AccountId``: B2 account name
-* ``B2AccountKey``: B2 account secret key
-* ``B2Bucket``: B2 bucket (directory)
-
-
-Rest
-~~~~
-
-Restic REST server, ``VFSType`` is ``rest``.
-Supported only by restic.
-
-Properties:
-
-* ``RestDirectory``: destination directory
-* ``RestHost``: REST server hostname or IP address
-* ``RestPort``: REST sever port (default for server is 8000)
-* ``RestProtocol``: REST protocol, can be ``http`` or ``https``
-* ``RestUser``: user for authentication (optional)
-* ``RestPassword``: password for authentication (optional)
-
-Examples
-^^^^^^^^
-
-Rsync backup, every day at 7:15 to a remote server. The SFTP backend requires the password of the remote server to execute SSH key exchange. ::
-
-  db backups set mybackup1 rsync status enabled BackupTime '15 7 * * *' Notify error NotifyTo root@localhost \
-  VFSType sftp SftpHost 192.168.1.2 SftpUser root SftpPort 22 SftpDirectory /mnt/mybackup1 
-  echo -e "Nethesis,1234" > /tmp/mybackup1-password; signal-event nethserver-backup-data-save mybackup1 /tmp/mybackup1-password
-
-Restic backup every day at 3:00 to Amazon S3, no retention limit: ::
-
-  db backups set mybackup1 restic VFSType s3 BackupTime '0 3 * * *' CleanupOlderThan never Notify error NotifyTo root@localhost status enabled \
-  S3AccessKey XXXXXXXXXXXXXXXXXXXX S3Bucket restic-demo S3Host s3.amazonaws.com S3SecretKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Prune 0
-  signal-event nethserver-backup-data-save mybackup1
-
-Duplicity backup every day at 22:00 to CIFS, 10 days retention: ::
-
-  db backups set mybackup1 duplicity VFSType cifs BackupTime '0 22 * * *' CleanupOlderThan 10D Notify error NotifyTo root@localhost status enabled \
-  SMBHost nas.localnethserver.org SMBLogin myuser SMBPassword mypassword SMBShare mybackup
-  signal-event nethserver-backup-data-save mybackup1
-
-
-To manually start a backup, execute: ::
-
-  backup-data -b <name>
-
-Where ``name`` is the backup name. For the examples above, the name is ``mybackup1``.
 
 .. _backup_customization-section:
 
@@ -449,10 +221,8 @@ Data backup customization
 If additional software is installed, the administrator can edit
 the list of files and directories included (or excluded).
 
-Single backup
-^^^^^^^^^^^^^
-
-**Inclusion**
+Inclusion
+^^^^^^^^^
 
 If you wish to add a file or directory to data backup, add a line to the file :file:`/etc/backup-data.d/custom.include`.
 
@@ -464,7 +234,8 @@ For example, to backup a software installed inside :file:`/opt` directory, add t
 The same syntax applies to configuration backup. Modifications should be done inside the file :file:`/etc/backup-config.d/custom.include`.
 
 
-**Exclusion**
+Exclusion
+^^^^^^^^^
 
 If you wish to exclude a file or directory from data backup, add a line to the file :file:`/etc/backup-data.d/custom.exclude`.
 
@@ -479,17 +250,19 @@ To exclude a mail directory called *test*, add this line: ::
 
 The same syntax applies to configuration backup. Modifications should be done inside the file :file:`/etc/backup-config.d/custom.exclude`.
 
-Multiple backups
-^^^^^^^^^^^^^^^^
+Override inclusions and exclusions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All multiple backups read the same configuration of the single backup, but the list 
-of saved and excluded files can be customized using two special files, where ``name`` is the name of the multiple backup:
+All backups read the same configuration, but the list 
+of saved and excluded files can be overridden using two special files:
 
 - ``/etc/backup-data/<name>.include``
 - ``/etc/backup-data/<name>.exclude``
 
-Both files will override the list of included and excluded data set from the single backup.
-The accepted syntax is the same as the single backup (see paragraph above).
+Where ``name`` is the name of the backup.
+
+Both files will override the list of included and excluded data set.
+The accepted syntax is the same as reported in the paragraph above.
 
 For example, given a backup named ``mybackup1`` create the following files:
 
@@ -499,13 +272,9 @@ For example, given a backup named ``mybackup1`` create the following files:
 Example
 ~~~~~~~
 
-It's possible to configure the single backup to save all data and create
-a multiple backup which includes only the mail and is scheduled each our.
+It's possible to configure a backup which includes only the mail and is scheduled each our.
 
-1. Configure the new ``mymailbackup``: ::
-
-     db backups set mymailbackup restic status enabled BackupTime '0 * * * *' Notify error NotifyTo root@localhost \
-     VFSType nfs NFSHost nsfs.server.loc NFSShare test CleanupOlderThan 1d Prune 0
+1. Configure the new ``mymailbackup`` using the UI
 
 2. Create a custom include containing only the mail directory: ::
 
@@ -522,6 +291,7 @@ a multiple backup which includes only the mail and is scheduled each our.
 
 .. warning:: Make sure not to leave empty lines inside edited files.
 
+.. note:: This type of backup can't be used in case of disaster recovery.
 
 
 .. _data_restore:
@@ -556,6 +326,8 @@ It is possible to restore the directories by clicking on the **Restore** button.
 
 .. note:: Multiple selection can be done with :kbd:`Ctrl` key pressed.
 
+.. note:: The UI for selective restore is available only for the backup named ``backup-data``.
+
 Command line procedure
 ----------------------
 
@@ -565,42 +337,8 @@ All relevant files are saved under :file:`/var/lib/nethserver/` directory:
 * Shared folders: :file:`/var/lib/nethserver/ibay/<name>`
 * User's home: :file:`/var/lib/nethserver/home/<user>`
 
-Single backup
-^^^^^^^^^^^^^
 
-It is possible to list all files inside the last backup using this command: ::
-
- backup-data-list
-
-The command can take some time depending on the backup size.
-
-To restore a file/directory, use the command: ::
-
-  restore-file <position> <file>
-
-Example, restore *test* mail account to :file:`/tmp` directory: ::
-
-  restore-file /tmp /var/lib/nethserver/vmail/test
-
-Example, restore *test* mail account to original position: ::
-
-  restore-file / /var/lib/nethserver/vmail/test
-
-
-The system can restore a previous version of directory (or file).
-
-Example, restore the version of a file from 15 days ago: ::
-
-  restore-file -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
-
-The ``-t`` option allows to specify the number of days (15 in this scenario).
-When used with snapshot-based engines, the ``-t`` option requires the name of the snapshot
-to restore.
-
-Multiple backups
-^^^^^^^^^^^^^^^^
-
-To list data inside a multiple backup, use: ::
+To list data inside a backup, use: ::
 
   backup-data-list -b <name>
 
@@ -611,6 +349,15 @@ To restore all data in the original location, use: ::
 To restore a file or directory, use: ::
 
   restore-file -b <name> <position> <path>
+
+Example, restore the version of a file from 15 days ago: ::
+
+  restore-file -b <name> -t 15D /tmp "/var/lib/nethserver/ibay/test/myfile" 
+
+The ``-t`` option allows to specify the number of days (15 in this scenario).
+When used with snapshot-based engines, the ``-t`` option requires the name of the snapshot
+to restore.
+
 
 .. note:: When you are using *CIFS* to access the share, and the command doesn't work
           as expected, verify that user and password for the network share are correct.
@@ -713,7 +460,7 @@ Steps to be executed:
 
 6. Restore data backup executing on the console ::
 
-    restore-data
+    restore-data -b <name>
 
 Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
 

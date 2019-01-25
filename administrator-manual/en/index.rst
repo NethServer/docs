@@ -120,6 +120,7 @@ Modules
        :maxdepth: 1
 
        sogo
+       phpVirtualBox
 
 Best practices
 --------------
@@ -139,6 +140,7 @@ Appendix
    upgrade
    license
    nscom_releases
+   issue_trackers
 
 .. only:: nscom
 
