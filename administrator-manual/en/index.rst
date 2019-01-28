@@ -119,6 +119,7 @@ Modules
     .. toctree::
        :maxdepth: 1
 
+       collabora
        sogo
        phpVirtualBox
 
