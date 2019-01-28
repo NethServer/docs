@@ -6,8 +6,8 @@
 Upgrade from |product| 6
 ========================
 
-The upgrade from |product| 6 to |product| |version| is obtained by means of
-three methods:
+The upgrade from |product| 6 to |product| 7 is obtained by means of three
+methods:
 
 * :ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-recovery-section`)
 * :ref:`rsync <upgrade_with_rsync-section>`
