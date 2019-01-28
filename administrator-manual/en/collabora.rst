@@ -30,14 +30,14 @@ HTTPS with a valid certificate.
 
 .. note::
 
- Collabora Online will **not be enable** without a dedicated virtual host
+ Collabora Online will **not be enabled** without a dedicated virtual host
 
 To configure Collobora Online, execute: ::
 
   config setprop loolwsd VirtualHost collabora.yourdomain.com
   signal-event nethserver-collabora-update
 
-After virtual host configuration, obtain a valid HTTPS certificate via Let's encrypt
+After virtual host configuration, obtain a valid HTTPS certificate via Let's Encrypt
 from ``Server certificate`` section of Server Manager interface.
 
 Usage
@@ -60,6 +60,6 @@ And manually configure the Nextcloud `richdocuments app <https://github.com/next
 Admin user
 ==========
 
-After installation, admin dashboard can be enable with ``loolconfig set-admin-password`` and accessible at: ::
+After installation, admin dashboard can be enabled with ``loolconfig set-admin-password`` and accessible at: ::
 
   https://collabora.yourdomain.com/loleaflet/dist/admin/admin.html
