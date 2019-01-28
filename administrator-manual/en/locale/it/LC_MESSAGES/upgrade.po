@@ -1,12 +1,12 @@
 # #-#-#-#-#  upgrade.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  upgrade.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:27+0100\n"
+"POT-Creation-Date: 2019-01-28 10:04+0100\n"
 "PO-Revision-Date: 2017-03-21 10:46+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -35,16 +35,25 @@ msgstr "Aggiornamento da |product| 6"
 
 #: ../../upgrade.rst:9
 msgid ""
-"The upgrade from |product| 6 to |product| |version| can be achieved from a "
-":ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-"
-"recovery-section` ) or :ref:`using rsync <upgrade_with_rsync-section>`."
+"The upgrade from |product| 6 to |product| 7 is obtained by means of three "
+"methods:"
 msgstr ""
-"L'upgrade da |product| 6 a |product| |version| può essere effettuato tramite"
-" :ref:`backup <upgrade_from_backup-section>` (fare riferimento anche alla "
-"sezione  :ref:`disaster-recovery-section`) o tramite :ref:`rsync "
-"<upgrade_with_rsync-section>`."
 
-#: ../../upgrade.rst:15
+#: ../../upgrade.rst:12
+msgid ""
+":ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-"
+"recovery-section`)"
+msgstr ""
+
+#: ../../upgrade.rst:13
+msgid ":ref:`rsync <upgrade_with_rsync-section>`"
+msgstr ""
+
+#: ../../upgrade.rst:14
+msgid ":ref:`upgrade-tool <upgrade_with_tool-section>` (beta)"
+msgstr ""
+
+#: ../../upgrade.rst:18
 msgid ""
 "Before running the upgrade procedure, read carefully all the sections of "
 "this chapter. Please also read :ref:`discontinued-section`."
@@ -53,18 +62,18 @@ msgstr ""
 "sezioni di questo documento. Si prega di fare riferimento anche alla sezione"
 " :ref:`discontinued-section`."
 
-#: ../../upgrade.rst:20
+#: ../../upgrade.rst:23
 msgid ""
 "During the whole upgrade process, all network services will be inaccessible."
 msgstr ""
 "Per l'intera durata del processo di upgrade tutti i servizi di rete saranno "
 "inaccessibili."
 
-#: ../../upgrade.rst:23
+#: ../../upgrade.rst:26
 msgid "Accounts provider"
 msgstr "Account provider"
 
-#: ../../upgrade.rst:25
+#: ../../upgrade.rst:28
 msgid ""
 "There are different upgrade scenarios, depending on how the source machine "
 "was configured."
@@ -72,7 +81,7 @@ msgstr ""
 "Esistono differenti scenari di aggiornamento, a seconda di come è "
 "configurata la macchina di origine."
 
-#: ../../upgrade.rst:27 ../../upgrade.rst:346
+#: ../../upgrade.rst:30 ../../upgrade.rst:349
 msgid ""
 "If the source system was a NT Primary Domain Controller (Samba server role "
 "was :guilabel:`Primary Domain Controller` -- PDC) or a standalone file "
@@ -84,7 +93,7 @@ msgstr ""
 "standalone (ruolo :guilabel:`Workstation` -- WS), fare riferimento alla "
 "sezione :ref:`pdc-upgrade-section`."
 
-#: ../../upgrade.rst:31 ../../upgrade.rst:350
+#: ../../upgrade.rst:34 ../../upgrade.rst:353
 msgid ""
 "If the source system was joined to an Active Directory domain (Samba server "
 "role was :guilabel:`Active Directory member` -- ADS), refer to :ref:`ads-"
@@ -94,7 +103,7 @@ msgstr ""
 "server Samba :guilabel:`Active Directory member` -- ADS), fare riferimento "
 "alla sezione :ref:`ads-upgrade-section`."
 
-#: ../../upgrade.rst:35
+#: ../../upgrade.rst:38
 msgid ""
 "In any other case, the LDAP server is upgraded automatically to *local LDAP "
 "accounts provider*, preserving existing users, passwords and groups."
@@ -103,11 +112,11 @@ msgstr ""
 "\"Account provider LDAP locale\", preservando utenti, password e gruppi "
 "preesistenti."
 
-#: ../../upgrade.rst:41
+#: ../../upgrade.rst:44
 msgid "Primary Domain Controller and Workstation upgrade"
 msgstr "Aggiornamento Primary Domain Controller e Workstation"
 
-#: ../../upgrade.rst:43
+#: ../../upgrade.rst:46
 msgid ""
 "After the restore procedure, go to :guilabel:`Accounts provider` page and "
 "select the :guilabel:`Upgrade to Active Directory` procedure. The button "
@@ -119,7 +128,7 @@ msgstr ""
 "to Active Directory`. Il bottone sarà disponibile unicamente se la "
 "configurazione di rete sarà stata adattata al nuovo hardware."
 
-#: ../../upgrade.rst:48
+#: ../../upgrade.rst:51
 msgid ""
 "The following accounts are ignored by the upgrade procedure because they are"
 " already provided by Samba Active Directory:"
@@ -127,19 +136,19 @@ msgstr ""
 "I seguenti account vengono ignorati dalla procedura di aggiornamento perché "
 "sono già forniti da Samba Active Directory:"
 
-#: ../../upgrade.rst:51
+#: ../../upgrade.rst:54
 msgid "``administrator``"
 msgstr "``administrator``"
 
-#: ../../upgrade.rst:52
+#: ../../upgrade.rst:55
 msgid "``guest``"
 msgstr "``guest``"
 
-#: ../../upgrade.rst:53
+#: ../../upgrade.rst:56
 msgid "``krbtgt``"
 msgstr "``krbtgt``"
 
-#: ../../upgrade.rst:55
+#: ../../upgrade.rst:58
 msgid ""
 "An additional, free, IP address from the *green* network is required by the "
 "Linux container to run the local Active Directory accounts provider."
@@ -148,23 +157,23 @@ msgstr ""
 "*green* al container Linux per attivare l'account provider Active Directory "
 "locale."
 
-#: ../../upgrade.rst:58
+#: ../../upgrade.rst:61
 msgid "For instance:"
 msgstr "Ad esempio:"
 
-#: ../../upgrade.rst:60
+#: ../../upgrade.rst:63
 msgid "server IP (green): ``192.168.98.252``"
 msgstr "IP server (green): ``192.168.98.252``"
 
-#: ../../upgrade.rst:61
+#: ../../upgrade.rst:64
 msgid "free additional IP in green network: ``192.168.98.7``"
 msgstr "IP aggiuntivo e libero della rete green: `192.168.98.7``"
 
-#: ../../upgrade.rst:63
+#: ../../upgrade.rst:66
 msgid "Ensure there is a working Internet connection:"
 msgstr "Assicurarsi che sia attiva una connessione internet:"
 
-#: ../../upgrade.rst:70
+#: ../../upgrade.rst:73
 msgid ""
 "For more information about the local Active Directory accounts provider, see"
 " :ref:`ad-local-accounts-provider-section`."
@@ -173,13 +182,13 @@ msgstr ""
 "locale, fare riferimento alla sezione :ref:`ad-local-accounts-provider-"
 "section`."
 
-#: ../../upgrade.rst:73
+#: ../../upgrade.rst:76
 msgid "Shared folder connections may require further adjustment."
 msgstr ""
 "Le connessioni alle cartelle condivise potrebbero richiedere delle "
 "modifiche."
 
-#: ../../upgrade.rst:77
+#: ../../upgrade.rst:80
 msgid ""
 "Read carefully the :ref:`upgrade-shared-folders` section, because the "
 "connection credentials may change when upgrading to |product| |version|."
@@ -188,12 +197,12 @@ msgstr ""
 "credenziali per la connessione potrebbero variare a seguito dell'upgrade a "
 "|product| |version|."
 
-#: ../../upgrade.rst:80
+#: ../../upgrade.rst:83
 msgid "The upgrade procedure preserves user, group and computer accounts."
 msgstr ""
 "La procedura di upgrade preserva utenti, gruppi e account dei computer."
 
-#: ../../upgrade.rst:84
+#: ../../upgrade.rst:87
 msgid ""
 "Users not enabled for Samba in |product| 6 will be migrated as locked users."
 " To enable these locked users, the administrator will have to set a new "
@@ -203,11 +212,11 @@ msgstr ""
 "utenti bloccati. Per abilitare questi utenti bloccati, l'amministratore "
 "dovrà semplicemente impostargli una nuova password."
 
-#: ../../upgrade.rst:91
+#: ../../upgrade.rst:94
 msgid "Active Directory member upgrade"
 msgstr "Aggiornamento membro Active Directory"
 
-#: ../../upgrade.rst:93
+#: ../../upgrade.rst:96
 msgid ""
 "After **restoring the configuration**, join the server to the existing "
 "Active Directory domain from the web interface. For more information see "
@@ -218,23 +227,23 @@ msgstr ""
 "ulteriori informazioni consultare la sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../upgrade.rst:97
+#: ../../upgrade.rst:100
 msgid "At the end, proceed with **data restore**."
 msgstr "Al termine, procedere con il **ripristino dei dati**."
 
-#: ../../upgrade.rst:99
+#: ../../upgrade.rst:102
 msgid "Mail aliases from AD server are not imported automatically!"
 msgstr "Gli alias e-mail non vengono importati automaticamente da AD!"
 
-#: ../../upgrade.rst:104
+#: ../../upgrade.rst:107
 msgid "Shared folders"
 msgstr "Cartelle condivise"
 
-#: ../../upgrade.rst:106
+#: ../../upgrade.rst:109
 msgid "Shared folders have been split into two packages:"
 msgstr "Le cartelle condivise sono state separate in due pacchetti:"
 
-#: ../../upgrade.rst:108
+#: ../../upgrade.rst:111
 msgid ""
 "\"Shared folders\" page configures only Samba SMB shares; it provides data "
 "access using CIFS/SMB protocol and can be used to share files among Windows "
@@ -245,7 +254,7 @@ msgstr ""
 "CIFS/SMB e può essere utilizzata per condividere file tra workstation "
 "Windows e Linux"
 
-#: ../../upgrade.rst:112
+#: ../../upgrade.rst:115
 msgid ""
 "The \"Virtual hosts\" panel provides HTTP and FTP access, it has been "
 "designed to host web sites and web applications"
@@ -253,11 +262,11 @@ msgstr ""
 "Il pannello \"Virtual host\" fornisce l'accesso via HTTP ed FTP ed è stato "
 "concepito per ospitare siti ed applicazioni web"
 
-#: ../../upgrade.rst:118
+#: ../../upgrade.rst:121
 msgid "SMB access"
 msgstr "Accesso SMB"
 
-#: ../../upgrade.rst:120
+#: ../../upgrade.rst:123
 msgid ""
 "In |product| |version| the SMB security model is based on Active Directory. "
 "As consequence when upgrading (or migrating) a file server in Primary Domain"
@@ -269,7 +278,7 @@ msgstr ""
 "migrazione) di un file server nel ruolo del controller di dominio primario "
 "(PDC) o di standalone workstation (WS), si applica la seguente regola:"
 
-#: ../../upgrade.rst:124
+#: ../../upgrade.rst:127
 msgid ""
 "When connecting to a shared folder, the NetBIOS domain name must be either "
 "prefixed to the user name (i.e. ``MYDOMAIN\\username``), or inserted in the "
@@ -279,7 +288,7 @@ msgstr ""
 "deve essere anteposto al nome utente (ad esempio ``MYDOMAIN\\username``) o "
 "inserito nel campo specifico del modulo di autenticazione."
 
-#: ../../upgrade.rst:128
+#: ../../upgrade.rst:131
 msgid ""
 "The upgrade procedure enables the deprecated [#badlock]_ NTLM authentication"
 " method to preserve backward compatibility with legacy network clients, like"
@@ -289,35 +298,35 @@ msgstr ""
 "[#badlock]_ al fine di preservare la compatibilità con i client della rete "
 "più vecchi, come stampanti e scanner."
 
-#: ../../upgrade.rst:134
+#: ../../upgrade.rst:137
 msgid ""
 "Fix the legacy SMB clients configuration, then disable NTLM authentication."
 msgstr ""
 "Si consiglia caldamente di correggere la configurazione dei client SMB più "
 "vecchi quindi di disattivare l'autenticazione NTLM."
 
-#: ../../upgrade.rst:136
+#: ../../upgrade.rst:139
 msgid "Edit ``/var/lib/machines/nsdc/etc/samba/smb.conf``"
 msgstr "Modificare ``/var/lib/machines/nsdc/etc/samba/smb.conf``"
 
-#: ../../upgrade.rst:137
+#: ../../upgrade.rst:140
 msgid "Remove the ``ntlm auth = yes`` line"
 msgstr "Rimuovere la riga ``ntlm auth = yes``"
 
-#: ../../upgrade.rst:138
+#: ../../upgrade.rst:141
 msgid "Restart the samba DC with ``systemctl -M nsdc restart samba``"
 msgstr ""
 "Riavviare il DC samba con il comando ``systemctl -M nsdc restart samba``"
 
-#: ../../upgrade.rst:140
+#: ../../upgrade.rst:143
 msgid "Badlock vulnerability http://badlock.org/"
 msgstr "Vulnerabilità Badlock http://badlock.org/"
 
-#: ../../upgrade.rst:143
+#: ../../upgrade.rst:146
 msgid "HTTP access"
 msgstr "Accesso HTTP"
 
-#: ../../upgrade.rst:145
+#: ../../upgrade.rst:148
 msgid ""
 "Every shared folder with web access configured in |product| 6 can be "
 "migrated to a virtual host directly from the web interface by selecting the "
@@ -330,7 +339,7 @@ msgstr ""
 "contenuti nel nuovo virtual host saranno accessibili solamente tramite i "
 "protocolli FTP ed HTTP."
 
-#: ../../upgrade.rst:150
+#: ../../upgrade.rst:153
 msgid ""
 "See also :ref:`virtual_hosts-section` for more information about "
 ":guilabel:`Virtual hosts` page."
@@ -338,11 +347,11 @@ msgstr ""
 "Fare riferimento alla sezione :ref:`virtual_hosts-section` per ulteriori "
 "informazioni relative alla pagina :guilabel:`Virtual hosts`"
 
-#: ../../upgrade.rst:154
+#: ../../upgrade.rst:157
 msgid "Mail server"
 msgstr "Server mail"
 
-#: ../../upgrade.rst:156
+#: ../../upgrade.rst:159
 msgid ""
 "All mailboxes options like SPAM retention and quota, along with ACLs, user "
 "shared mailboxes and subscriptions are preserved."
@@ -351,7 +360,7 @@ msgstr ""
 "così come le ACL, le cassette postali condivise dall'utente e le "
 "sottoscrizioni vengono conservate."
 
-#: ../../upgrade.rst:159
+#: ../../upgrade.rst:162
 msgid ""
 "Mailboxes associated to groups with :guilabel:`Deliver the message into a "
 "shared folder` option enabled, will be converted to public shared mailboxes."
@@ -364,11 +373,11 @@ msgstr ""
 "automaticamente sottoscritta da tutti i membri del gruppo, ma tutti i "
 "messaggi verranno contrassegnati come non letti."
 
-#: ../../upgrade.rst:165
+#: ../../upgrade.rst:168
 msgid "TLS policy"
 msgstr "TLS policy"
 
-#: ../../upgrade.rst:167
+#: ../../upgrade.rst:170
 msgid ""
 "In |product| |version| the services configuration can adhere to :ref"
 ":`tlspolicy-section`.  Before upgrading, the network clients must be checked"
@@ -379,7 +388,7 @@ msgstr ""
 "la compatibilità dei client di rete con le caratteristiche delle policy "
 "disponibili."
 
-#: ../../upgrade.rst:173
+#: ../../upgrade.rst:176
 msgid ""
 "An old network client can fail to connect if its TLS ciphers are considered "
 "invalid"
@@ -387,7 +396,7 @@ msgstr ""
 "Un client di rete datato potrebbe fallire la connessione se i cifrari TLS da"
 " esso supportati sono considerati non validi"
 
-#: ../../upgrade.rst:176
+#: ../../upgrade.rst:179
 msgid ""
 "The policy identifier selected by the upgrade procedure depends on the "
 "|product| version and is documented in :ref:`release-notes-section`."
@@ -396,11 +405,11 @@ msgstr ""
 "dipende dal versione di |product| come documentato in :ref:`release-notes-"
 "section`."
 
-#: ../../upgrade.rst:180
+#: ../../upgrade.rst:183
 msgid "Let's Encrypt"
 msgstr "Let's Encrypt"
 
-#: ../../upgrade.rst:182
+#: ../../upgrade.rst:185
 msgid ""
 "Let's Encrypt certificates are restored during the process, but will not be "
 "automatically renewed."
@@ -408,7 +417,7 @@ msgstr ""
 "I certificati Let's Encrypt vengono ripristinati durante il processo, ma non"
 " verranno automaticamente rinnovati."
 
-#: ../../upgrade.rst:185
+#: ../../upgrade.rst:188
 msgid ""
 "After the upgrade process has been completed, access the web interface and "
 "reconfigure Let's Encrypt from the :guilabel:`Server certificate` page."
@@ -417,18 +426,18 @@ msgstr ""
 "web e riconfigurare Let's Encrypt dalla pagina :guilabel:`Certificato del "
 "server`."
 
-#: ../../upgrade.rst:189
+#: ../../upgrade.rst:192
 msgid "Owncloud and Nextcloud"
 msgstr "Owncloud e Nextcloud"
 
-#: ../../upgrade.rst:191
+#: ../../upgrade.rst:194
 msgid ""
 "In |product| |version|, Owncloud has officially been replaced by Nextcloud."
 msgstr ""
 "In |product| |version|, Owncloud è stato ufficialmente sostituito da "
 "Nextcloud."
 
-#: ../../upgrade.rst:193
+#: ../../upgrade.rst:196
 msgid ""
 "However Owncloud 7 is still available to avoid service disruption after the "
 "upgrade."
@@ -436,7 +445,7 @@ msgstr ""
 "Tuttavia Owncloud 7 è ancora disponibile per evitare interruzioni del "
 "servizio dopo l'aggiornamento."
 
-#: ../../upgrade.rst:197
+#: ../../upgrade.rst:200
 msgid ""
 "In case of :ref:`upgrade from local LDAP to Samba AD <pdc-upgrade-section>`,"
 " user data inside Owncloud will not be accessible either from the web "
@@ -449,14 +458,14 @@ msgstr ""
 " migrare a Nextcloud dopo che è stato completato l'aggiornamento a Samba "
 "Active Directory."
 
-#: ../../upgrade.rst:203
+#: ../../upgrade.rst:206
 msgid ""
 "From Nextcloud 13, the migration from Owncloud to Nextcloud is not supported"
 " anymore."
 msgstr ""
 "Da Nextcloud 13, la migrazione da Owncloud a Nextcloud non è più supportata."
 
-#: ../../upgrade.rst:205
+#: ../../upgrade.rst:208
 msgid ""
 "Users should replace Owncloud clients with Nextcloud ones [#DownloadNC]_, "
 "then make sure to set the new application URL: "
@@ -466,17 +475,17 @@ msgstr ""
 "Nextcloud [#DownloadNC]_, assicurandosi di impostare il nuovo URL "
 "dell'applicazione: ``https://<your_server_address>/nextcloud``."
 
-#: ../../upgrade.rst:208
+#: ../../upgrade.rst:211
 msgid ""
 "Nextcloud clients download https://nextcloud.com/install/#install-clients"
 msgstr ""
 "download client Nextcloud https://nextcloud.com/install/#install-clients"
 
-#: ../../upgrade.rst:211
+#: ../../upgrade.rst:214
 msgid "Perl libraries"
 msgstr "Librerie Perl"
 
-#: ../../upgrade.rst:213
+#: ../../upgrade.rst:216
 msgid ""
 "In |product| |version|, perl library ``NethServer::Directory`` has been "
 "replaced by ``NethServer::Password``. Please update your custom scripts "
@@ -486,27 +495,27 @@ msgstr ""
 "sostituita da ``NethServer::Password``. Gli script personalizzati andranno "
 "adattati di conseguenza."
 
-#: ../../upgrade.rst:217
+#: ../../upgrade.rst:220
 msgid "Example of old code: ::"
 msgstr "Esempio del vecchio codice: ::"
 
-#: ../../upgrade.rst:222
+#: ../../upgrade.rst:225
 msgid "New code: ::"
 msgstr "Nuovo codice: ::"
 
-#: ../../upgrade.rst:227
+#: ../../upgrade.rst:230
 msgid "Documentation available via perldoc command: ::"
 msgstr "La documentazione è disponibile attraverso il comando perldoc: ::"
 
-#: ../../upgrade.rst:235
+#: ../../upgrade.rst:238
 msgid "Upgrade from backup"
 msgstr "Upgrade da backup"
 
-#: ../../upgrade.rst:237
+#: ../../upgrade.rst:240
 msgid "Make sure to have an updated backup of the original installation."
 msgstr "Assicurarsi di avere un backup recente del sistema di origine."
 
-#: ../../upgrade.rst:239
+#: ../../upgrade.rst:242
 msgid ""
 "Install |product| |version| and complete the initial steps using the first "
 "configuration wizard. The new machine must have the same hostname of the old"
@@ -518,7 +527,7 @@ msgstr ""
 "hostname della vecchia per poter accedere correttamente al set di backup. "
 "Installare e configurare il modulo del backup."
 
-#: ../../upgrade.rst:243
+#: ../../upgrade.rst:246
 msgid ""
 "Restore the configuration backup using the web interface. The network "
 "configuration is restored, too! If any error occurs, check the "
@@ -529,7 +538,7 @@ msgstr ""
 "verificarsi qualche problema, controllare il file di log "
 ":file:`/var/log/messages` per informazioni più approfondite: ::"
 
-#: ../../upgrade.rst:248
+#: ../../upgrade.rst:251
 msgid ""
 "If needed, go to :guilabel:`Network` page and fix the network configuration "
 "accordingly to the new hardware. If the machine was joined to an existing "
@@ -540,15 +549,15 @@ msgstr ""
 "attestata ad un dominio Active Directory esistente, leggere :ref:`ads-"
 "upgrade-section`."
 
-#: ../../upgrade.rst:253
+#: ../../upgrade.rst:256
 msgid "Complete the restore procedure with the following command: ::"
 msgstr "Completare la procedura di ripristino con i seguenti comandi: ::"
 
-#: ../../upgrade.rst:257
+#: ../../upgrade.rst:260
 msgid "Check the restore logs: ::"
 msgstr "Verificare i log del ripristino: ::"
 
-#: ../../upgrade.rst:262 ../../upgrade.rst:363
+#: ../../upgrade.rst:265 ../../upgrade.rst:366
 msgid ""
 "Each file under :file:`/etc/e-smith/templates-custom/` must be manually "
 "checked for compatibility with version |version|."
@@ -557,17 +566,17 @@ msgstr ""
 "percorso :file:`/etc/e-smith/templates-custom/` dovrà essere verificata "
 "manualmente."
 
-#: ../../upgrade.rst:267
+#: ../../upgrade.rst:270
 msgid "Do not reboot the machine before executing the restore-data procedure."
 msgstr ""
 "La macchina non va riavviata prima di aver eseguito la procedura di restore-"
 "data."
 
-#: ../../upgrade.rst:272
+#: ../../upgrade.rst:275
 msgid "Upgrade with rsync"
 msgstr "Upgrade tramite rsync"
 
-#: ../../upgrade.rst:274
+#: ../../upgrade.rst:277
 msgid ""
 "The process is much faster than a traditional backup and restore, also it "
 "minimizes the downtime for the users."
@@ -575,11 +584,11 @@ msgstr ""
 "Il processo tramite rsync è più rapido rispetto ad un tradizionale backup e "
 "ripristino e consenti di minimizzare il fermo servizi per gli utenti."
 
-#: ../../upgrade.rst:276
+#: ../../upgrade.rst:279
 msgid "Before starting make sure to have:"
 msgstr "Prima di iniziare assicurarsi di avere:"
 
-#: ../../upgrade.rst:278
+#: ../../upgrade.rst:281
 msgid ""
 "a running |product| 6 installation, we will call it original server or "
 "source server"
@@ -587,7 +596,7 @@ msgstr ""
 "una installazione di |product| 6 in produzione, che chiameremo server "
 "origine o server sorgente"
 
-#: ../../upgrade.rst:279
+#: ../../upgrade.rst:282
 msgid ""
 "a running |product| 7 installation with at least the same disk space of the "
 "source server, and **latest updates installed**; we will call it destination"
@@ -597,11 +606,11 @@ msgstr ""
 "server di origine e **gli ultimi aggiornamenti installati**, che chiameremo "
 "server di destinazione"
 
-#: ../../upgrade.rst:280
+#: ../../upgrade.rst:283
 msgid "a working network connection between the two severs"
 msgstr "una connessione di rete attiva tra i due server"
 
-#: ../../upgrade.rst:282
+#: ../../upgrade.rst:285
 msgid ""
 "Please also make sure the source server allows root login via SSH key and "
 "password."
@@ -609,11 +618,11 @@ msgstr ""
 "Assicurarsi che il server sorgente consenta il login all'utente root tramite"
 " password ed attraverso una chiave SSH."
 
-#: ../../upgrade.rst:285
+#: ../../upgrade.rst:288
 msgid "Sync files"
 msgstr "Sincronizzazione dei file"
 
-#: ../../upgrade.rst:287
+#: ../../upgrade.rst:290
 msgid ""
 "The synchronization script copies all data using rsync over SSH. If the "
 "destination server doesn't have any SSH keys, the script will also a pair of"
@@ -626,28 +635,28 @@ msgstr ""
 "pubblica nel server di origine. Tutte le directory escluse dai dati di "
 "backup non verranno sincronizzate."
 
-#: ../../upgrade.rst:291
+#: ../../upgrade.rst:294
 msgid "On the target machine, execute the following command: ::"
 msgstr "Nella macchina di destinazione, eseguire il seguente comando: ::"
 
-#: ../../upgrade.rst:295
+#: ../../upgrade.rst:298
 msgid "Where"
 msgstr "In cui"
 
-#: ../../upgrade.rst:297
+#: ../../upgrade.rst:300
 msgid "``source_server_name`` is the host name or IP of the original server"
 msgstr "``source_server_name`` è il nome host o l'IP del server origine"
 
-#: ../../upgrade.rst:298
+#: ../../upgrade.rst:301
 msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 "``ssh_port`` è la porta SSH del server origine (la porta di default è la 22)"
 
-#: ../../upgrade.rst:300 ../../upgrade.rst:314
+#: ../../upgrade.rst:303 ../../upgrade.rst:317
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../upgrade.rst:304
+#: ../../upgrade.rst:307
 msgid ""
 "When asked, insert the root password of the source server, make a coffee and"
 " wait patiently."
@@ -655,7 +664,7 @@ msgstr ""
 "Quando richiesto, inserire la password di root del server origine quindi "
 "prepararsi un caffè e aspettare con pazienza."
 
-#: ../../upgrade.rst:306
+#: ../../upgrade.rst:309
 msgid ""
 "The script will not perform any action on the source machine and can be "
 "invoked multiple times."
@@ -663,11 +672,11 @@ msgstr ""
 "Lo script non eseguirà alcuna azione sulla macchina di origine e può essere "
 "rilanciato più volte."
 
-#: ../../upgrade.rst:309
+#: ../../upgrade.rst:312
 msgid "Sync and upgrade"
 msgstr "Sincronizzazione e migrazione"
 
-#: ../../upgrade.rst:311
+#: ../../upgrade.rst:314
 msgid ""
 "If called with ``-u`` option, ``rsync-upgrade`` will execute a final "
 "synchronization and upgrade the target machine."
@@ -675,11 +684,11 @@ msgstr ""
 "Se impartito con l'opzione ``-u``, ``rsync-upgrade`` eseguirà una "
 "sincronizzazione finale e l'upgrade della macchina destinazione."
 
-#: ../../upgrade.rst:318
+#: ../../upgrade.rst:321
 msgid "The script will:"
 msgstr "Lo script si incaricherà di:"
 
-#: ../../upgrade.rst:320
+#: ../../upgrade.rst:323
 msgid ""
 "close access to every network service on the source machine (except for SSH "
 "and httpd-admin)"
@@ -687,7 +696,7 @@ msgstr ""
 "chiudere l'accesso ad ogni servizio di rete della macchina sorgente (ad "
 "eccezione di SSH ed httpd-admin)"
 
-#: ../../upgrade.rst:321
+#: ../../upgrade.rst:324
 msgid ""
 "execute ``pre-backup-config`` and ``pre-backup-data`` event on the source "
 "machine"
@@ -695,21 +704,21 @@ msgstr ""
 "eseguire gli eventi ``pre-backup-config`` e ``pre-backup-data`` nella "
 "macchina sorgente"
 
-#: ../../upgrade.rst:322
+#: ../../upgrade.rst:325
 msgid "sync all remaining data"
 msgstr "sincronizzare tutti i dati rimanenti"
 
-#: ../../upgrade.rst:323
+#: ../../upgrade.rst:326
 msgid "execute ``restore-config`` on the destination machine"
 msgstr "eseguire il comando ``restore-config`` sulla macchina destinazione"
 
-#: ../../upgrade.rst:325
+#: ../../upgrade.rst:328
 msgid ""
 "If ``rsync-upgrade`` terminates without loosing the network connection,"
 msgstr ""
 "Se l'``rsync-upgrade`` termina senza perdita della connessione di rete,"
 
-#: ../../upgrade.rst:327
+#: ../../upgrade.rst:330
 msgid ""
 "Disconnect the original ns6 from network, to avoid IP conflict with the "
 "destination server"
@@ -717,7 +726,7 @@ msgstr ""
 "Disconnettere il ns6 origine dalla rete, per evitare conflitti IP con il "
 "server di destinazione"
 
-#: ../../upgrade.rst:329
+#: ../../upgrade.rst:332
 msgid ""
 "Access the server manager UI and fix the network configuration from the "
 ":guilabel:`Network` page"
@@ -725,7 +734,7 @@ msgstr ""
 "Accedere all'interfaccia Server Manager e correggere la configurazione di "
 "rete dalla pagina :guilabel:`Rete`"
 
-#: ../../upgrade.rst:331
+#: ../../upgrade.rst:334
 msgid ""
 "Otherwise, if during ``rsync-upgrade`` **the network connection is lost**, "
 "it is likely that the source and destination servers have an **IP "
@@ -735,23 +744,23 @@ msgstr ""
 "persa**, è probabile che i server di origine e di destinazione abbiano un "
 "**conflitto IP**:"
 
-#: ../../upgrade.rst:334
+#: ../../upgrade.rst:337
 msgid "Disconnect the original ns6 from network,"
 msgstr "Disconnettere il ns6 origine dalla rete,"
 
-#: ../../upgrade.rst:336
+#: ../../upgrade.rst:339
 msgid "From a ns7 root console run the command: ::"
 msgstr "Da una console di root del ns7 lanciare il comando: ::"
 
-#: ../../upgrade.rst:340
+#: ../../upgrade.rst:343
 msgid "Then grab the screen device: ::"
 msgstr "Quindi accedere nuovamente alla screen: ::"
 
-#: ../../upgrade.rst:344
+#: ../../upgrade.rst:347
 msgid "At the end of ``rsync-upgrade`` run the following steps:"
 msgstr "Al termine dell'``rsync-upgrade`` seguire i seguenti passi:"
 
-#: ../../upgrade.rst:354
+#: ../../upgrade.rst:357
 msgid ""
 "Go back to the CLI and call the ``post-restore-data`` event on the "
 "destination machine: ::"
@@ -759,15 +768,39 @@ msgstr ""
 "Tornare alla CLI e scatenare l'evento ``post-restore-data`` sulla macchina "
 "di destinazione: ::"
 
-#: ../../upgrade.rst:358
+#: ../../upgrade.rst:361
 msgid "Check the restore logs for any ``ERROR`` or ``FAIL`` message: ::"
 msgstr ""
 "Controllare nei log di ripristino eventuali occorrenze di messaggi di "
 "``ERROR`` o di ``FAIL``: ::"
 
-#: ../../upgrade.rst:368
+#: ../../upgrade.rst:371
 msgid ""
 "Do not reboot the machine before executing the post-restore-data event."
 msgstr ""
 "La macchina non va riavviata prima di aver scatenato la evento post-restore-"
 "data."
+
+#: ../../upgrade.rst:376
+msgid "Upgrade with Upgrade tool (beta)"
+msgstr ""
+
+#: ../../upgrade.rst:378
+msgid ""
+"The Upgrade tool module make it possible an **in-place upgrade** of "
+"|product| from version 6 to version 7 with an automated procedure."
+msgstr ""
+
+#: ../../upgrade.rst:383
+msgid ""
+"Please refer to the `Upgrade tool page "
+"<http://docs.nethserver.org/en/v6/upgrade_tool.html>`_ of |product| 6 "
+"Administrator Manual."
+msgstr ""
+
+#: ../../upgrade.rst:387
+msgid ""
+"Please refer to the `Upgrade tool page "
+"<https://nethserver.docs.nethesis.it/en/v6/upgrade_tool.html>`_ of |product|"
+" 6 Administrator Manual."
+msgstr ""
