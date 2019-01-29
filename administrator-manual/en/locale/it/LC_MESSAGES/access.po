@@ -1,12 +1,12 @@
 # #-#-#-#-#  access.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  access.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:27+0100\n"
+"POT-Creation-Date: 2019-01-28 10:04+0100\n"
 "PO-Revision-Date: 2017-02-06 14:48+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -77,84 +77,68 @@ msgid ""
 "installed on the system. After logging in, go to the :ref:`software-center-"
 "section` page to install additional languages."
 msgstr ""
-"La pagina di login consente di selezionare una lingua alternativa tra quelle"
-" già installate nel sistema. Dopo essersi autenticati, andare alla pagina "
-":ref:`software-center-section` per installare il supporto a lingue "
-"aggiuntive."
 
 #: ../../access.rst:29
 msgid ""
 "The login page will give you a trusted access to the web interface. Log in "
 "as **root** and type the password chosen during |product| installation."
 msgstr ""
-"La pagina di login consente l'accesso autenticato al Server Manager. "
-"Accedere come **root** e digitare la password scelta durante l'installazione"
-" di |product|."
 
 #: ../../access.rst:34
 msgid ""
 "The *unattended* install procedure sets the root password to the default "
 "``Nethesis,1234``."
 msgstr ""
-"La procedura di installazione *unattended* imposta la password di *root* al "
-"valore ``Nethesis,1234``."
 
 #: ../../access.rst:40
 msgid "First configuration wizard"
-msgstr "Wizard di prima configurazione"
+msgstr ""
 
 #: ../../access.rst:42
 msgid ""
 "The first time **root** logs in, the *First configuration wizard* procedure "
 "is displayed."
 msgstr ""
-"La procedura *Wizard di prima configurazione* viene mostra al primo accesso "
-"all'interfaccia dell'utente *root*."
 
 #: ../../access.rst:45
 msgid ""
 "If the root password is still at the default value, a password change is "
 "required."
 msgstr ""
-"Se la password di root è ancora quella predefinita, è necessario "
-"modificarla."
 
 #: ../../access.rst:47
 msgid ""
 "It is possible to restore a **configuration backup**. Refer to :ref"
 ":`disaster-recovery-section` for more information."
 msgstr ""
-"La procedura di prima configurazione consente di ripristinare un *backup "
-"della configurazione*. Fare rifermento alla sezione :ref:`disaster-recovery-"
-"section` per maggiori dettagli."
 
 #: ../../access.rst:50
 msgid "Otherwise the wizard procedure helps on setting up:"
-msgstr "In alternativa la procedura consente di configurare:"
+msgstr ""
 
 #: ../../access.rst:52
 msgid "Host name"
-msgstr "Nome host"
+msgstr ""
 
 #: ../../access.rst:53
 msgid ":ref:`Date and time zone <date-time-section>`"
-msgstr ":ref:`Data e fuso orario<date-time-section>`"
+msgstr ""
 
 #: ../../access.rst:54
 msgid "SSH port"
-msgstr "Porta SSH"
+msgstr ""
 
 #: ../../access.rst:55
 msgid ":ref:`Smarthost configuration <smarthost-configuration>`"
-msgstr ":ref:`Configurazione smarthost <smarthost-configuration>`"
+msgstr ""
 
 #: ../../access.rst:56
 msgid ":ref:`Usage statistics <phonehome-section>`"
-msgstr ":ref:`Statistiche d'utilizzo <phonehome-section>`"
+msgstr ""
 
 #: ../../access.rst:59
 msgid "Change the current password"
-msgstr "Cambiare la password attuale"
+msgstr ""
 
 #: ../../access.rst:61
 msgid ""
@@ -162,13 +146,10 @@ msgid ""
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
 "screen and clicking on :guilabel:`Profile`."
 msgstr ""
-"Si può modificare la password di root dall'interfaccia web andando "
-"sull'etichetta :guilabel:`root@host.domain.com` nell'angolo in alto a destra"
-" dello schermo e cliccando su :guilabel:`Profilo`."
 
 #: ../../access.rst:67
 msgid "Logout"
-msgstr "Logout"
+msgstr ""
 
 #: ../../access.rst:69
 msgid ""
@@ -176,9 +157,6 @@ msgid ""
 ":guilabel:`root@host.domain.com` label on the upper right corner of the "
 "screen and by clicking on :guilabel:`Logout`."
 msgstr ""
-"Per terminare la sessione corrente del Server Manager andare sull'etichetta "
-":guilabel:`root@host.domain.com` nell'angolo in alto a destra dello schermo "
-"e cliccare su :guilabel:`Logout`."
 
 #: ../../access.rst:76
 msgid "Session timeouts"
@@ -190,9 +168,6 @@ msgid ""
 "terminates after **60 minutes of inactivity** (idle timeout) and **expires 8"
 " hours after the login** (session life time)."
 msgstr ""
-"Di default (a partire da |product| 7.5.1804), una sessione Server Manager "
-"viene terminata dopo **60 minuti di inattività** (idle timeout) e **scade 8 "
-"ore dopo il login** (session life time)."
 
 #: ../../access.rst:82
 msgid ""

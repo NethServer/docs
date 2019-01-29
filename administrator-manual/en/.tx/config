@@ -350,3 +350,9 @@ file_filter = locale/<lang>/LC_MESSAGES/fail2ban.po
 source_file = _build/locale/fail2ban.pot
 source_lang = en
 type = PO
+
+[docs-v7.collabora]
+file_filter = locale/<lang>/LC_MESSAGES/collabora.po
+source_file = _build/locale/collabora.pot
+source_lang = en
+type = PO

@@ -6,9 +6,12 @@
 Upgrade from |product| 6
 ========================
 
-The upgrade from |product| 6 to |product| |version| can be achieved 
-from a :ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-recovery-section` )
-or :ref:`using rsync <upgrade_with_rsync-section>`.
+The upgrade from |product| 6 to |product| 7 is obtained by means of three
+methods:
+
+* :ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-recovery-section`)
+* :ref:`rsync <upgrade_with_rsync-section>`
+* :ref:`upgrade-tool <upgrade_with_tool-section>` (beta)
 
 .. warning::
 
@@ -366,3 +369,22 @@ At the end of ``rsync-upgrade`` run the following steps:
 .. warning::
 
     Do not reboot the machine before executing the post-restore-data event.
+
+.. _upgrade_with_tool-section:
+
+Upgrade with Upgrade tool (beta)
+================================
+
+The Upgrade tool module make it possible an **in-place upgrade** of |product| from 
+version 6 to version 7 with an automated procedure.
+
+.. only:: nscom
+  
+  Please refer to the `Upgrade tool page <http://docs.nethserver.org/en/v6/upgrade_tool.html>`_ of |product| 6 Administrator Manual.
+
+.. only:: nsent
+  
+  Please refer to the `Upgrade tool page <https://nethserver.docs.nethesis.it/en/v6/upgrade_tool.html>`_ of |product| 6 Administrator Manual.
+  
+
+

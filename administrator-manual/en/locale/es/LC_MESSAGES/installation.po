@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-08 18:26+0100\n"
+"POT-Creation-Date: 2019-01-28 10:04+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -576,11 +576,17 @@ msgstr ""
 msgid "Simply type the following command: ::"
 msgstr ""
 
-#: ../../installation.rst:311
+#: ../../installation.rst:307
+msgid ""
+"Installation log is saved inside ``/tmp/nethserver-enterprise-"
+"install/install.log`` file."
+msgstr ""
+
+#: ../../installation.rst:312
 msgid "Next steps"
 msgstr "Próximos pasos"
 
-#: ../../installation.rst:313
+#: ../../installation.rst:314
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

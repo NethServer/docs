@@ -1,12 +1,12 @@
 # #-#-#-#-#  subscription.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  subscription.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 09:55+0200\n"
+"POT-Creation-Date: 2019-01-28 10:04+0100\n"
 "PO-Revision-Date: 2018-03-29 09:26+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -116,6 +116,13 @@ msgid ""
 msgstr ""
 
 #: ../../subscription.rst:53
+msgid ""
+"If you have installed the `new server manager` AKA `cockpit`, you can "
+"unsubscribe the machine in the `Subscription` page, clicking on "
+"**Unsubscribe** button."
+msgstr ""
+
+#: ../../subscription.rst:55
 msgid ""
 "Refer to :ref:`software-updates-section` for more information about the "
 "community updates origin."
