@@ -675,7 +675,7 @@ Alternatively, you can configure a global setting to turn images automatically i
 
 It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
-``public.resource.links.as.inline.attachments`` = true (default = flase)
+``public.resource.links.as.inline.attachments`` = true (default = false)
 
 
 To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
