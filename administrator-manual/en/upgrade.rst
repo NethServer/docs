@@ -255,7 +255,14 @@ Upgrade from backup
 
 #. Complete the restore procedure with the following command: ::
 
-    restore-data
+    restore-data -b <name>
+
+   where *name* is the name of the configured data backup.
+
+   .. note::
+         
+         By default, the name of the *backup-data* configured on |product| 6 is ``backup-data``
+
 
 #. Check the restore logs: ::
 
