@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys, os, datetime
 
 try:
     import sphinx_rtd_theme
@@ -19,7 +19,7 @@ try:
 except ImportError:
     pass
 
-copyright = u'2018, Nethesis Srl and the NethServer project contributors'
+copyright = u'%d, Nethesis Srl and the NethServer project contributors' % datetime.date.today().year
 
 if 'READTHEDOCS_PROJECT' in os.environ and 'cockpit' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('cockpit')
