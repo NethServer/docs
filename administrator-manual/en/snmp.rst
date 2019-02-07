@@ -13,7 +13,3 @@ During first configuration. you should set three main options:
 * the location name where the server is located
 * the name and mail address of system administrator
 
-.. rubric:: References
-
-.. [#SNMP] Simple Network Management Protocol http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
-
