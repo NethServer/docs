@@ -12,13 +12,14 @@
 # serve to show the default.
 
 import sys, os, datetime
+
 try:
     import sphinx_rtd_theme
     import sphinx_bootstrap_theme
 except ImportError:
     pass
 
-year = datetime.date.today().year
+copyright = u'%d, Nethesis Srl and the NethServer project contributors' % datetime.date.today().year
 
 if not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('nsent')
@@ -75,7 +76,6 @@ highlight_language = 'none'
 htmlhelp_basename = 'NethServer_enterprisedoc'
 
 if tags.has('nsent'):
-    copyright = u'%d, Nethesis Srl' % year
     templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
@@ -123,7 +123,6 @@ if tags.has('nsent'):
     }
 
 elif tags.has('nscom'):
-    copyright = u'%d, NethServer' % year
     templates_path = ['nscom/_templates']
     project = u'NethServer'
     html_title = u"%s %s" % (project, release)
