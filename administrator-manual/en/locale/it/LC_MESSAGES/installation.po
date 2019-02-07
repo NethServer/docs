@@ -10,14 +10,18 @@
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Nicola <nicola.rauso@nethesis.it>, 2017
+# Davide Principi <davide.principi@nethesis.it>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 6.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-07 11:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2017\n"
+"POT-Creation-Date: 2019-02-07 10:35+0100\n"
+"PO-Revision-Date: 2017-05-22 11:01+0000\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -547,7 +551,7 @@ msgid ""
 ":ref:`next-steps-section`."
 msgstr ""
 "Immessi i parametri la procedura avvierà l'installazione. Fare riferimento a"
-" "
+" :ref:`next-steps-section`."
 
 #: ../../installation.rst:277
 msgid "Install on CentOS"
@@ -602,22 +606,22 @@ msgstr ""
 "Esempio: ::"
 
 #: ../../installation.rst:307
-msgid "Enterprise promotion"
-msgstr "Promozione a Enterprise"
-
-#: ../../installation.rst:309
-msgid ""
-"To promote to NethServer Enterprise version follow the istructions "
-"`available here`_."
-msgstr ""
-"Per promuovere NethServer alla versione enterprise sequire le istruzioni "
-"`disponibili qui`_."
-
-#: ../../installation.rst:318
 msgid "Next steps"
 msgstr "Passi successivi"
 
-#: ../../installation.rst:320
+#: ../../installation.rst:311
+msgid "**Enterprise promotion**"
+msgstr "**Promozione a Enterprise**"
+
+#: ../../installation.rst:313
+msgid ""
+"To promote to NethServer Enterprise version follow the instructions "
+"`available here`_."
+msgstr ""
+"Per promuovere NethServer alla versione Enterprise seguire le istruzioni "
+"`disponibili qui`_."
+
+#: ../../installation.rst:319
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"

@@ -301,21 +301,20 @@ the name of the module as a parameter to the install script.  Example: ::
 
   nethserver-install nethserver-mail nethserver-nut
 
+.. _next-steps-section:
+
+Next steps
+==========
+
 .. only:: nsent
 
-    Enterprise promotion
-    ====================
+    **Enterprise promotion**
 
-    To promote to NethServer Enterprise version follow the istructions `available here`_.
+    To promote to NethServer Enterprise version follow the instructions `available here`_.
 
     .. _`available here`: http://helpdesk.nethesis.it/support/solutions/articles/3000062689-promozione-nethserver-enterprise-6-x-community-ad-enterprise
 
 .. only:: nscom
-
-    .. _next-steps-section:
-
-    Next steps
-    ==========
 
     At the end of the installation procedure, :ref:`access the
     server-manager <access-section>` to :ref:`install additional software
