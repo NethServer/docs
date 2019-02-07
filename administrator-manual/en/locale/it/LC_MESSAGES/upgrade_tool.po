@@ -1,0 +1,468 @@
+# #-#-#-#-#  upgrade_tool.pot (NethServer 6.10)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  upgrade_tool.pot (NethServer Enterprise 6.10)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nicola <nicola.rauso@nethesis.it>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 6.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 10:02+0100\n"
+"PO-Revision-Date: 2019-01-28 09:03+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../upgrade_tool.rst:5
+msgid "Upgrade tool (beta)"
+msgstr "Upgrade tool (beta)"
+
+#: ../../upgrade_tool.rst:7
+msgid ""
+"The :guilabel:`Upgrade tool` module upgrades |product| from version 6 to "
+"version 7 with an automated procedure that acts in three steps:"
+msgstr ""
+"Il modulo :guilabel:`Upgrade tool` consente di aggiornare |product| dalla "
+"versione 6 alla versione 7 attraverso una procedura automatica che agisce in"
+" tre passaggi:"
+
+#: ../../upgrade_tool.rst:10
+msgid ""
+"**preparation**: downloads all required packages from the configured "
+"software repositories"
+msgstr ""
+"**preparazione**: scarica tutti i pacchetti richiesti dai repository "
+"software configurati"
+
+#: ../../upgrade_tool.rst:13
+msgid ""
+"**upgrade**: at next reboot runs the packages upgrade transaction, the "
+"upgrade tasks, then reboots automatically"
+msgstr ""
+"**aggiornamento**: al successivo riavvio esegue la transazione di "
+"aggiornamento dei pacchetti, le attività di aggiornamento, quindi si riavvia"
+" automaticamente"
+
+#: ../../upgrade_tool.rst:16
+msgid "**post-upgrade**: completes by fully re-configuring the system"
+msgstr ""
+"**post-aggiornamento**: esegue la riconfigurazione completa del sistema"
+
+#: ../../upgrade_tool.rst:18
+msgid ""
+"Each step is described in the sections below. The time estimations depend on"
+" the number of packages, internet connection, CPU and disks speed."
+msgstr ""
+"Ogni passaggio è descritto nelle sezioni seguenti. Le stime temporali "
+"dipendono dal numero di pacchetti, dalla connessione Internet, dalla CPU e "
+"dalla velocità dei dischi."
+
+#: ../../upgrade_tool.rst:23
+msgid "Read carefully :ref:`upgrade_risks_section`"
+msgstr "Leggere attentamente :ref:`upgrade_risks_section`"
+
+#: ../../upgrade_tool.rst:26
+msgid "Preparation step"
+msgstr "Fase di preparazione"
+
+#: ../../upgrade_tool.rst:28
+msgid "Estimated time: 1 hour"
+msgstr "Tempo stimato: 1 ora"
+
+#: ../../upgrade_tool.rst:30
+msgid ""
+"The (1) **preparation** step can be started from the :guilabel:`Upgrade "
+"tool` page of the Server Manager."
+msgstr ""
+"La fase di (1) **preparazione** può essere avviata dalla pagina "
+":guilabel:`Upgrade tool` del Server Manager."
+
+#: ../../upgrade_tool.rst:33
+msgid ""
+"If the File server module is present and the Samba server role is "
+":guilabel:`Primary Domain Controller` or :guilabel:`Workstation` the system "
+"has to be configured with a local Active Directory accounts provider. See "
+":ref:`upgrade-to-ad`."
+msgstr ""
+"Se il modulo File server è presente e il ruolo del server Samba è "
+":guilabel:`Domain Controller Primario` o :guilabel:`Workstation` il sistema "
+"deve essere configurato con un account provider Active Directory locale. "
+"Vedi :ref:`upgrade-to-ad`."
+
+#: ../../upgrade_tool.rst:38
+msgid ""
+"The Upgrade tool does not work if the Samba server role is set to "
+":guilabel:`Active Directory Member`."
+msgstr ""
+"L'upgrade tool non può essere utilizzato se il ruolo del server Samba è "
+"impostato su :guilabel:`Membro Active Directory`."
+
+#: ../../upgrade_tool.rst:41
+msgid ""
+"During the preparation step the system is still operational as usual. The "
+"package download runs in background. It requires some time, depending on the"
+" available network bandwidth."
+msgstr ""
+"Durante la fase di preparazione il sistema è ancora completamente operativo."
+" Il download dei pacchetti viene eseguito in background. L'operazione può "
+"richiedere del tempo, anche in virtù della banda di rete disponibile."
+
+#: ../../upgrade_tool.rst:45
+msgid ""
+"The available disk space is checked twice, before and after the preparation "
+"step, to ensure the next steps do not run in short of disk space."
+msgstr ""
+"Lo spazio disponibile sul disco viene controllato due volte, prima e dopo la"
+" fase di preparazione, per garantire che i passaggi successivi non vengano "
+"eseguiti nel caso in cui lo spazio su disco fosse insufficiente."
+
+#: ../../upgrade_tool.rst:48
+msgid ""
+"At the end of the download the web page asks to abort the procedure or "
+"continue with the system reboot to the upgrade step."
+msgstr ""
+"Terminato il download, dalla pagina Web è possibile interrompere la "
+"procedura o continuare con il riavvio del sistema per lanciare la successiva"
+" fase di aggiornamento."
+
+#: ../../upgrade_tool.rst:52
+msgid "Upgrade step"
+msgstr "Fase di aggiornamento"
+
+#: ../../upgrade_tool.rst:54
+msgid "Estimated time: 30 minutes"
+msgstr "Tempo stimato: 30 minuti"
+
+#: ../../upgrade_tool.rst:56
+msgid ""
+"The (2) **upgrade** step starts at the next system reboot.  The upgrade "
+"procedure boots the Linux kernel of version 7 by default. If the disk "
+"controller is not compatible with it, the procedure fails at this point."
+msgstr ""
+"La fase (2) **aggiornamento** inizia al successivo riavvio del sistema. La "
+"procedura di aggiornamento avvia il kernel Linux della versione 7 per "
+"impostazione predefinita. Se il controller del disco a bordo della macchina "
+"non dovesse essere compatibile con esso, la procedura fallirà."
+
+#: ../../upgrade_tool.rst:62
+msgid ""
+"It is possible to select the old kernel and boot the system in the previous "
+"state, actually aborting the upgrade"
+msgstr ""
+"È possibile selezionare il vecchio kernel per avviare il sistema nello stato"
+" precedente, interrompendo così l'aggiornamento"
+
+#: ../../upgrade_tool.rst:65
+msgid ""
+"If the new kernel boots and mounts the disks correctly the system is "
+"**disconnected from the network** and the packages upgrade starts. From this"
+" point there is no way back. During the upgrade the system can be accessed "
+"from the system console."
+msgstr ""
+"Se la macchina si avvia con il nuovo kernel e monta correttamente i dischi, "
+"il sistema viene **disconnesso dalla rete** ed inizia l'aggiornamento dei "
+"pacchetti. Da questo punto non si può tornare indietro. Durante la fase di "
+"aggiornamento è possibile accedere al sistema solo dalla console di sistema."
+
+#: ../../upgrade_tool.rst:70
+msgid ""
+"It takes some time to upgrade all the packages, depending on the system "
+"speed and the number of the packages. At the end of the upgrade step the "
+"system is automatically rebooted."
+msgstr ""
+"L'aggiornamento può richiedere del tempo, a seconda della velocità del "
+"sistema e del numero dei pacchetti. Alla fine della fase di aggiornamento il"
+" sistema viene automaticamente riavviato."
+
+#: ../../upgrade_tool.rst:75
+msgid "Post-upgrade step"
+msgstr "Fase di post-aggiornamento"
+
+#: ../../upgrade_tool.rst:77
+msgid "Estimated time: 15 minutes"
+msgstr "Tempo stimato: 15 minuti"
+
+#: ../../upgrade_tool.rst:79
+msgid "The (3) **post-upgrade** step starts at the second reboot."
+msgstr ""
+"La fase di (3) **post-aggiornamento** viene lanciata al secondo riavvio."
+
+#: ../../upgrade_tool.rst:81
+msgid ""
+"The basic system was completely upgraded by the previous step; the post-"
+"upgrade step renames the network interfaces according to the new NIC naming "
+"rules and re-configures the installed modules."
+msgstr ""
+"Il sistema di base è stato completamente aggiornato nel passaggio "
+"precedente; la fase post-aggiornamento rinomina le interfacce di rete in "
+"base alle nuove regole di denominazione della NIC e riconfigura i moduli "
+"installati."
+
+#: ../../upgrade_tool.rst:85
+msgid ""
+"In this last step a fault can be recovered safely through the system "
+"console. At the end of the post-upgrade step SSH, Server Manager and the "
+"other services are available again."
+msgstr ""
+"Durante questo ultimo passaggio un eventuale problema può essere "
+"ripristinato in modo sicuro attraverso la console di sistema. Al termine del"
+" passaggio post-aggironamento SSH, Server Manager e gli altri servizi "
+"saranno nuovamente disponibili."
+
+#: ../../upgrade_tool.rst:89
+msgid ""
+"Any daily, weekly and monthly scheduled cron job will be started again "
+"within one hour since the system boot ends."
+msgstr ""
+"Ogni cron job giornaliero, settimanale e mensile verrà riavviato entro "
+"un'ora dall'avvio del sistema."
+
+#: ../../upgrade_tool.rst:95
+msgid "Post-upgrade checklist"
+msgstr "Checklist post-aggiornamento"
+
+#: ../../upgrade_tool.rst:99
+msgid ""
+"Some modules, like ownCloud, need to be upgraded or replaced manually. Refer"
+" to the Upgrade documentation of |product| 7"
+msgstr ""
+"Alcuni moduli, come ownCloud, devono essere aggiornati o sostituiti "
+"manualmente. Fare riferimento alla documentazione di aggiornamento di "
+"|product| 7"
+
+#: ../../upgrade_tool.rst:102
+msgid ""
+"Once the Server Manager is accessible again remember to refresh the browser "
+"cache with :kbd:`Ctrl + Shift + R` to fix display issues caused by the "
+"upgraded style sheets (CSS)"
+msgstr ""
+"Una volta tornato accessibile ilServer Manager, sarà necessario rammentare "
+"di aggiornare la cache del browser con la combinazione di tasti :kbd:`Ctrl +"
+" Shift + R` per correggere eventuali problemi di visualizzazione causati dai"
+" fogli di stile aggiornati (CSS)"
+
+#: ../../upgrade_tool.rst:107
+msgid "Upgrade completed check"
+msgstr "Verifica procedura completata"
+
+#: ../../upgrade_tool.rst:109
+msgid ""
+"To ensure the upgrade procedure has finished run ``systemd-analyze``. The "
+"output should begin like ::"
+msgstr ""
+"Per verificare che la procedura di aggiornamento abbia effettivamente "
+"terminato la sua esecuzione è possibile utilizzare il comando ``systemd-"
+"analyze``. L'output dovrebbe essere simile a questo:"
+
+#: ../../upgrade_tool.rst:115
+msgid "Upgrade errors check"
+msgstr "Verifica errori aggiornamento"
+
+#: ../../upgrade_tool.rst:117
+msgid "To check if any error occurred, run ::"
+msgstr "Per verificare se si siano riscontrati errori, eseguire ::"
+
+#: ../../upgrade_tool.rst:122
+msgid "Installed modules check"
+msgstr "Verifica moduli installati"
+
+#: ../../upgrade_tool.rst:124
+msgid ""
+"In :guilabel:`Software center`, check if the previously installed modules  "
+"are still marked as installed on the upgraded system. Each module is "
+"composed by some packages: as the module compositions has changed from "
+"version 6 to 7, some module may appear as not installed. To fix it, try to "
+"install it again with the :guilabel:`add` button."
+msgstr ""
+"Controllare tramite il :guilabel:`Software center` se i moduli installati in"
+" precedenza siano ancora contrassegnati come installati sul sistema "
+"aggiornato. Ogni modulo è composto da alcuni pacchetti: poiché le "
+"composizioni dei moduli sono cambiate dalla versione 6 alla 7, alcuni di "
+"essi potrebbero apparire come non installati. Per risolvere il problema, "
+"dovrebbe essere sufficiente installarli di nuovo con il pulsante "
+":guilabel:`aggiungi`."
+
+#: ../../upgrade_tool.rst:132
+msgid "Let's Encrypt certificate check"
+msgstr "Verifica certificato Let's Encrypt"
+
+#: ../../upgrade_tool.rst:134
+msgid ""
+"A Let's Encrypt certificate, if present, must be requested again from the "
+":guilabel:`Server certificate` page. Then set it as the default system "
+"certificate from the same page. For more information, refer to the \"Server "
+"certificate\"  manual page of |product| 7."
+msgstr ""
+"Il certificato Let's Encrypt, se presente, dovrà essere richiesto nuovamente"
+" attraverso la pagina :guilabel:`Certificato del server`. Andrà poi "
+"impostato dalla stessa pagina come certificato di sistema predefinito. Per "
+"ulteriori informazioni, consultare la pagina di manuale \"Certificato "
+"server\" di |product| 7."
+
+#: ../../upgrade_tool.rst:142
+msgid "Upgrade to Active Directory"
+msgstr "Aggiornamento ad Active Directory"
+
+#: ../../upgrade_tool.rst:144
+msgid ""
+"If the system requires a local Active Directory (AD) accounts provider, the "
+"Upgrade tool expects some additional parameters to be issued:"
+msgstr ""
+"Se il sistema necessita di un account provider di tipo Active Directory (AD)"
+" locale, l' Upgrade tool prevede l'inserimento di alcuni parametri "
+"aggiuntivi:"
+
+#: ../../upgrade_tool.rst:147
+msgid "The AD :guilabel:`DNS domain name`"
+msgstr "Il :guilabel:`nome dominio DNS` di AD"
+
+#: ../../upgrade_tool.rst:149
+msgid "The :guilabel:`NetBIOS domain name` (read only)"
+msgstr "Il :guilabel:`nome dominio NetBIOS` (in sola lettura)"
+
+#: ../../upgrade_tool.rst:151
+msgid "A green bridge interface"
+msgstr "Un'interfaccia green di tipo bridge"
+
+#: ../../upgrade_tool.rst:153
+msgid ""
+"The :guilabel:`Domain Controller IP address`: an additional, free IP address"
+" that AD services binds to. The IP must be in the same subnet of the green "
+"bridge"
+msgstr ""
+"L' :guilabel:`indirizzo IP Domain Controller`: un indirizzo IP aggiuntivo "
+"libero a cui i servizi di Active Directory saranno associati. L'IP deve "
+"essere nella stessa subnet del bridge green"
+
+#: ../../upgrade_tool.rst:157
+msgid ""
+"If a green bridge interface is not present go to the :guilabel:`Network` "
+"page and create one with :guilabel:`Create new logical interface`."
+msgstr ""
+"Se un'interfaccia bridge green non fosse presente, andrà creata dalla pagina"
+" :guilabel:`Rete` tramite il pulsante :guilabel:`Crea nuova interfaccia "
+"logica`."
+
+#: ../../upgrade_tool.rst:160
+msgid ""
+"The :guilabel:`NetBIOS domain name` is a read-only field. To change it, "
+"refer to the :guilabel:`Windows Network` page."
+msgstr ""
+"Il :guilabel:`nome dominio NetBIOS` è un campo di sola lettura. Per "
+"modificarlo, consultare la pagina :guilabel:`Rete Windows`."
+
+#: ../../upgrade_tool.rst:165
+msgid ""
+"In virtualized systems, remember to enable **promiscuous mode** in the "
+"hypervisor settings, otherwise access to AD will be blocked from LAN clients"
+msgstr ""
+"Nel caso di sistemi virtualizzati, sarà necessario ricordarsi di abilitare "
+"**la modalità promiscua** nelle impostazioni dell'hypervisor, altrimenti non"
+" sarà permesso l'accesso ad AD ai client LAN"
+
+#: ../../upgrade_tool.rst:168
+msgid ""
+"For more information refer also to the |product| 7 documentation, "
+"especially:"
+msgstr ""
+"Per ulteriori informazioni, consultare anche la documentazione di |product| "
+"7, in particolare:"
+
+#: ../../upgrade_tool.rst:170
+msgid ""
+"the \"Samba Active Directory local provider installation\" section, under "
+"the \"Users and groups\" chapter"
+msgstr ""
+"la sezione \"Installazione del provider locale Samba Active Directory\", nel"
+" capitolo \"Utenti e gruppi\""
+
+#: ../../upgrade_tool.rst:173
+msgid "the \"Upgrade from |product| 6\" chapter"
+msgstr "il capitolo \"Aggiornamento da |product| 6\""
+
+#: ../../upgrade_tool.rst:178
+msgid "Upgrade risks and how to reduce them"
+msgstr "Rischi legati all'upgrade e come ridurne l'impatto"
+
+#: ../../upgrade_tool.rst:180
+msgid ""
+"A major system version upgrade is a risky operation and must be planned "
+"carefully."
+msgstr ""
+"Un aggiornamento della major version del sistema operativo è un'operazione "
+"rischiosa e deve essere pianificata attentamente."
+
+#: ../../upgrade_tool.rst:183
+msgid ""
+"Ensure the system has enough free **disk space**. The procedure checks the "
+"free disk space, but it is always a good idea to check it early, even before"
+" installing the :guilabel:`Upgrade tool` module."
+msgstr ""
+"Assicurarsi che il sistema abbia abbastanza spazio **su disco**. La "
+"procedura controlla lo spazio libero, ma è sempre consigliabile verificarlo "
+"in anticipo, anche prima di installare l' :guilabel:`Upgrade tool`."
+
+#: ../../upgrade_tool.rst:187
+msgid ""
+"Prepare a complete backup or snapshot of the whole system. A **power "
+"outage** or an **hardware fault** during the upgrade step, as long as an "
+"**unknown bug** in this procedure could compromise the system"
+msgstr ""
+"Verificare di avere un backup completo o un'istantanea dell'intero sistema. "
+"Una **interruzione dell'alimentazione** o un **guasto hardware** durante la "
+"fase di aggiornamento, così come un ** errore sconosciuto ** in questa fase "
+"della procedura potrebbe compromettere il sistema"
+
+#: ../../upgrade_tool.rst:191
+msgid "Consider the **system downtime** and how it impacts on the end-users"
+msgstr ""
+"Tenere contro del **downtime del sistema** e del conseguente impatto sugli "
+"utenti finali"
+
+#: ../../upgrade_tool.rst:193
+msgid ""
+"Make a list of the modules that need to be configured, replaced, **upgraded "
+"manually** after the automated procedure completes. Refer to the Upgrade "
+"documentation of |product| 7"
+msgstr ""
+"Creare un elenco dei moduli che dovranno essere configurati, sostituiti, "
+"**aggiornati manualmente** al termine della procedura automatizzata. Fare "
+"riferimento alla documentazione di aggiornamento di |product| 7"
+
+#: ../../upgrade_tool.rst:197
+msgid ""
+"During the upgrade any existing **custom template** is archived into ``/root"
+"/templates-custom.upgrade/``. It is recommended to check the existing "
+"customized templates before starting the upgrade procedure and decide if and"
+" how to restore them"
+msgstr ""
+"Durante l'aggiornamento, qualsiasi  **template custom** esistente verrà "
+"archiviato in ``/root/templates-custom.upgrade/``. Si consiglia di "
+"controllare i template personalizzati esistenti prima di iniziare la "
+"procedura di aggiornamento e decidere se e come ripristinarli"
+
+#: ../../upgrade_tool.rst:202
+msgid ""
+"The system is **disconnected from the network** during the upgrade step and "
+"until the post-upgrade step completes. If any error occurs during those "
+"steps a direct **console access** is required."
+msgstr ""
+"Il sistema verrà **disconnesso dalla rete** durante la fase di aggiornamento"
+" e fino al completamento della fase post-aggiornamento. Se durante questi "
+"passaggi si dovesse verificare un errore, sarà necessario un **accesso alla "
+"console** diretto per intervenire."
