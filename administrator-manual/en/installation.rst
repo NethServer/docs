@@ -63,9 +63,9 @@ Installing from ISO
 Media creation
 --------------
 
-**Download the ISO file** from official site |download_site|.  The
-downloaded ISO file can be used to **create a bootable media** such as
-DVD or USB stick.  
+**Download the latest ISO file** from official site |download_site|.
+The downloaded ISO file can be used to **create a bootable media**
+such as DVD or USB stick.  
 
 USB stick
 ^^^^^^^^^
@@ -75,7 +75,7 @@ On a Linux machine, open the shell and execute: ::
   dd if=NethServer.iso of=/dev/sdc
 
 Where `NethServer.iso` is the file name of the downloaded ISO and `/dev/sdc` is the
-destination device corresponding to the USB key and 
+destination device corresponding to the USB key and
 not a partition (such as /dev/sdc1).
 
 On a Windows machine, make sure to format the USB drive then unmount it.

@@ -239,7 +239,8 @@ Upgrade from backup
 
 #. Make sure to have an updated backup of the original installation.
 
-#. Install |product| |version| and complete the initial steps using the first configuration wizard.
+#. Install |product| |version| **using the most recent ISO** and complete the initial steps using
+   the first configuration wizard.
    The new machine must have the same hostname of the old one, to access the backup set correctly.
    Install and configure the backup module.
 
