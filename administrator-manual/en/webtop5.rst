@@ -977,14 +977,14 @@ To import events:
 Hide auto-suggested recipient in lookups
 ========================================
 
-To disable the suggestion of automatically saved addresses, you can do it from the web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+To disable the suggestion of automatically saved addresses, access the web administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
 ``recipient.provider.auto.enabled`` = false  (default is true)
 
 Edit subject of a mail and save it
 ==================================
 
-To enable the edit of the text of the subject of received and sent emails, you can do it from the web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured: 
+To enable the modification of the subject for received and sent emails, access the web administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured: 
 
 ``message.edit.subject`` = true  (default is false)
 
