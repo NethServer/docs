@@ -675,7 +675,7 @@ Alternatively, you can configure a global setting to turn images automatically i
 
 It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
-``public.resource.links.as.inline.attachments`` = true (default = flase)
+``public.resource.links.as.inline.attachments`` = true (default = false)
 
 
 To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
@@ -974,7 +974,19 @@ To import events:
 
    .. image:: _static/webtop-import_calendars3.png
 
+Hide auto-suggested recipient in lookups
+========================================
 
+To disable the suggestion of automatically saved addresses, access the web administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``recipient.provider.auto.enabled`` = false  (default is true)
+
+Edit subject of a mail and save it
+==================================
+
+To enable the modification of the subject for received and sent emails, access the web administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured: 
+
+``message.edit.subject`` = true  (default is false)
 
 Importing from Outlook PST
 ==========================
