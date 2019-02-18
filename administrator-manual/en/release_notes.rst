@@ -90,9 +90,9 @@ Major changes on 2018-06-11
 * Quality of Service (QoS) implementation now uses `FireQOS <https://github.com/firehol/firehol/wiki/FireQOS>`_,
   current configuration is automatically migrated. See :ref:`traffic-shaping-section`
 
-* The menu entry :guilabel:`Automatic updates` in Server Manager was removed. Automatic 
-  updates are now configured from :guilabel:`Software center > Configure`. From the same panel
-  it is possible to select the :guilabel:`Software updates origin`. See :ref:`software-updates-section`
+* The menu entry :guilabel:`Automatic updates` in Server Manager was removed.
+  Automatic  updates are now configured from :guilabel:`Software center >
+  Configure`. See :ref:`software-updates-section`
 
 * The :guilabel:`NethServer subscription` module is available by default in new installations.
   Run the following command to update the base module set on existing installations: ``yum update @nethserver-iso``

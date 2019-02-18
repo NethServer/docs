@@ -47,15 +47,25 @@ Software updates
     more information about NethServer updates.
 
     Updates released by the CentOS project are immediately available on
-    NethServer directly from the CentOS mirrors. More info about CentOS updates:
+    |product| directly from the CentOS mirrors. Only updates for the current
+    system release (i.e. "7.6.1804") are considered, until a manual upgrade to
+    the next system release is started.
+
+    More info about CentOS updates:
 
     - https://wiki.centos.org/FAQ/General
     - https://access.redhat.com/support/policy/updates/errata/
     - https://access.redhat.com/security/updates/backporting
     - https://access.redhat.com/security/
 
-    Updates released by EPEL are available only if the **unlocked** software
-    updates origin is selected, as explained below.
+    Updates released by EPEL are immediately available from the official EPEL
+    mirrors. As EPEL is not bound to the current system release number, the
+    :guilabel:`Software center` always installs the latest available software
+    versions from EPEL.
+
+    More info about EPEL updates:
+
+    - https://fedoraproject.org/wiki/EPEL
 
     .. hint::
 
@@ -65,43 +75,6 @@ Software updates
         the updates changelog** to understand what is going to happen. If
         possible, test the updates in a non-production system. For any doubt ask
         the NethServer community forum! [#NSCOM]_
-
-    Every day an **automated scheduled task** checks if a new distribution
-    release of CentOS is available; when this happens it sends an email
-    notification message to the system administrator and changes the
-    :guilabel:`Software updates origin`. The system administrator can
-    temporarily change the software updates origin from :guilabel:`Software
-    center > Configure`. The available choices are:
-
-    :dfn:`Unlocked` (default)
-
-        The Software center considers updates from all available software
-        repositories. It ensures every installed package is at its latest
-        version.
-
-        The "unlocked" origin is automatically selected by the :dfn:`system
-        upgrade` procedure that can be started only by the system administrator.
-
-    :dfn:`Locked`
-
-        The Software center prevents to install the updates coming from a CentOS
-        release different than the current system version. For example, it
-        prevents to install updates from CentOS 7.6 if NethServer version is
-        7.5. Packages from other repositories which are generically compatible
-        with "7" (like EPEL) are considered only when new modules are installed;
-        once they have been installed they are never updated.
-
-        The "locked" origin is automatically selected when a new CentOS
-        distribution release is available. When also the NethServer project
-        releases a new version, the Software center asks to start the
-        :dfn:`system upgrade`. The upgrade procedure switches to the "unlocked"
-        origin at the end.
-
-        .. warning::
-
-            When ``yum`` is run from the command line and the software origin is
-            "locked", EPEL and other repositories which are generically
-            compatible with "7" are **enabled**
 
 .. _manual-updates:
 
