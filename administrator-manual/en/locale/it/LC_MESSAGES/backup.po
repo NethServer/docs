@@ -14,7 +14,7 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Alessandro Polidori <alessandro.polidori@gmail.com>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2018
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 10:04+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -370,6 +370,7 @@ msgstr ""
 #: ../../backup.rst:116
 msgid "When configuring backups, please bear in mind two golden rules:"
 msgstr ""
+"Quando si configurano più backup è opportuno rammentare due regole d'oro:"
 
 #: ../../backup.rst:118
 msgid "always use different destinations for each engine"
@@ -389,6 +390,9 @@ msgid ""
 "Manager, multiple backups must me configured using the New Server Manager "
 "(Cockpit)."
 msgstr ""
+"Mentre un backup singolo può essere configurato e ripristinato attraverso il"
+"  Server Manager, i backup multipli devono essere configurati utilizzando il"
+" nuovo Server Manager (Cockpit)."
 
 #: ../../backup.rst:127
 msgid "Storage backends"
@@ -396,7 +400,7 @@ msgstr "Backend di archiviazione"
 
 #: ../../backup.rst:129
 msgid "Supported by all engines:"
-msgstr ""
+msgstr "Supportati da tutti gli engine:"
 
 #: ../../backup.rst:131
 msgid ""
@@ -427,19 +431,19 @@ msgstr ""
 
 #: ../../backup.rst:134
 msgid "USB: disk connected to a local USB/SATA port"
-msgstr ""
+msgstr "USB: disco collegato ad una porta USB/SATA locale"
 
 #: ../../backup.rst:136
 msgid "Supported by restic and rsync:"
-msgstr ""
+msgstr "Supportati da restic ed rsync"
 
 #: ../../backup.rst:138
 msgid "SFTP: SSH File Transfer Protocol"
-msgstr ""
+msgstr "SFTP: SSH File Transfer Protocol"
 
 #: ../../backup.rst:140
 msgid "Supported only by restic:"
-msgstr ""
+msgstr "Supportati solo da restic"
 
 #: ../../backup.rst:142 ../../backup.rst:184
 msgid ""
@@ -500,6 +504,9 @@ msgid ""
 "change, the administrator should take care of copying/moving the backup data"
 " from the old directory to the new one."
 msgstr ""
+"Il nome della directory di destinazione è basato sul nome host del server: "
+"in caso di modifica dell'FQDN, l'amministratore dovrà occuparsi di "
+"copiare/spostare i dati di backup dalla vecchia directory a quella nuova."
 
 #: ../../backup.rst:170
 msgid "Restic"
@@ -586,7 +593,7 @@ msgstr ""
 
 #: ../../backup.rst:225
 msgid "Inclusion"
-msgstr ""
+msgstr "Inclusioni"
 
 #: ../../backup.rst:227
 msgid ""
@@ -615,7 +622,7 @@ msgstr ""
 
 #: ../../backup.rst:238
 msgid "Exclusion"
-msgstr ""
+msgstr "Esclusioni"
 
 #: ../../backup.rst:240
 msgid ""
@@ -647,13 +654,15 @@ msgstr ""
 
 #: ../../backup.rst:254
 msgid "Override inclusions and exclusions"
-msgstr ""
+msgstr "Personalizzazione inclusioni ed esclusioni"
 
 #: ../../backup.rst:256
 msgid ""
 "All backups read the same configuration, but the list of saved and excluded "
 "files can be overridden using two special files:"
 msgstr ""
+"Tutti i backup utilizzano la stessa configurazione, ma l'elenco dei file "
+"salvati ed esclusi può essere personalizzato utilizzando due file speciali:"
 
 #: ../../backup.rst:259
 msgid "``/etc/backup-data/<name>.include``"
@@ -665,13 +674,15 @@ msgstr "``/etc/backup-data/<name>.exclude``"
 
 #: ../../backup.rst:262
 msgid "Where ``name`` is the name of the backup."
-msgstr ""
+msgstr "In cui ``name`` è il nome del backup."
 
 #: ../../backup.rst:264
 msgid ""
 "Both files will override the list of included and excluded data set. The "
 "accepted syntax is the same as reported in the paragraph above."
 msgstr ""
+"Entrambi i file sostituiranno il set di dati inclusi ed esclusi dal backup. "
+"La sintassi accettata è la stessa indicata nel paragrafo precedente."
 
 #: ../../backup.rst:267
 msgid ""
@@ -696,10 +707,13 @@ msgid ""
 "It's possible to configure a backup which includes only the mail and is "
 "scheduled each our."
 msgstr ""
+"È possibile configurare un backup che includa solo i file della posta "
+"programmato ogni ora."
 
 #: ../../backup.rst:277
 msgid "Configure the new ``mymailbackup`` using the UI"
 msgstr ""
+"Configurare il nuovo ``mymailbackup`` utilizzando l'interfaccia utente"
 
 #: ../../backup.rst:279
 msgid "Create a custom include containing only the mail directory: ::"
@@ -721,6 +735,8 @@ msgstr "Assicurarsi di non lasciare linee vuote nei file modificati."
 #: ../../backup.rst:294
 msgid "This type of backup can't be used in case of disaster recovery."
 msgstr ""
+"Questo tipo di backup non può essere utilizzato in caso di disaster "
+"recovery."
 
 #: ../../backup.rst:300
 msgid "Selective restore of files"
@@ -803,6 +819,8 @@ msgid ""
 "The UI for selective restore is available only for the backup named "
 "``backup-data``."
 msgstr ""
+"L'interfaccia utente per il ripristino selettivo è disponibile solo per il "
+"backup denominato ``backup-dati``."
 
 #: ../../backup.rst:332
 msgid "Command line procedure"
@@ -829,7 +847,7 @@ msgstr "Home utenti: :file:`/var/lib/nethserver/home/<user>`"
 
 #: ../../backup.rst:341
 msgid "To list data inside a backup, use: ::"
-msgstr ""
+msgstr "Per elencare i dati all'interno di un backup, utilizzare: ::"
 
 #: ../../backup.rst:345
 msgid "To restore all data in the original location, use: ::"

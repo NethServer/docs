@@ -212,6 +212,18 @@ During data transfer, SFTP assures encryption and data is compressed to minimize
    Please note that |product| doesn't support links on Samba shares due to security implications.
    Also symlinks are not supported on WebDAV.
 
+Command line execution
+----------------------
+
+To run a backup from command line, use: ::
+
+  backup-data -b <name>
+
+where ``name`` is the name of the backup you want to run.
+
+.. note::
+   By default, the name of the *first* data backup configured on |product| is ``backup-data``
+
 
 .. _backup_customization-section:
 

@@ -154,8 +154,8 @@ Migration from backup
 #. In the source host, create a full backup archive and move it
    to the destination host.
 
-#. In the destination host, install all packages that cover the same
-   features of the source.
+#. In the destination host, install |product| |version| **using the most recent ISO** 
+   and all packages that cover the same features of the source.
 
 #. Explode the full backup archive into some directory; for instance,
    create the directory :file:`/var/lib/migration`.
@@ -182,7 +182,8 @@ The process is much faster than migrating from a backup.
 Before starting make sure to have:
 
 - a running NethService/SME installation, we will call it original server or source server
-- a running |product| 7 installation with at least the same disk space of the source server, we will call it destination server
+- a running |product| 7 installation with **all the latest updates installed** and at least 
+  the same disk space of the source server, we will call it destination server
 - a working network connection between the two severs
 
 Please also make sure the source server allows root login via SSH key and password.
