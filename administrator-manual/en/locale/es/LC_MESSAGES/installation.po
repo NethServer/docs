@@ -1,12 +1,12 @@
 # #-#-#-#-#  installation.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  installation.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 10:04+0100\n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -132,13 +132,10 @@ msgstr "Creación de medios"
 
 #: ../../installation.rst:66
 msgid ""
-"**Download the ISO file** from official site |download_site|.  The "
+"**Download the latest ISO file** from official site |download_site|. The "
 "downloaded ISO file can be used to **create a bootable media** such as DVD "
 "or USB stick."
 msgstr ""
-"**Descargar el archivo ISO** desde el sitio oficial |download_site|. El "
-"archivo ISO descargado se puede utilizar para **crear un medio de arranque**"
-" tal como DVD o memoria USB."
 
 #: ../../installation.rst:71
 msgid "USB stick"
