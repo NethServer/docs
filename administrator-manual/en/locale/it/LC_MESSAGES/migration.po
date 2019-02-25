@@ -1,12 +1,12 @@
 # #-#-#-#-#  migration.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  migration.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,16 +15,16 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:27+0100\n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -307,11 +307,12 @@ msgstr ""
 
 #: ../../migration.rst:157
 msgid ""
-"In the destination host, install all packages that cover the same features "
-"of the source."
+"In the destination host, install |product| |version| **using the most recent"
+" ISO** and all packages that cover the same features of the source."
 msgstr ""
-"Sul server destinazione, installare tutti i moduli che implementano i "
-"servizi presenti sulla macchina origine."
+"Sul server destinazione, installare |product| |version| **utilizzando la ISO"
+" più recente disponibile** e tutti i moduli che implementano i servizi "
+"presenti sulla macchina origine."
 
 #: ../../migration.rst:160
 msgid ""
@@ -359,17 +360,19 @@ msgstr ""
 
 #: ../../migration.rst:185
 msgid ""
-"a running |product| 7 installation with at least the same disk space of the "
-"source server, we will call it destination server"
+"a running |product| 7 installation with **all the latest updates installed**"
+" and at least the same disk space of the source server, we will call it "
+"destination server"
 msgstr ""
-"una installazione di |product| 7 attiva con a disposizione lo stesso spazio "
-"su disco del server sorgente, che chiameremo server destinazione"
+"una installazione di |product| 7 attiva con **tutti gli update più recenti "
+"installati** e con a disposizione lo stesso spazio su disco del server "
+"sorgente, che chiameremo server destinazione"
 
-#: ../../migration.rst:186
+#: ../../migration.rst:187
 msgid "a working network connection between the two severs"
 msgstr "una connessione di rete attiva tra i due server"
 
-#: ../../migration.rst:188
+#: ../../migration.rst:189
 msgid ""
 "Please also make sure the source server allows root login via SSH key and "
 "password."
@@ -377,11 +380,11 @@ msgstr ""
 "Assicurarsi che il server sorgente consenta il login all'utente root con "
 "password ed attraverso una chiave SSH."
 
-#: ../../migration.rst:191
+#: ../../migration.rst:192
 msgid "Sync files"
 msgstr "Sincronizzazione dei file"
 
-#: ../../migration.rst:193
+#: ../../migration.rst:194
 msgid ""
 "The synchronization script copies all data using rsync over SSH. Files are "
 "saved inside :file:`/var/lib/migration` directory. If the destination server"
@@ -395,28 +398,28 @@ msgstr ""
 " di chiavi RSA e ne copierà la chiave pubblica nel server di origine. Tutte "
 "le directory escluse dai dati di backup non verranno sincronizzate."
 
-#: ../../migration.rst:198
+#: ../../migration.rst:199
 msgid "On the target machine, execute the following command: ::"
 msgstr "Nella macchina di destinazione, eseguire il seguente comando: ::"
 
-#: ../../migration.rst:202
+#: ../../migration.rst:203
 msgid "Where"
 msgstr "In cui"
 
-#: ../../migration.rst:204
+#: ../../migration.rst:205
 msgid "``source_server_name`` is the host name or IP of the original server"
 msgstr "``source_server_name`` è il nome host o IP del server origine"
 
-#: ../../migration.rst:205
+#: ../../migration.rst:206
 msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 "``ssh_port`` è la porta SSH del server origine (la porta di default è la 22)"
 
-#: ../../migration.rst:207 ../../migration.rst:223
+#: ../../migration.rst:208 ../../migration.rst:224
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../migration.rst:211
+#: ../../migration.rst:212
 msgid ""
 "When asked, insert the root password of the source server, make a coffee and"
 " wait patiently."
@@ -424,7 +427,7 @@ msgstr ""
 "Quando richiesto, inserire la password di root del server origine quindi "
 "prepararsi un caffè e aspettare con pazienza."
 
-#: ../../migration.rst:213
+#: ../../migration.rst:214
 msgid ""
 "The script will not perform any action on the source machine and can be "
 "invoked multiple times."
@@ -432,11 +435,11 @@ msgstr ""
 "Lo script non eseguirà alcuna azione sulla macchina di origine e può essere "
 "rilanciato più volte."
 
-#: ../../migration.rst:216
+#: ../../migration.rst:217
 msgid "Sync and migrate"
 msgstr "Sincronizzazione e migrazione"
 
-#: ../../migration.rst:218
+#: ../../migration.rst:219
 msgid ""
 "If called with ``-m`` option, ``rsync-migrate`` will execute a final "
 "synchronization and upgrade the target machine."
@@ -444,7 +447,7 @@ msgstr ""
 "Se impartito con l'opzione ``-m``, ``rsync-migrate`` eseguirà una "
 "sincronizzazione finale e l'aggiornamento della macchina destinazione."
 
-#: ../../migration.rst:221
+#: ../../migration.rst:222
 msgid ""
 "Before executing the final migration, install all packages that cover the "
 "same features of the source."
@@ -453,27 +456,27 @@ msgstr ""
 "installato tutti i pacchetti che coprono le stesse funzionalità del server "
 "d'origine."
 
-#: ../../migration.rst:227
+#: ../../migration.rst:228
 msgid "The script will:"
 msgstr "Lo script si incaricherà di:"
 
-#: ../../migration.rst:229
+#: ../../migration.rst:230
 msgid "stop every service on the source machine (except for SSH)"
 msgstr "fermare ogni servizio sulla macchina origine (ad eccetto di SSH)"
 
-#: ../../migration.rst:230
+#: ../../migration.rst:231
 msgid "execute the ``pre-backup`` event on the source machine"
 msgstr "eseguire l'evento di ``pre-backup`` sulla macchina origine"
 
-#: ../../migration.rst:231
+#: ../../migration.rst:232
 msgid "sync all remaining data"
 msgstr "sincronizzare tutti i dati rimanenti"
 
-#: ../../migration.rst:232
+#: ../../migration.rst:233
 msgid "execute the ``migration-import`` event on the destination machine"
 msgstr "eseguire l'evento ``migration-import`` sulla macchina destinazione"
 
-#: ../../migration.rst:235
+#: ../../migration.rst:236
 msgid "At the end, check for any error message in :file:`/var/log/messages`::"
 msgstr ""
 "Al termine della procedura verificare la presenza di eventuali errori in "

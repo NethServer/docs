@@ -1,12 +1,12 @@
 # #-#-#-#-#  upgrade.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  upgrade.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 10:04+0100\n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
 "PO-Revision-Date: 2017-03-21 10:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -75,7 +75,7 @@ msgstr ""
 "Hay diferentes escenarios de actualización, dependiendo de cómo se configuró"
 " la máquina de origen."
 
-#: ../../upgrade.rst:30 ../../upgrade.rst:349
+#: ../../upgrade.rst:30 ../../upgrade.rst:357
 msgid ""
 "If the source system was a NT Primary Domain Controller (Samba server role "
 "was :guilabel:`Primary Domain Controller` -- PDC) or a standalone file "
@@ -87,7 +87,7 @@ msgstr ""
 "o un servidor de archivos independiente (rol era :guilabel:`Workstation` -- "
 "WS), refiérase a :ref :`pdc-upgrade-section`."
 
-#: ../../upgrade.rst:34 ../../upgrade.rst:353
+#: ../../upgrade.rst:34 ../../upgrade.rst:361
 msgid ""
 "If the source system was joined to an Active Directory domain (Samba server "
 "role was :guilabel:`Active Directory member` -- ADS), refer to :ref:`ads-"
@@ -438,87 +438,97 @@ msgstr ""
 
 #: ../../upgrade.rst:242
 msgid ""
-"Install |product| |version| and complete the initial steps using the first "
-"configuration wizard. The new machine must have the same hostname of the old"
-" one, to access the backup set correctly. Install and configure the backup "
-"module."
+"Install |product| |version| **using the most recent ISO** and complete the "
+"initial steps using the first configuration wizard. The new machine must "
+"have the same hostname of the old one, to access the backup set correctly. "
+"Install and configure the backup module."
 msgstr ""
 
-#: ../../upgrade.rst:246
+#: ../../upgrade.rst:247
 msgid ""
 "Restore the configuration backup using the web interface. The network "
 "configuration is restored, too! If any error occurs, check the "
 ":file:`/var/log/messages` log file for further information: ::"
 msgstr ""
 
-#: ../../upgrade.rst:251
+#: ../../upgrade.rst:252
 msgid ""
 "If needed, go to :guilabel:`Network` page and fix the network configuration "
 "accordingly to the new hardware. If the machine was joined to an existing "
 "Active Directory domain, read :ref:`ads-upgrade-section`."
 msgstr ""
 
-#: ../../upgrade.rst:256
+#: ../../upgrade.rst:257
 msgid "Complete the restore procedure with the following command: ::"
 msgstr ""
 "Complete el procedimiento de restauración con el siguiente comando: ::"
 
-#: ../../upgrade.rst:260
+#: ../../upgrade.rst:261
+msgid "where *name* is the name of the configured data backup."
+msgstr ""
+
+#: ../../upgrade.rst:265
+msgid ""
+"By default, the name of the *backup-data* configured on |product| 6 is "
+"``backup-data``"
+msgstr ""
+
+#: ../../upgrade.rst:268
 msgid "Check the restore logs: ::"
 msgstr ""
 
-#: ../../upgrade.rst:265 ../../upgrade.rst:366
+#: ../../upgrade.rst:273 ../../upgrade.rst:374
 msgid ""
 "Each file under :file:`/etc/e-smith/templates-custom/` must be manually "
 "checked for compatibility with version |version|."
 msgstr ""
 
-#: ../../upgrade.rst:270
+#: ../../upgrade.rst:278
 msgid "Do not reboot the machine before executing the restore-data procedure."
 msgstr ""
 
-#: ../../upgrade.rst:275
+#: ../../upgrade.rst:283
 msgid "Upgrade with rsync"
 msgstr ""
 
-#: ../../upgrade.rst:277
+#: ../../upgrade.rst:285
 msgid ""
 "The process is much faster than a traditional backup and restore, also it "
 "minimizes the downtime for the users."
 msgstr ""
 
-#: ../../upgrade.rst:279
+#: ../../upgrade.rst:287
 msgid "Before starting make sure to have:"
 msgstr ""
 
-#: ../../upgrade.rst:281
+#: ../../upgrade.rst:289
 msgid ""
 "a running |product| 6 installation, we will call it original server or "
 "source server"
 msgstr ""
 
-#: ../../upgrade.rst:282
+#: ../../upgrade.rst:290
 msgid ""
 "a running |product| 7 installation with at least the same disk space of the "
 "source server, and **latest updates installed**; we will call it destination"
 " server"
 msgstr ""
 
-#: ../../upgrade.rst:283
+#: ../../upgrade.rst:291
 msgid "a working network connection between the two severs"
 msgstr ""
 
-#: ../../upgrade.rst:285
+#: ../../upgrade.rst:293
 msgid ""
 "Please also make sure the source server allows root login via SSH key and "
 "password."
 msgstr ""
 
-#: ../../upgrade.rst:288
+#: ../../upgrade.rst:296
 msgid "Sync files"
 msgstr ""
 
-#: ../../upgrade.rst:290
+#: ../../upgrade.rst:298
 msgid ""
 "The synchronization script copies all data using rsync over SSH. If the "
 "destination server doesn't have any SSH keys, the script will also a pair of"
@@ -526,145 +536,145 @@ msgid ""
 "excluded from the backup data will not be synced."
 msgstr ""
 
-#: ../../upgrade.rst:294
+#: ../../upgrade.rst:302
 msgid "On the target machine, execute the following command: ::"
 msgstr ""
 
-#: ../../upgrade.rst:298
+#: ../../upgrade.rst:306
 msgid "Where"
 msgstr ""
 
-#: ../../upgrade.rst:300
+#: ../../upgrade.rst:308
 msgid "``source_server_name`` is the host name or IP of the original server"
 msgstr ""
 
-#: ../../upgrade.rst:301
+#: ../../upgrade.rst:309
 msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 
-#: ../../upgrade.rst:303 ../../upgrade.rst:317
+#: ../../upgrade.rst:311 ../../upgrade.rst:325
 msgid "Example: ::"
 msgstr ""
 
-#: ../../upgrade.rst:307
+#: ../../upgrade.rst:315
 msgid ""
 "When asked, insert the root password of the source server, make a coffee and"
 " wait patiently."
 msgstr ""
 
-#: ../../upgrade.rst:309
+#: ../../upgrade.rst:317
 msgid ""
 "The script will not perform any action on the source machine and can be "
 "invoked multiple times."
 msgstr ""
 
-#: ../../upgrade.rst:312
+#: ../../upgrade.rst:320
 msgid "Sync and upgrade"
 msgstr ""
 
-#: ../../upgrade.rst:314
+#: ../../upgrade.rst:322
 msgid ""
 "If called with ``-u`` option, ``rsync-upgrade`` will execute a final "
 "synchronization and upgrade the target machine."
 msgstr ""
 
-#: ../../upgrade.rst:321
+#: ../../upgrade.rst:329
 msgid "The script will:"
 msgstr ""
 
-#: ../../upgrade.rst:323
+#: ../../upgrade.rst:331
 msgid ""
 "close access to every network service on the source machine (except for SSH "
 "and httpd-admin)"
 msgstr ""
 
-#: ../../upgrade.rst:324
+#: ../../upgrade.rst:332
 msgid ""
 "execute ``pre-backup-config`` and ``pre-backup-data`` event on the source "
 "machine"
 msgstr ""
 
-#: ../../upgrade.rst:325
+#: ../../upgrade.rst:333
 msgid "sync all remaining data"
 msgstr ""
 
-#: ../../upgrade.rst:326
+#: ../../upgrade.rst:334
 msgid "execute ``restore-config`` on the destination machine"
 msgstr ""
 
-#: ../../upgrade.rst:328
+#: ../../upgrade.rst:336
 msgid ""
 "If ``rsync-upgrade`` terminates without loosing the network connection,"
 msgstr ""
 
-#: ../../upgrade.rst:330
+#: ../../upgrade.rst:338
 msgid ""
 "Disconnect the original ns6 from network, to avoid IP conflict with the "
 "destination server"
 msgstr ""
 
-#: ../../upgrade.rst:332
+#: ../../upgrade.rst:340
 msgid ""
 "Access the server manager UI and fix the network configuration from the "
 ":guilabel:`Network` page"
 msgstr ""
 
-#: ../../upgrade.rst:334
+#: ../../upgrade.rst:342
 msgid ""
 "Otherwise, if during ``rsync-upgrade`` **the network connection is lost**, "
 "it is likely that the source and destination servers have an **IP "
 "conflict**:"
 msgstr ""
 
-#: ../../upgrade.rst:337
+#: ../../upgrade.rst:345
 msgid "Disconnect the original ns6 from network,"
 msgstr ""
 
-#: ../../upgrade.rst:339
+#: ../../upgrade.rst:347
 msgid "From a ns7 root console run the command: ::"
 msgstr ""
 
-#: ../../upgrade.rst:343
+#: ../../upgrade.rst:351
 msgid "Then grab the screen device: ::"
 msgstr ""
 
-#: ../../upgrade.rst:347
+#: ../../upgrade.rst:355
 msgid "At the end of ``rsync-upgrade`` run the following steps:"
 msgstr ""
 
-#: ../../upgrade.rst:357
+#: ../../upgrade.rst:365
 msgid ""
 "Go back to the CLI and call the ``post-restore-data`` event on the "
 "destination machine: ::"
 msgstr ""
 
-#: ../../upgrade.rst:361
+#: ../../upgrade.rst:369
 msgid "Check the restore logs for any ``ERROR`` or ``FAIL`` message: ::"
 msgstr ""
 
-#: ../../upgrade.rst:371
+#: ../../upgrade.rst:379
 msgid ""
 "Do not reboot the machine before executing the post-restore-data event."
 msgstr ""
 
-#: ../../upgrade.rst:376
+#: ../../upgrade.rst:384
 msgid "Upgrade with Upgrade tool (beta)"
 msgstr ""
 
-#: ../../upgrade.rst:378
+#: ../../upgrade.rst:386
 msgid ""
 "The Upgrade tool module make it possible an **in-place upgrade** of "
 "|product| from version 6 to version 7 with an automated procedure."
 msgstr ""
 
-#: ../../upgrade.rst:383
+#: ../../upgrade.rst:391
 msgid ""
 "Please refer to the `Upgrade tool page "
 "<http://docs.nethserver.org/en/v6/upgrade_tool.html>`_ of |product| 6 "
 "Administrator Manual."
 msgstr ""
 
-#: ../../upgrade.rst:387
+#: ../../upgrade.rst:395
 msgid ""
 "Please refer to the `Upgrade tool page "
 "<https://nethserver.docs.nethesis.it/en/v6/upgrade_tool.html>`_ of |product|"
