@@ -221,14 +221,14 @@ When you create a port forward, you must specify at least the following paramete
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
 
-.. _ui-port-forward-syntax:
-
 Syntax
 ------
 
-* Source port: can be a single port, a comma separated list of ports, or a port range.
-  Port range must be in the form `start:end`. Example: `30:50`.
-* Destination port: can be empty or a single port. If empty, the destination port will be equal to source port.
+.. container:: ui-portforward-syntax
+
+    * **Source port**: can be a single port, a comma separated list of ports, or a port range.
+      Port range must be in the form ``start:end``. Example: ``30:50``.
+    * **Destination port**: can be empty or a single port. If empty, the destination port will be equal to source port.
 
 Example
 -------
