@@ -212,7 +212,7 @@ Documentation
 =============
 
 VirtualBox
-  The `official documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
+  The `official VirtualBox documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
 
 phpVirtualbox
-  The `official documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.
+  The `official phpVirtualbox documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.

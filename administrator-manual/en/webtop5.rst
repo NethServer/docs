@@ -511,8 +511,8 @@ Audio and video WebRTC calls with chat (Beta)
    When the final version will be released it is likely that the configurations previously made will be reset.
 
 Configuration is currently only possible via the WebTop administration panel.
-The settings to be inserted are documented `here <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_ 
-In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown `here <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_
+The settings to be inserted are documented inside `webrtc settings section <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_.
+In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown inside `xmpp settings <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_.
 
 From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
@@ -623,7 +623,8 @@ If you can not retrieve an Internet link of the icon image, you can copy the ima
 
        'icon': 'https://<public_name_server>/<icon.svg>'
  
-#. uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration panel -> :guilabel:`Cloud` -> :guilabel:`Public Images`and insert a URL of this type for the 'icon' field of the Json file: ::
+#. uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration 
+   panel -> :guilabel:`Cloud` -> :guilabel:`Public Images` and insert a URL of this type for the 'icon' field of the Json file: ::
 
        'icon': 'https://<public_name_server>/webtop/resources/156c0407/images/<icon.svg>'
 
