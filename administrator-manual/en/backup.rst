@@ -128,7 +128,7 @@ Storage backends
 
 Supported by all engines:
 
-* CIFS: Windows shared folder, it's available on all NAS (Network Attached Storage). Use access credentials like: MyBindUser,domain=mydomain.com
+* CIFS
 * NFS: Linux shared folder, it's available on all NAS, usually faster than CIFS
 * WebDAV: available on many NAS and remote servers (use a server with a valid SSL certificate as WebDAV target, otherwise the system will fail mounting the filesystem)
 * USB: disk connected to a local USB/SATA port
@@ -140,7 +140,42 @@ Supported by restic and rsync:
 Supported only by restic:
 
 * Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
-* Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
+* Backblaze
+
+
+CIFS
+^^^^
+
+.. container:: ui-backend-cifs
+
+   Windows shared folder, it's available on all NAS (Network Attached Storage).
+   Can work with native Windows implementation or Linux one (SMB).
+
+   Configuration fields:
+
+   * **SMB Share**: the name of the CIFS share
+   * **SMB Host**: the host name or IP address of the server, use the FQDN for better compatibility
+   * **SMB Login**: user name to access the CIFS share. If the CIFS server is joined to a domain, use access credentials like: ``MyBindUser,domain=mydomain.com``
+   * **SMB Password**: the password for given user
+
+
+
+Backblaze B2
+^^^^^^^^^^^^
+
+.. container:: ui-backend-b2
+
+
+   `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_ is the clous storage provided by Backblaze.
+
+   Configuration fields:
+
+   * **B2 Bucket**: the folder where data will be stored
+   * **B2 Account Id**: the id of your Backblaze account
+   * **B2 Account Key**: secret key to access the bucket 
+
+   More info on `how to access your Account Id and Account Key <https://help.backblaze.com/hc/en-us/articles/224991568-Where-can-I-find-my-Account-ID-and-Application-Key->`_.
+
 
 Engines
 -------
@@ -148,18 +183,20 @@ Engines
 Duplicity
 ^^^^^^^^^
 
-:index:`Duplicity` is the well-known default engine for |product|.
-It has a good compression algorithm which will reduce storage usage on the destination.
-Duplicity requires a full backup once a week, when the data set is very big the process
-may take more than 24 hours to complete.
-|product| doesn't implement backup encryption if the engine is Duplicity.
+.. container:: ui-engine-duplicity
 
-Supported storage backends:
+   :index:`Duplicity` is the well-known default engine for |product|.
+   It has a good compression algorithm which will reduce storage usage on the destination.
+   Duplicity requires a full backup once a week, when the data set is very big the process
+   may take more than 24 hours to complete.
+   |product| doesn't implement backup encryption if the engine is Duplicity.
 
-- CIFS
-- NFS
-- USB
-- WebDAV (only when used as single backup)
+   Supported storage backends:
+
+   - CIFS
+   - NFS
+   - USB
+   - WebDAV (only when used as single backup)
 
 .. note:: The destination directory is based on the server host name: in case of
    FQDN change, the administrator should take care of copying/moving the backup data from
