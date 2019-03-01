@@ -72,11 +72,16 @@ A rule consists of four main parts:
 * Time condition
 
 
-Available actions are:
+.. container:: ui-rules-action
 
-* :dfn:`ACCEPT`: accept the network traffic
-* :dfn:`REJECT`: block the traffic and notify the sender host 
-* :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
+   Available standard actions are:
+
+   * :dfn:`ACCEPT`: accept the network traffic
+   * :dfn:`REJECT`: block the traffic and notify the sender host 
+   * :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
+
+Available mangle actions are:
+
 * :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
 * :dfn:`Priority`: mark the traffic as high/low priority. See :ref:`traffic-shaping-section`.
 
