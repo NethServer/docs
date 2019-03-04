@@ -9,11 +9,21 @@ Virtual machines
 |product| is capable of running virtual machines using KVM and libvirt, but it
 doesn't provide a Web interface for it.
 
-Virtualization software can be installed and started using the command line, just execute: ::
+.. only:: nscom
+  
+  Virtualization software can be installed and started using the command line, just execute: ::
 
-  yum install --setopt=base.enablegroups=1 @virtualization-hypervisor @virtualization-tools @virtualization-platform
-  systemctl enable libvirtd
-  systemctl start libvirtd
+       yum install --setopt=base.enablegroups=1 @virtualization-hypervisor @virtualization-tools @virtualization-platform
+       systemctl enable libvirtd
+       systemctl start libvirtd
+
+.. only:: nsent
+  
+  Virtualization software can be installed and started using the command line, just execute: ::
+  
+       yum -y install quemu-kvm libvirt virt-install libvirt-client
+       systemctl enable libvirtd
+       systemctl start libvirtd
 
 If |product| is used as DHCP server, the Dnsmasq instance launched by libvirtd will conflict with the default one.
 To avoid such conflict, remove ``default`` libvirt NAT network: ::
