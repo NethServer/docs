@@ -21,7 +21,7 @@ doesn't provide a Web interface for it.
   
   Virtualization software can be installed and started using the command line, just execute: ::
   
-       yum -y install quemu-kvm libvirt virt-install libvirt-client
+       yum -y install qemu-kvm libvirt virt-install libvirt-client
        systemctl enable libvirtd
        systemctl start libvirtd
 
