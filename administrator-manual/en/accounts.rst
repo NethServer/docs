@@ -472,13 +472,18 @@ The default policy is :dfn:`strong`.
 Expiration
 ----------
 
-The  :index:`password expiration` is enabled by default to 6 months from the time when the password is set.
+The :index:`password expiration` is **NOT** enabled by default.
+If enabled, password lifetime is set to 6 months from the time when the password is set.
 
 .. note:: The system will refer to the date of the last password change,
-   if password is older than 6 months, the server will send an email to indicate that password has expired.
+   if password is older than 6 months, the server consider that password has expired.
    In this case you need to change the user password.
    For example, if the last password change was made in January and the activation of the deadline in October,
    the system will assume the password changed in January is expired, and notify the user.
+
+
+.. warning:: Due to some technical limitation, **no email notification related to password expiration** will 
+   be sent by the server!
 
 
 .. _effects-of-expired-password:
