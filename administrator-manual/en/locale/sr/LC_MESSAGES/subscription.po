@@ -1,0 +1,123 @@
+# #-#-#-#-#  subscription.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  subscription.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2018-03-29 09:26+0000\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../subscription.rst:5
+msgid "|product| subscription"
+msgstr ""
+
+#: ../../subscription.rst:7
+msgid ""
+"A |product| installation can be registered to a public or private Dartagnan "
+"[#Dartagnan]_ instance, getting access to monitoring portal and stable "
+"update repositories."
+msgstr ""
+
+#: ../../subscription.rst:12
+msgid ""
+"The |product| Subscription by Nethesis [#Nethesis]_ enables access to a "
+"public ready-to-use Dartagnan instance, along with immediate professional "
+"support services for your |product| deployments. Detailed info available at "
+"https://my.nethserver.com"
+msgstr ""
+
+#: ../../subscription.rst:18
+msgid ""
+"Activating a subscription will enable the stable YUM repositories, but will "
+"disable any other repositories you may have added. You can re-enable any "
+"other repositories by creating a \"template-custom\" for "
+":file:`/etc/nethserver/eorepo.conf`."
+msgstr ""
+
+#: ../../subscription.rst:23
+msgid ""
+"The subscription provider may not accept support requests for the contents "
+"of custom repositories."
+msgstr ""
+
+#: ../../subscription.rst:30
+msgid "Registering the system"
+msgstr ""
+
+#: ../../subscription.rst:32
+msgid "Access :guilabel:`Subscription` page from the Server Manager"
+msgstr ""
+
+#: ../../subscription.rst:33
+msgid "Click on :guilabel:`Subscribe`"
+msgstr ""
+
+#: ../../subscription.rst:34
+msgid ""
+"Login or register to https://my.nethserver.com to obtain a registration code"
+msgstr ""
+
+#: ../../subscription.rst:35
+msgid ""
+"Copy and paste the code inside the :guilabel:`Registration token` field"
+msgstr ""
+
+#: ../../subscription.rst:36
+msgid "Click on :guilabel:`Register now` button"
+msgstr ""
+
+#: ../../subscription.rst:38
+msgid ""
+"At the end, the subscription plan name and validity are reported inside the "
+"page. Monitoring and access to stable repositories are automatically "
+"enabled."
+msgstr ""
+
+#: ../../subscription.rst:41
+msgid "Dartagnan documentation: https://nethesis.github.io/dartagnan/"
+msgstr ""
+
+#: ../../subscription.rst:42
+msgid "Nethesis official site: http://www.nethesis.it"
+msgstr ""
+
+#: ../../subscription.rst:45
+msgid "Removing a subscription"
+msgstr ""
+
+#: ../../subscription.rst:47
+msgid ""
+"When the subscription expires, or at the end of a trial period, use the "
+"following command to revert any modification to repositories and access the "
+"community ones: ::"
+msgstr ""
+
+#: ../../subscription.rst:53
+msgid ""
+"If you have installed the `new server manager` AKA `cockpit`, you can "
+"unsubscribe the machine in the `Subscription` page, clicking on "
+"**Unsubscribe** button."
+msgstr ""
+
+#: ../../subscription.rst:55
+msgid ""
+"Refer to :ref:`software-updates-section` for more information about the "
+"community updates origin."
+msgstr ""

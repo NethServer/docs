@@ -1,0 +1,186 @@
+# #-#-#-#-#  tlspolicy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  tlspolicy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2018-04-06 09:32+0000\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../tlspolicy.rst:5
+msgid "TLS policy"
+msgstr ""
+
+#: ../../tlspolicy.rst:7
+msgid ""
+"The :guilabel:`TLS policy` page controls how individual services configure "
+"the Transport Layer Security (TLS) protocol, by selecting a *policy "
+"identifier*."
+msgstr ""
+
+#: ../../tlspolicy.rst:10
+msgid ""
+"If not otherwise stated, the TLS settings of policies are always "
+"*cumulative*: **newer policies extend older ones**."
+msgstr ""
+
+#: ../../tlspolicy.rst:13
+msgid ""
+"Each module implementation decides how to implement a specific policy "
+"identifier, providing a trade off between security and client compatibility."
+" Newer policies are biased towards security, whilst older ones provide "
+"better compatibility with old clients."
+msgstr ""
+
+#: ../../tlspolicy.rst:18
+msgid "The following sections describe each policy identifier."
+msgstr ""
+
+#: ../../tlspolicy.rst:21
+msgid "Policy 2018-10-01"
+msgstr ""
+
+#: ../../tlspolicy.rst:23
+msgid ""
+"This policy restricts the TLS settings of the default Ejabberd "
+"configuration. It applies only to Ejabberd version 18 and greater."
+msgstr ""
+
+#: ../../tlspolicy.rst:33
+msgid "Ejabberd (XMPP)"
+msgstr ""
+
+#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
+#: ../../tlspolicy.rst:85
+msgid ""
+"See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
+msgstr ""
+
+#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:47
+msgid "Disabled SSLv3 and TLSv1.0"
+msgstr ""
+
+#: ../../tlspolicy.rst:29
+msgid "Cipher server priority"
+msgstr ""
+
+#: ../../tlspolicy.rst:30
+msgid "ECC certificate"
+msgstr ""
+
+#: ../../tlspolicy.rst:31
+msgid "Ciphers suite ::"
+msgstr ""
+
+#: ../../tlspolicy.rst:36
+msgid "Policy 2018-06-21"
+msgstr ""
+
+#: ../../tlspolicy.rst:38
+msgid ""
+"This policy extends ``2018-03-30`` by adding the support for ECC "
+"certificates to"
+msgstr ""
+
+#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:66
+msgid "Apache"
+msgstr ""
+
+#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:74
+msgid "Dovecot"
+msgstr ""
+
+#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:82
+msgid "OpenSSH"
+msgstr ""
+
+#: ../../tlspolicy.rst:43 ../../tlspolicy.rst:94
+msgid "Postfix"
+msgstr ""
+
+#: ../../tlspolicy.rst:50
+msgid "Slapd (openldap-servers)"
+msgstr ""
+
+#: ../../tlspolicy.rst:46
+msgid "Reference https://access.redhat.com/articles/1474813"
+msgstr ""
+
+#: ../../tlspolicy.rst:48 ../../tlspolicy.rst:61 ../../tlspolicy.rst:70
+#: ../../tlspolicy.rst:88
+msgid "Cipher suite ::"
+msgstr ""
+
+#: ../../tlspolicy.rst:53
+msgid "Policy 2018-03-30"
+msgstr ""
+
+#: ../../tlspolicy.rst:55
+msgid ""
+"The goal of this policy is to harden the cipher set provided by the default "
+"upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25 "
+"clients. It does not support ECC certificates."
+msgstr ""
+
+#: ../../tlspolicy.rst:65 ../../tlspolicy.rst:74
+msgid "Disabled SSLv2 and SSLv3"
+msgstr ""
+
+#: ../../tlspolicy.rst:66
+msgid ""
+"Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-"
+"default`)"
+msgstr ""
+
+#: ../../tlspolicy.rst:77
+msgid "See https://github.com/NethServer/nethserver-openssh/pull/6"
+msgstr ""
+
+#: ../../tlspolicy.rst:78
+msgid "Configuration snippet ::"
+msgstr ""
+
+#: ../../tlspolicy.rst:86
+msgid "Use TLS in outbound connections, if remote server supports it"
+msgstr ""
+
+#: ../../tlspolicy.rst:87
+msgid "Disable SSLv2 and SSLv3 on submission ports"
+msgstr ""
+
+#: ../../tlspolicy.rst:92
+msgid "Exclude ciphers ::"
+msgstr ""
+
+#: ../../tlspolicy.rst:99
+msgid "Default upstream policy"
+msgstr ""
+
+#: ../../tlspolicy.rst:101
+msgid ""
+"The goal of this policy is retaining upstream settings. This is the original"
+" goal since |product| 7."
+msgstr ""
+
+#: ../../tlspolicy.rst:104
+msgid ""
+"This policy allows to customize ``httpd`` (Apache) with a given cipher list,"
+" by issuing the following  commands: ::"
+msgstr ""

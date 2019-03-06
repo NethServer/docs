@@ -1,0 +1,104 @@
+# #-#-#-#-#  freepbx.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  freepbx.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Kaya Zeren <kayazeren@gmail.com>, 2017
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2017-08-31 10:23+0000\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>, 2017\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../freepbx.rst:3
+msgid "FreePBX"
+msgstr "FreePBX"
+
+#: ../../freepbx.rst:5
+msgid ""
+":index:`FreePBX` is a web-based open source GUI (graphical user interface) "
+"that controls and manages :index:`Asterisk` (PBX), an open source "
+"communication server (https://www.freepbx.org/)."
+msgstr ""
+":index:`FreePBX` web tabanlı açık kaynak kodlu bir GUI (görsel kullanıcı "
+"arayüzü) ile :index:`Asterisk` (PBX) yönetimi yapmak için geliştirilmiş bir "
+"açık kaynaklı iletişim sunucusudur (https://www.freepbx.org/)."
+
+#: ../../freepbx.rst:10
+msgid "Installation"
+msgstr "Kurulum"
+
+#: ../../freepbx.rst:12
+msgid ""
+"You can install FreePBX from the package manager of NethServer, the module "
+"named \"FreePBX\"."
+msgstr ""
+"NethServer paket yöneticisi ile \"FreePBX\" modülünü kullanarak FreePBX "
+"kurulumu yapabilirsiniz."
+
+#: ../../freepbx.rst:15
+msgid ""
+"All FreePBX configurations and data are saved inside configuration and data "
+"backup."
+msgstr ""
+"Tüm FreePBX yapılandırması ve verileri yapılandırma ve veri yedekleri içine "
+"kaydedilir."
+
+#: ../../freepbx.rst:18
+msgid "Web Access"
+msgstr "Web Erişimi"
+
+#: ../../freepbx.rst:20
+msgid ""
+"After installed, FreePBX will be accessible at "
+"``https://ip_address/freepbx`` from green interfaces. You can also configure"
+" the access from the red interface under the \"PBX Access\" page of the "
+"|product| Server Manager."
+msgstr ""
+
+#: ../../freepbx.rst:26
+msgid "FwConsole"
+msgstr "FwConsole"
+
+#: ../../freepbx.rst:28
+msgid ""
+"The ``fwconsole`` is a tool that allows the user to perform some FreePBX "
+"administrative tasks (see `FreePBX wiki "
+"<https://wiki.freepbx.org/pages/viewpage.action?pageId=37912685>`_). In "
+"order to use it with |product| you have to use it in conjunction with scl: "
+"::"
+msgstr ""
+"``fwconsole`` kullanıcının bazı FreePBX yönetim işlemlerini yapmasını "
+"sağlayan bir araçtır (`FreePBX wiki sayfasına bakın "
+"<https://wiki.freepbx.org/pages/viewpage.action?pageId=37912685>`_). "
+"|product| ile kullanmak için scl: :: ile birlikte kullanmalısınız"
+
+#: ../../freepbx.rst:36
+msgid "Advanced Documentation"
+msgstr "Uzman Belgeleri"
+
+#: ../../freepbx.rst:38
+msgid ""
+"For further information you can read the FreePBX documentation at: "
+"https://wiki.freepbx.org"
+msgstr ""
+"Ayrıntılı bilgi almak için https://wiki.freepbx.org adresindeki FreePBX "
+"belgelerine bakabilirsiniz."

@@ -324,20 +324,20 @@ msgid ""
 "Upgrade tool expects some additional parameters to be issued:"
 msgstr ""
 "Se il sistema necessita di un account provider di tipo Active Directory (AD)"
-" locale, l' Upgrade tool prevede l'inserimento di alcuni parametri "
+" locale, l'Upgrade tool prevede l'inserimento di alcuni parametri "
 "aggiuntivi:"
 
 #: ../../upgrade_tool.rst:147
 msgid "The AD :guilabel:`DNS domain name`"
-msgstr "Il :guilabel:`nome dominio DNS` di AD"
+msgstr ":guilabel:`Nome dominio DNS` di AD"
 
 #: ../../upgrade_tool.rst:149
 msgid "The :guilabel:`NetBIOS domain name` (read only)"
-msgstr "Il :guilabel:`nome dominio NetBIOS` (in sola lettura)"
+msgstr ":guilabel:`Nome dominio NetBIOS` (in sola lettura)"
 
 #: ../../upgrade_tool.rst:151
 msgid "A green bridge interface"
-msgstr "Un'interfaccia green di tipo bridge"
+msgstr "Interfaccia **green** di tipo **bridge**"
 
 #: ../../upgrade_tool.rst:153
 msgid ""
@@ -345,7 +345,7 @@ msgid ""
 " that AD services binds to. The IP must be in the same subnet of the green "
 "bridge"
 msgstr ""
-"L' :guilabel:`indirizzo IP Domain Controller`: un indirizzo IP aggiuntivo "
+":guilabel:`Indirizzo IP Domain Controller`: un indirizzo IP aggiuntivo "
 "libero a cui i servizi di Active Directory saranno associati. L'IP deve "
 "essere nella stessa subnet del bridge green"
 
@@ -415,7 +415,7 @@ msgid ""
 msgstr ""
 "Assicurarsi che il sistema abbia abbastanza spazio **su disco**. La "
 "procedura controlla lo spazio libero, ma è sempre consigliabile verificarlo "
-"in anticipo, anche prima di installare l' :guilabel:`Upgrade tool`."
+"in anticipo, anche prima di installare il modulo :guilabel:`Upgrade tool`."
 
 #: ../../upgrade_tool.rst:187
 msgid ""
@@ -425,7 +425,7 @@ msgid ""
 msgstr ""
 "Verificare di avere un backup completo o un'istantanea dell'intero sistema. "
 "Una **interruzione dell'alimentazione** o un **guasto hardware** durante la "
-"fase di aggiornamento, così come un ** errore sconosciuto ** in questa fase "
+"fase di aggiornamento, così come un **errore sconosciuto** in questa fase "
 "della procedura potrebbe compromettere il sistema"
 
 #: ../../upgrade_tool.rst:191

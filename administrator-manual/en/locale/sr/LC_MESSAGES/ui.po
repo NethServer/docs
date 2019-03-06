@@ -1,0 +1,318 @@
+# #-#-#-#-#  ui.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  ui.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2018-01-10 14:21+0000\n"
+"Language-Team: Serbian (https://www.transifex.com/nethserver/teams/35834/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../ui/Ejabberd.rst:5
+msgid "Chat"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:7
+msgid ""
+"The :index:`chat` service uses the standard protocol "
+":index:`Jabber`/:index:`XMPP`. See also :ref:`chat-section`."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:12
+msgid "Administration web Interface"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:12
+msgid ""
+"The Jaber server comes with a web administrative interface for members of "
+"the jabberadmins group."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:15
+msgid "Federation (S2S)"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:15
+msgid ""
+"XMPP allows for servers communicating seamlessly with each other, forming a "
+"global 'federated' IM network."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:18
+msgid "File transfer maximum speed"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:18
+msgid "Limit in Byte/second the maximum file transfer."
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:21
+msgid "File transfer normal speed"
+msgstr ""
+
+#: ../../ui/Ejabberd.rst:21
+msgid "Limit in Byte/second the normal file transfer."
+msgstr ""
+
+#: ../../ui/FileServer.rst:5
+msgid "Windows file server"
+msgstr ""
+
+#: ../../ui/FileServer.rst:7
+msgid "See also :ref:`shared_folders-section`"
+msgstr ""
+
+#: ../../ui/FileServer.rst:13
+msgid "Workgroup/NetBIOS domain name"
+msgstr ""
+
+#: ../../ui/FileServer.rst:10
+msgid ""
+"The value can be changed only with LDAP accounts provider and defines the "
+"Windows workgroup name visible from Network neighborhood panel in Windows "
+"systems. With Active Directory accounts provider the value is determined by "
+"the joined domain"
+msgstr ""
+
+#: ../../ui/FileServer.rst:18
+msgid "When a new file or directory is created in a shared folder"
+msgstr ""
+
+#: ../../ui/FileServer.rst:16
+msgid ""
+"Decide who owns a newly created file or directory: either the resource "
+"creator or the current owner of the directory containing the new resource "
+"(also known as parent directory)"
+msgstr ""
+
+#: ../../ui/FileServer.rst:22
+msgid ""
+"Grant full control on home directories to Domain Admins group (home$ share)"
+msgstr ""
+
+#: ../../ui/FileServer.rst:21
+msgid ""
+"Allow members of ``Domain Admins`` group to connect the hidden ``home$`` "
+"share and grant them administrative access to any home folder inside of it"
+msgstr ""
+
+#: ../../ui/FileServer.rst:25
+msgid "Grant full control on shared folders to Domain Admins group"
+msgstr ""
+
+#: ../../ui/FileServer.rst:25
+msgid ""
+"Allow members of ``Domain Admins`` group to connect any shared folder and "
+"grant them administrative access on its content"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:5
+msgid "Reverse proxy"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:7
+msgid ""
+"This page configures certain paths and virtual host names under Apache to be"
+" served by forwarding the original web request to another URL. See also :ref"
+":`proxy_pass-section`."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:13
+msgid "Create / Edit"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:19
+msgid "Name"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:16
+msgid ""
+"The URL **path name** or the **virtual host name** (an host FQDN). A path "
+"name will match URLs like ``http://somehost/<path name>/...``, whilst a "
+"virtual host name will match an URL like ``http://<virtual host name>/...``."
+" Matching URLs are forwarded to the :guilabel:`Target URL`."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:23
+msgid "Access from CIDR networks"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:22
+msgid ""
+"Restrict the access from the given list of CIDR networks. Elements must be "
+"separated with a \",\" (comma)."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:26
+msgid "SSL/TLS certificate"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:26
+msgid "Select a certificate that is compatible with the virtual host name."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:30
+msgid "Require SSL encrypted connection"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:29
+msgid ""
+"If enabled, the URL path or virtual host name can be accessed only with an "
+"SSL/TLS connection."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:34
+msgid "Target URL"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:33
+msgid ""
+"The URL where the original request is forwarded. An URL has the form "
+"``<scheme>://<hostname>:<port>/<path>``."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:38
+msgid "Accept invalid SSL certificate from target"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:37
+msgid ""
+"If the :guilabel:`Target URL` has the ``https`` scheme, accept its "
+"certificate even if it is not valid."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:43
+msgid "Forward HTTP \"Host\" header to target"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:41
+msgid ""
+"When enabled, this option will pass the HTTP \"Host\" header line from the "
+"incoming request to the proxied host, instead of the \"hostname\" specified "
+"in the :guilabel:`Target URL` field."
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:46
+msgid "Delete"
+msgstr ""
+
+#: ../../ui/ProxyPass.rst:48
+msgid "Removes the selected entry."
+msgstr ""
+
+#: ../../ui/SOGo.rst:5
+msgid "SOGo Groupware"
+msgstr ""
+
+#: ../../ui/SOGo.rst:7
+msgid "See also :ref:`SOGo-section`."
+msgstr ""
+
+#: ../../ui/SOGo.rst:12
+msgid "Enable CalDAV and CardDAV"
+msgstr ""
+
+#: ../../ui/SOGo.rst:11
+msgid ""
+"CalDAV allow users to access and share calendar data on a server. CardDAV "
+"allows users to access and share contact data on a server."
+msgstr ""
+
+#: ../../ui/SOGo.rst:15
+msgid "Enable Microsoft ActiveSync"
+msgstr ""
+
+#: ../../ui/SOGo.rst:15
+msgid ""
+"ActiveSync is a mobile data (email, calendar, task, contact) synchronization"
+" app developed by Microsoft."
+msgstr ""
+
+#: ../../ui/SOGo.rst:18
+msgid "Allow Users to add other IMAP accounts"
+msgstr ""
+
+#: ../../ui/SOGo.rst:18
+msgid ""
+"Allow users to add other IMAP accounts that will be visible from the SOGo "
+"Webmail interface."
+msgstr ""
+
+#: ../../ui/SOGo.rst:21
+msgid "Administrators"
+msgstr ""
+
+#: ../../ui/SOGo.rst:21
+msgid "List of users with administrative privileges over all the user datas."
+msgstr ""
+
+#: ../../ui/SOGo.rst:24
+msgid "Notifications"
+msgstr ""
+
+#: ../../ui/SOGo.rst:24
+msgid ""
+"Several different types of notifications(email-based) are available. "
+"Activate them according your needs."
+msgstr ""
+
+#: ../../ui/SOGo.rst:28
+msgid "Make SOGO reachable only from this domain(FQDN)"
+msgstr ""
+
+#: ../../ui/SOGo.rst:27
+msgid ""
+"SOGo is per default accessible from all server's virtualhosts, If you "
+"specify a domain name here, SOGo will be usable only from this domaine name."
+msgstr ""
+
+#: ../../ui/SOGo.rst:32
+msgid "Number of workers"
+msgstr ""
+
+#: ../../ui/SOGo.rst:31
+msgid ""
+"This is the amount of instances of SOGo that will be spawned to handle "
+"multiple requests simultaneously. You should have at least one worker per "
+"activesync device connected."
+msgstr ""
+
+#: ../../ui/SOGo.rst:35
+msgid "Maximum time in second"
+msgstr ""
+
+#: ../../ui/SOGo.rst:35
+msgid ""
+"Parameter used to set the maximum amount of time, in seconds, SOGo will wait"
+" before doing an internal check for data changes (add, delete, and update)."
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:5
+msgid "TLS policy"
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:7
+msgid "Enforced security level"
+msgstr ""
+
+#: ../../ui/TlsPolicy.rst:8
+msgid ""
+"Configures the system services as described in the :ref:`tlspolicy-section` "
+"section"
+msgstr ""

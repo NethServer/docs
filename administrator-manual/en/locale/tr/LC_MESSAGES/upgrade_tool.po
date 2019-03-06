@@ -1,0 +1,349 @@
+# #-#-#-#-#  upgrade_tool.pot (NethServer 6.10)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  upgrade_tool.pot (NethServer Enterprise 6.10)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Nethesis Srl
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 6.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 10:02+0100\n"
+"PO-Revision-Date: 2019-01-28 09:03+0000\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../upgrade_tool.rst:5
+msgid "Upgrade tool (beta)"
+msgstr ""
+
+#: ../../upgrade_tool.rst:7
+msgid ""
+"The :guilabel:`Upgrade tool` module upgrades |product| from version 6 to "
+"version 7 with an automated procedure that acts in three steps:"
+msgstr ""
+
+#: ../../upgrade_tool.rst:10
+msgid ""
+"**preparation**: downloads all required packages from the configured "
+"software repositories"
+msgstr ""
+
+#: ../../upgrade_tool.rst:13
+msgid ""
+"**upgrade**: at next reboot runs the packages upgrade transaction, the "
+"upgrade tasks, then reboots automatically"
+msgstr ""
+
+#: ../../upgrade_tool.rst:16
+msgid "**post-upgrade**: completes by fully re-configuring the system"
+msgstr ""
+
+#: ../../upgrade_tool.rst:18
+msgid ""
+"Each step is described in the sections below. The time estimations depend on"
+" the number of packages, internet connection, CPU and disks speed."
+msgstr ""
+
+#: ../../upgrade_tool.rst:23
+msgid "Read carefully :ref:`upgrade_risks_section`"
+msgstr ""
+
+#: ../../upgrade_tool.rst:26
+msgid "Preparation step"
+msgstr ""
+
+#: ../../upgrade_tool.rst:28
+msgid "Estimated time: 1 hour"
+msgstr ""
+
+#: ../../upgrade_tool.rst:30
+msgid ""
+"The (1) **preparation** step can be started from the :guilabel:`Upgrade "
+"tool` page of the Server Manager."
+msgstr ""
+
+#: ../../upgrade_tool.rst:33
+msgid ""
+"If the File server module is present and the Samba server role is "
+":guilabel:`Primary Domain Controller` or :guilabel:`Workstation` the system "
+"has to be configured with a local Active Directory accounts provider. See "
+":ref:`upgrade-to-ad`."
+msgstr ""
+
+#: ../../upgrade_tool.rst:38
+msgid ""
+"The Upgrade tool does not work if the Samba server role is set to "
+":guilabel:`Active Directory Member`."
+msgstr ""
+
+#: ../../upgrade_tool.rst:41
+msgid ""
+"During the preparation step the system is still operational as usual. The "
+"package download runs in background. It requires some time, depending on the"
+" available network bandwidth."
+msgstr ""
+
+#: ../../upgrade_tool.rst:45
+msgid ""
+"The available disk space is checked twice, before and after the preparation "
+"step, to ensure the next steps do not run in short of disk space."
+msgstr ""
+
+#: ../../upgrade_tool.rst:48
+msgid ""
+"At the end of the download the web page asks to abort the procedure or "
+"continue with the system reboot to the upgrade step."
+msgstr ""
+
+#: ../../upgrade_tool.rst:52
+msgid "Upgrade step"
+msgstr ""
+
+#: ../../upgrade_tool.rst:54
+msgid "Estimated time: 30 minutes"
+msgstr ""
+
+#: ../../upgrade_tool.rst:56
+msgid ""
+"The (2) **upgrade** step starts at the next system reboot.  The upgrade "
+"procedure boots the Linux kernel of version 7 by default. If the disk "
+"controller is not compatible with it, the procedure fails at this point."
+msgstr ""
+
+#: ../../upgrade_tool.rst:62
+msgid ""
+"It is possible to select the old kernel and boot the system in the previous "
+"state, actually aborting the upgrade"
+msgstr ""
+
+#: ../../upgrade_tool.rst:65
+msgid ""
+"If the new kernel boots and mounts the disks correctly the system is "
+"**disconnected from the network** and the packages upgrade starts. From this"
+" point there is no way back. During the upgrade the system can be accessed "
+"from the system console."
+msgstr ""
+
+#: ../../upgrade_tool.rst:70
+msgid ""
+"It takes some time to upgrade all the packages, depending on the system "
+"speed and the number of the packages. At the end of the upgrade step the "
+"system is automatically rebooted."
+msgstr ""
+
+#: ../../upgrade_tool.rst:75
+msgid "Post-upgrade step"
+msgstr ""
+
+#: ../../upgrade_tool.rst:77
+msgid "Estimated time: 15 minutes"
+msgstr ""
+
+#: ../../upgrade_tool.rst:79
+msgid "The (3) **post-upgrade** step starts at the second reboot."
+msgstr ""
+
+#: ../../upgrade_tool.rst:81
+msgid ""
+"The basic system was completely upgraded by the previous step; the post-"
+"upgrade step renames the network interfaces according to the new NIC naming "
+"rules and re-configures the installed modules."
+msgstr ""
+
+#: ../../upgrade_tool.rst:85
+msgid ""
+"In this last step a fault can be recovered safely through the system "
+"console. At the end of the post-upgrade step SSH, Server Manager and the "
+"other services are available again."
+msgstr ""
+
+#: ../../upgrade_tool.rst:89
+msgid ""
+"Any daily, weekly and monthly scheduled cron job will be started again "
+"within one hour since the system boot ends."
+msgstr ""
+
+#: ../../upgrade_tool.rst:95
+msgid "Post-upgrade checklist"
+msgstr ""
+
+#: ../../upgrade_tool.rst:99
+msgid ""
+"Some modules, like ownCloud, need to be upgraded or replaced manually. Refer"
+" to the Upgrade documentation of |product| 7"
+msgstr ""
+
+#: ../../upgrade_tool.rst:102
+msgid ""
+"Once the Server Manager is accessible again remember to refresh the browser "
+"cache with :kbd:`Ctrl + Shift + R` to fix display issues caused by the "
+"upgraded style sheets (CSS)"
+msgstr ""
+
+#: ../../upgrade_tool.rst:107
+msgid "Upgrade completed check"
+msgstr ""
+
+#: ../../upgrade_tool.rst:109
+msgid ""
+"To ensure the upgrade procedure has finished run ``systemd-analyze``. The "
+"output should begin like ::"
+msgstr ""
+
+#: ../../upgrade_tool.rst:115
+msgid "Upgrade errors check"
+msgstr ""
+
+#: ../../upgrade_tool.rst:117
+msgid "To check if any error occurred, run ::"
+msgstr ""
+
+#: ../../upgrade_tool.rst:122
+msgid "Installed modules check"
+msgstr ""
+
+#: ../../upgrade_tool.rst:124
+msgid ""
+"In :guilabel:`Software center`, check if the previously installed modules  "
+"are still marked as installed on the upgraded system. Each module is "
+"composed by some packages: as the module compositions has changed from "
+"version 6 to 7, some module may appear as not installed. To fix it, try to "
+"install it again with the :guilabel:`add` button."
+msgstr ""
+
+#: ../../upgrade_tool.rst:132
+msgid "Let's Encrypt certificate check"
+msgstr ""
+
+#: ../../upgrade_tool.rst:134
+msgid ""
+"A Let's Encrypt certificate, if present, must be requested again from the "
+":guilabel:`Server certificate` page. Then set it as the default system "
+"certificate from the same page. For more information, refer to the \"Server "
+"certificate\"  manual page of |product| 7."
+msgstr ""
+
+#: ../../upgrade_tool.rst:142
+msgid "Upgrade to Active Directory"
+msgstr ""
+
+#: ../../upgrade_tool.rst:144
+msgid ""
+"If the system requires a local Active Directory (AD) accounts provider, the "
+"Upgrade tool expects some additional parameters to be issued:"
+msgstr ""
+
+#: ../../upgrade_tool.rst:147
+msgid "The AD :guilabel:`DNS domain name`"
+msgstr ""
+
+#: ../../upgrade_tool.rst:149
+msgid "The :guilabel:`NetBIOS domain name` (read only)"
+msgstr ""
+
+#: ../../upgrade_tool.rst:151
+msgid "A green bridge interface"
+msgstr ""
+
+#: ../../upgrade_tool.rst:153
+msgid ""
+"The :guilabel:`Domain Controller IP address`: an additional, free IP address"
+" that AD services binds to. The IP must be in the same subnet of the green "
+"bridge"
+msgstr ""
+
+#: ../../upgrade_tool.rst:157
+msgid ""
+"If a green bridge interface is not present go to the :guilabel:`Network` "
+"page and create one with :guilabel:`Create new logical interface`."
+msgstr ""
+
+#: ../../upgrade_tool.rst:160
+msgid ""
+"The :guilabel:`NetBIOS domain name` is a read-only field. To change it, "
+"refer to the :guilabel:`Windows Network` page."
+msgstr ""
+
+#: ../../upgrade_tool.rst:165
+msgid ""
+"In virtualized systems, remember to enable **promiscuous mode** in the "
+"hypervisor settings, otherwise access to AD will be blocked from LAN clients"
+msgstr ""
+
+#: ../../upgrade_tool.rst:168
+msgid ""
+"For more information refer also to the |product| 7 documentation, "
+"especially:"
+msgstr ""
+
+#: ../../upgrade_tool.rst:170
+msgid ""
+"the \"Samba Active Directory local provider installation\" section, under "
+"the \"Users and groups\" chapter"
+msgstr ""
+
+#: ../../upgrade_tool.rst:173
+msgid "the \"Upgrade from |product| 6\" chapter"
+msgstr ""
+
+#: ../../upgrade_tool.rst:178
+msgid "Upgrade risks and how to reduce them"
+msgstr ""
+
+#: ../../upgrade_tool.rst:180
+msgid ""
+"A major system version upgrade is a risky operation and must be planned "
+"carefully."
+msgstr ""
+
+#: ../../upgrade_tool.rst:183
+msgid ""
+"Ensure the system has enough free **disk space**. The procedure checks the "
+"free disk space, but it is always a good idea to check it early, even before"
+" installing the :guilabel:`Upgrade tool` module."
+msgstr ""
+
+#: ../../upgrade_tool.rst:187
+msgid ""
+"Prepare a complete backup or snapshot of the whole system. A **power "
+"outage** or an **hardware fault** during the upgrade step, as long as an "
+"**unknown bug** in this procedure could compromise the system"
+msgstr ""
+
+#: ../../upgrade_tool.rst:191
+msgid "Consider the **system downtime** and how it impacts on the end-users"
+msgstr ""
+
+#: ../../upgrade_tool.rst:193
+msgid ""
+"Make a list of the modules that need to be configured, replaced, **upgraded "
+"manually** after the automated procedure completes. Refer to the Upgrade "
+"documentation of |product| 7"
+msgstr ""
+
+#: ../../upgrade_tool.rst:197
+msgid ""
+"During the upgrade any existing **custom template** is archived into ``/root"
+"/templates-custom.upgrade/``. It is recommended to check the existing "
+"customized templates before starting the upgrade procedure and decide if and"
+" how to restore them"
+msgstr ""
+
+#: ../../upgrade_tool.rst:202
+msgid ""
+"The system is **disconnected from the network** during the upgrade step and "
+"until the post-upgrade step completes. If any error occurs during those "
+"steps a direct **console access** is required."
+msgstr ""

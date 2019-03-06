@@ -1,0 +1,364 @@
+# #-#-#-#-#  rspamd.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  rspamd.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2018-12-10 13:30+0000\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../rspamd.rst:5
+msgid "Rspamd"
+msgstr ""
+
+#: ../../rspamd.rst:7
+msgid ""
+"Rspamd is the new anti-spam engine of |product|, it replaces SpamAssassin "
+"and Amavisd-new."
+msgstr ""
+
+#: ../../rspamd.rst:10
+msgid ""
+"The official documentation of Rspamd is available at https://rspamd.com"
+msgstr ""
+
+#: ../../rspamd.rst:12
+msgid ""
+"You need to install the :guilabel:`Email` module from the "
+":guilabel:`Software center` page. The menu where to activate it and modify "
+"its settings is on the :guilabel:`Email > Filter` page. You can read more in"
+" the :ref:`Email filter <email_filter>` section."
+msgstr ""
+
+#: ../../rspamd.rst:19
+msgid "Rspamd Web Interface"
+msgstr ""
+
+#: ../../rspamd.rst:21
+msgid ""
+"The anti-spam component is implemented by Rspamd which provides its "
+"administrative web interface at ::"
+msgstr ""
+
+#: ../../rspamd.rst:26
+msgid ""
+"The actual URL is listed under the :guilabel:`Applications` page. By default"
+" access is granted to members of the ``domain admins`` group and to the "
+"``admin`` user (see also :ref:`admin-account-section`). An additional "
+"special login ``rspamd`` can be used to access it. Its credentials are "
+"available from :guilabel:`Email > Filter > Rspamd user interface (Web URL)`:"
+" just follow the given link."
+msgstr ""
+
+#: ../../rspamd.rst:33
+msgid "The Rspamd web UI:"
+msgstr ""
+
+#: ../../rspamd.rst:35
+msgid "displays messages and actions counters,"
+msgstr ""
+
+#: ../../rspamd.rst:36
+msgid "shows the server configuration,"
+msgstr ""
+
+#: ../../rspamd.rst:37
+msgid "tracks the history of recent messages,"
+msgstr ""
+
+#: ../../rspamd.rst:38
+msgid ""
+"allows training the Bayes filter by submitting a message from the web form."
+msgstr ""
+
+#: ../../rspamd.rst:41
+msgid "Status"
+msgstr ""
+
+#: ../../rspamd.rst:43
+msgid ""
+"It is the landing menu, the global statistics are available on the Rspamd "
+"service."
+msgstr ""
+
+#: ../../rspamd.rst:46
+msgid "Troughput"
+msgstr ""
+
+#: ../../rspamd.rst:48
+msgid ""
+"The graphics are displayed in this menu to explain the activity of the anti-"
+"spam software. You can adjust the time scale (hourly, daily, weekly, montly)"
+" and modify some other settings to refine the graphics"
+msgstr ""
+
+#: ../../rspamd.rst:53
+msgid "Configuration"
+msgstr ""
+
+#: ../../rspamd.rst:55
+msgid ""
+"The :guilabel:`Configuration > Lists` menu is useful to edit lists of "
+"allowed IP/Domain/mime for the modules, you will find:"
+msgstr ""
+
+#: ../../rspamd.rst:57
+msgid "SURBL"
+msgstr ""
+
+#: ../../rspamd.rst:58
+msgid "mime list types"
+msgstr ""
+
+#: ../../rspamd.rst:59
+msgid "SPF_DKIM"
+msgstr ""
+
+#: ../../rspamd.rst:60
+msgid "DMARC"
+msgstr ""
+
+#: ../../rspamd.rst:61
+msgid "DKIM"
+msgstr ""
+
+#: ../../rspamd.rst:62
+msgid "SPF"
+msgstr ""
+
+#: ../../rspamd.rst:64
+msgid ""
+"When you want to create an exception list in a module, you could give the "
+"path :file:`/var/lib/rspamd/`, the list will be editable by the Rspamd web "
+"interface."
+msgstr ""
+
+#: ../../rspamd.rst:69
+msgid "Symbols"
+msgstr ""
+
+#: ../../rspamd.rst:71
+msgid ""
+"Rspamd use a concept of symbols which will increase or decrease the spam "
+"score when the rule has matched. The symbol weight is modifiable, negative "
+"score are for good email, positive are for spam."
+msgstr ""
+
+#: ../../rspamd.rst:76
+msgid "Find the matching symbols"
+msgstr ""
+
+#: ../../rspamd.rst:78
+msgid "The convenient way is to use the :guilabel:`History > History` menu."
+msgstr ""
+
+#: ../../rspamd.rst:81
+msgid "Modify a symbol weight"
+msgstr ""
+
+#: ../../rspamd.rst:83
+msgid ""
+"An easier way to change the symbol weight is to use the Rspamd WebUI: "
+":guilabel:`Symbols > Symbols and rules`. A search box is available, you "
+"could use it to display the symbol and modify its weight."
+msgstr ""
+
+#: ../../rspamd.rst:86
+msgid "Symbol score for spam is in red (positive score)"
+msgstr ""
+
+#: ../../rspamd.rst:87
+msgid "Symbol score for ham is in green (negative score)"
+msgstr ""
+
+#: ../../rspamd.rst:89
+msgid ""
+"If you want to remove the custom settings, you could edit the file "
+":file:`/var/lib/rspamd/rspamd_dynamic` or remove them in the Rspamd Web "
+"Interface: :guilabel:`Configuration > Lists > rspamd_dynamic`"
+msgstr ""
+
+#: ../../rspamd.rst:93
+msgid ""
+"You could redefine manually the scores defined in "
+":file:`/etc/rspamd/scores.d/*_group.conf` where they are placed by a "
+"symbol’s group. Like for the modules, you could overwrite the setting in "
+":file:`/etc/rspamd/local.d/*_group.conf` or "
+":file:`/etc/rspamd/override.d/*_group.conf`."
+msgstr ""
+
+#: ../../rspamd.rst:97
+msgid "Priority order ::"
+msgstr ""
+
+#: ../../rspamd.rst:102
+msgid "Learning"
+msgstr ""
+
+#: ../../rspamd.rst:104
+msgid ""
+"The purpose of the :guilabel:`Learning` Menu is to train the Bayes filter, "
+"you could use directly the source of the email in the relevant text area to "
+"make learn to rspamd if the email is a spam or a ham."
+msgstr ""
+
+#: ../../rspamd.rst:109
+msgid "Scan"
+msgstr ""
+
+#: ../../rspamd.rst:111
+msgid ""
+"The :guilabel:`Scan` menu can be used to scan directly an email and check "
+"its score and the matching symbols."
+msgstr ""
+
+#: ../../rspamd.rst:114
+msgid "History"
+msgstr ""
+
+#: ../../rspamd.rst:116
+msgid ""
+"The Rspamd web Interface could be used to display the action done and the "
+"spam score against an email, see :guilabel:`History > History`"
+msgstr ""
+
+#: ../../rspamd.rst:119
+msgid ""
+"You could display a list of symbols by clicking on the email field, it will "
+"help you to understand the action done (reject, add_header, no_action, "
+"rewrite_subject, greylist) and gather useful informations like:"
+msgstr ""
+
+#: ../../rspamd.rst:122
+msgid "the sender"
+msgstr ""
+
+#: ../../rspamd.rst:123
+msgid "the recipient"
+msgstr ""
+
+#: ../../rspamd.rst:124
+msgid "the subject"
+msgstr ""
+
+#: ../../rspamd.rst:125
+msgid "the full score"
+msgstr ""
+
+#: ../../rspamd.rst:129
+msgid "Modules"
+msgstr ""
+
+#: ../../rspamd.rst:131
+msgid ""
+"Rspamd comes with a modular approach, all modules are not enabled by default"
+" and are customisable by the system administrator. The default settings are "
+"in the file :file:`/etc/rspamd/modules.d/MODULE_NAME.conf`, relevant to the "
+"module name."
+msgstr ""
+
+#: ../../rspamd.rst:135
+msgid ""
+"For a particular need, you can look the documentation with the `list of "
+"modules <https://rspamd.com/doc/modules/>`_."
+msgstr ""
+
+#: ../../rspamd.rst:141
+msgid "Disable a module"
+msgstr ""
+
+#: ../../rspamd.rst:143
+msgid ""
+"You must disable a module only with a good reason. For example the ip_score "
+"module could give a high spam score due to the IP of the email sender, if it"
+" is blacklisted."
+msgstr ""
+
+#: ../../rspamd.rst:146
+msgid ""
+"In that example we could disable the module but many modules (like ip_score)"
+" implement a white list to do not check an ip or a domain against the spam "
+"filter."
+msgstr ""
+
+#: ../../rspamd.rst:149
+msgid ""
+"Create a file (relevant to the module name) "
+":file:`/etc/rspamd/override.d/MODULE_NAME.conf` with ::"
+msgstr ""
+
+#: ../../rspamd.rst:154
+msgid "Restart Rspamd ::"
+msgstr ""
+
+#: ../../rspamd.rst:160
+msgid "Modify the settings of a module"
+msgstr ""
+
+#: ../../rspamd.rst:162
+msgid ""
+"All the default settings of a module are in "
+":file:`/etc/rspamd/modules.d/MODULE_NAME.conf`, |product| uses "
+":file:`/etc/rspamd/local.d/MODULE_NAME.conf` to modify these parameters. "
+"Therefore the prefered way is to use "
+":file:`/etc/rspamd/override.d/MODULE_NAME.conf` to either change the Rspamd "
+"and |product| default settings. The override file uses the new parameter "
+"with a high preference, all former settings are kept."
+msgstr ""
+
+#: ../../rspamd.rst:168
+msgid "Priority order::"
+msgstr ""
+
+#: ../../rspamd.rst:172
+msgid ""
+"In that example we want to implement a list of IP to allow them in the "
+"ip_score module."
+msgstr ""
+
+#: ../../rspamd.rst:174
+msgid "Create a file :file:`/etc/rspamd/override.d/ip_score.conf` with ::"
+msgstr ""
+
+#: ../../rspamd.rst:178
+msgid "Restart rspamd ::"
+msgstr ""
+
+#: ../../rspamd.rst:182
+msgid ""
+"The whitelist is editable in the rspamd UI at :guilabel:`Configuration > "
+"Lists > ip_score_whitelist`"
+msgstr ""
+
+#: ../../rspamd.rst:186
+msgid ""
+"The folder :file:`/var/lib/rspamd` is owned by Rspamd, all files here are "
+"modifiable by the software"
+msgstr ""
+
+#: ../../rspamd.rst:190
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../rspamd.rst:192
+msgid ""
+"The official Rspamd FAQ could have the answer to your questions. Please see "
+"https://rspamd.com/doc/faq.html"
+msgstr ""

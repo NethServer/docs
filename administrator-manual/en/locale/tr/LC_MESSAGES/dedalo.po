@@ -1,0 +1,307 @@
+# #-#-#-#-#  dedalo.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  dedalo.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"PO-Revision-Date: 2018-09-25 10:11+0000\n"
+"Language-Team: Turkish (https://www.transifex.com/nethserver/teams/35834/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../dedalo.rst:3
+msgid "Hotspot (Dedalo)"
+msgstr ""
+
+#: ../../dedalo.rst:5
+msgid ""
+"Hotspot main goal is to provide internet connectivity via wi-fi to casual "
+"users. Users are sent to a captive portal from which they can access the "
+"network by authenticating themselves via social login, sms or email. The "
+"hotspot service allows the regulation, accountability and pricing of "
+"Internet access in public places, like internet points, hotels and fairs."
+msgstr ""
+
+#: ../../dedalo.rst:9
+msgid "Main features:"
+msgstr ""
+
+#: ../../dedalo.rst:11
+msgid "network isolation between corporate and guests"
+msgstr ""
+
+#: ../../dedalo.rst:12
+msgid ""
+"guests can authenticate themselves using social login (Facebook, Instagram, "
+"Linkedin) as well as sms or email login"
+msgstr ""
+
+#: ../../dedalo.rst:13
+msgid "paid service based on vouchers"
+msgstr ""
+
+#: ../../dedalo.rst:14
+msgid "hotspot manager with different accesses type (admin, customer, desk)"
+msgstr ""
+
+#: ../../dedalo.rst:15
+msgid "bandwidth Limit for each user"
+msgstr ""
+
+#: ../../dedalo.rst:16
+msgid "export account list and connections report (not yet implemented)"
+msgstr ""
+
+#: ../../dedalo.rst:19
+msgid "How it works?"
+msgstr ""
+
+#: ../../dedalo.rst:20
+msgid "The implementation is based on 2 components:"
+msgstr ""
+
+#: ../../dedalo.rst:22
+msgid ""
+"a remote hotspot manager with a Web GUI running on a cloud server that "
+"allows you to:"
+msgstr ""
+
+#: ../../dedalo.rst:24
+msgid ""
+"create a hotspot instance: usually each instance is referred to a specific "
+"location (e.g. Art Cafè, Ritz Hotel and so on)"
+msgstr ""
+
+#: ../../dedalo.rst:25
+msgid "edit the captive portal page"
+msgstr ""
+
+#: ../../dedalo.rst:26
+msgid "choose what type of login to use"
+msgstr ""
+
+#: ../../dedalo.rst:27
+msgid "see session and users logged"
+msgstr ""
+
+#: ../../dedalo.rst:29
+msgid ""
+"a client part (dedalo) installed in |product| physically connected to the "
+"Access Points network : it assigns IP addresses to the clients of the Wi-Fi "
+"Network and redirects them to the captive portal for authentication."
+msgstr ""
+
+#: ../../dedalo.rst:31
+msgid ""
+"For more detailed information please refer to "
+"https://nethesis.github.io/icaro/docs/components/ ."
+msgstr ""
+
+#: ../../dedalo.rst:35
+msgid "How to install it"
+msgstr ""
+
+#: ../../dedalo.rst:37
+msgid ""
+"install the server component: "
+"https://nethesis.github.io/icaro/docs/provisioning/ This procedure uses "
+"Vagrant to provision a Digital Ocean (DO) droplet. If you prefere to use "
+"another cloud provider, edit Vagrantfile accordingly."
+msgstr ""
+
+#: ../../dedalo.rst:40
+msgid ""
+"configure the server in order to make it possibile to login: "
+"https://nethesis.github.io/icaro/docs/configuration/"
+msgstr ""
+
+#: ../../dedalo.rst:42
+msgid ""
+"install the client component in your |product|: "
+"https://nethesis.github.io/icaro/docs/client_installation/"
+msgstr ""
+
+#: ../../dedalo.rst:44
+msgid ""
+"please remind that the installation requires at least 3 ethernet interfaces:"
+msgstr ""
+
+#: ../../dedalo.rst:46
+msgid ""
+"1 for normal LAN clients, marked with green role (you need it even if "
+"unused, it can be a VLAN)"
+msgstr ""
+
+#: ../../dedalo.rst:47
+msgid "1 (or more) for Internet connection, marked with red role"
+msgstr ""
+
+#: ../../dedalo.rst:48
+msgid "1 one for the Dedalo, marked with hotspot role"
+msgstr ""
+
+#: ../../dedalo.rst:54
+msgid "Configuration"
+msgstr ""
+
+#: ../../dedalo.rst:58
+msgid "Hotspot manager interface"
+msgstr ""
+
+#: ../../dedalo.rst:60
+msgid "go to the hotspot manager"
+msgstr ""
+
+#: ../../dedalo.rst:61
+msgid ""
+"go to the *Managers* section and create a new *Manager* of type *Reseller* "
+"or *Customer*. More info about *Roles* here : "
+"https://nethesis.github.io/icaro/docs/manager/."
+msgstr ""
+
+#: ../../dedalo.rst:62
+msgid "do logout and login with the new manager just created"
+msgstr ""
+
+#: ../../dedalo.rst:63
+msgid "go in the *Hotspot* section and create a new hotspot instance"
+msgstr ""
+
+#: ../../dedalo.rst:64
+msgid "click on the hotspot name and configure the captive portal"
+msgstr ""
+
+#: ../../dedalo.rst:68
+msgid "Hotspot Unit on |product|"
+msgstr ""
+
+#: ../../dedalo.rst:70
+msgid "go to the section *Hotspot Unit* on |product|"
+msgstr ""
+
+#: ../../dedalo.rst:71
+msgid "edit the parameters in the `Hotspot unit registration` page:"
+msgstr ""
+
+#: ../../dedalo.rst:73
+msgid "``Host name`` : Public name of the Hotspot Manager"
+msgstr ""
+
+#: ../../dedalo.rst:74
+msgid "``User name`` : user of a working account (reseller or customer)"
+msgstr ""
+
+#: ../../dedalo.rst:75
+msgid "``Password`` : password"
+msgstr ""
+
+#: ../../dedalo.rst:77
+msgid ""
+"After that just choose the ethernet interface where the hotspot will be "
+"active."
+msgstr ""
+
+#: ../../dedalo.rst:79
+msgid ""
+"If you have the proxy web active a specific flag in the hotspot unit page "
+"will allow you to forward all the hotspot traffic (http and httpas "
+"protocols) to the web proxy for logging purposes (Be aware of the privacy "
+"implications!)."
+msgstr ""
+
+#: ../../dedalo.rst:82
+msgid "connect an AP to the hostpot interface."
+msgstr ""
+
+#: ../../dedalo.rst:88
+msgid "Access Point Configuration"
+msgstr ""
+
+#: ../../dedalo.rst:90
+msgid ""
+"The Access Point (AP) must perform the sole function of enabling the "
+"connection with the firewall, they should behave like an ordinary network "
+"switch. Follow these recommendations:"
+msgstr ""
+
+#: ../../dedalo.rst:93
+msgid "configure the access point without authentication and without DHCP"
+msgstr ""
+
+#: ../../dedalo.rst:94
+msgid ""
+"disable any service (security services, etc.) in order to avoid interference"
+" with hotspot behavior"
+msgstr ""
+
+#: ../../dedalo.rst:95
+msgid ""
+"if you use more AP configure them with different SSID (eg: 1-SCHOOL / "
+"SCHOOL-2 / ...) in order to easily identify any malfunctioning AP"
+msgstr ""
+
+#: ../../dedalo.rst:96
+msgid ""
+"configure the AP with a static IP address on a network segment (rfc-1918) "
+"different from the one used by the hotspot"
+msgstr ""
+
+#: ../../dedalo.rst:97
+msgid ""
+"if possible, enable the \"client isolation\", to avoid traffic between "
+"clients connected to the access point"
+msgstr ""
+
+#: ../../dedalo.rst:98
+msgid ""
+"configure the AP to work on different channels to minimize interference, a "
+"good AP allow you to manage the channels automatically or manually select "
+"them"
+msgstr ""
+
+#: ../../dedalo.rst:99
+msgid ""
+"do not use too shoddy products, low quality AP can cause frequent "
+"disconnections which impact on the quality of the overall service, the "
+"recommendation is even more important if you are using repeaters"
+msgstr ""
+
+#: ../../dedalo.rst:102
+msgid ""
+"For test purposes only you can also connect a laptop or a pc via ethernet "
+"cable to the hotspot interface instead of a Wi-Fi network. This can be very "
+"useful if you are experiencing problems and you want to check if they are "
+"caused by the hotspot service or by the AP network."
+msgstr ""
+
+#: ../../dedalo.rst:107
+msgid "Free Mode and Voucher Mode"
+msgstr ""
+
+#: ../../dedalo.rst:109
+msgid ""
+"The free mode (default) allows you to make login by yourself without the "
+"need of any code, just click on the desired social (or sms, email)."
+msgstr ""
+
+#: ../../dedalo.rst:111
+msgid ""
+"The voucher mode force you to create a voucher (basically \"a code\") and "
+"give it to every user, only users with the voucher will be allowed to make "
+"login."
+msgstr ""
