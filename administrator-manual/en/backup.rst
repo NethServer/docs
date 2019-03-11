@@ -452,7 +452,11 @@ Other restored configurations:
 * Users and groups
 * SSL certificates
 
-.. note:: The root/admin password is not restored.
+.. warning:: Do not restore a configuration backup of an old installation to a new one.
+   The backup should always have the same version of the new installation.
+
+   E.g.: Avoid the restore a configuration backup of a 7.4.1708 installation on a 7.6.1810 one.
+   Such scenario could lead to unexpected results.
 
 Steps to be executed:
 
@@ -475,6 +479,8 @@ Steps to be executed:
     restore-data -b <name>
 
 Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
+
+.. note:: The root/admin password is not restored.
 
 .. _restore-roles-section:
    
