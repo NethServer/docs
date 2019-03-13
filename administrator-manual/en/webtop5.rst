@@ -1173,11 +1173,7 @@ To disable ActiveSync on SOGo: ::
   config setprop sogod ActiveSync disabled
   signal-event nethserver-sogo-update
 
-To disable ActiveSync on WebTop: ::
-
-  config setprop webtop ActiveSync disabled
-  signal-event nethserver-webtop5-update
-
+To disable ActiveSync on WebTop change :file:`/etc/httpd/conf.d/webtop5-zpush.conf` config file.
 
 All incoming mail filters configured within SOGo, must be manually recreated inside WebTop interface.
 This also applies if the user is switching from WebTop to SOGo.
