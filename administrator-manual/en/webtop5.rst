@@ -27,7 +27,6 @@ web application and Active Sync.
 .. note::
    Active Sync protocol is supported only on Android and iOS devices.
    Outlook is not supported.
-   Mail synchronization is currently not supported.
 
 
 .. _webtop5_admin-section:
@@ -102,10 +101,6 @@ Synchronization with ActiveSync (EAS)
 Mobile devices can be synchronized using ActiveSync.
 :index:`ActiveSync` can be used only for **contacts** and **calendars**.
 
-.. note::
-
-   To synchronize **e-mails** you should configure an IMAP account.
-
 Apple iOS
 ---------
 
@@ -118,8 +113,6 @@ Fill the required fields with:
 - **Domain**: leave blank
 - **User name**: enter your full user name, eg: goofy@nethserver.org
 - **Password**: enter your password
-
-Finally, *disable* Mail synchronization and create an IMAP account: https://support.apple.com/en-us/HT201320
 
 .. note::
 
@@ -139,8 +132,6 @@ Fill the required fields with:
 Then select :guilabel:`Manual configuration` and change the name of the *Server* field accordingly
 to your server public name.
 Finally, if you have a self-signed certificate on your server, make sure to select :guilabel:`SSL/TLS (accept all certificates)` option.
-
-Finally, *disable* Mail synchronization and create an IMAP account.
 
 .. note::
 
