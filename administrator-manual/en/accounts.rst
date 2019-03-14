@@ -77,6 +77,10 @@ and groups` page.
 See :ref:`admin-account-section` section for more details about default
 administrative user and group.
 
+.. warning: The |product| OpenLDAP account provider does not fully support the 
+            user password expiration. Refer to :ref:`effects-of-expired-password` 
+            for more information
+
 .. _ad-local-accounts-provider-section:
 
 Samba Active Directory local provider installation
@@ -473,28 +477,50 @@ Expiration
 ----------
 
 The :index:`password expiration` is **NOT** enabled by default.
-If enabled, password lifetime is set to 6 months from the time when the password is set.
 
-.. note:: The system will refer to the date of the last password change,
-   if password is older than 6 months, the server consider that password has expired.
-   In this case you need to change the user password.
-   For example, if the last password change was made in January and the activation of the deadline in October,
-   the system will assume the password changed in January is expired, and notify the user.
+Each time a user changes his password, the date of the password change is 
+recorded; if :guilabel:`Password expiration for users` option is enabled, 
+the password is considered expired when the :guilabel:`Maximum Password Age`
+has elapsed.
 
+For example, given that
 
-.. warning:: Due to some technical limitation, **no email notification related to password expiration** will 
-   be sent by the server!
+- last password was set in January, 
+- in October the :guilabel:`Maximum Password Age` is set to ``180 days`` 
+  and :guilabel:`Password expiration for users` is enabled
 
+thus the password is immediately considered expired (January + 180 days = June).
 
 .. _effects-of-expired-password:
 
 Effects of expired passwords
 ----------------------------
 
-After password expiration, the user is still able to read and send email messages.
+.. warning:: **no email notification related to password expiration** is sent by the server!
 
-If |product| has an Active Directory account provider, the user cannot access
-shared folders, printers (by Samba) and other domain computers.
+The effects of an expired password depend on the configured accounts provider.
+
+When a password is expired
+
+* with Active Directory (both local and remote) a user cannot authenticate himself with any service
+* with a |product| LDAP accounts provider (both local and remote) some services ignore the password 
+  expiration and grant access in any case
+
+Examples of services that do not fully support the password expiration with |product| LDAP 
+accounts provider:
+
+.. only nscom:
+
+   - NextCloud
+   - WebTop (contacts and calendars are available)
+   - SOGo
+
+.. only nsent:
+
+   - NextCloud
+   - WebTop (contacts and calendars are available)
+
+...and other services that authenticate directly with LDAP
 
 .. _import-users_section:
 
