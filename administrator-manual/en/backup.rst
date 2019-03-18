@@ -453,7 +453,7 @@ Other restored configurations:
 * SSL certificates
 
 .. warning:: Do not restore a configuration backup of an old installation to a new one.
-   The backup should always have the same version of the new installation.
+   The backup must belong to a |product| having the same operating system version of the new one.
 
    E.g.: Avoid the restore a configuration backup of a 7.4.1708 installation on a 7.6.1810 one.
    Such scenario could lead to unexpected results.
