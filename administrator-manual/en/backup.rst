@@ -452,11 +452,12 @@ Other restored configurations:
 * Users and groups
 * SSL certificates
 
-.. warning:: Do not restore a configuration backup of an old installation to a new one.
-   The backup must belong to a |product| having the same operating system version of the new one.
+.. warning:: Do not restore a configuration backup from an old minor version into a newer version.
+   The backup should come from a |product| having the same operating system version of the new 
+   installation.
 
-   E.g.: Avoid the restore a configuration backup of a 7.4.1708 installation on a 7.6.1810 one.
-   Such scenario could lead to unexpected results.
+   E.g.: Avoid restoring a configuration backup from a 7.4.1708 installation on a new 7.6.1810 system,
+   as it may mead to unexpected results.
 
 Steps to be executed:
 
