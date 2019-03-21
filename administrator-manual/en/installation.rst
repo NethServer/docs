@@ -30,8 +30,8 @@ Hardware compatibility
 ----------------------
 
 |product| is compatible with any hardware certified by Red Hat®
-Enterprise Linux® (RHEL®), listed on `hardware.redhat.com
-<http://hardware.redhat.com/>`__
+Enterprise Linux® (RHEL®), listed on the hardware vendor website
+or at Red Hat Customer Portal <https://access.redhat.com/ecosystem/search/#/category/Server/>`.
 
 
 Installation types
