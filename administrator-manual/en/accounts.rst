@@ -127,6 +127,12 @@ When all fields are filled, press the :guilabel:`Create domain` button.
 The Active Directory configuration procedure might require some time to run.
 It creates the Linux Container chroot, by downloading additional packages.
 
+The Linux Container root directory is :file:`/var/lib/machines/nsdc/` and
+requires the filesystem support to Posix ACLs. The default XFS filesystem has a
+builtin support for Posix ACLs and no special configuration is required. For
+other filesystems (i.e. EXT4) enable the ACLs as explained in :ref:`Shared
+folders requirements <shared_folders_requirements-section>`.
+
 At the end of the Active Directory configuration procedure,  the |product| host
 machine is automatically configured to join the Active Directory domain. Go to 
 the page :guilabel:`User and groups` to see the default accounts.
