@@ -41,7 +41,7 @@ After virtual host configuration, obtain a valid HTTPS certificate via Let's Enc
 from ``Server certificate`` section of Server Manager interface.
 
 Usage
-----
+-----
 
 Collabora Online will be automatically enabled in Nextcloud if the package ``nethserver-nextcloud``
 is present when the virtual host is configured, otherwise you can enable with: ::

@@ -52,7 +52,7 @@ Network access
 The application is restricted to your local network (default is ``private``), to enable phpVirtualBox to the external IP ::
 
   config setprop phpvirtualbox access public
-  signal-event phpvirtualbox-update
+  signal-event phpvirtualbox-save
 
 Access on an exclusive hostname
 -------------------------------
@@ -64,7 +64,7 @@ To make phpVirtualBox accessible with an exclusive DNS name, for example https:/
 * Add the host name to ``DomainName`` prop list (default is ''): ::
 
     config setprop phpvirtualhost DomainName webmail.example.com
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 Advanced settings
 -----------------
@@ -72,7 +72,7 @@ Advanced settings
 phpVirtualBox attempts to look like the user interface of VirtualBox, but you can enable the ``AdvancedSettings`` property (default is ``false``) and get more settings, only available by the command line ::
 
     config setprop phpvirtualhost AdvancedSettings true
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 VM ownership and quota
 ----------------------
@@ -80,12 +80,12 @@ VM ownership and quota
 The administrator users are not limited on the virtual machine quota and can manage VM of other users. The VMs are visible only to the owner, as long as the property ``VMOwnerShip`` is to true (default is ``true``). ::
 
     config setprop phpvirtualhost VMOwnerShip false
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 Maximum number of VMs allowed for non admin user (default is ``5``) ::
 
     config setprop phpvirtualhost QuotaPerUser 10
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 
 User permissions
@@ -101,7 +101,7 @@ You can change the authentication method by the property ``Authentication`` (``i
 Example: ::
 
   config setprop phpvirtualbox Authentication AD
-  signal-event phpvirtualbox-update
+  signal-event phpvirtualbox-save
 
 internal
 --------
@@ -144,9 +144,9 @@ You could open a session by ssh to download directly the ISO with wget, or push 
 Oracle VM VirtualBox Extension Pack
 ===================================
 
-This `Extension Pack <https://www.virtualbox.org/manual/ch01.html#intro-installing>`_ provides some good features like the usb support, Virtualbox RDP, disk encryption, NVMe and PXE boot for Intel cards. It is installed by the event nethserver-virtualbox-X.X-virtualbox-update automatically (by the installation or a rpm update). The pack is relevant of the VirtualBox version, if you need to update it, then trigger the event virtualbox-update : ::
+This `Extension Pack <https://www.virtualbox.org/manual/ch01.html#intro-installing>`_ provides some good features like the usb support, Virtualbox RDP, disk encryption, NVMe and PXE boot for Intel cards. It is installed by the event nethserver-virtualbox-X.X-virtualbox-update automatically (by the installation or a rpm update). The pack is relevant of the VirtualBox version, if you need to update it, then trigger the event virtualbox-save : ::
 
-  signal-event virtualbox-update
+  signal-event virtualbox-save
 
 The RDP console
 ===============
@@ -156,12 +156,12 @@ You could use your own RDP software client for the installations of your guests,
 * The RDP console is restricted to the local network ( default is green), the ports are between ``[19000-19100]``. If you want to enable RDP for the external IP ::
 
     config setprop phpvirtualhost accessRDP red
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 * For specific needs you could specify the IP (default is '') of the integrated RDP console ::
 
     config setprop phpvirtualhost ipaddrRDP xxx.xxx.xxx.xxx
-    signal-event phpvirtualbox-update
+    signal-event phpvirtualbox-save
 
 
 VM networking
@@ -206,13 +206,13 @@ You can modify the available properties of phpvirtualhost: ::
 Example: ::
 
   config setprop phpvirtualbox accessRDP red AdvancedSettings enabled
-  signal-event phpvirtualbox-update
+  signal-event phpvirtualbox-save
 
 Documentation
 =============
 
 VirtualBox
-  The `official documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
+  The `official VirtualBox documentation <http://download.virtualbox.org/virtualbox/UserManual.pdf>`_ is available on the VirtualBox website.
 
 phpVirtualbox
-  The `official documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.
+  The `official phpVirtualbox documentation <https://github.com/phpvirtualbox/phpvirtualbox/wiki>`_ is available on the github website.

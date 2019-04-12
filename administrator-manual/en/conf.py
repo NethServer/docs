@@ -21,9 +21,7 @@ except ImportError:
 
 copyright = u'%d, Nethesis Srl and the NethServer project contributors' % datetime.date.today().year
 
-if 'READTHEDOCS_PROJECT' in os.environ and 'cockpit' in os.environ['READTHEDOCS_PROJECT']:
-    tags.add('cockpit')
-elif not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
+if not tags.has('nscom') and 'READTHEDOCS_PROJECT' in os.environ and 'enterprise' in os.environ['READTHEDOCS_PROJECT']:
     tags.add('nsent')
 elif not tags.has('nsent'):
     tags.add('nscom')
@@ -77,19 +75,7 @@ highlight_language = 'none'
 
 htmlhelp_basename = 'NethServer_enterprisedoc'
 
-if tags.has("cockpit"):
-    project = u'NethServer'
-    html_title = u"%s %s" % (project, release)
-    html_theme = "traditional"
-    html_add_permalinks=""
-    rst_prolog="""
-.. |product| replace:: NethServer
-.. |download_site| replace:: `www.nethserver.org <http://www.nethserver.org/getting-started-with-nethserver/>`__
-.. |ks_keyboard| replace:: :samp:`en`
-.. |ks_timezone| replace:: :samp:`Greenwich`
-.. |ks_language| replace:: :samp:`en_US`
-"""
-elif tags.has('nsent'):
+if tags.has('nsent'):
     templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)

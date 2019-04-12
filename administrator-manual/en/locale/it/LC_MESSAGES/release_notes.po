@@ -11,8 +11,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
+# Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Davide Principi <davide.principi@nethesis.it>, 2018
@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-25 10:05+0100\n"
+"POT-Creation-Date: 2019-03-26 09:43+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"

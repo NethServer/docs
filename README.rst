@@ -152,6 +152,28 @@ Use a spell checker program before submitting a pull request. For instance run :
 
   hunspell -d en_US <filename>
 
+Cockpit inline documentation
+----------------------------
+
+Cockpit can display inline documentation directly from the online manual
+using the `system-doc API <https://nethserver.github.io/nethserver-cockpit/api/system-docs/>`_.
+The paragraph to be served as inline documentation must be enclosed
+inside a `container <http://docutils.sourceforge.net/docs/ref/rst/directives.html#container>`_ element.
+
+The container must have a unique name in the form ``ui-<section>`` like ``ui-portforward-syntax``.
+
+Example: ::
+
+  .. container:: ui-test-section
+
+     Text example
+
+     * **First element**: description of element
+     * **Second element**: can contain ``special text``
+
+
+**Note**: the ``container`` element can't contain a title.
+
 Conditional sections
 --------------------
 
