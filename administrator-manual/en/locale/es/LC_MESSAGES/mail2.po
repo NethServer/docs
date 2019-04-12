@@ -1,12 +1,12 @@
 # #-#-#-#-#  mail2.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  mail2.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Nethesis Srl
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 12:52+0200\n"
+"POT-Creation-Date: 2019-03-14 16:36+0100\n"
 "PO-Revision-Date: 2018-06-20 12:01+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -144,23 +144,33 @@ msgid ""
 msgstr ""
 
 #: ../../mail2.rst:85
+msgid ""
+"After the upgrade the old anti-spam engine services provided by amavisd and "
+"spamassassin are stopped and their packages can be removed."
+msgstr ""
+
+#: ../../mail2.rst:88
+msgid "To clean up the old anti-spam rpms type ::"
+msgstr ""
+
+#: ../../mail2.rst:94
 msgid "References"
 msgstr ""
 
-#: ../../mail2.rst:87
+#: ../../mail2.rst:96
 msgid ""
 "Rspamd -- Fast, free and open-source spam filtering system. "
 "https://rspamd.com/"
 msgstr ""
 
-#: ../../mail2.rst:91
+#: ../../mail2.rst:100
 msgid ""
 "Domain Keys Identified Mail (DKIM) is an email authentication method "
 "designed to detect email spoofing -- `Wikipedia "
 "<https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_"
 msgstr ""
 
-#: ../../mail2.rst:96
+#: ../../mail2.rst:105
 msgid ""
 "Greylisting is a method of defending e-mail users against spam. A mail "
 "transfer agent (MTA) using greylisting will \"temporarily reject\" any email"
@@ -168,7 +178,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Greylisting>`_"
 msgstr ""
 
-#: ../../mail2.rst:102
+#: ../../mail2.rst:111
 msgid ""
 "alterMIME is a small program which is used to alter your mime-encoded "
 "mailpack -- https://pldaniels.com/altermime/"

@@ -511,8 +511,8 @@ Audio and video WebRTC calls with chat (Beta)
    When the final version will be released it is likely that the configurations previously made will be reset.
 
 Configuration is currently only possible via the WebTop administration panel.
-The settings to be inserted are documented `here <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_ 
-In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown `here <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_
+The settings to be inserted are documented inside `webrtc settings section <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_.
+In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown inside `xmpp settings <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_.
 
 From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
 
@@ -581,51 +581,32 @@ It is possible to indicate a number (max 16 characters) or a text (max 11 charac
    
 To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
 
-Custom link buttons in launcher (Beta)
-======================================
+Custom link buttons in launcher
+===============================
 
-.. warning::
-   This feature is currently released in Beta.
-   When the final version will be released it is likely that the configurations previously made will be reset.
+To configure the buttons access the WebTop administration panel and select -> :guilabel:`Domains` -> :guilabel:`NethServer` ->  :guilabel:`Launcher` :
 
-Configuration is currently only possible via the WebTop administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+.. image:: _static/webtop_launchers.png
 
-``launcher.links`` : json array of link objects
 
-In the "Value" field, enter the content in json format that shows the values of these variables:
+For each button, enter these three values
 
-``href`` : URL opened in a new browser tab
+``Name`` : tab descriptive text that appears with mouseover
 
-``text`` : descriptive text that appears with mouseover
+``Link URL`` : URL opened in a new browser
 
-``icon`` : icon image URL (to avoid scaling problems, use vector images)
+``Icon URL`` : icon image URL (to avoid scaling problems, use vector images)
 
-For example: ::
-
- [
-  {
-    'href': 'https://www.google.it/',
-    'text': 'Google',
-    'icon': 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'
-  }, {
-    'href': 'https://the/url/to/open',
-    'text': 'The link text',
-    'icon': 'https://the/icon/url'
-  }
- ]
 
 .. warning::
    The URL of the icon from which to retrieve the vector image must always be publicly reachable by the browser with which you connect.
    
 If you can not retrieve an Internet link of the icon image, you can copy the image locally on the server in two different ways:
 
-#. copying the file (for example ``icon.svg``) directly into the ``/var/www/html/`` directory of the server and using this type of URL for the 'icon' field of the Json file: ::
+#. copying the file (for example ``icon.svg``) directly into the ``/var/www/html/`` directory of the server and using this type of URL for the 'Icon URL' field: ``https://<public_name_server>/<icon.svg>``
 
-       'icon': 'https://<public_name_server>/<icon.svg>'
- 
-#. uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration panel -> :guilabel:`Cloud` -> :guilabel:`Public Images`and insert a URL of this type for the 'icon' field of the Json file: ::
-
-       'icon': 'https://<public_name_server>/webtop/resources/156c0407/images/<icon.svg>'
+#. uploading the icon file to the public cloud of WebTop (where images are uploaded for mailcards) via the administration 
+   panel -> :guilabel:`Cloud` -> :guilabel:`Public Images` and insert a URL of this type for the 'Icon URL' field: ``https://<public_name_server>/webtop/resources/156c0407/images/<icon.svg>``
 
 .. note::
 
