@@ -356,3 +356,9 @@ file_filter = locale/<lang>/LC_MESSAGES/collabora.po
 source_file = _build/locale/collabora.pot
 source_lang = en
 type = PO
+
+[docs-v7.virtual_machines]
+file_filter = locale/<lang>/LC_MESSAGES/virtual_machines.po
+source_file = _build/locale/virtual_machines.pot
+source_lang = en
+type = PO
