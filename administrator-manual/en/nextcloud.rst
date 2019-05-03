@@ -75,3 +75,15 @@ To add a new one use: ::
     signal-event nethserver-nextcloud-update
 
 To add more than one, concatenate the names with a comma.
+
+CalDAV and CardDAV
+==================
+
+Some CalDAV and CardDAV clients may have problems finding the proper sync URL and need automatic service discovery.
+Service discovery is enabled by default if a custom virtual host for Nexcloud has been configured.
+
+To enable the service discovery even if Nextcloud is running on the main FQDN, under the ``nextcloud`` subfolder,
+please make sure you do not have WebTop or SOGo already installed. Then execute: ::
+
+   config setprop nextcloud Wellknown enabled
+   signal-event nethserver-nextcloud-update
