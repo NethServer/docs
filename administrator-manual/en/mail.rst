@@ -592,6 +592,11 @@ not support SMTP authentication, encryption or port settings. Those
 can be enabled to send email messages by listing their IP address in
 :guilabel:`Allow relay from IP addresses` text area.
 
+.. warning::
+
+  The listed IP addresses are excluded from all mail filtering checks: use
+  this feature only as a last resort
+
 Moreover, under :guilabel:`Advanced options` there are further options:
 
 * The :guilabel:`Allow relay from trusted networks` option allows any
