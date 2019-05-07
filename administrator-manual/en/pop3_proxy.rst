@@ -24,7 +24,7 @@ to the provider's POP3 server, but the proxy will intercept all traffic and hand
 It's possible to selectively activate the following controls: 
 
 * antivirus: messages containing virus are rejected and a notification email is sent to the user
-* spam: messages will be marked with the appropriate anti-spam scores
+* spam: messages will be marked with the appropriate antispam scores
 
 
 POP3s
