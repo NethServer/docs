@@ -192,10 +192,11 @@ For example:
 
 .. index::
    pair: email; local network only
+   pair: email; internal visibility
    triple: email; private; internal
 
 Sometimes a company forbids communications from outside the organization
-using personal email addresses. The :guilabel:`Local network only`
+using personal email addresses. The :guilabel:`Local network only` (or visibility :guilabel:`Internal`)
 option blocks the possibility of an address to receive email from the
 outside.  Still the "local network only" address can be used to
 exchange messages with other accounts of the system.
