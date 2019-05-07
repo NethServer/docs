@@ -606,6 +606,19 @@ Moreover, under :guilabel:`Advanced options` there are further options:
 * The :guilabel:`Enable authentication on port 25` option allows
   authenticated SMTP clients to send email messages also on port 25.
 
+Sender/login match
+------------------
+
+By default an authenticated SMTP client has no particular restrictions on
+setting the SMTP sender address.
+
+To avoid the unauthorized use of email addresses and the sender address
+spoofing, enable the :guilabel:`Enforce sender/login match` option, available
+with the new Server Manager UI, under :guilabel:`Email > Relay > Configuration >
+Details`.
+
+If enabled, only addresses associated to the current SMTP login are allowed.
+
 .. index::
    pair: email; HELO
    alias: HELO; EHLO
