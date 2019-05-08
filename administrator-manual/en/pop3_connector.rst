@@ -30,7 +30,7 @@ Accounts` page. Each account can be specified:
 * the account credentials
 * the local user account where to deliver messages
 * if a message has to be deleted from the remote server after delivery
-* anti-spam and anti-virus checks
+* antispam and antivirus checks
 
 .. note:: It is allowed to associate more than one external accounts to a local
           one.  Deleting an account will *not* delete already

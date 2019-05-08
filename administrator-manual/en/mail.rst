@@ -8,14 +8,14 @@ The Email module is split into three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
-* Anti-spam filter, anti-virus and attachments blocker [#RSPAMD]_
+* Antispam filter, antivirus and attachments blocker [#RSPAMD]_
 
 Benefits are
 
 * complete autonomy in electronic mail management
 * avoid problems due to the Internet Service Provider
 * ability to track the route of messages in order to detect errors
-* optimized anti-virus and anti-spam scan
+* optimized antivirus and antispam scan
 
 See also the following related topics:
 
@@ -343,8 +343,8 @@ All transiting email messages are subjected to a list of checks that
 can be selectively enabled in :guilabel:`Email > Filter` page:
 
 * Block of attachments
-* Anti-virus
-* Anti-spam
+* Antivirus
+* Antispam
 
 .. index::
    pair: email; attachment
@@ -366,26 +366,30 @@ MS Word file (docx) and OpenOffice (odt) are blocked because they
 actually are also zip archives.
 
 .. index::
-   pair: email; anti-virus
+   pair: email; antivirus
    see: anti-virus; antivirus
 
-Anti-virus
-----------
+.. _anti-virus:
 
-The anti-virus component finds email messages containing
+Antivirus
+---------
+
+The antivirus component finds email messages containing
 viruses. Infected messages are discarded. The virus signature database
 is updated periodically.
 
 .. index::
    single: spam
-   pair: email; anti-spam
+   pair: email; antispam
    pair: spam; score
    see: anti-spam; antispam
 
-Anti-spam
----------
+.. _anti-spam:
 
-The anti-spam component [#RSPAMD]_ analyzes emails by detecting
+Antispam
+--------
+
+The antispam component [#RSPAMD]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
 content of messages.
@@ -470,14 +474,14 @@ three types of rules:
 
 It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specify the desired domain (e.g. : nethserver.org).
 
-.. note:: Antivirus checks are enforced despite *whitelist* settings.
+.. note:: Anti-virus checks are enforced despite *whitelist* settings.
 
 .. _rspamd-web-interface-section:
 
 Rspamd web interface
 --------------------
 
-The anti-spam component is implemented by Rspamd [#RSPAMD]_ which provides its
+The antispam component is implemented by Rspamd [#RSPAMD]_ which provides its
 administrative web interface at ::
 
   https://<HOST_IP>:980/rspamd
