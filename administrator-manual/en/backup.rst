@@ -87,7 +87,7 @@ When selecting an engine, the system administrator should carefully evaluate mul
 * Encryption: data saved inside the destination storage is encrypted.
   Usually data is encrypted before transfer
 * Size: space used on the destination for each backup, may be smaller or equal than the original data set.
-  When using engines without encryption support, the destination should always be bigger than
+  When using engines without compression support, the destination should always be bigger than
   the source
 * Retention: the policy which sets the amount of time in which a given set of data will remain available for restore
 * Integrity: it's the engine ability to check if the performed backup is valid in case of restore
