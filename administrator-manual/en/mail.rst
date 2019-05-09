@@ -474,7 +474,7 @@ three types of rules:
 
 It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specify the desired domain (e.g. : nethserver.org).
 
-.. note:: Anti-virus checks are enforced despite *whitelist* settings.
+.. warning:: **Anti-virus checks are disabled** too, in case *whitelist* settings.
 
 .. _rspamd-web-interface-section:
 
