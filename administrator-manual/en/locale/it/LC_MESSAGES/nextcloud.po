@@ -14,16 +14,16 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-05-08 11:13+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -208,3 +208,29 @@ msgstr "Per aggiungerne uno nuovo eseguire: ::"
 msgid "To add more than one, concatenate the names with a comma."
 msgstr ""
 "Per aggiungerne più di uno è sufficiente concatenare i nomi con una virgola."
+
+#: ../../nextcloud.rst:80
+msgid "CalDAV and CardDAV"
+msgstr "CalDAV e CardDAV"
+
+#: ../../nextcloud.rst:82
+msgid ""
+"Some CalDAV and CardDAV clients may have problems finding the proper sync "
+"URL and need automatic service discovery. Service discovery is enabled by "
+"default if a custom virtual host for Nexcloud has been configured."
+msgstr ""
+"Alcuni client CalDAV e CardDAV possono avere problemi nel trovare l'URL di "
+"sincronizzazione appropriato e richiedono il rilevamento automatico dei "
+"servizi. L'individuazione del servizio è abilitata per impostazione "
+"predefinita se è stato configurato un host virtuale personalizzato per "
+"Nexcloud."
+
+#: ../../nextcloud.rst:85
+msgid ""
+"To enable the service discovery even if Nextcloud is running on the main "
+"FQDN, under the ``nextcloud`` subfolder, please make sure you do not have "
+"WebTop or SOGo already installed. Then execute: ::"
+msgstr ""
+"Per abilitare il rilevamento automatico dei servizi anche se Nextcloud è in "
+"esecuzione sul FQDN principale, nella sottocartella ``nextcloud``, "
+"assicurarsi che WebTop o SOGo non siano installati. Quindi eseguire: ::"

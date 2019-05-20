@@ -4,7 +4,7 @@
 Rspamd
 ======
 
-Rspamd is the new anti-spam engine of |product|, it replaces SpamAssassin and
+Rspamd is the new antispam engine of |product|, it replaces SpamAssassin and
 Amavisd-new.
 
 The official documentation of Rspamd is available at https://rspamd.com
@@ -18,7 +18,7 @@ center` page. The menu where to activate it and modify its settings is on the
 Rspamd Web Interface
 ====================
 
-The anti-spam component is implemented by Rspamd which provides its
+The antispam component is implemented by Rspamd which provides its
 administrative web interface at ::
 
   https://<HOST_IP>:980/rspamd
@@ -45,7 +45,7 @@ It is the landing menu, the global statistics are available on the Rspamd servic
 Troughput
 ---------
 
-The graphics are displayed in this menu to explain the activity of the anti-spam 
+The graphics are displayed in this menu to explain the activity of the antispam 
 software. You can adjust the time scale (hourly, daily, weekly, montly) and modify 
 some other settings to refine the graphics
 

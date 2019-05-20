@@ -200,3 +200,14 @@ members of the ``Domain Admins`` group:
 
     \\MYSERVER\home$
     \\192.168.1.2\home$
+
+Auditing
+========
+
+Samba audit is a module that keeps track of all users activities on shared folders.
+Auditing is disabled by default and must be explicitly enabled for each folder.
+
+Actions are logged to a file during the the day and are moved to a browseable database overnight.
+
+The report web interface is available from the old Server Manager from the :guilabel:`Applications` page,
+while the new Server Manager (Cockpit) integrates a new interface inside the :guilabel:`File server` application.

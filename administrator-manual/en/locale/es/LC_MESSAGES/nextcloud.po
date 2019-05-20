@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-05-08 11:13+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -193,3 +193,21 @@ msgstr "Para añadir uno nuevo use: ::"
 #: ../../nextcloud.rst:77
 msgid "To add more than one, concatenate the names with a comma."
 msgstr "Para agregar más de uno, concatene los nombres con una coma."
+
+#: ../../nextcloud.rst:80
+msgid "CalDAV and CardDAV"
+msgstr ""
+
+#: ../../nextcloud.rst:82
+msgid ""
+"Some CalDAV and CardDAV clients may have problems finding the proper sync "
+"URL and need automatic service discovery. Service discovery is enabled by "
+"default if a custom virtual host for Nexcloud has been configured."
+msgstr ""
+
+#: ../../nextcloud.rst:85
+msgid ""
+"To enable the service discovery even if Nextcloud is running on the main "
+"FQDN, under the ``nextcloud`` subfolder, please make sure you do not have "
+"WebTop or SOGo already installed. Then execute: ::"
+msgstr ""

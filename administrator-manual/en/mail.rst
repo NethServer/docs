@@ -8,14 +8,14 @@ The Email module is split into three main parts:
 
 * SMTP server for sending and receiving [#Postfix]_
 * IMAP and POP3 server to read email [#Dovecot]_, and Sieve language to organize it [#Sieve]_
-* Anti-spam filter, anti-virus and attachments blocker [#RSPAMD]_
+* Antispam filter, antivirus and attachments blocker [#RSPAMD]_
 
 Benefits are
 
 * complete autonomy in electronic mail management
 * avoid problems due to the Internet Service Provider
 * ability to track the route of messages in order to detect errors
-* optimized anti-virus and anti-spam scan
+* optimized antivirus and antispam scan
 
 See also the following related topics:
 
@@ -192,10 +192,11 @@ For example:
 
 .. index::
    pair: email; local network only
+   pair: email; internal visibility
    triple: email; private; internal
 
 Sometimes a company forbids communications from outside the organization
-using personal email addresses. The :guilabel:`Local network only`
+using personal email addresses. The :guilabel:`Local network only` (or visibility :guilabel:`Internal`)
 option blocks the possibility of an address to receive email from the
 outside.  Still the "local network only" address can be used to
 exchange messages with other accounts of the system.
@@ -342,8 +343,8 @@ All transiting email messages are subjected to a list of checks that
 can be selectively enabled in :guilabel:`Email > Filter` page:
 
 * Block of attachments
-* Anti-virus
-* Anti-spam
+* Antivirus
+* Antispam
 
 .. index::
    pair: email; attachment
@@ -365,26 +366,30 @@ MS Word file (docx) and OpenOffice (odt) are blocked because they
 actually are also zip archives.
 
 .. index::
-   pair: email; anti-virus
+   pair: email; antivirus
    see: anti-virus; antivirus
 
-Anti-virus
-----------
+.. _anti-virus:
 
-The anti-virus component finds email messages containing
+Antivirus
+---------
+
+The antivirus component finds email messages containing
 viruses. Infected messages are discarded. The virus signature database
 is updated periodically.
 
 .. index::
    single: spam
-   pair: email; anti-spam
+   pair: email; antispam
    pair: spam; score
    see: anti-spam; antispam
 
-Anti-spam
----------
+.. _anti-spam:
 
-The anti-spam component [#RSPAMD]_ analyzes emails by detecting
+Antispam
+--------
+
+The antispam component [#RSPAMD]_ analyzes emails by detecting
 and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
 criteria, predetermined rules and statistical evaluations on the
 content of messages.
@@ -469,14 +474,14 @@ three types of rules:
 
 It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specify the desired domain (e.g. : nethserver.org).
 
-.. note:: Antivirus checks are enforced despite *whitelist* settings.
+.. warning:: **Anti-virus checks are disabled** too, in case *whitelist* settings.
 
 .. _rspamd-web-interface-section:
 
 Rspamd web interface
 --------------------
 
-The anti-spam component is implemented by Rspamd [#RSPAMD]_ which provides its
+The antispam component is implemented by Rspamd [#RSPAMD]_ which provides its
 administrative web interface at ::
 
   https://<HOST_IP>:980/rspamd
@@ -592,6 +597,11 @@ not support SMTP authentication, encryption or port settings. Those
 can be enabled to send email messages by listing their IP address in
 :guilabel:`Allow relay from IP addresses` text area.
 
+.. warning::
+
+  The listed IP addresses are excluded from all mail filtering checks: use
+  this feature only as a last resort
+
 Moreover, under :guilabel:`Advanced options` there are further options:
 
 * The :guilabel:`Allow relay from trusted networks` option allows any
@@ -600,6 +610,34 @@ Moreover, under :guilabel:`Advanced options` there are further options:
 
 * The :guilabel:`Enable authentication on port 25` option allows
   authenticated SMTP clients to send email messages also on port 25.
+
+Sender/login match
+------------------
+
+By default an authenticated SMTP client has no particular restrictions on
+setting the SMTP sender address.
+
+To avoid the unauthorized use of email addresses and the sender address
+spoofing, enable the :guilabel:`Enforce sender/login match` option, available
+with the new Server Manager UI, under :guilabel:`Email > Relay > Configuration >
+Details`.
+
+If enabled, only addresses associated to the current SMTP login are allowed.
+
+
+
+Multiple relay hosts
+--------------------
+
+The new Server Manager UI allows to describe the route of an email message, by
+sending it through an external relay host with specific port, authentication,
+and TLS settings.
+
+Create a relay host description under :guilabel:`Email > Relay > Create relay
+host`.
+
+The relay host is identified by the SMTP sender address. It is possible to match
+the full sender address or only the domain part of it.
 
 .. index::
    pair: email; HELO
