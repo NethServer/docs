@@ -11,16 +11,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-05-08 11:13+0200\n"
 "PO-Revision-Date: 2018-12-10 13:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,8 +34,8 @@ msgstr "Rspamd"
 
 #: ../../rspamd.rst:7
 msgid ""
-"Rspamd is the new anti-spam engine of |product|, it replaces SpamAssassin "
-"and Amavisd-new."
+"Rspamd is the new antispam engine of |product|, it replaces SpamAssassin and"
+" Amavisd-new."
 msgstr ""
 "Rspamd è il nuovo motore antispam di |product|, sostituisce SpamAssassin e "
 "Amavisd-new."
@@ -66,10 +66,10 @@ msgstr "Interfaccia web di Rspamd"
 
 #: ../../rspamd.rst:21
 msgid ""
-"The anti-spam component is implemented by Rspamd which provides its "
+"The antispam component is implemented by Rspamd which provides its "
 "administrative web interface at ::"
 msgstr ""
-"Il componente anti-spam è implementato tramite Rspamd che fornisce una sua "
+"Il componente antispam è implementato tramite Rspamd che fornisce una sua "
 "interfaccia web amministrativa all'url: ::"
 
 #: ../../rspamd.rst:26
@@ -130,12 +130,12 @@ msgstr "Troughput"
 
 #: ../../rspamd.rst:48
 msgid ""
-"The graphics are displayed in this menu to explain the activity of the anti-"
-"spam software. You can adjust the time scale (hourly, daily, weekly, montly)"
-" and modify some other settings to refine the graphics"
+"The graphics are displayed in this menu to explain the activity of the "
+"antispam software. You can adjust the time scale (hourly, daily, weekly, "
+"montly) and modify some other settings to refine the graphics"
 msgstr ""
 "I grafici visualizzati in questo menu illustrano l'attività del software "
-"anti-spam. È possibile regolare la scala temporale (oraria, giornaliera, "
+"antispam. È possibile regolare la scala temporale (oraria, giornaliera, "
 "settimanale, mensile) e modificare alcune altre impostazioni per adattare i "
 "grafici alle proprie necessità"
 

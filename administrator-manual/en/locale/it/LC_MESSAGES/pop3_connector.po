@@ -12,16 +12,16 @@
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-05-08 11:13+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,8 +103,8 @@ msgid "if a message has to be deleted from the remote server after delivery"
 msgstr "se un messaggio vada eliminato dal server remoto dopo la consegna"
 
 #: ../../pop3_connector.rst:33
-msgid "anti-spam and anti-virus checks"
-msgstr "controlli anti-spam e anti-virus"
+msgid "antispam and antivirus checks"
+msgstr "controlli antispam e antivirus"
 
 #: ../../pop3_connector.rst:35
 msgid ""

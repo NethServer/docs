@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-05-08 11:13+0200\n"
 "PO-Revision-Date: 2018-12-10 13:30+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -30,8 +30,8 @@ msgstr ""
 
 #: ../../rspamd.rst:7
 msgid ""
-"Rspamd is the new anti-spam engine of |product|, it replaces SpamAssassin "
-"and Amavisd-new."
+"Rspamd is the new antispam engine of |product|, it replaces SpamAssassin and"
+" Amavisd-new."
 msgstr ""
 
 #: ../../rspamd.rst:10
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../rspamd.rst:21
 msgid ""
-"The anti-spam component is implemented by Rspamd which provides its "
+"The antispam component is implemented by Rspamd which provides its "
 "administrative web interface at ::"
 msgstr ""
 
@@ -104,9 +104,9 @@ msgstr ""
 
 #: ../../rspamd.rst:48
 msgid ""
-"The graphics are displayed in this menu to explain the activity of the anti-"
-"spam software. You can adjust the time scale (hourly, daily, weekly, montly)"
-" and modify some other settings to refine the graphics"
+"The graphics are displayed in this menu to explain the activity of the "
+"antispam software. You can adjust the time scale (hourly, daily, weekly, "
+"montly) and modify some other settings to refine the graphics"
 msgstr ""
 
 #: ../../rspamd.rst:53
