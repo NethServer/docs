@@ -547,7 +547,7 @@ Example: ::
 
 then execute: ::
 
-  /usr/share/doc/nethserver-sssd-<ver>/import_users <youfilename>
+  /usr/share/doc/nethserver-sssd-<ver>/scripts/import_users <youfilename>
 
 For example, if the user’s file is /root/users.tsv, execute following command: ::
 
@@ -569,7 +569,25 @@ Then you can use the ``import_emails`` script. See :ref:`import-users_section` f
 Import groups
 -------------
 
-Group management is available from the command line through ``group-create`` and ``group-modify`` events ::
+It is possible to create groups from a TSV (Tab Separated Values) file with the following format: ::
+
+  group1 <TAB> user1 <TAB> user2 <NEWLINE>
+  group2 <TAB> user1 <TAB> user2 <TAB> user3 <NEWLINE>
+
+Example: ::
+
+  faxmaster <TAB> matteo <TAB> luca <NEWLINE>
+  managers <TAB> marco <TAB> francesco <TAB> luca <NEWLINE>
+
+then execute: ::
+
+  /usr/share/doc/nethserver-sssd-<ver>/scripts/import_groups <youfilename>
+
+For example, if the groups’ file is /root/groups.tsv, execute following command: ::
+
+  /usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/import_groups /root/groups.tsv
+
+Group management is also available from the command line through ``group-create`` and ``group-modify`` events ::
 
   signal-event group-create group1 user1 user2 user3
   signal-event group-modify group1 user1 user3 user4
