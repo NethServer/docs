@@ -583,7 +583,7 @@ then execute: ::
 
   /usr/share/doc/nethserver-sssd-<ver>/scripts/import_groups <youfilename>
 
-For example, if the groups’ file is /root/groups.tsv, execute following command: ::
+For example, if the group file is ``/root/groups.tsv``, execute following command: ::
 
   /usr/share/doc/nethserver-sssd-`rpm --query --qf "%{VERSION}" nethserver-sssd`/scripts/import_groups /root/groups.tsv
 
