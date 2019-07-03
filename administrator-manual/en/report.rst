@@ -41,7 +41,7 @@ Report configuration
 
 * **Theme**: the themes available for the dashboard are *light* and *dark*
 * **Palette**: there are 9 color palettes to choose from
-* **Interval**: time interval on wich the data are aggregated. It can be *Week*, *Month* or *Six-months*
+* **Interval**: time interval on which the data are aggregated. It can be *Week*, *Month* or *Six-months*
 * **Language**: language used to display the report
 * **Anonymization**: boolean flag that controls the anonymization of sensible data in the report
 * **Max Entries**: maximum number of items to display on ranking widgets
