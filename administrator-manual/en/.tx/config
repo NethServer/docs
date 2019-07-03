@@ -362,3 +362,9 @@ file_filter = locale/<lang>/LC_MESSAGES/virtual_machines.po
 source_file = _build/locale/virtual_machines.pot
 source_lang = en
 type = PO
+
+[docs-v7.report]
+file_filter = locale/<lang>/LC_MESSAGES/report.po
+source_file = _build/locale/report.pot
+source_lang = en
+type = PO
