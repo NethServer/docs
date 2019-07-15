@@ -154,8 +154,10 @@ Migration from backup
 #. In the source host, create a full backup archive and move it
    to the destination host.
 
-#. In the destination host, install |product| |version| **using the most recent ISO** 
-   and all packages that cover the same features of the source.
+#. In the destination host, install |product| |version| **using the most recent ISO**, 
+   register it then apply **all the latest core updates available**.
+
+#. In the destination host, install all packages that cover the same features of the source.
 
 #. Explode the full backup archive into some directory; for instance,
    create the directory :file:`/var/lib/migration`.
@@ -219,7 +221,7 @@ Sync and migrate
 If called with ``-m`` option, ``rsync-migrate`` will execute a final synchronization and upgrade
 the target machine.
 
-Before executing the final migration, install all packages that cover the same features of the source.
+**Before executing the final migration**, install all packages that cover the same features of the source.
 
 Example: ::
 
