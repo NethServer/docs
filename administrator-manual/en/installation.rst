@@ -300,11 +300,21 @@ comes already installed by the VPS provider.
 
     .. _installation-enterprise:
 
-    Simply type the following command: ::
+    1. Access Nethesis Operation Center and `create a new server <https://my.nethesis.it/#/servers?action=newServer>`_.
 
-        curl -sS https://go.nethesis.it/install/ns7.sh | bash
+    2. Copy the secret token and run the following command in a CentOS command shell, replacing ``<SECRET>`` with the copied token: ::
 
-    Installation log is saved inside ``/tmp/nethserver-enterprise-install/install.log`` file.
+          curl -sS https://go.nethesis.it/install/ns7.sh | bash -s - <SECRET>
+
+       For instance, after replacing ``<SECRET>`` the command might look like ::
+
+          curl -sS https://go.nethesis.it/install/ns7.sh | bash -s - a0aa000aa000a00aa000a00aa00a00a0aa000aa000000a0aaa000a00a00aa00a
+
+    The procedure takes a while to download system updates and |product|
+    packages, then it runs the system configuration.
+
+    The complete procedure log is written to
+    :file:`/root/nethserver-enterprise-install/install.log`.
 
 .. _installation-next-steps:
 
