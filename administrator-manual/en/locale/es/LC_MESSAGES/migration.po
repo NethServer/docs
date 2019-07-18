@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -282,10 +282,16 @@ msgstr ""
 #: ../../migration.rst:157
 msgid ""
 "In the destination host, install |product| |version| **using the most recent"
-" ISO** and all packages that cover the same features of the source."
+" ISO**, register it then apply **all the latest core updates available**."
 msgstr ""
 
 #: ../../migration.rst:160
+msgid ""
+"In the destination host, install all packages that cover the same features "
+"of the source."
+msgstr ""
+
+#: ../../migration.rst:162
 msgid ""
 "Explode the full backup archive into some directory; for instance, create "
 "the directory :file:`/var/lib/migration`."
@@ -293,59 +299,59 @@ msgstr ""
 "Descargar el archivo de copia de seguridad completo en algún directorio; Por"
 " ejemplo, cree el directorio :file:`/var/lib/migration`."
 
-#: ../../migration.rst:163
+#: ../../migration.rst:165
 msgid "In destination host, signal the event ``migration-import``::"
 msgstr "En el host de destino, señale el evento ``migration-import``::"
 
-#: ../../migration.rst:167
+#: ../../migration.rst:169
 msgid "This step will require some time."
 msgstr "Este paso requerirá algún tiempo."
 
-#: ../../migration.rst:169
+#: ../../migration.rst:171
 msgid "Check for any error message in :file:`/var/log/messages`::"
 msgstr ""
 "Compruebe si hay algún mensaje de error en :file:`/var/log/messages`::"
 
-#: ../../migration.rst:178
+#: ../../migration.rst:180
 msgid "Migration with rsync"
 msgstr ""
 
-#: ../../migration.rst:180
+#: ../../migration.rst:182
 msgid "The process is much faster than migrating from a backup."
 msgstr ""
 
-#: ../../migration.rst:182
+#: ../../migration.rst:184
 msgid "Before starting make sure to have:"
 msgstr ""
 
-#: ../../migration.rst:184
+#: ../../migration.rst:186
 msgid ""
 "a running NethService/SME installation, we will call it original server or "
 "source server"
 msgstr ""
 
-#: ../../migration.rst:185
+#: ../../migration.rst:187
 msgid ""
 "a running |product| 7 installation with **all the latest updates installed**"
 " and at least the same disk space of the source server, we will call it "
 "destination server"
 msgstr ""
 
-#: ../../migration.rst:187
+#: ../../migration.rst:189
 msgid "a working network connection between the two severs"
 msgstr ""
 
-#: ../../migration.rst:189
+#: ../../migration.rst:191
 msgid ""
 "Please also make sure the source server allows root login via SSH key and "
 "password."
 msgstr ""
 
-#: ../../migration.rst:192
+#: ../../migration.rst:194
 msgid "Sync files"
 msgstr ""
 
-#: ../../migration.rst:194
+#: ../../migration.rst:196
 msgid ""
 "The synchronization script copies all data using rsync over SSH. Files are "
 "saved inside :file:`/var/lib/migration` directory. If the destination server"
@@ -354,74 +360,74 @@ msgid ""
 "the backup data will not be synced."
 msgstr ""
 
-#: ../../migration.rst:199
+#: ../../migration.rst:201
 msgid "On the target machine, execute the following command: ::"
 msgstr ""
 
-#: ../../migration.rst:203
+#: ../../migration.rst:205
 msgid "Where"
 msgstr ""
 
-#: ../../migration.rst:205
+#: ../../migration.rst:207
 msgid "``source_server_name`` is the host name or IP of the original server"
 msgstr ""
 
-#: ../../migration.rst:206
+#: ../../migration.rst:208
 msgid "``ssh_port`` is the SSH port of the original server (default is 22)"
 msgstr ""
 
-#: ../../migration.rst:208 ../../migration.rst:224
+#: ../../migration.rst:210 ../../migration.rst:226
 msgid "Example: ::"
 msgstr ""
 
-#: ../../migration.rst:212
+#: ../../migration.rst:214
 msgid ""
 "When asked, insert the root password of the source server, make a coffee and"
 " wait patiently."
 msgstr ""
 
-#: ../../migration.rst:214
+#: ../../migration.rst:216
 msgid ""
 "The script will not perform any action on the source machine and can be "
 "invoked multiple times."
 msgstr ""
 
-#: ../../migration.rst:217
+#: ../../migration.rst:219
 msgid "Sync and migrate"
 msgstr ""
 
-#: ../../migration.rst:219
+#: ../../migration.rst:221
 msgid ""
 "If called with ``-m`` option, ``rsync-migrate`` will execute a final "
 "synchronization and upgrade the target machine."
 msgstr ""
 
-#: ../../migration.rst:222
+#: ../../migration.rst:224
 msgid ""
-"Before executing the final migration, install all packages that cover the "
-"same features of the source."
-msgstr ""
-
-#: ../../migration.rst:228
-msgid "The script will:"
+"**Before executing the final migration**, install all packages that cover "
+"the same features of the source."
 msgstr ""
 
 #: ../../migration.rst:230
-msgid "stop every service on the source machine (except for SSH)"
-msgstr ""
-
-#: ../../migration.rst:231
-msgid "execute the ``pre-backup`` event on the source machine"
+msgid "The script will:"
 msgstr ""
 
 #: ../../migration.rst:232
-msgid "sync all remaining data"
+msgid "stop every service on the source machine (except for SSH)"
 msgstr ""
 
 #: ../../migration.rst:233
+msgid "execute the ``pre-backup`` event on the source machine"
+msgstr ""
+
+#: ../../migration.rst:234
+msgid "sync all remaining data"
+msgstr ""
+
+#: ../../migration.rst:235
 msgid "execute the ``migration-import`` event on the destination machine"
 msgstr ""
 
-#: ../../migration.rst:236
+#: ../../migration.rst:238
 msgid "At the end, check for any error message in :file:`/var/log/messages`::"
 msgstr ""

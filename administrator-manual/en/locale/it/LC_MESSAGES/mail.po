@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -944,9 +944,9 @@ msgstr ""
 "dominio nella regola (es: nethserver.org)."
 
 #: ../../mail.rst:477
-msgid "Anti-virus checks are enforced despite *whitelist* settings."
+msgid "**Anti-virus checks are disabled** too, in case *whitelist* settings."
 msgstr ""
-"Il controllo antivirus è eseguito indipendentemente dalle impostazioni di "
+"**Anche il controllo antivirus viene disabilitato** dalle impostazioni di "
 "*whitelist*."
 
 #: ../../mail.rst:482

@@ -185,7 +185,7 @@ SOGo `must be tuned <https://sogo.nu/files/docs/SOGoInstallationGuide.html#_micr
 
 .. note:: 
 
-  Keep in mind to set one worker per user for the activesync connection.
+  Keep in mind to set one worker per active user for the activesync connection. The `SxVMemLimit <https://sogo.nu/files/docs/SOGoInstallationGuide.html#_general_preferences>`_ could be be adjusted also, between 25MB to 45 MB per active user with the activesync service.
 
 
 100 users, 10 EAS devices: ::
@@ -210,6 +210,11 @@ SOGo `must be tuned <https://sogo.nu/files/docs/SOGoInstallationGuide.html#_micr
   config setprop sogod SOGoMaximumPingInterval 3540
   config setprop sogod SOGoMaximumSyncInterval 3540
   config setprop sogod SOGoInternalSyncInterval 60
+  signal-event nethserver-sogo-update
+
+SxVMemLimit (default 512MB): ::
+
+  config setprop sogod SxVMemLimit 1024
   signal-event nethserver-sogo-update
 
 Increase sogod log verbosity

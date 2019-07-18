@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -568,20 +568,39 @@ msgstr ""
 "::"
 
 #: ../../installation.rst:303
-msgid "Simply type the following command: ::"
-msgstr ""
-
-#: ../../installation.rst:307
 msgid ""
-"Installation log is saved inside ``/tmp/nethserver-enterprise-"
-"install/install.log`` file."
+"Access Nethesis Operation Center and `create a new server "
+"<https://my.nethesis.it/#/servers?action=newServer>`_."
 msgstr ""
 
-#: ../../installation.rst:312
+#: ../../installation.rst:305
+msgid ""
+"Copy the secret token and run the following command in a CentOS command "
+"shell, replacing ``<SECRET>`` with the copied token: ::"
+msgstr ""
+
+#: ../../installation.rst:309
+msgid ""
+"For instance, after replacing ``<SECRET>`` the command might look like ::"
+msgstr ""
+
+#: ../../installation.rst:313
+msgid ""
+"The procedure takes a while to download system updates and |product| "
+"packages, then it runs the system configuration."
+msgstr ""
+
+#: ../../installation.rst:316
+msgid ""
+"The complete procedure log is written to :file:`/root/nethserver-enterprise-"
+"install/install.log`."
+msgstr ""
+
+#: ../../installation.rst:322
 msgid "Next steps"
 msgstr "Próximos pasos"
 
-#: ../../installation.rst:314
+#: ../../installation.rst:324
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"
