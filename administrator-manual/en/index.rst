@@ -79,6 +79,7 @@ Modules
    chat
    team_chat
    ups
+   report
    fax_server
    firewall
    web_proxy
