@@ -14,19 +14,19 @@
 # Francesco Pari, 2017
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
-# Davide Principi <davide.principi@nethesis.it>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Nicola <nicola.rauso@nethesis.it>, 2019
+# Davide Principi <davide.principi@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -584,22 +584,49 @@ msgstr ""
 "Esempio: ::"
 
 #: ../../installation.rst:303
-msgid "Simply type the following command: ::"
-msgstr "Eseguire semplicemente il seguente comando: ::"
-
-#: ../../installation.rst:307
 msgid ""
-"Installation log is saved inside ``/tmp/nethserver-enterprise-"
-"install/install.log`` file."
+"Access Nethesis Operation Center and `create a new server "
+"<https://my.nethesis.it/#/servers?action=newServer>`_."
 msgstr ""
-"I log dell'installazione sono disponibili nel file ``/tmp/nethserver-"
-"enterprise-install/install.log``."
+"Accedere al Nethesis Operation Center e `creare un nuovo server "
+"<https://my.nethesis.it/#/servers?action=newServer>`_."
 
-#: ../../installation.rst:312
+#: ../../installation.rst:305
+msgid ""
+"Copy the secret token and run the following command in a CentOS command "
+"shell, replacing ``<SECRET>`` with the copied token: ::"
+msgstr ""
+"Copiare il *token* segreto ed eseguire il seguente comando in una shell di "
+"CentOS, sostituendo ``<SECRET>`` con il token copiato: ::"
+
+#: ../../installation.rst:309
+msgid ""
+"For instance, after replacing ``<SECRET>`` the command might look like ::"
+msgstr ""
+"Per esempio, dopo aver sostituito ``<SECRET>`` il comando potrebbe apparire "
+"come ::"
+
+#: ../../installation.rst:313
+msgid ""
+"The procedure takes a while to download system updates and |product| "
+"packages, then it runs the system configuration."
+msgstr ""
+"La procedura impiega un po' a scaricare gli aggiornamenti di sistema e i "
+"pacchetti di |product|, quindi esegue la configurazione del sistema."
+
+#: ../../installation.rst:316
+msgid ""
+"The complete procedure log is written to :file:`/root/nethserver-enterprise-"
+"install/install.log`."
+msgstr ""
+"Il log completo della procedura è scritto su :file:`/root/nethserver-"
+"enterprise-install/install.log`."
+
+#: ../../installation.rst:322
 msgid "Next steps"
 msgstr "Passi successivi"
 
-#: ../../installation.rst:314
+#: ../../installation.rst:324
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"
