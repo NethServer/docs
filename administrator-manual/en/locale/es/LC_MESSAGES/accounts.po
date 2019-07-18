@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-04 10:23+0200\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -1108,15 +1108,15 @@ msgstr ""
 "Es posible crear cuentas de usuario desde un archivo TSV (Tab Separated "
 "Values, valores separados por tabulación) con el siguiente formato: ::"
 
-#: ../../accounts.rst:544 ../../accounts.rst:587
+#: ../../accounts.rst:544 ../../accounts.rst:577 ../../accounts.rst:605
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../accounts.rst:548 ../../accounts.rst:591
+#: ../../accounts.rst:548 ../../accounts.rst:582 ../../accounts.rst:609
 msgid "then execute: ::"
 msgstr "Luego ejecutar: ::"
 
-#: ../../accounts.rst:552 ../../accounts.rst:598
+#: ../../accounts.rst:552 ../../accounts.rst:616
 msgid ""
 "For example, if the user’s file is /root/users.tsv, execute following "
 "command: ::"
@@ -1124,7 +1124,7 @@ msgstr ""
 "Por ejemplo, si el archivo del usuario es /root/users.tsv, ejecute el "
 "siguiente comando: ::"
 
-#: ../../accounts.rst:556 ../../accounts.rst:602
+#: ../../accounts.rst:556 ../../accounts.rst:620
 msgid "Alternative separator character: ::"
 msgstr "Carácter de separador alternativo: ::"
 
@@ -1154,22 +1154,32 @@ msgstr ""
 
 #: ../../accounts.rst:572
 msgid ""
-"Group management is available from the command line through ``group-create``"
-" and ``group-modify`` events ::"
+"It is possible to create groups from a TSV (Tab Separated Values) file with "
+"the following format: ::"
 msgstr ""
-"La gestión de grupos está disponible desde la línea de comandos a través de "
-"los eventos ``group-create`` y ``group-modify`` ::"
 
-#: ../../accounts.rst:578
+#: ../../accounts.rst:586
+msgid ""
+"For example, if the group file is ``/root/groups.tsv``, execute following "
+"command: ::"
+msgstr ""
+
+#: ../../accounts.rst:590
+msgid ""
+"Group management is also available from the command line through ``group-"
+"create`` and ``group-modify`` events ::"
+msgstr ""
+
+#: ../../accounts.rst:596
 msgid "Delete users"
 msgstr ""
 
-#: ../../accounts.rst:580
+#: ../../accounts.rst:598
 msgid ""
 "It is possible to delete user accounts from a file with the following "
 "format: ::"
 msgstr ""
 
-#: ../../accounts.rst:596
+#: ../../accounts.rst:614
 msgid "You can also use the same import users file to delete the users."
 msgstr ""

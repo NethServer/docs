@@ -15,17 +15,17 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Davide Principi <davide.principi@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-04 10:23+0200\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1219,21 +1219,21 @@ msgstr ""
 "È possibile creare utenti a partire da un file TSV (Tab Separated Values) "
 "con il seguente formato:"
 
-#: ../../accounts.rst:544 ../../accounts.rst:587
+#: ../../accounts.rst:544 ../../accounts.rst:577 ../../accounts.rst:605
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../accounts.rst:548 ../../accounts.rst:591
+#: ../../accounts.rst:548 ../../accounts.rst:582 ../../accounts.rst:609
 msgid "then execute: ::"
 msgstr "quindi eseguire: ::"
 
-#: ../../accounts.rst:552 ../../accounts.rst:598
+#: ../../accounts.rst:552 ../../accounts.rst:616
 msgid ""
 "For example, if the user’s file is /root/users.tsv, execute following "
 "command: ::"
 msgstr "Per esempio, se il file è /root/users.tsv, eseguire: ::"
 
-#: ../../accounts.rst:556 ../../accounts.rst:602
+#: ../../accounts.rst:556 ../../accounts.rst:620
 msgid "Alternative separator character: ::"
 msgstr "Per utilizzare un carattere separatore alternativo: ::"
 
@@ -1263,17 +1263,33 @@ msgstr "Importazione gruppi"
 
 #: ../../accounts.rst:572
 msgid ""
-"Group management is available from the command line through ``group-create``"
-" and ``group-modify`` events ::"
+"It is possible to create groups from a TSV (Tab Separated Values) file with "
+"the following format: ::"
 msgstr ""
-"La gestione dei gruppi è disponibile da linea di comando usando gli eventi "
-"group-create e group-modify ::"
+"È possibile creare gruppi a partire da un file TSV (Tab Separated Values) "
+"con il seguente formato: ::"
 
-#: ../../accounts.rst:578
+#: ../../accounts.rst:586
+msgid ""
+"For example, if the group file is ``/root/groups.tsv``, execute following "
+"command: ::"
+msgstr ""
+"Per esempio, se il file è ``/root/groups.tsv``, eseguire il seguente "
+"comando: ::"
+
+#: ../../accounts.rst:590
+msgid ""
+"Group management is also available from the command line through ``group-"
+"create`` and ``group-modify`` events ::"
+msgstr ""
+"La gestione dei gruppi è disponibile anche da linea di comando per mezzo "
+"degli eventi group-create e group-modify ::"
+
+#: ../../accounts.rst:596
 msgid "Delete users"
 msgstr "Eliminazione utenti"
 
-#: ../../accounts.rst:580
+#: ../../accounts.rst:598
 msgid ""
 "It is possible to delete user accounts from a file with the following "
 "format: ::"
@@ -1281,7 +1297,7 @@ msgstr ""
 "È possibile eliminare gli account utente a partire da un file con il "
 "seguente formato: ::"
 
-#: ../../accounts.rst:596
+#: ../../accounts.rst:614
 msgid "You can also use the same import users file to delete the users."
 msgstr ""
 "È inoltre possibile utilizzare lo stesso file utilizzato per l'importazione "

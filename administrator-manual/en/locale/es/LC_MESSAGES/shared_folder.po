@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-07-17 16:50+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -319,4 +319,28 @@ msgid ""
 "control on home directories to Domain Admins group (home$ share)` checkbox. "
 "To access home directories connect to the hidden share ``home$``. For "
 "instance, the SMB network address is: ::"
+msgstr ""
+
+#: ../../shared_folder.rst:205
+msgid "Auditing"
+msgstr ""
+
+#: ../../shared_folder.rst:207
+msgid ""
+"Samba audit is a module that keeps track of all users activities on shared "
+"folders. Auditing is disabled by default and must be explicitly enabled for "
+"each folder."
+msgstr ""
+
+#: ../../shared_folder.rst:210
+msgid ""
+"Actions are logged to a file during the the day and are moved to a "
+"browseable database overnight."
+msgstr ""
+
+#: ../../shared_folder.rst:212
+msgid ""
+"The report web interface is available from the old Server Manager from the "
+":guilabel:`Applications` page, while the new Server Manager (Cockpit) "
+"integrates a new interface inside the :guilabel:`File server` application."
 msgstr ""
