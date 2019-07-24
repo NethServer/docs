@@ -461,23 +461,52 @@ Other restored configurations:
 
 Steps to be executed:
 
-1. Install the new machine. If possible, enable a network connection at
-   boot (refer to :ref:`installation-manual` section) to automatically re-install
-   the required modules
+.. only:: nscom
 
-2. Access the Server Manager and follow the :ref:`first-configuration-wizard-section` procedure
+  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
+     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>` 
+     procedure to complete the basic server configuration
 
-3. At step :guilabel:`Restore configuration`, upload the configuration archive.
-   The option :guilabel:`Download modules automatically` should be enabled.
+  2. Ensure that |product| is able to access the internet and resolve public names correctly
 
-4. If a warning message requires it, reconfigure the network roles assignment.
-   See :ref:`restore-roles-section` below.
+  3. Install all the available core updates in the :ref:`Software Center <software-updates-section>`
 
-5. Verify the system is functional
+  4. Restore the configuration backup using the :guilabel:`Backup (configuration)` panel
 
-6. Restore data backup executing on the console ::
+  5. If a warning message requires it, reconfigure the network roles assignment.
+     See :ref:`restore-roles-section` below.
 
-    restore-data -b <name>
+  6. Verify the system is functional
+
+  7. Restore data backup executing on the console ::
+
+      restore-data -b <name>
+
+
+.. only:: nsent
+
+  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
+     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>` 
+     procedure to complete the basic server configuration
+
+  2. Ensure that |product| is able to access the internet and resolve public names correctly
+
+  3. Activate |product| following the :ref:`registration <registration-section>` procedure
+
+  4. Install all the available core updates in the :ref:`Software Center <software-updates-section>`
+
+  5. Restore the configuration backup using the :guilabel:`Backup (configuration)` panel which allows
+     to use cloud backups or local archives
+
+  6. If a warning message requires it, reconfigure the network roles assignment.
+     See :ref:`restore-roles-section` below.
+
+  7. Verify the system is functional
+
+  8. Restore data backup executing on the console ::
+
+      restore-data -b <name>
+
 
 Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
 
