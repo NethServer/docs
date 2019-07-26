@@ -302,13 +302,11 @@ comes already installed by the VPS provider.
 
     1. Access Nethesis Operation Center and `create a new server <https://my.nethesis.it/#/servers?action=newServer>`_.
 
-    2. Copy the secret token and run the following command in a CentOS command shell, replacing ``<SECRET>`` with the copied token: ::
+    2. **Copy** the secret token and run the following command in a CentOS command shell: ::
 
-          curl -sS https://go.nethesis.it/install/ns7.sh | bash -s - <SECRET>
+          bash <(curl -sS https://go.nethesis.it/install/ns7.sh)
 
-       For instance, after replacing ``<SECRET>`` the command might look like ::
-
-          curl -sS https://go.nethesis.it/install/ns7.sh | bash -s - a0aa000aa000a00aa000a00aa00a00a0aa000aa000000a0aaa000a00a00aa00a
+    3. The command prints ``SECRET>`` and waits for input. **Paste** the secret token and press :kbd:`ENTER`.
 
     The procedure takes a while to download system updates and |product|
     packages, then it runs the system configuration.
