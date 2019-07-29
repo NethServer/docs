@@ -1,0 +1,162 @@
+# #-#-#-#-#  report.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  report.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-26 10:15+0200\n"
+"PO-Revision-Date: 2019-07-26 08:16+0000\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../report.rst:5
+msgid "Report"
+msgstr ""
+
+#: ../../report.rst:7
+msgid ""
+"This module manages the configuration of `Dante "
+"<https://github.com/nethesis/dante/>`_."
+msgstr ""
+
+#: ../../report.rst:10
+msgid ""
+"Dante collects data from logs, databases and services, aggregates and "
+"displays them on a report structured as a customizable dashboard. The report"
+" can be sent via e-mail, with configurable scheduling and recipients."
+msgstr ""
+
+#: ../../report.rst:14
+msgid "Dashboard"
+msgstr ""
+
+#: ../../report.rst:16
+msgid ""
+"The *Dashboard* page is composed by a set of widgets, each showing a piece "
+"of information on the system. The user can customize the layout of the "
+"dashboard by adding, removing, resizing and drag & dropping widgets."
+msgstr ""
+
+#: ../../report.rst:19
+msgid "The types of widgets currently supported are:"
+msgstr ""
+
+#: ../../report.rst:21
+msgid "**Chart**: pie, bar, line or area charts"
+msgstr ""
+
+#: ../../report.rst:22
+msgid ""
+"**Counter**: a card that displays an aggregated numerical value and a trend "
+"on a time interval"
+msgstr ""
+
+#: ../../report.rst:23
+msgid "**Table**: a table with optional row and column headers"
+msgstr ""
+
+#: ../../report.rst:24
+msgid "**Ranking**: a list of the top N items, ordered by their value"
+msgstr ""
+
+#: ../../report.rst:25
+msgid "**Label**: a text showing a piece of information"
+msgstr ""
+
+#: ../../report.rst:26
+msgid ""
+"**Title**: a simple text typed by the user to organize the layout of the "
+"dashboard"
+msgstr ""
+
+#: ../../report.rst:29
+msgid "Settings"
+msgstr ""
+
+#: ../../report.rst:31
+msgid "The *Settings* page manages the configuration of the module."
+msgstr ""
+
+#: ../../report.rst:34
+msgid "Host configuration"
+msgstr ""
+
+#: ../../report.rst:36
+msgid ""
+"**Public host**: this is the hostname where the report is hosted. It must be"
+" a name that can be resolved from the internet"
+msgstr ""
+
+#: ../../report.rst:37
+msgid ""
+"**Final url**: this field displays the public URL where the report is hosted"
+msgstr ""
+
+#: ../../report.rst:40
+msgid "Report configuration"
+msgstr ""
+
+#: ../../report.rst:42
+msgid ""
+"**Theme**: the themes available for the dashboard are *light* and *dark*"
+msgstr ""
+
+#: ../../report.rst:43
+msgid "**Palette**: there are 9 color palettes to choose from"
+msgstr ""
+
+#: ../../report.rst:44
+msgid ""
+"**Interval**: time interval on which the data are aggregated. It can be "
+"*Week*, *Month* or *Six-months*"
+msgstr ""
+
+#: ../../report.rst:45
+msgid "**Language**: language used to display the report"
+msgstr ""
+
+#: ../../report.rst:46
+msgid ""
+"**Anonymization**: boolean flag that controls the anonymization of sensible "
+"data in the report"
+msgstr ""
+
+#: ../../report.rst:47
+msgid "**Max Entries**: maximum number of items to display on ranking widgets"
+msgstr ""
+
+#: ../../report.rst:48
+msgid ""
+"**Addresses**: configuration of report e-mail recipients and scheduling of "
+"e-mail dispatch"
+msgstr ""
+
+#: ../../report.rst:51
+msgid "Test mail"
+msgstr ""
+
+#: ../../report.rst:53
+msgid "**Address**: e-mail recipient of the test e-mail containing the report"
+msgstr ""
+
+#: ../../report.rst:54
+msgid ""
+"**Include configured addresses**: boolean flag to control whether the test "
+"e-mail should be sent to the addresses configured in *Report configuration* "
+"in addition to *Address*"
+msgstr ""
