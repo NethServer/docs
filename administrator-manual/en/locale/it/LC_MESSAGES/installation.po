@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-17 16:50+0200\n"
+"POT-Creation-Date: 2019-07-26 18:37+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -593,20 +593,21 @@ msgstr ""
 
 #: ../../installation.rst:305
 msgid ""
-"Copy the secret token and run the following command in a CentOS command "
-"shell, replacing ``<SECRET>`` with the copied token: ::"
+"**Copy** the secret token and run the following command in a CentOS command "
+"shell: ::"
 msgstr ""
-"Copiare il *token* segreto ed eseguire il seguente comando in una shell di "
-"CentOS, sostituendo ``<SECRET>`` con il token copiato: ::"
+"**Copiare** il token segreto ed eseguire il comando seguente in una shell "
+"dei comandi di CentOS: ::"
 
 #: ../../installation.rst:309
 msgid ""
-"For instance, after replacing ``<SECRET>`` the command might look like ::"
+"The command prints ``SECRET>`` and waits for input. **Paste** the secret "
+"token and press :kbd:`ENTER`."
 msgstr ""
-"Per esempio, dopo aver sostituito ``<SECRET>`` il comando potrebbe apparire "
-"come ::"
+"Il comando stampa ``SECRET>`` e aspetta l'input. **Incollare** il token "
+"segreto e premere :kbd:`ENTER`."
 
-#: ../../installation.rst:313
+#: ../../installation.rst:311
 msgid ""
 "The procedure takes a while to download system updates and |product| "
 "packages, then it runs the system configuration."
@@ -614,7 +615,7 @@ msgstr ""
 "La procedura impiega un po' a scaricare gli aggiornamenti di sistema e i "
 "pacchetti di |product|, quindi esegue la configurazione del sistema."
 
-#: ../../installation.rst:316
+#: ../../installation.rst:314
 msgid ""
 "The complete procedure log is written to :file:`/root/nethserver-enterprise-"
 "install/install.log`."
@@ -622,11 +623,11 @@ msgstr ""
 "Il log completo della procedura è scritto su :file:`/root/nethserver-"
 "enterprise-install/install.log`."
 
-#: ../../installation.rst:322
+#: ../../installation.rst:320
 msgid "Next steps"
 msgstr "Passi successivi"
 
-#: ../../installation.rst:324
+#: ../../installation.rst:322
 msgid ""
 "At the end of the installation procedure, :ref:`access the server-manager "
 "<access-section>` to :ref:`install additional software <package_manager-"
