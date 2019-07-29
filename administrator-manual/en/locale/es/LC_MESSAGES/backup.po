@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-07-26 10:15+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -864,26 +864,33 @@ msgstr ""
 msgid "Steps to be executed:"
 msgstr "Pasos a ejecutar:"
 
-#: ../../backup.rst:464
+#: ../../backup.rst:466 ../../backup.rst:488
 msgid ""
-"Install the new machine. If possible, enable a network connection at boot "
-"(refer to :ref:`installation-manual` section) to automatically re-install "
-"the required modules"
+"Install the new machine (refer to :ref:`installation <installation-manual>` "
+"section), access the Server Manager and follow the :ref:`first configuration"
+" wizard <first-configuration-wizard-section>` procedure to complete the "
+"basic server configuration"
 msgstr ""
 
-#: ../../backup.rst:468
+#: ../../backup.rst:470 ../../backup.rst:492
 msgid ""
-"Access the Server Manager and follow the :ref:`first-configuration-wizard-"
-"section` procedure"
+"Ensure that |product| is able to access the internet and resolve public "
+"names correctly"
 msgstr ""
 
-#: ../../backup.rst:470
+#: ../../backup.rst:472 ../../backup.rst:496
 msgid ""
-"At step :guilabel:`Restore configuration`, upload the configuration archive."
-" The option :guilabel:`Download modules automatically` should be enabled."
+"Install all the available core updates in the :ref:`Software Center "
+"<software-updates-section>`"
 msgstr ""
 
-#: ../../backup.rst:473
+#: ../../backup.rst:474
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel"
+msgstr ""
+
+#: ../../backup.rst:476 ../../backup.rst:501
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
@@ -891,29 +898,41 @@ msgstr ""
 "Si un mensaje de advertencia lo requiere, reconfigure la asignación de roles"
 " de red. Ver :ref:`restore-roles-section` a continuación. "
 
-#: ../../backup.rst:476
+#: ../../backup.rst:479 ../../backup.rst:504
 msgid "Verify the system is functional"
 msgstr "Verificar que el sistema es funcional"
 
-#: ../../backup.rst:478
+#: ../../backup.rst:481 ../../backup.rst:506
 msgid "Restore data backup executing on the console ::"
 msgstr ""
 
-#: ../../backup.rst:482
+#: ../../backup.rst:494
+msgid ""
+"Activate |product| following the :ref:`registration <registration-section>` "
+"procedure"
+msgstr ""
+
+#: ../../backup.rst:498
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel which allows to use cloud backups or local archives"
+msgstr ""
+
+#: ../../backup.rst:511
 msgid ""
 "Please note that the disaster recovery should be always performed from a "
 "local media (eg. NFS or USB) to speed up the process."
 msgstr ""
 
-#: ../../backup.rst:484
+#: ../../backup.rst:513
 msgid "The root/admin password is not restored."
 msgstr "La contraseña de root/admin no se ha restaurado."
 
-#: ../../backup.rst:489
+#: ../../backup.rst:518
 msgid "Restore network roles"
 msgstr "Restaurar funciones de red"
 
-#: ../../backup.rst:491
+#: ../../backup.rst:520
 msgid ""
 "If a role configuration points to a missing network interface, the "
 ":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
@@ -925,21 +944,21 @@ msgstr ""
 "Restaurar` y :guilabel:`Red` muestran una advertencia. Esto podría suceder "
 "en los siguientes casos:"
 
-#: ../../backup.rst:496
+#: ../../backup.rst:525
 msgid "configuration backup has been restored on a new hardware"
 msgstr ""
 "La copia de seguridad de la configuración se ha restaurado en un nuevo "
 "hardware"
 
-#: ../../backup.rst:497
+#: ../../backup.rst:526
 msgid "one or more network cards have been substituted"
 msgstr "Una o más tarjetas de red han sido sustituidas"
 
-#: ../../backup.rst:498
+#: ../../backup.rst:527
 msgid "system disks are moved to a new machine"
 msgstr "Los discos del sistema se mueven a una nueva máquina"
 
-#: ../../backup.rst:500
+#: ../../backup.rst:529
 msgid ""
 "The warning points to a page that lists the network cards present in the "
 "system, highlighting those not having an assigned :ref:`role <network-"
@@ -951,7 +970,7 @@ msgstr ""
 ":ref:`rol <network-section>`.  A estas últimas, se les puede restaurar el "
 "rol desde el menú desplegable."
 
-#: ../../backup.rst:505
+#: ../../backup.rst:534
 msgid ""
 "For instance, if a card with the *orange* role has been replaced, the drop "
 "down menu will list an element ``orange``, near the new network card."
@@ -960,7 +979,7 @@ msgstr ""
 "el menú desplegable aparecerá listado un elemento \"naranja\" cerca de la "
 "placa de red."
 
-#: ../../backup.rst:509
+#: ../../backup.rst:538
 msgid ""
 "The same applies if the old card was a component of a logical interface, "
 "such as a bridge or bond."
@@ -968,7 +987,7 @@ msgstr ""
 "Lo mismo se aplica si la tarjeta antigua era un componente de una interfaz "
 "lógica, como un puente o enlace."
 
-#: ../../backup.rst:512
+#: ../../backup.rst:541
 msgid ""
 "By picking an element from the drop down menu, the old role is transferred "
 "to the new physical interface."
@@ -976,11 +995,11 @@ msgstr ""
 "Escogiendo un elemento del menú desplegable, el rol antiguo se transfiere a "
 "la nueva interfaz física."
 
-#: ../../backup.rst:515
+#: ../../backup.rst:544
 msgid "Click the :guilabel:`Submit` button to apply the changes."
 msgstr "Haga clic en el botón :guilabel:`Submit` para aplicar los cambios."
 
-#: ../../backup.rst:517
+#: ../../backup.rst:546
 msgid ""
 "Choose carefully the new interfaces assignment: doing a mistake here could "
 "lead to a system isolated from the network!"
@@ -988,7 +1007,7 @@ msgstr ""
 "Elija cuidadosamente la nueva asignación de interfaces: ¡cometer un error "
 "aquí podría conducir a tener un sistema aislado de la red!"
 
-#: ../../backup.rst:520
+#: ../../backup.rst:549
 msgid ""
 "If the missing role is ``green`` an automatic procedure attempts to fix the "
 "configuration at boot-time, to ensure a minimal network connectivity and "
