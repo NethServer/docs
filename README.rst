@@ -214,7 +214,7 @@ On Fedora 24 or later use: ::
 
 Then, install all required modules: ::
 
-  sudo pip install -f ./administrator-manual/en/nsent/requirements.txt
+  sudo pip install -r ./administrator-manual/en/nsent/requirements.txt
 
 
 First clone the repository, enter language directory and type ::
