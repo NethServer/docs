@@ -71,7 +71,7 @@ Go to :guilabel:`Settings` then click on guilabel:`Change password`.
 
 If you want to reset the admin password from command line, use the following commands: ::
 
-  curl -s https://git.io/fjhn8 -o webtop-set-admin-password
+  curl -sL https://git.io/fjhn8 -o webtop-set-admin-password
   bash webtop-set-admin-password <newpassword>
 
 Remember to replace ``<newpassword>`` with your actual new password, example: ::
