@@ -64,6 +64,13 @@ Configuration
    dhcp
    tlspolicy
 
+.. only:: nsent
+
+.. toctree::
+    :maxdepth: 1
+
+    launcher
+
 Modules
 -------
 
