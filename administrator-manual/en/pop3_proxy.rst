@@ -7,6 +7,12 @@ POP3 proxy
 
 .. note::
 
+  The configuration page of this module is available only in the old Server Manager
+  and will not be ported to the new one.
+
+
+.. note::
+
     Since |product| 7.5.1804 new :ref:`email-section`,
     :ref:`pop3_connector-section` and :ref:`pop3_proxy-section` installations
     are based on the Rspamd filter engine. Previous |product| installations are

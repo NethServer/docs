@@ -2,6 +2,12 @@
 SNMP
 ====
 
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager
+  and will not be ported to the new one.
+
+ntopng
 The SNMP (Simple Network Management Protocol) protocol allows to manage and monitor devices connected to the network.
 The :index:`SNMP` server can reply to specific queries about current system status.
 

@@ -2,6 +2,10 @@
 Phonebook
 =========
 
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager.
+
 The |product| phonebook allows to collect contacts from multiple sources. After collecting the data, 
 the contacts will be accessible in read-only mode from many clients.
 

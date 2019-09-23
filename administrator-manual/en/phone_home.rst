@@ -3,6 +3,12 @@
 ==========
 Phone Home
 ==========
+
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager
+  and will not be ported to new one.
+
 During the first configuration wizard, you can opt-out from contributing to usage statistics.
 Phone home is used to track all NethServer's installations around the world. Each time a new NethServer is installed, this tool sends some installation details to a central server. The information is stored in a database and used to display nice markers in a Google Map view with number of installation grouped by country and release.
 

@@ -2,6 +2,10 @@
 FreePBX
 =======
 
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager.
+
 :index:`FreePBX` is a web-based open source GUI (graphical user interface)
 that controls and manages :index:`Asterisk` (PBX), an open source communication server
 (https://www.freepbx.org/).
