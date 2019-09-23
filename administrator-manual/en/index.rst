@@ -109,7 +109,6 @@ Modules
    hotspot
    dedalo
    freepbx
-   hotsync
    virtual_machines
    fail2ban
    rspamd
