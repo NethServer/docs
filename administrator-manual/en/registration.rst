@@ -12,7 +12,7 @@ Registration
 which is accessible at |register_link|.
 First, each |product| must be registered to access software repositories, support services and enable monitoring tools:
 
-1. Open :guilabel:`Registration` page from the Server Manager (``https://<server_name>:980``)
+1. Open :guilabel:`Registration` page from the old Server Manager (``https://<server_name>:980``) or from the new one (``https://<server_name>:9090``)
 2. Login to |register_link|
 3. Click on :guilabel:`Create new server` from the Server Manager,
    or access the :guilabel:`Server` page inside |register_link|, click the :guilabel:`+` symbol under the :guilabel:`New server` section

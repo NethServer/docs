@@ -29,7 +29,7 @@ custom repositories.
 Registering the system
 ======================
 
-1. Access :guilabel:`Subscription` page from the Server Manager
+1. Access :guilabel:`Subscription` page from the old or new Server Manager
 2. Click on :guilabel:`Subscribe`
 3. Login or register to https://my.nethserver.com to obtain a registration code
 4. Copy and paste the code inside the :guilabel:`Registration token` field
