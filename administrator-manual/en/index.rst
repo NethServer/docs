@@ -112,6 +112,7 @@ Modules
    virtual_machines
    fail2ban
    rspamd
+   antivirus
 
 .. toctree::
    :hidden:
