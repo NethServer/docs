@@ -9,9 +9,11 @@ Shared folders
 A *shared folder* is a place where files can be accessed by a group of
 people using Samba (SMB/CIFS).
 
+Shared folder are part of the File server application in the new Server Manager.
+The application dashboard now integrates the Samba status module, which displays shared folder usage in real time.
+
 To create, edit and delete a shared folder go to the :guilabel:`Shared folders`
 page.
-
 
 .. _shared_folders_requirements-section:
 
@@ -203,6 +205,8 @@ members of the ``Domain Admins`` group:
 
 Auditing
 ========
+
+.. note:: The audit module has been integrated inside the File server application of the new Server Manager.
 
 Samba audit is a module that keeps track of all users activities on shared folders.
 Auditing is disabled by default and must be explicitly enabled for each folder.
