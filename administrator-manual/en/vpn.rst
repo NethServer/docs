@@ -1,3 +1,5 @@
+.. _vpn-section:
+
 ===
 VPN
 ===
@@ -11,6 +13,7 @@ The system supports two types of VPNs:
 
 2. :index:`net2net` or :index:`tunnel`: connect two remote networks
 
+Roadwarrior OpenVPN, IPSec tunnel and OpenVPN tunnels are now part of the VPN application in the new Server Manager.
 
 OpenVPN
 =======
@@ -22,6 +25,7 @@ It brings with numerous advantages including:
 * Multiple NAT traversal, you do not need a dedicated static IP on the firewall
 * High stability
 * Simple configuration
+
 
 Roadwarrior
 -----------
@@ -46,8 +50,22 @@ To allow a client to establish a VPN:
    authentication with user name and password.
 
 2. Download the file containing the configuration and certificates.
+   As an alternative, the file can be sent to the user by mail (available only on the new Server Manager).
 
 3. Import the file into the client and start the VPN.
+
+Accounting
+~~~~~~~~~~
+
+Every time a client connects to the OpenVPN server, the access is logged inside an accounting database.
+Access statistics are available from the new Server Manager. For each user, statistics include:
+
+- client name
+- virtual IP address
+- real IP address
+- time of connection
+- time of disconnection
+- transferred bytes
 
 
 Tunnel (net2net)
@@ -140,7 +158,7 @@ Steps to be performed on the slave:
 IPsec
 =====
 
-:index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN tunnels, it's tipically used to create net to net tunnels and it's supported from all manufacturers.
+:index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN tunnels, it's typically used to create net to net tunnels and it's supported from all manufacturers.
 You can use this protocol to create VPN tunnels between a |product| and a device from another manufacturer as well as VPN tunnels between 2 |product|.
 
 .. note::
