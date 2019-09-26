@@ -41,6 +41,11 @@ Major changes on 2019-10-XX
   Server Manager module from the Software Center page.  See also
   :ref:`access-section`.
 
+* The :guilabel:`Software updates origin` (locked/unlocked) feature was removed
+  from the "Software Center" page. |product| can be upgraded manually
+  from the Software Center page when the next "point release" is released. See
+  also :ref:`software-center-section`.
+
 * Delta RPM files have been removed by the upstream distro and are no longer
   available from YUM repositories
 
