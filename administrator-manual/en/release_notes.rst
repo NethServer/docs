@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,12 +24,32 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
+
+Major changes on 2019-10-XX
+---------------------------
+
+* ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
+
+* The new Server Manager implementation based on Cockpit reached Beta stage and
+  is available by default on new installations. Existing systems can add the new
+  Server Manager module from the Software Center page.  See also
+  :ref:`access-section`.
+
+* Delta RPM files have been removed by the upstream distro and are no longer
+  available from YUM repositories
+
+* OpenSSH configuration was removed from TLS policy settings and reverted to
+  upstream defaults.
+
+* The `Junk` public mailbox is created during the Mail module installation,
+  granting IMAP access to the root user; further permissions can be added from the
+  new Server Manager Email application or with an IMAP/ACL client, like Roundcube.
 
 Major changes on 2018-12-17
 ---------------------------
