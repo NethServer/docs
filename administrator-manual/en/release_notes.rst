@@ -39,7 +39,7 @@ Major changes on 2019-10-XX
 * The new Server Manager implementation based on Cockpit reached Beta stage and
   is available by default on new installations. Existing systems can add the new
   Server Manager module from the Software Center page.  See also
-  :ref:`access-section`.
+  :ref:`access2-section`.
 
 * The :guilabel:`Software updates origin` (locked/unlocked) feature was removed
   from the "Software Center" page. |product| can be upgraded manually
