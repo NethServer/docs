@@ -52,6 +52,10 @@ Major changes on 2019-10-XX
 * OpenSSH configuration was removed from TLS policy settings and reverted to
   upstream defaults.
 
+* Starting with the new Server Manager based on Cockpit, the Mail module
+  feature :guilabel:`Shared mailboxes` has been renamed to :guilabel:`Public
+  mailboxes`.
+
 * The `Junk` public mailbox is created during the Mail module installation,
   granting IMAP access to the root user; further permissions can be added from the
   new Server Manager Email application or with an IMAP/ACL client, like Roundcube.
