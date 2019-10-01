@@ -343,7 +343,7 @@ account. The safest approach is:
 - (optionally) change the user's password with a random one
 
 
-.. note:: When a user is deleted, the home directory and its own personal mail box will be also deleted.
+.. note:: When a user is deleted, the home directory and personal mail box will be also deleted.
 
 .. index:: password
 
@@ -428,7 +428,10 @@ If a **local AD or LDAP provider** is installed, an *admin* user, member of the
 access to all configuration pages within the Server Manager.  It is initially
 *disabled* and has no access from the console.
 
-.. tip:: To enable the *admin* account set its password.
+.. tip::
+
+    To enable the *admin* account set a password.
+    Also remember to enable the shell if the admin user must access the new Server Manager.
 
 Where applicable, the *admin* account is granted special privileges on some
 specific services, such as joining a workstation to an Active Directory domain.
