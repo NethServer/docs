@@ -46,7 +46,7 @@ Local providers
 Choosing the right account provider
 -----------------------------------
 
-Beside choosing to bind a remote provider or install a local one, the
+Besides choosing to bind a remote provider or install a local one, the
 administrator has to decide which backend type suits his needs.
 
 The *File server* module of |product|, which enables the :guilabel:`Shared
