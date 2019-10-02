@@ -201,6 +201,14 @@ option blocks the possibility of an address to receive email from the
 outside.  Still the "local network only" address can be used to
 exchange messages with other accounts of the system.
 
+Differences in the new Server Manager
+-------------------------------------
+
+Please note that "Shared mailboxes" has been renamed to "Public mailboxes".
+Also, if enabled from the :guilabel:`Mailboxes` page, the mail server can automatically
+create aliases of existing groups. A mail sent to the group alias will be
+copied and delivered to each member of the group.
+
 .. _email_mailboxes:
 
 Mailbox configuration
@@ -657,12 +665,7 @@ HELO domains that are not registered on a public DNS.
 
 When talking to another mail server, |product| uses its full host name
 (FQDN) as the value for the HELO command.  If the FQDN is not
-registered in public DNS, the HELO can be fixed by setting a special
-*prop*.  For instance, assuming ``myhelo.example.com`` is the publicly
-registered DNS record, type the following commands: ::
-
-  config setprop postfix HeloHost myhelo.example.com
-  signal-event nethserver-mail-common-save
+registered in the public DNS, the HELO can be changed from the new Server Manager.
 
 This configuration is also valuable if the mail server is using a free
 dynamic DNS service.
@@ -674,10 +677,8 @@ Outlook deleted mail
 
 Unlike almost any IMAP client, Outlook does not move deleted messages to the trash folder, but simply marks them as "deleted".
 
-It's possibile to automatically move messages inside the trash folder using the following commands: ::
-
- config setprop dovecot DeletedToTrash enabled
- signal-event nethserver-mail-server-save
+It is possibile to automatically move messages inside the trash folder.
+The option is available in the new Server Manager under the :guilabel:`Mailboxes` page.
 
 You should also change Outlook configuration to hide deleted messages from inbox folder.
 This configuration is available in the options menu.

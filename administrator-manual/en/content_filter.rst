@@ -1,9 +1,13 @@
+.. _web_content_filter-section:
+
 ==================
 Web content filter
 ==================
 
 The :index:`content filter` analyzes all web traffic and blocks selected websites or sites containing viruses.
 Forbidden sites are selected from a list of categories, which in turn must be downloaded from external sources and stored on the system.
+
+Web content filter is included inside the "Web Proxy & Filter" application of the new Server Manager.
 
 The system allows to create an infinite number of profiles.
 A profile is composed by three parts:
@@ -61,7 +65,8 @@ Antivirus
 =========
 
 Web browsing can be checked for malicious content, but only for clear text HTTP protocol.
-If the proxy is configured in SSL transparent mode (:ref:`proxy_ssl-section`), content downloaded via HTTPS will not be scanned.
+If the proxy is configured in SSL transparent mode (:ref:`proxy_ssl-section`), content downloaded via HTTPS **will not** be scanned.
+See :ref:`antivirus-section` for more info.
 
 
 Troubleshooting

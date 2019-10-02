@@ -34,10 +34,6 @@ After the installation a new application widget is added to the |product| web in
             Server logs keep track of which apps were disabled. After a successful update/upgrade procedure
             you can use the Applications page to update and re-enable the apps.
 
-.. note::   Nextcloud version 13 uses new PHP 7.1 (`nethserver-rh-php71-php-fpm`) while older version uses PHP 5.6 (`nethserver-rh-php56-php-fpm`).
-            You can remove php56 version (if there are no dependency problems) with the command "yum remove nethserver-rh-php56-php-fpm".
-
-
 User list
 ---------
 
@@ -49,41 +45,38 @@ in section `Internal Username` of `Official NextCloud documentation <https://doc
                 a dedicated user account in AD is required by the module to be fully
                 operational! See :ref:`join-existing-ad-section`.
 
-Custom Virtual Host
-===================
+Configuration
+=============
 
-To customize the Nextcloud web url: ::
+After installation, the application can be configured from the new Server Manager.
 
-    config setprop nextcloud VirtualHost mynextcloud.domain.com
-    config setprop nextcloud TrustedDomains mynextcloud.domain.com
-    signal-event nethserver-nextcloud-update
+Custom virtual host
+-------------------
 
-If you use :ref:`let's encrypt <server_certificate-section>` remember to add the domain name to the proper list.
+Sometimes it's better to reserve a full virtual host for accessing Nextcloud like ``nextcloud.nethserver.org``.
 
+Please note that after the configuration of a custom virtual host, Nextcloud will no longer be accessibile from the default URL ``https://your_nethserver_ip/nextcloud``.
 
-Trusted Domains
-===============
+If the machine is using :ref:`Let's Encrypt <server_certificate-section>`, remember to add the virtual host domain name to list of valid certificate domains.
+
+Trusted domains
+---------------
 
 Trusted domains are a list of domains that users can log into. Default trusted domains are:
 
 * domain name
 * ip address
 
-To add a new one use: ::
-
-    config setprop nextcloud TrustedDomains server.domain.com
-    signal-event nethserver-nextcloud-update
-
-To add more than one, concatenate the names with a comma.
+The list of trused domains can be customzized using :guilabel:`Trusted domains` field: add one domain per line.
 
 CalDAV and CardDAV
-==================
+------------------
 
 Some CalDAV and CardDAV clients may have problems finding the proper sync URL and need automatic service discovery.
 Service discovery is enabled by default if a custom virtual host for Nexcloud has been configured.
 
-To enable the service discovery even if Nextcloud is running on the main FQDN, under the ``nextcloud`` subfolder,
-please make sure you do not have WebTop or SOGo already installed. Then execute: ::
+To enable the service discovery even if Nextcloud is running on the default URL,
+check the :guilabel:`Enable CalDAV and CardDAV auto-discovery` field.
 
-   config setprop nextcloud Wellknown enabled
-   signal-event nethserver-nextcloud-update
+.. note:: When enabling DAV auto-discovery, please make sure WebTop or SOGo are *not* already installed.
+

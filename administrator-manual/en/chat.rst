@@ -82,4 +82,14 @@ To configure message retention policy, set :guilabel:`Clean messages older than 
 
    If enabled, this module will store every message sent between users.
    This behavior will affect the privacy of your users.
-   
+
+
+Other options
+=============
+
+From the new Server Manager the administrator can configure all the options described above.
+
+Other available options:
+
+- upload and dowload transfer speed
+- enable/disable the administrator web interface

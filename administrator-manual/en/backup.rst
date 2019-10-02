@@ -166,12 +166,12 @@ Supported storage backends:
    the old directory to the new one.
 
 
-Restic
+restic
 ^^^^^^
 
-:index:`Restic` implements a snapshot-based and always-encrypted backup.
+:index:`restic` implements a snapshot-based and always-encrypted backup.
 It has support for deduplication and can perform backup on cloud services.
-Since Restic requires only one full backup, all runs after the first should be fast
+Since restic requires only one full backup, all runs after the first should be fast
 and could be scheduled multiple times a day.
 
 Supported storage backends:
@@ -183,8 +183,19 @@ Supported storage backends:
 * SFTP (SSH File Transfer Protocol)
 * Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)
 * Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_
-* Restic `REST server <https://github.com/restic/rest-server>`_
+* restic `REST server <https://github.com/restic/rest-server>`_
 
+
+When configuring a backup using the restic engine and a remote storage backend,
+please ensure you have enough bandwidth to complete the first backup within
+24 hours. Otherwise restic will create multiple different snapshots.
+If you have a slow connection and you still want to use a remote storage
+backend, follow this procedure:
+
+- configure the restic backup
+- manually execute the backup by clicking on :guilabel:`Run now`
+- disable the configured backup, so it will not start at next scheduled execution
+- when the backup is over, re-enable it to allow scheduled execution
 
 Rsync
 ^^^^^

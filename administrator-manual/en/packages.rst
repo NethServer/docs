@@ -130,10 +130,13 @@ Once a module has been installed, it is listed under the :guilabel:`Installed` t
 
 To **install optional packages** at a later time, select :guilabel:`Installed`
 tab and push the :guilabel:`Edit` button on a listed entry.
+On the new Server Manager all optional packages will be installed by default.
 
 .. only:: nscom
 
-    To **remove a module**, go to the :guilabel:`Installed` tab and push the
+    To **remove a module** from the old Server Manager, go to the :guilabel:`Installed` tab and push the
+    corresponding :guilabel:`Remove` button.
+    To remove an application from the new Server Manager, go to the :guilabel:`Applications` page and click the
     corresponding :guilabel:`Remove` button.
 
     .. warning::
