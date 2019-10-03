@@ -134,7 +134,6 @@ elif tags.has('nscom'):
     html_favicon = 'nscom/_static/favicon.ico' 
     html_static_path = ['nscom/_static']
     exclude_patterns.extend([
-        'registration.rst',
         'hotspot.rst',
         'weekly_report.rst',
         'nethvoice_intro.rst',

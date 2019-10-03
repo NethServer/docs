@@ -78,6 +78,9 @@ Modules
    :maxdepth: 1
 
    backup
+   disaster_recovery
+   backup_customization
+   backup_legacy
    mail
    webmail
    webtop5

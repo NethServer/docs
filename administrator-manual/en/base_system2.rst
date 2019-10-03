@@ -210,7 +210,7 @@ To remove an installed module click :guilabel:`Remove` button on the correspondi
    When removing a module other modules could be removed, too! Read carefully
    the list of affected packages to avoid removing required features.
 
-   This feature is not available in Enterprise product.
+   This feature is not available in |product| Enterprise.
 
 
 .. _terminal-section:
