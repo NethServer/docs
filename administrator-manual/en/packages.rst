@@ -5,13 +5,15 @@
 Software center
 ===============
 
+.. note:: For the old Server Manager see :ref:`software_center_legacy-section`.
+
 |product| is highly modular: at the end of the installation a bare minimum set
-of features like *network configuration* and *log viewer* is installed. The
-:guilabel:`Software center` page allows the administrator to select and
-**install** additional  :dfn:`modules`, and also list and **update** the already
+of features like *network configuration* and *backup* are installed. The
+:guilabel:`Software Center` page allows the administrator to select and
+**install** additional  :dfn:`applications`, and also list and **update** the already
 installed software :dfn:`packages`.
 
-A *module* is usually constituted by multiple *packages*. It extends the system
+An *application* is usually constituted by multiple *packages*. It extends the system
 functionality. For instance a module can transform |product| into an Email
 server, or a Web proxy.
 
@@ -20,81 +22,93 @@ software repository. |product| packages are files in the RPM [#RPM]_ file
 format. Thus within this context the terms *package* and *RPM* can be used as
 synonyms.
 
+Applications installation
+=========================
+
+The :guilabel:`Applications` section lists all modules that can be installed.
+This list can be filtered by category.
+To **install an application**, check the corresponding box and click on
+:guilabel:`Install applications`.
+
+Once a module has been installed, it is listed under the :ref:`applications-section` page.
+
+
 .. _software-updates-section:
 
 Software updates
 ================
 
-.. only:: nsent
+Enterprise and community subscriptions
+--------------------------------------
 
-    |product| receives controlled updates from a set of managed software
-    repositories. See :ref:`automatic-updates` to receive new features and
-    fix bugs and security issues.
+|product| receives controlled updates from a set of managed software
+repositories. See :ref:`automatic-updates` to receive new features and
+fix bugs and security issues.
 
-.. only:: nscom
+Community without subscription
+------------------------------
 
-    A NethServer 7 system receives updates from different software projects:
+A NethServer 7 system receives updates from different software projects:
 
-    * the NethServer project itself [#NETHSERVER]_
-    * the CentOS project [#CENTOS]_
-    * the EPEL repository [#EPEL]_
+* the NethServer project itself [#NETHSERVER]_
+* the CentOS project [#CENTOS]_
+* the EPEL repository [#EPEL]_
 
-    Each project releases software updates according to its specific rules and
-    development cycle, but all of them prefer software stability over bleeding
-    edge features.
+Each project releases software updates according to its specific rules and
+development cycle, but all of them prefer software stability over bleeding
+edge features.
 
-    Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for
-    more information about NethServer updates.
+Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for
+more information about NethServer updates.
 
-    Updates released by the CentOS project are immediately available on
-    |product| directly from the CentOS mirrors. Only updates for the current
-    system release (i.e. "7.6.1804") are considered, until a manual upgrade to
-    the next system release is started.
+Updates released by the CentOS project are immediately available on
+|product| directly from the CentOS mirrors. Only updates for the current
+system release (i.e. "7.6.1804") are considered, until a manual upgrade to
+the next system release is started.
 
-    More info about CentOS updates:
+More info about CentOS updates:
 
-    - https://wiki.centos.org/FAQ/General
-    - https://access.redhat.com/support/policy/updates/errata/
-    - https://access.redhat.com/security/updates/backporting
-    - https://access.redhat.com/security/
+- https://wiki.centos.org/FAQ/General
+- https://access.redhat.com/support/policy/updates/errata/
+- https://access.redhat.com/security/updates/backporting
+- https://access.redhat.com/security/
 
-    Updates released by EPEL are immediately available from the official EPEL
-    mirrors. As EPEL is not bound to the current system release number, the
-    :guilabel:`Software center` always installs the latest available software
-    versions from EPEL.
+Updates released by EPEL are immediately available from the official EPEL
+mirrors. As EPEL is not bound to the current system release number, the
+:guilabel:`Software Center` always installs the latest available software
+versions from EPEL.
 
-    More info about EPEL updates:
+More info about EPEL updates:
 
-    - https://fedoraproject.org/wiki/EPEL
+- https://fedoraproject.org/wiki/EPEL
 
-    .. hint::
+.. hint::
 
-        Even if the above projects strive for software stability, care is
-        necessary to check if the updates fit well together. Every time the
-        system is going to be updated, **create a backup of the data and review
-        the updates changelog** to understand what is going to happen. If
-        possible, test the updates in a non-production system. For any doubt ask
-        the NethServer community forum! [#NSCOM]_
+     Even if the above projects strive for software stability, care is
+     necessary to check if the updates fit well together. Every time the
+     system is going to be updated, **create a backup of the data and review
+     the updates changelog** to understand what is going to happen. If
+     possible, test the updates in a non-production system. For any doubt ask
+     the NethServer community forum! [#NSCOM]_
 
 .. _manual-updates:
 
 Manual update procedure
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-When updates are available, a warning message appears in the :guilabel:`Software
-center` page.
+When updates are available, the list of new packages is available under the :guilabel:`Updates` section.
 
-Updates for the installed software are listed under the :guilabel:`Updates` tab.
-Further details about them are available under :guilabel:`Updates CHANGELOG`.
+Further details are available clicking the :guilabel:`Changelog` button.
 
-To start the system update click the :guilabel:`Download and install` button.
+To expand the list of updates, cick on the :guilabel:`Details` button,
+you can then update a single |product| package by clicking on the :guilabel:`Update` button.
+To start a full system update click the :guilabel:`Update all` button.
 
-.. only:: nscom
+.. hint::
 
-    .. hint::
-
-        Regularly update the installed software to fix bugs, security issues and
-        receive new features
+   On community machines without any type of subscription,
+   remember to regularly update the installed software to fix bugs, security issues and
+   receive new features
 
 
 .. _automatic-updates:
@@ -102,78 +116,20 @@ To start the system update click the :guilabel:`Download and install` button.
 Automatic update procedure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is possible to perform some automatic actions when new software updates are available. 
+It is possible to perform some automatic actions when new software updates are available.
 
 * Download and (optionally) install the updates
 
 * Send an email to the system administrator (root) and to an additional list of recipients
 
 The updates availability is checked by a task that runs at a random time overnight.
+To configure the update policy click on the :guilabel:`Configure` button.
 
 .. hint::
 
     If the notification email is not delivered or is marked as spam, it is
     possible to configure a  :ref:`smarthost <smarthost-configuration>`
 
-
-Modules installation
-====================
-
-The :guilabel:`Available` tab lists all of the modules that can be installed.
-This list can be filtered by category. See also :ref:`additional-languages`.
-
-To **install a module**, check the corresponding box and click on
-:guilabel:`Add`. Some modules suggest optional packages that can be installed
-also at a later time.
-
-Once a module has been installed, it is listed under the :guilabel:`Installed` tab.
-
-To **install optional packages** at a later time, select :guilabel:`Installed`
-tab and push the :guilabel:`Edit` button on a listed entry.
-On the new Server Manager all optional packages will be installed by default.
-
-.. only:: nscom
-
-    To **remove a module** from the old Server Manager, go to the :guilabel:`Installed` tab and push the
-    corresponding :guilabel:`Remove` button.
-    To remove an application from the new Server Manager, go to the :guilabel:`Applications` page and click the
-    corresponding :guilabel:`Remove` button.
-
-    .. warning::
-
-        When removing a module other modules could be removed, too! Read carefully
-        the list of affected packages to avoid removing required features.
-
-.. only:: nsent
-
-    .. warning::
-
-        Installed packages **cannot be removed from the Software Center!**
-        Please contact customer support if you need to remove an installed module.
-
-.. index::
-    pair: RPM; installed
-    pair: packages; installed
-
-List of installed packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The complete list of installed RPM packages is available under
-:guilabel:`Installed > Packages`.
-
-The section :guilabel:`Installed software` displays all packages already
-installed into the system with the full package version.
-
-.. _additional-languages:
-
-Additional languages
-^^^^^^^^^^^^^^^^^^^^
-
-The Server Manager allows selecting the interface language at the login screen.
-Only installed languages are listed.
-
-In :guilabel:`Available` tab, select the :guilabel:`Languages` category and install
-the desired languages.
 
 
 .. rubric:: References
