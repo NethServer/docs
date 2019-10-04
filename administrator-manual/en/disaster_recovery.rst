@@ -5,7 +5,7 @@ Disaster recovery
 
 The system is restored in two phases: configuration first, then data.
 Right after configuration restore, the system is ready to be used if the proper packages are installed.
-When the machine is functional, a full data restore can performed while the machine is already in production.
+When the machine is functional, a full data restore can be performed while the machine is already in production.
 You can install additional packages before or after the restore.
 For example, if the mail-server is installed, the system can send and receive mails.
 
@@ -128,7 +128,7 @@ instance in the following cases:
 * one or more network cards have been substituted
 * system disks are moved to a new machine
 
-The warning points to a page that lists the network cards present in
+The warning message points to a page that lists the network cards present in
 the system, highlighting those not having an assigned :ref:`role
 <network-section>`. Such cards have a drop down menu where to select a
 role available for restoring.

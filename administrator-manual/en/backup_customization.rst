@@ -244,7 +244,7 @@ It's possible to configure a backup which includes only the mail and is schedule
 Configuration backup
 ====================
 
-Configuration backup is an automated task runs every night at 00.15 and creates a new
+Configuration backup is an automated task that runs every night at 00.15 and creates a new
 archive, :file:`/var/lib/nethserver/backup/backup-config.tar.xz`, if the
 configuration has changed during the previous 24 hours.
 
@@ -359,17 +359,10 @@ In this scenario, the disk is accessibile as *sdc* device.
 
 * Create a Linux partition on the whole disk: ::
 
-    echo "0," | sfdisk /dev/sdc
+  sgdisk --zap-all /dev/sdc
+  sgdisk --largest-new=1 /dev/sdc
 
-* Create the filesystem on *sdc1* partition with a label named *backup*.
-  The filesystem should be tuned on the backup engine used: rsync and restic require a lot of
-  inodes, where duplicity performs better on file systems optimized for large files.
-
-  For duplicity use: ::
-
-    mke2fs -v -T largefile4 -j /dev/sdc1 -L backup
-
-  For rsync and restic use: ::
+* Create the filesystem on *sdc1* partition with a label named *backup* ::
 
     mkfs.ext4 -v /dev/sdc1 -L backup -E lazy_itable_init
 

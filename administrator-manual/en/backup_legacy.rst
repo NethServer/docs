@@ -16,7 +16,7 @@ From page :guilabel:`Backup (configuration)` the system
 configuration can be saved, downloaded, uploaded and restored again.
 
 The page allows the creation of a new on-demand backup by clicking on the :guilabel:`Create backup` button.
-As default, the system retains the latest three configuration backup. The retention policy can be changed using the :guilabel:`Configure` button.
+As default, the system retains the latest three configuration backups. The retention policy can be changed using the :guilabel:`Configure` button.
 
 Data backup
 ===========
