@@ -60,6 +60,15 @@ Major changes on 2019-10-XX
   granting IMAP access to the root user; further permissions can be added from the
   new Server Manager Email application or with an IMAP/ACL client, like Roundcube.
 
+* Official ClamAV antivirus signatures are disabled by default.
+
+* The web interface for selective restore has been removed from the old Server Manager.
+  A new one is available inside Cockpit, see :ref:`selective_restore-section`.
+
+* As default, the disk usage analyzer (duc) will skip directories on different
+  file systems.
+
+
 Major changes on 2018-12-17
 ---------------------------
 
