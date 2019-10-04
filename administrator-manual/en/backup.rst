@@ -22,7 +22,7 @@ Configuration backup contains only system configuration files and it's fully aut
 The purpose of this kind of backup is to quickly restore a machine in case of
 :ref:`disaster recovery <disaster-recovery-section>`.
 From page :guilabel:`Backup` the system configuration can be saved, downloaded, uploaded and restored again.
-The retention of configuration backup can be changed by clicking on the :guilabel:`Configure` button.
+The retention of configuration backup can be changed by clicking the :guilabel:`Configure` button.
 Make sure to regularly download the configuration backup and save it to a secure place.
 
 .. rubric:: Data backup
