@@ -46,7 +46,7 @@ Major changes on 2019-10-XX
   from the Software Center page when the next "point release" is released. See
   also :ref:`software-center-section`.
 
-* Delta RPM files have been removed by the upstream distro and are no longer
+* Delta RPM files have been removed by the upstream distribution and are no longer
   available from YUM repositories
 
 * OpenSSH configuration was removed from TLS policy settings and reverted to
@@ -59,6 +59,12 @@ Major changes on 2019-10-XX
 * The `Junk` public mailbox is created during the Mail module installation,
   granting IMAP access to the root user; further permissions can be added from the
   new Server Manager Email application or with an IMAP/ACL client, like Roundcube.
+
+* Only users with enabled shell can access the new Server Manager.
+  From the old Server Manager, go to the :guilabel:`Users and groups` page and enable
+  the :guilabel:`Remote shell (SSH)` option for the selected user.
+  From the new Server Manager, go to the :guilabel:`Users and groups` page and enable
+  the :guilabel:`Shell` option for the selected user.
 
 * Official ClamAV antivirus signatures are disabled by default.
 
