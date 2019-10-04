@@ -4,7 +4,7 @@
 Backup
 ======
 
-The backup documentation is split the following chapters:
+The backup documentation is split into the following chapters:
 
 * :ref:`backup_data_settings-section`: general data backup settings
 * :ref:`legacy_backup-section`: configuration from the old Server Manager
