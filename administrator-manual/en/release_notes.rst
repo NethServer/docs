@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,11 +24,54 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.6.1810 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
 
-    - This release is based on `CentOS 7 (1810) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+
+Major changes on 2019-10-07
+---------------------------
+
+* ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
+
+* The new Server Manager implementation based on Cockpit reached Beta stage and
+  is available by default on new installations. Existing systems can add the new
+  Server Manager module from the Software Center page.  See also
+  :ref:`access2-section`.
+
+* The :guilabel:`Software updates origin` (locked/unlocked) feature was removed
+  from the "Software Center" page. |product| can be upgraded manually
+  from the Software Center page when the next "point release" is released. See
+  also :ref:`software-center-section`.
+
+* Delta RPM files have been removed by the upstream distribution and are no longer
+  available from YUM repositories
+
+* OpenSSH configuration was removed from TLS policy settings and reverted to
+  upstream defaults.
+
+* Starting with the new Server Manager based on Cockpit, the Mail module
+  feature :guilabel:`Shared mailboxes` has been renamed to :guilabel:`Public
+  mailboxes`.
+
+* The `Junk` public mailbox is created during the Mail module installation,
+  granting IMAP access to the root user; further permissions can be added from the
+  new Server Manager Email application or with an IMAP/ACL client, like Roundcube.
+
+* Only users with enabled shell can access the new Server Manager.
+  From the old Server Manager, go to the :guilabel:`Users and groups` page and enable
+  the :guilabel:`Remote shell (SSH)` option for the selected user.
+  From the new Server Manager, go to the :guilabel:`Users and groups` page and enable
+  the :guilabel:`Shell` option for the selected user.
+
+* Official ClamAV antivirus signatures are disabled by default.
+
+* The web interface for selective restore has been removed from the old Server Manager.
+  A new one is available inside Cockpit, see :ref:`selective_restore-section`.
+
+* As default, the disk usage analyzer (duc) scans only the root file system contents. Other mount points are ignored.
 
 
 Major changes on 2018-12-17

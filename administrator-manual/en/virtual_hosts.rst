@@ -9,6 +9,9 @@ Virtual hosts
 
 Virtual hosting allows to host multiple domain names on a single server. On |product|, from :guilabel:`Virtual hosts` page, is possible to configure web sites as Apache named virtual hosts. 
 
+The virtual host configuration is part of the Web Server application inside the new Server Manager.
+When a new virtual host is created, the new Server Manager will also automatically create all required DNS server alias.
+
 Virtual host names (FQDN)
 -------------------------
 

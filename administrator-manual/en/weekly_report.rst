@@ -3,6 +3,15 @@
 Weekly report
 =============
 
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager
+  and will not be ported to the new one.
+
+.. warning::
+
+   This module has been deprecated and it has been replaced by new :ref:`report-section`
+
 The Weekly report is a summary document generated weekly
 and emailed to a selected address.
 It displays useful statistical analysis on 

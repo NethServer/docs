@@ -2,6 +2,11 @@
 Bandwidth monitor
 =================
 
+.. note::
+
+  The configuration page of this module is available only in the old Server Manager
+  and will not be ported to the new one.
+
 ntopng
 ======
 

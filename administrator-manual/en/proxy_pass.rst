@@ -7,6 +7,8 @@ Reverse proxy
 The :index:`reverse proxy` feature is useful when you want to access internal sites
 from the outside network.
 
+The virtual host configuration is part of the Web Server application inside the new Server Manager.
+
 Path and virtual host rules
 ===========================
 

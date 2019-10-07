@@ -4,9 +4,11 @@
 Base system
 ===========
 
+.. note:: A new Server Manager based on Cockpit is available. See :ref:`base_system2-section`.
+
 This chapter describes all available modules at the end of installation. All
 modules outside this section must be installed from the
-:ref:`software-center-section` page, including :ref:`backup-section`.
+:ref:`software-center-section` page.
 
 .. _dashboard-section:
 
@@ -197,7 +199,7 @@ Organization contacts
 
 The :guilabel:`Organization contacts` page fields are used as default
 values for user accounts.  The organization name and address are also
-displayed on the Server Manager login screen.
+displayed on the old Server Manager login screen.
 
 .. index::
    pair: Certificate; SSL

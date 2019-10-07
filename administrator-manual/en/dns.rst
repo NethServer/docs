@@ -16,7 +16,9 @@ During a name lookup the server will:
 * search for the name between hosts configured locally 
 * perform a query on external dns: requests are stored in cache to speed up subsequent queries
 
-.. note:: You must specify at least one external DNS server inside the :guilabel:`Network > DNS servers` page.
+.. note::
+    You must specify at least one external DNS server inside the :guilabel:`Network > DNS servers` page from the old Server Manager.
+    Otherwise click on the DNS address inside the :guilabel:`Dashboard` of the new Server Manager.
 
 If |product| is also the DHCP server on the network, all the machines will be configured to use the server itself for name resolution.
 
@@ -32,6 +34,8 @@ Locally configured names always take precedence over DNS records from external s
 In fact, if the provider inserts *www.mydomain.com* with an IP address corresponding to the official web server, 
 but inside |product| the IP of *www.mydomain.com* is configured with another address, hosts inside the LAN will not be able to see the site.
 
+
+.. _dns_alias-section:
 
 Alias
 =====

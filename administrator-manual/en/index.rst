@@ -78,6 +78,9 @@ Modules
    :maxdepth: 1
 
    backup
+   disaster_recovery
+   backup_customization
+   backup_legacy
    mail
    webmail
    webtop5
@@ -109,10 +112,10 @@ Modules
    hotspot
    dedalo
    freepbx
-   hotsync
    virtual_machines
    fail2ban
    rspamd
+   antivirus
 
 .. toctree::
    :hidden:

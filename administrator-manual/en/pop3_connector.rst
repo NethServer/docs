@@ -12,9 +12,13 @@ POP3 connector
     are based on the Rspamd filter engine. Previous |product| installations are
     automatically upgraded to Rspamd as described in :ref:`email2-section`
 
-The :guilabel:`POP3 connector` page allows configuring a list of mail
-accounts that will be checked regularly. Messages coming from the remote
-accounts will be delivered to local users.
+The :index:`POP3 connector` is part of the :guilabel:`Email` application inside
+the new Server Manager and it is accessible from the list of user mailboxes.
+The same configuration is accessible from the old Server Manager,
+from the :guilabel:`POP3 connector` page.
+
+Configured external accounts will be checked regularly and retrieved
+messages will be delivered to local users.
 
 It is not recommended to use the POP3 connector as the primary method
 for managing email.  Mail delivery can be affected by disk space and

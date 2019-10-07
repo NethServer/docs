@@ -148,11 +148,6 @@ SOGo-ActiveSync can be disabled in the server-manager at the SOGo-panel or with:
   config setprop sogod ActiveSync disabled
   signal-event nethserver-sogo-update
 
-To enable ActiveSync on WebTop: ::
-
-  config setprop webtop ActiveSync enabled
-  signal-event nethserver-webtop5-update
-
 To enable ActiveSync on SOGo again: ::
 
   config setprop sogod ActiveSync enabled

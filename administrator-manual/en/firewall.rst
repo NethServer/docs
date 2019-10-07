@@ -4,6 +4,8 @@
 Firewall and gateway
 =====================
 
+.. note:: A new Server Manager based on Cockpit is available. See :ref:`firewall_new-section`.
+
 |product| can act as :index:`firewall` and :index:`gateway` inside the network where is installed.
 All traffic between computers on the local network and the Internet passes through the server that decides how to 
 route packets and what rules to apply.
@@ -63,7 +65,7 @@ If the packet match a rule, the rule is applied.
 
 .. note:: Rule's order is very important. The system always applies the first rule that matches.
 
-A rule consists of four main parts:
+A rule consists of five main parts:
 
 * Action
 * Source 
@@ -201,6 +203,7 @@ If balanced mode is selected, the server will route a double number of connectio
 If active backup mode is selected, the server will route all connections on Provider1; only if Provider1 becomes
 unavailable the connections will be redirected to Provider2.
 
+.. _port_forward-section:
 
 Port forward
 ============
@@ -269,6 +272,8 @@ Some possible values:
 * ``10.2.10.0/24``: enable port forward only for traffic coming from 10.2.10.0/24 network
 * ``!10.2.10.4``: enable port forward  for all IPs except 10.2.10.4
 * ``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for 192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9
+
+.. _snat-section:
 
 sNAT 1:1
 ========
@@ -358,6 +363,8 @@ In all cases all spare bandwidth will be given to them.
 
 
 For more info, see [#]_ .
+
+.. _firewall_objects-section:
 
 Firewall objects
 ================

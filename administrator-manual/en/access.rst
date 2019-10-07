@@ -1,12 +1,14 @@
-.. _access-section:
-
 .. index::
    single: Server Manager
    single: web interface
 
+.. _access-section:
+
 ============================
 Accessing the Server Manager
 ============================
+
+.. note:: A new Server Manager based on Cockpit is available. See :ref:`access2-section`.
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
