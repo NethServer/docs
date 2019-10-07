@@ -8,7 +8,7 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
 
     - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
@@ -24,17 +24,17 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
+    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
 
     - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
 
 
-Major changes on 2019-10-XX
+Major changes on 2019-10-07
 ---------------------------
 
-* ISO release 7.7.1908 "rc1" replaces any previous ISO 7.6.1810
+* ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
 
 * The new Server Manager implementation based on Cockpit reached Beta stage and
   is available by default on new installations. Existing systems can add the new
