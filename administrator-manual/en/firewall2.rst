@@ -109,7 +109,7 @@ Rules
 This page allows the management of rules applied only to the network traffic traversing the firewall.
 To create rules for the traffic from/to the firewall itself, see the :ref:`local_rules-section`.
 
-A rule consists of four main parts:
+A rule consists of five main parts:
 
 * Source 
 * Destination

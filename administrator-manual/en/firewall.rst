@@ -65,7 +65,7 @@ If the packet match a rule, the rule is applied.
 
 .. note:: Rule's order is very important. The system always applies the first rule that matches.
 
-A rule consists of four main parts:
+A rule consists of five main parts:
 
 * Action
 * Source 
