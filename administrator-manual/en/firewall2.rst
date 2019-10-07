@@ -7,7 +7,7 @@ Firewall and gateway (new)
 .. note::
 
    This chapter describes changes introduces by the *Firewall* application in the new Server Manager.
-   Basic firewall behavior is unchaged and describe inside :ref:`firewall-section`.
+   Basic firewall behavior is unchanged and describe inside :ref:`firewall-section`.
    
    Please note that some changes made in the new Server Manager may not be reflected in the old one. 
 
@@ -37,7 +37,7 @@ Main differences from the old Server Manager:
 Apply and revert
 ----------------
 
-Everytime the configuration has been changed, modifications are not applied immediately but saved in a temporary store.
+Every time the configuration has been changed, modifications are not applied immediately but saved in a temporary store.
 For the changes to take effect, click on the :guilabel:`Apply` button at the top right corner of the page.
 
 As long as the new rules created have not been applied, you can revert all changes clicking the :guilabel:`Revert` button at the top right corner of the page.
@@ -72,7 +72,7 @@ with absolutes values expressed in kbps.
 As default, a traffic shaping class is applied to all red network interfaces.
 Such behavior can be changed by selecting an existing red interfaces under the :guilabel:`Bind to` menu
 inside the :guilabel:`Advanced` section.
-Binded classes and bandwidth expressed in kbps are not usable inside the old Server Manager.
+Bound classes and bandwidth expressed in kbps are not usable inside the old Server Manager.
 
 Rules can be created under the :guilabel:`Rules` section on the same page.
 After creating or editing rules, make sure to :ref:`apply <apply_revert-section>` the changes.
@@ -91,7 +91,7 @@ Firewall objects page offer the same features as the :ref:`old Server Manager <f
 Port forward
 ============
 
-Port forwards are groupd by destination host and support raw IP addresses along with firewall objects.
+Port forwards are grouped by destination host and support raw IP addresses along with firewall objects.
 
 The following protocols are supported only in the new Server Manager:
 
