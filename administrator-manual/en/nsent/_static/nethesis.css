@@ -18,14 +18,13 @@ h1, h2, h6, .h1, .h2, .h6 {
 h1 {
     padding-bottom: 15px;
 }
-h2 {
-    margin-top: 35px
+.caption-text, h2 {
     padding-top: 5px;
     margin-bottom: 25px;
     font-size: 30px;
 }
 
-.content > .section > .section {
+.toctree-wrapper > .caption, .content > .section > .section {
     margin-top: 35px;
     border-top: 1px solid #f4af1a;
 }
@@ -34,6 +33,13 @@ h2 {
     display: inline-block;
     margin-top: 0;
 }
+.caption-text {
+    border-top: 6px solid #f4af1a;
+    display: inline-block;
+    padding-top: 10px;;
+    font-weight: bold;
+}
+
 .section > span:empty {
     height: 0;
 }

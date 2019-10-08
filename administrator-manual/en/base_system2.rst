@@ -15,13 +15,14 @@ The default installation includes the following main modules:
 - :ref:`applications-section`
 - :ref:`software-center-section`
 - :ref:`terminal-section`
-.. only:: nscom
+-
+  .. only:: nscom
 
-  - :ref:`subscription-section`
+    :ref:`subscription-section`
 
-.. only:: nsent
+  .. only:: nsent
 
-  - :ref:`registration-section`
+    :ref:`registration-section`
 
 While the *root* user can see all configuration pages,
 access of each section and application may be also delegated to specific users.
@@ -188,17 +189,26 @@ Applications with a shortcut, will be linked to the left menu.
 
 Only *root* user has access to this feature.
 
-Add to home page
-----------------
+.. only:: nscom
 
-:index:`Launcher` is an application of the new Server Manager available to all users on HTTPS and HTTP ports.
-The launcher is accessible on the server FQDN (eg. ``https://my.server.com``) and it's enabled if
-there is no home page already configured inside the web server (no index page in :file:`/var/www/html`)
+  Add to home page
+  ----------------
 
-Installed applications can be added to the launcher by clicking on the :guilabel:`Add to home page` button.
-All users will be able to access the public link of the application.
+  :index:`Launcher` is an application of the new Server Manager available to all users on HTTPS and HTTP ports.
+  The launcher is accessible on the server FQDN (eg. ``https://my.server.com``) and it's enabled if
+  there is no home page already configured inside the web server (no index page in :file:`/var/www/html`)
 
-Only *root* user has access to this feature.
+  Installed applications can be added to the launcher by clicking on the :guilabel:`Add to home page` button.
+  All users will be able to access the public link of the application.
+
+  Only *root* user has access to this feature.
+
+.. only:: nsent
+
+  Launcher
+  --------
+
+  See :ref:`launcher-section`.
 
 Removing applications
 ---------------------

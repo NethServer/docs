@@ -59,7 +59,7 @@ Email
 Before running |product| in production, some considerations about the
 network and existing mail client configurations are required: what
 ports are in use, if SMTPAUTH and TLS are enabled.  Refer to
-:ref:`email_clients` and :ref:`email_policies` sections for more
+mail client configuration and :ref:`email_policies` section for more
 information.
 
 In a mail server migration, the source mail server could be on

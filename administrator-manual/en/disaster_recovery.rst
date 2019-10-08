@@ -27,9 +27,17 @@ Please, follow below steps:
 1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
    new Server Manager and make sure the machine is able to access the internet and resolve public names correctly 
 
-2. If the machine has an Enterprise entitlement, please follow :ref:`registration-section`,
-   if the machine has a Community subscription entitlement, please follow :ref:`subscription-section`.
-   Otherwise you can skip this step.
+2.
+
+  .. only:: nsent
+
+       Activate NethServer Enterprise following the :ref:`registration-section` procedure
+
+  .. only:: nscom
+
+       If the machine has a Community subscription entitlement, please follow :ref:`subscription-section`,
+       otherwise you can skip this step
+
 
 3. Install all the available core updates from the :ref:`software-updates-section`
 

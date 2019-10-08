@@ -359,8 +359,8 @@ In this scenario, the disk is accessibile as *sdc* device.
 
 * Create a Linux partition on the whole disk: ::
 
-  sgdisk --zap-all /dev/sdc
-  sgdisk --largest-new=1 /dev/sdc
+    sgdisk --zap-all /dev/sdc
+    sgdisk --largest-new=1 /dev/sdc
 
 * Create the filesystem on *sdc1* partition with a label named *backup* ::
 
