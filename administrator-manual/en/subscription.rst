@@ -1,8 +1,8 @@
 .. _subscription-section:
 
-======================
-|product| subscription
-======================
+============
+Subscription
+============
 
 A |product| installation can be registered to a public or private Dartagnan [#Dartagnan]_ instance,
 getting access to monitoring portal and stable update repositories.

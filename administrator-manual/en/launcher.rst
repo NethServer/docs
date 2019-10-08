@@ -1,6 +1,8 @@
-==================
-Nethesis Launcher
-==================
+.. _launcher-section:
+
+========
+Launcher
+========
 
 Nethesis Launcher is a Cockpit app launcher available on HTTPS and HTTP ports.
 The launcher is enabled if:

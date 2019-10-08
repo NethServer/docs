@@ -26,19 +26,15 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
-Release notes |version|
------------------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Release notes
 
    release_notes
 
-Installation
-------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Installation
 
    installation
    access
@@ -51,11 +47,9 @@ Installation
 
        subscription
 
-Configuration
--------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Configuration
 
    packages
    base_system
@@ -71,11 +65,9 @@ Configuration
 
     launcher
 
-Modules
--------
-
 .. toctree::
    :maxdepth: 1
+   :caption: Modules
 
    backup
    disaster_recovery
@@ -124,45 +116,35 @@ Modules
 
 .. only:: nscom
 
-    NethForge modules
-    -----------------
-
     .. toctree::
        :maxdepth: 1
+       :caption: NethForge modules
 
        collabora
        sogo
        phpVirtualBox
 
-Best practices
---------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Best practices
 
    third_party
    
-Appendix
---------
-
 .. toctree::
    :maxdepth: 1
+   :caption: Appendix
 
    migration
    upgrade
    license
    nscom_releases
    issue_trackers
+   genindex
 
-.. only:: nscom
-
-    Indices
-    -------
-
-    * :ref:`General index <genindex>`
 
 .. toctree::
    :hidden:
+   :caption: Old Server Manager
    :glob:
 
    ui/*

@@ -212,9 +212,9 @@ source_file = _build/locale/backup_legacy.pot
 source_lang = en
 type = PO
 
-[docs-v7.backup_advanced]
-file_filter = locale/<lang>/LC_MESSAGES/backup_advanced.po
-source_file = _build/locale/backup_advanced.pot
+[docs-v7.backup_customization]
+file_filter = locale/<lang>/LC_MESSAGES/backup_customization.po
+source_file = _build/locale/backup_customization.pot
 source_lang = en
 type = PO
 
@@ -266,9 +266,9 @@ source_file = _build/locale/base_system.pot
 source_lang = en
 type = PO
 
-[docs-v7.base2_system]
-file_filter = locale/<lang>/LC_MESSAGES/base2_system.po
-source_file = _build/locale/base2_system.pot
+[docs-v7.base_system2]
+file_filter = locale/<lang>/LC_MESSAGES/base_system2.po
+source_file = _build/locale/base_system2.pot
 source_lang = en
 type = PO
 
