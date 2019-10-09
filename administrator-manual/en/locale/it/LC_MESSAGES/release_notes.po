@@ -14,8 +14,8 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Davide Principi <davide.principi@nethesis.it>, 2018
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
 # 
 #, fuzzy
@@ -44,7 +44,7 @@ msgstr "|product| versione |version|"
 #: ../../release_notes.rst:11 ../../release_notes.rst:27
 #: ../../release_notes.rst:37
 msgid "ISO release 7.7.1908 \"final\" replaces any previous ISO 7.6.1810"
-msgstr "La ISO release 7.7.1908 \"final\" sostituisce la precedente ISO 7.7.1908"
+msgstr "La ISO release 7.7.1908 \"final\" sostituisce la precedente ISO 7.6.1810"
 
 #: ../../release_notes.rst:13 ../../release_notes.rst:29
 msgid ""
@@ -85,7 +85,7 @@ msgstr "Analisi dei `possibili bug <http://community.nethserver.org/c/bug>`_"
 
 #: ../../release_notes.rst:35
 msgid "Major changes on 2019-10-07"
-msgstr "Cambiamenti principali dal 07/10/2019"
+msgstr "Cambiamenti principali al 07/10/2019"
 
 #: ../../release_notes.rst:39
 msgid ""
@@ -106,8 +106,8 @@ msgid ""
 "manually from the Software Center page when the next \"point release\" is "
 "released. See also :ref:`software-center-section`."
 msgstr ""
-"La'opzione :guilabel:`Origine aggiornamenti software` (bloccata/sbloccata) è"
-" stata rimossa dalla pagina \"Software Center\". |product| può essere "
+"L'opzione :guilabel:`Origine aggiornamenti software` (bloccata/sbloccata) è "
+"stata rimossa dalla pagina \"Software Center\". |product| può essere "
 "aggiornato manualmente dalla pagina Software Center quando viene rilasciata "
 "la \"point release\" successiva. Vedi anche :ref:`software-center-section`."
 
@@ -133,9 +133,9 @@ msgid ""
 "feature :guilabel:`Shared mailboxes` has been renamed to :guilabel:`Public "
 "mailboxes`."
 msgstr ""
-"A partire dal nuovo Server Manager basato su Cockpit, la funzione del modulo"
-" Mail :guilabel:`Mailbox condivise` è stata rinominata in "
-":guilabel:`Cartelle pubbliche`."
+"Nel nuovo Server Manager basato su Cockpit, la funzione del modulo Mail "
+":guilabel:`Mailbox condivise` è stata rinominata in :guilabel:`Cartelle "
+"pubbliche`."
 
 #: ../../release_notes.rst:59
 msgid ""
@@ -147,7 +147,7 @@ msgstr ""
 "La cartella condivisa 'Junk' viene create durante l'installazione del modulo"
 " Email, accessibile in IMAP dall'utente root; ulteriori permessi possono "
 "essere aggiunti dall'applicazione Email del nuovo Server Manager o con un "
-"client /IMAP/ACL, per esempio Roundcube."
+"client IMAP/ACL, per esempio Roundcube."
 
 #: ../../release_notes.rst:63
 msgid ""
@@ -159,14 +159,14 @@ msgid ""
 msgstr ""
 "Solo gli utenti con la shell abilitata possono accedere al nuovo Server "
 "Manager. Dal vecchio Server Manager, aprire la pagina :guilabel:`Utenti e "
-"gruppi` e abilitare l'opzione guilabel:`Shell remota (SSH)`. Dal nuovo "
+"gruppi` e abilitare l'opzione :guilabel:`Shell remota (SSH)`. Dal nuovo "
 "Server Manager, aprire la pagina :guilabel:`Utenti e gruppi` e abilitare "
 "l'opzione :guilabel:`Shell` per l'utente selezionato."
 
 #: ../../release_notes.rst:69
 msgid "Official ClamAV antivirus signatures are disabled by default."
 msgstr ""
-"Le firme antivirus ufficiali di ClamAV sono ora disabilitate per default."
+"Le firme antivirus ufficiali di ClamAV sono ora disabilitate di default."
 
 #: ../../release_notes.rst:71
 msgid ""
