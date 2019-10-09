@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -32,11 +32,17 @@ msgstr ""
 msgid "Bandwidth monitor"
 msgstr "Monitor de ancho de banda"
 
-#: ../../bandwidth_monitor.rst:6
+#: ../../bandwidth_monitor.rst:7
+msgid ""
+"The configuration page of this module is available only in the old Server "
+"Manager and will not be ported to the new one."
+msgstr ""
+
+#: ../../bandwidth_monitor.rst:11
 msgid "ntopng"
 msgstr "ntopng"
 
-#: ../../bandwidth_monitor.rst:8
+#: ../../bandwidth_monitor.rst:13
 msgid ""
 "ntopng is a powerful tool that allows you to analyze real-time network "
 "traffic. It allows you to evaluate the bandwidth used by individual hosts "
@@ -46,11 +52,11 @@ msgstr ""
 "en tiempo real. Le permite evaluar el ancho de banda utilizado por los hosts"
 " individuales e identificar los protocolos de red más utilizados."
 
-#: ../../bandwidth_monitor.rst:14
+#: ../../bandwidth_monitor.rst:19
 msgid "Enable ntopng"
 msgstr "Habilitar ntopng"
 
-#: ../../bandwidth_monitor.rst:13
+#: ../../bandwidth_monitor.rst:18
 msgid ""
 "Enabling ntopng, all traffic passing through the network interfaces will be "
 "analyzed. It can cause a slowdown of the network and an increased in system "
@@ -60,19 +66,19 @@ msgstr ""
 "interfaces de red. Puede causar una ralentización de la red y un aumento en "
 "la carga del sistema."
 
-#: ../../bandwidth_monitor.rst:16
+#: ../../bandwidth_monitor.rst:21
 msgid "Port"
 msgstr "Puerto"
 
-#: ../../bandwidth_monitor.rst:17
+#: ../../bandwidth_monitor.rst:22
 msgid "The port where to view the ntopng web interface."
 msgstr "El puerto donde ver la interfaz web ntopng."
 
-#: ../../bandwidth_monitor.rst:19
+#: ../../bandwidth_monitor.rst:24
 msgid "Password for 'admin' user"
 msgstr "Contraseña para el usuario 'admin'"
 
-#: ../../bandwidth_monitor.rst:19
+#: ../../bandwidth_monitor.rst:24
 msgid ""
 "Admin user password. This password is not related to the |product| admin "
 "password."
@@ -80,10 +86,10 @@ msgstr ""
 "Contraseña del usuario administrador. Esta contraseña no está relacionada "
 "con la clave de administrador de |product| ."
 
-#: ../../bandwidth_monitor.rst:21
+#: ../../bandwidth_monitor.rst:26
 msgid "Interfaces"
 msgstr "Interfaces"
 
-#: ../../bandwidth_monitor.rst:22
+#: ../../bandwidth_monitor.rst:27
 msgid "Interfaces on which ntopng will listens to."
 msgstr "Interfaces en las que ntopng escuchará."

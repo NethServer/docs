@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -35,8 +35,9 @@ msgstr ""
 
 #: ../../registration.rst:15
 msgid ""
-"Open :guilabel:`Registration` page from the Server Manager "
-"(``https://<server_name>:980``)"
+"Open :guilabel:`Registration` page from the old Server Manager "
+"(``https://<server_name>:980``) or from the new one "
+"(``https://<server_name>:9090``)"
 msgstr ""
 
 #: ../../registration.rst:16

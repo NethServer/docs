@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -42,12 +42,19 @@ msgstr ""
 
 #: ../../pop3_connector.rst:15
 msgid ""
-"The :guilabel:`POP3 connector` page allows configuring a list of mail "
-"accounts that will be checked regularly. Messages coming from the remote "
-"accounts will be delivered to local users."
+"The :index:`POP3 connector` is part of the :guilabel:`Email` application "
+"inside the new Server Manager and it is accessible from the list of user "
+"mailboxes. The same configuration is accessible from the old Server Manager,"
+" from the :guilabel:`POP3 connector` page."
 msgstr ""
 
-#: ../../pop3_connector.rst:19
+#: ../../pop3_connector.rst:20
+msgid ""
+"Configured external accounts will be checked regularly and retrieved "
+"messages will be delivered to local users."
+msgstr ""
+
+#: ../../pop3_connector.rst:23
 msgid ""
 "It is not recommended to use the POP3 connector as the primary method for "
 "managing email.  Mail delivery can be affected by disk space and "
@@ -56,53 +63,53 @@ msgid ""
 "lost."
 msgstr ""
 
-#: ../../pop3_connector.rst:24
+#: ../../pop3_connector.rst:28
 msgid ""
 "POP3/IMAP accounts are configured from :guilabel:`POP3 connector > Accounts`"
 " page. Each account can be specified:"
 msgstr ""
 
-#: ../../pop3_connector.rst:27
+#: ../../pop3_connector.rst:31
 msgid "the email address (as unique account identifier)"
 msgstr ""
 
-#: ../../pop3_connector.rst:28
+#: ../../pop3_connector.rst:32
 msgid "the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)"
 msgstr ""
 
-#: ../../pop3_connector.rst:29
+#: ../../pop3_connector.rst:33
 msgid "the remote server address"
 msgstr ""
 
-#: ../../pop3_connector.rst:30
+#: ../../pop3_connector.rst:34
 msgid "the account credentials"
 msgstr ""
 
-#: ../../pop3_connector.rst:31
+#: ../../pop3_connector.rst:35
 msgid "the local user account where to deliver messages"
 msgstr ""
 
-#: ../../pop3_connector.rst:32
+#: ../../pop3_connector.rst:36
 msgid "if a message has to be deleted from the remote server after delivery"
 msgstr ""
 
-#: ../../pop3_connector.rst:33
+#: ../../pop3_connector.rst:37
 msgid "antispam and antivirus checks"
 msgstr ""
 
-#: ../../pop3_connector.rst:35
+#: ../../pop3_connector.rst:39
 msgid ""
 "It is allowed to associate more than one external accounts to a local one.  "
 "Deleting an account will *not* delete already delivered messages."
 msgstr ""
 
-#: ../../pop3_connector.rst:39
+#: ../../pop3_connector.rst:43
 msgid ""
 "After the account configuration has been completed, the account is "
 "automatically checked for new mail."
 msgstr ""
 
-#: ../../pop3_connector.rst:45
+#: ../../pop3_connector.rst:49
 msgid ""
 "The underneath implementation is based on :dfn:`Getmail` [#Getmail]_. After "
 "fetching mail messages from the POP3/IMAP provider Getmail applies all "
@@ -111,11 +118,11 @@ msgid ""
 "<email_filter>`."
 msgstr ""
 
-#: ../../pop3_connector.rst:51
+#: ../../pop3_connector.rst:55
 msgid "All operations are logged in :file:`/var/log/maillog`."
 msgstr ""
 
-#: ../../pop3_connector.rst:53
+#: ../../pop3_connector.rst:57
 msgid ""
 "If an account was selected for delivery and has been subsequently deleted "
 "the configuration becomes inconsistent. If this should happen then existing "
@@ -123,11 +130,11 @@ msgid ""
 " deleted."
 msgstr ""
 
-#: ../../pop3_connector.rst:59
+#: ../../pop3_connector.rst:63
 msgid "References"
 msgstr "Referencias"
 
-#: ../../pop3_connector.rst:60
+#: ../../pop3_connector.rst:64
 msgid ""
 "Getmail is a remote-mail retrieval utility "
 "http://pyropus.ca/software/getmail/"

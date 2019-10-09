@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -40,52 +40,58 @@ msgstr ""
 "La característica :index:`proxy inverso` es útil cuando se desea acceder a "
 "sitios internos desde la red externa."
 
-#: ../../proxy_pass.rst:11
-msgid "Path and virtual host rules"
+#: ../../proxy_pass.rst:10
+msgid ""
+"The virtual host configuration is part of the Web Server application inside "
+"the new Server Manager."
 msgstr ""
 
 #: ../../proxy_pass.rst:13
+msgid "Path and virtual host rules"
+msgstr ""
+
+#: ../../proxy_pass.rst:15
 msgid ""
 "A web client request can be forwarded to another web server transparently, "
 "according to two types of matching rules:"
 msgstr ""
 
-#: ../../proxy_pass.rst:16
+#: ../../proxy_pass.rst:18
 msgid "Requests matching an URL path, like ``http://mydomain.com/mysite``"
 msgstr ""
 
-#: ../../proxy_pass.rst:17
+#: ../../proxy_pass.rst:19
 msgid ""
 "Requests matching a virtual host name, like ``http://my.secondary-"
 "domain.com``"
 msgstr ""
 
-#: ../../proxy_pass.rst:19
+#: ../../proxy_pass.rst:21
 msgid "The typical scenario for a **URL path rule** is the following:"
 msgstr ""
 
-#: ../../proxy_pass.rst:21 ../../proxy_pass.rst:42
+#: ../../proxy_pass.rst:23 ../../proxy_pass.rst:44
 msgid "|product| is the firewall of your LAN"
 msgstr "|product| es el cortafuegos de su LAN"
 
-#: ../../proxy_pass.rst:23
+#: ../../proxy_pass.rst:25
 msgid "You have a domain ``http://mydomain.com``"
 msgstr ""
 
-#: ../../proxy_pass.rst:25
+#: ../../proxy_pass.rst:27
 msgid ""
 "You would like ``http://mydomain.com/mysite`` to forward to the internal "
 "server (internal IP: 192.168.2.100)"
 msgstr ""
 
-#: ../../proxy_pass.rst:28
+#: ../../proxy_pass.rst:30
 msgid ""
 "In this scenario, create a new record under :guilabel:`Reverse proxy > "
 "Paths` page. Set the :guilabel:`Name` of the item to ``mysite`` and the "
 ":guilabel:`Target URL` to ``http://192.168.2.100``."
 msgstr ""
 
-#: ../../proxy_pass.rst:32
+#: ../../proxy_pass.rst:34
 msgid ""
 "If only encrypted connections are allowed, enable the :guilabel:`Require SSL"
 " encrypted connection`."
@@ -93,7 +99,7 @@ msgstr ""
 "Si sólo se permiten las conexiones cifradas, habilite :guilabel:`Requiere "
 "conexión cifrada SSL`."
 
-#: ../../proxy_pass.rst:35
+#: ../../proxy_pass.rst:37
 msgid ""
 "Only clients from certain networks can be allowed to connect, by specifying"
 "  a comma-separated list of CIDR networks under the :guilabel:`Access from "
@@ -103,31 +109,31 @@ msgstr ""
 "especificando una lista separada por comas de las redes CIDR bajo el campo "
 ":guilabel:`Acceso desde las redes CIDR`."
 
-#: ../../proxy_pass.rst:39
+#: ../../proxy_pass.rst:41
 msgid ""
 "A **virtual host name rule** can be forward HTTP requests to another web "
 "server, and is defined in the :guilabel:`Reverse proxy > Virtual hosts` "
 "page. For instance:"
 msgstr ""
 
-#: ../../proxy_pass.rst:44
+#: ../../proxy_pass.rst:46
 msgid "You have a domain ``http://my.secondary-domain.com``"
 msgstr ""
 
-#: ../../proxy_pass.rst:46
+#: ../../proxy_pass.rst:48
 msgid ""
 "You would like ``http://my.secondary-domain.com`` to be forwarded to the "
 "internal web server ``192.168.2.101``, port 9000."
 msgstr ""
 
-#: ../../proxy_pass.rst:49
+#: ../../proxy_pass.rst:51
 msgid ""
 "In this scenario, set the :guilabel:`Name` of a new virtual host item to "
 "``my.secondary-domain.com`` and the :guilabel:`Target URL` to "
 "``http://192.168.2.101:9000``."
 msgstr ""
 
-#: ../../proxy_pass.rst:53
+#: ../../proxy_pass.rst:55
 msgid ""
 "Refer also to :ref:`the UI description of Reverse Proxy <ProxyPassUi-"
 "section>` for additional information about advanced features, like "
@@ -135,11 +141,11 @@ msgid ""
 "invalid SSL certificate from target`."
 msgstr ""
 
-#: ../../proxy_pass.rst:59
+#: ../../proxy_pass.rst:61
 msgid "Manual configuration"
 msgstr "Configuración manual"
 
-#: ../../proxy_pass.rst:61
+#: ../../proxy_pass.rst:63
 msgid ""
 "If :guilabel:`Reverse proxy` page is not enough, you can always configure "
 "Apache manually, by creating a new file inside :file:`/etc/httpd/conf.d/` "
@@ -149,18 +155,18 @@ msgstr ""
 "configurar Apache manualmente, mediante la creación de un nuevo archivo "
 "dentro del directorio :file:`/etc/httpd/conf.d/`."
 
-#: ../../proxy_pass.rst:64
+#: ../../proxy_pass.rst:66
 msgid "**Example**"
 msgstr "**Ejemplo**"
 
-#: ../../proxy_pass.rst:66
+#: ../../proxy_pass.rst:68
 msgid ""
 "Create :file:`/etc/httpd/conf.d/myproxypass.conf` file with this content: ::"
 msgstr ""
 "Crear archivo :file:`/etc/httpd/conf.d/myproxypass.conf` con este contenido:"
 " ::"
 
-#: ../../proxy_pass.rst:83
+#: ../../proxy_pass.rst:85
 msgid ""
 "Please refer to official Apache documentation for more information: "
 "https://httpd.apache.org/docs/2.4/mod/mod_proxy.html"

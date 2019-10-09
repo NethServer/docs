@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jose G. Jimenez S. <josegjimenez@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -222,4 +222,26 @@ msgstr ""
 msgid ""
 "If enabled, this module will store every message sent between users. This "
 "behavior will affect the privacy of your users."
+msgstr ""
+
+#: ../../chat.rst:88
+msgid "Other options"
+msgstr ""
+
+#: ../../chat.rst:90
+msgid ""
+"From the new Server Manager the administrator can configure all the options "
+"described above."
+msgstr ""
+
+#: ../../chat.rst:92
+msgid "Other available options:"
+msgstr ""
+
+#: ../../chat.rst:94
+msgid "upload and dowload transfer speed"
+msgstr ""
+
+#: ../../chat.rst:95
+msgid "enable/disable the administrator web interface"
 msgstr ""

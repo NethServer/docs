@@ -6,15 +6,16 @@
 # Translators:
 # Francesco Pari, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2019
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,11 +41,12 @@ msgstr ""
 
 #: ../../registration.rst:15
 msgid ""
-"Open :guilabel:`Registration` page from the Server Manager "
-"(``https://<server_name>:980``)"
+"Open :guilabel:`Registration` page from the old Server Manager "
+"(``https://<server_name>:980``) or from the new one "
+"(``https://<server_name>:9090``)"
 msgstr ""
-"Aprirle la pagina :guilabel:`Registrazione` del Server Manager "
-"(``https://<server_name>:980``)"
+"Aprirle la pagina :guilabel:`Registrazione` del vecchio Server Manager "
+"(``https://<server_name>:980``) o dal nuovo (``https://<server_name>:9090``)"
 
 #: ../../registration.rst:16
 msgid "Login to |register_link|"

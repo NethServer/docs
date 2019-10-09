@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -79,14 +79,14 @@ msgstr ""
 msgid "Ejabberd (XMPP)"
 msgstr ""
 
-#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
-#: ../../tlspolicy.rst:85
+#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:59 ../../tlspolicy.rst:68
+#: ../../tlspolicy.rst:76
 msgid ""
 "See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 msgstr ""
 "Ver https://bettercrypto.org/static/applied-crypto-hardening.pdf categoría B"
 
-#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:47
+#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:46
 msgid "Disabled SSLv3 and TLSv1.0"
 msgstr ""
 
@@ -112,81 +112,69 @@ msgid ""
 "certificates to"
 msgstr ""
 
-#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:66
+#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:65
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:74
+#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:73
 msgid "Dovecot"
 msgstr "Dovecot"
 
-#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:82
-msgid "OpenSSH"
-msgstr "OpenSSH"
-
-#: ../../tlspolicy.rst:43 ../../tlspolicy.rst:94
+#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:85
 msgid "Postfix"
 msgstr "Postfix"
 
-#: ../../tlspolicy.rst:50
+#: ../../tlspolicy.rst:49
 msgid "Slapd (openldap-servers)"
 msgstr ""
 
-#: ../../tlspolicy.rst:46
+#: ../../tlspolicy.rst:45
 msgid "Reference https://access.redhat.com/articles/1474813"
 msgstr ""
 
-#: ../../tlspolicy.rst:48 ../../tlspolicy.rst:61 ../../tlspolicy.rst:70
-#: ../../tlspolicy.rst:88
+#: ../../tlspolicy.rst:47 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
+#: ../../tlspolicy.rst:79
 msgid "Cipher suite ::"
 msgstr "Suite de cifrado ::"
 
-#: ../../tlspolicy.rst:53
+#: ../../tlspolicy.rst:52
 msgid "Policy 2018-03-30"
 msgstr "Política 2018-03-30"
 
-#: ../../tlspolicy.rst:55
+#: ../../tlspolicy.rst:54
 msgid ""
 "The goal of this policy is to harden the cipher set provided by the default "
 "upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25 "
 "clients. It does not support ECC certificates."
 msgstr ""
 
-#: ../../tlspolicy.rst:65 ../../tlspolicy.rst:74
+#: ../../tlspolicy.rst:64 ../../tlspolicy.rst:73
 msgid "Disabled SSLv2 and SSLv3"
 msgstr "Deshabilitados SSLv2 y SSLv3"
 
-#: ../../tlspolicy.rst:66
+#: ../../tlspolicy.rst:65
 msgid ""
 "Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-"
 "default`)"
 msgstr ""
 
 #: ../../tlspolicy.rst:77
-msgid "See https://github.com/NethServer/nethserver-openssh/pull/6"
-msgstr "Ver https://github.com/NethServer/nethserver-openssh/pull/6"
-
-#: ../../tlspolicy.rst:78
-msgid "Configuration snippet ::"
-msgstr "Snippet de configuración ::"
-
-#: ../../tlspolicy.rst:86
 msgid "Use TLS in outbound connections, if remote server supports it"
 msgstr "Use TLS en las conexiones de salida, si el servidor remoto lo admite"
 
-#: ../../tlspolicy.rst:87
+#: ../../tlspolicy.rst:78
 msgid "Disable SSLv2 and SSLv3 on submission ports"
 msgstr "Deshabilitar SSLv2 y SSLv3 en los puertos de envío"
 
-#: ../../tlspolicy.rst:92
+#: ../../tlspolicy.rst:83
 msgid "Exclude ciphers ::"
 msgstr "Excluir cifrados ::"
 
-#: ../../tlspolicy.rst:99
+#: ../../tlspolicy.rst:90
 msgid "Default upstream policy"
 msgstr "Política de subida predeterminada"
 
-#: ../../tlspolicy.rst:101
+#: ../../tlspolicy.rst:92
 msgid ""
 "The goal of this policy is retaining upstream settings. This is the original"
 " goal since |product| 7."
@@ -194,7 +182,7 @@ msgstr ""
 "El objetivo de esta política es mantener la configuración del caudal de "
 "subida. Este es el objetivo original desde |product| 7."
 
-#: ../../tlspolicy.rst:104
+#: ../../tlspolicy.rst:95
 msgid ""
 "This policy allows to customize ``httpd`` (Apache) with a given cipher list,"
 " by issuing the following  commands: ::"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -32,51 +32,33 @@ msgstr ""
 msgid "Phone Home"
 msgstr "Phone Home"
 
-#: ../../phone_home.rst:6
+#: ../../phone_home.rst:7
 msgid ""
-"During the first configuration wizard, you can opt-out from contributing to "
-"usage statistics. Phone home is used to track all NethServer's installations"
-" around the world. Each time a new NethServer is installed, this tool sends "
-"some installation details to a central server. The information is stored in "
-"a database and used to display nice markers in a Google Map view with number"
-" of installation grouped by country and release."
+"Phone home is used to track all |product| installations around the world. "
+"Each time a new |product| is installed, this tool sends some installation "
+"details to a central server. The information is stored in a database and "
+"used to display the number of installations grouped by country and release: "
+"https://www.nethserver.org/phone-home/index.html"
 msgstr ""
-"Durante el primer asistente de configuración, puede optar por no contribuir "
-"a las estadísticas de uso. Phone home se utiliza para rastrear todas las "
-"instalaciones de NethServer en todo el mundo. Cada vez que se instala un "
-"nuevo NethServer, esta herramienta envía algunos detalles de instalación a "
-"un servidor central. La información se almacena en una base de datos y se "
-"utiliza para mostrar marcadores agradables en una vista de Google Map con el"
-" número de instalación agrupada por país y versión."
-
-#: ../../phone_home.rst:10
-msgid "Overview"
-msgstr "Visión de conjunto"
 
 #: ../../phone_home.rst:11
-msgid "The tool is *enabled* by default."
-msgstr "La herramienta está *activada* de forma predeterminada."
+msgid "The phone home is enabled by default and it sends the following data:"
+msgstr ""
 
 #: ../../phone_home.rst:13
-msgid ""
-"To disable it at a later time, run: ``config setprop phone-home status "
-"disabled``"
+msgid "UUID stored in ``/var/lib/yum/uuid``"
 msgstr ""
-"Para deshabilitarlo más adelante, ejecute: ``config setprop phone-home "
-"status disabled``"
+
+#: ../../phone_home.rst:14
+msgid "RELEASE from ``/sbin/e-smith/config getprop sysconfig Version``"
+msgstr ""
 
 #: ../../phone_home.rst:17
-msgid "If phone home is *enabled* the details sent are:"
-msgstr "Si phone home está *habilitado*, los datos enviados son:"
-
-#: ../../phone_home.rst:16
-msgid "UUID: stored in ``/var/lib/yum/uuid``"
-msgstr "UUID: guardado en ``/var/lib/yum/uuid``"
-
-#: ../../phone_home.rst:17
-msgid "RELEASE: from ``/sbin/e-smith/config getprop sysconfig Version``"
-msgstr "RELEASE: desde ``/sbin/e-smith/config getprop sysconfig Version``"
+msgid "Disabling"
+msgstr ""
 
 #: ../../phone_home.rst:19
-msgid "All the data is used to populate the map."
-msgstr "Todos los datos se utilizan para rellenar el mapa."
+msgid ""
+"The phone home can be disabled from command line. Just run the following "
+"command in a root shell: ::"
+msgstr ""

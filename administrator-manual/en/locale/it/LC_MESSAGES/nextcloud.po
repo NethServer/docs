@@ -14,6 +14,7 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
@@ -21,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 11:13+0200\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -123,23 +124,11 @@ msgstr ""
 " aggiornamento / cambio di versione è possibile utilizzare la pagina "
 "Applicazioni per aggiornare e riattivare le app."
 
-#: ../../nextcloud.rst:37
-msgid ""
-"Nextcloud version 13 uses new PHP 7.1 (`nethserver-rh-php71-php-fpm`) while "
-"older version uses PHP 5.6 (`nethserver-rh-php56-php-fpm`). You can remove "
-"php56 version (if there are no dependency problems) with the command \"yum "
-"remove nethserver-rh-php56-php-fpm\"."
-msgstr ""
-"La versione 13 di Nextcloud utilizza il nuovo PHP 7.1 (`nethserver-rh-php71"
-"-php-fpm`) mentre la versione precedente utilizza PHP 5.6 (`nethserver-rh-"
-"php56-php-fpm`). È possibile rimuovere php56 (se non ci sono problemi di "
-"dipendenze) con il comando \"yum remove nethserver-rh-php56-php-fpm\"."
-
-#: ../../nextcloud.rst:42
+#: ../../nextcloud.rst:38
 msgid "User list"
 msgstr "Lista utenti"
 
-#: ../../nextcloud.rst:44
+#: ../../nextcloud.rst:40
 msgid ""
 "All users are listed inside the administrator panel of NextCloud using a "
 "unique identifier containing letters and numbers. This is because the system"
@@ -153,7 +142,7 @@ msgstr ""
 "spiegato nella sezione `Internal Username` della `Documentazione ufficiale "
 "di NextCloud <https://docs.nextcloud.com>`_."
 
-#: ../../nextcloud.rst:48
+#: ../../nextcloud.rst:44
 msgid ""
 "If |product| is bound to a remote Active Directory account provider a "
 "dedicated user account in AD is required by the module to be fully "
@@ -164,27 +153,55 @@ msgstr ""
 "pienamente operativo! Fare riferimento alla sezione :ref:`join-existing-ad-"
 "section`."
 
-#: ../../nextcloud.rst:53
-msgid "Custom Virtual Host"
+#: ../../nextcloud.rst:49
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../nextcloud.rst:51
+msgid ""
+"After installation, the application can be configured from the new Server "
+"Manager."
+msgstr ""
+"Dopo l'installazione, l'applicazione può essere configurata dal nuovo Server"
+" Manager."
+
+#: ../../nextcloud.rst:54
+msgid "Custom virtual host"
 msgstr "Host virtuale personalizzato"
 
-#: ../../nextcloud.rst:55
-msgid "To customize the Nextcloud web url: ::"
-msgstr "Per personalizzare l'url web di Nextcloud: ::"
-
-#: ../../nextcloud.rst:61
+#: ../../nextcloud.rst:56
 msgid ""
-"If you use :ref:`let's encrypt <server_certificate-section>` remember to add"
-" the domain name to the proper list."
+"Sometimes it's better to reserve a full virtual host for accessing Nextcloud"
+" like ``nextcloud.nethserver.org``."
 msgstr ""
-"Se si utilizza :ref:`let's encrypt <server_certificate-section>` ricordarsi "
-"di aggiungere il nome di dominio all'elenco dedicato."
+"In alcuni casi è opportuno riservare un virtual host completo per accedere a"
+" Nextcloud come ``nextcloud.nethserver.org``."
+
+#: ../../nextcloud.rst:58
+msgid ""
+"Please note that after the configuration of a custom virtual host, Nextcloud"
+" will no longer be accessibile from the default URL "
+"``https://your_nethserver_ip/nextcloud``."
+msgstr ""
+"Si noti che dopo la configurazione di un virtual host personalizzato, "
+"Nextcloud non sarà più accessibile dall'URL predefinito "
+"``https://ip_del_nethserver/nextcloud``."
+
+#: ../../nextcloud.rst:60
+msgid ""
+"If the machine is using :ref:`Let's Encrypt <server_certificate-section>`, "
+"remember to add the virtual host domain name to list of valid certificate "
+"domains."
+msgstr ""
+"Se la macchina utilizza :ref:`Let's Encrypt <server_certificate-section>`, è"
+" necessario ricordarsi di aggiungere il nome di dominio del virtual host "
+"dedicato all'elenco dei domini validi nel certificato."
+
+#: ../../nextcloud.rst:63
+msgid "Trusted domains"
+msgstr "Trusted domains"
 
 #: ../../nextcloud.rst:65
-msgid "Trusted Domains"
-msgstr "Trusted Domains"
-
-#: ../../nextcloud.rst:67
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -192,28 +209,27 @@ msgstr ""
 "I Trusted domains sono una lista di domini su cui l’utente può effettuare il"
 " login. Quelli presenti di default sono:"
 
-#: ../../nextcloud.rst:69
+#: ../../nextcloud.rst:67
 msgid "domain name"
 msgstr "nome dominio"
 
-#: ../../nextcloud.rst:70
+#: ../../nextcloud.rst:68
 msgid "ip address"
 msgstr "indirizzo ip"
 
-#: ../../nextcloud.rst:72
-msgid "To add a new one use: ::"
-msgstr "Per aggiungerne uno nuovo eseguire: ::"
-
-#: ../../nextcloud.rst:77
-msgid "To add more than one, concatenate the names with a comma."
+#: ../../nextcloud.rst:70
+msgid ""
+"The list of trused domains can be customzized using :guilabel:`Trusted "
+"domains` field: add one domain per line."
 msgstr ""
-"Per aggiungerne più di uno è sufficiente concatenare i nomi con una virgola."
+"L'elenco dei trusted domains può essere personalizzato usando il campo "
+":guilabel:`Trusted domains`: aggiungere un dominio per riga."
 
-#: ../../nextcloud.rst:80
+#: ../../nextcloud.rst:73
 msgid "CalDAV and CardDAV"
 msgstr "CalDAV e CardDAV"
 
-#: ../../nextcloud.rst:82
+#: ../../nextcloud.rst:75
 msgid ""
 "Some CalDAV and CardDAV clients may have problems finding the proper sync "
 "URL and need automatic service discovery. Service discovery is enabled by "
@@ -225,12 +241,19 @@ msgstr ""
 "predefinita se è stato configurato un host virtuale personalizzato per "
 "Nexcloud."
 
-#: ../../nextcloud.rst:85
+#: ../../nextcloud.rst:78
 msgid ""
-"To enable the service discovery even if Nextcloud is running on the main "
-"FQDN, under the ``nextcloud`` subfolder, please make sure you do not have "
-"WebTop or SOGo already installed. Then execute: ::"
+"To enable the service discovery even if Nextcloud is running on the default "
+"URL, check the :guilabel:`Enable CalDAV and CardDAV auto-discovery` field."
 msgstr ""
-"Per abilitare il rilevamento automatico dei servizi anche se Nextcloud è in "
-"esecuzione sul FQDN principale, nella sottocartella ``nextcloud``, "
-"assicurarsi che WebTop o SOGo non siano installati. Quindi eseguire: ::"
+"Per abilitare il servizio di discovery anche se Nextcloud è in esecuzione "
+"sull'URL predefinito, selezionare il campo :guilabel:`Abilita rilevamento "
+"automatico CalDAV e CardDAV`."
+
+#: ../../nextcloud.rst:81
+msgid ""
+"When enabling DAV auto-discovery, please make sure WebTop or SOGo are *not* "
+"already installed."
+msgstr ""
+"Quando si abilita l'auto-discovery DAV, assicurarsi che WebTop o SOGo *non* "
+"siano già installati."

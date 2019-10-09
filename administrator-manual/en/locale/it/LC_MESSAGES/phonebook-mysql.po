@@ -8,15 +8,16 @@
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2018
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,15 @@ msgstr ""
 msgid "Phonebook"
 msgstr "Rubrica Centralizzata"
 
-#: ../../phonebook-mysql.rst:5
+#: ../../phonebook-mysql.rst:7
+msgid ""
+"The configuration page of this module is available only in the old Server "
+"Manager."
+msgstr ""
+"La pagina di configurazione di questo modulo è disponibile solo nel vecchio "
+"Server Manager."
+
+#: ../../phonebook-mysql.rst:9
 msgid ""
 "The |product| phonebook allows to collect contacts from multiple sources. "
 "After collecting the data, the contacts will be accessible in read-only mode"
@@ -38,7 +47,7 @@ msgstr ""
 "provenienti da più fonti e renderli consultabili in sola lettura dai vari "
 "client."
 
-#: ../../phonebook-mysql.rst:8
+#: ../../phonebook-mysql.rst:12
 msgid ""
 "You should add or edit any contacts inside the source, not inside the "
 "phonebook itself."
@@ -46,7 +55,7 @@ msgstr ""
 "L'aggiunta o la modifica dei contatti dovrà essere effettuata alla fonte "
 "degli stessi, non direttamente sulla rubrica centralizzata."
 
-#: ../../phonebook-mysql.rst:10
+#: ../../phonebook-mysql.rst:14
 msgid ""
 "Synchronization of contacts from various external sources is performed by "
 "default every night, the command to force it: ::"
@@ -55,7 +64,7 @@ msgstr ""
 " default tutte le notti, il comando per forzarla ed eventualmente "
 "pianificarla più frequentemente è: ::"
 
-#: ../../phonebook-mysql.rst:15
+#: ../../phonebook-mysql.rst:19
 msgid ""
 "If during synchronizations the data source are unreachable, the phonebook "
 "will be empty."
@@ -63,7 +72,7 @@ msgstr ""
 "Se durante la sincronizzazione i database sorgente non sono raggiungibili, "
 "la rubrica centralizzata risulterà vuota."
 
-#: ../../phonebook-mysql.rst:17
+#: ../../phonebook-mysql.rst:21
 msgid ""
 "The phonebook is accessible using LDAP, only if enabled, using this base DN:"
 " ::"
@@ -71,25 +80,25 @@ msgstr ""
 "La rubrica centralizzata è accessibile in LDAP, attivandone l'esportazione, "
 "impostando come Dominio Base: ::"
 
-#: ../../phonebook-mysql.rst:21
+#: ../../phonebook-mysql.rst:25
 msgid "The web interface allows to enable the import from:"
 msgstr ""
 "L'interfaccia permette di attivare l'importazione dei contatti provenienti "
 "da:"
 
-#: ../../phonebook-mysql.rst:23
+#: ../../phonebook-mysql.rst:27
 msgid "publicly shared SOGo address book (|product| 6.x only!)"
 msgstr "rubriche di SOGo condivise pubblicamente (solo per |product| 6.x!)"
 
-#: ../../phonebook-mysql.rst:24
+#: ../../phonebook-mysql.rst:28
 msgid "shared contacts from |product_cti|"
 msgstr "dei contatti condivisi del |product_cti|"
 
-#: ../../phonebook-mysql.rst:25
+#: ../../phonebook-mysql.rst:29
 msgid "speed dial from  |product_voice|"
 msgstr "dei Numeri Brevi di |product_voice|"
 
-#: ../../phonebook-mysql.rst:27
+#: ../../phonebook-mysql.rst:31
 msgid ""
 "You can import contacts from other source using custom scripts inside: ::"
 msgstr ""
@@ -97,7 +106,7 @@ msgstr ""
 " altre sorgenti interne e/o esterne al |product|, per questo scopo vengono "
 "eseguiti tutti gli script presenti nella directory: ::"
 
-#: ../../phonebook-mysql.rst:31
+#: ../../phonebook-mysql.rst:35
 msgid ""
 "Custom scripts can be written in any language, but each script must be "
 "executable. Example: ::"
@@ -105,7 +114,7 @@ msgstr ""
 "Gli script personalizzati possono essere scritti in un qualsiasi linguaggio,"
 " assicurarsi che ogni script sia eseguibile. Per farlo: ::"
 
-#: ../../phonebook-mysql.rst:36
+#: ../../phonebook-mysql.rst:40
 msgid ""
 "The ``/usr/share/phonebooks/scripts`` is already part of configuration "
 "backup. Inside the ``/usr/share/phonebooks/samples/`` directory, you can "
@@ -115,7 +124,7 @@ msgstr ""
 "configurazione. Nella directory ``/usr/share/phonebooks/samples/`` si "
 "trovano degli esempi di script per collegare diversi tipi di sorgenti."
 
-#: ../../phonebook-mysql.rst:39
+#: ../../phonebook-mysql.rst:43
 msgid ""
 "If you need to access external databases (Mysql,PostgreSQL), you can create "
 "a new ODBC record."
@@ -123,49 +132,49 @@ msgstr ""
 "Per sorgenti di dati esterne (Mysql, PostgreSQL) al |product| è possibile "
 "creare un record ODBC che permetta il collegamento."
 
-#: ../../phonebook-mysql.rst:42
+#: ../../phonebook-mysql.rst:46
 msgid "ODBC configuration"
 msgstr "Configurazione ODBC"
 
-#: ../../phonebook-mysql.rst:44
+#: ../../phonebook-mysql.rst:48
 msgid "Define the ODBC record describing the database connection"
 msgstr "Definire il record ODBC che descrive la connessione al database"
 
-#: ../../phonebook-mysql.rst:46
+#: ../../phonebook-mysql.rst:50
 msgid "Example MySql: ::"
 msgstr "Esempio MySql: ::"
 
-#: ../../phonebook-mysql.rst:50
+#: ../../phonebook-mysql.rst:54
 msgid "Example PostgreSQL ::"
 msgstr "Esempio PostgreSQL: ::"
 
-#: ../../phonebook-mysql.rst:54
+#: ../../phonebook-mysql.rst:58
 msgid "Example MSSQL ::"
 msgstr "Esempio MSSQL: ::"
 
-#: ../../phonebook-mysql.rst:58
+#: ../../phonebook-mysql.rst:62
 msgid "Execute:"
 msgstr "Eseguire:"
 
-#: ../../phonebook-mysql.rst:65
+#: ../../phonebook-mysql.rst:69
 msgid "Test"
 msgstr "Testare il funzionamento"
 
-#: ../../phonebook-mysql.rst:67
+#: ../../phonebook-mysql.rst:71
 msgid "To test if the configuration is working: ::"
 msgstr ""
 "Testare il funzionamento (sintassi: isql -v nomeDSN utente password): ::"
 
-#: ../../phonebook-mysql.rst:81
+#: ../../phonebook-mysql.rst:85
 msgid "Then, try to execute a query ::"
 msgstr ""
 "Provare una query su una tabella del database selezionato precedentemente: "
 "::"
 
-#: ../../phonebook-mysql.rst:89
+#: ../../phonebook-mysql.rst:93
 msgid "Database details"
 msgstr "Dettagli database"
 
-#: ../../phonebook-mysql.rst:96
+#: ../../phonebook-mysql.rst:100
 msgid "Display phonebook fields: ::"
 msgstr "Per visualizzare i campi della rubrica centralizzata: ::"
