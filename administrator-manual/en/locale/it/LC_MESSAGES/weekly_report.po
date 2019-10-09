@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Francesco Pari, 2017
-# Filippo Carletti <filippo.carletti@gmail.com>, 2017
+# Filippo Carletti <filippo.carletti@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,23 @@ msgstr ""
 msgid "Weekly report"
 msgstr "Report Settimanale"
 
-#: ../../weekly_report.rst:6
+#: ../../weekly_report.rst:8
+msgid ""
+"The configuration page of this module is available only in the old Server "
+"Manager and will not be ported to the new one."
+msgstr ""
+"La pagina di configurazione di questo modulo è disponibile sono nel vecchio "
+"Server Manager e non verrà portata nel nuovo."
+
+#: ../../weekly_report.rst:13
+msgid ""
+"This module has been deprecated and it has been replaced by new :ref"
+":`report-section`"
+msgstr ""
+"Questo modulo è deprecato ed è stato sostituito dal nuovo :ref:`report-"
+"section`"
+
+#: ../../weekly_report.rst:15
 msgid ""
 "The Weekly report is a summary document generated weekly and emailed to a "
 "selected address. It displays useful statistical analysis on Internet "
@@ -44,17 +60,17 @@ msgstr ""
 "grafica e tabellare. Il report è componibile, ovvero l'utente può definire "
 "quali tabelle e/o grafici (widget) includere nel report."
 
-#: ../../weekly_report.rst:16
+#: ../../weekly_report.rst:25
 msgid "You can view current and all old reports the Server Manager."
 msgstr ""
 "È possibile consultare il report corrente e lo storico accedendo al Server "
 "Manager."
 
-#: ../../weekly_report.rst:19
+#: ../../weekly_report.rst:28
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../weekly_report.rst:21
+#: ../../weekly_report.rst:30
 msgid ""
 "Install the add-on by selection nethserver-report from the "
 ":guilabel:`Software center`."
@@ -62,11 +78,11 @@ msgstr ""
 "Installare l'add-on selezionando nethserver-report dal pannello "
 ":guilabel:`Software center`."
 
-#: ../../weekly_report.rst:24
+#: ../../weekly_report.rst:33
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../weekly_report.rst:26
+#: ../../weekly_report.rst:35
 msgid ""
 "The report configuration is located in the :guilabel:`Weekly report` "
 "section. The page displays the list of enabled/disabled widgets. You can "

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -85,14 +85,14 @@ msgstr ""
 msgid "Ejabberd (XMPP)"
 msgstr "Ejabberd (XMPP)"
 
-#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
-#: ../../tlspolicy.rst:85
+#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:59 ../../tlspolicy.rst:68
+#: ../../tlspolicy.rst:76
 msgid ""
 "See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 msgstr ""
 "Vedi https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 
-#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:47
+#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:46
 msgid "Disabled SSLv3 and TLSv1.0"
 msgstr "Disabilitati SSLv3 e TLSv1.0"
 
@@ -120,40 +120,36 @@ msgstr ""
 "Questa policy estende la ``2018-03-30`` aggiungendo il supporto per i "
 "certificati ECC a"
 
-#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:66
+#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:65
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:74
+#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:73
 msgid "Dovecot"
 msgstr "Dovecot"
 
-#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:82
-msgid "OpenSSH"
-msgstr "OpenSSH"
-
-#: ../../tlspolicy.rst:43 ../../tlspolicy.rst:94
+#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:85
 msgid "Postfix"
 msgstr "Postfix"
 
-#: ../../tlspolicy.rst:50
+#: ../../tlspolicy.rst:49
 msgid "Slapd (openldap-servers)"
 msgstr "Slapd (openldap-servers)"
 
-#: ../../tlspolicy.rst:46
+#: ../../tlspolicy.rst:45
 msgid "Reference https://access.redhat.com/articles/1474813"
 msgstr "Riferimento https://access.redhat.com/articles/1474813"
 
-#: ../../tlspolicy.rst:48 ../../tlspolicy.rst:61 ../../tlspolicy.rst:70
-#: ../../tlspolicy.rst:88
+#: ../../tlspolicy.rst:47 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
+#: ../../tlspolicy.rst:79
 msgid "Cipher suite ::"
 msgstr "Cipher suite ::"
 
-#: ../../tlspolicy.rst:53
+#: ../../tlspolicy.rst:52
 msgid "Policy 2018-03-30"
 msgstr "Policy 2018-03-30"
 
-#: ../../tlspolicy.rst:55
+#: ../../tlspolicy.rst:54
 msgid ""
 "The goal of this policy is to harden the cipher set provided by the default "
 "upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25 "
@@ -163,11 +159,11 @@ msgstr ""
 "default  fornito da upstream . Non è compatibile con IE 8 XP e Java 6u45 e "
 "7u25 client. Non supporta i certificati ECC."
 
-#: ../../tlspolicy.rst:65 ../../tlspolicy.rst:74
+#: ../../tlspolicy.rst:64 ../../tlspolicy.rst:73
 msgid "Disabled SSLv2 and SSLv3"
 msgstr "Disabilita SSLv2 e SSLv3"
 
-#: ../../tlspolicy.rst:66
+#: ../../tlspolicy.rst:65
 msgid ""
 "Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-"
 "default`)"
@@ -176,31 +172,23 @@ msgstr ""
 ":`tlspolicy-default')"
 
 #: ../../tlspolicy.rst:77
-msgid "See https://github.com/NethServer/nethserver-openssh/pull/6"
-msgstr "Vedi https://github.com/NethServer/nethserver-openssh/pull/6"
-
-#: ../../tlspolicy.rst:78
-msgid "Configuration snippet ::"
-msgstr "Configuration snippet ::"
-
-#: ../../tlspolicy.rst:86
 msgid "Use TLS in outbound connections, if remote server supports it"
 msgstr ""
 "Utilizza TLS per le connessioni in uscita, se il server remoto lo supporta"
 
-#: ../../tlspolicy.rst:87
+#: ../../tlspolicy.rst:78
 msgid "Disable SSLv2 and SSLv3 on submission ports"
 msgstr "Disabilita SSLv2 e SSLv3 sulle porte di submission"
 
-#: ../../tlspolicy.rst:92
+#: ../../tlspolicy.rst:83
 msgid "Exclude ciphers ::"
 msgstr "Exclude ciphers ::"
 
-#: ../../tlspolicy.rst:99
+#: ../../tlspolicy.rst:90
 msgid "Default upstream policy"
 msgstr "Politica upstream predefinita"
 
-#: ../../tlspolicy.rst:101
+#: ../../tlspolicy.rst:92
 msgid ""
 "The goal of this policy is retaining upstream settings. This is the original"
 " goal since |product| 7."
@@ -208,7 +196,7 @@ msgstr ""
 "L'obiettivo di questa policy è mantenere le impostazioni upstream. Questo è "
 "l'obiettivo principale dall'avvento di |product| 7."
 
-#: ../../tlspolicy.rst:104
+#: ../../tlspolicy.rst:95
 msgid ""
 "This policy allows to customize ``httpd`` (Apache) with a given cipher list,"
 " by issuing the following  commands: ::"

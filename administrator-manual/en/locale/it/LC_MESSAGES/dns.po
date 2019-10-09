@@ -13,15 +13,16 @@
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,15 +72,19 @@ msgstr ""
 "effettuare una query sui dns esterni: le richieste vengono salvate in cache "
 "per velocizzare le successive query"
 
-#: ../../dns.rst:19
+#: ../../dns.rst:20
 msgid ""
 "You must specify at least one external DNS server inside the "
-":guilabel:`Network > DNS servers` page."
+":guilabel:`Network > DNS servers` page from the old Server Manager. "
+"Otherwise click on the DNS address inside the :guilabel:`Dashboard` of the "
+"new Server Manager."
 msgstr ""
 "E’ obbligatorio specificare almeno un DNS esterno all’interno della scheda "
-":guilabel:`Network > Server DNS`"
+":guilabel:`Network > Server DNS` nel vecchio Server Manager. Altrimenti fare"
+" click sull'indirizzo DNS nella guilabel:`Dashboard` del nuovo Server "
+"Manager."
 
-#: ../../dns.rst:21
+#: ../../dns.rst:23
 msgid ""
 "If |product| is also the DHCP server on the network, all the machines will "
 "be configured to use the server itself for name resolution."
@@ -87,11 +92,11 @@ msgstr ""
 "Se |product| è anche il server DHCP della rete, tutte le macchine saranno "
 "configurare per utilizzare il server stesso anche per la risoluzione nomi."
 
-#: ../../dns.rst:24
+#: ../../dns.rst:26
 msgid "Hosts"
 msgstr "Hosts"
 
-#: ../../dns.rst:26
+#: ../../dns.rst:28
 msgid ""
 "The :guilabel:`Hosts` page allows you to map host names to IP addresses, "
 "whether they are local or remote."
@@ -99,7 +104,7 @@ msgstr ""
 "La pagina :guilabel:`Hosts` consente di associare i nomi host ad indirizzi "
 "IP, siano essi locali o remoti."
 
-#: ../../dns.rst:28
+#: ../../dns.rst:30
 msgid ""
 "For example, if you have an internal web server, you can associate the name "
 "*www.mysite.com* with the IP of the web server. Then all clients can reach "
@@ -109,7 +114,7 @@ msgstr ""
 "nome host *www.miosito.com* con l’IP del server web stesso. Tutti i client "
 "potranno quindi raggiungere il sito web digitando il nome scelto."
 
-#: ../../dns.rst:31
+#: ../../dns.rst:33
 msgid ""
 "Locally configured names always take precedence over DNS records from "
 "external servers. In fact, if the provider inserts *www.mydomain.com* with "
@@ -123,11 +128,11 @@ msgstr ""
 "configurato un ip diverso, i pc della LAN non saranno in grado di vedere il "
 "sito in questione."
 
-#: ../../dns.rst:37
+#: ../../dns.rst:41
 msgid "Alias"
 msgstr "Alias"
 
-#: ../../dns.rst:39
+#: ../../dns.rst:43
 msgid ""
 "An :dfn:`alias` is an alternative name used to reach the local server. For "
 "example, if the server is called *mail.example.com*, you can create a "
@@ -139,7 +144,7 @@ msgstr ""
 "creare un :index:`alias DNS`  *myname.example.com*. Il server sarà quindi "
 "raggiungibile dai client della LAN anche usando il nome appena definito."
 
-#: ../../dns.rst:43
+#: ../../dns.rst:47
 msgid ""
 "Aliases are only valid for the internal LAN. If you want the server is "
 "reachable from the outside with the same name you need to ask the provider "

@@ -12,16 +12,18 @@
 # 
 # Translators:
 # Francesco Pari, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Filippo Carletti <filippo.carletti@gmail.com>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -249,3 +251,27 @@ msgid ""
 msgstr ""
 "Se abilitato, questo modulo memorizzerà ogni messaggio inviato tra gli "
 "utenti. Questa funzionalità impatterà sulla privacy degli utenti."
+
+#: ../../chat.rst:88
+msgid "Other options"
+msgstr "Altre opzioni"
+
+#: ../../chat.rst:90
+msgid ""
+"From the new Server Manager the administrator can configure all the options "
+"described above."
+msgstr ""
+"L'amministratore può configurare tutte le opzioni sopra descritte anche "
+"tramite il nuovo Server Manager."
+
+#: ../../chat.rst:92
+msgid "Other available options:"
+msgstr "Altre opzioni disponibili:"
+
+#: ../../chat.rst:94
+msgid "upload and dowload transfer speed"
+msgstr "velocità di trasferimento in upload e download"
+
+#: ../../chat.rst:95
+msgid "enable/disable the administrator web interface"
+msgstr "abilita/disabilita l'interfaccia di amministrazione via web"

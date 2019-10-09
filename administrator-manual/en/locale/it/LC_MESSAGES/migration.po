@@ -14,17 +14,17 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2019
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-17 16:50+0200\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -146,13 +146,13 @@ msgstr "Email"
 msgid ""
 "Before running |product| in production, some considerations about the "
 "network and existing mail client configurations are required: what ports are"
-" in use, if SMTPAUTH and TLS are enabled.  Refer to :ref:`email_clients` and"
-" :ref:`email_policies` sections for more information."
+" in use, if SMTPAUTH and TLS are enabled.  Refer to mail client "
+"configuration and :ref:`email_policies` section for more information."
 msgstr ""
 "Prima di mettere in produzione |product|, è necessario fare qualche "
 "valutazione relativa alla rete ed alla configurazione dei client mail "
 "esistenti: quali porte siano utilizzate, se SMTPAUTH e TLS siano abilitati. "
-"Fare riferimento alle sezioni :ref:`email_clients` e :ref:`email_policies` "
+"Fare riferimento alle sezioni configurazioni client e :ref:`email_policies` "
 "per ulteriori informazioni."
 
 #: ../../migration.rst:65

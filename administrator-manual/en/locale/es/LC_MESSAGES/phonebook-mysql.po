@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,7 +25,13 @@ msgstr ""
 msgid "Phonebook"
 msgstr "Directorio telefónico"
 
-#: ../../phonebook-mysql.rst:5
+#: ../../phonebook-mysql.rst:7
+msgid ""
+"The configuration page of this module is available only in the old Server "
+"Manager."
+msgstr ""
+
+#: ../../phonebook-mysql.rst:9
 msgid ""
 "The |product| phonebook allows to collect contacts from multiple sources. "
 "After collecting the data, the contacts will be accessible in read-only mode"
@@ -35,7 +41,7 @@ msgstr ""
 "fuentes. Después de recopilar los datos, los contactos estarán accesibles en"
 " modo de sólo lectura de muchos clientes."
 
-#: ../../phonebook-mysql.rst:8
+#: ../../phonebook-mysql.rst:12
 msgid ""
 "You should add or edit any contacts inside the source, not inside the "
 "phonebook itself."
@@ -43,7 +49,7 @@ msgstr ""
 "Debe agregar o editar cualquier contacto dentro de la fuente, no dentro de "
 "la propia agenda."
 
-#: ../../phonebook-mysql.rst:10
+#: ../../phonebook-mysql.rst:14
 msgid ""
 "Synchronization of contacts from various external sources is performed by "
 "default every night, the command to force it: ::"
@@ -51,7 +57,7 @@ msgstr ""
 "La sincronización de los contactos de varias fuentes externas se realiza por"
 " defecto cada noche, el comando para forzarlo: ::"
 
-#: ../../phonebook-mysql.rst:15
+#: ../../phonebook-mysql.rst:19
 msgid ""
 "If during synchronizations the data source are unreachable, the phonebook "
 "will be empty."
@@ -59,7 +65,7 @@ msgstr ""
 "Si durante las sincronizaciones la fuente de datos es inaccesible, la agenda"
 " estará vacía."
 
-#: ../../phonebook-mysql.rst:17
+#: ../../phonebook-mysql.rst:21
 msgid ""
 "The phonebook is accessible using LDAP, only if enabled, using this base DN:"
 " ::"
@@ -67,30 +73,30 @@ msgstr ""
 "La agenda está accesible mediante LDAP, sólo si está habilitada, utilizando "
 "este DN base: ::"
 
-#: ../../phonebook-mysql.rst:21
+#: ../../phonebook-mysql.rst:25
 msgid "The web interface allows to enable the import from:"
 msgstr "La interfaz web permite habilitar la importación desde:"
 
-#: ../../phonebook-mysql.rst:23
+#: ../../phonebook-mysql.rst:27
 msgid "publicly shared SOGo address book (|product| 6.x only!)"
 msgstr ""
 
-#: ../../phonebook-mysql.rst:24
+#: ../../phonebook-mysql.rst:28
 msgid "shared contacts from |product_cti|"
 msgstr "Contactos compartidos de |product_cti|"
 
-#: ../../phonebook-mysql.rst:25
+#: ../../phonebook-mysql.rst:29
 msgid "speed dial from  |product_voice|"
 msgstr "Marcación rápida de |product_voice|"
 
-#: ../../phonebook-mysql.rst:27
+#: ../../phonebook-mysql.rst:31
 msgid ""
 "You can import contacts from other source using custom scripts inside: ::"
 msgstr ""
 "Puede importar contactos de otra fuente utilizando scripts personalizados "
 "dentro de:"
 
-#: ../../phonebook-mysql.rst:31
+#: ../../phonebook-mysql.rst:35
 msgid ""
 "Custom scripts can be written in any language, but each script must be "
 "executable. Example: ::"
@@ -98,7 +104,7 @@ msgstr ""
 "Los scripts personalizados se pueden escribir en cualquier idioma, pero cada"
 " script debe ser ejecutable. Ejemplo: ::"
 
-#: ../../phonebook-mysql.rst:36
+#: ../../phonebook-mysql.rst:40
 msgid ""
 "The ``/usr/share/phonebooks/scripts`` is already part of configuration "
 "backup. Inside the ``/usr/share/phonebooks/samples/`` directory, you can "
@@ -109,7 +115,7 @@ msgstr ""
 "``/usr/share/phonebooks/samples/``, puede encontrar muchos ejemplos de "
 "scripts personalizados."
 
-#: ../../phonebook-mysql.rst:39
+#: ../../phonebook-mysql.rst:43
 msgid ""
 "If you need to access external databases (Mysql,PostgreSQL), you can create "
 "a new ODBC record."
@@ -117,46 +123,46 @@ msgstr ""
 "Si necesita acceder a bases de datos externas (Mysql, PostgreSQL), puede "
 "crear un nuevo registro ODBC."
 
-#: ../../phonebook-mysql.rst:42
+#: ../../phonebook-mysql.rst:46
 msgid "ODBC configuration"
 msgstr "Configuración de ODBC"
 
-#: ../../phonebook-mysql.rst:44
+#: ../../phonebook-mysql.rst:48
 msgid "Define the ODBC record describing the database connection"
 msgstr "Definir el registro ODBC que describe la conexión a la base de datos"
 
-#: ../../phonebook-mysql.rst:46
+#: ../../phonebook-mysql.rst:50
 msgid "Example MySql: ::"
 msgstr "Ejemplo MySql: ::"
 
-#: ../../phonebook-mysql.rst:50
+#: ../../phonebook-mysql.rst:54
 msgid "Example PostgreSQL ::"
 msgstr "Ejemplo PostgreSQL: ::"
 
-#: ../../phonebook-mysql.rst:54
+#: ../../phonebook-mysql.rst:58
 msgid "Example MSSQL ::"
 msgstr "Ejemplo MSSQL ::"
 
-#: ../../phonebook-mysql.rst:58
+#: ../../phonebook-mysql.rst:62
 msgid "Execute:"
 msgstr "Ejecutar:"
 
-#: ../../phonebook-mysql.rst:65
+#: ../../phonebook-mysql.rst:69
 msgid "Test"
 msgstr "Prueba"
 
-#: ../../phonebook-mysql.rst:67
+#: ../../phonebook-mysql.rst:71
 msgid "To test if the configuration is working: ::"
 msgstr "Para probar si la configuración está funcionando: ::"
 
-#: ../../phonebook-mysql.rst:81
+#: ../../phonebook-mysql.rst:85
 msgid "Then, try to execute a query ::"
 msgstr "A continuación, intente ejecutar una consulta ::"
 
-#: ../../phonebook-mysql.rst:89
+#: ../../phonebook-mysql.rst:93
 msgid "Database details"
 msgstr "Detalles de la base de datos"
 
-#: ../../phonebook-mysql.rst:96
+#: ../../phonebook-mysql.rst:100
 msgid "Display phonebook fields: ::"
 msgstr "Mostrar los campos de la agenda: ::"

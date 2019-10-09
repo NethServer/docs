@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-17 16:50+0200\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -40,58 +40,65 @@ msgstr ""
 
 #: ../../shared_folder.rst:12
 msgid ""
+"Shared folder are part of the File server application in the new Server "
+"Manager. The application dashboard now integrates the Samba status module, "
+"which displays shared folder usage in real time."
+msgstr ""
+
+#: ../../shared_folder.rst:15
+msgid ""
 "To create, edit and delete a shared folder go to the :guilabel:`Shared "
 "folders` page."
 msgstr ""
 
-#: ../../shared_folder.rst:19
+#: ../../shared_folder.rst:21
 msgid "Requirements"
 msgstr ""
 
-#: ../../shared_folder.rst:21
+#: ../../shared_folder.rst:23
 msgid ""
 "Shared folders use ACL (Access Control List) to provide flexible permission "
 "on files and directories."
 msgstr ""
 
-#: ../../shared_folder.rst:24
+#: ../../shared_folder.rst:26
 msgid ""
 "To enable ACL, the filesystem must be mounted with the ``acl`` option. The "
 "``acl`` option is already enabled on ``XFS``, the default CentOS filesystem,"
 " and usually even on ``Ext3`` and ``Ext4`` filesystems."
 msgstr ""
 
-#: ../../shared_folder.rst:29
+#: ../../shared_folder.rst:31
 msgid "Enabling ACL"
 msgstr ""
 
-#: ../../shared_folder.rst:31
+#: ../../shared_folder.rst:33
 msgid ""
 "On Ext2/3/4 filesystems, use ``tune2fs`` command to check if ``acl`` option "
 "is already enabled: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:35
+#: ../../shared_folder.rst:37
 msgid ""
 "Where ``sdXY`` is the name of your partition, the output should look like "
 "this: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:39
+#: ../../shared_folder.rst:41
 msgid ""
 "If the ``acl`` option is not enabled, add the option inside the "
 ":file:`/etc/fstab`: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:43
+#: ../../shared_folder.rst:45
 msgid "Or use ``tune2fs`` to enable as default mount option: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:52
+#: ../../shared_folder.rst:54
 msgid "Authorizations"
 msgstr ""
 
-#: ../../shared_folder.rst:54
+#: ../../shared_folder.rst:56
 msgid ""
 "If **Active directory** is selected as account provider, a shared folder is "
 "owned by a group of users (:guilabel:`Owning group`). Each member of the "
@@ -101,34 +108,34 @@ msgid ""
 "based on the traditional UNIX file system permissions."
 msgstr ""
 
-#: ../../shared_folder.rst:61
+#: ../../shared_folder.rst:63
 msgid ""
 "Access privileges can be refined further with the :guilabel:`ACL` tab, "
 "allowing individual users and other groups to gain read and write "
 "permissions."
 msgstr ""
 
-#: ../../shared_folder.rst:64
+#: ../../shared_folder.rst:66
 msgid ""
 "ACLs can also be set on individual files and directories from a Windows "
 "client, if the user has enough permissions -- see section  :ref:`smb-perms-"
 "section` for details."
 msgstr ""
 
-#: ../../shared_folder.rst:70
+#: ../../shared_folder.rst:72
 msgid ""
 "Some ACLs settings supported by Windows clients cannot be translated to "
 "POSIX ACLs supported by |product|, thus they will be lost when they are "
 "applied"
 msgstr ""
 
-#: ../../shared_folder.rst:73
+#: ../../shared_folder.rst:75
 msgid ""
 "At any time, the :guilabel:`Reset permissions` button propagates the shared "
 "folder UNIX permissions and POSIX ACLs to its contents."
 msgstr ""
 
-#: ../../shared_folder.rst:76
+#: ../../shared_folder.rst:78
 msgid ""
 "If :guilabel:`Guest access` is enabled, any provided authentication "
 "credentials are considered valid."
@@ -136,37 +143,37 @@ msgstr ""
 "Si :guilabel:`Guest access` está habilitado, las credenciales de "
 "autenticación proporcionadas se consideran válidas."
 
-#: ../../shared_folder.rst:79
+#: ../../shared_folder.rst:81
 msgid ""
 "If an **LDAP** account provider is selected or there is no account provider "
 "at all, any access to shared folders is considered as *Guest access* so that"
 " everyone is allowed to read and write its content."
 msgstr ""
 
-#: ../../shared_folder.rst:86
+#: ../../shared_folder.rst:88
 msgid "Network access"
 msgstr ""
 
-#: ../../shared_folder.rst:88
+#: ../../shared_folder.rst:90
 msgid ""
 "SMB/CIFS is a widely adopted protocol that allows to share files across a "
 "computer network. The shared folder name becomes the SMB \"share name\"."
 msgstr ""
 
-#: ../../shared_folder.rst:91
+#: ../../shared_folder.rst:93
 msgid ""
 "For instance, the SMB network addresses of the ``docs`` share could be ::"
 msgstr ""
 "Por ejemplo, las direcciones de red SMB de la carpeta ``documentos`` podrían"
 " ser ::"
 
-#: ../../shared_folder.rst:98
+#: ../../shared_folder.rst:100
 msgid ""
 "Authenticated access to shared folders is available with an Active Directory"
 " accounts provider. LDAP provider allows guest access only."
 msgstr ""
 
-#: ../../shared_folder.rst:101
+#: ../../shared_folder.rst:103
 msgid ""
 "When accessing a SMB share, some user interfaces provide a single user name "
 "field. In that case, specify the **user short name** prefixed with the "
@@ -175,18 +182,18 @@ msgid ""
 "name to access a SMB share is: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:109
+#: ../../shared_folder.rst:111
 msgid ""
 "On the contrary, some applications provide separate input fields for the "
 "NetBIOS domain name and the user name; in that case fill in the input fields"
 " individually."
 msgstr ""
 
-#: ../../shared_folder.rst:114
+#: ../../shared_folder.rst:116
 msgid "Network recycle bin"
 msgstr ""
 
-#: ../../shared_folder.rst:116
+#: ../../shared_folder.rst:118
 msgid ""
 "If the option :guilabel:`Network recycle bin` is enabled, removed files are "
 "actually moved into a special \"wastebasket\" directory. The :guilabel:`Keep"
@@ -194,11 +201,11 @@ msgid ""
 "wastebasket directory, preventing overwrites."
 msgstr ""
 
-#: ../../shared_folder.rst:122
+#: ../../shared_folder.rst:124
 msgid "Hide a shared folder"
 msgstr ""
 
-#: ../../shared_folder.rst:124
+#: ../../shared_folder.rst:126
 msgid ""
 "If :guilabel:`Browseable` is enabled, the shared folder is listed publicly. "
 "This does not affect the permission to use this resource."
@@ -206,62 +213,62 @@ msgstr ""
 "Si :guilabel:`Navegable` está habilitado, la carpeta compartida aparece "
 "públicamente. Esto no afecta al permiso para usar este recurso."
 
-#: ../../shared_folder.rst:129
+#: ../../shared_folder.rst:131
 msgid "Home share"
 msgstr ""
 
-#: ../../shared_folder.rst:131
+#: ../../shared_folder.rst:133
 msgid ""
 "Each |product| user has a personal shared folder that is mapped to his Unix "
 "home directory. The SMB share name correspond to the **user short name**. "
 "For example:"
 msgstr ""
 
-#: ../../shared_folder.rst:134
+#: ../../shared_folder.rst:136
 msgid "user short name ``john.smith``"
 msgstr ""
 
-#: ../../shared_folder.rst:135
+#: ../../shared_folder.rst:137
 msgid "server name ``MYSERVER``"
 msgstr ""
 
-#: ../../shared_folder.rst:136
+#: ../../shared_folder.rst:138
 msgid "server address ``192.168.1.2``"
 msgstr ""
 
-#: ../../shared_folder.rst:138
+#: ../../shared_folder.rst:140
 msgid "The SMB network address is: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:143
+#: ../../shared_folder.rst:145
 msgid "Provide John's credentials as explained in :ref:`smb-access-section`."
 msgstr ""
 
-#: ../../shared_folder.rst:147
+#: ../../shared_folder.rst:149
 msgid ""
 "The Unix home directory is created the first time the user accesses it by "
 "either SMB or SFTP/SSH protocol."
 msgstr ""
 
-#: ../../shared_folder.rst:153
+#: ../../shared_folder.rst:155
 msgid "Change resource permissions from Windows clients"
 msgstr ""
 
-#: ../../shared_folder.rst:155
+#: ../../shared_folder.rst:157
 msgid ""
 "When an user connects to a shared folder with a Windows client, he can "
 "change permissions on individual files and directories. Permissions are "
 "expressed by Access Control Lists (ACLs)."
 msgstr ""
 
-#: ../../shared_folder.rst:161
+#: ../../shared_folder.rst:163
 msgid ""
 "Some ACLs settings supported by Windows clients cannot be translated to "
 "POSIX ACLs implemented by |product|, thus they will be lost when they are "
 "applied"
 msgstr ""
 
-#: ../../shared_folder.rst:164
+#: ../../shared_folder.rst:166
 msgid ""
 "Only the owner of a resource (being it either file or directory) has full "
 "control over it (read, write, change permissions). The permission to delete "
@@ -270,50 +277,50 @@ msgid ""
 "admins-section` section."
 msgstr ""
 
-#: ../../shared_folder.rst:170
+#: ../../shared_folder.rst:172
 msgid ""
 "When a new resource is created, the owner can be defined by one of the "
 "following rules:"
 msgstr ""
 
-#: ../../shared_folder.rst:173
+#: ../../shared_folder.rst:175
 msgid "the owner is the user that creates the resource"
 msgstr ""
 
-#: ../../shared_folder.rst:174
+#: ../../shared_folder.rst:176
 msgid "the owner is inherited from the parent directory"
 msgstr ""
 
-#: ../../shared_folder.rst:176
+#: ../../shared_folder.rst:178
 msgid ""
 "To enforce one of those rules, go to :ref:`FileServer-section` page and "
 "select the corresponding radio button under :guilabel:`When a new file or "
 "directory is created in a shared folder` section."
 msgstr ""
 
-#: ../../shared_folder.rst:182
+#: ../../shared_folder.rst:184
 msgid ""
 "The :guilabel:`Owning group` setting of a shared folder does not affect the "
 "owner of a resource. See also the :ref:`smb-auth-section` section above"
 msgstr ""
 
-#: ../../shared_folder.rst:188
+#: ../../shared_folder.rst:190
 msgid "Administrative access"
 msgstr ""
 
-#: ../../shared_folder.rst:190
+#: ../../shared_folder.rst:192
 msgid ""
 "The :ref:`FileServer-section` page allows to grant special privileges to "
 "members of the ``Domain Admins`` group:"
 msgstr ""
 
-#: ../../shared_folder.rst:193
+#: ../../shared_folder.rst:195
 msgid ""
 "extend the owner permission by enabling the :guilabel:`Grant full control on"
 " shared folders to Domain Admins group` checkbox"
 msgstr ""
 
-#: ../../shared_folder.rst:196
+#: ../../shared_folder.rst:198
 msgid ""
 "access other users' home directories by enabling the :guilabel:`Grant full "
 "control on home directories to Domain Admins group (home$ share)` checkbox. "
@@ -321,24 +328,30 @@ msgid ""
 "instance, the SMB network address is: ::"
 msgstr ""
 
-#: ../../shared_folder.rst:205
+#: ../../shared_folder.rst:207
 msgid "Auditing"
 msgstr ""
 
-#: ../../shared_folder.rst:207
+#: ../../shared_folder.rst:209
+msgid ""
+"The audit module has been integrated inside the File server application of "
+"the new Server Manager."
+msgstr ""
+
+#: ../../shared_folder.rst:211
 msgid ""
 "Samba audit is a module that keeps track of all users activities on shared "
 "folders. Auditing is disabled by default and must be explicitly enabled for "
 "each folder."
 msgstr ""
 
-#: ../../shared_folder.rst:210
+#: ../../shared_folder.rst:214
 msgid ""
 "Actions are logged to a file during the the day and are moved to a "
 "browseable database overnight."
 msgstr ""
 
-#: ../../shared_folder.rst:212
+#: ../../shared_folder.rst:216
 msgid ""
 "The report web interface is available from the old Server Manager from the "
 ":guilabel:`Applications` page, while the new Server Manager (Cockpit) "

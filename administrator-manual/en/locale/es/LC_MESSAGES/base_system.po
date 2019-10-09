@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -35,19 +35,22 @@ msgstr "Sistema base"
 
 #: ../../base_system.rst:7
 msgid ""
+"A new Server Manager based on Cockpit is available. See "
+":ref:`base_system2-section`."
+msgstr ""
+
+#: ../../base_system.rst:9
+msgid ""
 "This chapter describes all available modules at the end of installation. All"
 " modules outside this section must be installed from the :ref:`software-"
-"center-section` page, including :ref:`backup-section`."
+"center-section` page."
 msgstr ""
-"Este capítulo describe todos los módulos disponibles al final de la "
-"instalación. Todos los módulos fuera de esta sección deben instalarse desde "
-"la página :ref:`software-center-section`, incluyendo :ref:`backup-section`."
 
-#: ../../base_system.rst:14
+#: ../../base_system.rst:16
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: ../../base_system.rst:16
+#: ../../base_system.rst:18
 msgid ""
 "The :index:`Dashboard` page is the landing page after a successful login. "
 "The page will display the :index:`status` and configuration of the system."
@@ -56,11 +59,11 @@ msgstr ""
 " sesión satisfactorio. La página mostrará el :index:`estado` y la "
 "configuración del sistema."
 
-#: ../../base_system.rst:22
+#: ../../base_system.rst:24
 msgid "Disk analyzer"
 msgstr "Analizador de disco"
 
-#: ../../base_system.rst:24
+#: ../../base_system.rst:26
 msgid ""
 "This tool is used to visualize :index:`disk usage` in a simple and nice "
 "graph in which you can interact with, click, and double click to navigate in"
@@ -70,7 +73,7 @@ msgstr ""
 "simple y agradable gráfico en el que puedes interactuar, hacer clic y hacer "
 "doble clic para navegar en el árbol de directorios."
 
-#: ../../base_system.rst:26
+#: ../../base_system.rst:28
 msgid ""
 "After installation go to the :guilabel:`Dashboard`, and then :guilabel:`Disk"
 " usage` tab, and click :guilabel:`Update` in order to index the root "
@@ -82,35 +85,35 @@ msgstr ""
 "indexar el directorio raíz y mostrar el gráfico. Este proceso puede tomar "
 "varios minutos dependiendo del espacio en disco ocupado."
 
-#: ../../base_system.rst:29
+#: ../../base_system.rst:31
 msgid "Well known folders are:"
 msgstr "Las carpetas conocidas son:"
 
-#: ../../base_system.rst:31
+#: ../../base_system.rst:33
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay`"
 msgstr "Carpetas compartidas: :file:`/var/lib/nethserver/ibay`"
 
-#: ../../base_system.rst:32
+#: ../../base_system.rst:34
 msgid "User home directories: :file:`/var/lib/nethserver/home`"
 msgstr "Directorios de los usuarios: :file:`/var/lib/nethserver/home`"
 
-#: ../../base_system.rst:33
+#: ../../base_system.rst:35
 msgid "Mail: :file:`/var/lib/nethserver/vmail`"
 msgstr "Correo: :file:`/var/lib/nethserver/vmail`"
 
-#: ../../base_system.rst:34
+#: ../../base_system.rst:36
 msgid "Faxes: :file:`/var/lib/nethserver/fax`"
 msgstr "Faxes: :file:`/var/lib/nethserver/fax`"
 
-#: ../../base_system.rst:35
+#: ../../base_system.rst:37
 msgid "MySQL databases: :file:`/var/lib/mysql`"
 msgstr "Bases de datos MySQL: :file:`/var/lib/mysql`"
 
-#: ../../base_system.rst:45
+#: ../../base_system.rst:47
 msgid "Network"
 msgstr "Red"
 
-#: ../../base_system.rst:47
+#: ../../base_system.rst:49
 msgid ""
 "The :guilabel:`Network` page configures how the server is connected to the "
 "local network (LAN) and/or other networks (i.e. Internet)."
@@ -118,7 +121,7 @@ msgstr ""
 "La página :guilabel:`Red` configura cómo el servidor está conectado a la red"
 " local (LAN) y/o a otras redes (es decir, Internet)."
 
-#: ../../base_system.rst:50
+#: ../../base_system.rst:52
 msgid ""
 "If the server has firewall and gateway functionality, it will handle extra "
 "networks with special functions like DMZ (DeMilitarized Zone) and guests "
@@ -128,7 +131,7 @@ msgstr ""
 "adicionales con funciones especiales como DMZ (Zona desmilitarizada) y la "
 "red de invitados."
 
-#: ../../base_system.rst:53
+#: ../../base_system.rst:55
 msgid ""
 "|product| supports an unlimited number of network interfaces. Any network "
 "managed by the system must follow these rules:"
@@ -136,7 +139,7 @@ msgstr ""
 "|product| soporta un número ilimitado de interfaces de red. Cualquier red "
 "administrada por el sistema debe seguir estas reglas:"
 
-#: ../../base_system.rst:56
+#: ../../base_system.rst:58
 msgid ""
 "networks must be physically separated (multiple networks can't be connected "
 "to the same switch/hub)"
@@ -144,7 +147,7 @@ msgstr ""
 "Las redes deben estar físicamente separadas (no se pueden conectar múltiples"
 " redes al mismo conmutador/concentrador)"
 
-#: ../../base_system.rst:57
+#: ../../base_system.rst:59
 msgid ""
 "networks must be logically separated: each network must have different "
 "addresses"
@@ -152,7 +155,7 @@ msgstr ""
 "Las redes deben estar lógicamente separadas: cada red debe tener direcciones"
 " diferentes"
 
-#: ../../base_system.rst:58
+#: ../../base_system.rst:60
 msgid ""
 "private networks, like LANs, must follow address's convention from RFC1918 "
 "document See :ref:`RFC1918-section`"
@@ -160,7 +163,7 @@ msgstr ""
 "Las redes privadas, como las LAN, deben seguir la convención de la dirección"
 " del documento RFC1918 Ver :ref:`RFC1918-section`"
 
-#: ../../base_system.rst:63
+#: ../../base_system.rst:65
 msgid ""
 "Every network interface has a specific *role* which determines its behavior."
 " All roles are identified by colors. Each role corresponds to a well-known "
@@ -170,7 +173,7 @@ msgstr ""
 "comportamiento. Todos los roles se identifican por colores. Cada función "
 "corresponde a una *zona* conocida con reglas especiales de tráfico de red:"
 
-#: ../../base_system.rst:66
+#: ../../base_system.rst:68
 msgid ""
 "*green*: local network (green role/zone). Hosts on this network can access "
 "any other configured network"
@@ -178,7 +181,7 @@ msgstr ""
 "*verde*: red local (función/zona verde). Los hosts de esta red pueden "
 "acceder a cualquier otra red configurada"
 
-#: ../../base_system.rst:67
+#: ../../base_system.rst:69
 msgid ""
 "*blue*: guests network (blue role/zone). Hosts on this network can access "
 "orange and red networks, but can't access the green network"
@@ -186,7 +189,7 @@ msgstr ""
 "*azul*: red de invitados (función/zona azul). Los hosts de esta red pueden "
 "acceder a redes naranjas y rojas, pero no pueden acceder a la red verde"
 
-#: ../../base_system.rst:68
+#: ../../base_system.rst:70
 msgid ""
 "*orange*: DMZ network (orange role/zone).  Hosts on this network can access "
 "red network, but can't access to blue and green networks"
@@ -194,7 +197,7 @@ msgstr ""
 "*naranja*: red DMZ (función/zona naranja). Los hosts de esta red pueden "
 "acceder a la red roja, pero no pueden acceder a redes azules y verdes"
 
-#: ../../base_system.rst:69
+#: ../../base_system.rst:71
 msgid ""
 "*red*: public network (red role/zone). Hosts on this network can access only"
 " the server itself"
@@ -202,14 +205,14 @@ msgstr ""
 "*roja*: red pública (funcion/zona roja). Los hosts de esta red sólo pueden "
 "acceder al servidor en sí"
 
-#: ../../base_system.rst:71
+#: ../../base_system.rst:73
 msgid ""
 "See :ref:`policy-section` for more information on roles and firewall rules."
 msgstr ""
 "Consulte :ref:`policy-section` para obtener más información sobre las "
 "funciones y las reglas de firewall."
 
-#: ../../base_system.rst:73
+#: ../../base_system.rst:75
 msgid ""
 "The server must have at least one network interface. When the server has "
 "only one interface, this interface must have green role."
@@ -217,7 +220,7 @@ msgstr ""
 "El servidor debe tener al menos una interfaz de red. Cuando el servidor "
 "tiene sólo una interfaz, esta interfaz debe tener rol verde."
 
-#: ../../base_system.rst:75
+#: ../../base_system.rst:77
 msgid ""
 "If the server is installed on a public VPS (Virtual Private Server), it "
 "should must be configured with a green interface. All critical services "
@@ -227,15 +230,15 @@ msgstr ""
 "debe estar configurado con una interfaz verde. Todos los servicios críticos "
 "deben cerrarse mediante el panel :ref:`network_services-section`."
 
-#: ../../base_system.rst:81
+#: ../../base_system.rst:83
 msgid "Alias IP"
 msgstr "Alias IP"
 
-#: ../../base_system.rst:83
+#: ../../base_system.rst:85
 msgid "Use alias IP to assign more IP addresses to the same NIC."
 msgstr "Utilice alias IP para asignar más direcciones IP a la misma NIC."
 
-#: ../../base_system.rst:85
+#: ../../base_system.rst:87
 msgid ""
 "The most common use is with a red interface: when the ISP provides a pool of"
 " public IP addresses (within the same subnet) you can add some (or all) of "
@@ -247,7 +250,7 @@ msgstr ""
 "algunas (o todas) a la misma interfaz en rojo y administrarlas "
 "individualmente (por ejemplo, en la configuración de reenvío de puertos)."
 
-#: ../../base_system.rst:87
+#: ../../base_system.rst:89
 msgid ""
 "Alias IP section can be found in the dropdown menu of the related network "
 "interface."
@@ -255,7 +258,7 @@ msgstr ""
 "La sección IP de alias se puede encontrar en el menú desplegable de la "
 "interfaz de red relacionada."
 
-#: ../../base_system.rst:89
+#: ../../base_system.rst:91
 msgid ""
 "Alias IPs on PPPoE interface could not work properly, due to different "
 "implementations of the service made by internet providers."
@@ -264,11 +267,11 @@ msgstr ""
 " debido a las diferentes implementaciones del servicio realizado por los "
 "proveedores de Internet."
 
-#: ../../base_system.rst:94
+#: ../../base_system.rst:96
 msgid "Logical interfaces"
 msgstr "Interfaces lógicas"
 
-#: ../../base_system.rst:96
+#: ../../base_system.rst:98
 msgid ""
 "In :guilabel:`Network` page press the :guilabel:`New interface` button to "
 "create a logical interface. Supported logical interfaces are:"
@@ -276,7 +279,7 @@ msgstr ""
 "En la página :guilabel:`Red` pulse el botón :guilabel:`Nueva interfaz` para "
 "crear una interfaz lógica. Las interfaces lógicas soportadas son:"
 
-#: ../../base_system.rst:99
+#: ../../base_system.rst:101
 msgid ""
 ":index:`bond`: arrange two or more network interfaces (provides load "
 "balancing and fault tolerance)"
@@ -284,7 +287,7 @@ msgstr ""
 ":index:`balanceo`: organiza dos o más interfaces de red (proporciona "
 "equilibrio de carga y tolerancia a fallos)"
 
-#: ../../base_system.rst:100
+#: ../../base_system.rst:102
 msgid ""
 ":index:`bridge`: connect two different networks (it's often used for bridged"
 " VPN and virtual machine)"
@@ -292,7 +295,7 @@ msgstr ""
 ":index:`puente`: conecta dos redes diferentes (a menudo se utiliza para "
 "puentear VPN y máquina virtual)"
 
-#: ../../base_system.rst:101
+#: ../../base_system.rst:103
 msgid ""
 ":index:`VLAN` (Virtual Local Area Network): create two or more logically "
 "separated networks using a single interface"
@@ -300,7 +303,7 @@ msgstr ""
 ":index:`VLAN` (Virtual Local Area Network): crea dos o más redes separadas "
 "lógicamente utilizando una sola interfaz"
 
-#: ../../base_system.rst:102
+#: ../../base_system.rst:104
 msgid ""
 ":index:`PPPoE` (Point-to-Point Protocol over Ethernet): connect to Internet "
 "through a DSL modem"
@@ -308,7 +311,7 @@ msgstr ""
 ":index:`PPPoE` (Point-to-Point Protocol over Etherne): conéctese a Internet "
 "a través de un módem DSL"
 
-#: ../../base_system.rst:104
+#: ../../base_system.rst:106
 msgid ""
 "**Bonds** allow you to aggregate bandwidth or tolerate link faults. Bonds "
 "can be configured in multiple modes."
@@ -316,19 +319,19 @@ msgstr ""
 "**Los balances** le permiten agregar ancho de banda o tolerar errores de "
 "enlace. Los balances se pueden configurar en varios modos."
 
-#: ../../base_system.rst:106
+#: ../../base_system.rst:108
 msgid "Modes providing load balancing and fault tolerance:"
 msgstr "Modos que proporcionan equilibrio de carga y tolerancia a fallos:"
 
-#: ../../base_system.rst:108
+#: ../../base_system.rst:110
 msgid "Balance Round Robin (recommended)"
 msgstr "Balance Round Robin (recomendado)"
 
-#: ../../base_system.rst:109
+#: ../../base_system.rst:111
 msgid "Balance XOR"
 msgstr "Balance XOR"
 
-#: ../../base_system.rst:110
+#: ../../base_system.rst:112
 msgid ""
 "802.3ad (LACP): it requires support at driver level and a switch with IEEE "
 "802.3ad Dynamic link aggregation mode enabled"
@@ -336,27 +339,27 @@ msgstr ""
 "802.3ad (LACP): requiere soporte a nivel de controlador y un conmutador con "
 "IEEE 802.3ad Modo de agregación de vínculo dinámico habilitado"
 
-#: ../../base_system.rst:111
+#: ../../base_system.rst:113
 msgid "Balance TLB: it requires support at driver level"
 msgstr "Balance TLB: requiere soporte a nivel de driver"
 
-#: ../../base_system.rst:112
+#: ../../base_system.rst:114
 msgid "Balance ALB"
 msgstr "Balance ALB"
 
-#: ../../base_system.rst:114
+#: ../../base_system.rst:116
 msgid "Modes providing fault tolerance only:"
 msgstr "Modos que proporcionan tolerancia a fallos solamente:"
 
-#: ../../base_system.rst:116
+#: ../../base_system.rst:118
 msgid "Active backup (recommended)"
 msgstr "Copia de seguridad activa (recomendado)"
 
-#: ../../base_system.rst:117
+#: ../../base_system.rst:119
 msgid "Broadcast policy"
 msgstr "Política de difusión"
 
-#: ../../base_system.rst:119
+#: ../../base_system.rst:121
 msgid ""
 "A **bridge** has the function to connect different network segments, for "
 "example by allowing virtual machines, or client connected using a VPN, to "
@@ -366,7 +369,7 @@ msgstr ""
 "red, por ejemplo, permitiendo máquinas virtuales, o un cliente conectado a "
 "través de una VPN, para acceder a la red local (verde)."
 
-#: ../../base_system.rst:122
+#: ../../base_system.rst:124
 msgid ""
 "When it is not possible to physically separate two different networks, you "
 "can use a tagged **VLAN**. The traffic of the two networks can be "
@@ -380,7 +383,7 @@ msgstr ""
 "recibido en tarjetas de red separadas. El uso de VLAN, requiere switches "
 "configurados correctamente. "
 
-#: ../../base_system.rst:126
+#: ../../base_system.rst:128
 msgid ""
 "The **PPPoE** logical interface must be assigned the red role, thus requires"
 " the gateway functionality. See :ref:`firewall-section` for details."
@@ -389,11 +392,11 @@ msgstr ""
 "requiere la funcionalidad de la pasarela o gateway. Véase :ref:`firewall-"
 "section` para más detalles."
 
-#: ../../base_system.rst:133
+#: ../../base_system.rst:135
 msgid "Address for private networks (RFC1918)"
 msgstr "Dirección para redes privadas (RFC1918)"
 
-#: ../../base_system.rst:135
+#: ../../base_system.rst:137
 msgid ""
 "TCP/IP private networks not directly connected to Internet should use "
 "special addresses selected by Internet Assigned Numbers Authority (IANA)."
@@ -402,66 +405,66 @@ msgstr ""
 "deben utilizar direcciones especiales seleccionadas por la Autoridad de "
 "Números Asignados de Internet (IANA)."
 
-#: ../../base_system.rst:139
+#: ../../base_system.rst:141
 msgid "Private network"
 msgstr "Red privada"
 
-#: ../../base_system.rst:139
+#: ../../base_system.rst:141
 msgid "Subnet mask"
 msgstr "Máscara de subred"
 
-#: ../../base_system.rst:139
+#: ../../base_system.rst:141
 msgid "IP addresses interval"
 msgstr "Intervalo de direcciones IP"
 
-#: ../../base_system.rst:141
+#: ../../base_system.rst:143
 msgid "10.0.0.0"
 msgstr "10.0.0.0"
 
-#: ../../base_system.rst:141
+#: ../../base_system.rst:143
 msgid "255.0.0.0"
 msgstr "255.0.0.0"
 
-#: ../../base_system.rst:141
+#: ../../base_system.rst:143
 msgid "10.0.0.1 - 10.255.255.254"
 msgstr "10.0.0.1 - 10.255.255.254"
 
-#: ../../base_system.rst:142
+#: ../../base_system.rst:144
 msgid "172.16.0.0"
 msgstr "172.16.0.0"
 
-#: ../../base_system.rst:142
+#: ../../base_system.rst:144
 msgid "255.240.0.0"
 msgstr "255.240.0.0"
 
-#: ../../base_system.rst:142
+#: ../../base_system.rst:144
 msgid "172.16.0.1 - 172.31.255.254"
 msgstr "172.16.0.1 - 172.31.255.254"
 
-#: ../../base_system.rst:143
+#: ../../base_system.rst:145
 msgid "192.168.0.0"
 msgstr "192.168.0.0"
 
-#: ../../base_system.rst:143
+#: ../../base_system.rst:145
 msgid "255.255.0.0"
 msgstr "255.255.0.0"
 
-#: ../../base_system.rst:143
+#: ../../base_system.rst:145
 msgid "192.168.0.1 - 192.168.255.254"
 msgstr "192.168.0.1 - 192.168.255.254"
 
-#: ../../base_system.rst:153
+#: ../../base_system.rst:155
 msgid "Network services"
 msgstr "Servicios de red"
 
-#: ../../base_system.rst:155
+#: ../../base_system.rst:157
 msgid ""
 "A :index:`network service` is a service running on the firewall itself."
 msgstr ""
 "Un :index:`servicio de red` es un servicio que se ejecuta en el propio "
 "firewall."
 
-#: ../../base_system.rst:157
+#: ../../base_system.rst:159
 msgid ""
 "Each service has a list of \"open\" ports on which it answers to "
 "connections. Connections can be accepted from selected zones. Finer grained "
@@ -473,11 +476,11 @@ msgstr ""
 "Puede configurarse un control más detallado del acceso a los servicios de "
 "red desde la página de reglas del firewall."
 
-#: ../../base_system.rst:167
+#: ../../base_system.rst:169
 msgid "Trusted networks"
 msgstr "Redes de confianza"
 
-#: ../../base_system.rst:169
+#: ../../base_system.rst:171
 msgid ""
 "Trusted networks are special networks (local, VPNs or remote) allowed to "
 "access special server's services."
@@ -485,19 +488,19 @@ msgstr ""
 "Las redes de confianza son redes especiales (locales, VPN o remotas) que "
 "pueden acceder a los servicios de un servidor especial."
 
-#: ../../base_system.rst:172
+#: ../../base_system.rst:174
 msgid "For example, hosts inside trusted networks can access to:"
 msgstr "Por ejemplo, los hosts dentro de redes de confianza pueden acceder a:"
 
-#: ../../base_system.rst:174
+#: ../../base_system.rst:176
 msgid "Server Manager"
 msgstr "Administrador del servidor"
 
-#: ../../base_system.rst:175
+#: ../../base_system.rst:177
 msgid "Shared folders (SAMBA)"
 msgstr "Carpetas compartidas (SAMBA)"
 
-#: ../../base_system.rst:177
+#: ../../base_system.rst:179
 msgid ""
 "If the remote network is reachable using a router, remember to add a static "
 "route inside :ref:`static_routes-section` page."
@@ -505,11 +508,11 @@ msgstr ""
 "Si la red remota es accesible mediante un router, recuerde agregar una ruta "
 "estática dentro de la página :ref:`static_routes-section`."
 
-#: ../../base_system.rst:185
+#: ../../base_system.rst:187
 msgid "Static routes"
 msgstr "Rutas estáticas"
 
-#: ../../base_system.rst:187
+#: ../../base_system.rst:189
 msgid ""
 "This page allow to create special :index:`static routes` which will use the "
 "specified gateway. These routes are usually used to connect private network."
@@ -518,7 +521,7 @@ msgstr ""
 "puerta de enlace especificada. Estas rutas se utilizan generalmente para "
 "conectar la red privada."
 
-#: ../../base_system.rst:190
+#: ../../base_system.rst:192
 msgid ""
 "Remember to add the network to :ref:`trusted_networks-section`, if you wish "
 "to allow remote hosts to access local services."
@@ -526,26 +529,22 @@ msgstr ""
 "Recuerde agregar la red a :ref:`trusted_networks-section`, si desea permitir"
 " que los hosts remotos tengan acceso a los servicios locales."
 
-#: ../../base_system.rst:196
+#: ../../base_system.rst:198
 msgid "Organization contacts"
 msgstr "Organización contactos"
 
-#: ../../base_system.rst:198
+#: ../../base_system.rst:200
 msgid ""
 "The :guilabel:`Organization contacts` page fields are used as default values"
 " for user accounts.  The organization name and address are also displayed on"
-" the Server Manager login screen."
+" the old Server Manager login screen."
 msgstr ""
-"Los campos de la página :guilabel:`Organización contactos` se utilizan como "
-"valores predeterminados para las cuentas de usuario. El nombre y la "
-"dirección de la organización también se muestran en la pantalla de inicio de"
-" sesión del Administrador del servidor."
 
-#: ../../base_system.rst:208
+#: ../../base_system.rst:210
 msgid "Server certificate"
 msgstr "Certificado del servidor"
 
-#: ../../base_system.rst:210
+#: ../../base_system.rst:212
 msgid ""
 "The :guilabel:`Server certificate` page shows the currently installed X.509 "
 "certificates, and the default one provided by system services for TLS/SSL "
@@ -555,13 +554,13 @@ msgstr ""
 "X.509 actualmente instalados y el predeterminado proporcionado por los "
 "servicios del sistema para las comunicaciones cifradas TLS/SSL."
 
-#: ../../base_system.rst:214
+#: ../../base_system.rst:216
 msgid ""
 "|product| checks the certificates validity and sends an email to the root "
 "user if a certificate is near to expire."
 msgstr ""
 
-#: ../../base_system.rst:217
+#: ../../base_system.rst:219
 msgid ""
 "The :guilabel:`Set as default` button allows choosing the default "
 "certificate. When a new certificate is chosen, all services using TLS/SSL "
@@ -573,7 +572,7 @@ msgstr ""
 "servicios que utilizan TLS/SSL se reinician y los clientes de red deben "
 "aceptar el nuevo certificado."
 
-#: ../../base_system.rst:221
+#: ../../base_system.rst:223
 msgid ""
 "When |product| is installed a default RSA self-signed certificate is "
 "generated. It should be edited by inserting proper values before configuring"
@@ -582,17 +581,17 @@ msgid ""
 "the same attributes."
 msgstr ""
 
-#: ../../base_system.rst:226
+#: ../../base_system.rst:228
 msgid "The :guilabel:`Server certificate` page also allows:"
 msgstr ""
 
-#: ../../base_system.rst:228
+#: ../../base_system.rst:230
 msgid ""
 "uploading an existing certificate and private RSA/ECC key. Optionally a "
 "certificate chain file can be specified, too. All files must be PEM-encoded."
 msgstr ""
 
-#: ../../base_system.rst:231
+#: ../../base_system.rst:233
 msgid ""
 "requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is "
 "possible if the following requirements are met:"
@@ -600,7 +599,7 @@ msgstr ""
 "solicitar un nuevo certificado de *Let's Encrypt* [#Letsencrypt]_. Esto es "
 "posible si se cumplen los siguientes requisitos:"
 
-#: ../../base_system.rst:234
+#: ../../base_system.rst:236
 msgid ""
 "The server must be reachable from outside at port 80. Make sure your port 80"
 " is open to the public Internet (you can check with sites like [#CSM]_);"
@@ -609,7 +608,7 @@ msgstr ""
 "de que su puerto 80 está abierto a la Internet pública (puede consultar con "
 "sitios como [#CSM]_);"
 
-#: ../../base_system.rst:237
+#: ../../base_system.rst:239
 msgid ""
 "The domains that you want the certificate for must be public domain names "
 "associated to server own public IP. Make sure you have public DNS name "
@@ -620,23 +619,23 @@ msgstr ""
 "tiene un nombre DNS público que apunta a su servidor (puede consultar con "
 "sitios como [#VDNS]_)."
 
-#: ../../base_system.rst:241
+#: ../../base_system.rst:243
 msgid "Wildcard certificates (i.e. ``*.nethserver.org``) are not supported."
 msgstr ""
 
-#: ../../base_system.rst:243
+#: ../../base_system.rst:245
 msgid ""
 "The :guilabel:`Notification email` will be used by Let's Encrypt to send "
 "notifications about the certificate."
 msgstr ""
 
-#: ../../base_system.rst:246
+#: ../../base_system.rst:248
 msgid ""
 "The Let's Encrypt certificate is automatically renewd 30 days before "
 "expiration date."
 msgstr ""
 
-#: ../../base_system.rst:249
+#: ../../base_system.rst:251
 msgid ""
 "To avoid problems while importing the certificate in Internet Explorer, the "
 "Common Name (CN) field should match the server FQDN."
@@ -644,42 +643,42 @@ msgstr ""
 "Para evitar problemas al importar el certificado en Internet Explorer, el "
 "campo Nombre Común (CN) debe coincidir con el FQDN de servidor."
 
-#: ../../base_system.rst:252
+#: ../../base_system.rst:254
 msgid "Let's Encrypt website https://letsencrypt.org/"
 msgstr "Sitio web Let's Encrypt https://letsencrypt.org/"
 
-#: ../../base_system.rst:253
+#: ../../base_system.rst:255
 msgid "Website http://www.canyouseeme.org/"
 msgstr "Sitio web http://www.canyouseeme.org/"
 
-#: ../../base_system.rst:254
+#: ../../base_system.rst:256
 msgid "Website http://viewdns.info/"
 msgstr "Sitio web http://viewdns.info/"
 
-#: ../../base_system.rst:257
+#: ../../base_system.rst:259
 msgid "Disable Let's Encrypt"
 msgstr "Deshabilitar Let's Encrypt"
 
-#: ../../base_system.rst:259
+#: ../../base_system.rst:261
 msgid "Let's Encrypt certificate can be disabled following these steps:"
 msgstr ""
 "El certificado Let's Encrypt se puede deshabilitar siguiendo estos pasos:"
 
-#: ../../base_system.rst:261
+#: ../../base_system.rst:263
 msgid ""
 "Access the :guilabel:`Server certificate` page, set as default the self-"
 "signed certificate or an uploaded one"
 msgstr ""
 
-#: ../../base_system.rst:262
+#: ../../base_system.rst:264
 msgid "Open the shell and execute the following commands:"
 msgstr "Abre el shell y ejecuta los siguientes comandos:"
 
-#: ../../base_system.rst:270
+#: ../../base_system.rst:272
 msgid "Shutdown"
 msgstr "Apagar"
 
-#: ../../base_system.rst:272
+#: ../../base_system.rst:274
 msgid ""
 "The machine where |product| is installed can be rebooted or halted from the "
 ":menuselection:`Shutdown` page. Choose an option (reboot or halt) then click"
@@ -689,18 +688,18 @@ msgstr ""
 "desde la página :menuselection:`Apagar`. Seleccione una opción (reiniciar o "
 "detener) y, a continuación, haga clic en el botón Enviar."
 
-#: ../../base_system.rst:275
+#: ../../base_system.rst:277
 msgid ""
 "Always use this module to avoid bad shutdown which can cause data damages."
 msgstr ""
 "Utilice siempre este módulo para evitar un apagado incorrecto que pueda "
 "causar daños en los datos."
 
-#: ../../base_system.rst:278
+#: ../../base_system.rst:280
 msgid "Log viewer"
 msgstr "Visor de registro"
 
-#: ../../base_system.rst:280
+#: ../../base_system.rst:282
 msgid ""
 "All services will save operations inside files called :dfn:`logs`. The "
 ":index:`log` analysis is the main tool to find and resolve problems. To "
@@ -711,27 +710,27 @@ msgstr ""
 "principal para encontrar y resolver problemas. Para analizar los archivos de"
 " registro, haga clic en :menuselection:`Visor de registro`."
 
-#: ../../base_system.rst:284
+#: ../../base_system.rst:286
 msgid "This module allows to:"
 msgstr "Este módulo permite:"
 
-#: ../../base_system.rst:286
+#: ../../base_system.rst:288
 msgid "start search on all server's logs"
 msgstr "Iniciar la búsqueda en todos los registros del servidor"
 
-#: ../../base_system.rst:287
+#: ../../base_system.rst:289
 msgid "display a single log"
 msgstr "Mostrar un solo registro"
 
-#: ../../base_system.rst:288
+#: ../../base_system.rst:290
 msgid "follow the content of a log in real time"
 msgstr "Seguir el contenido de un registro en tiempo real"
 
-#: ../../base_system.rst:293
+#: ../../base_system.rst:295
 msgid "Date and time"
 msgstr "Fecha y hora"
 
-#: ../../base_system.rst:295
+#: ../../base_system.rst:297
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -741,7 +740,7 @@ msgstr ""
 " la zona horaria correcta. El reloj de la máquina puede configurarse manual "
 "o automáticamente utilizando servidores públicos NTP (de preferencia)."
 
-#: ../../base_system.rst:298
+#: ../../base_system.rst:300
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -750,11 +749,11 @@ msgstr ""
 "problemas, todos los hosts en LAN se pueden configurar para utilizar el "
 "servidor como servidor NTP."
 
-#: ../../base_system.rst:302
+#: ../../base_system.rst:304
 msgid "Inline help"
 msgstr "Ayuda en línea"
 
-#: ../../base_system.rst:304
+#: ../../base_system.rst:306
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -763,24 +762,24 @@ msgstr ""
 ":index:`ayuda en línea`. La ayuda en línea explica cómo funciona el módulo y"
 " todas las opciones disponibles."
 
-#: ../../base_system.rst:307
+#: ../../base_system.rst:309
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Estas páginas de ayuda están disponibles en todos los idiomas del "
 "Administrador de servidores."
 
-#: ../../base_system.rst:309
+#: ../../base_system.rst:311
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Puede encontrar una lista de todas las páginas de ayuda en línea disponibles"
 " en la dirección: ::"
 
-#: ../../base_system.rst:313
+#: ../../base_system.rst:315
 msgid "**Example**"
 msgstr "**Ejemplo**"
 
-#: ../../base_system.rst:315
+#: ../../base_system.rst:317
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"

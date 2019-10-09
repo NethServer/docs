@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -25,7 +25,19 @@ msgstr ""
 msgid "Weekly report"
 msgstr "Reporte semanal"
 
-#: ../../weekly_report.rst:6
+#: ../../weekly_report.rst:8
+msgid ""
+"The configuration page of this module is available only in the old Server "
+"Manager and will not be ported to the new one."
+msgstr ""
+
+#: ../../weekly_report.rst:13
+msgid ""
+"This module has been deprecated and it has been replaced by new :ref"
+":`report-section`"
+msgstr ""
+
+#: ../../weekly_report.rst:15
 msgid ""
 "The Weekly report is a summary document generated weekly and emailed to a "
 "selected address. It displays useful statistical analysis on Internet "
@@ -44,16 +56,16 @@ msgstr ""
 "usuario puede definir qué tablas y/o gráficos (widgets) incluir en el "
 "informe."
 
-#: ../../weekly_report.rst:16
+#: ../../weekly_report.rst:25
 msgid "You can view current and all old reports the Server Manager."
 msgstr ""
 "Puede ver los informes actuales y antiguos en el Administrador del servidor."
 
-#: ../../weekly_report.rst:19
+#: ../../weekly_report.rst:28
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../weekly_report.rst:21
+#: ../../weekly_report.rst:30
 msgid ""
 "Install the add-on by selection nethserver-report from the "
 ":guilabel:`Software center`."
@@ -61,11 +73,11 @@ msgstr ""
 "Instale el complemento mediante la selección nethserver-report desde el "
 ":guilabel:`Centro de software`."
 
-#: ../../weekly_report.rst:24
+#: ../../weekly_report.rst:33
 msgid "Configuration"
 msgstr "Configuración"
 
-#: ../../weekly_report.rst:26
+#: ../../weekly_report.rst:35
 msgid ""
 "The report configuration is located in the :guilabel:`Weekly report` "
 "section. The page displays the list of enabled/disabled widgets. You can "

@@ -14,15 +14,16 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2018
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,15 +66,15 @@ msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
 
-#: ../../index.rst:30
-msgid "Release notes |version|"
-msgstr "Note di rilascio |version|"
+#: ../../index.rst:29
+msgid "Release notes"
+msgstr "Release notes"
 
-#: ../../index.rst:38
+#: ../../index.rst:35
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:55
+#: ../../index.rst:50
 msgid "Configuration"
 msgstr "Configurazione"
 
@@ -81,7 +82,7 @@ msgstr "Configurazione"
 msgid "Modules"
 msgstr "Moduli"
 
-#: ../../index.rst:117
+#: ../../index.rst:119
 msgid "NethForge modules"
 msgstr "Moduli NethForge"
 
@@ -89,14 +90,6 @@ msgstr "Moduli NethForge"
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:135
+#: ../../index.rst:133
 msgid "Appendix"
 msgstr "Appendice"
-
-#: ../../index.rst:149
-msgid "Indices"
-msgstr "Indici"
-
-#: ../../index.rst:151
-msgid ":ref:`General index <genindex>`"
-msgstr ":ref:`Indice generale <genindex>`"

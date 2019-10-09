@@ -16,6 +16,7 @@
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Ilvo Marzano <tarpano@hotmail.com>, 2018
 # Davide Principi <davide.principi@nethesis.it>, 2018
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Nicola <nicola.rauso@nethesis.it>, 2019
 # 
 #, fuzzy
@@ -23,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -38,31 +39,35 @@ msgid "Software center"
 msgstr "Software center"
 
 #: ../../packages.rst:8
+msgid "For the old Server Manager see :ref:`software_center_legacy-section`."
+msgstr ""
+"Per il vecchio Server Manager vedi :ref:`software_center_legacy-section`."
+
+#: ../../packages.rst:10
 msgid ""
 "|product| is highly modular: at the end of the installation a bare minimum "
-"set of features like *network configuration* and *log viewer* is installed. "
-"The :guilabel:`Software center` page allows the administrator to select and "
-"**install** additional  :dfn:`modules`, and also list and **update** the "
-"already installed software :dfn:`packages`."
+"set of features like *network configuration* and *backup* are installed. The"
+" :guilabel:`Software Center` page allows the administrator to select and "
+"**install** additional  :dfn:`applications`, and also list and **update** "
+"the already installed software :dfn:`packages`."
 msgstr ""
-"|product| è altamente modulare: al termine dell’installazione il sistema "
-"contiene solo i moduli di base  *configurazione di rete*, *visualizzazione "
-"log*. La pagina  del :guilabel:`Software center`  consente  "
-"all'amministratore di selezionare e **installare** dei :dfn:`moduli` "
-"aggiuntivi, e anche di elencare e  **aggiornare** i :dfn:`pacchetti` "
-"software già installati."
+"|product| è altamente modulare: al termine dell'installazione è disponibile "
+"solo un set minimo di funzionalità come la *configurazione di rete* e il "
+"*backup*. La pagina :guilabel:`Software Center` consente all'amministratore "
+"di selezionare e **installare** :dfn:`applicazioni` aggiuntive, e anche di "
+"elencare e **aggiornare** i :dfn:`pacchetti` già installati."
 
-#: ../../packages.rst:14
+#: ../../packages.rst:16
 msgid ""
-"A *module* is usually constituted by multiple *packages*. It extends the "
-"system functionality. For instance a module can transform |product| into an "
-"Email server, or a Web proxy."
+"An *application* is usually constituted by multiple *packages*. It extends "
+"the system functionality. For instance a module can transform |product| into"
+" an Email server, or a Web proxy."
 msgstr ""
-"Un *modulo*  è solitamente costituito da più *pacchetti*. Estende le "
+"Un'*applicazione* è generalmente costituita da più *pacchetti*. Estende le "
 "funzionalità del sistema. Ad esempio un modulo può trasformare |product| in "
 "un server di posta elettronica o un proxy Web."
 
-#: ../../packages.rst:18
+#: ../../packages.rst:20
 msgid ""
 "A software *package* is an atomic unit of software. It is published by a "
 "public software repository. |product| packages are files in the RPM [#RPM]_ "
@@ -75,10 +80,38 @@ msgstr ""
 "possono essere usati come sinonimi."
 
 #: ../../packages.rst:26
+msgid "Applications installation"
+msgstr "Installazione applicazioni"
+
+#: ../../packages.rst:28
+msgid ""
+"The :guilabel:`Applications` section lists all modules that can be "
+"installed. This list can be filtered by category. To **install an "
+"application**, check the corresponding box and click on :guilabel:`Install "
+"applications`."
+msgstr ""
+"La sezione :guilabel:`Applicazioni` elenca tutti i moduli che possono essere"
+" installati. Questo elenco può essere filtrato per categoria. Per "
+"**installare un'applicazione**, selezionare la casella corrispondente e fare"
+" clic su :guilabel:`Installa applicazioni`."
+
+#: ../../packages.rst:33
+msgid ""
+"Once a module has been installed, it is listed under the :ref:`applications-"
+"section` page."
+msgstr ""
+"Una volta che un modulo è stato installato, è elencato nella sezione :ref"
+":`applications-section`."
+
+#: ../../packages.rst:39
 msgid "Software updates"
 msgstr "Aggiornamenti software"
 
-#: ../../packages.rst:30
+#: ../../packages.rst:42
+msgid "Enterprise and community subscriptions"
+msgstr "Subscription enterprise e community"
+
+#: ../../packages.rst:44
 msgid ""
 "|product| receives controlled updates from a set of managed software "
 "repositories. See :ref:`automatic-updates` to receive new features and fix "
@@ -88,25 +121,29 @@ msgstr ""
 "software. Vedi  :ref:`automatic-updates` per ricevere nuove funzionalità e "
 "correggere bug e problemi di sicurezza."
 
-#: ../../packages.rst:36
+#: ../../packages.rst:49
+msgid "Community without subscription"
+msgstr "Community senza subscription"
+
+#: ../../packages.rst:51
 msgid ""
 "A NethServer 7 system receives updates from different software projects:"
 msgstr ""
 "Un sistema NethServer 7 riceve aggiornamenti da diversi progetti software:"
 
-#: ../../packages.rst:38
+#: ../../packages.rst:53
 msgid "the NethServer project itself [#NETHSERVER]_"
 msgstr "il progetto NethServer stesso [#NETHSERVER]_"
 
-#: ../../packages.rst:39
+#: ../../packages.rst:54
 msgid "the CentOS project [#CENTOS]_"
 msgstr "il progetto CentOS [#CENTOS]_"
 
-#: ../../packages.rst:40
+#: ../../packages.rst:55
 msgid "the EPEL repository [#EPEL]_"
 msgstr "repository EPEL  [#EPEL]_"
 
-#: ../../packages.rst:42
+#: ../../packages.rst:57
 msgid ""
 "Each project releases software updates according to its specific rules and "
 "development cycle, but all of them prefer software stability over bleeding "
@@ -116,7 +153,7 @@ msgstr ""
 "specifiche e al ciclo di sviluppo, ma tutti preferiscono la stabilità del "
 "software rispetto a nuove funzionalità. "
 
-#: ../../packages.rst:46
+#: ../../packages.rst:61
 msgid ""
 "Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for "
 "more information about NethServer updates."
@@ -124,7 +161,7 @@ msgstr ""
 "Fare riferimento al forum della community [#NSCOM]_ e :ref:`release-notes-"
 "section` per ulteriori informazioni sugli aggiornamenti di NethServer."
 
-#: ../../packages.rst:49
+#: ../../packages.rst:64
 msgid ""
 "Updates released by the CentOS project are immediately available on "
 "|product| directly from the CentOS mirrors. Only updates for the current "
@@ -137,31 +174,31 @@ msgstr ""
 "corrente del sistema (ad esempio \"7.6.1804\"), fino aggiornamento alla "
 "successiva versione di sistema, procedura che va avviata manualmente."
 
-#: ../../packages.rst:54
+#: ../../packages.rst:69
 msgid "More info about CentOS updates:"
 msgstr "Maggiori informazioni sugli aggiornamenti CentOS:"
 
-#: ../../packages.rst:56
+#: ../../packages.rst:71
 msgid "https://wiki.centos.org/FAQ/General"
 msgstr "https://wiki.centos.org/FAQ/General"
 
-#: ../../packages.rst:57
+#: ../../packages.rst:72
 msgid "https://access.redhat.com/support/policy/updates/errata/"
 msgstr "https://access.redhat.com/support/policy/updates/errata/"
 
-#: ../../packages.rst:58
+#: ../../packages.rst:73
 msgid "https://access.redhat.com/security/updates/backporting"
 msgstr "https://access.redhat.com/security/updates/backporting"
 
-#: ../../packages.rst:59
+#: ../../packages.rst:74
 msgid "https://access.redhat.com/security/"
 msgstr "https://access.redhat.com/security/"
 
-#: ../../packages.rst:61
+#: ../../packages.rst:76
 msgid ""
 "Updates released by EPEL are immediately available from the official EPEL "
 "mirrors. As EPEL is not bound to the current system release number, the "
-":guilabel:`Software center` always installs the latest available software "
+":guilabel:`Software Center` always installs the latest available software "
 "versions from EPEL."
 msgstr ""
 "Gli aggiornamenti rilasciati da EPEL sono resi immediatamente disponibili "
@@ -169,15 +206,15 @@ msgstr ""
 "del sistema corrente, il :guilabel:`Software center` installa sempre le "
 "versioni software più recenti disponibili su EPEL."
 
-#: ../../packages.rst:66
+#: ../../packages.rst:81
 msgid "More info about EPEL updates:"
 msgstr "Maggiori informazioni sugli aggiornamenti EPEL:"
 
-#: ../../packages.rst:68
+#: ../../packages.rst:83
 msgid "https://fedoraproject.org/wiki/EPEL"
 msgstr "https://fedoraproject.org/wiki/EPEL"
 
-#: ../../packages.rst:72
+#: ../../packages.rst:87
 msgid ""
 "Even if the above projects strive for software stability, care is necessary "
 "to check if the updates fit well together. Every time the system is going to"
@@ -194,49 +231,53 @@ msgstr ""
 "produzione. Per qualsiasi dubbio chiedi al forum della community di "
 "NethServer! [#NSCOM]_"
 
-#: ../../packages.rst:82
+#: ../../packages.rst:97
 msgid "Manual update procedure"
 msgstr "Procedura di aggiornamento manuale"
 
-#: ../../packages.rst:84
+#: ../../packages.rst:99
 msgid ""
-"When updates are available, a warning message appears in the "
-":guilabel:`Software center` page."
+"When updates are available, the list of new packages is available under the "
+":guilabel:`Updates` section."
 msgstr ""
-"Quando gli aggiornamenti sono disponibili, viene visualizzato un messaggio "
-"di avviso nella pagina :guilabel:`Software center`."
+"Quando sono disponibili aggiornamenti, l'elenco dei nuovi pacchetti è "
+"disponibile nella sezione :guilabel:`Aggiornamenti`."
 
-#: ../../packages.rst:87
+#: ../../packages.rst:101
 msgid ""
-"Updates for the installed software are listed under the :guilabel:`Updates` "
-"tab. Further details about them are available under :guilabel:`Updates "
-"CHANGELOG`."
+"Further details are available clicking the :guilabel:`Changelog` button."
 msgstr ""
-"Gli aggiornamenti per il software installato sono elencati nella  scheda "
-":guilabel:`Updates`. Ulteriori dettagli su i pacchetti installati sono "
-"disponibili in :guilabel:`Updates CHANGELOG`."
-
-#: ../../packages.rst:90
-msgid ""
-"To start the system update click the :guilabel:`Download and install` "
-"button."
-msgstr ""
-"Per avviare l'aggiornamento del sistema, fai clic sul pulsante "
-":guilabel:`Scarica e installa`."
-
-#: ../../packages.rst:96
-msgid ""
-"Regularly update the installed software to fix bugs, security issues and "
-"receive new features"
-msgstr ""
-"Aggiorna regolarmente il software installato per correggere bug, problemi di"
-" sicurezza e ricevere nuove funzionalità"
+"Maggiori dettagli sono disponibili cliccando il pulsante "
+":guilabel:`Changelog`."
 
 #: ../../packages.rst:103
+msgid ""
+"To expand the list of updates, cick on the :guilabel:`Details` button, you "
+"can then update a single |product| package by clicking on the "
+":guilabel:`Update` button. To start a full system update click the "
+":guilabel:`Update all` button."
+msgstr ""
+"Per espandere l'elenco degli aggiornamenti, cliccare sul pulsante "
+":guilabel:`Dettagli`, è quindi possibile aggiornare un singolo pacchetto di "
+"|product| facendo clic sul pulsante :guilabel:`Aggiorna`. Per avviare un "
+"aggiornamento completo del sistema, fare clic sul pulsante "
+":guilabel:`Aggiorna tutto`."
+
+#: ../../packages.rst:109
+msgid ""
+"On community machines without any type of subscription, remember to "
+"regularly update the installed software to fix bugs, security issues and "
+"receive new features"
+msgstr ""
+"Sulle macchine community senza alcun tipo di subscirption, è indispensabile "
+"ricordare di aggiornare regolarmente il software installato per correggere "
+"bug, problemi di sicurezza e ricevere nuove funzionalità"
+
+#: ../../packages.rst:117
 msgid "Automatic update procedure"
 msgstr "Procedura di aggiornamento automatico"
 
-#: ../../packages.rst:105
+#: ../../packages.rst:119
 msgid ""
 "It is possible to perform some automatic actions when new software updates "
 "are available."
@@ -244,11 +285,11 @@ msgstr ""
 "È possibile eseguire alcune azioni automatiche quando sono disponibili nuovi"
 " aggiornamenti software."
 
-#: ../../packages.rst:107
+#: ../../packages.rst:121
 msgid "Download and (optionally) install the updates"
 msgstr "Scarica e (facoltativamente) installa gli aggiornamenti"
 
-#: ../../packages.rst:109
+#: ../../packages.rst:123
 msgid ""
 "Send an email to the system administrator (root) and to an additional list "
 "of recipients"
@@ -256,15 +297,17 @@ msgstr ""
 "Invia una e-mail all'amministratore di sistema (root) e ad un ulteriore "
 "elenco di destinatari"
 
-#: ../../packages.rst:111
+#: ../../packages.rst:125
 msgid ""
 "The updates availability is checked by a task that runs at a random time "
-"overnight."
+"overnight. To configure the update policy click on the :guilabel:`Configure`"
+" button."
 msgstr ""
-"La disponibilità degli aggiornamenti è controllata da un'attività che viene "
-"eseguita in un momento casuale durante la notte."
+"La disponibilità degli aggiornamenti viene verificata da un'attività che "
+"viene eseguita in un momento casuale durante la notte. Per modificare la "
+"politica di aggiornamento fare clic sul pulsante :guilabel:`Configura`."
 
-#: ../../packages.rst:115
+#: ../../packages.rst:130
 msgid ""
 "If the notification email is not delivered or is marked as spam, it is "
 "possible to configure a  :ref:`smarthost <smarthost-configuration>`"
@@ -272,133 +315,25 @@ msgstr ""
 "Se l'e-mail di notifica non viene consegnata o è contrassegnata come spam, è"
 " possibile configurare un  :ref:`smarthost <smarthost-configuration>`"
 
-#: ../../packages.rst:120
-msgid "Modules installation"
-msgstr "Installazione dei moduli"
-
-#: ../../packages.rst:122
-msgid ""
-"The :guilabel:`Available` tab lists all of the modules that can be "
-"installed. This list can be filtered by category. See also :ref:`additional-"
-"languages`."
-msgstr ""
-"La scheda :guilabel:`Available` elenca tutti i moduli che possono essere "
-"installati. Questo elenco può essere filtrato per categoria. Vedi anche :ref"
-":`additional-languages`."
-
-#: ../../packages.rst:125
-msgid ""
-"To **install a module**, check the corresponding box and click on "
-":guilabel:`Add`. Some modules suggest optional packages that can be "
-"installed also at a later time."
-msgstr ""
-"Per **install a module**, selezionare la casella corrispondente e fare clic "
-"su :guilabel:`Add`. Alcuni moduli suggeriscono pacchetti opzionali che "
-"possono essere installati anche in un secondo momento."
-
-#: ../../packages.rst:129
-msgid ""
-"Once a module has been installed, it is listed under the "
-":guilabel:`Installed` tab."
-msgstr ""
-"Una volta che un modulo è stato installato, è elencato nella scheda  "
-":guilabel:`Installed`."
-
-#: ../../packages.rst:131
-msgid ""
-"To **install optional packages** at a later time, select "
-":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
-"entry."
-msgstr ""
-"Per **installare i pacchetti opzionali** in seguito, selezionare il tab "
-":guilabel:`Installati` e premere il pulsante :guilabel:`Modifica` di una "
-"voce della lista."
-
 #: ../../packages.rst:136
-msgid ""
-"To **remove a module**, go to the :guilabel:`Installed` tab and push the "
-"corresponding :guilabel:`Remove` button."
-msgstr ""
-"Per **remove a module**, vai alla scheda :guilabel:`Installed` e premi il "
-"pulsante :guilabel:`Remove` corrispondente."
-
-#: ../../packages.rst:141
-msgid ""
-"When removing a module other modules could be removed, too! Read carefully "
-"the list of affected packages to avoid removing required features."
-msgstr ""
-"In fase di rimozione, alcuni moduli collegati potrebbe essere rimossi "
-"indirettamente! Leggere attentamente la lista dei pacchetti in rimozione per"
-" evitare di rimuovere delle funzionalità necessarie."
-
-#: ../../packages.rst:148
-msgid ""
-"Installed packages **cannot be removed from the Software Center!** Please "
-"contact customer support if you need to remove an installed module."
-msgstr ""
-"I pacchetti installati **non possono essere rimossi dal Software Center!** "
-"Se dovesse essere necessario rimuovere un modulo installato vi invitiamo a "
-"contattare il supporto tecnico."
-
-#: ../../packages.rst:156
-msgid "List of installed packages"
-msgstr "Lista dei pacchetti installati"
-
-#: ../../packages.rst:158
-msgid ""
-"The complete list of installed RPM packages is available under "
-":guilabel:`Installed > Packages`."
-msgstr ""
-"La lista completa dei pacchetti RPM installati è disponibile nel tab "
-":guilabel:`Installati`."
-
-#: ../../packages.rst:161
-msgid ""
-"The section :guilabel:`Installed software` displays all packages already "
-"installed into the system with the full package version."
-msgstr ""
-"La sezione :guilabel:`Installed software` mostra tutti i pacchetti "
-"installati con la versione completa del pacchetto."
-
-#: ../../packages.rst:167
-msgid "Additional languages"
-msgstr "Lingue aggiuntive"
-
-#: ../../packages.rst:169
-msgid ""
-"The Server Manager allows selecting the interface language at the login "
-"screen. Only installed languages are listed."
-msgstr ""
-"Il Server Manager permette di selezionare la lingue dell'interfaccia al "
-"momento del login. Sono elencate solo le lingue installate."
-
-#: ../../packages.rst:172
-msgid ""
-"In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
-"install the desired languages."
-msgstr ""
-"Nel tab :guilabel:`Disponibili`, selezionare la categoria :guilabel:`Lingue`"
-" e installare le lingue desiderate."
-
-#: ../../packages.rst:177
 msgid "References"
 msgstr "Riferimenti"
 
-#: ../../packages.rst:178
+#: ../../packages.rst:137
 msgid "RPM Package Manager -- http://rpm.org"
 msgstr "RPM Package Manager -- http://rpm.org"
 
-#: ../../packages.rst:179
+#: ../../packages.rst:138
 msgid "NethServer -- http://www.nethserver.org"
 msgstr "NethServer -- http://www.nethserver.org"
 
-#: ../../packages.rst:180
+#: ../../packages.rst:139
 msgid ""
 "CentOS -- Community ENTerprise Operating System https://www.centos.org/"
 msgstr ""
 "CentOS -- Community ENTerprise Operating System https://www.centos.org/"
 
-#: ../../packages.rst:181
+#: ../../packages.rst:140
 msgid ""
 "EPEL -- Extra Packages for Enterprise Linux "
 "https://fedoraproject.org/wiki/EPEL"
@@ -406,6 +341,6 @@ msgstr ""
 "EPEL -- Extra Packages for Enterprise Linux "
 "https://fedoraproject.org/wiki/EPEL"
 
-#: ../../packages.rst:185
+#: ../../packages.rst:144
 msgid "NethServer community forum -- http://community.nethserver.org"
 msgstr "NethServer community forum -- http://community.nethserver.org"
