@@ -272,6 +272,11 @@ source_file = _build/locale/base_system2.pot
 source_lang = en
 type = PO
 
+[docs-v7.disaster_recovery]
+file_filter = locale/<lang>/LC_MESSAGES/disaster_recovery.po
+source_file = _build/locale/disaster_recovery.pot
+source_lang = en
+type = PO
 
 [docs-v7.chat]
 file_filter = locale/<lang>/LC_MESSAGES/chat.po
