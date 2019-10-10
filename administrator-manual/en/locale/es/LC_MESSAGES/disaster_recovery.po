@@ -1,0 +1,268 @@
+# #-#-#-#-#  disaster_recovery.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  disaster_recovery.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-10 10:58+0200\n"
+"PO-Revision-Date: 2019-10-10 08:59+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../disaster_recovery.rst:4
+msgid "Disaster recovery"
+msgstr ""
+
+#: ../../disaster_recovery.rst:6
+msgid ""
+"The system is restored in two phases: configuration first, then data. Right "
+"after configuration restore, the system is ready to be used if the proper "
+"packages are installed. When the machine is functional, a full data restore "
+"can be performed while the machine is already in production. You can install"
+" additional packages before or after the restore. For example, if the mail-"
+"server is installed, the system can send and receive mails."
+msgstr ""
+
+#: ../../disaster_recovery.rst:12
+msgid "Other restored configurations:"
+msgstr ""
+
+#: ../../disaster_recovery.rst:14
+msgid "Users and groups"
+msgstr ""
+
+#: ../../disaster_recovery.rst:15
+msgid "SSL certificates"
+msgstr ""
+
+#: ../../disaster_recovery.rst:17
+msgid ""
+"Do not restore a configuration backup from an old minor version into a newer"
+" version. The backup should come from a |product| having the same operating "
+"system version of the new installation, i.e., avoid restoring a "
+"configuration backup from a 7.4.1708 installation on a new 7.6.1810 system, "
+"as it may lead to unexpected results."
+msgstr ""
+
+#: ../../disaster_recovery.rst:23
+msgid "New Server Manger"
+msgstr ""
+
+#: ../../disaster_recovery.rst:25 ../../disaster_recovery.rst:72
+msgid "Please, follow below steps:"
+msgstr ""
+
+#: ../../disaster_recovery.rst:27
+msgid ""
+"Install the new machine (refer to :ref:`installation <installation-manual>` "
+"section), access the new Server Manager and make sure the machine is able to"
+" access the internet and resolve public names correctly"
+msgstr ""
+
+#: ../../disaster_recovery.rst:34
+msgid ""
+"Activate NethServer Enterprise following the :ref:`registration-section` "
+"procedure"
+msgstr ""
+
+#: ../../disaster_recovery.rst:38
+msgid ""
+"If the machine has a Community subscription entitlement, please follow :ref"
+":`subscription-section`, otherwise you can skip this step"
+msgstr ""
+
+#: ../../disaster_recovery.rst:42
+msgid ""
+"Install all the available core updates from the :ref:`software-updates-"
+"section`"
+msgstr ""
+
+#: ../../disaster_recovery.rst:44
+msgid ""
+"Access the :guilabel:`Backup` page and click on the :guilabel:`Restore` "
+"button under the **Configuration Backup** section, then upload the "
+"configuration backup or download it directly from an HTTP/S URL."
+msgstr ""
+
+#: ../../disaster_recovery.rst:48
+msgid ""
+"For |product| Enterprise, all cloud backups will be automatically downloaded"
+" and ready to be restored directly from the :guilabel:`From backup` field."
+msgstr ""
+
+#: ../../disaster_recovery.rst:51
+msgid "Map network interface names from the backup to the running system."
+msgstr ""
+
+#: ../../disaster_recovery.rst:53
+msgid "Click the :guilabel:`Restore` to start the restore process."
+msgstr ""
+
+#: ../../disaster_recovery.rst:57
+msgid ""
+"If you're connected to a network interface that will change the IP address "
+"during the restore, you will be disconnected from the Server Manager and you"
+" will need to login again using the new IP address."
+msgstr ""
+
+#: ../../disaster_recovery.rst:61
+msgid ""
+"Verify the system is functional and then access the :guilabel:`Backup` page."
+" To restore all files, click on :guilabel:`Restore` button under the **Data "
+"Backup** section, select the name of the backup and click the "
+":guilabel:`Restore` button."
+msgstr ""
+
+#: ../../disaster_recovery.rst:65
+msgid ""
+"Please bear in mind that the restore process can last from minutes to hours "
+"depending on the storage backend speed."
+msgstr ""
+
+#: ../../disaster_recovery.rst:70
+msgid "Old Server Manager"
+msgstr ""
+
+#: ../../disaster_recovery.rst:76 ../../disaster_recovery.rst:98
+msgid ""
+"Install the new machine (refer to :ref:`installation <installation-manual>` "
+"section), access the Server Manager and follow the :ref:`first configuration"
+" wizard <first-configuration-wizard-section>` procedure to complete the "
+"basic server configuration"
+msgstr ""
+
+#: ../../disaster_recovery.rst:80 ../../disaster_recovery.rst:102
+msgid ""
+"Ensure that |product| is able to access the internet and resolve public "
+"names correctly"
+msgstr ""
+
+#: ../../disaster_recovery.rst:82 ../../disaster_recovery.rst:106
+msgid ""
+"Install all the available core updates in the :ref:`Software Center "
+"<software-updates-section>`"
+msgstr ""
+
+#: ../../disaster_recovery.rst:84
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel"
+msgstr ""
+
+#: ../../disaster_recovery.rst:86 ../../disaster_recovery.rst:111
+msgid ""
+"If a warning message requires it, reconfigure the network roles assignment. "
+"See :ref:`restore-roles-section` below."
+msgstr ""
+
+#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:114
+msgid "Verify the system is functional"
+msgstr ""
+
+#: ../../disaster_recovery.rst:91 ../../disaster_recovery.rst:116
+msgid "Restore data backup executing on the console ::"
+msgstr ""
+
+#: ../../disaster_recovery.rst:104
+msgid ""
+"Activate |product| following the :ref:`registration <registration-section>` "
+"procedure"
+msgstr ""
+
+#: ../../disaster_recovery.rst:108
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel which allows to use cloud backups or local archives"
+msgstr ""
+
+#: ../../disaster_recovery.rst:121
+msgid ""
+"Please note that the disaster recovery should be always performed from a "
+"local media (eg. NFS or USB) to speed up the process."
+msgstr ""
+
+#: ../../disaster_recovery.rst:123
+msgid "The root/admin password is not restored."
+msgstr ""
+
+#: ../../disaster_recovery.rst:128
+msgid "Restore network roles"
+msgstr ""
+
+#: ../../disaster_recovery.rst:130
+msgid ""
+"If a role configuration points to a missing network interface, the "
+":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
+":guilabel:`Network` pages pop up a warning. This happens for instance in the"
+" following cases:"
+msgstr ""
+
+#: ../../disaster_recovery.rst:135
+msgid "configuration backup has been restored on a new hardware"
+msgstr ""
+
+#: ../../disaster_recovery.rst:136
+msgid "one or more network cards have been substituted"
+msgstr ""
+
+#: ../../disaster_recovery.rst:137
+msgid "system disks are moved to a new machine"
+msgstr ""
+
+#: ../../disaster_recovery.rst:139
+msgid ""
+"The warning message points to a page that lists the network cards present in"
+" the system, highlighting those not having an assigned :ref:`role <network-"
+"section>`. Such cards have a drop down menu where to select a role available"
+" for restoring."
+msgstr ""
+
+#: ../../disaster_recovery.rst:144
+msgid ""
+"For instance, if a card with the *orange* role has been replaced, the drop "
+"down menu will list an element ``orange``, near the new network card."
+msgstr ""
+
+#: ../../disaster_recovery.rst:148
+msgid ""
+"The same applies if the old card was a component of a logical interface, "
+"such as a bridge or bond."
+msgstr ""
+
+#: ../../disaster_recovery.rst:151
+msgid ""
+"By picking an element from the drop down menu, the old role is transferred "
+"to the new physical interface."
+msgstr ""
+
+#: ../../disaster_recovery.rst:154
+msgid "Click the :guilabel:`Submit` button to apply the changes."
+msgstr ""
+
+#: ../../disaster_recovery.rst:156
+msgid ""
+"Choose carefully the new interfaces assignment: doing a mistake here could "
+"lead to a system isolated from the network!"
+msgstr ""
+
+#: ../../disaster_recovery.rst:159
+msgid ""
+"If the missing role is ``green`` an automatic procedure attempts to fix the "
+"configuration at boot-time, to ensure a minimal network connectivity and "
+"login again on the Server Manager."
+msgstr ""

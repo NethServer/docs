@@ -1,0 +1,359 @@
+# #-#-#-#-#  disaster_recovery.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  disaster_recovery.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-10 10:58+0200\n"
+"PO-Revision-Date: 2019-10-10 08:59+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../disaster_recovery.rst:4
+msgid "Disaster recovery"
+msgstr "Disaster recovery"
+
+#: ../../disaster_recovery.rst:6
+msgid ""
+"The system is restored in two phases: configuration first, then data. Right "
+"after configuration restore, the system is ready to be used if the proper "
+"packages are installed. When the machine is functional, a full data restore "
+"can be performed while the machine is already in production. You can install"
+" additional packages before or after the restore. For example, if the mail-"
+"server is installed, the system can send and receive mails."
+msgstr ""
+"Il sistema viene ripristinato in due fasi: prima la configurazione, poi i "
+"dati. Subito dopo il ripristino della configurazione, il sistema è pronto "
+"per essere utilizzato se sono installati i pacchetti corretti. Quando il "
+"sistema è funzionante, è possibile eseguire un ripristino completo dei dati "
+"mentre il server è in produzione. È anche possibile installare pacchetti "
+"aggiuntivi prima o dopo il ripristino. Ad esempio, se il server di posta è "
+"installato, il sistema può inviare e ricevere posta."
+
+#: ../../disaster_recovery.rst:12
+msgid "Other restored configurations:"
+msgstr "Altre configurazioni ripristinate:"
+
+#: ../../disaster_recovery.rst:14
+msgid "Users and groups"
+msgstr "Utenti e gruppi"
+
+#: ../../disaster_recovery.rst:15
+msgid "SSL certificates"
+msgstr "Certificati SSL"
+
+#: ../../disaster_recovery.rst:17
+msgid ""
+"Do not restore a configuration backup from an old minor version into a newer"
+" version. The backup should come from a |product| having the same operating "
+"system version of the new installation, i.e., avoid restoring a "
+"configuration backup from a 7.4.1708 installation on a new 7.6.1810 system, "
+"as it may lead to unexpected results."
+msgstr ""
+"Non ripristinare un backup della configurazione proveniente da una minor "
+"version in una versione più recente. Il backup dovrebbe provenire da un "
+"|product| avente la stessa versione del sistema operativo della nuova "
+"installazione. Ad esempio, evitare di ripristinare il backup della "
+"configurazione di una installazione 7.4.1708 su un nuovo sistema 7.6.1810, "
+"poiché potrebbero verificarsi comportamenti inaspettati."
+
+#: ../../disaster_recovery.rst:23
+msgid "New Server Manger"
+msgstr "Nuovo Server Manager"
+
+#: ../../disaster_recovery.rst:25 ../../disaster_recovery.rst:72
+msgid "Please, follow below steps:"
+msgstr "Si prega di seguire i seguenti passi:"
+
+#: ../../disaster_recovery.rst:27
+msgid ""
+"Install the new machine (refer to :ref:`installation <installation-manual>` "
+"section), access the new Server Manager and make sure the machine is able to"
+" access the internet and resolve public names correctly"
+msgstr ""
+"Installare la nuova macchina (fare riferimento alla sezione "
+":ref:`installation <installation-manual>`), accedere al nuovo Server Manager"
+" e assicurarsi che la macchina sia in grado di accedere a Internet e "
+"risolvere correttamente i nomi pubblici"
+
+#: ../../disaster_recovery.rst:34
+msgid ""
+"Activate NethServer Enterprise following the :ref:`registration-section` "
+"procedure"
+msgstr ""
+"Attivare NethServer Enterprise seguendo la procedura :ref:`registration-"
+"section` "
+
+#: ../../disaster_recovery.rst:38
+msgid ""
+"If the machine has a Community subscription entitlement, please follow :ref"
+":`subscription-section`, otherwise you can skip this step"
+msgstr ""
+"Se la macchina ha una subscription Community, seguire :ref:`subscription-"
+"section`, altrimenti ignorare questo passo"
+
+#: ../../disaster_recovery.rst:42
+msgid ""
+"Install all the available core updates from the :ref:`software-updates-"
+"section`"
+msgstr ""
+"Installare tutti gli aggiornamenti core disponibili dal :ref:`software-"
+"updates-section`"
+
+#: ../../disaster_recovery.rst:44
+msgid ""
+"Access the :guilabel:`Backup` page and click on the :guilabel:`Restore` "
+"button under the **Configuration Backup** section, then upload the "
+"configuration backup or download it directly from an HTTP/S URL."
+msgstr ""
+"Accedere alla pagina :guilabel:`Backup` e fare click sul pulsante "
+":guilabel:`Ripristina` nella sezione **Backup configurazione**, quindi "
+"caricare il backup della configurazione o scaricarlo direttamente da un un "
+"URL HTTP/S."
+
+#: ../../disaster_recovery.rst:48
+msgid ""
+"For |product| Enterprise, all cloud backups will be automatically downloaded"
+" and ready to be restored directly from the :guilabel:`From backup` field."
+msgstr ""
+"Su NethServer Enterprise, tutti i backup in cloud verranno automaticamente "
+"scaricati e resi disponibili per essere ripristinati direttamente dal campo "
+":guilabel:`Dal backup`."
+
+#: ../../disaster_recovery.rst:51
+msgid "Map network interface names from the backup to the running system."
+msgstr ""
+"Mappare i nomi delle interfacce di rete assegnandole alle schede del sistema"
+" in esecuzione."
+
+#: ../../disaster_recovery.rst:53
+msgid "Click the :guilabel:`Restore` to start the restore process."
+msgstr ""
+"Preme il pulsante :guilabel:`Ripristina` per iniziare il processo di "
+"ripristino."
+
+#: ../../disaster_recovery.rst:57
+msgid ""
+"If you're connected to a network interface that will change the IP address "
+"during the restore, you will be disconnected from the Server Manager and you"
+" will need to login again using the new IP address."
+msgstr ""
+"Se si è connessi ad un'interfaccia di rete che cambierà indirizzo IP durante"
+" il ripristino, si verrà disconnessi dal Server Manager e sarà necessario "
+"ricollegarsi usando il nuovo indirizzo IP."
+
+#: ../../disaster_recovery.rst:61
+msgid ""
+"Verify the system is functional and then access the :guilabel:`Backup` page."
+" To restore all files, click on :guilabel:`Restore` button under the **Data "
+"Backup** section, select the name of the backup and click the "
+":guilabel:`Restore` button."
+msgstr ""
+"Verificare che il sistema sia funzionante, quindi accedere alla pagina "
+":guilabel:`Backup`. Per ripristinare tutti i file, fare click sul pulsante  "
+":guilabel:`Ripristina` nella sezione **Backup dati**, selezionare il nome "
+"del backup e fare click sul pulsante :guilabel:`Ripristina`."
+
+#: ../../disaster_recovery.rst:65
+msgid ""
+"Please bear in mind that the restore process can last from minutes to hours "
+"depending on the storage backend speed."
+msgstr ""
+"Si tenga presente che il processo di ripristino può durare da pochi minuti a"
+" diverse ore "
+
+#: ../../disaster_recovery.rst:70
+msgid "Old Server Manager"
+msgstr "Vecchio Server Manager"
+
+#: ../../disaster_recovery.rst:76 ../../disaster_recovery.rst:98
+msgid ""
+"Install the new machine (refer to :ref:`installation <installation-manual>` "
+"section), access the Server Manager and follow the :ref:`first configuration"
+" wizard <first-configuration-wizard-section>` procedure to complete the "
+"basic server configuration"
+msgstr ""
+"Installare la nuova macchina (fare riferimento alla sezione "
+":ref:`Installazione <installation-manual>`), accedere al Server Manager e "
+"seguire la procedura :ref:`di prima configurazione <first-configuration-"
+"wizard-section>` per completare la configurazione di base del sistema"
+
+#: ../../disaster_recovery.rst:80 ../../disaster_recovery.rst:102
+msgid ""
+"Ensure that |product| is able to access the internet and resolve public "
+"names correctly"
+msgstr ""
+"Assicurarsi che |product| sia in grado di accedere ad internet e risolvere "
+"correttamente i nomi con il DNS pubblico"
+
+#: ../../disaster_recovery.rst:82 ../../disaster_recovery.rst:106
+msgid ""
+"Install all the available core updates in the :ref:`Software Center "
+"<software-updates-section>`"
+msgstr ""
+"Installare tutti gli aggiornamenti core disponibili dal :ref:`Software "
+"Center <software-updates-section>`"
+
+#: ../../disaster_recovery.rst:84
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel"
+msgstr ""
+"Ripristinare il backup della configurazione utilizzando il pannello "
+":guilabel:`Backup (configurazione)`"
+
+#: ../../disaster_recovery.rst:86 ../../disaster_recovery.rst:111
+msgid ""
+"If a warning message requires it, reconfigure the network roles assignment. "
+"See :ref:`restore-roles-section` below."
+msgstr ""
+"Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi :ref"
+":`restore-roles-section`"
+
+#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:114
+msgid "Verify the system is functional"
+msgstr "Verificare che la macchina sia funzionante"
+
+#: ../../disaster_recovery.rst:91 ../../disaster_recovery.rst:116
+msgid "Restore data backup executing on the console ::"
+msgstr "Ripristinare il backup dei dati eseguendo dalla console ::"
+
+#: ../../disaster_recovery.rst:104
+msgid ""
+"Activate |product| following the :ref:`registration <registration-section>` "
+"procedure"
+msgstr ""
+"Attivare |product| seguendo la procedura di :ref:`registrazione "
+"<registration-section>`"
+
+#: ../../disaster_recovery.rst:108
+msgid ""
+"Restore the configuration backup using the :guilabel:`Backup "
+"(configuration)` panel which allows to use cloud backups or local archives"
+msgstr ""
+"Ripristinare il backup della configurazione utilizzando il pannello "
+":guilabel:`Backup (configurazione)` che consente di selezionare backup su "
+"cloud o archivi locali"
+
+#: ../../disaster_recovery.rst:121
+msgid ""
+"Please note that the disaster recovery should be always performed from a "
+"local media (eg. NFS or USB) to speed up the process."
+msgstr ""
+"Si noti che il disater recovery dovrebbe essere sempre eseguito da un "
+"supporto locale (ad esempio NFS o USB) per velocizzare il processo."
+
+#: ../../disaster_recovery.rst:123
+msgid "The root/admin password is not restored."
+msgstr ""
+"La password di root/admin non viene ripristinata, verrà mantenuta quella "
+"impostata nel nuovo sistema."
+
+#: ../../disaster_recovery.rst:128
+msgid "Restore network roles"
+msgstr "Assegnamento delle interfacce di rete"
+
+#: ../../disaster_recovery.rst:130
+msgid ""
+"If a role configuration points to a missing network interface, the "
+":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
+":guilabel:`Network` pages pop up a warning. This happens for instance in the"
+" following cases:"
+msgstr ""
+"Se la configurazione contiene una scheda di rete assente, le pagine "
+":guilabel:`Dashboard`, :guilabel:`Backup (configurazione) > Ripristino` e "
+":guilabel:`Network` mostrano un avviso. Questo può accadere per esempio nei "
+"seguenti casi:"
+
+#: ../../disaster_recovery.rst:135
+msgid "configuration backup has been restored on a new hardware"
+msgstr ""
+"dopo il ripristino del backup della configurazione su un nuovo hardware"
+
+#: ../../disaster_recovery.rst:136
+msgid "one or more network cards have been substituted"
+msgstr "una o più schede di rete sono state sostituite"
+
+#: ../../disaster_recovery.rst:137
+msgid "system disks are moved to a new machine"
+msgstr "i dischi del sistema sono stati spostati su una nuova macchina"
+
+#: ../../disaster_recovery.rst:139
+msgid ""
+"The warning message points to a page that lists the network cards present in"
+" the system, highlighting those not having an assigned :ref:`role <network-"
+"section>`. Such cards have a drop down menu where to select a role available"
+" for restoring."
+msgstr ""
+"L’avviso porta a una pagina che elenca le schede di rete fisiche presenti "
+"nel sistema, evidenziando quelle che non hanno un :ref:`ruolo <network-"
+"section>` assegnato. Per ogni scheda di questo tipo, un menù a discesa "
+"mostra i ruoli da assegnare."
+
+#: ../../disaster_recovery.rst:144
+msgid ""
+"For instance, if a card with the *orange* role has been replaced, the drop "
+"down menu will list an element ``orange``, near the new network card."
+msgstr ""
+"Per esempio, se una scheda con ruolo *orange* è stata sostituita, il menù a "
+"discesa elencherà un elemento ``orange`` in corrispondenza della nuova "
+"scheda di rete."
+
+#: ../../disaster_recovery.rst:148
+msgid ""
+"The same applies if the old card was a component of a logical interface, "
+"such as a bridge or bond."
+msgstr ""
+"Lo stesso accade se la vecchia scheda era il componente di una interfaccia "
+"logica, come un bridge o un bond."
+
+#: ../../disaster_recovery.rst:151
+msgid ""
+"By picking an element from the drop down menu, the old role is transferred "
+"to the new physical interface."
+msgstr ""
+"Selezionando un elemento dal menù a discesa, le impostazioni del ruolo sono "
+"trasferiti alla nuova scheda."
+
+#: ../../disaster_recovery.rst:154
+msgid "Click the :guilabel:`Submit` button to apply the changes."
+msgstr ""
+"Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate."
+
+#: ../../disaster_recovery.rst:156
+msgid ""
+"Choose carefully the new interfaces assignment: doing a mistake here could "
+"lead to a system isolated from the network!"
+msgstr ""
+"Assegnare con attenzione i ruoli alle nuove interfacce. Un errore può "
+"portare ad un sistema isolato dalla rete."
+
+#: ../../disaster_recovery.rst:159
+msgid ""
+"If the missing role is ``green`` an automatic procedure attempts to fix the "
+"configuration at boot-time, to ensure a minimal network connectivity and "
+"login again on the Server Manager."
+msgstr ""
+"Nel caso in cui fosse il ruolo ``green`` a mancare, in fase di avvio del "
+"sistema una procedura automatica tenterà di ripristinare la configurazione "
+"di rete essenziale per consentire di accedere nuovamente al Server Manager."
