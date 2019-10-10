@@ -1,0 +1,676 @@
+# #-#-#-#-#  backup_customization.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  backup_customization.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"PO-Revision-Date: 2019-10-08 08:09+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../backup_customization.rst:5
+msgid "Backup customization"
+msgstr ""
+
+#: ../../backup_customization.rst:7
+msgid ""
+"Basic customization can be done directly from the new Server Manager. See "
+":ref:`backup_basic_customization-section`."
+msgstr ""
+
+#: ../../backup_customization.rst:12
+msgid "Data backup"
+msgstr ""
+
+#: ../../backup_customization.rst:14
+msgid "The data backup can be performed using different engines:"
+msgstr ""
+
+#: ../../backup_customization.rst:16
+msgid "duplicity (default) - http://duplicity.nongnu.org/"
+msgstr ""
+
+#: ../../backup_customization.rst:17
+msgid "restic - https://restic.net/"
+msgstr ""
+
+#: ../../backup_customization.rst:18
+msgid "rsync - https://rsync.samba.org/"
+msgstr ""
+
+#: ../../backup_customization.rst:20
+msgid ""
+"When selecting an engine, the system administrator should carefully evaluate"
+" multiple aspects:"
+msgstr ""
+
+#: ../../backup_customization.rst:22
+msgid ""
+"Compression: data is compressed on the destination, disk usage can vary in "
+"function of compression efficiency which depends also on the data set"
+msgstr ""
+
+#: ../../backup_customization.rst:24
+msgid ""
+"Deduplication: instead of compressing files, data is split into chunks and "
+"only a copy of each chunk is kept. Efficiency depends highly on the data set"
+msgstr ""
+
+#: ../../backup_customization.rst:26
+msgid ""
+"Encryption: data saved inside the destination storage is encrypted. Usually "
+"data is encrypted before transfer"
+msgstr ""
+
+#: ../../backup_customization.rst:28
+msgid ""
+"Size: space used on the destination for each backup, may be smaller or equal"
+" than the original data set. When using engines without compression support,"
+" the destination should always be bigger than the source"
+msgstr ""
+
+#: ../../backup_customization.rst:31
+msgid ""
+"Retention: the policy which sets the amount of time in which a given set of "
+"data will remain available for restore"
+msgstr ""
+
+#: ../../backup_customization.rst:32
+msgid ""
+"Integrity: it's the engine ability to check if the performed backup is valid"
+" in case of restore"
+msgstr ""
+
+#: ../../backup_customization.rst:33
+msgid ""
+"Type: a backup can be full, incremental or snapshot based (incremental-"
+"forever):"
+msgstr ""
+
+#: ../../backup_customization.rst:35
+msgid "full: all files are copied to the destination each time"
+msgstr ""
+
+#: ../../backup_customization.rst:36
+msgid ""
+"incremental: compare the data with last full backup and copy only changed or"
+" added items. The full backup and all the intermediate incrementals are "
+"needed for the restore process. A full backup is required on a regular "
+"basis."
+msgstr ""
+
+#: ../../backup_customization.rst:39
+msgid ""
+"snapshot: create a full backup only the first time, then create differential"
+" backups. Snapshots can be deleted and consolidated and only one full backup"
+" is needed"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Engine"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Compression"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Deduplication"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Encryption"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Integrity"
+msgstr ""
+
+#: ../../backup_customization.rst:44
+msgid "Type"
+msgstr ""
+
+#: ../../backup_customization.rst:46
+msgid "**duplicity**"
+msgstr ""
+
+#: ../../backup_customization.rst:46 ../../backup_customization.rst:47
+msgid "Yes"
+msgstr ""
+
+#: ../../backup_customization.rst:46 ../../backup_customization.rst:47
+#: ../../backup_customization.rst:48
+msgid "No"
+msgstr ""
+
+#: ../../backup_customization.rst:46
+msgid "full / incremental"
+msgstr ""
+
+#: ../../backup_customization.rst:47
+msgid "**restic**"
+msgstr ""
+
+#: ../../backup_customization.rst:47 ../../backup_customization.rst:48
+msgid "snapshot"
+msgstr ""
+
+#: ../../backup_customization.rst:48
+msgid "**rsync**"
+msgstr ""
+
+#: ../../backup_customization.rst:48
+msgid "Partial"
+msgstr ""
+
+#: ../../backup_customization.rst:52
+msgid "Storage backends"
+msgstr ""
+
+#: ../../backup_customization.rst:54
+msgid "Supported by all engines:"
+msgstr ""
+
+#: ../../backup_customization.rst:56
+msgid ""
+"CIFS: Windows shared folder, it's available on all NAS (Network Attached "
+"Storage). Use access credentials like: MyBindUser,domain=mydomain.com"
+msgstr ""
+
+#: ../../backup_customization.rst:57
+msgid ""
+"NFS: Linux shared folder, it's available on all NAS, usually faster than "
+"CIFS"
+msgstr ""
+
+#: ../../backup_customization.rst:58
+msgid ""
+"WebDAV: available on many NAS and remote servers (use a server with a valid "
+"SSL certificate as WebDAV target, otherwise the system will fail mounting "
+"the filesystem)"
+msgstr ""
+
+#: ../../backup_customization.rst:59
+msgid "USB: disk connected to a local USB/SATA port"
+msgstr ""
+
+#: ../../backup_customization.rst:61
+msgid "Supported by restic and rsync:"
+msgstr ""
+
+#: ../../backup_customization.rst:63
+msgid "SFTP: SSH File Transfer Protocol"
+msgstr ""
+
+#: ../../backup_customization.rst:65
+msgid "Supported only by restic:"
+msgstr ""
+
+#: ../../backup_customization.rst:67 ../../backup_customization.rst:109
+msgid ""
+"Amazon S3 (or any compatible server like `Minio <https://www.minio.io/>`_)"
+msgstr ""
+
+#: ../../backup_customization.rst:68 ../../backup_customization.rst:110
+msgid "Backblaze `B2 <https://www.backblaze.com/b2/cloud-storage.html>`_"
+msgstr ""
+
+#: ../../backup_customization.rst:71
+msgid "Engines"
+msgstr ""
+
+#: ../../backup_customization.rst:74
+msgid "Duplicity"
+msgstr ""
+
+#: ../../backup_customization.rst:76
+msgid ""
+":index:`Duplicity` is the well-known default engine for |product|. It has a "
+"good compression algorithm which will reduce storage usage on the "
+"destination. Duplicity requires a full backup once a week, when the data set"
+" is very big the process may take more than 24 hours to complete. |product| "
+"doesn't implement backup encryption if the engine is Duplicity."
+msgstr ""
+
+#: ../../backup_customization.rst:82 ../../backup_customization.rst:102
+#: ../../backup_customization.rst:135
+msgid "Supported storage backends:"
+msgstr ""
+
+#: ../../backup_customization.rst:84 ../../backup_customization.rst:104
+#: ../../backup_customization.rst:137
+msgid "CIFS"
+msgstr ""
+
+#: ../../backup_customization.rst:85 ../../backup_customization.rst:105
+#: ../../backup_customization.rst:138
+msgid "NFS"
+msgstr ""
+
+#: ../../backup_customization.rst:86 ../../backup_customization.rst:106
+#: ../../backup_customization.rst:139
+msgid "USB"
+msgstr ""
+
+#: ../../backup_customization.rst:87
+msgid "WebDAV (only when used as single backup)"
+msgstr ""
+
+#: ../../backup_customization.rst:89
+msgid ""
+"The destination directory is based on the server host name: in case of FQDN "
+"change, the administrator should take care of copying/moving the backup data"
+" from the old directory to the new one."
+msgstr ""
+
+#: ../../backup_customization.rst:95
+msgid "restic"
+msgstr ""
+
+#: ../../backup_customization.rst:97
+msgid ""
+":index:`restic` implements a snapshot-based and always-encrypted backup. It "
+"has support for deduplication and can perform backup on cloud services. "
+"Since restic requires only one full backup, all runs after the first should "
+"be fast and could be scheduled multiple times a day."
+msgstr ""
+
+#: ../../backup_customization.rst:107 ../../backup_customization.rst:140
+msgid "WebDAV (only when used as *single backup*)"
+msgstr ""
+
+#: ../../backup_customization.rst:108 ../../backup_customization.rst:141
+msgid "SFTP (SSH File Transfer Protocol)"
+msgstr ""
+
+#: ../../backup_customization.rst:111
+msgid "restic `REST server <https://github.com/restic/rest-server>`_"
+msgstr ""
+
+#: ../../backup_customization.rst:114
+msgid ""
+"When configuring a backup using the restic engine and a remote storage "
+"backend, please ensure you have enough bandwidth to complete the first "
+"backup within 24 hours. Otherwise restic will create multiple different "
+"snapshots. If you have a slow connection and you still want to use a remote "
+"storage backend, follow this procedure:"
+msgstr ""
+
+#: ../../backup_customization.rst:120
+msgid "configure the restic backup"
+msgstr ""
+
+#: ../../backup_customization.rst:121
+msgid "manually execute the backup by clicking on :guilabel:`Run now`"
+msgstr ""
+
+#: ../../backup_customization.rst:122
+msgid ""
+"disable the configured backup, so it will not start at next scheduled "
+"execution"
+msgstr ""
+
+#: ../../backup_customization.rst:123
+msgid "when the backup is over, re-enable it to allow scheduled execution"
+msgstr ""
+
+#: ../../backup_customization.rst:126
+msgid "Rsync"
+msgstr ""
+
+#: ../../backup_customization.rst:128
+msgid ""
+":index:`Time machine-style` backup engine using :index:`rsync`. After the "
+"first full backup, it copies only modified or new files using fast "
+"incremental file transfer. On the destination, partial deduplication is "
+"obtained using hard links. If the backup destination directory is full, the "
+"oldest backups are automatically deleted to free space."
+msgstr ""
+
+#: ../../backup_customization.rst:143
+msgid ""
+"Rsync doesn't support encryption nor compression on the destination. During "
+"data transfer, SFTP assures encryption and data is compressed to minimize "
+"bandwidth usage."
+msgstr ""
+
+#: ../../backup_customization.rst:147
+msgid ""
+"When using rsync engine, make sure the storage backend supports symbolic and"
+" hard links. Please note that |product| doesn't support links on Samba "
+"shares due to security implications. Also symlinks are not supported on "
+"WebDAV."
+msgstr ""
+
+#: ../../backup_customization.rst:152
+msgid "Command line execution"
+msgstr ""
+
+#: ../../backup_customization.rst:154
+msgid "To run a backup from command line, use: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:158
+msgid "where ``name`` is the name of the backup you want to run."
+msgstr ""
+
+#: ../../backup_customization.rst:161
+msgid ""
+"By default, the name of the *first* data backup configured on |product| is "
+"``backup-data``"
+msgstr ""
+
+#: ../../backup_customization.rst:167
+msgid "Data backup customization"
+msgstr ""
+
+#: ../../backup_customization.rst:169
+msgid ""
+"If additional software is installed, the administrator can edit the list of "
+"files and directories included (or excluded)."
+msgstr ""
+
+#: ../../backup_customization.rst:173 ../../backup_customization.rst:259
+msgid "Inclusion"
+msgstr ""
+
+#: ../../backup_customization.rst:175
+msgid ""
+"If you wish to add a file or directory to data backup, add a line to the "
+"file :file:`/etc/backup-data.d/custom.include`."
+msgstr ""
+
+#: ../../backup_customization.rst:177
+msgid ""
+"For example, to backup a software installed inside :file:`/opt` directory, "
+"add this line: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:182
+msgid ""
+"The same syntax applies to configuration backup. Modifications should be "
+"done inside the file :file:`/etc/backup-config.d/custom.include`."
+msgstr ""
+
+#: ../../backup_customization.rst:186 ../../backup_customization.rst:270
+msgid "Exclusion"
+msgstr ""
+
+#: ../../backup_customization.rst:188
+msgid ""
+"If you wish to exclude a file or directory from data backup, add a line to "
+"the file :file:`/etc/backup-data.d/custom.exclude`."
+msgstr ""
+
+#: ../../backup_customization.rst:190
+msgid ""
+"For example, to exclude all directories called *Download*, add this line: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:194
+msgid "To exclude a mail directory called *test*, add this line: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:199
+msgid ""
+"The same syntax applies to configuration backup. Modifications should be "
+"done inside the file :file:`/etc/backup-config.d/custom.exclude`."
+msgstr ""
+
+#: ../../backup_customization.rst:202
+msgid "Override inclusions and exclusions"
+msgstr ""
+
+#: ../../backup_customization.rst:204
+msgid ""
+"All backups read the same configuration, but the list of saved and excluded "
+"files can be overridden using two special files:"
+msgstr ""
+
+#: ../../backup_customization.rst:207
+msgid "``/etc/backup-data/<name>.include``"
+msgstr ""
+
+#: ../../backup_customization.rst:208
+msgid "``/etc/backup-data/<name>.exclude``"
+msgstr ""
+
+#: ../../backup_customization.rst:210
+msgid "Where ``name`` is the name of the backup."
+msgstr ""
+
+#: ../../backup_customization.rst:212
+msgid ""
+"Both files will override the list of included and excluded data set. The "
+"accepted syntax is the same as reported in the paragraph above."
+msgstr ""
+
+#: ../../backup_customization.rst:215
+msgid ""
+"For example, given a backup named ``mybackup1`` create the following files:"
+msgstr ""
+
+#: ../../backup_customization.rst:217
+msgid ":file:`/etc/backup-data/mybackup1.include`"
+msgstr ""
+
+#: ../../backup_customization.rst:218
+msgid ":file:`/etc/backup-data/mybackup1.exclude`"
+msgstr ""
+
+#: ../../backup_customization.rst:221
+msgid "Example"
+msgstr ""
+
+#: ../../backup_customization.rst:223
+msgid ""
+"It's possible to configure a backup which includes only the mail and is "
+"scheduled each our."
+msgstr ""
+
+#: ../../backup_customization.rst:225
+msgid "Configure the new ``mymailbackup`` using the UI"
+msgstr ""
+
+#: ../../backup_customization.rst:227
+msgid "Create a custom include containing only the mail directory: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:231
+msgid "Create an empty custom exclude file: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:235
+msgid "Apply the configuration: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:240
+msgid "Make sure not to leave empty lines inside edited files."
+msgstr ""
+
+#: ../../backup_customization.rst:242
+msgid "This type of backup can't be used in case of disaster recovery."
+msgstr ""
+
+#: ../../backup_customization.rst:245
+msgid "Configuration backup"
+msgstr ""
+
+#: ../../backup_customization.rst:247
+msgid ""
+"Configuration backup is an automated task that runs every night at 00.15 and"
+" creates a new archive, :file:`/var/lib/nethserver/backup/backup-"
+"config.tar.xz`, if the configuration has changed during the previous 24 "
+"hours."
+msgstr ""
+
+#: ../../backup_customization.rst:251
+msgid ""
+"The list of installed modules is included in the backup archive. The restore"
+" procedure can download and install the listed modules automatically."
+msgstr ""
+
+#: ../../backup_customization.rst:254
+msgid ""
+"In most cases it is not necessary to change the configuration backup. But it"
+" can be useful, for example, if you have a custom httpd configuration. In "
+"this case you can add the file that contains the customization to the list "
+"of files to backup."
+msgstr ""
+
+#: ../../backup_customization.rst:261
+msgid ""
+"If you wish to add a file or directory to configuration backup, add a line "
+"to the file :file:`/etc/backup-config.d/custom.include`."
+msgstr ""
+
+#: ../../backup_customization.rst:263
+msgid ""
+"For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file, add "
+"this line: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:267
+msgid "Do not add big directories or files to the configuration backup."
+msgstr ""
+
+#: ../../backup_customization.rst:272
+msgid ""
+"If you wish to exclude a file or directory from the configuration backup, "
+"add a line to the file :file:`/etc/backup-config.d/custom.exclude`."
+msgstr ""
+
+#: ../../backup_customization.rst:275
+msgid ""
+"Make sure not to leave empty lines inside edited files. The syntax of the "
+"configuration backup supports only simple file and directory paths."
+msgstr ""
+
+#: ../../backup_customization.rst:283
+msgid "Restore from command line"
+msgstr ""
+
+#: ../../backup_customization.rst:285
+msgid ""
+"When the :ref:`selective_restore-section` web interface is not enough, the "
+"restore can be done via command line."
+msgstr ""
+
+#: ../../backup_customization.rst:288
+msgid ""
+"All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
+msgstr ""
+
+#: ../../backup_customization.rst:290
+msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
+msgstr ""
+
+#: ../../backup_customization.rst:291
+msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
+msgstr ""
+
+#: ../../backup_customization.rst:292
+msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
+msgstr ""
+
+#: ../../backup_customization.rst:295
+msgid "To list data inside a backup, use: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:299
+msgid "To restore all data in the original location, use: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:303
+msgid "To restore a file or directory, use: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:307
+msgid "Example, restore the version of a file from 15 days ago: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:311
+msgid ""
+"The ``-t`` option allows to specify the number of days (15 in this "
+"scenario). When used with snapshot-based engines, the ``-t`` option requires"
+" the name of the snapshot to restore."
+msgstr ""
+
+#: ../../backup_customization.rst:316
+msgid ""
+"When you are using *CIFS* to access the share, and the command doesn't work "
+"as expected, verify that user and password for the network share are "
+"correct. If user or password are wrong, you will find "
+"NT_STATUS_LOGON_FAILURE errors in :file:`/var/log/messages`. Also, you can "
+"use the :command:`backup-data-list` to check if the backup is accessible."
+msgstr ""
+
+#: ../../backup_customization.rst:325
+msgid "Formatting a local disk"
+msgstr ""
+
+#: ../../backup_customization.rst:327
+msgid ""
+"Local disks can be formatted directly from the :ref:`web interface "
+"<backup_data_settings-section>`. If something goes wrong, or a custom "
+"partitioning is required, please follow the below steps."
+msgstr ""
+
+#: ../../backup_customization.rst:330
+msgid ""
+"The best filesystem for SATA/USB backup disks is EXT3 or EXT4. FAT "
+"filesystem is supported but *not recommended*, while NTFS is **not "
+"supported**. EXT3 or EXT4 is mandatory for the rsync engine."
+msgstr ""
+
+#: ../../backup_customization.rst:333
+msgid ""
+"Before formatting the disk, attach it to the server and find the device "
+"name: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:354
+msgid "Another good command could be: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:358
+msgid "In this scenario, the disk is accessibile as *sdc* device."
+msgstr ""
+
+#: ../../backup_customization.rst:360
+msgid "Create a Linux partition on the whole disk: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:365
+msgid ""
+"Create the filesystem on *sdc1* partition with a label named *backup* ::"
+msgstr ""
+
+#: ../../backup_customization.rst:369
+msgid "Detach and reconnect the USB disk:"
+msgstr ""
+
+#: ../../backup_customization.rst:371
+msgid "You can simulate it with the following command: ::"
+msgstr ""
+
+#: ../../backup_customization.rst:375
+msgid ""
+"Now the *backup* label will be displayed inside the :guilabel:`Backup` page."
+msgstr ""
