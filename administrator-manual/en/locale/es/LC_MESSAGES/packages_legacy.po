@@ -1,0 +1,321 @@
+# #-#-#-#-#  packages_legacy.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  packages_legacy.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"PO-Revision-Date: 2019-10-07 12:38+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../packages_legacy.rst:5
+msgid "Legacy software center"
+msgstr ""
+
+#: ../../packages_legacy.rst:7
+msgid ""
+"|product| is highly modular: at the end of the installation a bare minimum "
+"set of features like *network configuration* and *log viewer* is installed. "
+"The :guilabel:`Software center` page allows the administrator to select and "
+"**install** additional  :dfn:`modules`, and also list and **update** the "
+"already installed software :dfn:`packages`."
+msgstr ""
+
+#: ../../packages_legacy.rst:13
+msgid ""
+"A *module* is usually constituted by multiple *packages*. It extends the "
+"system functionality. For instance a module can transform |product| into an "
+"Email server, or a Web proxy."
+msgstr ""
+
+#: ../../packages_legacy.rst:17
+msgid ""
+"A software *package* is an atomic unit of software. It is published by a "
+"public software repository. |product| packages are files in the RPM [#RPM]_ "
+"file format. Thus within this context the terms *package* and *RPM* can be "
+"used as synonyms."
+msgstr ""
+
+#: ../../packages_legacy.rst:24
+msgid "Software updates"
+msgstr ""
+
+#: ../../packages_legacy.rst:28
+msgid ""
+"|product| receives controlled updates from a set of managed software "
+"repositories. See :ref:`automatic-updates` to receive new features and fix "
+"bugs and security issues."
+msgstr ""
+
+#: ../../packages_legacy.rst:34
+msgid ""
+"A NethServer 7 system receives updates from different software projects:"
+msgstr ""
+
+#: ../../packages_legacy.rst:36
+msgid "the NethServer project itself [#NETHSERVER]_"
+msgstr ""
+
+#: ../../packages_legacy.rst:37
+msgid "the CentOS project [#CENTOS]_"
+msgstr ""
+
+#: ../../packages_legacy.rst:38
+msgid "the EPEL repository [#EPEL]_"
+msgstr ""
+
+#: ../../packages_legacy.rst:40
+msgid ""
+"Each project releases software updates according to its specific rules and "
+"development cycle, but all of them prefer software stability over bleeding "
+"edge features."
+msgstr ""
+
+#: ../../packages_legacy.rst:44
+msgid ""
+"Refer to the Community forum [#NSCOM]_ and :ref:`release-notes-section` for "
+"more information about NethServer updates."
+msgstr ""
+
+#: ../../packages_legacy.rst:47
+msgid ""
+"Updates released by the CentOS project are immediately available on "
+"|product| directly from the CentOS mirrors. Only updates for the current "
+"system release (i.e. \"7.6.1804\") are considered, until a manual upgrade to"
+" the next system release is started."
+msgstr ""
+
+#: ../../packages_legacy.rst:52
+msgid "More info about CentOS updates:"
+msgstr ""
+
+#: ../../packages_legacy.rst:54
+msgid "https://wiki.centos.org/FAQ/General"
+msgstr ""
+
+#: ../../packages_legacy.rst:55
+msgid "https://access.redhat.com/support/policy/updates/errata/"
+msgstr ""
+
+#: ../../packages_legacy.rst:56
+msgid "https://access.redhat.com/security/updates/backporting"
+msgstr ""
+
+#: ../../packages_legacy.rst:57
+msgid "https://access.redhat.com/security/"
+msgstr ""
+
+#: ../../packages_legacy.rst:59
+msgid ""
+"Updates released by EPEL are immediately available from the official EPEL "
+"mirrors. As EPEL is not bound to the current system release number, the "
+":guilabel:`Software center` always installs the latest available software "
+"versions from EPEL."
+msgstr ""
+
+#: ../../packages_legacy.rst:64
+msgid "More info about EPEL updates:"
+msgstr ""
+
+#: ../../packages_legacy.rst:66
+msgid "https://fedoraproject.org/wiki/EPEL"
+msgstr ""
+
+#: ../../packages_legacy.rst:70
+msgid ""
+"Even if the above projects strive for software stability, care is necessary "
+"to check if the updates fit well together. Every time the system is going to"
+" be updated, **create a backup of the data and review the updates "
+"changelog** to understand what is going to happen. If possible, test the "
+"updates in a non-production system. For any doubt ask the NethServer "
+"community forum! [#NSCOM]_"
+msgstr ""
+
+#: ../../packages_legacy.rst:79
+msgid "Manual update procedure"
+msgstr ""
+
+#: ../../packages_legacy.rst:81
+msgid ""
+"When updates are available, a warning message appears in the "
+":guilabel:`Software center` page."
+msgstr ""
+
+#: ../../packages_legacy.rst:84
+msgid ""
+"Updates for the installed software are listed under the :guilabel:`Updates` "
+"tab. Further details about them are available under :guilabel:`Updates "
+"CHANGELOG`."
+msgstr ""
+
+#: ../../packages_legacy.rst:87
+msgid ""
+"To start the system update click the :guilabel:`Download and install` "
+"button."
+msgstr ""
+
+#: ../../packages_legacy.rst:93
+msgid ""
+"Regularly update the installed software to fix bugs, security issues and "
+"receive new features"
+msgstr ""
+
+#: ../../packages_legacy.rst:99
+msgid "Automatic update procedure"
+msgstr ""
+
+#: ../../packages_legacy.rst:101
+msgid ""
+"It is possible to perform some automatic actions when new software updates "
+"are available."
+msgstr ""
+
+#: ../../packages_legacy.rst:103
+msgid "Download and (optionally) install the updates"
+msgstr ""
+
+#: ../../packages_legacy.rst:105
+msgid ""
+"Send an email to the system administrator (root) and to an additional list "
+"of recipients"
+msgstr ""
+
+#: ../../packages_legacy.rst:107
+msgid ""
+"The updates availability is checked by a task that runs at a random time "
+"overnight."
+msgstr ""
+
+#: ../../packages_legacy.rst:111
+msgid ""
+"If the notification email is not delivered or is marked as spam, it is "
+"possible to configure a  :ref:`smarthost <smarthost-configuration>`"
+msgstr ""
+
+#: ../../packages_legacy.rst:116
+msgid "Modules installation"
+msgstr ""
+
+#: ../../packages_legacy.rst:118
+msgid ""
+"The :guilabel:`Available` tab lists all of the modules that can be "
+"installed. This list can be filtered by category. See also :ref:`additional-"
+"languages`."
+msgstr ""
+
+#: ../../packages_legacy.rst:121
+msgid ""
+"To **install a module**, check the corresponding box and click on "
+":guilabel:`Add`. Some modules suggest optional packages that can be "
+"installed also at a later time."
+msgstr ""
+
+#: ../../packages_legacy.rst:125
+msgid ""
+"Once a module has been installed, it is listed under the "
+":guilabel:`Installed` tab."
+msgstr ""
+
+#: ../../packages_legacy.rst:127
+msgid ""
+"To **install optional packages** at a later time, select "
+":guilabel:`Installed` tab and push the :guilabel:`Edit` button on a listed "
+"entry. On the new Server Manager all optional packages will be installed by "
+"default."
+msgstr ""
+
+#: ../../packages_legacy.rst:133
+msgid ""
+"To **remove a module** from the old Server Manager, go to the "
+":guilabel:`Installed` tab and push the corresponding :guilabel:`Remove` "
+"button. To remove an application from the new Server Manager, go to the "
+":guilabel:`Applications` page and click the corresponding :guilabel:`Remove`"
+" button."
+msgstr ""
+
+#: ../../packages_legacy.rst:140
+msgid ""
+"When removing a module other modules could be removed, too! Read carefully "
+"the list of affected packages to avoid removing required features."
+msgstr ""
+
+#: ../../packages_legacy.rst:147
+msgid ""
+"Installed packages **cannot be removed from the Software Center!** Please "
+"contact customer support if you need to remove an installed module."
+msgstr ""
+
+#: ../../packages_legacy.rst:155
+msgid "List of installed packages"
+msgstr ""
+
+#: ../../packages_legacy.rst:157
+msgid ""
+"The complete list of installed RPM packages is available under "
+":guilabel:`Installed > Packages`."
+msgstr ""
+
+#: ../../packages_legacy.rst:160
+msgid ""
+"The section :guilabel:`Installed software` displays all packages already "
+"installed into the system with the full package version."
+msgstr ""
+
+#: ../../packages_legacy.rst:166
+msgid "Additional languages"
+msgstr ""
+
+#: ../../packages_legacy.rst:168
+msgid ""
+"The Server Manager allows selecting the interface language at the login "
+"screen. Only installed languages are listed."
+msgstr ""
+
+#: ../../packages_legacy.rst:171
+msgid ""
+"In :guilabel:`Available` tab, select the :guilabel:`Languages` category and "
+"install the desired languages."
+msgstr ""
+
+#: ../../packages_legacy.rst:176
+msgid "References"
+msgstr ""
+
+#: ../../packages_legacy.rst:177
+msgid "RPM Package Manager -- http://rpm.org"
+msgstr ""
+
+#: ../../packages_legacy.rst:178
+msgid "NethServer -- http://www.nethserver.org"
+msgstr ""
+
+#: ../../packages_legacy.rst:179
+msgid ""
+"CentOS -- Community ENTerprise Operating System https://www.centos.org/"
+msgstr ""
+
+#: ../../packages_legacy.rst:180
+msgid ""
+"EPEL -- Extra Packages for Enterprise Linux "
+"https://fedoraproject.org/wiki/EPEL"
+msgstr ""
+
+#: ../../packages_legacy.rst:184
+msgid "NethServer community forum -- http://community.nethserver.org"
+msgstr ""

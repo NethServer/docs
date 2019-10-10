@@ -1,0 +1,483 @@
+# #-#-#-#-#  base_system2.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  base_system2.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"PO-Revision-Date: 2019-10-08 08:11+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../base_system2.rst:5
+msgid "Base system (new)"
+msgstr ""
+
+#: ../../base_system2.rst:7
+msgid ""
+"The documentation of the Server Manager is available at :ref:`base_system-"
+"section`."
+msgstr ""
+
+#: ../../base_system2.rst:9
+msgid ""
+"This chapter describes all available modules at the end of installation. All"
+" modules outside this section can be installed from the :ref:`software-"
+"center-section` page."
+msgstr ""
+
+#: ../../base_system2.rst:12
+msgid "The default installation includes the following main modules:"
+msgstr ""
+
+#: ../../base_system2.rst:14
+msgid ":ref:`system-section`"
+msgstr ""
+
+#: ../../base_system2.rst:15
+msgid ":ref:`applications-section`"
+msgstr ""
+
+#: ../../base_system2.rst:16
+msgid ":ref:`software-center-section`"
+msgstr ""
+
+#: ../../base_system2.rst:17
+msgid ":ref:`terminal-section`"
+msgstr ""
+
+#: ../../base_system2.rst:21
+msgid ":ref:`subscription-section`"
+msgstr ""
+
+#: ../../base_system2.rst:25
+msgid ":ref:`registration-section`"
+msgstr ""
+
+#: ../../base_system2.rst:27
+msgid ""
+"While the *root* user can see all configuration pages, access of each "
+"section and application may be also delegated to specific users. See :ref"
+":`delegation-section`."
+msgstr ""
+
+#: ../../base_system2.rst:31
+msgid ""
+"Many Server Manager applications use netdata to display useful charts. Since"
+" netdata is not installed by default, you can install it from :ref"
+":`software-center-section`."
+msgstr ""
+
+#: ../../base_system2.rst:37
+msgid "System"
+msgstr ""
+
+#: ../../base_system2.rst:39
+msgid ""
+"The :index:`System` page is the landing section after a successful login. "
+"The page will display the :index:`status` and configuration of the system."
+msgstr ""
+
+#: ../../base_system2.rst:42
+msgid "From the system dashboard, the administrator can:"
+msgstr ""
+
+#: ../../base_system2.rst:44
+msgid "change the machine FQDN and server :ref:`dns_alias-section`"
+msgstr ""
+
+#: ../../base_system2.rst:45
+msgid "set upstream :ref:`dns-section` servers"
+msgstr ""
+
+#: ../../base_system2.rst:46
+msgid "configure :ref:`date-time-section`"
+msgstr ""
+
+#: ../../base_system2.rst:47
+msgid "customize the organization details"
+msgstr ""
+
+#: ../../base_system2.rst:49
+msgid "The basic system includes also:"
+msgstr ""
+
+#: ../../base_system2.rst:51
+msgid ":ref:`network2-section`"
+msgstr ""
+
+#: ../../base_system2.rst:52
+msgid ":ref:`services-section`"
+msgstr ""
+
+#: ../../base_system2.rst:53
+msgid ":ref:`backup-section`"
+msgstr ""
+
+#: ../../base_system2.rst:54
+msgid ":ref:`server_certificate-section`"
+msgstr ""
+
+#: ../../base_system2.rst:55
+msgid ":ref:`users_and_groups-section`"
+msgstr ""
+
+#: ../../base_system2.rst:56
+msgid ":ref:`tlspolicy-section`"
+msgstr ""
+
+#: ../../base_system2.rst:57
+msgid ":ref:`dhcp-section`"
+msgstr ""
+
+#: ../../base_system2.rst:58
+msgid ":ref:`dns-section`"
+msgstr ""
+
+#: ../../base_system2.rst:59
+msgid ":ref:`ssh-section`"
+msgstr ""
+
+#: ../../base_system2.rst:60
+msgid ":ref:`storage-section`"
+msgstr ""
+
+#: ../../base_system2.rst:61
+msgid ":ref:`trusted_networks-section`"
+msgstr ""
+
+#: ../../base_system2.rst:62
+msgid ":ref:`duc-section`"
+msgstr ""
+
+#: ../../base_system2.rst:63
+msgid ":ref:`settings-section`"
+msgstr ""
+
+#: ../../base_system2.rst:64
+msgid ":ref:`logs-section`"
+msgstr ""
+
+#: ../../base_system2.rst:69
+msgid "Network"
+msgstr ""
+
+#: ../../base_system2.rst:71
+msgid ""
+"Besides all features available in the old Server Manager (see :ref:`network-"
+"section`), this page allows to:"
+msgstr ""
+
+#: ../../base_system2.rst:74
+msgid ""
+"check network status with integrated diagnostic tools like ping, trace route"
+" and name lookup"
+msgstr ""
+
+#: ../../base_system2.rst:75
+msgid ""
+"create a logical network interface without a role: such an interface can be "
+"used later in other modules like Dedalo hotspot"
+msgstr ""
+
+#: ../../base_system2.rst:81
+msgid "Services"
+msgstr ""
+
+#: ../../base_system2.rst:83
+msgid "A :index:`service` is a software running on the firewall itself."
+msgstr ""
+
+#: ../../base_system2.rst:85
+msgid ""
+"Each service can have a list of \"open\" ports accepting local or remote "
+"connections. To control which zones or hosts can access a network service, "
+"see :ref:`firewall-section`."
+msgstr ""
+
+#: ../../base_system2.rst:88
+msgid ""
+"Existing services can be started and stopped directly from the "
+":guilabel:`Services` page."
+msgstr ""
+
+#: ../../base_system2.rst:94
+msgid "Storage"
+msgstr ""
+
+#: ../../base_system2.rst:96
+msgid ""
+"The :index:`storage` section configures and monitors disks. The "
+"administrator can mount new local or remote disks, manage RAID arrays and "
+"LVM volumes."
+msgstr ""
+
+#: ../../base_system2.rst:103
+msgid "SSH"
+msgstr ""
+
+#: ../../base_system2.rst:105
+msgid ""
+"The :index:`ssh` page displays the number of current SSH connection. From "
+"this section the administrator can change the OpenSSH listening port, "
+"disable root login or password authentication."
+msgstr ""
+
+#: ../../base_system2.rst:112
+msgid "Settings"
+msgstr ""
+
+#: ../../base_system2.rst:114
+msgid ""
+"The :index:`settings` page allows the configuration of some options which "
+"could impact multiple system applications."
+msgstr ""
+
+#: ../../base_system2.rst:117
+msgid "Smart host"
+msgstr ""
+
+#: ../../base_system2.rst:119
+msgid ""
+"Many system applications, like cron, can generate mail notification. If the "
+"server can't directly deliver those mails, the administrator can configure a"
+" SMTP relay. When the smarthost is enabled, all mail messages will be "
+"delivered to the configured server."
+msgstr ""
+
+#: ../../base_system2.rst:125
+msgid "Email notifications"
+msgstr ""
+
+#: ../../base_system2.rst:127
+msgid ""
+"As default, notifications are sent to the local root maildir. The "
+"administrator can change the root forward address adding one or more mail "
+"address to the :guilabel:`Destination` field."
+msgstr ""
+
+#: ../../base_system2.rst:130
+msgid ""
+"It's also a good practice to set a custom :guilabel:`Sender address`: "
+"messages from the root user (like cron notifications) will be sent using the"
+" specified address. A good value could be: ``no-reply@<domain>`` (where "
+"``<domain>`` is the domain of the server). If not set, messages will be sent"
+" using ``root@<fqdn>`` as sender address."
+msgstr ""
+
+#: ../../base_system2.rst:136
+msgid "Server Manager"
+msgstr ""
+
+#: ../../base_system2.rst:138
+msgid ""
+"As default, access to the Server Manager is granted from all firewall zones."
+" From this section the administrator can restrict the access to the Server "
+"Manager only to a list of trusted IP addresses."
+msgstr ""
+
+#: ../../base_system2.rst:143
+msgid "Log files"
+msgstr ""
+
+#: ../../base_system2.rst:145
+msgid ""
+"All log files are managed by :index:`logrotate`. Logrotate is designed to "
+"ease administration of a large numbers of log files. It allows automatic "
+"rotation, compression, and removal of log files. Each log file may be "
+"handled daily, weekly, monthly."
+msgstr ""
+
+#: ../../base_system2.rst:148
+msgid ""
+"The administrator can set logrotate defaults from this page. The "
+"configuration will apply to all applications. But please note that some "
+"applications can override such configuration to meet specific needs."
+msgstr ""
+
+#: ../../base_system2.rst:152
+msgid "Configuration hints"
+msgstr ""
+
+#: ../../base_system2.rst:154
+msgid ""
+"Most Server Manager pages can display some configuration hints to help guide"
+" the administrator on a better system configuration. Hints are just "
+"suggestions and can be disabled from this menu."
+msgstr ""
+
+#: ../../base_system2.rst:159
+msgid "Password change"
+msgstr ""
+
+#: ../../base_system2.rst:161
+msgid ""
+"The settings page also includes a panel to let users change their password, "
+"including the root user."
+msgstr ""
+
+#: ../../base_system2.rst:166
+msgid "Logs"
+msgstr ""
+
+#: ../../base_system2.rst:168
+msgid ""
+"The system provides an indexed log named journal. Journal can be browsed "
+"from this page: messages can be filtered by service, severity and date."
+msgstr ""
+
+#: ../../base_system2.rst:174
+msgid "Applications"
+msgstr ""
+
+#: ../../base_system2.rst:176
+msgid ""
+"The :guilabel:`Applications` page lists all installed applications. An "
+":index:`application` is a Server Manager module usually composed by multiple"
+" pages including a dashboard, one or more configuration sections and the "
+"access to application logs. A click on the :guilabel:`Settings` button will "
+"open the application."
+msgstr ""
+
+#: ../../base_system2.rst:181
+msgid ""
+"There are also simpler applications which include only a link to an external"
+" web pages. To access such applications click on the :guilabel:`Open` "
+"button."
+msgstr ""
+
+#: ../../base_system2.rst:185
+msgid "Shortcuts"
+msgstr ""
+
+#: ../../base_system2.rst:187
+msgid ""
+"The administrator can add shortcuts to applications which are frequently "
+"used. Applications with a shortcut, will be linked to the left menu."
+msgstr ""
+
+#: ../../base_system2.rst:190 ../../base_system2.rst:204
+msgid "Only *root* user has access to this feature."
+msgstr ""
+
+#: ../../base_system2.rst:195
+msgid "Add to home page"
+msgstr ""
+
+#: ../../base_system2.rst:197
+msgid ""
+":index:`Launcher` is an application of the new Server Manager available to "
+"all users on HTTPS and HTTP ports. The launcher is accessible on the server "
+"FQDN (eg. ``https://my.server.com``) and it's enabled if there is no home "
+"page already configured inside the web server (no index page in "
+":file:`/var/www/html`)"
+msgstr ""
+
+#: ../../base_system2.rst:201
+msgid ""
+"Installed applications can be added to the launcher by clicking on the "
+":guilabel:`Add to home page` button. All users will be able to access the "
+"public link of the application."
+msgstr ""
+
+#: ../../base_system2.rst:209
+msgid "Launcher"
+msgstr ""
+
+#: ../../base_system2.rst:211
+msgid "See :ref:`launcher-section`."
+msgstr ""
+
+#: ../../base_system2.rst:214
+msgid "Removing applications"
+msgstr ""
+
+#: ../../base_system2.rst:216
+msgid ""
+"To remove an installed module click :guilabel:`Remove` button on the "
+"corresponding application."
+msgstr ""
+
+#: ../../base_system2.rst:220
+msgid ""
+"When removing a module other modules could be removed, too! Read carefully "
+"the list of affected packages to avoid removing required features."
+msgstr ""
+
+#: ../../base_system2.rst:223
+msgid "This feature is not available in |product| Enterprise."
+msgstr ""
+
+#: ../../base_system2.rst:229
+msgid "Terminal"
+msgstr ""
+
+#: ../../base_system2.rst:231
+msgid ""
+"Execute a standard shell inside a terminal directly accessible from the "
+"browser. The shell and the processes will run with the user privileges."
+msgstr ""
+
+#: ../../base_system2.rst:237
+msgid "Role delegation"
+msgstr ""
+
+#: ../../base_system2.rst:239
+msgid ""
+"On complex environments, the *root* user can delegate the access of some "
+"section to specific groups of local users."
+msgstr ""
+
+#: ../../base_system2.rst:242
+msgid "A local user can be delegated to access:"
+msgstr ""
+
+#: ../../base_system2.rst:244
+msgid "one or more pages of the *System* section"
+msgstr ""
+
+#: ../../base_system2.rst:245
+msgid "one or more installed applications"
+msgstr ""
+
+#: ../../base_system2.rst:246
+msgid ""
+"one or more main sections between *Subscription*, *Software Center* or "
+"*Terminal*"
+msgstr ""
+
+#: ../../base_system2.rst:248
+msgid ""
+"Role delegation is based on local groups, each user belonging to the group "
+"will be delegated. Users inside the *domains admins* are automatically "
+"delegated to all panels."
+msgstr ""
+
+#: ../../base_system2.rst:251
+msgid ""
+"To create a new delegation, access the :guilabel:`User & Groups` page under "
+"the group section, then edit an existing group or create a new one. Select "
+"one or more items from the :guilabel:`System views` and "
+":guilabel:`Applications` menus."
+msgstr ""
+
+#: ../../base_system2.rst:255
+msgid ""
+"Even if a user has been delegated, it must be explicitly granted the shell "
+"access before being able to log into the Server Manager."
+msgstr ""

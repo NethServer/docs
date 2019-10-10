@@ -1,0 +1,352 @@
+# #-#-#-#-#  firewall2.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  firewall2.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"PO-Revision-Date: 2019-10-07 12:38+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../firewall2.rst:5
+msgid "Firewall and gateway (new)"
+msgstr ""
+
+#: ../../firewall2.rst:9
+msgid ""
+"This chapter describes changes introduces by the *Firewall* application in "
+"the new Server Manager. Basic firewall behavior is unchanged and describe "
+"inside :ref:`firewall-section`."
+msgstr ""
+
+#: ../../firewall2.rst:12
+msgid ""
+"Please note that some changes made in the new Server Manager may not be "
+"reflected in the old one."
+msgstr ""
+
+#: ../../firewall2.rst:16
+msgid "General"
+msgstr ""
+
+#: ../../firewall2.rst:18
+msgid "Main differences from the old Server Manager:"
+msgstr ""
+
+#: ../../firewall2.rst:20
+msgid "the rules panel has been split into 3 different pages:"
+msgstr ""
+
+#: ../../firewall2.rst:22
+msgid ":ref:`firewall_rules_new-section`"
+msgstr ""
+
+#: ../../firewall2.rst:23
+msgid ":ref:`local_rules-section`"
+msgstr ""
+
+#: ../../firewall2.rst:24
+msgid ":ref:`traffic_shaping-section`"
+msgstr ""
+
+#: ../../firewall2.rst:26
+msgid "all pages use :ref:`apply_revert-section` behavior"
+msgstr ""
+
+#: ../../firewall2.rst:27
+msgid ""
+"smart search: on most panels the full text search can be used to quickly "
+"find existing rules or objects"
+msgstr ""
+
+#: ../../firewall2.rst:28
+msgid ""
+"advanced properties: when creating new rules, only the most common fields "
+"are shown. To show other less common parameters click the "
+":guilabel:`Advanced` label"
+msgstr ""
+
+#: ../../firewall2.rst:29
+msgid ""
+"raw address support: the user can use raw IP addresses (or CIDR) whenever "
+"creating a rule. Such raw addresses can be later converted to firewall "
+"objects using the :guilabel:`Create Host` and :guilabel:`Create CIDR subnet`"
+" actions which will appear next to the IP address"
+msgstr ""
+
+#: ../../firewall2.rst:31
+msgid ""
+"real-time charts: many pages has real-time charts displaying data from "
+"``netdata``. Since netdata is not installed by default, you can install it "
+"from :ref:`software-center-section`."
+msgstr ""
+
+#: ../../firewall2.rst:33
+msgid "list of active :ref:`firewall_connections-section`"
+msgstr ""
+
+#: ../../firewall2.rst:38
+msgid "Apply and revert"
+msgstr ""
+
+#: ../../firewall2.rst:40
+msgid ""
+"Every time the configuration has been changed, modifications are not applied"
+" immediately but saved in a temporary store. For the changes to take effect,"
+" click on the :guilabel:`Apply` button at the top right corner of the page."
+msgstr ""
+
+#: ../../firewall2.rst:43
+msgid ""
+"As long as the new rules created have not been applied, you can revert all "
+"changes clicking the :guilabel:`Revert` button at the top right corner of "
+"the page."
+msgstr ""
+
+#: ../../firewall2.rst:46
+msgid "Dashboard"
+msgstr ""
+
+#: ../../firewall2.rst:48
+msgid ""
+"The dashboard displays the local firewall network topology along with the "
+"number of established connection, the count of configured objects and the "
+"list of active services."
+msgstr ""
+
+#: ../../firewall2.rst:52
+msgid "WAN"
+msgstr ""
+
+#: ../../firewall2.rst:54
+msgid ""
+"All red interfaces are listed on the top of the page, just below bandwidth "
+"usage charts. Download and upload bandwidth can be automatically calculated "
+"using :guilabel:`Speedtest` button. Each red network interface can be also "
+"enabled and disabled directly from the list."
+msgstr ""
+
+#: ../../firewall2.rst:58
+msgid ""
+"To change WAN mode and link monitoring options click on "
+":guilabel:`Configure` button."
+msgstr ""
+
+#: ../../firewall2.rst:60 ../../firewall2.rst:77
+msgid ""
+"Rules can be created under the :guilabel:`Rules` section on the same page. "
+"After creating or editing rules, make sure to :ref:`apply <apply_revert-"
+"section>` the changes."
+msgstr ""
+
+#: ../../firewall2.rst:66
+msgid "Traffic shaping"
+msgstr ""
+
+#: ../../firewall2.rst:68
+msgid ""
+"Traffic shaping classes are used to commit bandwidth for specific network "
+"traffic. For each class the bandwidth can be specified using the percentage "
+"of available network bandwidth or with absolutes values expressed in kbps."
+msgstr ""
+
+#: ../../firewall2.rst:72
+msgid ""
+"As default, a traffic shaping class is applied to all red network "
+"interfaces. Such behavior can be changed by selecting an existing red "
+"interfaces under the :guilabel:`Bind to` menu inside the "
+":guilabel:`Advanced` section. Bound classes and bandwidth expressed in kbps "
+"are not usable inside the old Server Manager."
+msgstr ""
+
+#: ../../firewall2.rst:81
+msgid "SNAT"
+msgstr ""
+
+#: ../../firewall2.rst:83
+msgid ""
+"SNAT is available only if there is at least one IP alias configured on red "
+"network interfaces. See also :ref:`snat-section`."
+msgstr ""
+
+#: ../../firewall2.rst:87
+msgid "Objects"
+msgstr ""
+
+#: ../../firewall2.rst:89
+msgid ""
+"Firewall objects page offer the same features as the :ref:`old Server "
+"Manager <firewall_objects-section>`."
+msgstr ""
+
+#: ../../firewall2.rst:92
+msgid "Port forward"
+msgstr ""
+
+#: ../../firewall2.rst:94
+msgid ""
+"Port forwards are grouped by destination host and support raw IP addresses "
+"along with firewall objects."
+msgstr ""
+
+#: ../../firewall2.rst:96
+msgid "The following protocols are supported only in the new Server Manager:"
+msgstr ""
+
+#: ../../firewall2.rst:98
+msgid "AH"
+msgstr ""
+
+#: ../../firewall2.rst:99
+msgid "ESP"
+msgstr ""
+
+#: ../../firewall2.rst:100
+msgid "GRE"
+msgstr ""
+
+#: ../../firewall2.rst:102
+msgid ""
+"For more info on port forward see the :ref:`old Server Manager "
+"<port_forward-section>`."
+msgstr ""
+
+#: ../../firewall2.rst:107
+msgid "Rules"
+msgstr ""
+
+#: ../../firewall2.rst:109
+msgid ""
+"This page allows the management of rules applied only to the network traffic"
+" traversing the firewall. To create rules for the traffic from/to the "
+"firewall itself, see the :ref:`local_rules-section`."
+msgstr ""
+
+#: ../../firewall2.rst:112
+msgid "A rule consists of five main parts:"
+msgstr ""
+
+#: ../../firewall2.rst:114
+msgid "Source"
+msgstr ""
+
+#: ../../firewall2.rst:115
+msgid "Destination"
+msgstr ""
+
+#: ../../firewall2.rst:116
+msgid "Service (optional)"
+msgstr ""
+
+#: ../../firewall2.rst:117
+msgid "Action"
+msgstr ""
+
+#: ../../firewall2.rst:118
+msgid "Time condition (optional)"
+msgstr ""
+
+#: ../../firewall2.rst:120
+msgid "Available actions are:"
+msgstr ""
+
+#: ../../firewall2.rst:122
+msgid ":dfn:`ACCEPT`: accept the network traffic"
+msgstr ""
+
+#: ../../firewall2.rst:123
+msgid ":dfn:`REJECT`: block the traffic and notify the sender host"
+msgstr ""
+
+#: ../../firewall2.rst:124
+msgid ""
+":dfn:`DROP`: block the traffic, packets are dropped and no notification is "
+"sent to the sender host"
+msgstr ""
+
+#: ../../firewall2.rst:126
+msgid "Rules support raw IP addresses and two extra zones:"
+msgstr ""
+
+#: ../../firewall2.rst:128
+msgid "ivpn: all traffic from IPSec VPNs"
+msgstr ""
+
+#: ../../firewall2.rst:129
+msgid "ovpn: all traffic from OpenVPN VPNs"
+msgstr ""
+
+#: ../../firewall2.rst:131
+msgid ""
+"Both zones are available only if VPN application is installed. Rules using "
+"such zones, can't be modified from the :ref:`old Server Manager <firewall-"
+"rules-section>`."
+msgstr ""
+
+#: ../../firewall2.rst:137
+msgid "Policies"
+msgstr ""
+
+#: ../../firewall2.rst:139
+msgid ""
+"To display active policies click on the :guilabel:`Policies` button. "
+"Policies are affected by changes on the :ref:`firewall_settings-section` "
+"page."
+msgstr ""
+
+#: ../../firewall2.rst:145
+msgid "Local rules"
+msgstr ""
+
+#: ../../firewall2.rst:147
+msgid ""
+"This page allows the management of rules applied only to the network traffic"
+" generated from the firewall, or directed to the firewall itself. The "
+"configuration is the same as :ref:`firewall_rules_new-section` page."
+msgstr ""
+
+#: ../../firewall2.rst:154
+msgid "Connections"
+msgstr ""
+
+#: ../../firewall2.rst:156
+msgid ""
+"This page keeps track of all active connections. Connections can be filter "
+"by :guilabel:`Protocol` and :guilabel:`State`. The list of connections is "
+"not refreshed in real time. To list new connections click the "
+":guilabel:`Refresh` button."
+msgstr ""
+
+#: ../../firewall2.rst:160
+msgid ""
+"The administrator can delete a single connection or flush the whole "
+"connection tracking table using :guilabel:`Delete all connections` button."
+msgstr ""
+
+#: ../../firewall2.rst:166
+msgid "Settings"
+msgstr ""
+
+#: ../../firewall2.rst:168
+msgid ""
+"Global settings which affect the whole firewall behavior, like MAC "
+"validation. When the :guilabel:`Traffic to Internet (red interface)` option "
+"is changed, modifications are reflected inside the :ref:`policies-section` "
+"section."
+msgstr ""
