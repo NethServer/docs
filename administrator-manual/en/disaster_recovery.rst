@@ -31,7 +31,7 @@ Please, follow below steps:
 
   .. only:: nsent
 
-       Activate NethServer Enterprise following the :ref:`registration-section` procedure
+       Activate NethServer Enterprise following the :ref:`registration <registration-section>` procedure
 
   .. only:: nscom
 
@@ -92,6 +92,8 @@ Please, follow below steps:
 
       restore-data -b <name>
 
+     where ``name`` is the name of the data backup you want to restore from.
+
 
 .. only:: nsent
 
@@ -116,6 +118,8 @@ Please, follow below steps:
   8. Restore data backup executing on the console ::
 
       restore-data -b <name>
+
+     where ``name`` is the name of the data backup you want to restore from.
 
 
 Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
