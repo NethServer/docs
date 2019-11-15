@@ -12,6 +12,7 @@ The phone home is enabled by default and it sends the following data:
 
  * UUID stored in ``/var/lib/yum/uuid``
  * RELEASE from ``/sbin/e-smith/config getprop sysconfig Version``
+ * TYPE of installation like ``subscription``, ``enterprise`` or ``community``
 
 Disabling
 =========
