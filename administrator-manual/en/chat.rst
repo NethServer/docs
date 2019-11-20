@@ -61,13 +61,13 @@ Administrators
 
 All users within the group ``jabberadmins`` are considered administrators of the chat server. 
 
+The group ``jabberadmins`` must be created and configured from the :ref:`groups-section` page.
+
 Administrators can: 
 
 * Send broadcast messages 
 * Check the status of connected users 
 
-
-The group ``jabberadmins`` is configurable from :ref:`groups-section` page.
 
 Message Archive Management
 ==========================
