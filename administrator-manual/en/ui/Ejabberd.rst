@@ -1,17 +1,15 @@
 .. _ChatUi-section:
 
-====
-Chat
-====
+=========
+ejabberd
+=========
 
-The :index:`chat` service uses the standard protocol :index:`Jabber`/:index:`XMPP`. See also
-:ref:`chat-section`.
+The :index:`chat` service uses the standard protocol :index:`XMPP`. See also :ref:`chat-section`.
 
+Web administration interface
+    The XMPP server comes with a web administrative interface for members of the jabberadmins group.
 
-Administration web Interface
-    The Jaber server comes with a web administrative interface for members of the jabberadmins group.
-
-Federation (S2S)
+XMPP Federation (S2S)
     XMPP allows for servers communicating seamlessly with each other, forming a global 'federated' IM network.
 
 File transfer maximum speed

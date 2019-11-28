@@ -36,11 +36,11 @@ msgstr "Chat"
 #: ../../chat.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
-":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
+":index:`XMPP` and support TLS on standard ports (5222 or "
 "5223)."
 msgstr ""
 "El servicio: index:`chat` utiliza el protocolo estándar: "
-"index:`Jabber`/:index:`XMPP` y soporta TLS en puertos estándar (5222 o "
+":index:`XMPP` y soporta TLS en puertos estándar (5222 o "
 "5223)."
 
 #: ../../chat.rst:9
@@ -96,7 +96,7 @@ msgstr ""
 "operativo. Ver :ref:`join-existing-ad-section`."
 
 #: ../../chat.rst:27
-msgid "Server to server (S2S)"
+msgid "Server to Server (S2S)"
 msgstr ""
 
 #: ../../chat.rst:29
@@ -119,9 +119,9 @@ msgid "Client"
 msgstr "Cliente"
 
 #: ../../chat.rst:39
-msgid "Jabber clients are available for all desktop and mobile platforms."
+msgid "XMPP clients are available for all desktop and mobile platforms."
 msgstr ""
-"Los clientes Jabber están disponibles para todas las plataformas de "
+"Los clientes XMPP están disponibles para todas las plataformas de "
 "escritorio y móviles."
 
 #: ../../chat.rst:41
@@ -129,16 +129,12 @@ msgid "Some widespread clients:"
 msgstr "Algunos clientes comunes:"
 
 #: ../../chat.rst:43
-msgid "Pidgin is available for Windows and Linux"
-msgstr "Pidgin está disponible para Windows y Linux"
-
-#: ../../chat.rst:44
-msgid "Adium for Mac OS X"
-msgstr "Adium para Mac OS X"
+msgid "Gajim and Psi are available for Linux, Mac OS, Windows and more"
+msgstr ""
 
 #: ../../chat.rst:45
-msgid "BeejibelIM for Android and iOS, Xabber only for Android"
-msgstr "BeejibelIM para Android e iOS, Xabber sólo para Android"
+msgid "Conversations for Android, Monal for iPhone, Siskin IM for iPhone, Tigase Stork IM for Android"
+msgstr ""
 
 #: ../../chat.rst:47
 msgid ""
@@ -206,7 +202,7 @@ msgstr ""
 #: ../../chat.rst:75
 msgid ""
 "Message Archive Management (mod_mam) implements Message Archive Management "
-"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
+"as described in `XEP-0313 <https://xmpp.org/extensions/xep-0313.html>`_. When"
 " enabled, all messages will be stored inside the server and compatible XMPP "
 "clients can use it to store their chat history on the server."
 msgstr ""
@@ -243,5 +239,5 @@ msgid "upload and dowload transfer speed"
 msgstr ""
 
 #: ../../chat.rst:95
-msgid "enable/disable the administrator web interface"
+msgid "enable/disable the web administration interface"
 msgstr ""

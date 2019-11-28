@@ -38,12 +38,12 @@ msgstr "Chat"
 #: ../../chat.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
-":index:`Jabber`/:index:`XMPP` and support TLS on standard ports (5222 or "
+":index:`XMPP` and support TLS on standard ports (5222 or "
 "5223)."
 msgstr ""
 "Il servizio di :index:`chat` utilizza il protocollo standard "
-":index:`Jabber`/:index:`XMPP`, supporta TLS sulla porte :index:`XMPP` "
-"standard (5222 o 5223)."
+":index:`XMPP`, supporta TLS sulla porte :index:`XMPP` standard (5222 o "
+"5223)."
 
 #: ../../chat.rst:9
 msgid "The main features are:"
@@ -99,8 +99,8 @@ msgstr ""
 "section`."
 
 #: ../../chat.rst:27
-msgid "Server to server (S2S)"
-msgstr "Server to server (S2S)"
+msgid "Server to Server (S2S)"
+msgstr "Server to Server (S2S)"
 
 #: ../../chat.rst:29
 msgid ""
@@ -129,25 +129,21 @@ msgid "Client"
 msgstr "Client"
 
 #: ../../chat.rst:39
-msgid "Jabber clients are available for all desktop and mobile platforms."
+msgid "XMPP clients are available for all desktop and mobile platforms."
 msgstr ""
-"I client Jabber sono disponibili per tutte le piattaforme desktop e mobile."
+"I client XMPP sono disponibili per tutte le piattaforme desktop e mobile."
 
 #: ../../chat.rst:41
 msgid "Some widespread clients:"
 msgstr "Fra i client più diffusi:"
 
 #: ../../chat.rst:43
-msgid "Pidgin is available for Windows and Linux"
-msgstr "Pidgin disponibile per Windows e Linux"
-
-#: ../../chat.rst:44
-msgid "Adium for Mac OS X"
-msgstr "Adium per Mac OS X"
+msgid "Gajim and Psi are available for Linux, Mac OS, Windows and more"
+msgstr ""
 
 #: ../../chat.rst:45
-msgid "BeejibelIM for Android and iOS, Xabber only for Android"
-msgstr "BeejibelIM per Android e iOS, o Xabber solo Android"
+msgid "Conversations for Android, Monal for iPhone, Siskin IM for iPhone, Tigase Stork IM for Android"
+msgstr ""
 
 #: ../../chat.rst:47
 msgid ""
@@ -222,13 +218,13 @@ msgstr "Gestione archivio messaggi"
 #: ../../chat.rst:75
 msgid ""
 "Message Archive Management (mod_mam) implements Message Archive Management "
-"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
+"as described in `XEP-0313 <https://xmpp.org/extensions/xep-0313.html>`_. When"
 " enabled, all messages will be stored inside the server and compatible XMPP "
 "clients can use it to store their chat history on the server."
 msgstr ""
 "Message Archive Management (mod_mam) implementa la gestione dell'archivio "
 "messaggi come descritto in `XEP-0313 "
-"<http://xmpp.org/extensions/xep-0313.html>` _. Se abilitato, tutti i "
+"<https://xmpp.org/extensions/xep-0313.html>` _. Se abilitato, tutti i "
 "messaggi verranno archiviati all'interno del server e i client XMPP "
 "compatibili potranno utilizzarlo per archiviare la propria cronologia chat "
 "sul server."
@@ -273,5 +269,5 @@ msgid "upload and dowload transfer speed"
 msgstr "velocità di trasferimento in upload e download"
 
 #: ../../chat.rst:95
-msgid "enable/disable the administrator web interface"
+msgid "enable/disable the web administration interface"
 msgstr "abilita/disabilita l'interfaccia di amministrazione via web"

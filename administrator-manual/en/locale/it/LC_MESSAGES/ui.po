@@ -30,35 +30,35 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../ui/Ejabberd.rst:5
-msgid "Chat"
-msgstr "Chat"
+#: ../../ui/Ejabberd.rst:4
+msgid "ejabberd"
+msgstr "ejabberd"
 
 #: ../../ui/Ejabberd.rst:7
 msgid ""
 "The :index:`chat` service uses the standard protocol "
-":index:`Jabber`/:index:`XMPP`. See also :ref:`chat-section`."
+":index:`XMPP`. See also :ref:`chat-section`."
 msgstr ""
 "Il servizio :index:`chat` utilizza il protocollo standard "
-":index:`Jabber`/:index:`XMPP`. Vedi anche :ref:`chat-section`."
+":index:`XMPP`. Vedi anche :ref:`chat-section`."
 
-#: ../../ui/Ejabberd.rst:12
-msgid "Administration web Interface"
+#: ../../ui/Ejabberd.rst:9
+msgid "Web administration interface"
 msgstr "Interfaccia web di amministrazione"
 
-#: ../../ui/Ejabberd.rst:12
+#: ../../ui/Ejabberd.rst:10
 msgid ""
-"The Jaber server comes with a web administrative interface for members of "
+"The XMPP server comes with a web administrative interface for members of "
 "the jabberadmins group."
 msgstr ""
-"Il server Jabber è dotato di un'interfaccia web amministrativa il cui "
+"Il server XMPP è dotato di un'interfaccia web amministrativa il cui "
 "accesso è consentito ai membri del gruppo jabberadmins."
 
-#: ../../ui/Ejabberd.rst:15
-msgid "Federation (S2S)"
-msgstr "Federation (S2S)"
+#: ../../ui/Ejabberd.rst:12
+msgid "XMPP Federation (S2S)"
+msgstr "XMPP Federation (S2S)"
 
-#: ../../ui/Ejabberd.rst:15
+#: ../../ui/Ejabberd.rst:13
 msgid ""
 "XMPP allows for servers communicating seamlessly with each other, forming a "
 "global 'federated' IM network."
@@ -66,21 +66,21 @@ msgstr ""
 "XMPP consente ai server di intercomunicare tra loro, formando una rete IM "
 "globale \"federata\"."
 
-#: ../../ui/Ejabberd.rst:18
+#: ../../ui/Ejabberd.rst:15
 msgid "File transfer maximum speed"
 msgstr "Massima velocità trasferimento file"
 
-#: ../../ui/Ejabberd.rst:18
+#: ../../ui/Ejabberd.rst:16
 msgid "Limit in Byte/second the maximum file transfer."
 msgstr ""
 "Limita la massima velocità per il trasferimento file al valore in "
 "Byte/secondo "
 
-#: ../../ui/Ejabberd.rst:21
+#: ../../ui/Ejabberd.rst:18
 msgid "File transfer normal speed"
 msgstr "Velocità standard di trasferimento file"
 
-#: ../../ui/Ejabberd.rst:21
+#: ../../ui/Ejabberd.rst:19
 msgid "Limit in Byte/second the normal file transfer."
 msgstr ""
 "Limita la velocità standard per il trasferimento file al valore in "
