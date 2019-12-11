@@ -243,7 +243,7 @@ A local user can be delegated to access:
 
 * one or more pages of the *System* section
 * one or more installed applications
-* one or more main sections between *Subscription*, *Software Center* or *Terminal*
+* one or more main sections between *Subscription*, *Software Center*
 
 Role delegation is based on local groups, each user belonging to the group will be delegated.
 Users inside the *domains admins* are automatically delegated to all panels.
@@ -255,3 +255,8 @@ Select one or more items from the :guilabel:`System views` and :guilabel:`Applic
 Even if a user has been delegated, it must be explicitly granted the shell access before
 being able to log into the Server Manager.
 
+The following pages are always accessible to all users:
+
+* dashboard
+* applications
+* terminal
