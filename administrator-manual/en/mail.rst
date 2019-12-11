@@ -471,7 +471,7 @@ send or receive messages.
 
 .. warning::
 
-    **Anti-virus checks are disabled** too, in case *whitelist* settings.
+    **Anti-virus checks are also disabled** for *whitelists*.
 
 The section :guilabel:`Rules by mail address` allows creating
 three types of rules:
@@ -484,13 +484,13 @@ three types of rules:
 
 * :guilabel:`Block From`: any message from specified sender is blocked
 
-The *Allow* rules have higher precedence over the *Block* one. If any of them
+The *Allow* rules have higher precedence over the *Block* ones. As soon as an *Allow* rule
 matches, the antispam and antivirus checks are skipped, the *Block* rule is not
 evaluated and the message is accepted immediately.
 
-It is possible to create an *Allow* or *Block* rule even for a complete email
+It is possible to create an *Allow* or *Block* rule even for an entire 
 domain, not just for a single email address: you just need to specify the
-desired domain (e.g. ``dev.nethserver.org``).
+domain name (e.g. ``dev.nethserver.org``).
 
 When a second level domain domain name is specified it matches also its
 subdomains. For instance ``nethserver.org`` matches ``nethserver.org`` itself,
