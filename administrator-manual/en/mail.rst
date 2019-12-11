@@ -469,10 +469,6 @@ the *whitelists* and *blacklists* can help. Those are lists of email
 addresses or domains respectively always allowed and always blocked to
 send or receive messages.
 
-.. warning::
-
-    **Anti-virus checks are also disabled** for *whitelists*.
-
 The section :guilabel:`Rules by mail address` allows creating
 three types of rules:
 
@@ -486,7 +482,11 @@ three types of rules:
 
 The *Allow* rules have higher precedence over the *Block* ones. As soon as an *Allow* rule
 matches, the antispam and antivirus checks are skipped, the *Block* rule is not
-evaluated and the message is accepted immediately.
+evaluated and the message is accepted.
+
+.. warning::
+
+    **Antivirus and antispam checks are skipped** if an *Allow* rule matches
 
 It is possible to create an *Allow* or *Block* rule even for an entire 
 domain, not just for a single email address: you just need to specify the
