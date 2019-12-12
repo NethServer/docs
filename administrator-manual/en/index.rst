@@ -74,6 +74,7 @@ Administrator Manual
    backup_customization
    backup_legacy
    mail
+   web_server
    webmail
    webtop5
    pop3_proxy

@@ -23,7 +23,7 @@ path inside the custom field. For example, given a shared folder called *mywebsi
 
 The FTP virtual user will be able to access only the specified directory.
 
-The FTP server is part of the Web Server application inside the new Server Manager.
+The FTP server is part of the :ref:`Web server <web-server-section>` application inside the new Server Manager.
 
 System users
 ============
