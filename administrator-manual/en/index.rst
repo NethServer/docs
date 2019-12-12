@@ -67,6 +67,13 @@ Administrator Manual
 
 .. toctree::
    :maxdepth: 1
+   :caption: Applications - New Server Manager
+
+   web_server
+   firewall2
+
+.. toctree::
+   :maxdepth: 1
    :caption: Modules
 
    backup
@@ -74,7 +81,6 @@ Administrator Manual
    backup_customization
    backup_legacy
    mail
-   web_server
    webmail
    webtop5
    pop3_proxy
