@@ -80,7 +80,8 @@ this page allows to:
 Services
 --------
 
-A :index:`service` is a software running on the firewall itself.
+A remote system can connect to a :index:`network service`, which is a software
+running on |product| itself.
 
 Each service can have a list of "open" ports accepting local or remote connections.
 To control which zones or hosts can access a network service, see :ref:`firewall-section`.
