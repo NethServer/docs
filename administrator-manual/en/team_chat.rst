@@ -17,6 +17,10 @@ Before proceeding with the configuration, make sure to create the corresponding 
 
 If your server is using a Let's Encrypt certificate as default, make also sure to have a corresponding public DNS record. See :ref:`server_certificate-section` for more info.
 
+.. warning::
+   
+   Please note that the mobile app **cannot connect to servers with self-signed certificates**!
+
 How to configure:
 
 1. Access :guilabel:`Team chat` page inside the Server Manager
