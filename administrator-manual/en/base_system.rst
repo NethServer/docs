@@ -154,7 +154,8 @@ Private network   Subnet mask   IP addresses interval
 Network services
 ================
 
-A :index:`network service` is a service running on the firewall itself.
+A remote system can connect to a :index:`network service`, which is a software
+running on |product| itself.
 
 Each service has a list of "open" ports on which it answers to connections.
 Connections can be accepted from selected zones. Finer grained control of 
