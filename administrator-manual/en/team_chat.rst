@@ -19,7 +19,7 @@ If your server is using a Let's Encrypt certificate as default, make also sure t
 
 .. warning::
    
-   Please note that the app **cannot connect to servers with self-signed certificates**!
+   Please note that the mobile app **cannot connect to servers with self-signed certificates**!
 
 How to configure:
 
