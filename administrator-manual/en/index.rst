@@ -123,6 +123,7 @@ Administrator Manual
        collabora
        sogo
        phpVirtualBox
+       hotsync
 
 .. toctree::
    :maxdepth: 2
