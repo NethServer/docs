@@ -472,17 +472,31 @@ send or receive messages.
 The section :guilabel:`Rules by mail address` allows creating
 three types of rules:
 
-* :guilabel:`Block From`: any message from specified sender is blocked
-
 * :guilabel:`Allow From`: any message from specified sender is
   accepted
 
 * :guilabel:`Allow To`: any message to the specified recipient is
   accepted
 
-It's possible to create an 'Allow' or 'Block' rule even for a complete email domain, not just for a single email address : you just need to specify the desired domain (e.g. : nethserver.org).
+* :guilabel:`Block From`: any message from specified sender is blocked
 
-.. warning:: **Anti-virus checks are disabled** too, in case *whitelist* settings.
+The *Allow* rules have higher precedence over the *Block* ones. As soon as an *Allow* rule
+matches, the antispam and antivirus checks are skipped, the *Block* rule is not
+evaluated and the message is accepted.
+
+.. warning::
+
+    **Antivirus and antispam checks are skipped** if an *Allow* rule matches
+
+It is possible to create an *Allow* or *Block* rule even for an entire 
+domain, not just for a single email address: you just need to specify the
+domain name (e.g. ``dev.nethserver.org``).
+
+When a second level domain domain name is specified it matches also its
+subdomains. For instance ``nethserver.org`` matches ``nethserver.org`` itself,
+``dev.nethserver.org``, ``demo.nethserver.org`` and so on.
+
+
 
 .. _rspamd-web-interface-section:
 

@@ -80,7 +80,8 @@ this page allows to:
 Services
 --------
 
-A :index:`service` is a software running on the firewall itself.
+A remote system can connect to a :index:`network service`, which is a software
+running on |product| itself.
 
 Each service can have a list of "open" ports accepting local or remote connections.
 To control which zones or hosts can access a network service, see :ref:`firewall-section`.
@@ -243,7 +244,7 @@ A local user can be delegated to access:
 
 * one or more pages of the *System* section
 * one or more installed applications
-* one or more main sections between *Subscription*, *Software Center* or *Terminal*
+* one or more main sections between *Subscription*, *Software Center*
 
 Role delegation is based on local groups, each user belonging to the group will be delegated.
 Users inside the *domains admins* are automatically delegated to all panels.
@@ -255,3 +256,8 @@ Select one or more items from the :guilabel:`System views` and :guilabel:`Applic
 Even if a user has been delegated, it must be explicitly granted the shell access before
 being able to log into the Server Manager.
 
+The following pages are always accessible to all users:
+
+* dashboard
+* applications
+* terminal

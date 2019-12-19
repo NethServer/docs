@@ -4,6 +4,10 @@
 HotSync
 =======
 
+.. note::
+
+  This package is not supported in |product| Enterprise
+
 .. warning::
 
    HotSync should be considered a `beta release <https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta>`_.
