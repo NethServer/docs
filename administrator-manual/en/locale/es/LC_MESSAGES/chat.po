@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2019-12-19 10:43+0100\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jose G. Jimenez S. <josegjimenez@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -181,23 +181,22 @@ msgstr ""
 "administradores del servidor de chat."
 
 #: ../../chat.rst:64
+msgid ""
+"The group ``jabberadmins`` must be created and configured from the :ref"
+":`groups-section` page."
+msgstr ""
+
+#: ../../chat.rst:66
 msgid "Administrators can:"
 msgstr "Los administradores pueden:"
 
-#: ../../chat.rst:66
+#: ../../chat.rst:68
 msgid "Send broadcast messages"
 msgstr "Enviar mensajes de difusión"
 
-#: ../../chat.rst:67
+#: ../../chat.rst:69
 msgid "Check the status of connected users"
 msgstr "Compruebe el estatus de los usuarios conectados"
-
-#: ../../chat.rst:70
-msgid ""
-"The group ``jabberadmins`` is configurable from :ref:`groups-section` page."
-msgstr ""
-"El grupo ``jabberadmins`` es configurable desde la página :ref:`groups-"
-"section`."
 
 #: ../../chat.rst:73
 msgid "Message Archive Management"

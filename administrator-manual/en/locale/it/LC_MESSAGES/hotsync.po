@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2019-12-19 10:43+0100\n"
 "PO-Revision-Date: 2018-01-12 09:13+0000\n"
 "Last-Translator: Youssef Mehni <mehniyoussef@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -35,6 +35,10 @@ msgid "HotSync"
 msgstr "HotSync"
 
 #: ../../hotsync.rst:9
+msgid "This package is not supported in |product| Enterprise"
+msgstr ""
+
+#: ../../hotsync.rst:13
 msgid ""
 "HotSync should be considered a `beta release "
 "<https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta>`_. Please "
@@ -44,7 +48,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta>`_. Pertanto"
 " è opportuno provarla in ambienti di test prima di procedere in produzione."
 
-#: ../../hotsync.rst:12
+#: ../../hotsync.rst:16
 msgid ""
 "HotSync aims to reduce downtime in case of failure, syncing your |product| "
 "with another one, that will be manually activated in case of master server "
@@ -54,7 +58,7 @@ msgstr ""
 "sincronizzando il |product| con un altro sistema gemello, che verrà attivato"
 " manualmente in caso di guasto del server master."
 
-#: ../../hotsync.rst:14
+#: ../../hotsync.rst:18
 msgid ""
 "Normally, when a hardware damage occurs, the time needed to restore service "
 "is:"
@@ -62,19 +66,19 @@ msgstr ""
 "Normalmente, quando si verifica un problema hardware, il tempo necessario "
 "per ripristinare il servizio è:"
 
-#: ../../hotsync.rst:16
+#: ../../hotsync.rst:20
 msgid "fix/buy another server: from 4h to 2 days"
 msgstr "riparazione/approvvigionamento nuovo server: da 4h a 2 giorni"
 
-#: ../../hotsync.rst:17
+#: ../../hotsync.rst:21
 msgid "install OS: 30 minutes"
 msgstr "installazione sistema operativo: 30 minuti"
 
-#: ../../hotsync.rst:18
+#: ../../hotsync.rst:22
 msgid "restore backup: from 10 minutes to 8 hours"
 msgstr "ripristino backup: da 10 minuti a 8 ore"
 
-#: ../../hotsync.rst:20
+#: ../../hotsync.rst:24
 msgid ""
 "In summary, users are able to start working again with data from the night "
 "before failure after a few hours/days. Using hotsync, time 1 and 3 are 0, 2 "
@@ -89,7 +93,7 @@ msgstr ""
 "a lavorare in pochi minuti, utilizzando i dati di alcuni minuti prima del "
 "crash."
 
-#: ../../hotsync.rst:23
+#: ../../hotsync.rst:27
 msgid ""
 "By default all data included in backup are synchronized every 15 minutes. "
 "MariaDB databases are synchronized too, unless databases synchronization "
@@ -102,32 +106,32 @@ msgstr ""
 "applicazioni che utilizzano PostgreSQL sono sincronizzate (Mattermost, "
 "Webtop5) a meno che la sincronizzazione dei database non sia disabilitata."
 
-#: ../../hotsync.rst:28
+#: ../../hotsync.rst:32
 msgid "Terminology"
 msgstr "Terminologia"
 
-#: ../../hotsync.rst:30
+#: ../../hotsync.rst:34
 msgid "MASTER is the production system SLAVE is the spare server"
 msgstr "MASTER è il sistema di produzione SLAVE è il server di riserva"
 
-#: ../../hotsync.rst:31
+#: ../../hotsync.rst:35
 msgid "SLAVE is switched on, with an IP address different than MASTER"
 msgstr "SLAVE è acceso, con un indirizzo IP diverso da MASTER"
 
-#: ../../hotsync.rst:32
+#: ../../hotsync.rst:36
 msgid "Every 15 minutes, MASTER makes a backup on SLAVE"
 msgstr "Ogni 15 minuti, MASTER esegue un backup su SLAVE"
 
-#: ../../hotsync.rst:33
+#: ../../hotsync.rst:37
 msgid "An email is sent to root (admin if mail server is installed)"
 msgstr ""
 "Un'e-mail viene inviata a root (admin se è installato il server di posta)"
 
-#: ../../hotsync.rst:37
+#: ../../hotsync.rst:41
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../hotsync.rst:41
+#: ../../hotsync.rst:45
 msgid ""
 "Install nethserver-hotsync on both MASTER and SLAVE, execute from command "
 "line: ::"
@@ -135,35 +139,35 @@ msgstr ""
 "Per installare nethserver-hotsync su MASTER e SLAVE, esegure dalla riga di "
 "comando: ::"
 
-#: ../../hotsync.rst:47
+#: ../../hotsync.rst:51
 msgid "Install nethserver-hotsync on both MASTER and SLAVE."
 msgstr "Installare nethserver-hotsync sia sul MASTER che sullo SLAVE"
 
-#: ../../hotsync.rst:49
+#: ../../hotsync.rst:53
 msgid "To install the module on MASTER execute from command line: ::"
 msgstr "Per installare il modulo sul MASTER lanciare da shell il comando: ::"
 
-#: ../../hotsync.rst:53
+#: ../../hotsync.rst:57
 msgid "To install the module on SLAVE execute from command line: ::"
 msgstr "Per installare il modulo sullo SLAVE lanciare da shell il comando: ::"
 
-#: ../../hotsync.rst:60
+#: ../../hotsync.rst:64
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../hotsync.rst:63
+#: ../../hotsync.rst:67
 msgid "Master"
 msgstr "Master"
 
-#: ../../hotsync.rst:74
+#: ../../hotsync.rst:78
 msgid "Slave"
 msgstr "Slave"
 
-#: ../../hotsync.rst:84
+#: ../../hotsync.rst:88
 msgid "The ``<PASSWORD>`` must be the same on master and slave."
 msgstr "La ``<PASSWORD>`` deve essere la stessa sul master e sullo slave."
 
-#: ../../hotsync.rst:86
+#: ../../hotsync.rst:90
 msgid ""
 "If mysql or postgresql are installed, they will be synchronized by default. "
 "To disable databases sync"
@@ -171,23 +175,23 @@ msgstr ""
 "Se mysql o postgresql sono installati, saranno sincronizzati per "
 "impostazione predefinita. Per disabilitare la sincronizzazione dei database"
 
-#: ../../hotsync.rst:95
+#: ../../hotsync.rst:99
 msgid "Enabling/Disabling"
 msgstr "Abilitazione/Disabilitazione"
 
-#: ../../hotsync.rst:97
+#: ../../hotsync.rst:101
 msgid "Hotsync is enabled by default. To disable it:"
 msgstr "Hotsync è abilitato di default. Per disabilitarlo:"
 
-#: ../../hotsync.rst:105
+#: ../../hotsync.rst:109
 msgid "and to re-enable it:"
 msgstr "e per riabilitarlo:"
 
-#: ../../hotsync.rst:115
+#: ../../hotsync.rst:119
 msgid "Restore: put SLAVE in production"
 msgstr "Ripristino: promuovere lo SLAVE in produzione"
 
-#: ../../hotsync.rst:117
+#: ../../hotsync.rst:121
 msgid ""
 "The following procedure puts the SLAVE in production when the master has "
 "crashed."
@@ -195,11 +199,11 @@ msgstr ""
 "La seguente procedura mette in produzione lo SLAVE in caso di arrewsto "
 "anomalo del master."
 
-#: ../../hotsync.rst:119
+#: ../../hotsync.rst:123
 msgid "switch off MASTER"
 msgstr "spegnere il MASTER"
 
-#: ../../hotsync.rst:121
+#: ../../hotsync.rst:125
 msgid ""
 "if the SLAVE machine must run as network gateway, connect it to the "
 "router/modem with a network cable"
@@ -207,7 +211,7 @@ msgstr ""
 "se lo SLAVE deve funzionare come gateway di rete, collegarlo al router/modem"
 " con un cavo di rete"
 
-#: ../../hotsync.rst:124
+#: ../../hotsync.rst:128
 msgid ""
 "on SLAVE, if you are connected through an ssh console, launch the ``screen``"
 " command, to make your session survive to network outages::"
@@ -216,14 +220,14 @@ msgstr ""
 "``screen``, per fare in modo che la sessione sopravviva in caso di "
 "interruzioni di rete: ::"
 
-#: ../../hotsync.rst:129
+#: ../../hotsync.rst:133
 msgid ""
 "on SLAVE launch the following command, and read carefully its output ::"
 msgstr ""
 "lanciare sullo SLAVE il seguente comando e leggere attentamente l'output "
 "generato ::"
 
-#: ../../hotsync.rst:133
+#: ../../hotsync.rst:137
 msgid ""
 "go to Server Manager, in page ``Network`` and reassign roles to network "
 "interfaces as required"
@@ -231,89 +235,89 @@ msgstr ""
 "spostarsi nella pagina ``Rete`` del Server Manager e riassegnare i ruoli "
 "alle interfacce di rete secondo necessità"
 
-#: ../../hotsync.rst:136
+#: ../../hotsync.rst:140
 msgid "launch the command ::"
 msgstr "lanciare il comando ::"
 
-#: ../../hotsync.rst:140
+#: ../../hotsync.rst:144
 msgid "update the system to the latest packages version ::"
 msgstr "aggiorna il sistema alla versione più recente dei pacchetti ::"
 
-#: ../../hotsync.rst:144
+#: ../../hotsync.rst:148
 msgid ""
 "if an USB backup is configured on MASTER, connect the backup HD to SLAVE"
 msgstr ""
 "se sul MASTER era configurato un backup su USB, collegare il disco di backup"
 " allo SLAVE"
 
-#: ../../hotsync.rst:147
+#: ../../hotsync.rst:151
 msgid "Supported packages"
 msgstr "Pacchetti supportati"
 
-#: ../../hotsync.rst:149 ../../hotsync.rst:162
+#: ../../hotsync.rst:153 ../../hotsync.rst:166
 msgid "nethserver-nextcloud"
 msgstr "nethserver-nextcloud"
 
-#: ../../hotsync.rst:150
+#: ../../hotsync.rst:154
 msgid "nethserver-mysql"
 msgstr "nethserver-mysql"
 
-#: ../../hotsync.rst:151
+#: ../../hotsync.rst:155
 msgid "nethserver-dnsmasq"
 msgstr "nethserver-dnsmasq"
 
-#: ../../hotsync.rst:152
+#: ../../hotsync.rst:156
 msgid "nethserver-squidguard"
 msgstr "nethserver-squidguard"
 
-#: ../../hotsync.rst:153
+#: ../../hotsync.rst:157
 msgid "nethserver-pulledpork"
 msgstr "nethserver-pulledpork"
 
-#: ../../hotsync.rst:154
+#: ../../hotsync.rst:158
 msgid "nethserver-antivirus"
 msgstr "nethserver-antivirus"
 
-#: ../../hotsync.rst:155
+#: ../../hotsync.rst:159
 msgid "nethserver-samba-audit"
 msgstr "nethserver-samba-audit"
 
-#: ../../hotsync.rst:156
+#: ../../hotsync.rst:160
 msgid "nethserver-freepbx > 14.0.3"
 msgstr "nethserver-freepbx > 14.0.3"
 
-#: ../../hotsync.rst:157
+#: ../../hotsync.rst:161
 msgid "nethserver-webtop5 (z-push state is not synchronized)"
 msgstr "nethserver-webtop5 (lo stato di z-push non è sincronizzato)"
 
-#: ../../hotsync.rst:158
+#: ../../hotsync.rst:162
 msgid "nethserver-collectd"
 msgstr "nethserver-collectd"
 
-#: ../../hotsync.rst:159
+#: ../../hotsync.rst:163
 msgid "nethserver-cups"
 msgstr "nethserver-cups"
 
-#: ../../hotsync.rst:160
+#: ../../hotsync.rst:164
 msgid "nethserver-dc"
 msgstr "nethserver-dc"
 
-#: ../../hotsync.rst:161
+#: ../../hotsync.rst:165
 msgid "nethserver-letsencrypt"
 msgstr "nethserver-letsencrypt"
 
-#: ../../hotsync.rst:163
+#: ../../hotsync.rst:167
 msgid "nethserver-sssd"
 msgstr "nethserver-sssd"
 
-#: ../../hotsync.rst:164
+#: ../../hotsync.rst:168
 msgid "nethserver-directory"
 msgstr "nethserver-directory"
 
-#: ../../hotsync.rst:165
+#: ../../hotsync.rst:169
 msgid "nethserver-ibays"
 msgstr "nethserver-ibays"
 
-#: ../../hotsync.rst:166
+#: ../../hotsync.rst:170
 msgid "nethserver-mail-server"
 msgstr "nethserver-mail-server"

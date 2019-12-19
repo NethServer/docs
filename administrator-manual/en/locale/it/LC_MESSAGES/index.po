@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2019-12-19 10:43+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -30,6 +30,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../index.rst:29
+msgid "Release notes"
+msgstr "Release notes"
+
+#: ../../index.rst:35
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../index.rst:50
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../index.rst:68
+msgid "Modules"
+msgstr "Moduli"
+
+#: ../../index.rst:119
+msgid "NethForge modules"
+msgstr "Moduli NethForge"
+
+#: ../../index.rst:128
+msgid "Best practices"
+msgstr "Best practice"
+
+#: ../../index.rst:134
+msgid "Appendix"
+msgstr "Appendice"
+
+#: ../../index.rst:146
+msgid "Old Server Manager"
+msgstr ""
 
 #: ../../index.rst:4
 msgid "Administrator Manual"
@@ -65,31 +97,3 @@ msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 #: ../../index.rst:27
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
-
-#: ../../index.rst:29
-msgid "Release notes"
-msgstr "Release notes"
-
-#: ../../index.rst:35
-msgid "Installation"
-msgstr "Installazione"
-
-#: ../../index.rst:50
-msgid "Configuration"
-msgstr "Configurazione"
-
-#: ../../index.rst:68
-msgid "Modules"
-msgstr "Moduli"
-
-#: ../../index.rst:119
-msgid "NethForge modules"
-msgstr "Moduli NethForge"
-
-#: ../../index.rst:127
-msgid "Best practices"
-msgstr "Best practice"
-
-#: ../../index.rst:133
-msgid "Appendix"
-msgstr "Appendice"

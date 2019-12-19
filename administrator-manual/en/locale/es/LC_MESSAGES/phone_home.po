@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2019-12-19 10:43+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -53,11 +53,16 @@ msgstr ""
 msgid "RELEASE from ``/sbin/e-smith/config getprop sysconfig Version``"
 msgstr ""
 
-#: ../../phone_home.rst:17
+#: ../../phone_home.rst:15
+msgid ""
+"TYPE of installation like ``subscription``, ``enterprise`` or ``community``"
+msgstr ""
+
+#: ../../phone_home.rst:18
 msgid "Disabling"
 msgstr ""
 
-#: ../../phone_home.rst:19
+#: ../../phone_home.rst:20
 msgid ""
 "The phone home can be disabled from command line. Just run the following "
 "command in a root shell: ::"
