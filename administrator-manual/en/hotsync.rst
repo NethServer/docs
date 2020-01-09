@@ -15,7 +15,7 @@ HotSync
 
 .. warning::
 
-   For a correct restore, it's suggested to configure hotsync on two identical servers or two servers with same network cards number, name and position. If you restore master on a not identical slave server you can encounter some problems and you'll have to fix it consulting troubleshooting section.
+   For a correct restore, it's suggested to configure HotSync on two identical servers or two servers with same network cards number, name and position. If you restore master on a not identical slave server you can encounter some problems and you'll have to fix it consulting troubleshooting section.
 
 
 HotSync aims to reduce downtime in case of failure, syncing your |product| with another one, that will be manually activated in case of master server failure.
@@ -26,7 +26,7 @@ Normally, when a hardware damage occurs, the time needed to restore service is:
 2. install OS: 30 minutes
 3. restore backup: from 10 minutes to 8 hours
 
-In summary, users are able to start working again with data from the night before failure after a few hours/days. Using hotsync, time 1 and 3 are 0, 2 is 5 minutes (time to activate spare server). Users are able to start working again in few minutes, using data from a few minutes before the crash.
+In summary, users are able to start working again with data from the night before failure after a few hours/days. Using HotSync, time 1 and 3 are 0, 2 is 5 minutes (time to activate spare server). Users are able to start working again in few minutes, using data from a few minutes before the crash.
 
 
 By default all data included in backup are synchronized every 15 minutes. MariaDB databases are synchronized too, unless databases synchronization isn't disabled.
@@ -72,7 +72,7 @@ Configuration
 You can configure HotSync from Cockpit interface: access this from Master and Slave, select role and fill required fields with password and IP.
 The ``<PASSWORD>`` must be the same on master and slave.
 
-You can also configure hotsync from command line using these commands:
+You can also configure HotSync from command line using these commands:
 
 Master
 ------
@@ -107,7 +107,7 @@ If mysql or postgresql are installed, they will be synchronized by default. You 
 Enabling/Disabling
 ------------------
 
-Hotsync is enabled by default. To disable it uncheck the checkbox into HotSync Cockpit GUI or use this command:
+HotSync is enabled by default. To disable it uncheck the checkbox into HotSync Cockpit GUI or use this command:
 
 ::
 
@@ -125,7 +125,7 @@ and to re-enable it re-check the checkbox on interface or use CLI:
 
 .. note::
 
-   After hotsync is configured, it's a good practice to launch ``hotsync`` command on master host and ``hotsync-slave`` command on slave host after master has properly syncronized with slave.
+   After HotSync is configured, it's a good practice to launch ``hotsync`` command on master host and ``hotsync-slave`` command on slave host after master has properly syncronized with slave.
    You can force these commands also from Cockpit GUI and check ``/var/log/messages`` logs. It's suggested to launch first command directly from CLI to check if all is properly configured.
 
 
