@@ -103,6 +103,11 @@ If mysql or postgresql are installed, they will be synchronized by default. You 
     [root@master]# config setprop hotsync databases disabled
     [root@master]# signal-event nethserver-hotsync-save
 
+.. note::
+   
+   If you are using HotSync to restore FreePBX leave databases enabled, otherwise FreePBX database will not restored properly.
+
+
 
 Enabling/Disabling
 ------------------
@@ -127,6 +132,11 @@ and to re-enable it re-check the checkbox on interface or use CLI:
 
    After HotSync is configured, it's a good practice to launch ``hotsync`` command on master host and ``hotsync-slave`` command on slave host after master has properly syncronized with slave.
    You can force these commands also from Cockpit GUI and check ``/var/log/messages`` logs. It's suggested to launch first command directly from CLI to check if all is properly configured.
+
+
+.. warning::
+   
+   After HotSync is configured and ``hotsync`` command executed properly, note that ``hotsync-slave`` command must be executed at least one time before proceed with ``hotsync-promote``. You can launch it manually or wait 60 minutes for automatic execution.
 
 
 
