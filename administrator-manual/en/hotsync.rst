@@ -236,23 +236,60 @@ After all is working fine, reboot the system and check all services start and al
 Supported packages
 ==================
 
+All nethserver packages are supported. Here is a list of major NethServer packages:
+
 * nethserver-antivirus
+* nethserver-backup-config
+* nethserver-backup-data
+* nethserver-base
+* nethserver-c-icap
+* nethserver-cockpit
 * nethserver-collectd
 * nethserver-cups
+* nethserver-dante
 * nethserver-dc
+* nethserver-dedalo
 * nethserver-directory
 * nethserver-dnsmasq
+* nethserver-duc
+* nethserver-ejabberd
+* nethserver-evebox
+* nethserver-fail2ban
+* nethserver-firewall-base
 * nethserver-freepbx > 14.0.3
-* nethserver-ibays
+* nethserver-httpd
+* nethserver-hylafax
+* nethserver-iaxmodem
+* nethserver-ipsec-tunnels
+* nethserver-janus
 * nethserver-letsencrypt
-* nethserver-mail-server
+* nethserver-lightsquid
+* nethserver-mail
+* nethserver-mattermost
 * nethserver-mysql
+* nethserver-ndpi
+* nethserver-netdata
 * nethserver-nextcloud
+* nethserver-ntopng
+* nethserver-nut
+* nethserver-openssh
+* nethserver-openvpn
 * nethserver-pulledpork
+* nethserver-restore-data
+* nethserver-roundcubemail
+* nethserver-samba
 * nethserver-samba-audit
+* nethserver-squid
+* nethserver-squidclamav
 * nethserver-squidguard
 * nethserver-sssd
+* nethserver-subscription
+* nethserver-suricata
+* nethserver-vpn-ui
+* nethserver-vsftpd
 * nethserver-webtop5 (z-push state is not synchronized)
+
+Packages nethserver-ntopng and nethserver-evebox are reinstalled without migrating history.
 
 .. warning::
 
