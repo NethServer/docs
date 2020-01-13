@@ -7,9 +7,13 @@
 Virtual hosts
 ==============
 
+.. warning::
+
+    The virtual host configuration is part of the :ref:`Web server
+    <web-server-section>` application inside the new Server Manager.
+
 Virtual hosting allows to host multiple domain names on a single server. On |product|, from :guilabel:`Virtual hosts` page, is possible to configure web sites as Apache named virtual hosts. 
 
-The virtual host configuration is part of the :ref:`Web server <web-server-section>` application inside the new Server Manager.
 
 Virtual host names (FQDN)
 -------------------------

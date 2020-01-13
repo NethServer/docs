@@ -4,11 +4,13 @@
 Reverse proxy
 =============
 
+.. warning::
+
+    The reverse proxy configuration is part of the :ref:`Web server
+    <web-server-section>` application inside the new Server Manager.
+
 The :index:`reverse proxy` feature is useful when you want to access internal sites
 from the outside network.
-
-The reverse proxy configuration is part of the :ref:`Web server <web-server-section>`
-application inside the new Server Manager.
 
 Path and virtual host rules
 ===========================
