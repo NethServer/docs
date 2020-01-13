@@ -6,8 +6,8 @@ Firewall and gateway (new)
 
 .. note::
 
-   This chapter describes changes introduces by the *Firewall* application in the new Server Manager.
-   Basic firewall behavior is unchanged and describe inside :ref:`firewall-section`.
+   This chapter describes the changes introduced by the *Firewall* application in the new Server Manager.
+   Basic firewall behavior is unchanged and described inside :ref:`firewall-section`.
    
    Please note that some changes made in the new Server Manager may not be reflected in the old one. 
 
