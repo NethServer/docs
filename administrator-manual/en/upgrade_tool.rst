@@ -1,8 +1,8 @@
 .. _upgrade_tool_section:
 
-===================
-Upgrade tool (beta)
-===================
+============
+Upgrade tool
+============
 
 The :guilabel:`Upgrade tool` module upgrades |product| from version 6 to version
 7 with an automated procedure that acts in three steps:
