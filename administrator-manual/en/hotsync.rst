@@ -162,15 +162,15 @@ The following procedure puts the SLAVE in production when the master has crashed
    If no Internet connection is detected (e.g. you are restoring a firewall on a machine that was passing through crashed master for Internet connection), the scripts will purpose you some options ::
    
     1. Restore master network configuration (IMPORTANT: use this option only if two servers are identical - NIC number, names and positions must be identical)
-    2. Fix network configuration from Cockpit GUI (if you are restoring on different hardware)
+    2. Fix network configuration from Cockpit GUI (when restoring on different hardware)
     3. Continue without internet: assign correct roles before proceed with this option. Some events could fails (not recommended)
    
    else restore will start automatically. If you are restore on different hardware you could encounter DC errors.
    
 .. warning::
 
-    If you are restoring on identical hardware choose option 1 and network configuration will be overwritten, else choose option 2. It's not recommended to start the promote procedure without Internet access.
-    If you are restoring on a different hardware and you've choosed option 2, you can encounter DC errors. Please see :ref:`hostync-troubleshooting-section`.
+    When restoring on identical hardware choose option 1 and network configuration will be overwritten, else choose option 2. It's not recommended to start the promote procedure without Internet access.
+    When restoring on a different hardware and you've choosed option 2, you can encounter DC errors. Please see :ref:`hostync-troubleshooting-section`.
 
 5. If necessary go to Server Manager or Cockpit GUI, in page ``Network`` and reassign roles to network interfaces as master one. Remember also to recreate bridge if you have configured DC. In case of DC errors consult troubleshooting section before proceed with network restore.
 
