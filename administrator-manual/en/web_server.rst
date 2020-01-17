@@ -201,7 +201,7 @@ certificate` list.
 .. warning:
 
     If the certificate does not include the web site name, web clients will
-    reject to open the web site.
+    refuse to open the web site.
 
 
 It is not possible to select the certificate if the rule matches a **resource
