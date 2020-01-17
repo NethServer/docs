@@ -15,7 +15,7 @@ HotSync
 
 .. warning::
 
-   For a correct restore, it's suggested to configure HotSync on two identical servers or two servers with same network cards number, name and position. If you restore master on a not identical slave server you can encounter some problems and you'll have to fix it consulting troubleshooting section.
+   For a correct restore, it's suggested to configure HotSync on two identical servers or two servers with same network cards number, name and position. If the master and slave servers differ, the restore procedure may behave unexpectedly (see :ref:`hostync-troubleshooting-section`).
 
 
 HotSync aims to reduce downtime in case of failure, syncing your |product| with another one, that will be manually activated in case of master server failure.
@@ -39,7 +39,7 @@ Terminology
 - MASTER is the production system SLAVE is the spare server
 - SLAVE is switched on, with an IP address different than MASTER
 - Every 15 minutes, MASTER makes a backup on SLAVE
-- If something went wrong, an email is sent to root (admin if mail server is installed)
+- If an error occurs, an email is sent to root (admin if mail server is installed)
 - SLAVE check updates and makes some system operations every 60 minutes
 
 
@@ -69,7 +69,7 @@ Installation
 Configuration
 =============
 
-You can configure HotSync from Cockpit interface: access this from Master and Slave, select role and fill required fields with password and IP.
+You can configure HotSync from Cockpit interface: access it from Master and Slave, select role and fill required fields with password and IP.
 The ``<PASSWORD>`` must be the same on master and slave.
 
 You can also configure HotSync from command line using these commands:
@@ -105,7 +105,7 @@ If mysql or postgresql are installed, they will be synchronized by default. You 
 
 .. note::
    
-   If you are using HotSync to restore FreePBX leave databases enabled, otherwise FreePBX database will not restored properly.
+   If you are using HotSync to restore FreePBX leave databases enabled, otherwise FreePBX database will not be restored properly.
 
 
 
@@ -130,8 +130,8 @@ and to re-enable it re-check the checkbox on interface or use CLI:
 
 .. note::
 
-   After HotSync is configured, it's a good practice to launch ``hotsync`` command on master host and ``hotsync-slave`` command on slave host after master has properly syncronized with slave.
-   You can force these commands also from Cockpit GUI and check ``/var/log/messages`` logs. It's suggested to launch first command directly from CLI to check if all is properly configured.
+   After HotSync is configured, it's a good practice to launch ``hotsync`` command on master host. After master has properly syncronized, access the slave and  execute ``hotsync-slave``.
+   You can force these commands also from Cockpit GUI and check ``/var/log/messages`` logs. As best practice, the first syncrhonization should be done via command line to better check if everything is properly configured.
 
 
 .. warning::
@@ -149,17 +149,17 @@ The following procedure puts the SLAVE in production when the master has crashed
 
 2. If the SLAVE machine must run as network gateway, connect it to the router/modem with a network cable.
 
-3. On SLAVE, if you are connected through an ssh console, launch the ``screen`` command, to make your session survive to network outages::
+3. On SLAVE, if you are connected through an SSH console, launch the ``screen`` command, to make your session survive to network outages::
 
     [root@slave]# screen
 
-   It's suggested to execute following procedure directly from the console and not via ssh.
+   As best practice, execute following procedure using a local console and not via SSH connection.
 
 4. on SLAVE launch the following command, and read carefully its output ::
 
     [root@slave]# hotsync-promote
 
-   If no internet connection is detected (e.g. you are restoring a firewall on a machine that was passing through crashed master for internet connection), the scripts will purpose you some options ::
+   If no Internet connection is detected (e.g. you are restoring a firewall on a machine that was passing through crashed master for Internet connection), the scripts will purpose you some options ::
    
     1. Restore master network configuration (IMPORTANT: use this option only if two servers are identical - NIC number, names and positions must be identical)
     2. Fix network configuration from Cockpit GUI (if you are restoring on different hardware)
@@ -169,21 +169,22 @@ The following procedure puts the SLAVE in production when the master has crashed
    
 .. warning::
 
-    If you are restoring on identical hardware choose option 1 and network configuration will be overwritten, else choose option 2. It's not recommended to start promote procedure without internet.
-    If you are restoring on a different hardware and you've choosed option 2, you can encounter DC errors. Read troubleshooting section.
+    If you are restoring on identical hardware choose option 1 and network configuration will be overwritten, else choose option 2. It's not recommended to start the promote procedure without Internet access.
+    If you are restoring on a different hardware and you've choosed option 2, you can encounter DC errors. Please see :ref:`hostync-troubleshooting-section`.
 
 5. If necessary go to Server Manager or Cockpit GUI, in page ``Network`` and reassign roles to network interfaces as master one. Remember also to recreate bridge if you have configured DC. In case of DC errors consult troubleshooting section before proceed with network restore.
 
-6. After all is restored launch the command ::
+6. After everything has been restored, launch the command ::
 
     [root@slave]# /sbin/e-smith/signal-event post-restore-data
 
-7. Ypdate the system to the latest packages version ::
+7. Update the system to the latest packages version ::
 
     [root@slave]# yum clean all && yum -y update
 
 8. If an USB backup is configured on MASTER, connect the backup HD to SLAVE
 
+.. _hostync-troubleshooting-section:
 
 Troubleshooting
 ===============
@@ -191,7 +192,7 @@ Troubleshooting
 After restore on different hardware DC is not working
 -----------------------------------------------------
 
-Console could reports some errors like these ::
+Console could report some errors like these ::
 
     [ERROR] /usr/libexec/nethserver/sambads: failed to add service primaries to system keytab
     Action: /etc/e-smith/events/nethserver-mail-server-update/S50nethserver-sssd-initkeytabs FAILED
@@ -219,18 +220,18 @@ If you cannot reach server after a network reconfiguration, check configuration 
 If you cannot reach the server yet, use ``network-recovery`` tool.
 
 
-Some check after restore
-------------------------
+Suggested check after restore
+-----------------------------
 
-After you've solved issues of configuration restore you should make some checks:
+When all issues have been solved, please make that:
 - configuration is restored properly
 - all enabled services are working
 - applications interfaces (e.g. freepbx, webtop) are working
-- file server (if installed) is working and users can log into shared folders
+- file server is working and users can log into shared folders
 - email server is working and users can send and receive emails
 - asterisk is working and users can make calls
 
-After all is working fine, reboot the system and check all services start and all working as expected.
+Finally, reboot the system and check all services are working after boot.
 
 
 Supported packages
