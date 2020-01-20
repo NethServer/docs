@@ -80,7 +80,7 @@ When a new virtual host is created with one or more *server names* the new
 Server Manager contextually creates a server alias name in the local DNS service
 for each of them.
 
-.. warning::
+.. note::
 
     A server alias name is accessible from web clients if they use the |product|
     itself as their DNS server.  For public web sites, refer to your DNS
@@ -241,7 +241,7 @@ Regardless the rule type, the following settings are also available:
 FTP server
 ==========
 
-.. note::
+.. warning::
 
     The FTP protocol is unsecure. Passwords and file data are sent in clear text
     over the network.

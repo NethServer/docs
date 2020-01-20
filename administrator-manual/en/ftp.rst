@@ -4,12 +4,14 @@
 FTP
 ===
 
-.. warning::
+.. note::
 
     The FTP server is part of the :ref:`Web server <web-server-section>`
     application inside the new Server Manager.
 
-.. note:: The FTP protocol is insecure: password are sent in clear text.
+.. warning::
+
+    The FTP protocol is insecure: password are sent in clear text.
 
 The :index:`FTP` server allows to transfer files between client and server.
 

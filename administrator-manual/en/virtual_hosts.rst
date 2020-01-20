@@ -7,7 +7,7 @@
 Virtual hosts
 ==============
 
-.. warning::
+.. note::
 
     The virtual host configuration is part of the :ref:`Web server
     <web-server-section>` application inside the new Server Manager.
