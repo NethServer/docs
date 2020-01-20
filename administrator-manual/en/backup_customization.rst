@@ -241,6 +241,8 @@ It's possible to configure a backup which includes only the mail and is schedule
 
 .. note:: This type of backup can't be used in case of disaster recovery.
 
+.. _configuration_backup-section:
+
 Configuration backup
 ====================
 

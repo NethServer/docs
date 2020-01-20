@@ -54,8 +54,19 @@ applications and command line scripts, unless they are overridden by some means.
 
 PHP settings can also be adjusted for a specific web site from the
 :guilabel:`Virtual hosts` page (see also :ref:`webserver-phpversions-section`),
-or overridden with a custom configuration file.
+or overridden with a custom configuration file. To this end,
 
+  1. for PHP 7.2, look at current PHP-FPM settings in
+     :file:`/etc/opt/rh/rh-php72/php-fpm.d/000-virtualhost.conf`;
+
+  2. create a file under the same directory (e.g.
+     :file:`/etc/opt/rh/rh-php72/php-fpm.d/001-custom.conf`) and refer to the
+     official `PHP-FPM documentation`_ to adjust the pool directives;
+
+  3. add the created file to your :ref:`configuration backup
+     <configuration_backup-section>`.
+
+.. _`PHP-FPM documentation`: https://www.php.net/manual/en/install.fpm.configuration.php
 
 .. _webserver-vhosts-section:
 
