@@ -1,12 +1,12 @@
 # #-#-#-#-#  index.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  index.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-19 10:43+0100\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -42,22 +42,26 @@ msgid "Configuration"
 msgstr "Configuración"
 
 #: ../../index.rst:68
+msgid "Applications - New Server Manager"
+msgstr ""
+
+#: ../../index.rst:75
 msgid "Modules"
 msgstr "Módulos"
 
-#: ../../index.rst:119
+#: ../../index.rst:126
 msgid "NethForge modules"
 msgstr "Módulos NethForge"
 
-#: ../../index.rst:128
+#: ../../index.rst:135
 msgid "Best practices"
 msgstr "Mejores prácticas"
 
-#: ../../index.rst:134
+#: ../../index.rst:141
 msgid "Appendix"
 msgstr "Apéndice"
 
-#: ../../index.rst:146
+#: ../../index.rst:153
 msgid "Old Server Manager"
 msgstr ""
 

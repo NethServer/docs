@@ -1,28 +1,28 @@
 # #-#-#-#-#  firewall2.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  firewall2.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2019-10-07 12:38+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,9 +36,9 @@ msgstr "Firewall e gateway (nuovo)"
 
 #: ../../firewall2.rst:9
 msgid ""
-"This chapter describes changes introduces by the *Firewall* application in "
-"the new Server Manager. Basic firewall behavior is unchanged and describe "
-"inside :ref:`firewall-section`."
+"This chapter describes the changes introduced by the *Firewall* application "
+"in the new Server Manager. Basic firewall behavior is unchanged and "
+"described inside :ref:`firewall-section`."
 msgstr ""
 "Questo capitolo descrive le modifiche introdotte dall'applicazione "
 "*Firewall* del nuovo Server Manager. Il comportamento di base del firewall è"

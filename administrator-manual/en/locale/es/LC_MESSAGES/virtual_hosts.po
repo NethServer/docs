@@ -1,12 +1,12 @@
 # #-#-#-#-#  virtual_hosts.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  virtual_hosts.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -33,7 +33,13 @@ msgstr ""
 msgid "Virtual hosts"
 msgstr "Hosts virtuales"
 
-#: ../../virtual_hosts.rst:10
+#: ../../virtual_hosts.rst:12
+msgid ""
+"The virtual host configuration is part of the :ref:`Web server <web-server-"
+"section>` application inside the new Server Manager."
+msgstr ""
+
+#: ../../virtual_hosts.rst:15
 msgid ""
 "Virtual hosting allows to host multiple domain names on a single server. On "
 "|product|, from :guilabel:`Virtual hosts` page, is possible to configure web"
@@ -43,18 +49,11 @@ msgstr ""
 "único servidor. En |product|, desde la página :guilabel:`Virtual hosts`, se "
 "pueden configurar sitios web como nombres virtuales de dominio de Apache."
 
-#: ../../virtual_hosts.rst:12
-msgid ""
-"The virtual host configuration is part of the Web Server application inside "
-"the new Server Manager. When a new virtual host is created, the new Server "
-"Manager will also automatically create all required DNS server alias."
-msgstr ""
-
-#: ../../virtual_hosts.rst:16
+#: ../../virtual_hosts.rst:19
 msgid "Virtual host names (FQDN)"
 msgstr "Nombres de host virtuales (FQDN)"
 
-#: ../../virtual_hosts.rst:18
+#: ../../virtual_hosts.rst:21
 msgid ""
 "Is the list of Fully Qualified Domain Names that are associated to the "
 "virtual host. Values must be separated with a \",\" (comma). To access "
@@ -70,11 +69,11 @@ msgstr ""
 "servidor\", pero sólo es útil para los clientes que utilizan el servidor "
 "como DNS."
 
-#: ../../virtual_hosts.rst:22
+#: ../../virtual_hosts.rst:25
 msgid "Configuring a web application"
 msgstr "Configuración de una aplicación web"
 
-#: ../../virtual_hosts.rst:24
+#: ../../virtual_hosts.rst:27
 msgid ""
 "When a new virtual host is created, also the folder "
 "/var/lib/nethserver/vhost/`NAME` is created. If FTP access is enabled, is "
@@ -86,7 +85,7 @@ msgstr ""
 "posible cargar archivos a esta carpeta usando un cliente FTP y un nombre de "
 "host virtual como nombre de usuario."
 
-#: ../../virtual_hosts.rst:27
+#: ../../virtual_hosts.rst:30
 msgid ""
 "FTP access is disabled by default, you also need to enable it from FTP "
 "configuration page"
@@ -94,7 +93,7 @@ msgstr ""
 "El acceso FTP está desactivado de forma predeterminada, también es necesario"
 " habilitarlo desde la página de configuración FTP "
 
-#: ../../virtual_hosts.rst:29
+#: ../../virtual_hosts.rst:32
 msgid ""
 "HTTP authentication password should be different from FTP ones, because FTP "
 "is used for upload content on virtual host and HTTP to read content."
@@ -103,11 +102,11 @@ msgstr ""
 "se utiliza FTP para cargar contenido en el host virtual y HTTP para leer "
 "contenido."
 
-#: ../../virtual_hosts.rst:32
+#: ../../virtual_hosts.rst:35
 msgid "Apache permissions"
 msgstr "Permisos de Apache"
 
-#: ../../virtual_hosts.rst:34
+#: ../../virtual_hosts.rst:37
 msgid ""
 "FTP uploaded files are owned by the \"apache\" group. If you need to allow "
 "apache write or execution access, you can change group permissions using the"
@@ -117,7 +116,7 @@ msgstr ""
 " permitir acceso de escritura o ejecución de apache, puede cambiar permisos "
 "de grupo utilizando el cliente FTP"
 
-#: ../../virtual_hosts.rst:36
+#: ../../virtual_hosts.rst:39
 msgid ""
 "If a virtual host contains executable code, such as PHP scripts, user "
 "permissions and security implications must be evaluated carefully."
