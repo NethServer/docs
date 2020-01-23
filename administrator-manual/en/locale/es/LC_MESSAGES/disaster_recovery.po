@@ -1,12 +1,12 @@
 # #-#-#-#-#  disaster_recovery.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  disaster_recovery.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-10 10:58+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2019-10-10 08:59+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 
 #: ../../disaster_recovery.rst:23
-msgid "New Server Manger"
+msgid "New Server Manager"
 msgstr ""
 
 #: ../../disaster_recovery.rst:25 ../../disaster_recovery.rst:72
@@ -76,8 +76,8 @@ msgstr ""
 
 #: ../../disaster_recovery.rst:34
 msgid ""
-"Activate NethServer Enterprise following the :ref:`registration-section` "
-"procedure"
+"Activate NethServer Enterprise following the :ref:`registration "
+"<registration-section>` procedure"
 msgstr ""
 
 #: ../../disaster_recovery.rst:38
@@ -101,8 +101,9 @@ msgstr ""
 
 #: ../../disaster_recovery.rst:48
 msgid ""
-"For |product| Enterprise, all cloud backups will be automatically downloaded"
-" and ready to be restored directly from the :guilabel:`From backup` field."
+"For NethServer Enterprise, all cloud backups will be automatically "
+"downloaded and ready to be restored directly from the :guilabel:`From "
+"backup` field."
 msgstr ""
 
 #: ../../disaster_recovery.rst:51
@@ -138,7 +139,7 @@ msgstr ""
 msgid "Old Server Manager"
 msgstr ""
 
-#: ../../disaster_recovery.rst:76 ../../disaster_recovery.rst:98
+#: ../../disaster_recovery.rst:76 ../../disaster_recovery.rst:100
 msgid ""
 "Install the new machine (refer to :ref:`installation <installation-manual>` "
 "section), access the Server Manager and follow the :ref:`first configuration"
@@ -146,13 +147,13 @@ msgid ""
 "basic server configuration"
 msgstr ""
 
-#: ../../disaster_recovery.rst:80 ../../disaster_recovery.rst:102
+#: ../../disaster_recovery.rst:80 ../../disaster_recovery.rst:104
 msgid ""
 "Ensure that |product| is able to access the internet and resolve public "
 "names correctly"
 msgstr ""
 
-#: ../../disaster_recovery.rst:82 ../../disaster_recovery.rst:106
+#: ../../disaster_recovery.rst:82 ../../disaster_recovery.rst:108
 msgid ""
 "Install all the available core updates in the :ref:`Software Center "
 "<software-updates-section>`"
@@ -164,47 +165,52 @@ msgid ""
 "(configuration)` panel"
 msgstr ""
 
-#: ../../disaster_recovery.rst:86 ../../disaster_recovery.rst:111
+#: ../../disaster_recovery.rst:86 ../../disaster_recovery.rst:113
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
 msgstr ""
 
-#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:114
+#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:116
 msgid "Verify the system is functional"
 msgstr ""
 
-#: ../../disaster_recovery.rst:91 ../../disaster_recovery.rst:116
+#: ../../disaster_recovery.rst:91 ../../disaster_recovery.rst:118
 msgid "Restore data backup executing on the console ::"
 msgstr ""
 
-#: ../../disaster_recovery.rst:104
+#: ../../disaster_recovery.rst:95 ../../disaster_recovery.rst:122
+msgid ""
+"where ``name`` is the name of the data backup you want to restore from."
+msgstr ""
+
+#: ../../disaster_recovery.rst:106
 msgid ""
 "Activate |product| following the :ref:`registration <registration-section>` "
 "procedure"
 msgstr ""
 
-#: ../../disaster_recovery.rst:108
+#: ../../disaster_recovery.rst:110
 msgid ""
 "Restore the configuration backup using the :guilabel:`Backup "
 "(configuration)` panel which allows to use cloud backups or local archives"
 msgstr ""
 
-#: ../../disaster_recovery.rst:121
+#: ../../disaster_recovery.rst:125
 msgid ""
 "Please note that the disaster recovery should be always performed from a "
 "local media (eg. NFS or USB) to speed up the process."
 msgstr ""
 
-#: ../../disaster_recovery.rst:123
+#: ../../disaster_recovery.rst:127
 msgid "The root/admin password is not restored."
 msgstr ""
 
-#: ../../disaster_recovery.rst:128
+#: ../../disaster_recovery.rst:132
 msgid "Restore network roles"
 msgstr ""
 
-#: ../../disaster_recovery.rst:130
+#: ../../disaster_recovery.rst:134
 msgid ""
 "If a role configuration points to a missing network interface, the "
 ":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
@@ -212,19 +218,19 @@ msgid ""
 " following cases:"
 msgstr ""
 
-#: ../../disaster_recovery.rst:135
+#: ../../disaster_recovery.rst:139
 msgid "configuration backup has been restored on a new hardware"
 msgstr ""
 
-#: ../../disaster_recovery.rst:136
+#: ../../disaster_recovery.rst:140
 msgid "one or more network cards have been substituted"
 msgstr ""
 
-#: ../../disaster_recovery.rst:137
+#: ../../disaster_recovery.rst:141
 msgid "system disks are moved to a new machine"
 msgstr ""
 
-#: ../../disaster_recovery.rst:139
+#: ../../disaster_recovery.rst:143
 msgid ""
 "The warning message points to a page that lists the network cards present in"
 " the system, highlighting those not having an assigned :ref:`role <network-"
@@ -232,35 +238,35 @@ msgid ""
 " for restoring."
 msgstr ""
 
-#: ../../disaster_recovery.rst:144
+#: ../../disaster_recovery.rst:148
 msgid ""
 "For instance, if a card with the *orange* role has been replaced, the drop "
 "down menu will list an element ``orange``, near the new network card."
 msgstr ""
 
-#: ../../disaster_recovery.rst:148
+#: ../../disaster_recovery.rst:152
 msgid ""
 "The same applies if the old card was a component of a logical interface, "
 "such as a bridge or bond."
 msgstr ""
 
-#: ../../disaster_recovery.rst:151
+#: ../../disaster_recovery.rst:155
 msgid ""
 "By picking an element from the drop down menu, the old role is transferred "
 "to the new physical interface."
 msgstr ""
 
-#: ../../disaster_recovery.rst:154
+#: ../../disaster_recovery.rst:158
 msgid "Click the :guilabel:`Submit` button to apply the changes."
 msgstr ""
 
-#: ../../disaster_recovery.rst:156
+#: ../../disaster_recovery.rst:160
 msgid ""
 "Choose carefully the new interfaces assignment: doing a mistake here could "
 "lead to a system isolated from the network!"
 msgstr ""
 
-#: ../../disaster_recovery.rst:159
+#: ../../disaster_recovery.rst:163
 msgid ""
 "If the missing role is ``green`` an automatic procedure attempts to fix the "
 "configuration at boot-time, to ensure a minimal network connectivity and "

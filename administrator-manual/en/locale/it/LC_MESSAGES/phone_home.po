@@ -1,12 +1,12 @@
 # #-#-#-#-#  phone_home.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  phone_home.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -14,15 +14,16 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,18 +53,25 @@ msgstr ""
 
 #: ../../phone_home.rst:13
 msgid "UUID stored in ``/var/lib/yum/uuid``"
-msgstr "UUID salvato in ``/var/lib/yum/uuid``"
+msgstr "UUID: salvato in ``/var/lib/yum/uuid``"
 
 #: ../../phone_home.rst:14
 msgid "RELEASE from ``/sbin/e-smith/config getprop sysconfig Version``"
 msgstr ""
 "RELEASE: ottenuto da ``/sbin/e-smith/config getprop sysconfig Version``"
 
-#: ../../phone_home.rst:17
+#: ../../phone_home.rst:15
+msgid ""
+"TYPE of installation like ``subscription``, ``enterprise`` or ``community``"
+msgstr ""
+"TYPE: tipo di installazione (`subscription``, ``enterprise`` o "
+"``community``)"
+
+#: ../../phone_home.rst:18
 msgid "Disabling"
 msgstr "Disabilitazione"
 
-#: ../../phone_home.rst:19
+#: ../../phone_home.rst:20
 msgid ""
 "The phone home can be disabled from command line. Just run the following "
 "command in a root shell: ::"

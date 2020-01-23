@@ -1,28 +1,28 @@
 # #-#-#-#-#  ftp.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  ftp.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,17 +34,25 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-#: ../../ftp.rst:7
+#: ../../ftp.rst:9
+msgid ""
+"The FTP server is part of the :ref:`Web server <web-server-section>` "
+"application inside the new Server Manager."
+msgstr ""
+"Il server FTP è parte dell'applicazione :ref:`Server Web <web-server-"
+"section>` all'interno del nuovo Server Manager."
+
+#: ../../ftp.rst:14
 msgid "The FTP protocol is insecure: password are sent in clear text."
 msgstr "Il protocollo FTP è insicuro: le password sono inviate in chiaro."
 
-#: ../../ftp.rst:9
+#: ../../ftp.rst:16
 msgid ""
 "The :index:`FTP` server allows to transfer files between client and server."
 msgstr ""
 "Il server :index:`FTP` consente di trasferire file fra client e server."
 
-#: ../../ftp.rst:11
+#: ../../ftp.rst:18
 msgid ""
 "A FTP user can be :dfn:`virtual` or a system users. Virtual users can access"
 " only the FTP server. This is the recommended configuration. The web "
@@ -55,7 +63,7 @@ msgstr ""
 "configurazione consigliata. L’interfaccia web consente la configurazione "
 "solo degli utenti virtuali."
 
-#: ../../ftp.rst:15
+#: ../../ftp.rst:22
 msgid ""
 "When accessing the FTP server, a user can explore the entire filesystem "
 "accordingly to its own privileges. To avoid information disclosure, the FTP "
@@ -68,7 +76,7 @@ msgstr ""
 "l’opzione :dfn:`chroot` : l’utente non potrà uscire dalla directory in cui è"
 " stato confinato."
 
-#: ../../ftp.rst:19
+#: ../../ftp.rst:26
 msgid ""
 "This behavior can be useful in case a shared folder is used as part of a "
 "simple web hosting. Insert the shared folder path inside the custom field. "
@@ -80,27 +88,20 @@ msgstr ""
 "condivisa nel campo chroot personalizzato. Ad esempio, data una cartella "
 "condivisa chiamata *miosito*, inserire questo percorso: ::"
 
-#: ../../ftp.rst:24
+#: ../../ftp.rst:31
 msgid ""
 "The FTP virtual user will be able to access only the specified directory."
 msgstr "L’utente FTP virtuale potrà accedere solo alla directory specificata."
 
-#: ../../ftp.rst:26
-msgid ""
-"The FTP server is part of the Web Server application inside the new Server "
-"Manager."
-msgstr ""
-"Il server FTP è parte dell'applicazione Server Web nel nuovo Server Manager."
-
-#: ../../ftp.rst:29
+#: ../../ftp.rst:34
 msgid "System users"
 msgstr "Utenti di sistema"
 
-#: ../../ftp.rst:31
+#: ../../ftp.rst:36
 msgid "This configuration is highly discouraged"
 msgstr "Questa configurazione è altamente sconsigliata."
 
-#: ../../ftp.rst:33
+#: ../../ftp.rst:38
 msgid ""
 "After enabling system users, all virtual users will be disabled. All "
 "configuration must be done using the command line."
@@ -109,11 +110,11 @@ msgstr ""
 "disabilitati. Tutta la configurazione deve essere eseguita da linea di "
 "comando."
 
-#: ../../ftp.rst:36
+#: ../../ftp.rst:41
 msgid "Enable system users: ::"
 msgstr "Abilitare gli utenti di sistema: ::"
 
-#: ../../ftp.rst:41
+#: ../../ftp.rst:46
 msgid ""
 "Given a user name *goofy*, first make sure the user has Remote shell access."
 " Then, enable the FTP access: ::"
@@ -122,11 +123,11 @@ msgstr ""
 "l’accesso remoto da shell. Vedi Accesso ai servizi. Quindi, abilitare "
 "l’accesso: ::"
 
-#: ../../ftp.rst:48
+#: ../../ftp.rst:53
 msgid "To disable an already enabled user: ::"
 msgstr "Per disabilitare l’accesso ad un utente precedentemente abilitato: ::"
 
-#: ../../ftp.rst:53
+#: ../../ftp.rst:58
 msgid ""
 "If not explicitly disabled, all system users are chrooted. To disable a "
 "chroot for a system user: ::"

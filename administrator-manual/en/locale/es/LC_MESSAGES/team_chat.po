@@ -1,12 +1,12 @@
 # #-#-#-#-#  team_chat.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  team_chat.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-26 09:43+0100\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -65,110 +65,116 @@ msgid ""
 ":`server_certificate-section` for more info."
 msgstr ""
 
-#: ../../team_chat.rst:20
+#: ../../team_chat.rst:22
+msgid ""
+"Please note that the mobile app **cannot connect to servers with self-signed"
+" certificates**!"
+msgstr ""
+
+#: ../../team_chat.rst:24
 msgid "How to configure:"
 msgstr ""
 
-#: ../../team_chat.rst:22
+#: ../../team_chat.rst:26
 msgid "Access :guilabel:`Team chat` page inside the Server Manager"
 msgstr ""
 
-#: ../../team_chat.rst:23
+#: ../../team_chat.rst:27
 msgid ""
 "Check :guilabel:`Enable Mattermost Team Edition`, then enter a valid FQDN "
 "inside :guilabel:`Virtual host name` field (eg. ``chat.nethserver.org``)"
 msgstr ""
 
-#: ../../team_chat.rst:24
+#: ../../team_chat.rst:28
 msgid ""
 "Open the entered host name inside the browser, eg: "
 "``https://chat.nethserver.org``. At first access, a wizard will create the "
 "administrator user"
 msgstr ""
 
-#: ../../team_chat.rst:27
+#: ../../team_chat.rst:31
 msgid "The following features are enabled by default:"
 msgstr ""
 
-#: ../../team_chat.rst:29
+#: ../../team_chat.rst:33
 msgid "mail notifications"
 msgstr ""
 
-#: ../../team_chat.rst:30
+#: ../../team_chat.rst:34
 msgid "push notifications for mobile apps"
 msgstr ""
 
-#: ../../team_chat.rst:31
+#: ../../team_chat.rst:35
 msgid "redirect from HTTP to HTTPS"
 msgstr ""
 
-#: ../../team_chat.rst:35
+#: ../../team_chat.rst:39
 msgid "Authentication"
 msgstr ""
 
-#: ../../team_chat.rst:37
+#: ../../team_chat.rst:41
 msgid ""
 "Mattermost authentication is *not* integrated with any Account Provider. The"
 " Mattermost administrator should take care of users and teams creation."
 msgstr ""
 
-#: ../../team_chat.rst:42
+#: ../../team_chat.rst:46
 msgid ""
 "The administrator should always use Mattermost wizard to create the admin "
 "user, then send team invitation link to each user."
 msgstr ""
 
-#: ../../team_chat.rst:46
+#: ../../team_chat.rst:50
 msgid "Importing users"
 msgstr ""
 
-#: ../../team_chat.rst:48
+#: ../../team_chat.rst:52
 msgid ""
 "If the system administrator still needs bulk user creation, he/she can rely "
 "on ``mattermost-bulk-user-create`` command."
 msgstr ""
 
-#: ../../team_chat.rst:50
+#: ../../team_chat.rst:54
 msgid "The command will:"
 msgstr ""
 
-#: ../../team_chat.rst:52
+#: ../../team_chat.rst:56
 msgid ""
 "create a default team named as the Company from :ref:`organization_contacts-"
 "section`"
 msgstr ""
 
-#: ../../team_chat.rst:53
+#: ../../team_chat.rst:57
 msgid ""
 "read all users from local or remote Account Providers and create them inside"
 " Mattermost"
 msgstr ""
 
-#: ../../team_chat.rst:55
+#: ../../team_chat.rst:59
 msgid "Please note that:"
 msgstr ""
 
-#: ../../team_chat.rst:57
+#: ../../team_chat.rst:61
 msgid ""
 "users disabled in the Server Manager or already existing in Mattermost will "
 "be skipped"
 msgstr ""
 
-#: ../../team_chat.rst:58
+#: ../../team_chat.rst:62
 msgid "a random password will be generated for each user"
 msgstr ""
 
-#: ../../team_chat.rst:59
+#: ../../team_chat.rst:63
 msgid ""
 "the first imported user will be set as administrator if no admin has been "
 "already created"
 msgstr ""
 
-#: ../../team_chat.rst:61
+#: ../../team_chat.rst:65
 msgid "Invocation example: ::"
 msgstr ""
 
-#: ../../team_chat.rst:74
+#: ../../team_chat.rst:78
 msgid ""
 "Users are not automatically synced inside Mattermost. Each time a user is "
 "created or removed, remember to execute ``mattermost-bulk-user-create`` "
@@ -176,16 +182,16 @@ msgid ""
 "interface."
 msgstr ""
 
-#: ../../team_chat.rst:79
+#: ../../team_chat.rst:83
 msgid "Forcing a common default password"
 msgstr ""
 
-#: ../../team_chat.rst:81
+#: ../../team_chat.rst:85
 msgid ""
 "It's possible to set a default password for each new Mattermost user, just "
 "append the default password to command invocation."
 msgstr ""
 
-#: ../../team_chat.rst:84
+#: ../../team_chat.rst:88
 msgid "Example: ::"
 msgstr ""

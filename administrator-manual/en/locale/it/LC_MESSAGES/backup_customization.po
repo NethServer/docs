@@ -1,12 +1,12 @@
 # #-#-#-#-#  backup_customization.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  backup_customization.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2019-10-08 08:09+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -471,7 +471,7 @@ msgstr ""
 "modificare la lista delle directory e dei file inclusi (o esclusi) dal "
 "backup."
 
-#: ../../backup_customization.rst:173 ../../backup_customization.rst:259
+#: ../../backup_customization.rst:173 ../../backup_customization.rst:261
 msgid "Inclusion"
 msgstr "Inclusione"
 
@@ -501,7 +501,7 @@ msgstr ""
 "dovranno essere incluse all'interno del file :file:`/etc/backup-"
 "config.d/custom.include`."
 
-#: ../../backup_customization.rst:186 ../../backup_customization.rst:270
+#: ../../backup_customization.rst:186 ../../backup_customization.rst:272
 msgid "Exclusion"
 msgstr "Esclusione"
 
@@ -622,11 +622,11 @@ msgstr ""
 "Questo tipo di backup non può essere utilizzato in caso di disaster "
 "recovery."
 
-#: ../../backup_customization.rst:245
+#: ../../backup_customization.rst:247
 msgid "Configuration backup"
 msgstr "Backup configurazione"
 
-#: ../../backup_customization.rst:247
+#: ../../backup_customization.rst:249
 msgid ""
 "Configuration backup is an automated task that runs every night at 00.15 and"
 " creates a new archive, :file:`/var/lib/nethserver/backup/backup-"
@@ -638,7 +638,7 @@ msgstr ""
 ":file:`/var/lib/nethserver/backup/backup-config.tar.xz`, se la "
 "configurazione è cambiata nelle 24 ore precedenti."
 
-#: ../../backup_customization.rst:251
+#: ../../backup_customization.rst:253
 msgid ""
 "The list of installed modules is included in the backup archive. The restore"
 " procedure can download and install the listed modules automatically."
@@ -647,7 +647,7 @@ msgstr ""
 "procedura di ripristino consente di scaricare e installare automaticamente i"
 " moduli riportati nell'elenco."
 
-#: ../../backup_customization.rst:254
+#: ../../backup_customization.rst:256
 msgid ""
 "In most cases it is not necessary to change the configuration backup. But it"
 " can be useful, for example, if you have a custom httpd configuration. In "
@@ -660,7 +660,7 @@ msgstr ""
 "backup della configurazione il percorso del file che contiene la "
 "personalizzazione."
 
-#: ../../backup_customization.rst:261
+#: ../../backup_customization.rst:263
 msgid ""
 "If you wish to add a file or directory to configuration backup, add a line "
 "to the file :file:`/etc/backup-config.d/custom.include`."
@@ -669,7 +669,7 @@ msgstr ""
 "configurazione, aggiungere una riga al file :file:`/etc/backup-"
 "config.d/custom.include`."
 
-#: ../../backup_customization.rst:263
+#: ../../backup_customization.rst:265
 msgid ""
 "For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file, add "
 "this line: ::"
@@ -677,13 +677,13 @@ msgstr ""
 "Ad esempio, per eseguire il backup del file "
 ":file:`/etc/httpd/conf.d/mycustom.conf`, aggiungere la riga: ::"
 
-#: ../../backup_customization.rst:267
+#: ../../backup_customization.rst:269
 msgid "Do not add big directories or files to the configuration backup."
 msgstr ""
 "Non aggiungere mai directory e file voluminosi al backup della "
 "configurazione."
 
-#: ../../backup_customization.rst:272
+#: ../../backup_customization.rst:274
 msgid ""
 "If you wish to exclude a file or directory from the configuration backup, "
 "add a line to the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -692,7 +692,7 @@ msgstr ""
 "configurazione, aggiungere una riga al file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup_customization.rst:275
+#: ../../backup_customization.rst:277
 msgid ""
 "Make sure not to leave empty lines inside edited files. The syntax of the "
 "configuration backup supports only simple file and directory paths."
@@ -701,11 +701,11 @@ msgstr ""
 " backup della configurazione supporta solo semplici percorsi di file e "
 "directory."
 
-#: ../../backup_customization.rst:283
+#: ../../backup_customization.rst:285
 msgid "Restore from command line"
 msgstr "Ripristino da linea di comando"
 
-#: ../../backup_customization.rst:285
+#: ../../backup_customization.rst:287
 msgid ""
 "When the :ref:`selective_restore-section` web interface is not enough, the "
 "restore can be done via command line."
@@ -713,44 +713,44 @@ msgstr ""
 "Nel caso in cui l'interfaccia web :ref:`select_restore-section` non fosse "
 "sufficiente, il ripristino può essere eseguito dalla riga di comando."
 
-#: ../../backup_customization.rst:288
+#: ../../backup_customization.rst:290
 msgid ""
 "All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
 msgstr ""
 "Tutti i file rilevanti sono conservati nella directory "
 ":file:`/var/lib/nethserver/` :"
 
-#: ../../backup_customization.rst:290
+#: ../../backup_customization.rst:292
 msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
 msgstr "Cartelle di posta: :file:`/var/lib/nethserver/vmail/<user>`"
 
-#: ../../backup_customization.rst:291
+#: ../../backup_customization.rst:293
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
 msgstr "Cartelle condivise: :file:`/var/lib/nethserver/ibay/<name>`"
 
-#: ../../backup_customization.rst:292
+#: ../../backup_customization.rst:294
 msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
 msgstr "Home utenti: :file:`/var/lib/nethserver/home/<user>`"
 
-#: ../../backup_customization.rst:295
+#: ../../backup_customization.rst:297
 msgid "To list data inside a backup, use: ::"
 msgstr ""
 "Per ottenere un elenco dei dati contenuti in un backup, utilizzare: ::"
 
-#: ../../backup_customization.rst:299
+#: ../../backup_customization.rst:301
 msgid "To restore all data in the original location, use: ::"
 msgstr ""
 "Per ripristinare tutti i dati nella loro posizione originale, utilizzare: ::"
 
-#: ../../backup_customization.rst:303
+#: ../../backup_customization.rst:305
 msgid "To restore a file or directory, use: ::"
 msgstr "Per ripristinare un file o una directory, utilizzare: ::"
 
-#: ../../backup_customization.rst:307
+#: ../../backup_customization.rst:309
 msgid "Example, restore the version of a file from 15 days ago: ::"
 msgstr "Esempio, ripristinare un file alla versione di 15 giorni fa: ::"
 
-#: ../../backup_customization.rst:311
+#: ../../backup_customization.rst:313
 msgid ""
 "The ``-t`` option allows to specify the number of days (15 in this "
 "scenario). When used with snapshot-based engines, the ``-t`` option requires"
@@ -760,7 +760,7 @@ msgstr ""
 "scenario). Quando viene utilizzato con engine basati su snapshot, l'opzione "
 "``-t`` richiede il nome dello snapshot da ripristinare."
 
-#: ../../backup_customization.rst:316
+#: ../../backup_customization.rst:318
 msgid ""
 "When you are using *CIFS* to access the share, and the command doesn't work "
 "as expected, verify that user and password for the network share are "
@@ -775,11 +775,11 @@ msgstr ""
 "NT_STATUS_LOGON_FAILURE. Allo stesso tempo il comando backup-data-list non "
 "andrà a buon fine e uscirà immediatamente riportando degli errori."
 
-#: ../../backup_customization.rst:325
+#: ../../backup_customization.rst:327
 msgid "Formatting a local disk"
 msgstr "Formattazione di un disco locale"
 
-#: ../../backup_customization.rst:327
+#: ../../backup_customization.rst:329
 msgid ""
 "Local disks can be formatted directly from the :ref:`web interface "
 "<backup_data_settings-section>`. If something goes wrong, or a custom "
@@ -790,7 +790,7 @@ msgstr ""
 "storto o fosse necessario un partizionamento personalizzato, seguire i "
 "seguenti passaggi."
 
-#: ../../backup_customization.rst:330
+#: ../../backup_customization.rst:332
 msgid ""
 "The best filesystem for SATA/USB backup disks is EXT3 or EXT4. FAT "
 "filesystem is supported but *not recommended*, while NTFS is **not "
@@ -801,7 +801,7 @@ msgstr ""
 "supportato**. EXT3 o EXT4 sono obbligatori in caso di utilizzo dell'engine "
 "rsync."
 
-#: ../../backup_customization.rst:333
+#: ../../backup_customization.rst:335
 msgid ""
 "Before formatting the disk, attach it to the server and find the device "
 "name: ::"
@@ -809,36 +809,36 @@ msgstr ""
 "Per eseguire la formattazione, è necessario collegare il disco e "
 "identificarlo correttamente: ::"
 
-#: ../../backup_customization.rst:354
+#: ../../backup_customization.rst:356
 msgid "Another good command could be: ::"
 msgstr "Un altro buon comando da utilizzare è essere: ::"
 
-#: ../../backup_customization.rst:358
+#: ../../backup_customization.rst:360
 msgid "In this scenario, the disk is accessibile as *sdc* device."
 msgstr "In questo esempio, il disco è stato riconosciuto come device *sdc*."
 
-#: ../../backup_customization.rst:360
+#: ../../backup_customization.rst:362
 msgid "Create a Linux partition on the whole disk: ::"
 msgstr "Creare una unica partizione Linux sull’intero disco: ::"
 
-#: ../../backup_customization.rst:365
+#: ../../backup_customization.rst:367
 msgid ""
 "Create the filesystem on *sdc1* partition with a label named *backup* ::"
 msgstr ""
 "Creare il filesystem sulla partizione *sdc1* assegnando una label, ad "
 "esempio *backup*: ::"
 
-#: ../../backup_customization.rst:369
+#: ../../backup_customization.rst:371
 msgid "Detach and reconnect the USB disk:"
 msgstr "Scollegare e ricollegare il disco USB:"
 
-#: ../../backup_customization.rst:371
+#: ../../backup_customization.rst:373
 msgid "You can simulate it with the following command: ::"
 msgstr ""
 "E’ possibile utilizzare il comando seguente per simulare il collegamento del"
 " disco: ::"
 
-#: ../../backup_customization.rst:375
+#: ../../backup_customization.rst:377
 msgid ""
 "Now the *backup* label will be displayed inside the :guilabel:`Backup` page."
 msgstr ""

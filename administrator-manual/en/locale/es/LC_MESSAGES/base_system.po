@@ -1,12 +1,12 @@
 # #-#-#-#-#  base_system.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  base_system.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 10:10+0200\n"
+"POT-Creation-Date: 2020-01-20 10:53+0100\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -459,12 +459,11 @@ msgstr "Servicios de red"
 
 #: ../../base_system.rst:157
 msgid ""
-"A :index:`network service` is a service running on the firewall itself."
+"A remote system can connect to a :index:`network service`, which is a "
+"software running on |product| itself."
 msgstr ""
-"Un :index:`servicio de red` es un servicio que se ejecuta en el propio "
-"firewall."
 
-#: ../../base_system.rst:159
+#: ../../base_system.rst:160
 msgid ""
 "Each service has a list of \"open\" ports on which it answers to "
 "connections. Connections can be accepted from selected zones. Finer grained "
@@ -476,11 +475,11 @@ msgstr ""
 "Puede configurarse un control más detallado del acceso a los servicios de "
 "red desde la página de reglas del firewall."
 
-#: ../../base_system.rst:169
+#: ../../base_system.rst:170
 msgid "Trusted networks"
 msgstr "Redes de confianza"
 
-#: ../../base_system.rst:171
+#: ../../base_system.rst:172
 msgid ""
 "Trusted networks are special networks (local, VPNs or remote) allowed to "
 "access special server's services."
@@ -488,19 +487,19 @@ msgstr ""
 "Las redes de confianza son redes especiales (locales, VPN o remotas) que "
 "pueden acceder a los servicios de un servidor especial."
 
-#: ../../base_system.rst:174
+#: ../../base_system.rst:175
 msgid "For example, hosts inside trusted networks can access to:"
 msgstr "Por ejemplo, los hosts dentro de redes de confianza pueden acceder a:"
 
-#: ../../base_system.rst:176
+#: ../../base_system.rst:177
 msgid "Server Manager"
 msgstr "Administrador del servidor"
 
-#: ../../base_system.rst:177
+#: ../../base_system.rst:178
 msgid "Shared folders (SAMBA)"
 msgstr "Carpetas compartidas (SAMBA)"
 
-#: ../../base_system.rst:179
+#: ../../base_system.rst:180
 msgid ""
 "If the remote network is reachable using a router, remember to add a static "
 "route inside :ref:`static_routes-section` page."
@@ -508,11 +507,11 @@ msgstr ""
 "Si la red remota es accesible mediante un router, recuerde agregar una ruta "
 "estática dentro de la página :ref:`static_routes-section`."
 
-#: ../../base_system.rst:187
+#: ../../base_system.rst:188
 msgid "Static routes"
 msgstr "Rutas estáticas"
 
-#: ../../base_system.rst:189
+#: ../../base_system.rst:190
 msgid ""
 "This page allow to create special :index:`static routes` which will use the "
 "specified gateway. These routes are usually used to connect private network."
@@ -521,7 +520,7 @@ msgstr ""
 "puerta de enlace especificada. Estas rutas se utilizan generalmente para "
 "conectar la red privada."
 
-#: ../../base_system.rst:192
+#: ../../base_system.rst:193
 msgid ""
 "Remember to add the network to :ref:`trusted_networks-section`, if you wish "
 "to allow remote hosts to access local services."
@@ -529,22 +528,22 @@ msgstr ""
 "Recuerde agregar la red a :ref:`trusted_networks-section`, si desea permitir"
 " que los hosts remotos tengan acceso a los servicios locales."
 
-#: ../../base_system.rst:198
+#: ../../base_system.rst:199
 msgid "Organization contacts"
 msgstr "Organización contactos"
 
-#: ../../base_system.rst:200
+#: ../../base_system.rst:201
 msgid ""
 "The :guilabel:`Organization contacts` page fields are used as default values"
 " for user accounts.  The organization name and address are also displayed on"
 " the old Server Manager login screen."
 msgstr ""
 
-#: ../../base_system.rst:210
+#: ../../base_system.rst:211
 msgid "Server certificate"
 msgstr "Certificado del servidor"
 
-#: ../../base_system.rst:212
+#: ../../base_system.rst:213
 msgid ""
 "The :guilabel:`Server certificate` page shows the currently installed X.509 "
 "certificates, and the default one provided by system services for TLS/SSL "
@@ -554,13 +553,13 @@ msgstr ""
 "X.509 actualmente instalados y el predeterminado proporcionado por los "
 "servicios del sistema para las comunicaciones cifradas TLS/SSL."
 
-#: ../../base_system.rst:216
+#: ../../base_system.rst:217
 msgid ""
 "|product| checks the certificates validity and sends an email to the root "
 "user if a certificate is near to expire."
 msgstr ""
 
-#: ../../base_system.rst:219
+#: ../../base_system.rst:220
 msgid ""
 "The :guilabel:`Set as default` button allows choosing the default "
 "certificate. When a new certificate is chosen, all services using TLS/SSL "
@@ -572,7 +571,7 @@ msgstr ""
 "servicios que utilizan TLS/SSL se reinician y los clientes de red deben "
 "aceptar el nuevo certificado."
 
-#: ../../base_system.rst:223
+#: ../../base_system.rst:224
 msgid ""
 "When |product| is installed a default RSA self-signed certificate is "
 "generated. It should be edited by inserting proper values before configuring"
@@ -581,17 +580,17 @@ msgid ""
 "the same attributes."
 msgstr ""
 
-#: ../../base_system.rst:228
+#: ../../base_system.rst:229
 msgid "The :guilabel:`Server certificate` page also allows:"
 msgstr ""
 
-#: ../../base_system.rst:230
+#: ../../base_system.rst:231
 msgid ""
 "uploading an existing certificate and private RSA/ECC key. Optionally a "
 "certificate chain file can be specified, too. All files must be PEM-encoded."
 msgstr ""
 
-#: ../../base_system.rst:233
+#: ../../base_system.rst:234
 msgid ""
 "requesting a new *Let's Encrypt* [#Letsencrypt]_ certificate.  This is "
 "possible if the following requirements are met:"
@@ -599,7 +598,7 @@ msgstr ""
 "solicitar un nuevo certificado de *Let's Encrypt* [#Letsencrypt]_. Esto es "
 "posible si se cumplen los siguientes requisitos:"
 
-#: ../../base_system.rst:236
+#: ../../base_system.rst:237
 msgid ""
 "The server must be reachable from outside at port 80. Make sure your port 80"
 " is open to the public Internet (you can check with sites like [#CSM]_);"
@@ -608,7 +607,7 @@ msgstr ""
 "de que su puerto 80 está abierto a la Internet pública (puede consultar con "
 "sitios como [#CSM]_);"
 
-#: ../../base_system.rst:239
+#: ../../base_system.rst:240
 msgid ""
 "The domains that you want the certificate for must be public domain names "
 "associated to server own public IP. Make sure you have public DNS name "
@@ -619,23 +618,23 @@ msgstr ""
 "tiene un nombre DNS público que apunta a su servidor (puede consultar con "
 "sitios como [#VDNS]_)."
 
-#: ../../base_system.rst:243
+#: ../../base_system.rst:244
 msgid "Wildcard certificates (i.e. ``*.nethserver.org``) are not supported."
 msgstr ""
 
-#: ../../base_system.rst:245
+#: ../../base_system.rst:246
 msgid ""
 "The :guilabel:`Notification email` will be used by Let's Encrypt to send "
 "notifications about the certificate."
 msgstr ""
 
-#: ../../base_system.rst:248
+#: ../../base_system.rst:249
 msgid ""
 "The Let's Encrypt certificate is automatically renewd 30 days before "
 "expiration date."
 msgstr ""
 
-#: ../../base_system.rst:251
+#: ../../base_system.rst:252
 msgid ""
 "To avoid problems while importing the certificate in Internet Explorer, the "
 "Common Name (CN) field should match the server FQDN."
@@ -643,42 +642,42 @@ msgstr ""
 "Para evitar problemas al importar el certificado en Internet Explorer, el "
 "campo Nombre Común (CN) debe coincidir con el FQDN de servidor."
 
-#: ../../base_system.rst:254
+#: ../../base_system.rst:255
 msgid "Let's Encrypt website https://letsencrypt.org/"
 msgstr "Sitio web Let's Encrypt https://letsencrypt.org/"
 
-#: ../../base_system.rst:255
+#: ../../base_system.rst:256
 msgid "Website http://www.canyouseeme.org/"
 msgstr "Sitio web http://www.canyouseeme.org/"
 
-#: ../../base_system.rst:256
+#: ../../base_system.rst:257
 msgid "Website http://viewdns.info/"
 msgstr "Sitio web http://viewdns.info/"
 
-#: ../../base_system.rst:259
+#: ../../base_system.rst:260
 msgid "Disable Let's Encrypt"
 msgstr "Deshabilitar Let's Encrypt"
 
-#: ../../base_system.rst:261
+#: ../../base_system.rst:262
 msgid "Let's Encrypt certificate can be disabled following these steps:"
 msgstr ""
 "El certificado Let's Encrypt se puede deshabilitar siguiendo estos pasos:"
 
-#: ../../base_system.rst:263
+#: ../../base_system.rst:264
 msgid ""
 "Access the :guilabel:`Server certificate` page, set as default the self-"
 "signed certificate or an uploaded one"
 msgstr ""
 
-#: ../../base_system.rst:264
+#: ../../base_system.rst:265
 msgid "Open the shell and execute the following commands:"
 msgstr "Abre el shell y ejecuta los siguientes comandos:"
 
-#: ../../base_system.rst:272
+#: ../../base_system.rst:273
 msgid "Shutdown"
 msgstr "Apagar"
 
-#: ../../base_system.rst:274
+#: ../../base_system.rst:275
 msgid ""
 "The machine where |product| is installed can be rebooted or halted from the "
 ":menuselection:`Shutdown` page. Choose an option (reboot or halt) then click"
@@ -688,18 +687,18 @@ msgstr ""
 "desde la página :menuselection:`Apagar`. Seleccione una opción (reiniciar o "
 "detener) y, a continuación, haga clic en el botón Enviar."
 
-#: ../../base_system.rst:277
+#: ../../base_system.rst:278
 msgid ""
 "Always use this module to avoid bad shutdown which can cause data damages."
 msgstr ""
 "Utilice siempre este módulo para evitar un apagado incorrecto que pueda "
 "causar daños en los datos."
 
-#: ../../base_system.rst:280
+#: ../../base_system.rst:281
 msgid "Log viewer"
 msgstr "Visor de registro"
 
-#: ../../base_system.rst:282
+#: ../../base_system.rst:283
 msgid ""
 "All services will save operations inside files called :dfn:`logs`. The "
 ":index:`log` analysis is the main tool to find and resolve problems. To "
@@ -710,27 +709,27 @@ msgstr ""
 "principal para encontrar y resolver problemas. Para analizar los archivos de"
 " registro, haga clic en :menuselection:`Visor de registro`."
 
-#: ../../base_system.rst:286
+#: ../../base_system.rst:287
 msgid "This module allows to:"
 msgstr "Este módulo permite:"
 
-#: ../../base_system.rst:288
+#: ../../base_system.rst:289
 msgid "start search on all server's logs"
 msgstr "Iniciar la búsqueda en todos los registros del servidor"
 
-#: ../../base_system.rst:289
+#: ../../base_system.rst:290
 msgid "display a single log"
 msgstr "Mostrar un solo registro"
 
-#: ../../base_system.rst:290
+#: ../../base_system.rst:291
 msgid "follow the content of a log in real time"
 msgstr "Seguir el contenido de un registro en tiempo real"
 
-#: ../../base_system.rst:295
+#: ../../base_system.rst:296
 msgid "Date and time"
 msgstr "Fecha y hora"
 
-#: ../../base_system.rst:297
+#: ../../base_system.rst:298
 msgid ""
 "After installation, make sure the server is configured with the correct "
 "timezone. The machine clock can be configured manually or automatically "
@@ -740,7 +739,7 @@ msgstr ""
 " la zona horaria correcta. El reloj de la máquina puede configurarse manual "
 "o automáticamente utilizando servidores públicos NTP (de preferencia)."
 
-#: ../../base_system.rst:300
+#: ../../base_system.rst:301
 msgid ""
 "The machine clock is very important in many protocols. To avoid problems, "
 "all hosts in LAN can be configured to use the server as NTP server."
@@ -749,11 +748,11 @@ msgstr ""
 "problemas, todos los hosts en LAN se pueden configurar para utilizar el "
 "servidor como servidor NTP."
 
-#: ../../base_system.rst:304
+#: ../../base_system.rst:305
 msgid "Inline help"
 msgstr "Ayuda en línea"
 
-#: ../../base_system.rst:306
+#: ../../base_system.rst:307
 msgid ""
 "All packages inside the Server Manager contain an :index:`inline help`. The "
 "inline help explains how the module works and all available options."
@@ -762,24 +761,24 @@ msgstr ""
 ":index:`ayuda en línea`. La ayuda en línea explica cómo funciona el módulo y"
 " todas las opciones disponibles."
 
-#: ../../base_system.rst:309
+#: ../../base_system.rst:310
 msgid "These help pages are available in all Server Manager's languages."
 msgstr ""
 "Estas páginas de ayuda están disponibles en todos los idiomas del "
 "Administrador de servidores."
 
-#: ../../base_system.rst:311
+#: ../../base_system.rst:312
 msgid ""
 "A list of all available inline help pages can be found at the address: ::"
 msgstr ""
 "Puede encontrar una lista de todas las páginas de ayuda en línea disponibles"
 " en la dirección: ::"
 
-#: ../../base_system.rst:315
+#: ../../base_system.rst:316
 msgid "**Example**"
 msgstr "**Ejemplo**"
 
-#: ../../base_system.rst:317
+#: ../../base_system.rst:318
 msgid ""
 "If the server has address ``192.168.1.2``, and you want to see all English "
 "help pages, use this address: ::"

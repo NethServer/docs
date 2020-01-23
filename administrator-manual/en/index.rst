@@ -67,6 +67,13 @@ Administrator Manual
 
 .. toctree::
    :maxdepth: 1
+   :caption: Applications - New Server Manager
+
+   web_server
+   firewall2
+
+.. toctree::
+   :maxdepth: 1
    :caption: Modules
 
    backup

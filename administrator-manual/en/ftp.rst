@@ -4,7 +4,14 @@
 FTP
 ===
 
-.. note:: The FTP protocol is insecure: password are sent in clear text.
+.. note::
+
+    The FTP server is part of the :ref:`Web server <web-server-section>`
+    application inside the new Server Manager.
+
+.. warning::
+
+    The FTP protocol is insecure: password are sent in clear text.
 
 The :index:`FTP` server allows to transfer files between client and server.
 
@@ -22,8 +29,6 @@ path inside the custom field. For example, given a shared folder called *mywebsi
   /var/lib/nethserver/ibay/mywebsite
 
 The FTP virtual user will be able to access only the specified directory.
-
-The FTP server is part of the Web Server application inside the new Server Manager.
 
 System users
 ============
