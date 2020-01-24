@@ -80,3 +80,25 @@ check the :guilabel:`Enable CalDAV and CardDAV auto-discovery` field.
 
 .. note:: When enabling DAV auto-discovery, please make sure WebTop or SOGo are *not* already installed.
 
+
+Collabora Online
+----------------
+
+See :ref:`Collabora Online module from NethForge <collabora-section>`.
+
+
+ONLYOFFICE
+----------
+
+Since Nextcloud 18, ONLYOFFICE Community Document Server can be installed directly to the system without further configuration.
+To enable built-in ONLYOFFICE integration, access Nextcloud with the ``admin`` user then:
+
+- Go to :guilabel:`Apps` page and access :guilabel:`Office & text` section
+- Download and enable the ``ONLYOFFICE`` application
+- Download and enable the ``Community Document Server`` application.  Please be patient, download and install will take a while.
+- Go to the :guilabel:`Settings` page and access the :guilabel:`ONLYOFFICE` application under :guilabel:`Administration` section
+- Verify the :guilabel:`Document Editing Service address` already contains the public address of your Nextcloud server
+
+.. note:: Installation of full ONLYOFFICE server is not supported on |product|.
+
+
