@@ -496,7 +496,20 @@ When a second level domain domain name is specified it matches also its
 subdomains. For instance ``nethserver.org`` matches ``nethserver.org`` itself,
 ``dev.nethserver.org``, ``demo.nethserver.org`` and so on.
 
+.. note:: It is possible to bulk add emails and domains to the rspamd filters  
+          (The filter will be displayed in the UI).
 
+* :guilabel:`Allow From`: the property is :guilabel:`SenderWhiteList`
+
+* :guilabel:`Allow To`: the property is :guilabel:`RecipientWhiteList`
+
+* :guilabel:`Block From`: the property is :guilabel:`SenderBlackList`
+
+Create a comma separated list and use the terminal to add the filter, the 
+previous filters values will be erased ::
+
+  config setprop rspamd SenderWhiteList user2@mail.net,mail.com,mail.org,user@mail.net
+  signal-event nethserver-mail-filter-save
 
 .. _rspamd-web-interface-section:
 
