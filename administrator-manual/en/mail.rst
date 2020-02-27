@@ -274,18 +274,18 @@ Users could share their mailbox (or some parts of it, folders) with selected acc
 Everyone who is given access to a shared mailbox can read or delete messages according to permissions
 granted by the mailbox owner.
 
-An IMAP flag named /Seen is used to mark if a message has been read or not. In a shared mailbox,
+An IMAP flag named ``/Seen`` is used to mark if a message has been read or not. In a shared mailbox,
 each user has their copy of the messages they have read, but sometimes a team sharing a mailbox
 could prefer to know if a mail has already been read by someone else.
-To enable sharing of the /Seen flag for all shared mailboxes use the following commands: ::
+To enable sharing of the ``/Seen`` flag for all shared mailboxes use the following commands: ::
 
     config setprop dovecot SharedSeen enabled
     signal-event nethserver-mail-server-save
 
-Please note that changing the SharedSeen status resets the /Seen flag for all users on all mailboxes.
+Please note that changing the ``SharedSeen`` status resets the ``/Seen`` flag for all users on all mailboxes.
 
 Public folders are created by the administrator and are usually visible to all users (or large groups).
-The /Seen flag is kept for each user and can't be shared.
+The ``/Seen`` flag is kept for each user and it cannot be shared.
 
 
 .. _email_messages:
