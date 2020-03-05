@@ -115,6 +115,7 @@ Administrator Manual
    fail2ban
    rspamd
    antivirus
+   blacklist
 
 .. toctree::
    :hidden:

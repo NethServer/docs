@@ -421,3 +421,9 @@ file_filter = locale/<lang>/LC_MESSAGES/launcher.po
 source_file = _build/locale/launcher.pot
 source_lang = en
 type = PO
+
+[docs-v7.blacklist]
+file_filter = locale/<lang>/LC_MESSAGES/blacklist.po
+source_file = _build/locale/blacklist.pot
+source_lang = en
+type = PO
