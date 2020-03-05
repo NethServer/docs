@@ -18,7 +18,7 @@ First, access the threat shield web interface to set the download URL for the bl
 
 After setting the URL, the administrator can choose what :index:`blacklist` categories should be enabled.
 Each category can have a :guilabel:`Confidence` score between 0 and 10.
-Categories with an higher confidence are less prone to false positives.
+Categories with a higher confidence are less prone to false positives.
 
 Enabled categories will be automatically updated at regular intervals.
 
