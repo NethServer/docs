@@ -1,10 +1,10 @@
-=======
+====================
 Microsoft SQL Server
-=======
+====================
 
 .. note::
 
-  This package is not supported in |product| Enterprise
+  This package is not supported in NethServer Enterprise
 
 
 With this package you can install Microsoft SQL Server on NethServer: it will automatically configure Microsoft repository and default configuration.
@@ -13,7 +13,7 @@ With this package you can install Microsoft SQL Server on NethServer: it will au
 Installation
 ============
 
-To install this package go on Software Center and install Microsoft SQL Server application. Otherwise use this command:
+To install this package go on Software Center and install Microsoft SQL Server application. Otherwise use this command: ::
 
     yum install -y nethserver-mssql --enablerepo=nethforge
     
@@ -28,7 +28,7 @@ When installed the module generates a default configuration as follow:
 
 User can change access network from Cockpit Services page or from Firewall section.
 
-Database example:
+Database example: ::
 
     mssql-server=service
         ProductId=express
@@ -41,15 +41,15 @@ Database example:
 Install mssql-server service
 ============================
 
-The package needs a first configuration. User had to go to Cockpit application and select MSSQL edition between these options: Evaluation, Developer, Web, Express, Standard, Enterprise. Alternatively it is possibile also to insert a product key.
+The package needs a first configuration. Please access the Cockpit application and select MSSQL edition between these options: Evaluation, Developer, Web, Express, Standard, Enterprise. Alternatively it is possibile also to insert a product key.
 
-You can do this also from command line:
+You can do this also from command line: ::
 
     config setprop mssql-server ProductId <version>
     signal-event nethserver-mssql-save
     
 
-Instead, if you want to configure a product key use these commands:
+Instead, if you want to configure a product key use these commands: ::
   
     config setprop mssql-server ProductId key
     config setprop mssql-server ProductKey <ProductKey>
