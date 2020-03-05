@@ -82,11 +82,11 @@ Append a legal notice
 .. warning::
 
     Since |product| 7.5.1804 this feature is shipped in a separate, optional
-    package: ``nethserver-mail2-disclaimer``. It is considered *deprecated*
+    package: ``nethserver-mail-disclaimer``. It is considered *deprecated*
     because the alterMIME [#alterMIME]_ project which provides the actual
     implementation is no longer developed and can stop working at any time.
 
-If the optional ``nethserver-mail2-disclaimer`` package was installed from the
+If the optional ``nethserver-mail-disclaimer`` package was installed from the
 :guilabel:`Software center`, |product| can automatically :guilabel:`append a
 legal notice to sent messages`. This text is also known as "disclaimer" and
 it can be used to meet some legal requirements.
