@@ -35,7 +35,7 @@ Whitelist
 In case of a false positive, a host or a CIDR can be added to the local :guilabel:`Whitelist`.
 If the firewall module is installed, the whitelist will also accept host and CIDR firewall objects.
 
-Hosts should be addedd to the whitelist only for a limited period of time.
+Hosts should be added to the whitelist only for a limited period of time.
 As a best pratice, when a false positive is found, please report it to the blacklist maintainer.
 
 Incident response
