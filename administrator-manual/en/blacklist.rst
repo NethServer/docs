@@ -7,7 +7,7 @@ Threat shield
   The configuration page of this module is available only in the new Server Manager.
 
 
-The threat shield blocks malicious hosts preventing attacks, service abuse, malware and other cybercrime activities.
+The threat shield blocks connections to and from malicious hosts, preventing attacks, service abuse, malware, and other cybercrime activities.
 The package can be installed both on firewalls and on machines without a red interface, like mail servers
 or PBXs.
 
