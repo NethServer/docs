@@ -132,6 +132,7 @@ Administrator Manual
        sogo
        phpVirtualBox
        hotsync
+       mssql
 
 .. toctree::
    :maxdepth: 2
