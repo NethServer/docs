@@ -56,7 +56,7 @@ Domain redirection
 The administrator can override the upstream DNS for specific domains.
 A typical usage scenario is setting the Active Directory server as resolver for the queries to the internal domain.
 
-Such change can be done by editing the ``DomainRedirection`` property via command line.
+Such changes can be done by editing the ``DomainRedirection`` property via command line.
 The property accepts a comma-separated list of couples in the form ``<domain>:<ip_address>``.
 
 Example: ::
