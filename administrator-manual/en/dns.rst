@@ -47,3 +47,28 @@ The server will then be accessible from clients on the LAN even using the name y
 Aliases are only valid for the internal LAN. If you want the server is reachable from the outside with the same name 
 you need to ask the provider to associate the public address of the server to the desired name.
 
+
+.. _dns_redirection-section:
+
+Domain redirection
+==================
+
+The administrator can override the upstream DNS for specific domains.
+A typical usage scenario is setting the Active Directory server as resolver for the queries to the internal domain.
+
+Such change can be done by editing the ``DomainRedirection`` property via command line.
+The property accepts a comma-separated list of couples in the form ``<domain>:<ip_address>``.
+
+Example: ::
+
+  config setprop dnsmasq DomainRedirection my.local.domain.org:192.168.1.1,my.domain.com:192.168.1.2
+  signal-event nethserver-dnsmasq-save
+
+The ``my.domain.org:192.168.1.1`` configuration will send all queries for ``my.local.domain.org`` to ``192.168.1.1``. 
+
+The special server address ``#`` can be used to send queries to the default DNS server. Example: ::
+
+  config setprop dnsmasq DomainRedirection domain.org:1.1.1.1,sub.domain.org:#
+  signal-event nethserver-dnsmasq-save
+
+In this example all queries for ``domain.org`` will be sent to ``1.1.1.1``, while queries for ``sub.domain.org`` will be sent to default upstream DNS.
