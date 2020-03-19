@@ -299,7 +299,7 @@ Available for both Android and iOS:
 Emergency recovery
 ------------------
 
-In case of emergeny, 2FA can be disabled accessing the server from a pysical console like a keyboard and a monitor,
+In case of emergency, 2FA can be disabled accessing the server from a physical console like a keyboard and a monitor,
 a serial cable or a VNC-like connection for virtual machines:
 
 1. access the system with user name and password
