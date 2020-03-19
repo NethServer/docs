@@ -280,7 +280,7 @@ under :guilabel:`Settings` page, then following these steps:
 Recovery codes
 --------------
 
-Recovery codes can be used instead of temporary codes if the user can't access the 2FA application on the smartphone.
+Recovery codes can be used instead of temporary codes if the user cannot access the 2FA application on the smartphone.
 Each recovery code is a one-time password and can be used only once.
 
 To generate new recovery codes, disable 2FA, then re-enable it by registering the application again following the above steps.
