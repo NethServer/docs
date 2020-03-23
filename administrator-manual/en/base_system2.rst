@@ -305,4 +305,4 @@ a serial cable or a VNC-like connection for virtual machines:
 1. access the system with user name and password
 2. execute: ::
      rm -f ~/.2fa.secret
-     signal-event otp-save
+     sudo /sbin/e-smith/signal-event -j otp-save
