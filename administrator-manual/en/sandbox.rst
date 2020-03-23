@@ -18,7 +18,7 @@ Suspicious files will receive an high SPAM score and will be likely moved inside
 Requirements
 ============
 
-Yomi sandbox is automatically enabled after install if:
+Yomi sandbox is automatically enabled after installation if:
 
 - the server is correctly registered to `my.nethesis.it <https://my.nethesis.it/>`_
 - the antivirus check is enabled inside the mail filter
