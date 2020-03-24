@@ -115,6 +115,7 @@ Administrator Manual
    fail2ban
    rspamd
    antivirus
+   blacklist
 
 .. toctree::
    :hidden:
@@ -131,6 +132,7 @@ Administrator Manual
        sogo
        phpVirtualBox
        hotsync
+       mssql
 
 .. toctree::
    :maxdepth: 2
