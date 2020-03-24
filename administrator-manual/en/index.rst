@@ -64,6 +64,7 @@ Administrator Manual
     :maxdepth: 1
 
     launcher
+    sandbox
 
 .. toctree::
    :maxdepth: 1
