@@ -274,8 +274,8 @@ under :guilabel:`Settings` page, then following these steps:
 
 1. download and install the preferred 2FA application inside the smartphone
 2. scan the QR code with the 2FA application
-3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :button:`Check code`
-4. if the verification code is correct, click on the :button:`Save` button
+3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
+4. if the verification code is correct, click on the :guilabel:`Save` button
 
 Recovery codes
 --------------
