@@ -277,6 +277,11 @@ under :guilabel:`Settings` page, then following these steps:
 3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
 4. if the verification code is correct, click on the :guilabel:`Save` button
 
+Two-factor authentication can be enabled for:
+
+- the new Server Manager
+- SSH when using username and password (access with public key will never require 2FA)
+
 Recovery codes
 --------------
 
@@ -304,5 +309,20 @@ a serial cable or a VNC-like connection for virtual machines:
 
 1. access the system with user name and password
 2. execute: ::
+
      rm -f ~/.2fa.secret
      sudo /sbin/e-smith/signal-event -j otp-save
+
+Eventually, the root user can retrieve recovery codes for a user.
+Use the following command and replace ``<user>`` with the actual user name : ::
+
+  oathtool -w 4 $(cat ~<user>/.2fa.secret)
+
+Example for user ``goofy``: ::
+
+  # oathtool -w 4 $(cat ~goofy/.2fa.secret)
+  984147
+  754680
+  540025
+  425645
+  016250
