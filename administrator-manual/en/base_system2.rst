@@ -283,6 +283,12 @@ Recovery codes
 Recovery codes can be used instead of temporary codes if the user cannot access the 2FA application on the smartphone.
 Each recovery code is a one-time password and can be used only once.
 
+The recovery codes of a user are retrievable from console, too. Once logged in console with the specific user you can retrieve its codes with the command: ::
+
+     oathtool -w 4 $(cat ~/.2fa.secret)
+
+.. note:: The above command will show all user recovery codes, even the ones already used.
+
 To generate new recovery codes, disable 2FA, then re-enable it by registering the application again following the above steps.
 
 Smartphone applications
@@ -304,5 +310,6 @@ a serial cable or a VNC-like connection for virtual machines:
 
 1. access the system with user name and password
 2. execute: ::
+     
      rm -f ~/.2fa.secret
      sudo /sbin/e-smith/signal-event -j otp-save
