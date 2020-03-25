@@ -277,6 +277,11 @@ under :guilabel:`Settings` page, then following these steps:
 3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
 4. if the verification code is correct, click on the :guilabel:`Save` button
 
+Two-factor authentication can be enabled for:
+
+- the new Server Manager
+- SSH when using username and password (access with public key will never require 2FA)
+
 Recovery codes
 --------------
 
