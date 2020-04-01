@@ -161,6 +161,21 @@ Password change
 
 The settings page also includes a panel to let users change their password, including the root user.
 
+Shell policy
+^^^^^^^^^^^^
+
+This setting can be used to enable or disable the shell Bash that is needed to use the cockpit server manager
+and the SSH service. You can override the shell of all users if this option is enabled.
+
+User settings page
+^^^^^^^^^^^^^^^^^^
+
+With this setting you can allow users to change their password and other settings on a web page outside
+Cockpit (on port 443). The default page is :guilabel:`/user-settings` This feature can be enabled only if
+:guilabel:`Shell Policy` is enabled as well.
+
+You can also limit the access to the page only from Trusted Networks.
+
 .. _logs-section:
 
 Logs
