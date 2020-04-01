@@ -165,7 +165,7 @@ Shell policy
 ^^^^^^^^^^^^
 
 This setting can be used to enable or disable the shell Bash that is needed to use the cockpit server manager
-and the SSH service. You can override the shell of all users if this option is enabled.
+and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored and it is considered always enabled.
 
 User settings page
 ^^^^^^^^^^^^^^^^^^
