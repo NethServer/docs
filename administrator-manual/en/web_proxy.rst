@@ -102,6 +102,8 @@ Destination bypasses are configurable from :guilabel:`Sites without proxy` secti
 
 These bypass rules are also configured inside the WPAD file.
 
+.. _squid_rules-section:
+
 Priority and divert rules
 =========================
 
