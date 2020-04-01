@@ -165,16 +165,17 @@ Shell policy
 ^^^^^^^^^^^^
 
 This setting can be used to enable or disable the shell Bash that is needed to use the cockpit server manager
-and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored and it is considered always enabled.
+and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
+and it is considered always enabled.
 
 User settings page
 ^^^^^^^^^^^^^^^^^^
 
-With this setting you can allow users to change their password and other settings on a web page outside
-Cockpit (on port 443). The default page is :guilabel:`/user-settings` This feature can be enabled only if
+With this setting users can change their password and other settings on a web page outside
+Cockpit (on port 443). The default page is :guilabel:`/user-settings`. This feature can be enabled only if
 :guilabel:`Shell Policy` is enabled as well.
 
-You can also limit the access to the page only from Trusted Networks.
+The access to the page can be limited only from Trusted Networks.
 
 .. _logs-section:
 
