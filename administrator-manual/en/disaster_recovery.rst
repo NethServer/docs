@@ -192,7 +192,7 @@ See also :ref:`dhcp-section` for more general information.
 Samba Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Samba Active Directory requires a network bridge for the local running container.
+Samba Active Directory requires a network bridge in the green zone for the local running container.
 If the bridge already exists, the container will continue running after the restore.
 
 If the bridge doesn't exists anymore, Samba Active Directory is stopped.
