@@ -173,7 +173,7 @@ connectivity and login again on the Server Manager.
 Skip network restore
 --------------------
 
-Network configuration is restored by default, but sometimes it's necessary to restore an 
+Network configuration is restored by default, but sometimes it is necessary to restore an 
 installation on a different hardware without migrating the network configuration.
 This is a common scenario when moving a virtual machine from a VPS provider to another.
 
@@ -267,5 +267,4 @@ ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page insid
 Then enable the service and select network interfaces to monitor.
 
 See also :ref:`ntopng-section`.
-
 
