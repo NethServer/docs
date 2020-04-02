@@ -263,7 +263,7 @@ If the Dedalo is disabled, just reconfigure following :ref:`dedalo-section` chap
 ntopng
 ^^^^^^
 
-ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page inside old Server Manager.
+ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page inside the old Server Manager.
 Then enable the service and select network interfaces to monitor.
 
 See also :ref:`ntopng-section`.
