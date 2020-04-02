@@ -185,7 +185,7 @@ Since some application configurations depend on network interface names, not eve
 DHCP
 ^^^^
 
-DHCP servers on non-existing interface will be deleted.
+DHCP servers on non-existing interfaces will be deleted.
 If needed, please reconfigure the DHCP from the Server Manager.
 See also :ref:`dhcp-section` for more general information.
 
@@ -267,4 +267,3 @@ ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page insid
 Then enable the service and select network interfaces to monitor.
 
 See also :ref:`ntopng-section`.
-
