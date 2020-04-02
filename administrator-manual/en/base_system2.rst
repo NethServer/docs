@@ -161,6 +161,22 @@ Password change
 
 The settings page also includes a panel to let users change their password, including the root user.
 
+Shell policy
+^^^^^^^^^^^^
+
+This setting can be used to enable or disable the shell that is needed to use new Server Manager
+and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
+and it is considered always enabled.
+
+User settings page
+^^^^^^^^^^^^^^^^^^
+
+When the :guilabel:`Enable user settings page` options is enabled, users can change their password and other settings on a web page outside
+Cockpit (on port 443). The default page is :guilabel:`/user-settings`. This feature can be enabled only if
+:guilabel:`Shell Policy` is enabled as well.
+
+The access to the page can be limited only from Trusted Networks.
+
 .. _logs-section:
 
 Logs
