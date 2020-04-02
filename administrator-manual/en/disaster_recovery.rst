@@ -257,7 +257,7 @@ More info at :ref:`ipsec-section`.
 Dedalo hotspot
 ^^^^^^^^^^^^^^
 
-Dedalo hotspot will be disabled if the system doesn't have a network interface configured with the hotspot role.
+Dedalo hotspot will be disabled if the system does not have a network interface configured with the ``hotspot`` role.
 If the Dedalo is disabled, just reconfigure following :ref:`dedalo-section` chapter.
 
 ntopng
