@@ -107,8 +107,8 @@ The :index:`SSH` page displays the number of current SSH connections. From this
 section the administrator can change the OpenSSH listening port, disable root
 login and password authentication.
 
-It is possible to selectively grant SSH and :index:`SFTP` access to some groups;
-administrators are always granted access to SSH and SFTP.
+It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
+while administrators are always granted access to SSH and SFTP.
 
 SSH and SFTP permissions are available once the :guilabel:`System > Settings >
 Shell policy > Override the shell of users` has been enabled.
