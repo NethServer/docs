@@ -103,9 +103,16 @@ The administrator can mount new local or remote disks, manage RAID arrays and LV
 SSH
 ---
 
-The :index:`ssh` page displays the number of current SSH connection.
-From this section the administrator can change the OpenSSH listening port, disable root login or
-password authentication.
+The :index:`SSH` page displays the number of current SSH connections. From this
+section the administrator can change the OpenSSH listening port, disable root
+login and password authentication.
+
+It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
+while administrators are always granted access to SSH and SFTP.
+
+SSH and SFTP permissions are available once the :guilabel:`System > Settings >
+Shell policy > Override the shell of users` has been enabled.
+
 
 .. _settings-section:
 
