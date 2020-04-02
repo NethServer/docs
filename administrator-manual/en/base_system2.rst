@@ -171,7 +171,7 @@ and it is considered always enabled.
 User settings page
 ^^^^^^^^^^^^^^^^^^
 
-With this setting users can change their password and other settings on a web page outside
+When the :guilabel:`Enable user settings page` options is enabled, users can change their password and other settings on a web page outside
 Cockpit (on port 443). The default page is :guilabel:`/user-settings`. This feature can be enabled only if
 :guilabel:`Shell Policy` is enabled as well.
 
