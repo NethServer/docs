@@ -164,7 +164,7 @@ The settings page also includes a panel to let users change their password, incl
 Shell policy
 ^^^^^^^^^^^^
 
-This setting can be used to enable or disable the shell Bash that is needed to use new Server Manager
+This setting can be used to enable or disable the shell that is needed to use new Server Manager
 and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
 and it is considered always enabled.
 
