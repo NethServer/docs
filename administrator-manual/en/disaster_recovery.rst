@@ -195,7 +195,7 @@ Samba Active Directory
 Samba Active Directory requires a network bridge in the green zone for the local running container.
 If the bridge already exists, the container will continue running after the restore.
 
-If the bridge doesn't exists anymore, Samba Active Directory is stopped.
+If the bridge does not exist anymore, Samba Active Directory is stopped.
 To enable it again:
 
 - create the bridge, eg. ``br0``
