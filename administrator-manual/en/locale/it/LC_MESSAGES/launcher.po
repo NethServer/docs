@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nicola <nicola.rauso@nethesis.it>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 17:26+0100\n"
+"PO-Revision-Date: 2020-02-19 16:28+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../launcher.rst:5
+msgid "Launcher"
+msgstr "Launcher"
+
+#: ../../launcher.rst:7
+msgid ""
+"Nethesis Launcher is a Cockpit app launcher available on HTTPS and HTTP "
+"ports. The launcher is enabled if:"
+msgstr ""
+"Nethesis Launcher è un gestore di app Cockpit disponibile su porte HTTPS e "
+"HTTP. Il launcher è abilitato se:"
+
+#: ../../launcher.rst:10
+msgid "Cockpit UI is installed (package ``nethserver-cockpit``)"
+msgstr "la UI Cockpit è installata (package ``nethserver-cockpit``)"
+
+#: ../../launcher.rst:11
+msgid ""
+"there is no home page already configured in httpd (no index page in "
+":file:`/var/www/html`)"
+msgstr ""
+"non esiste una home page già configurata in httpd (nessuna index page in "
+":file:`/var/www/html`)"
+
+#: ../../launcher.rst:13
+msgid ""
+"If Cockpit UI has been manually installed, execute the following command to "
+"enable Nethesis Launcher: ::"
+msgstr ""
+"Se l'interfaccia utente Cockpit è stata installata manualmente, eseguire il "
+"comando seguente per abilitare il Nethesis Launcher: ::"
+
+#: ../../launcher.rst:19
+msgid "Launcher customization"
+msgstr "Personalizzazione launcher"
+
+#: ../../launcher.rst:21
+msgid ""
+"You can use your company brand in the app launcher by editing this "
+"configuration file: "
+":file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini`. The default"
+" content of :file:`launcher_data.ini` is the following:"
+msgstr ""
+"È possibile usare il proprio logo aziendale nel launcher dell'app "
+"modificando il file di configurazione: "
+":file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini`.  Il "
+"contenuto predefinito di :file:`launcher_data.ini` è il seguente:"
+
+#: ../../launcher.rst:32
+msgid "The file contains four properties that can be customized:"
+msgstr "Il file contiene quattro proprietà che possono essere personalizzate:"
+
+#: ../../launcher.rst:34
+msgid "``LauncherTitle``: text appearing at the top left corner of the page"
+msgstr ""
+"``LauncherTitle``: testo che appare nell'angolo in alto a sinistra della "
+"pagina"
+
+#: ../../launcher.rst:35
+msgid ""
+"``LogoImage``: logo image appearing at the bottom left corner of the page"
+msgstr ""
+"``LogoImage``: immagine del logo che appare nell'angolo in basso a sinistra "
+"della pagina"
+
+#: ../../launcher.rst:36
+msgid "``LogoHref``: logo hyperlink"
+msgstr "``LogoHref``: hyperlink correlato al logo"
+
+#: ../../launcher.rst:37
+msgid "``DocsHref``: documentation hyperlink"
+msgstr "``DocsHref``: hyperlink documentazione"
+
+#: ../../launcher.rst:40
+msgid "Example"
+msgstr "Esempio"
+
+#: ../../launcher.rst:42
+msgid ""
+"If you want to use your company brand in the Nethesis Launcher just follow "
+"these steps:"
+msgstr ""
+"Se si desidera utilizzare il logo della tua azienda nel Nethesis Launcher, "
+"procedere nel seguente modo:"
+
+#: ../../launcher.rst:44
+msgid ""
+"upload your logo image (e.g. ``my-company-logo.png``) into "
+":file:`/usr/share/httpd/noindex/nethesis/res` directory of your server: ::"
+msgstr ""
+"caricare l'immagine del logo (ad es. ``my-company-logo.png``) nella "
+"directory :file:`/usr/share/httpd/noindex/nethesis/res` del proprio server: "
+"::"
+
+#: ../../launcher.rst:48
+msgid ""
+"open :file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini` using "
+"``vim`` or any other text editor and edit ``LauncherTitle``, ``LogoImage``, "
+"``LogoHref`` and ``DocsHref`` properties: ::"
+msgstr ""
+"aprire il :file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini` "
+"usando ``vim`` o qualsiasi altro editor di testo e modificare  le proprietà "
+"``LauncherTitle``, ``LogoImage``, ``LogoHref`` e `` DocsHref``: ::"
+
+#: ../../launcher.rst:52
+msgid "The resulting file content should be similar to this: ::"
+msgstr "Il contenuto del file risultante dovrebbe essere simile a questo: ::"

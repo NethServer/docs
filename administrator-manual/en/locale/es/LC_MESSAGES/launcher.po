@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 17:26+0100\n"
+"PO-Revision-Date: 2020-02-19 16:28+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../launcher.rst:5
+msgid "Launcher"
+msgstr ""
+
+#: ../../launcher.rst:7
+msgid ""
+"Nethesis Launcher is a Cockpit app launcher available on HTTPS and HTTP "
+"ports. The launcher is enabled if:"
+msgstr ""
+
+#: ../../launcher.rst:10
+msgid "Cockpit UI is installed (package ``nethserver-cockpit``)"
+msgstr ""
+
+#: ../../launcher.rst:11
+msgid ""
+"there is no home page already configured in httpd (no index page in "
+":file:`/var/www/html`)"
+msgstr ""
+
+#: ../../launcher.rst:13
+msgid ""
+"If Cockpit UI has been manually installed, execute the following command to "
+"enable Nethesis Launcher: ::"
+msgstr ""
+
+#: ../../launcher.rst:19
+msgid "Launcher customization"
+msgstr ""
+
+#: ../../launcher.rst:21
+msgid ""
+"You can use your company brand in the app launcher by editing this "
+"configuration file: "
+":file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini`. The default"
+" content of :file:`launcher_data.ini` is the following:"
+msgstr ""
+
+#: ../../launcher.rst:32
+msgid "The file contains four properties that can be customized:"
+msgstr ""
+
+#: ../../launcher.rst:34
+msgid "``LauncherTitle``: text appearing at the top left corner of the page"
+msgstr ""
+
+#: ../../launcher.rst:35
+msgid ""
+"``LogoImage``: logo image appearing at the bottom left corner of the page"
+msgstr ""
+
+#: ../../launcher.rst:36
+msgid "``LogoHref``: logo hyperlink"
+msgstr ""
+
+#: ../../launcher.rst:37
+msgid "``DocsHref``: documentation hyperlink"
+msgstr ""
+
+#: ../../launcher.rst:40
+msgid "Example"
+msgstr ""
+
+#: ../../launcher.rst:42
+msgid ""
+"If you want to use your company brand in the Nethesis Launcher just follow "
+"these steps:"
+msgstr ""
+
+#: ../../launcher.rst:44
+msgid ""
+"upload your logo image (e.g. ``my-company-logo.png``) into "
+":file:`/usr/share/httpd/noindex/nethesis/res` directory of your server: ::"
+msgstr ""
+
+#: ../../launcher.rst:48
+msgid ""
+"open :file:`/usr/share/httpd/noindex/nethesis/res/launcher_data.ini` using "
+"``vim`` or any other text editor and edit ``LauncherTitle``, ``LogoImage``, "
+"``LogoHref`` and ``DocsHref`` properties: ::"
+msgstr ""
+
+#: ../../launcher.rst:52
+msgid "The resulting file content should be similar to this: ::"
+msgstr ""
