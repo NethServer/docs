@@ -192,17 +192,21 @@ See also :ref:`dhcp-section` for more general information.
 Samba Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Samba Active Directory requires a network bridge in the green zone for the local running container.
-If the bridge already exists, the container will continue running after the restore.
+Samba Active Directory requires a network bridge and an additional, free IP
+address in the green zone for the local running container.
 
-If the bridge does not exist anymore, Samba Active Directory is stopped.
+If both the bridge exists and the IP address suits the current network
+configuration, the container will continue running after the restore.
+
+Otherwise Samba Active Directory is forcibly stopped.
 To enable it again:
 
-- create the bridge, eg. ``br0``
+- create the bridge, e.g. ``br0``
+- find an unused IP address in your green network, e.g. ``192.168.1.11``
 - reconfigure the container from command line: ::
 
     config setprop nsdc bridge br0 status enabled
-    signal-event nethserver-dc-save
+    signal-event nethserver-dc-change-ip 192.168.1.11
 
 More info about :ref:`ad-local-accounts-provider-section`.
 
