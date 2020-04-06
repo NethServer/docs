@@ -201,7 +201,7 @@ configuration, the container will continue running after the restore.
 Otherwise Samba Active Directory is forcibly stopped.
 To enable it again:
 
-- create the bridge, e.g. ``br0``
+- from the :guilabel:`Network` page, create the bridge, e.g. ``br0``
 - find an unused IP address in your green network, e.g. ``192.168.1.11``
 - reconfigure the container from command line: ::
 
