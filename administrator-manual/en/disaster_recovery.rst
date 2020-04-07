@@ -213,6 +213,10 @@ To enable it again:
     config setprop nsdc bridge br0 status enabled
     signal-event nethserver-dc-change-ip 192.168.1.11
 
+- fix the DC sysvol ACLs: ::
+
+    /etc/e-smith/events/actions/nethserver-dc-sysvolreset
+
 More info about :ref:`ad-local-accounts-provider-section`.
 
 Firewall
