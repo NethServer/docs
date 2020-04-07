@@ -434,3 +434,9 @@ file_filter = locale/<lang>/LC_MESSAGES/mssql.po
 source_file = _build/locale/mssql.pot
 source_lang = en
 type = PO
+
+[docs-v7.sandbox]
+file_filter = locale/<lang>/LC_MESSAGES/sandbox.po
+source_file = _build/locale/sandbox.pot
+source_lang = en
+type = PO
