@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-07 15:40+0200\n"
 "PO-Revision-Date: 2019-10-08 08:11+0000\n"
 "Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -273,19 +273,28 @@ msgstr "SSH"
 
 #: ../../base_system2.rst:106
 msgid ""
-"The :index:`ssh` page displays the number of current SSH connection. From "
+"The :index:`SSH` page displays the number of current SSH connections. From "
 "this section the administrator can change the OpenSSH listening port, "
-"disable root login or password authentication."
+"disable root login and password authentication."
 msgstr ""
-"La pagina :index:`ssh` mostra il numero delle connessioni SSH attive. Da "
-"questa sezione l'amministratore può modificare la porta di ascolto di "
-"OpenSSH, disabilitare l'accesso root o l'autenticazione tramite password."
+
+#: ../../base_system2.rst:110
+msgid ""
+"It is possible to selectively grant SSH and :index:`SFTP` access to some "
+"groups, while administrators are always granted access to SSH and SFTP."
+msgstr ""
 
 #: ../../base_system2.rst:113
+msgid ""
+"SSH and SFTP permissions are available once the :guilabel:`System > Settings"
+" > Shell policy > Override the shell of users` has been enabled."
+msgstr ""
+
+#: ../../base_system2.rst:120
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: ../../base_system2.rst:115
+#: ../../base_system2.rst:122
 msgid ""
 "The :index:`settings` page allows the configuration of some options which "
 "could impact multiple system applications."
@@ -293,11 +302,11 @@ msgstr ""
 "La pagina :index:`impostazioni` consente la configurazione di alcune opzioni"
 " che potrebbero avere un impatto su più applicazioni di sistema."
 
-#: ../../base_system2.rst:118
+#: ../../base_system2.rst:125
 msgid "Smart host"
 msgstr "Smart host"
 
-#: ../../base_system2.rst:120
+#: ../../base_system2.rst:127
 msgid ""
 "Many system applications, like cron, can generate mail notification. If the "
 "server can't directly deliver those mails, the administrator can configure a"
@@ -310,11 +319,11 @@ msgstr ""
 " Quando lo smarthost è abilitato, tutti i messaggi di posta verranno "
 "recapitati attraverso il server configurato."
 
-#: ../../base_system2.rst:126
+#: ../../base_system2.rst:133
 msgid "Email notifications"
 msgstr "Notifiche email"
 
-#: ../../base_system2.rst:128
+#: ../../base_system2.rst:135
 msgid ""
 "As default, notifications are sent to the local root maildir. The "
 "administrator can change the root forward address adding one or more mail "
@@ -325,7 +334,7 @@ msgstr ""
 "aggiungendo uno o più indirizzi di posta elettronica nel campo "
 ":guilabel:`Destinazione`."
 
-#: ../../base_system2.rst:131
+#: ../../base_system2.rst:138
 msgid ""
 "It's also a good practice to set a custom :guilabel:`Sender address`: "
 "messages from the root user (like cron notifications) will be sent using the"
@@ -340,11 +349,11 @@ msgstr ""
 "impostato, i messaggi verranno inviati usando ``root@<fqdn>`` come indirizzo"
 " mittente."
 
-#: ../../base_system2.rst:137
+#: ../../base_system2.rst:144
 msgid "Server Manager"
 msgstr "Server Manager"
 
-#: ../../base_system2.rst:139
+#: ../../base_system2.rst:146
 msgid ""
 "As default, access to the Server Manager is granted from all firewall zones."
 " From this section the administrator can restrict the access to the Server "
@@ -354,11 +363,11 @@ msgstr ""
 "tutte le zone del firewall. Da questa sezione l'amministratore può limitare "
 "l'accesso al Server Manager solo a un elenco di indirizzi IP affidabili."
 
-#: ../../base_system2.rst:144
+#: ../../base_system2.rst:151
 msgid "Log files"
 msgstr "File di log"
 
-#: ../../base_system2.rst:146
+#: ../../base_system2.rst:153
 msgid ""
 "All log files are managed by :index:`logrotate`. Logrotate is designed to "
 "ease administration of a large numbers of log files. It allows automatic "
@@ -371,7 +380,7 @@ msgstr ""
 "log. Ogni file può essere gestito giornalmente, settimanalmente, "
 "mensilmente."
 
-#: ../../base_system2.rst:149
+#: ../../base_system2.rst:156
 msgid ""
 "The administrator can set logrotate defaults from this page. The "
 "configuration will apply to all applications. But please note that some "
@@ -382,11 +391,11 @@ msgstr ""
 "Tuttavia, alcune applicazioni possono ignorare tale configurazione per "
 "rispondere ad esigenze specifiche."
 
-#: ../../base_system2.rst:153
+#: ../../base_system2.rst:160
 msgid "Configuration hints"
 msgstr "Suggerimenti di configurazione"
 
-#: ../../base_system2.rst:155
+#: ../../base_system2.rst:162
 msgid ""
 "Most Server Manager pages can display some configuration hints to help guide"
 " the administrator on a better system configuration. Hints are just "
@@ -397,11 +406,11 @@ msgstr ""
 "configurazione del sistema. I suggerimenti sono solo dei consigli e possono "
 "essere disabilitati da questo menu."
 
-#: ../../base_system2.rst:160
+#: ../../base_system2.rst:167
 msgid "Password change"
 msgstr "Cambio password"
 
-#: ../../base_system2.rst:162
+#: ../../base_system2.rst:169
 msgid ""
 "The settings page also includes a panel to let users change their password, "
 "including the root user."
@@ -409,11 +418,39 @@ msgstr ""
 "La pagina delle impostazioni include anche un pannello per consentire agli "
 "utenti, incluso l'utente root, di cambiare la propria password."
 
-#: ../../base_system2.rst:167
+#: ../../base_system2.rst:172
+msgid "Shell policy"
+msgstr ""
+
+#: ../../base_system2.rst:174
+msgid ""
+"This setting can be used to enable or disable the shell that is needed to "
+"use new Server Manager and the SSH service. If this option is enabled the "
+"user's shell setting under the :guilabel:`Users and Groups` page is ignored "
+"and it is considered always enabled."
+msgstr ""
+
+#: ../../base_system2.rst:179
+msgid "User settings page"
+msgstr ""
+
+#: ../../base_system2.rst:181
+msgid ""
+"When the :guilabel:`Enable user settings page` options is enabled, users can"
+" change their password and other settings on a web page outside Cockpit (on "
+"port 443). The default page is :guilabel:`/user-settings`. This feature can "
+"be enabled only if :guilabel:`Shell Policy` is enabled as well."
+msgstr ""
+
+#: ../../base_system2.rst:185
+msgid "The access to the page can be limited only from Trusted Networks."
+msgstr ""
+
+#: ../../base_system2.rst:190
 msgid "Logs"
 msgstr "Log"
 
-#: ../../base_system2.rst:169
+#: ../../base_system2.rst:192
 msgid ""
 "The system provides an indexed log named journal. Journal can be browsed "
 "from this page: messages can be filtered by service, severity and date."
@@ -422,11 +459,11 @@ msgstr ""
 "può essere sfogliato da questa pagina: i messaggi possono essere filtrati "
 "per servizio, gravità e data."
 
-#: ../../base_system2.rst:175
+#: ../../base_system2.rst:198
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: ../../base_system2.rst:177
+#: ../../base_system2.rst:200
 msgid ""
 "The :guilabel:`Applications` page lists all installed applications. An "
 ":index:`application` is a Server Manager module usually composed by multiple"
@@ -440,7 +477,7 @@ msgstr ""
 "configurazione e l'accesso ai registri dell'applicazione. Un clic sul "
 "pulsante :guilabel:`Impostazioni` aprirà l'applicazione."
 
-#: ../../base_system2.rst:182
+#: ../../base_system2.rst:205
 msgid ""
 "There are also simpler applications which include only a link to an external"
 " web pages. To access such applications click on the :guilabel:`Open` "
@@ -450,11 +487,11 @@ msgstr ""
 "a pagine Web esterne. Per accedere a tali applicazioni fare clic sul "
 "pulsante :guilabel:`Apri`."
 
-#: ../../base_system2.rst:186
+#: ../../base_system2.rst:209
 msgid "Shortcuts"
 msgstr "Scorciatoie"
 
-#: ../../base_system2.rst:188
+#: ../../base_system2.rst:211
 msgid ""
 "The administrator can add shortcuts to applications which are frequently "
 "used. Applications with a shortcut, will be linked to the left menu."
@@ -463,15 +500,15 @@ msgstr ""
 "utilizzate più di frequente. I collegamenti alle applicazioni saranno "
 "mostrati nel menu di sinistra."
 
-#: ../../base_system2.rst:191 ../../base_system2.rst:205
+#: ../../base_system2.rst:214 ../../base_system2.rst:228
 msgid "Only *root* user has access to this feature."
 msgstr "Solo l'utente *root* ha accesso a questa funzionalità."
 
-#: ../../base_system2.rst:196
+#: ../../base_system2.rst:219
 msgid "Add to home page"
 msgstr "Aggiungi alla home page"
 
-#: ../../base_system2.rst:198
+#: ../../base_system2.rst:221
 msgid ""
 ":index:`Launcher` is an application of the new Server Manager available to "
 "all users on HTTPS and HTTP ports. The launcher is accessible on the server "
@@ -486,7 +523,7 @@ msgstr ""
 "all'interno del server Web (nessuna index page nel percorso "
 ":file:`/var/www/html`)"
 
-#: ../../base_system2.rst:202
+#: ../../base_system2.rst:225
 msgid ""
 "Installed applications can be added to the launcher by clicking on the "
 ":guilabel:`Add to home page` button. All users will be able to access the "
@@ -496,19 +533,19 @@ msgstr ""
 "sul pulsante :guilabel:`Aggiungi alla home page`. Tutti gli utenti saranno "
 "in grado di accedere al link pubblico dell'applicazione."
 
-#: ../../base_system2.rst:210
+#: ../../base_system2.rst:233
 msgid "Launcher"
 msgstr "Launcher"
 
-#: ../../base_system2.rst:212
+#: ../../base_system2.rst:235
 msgid "See :ref:`launcher-section`."
 msgstr "Vedi :ref:`launcher-section`."
 
-#: ../../base_system2.rst:215
+#: ../../base_system2.rst:238
 msgid "Removing applications"
 msgstr "Rimozione applicazioni"
 
-#: ../../base_system2.rst:217
+#: ../../base_system2.rst:240
 msgid ""
 "To remove an installed module click :guilabel:`Remove` button on the "
 "corresponding application."
@@ -516,7 +553,7 @@ msgstr ""
 "Per rimuovere un modulo installato, fare clic sul pulsante "
 ":guilabel:`Rimuovi` dell'applicazione corrispondente."
 
-#: ../../base_system2.rst:221
+#: ../../base_system2.rst:244
 msgid ""
 "When removing a module other modules could be removed, too! Read carefully "
 "the list of affected packages to avoid removing required features."
@@ -525,15 +562,15 @@ msgstr ""
 " moduli! Leggere attentamente l'elenco dei pacchetti interessati per evitare"
 " di rimuovere delle funzionalità necessarie."
 
-#: ../../base_system2.rst:224
+#: ../../base_system2.rst:247
 msgid "This feature is not available in |product| Enterprise."
 msgstr "Questa funzionalità non è supportata in |product| Enterprise"
 
-#: ../../base_system2.rst:230
+#: ../../base_system2.rst:253
 msgid "Terminal"
 msgstr "Terminale"
 
-#: ../../base_system2.rst:232
+#: ../../base_system2.rst:255
 msgid ""
 "Execute a standard shell inside a terminal directly accessible from the "
 "browser. The shell and the processes will run with the user privileges."
@@ -542,35 +579,33 @@ msgstr ""
 "accessibile dal browser. La shell e i processi verranno eseguiti con i "
 "privilegi dell'utente."
 
-#: ../../base_system2.rst:238
+#: ../../base_system2.rst:261
 msgid "Role delegation"
 msgstr "Delega"
 
-#: ../../base_system2.rst:240
+#: ../../base_system2.rst:263
 msgid ""
-"On complex environments, the *root* user can delegate the access of some "
-"section to specific groups of local users."
+"On complex environments, the *root* user can :index:`delegate` the access of"
+" some section to specific groups of local users."
 msgstr ""
-"In ambienti complessi, l'utente *root* può delegare a gruppi specifici di "
-"utenti locali l'accesso ad alcune sezioni."
 
-#: ../../base_system2.rst:243
+#: ../../base_system2.rst:266
 msgid "A local user can be delegated to access:"
 msgstr "Un utente locale può essere delegato ad accedere a:"
 
-#: ../../base_system2.rst:245
+#: ../../base_system2.rst:268
 msgid "one or more pages of the *System* section"
 msgstr "una o più pagine della sezione *Sistema*"
 
-#: ../../base_system2.rst:246
+#: ../../base_system2.rst:269
 msgid "one or more installed applications"
 msgstr "una o più applicazioni installate"
 
-#: ../../base_system2.rst:247
+#: ../../base_system2.rst:270
 msgid "one or more main sections between *Subscription*, *Software Center*"
 msgstr "una o più sezioni tra *Subscription*, *Software Center*"
 
-#: ../../base_system2.rst:249
+#: ../../base_system2.rst:272
 msgid ""
 "Role delegation is based on local groups, each user belonging to the group "
 "will be delegated. Users inside the *domains admins* are automatically "
@@ -580,7 +615,7 @@ msgstr ""
 "erediterà le deleghe. Gli utenti appartenenti ai *domain admins* vengono "
 "automaticamente delegati a tutti i pannelli."
 
-#: ../../base_system2.rst:252
+#: ../../base_system2.rst:275
 msgid ""
 "To create a new delegation, access the :guilabel:`User & Groups` page under "
 "the group section, then edit an existing group or create a new one. Select "
@@ -592,7 +627,7 @@ msgstr ""
 "crearne uno nuovo - selezionando uno o più elementi dai menu "
 ":guilabel:`Viste sistema` e :guilabel:`Applicazioni`."
 
-#: ../../base_system2.rst:256
+#: ../../base_system2.rst:279
 msgid ""
 "Even if a user has been delegated, it must be explicitly granted the shell "
 "access before being able to log into the Server Manager."
@@ -600,18 +635,146 @@ msgstr ""
 "Anche se un utente è stato delegato, gli deve essere concesso esplicitamente"
 " l'accesso alla shell prima di poter accedere a Server Manager."
 
-#: ../../base_system2.rst:259
+#: ../../base_system2.rst:282
 msgid "The following pages are always accessible to all users:"
 msgstr "Le sezioni seguenti sono sempre accessibili da tutti gli utenti: "
 
-#: ../../base_system2.rst:261
+#: ../../base_system2.rst:284
 msgid "dashboard"
 msgstr "dashboard"
 
-#: ../../base_system2.rst:262
+#: ../../base_system2.rst:285
 msgid "applications"
 msgstr "applicazioni"
 
-#: ../../base_system2.rst:263
+#: ../../base_system2.rst:286
 msgid "terminal"
 msgstr "terminale"
+
+#: ../../base_system2.rst:289
+msgid "Two-factor authentication (2FA)"
+msgstr ""
+
+#: ../../base_system2.rst:291
+msgid ""
+"Two-factor authentication (2FA) can be used to add an extra layer of "
+"security required to access the new Server Manager. First, users will enter "
+"user name and password, then they will be required to provide a temporary "
+"verification code generated by an application running on their smartphone."
+msgstr ""
+
+#: ../../base_system2.rst:295
+msgid ""
+"2FA is disabled by default. Each user can enable it by accessing the "
+":guilabel:`Two-factor authentication` section under :guilabel:`Settings` "
+"page, then following these steps:"
+msgstr ""
+
+#: ../../base_system2.rst:298
+msgid ""
+"download and install the preferred 2FA application inside the smartphone"
+msgstr ""
+
+#: ../../base_system2.rst:299
+msgid "scan the QR code with the 2FA application"
+msgstr ""
+
+#: ../../base_system2.rst:300
+msgid ""
+"generate a new code and copy it inside :guilabel:`Verification code` field, "
+"than click :guilabel:`Check code`"
+msgstr ""
+
+#: ../../base_system2.rst:301
+msgid ""
+"if the verification code is correct, click on the :guilabel:`Save` button"
+msgstr ""
+
+#: ../../base_system2.rst:303
+msgid "Two-factor authentication can be enabled for:"
+msgstr ""
+
+#: ../../base_system2.rst:305
+msgid "the new Server Manager"
+msgstr ""
+
+#: ../../base_system2.rst:306
+msgid ""
+"SSH when using username and password (access with public key will never "
+"require 2FA)"
+msgstr ""
+
+#: ../../base_system2.rst:310
+msgid "Recovery codes"
+msgstr ""
+
+#: ../../base_system2.rst:312
+msgid ""
+"Recovery codes can be used instead of temporary codes if the user cannot "
+"access the 2FA application on the smartphone. Each recovery code is a one-"
+"time password and can be used only once."
+msgstr ""
+
+#: ../../base_system2.rst:315
+msgid ""
+"To generate new recovery codes, disable 2FA, then re-enable it by "
+"registering the application again following the above steps."
+msgstr ""
+
+#: ../../base_system2.rst:318
+msgid "Smartphone applications"
+msgstr ""
+
+#: ../../base_system2.rst:320
+msgid "There are several commercial and open source 2FA applications:"
+msgstr ""
+
+#: ../../base_system2.rst:322
+msgid "Available for both Android and iOS:"
+msgstr ""
+
+#: ../../base_system2.rst:324
+msgid ""
+"`FreeOTP <https://freeotp.github.io/>`_: available for both Android and iOS"
+msgstr ""
+
+#: ../../base_system2.rst:325
+msgid ""
+"`Authenticator <https://mattrubin.me/authenticator/>`_: available on iOS "
+"only"
+msgstr ""
+
+#: ../../base_system2.rst:326
+msgid ""
+"`andOTP <https://github.com/andOTP/andOTP>`_: available for both Android and"
+" iOS https://github.com/andOTP/andOTP"
+msgstr ""
+
+#: ../../base_system2.rst:329
+msgid "Emergency recovery"
+msgstr ""
+
+#: ../../base_system2.rst:331
+msgid ""
+"In case of emergency, 2FA can be disabled accessing the server from a "
+"physical console like a keyboard and a monitor, a serial cable or a VNC-like"
+" connection for virtual machines:"
+msgstr ""
+
+#: ../../base_system2.rst:334
+msgid "access the system with user name and password"
+msgstr ""
+
+#: ../../base_system2.rst:335
+msgid "execute: ::"
+msgstr ""
+
+#: ../../base_system2.rst:340
+msgid ""
+"Eventually, the root user can retrieve recovery codes for a user. Use the "
+"following command and replace ``<user>`` with the actual user name : ::"
+msgstr ""
+
+#: ../../base_system2.rst:345
+msgid "Example for user ``goofy``: ::"
+msgstr ""

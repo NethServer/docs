@@ -1,0 +1,132 @@
+# #-#-#-#-#  mssql.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  mssql.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-10 10:33+0100\n"
+"PO-Revision-Date: 2020-04-07 13:42+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../mssql.rst:3
+msgid "Microsoft SQL Server"
+msgstr ""
+
+#: ../../mssql.rst:7
+msgid "This package is not supported in NethServer Enterprise"
+msgstr ""
+
+#: ../../mssql.rst:10
+msgid ""
+"With this package you can install Microsoft SQL Server on NethServer: it "
+"will automatically configure Microsoft repository and default configuration."
+msgstr ""
+
+#: ../../mssql.rst:14
+msgid "Installation"
+msgstr ""
+
+#: ../../mssql.rst:16
+msgid ""
+"To install this package go on Software Center and install Microsoft SQL "
+"Server application. Otherwise use this command: ::"
+msgstr ""
+
+#: ../../mssql.rst:22
+msgid "Default configuration"
+msgstr ""
+
+#: ../../mssql.rst:24
+msgid ""
+"When installed the module generates a default configuration as follow: * "
+"Auto-generated SA password saved in /var/lib/nethserver/secrets/mssql * "
+"Create default MSSQL databases (master, model, msdb, tempdb) * Allow access "
+"to SQL service from Green network on default port 1433"
+msgstr ""
+
+#: ../../mssql.rst:29
+msgid ""
+"User can change access network from Cockpit Services page or from Firewall "
+"section."
+msgstr ""
+
+#: ../../mssql.rst:31
+msgid "Database example: ::"
+msgstr ""
+
+#: ../../mssql.rst:42
+msgid "Install mssql-server service"
+msgstr ""
+
+#: ../../mssql.rst:44
+msgid ""
+"The package needs a first configuration. Please access the Cockpit "
+"application and select MSSQL edition between these options: Evaluation, "
+"Developer, Web, Express, Standard, Enterprise. Alternatively it is possibile"
+" also to insert a product key."
+msgstr ""
+
+#: ../../mssql.rst:46
+msgid "You can do this also from command line: ::"
+msgstr ""
+
+#: ../../mssql.rst:52
+msgid "Instead, if you want to configure a product key use these commands: ::"
+msgstr ""
+
+#: ../../mssql.rst:61
+msgid ""
+"After save event is launched, Microsoft package download will starts: this "
+"phase can be long, depending on Internet connection."
+msgstr ""
+
+#: ../../mssql.rst:64
+msgid "Now your SQL Server is ready to use!"
+msgstr ""
+
+#: ../../mssql.rst:68
+msgid "Helpful actions"
+msgstr ""
+
+#: ../../mssql.rst:70
+msgid ""
+"Directly from Cockpit interface you can: * create a new database under "
+"Databases page * view and change SA password under Settings page * see SQL "
+"Server status in MSSQL Dashboard page * change SQL Server edition from "
+"Settings page"
+msgstr ""
+
+#: ../../mssql.rst:79
+msgid ""
+"Don't change SA password from SQL Server, but use Cockpit interface. "
+"Otherwise NethServer will not able to load correct informations and perform "
+"backup-data."
+msgstr ""
+
+#: ../../mssql.rst:83
+msgid "Backup and restore"
+msgstr ""
+
+#: ../../mssql.rst:85
+msgid ""
+"Configuration is saved with backup-config event. After you've restored "
+"configuration on new server download of MSSQL package will starts in post-"
+"config-restore event. Database are automatically saved in backup-data event."
+" They will be restored in post-restore-data."
+msgstr ""

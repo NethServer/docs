@@ -13,7 +13,6 @@
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
-# Davide Principi <davide.principi@nethesis.it>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Nicola <nicola.rauso@nethesis.it>, 2019
 # 
@@ -22,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-02-19 17:26+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -57,10 +56,8 @@ msgstr "*Funzionalità:*"
 
 #: ../../nextcloud.rst:14
 msgid ""
-"preconfigure :index:`Nextcloud` with MariaDB and default access credential"
+"configure :index:`Nextcloud` with MariaDB and default access credential"
 msgstr ""
-"configurazione automatica di :index:`Nextcloud` con database MariaDB con "
-"credenziali di default"
 
 #: ../../nextcloud.rst:15
 msgid "integration with |product| system users and groups"
@@ -72,8 +69,8 @@ msgid "automatic backup data with nethserver-backup-data tool"
 msgstr "backup dei dati automatico tramite nethserver-backup-data"
 
 #: ../../nextcloud.rst:17
-msgid "customize https access url (custom virtual host)"
-msgstr "personalizzare l'URL di accesso https (host virtuale personalizzato)"
+msgid "customize HTTPS access URL (custom virtual host)"
+msgstr ""
 
 #: ../../nextcloud.rst:21
 msgid "Installation"
@@ -88,8 +85,8 @@ msgstr ""
 "Dopo l’installazione:"
 
 #: ../../nextcloud.rst:26
-msgid "open the url https://your_nethserver_ip/nextcloud"
-msgstr "collegarsi all’url https://your_nethserver_ip/nextcloud"
+msgid "open the URL https://your_nethserver_ip/nextcloud"
+msgstr ""
 
 #: ../../nextcloud.rst:27
 msgid "use **admin/Nethesis,1234** as default credentials"
@@ -102,14 +99,10 @@ msgstr "cambiare la password di default"
 #: ../../nextcloud.rst:30
 msgid ""
 "All users configured inside any user provider (see :ref:`users_and_groups-"
-"section`) can automatically access the NextCloud installation. After the "
+"section`) can automatically access the Nextcloud installation. After the "
 "installation a new application widget is added to the |product| web "
 "interface dashboard."
 msgstr ""
-"Ciascun utente presente nel sistema può accedere automaticamente tramite le "
-"sue credenziali, indipendentemente dal provider utenti utilizzato (vedi :ref"
-":`users_and_groups-section`). Dopo l’installazione sarà presente anche un "
-"nuovo widget applicazioni nella dashboard di |product|."
 
 #: ../../nextcloud.rst:33
 msgid ""
@@ -130,17 +123,12 @@ msgstr "Lista utenti"
 
 #: ../../nextcloud.rst:40
 msgid ""
-"All users are listed inside the administrator panel of NextCloud using a "
+"All users are listed inside the administrator panel of Nextcloud using a "
 "unique identifier containing letters and numbers. This is because the system"
 " ensures that there are no duplicate internal user names as reported in "
-"section `Internal Username` of `Official NextCloud documentation "
+"section `Internal Username` of `Official Nextcloud documentation "
 "<https://docs.nextcloud.com>`_."
 msgstr ""
-"Tutti gli utenti vengono elencati nel pannello dell'amministratore di "
-"NextCloud utilizzando un identificativo alfanumerico univoco. In questo modo"
-" il sistema garantisce l'assenza di duplicati nei nomi utente interni, come "
-"spiegato nella sezione `Internal Username` della `Documentazione ufficiale "
-"di NextCloud <https://docs.nextcloud.com>`_."
 
 #: ../../nextcloud.rst:44
 msgid ""
@@ -180,12 +168,9 @@ msgstr ""
 #: ../../nextcloud.rst:58
 msgid ""
 "Please note that after the configuration of a custom virtual host, Nextcloud"
-" will no longer be accessibile from the default URL "
+" will no longer be accessible from the default URL "
 "``https://your_nethserver_ip/nextcloud``."
 msgstr ""
-"Si noti che dopo la configurazione di un virtual host personalizzato, "
-"Nextcloud non sarà più accessibile dall'URL predefinito "
-"``https://ip_del_nethserver/nextcloud``."
 
 #: ../../nextcloud.rst:60
 msgid ""
@@ -214,16 +199,14 @@ msgid "domain name"
 msgstr "nome dominio"
 
 #: ../../nextcloud.rst:68
-msgid "ip address"
-msgstr "indirizzo ip"
+msgid "IP address"
+msgstr ""
 
 #: ../../nextcloud.rst:70
 msgid ""
-"The list of trused domains can be customzized using :guilabel:`Trusted "
+"The list of trusted domains can be customized using :guilabel:`Trusted "
 "domains` field: add one domain per line."
 msgstr ""
-"L'elenco dei trusted domains può essere personalizzato usando il campo "
-":guilabel:`Trusted domains`: aggiungere un dominio per riga."
 
 #: ../../nextcloud.rst:73
 msgid "CalDAV and CardDAV"
@@ -233,13 +216,8 @@ msgstr "CalDAV e CardDAV"
 msgid ""
 "Some CalDAV and CardDAV clients may have problems finding the proper sync "
 "URL and need automatic service discovery. Service discovery is enabled by "
-"default if a custom virtual host for Nexcloud has been configured."
+"default if a custom virtual host for Nextcloud has been configured."
 msgstr ""
-"Alcuni client CalDAV e CardDAV possono avere problemi nel trovare l'URL di "
-"sincronizzazione appropriato e richiedono il rilevamento automatico dei "
-"servizi. L'individuazione del servizio è abilitata per impostazione "
-"predefinita se è stato configurato un host virtuale personalizzato per "
-"Nexcloud."
 
 #: ../../nextcloud.rst:78
 msgid ""
@@ -257,3 +235,53 @@ msgid ""
 msgstr ""
 "Quando si abilita l'auto-discovery DAV, assicurarsi che WebTop o SOGo *non* "
 "siano già installati."
+
+#: ../../nextcloud.rst:85
+msgid "Collabora Online"
+msgstr ""
+
+#: ../../nextcloud.rst:87
+msgid "See :ref:`Collabora Online module from NethForge <collabora-section>`."
+msgstr ""
+
+#: ../../nextcloud.rst:91
+msgid "ONLYOFFICE"
+msgstr ""
+
+#: ../../nextcloud.rst:93
+msgid ""
+"Since Nextcloud 18, ONLYOFFICE Community Document Server can be installed "
+"directly to the system without further configuration. To enable built-in "
+"ONLYOFFICE integration, access Nextcloud with the ``admin`` user then:"
+msgstr ""
+
+#: ../../nextcloud.rst:96
+msgid ""
+"Go to :guilabel:`Apps` page and access :guilabel:`Office & text` section"
+msgstr ""
+
+#: ../../nextcloud.rst:97
+msgid "Download and enable the ``ONLYOFFICE`` application"
+msgstr ""
+
+#: ../../nextcloud.rst:98
+msgid ""
+"Download and enable the ``Community Document Server`` application.  Please "
+"be patient, download and install will take a while."
+msgstr ""
+
+#: ../../nextcloud.rst:99
+msgid ""
+"Go to the :guilabel:`Settings` page and access the :guilabel:`ONLYOFFICE` "
+"application under :guilabel:`Administration` section"
+msgstr ""
+
+#: ../../nextcloud.rst:100
+msgid ""
+"Verify the :guilabel:`Document Editing Service address` already contains the"
+" public address of your Nextcloud server"
+msgstr ""
+
+#: ../../nextcloud.rst:102
+msgid "Installation of full ONLYOFFICE server is not supported on |product|."
+msgstr ""

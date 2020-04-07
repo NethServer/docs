@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-07 15:40+0200\n"
 "PO-Revision-Date: 2019-10-10 08:59+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "New Server Manager"
 msgstr "Nuovo Server Manager"
 
-#: ../../disaster_recovery.rst:25 ../../disaster_recovery.rst:72
+#: ../../disaster_recovery.rst:25 ../../disaster_recovery.rst:75
 msgid "Please, follow below steps:"
 msgstr "Si prega di seguire i seguenti passi:"
 
@@ -142,18 +142,19 @@ msgstr ""
 "il campo :guilabel:`Dal backup`."
 
 #: ../../disaster_recovery.rst:51
-msgid "Map network interface names from the backup to the running system."
+msgid ""
+"Map network interface names from the backup to the running system. This step"
+" is required only if :guilabel:`Restore network configuration` option is "
+"enabled."
 msgstr ""
-"Mappare i nomi delle interfacce di rete assegnandole alle schede del sistema"
-" in esecuzione."
 
-#: ../../disaster_recovery.rst:53
+#: ../../disaster_recovery.rst:54
 msgid "Click the :guilabel:`Restore` to start the restore process."
 msgstr ""
 "Preme il pulsante :guilabel:`Ripristina` per iniziare il processo di "
 "ripristino."
 
-#: ../../disaster_recovery.rst:57
+#: ../../disaster_recovery.rst:58
 msgid ""
 "If you're connected to a network interface that will change the IP address "
 "during the restore, you will be disconnected from the Server Manager and you"
@@ -163,7 +164,7 @@ msgstr ""
 " il ripristino, si verrà disconnessi dal Server Manager e sarà necessario "
 "ricollegarsi usando il nuovo indirizzo IP."
 
-#: ../../disaster_recovery.rst:61
+#: ../../disaster_recovery.rst:62
 msgid ""
 "Verify the system is functional and then access the :guilabel:`Backup` page."
 " To restore all files, click on :guilabel:`Restore` button under the **Data "
@@ -175,7 +176,7 @@ msgstr ""
 ":guilabel:`Ripristina` nella sezione **Backup dati**, selezionare il nome "
 "del backup e fare click sul pulsante :guilabel:`Ripristina`."
 
-#: ../../disaster_recovery.rst:65
+#: ../../disaster_recovery.rst:66
 msgid ""
 "Please bear in mind that the restore process can last from minutes to hours "
 "depending on the storage backend speed."
@@ -183,11 +184,18 @@ msgstr ""
 "Si tenga presente che il processo di ripristino può durare da pochi minuti a"
 " diverse ore "
 
-#: ../../disaster_recovery.rst:70
+#: ../../disaster_recovery.rst:69
+msgid ""
+"If the :guilabel:`Restore network configuration` was not enabled, further "
+"steps may be required to restore all applications. See :ref:`skip-network-"
+"restore-section` for more details."
+msgstr ""
+
+#: ../../disaster_recovery.rst:73
 msgid "Old Server Manager"
 msgstr "Vecchio Server Manager"
 
-#: ../../disaster_recovery.rst:76 ../../disaster_recovery.rst:100
+#: ../../disaster_recovery.rst:79 ../../disaster_recovery.rst:103
 msgid ""
 "Install the new machine (refer to :ref:`installation <installation-manual>` "
 "section), access the Server Manager and follow the :ref:`first configuration"
@@ -199,7 +207,7 @@ msgstr ""
 "seguire la procedura :ref:`di prima configurazione <first-configuration-"
 "wizard-section>` per completare la configurazione di base del sistema"
 
-#: ../../disaster_recovery.rst:80 ../../disaster_recovery.rst:104
+#: ../../disaster_recovery.rst:83 ../../disaster_recovery.rst:107
 msgid ""
 "Ensure that |product| is able to access the internet and resolve public "
 "names correctly"
@@ -207,7 +215,7 @@ msgstr ""
 "Assicurarsi che |product| sia in grado di accedere ad internet e risolvere "
 "correttamente i nomi con il DNS pubblico"
 
-#: ../../disaster_recovery.rst:82 ../../disaster_recovery.rst:108
+#: ../../disaster_recovery.rst:85 ../../disaster_recovery.rst:111
 msgid ""
 "Install all the available core updates in the :ref:`Software Center "
 "<software-updates-section>`"
@@ -215,7 +223,7 @@ msgstr ""
 "Installare tutti gli aggiornamenti core disponibili dal :ref:`Software "
 "Center <software-updates-section>`"
 
-#: ../../disaster_recovery.rst:84
+#: ../../disaster_recovery.rst:87
 msgid ""
 "Restore the configuration backup using the :guilabel:`Backup "
 "(configuration)` panel"
@@ -223,7 +231,7 @@ msgstr ""
 "Ripristinare il backup della configurazione utilizzando il pannello "
 ":guilabel:`Backup (configurazione)`"
 
-#: ../../disaster_recovery.rst:86 ../../disaster_recovery.rst:113
+#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:116
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
@@ -231,20 +239,20 @@ msgstr ""
 "Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi :ref"
 ":`restore-roles-section`"
 
-#: ../../disaster_recovery.rst:89 ../../disaster_recovery.rst:116
+#: ../../disaster_recovery.rst:92 ../../disaster_recovery.rst:119
 msgid "Verify the system is functional"
 msgstr "Verificare che la macchina sia funzionante"
 
-#: ../../disaster_recovery.rst:91 ../../disaster_recovery.rst:118
+#: ../../disaster_recovery.rst:94 ../../disaster_recovery.rst:121
 msgid "Restore data backup executing on the console ::"
 msgstr "Ripristinare il backup dei dati eseguendo dalla console ::"
 
-#: ../../disaster_recovery.rst:95 ../../disaster_recovery.rst:122
+#: ../../disaster_recovery.rst:98 ../../disaster_recovery.rst:125
 msgid ""
 "where ``name`` is the name of the data backup you want to restore from."
 msgstr "in cui ``name`` è il nome del backup che si desidera ripristinare."
 
-#: ../../disaster_recovery.rst:106
+#: ../../disaster_recovery.rst:109
 msgid ""
 "Activate |product| following the :ref:`registration <registration-section>` "
 "procedure"
@@ -252,7 +260,7 @@ msgstr ""
 "Attivare |product| seguendo la procedura di :ref:`registrazione "
 "<registration-section>`"
 
-#: ../../disaster_recovery.rst:110
+#: ../../disaster_recovery.rst:113
 msgid ""
 "Restore the configuration backup using the :guilabel:`Backup "
 "(configuration)` panel which allows to use cloud backups or local archives"
@@ -261,7 +269,7 @@ msgstr ""
 ":guilabel:`Backup (configurazione)` che consente di selezionare backup su "
 "cloud o archivi locali"
 
-#: ../../disaster_recovery.rst:125
+#: ../../disaster_recovery.rst:128
 msgid ""
 "Please note that the disaster recovery should be always performed from a "
 "local media (eg. NFS or USB) to speed up the process."
@@ -269,17 +277,17 @@ msgstr ""
 "Si noti che il disater recovery dovrebbe essere sempre eseguito da un "
 "supporto locale (ad esempio NFS o USB) per velocizzare il processo."
 
-#: ../../disaster_recovery.rst:127
+#: ../../disaster_recovery.rst:130
 msgid "The root/admin password is not restored."
 msgstr ""
 "La password di root/admin non viene ripristinata, verrà mantenuta quella "
 "impostata nel nuovo sistema."
 
-#: ../../disaster_recovery.rst:132
+#: ../../disaster_recovery.rst:135
 msgid "Restore network roles"
 msgstr "Assegnamento delle interfacce di rete"
 
-#: ../../disaster_recovery.rst:134
+#: ../../disaster_recovery.rst:137
 msgid ""
 "If a role configuration points to a missing network interface, the "
 ":guilabel:`Dashboard`, :guilabel:`Backup (configuration) > Restore` and "
@@ -291,20 +299,20 @@ msgstr ""
 ":guilabel:`Network` mostrano un avviso. Questo può accadere per esempio nei "
 "seguenti casi:"
 
-#: ../../disaster_recovery.rst:139
+#: ../../disaster_recovery.rst:142
 msgid "configuration backup has been restored on a new hardware"
 msgstr ""
 "dopo il ripristino del backup della configurazione su un nuovo hardware"
 
-#: ../../disaster_recovery.rst:140
+#: ../../disaster_recovery.rst:143
 msgid "one or more network cards have been substituted"
 msgstr "una o più schede di rete sono state sostituite"
 
-#: ../../disaster_recovery.rst:141
+#: ../../disaster_recovery.rst:144
 msgid "system disks are moved to a new machine"
 msgstr "i dischi del sistema sono stati spostati su una nuova macchina"
 
-#: ../../disaster_recovery.rst:143
+#: ../../disaster_recovery.rst:146
 msgid ""
 "The warning message points to a page that lists the network cards present in"
 " the system, highlighting those not having an assigned :ref:`role <network-"
@@ -316,7 +324,7 @@ msgstr ""
 "section>` assegnato. Per ogni scheda di questo tipo, un menù a discesa "
 "mostra i ruoli da assegnare."
 
-#: ../../disaster_recovery.rst:148
+#: ../../disaster_recovery.rst:151
 msgid ""
 "For instance, if a card with the *orange* role has been replaced, the drop "
 "down menu will list an element ``orange``, near the new network card."
@@ -325,7 +333,7 @@ msgstr ""
 "discesa elencherà un elemento ``orange`` in corrispondenza della nuova "
 "scheda di rete."
 
-#: ../../disaster_recovery.rst:152
+#: ../../disaster_recovery.rst:155
 msgid ""
 "The same applies if the old card was a component of a logical interface, "
 "such as a bridge or bond."
@@ -333,7 +341,7 @@ msgstr ""
 "Lo stesso accade se la vecchia scheda era il componente di una interfaccia "
 "logica, come un bridge o un bond."
 
-#: ../../disaster_recovery.rst:155
+#: ../../disaster_recovery.rst:158
 msgid ""
 "By picking an element from the drop down menu, the old role is transferred "
 "to the new physical interface."
@@ -341,12 +349,12 @@ msgstr ""
 "Selezionando un elemento dal menù a discesa, le impostazioni del ruolo sono "
 "trasferiti alla nuova scheda."
 
-#: ../../disaster_recovery.rst:158
+#: ../../disaster_recovery.rst:161
 msgid "Click the :guilabel:`Submit` button to apply the changes."
 msgstr ""
 "Premendo il pulsante :guilabel:`Salva` le modifiche vengono applicate."
 
-#: ../../disaster_recovery.rst:160
+#: ../../disaster_recovery.rst:163
 msgid ""
 "Choose carefully the new interfaces assignment: doing a mistake here could "
 "lead to a system isolated from the network!"
@@ -354,7 +362,7 @@ msgstr ""
 "Assegnare con attenzione i ruoli alle nuove interfacce. Un errore può "
 "portare ad un sistema isolato dalla rete."
 
-#: ../../disaster_recovery.rst:163
+#: ../../disaster_recovery.rst:166
 msgid ""
 "If the missing role is ``green`` an automatic procedure attempts to fix the "
 "configuration at boot-time, to ensure a minimal network connectivity and "
@@ -363,3 +371,203 @@ msgstr ""
 "Nel caso in cui fosse il ruolo ``green`` a mancare, in fase di avvio del "
 "sistema una procedura automatica tenterà di ripristinare la configurazione "
 "di rete essenziale per consentire di accedere nuovamente al Server Manager."
+
+#: ../../disaster_recovery.rst:174
+msgid "Skip network restore"
+msgstr ""
+
+#: ../../disaster_recovery.rst:176
+msgid ""
+"Network configuration is restored by default, but sometimes it is necessary "
+"to restore an installation on a different hardware without migrating the "
+"network configuration. This is a common scenario when moving a virtual "
+"machine from a VPS provider to another."
+msgstr ""
+
+#: ../../disaster_recovery.rst:180
+msgid ""
+"To disable the network restore, make sure to disable the :guilabel:`Restore "
+"network configuration` option from the new Server Manager."
+msgstr ""
+
+#: ../../disaster_recovery.rst:183
+msgid ""
+"Since some application configurations depend on network interface names, not"
+" everything can be automatically restored."
+msgstr ""
+
+#: ../../disaster_recovery.rst:186
+msgid "DHCP"
+msgstr ""
+
+#: ../../disaster_recovery.rst:188
+msgid ""
+"DHCP servers on non-existing interfaces will be deleted. If needed, please "
+"reconfigure the DHCP from the Server Manager. See also :ref:`dhcp-section` "
+"for more general information."
+msgstr ""
+
+#: ../../disaster_recovery.rst:193
+msgid "Samba Active Directory"
+msgstr ""
+
+#: ../../disaster_recovery.rst:197
+msgid ""
+"Restoring a local Samba Active Directory without the :guilabel:`Restore "
+"network configuration` option enabled is highly discouraged. Read carefully "
+"this section."
+msgstr ""
+
+#: ../../disaster_recovery.rst:200
+msgid ""
+"Samba Active Directory requires a network bridge and an additional, free IP "
+"address in the green zone for the local running container."
+msgstr ""
+
+#: ../../disaster_recovery.rst:203
+msgid ""
+"If both the bridge exists and the IP address suits the current network "
+"configuration, the container will continue running after the restore."
+msgstr ""
+
+#: ../../disaster_recovery.rst:206
+msgid ""
+"Otherwise Samba Active Directory is forcibly stopped. To enable it again:"
+msgstr ""
+
+#: ../../disaster_recovery.rst:209
+msgid "from the :guilabel:`Network` page, create the bridge, e.g. ``br0``"
+msgstr ""
+
+#: ../../disaster_recovery.rst:210
+msgid "find an unused IP address in your green network, e.g. ``192.168.1.11``"
+msgstr ""
+
+#: ../../disaster_recovery.rst:211
+msgid "reconfigure the container from command line: ::"
+msgstr ""
+
+#: ../../disaster_recovery.rst:216
+msgid "fix the DC sysvol ACLs: ::"
+msgstr ""
+
+#: ../../disaster_recovery.rst:220
+msgid "More info about :ref:`ad-local-accounts-provider-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:223
+msgid "Firewall"
+msgstr ""
+
+#: ../../disaster_recovery.rst:225
+msgid "At the end of restore the firewall will:"
+msgstr ""
+
+#: ../../disaster_recovery.rst:227
+msgid "delete all WAN providers"
+msgstr ""
+
+#: ../../disaster_recovery.rst:228
+msgid "delete all zones connected to non-existing network interface"
+msgstr ""
+
+#: ../../disaster_recovery.rst:229
+msgid "disable all rules using a non-existing zone or a non-existing role"
+msgstr ""
+
+#: ../../disaster_recovery.rst:231
+msgid ""
+"The administrator can access the Server Manager to create missing zones and "
+"roles. Finally, all previously disabled rules can be manually enabled again."
+msgstr ""
+
+#: ../../disaster_recovery.rst:234
+msgid "See :ref:`firewall_new-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:237
+msgid "Web proxy"
+msgstr ""
+
+#: ../../disaster_recovery.rst:239
+msgid ""
+"Web proxy priority rules using non-existing zones will be disabled. Before "
+"re-enabling such rules, make sure the zones have been created."
+msgstr ""
+
+#: ../../disaster_recovery.rst:242
+msgid "More info on priority rules: :ref:`squid_rules-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:245
+msgid "OpenVPN tunnels"
+msgstr ""
+
+#: ../../disaster_recovery.rst:247
+msgid ""
+"OpenVPN tunnel servers contain a field named :guilabel:`Public address`. If "
+"such field uses only public DNS names, no action is required. Otherwise, "
+"insert the new public IP address inside the field and update tunnel clients "
+"accordingly."
+msgstr ""
+
+#: ../../disaster_recovery.rst:251
+msgid "See also OpenVPN :ref:`ovpn_tunnel-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:254
+msgid "OpenVPN roadwarrior"
+msgstr ""
+
+#: ../../disaster_recovery.rst:256
+msgid ""
+"OpenVPN roadwarrior server exposes a field named :guilabel:`Contact this "
+"server on public IP / host`. If such field uses only public DNS names, no "
+"action is required. Otherwise, insert the new public IP address inside the "
+"field and update roadwarrior clients accordingly."
+msgstr ""
+
+#: ../../disaster_recovery.rst:260
+msgid "See also OpenVPN :ref:`ovpn_roadwarrior-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:263
+msgid "IPSec tunnels"
+msgstr ""
+
+#: ../../disaster_recovery.rst:265
+msgid ""
+"Only IPSec tunnels configured with a dynamic red interface will be disabled."
+" Access the Server Manager, edit the disabled tunnel by selecting a new red "
+"interface and enable it again."
+msgstr ""
+
+#: ../../disaster_recovery.rst:268
+msgid "More info at :ref:`ipsec-section`."
+msgstr ""
+
+#: ../../disaster_recovery.rst:271
+msgid "Dedalo hotspot"
+msgstr ""
+
+#: ../../disaster_recovery.rst:273
+msgid ""
+"Dedalo hotspot will be disabled if the system does not have a network "
+"interface configured with the ``hotspot`` role. If the Dedalo is disabled, "
+"just reconfigure following :ref:`dedalo-section` chapter."
+msgstr ""
+
+#: ../../disaster_recovery.rst:277
+msgid "ntopng"
+msgstr ""
+
+#: ../../disaster_recovery.rst:279
+msgid ""
+"ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page "
+"inside the old Server Manager. Then enable the service and select network "
+"interfaces to monitor."
+msgstr ""
+
+#: ../../disaster_recovery.rst:282
+msgid "See also :ref:`ntopng-section`."
+msgstr ""
