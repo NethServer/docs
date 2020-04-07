@@ -305,6 +305,7 @@ Two-factor authentication can be enabled for:
 - the new Server Manager
 - SSH when using username and password (access with public key will never require 2FA)
 
+
 Recovery codes
 --------------
 
