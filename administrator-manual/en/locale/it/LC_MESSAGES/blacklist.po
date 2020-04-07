@@ -1,0 +1,159 @@
+# #-#-#-#-#  blacklist.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  blacklist.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nicola <nicola.rauso@nethesis.it>, 2020
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-10 10:33+0100\n"
+"PO-Revision-Date: 2020-03-10 09:33+0000\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../blacklist.rst:3
+msgid "Threat shield"
+msgstr "Threat shield"
+
+#: ../../blacklist.rst:7
+msgid ""
+"The configuration page of this module is available only in the new Server "
+"Manager."
+msgstr ""
+"La pagina di configurazione di questo modulo è disponibile sono nel nuovo "
+"Server Manager."
+
+#: ../../blacklist.rst:10
+msgid ""
+"The threat shield blocks connections to and from malicious hosts, preventing"
+" attacks, service abuse, malware, and other cybercrime activities. The "
+"package can be installed both on firewalls and on machines without a red "
+"interface, like mail servers or PBXs."
+msgstr ""
+"La threat shield blocca le connessioni da e verso host dannosi, prevenendo "
+"attacchi, abusi di servizio, malware e altre attività di criminalità "
+"informatica. Il pacchetto può essere installato sia su firewall che su "
+"macchine senza interfaccia red, come server di posta o PBX."
+
+#: ../../blacklist.rst:15
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../blacklist.rst:17
+msgid ""
+"First, access the threat shield web interface to set the download URL for "
+"the blacklists."
+msgstr ""
+"Per prima cosa, accedere all'interfaccia web della threat shield per "
+"impostare l'URL di download per le blacklist."
+
+#: ../../blacklist.rst:19
+msgid ""
+"After setting the URL, the administrator can choose what :index:`blacklist` "
+"categories should be enabled. Each category can have a "
+":guilabel:`Confidence` score between 0 and 10. Categories with a higher "
+"confidence are less prone to false positives."
+msgstr ""
+"Dopo aver impostato l'URL, l'amministratore può scegliere quali categorie di"
+" :index:`blacklist` debbano essere abilitate. Ogni categoria può avere un "
+"punteggio :guilabel:`Fiducia` tra 0 e 10. Le categorie con una maggiore "
+"fiducia sono meno soggette a falsi positivi."
+
+#: ../../blacklist.rst:23
+msgid "Enabled categories will be automatically updated at regular intervals."
+msgstr ""
+"Le categorie abilitate verranno aggiornate automaticamente a intervalli "
+"regolari."
+
+#: ../../blacklist.rst:25
+msgid ""
+"The download URL must contain a valid GIT repository. Administrators can "
+"choose a public repository, like `Firehol ipsets one "
+"<https://github.com/firehol/blocklist-ipsets>`_, or subscribe to a "
+"commercial service. If the machine has a Community or an Enterprise "
+"subscription, the access to the URL will be authenticated using system id "
+"and secret."
+msgstr ""
+"L'URL di download deve contenere un repository GIT valido. Gli "
+"amministratori possono scegliere un repository pubblico, come `Firehol "
+"ipsets one <https://github.com/firehol/blocklist-ipsets>`_ o abbonarsi a un "
+"servizio commerciale. Se la macchina dispone di un abbonamento Community o "
+"Enterprise, l'accesso all'URL verrà autenticato utilizzando l'id di sistema "
+"e il token."
+
+#: ../../blacklist.rst:30
+msgid ""
+"Experienced administrators can also `setup their own blacklist server "
+"<https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-"
+"blacklist.html#setup-a-blacklist-server>`_."
+msgstr ""
+"Gli amministratori esperti possono anche `configurare il proprio server di "
+"blacklist <https://docs.nethserver.org/projects/nethserver-devel/en/latest"
+"/nethserver-blacklist.html#setup-a-blacklist-server>`_."
+
+#: ../../blacklist.rst:33
+msgid "Whitelist"
+msgstr "Whitelist"
+
+#: ../../blacklist.rst:35
+msgid ""
+"In case of a false positive, a host or a CIDR can be added to the local "
+":guilabel:`Whitelist`. If the firewall module is installed, the whitelist "
+"will also accept host and CIDR firewall objects."
+msgstr ""
+"In caso di falso positivo, è possibile aggiungere un host o un CIDR alla "
+":guilabel:`whitelist` locale. Se è installato il modulo firewall, la "
+"Whitelist accetterà anche oggetti firewall di tipo host e CIDR."
+
+#: ../../blacklist.rst:38
+msgid ""
+"Hosts should be added to the whitelist only for a limited period of time. As"
+" a best pratice, when a false positive is found, please report it to the "
+"blacklist maintainer."
+msgstr ""
+"Gli host dovrebbero essere aggiunti alla whitelist solo per un periodo di "
+"tempo limitato. Come best practice, quando viene trovato un falso positivo, "
+"si invita a segnalarlo al manutentore della blacklist."
+
+#: ../../blacklist.rst:42
+msgid "Incident response"
+msgstr "Incident response"
+
+#: ../../blacklist.rst:44
+msgid ""
+"The :guilabel:`Analysis` page displays most recent attacks which can be "
+"filtered by source, destination, protocol and port. Using the "
+":guilabel:`Check IP address` section, administrators can also check if a "
+"given IP has been blacklisted by an enabled category."
+msgstr ""
+"La pagina :guilabel:`Analisi` mostra gli attacchi più recenti, che possono "
+"essere filtrati per sorgente, destinazione, protocollo e porta. Usando la "
+"sezione :guilabel:`Controlla indirizzo IP`, gli amministratori possono anche"
+" verificare se un determinato IP sia stato inserito nella blacklist da una "
+"categoria abilitata."
+
+#: ../../blacklist.rst:47
+msgid ""
+"For advanced log analysis with regular expressions support, use the "
+":guilabel:`Logs` page."
+msgstr ""
+"Per un'analisi avanzata dei log con supporto delle espressioni regolari, "
+"usare la pagina :guilabel:`Log`."

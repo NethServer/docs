@@ -103,9 +103,16 @@ The administrator can mount new local or remote disks, manage RAID arrays and LV
 SSH
 ---
 
-The :index:`ssh` page displays the number of current SSH connection.
-From this section the administrator can change the OpenSSH listening port, disable root login or
-password authentication.
+The :index:`SSH` page displays the number of current SSH connections. From this
+section the administrator can change the OpenSSH listening port, disable root
+login and password authentication.
+
+It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
+while administrators are always granted access to SSH and SFTP.
+
+SSH and SFTP permissions are available once the :guilabel:`System > Settings >
+Shell policy > Override the shell of users` has been enabled.
+
 
 .. _settings-section:
 
@@ -160,6 +167,22 @@ Password change
 ^^^^^^^^^^^^^^^
 
 The settings page also includes a panel to let users change their password, including the root user.
+
+Shell policy
+^^^^^^^^^^^^
+
+This setting can be used to enable or disable the shell that is needed to use new Server Manager
+and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
+and it is considered always enabled.
+
+User settings page
+^^^^^^^^^^^^^^^^^^
+
+When the :guilabel:`Enable user settings page` options is enabled, users can change their password and other settings on a web page outside
+Cockpit (on port 443). The default page is :guilabel:`/user-settings`. This feature can be enabled only if
+:guilabel:`Shell Policy` is enabled as well.
+
+The access to the page can be limited only from Trusted Networks.
 
 .. _logs-section:
 
@@ -277,6 +300,12 @@ under :guilabel:`Settings` page, then following these steps:
 3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
 4. if the verification code is correct, click on the :guilabel:`Save` button
 
+Two-factor authentication can be enabled for:
+
+- the new Server Manager
+- SSH when using username and password (access with public key will never require 2FA)
+
+
 Recovery codes
 --------------
 
@@ -304,5 +333,20 @@ a serial cable or a VNC-like connection for virtual machines:
 
 1. access the system with user name and password
 2. execute: ::
+
      rm -f ~/.2fa.secret
      sudo /sbin/e-smith/signal-event -j otp-save
+
+Eventually, the root user can retrieve recovery codes for a user.
+Use the following command and replace ``<user>`` with the actual user name : ::
+
+  oathtool -w 4 $(cat ~<user>/.2fa.secret)
+
+Example for user ``goofy``: ::
+
+  # oathtool -w 4 $(cat ~goofy/.2fa.secret)
+  984147
+  754680
+  540025
+  425645
+  016250

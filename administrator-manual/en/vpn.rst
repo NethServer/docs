@@ -15,6 +15,8 @@ The system supports two types of VPNs:
 
 Roadwarrior OpenVPN, IPSec tunnel and OpenVPN tunnels are now part of the VPN application in the new Server Manager.
 
+.. _ovpn-section:
+
 OpenVPN
 =======
 
@@ -26,6 +28,7 @@ It brings with numerous advantages including:
 * High stability
 * Simple configuration
 
+.. _ovpn_roadwarrior-section:
 
 Roadwarrior
 -----------
@@ -67,6 +70,7 @@ Access statistics are available from the new Server Manager. For each user, stat
 - time of disconnection
 - transferred bytes
 
+.. _ovpn_tunnel-section:
 
 Tunnel (net2net)
 ----------------
@@ -154,6 +158,8 @@ Steps to be performed on the slave:
 
 * Copy and paste the content of downloaded certificates from the master configuration page.
 
+
+.. _ipsec-section:
 
 IPsec
 =====

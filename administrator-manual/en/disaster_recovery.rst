@@ -49,6 +49,7 @@ Please, follow below steps:
    to be restored directly from the :guilabel:`From backup` field.
   
 5. Map network interface names from the backup to the running system.
+   This step is required only if :guilabel:`Restore network configuration` option is enabled.
    
 6. Click the :guilabel:`Restore` to start the restore process.
 
@@ -62,9 +63,11 @@ Please, follow below steps:
    To restore all files, click on :guilabel:`Restore` button under the **Data Backup** section,
    select the name of the backup and click the :guilabel:`Restore` button.
 
-   Please bear in mind that the restore process can last from minutes to hours depending
-   on the storage backend speed.
+Please bear in mind that the restore process can last from minutes to hours depending
+on the storage backend speed.
 
+If the :guilabel:`Restore network configuration` was not enabled, further steps
+may be required to restore all applications. See :ref:`skip-network-restore-section` for more details.
 
 Old Server Manager
 ------------------
@@ -165,3 +168,115 @@ the configuration at boot-time, to ensure a minimal network
 connectivity and login again on the Server Manager.
 
 
+.. _skip-network-restore-section:
+
+Skip network restore
+--------------------
+
+Network configuration is restored by default, but sometimes it is necessary to restore an 
+installation on a different hardware without migrating the network configuration.
+This is a common scenario when moving a virtual machine from a VPS provider to another.
+
+To disable the network restore, make sure to disable the :guilabel:`Restore network configuration` option from
+the new Server Manager.
+
+Since some application configurations depend on network interface names, not everything can be automatically restored.
+
+DHCP
+^^^^
+
+DHCP servers on non-existing interfaces will be deleted.
+If needed, please reconfigure the DHCP from the Server Manager.
+See also :ref:`dhcp-section` for more general information.
+
+Samba Active Directory
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. warning::
+
+  Restoring a local Samba Active Directory without the :guilabel:`Restore
+  network configuration` option enabled is highly discouraged. Read carefully this section.
+
+Samba Active Directory requires a network bridge and an additional, free IP
+address in the green zone for the local running container.
+
+If both the bridge exists and the IP address suits the current network
+configuration, the container will continue running after the restore.
+
+Otherwise Samba Active Directory is forcibly stopped.
+To enable it again:
+
+- from the :guilabel:`Network` page, create the bridge, e.g. ``br0``
+- find an unused IP address in your green network, e.g. ``192.168.1.11``
+- reconfigure the container from command line: ::
+
+    config setprop nsdc bridge br0 status enabled
+    signal-event nethserver-dc-change-ip 192.168.1.11
+
+- fix the DC sysvol ACLs: ::
+
+    /etc/e-smith/events/actions/nethserver-dc-sysvolreset
+
+More info about :ref:`ad-local-accounts-provider-section`.
+
+Firewall
+^^^^^^^^
+
+At the end of restore the firewall will:
+
+- delete all WAN providers
+- delete all zones connected to non-existing network interface
+- disable all rules using a non-existing zone or a non-existing role
+
+The administrator can access the Server Manager to create missing zones and roles.
+Finally, all previously disabled rules can be manually enabled again.
+
+See :ref:`firewall_new-section`.
+
+Web proxy
+^^^^^^^^^
+
+Web proxy priority rules using non-existing zones will be disabled.
+Before re-enabling such rules, make sure the zones have been created.
+
+More info on priority rules: :ref:`squid_rules-section`.
+
+OpenVPN tunnels
+^^^^^^^^^^^^^^^
+
+OpenVPN tunnel servers contain a field named :guilabel:`Public address`.
+If such field uses only public DNS names, no action is required.
+Otherwise, insert the new public IP address inside the field and update tunnel clients accordingly.
+
+See also OpenVPN :ref:`ovpn_tunnel-section`.
+
+OpenVPN roadwarrior
+^^^^^^^^^^^^^^^^^^^
+
+OpenVPN roadwarrior server exposes a field named :guilabel:`Contact this server on public IP / host`.
+If such field uses only public DNS names, no action is required.
+Otherwise, insert the new public IP address inside the field and update roadwarrior clients accordingly.
+
+See also OpenVPN :ref:`ovpn_roadwarrior-section`.
+
+IPSec tunnels
+^^^^^^^^^^^^^
+
+Only IPSec tunnels configured with a dynamic red interface will be disabled.
+Access the Server Manager, edit the disabled tunnel by selecting a new red interface and enable it again.
+
+More info at :ref:`ipsec-section`.
+
+Dedalo hotspot
+^^^^^^^^^^^^^^
+
+Dedalo hotspot will be disabled if the system does not have a network interface configured with the ``hotspot`` role.
+If the Dedalo is disabled, just reconfigure following :ref:`dedalo-section` chapter.
+
+ntopng
+^^^^^^
+
+ntopng must be reconfigured. Access the :guilabel:`Bandwidth monitor` page inside the old Server Manager.
+Then enable the service and select network interfaces to monitor.
+
+See also :ref:`ntopng-section`.

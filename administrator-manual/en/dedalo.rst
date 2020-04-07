@@ -1,3 +1,5 @@
+.. _dedalo-section:
+
 ================
 Hotspot (Dedalo)
 ================
