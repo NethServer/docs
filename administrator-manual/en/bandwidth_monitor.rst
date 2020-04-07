@@ -1,3 +1,5 @@
+.. _ntopng-section:
+
 =================
 Bandwidth monitor
 =================
