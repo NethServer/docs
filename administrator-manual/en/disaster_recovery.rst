@@ -192,6 +192,11 @@ See also :ref:`dhcp-section` for more general information.
 Samba Active Directory
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. warning::
+
+  Restoring a local Samba Active Directory without the :guilabel:`Restore
+  network configuration` is highly discouraged. Read carefully this section.
+
 Samba Active Directory requires a network bridge and an additional, free IP
 address in the green zone for the local running container.
 
