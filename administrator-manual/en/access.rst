@@ -4,9 +4,9 @@
 
 .. _access-section:
 
-============================
-Accessing the Server Manager
-============================
+================================
+Accessing the old Server Manager
+================================
 
 .. note:: A new Server Manager based on Cockpit is available. See :ref:`access2-section`.
 
