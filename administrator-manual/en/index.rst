@@ -84,7 +84,6 @@ Administrator Manual
    mail
    webmail
    webtop5
-   pop3_proxy
    pop3_connector
    chat
    team_chat
