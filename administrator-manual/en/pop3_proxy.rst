@@ -5,6 +5,10 @@
 POP3 proxy
 ==========
 
+.. warning::
+
+   This module is officially deprecated since |product| 7.8.2003
+
 .. note::
 
   The configuration page of this module is available only in the old Server Manager

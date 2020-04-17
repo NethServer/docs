@@ -37,7 +37,7 @@ Administrator Manual
    :caption: Installation
 
    installation
-   access
+   access2
    registration
 
 .. only:: nscom
@@ -52,7 +52,7 @@ Administrator Manual
    :caption: Configuration
 
    packages
-   base_system
+   base_system2
    accounts
    dns
    dhcp
@@ -84,7 +84,6 @@ Administrator Manual
    mail
    webmail
    webtop5
-   pop3_proxy
    pop3_connector
    chat
    team_chat

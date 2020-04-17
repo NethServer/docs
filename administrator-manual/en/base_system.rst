@@ -1,8 +1,8 @@
 .. _base_system-section:
 
-===========
-Base system
-===========
+=================
+Base system (old)
+=================
 
 .. note:: A new Server Manager based on Cockpit is available. See :ref:`base_system2-section`.
 

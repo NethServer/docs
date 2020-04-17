@@ -1,8 +1,10 @@
 .. _access2-section:
 
-================================
-Accessing the new Server Manager
-================================
+============================
+Accessing the Server Manager
+============================
+
+.. note:: Documentation about the old Server Manager is available :ref:`here <access2-section>`.
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 

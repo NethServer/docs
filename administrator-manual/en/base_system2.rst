@@ -1,10 +1,10 @@
 .. _base_system2-section:
 
-=================
-Base system (new)
-=================
+===========
+Base system
+===========
 
-.. note:: The documentation of the Server Manager is available at :ref:`base_system-section`.
+.. note:: Documentation about the old Server Manager is available :ref:`here <base_system-section>`.
 
 This chapter describes all available modules at the end of installation. All
 modules outside this section can be installed from the :ref:`software-center-section` page.
