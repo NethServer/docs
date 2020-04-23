@@ -39,7 +39,8 @@ Supported authentication methods are:
 
 * System user and password
 * Certificate
-* System user, password and certificate
+* System user name, password and certificate
+* System user name, One Time Password (OTP) and certificate
 
 The server can operate in two modes: :index:`routed` or :index:`bridged`.
 You should choose bridged mode only if the tunnel must carry non-IP traffic.
@@ -56,6 +57,12 @@ To allow a client to establish a VPN:
    As an alternative, the file can be sent to the user by mail (available only on the new Server Manager).
 
 3. Import the file into the client and start the VPN.
+
+.. note::
+
+   When using OTP-based authentication, users will be required to enable :ref:`2FA <2fa-section>` before accessing the VPN.
+   Also make sure users will not enable the "Save password" option on their clients, because a new OTP must be
+   entered every time the VPN is started.
 
 Accounting
 ~~~~~~~~~~
