@@ -1,3 +1,5 @@
+.. _fail2ban-section:
+
 ========
 Fail2ban
 ========

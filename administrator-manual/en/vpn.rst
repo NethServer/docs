@@ -51,7 +51,7 @@ To allow a client to establish a VPN:
    with certificate, avoiding the need to create a system user.
 
    On the other hand, it's mandatory to choose a system account if you want to use
-   authentication with user name and password.
+   authentication with user name and password or with one time password (2FA).
 
 2. Download the file containing the configuration and certificates.
    As an alternative, the file can be sent to the user by mail (available only on the new Server Manager).
@@ -62,7 +62,7 @@ To allow a client to establish a VPN:
 
    When using OTP-based authentication, users will be required to enable :ref:`2FA <2fa-section>` before accessing the VPN.
    Also make sure users will not enable the "Save password" option on their clients, because a new OTP must be
-   entered every time the VPN is started.
+   entered every time the VPN is started. A password saved inside a VPN client can be seen as a login failure by  :ref:`fail2ban-section`.
 
 Accounting
 ~~~~~~~~~~
