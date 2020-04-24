@@ -1,3 +1,5 @@
+.. _fail2ban-section:
+
 ========
 Fail2ban
 ========
@@ -126,4 +128,3 @@ Whois
 =====
 
 If you desire to query the IP ``whois`` database and obtain the origin of the banned IP by email, you could  Install the ``whois`` rpm.
-
