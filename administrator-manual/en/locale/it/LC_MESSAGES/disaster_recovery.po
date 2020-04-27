@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-07 15:40+0200\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2019-10-10 08:59+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -92,8 +92,8 @@ msgid ""
 " access the internet and resolve public names correctly"
 msgstr ""
 "Installare la nuova macchina (fare riferimento alla sezione "
-":ref:`installation <installation-manual>`), accedere al nuovo Server Manager"
-" e assicurarsi che la macchina sia in grado di accedere a Internet e "
+":ref:`installazione <installation-manual>`), accedere al nuovo Server "
+"Manager e assicurarsi che la macchina sia in grado di accedere a Internet e "
 "risolvere correttamente i nomi pubblici"
 
 #: ../../disaster_recovery.rst:34
@@ -117,7 +117,7 @@ msgid ""
 "Install all the available core updates from the :ref:`software-updates-"
 "section`"
 msgstr ""
-"Installare tutti gli aggiornamenti core disponibili dal :ref:`software-"
+"Installare tutti gli aggiornamenti core disponibili da :ref:`software-"
 "updates-section`"
 
 #: ../../disaster_recovery.rst:44
@@ -147,6 +147,9 @@ msgid ""
 " is required only if :guilabel:`Restore network configuration` option is "
 "enabled."
 msgstr ""
+"Mappare i nomi delle interfacce di rete dal backup al sistema in esecuzione."
+" Questo passaggio è necessario solo se l'opzione :guilabel:`Ripristina "
+"configurazione di rete` è abilitata."
 
 #: ../../disaster_recovery.rst:54
 msgid "Click the :guilabel:`Restore` to start the restore process."
@@ -190,6 +193,10 @@ msgid ""
 "steps may be required to restore all applications. See :ref:`skip-network-"
 "restore-section` for more details."
 msgstr ""
+"Se :guilabel:`Ripristina configurazione di rete` non fosse stato abilitato, "
+"potrebbero essere necessari ulteriori passaggi per ripristinare tutte le "
+"applicazioni. Fare riferimento alla sezione :ref:`skip-network-restore-"
+"section` per maggiori dettagli."
 
 #: ../../disaster_recovery.rst:73
 msgid "Old Server Manager"
@@ -374,7 +381,7 @@ msgstr ""
 
 #: ../../disaster_recovery.rst:174
 msgid "Skip network restore"
-msgstr ""
+msgstr "Disabilitare ripristino della rete"
 
 #: ../../disaster_recovery.rst:176
 msgid ""
@@ -383,22 +390,32 @@ msgid ""
 "network configuration. This is a common scenario when moving a virtual "
 "machine from a VPS provider to another."
 msgstr ""
+"La configurazione di rete viene ripristinata per impostazione predefinita, "
+"ma in alcune situazione è necessario ripristinare un'installazione su un "
+"hardware differente senza migrarne la configurazione di rete. Questo è uno "
+"scenario comune quando si sposta una macchina virtuale da un provider VPS a "
+"un altro."
 
 #: ../../disaster_recovery.rst:180
 msgid ""
 "To disable the network restore, make sure to disable the :guilabel:`Restore "
 "network configuration` option from the new Server Manager."
 msgstr ""
+"Per disabilitare il ripristino della rete, assicurarsi di disabilitare "
+"l'opzione :guilabel:`Ripristina configurazione di rete` dal nuovo Server "
+"Manager."
 
 #: ../../disaster_recovery.rst:183
 msgid ""
 "Since some application configurations depend on network interface names, not"
 " everything can be automatically restored."
 msgstr ""
+"Poiché alcune configurazioni dell'applicazione dipendono dai nomi delle "
+"interfacce di rete, non tutto può essere ripristinato automaticamente."
 
 #: ../../disaster_recovery.rst:186
 msgid "DHCP"
-msgstr ""
+msgstr "DHCP"
 
 #: ../../disaster_recovery.rst:188
 msgid ""
@@ -406,10 +423,13 @@ msgid ""
 "reconfigure the DHCP from the Server Manager. See also :ref:`dhcp-section` "
 "for more general information."
 msgstr ""
+"I server DHCP su interfacce inesistenti verranno eliminati. Se necessario, "
+"riconfigurare il DHCP tramite il Server Manager. Fare riferimento alla "
+"sezione :ref `dhcp-section` per maggiori informazioni."
 
 #: ../../disaster_recovery.rst:193
 msgid "Samba Active Directory"
-msgstr ""
+msgstr "Samba Active Directory"
 
 #: ../../disaster_recovery.rst:197
 msgid ""
@@ -417,91 +437,114 @@ msgid ""
 "network configuration` option enabled is highly discouraged. Read carefully "
 "this section."
 msgstr ""
+"Il ripristino di un Samba Active Directory locale senza l'opzione "
+":guilabel:`Ripristina configurazione di rete` abilitata è altamente "
+"sconsigliato. Leggere attentamente quanto riportato di seguito."
 
 #: ../../disaster_recovery.rst:200
 msgid ""
 "Samba Active Directory requires a network bridge and an additional, free IP "
 "address in the green zone for the local running container."
 msgstr ""
+"Samba Active Directory richiede un bridge di rete e un indirizzo IP "
+"aggiuntivo, inutilizzato, nella zona green per attivare il container locale."
 
 #: ../../disaster_recovery.rst:203
 msgid ""
 "If both the bridge exists and the IP address suits the current network "
 "configuration, the container will continue running after the restore."
 msgstr ""
+"Se il bridge esiste e l'indirizzo IP si adatta alla configurazione di rete "
+"corrente, il container continuerà a funzionare anche dopo il ripristino."
 
 #: ../../disaster_recovery.rst:206
 msgid ""
 "Otherwise Samba Active Directory is forcibly stopped. To enable it again:"
 msgstr ""
+"Viceversa Samba Active Directory verrà arrestato forzatamente. Per "
+"abilitarlo di nuovo:"
 
 #: ../../disaster_recovery.rst:209
 msgid "from the :guilabel:`Network` page, create the bridge, e.g. ``br0``"
-msgstr ""
+msgstr "dalla pagina :guilabel:`Rete`, creare il bridge, ad esempio ``br0``"
 
 #: ../../disaster_recovery.rst:210
 msgid "find an unused IP address in your green network, e.g. ``192.168.1.11``"
 msgstr ""
+"individuare un indirizzo IP inutilizzato sulla rete green, ad esempio "
+"``192.168.1.11``"
 
 #: ../../disaster_recovery.rst:211
 msgid "reconfigure the container from command line: ::"
-msgstr ""
+msgstr "riconfigurare il container da riga di comando: ::"
 
 #: ../../disaster_recovery.rst:216
 msgid "fix the DC sysvol ACLs: ::"
-msgstr ""
+msgstr "correggere le ACL di sysvol del DC: ::"
 
 #: ../../disaster_recovery.rst:220
 msgid "More info about :ref:`ad-local-accounts-provider-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref:`ad-local-"
+"accounts-provider-section`."
 
 #: ../../disaster_recovery.rst:223
 msgid "Firewall"
-msgstr ""
+msgstr "Firewall"
 
 #: ../../disaster_recovery.rst:225
 msgid "At the end of restore the firewall will:"
-msgstr ""
+msgstr "Al termine del ripristino il firewall provvederà a:"
 
 #: ../../disaster_recovery.rst:227
 msgid "delete all WAN providers"
-msgstr ""
+msgstr "eliminare tutti i provider WAN"
 
 #: ../../disaster_recovery.rst:228
 msgid "delete all zones connected to non-existing network interface"
-msgstr ""
+msgstr "eliminare tutte le zone connesse alle interfacce di rete inesistenti"
 
 #: ../../disaster_recovery.rst:229
 msgid "disable all rules using a non-existing zone or a non-existing role"
 msgstr ""
+"disabilitare tutte le regole relative ad una zona inesistente o un ruolo "
+"inesistente"
 
 #: ../../disaster_recovery.rst:231
 msgid ""
 "The administrator can access the Server Manager to create missing zones and "
 "roles. Finally, all previously disabled rules can be manually enabled again."
 msgstr ""
+"L'amministratore potrà accedere al Server Manager per creare zone e ruoli "
+"mancanti. Infine, tutte le regole precedentemente disabilitate potranno "
+"essere nuovamente abilitate manualmente."
 
 #: ../../disaster_recovery.rst:234
 msgid "See :ref:`firewall_new-section`."
-msgstr ""
+msgstr "Fare riferimento alla sezione :ref:`firewall_new-section`."
 
 #: ../../disaster_recovery.rst:237
 msgid "Web proxy"
-msgstr ""
+msgstr "Proxy Web"
 
 #: ../../disaster_recovery.rst:239
 msgid ""
 "Web proxy priority rules using non-existing zones will be disabled. Before "
 "re-enabling such rules, make sure the zones have been created."
 msgstr ""
+"Le regole di priorità del proxy Web che utilizzano zone inesistenti verranno"
+" disabilitate. Prima di riattivare tali regole, assicurarsi che le zone "
+"siano state create."
 
 #: ../../disaster_recovery.rst:242
 msgid "More info on priority rules: :ref:`squid_rules-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref:`squid_rules-"
+"section`."
 
 #: ../../disaster_recovery.rst:245
 msgid "OpenVPN tunnels"
-msgstr ""
+msgstr "Tunnel OpenVPN"
 
 #: ../../disaster_recovery.rst:247
 msgid ""
@@ -510,14 +553,21 @@ msgid ""
 "insert the new public IP address inside the field and update tunnel clients "
 "accordingly."
 msgstr ""
+"I server tunnel OpenVPN contengono un campo chiamato :guilabel:`Indirizzo "
+"pubblico`. Se tale campo utilizza solo nomi DNS pubblici, non è richiesta "
+"alcuna azione. In caso contrario, si dovrà inserire il nuovo indirizzo IP "
+"pubblico all'interno del campo e aggiornare i client del tunnel di "
+"conseguenza."
 
 #: ../../disaster_recovery.rst:251
 msgid "See also OpenVPN :ref:`ovpn_tunnel-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref:`ovpn_tunnel-"
+"section` della pagina OpenVPN."
 
 #: ../../disaster_recovery.rst:254
 msgid "OpenVPN roadwarrior"
-msgstr ""
+msgstr "OpenVPN roadwarrior"
 
 #: ../../disaster_recovery.rst:256
 msgid ""
@@ -526,14 +576,21 @@ msgid ""
 "action is required. Otherwise, insert the new public IP address inside the "
 "field and update roadwarrior clients accordingly."
 msgstr ""
+"Il server OpenVPN roadwarrior espone un campo chiamato :guilabel:`Contatta "
+"questo server su IP / host pubblico`. Se tale campo utilizza solo nomi DNS "
+"pubblici, non è richiesta alcuna azione. In caso contrario, si dovrà "
+"inserire il nuovo indirizzo IP pubblico nel campo e aggiornare i client "
+"roadwarrior di conseguenza."
 
 #: ../../disaster_recovery.rst:260
 msgid "See also OpenVPN :ref:`ovpn_roadwarrior-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref"
+":`ovpn_roadwarrior-section` della pagina OpenVPN"
 
 #: ../../disaster_recovery.rst:263
 msgid "IPSec tunnels"
-msgstr ""
+msgstr "Tunnel IPSec"
 
 #: ../../disaster_recovery.rst:265
 msgid ""
@@ -541,14 +598,19 @@ msgid ""
 " Access the Server Manager, edit the disabled tunnel by selecting a new red "
 "interface and enable it again."
 msgstr ""
+"Solo i tunnel IPSec configurati su un'interfaccia red dinamica saranno "
+"disabilitati. Si dovrà accedere al Server Manager, modificare il tunnel "
+"disabilitato selezionando una nuova interfaccia red e abilitarlo nuovamente."
 
 #: ../../disaster_recovery.rst:268
 msgid "More info at :ref:`ipsec-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref:`ipsec-"
+"section`."
 
 #: ../../disaster_recovery.rst:271
 msgid "Dedalo hotspot"
-msgstr ""
+msgstr "Hotspot Dedalo"
 
 #: ../../disaster_recovery.rst:273
 msgid ""
@@ -556,10 +618,14 @@ msgid ""
 "interface configured with the ``hotspot`` role. If the Dedalo is disabled, "
 "just reconfigure following :ref:`dedalo-section` chapter."
 msgstr ""
+"L'hotspot Dedalo sarà disabilitato se il sistema non ha un'interfaccia di "
+"rete configurata con il ruolo ``hotspot``. Se Dedalo verrà disabilitato, "
+"sarà possibile riconfigurarlo seguendo le indicazioni del capitolo :ref"
+":`dedalo-section`."
 
 #: ../../disaster_recovery.rst:277
 msgid "ntopng"
-msgstr ""
+msgstr "ntopng"
 
 #: ../../disaster_recovery.rst:279
 msgid ""
@@ -567,7 +633,12 @@ msgid ""
 "inside the old Server Manager. Then enable the service and select network "
 "interfaces to monitor."
 msgstr ""
+"ntopng dovrà essere riconfigurato accedendo alla pagina :guilabel:`Monitor "
+"di banda` all'interno del vecchio Server Manager, abilitando il servizio e "
+"selezionando le interfacce di rete da monitorare."
 
 #: ../../disaster_recovery.rst:282
 msgid "See also :ref:`ntopng-section`."
 msgstr ""
+"Per maggiori informazioni fare riferimento alla sezione :ref:`ntopng-"
+"section`."

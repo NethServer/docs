@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 10:33+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2020-04-07 13:42+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -129,4 +129,14 @@ msgid ""
 "configuration on new server download of MSSQL package will starts in post-"
 "config-restore event. Database are automatically saved in backup-data event."
 " They will be restored in post-restore-data."
+msgstr ""
+
+#: ../../mssql.rst:90
+msgid "SQLCMD utility"
+msgstr ""
+
+#: ../../mssql.rst:92
+msgid ""
+"You can use also classic SQLCMD utility by accessing it with this absolute "
+"path: ::"
 msgstr ""

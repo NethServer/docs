@@ -12,17 +12,17 @@
 # 
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Davide Principi <davide.principi@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-07 15:40+0200\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2019-10-08 08:11+0000\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,16 +31,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../base_system2.rst:5
-msgid "Base system (new)"
-msgstr "Sistema base (nuovo)"
+msgid "Base system"
+msgstr ""
 
 #: ../../base_system2.rst:7
 msgid ""
-"The documentation of the Server Manager is available at :ref:`base_system-"
-"section`."
+"Documentation about the old Server Manager is available :ref:`here "
+"<base_system-section>`."
 msgstr ""
-"La documentazione del Server Manager è disponibile alla sezione :ref"
-":`base_system-section`."
 
 #: ../../base_system2.rst:9
 msgid ""
@@ -277,18 +275,27 @@ msgid ""
 "this section the administrator can change the OpenSSH listening port, "
 "disable root login and password authentication."
 msgstr ""
+"La pagina :index:`SSH` mostra il numero di connessioni SSH attive. Da questa"
+" sezione l'amministratore può modificare la porta di ascolto OpenSSH, "
+"disabilitare l'accesso root e l'autenticazione della password."
 
 #: ../../base_system2.rst:110
 msgid ""
 "It is possible to selectively grant SSH and :index:`SFTP` access to some "
 "groups, while administrators are always granted access to SSH and SFTP."
 msgstr ""
+"È possibile concedere in modo selettivo l'accesso SSH e :index:`SFTP` ad "
+"alcuni gruppi, mentre agli amministratori è sempre concesso l'accesso a SSH "
+"e SFTP."
 
 #: ../../base_system2.rst:113
 msgid ""
 "SSH and SFTP permissions are available once the :guilabel:`System > Settings"
 " > Shell policy > Override the shell of users` has been enabled."
 msgstr ""
+"Le autorizzazioni SSH e SFTP sono modificabili dopo aver abilitato "
+":guilabel:`Sistema > Impostazioni > Criteri shell > Sostituisci la shell "
+"degli utenti`."
 
 #: ../../base_system2.rst:120
 msgid "Settings"
@@ -420,7 +427,7 @@ msgstr ""
 
 #: ../../base_system2.rst:172
 msgid "Shell policy"
-msgstr ""
+msgstr "Criteri shell"
 
 #: ../../base_system2.rst:174
 msgid ""
@@ -429,10 +436,15 @@ msgid ""
 "user's shell setting under the :guilabel:`Users and Groups` page is ignored "
 "and it is considered always enabled."
 msgstr ""
+"Questa impostazione può essere utilizzata per abilitare o disabilitare la "
+"shell, necessaria per utilizzare il nuovo Server Manager e il servizio SSH. "
+"Se questa opzione è attiva, la shell è considerata sempre abilitata e la "
+"relativa impostazione per l'utente nella pagina :guilabel:`Utenti e gruppi` "
+"viene ignorata."
 
 #: ../../base_system2.rst:179
 msgid "User settings page"
-msgstr ""
+msgstr "Pagina impostazioni utente"
 
 #: ../../base_system2.rst:181
 msgid ""
@@ -441,10 +453,15 @@ msgid ""
 "port 443). The default page is :guilabel:`/user-settings`. This feature can "
 "be enabled only if :guilabel:`Shell Policy` is enabled as well."
 msgstr ""
+"Quando l'opzione :guilabel:`Abilita pagina impostazioni utente` è abilitata,"
+" gli utenti possono modificare la propria password e altre impostazioni del "
+"profilo attraverso una pagina Web esterna a Cockpit (sulla porta 443). La "
+"pagina predefinita è :guilabel:`/ user-settings`. Questa funzione può essere"
+" abilitata solo se è attiva l'opzione :guilabel:`Criteri Shell`."
 
 #: ../../base_system2.rst:185
 msgid "The access to the page can be limited only from Trusted Networks."
-msgstr ""
+msgstr "L'accesso alla pagina può essere limitato alle sole reti fidate."
 
 #: ../../base_system2.rst:190
 msgid "Logs"
@@ -588,6 +605,8 @@ msgid ""
 "On complex environments, the *root* user can :index:`delegate` the access of"
 " some section to specific groups of local users."
 msgstr ""
+"In ambienti struturati, l'utente *root* può :index: `delegare` l'accesso ad "
+"alcune sezioni a gruppi specifici di utenti locali."
 
 #: ../../base_system2.rst:266
 msgid "A local user can be delegated to access:"
@@ -651,130 +670,164 @@ msgstr "applicazioni"
 msgid "terminal"
 msgstr "terminale"
 
-#: ../../base_system2.rst:289
-msgid "Two-factor authentication (2FA)"
-msgstr ""
-
 #: ../../base_system2.rst:291
+msgid "Two-factor authentication (2FA)"
+msgstr "Autenticazione a due fattori (2FA)"
+
+#: ../../base_system2.rst:293
 msgid ""
 "Two-factor authentication (2FA) can be used to add an extra layer of "
 "security required to access the new Server Manager. First, users will enter "
 "user name and password, then they will be required to provide a temporary "
 "verification code generated by an application running on their smartphone."
 msgstr ""
+"L'autenticazione a due fattori (2FA) può essere utilizzata per aggiungere un"
+" ulteriore livello di sicurezza per l'accesso al nuovo Server Manager. "
+"Innanzitutto, gli utenti inseriranno nome utente e password, quindi dovranno"
+" fornire un codice di verifica temporaneo generato da un'applicazione in "
+"esecuzione sul proprio smartphone."
 
-#: ../../base_system2.rst:295
+#: ../../base_system2.rst:297
 msgid ""
 "2FA is disabled by default. Each user can enable it by accessing the "
 ":guilabel:`Two-factor authentication` section under :guilabel:`Settings` "
 "page, then following these steps:"
 msgstr ""
-
-#: ../../base_system2.rst:298
-msgid ""
-"download and install the preferred 2FA application inside the smartphone"
-msgstr ""
-
-#: ../../base_system2.rst:299
-msgid "scan the QR code with the 2FA application"
-msgstr ""
+"Il 2FA è disabilitato per impostazione predefinita. Ogni utente può "
+"abilitarlo accedendo alla sezione :guilabel:`Autenticazione a due fattori` "
+"sotto la pagina :guilabel:`Impostazioni` del proprio profilo, quindi "
+"seguendo questi passaggi:"
 
 #: ../../base_system2.rst:300
+msgid ""
+"download and install the preferred 2FA application inside the smartphone"
+msgstr "scaricare e installare nello smartphone l'applicazione 2FA preferita "
+
+#: ../../base_system2.rst:301
+msgid "scan the QR code with the 2FA application"
+msgstr "scansionare il QR code con l'applicazione 2FA"
+
+#: ../../base_system2.rst:302
 msgid ""
 "generate a new code and copy it inside :guilabel:`Verification code` field, "
 "than click :guilabel:`Check code`"
 msgstr ""
+"generare un nuovo codice e copiarlo all'interno del campo :guilabel:`Codice "
+"di verifica`, quindi fare clic su :guilabel:`Verifica codice`"
 
-#: ../../base_system2.rst:301
+#: ../../base_system2.rst:303
 msgid ""
 "if the verification code is correct, click on the :guilabel:`Save` button"
 msgstr ""
-
-#: ../../base_system2.rst:303
-msgid "Two-factor authentication can be enabled for:"
-msgstr ""
+"se il codice di verifica è corretto, fare clic sul pulsante "
+":guilabel:`Salva`"
 
 #: ../../base_system2.rst:305
-msgid "the new Server Manager"
-msgstr ""
+msgid "Two-factor authentication can be enabled for:"
+msgstr "L'autenticazione a due fattori è attivabile per:"
 
-#: ../../base_system2.rst:306
+#: ../../base_system2.rst:307
+msgid "the new Server Manager"
+msgstr "il nuovo Server Manager"
+
+#: ../../base_system2.rst:308
 msgid ""
 "SSH when using username and password (access with public key will never "
 "require 2FA)"
 msgstr ""
-
-#: ../../base_system2.rst:310
-msgid "Recovery codes"
-msgstr ""
+"SSH quando si utilizzano nome utente e password (l'accesso con chiave "
+"pubblica non richiederà mai il 2FA)"
 
 #: ../../base_system2.rst:312
+msgid "Recovery codes"
+msgstr "Codici di recupero"
+
+#: ../../base_system2.rst:314
 msgid ""
 "Recovery codes can be used instead of temporary codes if the user cannot "
 "access the 2FA application on the smartphone. Each recovery code is a one-"
 "time password and can be used only once."
 msgstr ""
+"È possibile utilizzare i codici di ripristino anziché dei codici temporanei "
+"se l'utente non può accedere all'applicazione 2FA sullo smartphone. Ogni "
+"codice di ripristino è una one-time password e può essere utilizzato una "
+"sola volta."
 
-#: ../../base_system2.rst:315
+#: ../../base_system2.rst:317
 msgid ""
 "To generate new recovery codes, disable 2FA, then re-enable it by "
 "registering the application again following the above steps."
 msgstr ""
-
-#: ../../base_system2.rst:318
-msgid "Smartphone applications"
-msgstr ""
+"Per generare nuovi codici di ripristino, disabilitare il 2FA, quindi "
+"riattivarlo registrando nuovamente l'applicazione, seguendo i passaggi "
+"precedenti."
 
 #: ../../base_system2.rst:320
-msgid "There are several commercial and open source 2FA applications:"
-msgstr ""
+msgid "Smartphone applications"
+msgstr "Applicazioni per smartphone"
 
 #: ../../base_system2.rst:322
-msgid "Available for both Android and iOS:"
-msgstr ""
+msgid "There are several commercial and open source 2FA applications:"
+msgstr "Esistono diverse applicazioni, commerciali e open source, per il 2FA:"
 
 #: ../../base_system2.rst:324
+msgid "Available for both Android and iOS:"
+msgstr "Disponibili sia per Android che per iOS:"
+
+#: ../../base_system2.rst:326
 msgid ""
 "`FreeOTP <https://freeotp.github.io/>`_: available for both Android and iOS"
 msgstr ""
+"`FreeOTP <https://freeotp.github.io/>`_: disponibile sia per Android che per"
+" iOS"
 
-#: ../../base_system2.rst:325
+#: ../../base_system2.rst:327
 msgid ""
 "`Authenticator <https://mattrubin.me/authenticator/>`_: available on iOS "
 "only"
 msgstr ""
+"`Authenticator <https://mattrubin.me/authenticator/>`_: disponibile solo per"
+" iOS"
 
-#: ../../base_system2.rst:326
+#: ../../base_system2.rst:328
 msgid ""
 "`andOTP <https://github.com/andOTP/andOTP>`_: available for both Android and"
 " iOS https://github.com/andOTP/andOTP"
 msgstr ""
-
-#: ../../base_system2.rst:329
-msgid "Emergency recovery"
-msgstr ""
+"`andOTP <https://github.com/andOTP/andOTP>`_: disponibile sia per Android "
+"che per iOS"
 
 #: ../../base_system2.rst:331
+msgid "Emergency recovery"
+msgstr "Ripristino d'emergenza"
+
+#: ../../base_system2.rst:333
 msgid ""
 "In case of emergency, 2FA can be disabled accessing the server from a "
 "physical console like a keyboard and a monitor, a serial cable or a VNC-like"
 " connection for virtual machines:"
 msgstr ""
+"In caso di emergenza, il 2FA può essere disabilitato accedendo al server da "
+"una console fisica, come una tastiera e un monitor, un cavo seriale o una "
+"connessione VNC - o simili - per macchine virtuali:"
 
-#: ../../base_system2.rst:334
+#: ../../base_system2.rst:336
 msgid "access the system with user name and password"
-msgstr ""
+msgstr "accedere al sistema con nome utente e password"
 
-#: ../../base_system2.rst:335
+#: ../../base_system2.rst:337
 msgid "execute: ::"
-msgstr ""
+msgstr "eseguire: ::"
 
-#: ../../base_system2.rst:340
+#: ../../base_system2.rst:342
 msgid ""
 "Eventually, the root user can retrieve recovery codes for a user. Use the "
 "following command and replace ``<user>`` with the actual user name : ::"
 msgstr ""
+"Successivamente, l'utente root potrà ottenere i codici di recupero per un "
+"utente utilizzando il seguente comando, sostituendo ``<user>`` con il nome "
+"utente effettivo: ::"
 
-#: ../../base_system2.rst:345
+#: ../../base_system2.rst:347
 msgid "Example for user ``goofy``: ::"
-msgstr ""
+msgstr "Esempio per l'utente ``goofy``: ::"

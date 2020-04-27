@@ -16,16 +16,16 @@
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 10:33+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,6 +195,11 @@ msgid ""
 "because the alterMIME [#alterMIME]_ project which provides the actual "
 "implementation is no longer developed and can stop working at any time."
 msgstr ""
+"Dal |product| 7.5.1804 questa funzionalità è distribuita in un pacchetto "
+"separato e opzionale: ``nethserver-mail-disclaimer``. Questo pacchetto è "
+"*deprecato* perché il progetto alterMIME [#alterMIME]_ su cui si basa "
+"l'attuale implementazione, non è più sviluppato e potrebbe smettere di "
+"funzionare in qualsiasi momento."
 
 #: ../../mail.rst:89
 msgid ""
@@ -203,6 +208,11 @@ msgid ""
 ":guilabel:`append a legal notice to sent messages`. This text is also known "
 "as \"disclaimer\" and it can be used to meet some legal requirements."
 msgstr ""
+"Se il pacchetto opzionale ``nethserver-mail-disclaimer`` è stato installato "
+"dal :guilabel:`Software center`, |product| può automaticamente "
+":guilabel:`aggiungere una nota legale ai messaggi inviati`. Questo testo è "
+"anche conosciuto come \"disclaimer\" e serve per ottemperare a determinati "
+"requisiti legali."
 
 #: ../../mail.rst:94
 msgid ""
@@ -563,6 +573,11 @@ msgid ""
 "can read or delete messages according to permissions granted by the mailbox "
 "owner."
 msgstr ""
+"Gli utenti possono condividere la propria cassetta postale (o parte di essa,"
+" ad esempio specifiche cartelle) con account selezionati del sistema. "
+"Chiunque abbia accesso a una cassetta postale condivisa può leggerne o "
+"eliminarne i messaggi in base alle autorizzazioni concesse dal proprietario "
+"della cassetta postale."
 
 #: ../../mail.rst:277
 msgid ""
@@ -572,12 +587,21 @@ msgid ""
 " has already been read by someone else. To enable sharing of the ``/Seen`` "
 "flag for all shared mailboxes use the following commands: ::"
 msgstr ""
+"Il flag IMAP ``/Seen`` viene utilizzato per contrassegnare se un messaggio è"
+" stato letto o meno. In una cassetta postale condivisa, ogni utente ha la "
+"propria copia dei messaggi letti, ma a volte un team che condivide una "
+"cassetta postale potrebbe preferire sapere se un messaggio è già stato letto"
+" da qualcun altro. Per abilitare la condivisione del flag ``Seen`` per tutte"
+" le cassette postali condivise, utilizzare i seguenti comandi: ::"
 
 #: ../../mail.rst:285
 msgid ""
 "Please note that changing the ``SharedSeen`` status resets the ``/Seen`` "
 "flag for all users on all mailboxes."
 msgstr ""
+"È opportuno sottolineare che la modifica dello stato di ``SharedSeen`` "
+"ripristina il flag ``/Seen`` per tutti gli utenti su tutte le cassette "
+"postali."
 
 #: ../../mail.rst:287
 msgid ""
@@ -585,6 +609,9 @@ msgid ""
 "all users (or large groups). The ``/Seen`` flag is kept for each user and it"
 " cannot be shared."
 msgstr ""
+"Le cartelle pubbliche vengono create dall'amministratore e in genere sono "
+"visibili a tutti gli utenti (o ai grandi gruppi). Il flag ``/Seen`` viene "
+"gestito per ciascun utente e non può essere condiviso."
 
 #: ../../mail.rst:294
 msgid "Messages"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -33,12 +33,16 @@ msgid "POP3 proxy"
 msgstr "POP3 proxy"
 
 #: ../../pop3_proxy.rst:10
+msgid "This module is officially deprecated since |product| 7.8.2003"
+msgstr ""
+
+#: ../../pop3_proxy.rst:14
 msgid ""
 "The configuration page of this module is available only in the old Server "
 "Manager and will not be ported to the new one."
 msgstr ""
 
-#: ../../pop3_proxy.rst:16
+#: ../../pop3_proxy.rst:20
 msgid ""
 "Since |product| 7.5.1804 new :ref:`email-section`, :ref:`pop3_connector-"
 "section` and :ref:`pop3_proxy-section` installations are based on the Rspamd"
@@ -46,14 +50,14 @@ msgid ""
 "to Rspamd as described in :ref:`email2-section`"
 msgstr ""
 
-#: ../../pop3_proxy.rst:21
+#: ../../pop3_proxy.rst:25
 msgid ""
 "A user on the LAN can configure an email client in order to connect to an "
 "external POP3 server and download mail messages. Please note that fetched "
 "mail could contain viruses that may infect computer on the network."
 msgstr ""
 
-#: ../../pop3_proxy.rst:25
+#: ../../pop3_proxy.rst:29
 msgid ""
 "The POP3 proxy intercepts connection to external servers on port 110, then "
 "it scans all incoming email, in order to block viruses and tag spam. The "
@@ -62,11 +66,11 @@ msgid ""
 "proxy will intercept all traffic and handle the connection to the server."
 msgstr ""
 
-#: ../../pop3_proxy.rst:30
+#: ../../pop3_proxy.rst:34
 msgid "It's possible to selectively activate the following controls:"
 msgstr ""
 
-#: ../../pop3_proxy.rst:32
+#: ../../pop3_proxy.rst:36
 msgid ""
 "antivirus: messages containing virus are rejected and a notification email "
 "is sent to the user"
@@ -74,15 +78,15 @@ msgstr ""
 "antivirus: los mensajes que contienen virus son rechazados y se envía un "
 "correo electrónico de notificación al usuario"
 
-#: ../../pop3_proxy.rst:33
+#: ../../pop3_proxy.rst:37
 msgid "spam: messages will be marked with the appropriate antispam scores"
 msgstr ""
 
-#: ../../pop3_proxy.rst:37
+#: ../../pop3_proxy.rst:41
 msgid "POP3s"
 msgstr "POP3s"
 
-#: ../../pop3_proxy.rst:39
+#: ../../pop3_proxy.rst:43
 msgid ""
 "The proxy can also intercept POP3s connections on port 995. The proxy will "
 "establish a secure connection to the external server, but data exchange with"
@@ -92,7 +96,7 @@ msgstr ""
 "proxy establecerá una conexión segura con el servidor externo, pero el "
 "intercambio de datos con el cliente LAN estará en texto claro."
 
-#: ../../pop3_proxy.rst:43
+#: ../../pop3_proxy.rst:47
 msgid ""
 "Mail clients must be configured to connect to port 995 and will have to turn"
 " off encryption."
