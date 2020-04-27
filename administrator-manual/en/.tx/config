@@ -440,3 +440,9 @@ file_filter = locale/<lang>/LC_MESSAGES/sandbox.po
 source_file = _build/locale/sandbox.pot
 source_lang = en
 type = PO
+
+[docs-v7.antivirus]
+file_filter = locale/<lang>/LC_MESSAGES/antivirus.po
+source_file = _build/locale/antivirus.pot
+source_lang = en
+type = PO
