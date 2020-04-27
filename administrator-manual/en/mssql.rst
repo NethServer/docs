@@ -89,7 +89,6 @@ Database are automatically saved in backup-data event. They will be restored in 
 SQLCMD utility
 ==============
 
-You can use also classic SQLCMD utility by accessing it with this absolute path:
+You can use also classic SQLCMD utility by accessing it with this absolute path: ::
 
     /opt/mssql-tools/bin/sqlcmd
-
