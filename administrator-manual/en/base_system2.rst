@@ -285,6 +285,8 @@ The following pages are always accessible to all users:
 * applications
 * terminal
 
+.. _2fa-section:
+
 Two-factor authentication (2FA)
 ===============================
 
