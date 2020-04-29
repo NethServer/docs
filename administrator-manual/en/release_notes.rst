@@ -38,7 +38,7 @@ Major changes on 2020-xx-05
 * The new Server Manager implementation based on Cockpit is now marked as stable
 
 * On new installations, ``Override the shell of users`` option is enabled by default.
-  Normal users will be able to login into the new Server Manager only if ``Enable user settings page`` option has been enabled, or if the user have been
+  Normal users will be able to log in to the new Server Manager only if :guilabel:`System > Settings > User settings page > Enable user settings page` option has been enabled, or if the user has been
   delegated to access at least one module.
 
   SSH access is limited by default to ``root`` and users inside the administrator group
