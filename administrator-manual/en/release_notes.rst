@@ -35,9 +35,35 @@ Major changes on 2020-xx-05
 
 * ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
 
-* The new Server Manager implementation based on Cockpit is now marked as stable.
+* The new Server Manager implementation based on Cockpit is now marked as stable
 
-* POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
+* OpenVPN: newly configured roadwarrior servers will use the ``subnet`` `topology <https://community.openvpn.net/openvpn/wiki/Topology>`_
+
+* OpenVPN: when authentication mode is set to ``Username, Password and Certificate``, roadwarrior server now enforce a check between user name and certificate CN
+
+* Nextcloud now uses PHP 7.3 stack which is the minimum recommended version
+
+* Ejabberd has been upgraded to 20.03, this release will be updated again only if relevant security issues will rise
+
+* Default PHP memory size has been increased from 128MB to 512MB
+
+* PHP 7.1 is now obsolete and has been removed from upstream repositories: restored machines will need to migrate custom applications to PHP 7.2 or higher
+
+* On new installations, ``Override the shell of users`` option is enabled by default.
+  Normal users will be able to login into the new Server Manager only if ``Enable user settings page`` option has been enabled, or if the user have been
+  delegated to access at least one module
+  SSH access is limited by default to ``root`` and administrator users
+
+* Mail server: when creating a new POP3 connector, filter check is disabled by default
+
+* Mail server: shared seen flag for shared mail folders is enabled by default
+
+* Mail server: all IMAP actions will be logged by default into ``/var/log/maillog``
+
+* Mail server: by default, connection limit for each user/IP has been increased to avoid errors on web mail clients
+
+* Mail server and filter: POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
+
 
 
 Major changes on 2019-10-07
