@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
 
-    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2003) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,11 +24,20 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
 
     - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+Major changes on 2020-xx-05
+---------------------------
+
+* ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+
+* The new Server Manager implementation based on Cockpit is now marked as stable.
+
+* POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
 
 
 Major changes on 2019-10-07
