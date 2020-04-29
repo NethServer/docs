@@ -43,7 +43,7 @@ Major changes on 2020-xx-05
 
   SSH access is limited by default to ``root`` and users inside the administrator group
 
-* All IMAP actions will be logged by default into ``/var/log/maillog``
+* All IMAP actions will be logged by default into ``/var/log/imap``
 
 * Shared seen flag is enabled by default for shared mail folders
 
