@@ -37,32 +37,34 @@ Major changes on 2020-xx-05
 
 * The new Server Manager implementation based on Cockpit is now marked as stable
 
-* OpenVPN: newly configured roadwarrior servers will use the ``subnet`` `topology <https://community.openvpn.net/openvpn/wiki/Topology>`_
-
-* OpenVPN: when authentication mode is set to ``Username, Password and Certificate``, roadwarrior server now enforce a check between user name and certificate CN
-
-* Nextcloud now uses PHP 7.3 stack which is the minimum recommended version
-
-* Ejabberd has been upgraded to 20.03, this release will be updated again only if relevant security issues will rise
-
-* Default PHP memory size has been increased from 128MB to 512MB
-
-* PHP 7.1 is now obsolete and has been removed from upstream repositories: restored machines will need to migrate custom applications to PHP 7.2 or higher
-
 * On new installations, ``Override the shell of users`` option is enabled by default.
   Normal users will be able to login into the new Server Manager only if ``Enable user settings page`` option has been enabled, or if the user have been
-  delegated to access at least one module
-  SSH access is limited by default to ``root`` and administrator users
+  delegated to access at least one module.
 
-* Mail server: when creating a new POP3 connector, filter check is disabled by default
+  SSH access is limited by default to ``root`` and users inside the administrator group
 
-* Mail server: shared seen flag for shared mail folders is enabled by default
+* All IMAP actions will be logged by default into ``/var/log/maillog``
 
-* Mail server: all IMAP actions will be logged by default into ``/var/log/maillog``
+* Shared seen flag is enabled by default for shared mail folders
 
-* Mail server: by default, connection limit for each user/IP has been increased to avoid errors on web mail clients
+* Mail server connection limit for each user has been increased to avoid errors on web mail clients
 
-* Mail server and filter: POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
+* When creating a new POP3 connector, filter check is disabled by default
+
+* OpenVPN roadwarrior server will use the ``subnet`` `topology <https://community.openvpn.net/openvpn/wiki/Topology>`_ as default
+
+* To increase security, when authentication mode is set to ``Username, Password and Certificate``, OpenVPN roadwarrior server will enforce a
+  match between user name and certificate CN
+
+* Default maximum PHP memory size has been increased from 128MB to 512MB
+
+* Nextcloud now uses PHP 7.3 stack to improve performance and support widely used plugins
+
+* Ejabberd has been upgraded to 20.03
+
+* POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
+
+* PHP 7.1 is now obsolete and has been removed from upstream repositories: restored machines will need to migrate custom applications to PHP 7.2 or higher
 
 
 
