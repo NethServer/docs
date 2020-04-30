@@ -64,7 +64,6 @@ Administrator Manual
     :maxdepth: 1
 
     launcher
-    sandbox
 
 .. toctree::
    :maxdepth: 1
@@ -116,6 +115,7 @@ Administrator Manual
    rspamd
    antivirus
    blacklist
+   sandbox
 
 .. toctree::
    :hidden:
