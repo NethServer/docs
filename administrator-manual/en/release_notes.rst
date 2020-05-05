@@ -41,7 +41,7 @@ Major changes on 2020-05-05
   Normal users will be able to log in to the new Server Manager only if :guilabel:`System > Settings > User settings page > Enable user settings page` option has been enabled, or if the user has been
   delegated to access at least one module.
 
-  SSH access is limited to ``root`` and users inside the designed administrative group (``Domain Admins`` by default). More granular permissions can be tuned from the :guilabel:`SSH` page.
+  SSH access is limited to ``root`` and users inside the designated administrative group (``Domain Admins`` by default). More granular permissions can be tuned from the :guilabel:`SSH` page.
 
 * All IMAP actions will be logged by default into ``/var/log/imap``
 

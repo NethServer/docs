@@ -107,7 +107,7 @@ The :index:`SSH` page displays the number of current SSH connections. From this
 section the administrator can change the OpenSSH listening port, disable root
 login and password authentication.
 
-By default, SSH access is limited to ``root`` user and all users inside the designed
+By default, SSH access is limited to ``root`` user and all users inside the designated
 administrative group (``Domain Admins``).
 It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
 while administrators are always granted access to SSH and SFTP.
