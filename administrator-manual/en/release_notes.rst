@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
 
-    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2003) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,11 +24,48 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.7.1908 "final" replaces any previous ISO 7.6.1810
+    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
 
     - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+Major changes on 2020-05-05
+---------------------------
+
+* ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+
+* The new Server Manager implementation based on Cockpit is now marked as stable
+
+* On new installations, the :guilabel:`System > Settings > Shell policy > Override the shell of users` option is enabled by default.
+  Normal users will be able to log in to the new Server Manager only if :guilabel:`System > Settings > User settings page > Enable user settings page` option has been enabled, or if the user has been
+  delegated to access at least one module.
+
+  SSH access is limited to ``root`` and users inside the designed administrative group (``Domain Admins`` by default). More granular permissions can be tuned from the :guilabel:`SSH` page.
+
+* All IMAP actions will be logged by default into ``/var/log/imap``
+
+* Shared seen flag is enabled by default for shared mail folders
+
+* Mail server connection limit for each user has been increased to avoid errors on web mail clients
+
+* When creating a new POP3 connector, filter check is disabled by default
+
+* OpenVPN roadwarrior server will use the ``subnet`` `topology <https://community.openvpn.net/openvpn/wiki/Topology>`_ as default
+
+* To increase security, when authentication mode is set to ``Username, Password and Certificate``, OpenVPN roadwarrior server will enforce a
+  match between user name and certificate CN
+
+* Default maximum PHP memory size has been increased from 128MB to 512MB
+
+* Nextcloud now uses PHP 7.3 stack to improve performance and support widely used plugins
+
+* Ejabberd has been upgraded to 20.03
+
+* POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from Software Center
+
+* PHP 7.1 is now obsolete and has been removed from upstream repositories: restored machines will need to migrate custom applications to PHP 7.2 or higher
+
 
 
 Major changes on 2019-10-07
