@@ -115,7 +115,7 @@ while administrators are always granted access to SSH and SFTP.
 SSH and SFTP permissions are available once the :guilabel:`System > Settings >
 Shell policy > Override the shell of users` has been enabled.
 If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
-option can access the Server Manager, no delegation is required.
+option can access the Server Manager, and delegation is not required any more.
 
 
 .. _settings-section:
