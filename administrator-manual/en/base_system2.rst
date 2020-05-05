@@ -107,11 +107,15 @@ The :index:`SSH` page displays the number of current SSH connections. From this
 section the administrator can change the OpenSSH listening port, disable root
 login and password authentication.
 
+By default, SSH access is limited to ``root`` user and all users inside the designed
+administrative group (``Domain Admins``).
 It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
 while administrators are always granted access to SSH and SFTP.
 
 SSH and SFTP permissions are available once the :guilabel:`System > Settings >
 Shell policy > Override the shell of users` has been enabled.
+If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
+option can access the Server Manager, no delegation is required.
 
 
 .. _settings-section:
