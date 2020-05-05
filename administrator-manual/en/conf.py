@@ -140,7 +140,8 @@ elif tags.has('nscom'):
         'nethcti_intro.rst',
         'phonebook-mysql.rst',
         'registration.rst',
-        'launcher.rst'
+        'launcher.rst',
+        'sandbox.rst'
     ])
     rst_prolog="""
 .. |product| replace:: NethServer

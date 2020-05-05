@@ -16,17 +16,17 @@
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Davide Principi <davide.principi@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1251,16 +1251,17 @@ msgid ""
 "It is possible to create mail aliases from a TSV (Tab Separated Values) file"
 " with the following format: ::"
 msgstr ""
-"E' possibile creare indirizzi mail da un file TSV (Tab Separated Values) con"
-" il seguente formato:"
+"È possibile creare indirizzi mail a partire da un file TSV (Tab Separated "
+"Values) con il seguente formato:"
 
 #: ../../accounts.rst:570
 msgid ""
 "Then you can use the ``import_emails`` script. See :ref:`import-"
 "users_section` for a sample script invocation."
 msgstr ""
-"Poi si può usare lo script `import_emails``. Vedi :ref:`import-"
-"users_section` per un esempio di invocazione del comando."
+"Si potrà poi utilizzare lo script ``import_emails``. Fare riferimento alla "
+"sezione :ref:`import-users_section` per un esempio di invocazione del "
+"comando."
 
 #: ../../accounts.rst:573
 msgid "Import groups"

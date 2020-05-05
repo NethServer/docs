@@ -8,6 +8,13 @@ See also the `ISO releases`_ on Developer's manual.
 
 .. _ISO releases: http://docs.nethserver.org/projects/nethserver-devel/en/v7/development_process.html#iso-releases-section
 
+7.8.2003
+--------
+
+* 2020-05-05 `final <rel77_>`_
+
+.. _rel78: https://github.com/NethServer/dev/milestone/26?closed=1
+
 7.7.1908
 --------
 

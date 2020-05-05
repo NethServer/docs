@@ -1,10 +1,10 @@
 .. _base_system2-section:
 
-=================
-Base system (new)
-=================
+===========
+Base system
+===========
 
-.. note:: The documentation of the Server Manager is available at :ref:`base_system-section`.
+.. note:: Documentation about the old Server Manager is available :ref:`here <base_system-section>`.
 
 This chapter describes all available modules at the end of installation. All
 modules outside this section can be installed from the :ref:`software-center-section` page.
@@ -107,11 +107,15 @@ The :index:`SSH` page displays the number of current SSH connections. From this
 section the administrator can change the OpenSSH listening port, disable root
 login and password authentication.
 
+By default, SSH access is limited to ``root`` user and all users inside the designated
+administrative group (``Domain Admins``).
 It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
 while administrators are always granted access to SSH and SFTP.
 
 SSH and SFTP permissions are available once the :guilabel:`System > Settings >
 Shell policy > Override the shell of users` has been enabled.
+If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
+option can access the Server Manager, and delegation is not required any more.
 
 
 .. _settings-section:
@@ -284,6 +288,8 @@ The following pages are always accessible to all users:
 * dashboard
 * applications
 * terminal
+
+.. _2fa-section:
 
 Two-factor authentication (2FA)
 ===============================

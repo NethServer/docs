@@ -134,7 +134,6 @@ automatically deleted to free space.
 
 Supported storage backends:
 
-- CIFS
 - NFS
 - USB
 - WebDAV (only when used as *single backup*)

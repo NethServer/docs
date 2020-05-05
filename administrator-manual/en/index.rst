@@ -37,7 +37,7 @@ Administrator Manual
    :caption: Installation
 
    installation
-   access
+   access2
    registration
 
 .. only:: nscom
@@ -52,7 +52,7 @@ Administrator Manual
    :caption: Configuration
 
    packages
-   base_system
+   base_system2
    accounts
    dns
    dhcp
@@ -64,7 +64,6 @@ Administrator Manual
     :maxdepth: 1
 
     launcher
-    sandbox
 
 .. toctree::
    :maxdepth: 1
@@ -84,7 +83,6 @@ Administrator Manual
    mail
    webmail
    webtop5
-   pop3_proxy
    pop3_connector
    chat
    team_chat
@@ -117,6 +115,7 @@ Administrator Manual
    rspamd
    antivirus
    blacklist
+   sandbox
 
 .. toctree::
    :hidden:

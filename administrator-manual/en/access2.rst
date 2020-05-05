@@ -1,8 +1,10 @@
 .. _access2-section:
 
-================================
-Accessing the new Server Manager
-================================
+============================
+Accessing the Server Manager
+============================
+
+.. note:: Documentation about the old Server Manager is available :ref:`here <access2-section>`.
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
@@ -25,7 +27,7 @@ as **root** and type the password chosen during |product| installation.
     ``Nethesis,1234``.
 
 
-Besides root, all users with the :guilabel:`Shell` option enabled can access the Server Manager.
+Besides root, all users with a :ref:`delegated<delegation-section>` panel can access the Server Manager.
 
 The web interface language is automatically chosen depending on your browser configuration.
 If you wish to change the language, go to your user name

@@ -14,15 +14,16 @@
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -154,3 +155,56 @@ msgstr ""
 "raggiungibile con lo stesso nome anche dall’esterno è necessario chiedere al"
 " provider di associare l’indirizzo pubblico del nostro server al nome "
 "desiderato."
+
+#: ../../dns.rst:54
+msgid "Domain redirection"
+msgstr "Reindirizzamento domini"
+
+#: ../../dns.rst:56
+msgid ""
+"The administrator can override the upstream DNS for specific domains. A "
+"typical usage scenario is setting the Active Directory server as resolver "
+"for the queries to the internal domain."
+msgstr ""
+"L'amministratore può configurare un override del DNS upstream per domini "
+"specifici. Uno scenario di utilizzo tipico è l'impostazione del server "
+"Active Directory come resolver per le query sul dominio interno."
+
+#: ../../dns.rst:59
+msgid ""
+"Such changes can be done by editing the ``DomainRedirection`` property via "
+"command line. The property accepts a comma-separated list of couples in the "
+"form ``<domain>:<ip_address>``."
+msgstr ""
+"Tali modifiche possono essere apportate utilizzando la proprietà "
+"``DomainRedirection`` d riga di comando. La proprietà accetta un elenco di "
+"coppie separato da virgole nel formato ``<domain>:<ip_address>``."
+
+#: ../../dns.rst:62
+msgid "Example: ::"
+msgstr "Esempio: ::"
+
+#: ../../dns.rst:67
+msgid ""
+"The ``my.domain.org:192.168.1.1`` configuration will send all queries for "
+"``my.local.domain.org`` to ``192.168.1.1``."
+msgstr ""
+"La configurazione ``my.domain.org:192.168.1.1`` invierà tutte le query per "
+"``my.local.domain.org`` al server ``192.168.1.1``."
+
+#: ../../dns.rst:69
+msgid ""
+"The special server address ``#`` can be used to send queries to the default "
+"DNS server. Example: ::"
+msgstr ""
+"Il carattere speciale ``#`` può essere utilizzato per inviare le query al "
+"server DNS predefinito. Esempio: ::"
+
+#: ../../dns.rst:74
+msgid ""
+"In this example all queries for ``domain.org`` will be sent to ``1.1.1.1``, "
+"while queries for ``sub.domain.org`` will be sent to default upstream DNS."
+msgstr ""
+"In questo esempio tutte le query per ``domain.org`` andranno inviate a "
+"``1.1.1.1`` mentre le query per `sub.domain.org`` andranno inviate al DNS "
+"upstream predefinito."

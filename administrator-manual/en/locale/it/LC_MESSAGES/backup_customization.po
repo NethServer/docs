@@ -12,16 +12,16 @@
 # 
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
 "PO-Revision-Date: 2019-10-08 08:09+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -333,7 +333,7 @@ msgstr ""
 
 #: ../../backup_customization.rst:95
 msgid "restic"
-msgstr "restic"
+msgstr "Restic"
 
 #: ../../backup_customization.rst:97
 msgid ""
@@ -342,7 +342,7 @@ msgid ""
 "Since restic requires only one full backup, all runs after the first should "
 "be fast and could be scheduled multiple times a day."
 msgstr ""
-":index:`restic` implementa un backup basato su snapshot e sempre "
+":index:`Restic` implementa un backup basato su snapshot e sempre "
 "crittografato. Supporta la deduplicazione e può eseguire il backup sui "
 "servizi cloud. Poiché Restic richiede solo un backup completo, tutte le "
 "esecuzioni successive alla prima dovrebbero essere veloci e potrebbero "
@@ -409,7 +409,7 @@ msgid ""
 "obtained using hard links. If the backup destination directory is full, the "
 "oldest backups are automatically deleted to free space."
 msgstr ""
-"L'engine di backup stile :index:`Time machine utilizza: index:` rsync`. Dopo"
+"L'engine di backup stile :index:`Time machine` utilizza :index:`rsync`. Dopo"
 " il primo backup completo, copia solo i file modificati o nuovi utilizzando "
 "un  effiecente sistema di trasferimento incrementale. Sulla destinazione, la"
 " deduplicazione parziale viene ottenuta attraverso l'uso di link fisici. Se "

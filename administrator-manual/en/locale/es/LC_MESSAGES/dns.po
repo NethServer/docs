@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-04-07 15:40+0200\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -150,3 +150,43 @@ msgstr ""
 "Los alias sólo son válidos para la LAN interna. Si desea que el servidor sea"
 " accesible desde el exterior con el mismo nombre, deberá solicitar al "
 "proveedor que asocie la dirección pública del servidor al nombre deseado."
+
+#: ../../dns.rst:54
+msgid "Domain redirection"
+msgstr ""
+
+#: ../../dns.rst:56
+msgid ""
+"The administrator can override the upstream DNS for specific domains. A "
+"typical usage scenario is setting the Active Directory server as resolver "
+"for the queries to the internal domain."
+msgstr ""
+
+#: ../../dns.rst:59
+msgid ""
+"Such changes can be done by editing the ``DomainRedirection`` property via "
+"command line. The property accepts a comma-separated list of couples in the "
+"form ``<domain>:<ip_address>``."
+msgstr ""
+
+#: ../../dns.rst:62
+msgid "Example: ::"
+msgstr ""
+
+#: ../../dns.rst:67
+msgid ""
+"The ``my.domain.org:192.168.1.1`` configuration will send all queries for "
+"``my.local.domain.org`` to ``192.168.1.1``."
+msgstr ""
+
+#: ../../dns.rst:69
+msgid ""
+"The special server address ``#`` can be used to send queries to the default "
+"DNS server. Example: ::"
+msgstr ""
+
+#: ../../dns.rst:74
+msgid ""
+"In this example all queries for ``domain.org`` will be sent to ``1.1.1.1``, "
+"while queries for ``sub.domain.org`` will be sent to default upstream DNS."
+msgstr ""

@@ -1,0 +1,129 @@
+# #-#-#-#-#  sandbox.pot (NethServer 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# #-#-#-#-#  sandbox.pot (NethServer Enterprise 7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# This file is distributed under the same license as the NethServer Enterprise package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethServer Enterprise 7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"PO-Revision-Date: 2020-04-07 13:43+0000\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sandbox.rst:3
+msgid "Yomi mail sandbox"
+msgstr "Sandbox Yomi mail"
+
+#: ../../sandbox.rst:7
+msgid ""
+"The sandbox service must be explicitly enabled for each server. For more "
+"information, please contact Nethesis sales."
+msgstr ""
+"Il servizio sandbox deve essere esplicitamente abilitato per ciascun server."
+" Per ulteriori informazioni, si prega di contattare il reparto commerciale "
+"Nethesis."
+
+#: ../../sandbox.rst:9
+msgid ""
+"Yomi sandbox is an automated malware analysis system provided by `Yoroi "
+"<http://yoroi.company/>`_."
+msgstr ""
+"Yomi sandbox è un sistema automatizzato di analisi malware fornito da `Yoroi"
+" <http://yoroi.company/>`_."
+
+#: ../../sandbox.rst:11
+msgid ""
+"Every mail message received or sent by the server is analyzed by the mail "
+"filter. If the message contains attachments, each attachment is sent to the "
+"sandbox. Yomi analyzes the behavior of the file when executed inside a "
+"realistic but isolated environment and return a confidence score."
+msgstr ""
+"Ogni messaggio di posta ricevuto o inviato dal server viene analizzato dal "
+"filtro di posta. Se il messaggio contiene allegati, ogni allegato viene "
+"inviato alla sandbox. Yomi analizza il comportamento del file quando viene "
+"eseguito in un ambiente realistico ma isolato e restituisce un punteggio di "
+"affidabilità."
+
+#: ../../sandbox.rst:16
+msgid ""
+"Suspicious files will receive an high SPAM score and will be likely moved "
+"inside the Junk folder."
+msgstr ""
+"I file sospetti riceveranno un punteggio SPAM elevato e saranno "
+"probabilmente spostati all'interno della cartella Junk."
+
+#: ../../sandbox.rst:19
+msgid "Requirements"
+msgstr "Requisiti"
+
+#: ../../sandbox.rst:21
+msgid "Yomi sandbox is automatically enabled after installation if:"
+msgstr ""
+"La sandbox Yomi viene abilitata automaticamente dopo l'installazione se:"
+
+#: ../../sandbox.rst:23
+msgid ""
+"the server is correctly registered to `my.nethesis.it "
+"<https://my.nethesis.it/>`_"
+msgstr ""
+"il server è correttamente registrato su `my.nethesis.it "
+"<https://my.nethesis.it/>`_"
+
+#: ../../sandbox.rst:24
+msgid "the antivirus check is enabled inside the mail filter"
+msgstr "il controllo antivirus è abilitato nel filtro della posta"
+
+#: ../../sandbox.rst:25
+msgid "the server has a valid entitlement to access the service"
+msgstr "il server è stato abilitato al servizio"
+
+#: ../../sandbox.rst:27
+msgid ""
+"The administrator can check if all requirements are satisfied using the "
+"following command: ::"
+msgstr ""
+"L'amministratore può verificare se tutti i requisiti siano soddisfatti "
+"utilizzando il seguente comando:"
+
+#: ../../sandbox.rst:31
+msgid "If everything is correctly set, the output should look like this: ::"
+msgstr "Se tutto è impostato correttamente, l'output dovrebbe apparire così"
+
+#: ../../sandbox.rst:37
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../sandbox.rst:39
+msgid ""
+"The sandbox should not require any tuning, but it can be disabled from "
+"command line."
+msgstr ""
+"La sandbox non dovrebbe richiedere alcuna ottimizzazione, ma può essere "
+"disabilitata dalla riga di comando."
+
+#: ../../sandbox.rst:41
+msgid "To disable it: ::"
+msgstr "Per disabilitarla: ::"
+
+#: ../../sandbox.rst:46
+msgid "To enable it again: ::"
+msgstr "Per abilitarla nuovamente: ::"
