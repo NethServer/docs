@@ -4,7 +4,7 @@
 Accessing the Server Manager
 ============================
 
-.. note:: Documentation about the old Server Manager is available :ref:`here <access2-section>`.
+.. note:: Documentation about the old Server Manager is available :ref:`here <access-section>`.
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
