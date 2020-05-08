@@ -147,6 +147,8 @@ During data transfer, SFTP assures encryption and data is compressed to minimize
    Please note that |product| doesn't support links on Samba shares due to security implications.
    Also symlinks are not supported on WebDAV.
 
+   The destination must be accessed with ``root`` user.
+
 Command line execution
 ----------------------
 
