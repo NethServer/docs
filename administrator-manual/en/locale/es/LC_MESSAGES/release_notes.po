@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-05-05 15:23+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -38,13 +38,13 @@ msgid "|product| release |version|"
 msgstr "|product| versión |version|"
 
 #: ../../release_notes.rst:11 ../../release_notes.rst:27
-#: ../../release_notes.rst:37
-msgid "ISO release 7.7.1908 \"final\" replaces any previous ISO 7.6.1810"
+#: ../../release_notes.rst:36
+msgid "ISO release 7.8.2003 \"final\" replaces any previous ISO 7.7.1908"
 msgstr ""
 
-#: ../../release_notes.rst:13 ../../release_notes.rst:29
+#: ../../release_notes.rst:13
 msgid ""
-"This release is based on `CentOS 7 (1908) "
+"This release is based on `CentOS 7 (2003) "
 "<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
 msgstr ""
 
@@ -75,11 +75,106 @@ msgstr ""
 "Discusiones sobre `posibles errores "
 "<http://community.nethserver.org/c/bug>`_"
 
-#: ../../release_notes.rst:35
+#: ../../release_notes.rst:29
+msgid ""
+"This release is based on `CentOS 7 (1908) "
+"<https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_"
+msgstr ""
+
+#: ../../release_notes.rst:34
+msgid "Major changes on 2020-05-05"
+msgstr ""
+
+#: ../../release_notes.rst:38
+msgid ""
+"The new Server Manager implementation based on Cockpit is now marked as "
+"stable"
+msgstr ""
+
+#: ../../release_notes.rst:40
+msgid ""
+"On new installations, the :guilabel:`System > Settings > Shell policy > "
+"Override the shell of users` option is enabled by default. Normal users will"
+" be able to log in to the new Server Manager only if :guilabel:`System > "
+"Settings > User settings page > Enable user settings page` option has been "
+"enabled, or if the user has been delegated to access at least one module."
+msgstr ""
+
+#: ../../release_notes.rst:44
+msgid ""
+"SSH access is limited to ``root`` and users inside the designated "
+"administrative group (``Domain Admins`` by default). More granular "
+"permissions can be tuned from the :guilabel:`SSH` page."
+msgstr ""
+
+#: ../../release_notes.rst:46
+msgid "All IMAP actions will be logged by default into ``/var/log/imap``"
+msgstr ""
+
+#: ../../release_notes.rst:48
+msgid "Shared seen flag is enabled by default for shared mail folders"
+msgstr ""
+
+#: ../../release_notes.rst:50
+msgid ""
+"Mail server connection limit for each user has been increased to avoid "
+"errors on web mail clients"
+msgstr ""
+
+#: ../../release_notes.rst:52
+msgid ""
+"When creating a new POP3 connector, filter check is disabled by default"
+msgstr ""
+
+#: ../../release_notes.rst:54
+msgid ""
+"OpenVPN roadwarrior server will use the ``subnet`` `topology "
+"<https://community.openvpn.net/openvpn/wiki/Topology>`_ as default"
+msgstr ""
+
+#: ../../release_notes.rst:56
+msgid ""
+"To increase security, when authentication mode is set to ``Username, "
+"Password and Certificate``, OpenVPN roadwarrior server will enforce a match "
+"between user name and certificate CN"
+msgstr ""
+
+#: ../../release_notes.rst:59
+msgid "Default maximum PHP memory size has been increased from 128MB to 512MB"
+msgstr ""
+
+#: ../../release_notes.rst:61
+msgid ""
+"Nextcloud now uses PHP 7.3 stack to improve performance and support widely "
+"used plugins"
+msgstr ""
+
+#: ../../release_notes.rst:63
+msgid "Ejabberd has been upgraded to 20.03"
+msgstr ""
+
+#: ../../release_notes.rst:65
+msgid ""
+"POP3 proxy (P3Scan) has been deprecated and can't be installed anymore from "
+"Software Center"
+msgstr ""
+
+#: ../../release_notes.rst:67
+msgid ""
+"PHP 7.1 is now obsolete and has been removed from upstream repositories: "
+"restored machines will need to migrate custom applications to PHP 7.2 or "
+"higher"
+msgstr ""
+
+#: ../../release_notes.rst:72
 msgid "Major changes on 2019-10-07"
 msgstr ""
 
-#: ../../release_notes.rst:39
+#: ../../release_notes.rst:74
+msgid "ISO release 7.7.1908 \"final\" replaces any previous ISO 7.6.1810"
+msgstr ""
+
+#: ../../release_notes.rst:76
 msgid ""
 "The new Server Manager implementation based on Cockpit reached Beta stage "
 "and is available by default on new installations. Existing systems can add "
@@ -87,7 +182,7 @@ msgid ""
 ":ref:`access2-section`."
 msgstr ""
 
-#: ../../release_notes.rst:44
+#: ../../release_notes.rst:81
 msgid ""
 "The :guilabel:`Software updates origin` (locked/unlocked) feature was "
 "removed from the \"Software Center\" page. |product| can be upgraded "
@@ -95,26 +190,26 @@ msgid ""
 "released. See also :ref:`software-center-section`."
 msgstr ""
 
-#: ../../release_notes.rst:49
+#: ../../release_notes.rst:86
 msgid ""
 "Delta RPM files have been removed by the upstream distribution and are no "
 "longer available from YUM repositories"
 msgstr ""
 
-#: ../../release_notes.rst:52
+#: ../../release_notes.rst:89
 msgid ""
 "OpenSSH configuration was removed from TLS policy settings and reverted to "
 "upstream defaults."
 msgstr ""
 
-#: ../../release_notes.rst:55
+#: ../../release_notes.rst:92
 msgid ""
 "Starting with the new Server Manager based on Cockpit, the Mail module "
 "feature :guilabel:`Shared mailboxes` has been renamed to :guilabel:`Public "
 "mailboxes`."
 msgstr ""
 
-#: ../../release_notes.rst:59
+#: ../../release_notes.rst:96
 msgid ""
 "The `Junk` public mailbox is created during the Mail module installation, "
 "granting IMAP access to the root user; further permissions can be added from"
@@ -122,7 +217,7 @@ msgid ""
 "Roundcube."
 msgstr ""
 
-#: ../../release_notes.rst:63
+#: ../../release_notes.rst:100
 msgid ""
 "Only users with enabled shell can access the new Server Manager. From the "
 "old Server Manager, go to the :guilabel:`Users and groups` page and enable "
@@ -131,71 +226,71 @@ msgid ""
 "the :guilabel:`Shell` option for the selected user."
 msgstr ""
 
-#: ../../release_notes.rst:69
+#: ../../release_notes.rst:106
 msgid "Official ClamAV antivirus signatures are disabled by default."
 msgstr ""
 
-#: ../../release_notes.rst:71
+#: ../../release_notes.rst:108
 msgid ""
 "The web interface for selective restore has been removed from the old Server"
 " Manager. A new one is available inside Cockpit, see :ref"
 ":`selective_restore-section`."
 msgstr ""
 
-#: ../../release_notes.rst:74
+#: ../../release_notes.rst:111
 msgid ""
 "As default, the disk usage analyzer (duc) scans only the root file system "
 "contents. Other mount points are ignored."
 msgstr ""
 
-#: ../../release_notes.rst:78
+#: ../../release_notes.rst:115
 msgid "Major changes on 2018-12-17"
 msgstr ""
 
-#: ../../release_notes.rst:80
+#: ../../release_notes.rst:117
 msgid "ISO release 7.6.1810 \"final\" replaces any previous ISO 7.5.1804"
 msgstr ""
 
-#: ../../release_notes.rst:82
+#: ../../release_notes.rst:119
 msgid ""
 "PHP 5.6 from SCL has reached end-of-life and is thus deprecated. See "
 ":ref:`dpw_php56scl`"
 msgstr ""
 
-#: ../../release_notes.rst:85
+#: ../../release_notes.rst:122
 msgid "Default TLS policy is ``2018-10-01``"
 msgstr ""
 
-#: ../../release_notes.rst:87
+#: ../../release_notes.rst:124
 msgid "Default systems log retention has been increased to 52 weeks"
 msgstr ""
 
-#: ../../release_notes.rst:89
+#: ../../release_notes.rst:126
 msgid "The Zeroconf network protocol is now disabled by default"
 msgstr ""
 
-#: ../../release_notes.rst:91
+#: ../../release_notes.rst:128
 msgid ""
 "By default, Evebox events are retained for 30 days. The new default is "
 "applied to upgraded systems as a bug fix"
 msgstr ""
 
-#: ../../release_notes.rst:94
+#: ../../release_notes.rst:131
 msgid ""
 "NDPI module has been updated to version 2.4 which no longer recognize some "
 "old protocols. See :ref:`dpw_ndpi24` for the list of removed protocols"
 msgstr ""
 
-#: ../../release_notes.rst:97
+#: ../../release_notes.rst:134
 msgid "SMTP server can be directly accessed from trusted networks"
 msgstr ""
 
-#: ../../release_notes.rst:99
+#: ../../release_notes.rst:136
 msgid ""
 "PPPoE connections use rp-pppoe plugin by default to improve network speed"
 msgstr ""
 
-#: ../../release_notes.rst:103
+#: ../../release_notes.rst:140
 msgid ""
 "For repositories that support GPG metadata signature, YUM runs now an "
 "integrity check (``repo_gpgcheck=1``) for additional security. This new "
@@ -205,227 +300,227 @@ msgid ""
 "defaults. This is the list of files to be checked:"
 msgstr ""
 
-#: ../../release_notes.rst:110
+#: ../../release_notes.rst:147
 msgid ":file:`/etc/nethserver/yum-update.d/NsReleaseLock.repo`"
 msgstr ""
 
-#: ../../release_notes.rst:111
+#: ../../release_notes.rst:148
 msgid ":file:`/etc/yum.repos.d/NethServer.repo`"
 msgstr ""
 
-#: ../../release_notes.rst:112
+#: ../../release_notes.rst:149
 msgid ":file:`/etc/yum.repos.d/NsReleaseLock.repo`"
 msgstr ""
 
-#: ../../release_notes.rst:115
+#: ../../release_notes.rst:152
 msgid "Major changes on 2018-06-11"
 msgstr ""
 
-#: ../../release_notes.rst:117
+#: ../../release_notes.rst:154
 msgid ""
 "ISO release 7.5.1804 \"final\" replaces any previous ISO 7.5.1804 \"rc\" and"
 " \"beta\""
 msgstr ""
 
-#: ../../release_notes.rst:119
+#: ../../release_notes.rst:156
 msgid "The :ref:`email-section` module is now based on Rspamd"
 msgstr ""
 
-#: ../../release_notes.rst:121
+#: ../../release_notes.rst:158
 msgid ""
 "MX DNS record override for LAN hosts has been removed. Removed "
 "``postfix/MxRecordStatus`` prop"
 msgstr ""
 
-#: ../../release_notes.rst:123
+#: ../../release_notes.rst:160
 msgid ""
 "Host name aliases are converted into ``hosts`` DB records. See :ref:`email-"
 "mxrecordstatus`"
 msgstr ""
 
-#: ../../release_notes.rst:125
+#: ../../release_notes.rst:162
 msgid ""
 ":file:`/etc/fstab` is no longer an expanded template. See :ref"
 ":`shared_folders_requirements-section` and :ref:`home_bind-section` for "
 "details"
 msgstr ""
 
-#: ../../release_notes.rst:127
+#: ../../release_notes.rst:164
 msgid ""
 "Default permissions for :ref:`shared_folders-section` is :guilabel:`Grant "
 "full control to the creator`"
 msgstr ""
 
-#: ../../release_notes.rst:129
+#: ../../release_notes.rst:166
 msgid "Default :ref:`tlspolicy-section` is ``2018-03-30``"
 msgstr ""
 
-#: ../../release_notes.rst:131
+#: ../../release_notes.rst:168
 msgid ""
 "Default Server Manager :ref:`session idle timeout <session-timeouts-"
 "section>` is 60 minutes, session life time is 8 hours"
 msgstr ""
 
-#: ../../release_notes.rst:133
+#: ../../release_notes.rst:170
 msgid ""
 "Quality of Service (QoS) implementation now uses `FireQOS "
 "<https://github.com/firehol/firehol/wiki/FireQOS>`_, current configuration "
 "is automatically migrated. See :ref:`traffic-shaping-section`"
 msgstr ""
 
-#: ../../release_notes.rst:136
+#: ../../release_notes.rst:173
 msgid ""
 "The menu entry :guilabel:`Automatic updates` in Server Manager was removed. "
 "Automatic  updates are now configured from :guilabel:`Software center > "
 "Configure`. See :ref:`software-updates-section`"
 msgstr ""
 
-#: ../../release_notes.rst:140
+#: ../../release_notes.rst:177
 msgid ""
 "The :guilabel:`NethServer subscription` module is available by default in "
 "new installations. Run the following command to update the base module set "
 "on existing installations: ``yum update @nethserver-iso``"
 msgstr ""
 
-#: ../../release_notes.rst:143
+#: ../../release_notes.rst:180
 msgid ""
 "The WebVirtMgr project is no longer maintained and the corresponding module "
 "has been removed along with nethserver-libvirt package. See :ref"
 ":`virtual_machines-section` chapter for details on how to use virtualization"
 msgstr ""
 
-#: ../../release_notes.rst:148
+#: ../../release_notes.rst:185
 msgid "Major changes on 2017-10-26"
 msgstr ""
 
-#: ../../release_notes.rst:150
+#: ../../release_notes.rst:187
 msgid ""
 "ISO release 7.4.1708 \"final\" replaces the old ISOs 7.4.1708 \"beta1\" and "
 "7.3.1611 \"update 1\""
 msgstr ""
 
-#: ../../release_notes.rst:152
+#: ../../release_notes.rst:189
 msgid ""
 "The local AD account provider applies updates to the Samba DC instance "
 "automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_) "
 "Latest Samba DC version is 4.6.8"
 msgstr ""
 
-#: ../../release_notes.rst:156
+#: ../../release_notes.rst:193
 msgid ""
 "The Software center page warns when a new upstream release is available "
 "(`#5355 <https://github.com/NethServer/dev/issues/5355>`_)"
 msgstr ""
 
-#: ../../release_notes.rst:159
+#: ../../release_notes.rst:196
 msgid "Added FreePBX 14 module"
 msgstr ""
 
-#: ../../release_notes.rst:161
+#: ../../release_notes.rst:198
 msgid ""
 "Squid has been patched for a smoother web navigation experience when using "
 "SSL transparent proxy"
 msgstr ""
 
-#: ../../release_notes.rst:163
+#: ../../release_notes.rst:200
 msgid ""
 "Ntopng 3 replaces Bandwidthd, the Server Manager has a new \"top talkers\" "
 "page which tracks hosts network usage"
 msgstr ""
 
-#: ../../release_notes.rst:166
+#: ../../release_notes.rst:203
 msgid "Suricata can be configured with multiple categories rules"
 msgstr ""
 
-#: ../../release_notes.rst:168
+#: ../../release_notes.rst:205
 msgid "EveBox can report traffic anomalies detected by Suricata"
 msgstr ""
 
-#: ../../release_notes.rst:170
+#: ../../release_notes.rst:207
 msgid "Nextcloud 12.0.3"
 msgstr ""
 
-#: ../../release_notes.rst:172
+#: ../../release_notes.rst:209
 msgid "Web antivirus based on ICAP instead of ECAP"
 msgstr ""
 
-#: ../../release_notes.rst:174
+#: ../../release_notes.rst:211
 msgid "Web filters: ufdbGuard updated to 1.33.4, small UI improvements on web"
 msgstr ""
 
-#: ../../release_notes.rst:176
+#: ../../release_notes.rst:213
 msgid "Diagtools: added speedtest"
 msgstr ""
 
-#: ../../release_notes.rst:178
+#: ../../release_notes.rst:215
 msgid "ufdbGuard updated to release 1.33.4"
 msgstr ""
 
-#: ../../release_notes.rst:180
+#: ../../release_notes.rst:217
 msgid "WebTop4 has been removed"
 msgstr ""
 
-#: ../../release_notes.rst:183
+#: ../../release_notes.rst:220
 msgid "Major changes on 2017-07-31"
 msgstr ""
 
-#: ../../release_notes.rst:185
+#: ../../release_notes.rst:222
 msgid "ISO release 7.3.1611 \"update 1\" replaces the previous ISO 7.3.1611 \"Final\""
 msgstr ""
 
-#: ../../release_notes.rst:187
+#: ../../release_notes.rst:224
 msgid "Configuration backup page enhancement"
 msgstr ""
 
-#: ../../release_notes.rst:189
+#: ../../release_notes.rst:226
 msgid "Accounts provider page enhancement"
 msgstr ""
 
-#: ../../release_notes.rst:191
+#: ../../release_notes.rst:228
 msgid "Migration from sme8 and upgrade from ns6 procedures"
 msgstr ""
 
-#: ../../release_notes.rst:193
+#: ../../release_notes.rst:230
 msgid "OpenvPN: improve net2net tunnels"
 msgstr ""
 
-#: ../../release_notes.rst:195
+#: ../../release_notes.rst:232
 msgid "WebTop 5.0.7"
 msgstr ""
 
-#: ../../release_notes.rst:197
+#: ../../release_notes.rst:234
 msgid "Backup data: basic WebDAV support for backups and storage stats"
 msgstr ""
 
-#: ../../release_notes.rst:199
+#: ../../release_notes.rst:236
 msgid "UI tweaks for IPSec tunnels"
 msgstr ""
 
-#: ../../release_notes.rst:201
+#: ../../release_notes.rst:238
 msgid "Web proxy: support divert and priority rules"
 msgstr ""
 
-#: ../../release_notes.rst:203
+#: ../../release_notes.rst:240
 msgid "NextCloud 12"
 msgstr ""
 
-#: ../../release_notes.rst:205
+#: ../../release_notes.rst:242
 msgid "Network diagnostic tools page"
 msgstr ""
 
-#: ../../release_notes.rst:208
+#: ../../release_notes.rst:245
 msgid "Major changes on 2017-01-30"
 msgstr ""
 
-#: ../../release_notes.rst:210
+#: ../../release_notes.rst:247
 msgid "ISO release 7.3.1611 \"Final\" replaces the previous ISO 7.3.1611 \"RC4\""
 msgstr ""
 
-#: ../../release_notes.rst:211
+#: ../../release_notes.rst:248
 msgid "Installer: added new manual installation method"
 msgstr "Instalador: nuevo método de instalación manual"
 
-#: ../../release_notes.rst:212
+#: ../../release_notes.rst:249
 msgid ""
 "Account providers: \"administrators\" group has been replaced by \"domain "
 "admins\" group (:ref:`server_manager-section`)"
@@ -433,11 +528,11 @@ msgstr ""
 "Proveedores de cuentas: el grupo \"administradores\" ha sido sustituido por "
 "el grupo \"administradores de dominio\" (:ref:`server_manager-section`)"
 
-#: ../../release_notes.rst:213
+#: ../../release_notes.rst:250
 msgid "Mail server: fix pseudonym expansion for groups"
 msgstr "Servidor de correo: corrige la expansión del pseudónimo para grupos"
 
-#: ../../release_notes.rst:214
+#: ../../release_notes.rst:251
 msgid ""
 "Mail server: enable user shared mailbox by default (:ref"
 ":`enable_shared_folders-section`)"
@@ -445,178 +540,178 @@ msgstr ""
 "Servidor de correo: habilita el buzón de correo compartido del usuario de "
 "forma predeterminada (:ref:`enable_shared_folders-section`)"
 
-#: ../../release_notes.rst:215
+#: ../../release_notes.rst:252
 msgid "Mail server: specific per-domain pseudonym now override generic ones"
 msgstr ""
 "Servidor de correo: el seudónimo específico por dominio ahora sustituye a "
 "los genéricos"
 
-#: ../../release_notes.rst:216
+#: ../../release_notes.rst:253
 msgid "OpenVPN: start VPN clients on boot"
 msgstr ""
 "Servidor de correo: el seudónimo específico por dominio ahora sustituye a "
 "los genéricos"
 
-#: ../../release_notes.rst:217
+#: ../../release_notes.rst:254
 msgid "Web filter: fix group-based profiles"
 msgstr "Filtro Web: fijar perfiles basados en grupos"
 
-#: ../../release_notes.rst:218
+#: ../../release_notes.rst:255
 msgid "Firewall: fix selection of time conditions"
 msgstr "Firewall: Selecciona correcciones según condiciones de tiempo"
 
-#: ../../release_notes.rst:219
+#: ../../release_notes.rst:256
 msgid "IPS: update configuration for latest pulledpork release"
 msgstr "IPS: actualiza la configuración para la última liberación preferida"
 
-#: ../../release_notes.rst:222
+#: ../../release_notes.rst:259
 msgid "Deprecated features and packages"
 msgstr ""
 
-#: ../../release_notes.rst:227
+#: ../../release_notes.rst:264
 msgid "PHP 5.6 SCL"
 msgstr ""
 
-#: ../../release_notes.rst:229
+#: ../../release_notes.rst:266
 msgid ""
 "PHP 5.6 from the SCL repository has reached end-of-life (EOL) [#PHP56RHEOL]_"
 " [#PHP56EOL]_."
 msgstr ""
 
-#: ../../release_notes.rst:232
+#: ../../release_notes.rst:269
 msgid ""
 "To avoid problems with existing legacy applications, the PHP 5.6 SCL "
 "packages from CentOS 7.5.1804 will be still available from |product| "
 "repositories during the 7.6.1810 lifetime."
 msgstr ""
 
-#: ../../release_notes.rst:238
+#: ../../release_notes.rst:275
 msgid ""
 "PHP 5.6 SCL packages will **not** receive any security update. Very limited "
 "support will be provided as best-effort"
 msgstr ""
 
-#: ../../release_notes.rst:241
+#: ../../release_notes.rst:278
 msgid ""
 "The ``nethserver-rh-php56-php-fpm`` package will be removed from the next "
 "|product| release."
 msgstr ""
 
-#: ../../release_notes.rst:244
+#: ../../release_notes.rst:281
 msgid ""
 "Developers are invited to update their modules, replacing ``nethserver-rh-"
 "php56-php-fpm`` with ``nethserver-rh-php71-php-fpm`` as soon as possible."
 msgstr ""
 
-#: ../../release_notes.rst:251
+#: ../../release_notes.rst:288
 msgid "NDPI 2.4"
 msgstr ""
 
-#: ../../release_notes.rst:253
+#: ../../release_notes.rst:290
 msgid "The following protocols have been removed:"
 msgstr ""
 
-#: ../../release_notes.rst:255
+#: ../../release_notes.rst:292
 msgid "tds"
 msgstr ""
 
-#: ../../release_notes.rst:256
+#: ../../release_notes.rst:293
 msgid "winmx"
 msgstr ""
 
-#: ../../release_notes.rst:257
+#: ../../release_notes.rst:294
 msgid "imesh"
 msgstr ""
 
-#: ../../release_notes.rst:258
+#: ../../release_notes.rst:295
 msgid "http_app_veohtv"
 msgstr ""
 
-#: ../../release_notes.rst:259
+#: ../../release_notes.rst:296
 msgid "quake"
 msgstr ""
 
-#: ../../release_notes.rst:260
+#: ../../release_notes.rst:297
 msgid "meebo"
 msgstr ""
 
-#: ../../release_notes.rst:261
+#: ../../release_notes.rst:298
 msgid "skyfile_prepaid"
 msgstr ""
 
-#: ../../release_notes.rst:262
+#: ../../release_notes.rst:299
 msgid "skyfile_rudics"
 msgstr ""
 
-#: ../../release_notes.rst:263
+#: ../../release_notes.rst:300
 msgid "skyfile_postpaid"
 msgstr ""
 
-#: ../../release_notes.rst:264
+#: ../../release_notes.rst:301
 msgid "socks4"
 msgstr ""
 
-#: ../../release_notes.rst:265
+#: ../../release_notes.rst:302
 msgid "timmeu"
 msgstr ""
 
-#: ../../release_notes.rst:266
+#: ../../release_notes.rst:303
 msgid "torcedor"
 msgstr ""
 
-#: ../../release_notes.rst:267
+#: ../../release_notes.rst:304
 msgid "tim"
 msgstr ""
 
-#: ../../release_notes.rst:268
+#: ../../release_notes.rst:305
 msgid "simet"
 msgstr ""
 
-#: ../../release_notes.rst:269
+#: ../../release_notes.rst:306
 msgid "opensignal"
 msgstr ""
 
-#: ../../release_notes.rst:270
+#: ../../release_notes.rst:307
 msgid "99taxi"
 msgstr ""
 
-#: ../../release_notes.rst:271
+#: ../../release_notes.rst:308
 msgid "easytaxi"
 msgstr ""
 
-#: ../../release_notes.rst:272
+#: ../../release_notes.rst:309
 msgid "globotv"
 msgstr ""
 
-#: ../../release_notes.rst:273
+#: ../../release_notes.rst:310
 msgid "timsomdechamada"
 msgstr ""
 
-#: ../../release_notes.rst:274
+#: ../../release_notes.rst:311
 msgid "timmenu"
 msgstr ""
 
-#: ../../release_notes.rst:275
+#: ../../release_notes.rst:312
 msgid "timportasabertas"
 msgstr ""
 
-#: ../../release_notes.rst:276
+#: ../../release_notes.rst:313
 msgid "timrecarga"
 msgstr ""
 
-#: ../../release_notes.rst:277
+#: ../../release_notes.rst:314
 msgid "timbeta"
 msgstr ""
 
-#: ../../release_notes.rst:279
+#: ../../release_notes.rst:316
 msgid "Rules using the above protocols, will be automatically disabled."
 msgstr ""
 
-#: ../../release_notes.rst:282
+#: ../../release_notes.rst:319
 msgid "Upgrading |product| 6 to |product| |version|"
 msgstr "Actualizando |product| 6 a |product| |version|"
 
-#: ../../release_notes.rst:284
+#: ../../release_notes.rst:321
 msgid ""
 "It is possible to upgrade the previous major release of |product| to "
 "|version|, with a backup/restore strategy. See the :ref:`upgrade-section` "
@@ -626,31 +721,31 @@ msgstr ""
 " mediante una estrategia de respaldo/recuperación. Vea :ref:`upgrade-"
 "section` para más detalles."
 
-#: ../../release_notes.rst:290
+#: ../../release_notes.rst:327
 msgid "Server Manager access"
 msgstr "Acceso al Administrador del servidor"
 
-#: ../../release_notes.rst:292
+#: ../../release_notes.rst:329
 msgid ""
 "If you want to grant :ref:`Server Manager access to other users than root "
 "<admin-account-section>`, please add the users to the \"domain admins\" "
 "group and execute: ::"
 msgstr ""
 
-#: ../../release_notes.rst:301
+#: ../../release_notes.rst:338
 msgid "User shared mailbox"
 msgstr "Buzón de correo compartido del usuario"
 
-#: ../../release_notes.rst:303
+#: ../../release_notes.rst:340
 msgid "If you want to enable user shared mailbox, execute: ::"
 msgstr ""
 "Si desea habilitar el buzón de correo compartido de usuario, ejecute: ::"
 
-#: ../../release_notes.rst:311
+#: ../../release_notes.rst:348
 msgid "Discontinued packages"
 msgstr "Paquetes descontinuados"
 
-#: ../../release_notes.rst:313
+#: ../../release_notes.rst:350
 msgid ""
 "The following packages were available in the previous 6 release and have "
 "been removed in 7:"
@@ -658,15 +753,15 @@ msgstr ""
 "Los siguientes paquetes estaban disponibles en la versión anterior 6 y se "
 "han eliminado en 7:"
 
-#: ../../release_notes.rst:316
+#: ../../release_notes.rst:353
 msgid "nethserver-collectd-web: replaced by nethserver-cgp"
 msgstr "nethserver-collectd-web: reemplazado por nethserver-cgp"
 
-#: ../../release_notes.rst:317
+#: ../../release_notes.rst:354
 msgid "nethserver-password: integrated inside nethserver-sssd"
 msgstr "nethserver-password: integrado en nethserver-sssd"
 
-#: ../../release_notes.rst:318
+#: ../../release_notes.rst:355
 msgid ""
 "nethserver-faxweb2: see the discussion `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
@@ -674,11 +769,11 @@ msgstr ""
 "nethserver-faxweb2: vea la discusión `faxweb2 vs avantfax "
 "<http://community.nethserver.org/t/ns-7-faxweb2-vs-avantafax/2645>`_."
 
-#: ../../release_notes.rst:319
+#: ../../release_notes.rst:356
 msgid "nethserver-fetchmail: replaced by getmail"
 msgstr "nethserver-fetchmail: reemplazado por getmail"
 
-#: ../../release_notes.rst:320
+#: ../../release_notes.rst:357
 msgid ""
 "nethserver-ocsinventory, nethserver-adagios: due to compatibility problems "
 "with Nagios, these modules will be mantained only on |product| 6 release"
@@ -687,7 +782,7 @@ msgstr ""
 "compatibilidad con Nagios, estos módulos se mantendrán sólo en la liberación"
 " |product| 6"
 
-#: ../../release_notes.rst:322
+#: ../../release_notes.rst:359
 msgid ""
 "nethserver-ipsec: IPSec tunnels are now implemented in nethserver-ipsec-"
 "tunnels, L2TP function has been dropped"
@@ -695,20 +790,20 @@ msgstr ""
 "nethserver-ipsec: Los túneles IPSec ahora están implementados en nethserver-"
 "ipsec-tunnels. La función L2TP está caída."
 
-#: ../../release_notes.rst:323
+#: ../../release_notes.rst:360
 msgid "nethserver-webvirtmgr"
 msgstr ""
 
-#: ../../release_notes.rst:329
+#: ../../release_notes.rst:366
 msgid "References"
 msgstr ""
 
-#: ../../release_notes.rst:330
+#: ../../release_notes.rst:367
 msgid ""
 "Red Hat Software Collections Product Life Cycle -- "
 "https://access.redhat.com/support/policy/updates/rhscl"
 msgstr ""
 
-#: ../../release_notes.rst:331
+#: ../../release_notes.rst:368
 msgid "PHP supported versions -- http://php.net/supported-versions.php"
 msgstr ""
