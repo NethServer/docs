@@ -13,10 +13,10 @@
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Davide Principi <davide.principi@nethesis.it>, 2018
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
 # Nicola <nicola.rauso@nethesis.it>, 2020
+# Davide Principi <davide.principi@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 15:23+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,9 +159,9 @@ msgid ""
 "OpenVPN roadwarrior server will use the ``subnet`` `topology "
 "<https://community.openvpn.net/openvpn/wiki/Topology>`_ as default"
 msgstr ""
-"Il server roadwarrior di OpenVPN utilizza la "
-"`topologia<https://community.openvpn.net/openvpn/wiki/Topology> `_ di tipo "
-"``subnet`` come impostazione predefinita"
+"Il server roadwarrior di OpenVPN utilizza la `topologia "
+"<https://community.openvpn.net/openvpn/wiki/Topology> `_ di tipo ``subnet`` "
+"come impostazione predefinita"
 
 #: ../../release_notes.rst:56
 msgid ""
