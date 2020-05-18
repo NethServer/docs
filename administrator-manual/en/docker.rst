@@ -60,7 +60,7 @@ More port rules can be opened to the system services running on the server with 
 
 You have to specify to use the network ``aqua`` for your container, the default ``docker0`` doesn't exist. Each container on the network ``aqua`` will have an IP from the network ``172.28.0.0/16``. They can communicate each other and the server can ping each container.
 
-For example (pihole on aqua with a static IP):: 
+For example (pihole on aqua with a static IP): :: 
 
  docker run -d --name nxfilter -v nxfilter-conf:/nxfilter/conf -v nxfilter-log:/nxfilter/log \
  -v nxfilter-db:/nxfilter/db -e TZ=Europe/Vienna \ 
