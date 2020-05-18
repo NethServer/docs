@@ -160,7 +160,7 @@ msgid ""
 "<https://community.openvpn.net/openvpn/wiki/Topology>`_ as default"
 msgstr ""
 "Il server roadwarrior di OpenVPN utilizza la `topologia "
-"<https://community.openvpn.net/openvpn/wiki/Topology> `_ di tipo ``subnet`` "
+"<https://community.openvpn.net/openvpn/wiki/Topology>`_ di tipo ``subnet`` "
 "come impostazione predefinita"
 
 #: ../../release_notes.rst:56
