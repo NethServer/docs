@@ -20,7 +20,7 @@ The following sections describe each policy identifier.
 Policy 2020-05-10
 -----------------
 
-This policy disables the TLS protocol version 1.0 and 1.1. It applies to the following services:
+This policy disables the TLS protocol versions 1.0 and 1.1. It applies to the following services:
 
 * Apache (httpd, httpd-admin)
 * Ejabberd
