@@ -24,7 +24,6 @@ This policy disables the TLS protocol versions 1.0 and 1.1. It applies to the fo
 
 * Apache (httpd, httpd-admin)
 * Ejabberd
-* Mattermost
 * Cockpit
 * Slapd (openldap-servers)
 * Postfix
