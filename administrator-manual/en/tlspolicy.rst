@@ -17,6 +17,21 @@ compatibility with old clients.
 
 The following sections describe each policy identifier.
 
+Policy 2020-05-10
+-----------------
+
+This policy disables the TLS protocol versions 1.0 and 1.1. It applies to the following services:
+
+* Apache (httpd, httpd-admin)
+* Ejabberd
+* Cockpit
+* Slapd (openldap-servers)
+* Postfix
+* Dovecot
+
+Reference: https://access.redhat.com/articles/1462183
+
+
 Policy 2018-10-01
 -----------------
 
