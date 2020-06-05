@@ -129,6 +129,7 @@ Administrator Manual
        :caption: NethForge modules
 
        collabora
+       docker
        sogo
        phpVirtualBox
        hotsync
