@@ -68,3 +68,8 @@ In :guilabel:`Settings` page you can manage **Bandwidth monitor** configuration 
 When **Bandwidth monitor** is enabled, **ntopng** web interface is available at: ``http://<SERVER_NAME>:<WEB_INTERFACE_PORT>``.
 A link to **ntopng** web interface is provided in :guilabel:`Dashboard` and :guilabel:`Settings` pages.
 
+
+Logs
+====
+
+In :guilabel:`Logs` page you can examine systemd journal of **ntopng** unit.
