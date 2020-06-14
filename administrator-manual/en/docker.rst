@@ -12,8 +12,8 @@ Docker is an open platform for developing, shipping, and running applications. D
 
 .. warning::
 
- Docker is customised to NethServer and the firewall layer. It means that the default bridge ``docker0`` is disabled and we use other bridge called ``aqua`` and ``aeria``.
- If you have still some doubts why you should never use the default bridge ``docker0``, the official docker documentation `stated on it <https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge>`_.
+ Docker is customised to NethServer and the firewall layer. The default bridge ``docker0`` is enabled to provide compatibility, however the official docker documentation `stated on why you should not use it <https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge>`_. 
+ Docker with NethServer comes with 3 other networks called ``aqua``, ``aeria`` and ``macvlan``.
 
 Official documentation
 ======================
@@ -31,6 +31,32 @@ Install from the Software Center or use the command line: ::
 
   yum install nethserver-docker
 
+Docker repository
+=================
+
+The official repository of docker is bundled but not enabled, the upgrade might break the running containers. It is advised to stop all containers before to upgrade ``docker-ce``. 
+
+To upgrade to the latest stable version of docker: ::
+
+ yum update --enablerepo=docker-ce-stable
+
+Configuration
+=============
+If you have a free block device (required for production environments) assign it to Docker before starting it for the first time ::
+
+ config setprop docker DirectLvmDevice /dev/sdb
+ signal-event nethserver-docker-update
+
+Review the current settings with ::
+
+ config show docker
+
+Network, is the IP network address of the aqua zone
+IpAddress, is the IP address of the Docker host in the Network above
+
+After each change, you have to restart docker ::
+
+ signal-event nethserver-docker-update
 
 Web user Interface
 ==================
@@ -46,19 +72,28 @@ Portainer is itself a container without important data, except the admin credent
 
 The official documentation of portainer can be found at : https://www.portainer.io/documentation/
 
+Default network
+===============
+
+The default bridge docker0 is allowed in the firewall of NethServer, any ports or the containers will be opened through shorewall. Any docker howto is supposed to be compatible.
+
+Example of nginx container on port ``9001``: ::
+
+ docker run  -dit --name nginx-test-01 -p 9001:80 --restart=unless-stopped nginx:alpine nginx-debug -g 'daemon off;'
+
 Aqua network
 ============
 
 A new firewall zone and docker network, ``aqua``. Basically, containers are attached to aqua and they can talk each other. IP traffic from other zones, like green and red must be configured with the usual Firewall rules and Port forwarding pages.
 
 For an integration with system services, connections from the aqua zone are allowed to the MySQL/MariaDB port ``3306``. it means that a docker running on ``aqua`` can use the mysql database on the server.
-More port rules can be opened to the system services running on the server with a esmith db command ::
+More port rules can be opened to the system services running on the server with a esmith db command (these rules allow **only** the containers to connect to a service running on the server)::
 
  db dockrules set customName aqua TCPPorts 5141,5142 UDPPorts 5143,5144 status enabled
  signal-event firewall-adjust
 
 
-You have to specify to use the network ``aqua`` for your container, the default ``docker0`` doesn't exist. Each container on the network ``aqua`` will have an IP from the network ``172.28.0.0/16``. They can communicate each other and the server can ping each container.
+You have to specify to use the network ``aqua`` for your container, the default ``docker0`` is another network. Each container on the network ``aqua`` will have an IP from the network ``172.28.0.0/16``. They can communicate each other and the server can ping each container.
 
 For example (pihole on aqua with a static IP): :: 
 
@@ -70,11 +105,15 @@ For example (pihole on aqua with a static IP): ::
 Aeria network
 =============
 
+.. note::
+
+  This network is not standard on docker, the developer can be contacted at https://github.com/devplayer0/docker-net-dhcp
+
 NethServer docker provides a docker network named ``Aeria`` that is bound to a bridge. The container will have an IP attributed by the dhcp server of your local network, all containers will communicate like any servers on your network.
 
 For the bridge creation the server manager could be used, if you have already installed the account provider Samba AD (nethserver-dc), you have already a bridge called ``br0``. 
 
-.. note::
+.. warning::
 
   A bridge is mandatory to ``aeria``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable
 
@@ -96,29 +135,53 @@ Aeria uses a docker plugin. To update the plugin ::
 
  signal-event nethserver-docker-plugin-update
 
+Macvlan
+=======
 
-Docker repository
-=================
+A container use TCP/UDP ports to communicate  outside of the server, this is the default networking. However your container could need to get a real IP on your network. Like this it will be reachable with ``http://IPofYourContainer`` 
+instead of ``http://IPofYourServer:port``. A specific configuration like a DNS sinkhole (as pihole) must have an IP, because it might break the DNS resolution of your server. Therefore with a different IP, all hosts of your network will use the services of pihole like if it was on another server.
 
-The official repository of docker is enabled to update the latest stable version.
+.. note::
 
-Configuration
-=============
-If you have a free block device (required for production environments) assign it to Docker before starting it for the first time ::
+  The difference between macvlan and aeria is that macvlan is not a plugin, it is an official network driver.
 
- config setprop docker DirectLvmDevice /dev/sdb
- signal-event nethserver-docker-update
- 
-Review the current settings with ::
+NethServer docker provides a docker network named ``macvlan`` that must be bound to a bridge. Each container on the network ``macvlan`` must have a relevant IP in the range assigned to macvlan, all containers will communicate like any servers on your network.
 
- config show docker
+For the bridge creation the server manager could be used, if you have already installed the account provider Samba AD (nethserver-dc), you have already a bridge called ``br0``. 
 
-Network, is the IP network address of the aqua zone
-IpAddress, is the IP address of the Docker host in the Network above
+.. warning::
 
-After each change, you have to restart docker ::
+  A bridge is mandatory to ``macvlan``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable
 
- signal-event nethserver-docker-update
+Macvlan must be created by filling some important parameters, the goal is to create a container with an IP on your network, each parameter depends from your network setting.
+
+- macVlanGateway : It is the gateway of your network, generally speaking it is your router (here **192.168.1.1**)
+
+- macVlanLocalNetwork : It is the full network of your router (here **192.168.1.0/24** from **192.168.1.1** to **192.168.1.255**)
+
+- macVlanNetwork : It is the restricted IP for ``macVlan0`` (here **192.168.1.224/27**, you can use **30 IP** for your containers from **192.168.1.225** to **192.168.1.254**)
+
+- macVlanNic : It is the network interface where to run macvlan (**br0** here)
+
+Create the network ::
+
+  config setprop  docker macVlanGateway 192.168.1.1 macVlanLocalNetwork 192.168.1.0/24 macVlanNetwork 192.168.1.224/27 macVlanNic br0
+
+Then trigger the event  ::
+
+  signal-event nethserver-docker-update
+
+You have to specify to use the network ``macvlan`` for your container, the default ``docker0`` is another network.
+
+Docker creation example on macvlan ::
+
+  docker run --net=macvlan -dit --name nginx-test-02 --ip=192.168.1.225 --restart=unless-stopped nginx:alpine nginx-debug -g 'daemon off;'
+
+The container can be contacted at the relevant IP ::
+
+  curl http://192.168.1.225
+
+In case of the proposed CIDR doesn't fit your need, you should have a look to an `IP calculator <https://www.calculator.net/ip-subnet-calculator.html>`_
 
 Issues
 ======
