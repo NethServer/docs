@@ -12,8 +12,8 @@ Docker is an open platform for developing, shipping, and running applications. D
 
 .. warning::
 
- Docker is customised to NethServer and the firewall layer. The default bridge ``docker0`` is enabled to provide compatibility, however the official docker documentation `stated on why you should not use it <https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge>`_. 
- Docker with NethServer comes with 3 other networks called ``aqua``, ``aeria`` and ``macvlan``.
+ Docker is customised to |product| and the firewall layer. The default bridge ``docker0`` is enabled to provide compatibility, however the official docker documentation `stated on why you should not use it <https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge>`_. 
+ Docker with |product| comes with 3 other networks called ``aqua``, ``aeria`` and ``macvlan``.
 
 Official documentation
 ======================
@@ -80,7 +80,7 @@ The official documentation of portainer can be found at : https://www.portainer.
 Default network
 ===============
 
-The default bridge docker0 is allowed in the firewall of NethServer, any ports or the containers will be opened through shorewall. Any docker howto is supposed to be compatible.
+The default bridge docker0 is allowed in the firewall of |product|, any ports or the containers will be opened through shorewall. Any docker howto is supposed to be compatible.
 
 Example of nginx container on port ``9001``: ::
 
@@ -114,7 +114,7 @@ Aeria network
 
   This network is not standard on docker, the developer can be contacted at https://github.com/devplayer0/docker-net-dhcp
 
-NethServer docker provides a docker network named ``Aeria`` that is bound to a bridge. The container will have an IP attributed by the dhcp server of your local network, all containers will communicate like any servers on your network.
+|product| docker provides a docker network named ``Aeria`` that is bound to a bridge. The container will have an IP attributed by the dhcp server of your local network, all containers will communicate like any servers on your network.
 
 For the bridge creation the server manager could be used, if you have already installed the account provider Samba AD (nethserver-dc), you have already a bridge called ``br0``. 
 
@@ -127,7 +127,7 @@ To enable the Aeria network, the ``bridgeAeria`` property has to be set to the n
  config setprop docker bridgeAeria br0
  signal-event nethserver-docker-update
 
-The NethServer DHCP module can be used to set IP addresses for the docker containers. By default docker containers use random MAC addresses so fixed ones need to be set for the containers to make DHCP reservations work.
+The |product| DHCP module can be used to set IP addresses for the docker containers. By default docker containers use random MAC addresses so fixed ones need to be set for the containers to make DHCP reservations work.
 
 Here is an example for starting pihole in the Aeria network and set the MAC address ::
 
@@ -150,7 +150,7 @@ instead of ``http://IPofYourServer:port``. A specific configuration like a DNS s
 
   The difference between macvlan and aeria is that macvlan is not a plugin, it is an official network driver.
 
-NethServer docker provides a docker network named ``macvlan`` that must be bound to a bridge. Each container on the network ``macvlan`` must have a relevant IP in the range assigned to macvlan, all containers will communicate like any servers on your network.
+|product| docker provides a docker network named ``macvlan`` that must be bound to a bridge. Each container on the network ``macvlan`` must have a relevant IP in the range assigned to macvlan, all containers will communicate like any servers on your network.
 
 For the bridge creation the server manager could be used, if you have already installed the account provider Samba AD (nethserver-dc), you have already a bridge called ``br0``. 
 
