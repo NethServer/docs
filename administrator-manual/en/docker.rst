@@ -110,10 +110,6 @@ For example (pihole on aqua with a static IP): ::
 Aeria network
 =============
 
-.. note::
-
-  This network is not standard on docker, the developer can be contacted at https://github.com/devplayer0/docker-net-dhcp
-
 |product| docker provides a docker network named ``Aeria`` that is bound to a bridge. The container will have an IP attributed by the dhcp server of your local network, all containers will communicate like any servers on your network.
 
 For the bridge creation the server manager could be used, if you have already installed the account provider Samba AD (nethserver-dc), you have already a bridge called ``br0``. 
