@@ -40,6 +40,11 @@ To upgrade to the latest stable version of docker: ::
 
  yum update --enablerepo=docker-ce-stable
 
+to enable it permanently: ::
+
+ config setprop docker enableRepository enabled
+ signal-event nethserver-docker-update
+
 Configuration
 =============
 If you have a free block device (required for production environments) assign it to Docker before starting it for the first time ::
