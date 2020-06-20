@@ -116,7 +116,7 @@ For the bridge creation the server manager could be used, if you have already in
 
 .. warning::
 
-  A bridge is mandatory to ``aeria``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable
+  A bridge is mandatory to ``aeria``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable. The same bridge cannot be shared among ``aeria`` and ``macvlan``, it is a docker limitation.
 
 To enable the Aeria network, the ``bridgeAeria`` property has to be set to the name of the bridge ::
 
@@ -152,7 +152,7 @@ For the bridge creation the server manager could be used, if you have already in
 
 .. warning::
 
-  A bridge is mandatory to ``macvlan``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable
+  A bridge is mandatory to ``macvlan``, you must accomplish this step before to go further: ``ip a`` can valid that the bridge is up and workable. The same bridge cannot be shared among ``aeria`` and ``macvlan``, it is a docker limitation.
 
 Macvlan must be created by filling some important parameters, the goal is to create a container with an IP on your network, each parameter depends from your network setting.
 
