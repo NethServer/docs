@@ -365,14 +365,14 @@ some restrictions. It could check:
 IMAP synchronization
 ====================
 
-The imap syncronization is based on an IMAP transfers tool called Imapsync.
-The purpose is to migrate an imap account of a remote server to the account
+IMAP synchronization is based on an IMAP transfer tool called Imapsync.
+The purpose is to migrate an IMAP account emais from a remote server to the account
 of your email server. The migration is recursive and incremental,
-you can run it as many time you want, the emails will be copied locally
+you can run it as many times you want, the emails will be copied locally
 if they do not exist on the local server.
 
 The system administrator of the local |product| does not need to know the
-password of the local user, the IMAP admin authentication is used. However he
+password of the local user, the IMAP admin authentication is used. However, he
 has to know the password of the remote IMAP account, except if the IMAP admin
 authentication is implemented also for this email server.
 
@@ -380,7 +380,7 @@ If you plan to copy email from a |product| to another |product|,
 the IMAP admin user is the account ``vmail``. The password can be found at
 :file:`/var/lib/nethserver/secrets/vmail`.
 
-In the IMAP syncronization panel you must use a specific username
+In the IMAP synchronization panel you must use a specific username
 ``username@domain.com*vmail`` and the ``vmail`` password.
 
 .. note:: The developer of Imapsync has written a page about servers supporting
