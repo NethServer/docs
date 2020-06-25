@@ -367,8 +367,10 @@ IMAP synchronization
 
 IMAP synchronization is based on an IMAP transfer tool called Imapsync.
 The purpose is to migrate an IMAP account emais from a remote server to the account
-of your email server. The migration is recursive and incremental,
-you can run it as many times you want, the emails will be copied locally
+of your email server. 
+
+The migration is recursive and incremental and 
+can be repeated as many times as needed. The emails will be copied locally
 if they do not exist on the local server.
 
 The system administrator of the local |product| does not need to know the
