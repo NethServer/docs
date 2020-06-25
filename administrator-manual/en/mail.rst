@@ -383,9 +383,9 @@ the IMAP admin user is ``vmail`` and its password can be read from
 :file:`/var/lib/nethserver/secrets/vmail`.
 The username with a ``*vmail`` suffix (e.g. ``username@domain.com*vmail``) and the ``vmail`` password has to be set in the IMAP synchronization panel.
 
-.. note:: The developer of Imapsync has written a page about servers supporting
-         the IMAP admin authentication, it is available `on his website 
-         <https://imapsync.lamiral.info/FAQ.d/FAQ.Admin_Authentication.txt>`_
+.. note:: 
+
+    List of `IMAP servers with admin authentication <https://imapsync.lamiral.info/FAQ.d/FAQ.Admin_Authentication.txt>`_ in Imapsync documentation
 
 
 .. _email_filter:
