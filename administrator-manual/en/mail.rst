@@ -378,8 +378,8 @@ password of the local user, the IMAP admin authentication is used. However, he
 has to know the password of the remote IMAP account, except if the IMAP admin
 authentication is implemented also for this email server.
 
-If you plan to copy email from a |product| to another |product|,
-the IMAP admin user is the account ``vmail``. The password can be found at
+If the remote IMAP server is also a |product|,
+the IMAP admin user is ``vmail`` and its password can be read from
 :file:`/var/lib/nethserver/secrets/vmail`.
 
 In the IMAP synchronization panel you must use a specific username
