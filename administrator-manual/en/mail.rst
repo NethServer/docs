@@ -381,9 +381,7 @@ authentication is implemented also for this email server.
 If the remote IMAP server is also a |product|,
 the IMAP admin user is ``vmail`` and its password can be read from
 :file:`/var/lib/nethserver/secrets/vmail`.
-
-In the IMAP synchronization panel you must use a specific username
-``username@domain.com*vmail`` and the ``vmail`` password.
+The username with a ``*vmail`` suffix (e.g. ``username@domain.com*vmail``) and the ``vmail`` password has to be set in the IMAP synchronization panel.
 
 .. note:: The developer of Imapsync has written a page about servers supporting
          the IMAP admin authentication, it is available `on his website 
