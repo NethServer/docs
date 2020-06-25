@@ -374,7 +374,7 @@ can be repeated as many times as needed. The emails will be copied locally
 if they do not exist on the local server.
 
 The system administrator of the local |product| does not need to know the
-password of the local user, the IMAP admin authentication is used. However, he
+password of the local user. However, he
 has to know the password of the remote IMAP account, except if the IMAP admin
 authentication is implemented also for this email server.
 
