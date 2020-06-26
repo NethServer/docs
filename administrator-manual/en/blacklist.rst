@@ -7,7 +7,7 @@ Threat shield
   The configuration page of this module is available only in the new Server Manager.
 
 
-Threat shield module blocks connections to and from malicious hosts, preventing attacks, service abuse, malware, and other cybercrime activities using IP blacklists. It also blocks DNS requests for malicious domains using DNS blacklists.
+The Threat shield blocks connections to and from malicious hosts, preventing attacks, service abuse, malware, and other cybercrime activities using IP blacklists. It also blocks DNS requests for malicious domains using DNS blacklists.
 The package can be installed both on firewalls and on machines without a red interface, like mail servers
 or PBXs.
 
@@ -65,4 +65,3 @@ DNS blacklist dashboard provides:
 * Top clients performing most DNS requests
 * Top blocked domains
 * Top requested domains
-
