@@ -53,15 +53,15 @@ The :guilabel:`Dashboard` page provides an overview on current status of IP and 
 
 IP blacklist dashboard provides:
 
-* Today total number of threats blocked
-* Today most blocked source hosts
-* Today most blocked destination hosts
+* Today's total number of threats blocked
+* Today's most blocked source hosts
+* Today's most blocked destination hosts
 
 DNS blacklist dashboard provides:
 
-* Today total number of threats blocked
-* Today total number of DNS requests
-* Today threats percentage
+* Today's total number of threats blocked
+* Today's total number of DNS requests
+* Today's threats percentage
 * Top clients performing most DNS requests
 * Top blocked domains
 * Top requested domains
