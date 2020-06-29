@@ -7,41 +7,61 @@ Threat shield
   The configuration page of this module is available only in the new Server Manager.
 
 
-The threat shield blocks connections to and from malicious hosts, preventing attacks, service abuse, malware, and other cybercrime activities.
+The Threat shield blocks connections to and from malicious hosts, preventing attacks, service abuse, malware, and other cybercrime activities using IP blacklists. It also blocks DNS requests for malicious domains using DNS blacklists.
 The package can be installed both on firewalls and on machines without a red interface, like mail servers
 or PBXs.
 
 Configuration
 =============
 
-First, access the threat shield web interface to set the download URL for the blacklists.
+:guilabel:`IP blacklist` and :guilabel:`DNS blacklist` can be enabled and configured on the corresponding pages in the menu.
+Their configuration is almost identical.
 
-After setting the URL, the administrator can choose what :index:`blacklist` categories should be enabled.
+First, set the :guilabel:`Download URL` for the blacklists.
+After setting the URL, the administrator can choose which :index:`blacklist` categories should be enabled.
 Each category can have a :guilabel:`Confidence` score between 0 and 10.
 Categories with a higher confidence are less prone to false positives.
 
 Enabled categories will be automatically updated at regular intervals.
 
 The download URL must contain a valid GIT repository.
-Administrators can choose a public repository, like `Firehol ipsets one <https://github.com/firehol/blocklist-ipsets>`_,
-or subscribe to a commercial service. If the machine has a Community or an Enterprise subscription, the access to the URL
-will be authenticated using system id and secret.
+Administrators can choose a public repository or subscribe to a commercial service. If the machine has a Community or an Enterprise subscription, the access to the URL will be authenticated using system id and secret.
 
-Experienced administrators can also `setup their own blacklist server <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-blacklist.html#setup-a-blacklist-server>`_.
+A popular free IP blacklist is `Firehol <https://github.com/firehol/blocklist-ipsets>`_. Experienced administrators can also `setup their own IP blacklist server <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-blacklist.html#setup-a-blacklist-server>`_.
 
 Whitelist
 ---------
 
-In case of a false positive, a host or a CIDR can be added to the local :guilabel:`Whitelist`.
+In case of a false positive, an IP address or a CIDR subnet can be added to the local :guilabel:`Whitelist`.
 If the firewall module is installed, the whitelist will also accept host and CIDR firewall objects.
 
 Hosts should be added to the whitelist only for a limited period of time.
-As a best pratice, when a false positive is found, please report it to the blacklist maintainer.
+As a best practice, when a false positive is found, please report it to the blacklist maintainer.
 
 Incident response
 =================
 
-The :guilabel:`Analysis` page displays most recent attacks which can be filtered by source, destination, protocol and port.
-Using the :guilabel:`Check IP address` section, administrators can also check if a given IP has been blacklisted by an enabled category.
+The :guilabel:`Analysis` page displays most recent attacks and DNS requests which can be easily filtered by source, destination and other attributes.
+Using the :guilabel:`Check IP address or domain` section, administrators can also check if a given IP or domain has been blacklisted by enabled categories.
 
 For advanced log analysis with regular expressions support, use the :guilabel:`Logs` page.
+
+Statistics
+==========
+
+The :guilabel:`Dashboard` page provides an overview on current status of IP and DNS blacklists and displays graphical information about blocked attacks.
+
+IP blacklist dashboard provides:
+
+* Today total number of threats blocked
+* Today most blocked source hosts
+* Today most blocked destination hosts
+
+DNS blacklist dashboard provides:
+
+* Today total number of threats blocked
+* Today total number of DNS requests
+* Today threats percentage
+* Top clients performing most DNS requests
+* Top blocked domains
+* Top requested domains
