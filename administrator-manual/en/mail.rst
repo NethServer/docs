@@ -374,9 +374,9 @@ can be repeated as many times as needed. The emails will be copied locally
 if they do not exist on the local server.
 
 The system administrator of the local |product| does not need to know the
-password of the local user. However, administrator
-has to know the password of the remote IMAP account, except if the IMAP admin
-authentication is implemented also for this email server.
+password of the local user. However, the administrator
+has to know the password of the remote IMAP account, unless the IMAP admin
+authentication is implemented also for the remote email server.
 
 If the remote IMAP server is also a |product|,
 the IMAP admin user is ``vmail`` and its password can be read from
