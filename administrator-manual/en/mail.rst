@@ -360,6 +360,34 @@ some restrictions. It could check:
 .. index::
    pair: email; filter
 
+.. _email_imap_synchronization:
+
+IMAP synchronization
+====================
+
+IMAP synchronization is based on an IMAP transfer tool called Imapsync.
+The purpose is to migrate email messages from a remote IMAP account to a
+local one.
+
+The migration is recursive and incremental and 
+can be repeated as many times as needed. The emails will be copied locally
+if they do not exist on the local server.
+
+The system administrator of the local |product| does not need to know the
+password of the local user. However, the administrator
+has to know the password of the remote IMAP account, unless the IMAP admin
+authentication is implemented also for the remote email server.
+
+If the remote IMAP server is also a |product|,
+the IMAP admin user is ``vmail`` and its password can be read from
+:file:`/var/lib/nethserver/secrets/vmail`.
+The username with a ``*vmail`` suffix (e.g. ``username@domain.com*vmail``) and the ``vmail`` password has to be set in the IMAP synchronization panel.
+
+.. note:: 
+
+    List of `IMAP servers with admin authentication <https://imapsync.lamiral.info/FAQ.d/FAQ.Admin_Authentication.txt>`_ in Imapsync documentation
+
+
 .. _email_filter:
 
 Filter
