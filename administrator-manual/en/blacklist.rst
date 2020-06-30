@@ -29,6 +29,8 @@ Administrators can choose a public repository or subscribe to a commercial servi
 
 A popular free IP blacklist is `Firehol <https://github.com/firehol/blocklist-ipsets>`_. Experienced administrators can also `setup their own IP blacklist server <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-blacklist.html#setup-a-blacklist-server>`_.
 
+An example of DNS blacklist is available at `dns-community-blacklist <https://github.com/NethServer/dns-community-blacklist>`_.
+
 Whitelist
 ---------
 
