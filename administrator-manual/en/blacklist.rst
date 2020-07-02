@@ -31,6 +31,8 @@ A popular free IP blacklist is `Firehol <https://github.com/firehol/blocklist-ip
 
 An example of DNS blacklist is available at `dns-community-blacklist <https://github.com/NethServer/dns-community-blacklist>`_.
 
+.. warning:: If :ref:`proxy-section` is enabled, in any mode, :guilabel:`DNS blacklist` will not work for proxied hosts.
+
 Whitelist
 ---------
 
