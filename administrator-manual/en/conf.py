@@ -76,6 +76,7 @@ highlight_language = 'none'
 htmlhelp_basename = 'NethServer_enterprisedoc'
 
 if tags.has('nsent'):
+    smartquotes = False
     templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
