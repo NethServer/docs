@@ -810,22 +810,6 @@ Full administration of user settings is available directly in the administration
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
-SMTP setting
-============
-
-The default configuration for sending mail to the SMTP server is anonymous and without encryption on port 587.
-It is possible to enable authenticated sending in this way: ::
-
-  config setprop webtop SmtpAuth enabled
-  
-to enable encryption also: ::
-
-  config setprop webtop SmtpStarttls enabled
-  
-To apply the new settings launch this event which will also restart the application: ::
-
-  signal-event nethserver-webtop5-update
-
 Changing the logo
 =================
 
