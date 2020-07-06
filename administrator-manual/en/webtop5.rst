@@ -663,7 +663,7 @@ The public image just uploaded will be able to recall it in the HTML editor of t
    The personal mailcard can be associated with the user or his email:
    by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
 
-By accessing the settings from the WebTop administrator panel you can also set a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard:
+By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
 
 .. image:: _static/webtop-domain_mailcard.png
 
