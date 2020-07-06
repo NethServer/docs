@@ -673,7 +673,7 @@ Furthermore, it will also be possible to modify personal information:
 
 that can be used within the parameterized fields within the domain mailcard editor:
 
-.. image:: _static/webtop-domain_mailcard.png
+.. image:: _static/webtop-mailcard_editor.png
 
 In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
 
