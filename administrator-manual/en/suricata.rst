@@ -233,7 +233,20 @@ Web Specific Apps
 WORM
   Traffic indicative of network based worm activity.
 
+Bypass
+======
 
+The bypass disables IPS protection for selected hosts: all traffic from/to the given host will not be analyzed.
+
+To create a bypass access the new Server Manager and open the :guilabel:`IPS` application, then go to the :guilabel:`Bypass`
+page and click on :guilabel:`Add bypass` button.
+
+Fill the :guilabel:`Bypass` field and click on :guilabel:`Save` button. The :guilabel:`Bypass` field supports:
+
+- host objects
+- host groups objects
+- IP range objects
+- raw IP addresses
 
 EveBox
 ======
