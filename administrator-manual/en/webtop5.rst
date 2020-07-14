@@ -663,7 +663,7 @@ The public image just uploaded will be able to recall it in the HTML editor of t
    The personal mailcard can be associated with the user or his email:
    by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
 
-By accessing the settings from the WebTop administrator panel you can also set a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard:
+By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
 
 .. image:: _static/webtop-domain_mailcard.png
 
@@ -673,7 +673,7 @@ Furthermore, it will also be possible to modify personal information:
 
 that can be used within the parameterized fields within the domain mailcard editor:
 
-.. image:: _static/webtop-domain_mailcard.png
+.. image:: _static/webtop-mailcard_editor.png
 
 In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
 
@@ -809,22 +809,6 @@ While impersonating you receive similar user privileges, allowing you to control
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
-
-SMTP setting
-============
-
-The default configuration for sending mail to the SMTP server is anonymous and without encryption on port 587.
-It is possible to enable authenticated sending in this way: ::
-
-  config setprop webtop SmtpAuth enabled
-  
-to enable encryption also: ::
-
-  config setprop webtop SmtpStarttls enabled
-  
-To apply the new settings launch this event which will also restart the application: ::
-
-  signal-event nethserver-webtop5-update
 
 Changing the logo
 =================
