@@ -171,9 +171,10 @@ to that user's mailbox can be forwarded to multiple external email addresses.
 Groups mailboxes
 ----------------
 
-The Groups mailboxes are initially disabled. If enabled, addresses like
-*<groupname>@<domain>* become valid email addresses. A specific group address
+The *automatic aliases for groups mailboxes* are initially disabled. If enabled,
+addresses like *<groupname>@<domain>* become valid email addresses. A specific group address
 can be disabled and enabled again in a later stage, once Groups mailboxes are enabled.
+to disable the automatic aliases globally, refer to :ref:`email_mailboxes_settings`.
 
 A group mailbox has no disk space for it. When a message is sent to a group mailbox,
 a copy of it is delivered to the group members, according to their delivery and forward
@@ -257,6 +258,23 @@ use the following credentials:
 
 * user name: ``john*root``
 * password: ``secr3t``
+
+Additional options:
+
+* If *Groups mailboxes* were enabled in guilabel:`Email > Mailboxes > Groups`,
+  unselect the :guilabel:`Automatic alias for groups` check box to disable them again.
+
+* It is possible to record the IMAP actions by enabling :guilabel:`Log IMAP actions`.
+  See also :ref:`email_log`.
+
+* An option useful for MS Outlook clients is :guilabel:`Move deleted email to trash (Outlook)`.
+  Outlook clients mark messages as deleted but does not automatically move them to the Trash folder.
+  Once enabled, this option does it automatically.
+
+* :guilabel:`Max user connections per IP` changes the limit of connections for a user coming from
+  the same IP address. This limit could be increased if messages like
+  *Maximum number of connections* appear in the log files (see :ref:`email_log`).
+
 
 *Shared seen* configuration
 ---------------------------
@@ -782,7 +800,8 @@ Log
 Every mail server operation is saved in the following log files:
 
 * :file:`/var/log/maillog` registers all mail transactions
-* :file:`/var/log/imap` contains users login and logout operations
+* :file:`/var/log/imap` contains users login and logout operations,
+  plus the IMAP actions, if enabled in :ref:`email_mailboxes_settings`
 
 A transaction recorded in the :file:`maillog` file usually involves
 different components of the mail server.  Each line contains
