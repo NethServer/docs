@@ -60,10 +60,11 @@ two alternatives:
 |product| allows storing an :dfn:`hidden copy` of all messages
 directed to a particular domain: they will be delivered to the final
 recipient *and also* to a custom email address. The hidden copy is
-enabled by the :guilabel:`Always send a copy (Bcc)` check box.
+enabled by the :guilabel:`Copy inbound messages` switch
+(formerly :guilabel:`Always send a copy (Bcc)` check box).
 
-.. warning:: On some countries, enabling the *Always send a copy
-             (Bcc)* can be against privacy laws.
+.. warning:: On some countries, enabling the *Copy inbound messages*
+             switch can be against privacy laws.
 
 If the final recipient cannot be established (i.e. the recipient address does
 not exist), the message is normally rejected. Sometimes (i.e. when a mail domain
