@@ -127,8 +127,8 @@ DomainKeys Identified Mail (DKIM) [#DKIM]_ provides a way to validate the
 sending MTA, which adds a cryptographic signature to the outbound message MIME
 headers.
 
-To enable the DKIM signature for a mail domain, enable :guilabel:`Email >
-Domains > Sign outbound messages with DomainKeys Identified Mail (DKIM)`.
+To enable the DKIM signature for a mail domain, enable the :guilabel:`Signature` switch
+under :guilabel:`Email > Domains > [list item] > Configure DKIM`.
 
 The DKIM signature headers are added only to messages sent through TCP ports 587
 (submission) and 465 (smtps).
