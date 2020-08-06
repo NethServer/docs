@@ -140,23 +140,26 @@ instructions of your DNS provider to run the following steps:
 
 2. Copy and paste the given key text in the DNS record data (RDATA) section
 
-.. index:: email address, pseudonym
+.. _email_mailboxes:
 
-.. _email_addresses:
-
-Email addresses
-===============
+Mailboxes
+=========
 
 .. index::
     pair: user; mailbox
 
-Each user has a personal :dfn:`mailbox` and any user name in the form
+Each user has a personal mailbox and any user name in the form
 *<username>@<domain>* is also a valid email address to deliver messages into it.
 
-The list of mailboxes is shown by the :guilabel:`Email addresses > User
-mailboxes` page. The :guilabel:`Edit` button allows disabling the :guilabel:`Access to
+The list of mailboxes is shown by the :guilabel:`Email > Mailboxes` page. There
+are three types of mailboxes: Users, Groups and Public mailboxes.
+
+Users mailboxes
+---------------
+
+The :guilabel:`Edit` button allows disabling the :guilabel:`Access to
 email services` (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
-to that user's mailbox can be forwarded to an external email address.
+to that user's mailbox can be forwarded to multiple external email addresses.
 
 .. warning::
 
@@ -165,24 +168,55 @@ to that user's mailbox can be forwarded to an external email address.
     mailbox must be erased manually. The file system path prefix is
     :file:`/var/lib/nethserver/vmail/`.
 
+Groups mailboxes
+----------------
+
+The Groups mailboxes are initially disabled. If enabled, addresses like
+*<groupname>@<domain>* become valid email addresses. A specific group address
+can be disabled and enabled again in a later stage, once Groups mailboxes are enabled.
+
+A group mailbox has no disk space for it. When a message is sent to a group mailbox,
+a copy of it is delivered to the group members, according to their delivery and forward
+preferences.
+
+Public mailboxes
+----------------
+
 .. index::
     pair: shared; mailbox
 
-Mailboxes can be shared among groups of users.  The :guilabel:`Email addresses >
-Shared mailboxes` page allows creating a new :dfn:`shared mailbox` and defining
-one or more owning groups. Shared mailboxes can also be created by any IMAP
-client supporting IMAP ACL protocol extension (RFC 4314).
+.. note::
 
-The system enables the creation of an unlimited number of additional email
-addresses, from the :guilabel:`Email addresses > Mail aliases` page. Each
-:dfn:`mail alias` is associated with one or more destinations. A
+   In the old Server Manager the :guilabel:`Shared mailboxes` label was used
+   in place of :guilabel:`Public mailboxes`.
+
+.. index::
+    pair: public; mailbox
+
+Public mailboxes can be shared among groups of users.  The :guilabel:`Email >
+Mailboxes > Public mailboxes` section allows creating a new public mailbox
+and defining one or more owning groups. Public mailboxes can also be created by
+any IMAP client supporting IMAP ACL protocol extension (RFC 4314).
+
+.. index:: email address, pseudonym
+
+.. _email_addresses:
+
+Addresses
+=========
+
+In addition to the Users, Groups and Public mailboxes addresses, described in the
+previous section, the system enables the creation of an unlimited number of email
+addresses, from the :guilabel:`Email > Addresses` page. Each
+:dfn:`mail address` is associated with one or more destinations. A
 :dfn:`destination` can be of the following types:
 
 * user mailbox,
-* shared mailbox,
+* groups mailbox,
+* public mailbox,
 * external email address.
 
-A mail alias can be bound to any mail domain or be specific to one mail domain.
+A mail address can be bound to any mail domain or be specific to one mail domain.
 For example:
 
 * First domain: mydomain.net
@@ -197,20 +231,12 @@ For example:
    triple: email; private; internal
 
 Sometimes a company forbids communications from outside the organization
-using personal email addresses. The :guilabel:`Local network only` (or visibility :guilabel:`Internal`)
-option blocks the possibility of an address to receive email from the
-outside.  Still the "local network only" address can be used to
+using personal email addresses. The :guilabel:`Internal` check box
+(formerly :guilabel:`Local network only`) and the :guilabel:`Make internal`
+and :guilabel:`Make public` buttons block the possibility of an address
+to receive messages from the outside.  Still an *internal* address can be used to
 exchange messages with other accounts of the system.
 
-Differences in the new Server Manager
--------------------------------------
-
-Please note that "Shared mailboxes" has been renamed to "Public mailboxes".
-Also, if enabled from the :guilabel:`Mailboxes` page, the mail server can automatically
-create aliases of existing groups. A mail sent to the group alias will be
-copied and delivered to each member of the group.
-
-.. _email_mailboxes:
 
 Mailbox configuration
 =====================
