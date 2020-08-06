@@ -198,6 +198,87 @@ Mailboxes > Public mailboxes` section allows creating a new public mailbox
 and defining one or more owning groups. Public mailboxes can also be created by
 any IMAP client supporting IMAP ACL protocol extension (RFC 4314).
 
+.. _email_mailboxes_settings:
+
+General settings
+----------------
+
+The :guilabel:`Email > Mailboxes (General settings) > Configure` page controls what protocols are
+available to access the user's mailbox:
+
+* IMAP [#IMAP]_ (recommended)
+* POP3 [#POP3]_ (obsolete)
+
+For security reasons, all protocols require STARTTLS encryption by
+default.  The :guilabel:`Allow unencrypted connections` check box,
+disables this important requirement, and allows passing clear-text passwords and
+mail contents over the network.
+
+.. warning:: Do not allow unencrypted connections on production
+             environments!
+
+.. index::
+   triple: email; custom; quota
+
+From the same page, the :guilabel:`Quota limit` for each mailbox can be
+limited to a default quota.  If the general mailbox quota is enabled, the
+:guilabel:`Email > Mailboxes` list summarizes the quota usage for
+each user.  This summary is updated when a user logs in or a message is
+delivered. The quota can be customized for a specific user in :guilabel:`Email
+> Mailboxes [users item] > Edit > Custom mailbox quota`.
+
+.. index::
+   pair: email; spam retention
+   triple: email; custom; spam retention
+
+Messages marked as **spam** (see :ref:`email_filter`) can be automatically
+moved into the :dfn:`Junk` folder by enabling the option
+:guilabel:`Move spam to "Junk" folder`. Spam messages are expunged
+automatically after the :guilabel:`Keep spam for` period has elapsed.  The
+spam retention period can be customized for a specific user in
+:guilabel:`Email > Mailboxes [users item] > Edit > Custom spam retention`.
+
+.. index::
+   pair: email; master user
+
+The ``root`` user can impersonate another user, gaining full rights
+to any mailbox contents and folder permissions.  The
+:guilabel:`Root can log in as another user` option controls this
+empowerment, known also as *master user* in Dovecot [#Dovecot]_.
+
+When :guilabel:`Root can log in as another user` is enabled, the following
+credentials are accepted by the IMAP server:
+
+* user name with ``*root`` suffix appended
+* root's password
+
+For instance, to access as ``john`` with root password ``secr3t``,
+use the following credentials:
+
+* user name: ``john*root``
+* password: ``secr3t``
+
+*Shared seen* configuration
+---------------------------
+
+Users could share their mailbox (or some parts of it, folders) with selected accounts on the system. 
+Everyone who is given access to a shared mailbox can read or delete messages according to permissions
+granted by the mailbox owner.
+
+An IMAP flag named ``/Seen`` is used to mark if a message has been read or not. In a shared mailbox,
+each user has their copy of the messages they have read, but sometimes a team sharing a mailbox
+could prefer to know if a mail has already been read by someone else.
+To enable sharing of the ``/Seen`` flag for all shared mailboxes use the following commands: ::
+
+    config setprop dovecot SharedSeen enabled
+    signal-event nethserver-mail-server-save
+
+Please note that changing the ``SharedSeen`` status resets the ``/Seen`` flag for all users on all mailboxes.
+
+Public folders are created by the administrator and are usually visible to all users (or large groups).
+The ``/Seen`` flag is kept for each user and it cannot be shared.
+
+
 .. index:: email address, pseudonym
 
 .. _email_addresses:
@@ -236,83 +317,6 @@ using personal email addresses. The :guilabel:`Internal` check box
 and :guilabel:`Make public` buttons block the possibility of an address
 to receive messages from the outside.  Still an *internal* address can be used to
 exchange messages with other accounts of the system.
-
-
-Mailbox configuration
-=====================
-
-The :guilabel:`Email > Mailboxes` page controls what protocols are
-available to access a user mailbox:
-
-* IMAP [#IMAP]_ (recommended)
-* POP3 [#POP3]_ (obsolete)
-
-For security reasons, all protocols require STARTTLS encryption by
-default.  The :guilabel:`Allow unencrypted connections`, disables this
-important requirement, and allows passing clear-text passwords and
-mail contents on the network.
-
-.. warning:: Do not allow unencrypted connections on production
-             environments!
-
-.. index::
-   triple: email; custom; quota
-
-From the same page, the :guilabel:`disk space` of each mailbox can be
-limited to a default :dfn:`quota`.  If the mailbox quota is enabled, the
-:guilabel:`Dashboard > Mail quota` page summarizes the quota usage for
-each user.  This summary is updated when a user logs in or a message is
-delivered. The quota can be customized for a specific user in :guilabel:`Email
-addresses > User mailboxes > Edit > Custom mailbox quota`.
-
-.. index::
-   pair: email; spam retention
-   triple: email; custom; spam retention
-
-Messages marked as **spam** (see :ref:`email_filter`) can be automatically
-moved into the :dfn:`Junk` folder by enabling the option
-:guilabel:`Move to "Junk" folder`. Spam messages are expunged
-automatically after the :guilabel:`Hold for` period has elapsed.  The
-spam retention period can be customized for a specific user in
-:guilabel:`Email addresses > User mailboxes > Edit > Customize spam message
-retention`.
-
-.. index::
-   pair: email; master user
-
-The ``root`` user can impersonate another user, gaining full rights
-to any mailbox contents and folder permissions.  The
-:guilabel:`Root can log in as another user` option controls this
-empowerment, known also as *master user* in Dovecot [#Dovecot]_.
-
-When :guilabel:`Root can log in as another user` is enabled, the following
-credentials are accepted by the IMAP server:
-
-* user name with ``*root`` suffix appended
-* root's password
-
-For instance, to access as ``john`` with root password ``secr3t``,
-use the following credentials:
-
-* user name: ``john*root``
-* password: ``secr3t``
-
-Users could share their mailbox (or some parts of it, folders) with selected accounts on the system. 
-Everyone who is given access to a shared mailbox can read or delete messages according to permissions
-granted by the mailbox owner.
-
-An IMAP flag named ``/Seen`` is used to mark if a message has been read or not. In a shared mailbox,
-each user has their copy of the messages they have read, but sometimes a team sharing a mailbox
-could prefer to know if a mail has already been read by someone else.
-To enable sharing of the ``/Seen`` flag for all shared mailboxes use the following commands: ::
-
-    config setprop dovecot SharedSeen enabled
-    signal-event nethserver-mail-server-save
-
-Please note that changing the ``SharedSeen`` status resets the ``/Seen`` flag for all users on all mailboxes.
-
-Public folders are created by the administrator and are usually visible to all users (or large groups).
-The ``/Seen`` flag is kept for each user and it cannot be shared.
 
 
 .. _email_messages:
