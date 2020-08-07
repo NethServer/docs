@@ -71,6 +71,7 @@ Administrator Manual
 
    web_server
    firewall2
+   mail
 
 .. toctree::
    :maxdepth: 1
@@ -80,7 +81,6 @@ Administrator Manual
    disaster_recovery
    backup_customization
    backup_legacy
-   mail
    webmail
    webtop5
    pop3_connector

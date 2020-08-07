@@ -140,6 +140,234 @@ instructions of your DNS provider to run the following steps:
 
 2. Copy and paste the given key text in the DNS record data (RDATA) section
 
+
+.. index::
+   pair: email; filter
+
+.. _email_filter:
+
+Filter
+======
+
+All transiting email messages are subjected to a list of checks that
+can be selectively enabled in :guilabel:`Email > Filter` page:
+
+* Block of attachments
+* Antivirus
+* Antispam
+
+.. index::
+   pair: email; attachment
+
+Block of attachments
+--------------------
+
+The system can inspect mail attachments, denying access to messages
+carrying forbidden file formats. The server can check the following
+attachment classes:
+
+* :index:`executables` (eg. exe, msi)
+* :index:`archives`  (eg. zip, tar.gz, docx)
+* custom file format list
+
+The system recognizes file types by looking at their contents,
+regardless of the file attachment name.  Therefore it is possible that
+MS Word file (docx) and OpenOffice (odt) are blocked because they
+actually are also zip archives.
+
+.. index::
+   pair: email; antivirus
+   see: anti-virus; antivirus
+
+.. _anti-virus:
+
+Antivirus
+---------
+
+The antivirus component finds email messages containing
+viruses. Infected messages are discarded. The virus signature database
+is updated periodically.
+
+.. index::
+   single: spam
+   pair: email; antispam
+   pair: spam; score
+   see: anti-spam; antispam
+
+.. _anti-spam:
+
+Antispam
+--------
+
+The antispam component [#RSPAMD]_ analyzes emails by detecting
+and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
+criteria, predetermined rules and statistical evaluations on the
+content of messages.
+
+The filter can also check if sender server is listed in one or more blacklists
+(:index:`DNSBL` [#DNSBL]_). A score is associated to each rule.
+
+Total spam score collected at the end of the analysis allows the server to
+decide what to do with a message, according to three **thresholds** that can be
+adjusted under :guilabel:`Email > Filter > Anti spam`.
+
+1. If the spam score is above :guilabel:`Greylist threshold` the message is
+   **temporarily rejected**. The :dfn:`greylisting` [#GREY]_ technique assumes
+   that a spammer is in hurry and is likely to give up, whilst a
+   SMTP-compliant MTA will attempt to deliver the deferred message again.
+
+2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
+   as spam** by adding the special header ``X-Spam: Yes`` for specific
+   treatments, then it is delivered like other messages. As an alternative, the
+   :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
+   visible on the subject of the message, by prefixing the given string to the
+   ``Subject`` header.
+
+3. If the spam score is above :guilabel:`Deny message spam threshold` the
+   message is **rejected**.
+
+.. index::
+   pair: email; spam training
+
+Statistical filters, called Bayesian [#BAYES]_, are special rules that
+evolve and quickly adapt analyzing messages marked as **spam** or
+**ham**.
+
+The statistical filters can then be trained with any IMAP client by
+simply moving a message in and out of the :dfn:`Junk folder`. As a
+prerequisite, the Junk folder must be enabled from
+:guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
+"Junk" folder"` option.
+
+* By *putting a message into the Junk folder*, the filters learn
+  it is spam and will assign an higher score to similar messages.
+
+* On the contrary, by *getting a message out of Junk*, the filters
+  learn it is ham: next time a lower score will be assigned.
+
+By default, all users can train the filters using this technique. If
+a group called ``spamtrainers`` exists, only users in this group
+will be allowed to train the filters.
+
+The bayesian filter training applies to all users on the system, not only the user that marked an email as spam or ham.
+
+It is important to understand how the Bayesian tests really work:
+
+* It does not outright flag messages as spam if they contain a specific subject, or sender address. It is only collecting specific characteristics of the message.
+
+* A message can only be flagged one time. If the same message is flagged multiple times, it will not affect anything as the dynamic tests have already been trained by that message.
+
+* The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).**
+
+.. note:: It is a good habit to frequently check the Junk folder
+          in order not to lose email wrongly recognized as spam.
+
+.. index::
+   pair: email; whitelist
+   pair: email; blacklist
+
+If the system fails to recognize spam properly even after training,
+the *whitelists* and *blacklists* can help. Those are lists of email
+addresses or domains respectively always allowed and always blocked to
+send or receive messages.
+
+The section :guilabel:`Rules by mail address` allows creating
+three types of rules:
+
+* :guilabel:`Allow From`: any message from specified sender is
+  accepted
+
+* :guilabel:`Allow To`: any message to the specified recipient is
+  accepted
+
+* :guilabel:`Block From`: any message from specified sender is blocked
+
+The *Allow* rules have higher precedence over the *Block* ones. As soon as an *Allow* rule
+matches, the antispam and antivirus checks are skipped, the *Block* rule is not
+evaluated and the message is accepted.
+
+.. warning::
+
+    **Antivirus and antispam checks are skipped** if an *Allow* rule matches
+
+It is possible to create an *Allow* or *Block* rule even for an entire
+domain, not just for a single email address: you just need to specify the
+domain name (e.g. ``dev.nethserver.org``).
+
+When a second level domain domain name is specified it matches also its
+subdomains. For instance ``nethserver.org`` matches ``nethserver.org`` itself,
+``dev.nethserver.org``, ``demo.nethserver.org`` and so on.
+
+
+
+.. _rspamd-web-interface-section:
+
+Rspamd web interface
+--------------------
+
+The antispam component is implemented by Rspamd [#RSPAMD]_ which provides its
+administrative web interface at ::
+
+  https://<HOST_IP>:980/rspamd
+
+For more information on Rspamd, please read the :ref:`rspamd-section` page.
+
+.. only:: nscom
+
+    .. _quarantine:
+
+    Quarantine (beta)
+    -----------------
+
+    |product| scans all incomaing email messages before they are delivered to the user mailbox.
+    The messages that are identified as spam will be sent to a specific user mailbox.
+    The purpose of this feature is to verify the email before deleting it.
+    If enabled, a mail notification is also sent to the postmaster (root alias) for each
+    quarantined email.
+
+    .. note::
+
+      The quarantined messages can be accessed using a web mail or an IMAP account
+
+    .. warning::
+
+      The mailbox used for quarantine, must be able to accept spam.
+      It should be a local shared mailbox or a user mailbox.
+      If an external account is used, make sure the account exists on the remote server.
+      Please make sure the quarantine mailbox has been created only for this specific purpose,
+      otherwise the mailbox will be overloaded with unwanted spam.
+
+    Quarantine is provided by an optional module named
+    ``nethserver-mail-quarantine``. Once it has been installed from the
+    :guilabel:`Software center` you must manually set its database properties.
+
+    The properties are under the ``rspamd`` key (configuration database): ::
+
+        rspamd=service
+        ...
+        QuarantineAccount=spam@domain.org
+        QuarantineStatus=enabled
+        SpamNotificationStatus=disabled
+
+
+    * ``QuarantineAccount``: The user or the shared mailbox where to send all spam messages (spam
+      check is automatically disabled on this account). You must create it
+      manually. You could send it to an external mailbox  but then make sure to
+      disable the spam check on the remote server
+
+    * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected:
+      enabled/disabled. Disabled by default
+
+    * ``SpamNotificationStatus``: Enable the email notification when email are
+      quarantined: enabled/disabled. Disabled by default
+
+    For example, the following commands enable the quarantine and the mail
+    notification to root: ::
+
+      config setprop rspamd QuarantineAccount spam@domain.org QuarantineStatus enabled SpamNotificationStatus enabled
+      signal-event nethserver-mail-quarantine-save
+
+
 .. _email_mailboxes:
 
 Mailboxes
@@ -267,9 +495,16 @@ Additional options:
 * It is possible to record the IMAP actions by enabling :guilabel:`Log IMAP actions`.
   See also :ref:`email_log`.
 
-* An option useful for MS Outlook clients is :guilabel:`Move deleted email to trash (Outlook)`.
-  Outlook clients mark messages as deleted but does not automatically move them to the Trash folder.
-  Once enabled, this option does it automatically.
+.. _email_outlook_deleted:
+
+* Unlike almost any IMAP client, Outlook does not move deleted messages
+  to the trash folder, but simply marks them as "deleted".
+
+  It is possibile to automatically move messages inside the trash folder,
+  by enabling :guilabel:`Move deleted email to trash (Outlook)`.
+
+  You should also change Outlook configuration to hide deleted messages from the inbox folder.
+  This configuration is available in the Outlook options menu.
 
 * :guilabel:`Max user connections per IP` changes the limit of connections for a user coming from
   the same IP address. This limit could be increased if messages like
@@ -279,7 +514,7 @@ Additional options:
 *Shared seen* configuration
 ---------------------------
 
-Users could share their mailbox (or some parts of it, folders) with selected accounts on the system. 
+Users could share their mailbox (or some parts of it, folders) with selected accounts on the system.
 Everyone who is given access to a shared mailbox can read or delete messages according to permissions
 granted by the mailbox owner.
 
@@ -336,89 +571,23 @@ and :guilabel:`Make public` action buttons block the possibility of an address
 to receive messages from the outside.  Still an *internal* address can be used to
 exchange messages with other accounts of the system.
 
+.. _email-connectors:
 
-.. _email_messages:
+Connectors
+==========
 
-Messages
-========
-
-.. index::
-   pair: email; size
-   pair: email; retries
-   pair: email; message queue
-
-From the :guilabel:`Email > Messages` page, the :guilabel:`Queue
-message max size` slider sets the maximum size of messages traversing
-the system. If this limit is exceeded, a message cannot enter the
-system at all and is rejected.
-
-Once a message enters |product|, it is persisted to a :dfn:`queue`,
-waiting for final delivery or relay. When |product| relays a message
-to a remote server, errors may occur. For instance,
-
-* the network connection fails, or
-* the other server is down or is overloaded.
-
-Those and other errors are *temporary*: in such cases, |product|
-attempts to reconnect the remote host at regular intervals until a
-limit is reached. The :guilabel:`Queue message lifetime` slider
-changes this limit.  By default it is set to *4 days*.
-
-While messages are in the queue, the administrator can request an
-immediate message relay attempt, by pressing the button
-:guilabel:`Attempt to send` from the :guilabel:`Email > Queue
-management` page.  Otherwise the administrator can selectively delete
-queued messages or empty the queue with :guilabel:`Delete all` button.
-
-.. index::
-   pair: email; always send a copy
-   pair: email; hidden copy
-   pair: email; bcc
-
-To keep an hidden copy of any message traversing the mail server,
-enable the :guilabel:`Always send a copy (Bcc)` check box. This feature
-is different from the same check box under :guilabel:`Email > Domain` as
-it does not differentiate between mail domains and catches also any
-outgoing message.
-
-.. warning:: On some countries, enabling the *Always send a copy
-             (Bcc)* can be against privacy laws.
-
-.. _smarthost-configuration:
-
-.. index:: 
-   pair: email; smarthost
-
-Smarthost
-=========
-
-The :guilabel:`Email > Smarthost` page, configures all outgoing
-messages to be directed through a special SMTP server, technically
-named :dfn:`smarthost`.  A smarthost accepts to relay messages under
-some restrictions. It could check:
-
-* the client IP address,
-* the client SMTP AUTH credentials.
-
-.. note:: Sending through a *smarthost* is generally not recommended.
-          It might be used only if the server is temporarily
-          blacklisted [#DNSBL]_, or normal SMTP access is restricted
-          by the ISP.
-
-
-.. index::
-   pair: email; filter
+The :guilabel:`Email > Connectors` page is described in :ref:`pop3_connector-section`.
 
 .. _email_imap_synchronization:
 
-IMAP synchronization
-====================
+Synchronization
+===============
 
-IMAP synchronization is based on an IMAP transfer tool called Imapsync.
+The :guilabel:`Email > Synchronization` page  is based on an IMAP transfer tool called Imapsync.
 The purpose is to migrate email messages from a remote IMAP account to a
 local one.
 
-The migration is recursive and incremental and 
+The migration is recursive and incremental and
 can be repeated as many times as needed. The emails will be copied locally
 if they do not exist on the local server.
 
@@ -432,279 +601,58 @@ the IMAP admin user is ``vmail`` and its password can be read from
 :file:`/var/lib/nethserver/secrets/vmail`.
 The username with a ``*vmail`` suffix (e.g. ``username@domain.com*vmail``) and the ``vmail`` password has to be set in the IMAP synchronization panel.
 
-.. note:: 
+.. note::
 
     List of `IMAP servers with admin authentication <https://imapsync.lamiral.info/FAQ.d/FAQ.Admin_Authentication.txt>`_ in Imapsync documentation
 
+.. index::
+   pair: email; queue
 
-.. _email_filter:
+.. _email-queue:
 
-Filter
-======
+Queue
+=====
 
-All transiting email messages are subjected to a list of checks that
-can be selectively enabled in :guilabel:`Email > Filter` page:
+The :guilabel:`Email > Queue` page lists the messages that are waiting to
+be relayed in the SMTP mail queue. In normal conditions, this queue
+should be empty or contain just a few messages.
 
-* Block of attachments
-* Antivirus
-* Antispam
+The :guilabel:`Email > Queue [Charts] > Show charts` link shows a real-time
+chart of the mail queue status in the last minutes, updated as the page is left opened.
+The chart shows the number of message in the queue and the total queue size in kilo bytes.
+
+While messages are in the queue, the administrator can request an
+immediate message relay attempt, by pressing the button
+:guilabel:`Resend all` (formerly :guilabel:`Attempt to send`),
+or empty the queue with the :guilabel:`Delete all` button.
+
+It is also possible to selectively :guilabel:`Resend` or :guilabel:`Delete` a queued message,
+from the action buttons of :guilabel:`Email > Queue [List]` items.
 
 .. index::
-   pair: email; attachment
+   pair: email; smarthost
+   pair: email; relay
 
-Block of attachments
---------------------
+.. _email-relay:
 
-The system can inspect mail attachments, denying access to messages
-carrying forbidden file formats. The server can check the following
-attachment classes:
+Relay
+=====
 
-* :index:`executables` (eg. exe, msi)
-* :index:`archives`  (eg. zip, tar.gz, docx)
-* custom file format list
-
-The system recognizes file types by looking at their contents,
-regardless of the file attachment name.  Therefore it is possible that
-MS Word file (docx) and OpenOffice (odt) are blocked because they
-actually are also zip archives.
-
-.. index::
-   pair: email; antivirus
-   see: anti-virus; antivirus
-
-.. _anti-virus:
-
-Antivirus
----------
-
-The antivirus component finds email messages containing
-viruses. Infected messages are discarded. The virus signature database
-is updated periodically.
-
-.. index::
-   single: spam
-   pair: email; antispam
-   pair: spam; score
-   see: anti-spam; antispam
-
-.. _anti-spam:
-
-Antispam
---------
-
-The antispam component [#RSPAMD]_ analyzes emails by detecting
-and classifying :dfn:`spam` [#SPAM]_ messages using heuristic
-criteria, predetermined rules and statistical evaluations on the
-content of messages.
-
-The filter can also check if sender server is listed in one or more blacklists
-(:index:`DNSBL` [#DNSBL]_). A score is associated to each rule.
-
-Total spam score collected at the end of the analysis allows the server to
-decide what to do with a message, according to three **thresholds** that can be
-adjusted under :guilabel:`Email > Filter > Anti spam`.
-
-1. If the spam score is above :guilabel:`Greylist threshold` the message is
-   **temporarily rejected**. The :dfn:`greylisting` [#GREY]_ technique assumes
-   that a spammer is in hurry and is likely to give up, whilst a
-   SMTP-compliant MTA will attempt to deliver the deferred message again.
-
-2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
-   as spam** by adding the special header ``X-Spam: Yes`` for specific
-   treatments, then it is delivered like other messages. As an alternative, the
-   :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
-   visible on the subject of the message, by prefixing the given string to the
-   ``Subject`` header.
-
-3. If the spam score is above :guilabel:`Deny message spam threshold` the
-   message is **rejected**.
-
-.. index::
-   pair: email; spam training
-
-Statistical filters, called Bayesian [#BAYES]_, are special rules that
-evolve and quickly adapt analyzing messages marked as **spam** or
-**ham**.
-
-The statistical filters can then be trained with any IMAP client by
-simply moving a message in and out of the :dfn:`Junk folder`. As a
-prerequisite, the Junk folder must be enabled from
-:guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
-"Junk" folder"` option.
-
-* By *putting a message into the Junk folder*, the filters learn
-  it is spam and will assign an higher score to similar messages.
-
-* On the contrary, by *getting a message out of Junk*, the filters
-  learn it is ham: next time a lower score will be assigned.
-
-By default, all users can train the filters using this technique. If
-a group called ``spamtrainers`` exists, only users in this group
-will be allowed to train the filters.
-
-The bayesian filter training applies to all users on the system, not only the user that marked an email as spam or ham.
-
-It is important to understand how the Bayesian tests really work:
-
-* It does not outright flag messages as spam if they contain a specific subject, or sender address. It is only collecting specific characteristics of the message.
-
-* A message can only be flagged one time. If the same message is flagged multiple times, it will not affect anything as the dynamic tests have already been trained by that message.
-
-* The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).** 
-
-.. note:: It is a good habit to frequently check the Junk folder
-          in order not to lose email wrongly recognized as spam.
-
-.. index::
-   pair: email; whitelist
-   pair: email; blacklist
-
-If the system fails to recognize spam properly even after training,
-the *whitelists* and *blacklists* can help. Those are lists of email
-addresses or domains respectively always allowed and always blocked to
-send or receive messages.
-
-The section :guilabel:`Rules by mail address` allows creating
-three types of rules:
-
-* :guilabel:`Allow From`: any message from specified sender is
-  accepted
-
-* :guilabel:`Allow To`: any message to the specified recipient is
-  accepted
-
-* :guilabel:`Block From`: any message from specified sender is blocked
-
-The *Allow* rules have higher precedence over the *Block* ones. As soon as an *Allow* rule
-matches, the antispam and antivirus checks are skipped, the *Block* rule is not
-evaluated and the message is accepted.
-
-.. warning::
-
-    **Antivirus and antispam checks are skipped** if an *Allow* rule matches
-
-It is possible to create an *Allow* or *Block* rule even for an entire 
-domain, not just for a single email address: you just need to specify the
-domain name (e.g. ``dev.nethserver.org``).
-
-When a second level domain domain name is specified it matches also its
-subdomains. For instance ``nethserver.org`` matches ``nethserver.org`` itself,
-``dev.nethserver.org``, ``demo.nethserver.org`` and so on.
-
-
-
-.. _rspamd-web-interface-section:
-
-Rspamd web interface
---------------------
-
-The antispam component is implemented by Rspamd [#RSPAMD]_ which provides its
-administrative web interface at ::
-
-  https://<HOST_IP>:980/rspamd
-
-For more information on Rspamd, please read the :ref:`rspamd-section` page.
-
-.. only:: nscom
-
-    .. _quarantine:
-
-    Quarantine (beta)
-    -----------------
-
-    |product| scans all incomaing email messages before they are delivered to the user mailbox.
-    The messages that are identified as spam will be sent to a specific user mailbox.
-    The purpose of this feature is to verify the email before deleting it.
-    If enabled, a mail notification is also sent to the postmaster (root alias) for each
-    quarantined email.
-
-    .. note::
-
-      The quarantined messages can be accessed using a web mail or an IMAP account
-
-    .. warning::
-
-      The mailbox used for quarantine, must be able to accept spam.
-      It should be a local shared mailbox or a user mailbox.
-      If an external account is used, make sure the account exists on the remote server.
-      Please make sure the quarantine mailbox has been created only for this specific purpose,
-      otherwise the mailbox will be overloaded with unwanted spam.
-
-    Quarantine is provided by an optional module named
-    ``nethserver-mail-quarantine``. Once it has been installed from the
-    :guilabel:`Software center` you must manually set its database properties.
-
-    The properties are under the ``rspamd`` key (configuration database): ::
-
-        rspamd=service
-        ...
-        QuarantineAccount=spam@domain.org
-        QuarantineStatus=enabled
-        SpamNotificationStatus=disabled
-
-
-    * ``QuarantineAccount``: The user or the shared mailbox where to send all spam messages (spam
-      check is automatically disabled on this account). You must create it
-      manually. You could send it to an external mailbox  but then make sure to
-      disable the spam check on the remote server
-
-    * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected:
-      enabled/disabled. Disabled by default
-
-    * ``SpamNotificationStatus``: Enable the email notification when email are
-      quarantined: enabled/disabled. Disabled by default
-
-    For example, the following commands enable the quarantine and the mail
-    notification to root: ::
-
-      config setprop rspamd QuarantineAccount spam@domain.org QuarantineStatus enabled SpamNotificationStatus enabled
-      signal-event nethserver-mail-quarantine-save
-
-
-.. _email_clients:
-
-Client configuration
-====================
-
-The server supports standard-compliant email clients using the
-following IANA ports:
-
-* imap/143
-* pop3/110
-* smtp/587
-* sieve/4190
-
-Authentication requires the STARTTLS command and supports the
-following variants:
-
-* LOGIN
-* PLAIN
-* GSSAPI (only if |product| is bound to Samba/Microsoft Active Directory)
-
-Also the following SSL-enabled ports are available for legacy software
-that still does not support STARTTLS:
-
-* imaps/993
-* pop3s/995
-* smtps/465
-
-.. warning::
-
-    The standard SMTP port 25 is reserved for mail transfers between MTA
-    servers. Mail user agents (MUA) must use the submission port.
-
+The :guilabel:`Email > Relay` page configures how messages are accepted
+and routed from the |product| SMTP server to other SMTP servers.
 
 .. _email_policies:
 
 Special SMTP access policies
-============================
+----------------------------
 
 The default |product| configuration requires that all clients use the
 submission port (587) with encryption and authentication enabled to
-send mail through the SMTP server.
+send mail through the SMTP server. See also :ref:`email_clients`.
 
-To ease the configuration of legacy environments, the :guilabel:`Email
-> SMTP access` page allows making some exceptions on the default SMTP
+To ease the configuration of legacy environments, the
+:guilabel:`Email > Relay [Configuration] > Details` section (formerly the :guilabel:`Email
+> SMTP access` page) allows making some exceptions on the default SMTP
 access policy.
 
 .. warning:: Do not change the default policy on new environments!
@@ -719,7 +667,7 @@ can be enabled to send email messages by listing their IP address in
   The listed IP addresses are excluded from all mail filtering checks: use
   this feature only as a last resort
 
-Moreover, under :guilabel:`Advanced options` there are further options:
+Moreover, in the same section there are further options:
 
 * The :guilabel:`Allow relay from trusted networks` option allows any
   client in the trusted networks to send email messages without any
@@ -728,33 +676,13 @@ Moreover, under :guilabel:`Advanced options` there are further options:
 * The :guilabel:`Enable authentication on port 25` option allows
   authenticated SMTP clients to send email messages also on port 25.
 
-Sender/login match
-------------------
+* By default an authenticated SMTP client has no particular restrictions on
+  setting the SMTP sender address.
 
-By default an authenticated SMTP client has no particular restrictions on
-setting the SMTP sender address.
+  To avoid the unauthorized use of email addresses and the sender address
+  spoofing, enable the :guilabel:`Enforce sender/login match` option.
 
-To avoid the unauthorized use of email addresses and the sender address
-spoofing, enable the :guilabel:`Enforce sender/login match` option, available
-with the new Server Manager UI, under :guilabel:`Email > Relay > Configuration >
-Details`.
-
-If enabled, only addresses associated to the current SMTP login are allowed.
-
-
-
-Multiple relay hosts
---------------------
-
-The new Server Manager UI allows to describe the route of an email message, by
-sending it through an external relay host with specific port, authentication,
-and TLS settings.
-
-Create a relay host description under :guilabel:`Email > Relay > Create relay
-host`.
-
-The relay host is identified by the SMTP sender address. It is possible to match
-the full sender address or only the domain part of it.
+  If enabled, only addresses associated to the current SMTP login are allowed.
 
 .. index::
    pair: email; HELO
@@ -763,7 +691,7 @@ the full sender address or only the domain part of it.
 .. _email_helo:
 
 Custom HELO
-===========
+-----------
 
 The first step of an SMTP session is the exchange of :dfn:`HELO`
 command (or :dfn:`EHLO`).  This command takes a valid server name as
@@ -774,28 +702,101 @@ HELO domains that are not registered on a public DNS.
 
 When talking to another mail server, |product| uses its full host name
 (FQDN) as the value for the HELO command.  If the FQDN is not
-registered in the public DNS, the HELO can be changed from the new Server Manager.
+registered in the public DNS, the HELO can be changed in the
+:guilabel:`Custom HELO` text field.
 
 This configuration is also valuable if the mail server is using a free
 dynamic DNS service.
 
-.. _email_outlook_deleted:
+.. _email-multi-relay:
 
-Outlook deleted mail
-====================
+Relay hosts
+-----------
 
-Unlike almost any IMAP client, Outlook does not move deleted messages to the trash folder, but simply marks them as "deleted".
+The :guilabel:`Email > Relay` page allows to describe the route of an email message, by
+sending it through an external relay host with specific port, authentication,
+and TLS settings.
 
-It is possibile to automatically move messages inside the trash folder.
-The option is available in the new Server Manager under the :guilabel:`Mailboxes` page.
+Create a relay host description under :guilabel:`Email > Relay > Create relay
+host`.
 
-You should also change Outlook configuration to hide deleted messages from inbox folder.
-This configuration is available in the options menu.
+The relay host is identified by **the SMTP sender address**. It is possible to match
+the full sender address or only the domain part of it.
+
+.. _smarthost-configuration:
+
+Default relay host settings
+---------------------------
+
+If the sender address does not match the relay rules described in the above section it
+is possible (though not recommended) to configure a default relay host instead of
+relying on the standard SMTP relay rules.
+
+.. note:: Sending through a *smarthost* is generally not recommended.
+          It might be used only if the server is temporarily
+          blacklisted [#DNSBL]_, or normal SMTP access is restricted
+          by the ISP.
+
+The :guilabel:`System > Settings > Smart host` section, configures the outgoing
+messages to be directed through a special SMTP server, technically
+named :dfn:`smarthost`.  A smarthost accepts to relay messages under
+some restrictions. It could check:
+
+* the client IP address,
+* the client SMTP AUTH credentials.
+
+Refer also to :ref:`smart-host` for more information.
+
+.. _email_messages:
+
+.. _email-settings:
+
+Settings
+========
+
+.. index::
+   pair: email; size
+   pair: email; retries
+   pair: email; message queue
+
+From the :guilabel:`Email > Settings` page, the :guilabel:`Maximum message size`
+(formerly :guilabel:`Queue message max size`) slider sets the maximum size of
+messages traversing the system. If this limit is exceeded, a message cannot enter the
+system at all and is rejected.
+
+Once a message enters |product|, it is persisted to a :dfn:`queue`,
+waiting for final delivery or relay. When |product| relays a message
+to a remote server, errors may occur. For instance,
+
+* the network connection fails, or
+* the other server is down or is overloaded.
+
+Those and other errors are *temporary*: in such cases, |product|
+attempts to reconnect the remote host at regular intervals until a
+limit is reached. The :guilabel:`Message queue lifetime` (formerly
+:guilabel:`Queue message lifetime`) slider
+changes this limit.  By default it is set to *4 days*.
+
+.. index::
+   pair: email; always send a copy
+   pair: email; hidden copy
+   pair: email; bcc
+
+To keep an hidden copy of any message traversing the mail server,
+enable the :guilabel:`Forward a copy of all messages` (formerly
+:guilabel:`Always send a copy (Bcc)` check box). This feature
+is different from the same check box under :guilabel:`Email > Domains` as
+it does not differentiate between mail domains and catches also any
+outgoing message.
+
+.. warning:: On some countries, enabling the *Always send a copy
+             (Bcc)* can be against privacy laws.
+
 
 .. _email_log:
 
-Log
-===
+Logs
+====
 
 Every mail server operation is saved in the following log files:
 
@@ -846,6 +847,38 @@ Yields ::
   /var/log/maillog:May 15 02:05:03 mail postfix/lmtp[25854]: A785B308622AB: to=<vmail+jsmith@mail.mynethserver.org>, orig_to=<jsmith@example.com>, relay=mail.mynethserver.org[/var/run/dovecot/lmtp], delay=0.82, delays=0.8/0.01/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 <vmail+jsmith@mail.mynethserver.org> gK8pHS8k+lr/ZAAAJc5BcA Saved)
   /var/log/maillog:May 15 02:05:03 mail postfix/qmgr[27757]: A785B308622AB: removed
 
+
+.. _email_clients:
+
+Client configuration
+====================
+
+The server supports standard-compliant email clients using the
+following IANA ports:
+
+* imap/143
+* pop3/110
+* smtp/587
+* sieve/4190
+
+Authentication requires the STARTTLS command and supports the
+following variants:
+
+* LOGIN
+* PLAIN
+* GSSAPI (only if |product| is bound to Samba/Microsoft Active Directory)
+
+Also the following SSL-enabled ports are available for legacy software
+that still does not support STARTTLS:
+
+* imaps/993
+* pop3s/995
+* smtps/465
+
+.. warning::
+
+    The standard SMTP port 25 is reserved for mail transfers between MTA
+    servers. Mail user agents (MUA) must use the submission port.
 
 .. rubric:: References
 
