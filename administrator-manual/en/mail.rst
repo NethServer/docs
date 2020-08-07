@@ -87,10 +87,13 @@ Append a legal notice
     because the alterMIME [#alterMIME]_ project which provides the actual
     implementation is no longer developed and can stop working at any time.
 
-If the optional ``nethserver-mail-disclaimer`` package was installed from the
-:guilabel:`Software center`, |product| can automatically :guilabel:`append a
-legal notice to sent messages`. This text is also known as "disclaimer" and
+If the optional ``nethserver-mail-disclaimer`` package was installed,
+|product| can automatically append a
+legal notice to sent messages. This text is also known as "disclaimer" and
 it can be used to meet some legal requirements.
+
+To configure and enable the *disclaimer attachment*, turn on the option switch
+:guilabel:`Email > Domains [List item] > Edit > Append a legal note to sent messages`.
 
 The disclaimer text can contain Markdown [#Markdown]_ code to format the text.
 
