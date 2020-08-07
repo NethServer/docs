@@ -174,7 +174,7 @@ Groups mailboxes
 The *automatic aliases for groups mailboxes* are initially disabled. If enabled,
 addresses like *<groupname>@<domain>* become valid email addresses. A specific group address
 can be disabled and enabled again in a later stage, once Groups mailboxes are enabled.
-to disable the automatic aliases globally, refer to :ref:`email_mailboxes_settings`.
+To disable the automatic aliases globally, refer to :ref:`email_mailboxes_settings`.
 
 A group mailbox has no disk space for it. When a message is sent to a group mailbox,
 a copy of it is delivered to the group members, according to their delivery and forward
@@ -204,7 +204,7 @@ any IMAP client supporting IMAP ACL protocol extension (RFC 4314).
 General settings
 ----------------
 
-The :guilabel:`Email > Mailboxes (General settings) > Configure` page controls what protocols are
+The :guilabel:`Email > Mailboxes [General settings] > Configure` page controls what protocols are
 available to access the user's mailbox:
 
 * IMAP [#IMAP]_ (recommended)
@@ -261,7 +261,7 @@ use the following credentials:
 
 Additional options:
 
-* If *Groups mailboxes* were enabled in guilabel:`Email > Mailboxes > Groups`,
+* If *Groups mailboxes* were enabled in :guilabel:`Email > Mailboxes > Groups`,
   unselect the :guilabel:`Automatic alias for groups` check box to disable them again.
 
 * It is possible to record the IMAP actions by enabling :guilabel:`Log IMAP actions`.
@@ -318,11 +318,11 @@ addresses, from the :guilabel:`Email > Addresses` page. Each
 A mail address can be bound to any mail domain or be specific to one mail domain.
 For example:
 
-* First domain: mydomain.net
-* Second domain: example.com
-* Email address *info* valid for both domains: info@mydomain.net,
-  info@example.com
-* Email address *goofy* valid only for one domain: goofy@example.com
+* First domain: ``mydomain.net``
+* Second domain: ``example.com``
+* Email address *info* bound to any domain: ``info@mydomain.net``,
+  ``info@example.com``
+* Email address *goofy* specific to one domain: ``goofy@example.com``
 
 .. index::
    pair: email; local network only
@@ -332,7 +332,7 @@ For example:
 Sometimes a company forbids communications from outside the organization
 using personal email addresses. The :guilabel:`Internal` check box
 (formerly :guilabel:`Local network only`) and the :guilabel:`Make internal`
-and :guilabel:`Make public` buttons block the possibility of an address
+and :guilabel:`Make public` action buttons block the possibility of an address
 to receive messages from the outside.  Still an *internal* address can be used to
 exchange messages with other accounts of the system.
 
