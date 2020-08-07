@@ -87,7 +87,7 @@ Append a legal notice
     because the alterMIME [#alterMIME]_ project which provides the actual
     implementation is no longer developed and can stop working at any time.
 
-If the optional ``nethserver-mail-disclaimer`` package was installed,
+If the optional ``nethserver-mail-disclaimer`` RPM was installed from the terminal,
 |product| can automatically append a
 legal notice to sent messages. This text is also known as "disclaimer" and
 it can be used to meet some legal requirements.
@@ -348,9 +348,9 @@ For more information on Rspamd, please read the :ref:`rspamd-section` page.
       Please make sure the quarantine mailbox has been created only for this specific purpose,
       otherwise the mailbox will be overloaded with unwanted spam.
 
-    Quarantine is provided by an optional module named
+    Quarantine is provided by an optional RPM named
     ``nethserver-mail-quarantine``. Once it has been installed from the
-    :guilabel:`Software center` you must manually set its database properties.
+    terminal you must manually set its database properties.
 
     The properties are under the ``rspamd`` key (configuration database): ::
 
