@@ -155,15 +155,15 @@ Filter
 All transiting email messages are subjected to a list of checks that
 can be selectively enabled in :guilabel:`Email > Filter` page:
 
-* Block of attachments
+* Attachments
 * Antivirus
 * Antispam
 
 .. index::
    pair: email; attachment
 
-Block of attachments
---------------------
+Attachments
+-----------
 
 The system can inspect mail attachments, denying access to messages
 carrying forbidden file formats. The server can check the following
@@ -238,9 +238,11 @@ evolve and quickly adapt analyzing messages marked as **spam** or
 
 The statistical filters can then be trained with any IMAP client by
 simply moving a message in and out of the :dfn:`Junk folder`. As a
-prerequisite, the Junk folder must be enabled from
-:guilabel:`Email > Mailboxes` page by checking :guilabel:`Move to
-"Junk" folder"` option.
+prerequisite, the Junk folder must be enabled from the
+:guilabel:`Email > Mailboxes [General settings] > Configure
+[Advanced options] > Move spam to "Junk" folder` check box
+(formerly :guilabel:`Email > Mailboxes > Move to
+"Junk" folder"` check box).
 
 * By *putting a message into the Junk folder*, the filters learn
   it is spam and will assign an higher score to similar messages.
@@ -262,6 +264,9 @@ It is important to understand how the Bayesian tests really work:
 
 * The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).**
 
+  As the system receives that information, the progress of bayesian filter training
+  can be monitored from the :guilabel:`Email > Filter [Statistics] > Bayes training` progress bar.
+
 .. note:: It is a good habit to frequently check the Junk folder
           in order not to lose email wrongly recognized as spam.
 
@@ -269,13 +274,16 @@ It is important to understand how the Bayesian tests really work:
    pair: email; whitelist
    pair: email; blacklist
 
+Rules for white and black lists
+-------------------------------
+
 If the system fails to recognize spam properly even after training,
 the *whitelists* and *blacklists* can help. Those are lists of email
 addresses or domains respectively always allowed and always blocked to
 send or receive messages.
 
-The section :guilabel:`Rules by mail address` allows creating
-three types of rules:
+The section :guilabel:`Email > Filter [Rules] > Details` (formerly
+:guilabel:`Rules by mail address`) allows creating three types of rules:
 
 * :guilabel:`Allow From`: any message from specified sender is
   accepted
