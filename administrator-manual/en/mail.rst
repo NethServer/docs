@@ -219,7 +219,7 @@ adjusted under :guilabel:`Email > Filter > Anti spam`.
    that a spammer is in hurry and is likely to give up, whilst a
    SMTP-compliant MTA will attempt to deliver the deferred message again.
 
-2. If the spam score is above :guilabel:`Spam threshold` the message is **marked
+2. If the spam score is above :guilabel:`Spam flag threshold` the message is **marked
    as spam** by adding the special header ``X-Spam: Yes`` for specific
    treatments, then it is delivered like other messages. As an alternative, the
    :guilabel:`Add a prefix to spam messages subject` option makes the spam flag
