@@ -262,7 +262,7 @@ It is important to understand how the Bayesian tests really work:
 
 * A message can only be flagged one time. If the same message is flagged multiple times, it will not affect anything as the dynamic tests have already been trained by that message.
 
-* The Bayesian tests **are not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).**
+* The Bayesian filter **is not active until it has received enough information. This includes a minimum of 200 spams AND 200 hams (false positives).**
 
   As the system receives that information, the progress of bayesian filter training
   can be monitored from the :guilabel:`Email > Filter [Statistics] > Bayes training` progress bar.
