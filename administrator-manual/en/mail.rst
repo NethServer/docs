@@ -42,12 +42,12 @@ Domains
 =======
 
 |product| can handle an unlimited number of mail domains, configurable
-from the :guilabel:`Email > Domains` page.  For each domain there are
+from the :guilabel:`Email > Domains` page. For each domain there are
 two alternatives:
 
 * *Deliver* messages to local mailboxes, according to the Maildir
-  [#MailDirFormat]_ format.
-* *Relay* messages to another mail server.
+  [#MailDirFormat]_ format
+* *Relay* messages to another mail server
 
 .. note:: If a domain is deleted, email will not be deleted;
    any message already received is preserved.
@@ -107,12 +107,12 @@ Disclaimer example: ::
 
   This email and any files transmitted with it are confidential and
   intended solely for the use of the individual or entity to whom they
-  are addressed.  If you have received this email in error please
-  notify the system manager.  This message contains confidential
+  are addressed. If you have received this email in error please
+  notify the system manager. This message contains confidential
   information and is intended only for the individual named.
 
 The **signature** should be inserted inside the message text only by the
-mail client (MUA): Outlook, Thunderbird, etc.  Usually it is a
+mail client (MUA): Outlook, Thunderbird, etc. Usually it is a
 user-defined text containing information such as sender addresses and
 phone numbers.
 
@@ -170,11 +170,11 @@ carrying forbidden file formats. The server can check the following
 attachment classes:
 
 * :index:`executables` (eg. exe, msi)
-* :index:`archives`  (eg. zip, tar.gz, docx)
+* :index:`archives` (eg. zip, tar.gz, docx)
 * custom file format list
 
 The system recognizes file types by looking at their contents,
-regardless of the file attachment name.  Therefore it is possible that
+regardless of the file attachment name. Therefore it is possible that
 MS Word file (docx) and OpenOffice (odt) are blocked because they
 actually are also zip archives.
 
@@ -363,7 +363,7 @@ For more information on Rspamd, please read the :ref:`rspamd-section` page.
 
     * ``QuarantineAccount``: The user or the shared mailbox where to send all spam messages (spam
       check is automatically disabled on this account). You must create it
-      manually. You could send it to an external mailbox  but then make sure to
+      manually. You could send it to an external mailbox but then make sure to
       disable the spam check on the remote server
 
     * ``QuarantineStatus``: Enable the quarantine, spam are no more rejected:
@@ -397,7 +397,7 @@ Users mailboxes
 ---------------
 
 The :guilabel:`Edit` button allows disabling the :guilabel:`Access to
-email services` (IMAP, POP3, SMTP/AUTH) for a specific user.  Messages delivered
+email services` (IMAP, POP3, SMTP/AUTH) for a specific user. Messages delivered
 to that user's mailbox can be forwarded to multiple external email addresses.
 
 .. warning::
@@ -433,7 +433,7 @@ Public mailboxes
 .. index::
     pair: public; mailbox
 
-Public mailboxes can be shared among groups of users.  The :guilabel:`Email >
+Public mailboxes can be shared among groups of users. The :guilabel:`Email >
 Mailboxes > Public mailboxes` section allows creating a new public mailbox
 and defining one or more owning groups. Public mailboxes can also be created by
 any IMAP client supporting IMAP ACL protocol extension (RFC 4314).
@@ -461,9 +461,9 @@ mail contents over the network.
    triple: email; custom; quota
 
 From the same page, the :guilabel:`Quota limit` for each mailbox can be
-limited to a default quota.  If the general mailbox quota is enabled, the
+limited to a default quota. If the general mailbox quota is enabled, the
 :guilabel:`Email > Mailboxes` list summarizes the quota usage for
-each user.  This summary is updated when a user logs in or a message is
+each user. This summary is updated when a user logs in or a message is
 delivered. The quota can be customized for a specific user in :guilabel:`Email
 > Mailboxes [users item] > Edit > Custom mailbox quota`.
 
@@ -474,7 +474,7 @@ delivered. The quota can be customized for a specific user in :guilabel:`Email
 Messages marked as **spam** (see :ref:`email_filter`) can be automatically
 moved into the :dfn:`Junk` folder by enabling the option
 :guilabel:`Move spam to "Junk" folder`. Spam messages are expunged
-automatically after the :guilabel:`Keep spam for` period has elapsed.  The
+automatically after the :guilabel:`Keep spam for` period has elapsed. The
 spam retention period can be customized for a specific user in
 :guilabel:`Email > Mailboxes [users item] > Edit > Custom spam retention`.
 
@@ -482,7 +482,7 @@ spam retention period can be customized for a specific user in
    pair: email; master user
 
 The ``root`` user can impersonate another user, gaining full rights
-to any mailbox contents and folder permissions.  The
+to any mailbox contents and folder permissions. The
 :guilabel:`Root can log in as another user` option controls this
 empowerment, known also as *master user* in Dovecot [#Dovecot]_.
 
@@ -556,10 +556,10 @@ addresses, from the :guilabel:`Email > Addresses` page. Each
 :dfn:`mail address` is associated with one or more destinations. A
 :dfn:`destination` can be of the following types:
 
-* user mailbox,
-* groups mailbox,
-* public mailbox,
-* external email address.
+* user mailbox
+* groups mailbox
+* public mailbox
+* external email address
 
 A mail address can be bound to any mail domain or be specific to one mail domain.
 For example:
@@ -579,7 +579,7 @@ Sometimes a company forbids communications from outside the organization
 using personal email addresses. The :guilabel:`Internal` check box
 (formerly :guilabel:`Local network only`) and the :guilabel:`Make internal`
 and :guilabel:`Make public` action buttons block the possibility of an address
-to receive messages from the outside.  Still an *internal* address can be used to
+to receive messages from the outside. Still an *internal* address can be used to
 exchange messages with other accounts of the system.
 
 .. _email-connectors:
@@ -594,7 +594,7 @@ The :guilabel:`Email > Connectors` page is described in :ref:`pop3_connector-sec
 Synchronization
 ===============
 
-The :guilabel:`Email > Synchronization` page  is based on an IMAP transfer tool called Imapsync.
+The :guilabel:`Email > Synchronization` page is based on an IMAP transfer tool called Imapsync.
 The purpose is to migrate email messages from a remote IMAP account to a
 local one.
 
@@ -630,7 +630,7 @@ should be empty or contain just a few messages.
 
 The :guilabel:`Email > Queue [Charts] > Show charts` link shows a real-time
 chart of the mail queue status in the last minutes, updated as the page is left opened.
-The chart shows the number of message in the queue and the total queue size in kilo bytes.
+The chart shows the number of message in the queue and the total queue size in kilobytes.
 
 While messages are in the queue, the administrator can request an
 immediate message relay attempt, by pressing the button
@@ -705,14 +705,14 @@ Custom HELO
 -----------
 
 The first step of an SMTP session is the exchange of :dfn:`HELO`
-command (or :dfn:`EHLO`).  This command takes a valid server name as
+command (or :dfn:`EHLO`). This command takes a valid server name as
 required parameter (RFC 1123).
 
 |product| and other mail servers try to reduce spam by not accepting
 HELO domains that are not registered on a public DNS.
 
 When talking to another mail server, |product| uses its full host name
-(FQDN) as the value for the HELO command.  If the FQDN is not
+(FQDN) as the value for the HELO command. If the FQDN is not
 registered in the public DNS, the HELO can be changed in the
 :guilabel:`Custom HELO` text field.
 
@@ -750,11 +750,11 @@ relying on the standard SMTP relay rules.
 
 The :guilabel:`System > Settings > Smart host` section, configures the outgoing
 messages to be directed through a special SMTP server, technically
-named :dfn:`smarthost`.  A smarthost accepts to relay messages under
+named :dfn:`smarthost`. A smarthost accepts to relay messages under
 some restrictions. It could check:
 
-* the client IP address,
-* the client SMTP AUTH credentials.
+* the client IP address
+* the client SMTP AUTH credentials
 
 Refer also to :ref:`smart-host` for more information.
 
@@ -780,13 +780,13 @@ waiting for final delivery or relay. When |product| relays a message
 to a remote server, errors may occur. For instance,
 
 * the network connection fails, or
-* the other server is down or is overloaded.
+* the other server is down or is overloaded
 
 Those and other errors are *temporary*: in such cases, |product|
 attempts to reconnect the remote host at regular intervals until a
 limit is reached. The :guilabel:`Message queue lifetime` (formerly
 :guilabel:`Queue message lifetime`) slider
-changes this limit.  By default it is set to *4 days*.
+changes this limit. By default it is set to *4 days*.
 
 .. index::
    pair: email; always send a copy
@@ -800,8 +800,8 @@ is different from the same check box under :guilabel:`Email > Domains` as
 it does not differentiate between mail domains and catches also any
 outgoing message.
 
-.. warning:: On some countries, enabling the *Always send a copy
-             (Bcc)* can be against privacy laws.
+.. warning:: On some countries, enabling the *Forward a copy of
+             all messages* can be against privacy laws.
 
 
 .. _email_log:
@@ -816,11 +816,11 @@ Every mail server operation is saved in the following log files:
   plus the IMAP actions, if enabled in :ref:`email_mailboxes_settings`
 
 A transaction recorded in the :file:`maillog` file usually involves
-different components of the mail server.  Each line contains
+different components of the mail server. Each line contains
 respectively
 
-* the timestamp,
-* the host name,
+* the timestamp
+* the host name
 * the component name, and the process-id of the component instance
 * a text message detailing the operation
 
