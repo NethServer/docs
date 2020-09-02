@@ -125,6 +125,8 @@ Settings
 
 The :index:`settings` page allows the configuration of some options which could impact multiple system applications.
 
+.. _smart-host:
+
 Smart host
 ^^^^^^^^^^
 
