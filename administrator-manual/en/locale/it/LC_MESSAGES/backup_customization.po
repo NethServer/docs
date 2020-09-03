@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2019-10-08 08:09+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -303,17 +303,16 @@ msgid "Supported storage backends:"
 msgstr "Backend di archiviazione supportati:"
 
 #: ../../backup_customization.rst:84 ../../backup_customization.rst:104
-#: ../../backup_customization.rst:137
 msgid "CIFS"
 msgstr "CIFS"
 
 #: ../../backup_customization.rst:85 ../../backup_customization.rst:105
-#: ../../backup_customization.rst:138
+#: ../../backup_customization.rst:137
 msgid "NFS"
 msgstr "NFS"
 
 #: ../../backup_customization.rst:86 ../../backup_customization.rst:106
-#: ../../backup_customization.rst:139
+#: ../../backup_customization.rst:138
 msgid "USB"
 msgstr "USB"
 
@@ -348,11 +347,11 @@ msgstr ""
 "esecuzioni successive alla prima dovrebbero essere veloci e potrebbero "
 "essere programmate più volte al giorno."
 
-#: ../../backup_customization.rst:107 ../../backup_customization.rst:140
+#: ../../backup_customization.rst:107 ../../backup_customization.rst:139
 msgid "WebDAV (only when used as *single backup*)"
 msgstr "WebDAV (solo quando usato come *backup singolo*)"
 
-#: ../../backup_customization.rst:108 ../../backup_customization.rst:141
+#: ../../backup_customization.rst:108 ../../backup_customization.rst:140
 msgid "SFTP (SSH File Transfer Protocol)"
 msgstr "SFTP (SSH File Transfer Protocol)"
 
@@ -416,7 +415,7 @@ msgstr ""
 "la directory di destinazione del backup è piena, i backup più vecchi vengono"
 " automaticamente eliminati per liberare spazio."
 
-#: ../../backup_customization.rst:143
+#: ../../backup_customization.rst:142
 msgid ""
 "Rsync doesn't support encryption nor compression on the destination. During "
 "data transfer, SFTP assures encryption and data is compressed to minimize "
@@ -426,7 +425,7 @@ msgstr ""
 "Durante il trasferimento dei dati, SFTP assicura la crittografia e i dati "
 "vengono compressi per ridurre al minimo l'utilizzo della banda utilizzata."
 
-#: ../../backup_customization.rst:147
+#: ../../backup_customization.rst:146
 msgid ""
 "When using rsync engine, make sure the storage backend supports symbolic and"
 " hard links. Please note that |product| doesn't support links on Samba "
@@ -438,19 +437,23 @@ msgstr ""
 " supporta collegamenti su condivisioni Samba per implicazioni di sicurezza. "
 "Inoltre i link simbolici non sono supportati su WebDAV."
 
-#: ../../backup_customization.rst:152
+#: ../../backup_customization.rst:150
+msgid "The destination must be accessed with ``root`` user."
+msgstr "È necessario accedere alla destinazione con l'utente ``root``."
+
+#: ../../backup_customization.rst:153
 msgid "Command line execution"
 msgstr "Esecuzione da riga di comando"
 
-#: ../../backup_customization.rst:154
+#: ../../backup_customization.rst:155
 msgid "To run a backup from command line, use: ::"
 msgstr "Per lanciare un backup da riga di comando, utilizzare: ::"
 
-#: ../../backup_customization.rst:158
+#: ../../backup_customization.rst:159
 msgid "where ``name`` is the name of the backup you want to run."
 msgstr "in cui ``name`` è il nome del backup che si desidera lanciare."
 
-#: ../../backup_customization.rst:161
+#: ../../backup_customization.rst:162
 msgid ""
 "By default, the name of the *first* data backup configured on |product| is "
 "``backup-data``"
@@ -458,11 +461,11 @@ msgstr ""
 "Di default il nome del *primo* backup configurato su |product| è ``backup-"
 "data``"
 
-#: ../../backup_customization.rst:167
+#: ../../backup_customization.rst:168
 msgid "Data backup customization"
 msgstr "Personalizzazione backup dati"
 
-#: ../../backup_customization.rst:169
+#: ../../backup_customization.rst:170
 msgid ""
 "If additional software is installed, the administrator can edit the list of "
 "files and directories included (or excluded)."
@@ -471,11 +474,11 @@ msgstr ""
 "modificare la lista delle directory e dei file inclusi (o esclusi) dal "
 "backup."
 
-#: ../../backup_customization.rst:173 ../../backup_customization.rst:261
+#: ../../backup_customization.rst:174 ../../backup_customization.rst:262
 msgid "Inclusion"
 msgstr "Inclusione"
 
-#: ../../backup_customization.rst:175
+#: ../../backup_customization.rst:176
 msgid ""
 "If you wish to add a file or directory to data backup, add a line to the "
 "file :file:`/etc/backup-data.d/custom.include`."
@@ -484,7 +487,7 @@ msgstr ""
 "sufficiente aggiungere una riga al file :file:`/etc/backup-"
 "data.d/custom.include`."
 
-#: ../../backup_customization.rst:177
+#: ../../backup_customization.rst:178
 msgid ""
 "For example, to backup a software installed inside :file:`/opt` directory, "
 "add this line: ::"
@@ -492,7 +495,7 @@ msgstr ""
 "Ad esempio, per includere nel backup un software installato nella directory "
 ":file:`/opt`, aggiungere questa riga: ::"
 
-#: ../../backup_customization.rst:182
+#: ../../backup_customization.rst:183
 msgid ""
 "The same syntax applies to configuration backup. Modifications should be "
 "done inside the file :file:`/etc/backup-config.d/custom.include`."
@@ -501,11 +504,11 @@ msgstr ""
 "dovranno essere incluse all'interno del file :file:`/etc/backup-"
 "config.d/custom.include`."
 
-#: ../../backup_customization.rst:186 ../../backup_customization.rst:272
+#: ../../backup_customization.rst:187 ../../backup_customization.rst:273
 msgid "Exclusion"
 msgstr "Esclusione"
 
-#: ../../backup_customization.rst:188
+#: ../../backup_customization.rst:189
 msgid ""
 "If you wish to exclude a file or directory from data backup, add a line to "
 "the file :file:`/etc/backup-data.d/custom.exclude`."
@@ -513,18 +516,18 @@ msgstr ""
 "Se si desidera escludere una directory o un file dal backup dei dati, "
 "aggiungere una riga al file  :file:`/etc/backup-data.d/custom.exclude`."
 
-#: ../../backup_customization.rst:190
+#: ../../backup_customization.rst:191
 msgid ""
 "For example, to exclude all directories called *Download*, add this line: ::"
 msgstr ""
 "Ad esempio, per escludere dal backup tutte le directory chiamate *Download*,"
 " aggiungere la riga: ::"
 
-#: ../../backup_customization.rst:194
+#: ../../backup_customization.rst:195
 msgid "To exclude a mail directory called *test*, add this line: ::"
 msgstr "Per escludere la casella di posta *test*, aggiungere la riga: ::"
 
-#: ../../backup_customization.rst:199
+#: ../../backup_customization.rst:200
 msgid ""
 "The same syntax applies to configuration backup. Modifications should be "
 "done inside the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -533,11 +536,11 @@ msgstr ""
 "dovrebbero essere fatte all’interno del file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup_customization.rst:202
+#: ../../backup_customization.rst:203
 msgid "Override inclusions and exclusions"
 msgstr "Personalizzazione inclusioni ed esclusioni"
 
-#: ../../backup_customization.rst:204
+#: ../../backup_customization.rst:205
 msgid ""
 "All backups read the same configuration, but the list of saved and excluded "
 "files can be overridden using two special files:"
@@ -546,19 +549,19 @@ msgstr ""
 "salvati ed esclusi può essere personalizzato per ciascun backup utilizzando "
 "due file speciali:"
 
-#: ../../backup_customization.rst:207
+#: ../../backup_customization.rst:208
 msgid "``/etc/backup-data/<name>.include``"
 msgstr "``/etc/backup-data/<name>.include``"
 
-#: ../../backup_customization.rst:208
+#: ../../backup_customization.rst:209
 msgid "``/etc/backup-data/<name>.exclude``"
 msgstr "``/etc/backup-data/<name>.exclude``"
 
-#: ../../backup_customization.rst:210
+#: ../../backup_customization.rst:211
 msgid "Where ``name`` is the name of the backup."
 msgstr "In cui ``name`` è il nome del backup."
 
-#: ../../backup_customization.rst:212
+#: ../../backup_customization.rst:213
 msgid ""
 "Both files will override the list of included and excluded data set. The "
 "accepted syntax is the same as reported in the paragraph above."
@@ -566,26 +569,26 @@ msgstr ""
 "Entrambi i file sostituiranno il set di dati inclusi ed esclusi dal backup. "
 "La sintassi accettata è la stessa indicata nel paragrafo precedente."
 
-#: ../../backup_customization.rst:215
+#: ../../backup_customization.rst:216
 msgid ""
 "For example, given a backup named ``mybackup1`` create the following files:"
 msgstr ""
 "Ad esempio, dato un backup chiamato ``mybackup1``, andranno creati i "
 "seguenti file:"
 
-#: ../../backup_customization.rst:217
+#: ../../backup_customization.rst:218
 msgid ":file:`/etc/backup-data/mybackup1.include`"
 msgstr ":file:`/etc/backup-data/mybackup1.include`"
 
-#: ../../backup_customization.rst:218
+#: ../../backup_customization.rst:219
 msgid ":file:`/etc/backup-data/mybackup1.exclude`"
 msgstr ":file:`/etc/backup-data/mybackup1.exclude`"
 
-#: ../../backup_customization.rst:221
+#: ../../backup_customization.rst:222
 msgid "Example"
 msgstr "Esempio"
 
-#: ../../backup_customization.rst:223
+#: ../../backup_customization.rst:224
 msgid ""
 "It's possible to configure a backup which includes only the mail and is "
 "scheduled each our."
@@ -593,40 +596,40 @@ msgstr ""
 "È possibile configurare un backup programmato ogni ora che includa solo i "
 "file della posta."
 
-#: ../../backup_customization.rst:225
+#: ../../backup_customization.rst:226
 msgid "Configure the new ``mymailbackup`` using the UI"
 msgstr ""
 "Configurare il nuovo backup ``mymailbackup`` utilizzando l'interfaccia "
 "utente"
 
-#: ../../backup_customization.rst:227
+#: ../../backup_customization.rst:228
 msgid "Create a custom include containing only the mail directory: ::"
 msgstr ""
 "Creare un file include custom contenente solo la directory delle email: ::"
 
-#: ../../backup_customization.rst:231
+#: ../../backup_customization.rst:232
 msgid "Create an empty custom exclude file: ::"
 msgstr "Creare un file exclude custom vuoto: ::"
 
-#: ../../backup_customization.rst:235
+#: ../../backup_customization.rst:236
 msgid "Apply the configuration: ::"
 msgstr "Applicare la configurazione: ::"
 
-#: ../../backup_customization.rst:240
+#: ../../backup_customization.rst:241
 msgid "Make sure not to leave empty lines inside edited files."
 msgstr "Assicurarsi di non lasciare righe vuote all'interno file modificati."
 
-#: ../../backup_customization.rst:242
+#: ../../backup_customization.rst:243
 msgid "This type of backup can't be used in case of disaster recovery."
 msgstr ""
 "Questo tipo di backup non può essere utilizzato in caso di disaster "
 "recovery."
 
-#: ../../backup_customization.rst:247
+#: ../../backup_customization.rst:248
 msgid "Configuration backup"
 msgstr "Backup configurazione"
 
-#: ../../backup_customization.rst:249
+#: ../../backup_customization.rst:250
 msgid ""
 "Configuration backup is an automated task that runs every night at 00.15 and"
 " creates a new archive, :file:`/var/lib/nethserver/backup/backup-"
@@ -638,7 +641,7 @@ msgstr ""
 ":file:`/var/lib/nethserver/backup/backup-config.tar.xz`, se la "
 "configurazione è cambiata nelle 24 ore precedenti."
 
-#: ../../backup_customization.rst:253
+#: ../../backup_customization.rst:254
 msgid ""
 "The list of installed modules is included in the backup archive. The restore"
 " procedure can download and install the listed modules automatically."
@@ -647,7 +650,7 @@ msgstr ""
 "procedura di ripristino consente di scaricare e installare automaticamente i"
 " moduli riportati nell'elenco."
 
-#: ../../backup_customization.rst:256
+#: ../../backup_customization.rst:257
 msgid ""
 "In most cases it is not necessary to change the configuration backup. But it"
 " can be useful, for example, if you have a custom httpd configuration. In "
@@ -660,7 +663,7 @@ msgstr ""
 "backup della configurazione il percorso del file che contiene la "
 "personalizzazione."
 
-#: ../../backup_customization.rst:263
+#: ../../backup_customization.rst:264
 msgid ""
 "If you wish to add a file or directory to configuration backup, add a line "
 "to the file :file:`/etc/backup-config.d/custom.include`."
@@ -669,7 +672,7 @@ msgstr ""
 "configurazione, aggiungere una riga al file :file:`/etc/backup-"
 "config.d/custom.include`."
 
-#: ../../backup_customization.rst:265
+#: ../../backup_customization.rst:266
 msgid ""
 "For example, to backup :file:`/etc/httpd/conf.d/mycustom.conf` file, add "
 "this line: ::"
@@ -677,13 +680,13 @@ msgstr ""
 "Ad esempio, per eseguire il backup del file "
 ":file:`/etc/httpd/conf.d/mycustom.conf`, aggiungere la riga: ::"
 
-#: ../../backup_customization.rst:269
+#: ../../backup_customization.rst:270
 msgid "Do not add big directories or files to the configuration backup."
 msgstr ""
 "Non aggiungere mai directory e file voluminosi al backup della "
 "configurazione."
 
-#: ../../backup_customization.rst:274
+#: ../../backup_customization.rst:275
 msgid ""
 "If you wish to exclude a file or directory from the configuration backup, "
 "add a line to the file :file:`/etc/backup-config.d/custom.exclude`."
@@ -692,7 +695,7 @@ msgstr ""
 "configurazione, aggiungere una riga al file :file:`/etc/backup-"
 "config.d/custom.exclude`."
 
-#: ../../backup_customization.rst:277
+#: ../../backup_customization.rst:278
 msgid ""
 "Make sure not to leave empty lines inside edited files. The syntax of the "
 "configuration backup supports only simple file and directory paths."
@@ -701,11 +704,11 @@ msgstr ""
 " backup della configurazione supporta solo semplici percorsi di file e "
 "directory."
 
-#: ../../backup_customization.rst:285
+#: ../../backup_customization.rst:286
 msgid "Restore from command line"
 msgstr "Ripristino da linea di comando"
 
-#: ../../backup_customization.rst:287
+#: ../../backup_customization.rst:288
 msgid ""
 "When the :ref:`selective_restore-section` web interface is not enough, the "
 "restore can be done via command line."
@@ -713,44 +716,44 @@ msgstr ""
 "Nel caso in cui l'interfaccia web :ref:`select_restore-section` non fosse "
 "sufficiente, il ripristino può essere eseguito dalla riga di comando."
 
-#: ../../backup_customization.rst:290
+#: ../../backup_customization.rst:291
 msgid ""
 "All relevant files are saved under :file:`/var/lib/nethserver/` directory:"
 msgstr ""
 "Tutti i file rilevanti sono conservati nella directory "
 ":file:`/var/lib/nethserver/` :"
 
-#: ../../backup_customization.rst:292
+#: ../../backup_customization.rst:293
 msgid "Mails: :file:`/var/lib/nethserver/vmail/<user>`"
 msgstr "Cartelle di posta: :file:`/var/lib/nethserver/vmail/<user>`"
 
-#: ../../backup_customization.rst:293
+#: ../../backup_customization.rst:294
 msgid "Shared folders: :file:`/var/lib/nethserver/ibay/<name>`"
 msgstr "Cartelle condivise: :file:`/var/lib/nethserver/ibay/<name>`"
 
-#: ../../backup_customization.rst:294
+#: ../../backup_customization.rst:295
 msgid "User's home: :file:`/var/lib/nethserver/home/<user>`"
 msgstr "Home utenti: :file:`/var/lib/nethserver/home/<user>`"
 
-#: ../../backup_customization.rst:297
+#: ../../backup_customization.rst:298
 msgid "To list data inside a backup, use: ::"
 msgstr ""
 "Per ottenere un elenco dei dati contenuti in un backup, utilizzare: ::"
 
-#: ../../backup_customization.rst:301
+#: ../../backup_customization.rst:302
 msgid "To restore all data in the original location, use: ::"
 msgstr ""
 "Per ripristinare tutti i dati nella loro posizione originale, utilizzare: ::"
 
-#: ../../backup_customization.rst:305
+#: ../../backup_customization.rst:306
 msgid "To restore a file or directory, use: ::"
 msgstr "Per ripristinare un file o una directory, utilizzare: ::"
 
-#: ../../backup_customization.rst:309
+#: ../../backup_customization.rst:310
 msgid "Example, restore the version of a file from 15 days ago: ::"
 msgstr "Esempio, ripristinare un file alla versione di 15 giorni fa: ::"
 
-#: ../../backup_customization.rst:313
+#: ../../backup_customization.rst:314
 msgid ""
 "The ``-t`` option allows to specify the number of days (15 in this "
 "scenario). When used with snapshot-based engines, the ``-t`` option requires"
@@ -760,7 +763,7 @@ msgstr ""
 "scenario). Quando viene utilizzato con engine basati su snapshot, l'opzione "
 "``-t`` richiede il nome dello snapshot da ripristinare."
 
-#: ../../backup_customization.rst:318
+#: ../../backup_customization.rst:319
 msgid ""
 "When you are using *CIFS* to access the share, and the command doesn't work "
 "as expected, verify that user and password for the network share are "
@@ -775,11 +778,11 @@ msgstr ""
 "NT_STATUS_LOGON_FAILURE. Allo stesso tempo il comando backup-data-list non "
 "andrà a buon fine e uscirà immediatamente riportando degli errori."
 
-#: ../../backup_customization.rst:327
+#: ../../backup_customization.rst:328
 msgid "Formatting a local disk"
 msgstr "Formattazione di un disco locale"
 
-#: ../../backup_customization.rst:329
+#: ../../backup_customization.rst:330
 msgid ""
 "Local disks can be formatted directly from the :ref:`web interface "
 "<backup_data_settings-section>`. If something goes wrong, or a custom "
@@ -790,7 +793,7 @@ msgstr ""
 "storto o fosse necessario un partizionamento personalizzato, seguire i "
 "seguenti passaggi."
 
-#: ../../backup_customization.rst:332
+#: ../../backup_customization.rst:333
 msgid ""
 "The best filesystem for SATA/USB backup disks is EXT3 or EXT4. FAT "
 "filesystem is supported but *not recommended*, while NTFS is **not "
@@ -801,7 +804,7 @@ msgstr ""
 "supportato**. EXT3 o EXT4 sono obbligatori in caso di utilizzo dell'engine "
 "rsync."
 
-#: ../../backup_customization.rst:335
+#: ../../backup_customization.rst:336
 msgid ""
 "Before formatting the disk, attach it to the server and find the device "
 "name: ::"
@@ -809,36 +812,36 @@ msgstr ""
 "Per eseguire la formattazione, è necessario collegare il disco e "
 "identificarlo correttamente: ::"
 
-#: ../../backup_customization.rst:356
+#: ../../backup_customization.rst:357
 msgid "Another good command could be: ::"
 msgstr "Un altro buon comando da utilizzare è essere: ::"
 
-#: ../../backup_customization.rst:360
+#: ../../backup_customization.rst:361
 msgid "In this scenario, the disk is accessibile as *sdc* device."
 msgstr "In questo esempio, il disco è stato riconosciuto come device *sdc*."
 
-#: ../../backup_customization.rst:362
+#: ../../backup_customization.rst:363
 msgid "Create a Linux partition on the whole disk: ::"
 msgstr "Creare una unica partizione Linux sull’intero disco: ::"
 
-#: ../../backup_customization.rst:367
+#: ../../backup_customization.rst:368
 msgid ""
 "Create the filesystem on *sdc1* partition with a label named *backup* ::"
 msgstr ""
 "Creare il filesystem sulla partizione *sdc1* assegnando una label, ad "
 "esempio *backup*: ::"
 
-#: ../../backup_customization.rst:371
+#: ../../backup_customization.rst:372
 msgid "Detach and reconnect the USB disk:"
 msgstr "Scollegare e ricollegare il disco USB:"
 
-#: ../../backup_customization.rst:373
+#: ../../backup_customization.rst:374
 msgid "You can simulate it with the following command: ::"
 msgstr ""
 "E’ possibile utilizzare il comando seguente per simulare il collegamento del"
 " disco: ::"
 
-#: ../../backup_customization.rst:377
+#: ../../backup_customization.rst:378
 msgid ""
 "Now the *backup* label will be displayed inside the :guilabel:`Backup` page."
 msgstr ""
