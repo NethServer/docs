@@ -1701,8 +1701,8 @@ msgid ""
 "lines in ``/var/log/maillog*`` (note the ending \"*\" to search also in "
 "archived log files). For instance ::"
 msgstr ""
-"Entrambe le stringhe possono essere usate con il comando `` grep`` per "
-"trovare righe di log rilevanti in ``/var/log/maillog* `` (notare il  \"*\" "
+"Entrambe le stringhe possono essere usate con il comando ``grep`` per "
+"trovare righe di log rilevanti in ``/var/log/maillog*`` (notare il  \"*\" "
 "finale  per cercare anche nei file di log archiviati). Per esempio ::"
 
 #: ../../mail.rst:851
