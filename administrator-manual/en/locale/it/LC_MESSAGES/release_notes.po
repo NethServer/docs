@@ -15,17 +15,17 @@
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2020
 # Davide Principi <davide.principi@nethesis.it>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 15:23+0200\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2020\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,10 +65,10 @@ msgstr ":ref:`nscom-releases-section`"
 #: ../../release_notes.rst:19
 msgid ""
 "List of `changes "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-10-07T23%3A59%3A59Z..2024-06-30>`_"
 msgstr ""
 "Lista delle `principali modifiche "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-01-30T23%3A59%3A59Z..2024-06-30>`_"
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-10-07T23%3A59%3A59Z..2024-06-30>`_"
 
 #: ../../release_notes.rst:21
 msgid ""

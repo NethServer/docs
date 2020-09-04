@@ -13,15 +13,16 @@
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2019-10-07 12:37+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,13 +32,15 @@ msgstr ""
 
 #: ../../access2.rst:5
 msgid "Accessing the Server Manager"
-msgstr ""
+msgstr "Accesso al Server Manager"
 
 #: ../../access2.rst:7
 msgid ""
-"Documentation about the old Server Manager is available :ref:`here "
-"<access2-section>`."
+"Documentation about the old Server Manager is available :ref:`here <access-"
+"section>`."
 msgstr ""
+"La documentazione relativa al vecchio Server Manager è disponibile :ref:`qui"
+" <access-section>`."
 
 #: ../../access2.rst:9
 msgid ""
@@ -89,11 +92,11 @@ msgstr ""
 
 #: ../../access2.rst:30
 msgid ""
-"Besides root, all users with the :guilabel:`Shell` option enabled can access"
-" the Server Manager."
+"Besides root, all users with a :ref:`delegated<delegation-section>` panel "
+"can access the Server Manager."
 msgstr ""
-"Oltre a root, tutti gli utenti con l'opzione :guilabel:`Shell` abilitata "
-"potranno accedere al Server Manager."
+"Oltre a root, tutti gli utenti con almeno una :ref:`delega<delegation-"
+"section>` possono accedere al Server Manager."
 
 #: ../../access2.rst:32
 msgid ""
