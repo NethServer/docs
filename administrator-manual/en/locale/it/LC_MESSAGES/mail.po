@@ -409,8 +409,8 @@ msgid ""
 "blacklists (:index:`DNSBL` [#DNSBL]_). A score is associated to each rule."
 msgstr ""
 "Il filtro può anche verificare se il server mittente è elencato in una o più"
-" black list (:index:`DNSBL` [#DNSBL] _). Un punteggio è associato a ciascuna"
-" regola."
+" black list (:index:`DNSBL` [#DNSBL]_). Un punteggio è associato a ciascuna "
+"regola."
 
 #: ../../mail.rst:213
 msgid ""
