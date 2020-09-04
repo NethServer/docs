@@ -12,16 +12,15 @@
 # 
 # Translators:
 # Nicola <nicola.rauso@nethesis.it>, 2020
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 10:33+0100\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2020-03-10 09:33+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,15 +42,18 @@ msgstr ""
 
 #: ../../blacklist.rst:10
 msgid ""
-"The threat shield blocks connections to and from malicious hosts, preventing"
-" attacks, service abuse, malware, and other cybercrime activities. The "
-"package can be installed both on firewalls and on machines without a red "
-"interface, like mail servers or PBXs."
+"The Threat shield blocks connections to and from malicious hosts, preventing"
+" attacks, service abuse, malware, and other cybercrime activities using IP "
+"blacklists. It also blocks DNS requests for malicious domains using DNS "
+"blacklists. The package can be installed both on firewalls and on machines "
+"without a red interface, like mail servers or PBXs."
 msgstr ""
-"La threat shield blocca le connessioni da e verso host dannosi, prevenendo "
-"attacchi, abusi di servizio, malware e altre attività di criminalità "
-"informatica. Il pacchetto può essere installato sia su firewall che su "
-"macchine senza interfaccia red, come server di posta o PBX."
+"La Threat Shield blocca le connessioni da e verso host dannosi, prevenendo "
+"attacchi, abusi del servizio, malware e altre attività di criminalità "
+"informatica mediante blacklist di IP. Inoltre, blocca le richieste DNS per "
+"domini dannosi mediante blacklist DNS. Il pacchetto può essere installato "
+"sia su firewall che su macchine senza interfaccia red, come server di posta "
+"o PBX."
 
 #: ../../blacklist.rst:15
 msgid "Configuration"
@@ -59,101 +61,175 @@ msgstr "Configurazione"
 
 #: ../../blacklist.rst:17
 msgid ""
-"First, access the threat shield web interface to set the download URL for "
-"the blacklists."
+":guilabel:`IP blacklist` and :guilabel:`DNS blacklist` can be enabled and "
+"configured on the corresponding pages in the menu. Their configuration is "
+"almost identical."
 msgstr ""
-"Per prima cosa, accedere all'interfaccia web della threat shield per "
-"impostare l'URL di download per le blacklist."
+":guilabel:`IP blacklist` e :guilabel:`DNS blacklist` possono essere "
+"abilitati e configurati nelle corrispondenti pagine del menu dedicato. La "
+"loro configurazione è pressoché identica."
 
-#: ../../blacklist.rst:19
+#: ../../blacklist.rst:20
 msgid ""
-"After setting the URL, the administrator can choose what :index:`blacklist` "
-"categories should be enabled. Each category can have a "
-":guilabel:`Confidence` score between 0 and 10. Categories with a higher "
-"confidence are less prone to false positives."
+"First, set the :guilabel:`Download URL` for the blacklists. After setting "
+"the URL, the administrator can choose which :index:`blacklist` categories "
+"should be enabled. Each category can have a :guilabel:`Confidence` score "
+"between 0 and 10. Categories with a higher confidence are less prone to "
+"false positives."
 msgstr ""
-"Dopo aver impostato l'URL, l'amministratore può scegliere quali categorie di"
-" :index:`blacklist` debbano essere abilitate. Ogni categoria può avere un "
+"Innanzitutto, è necessario impostare il :guilabel:`Download URL` per le "
+"blacklist. Dopo aver impostato l'URL, l'amministratore può scegliere quali "
+"categorie di :index:`blacklist` abilitare. Ogni categoria può avere un "
 "punteggio :guilabel:`Fiducia` tra 0 e 10. Le categorie con una maggiore "
 "fiducia sono meno soggette a falsi positivi."
 
-#: ../../blacklist.rst:23
+#: ../../blacklist.rst:25
 msgid "Enabled categories will be automatically updated at regular intervals."
 msgstr ""
 "Le categorie abilitate verranno aggiornate automaticamente a intervalli "
 "regolari."
 
-#: ../../blacklist.rst:25
+#: ../../blacklist.rst:27
 msgid ""
 "The download URL must contain a valid GIT repository. Administrators can "
-"choose a public repository, like `Firehol ipsets one "
-"<https://github.com/firehol/blocklist-ipsets>`_, or subscribe to a "
-"commercial service. If the machine has a Community or an Enterprise "
-"subscription, the access to the URL will be authenticated using system id "
-"and secret."
+"choose a public repository or subscribe to a commercial service. If the "
+"machine has a Community or an Enterprise subscription, the access to the URL"
+" will be authenticated using system id and secret."
 msgstr ""
-"L'URL di download deve contenere un repository GIT valido. Gli "
-"amministratori possono scegliere un repository pubblico, come `Firehol "
-"ipsets one <https://github.com/firehol/blocklist-ipsets>`_ o abbonarsi a un "
-"servizio commerciale. Se la macchina dispone di un abbonamento Community o "
-"Enterprise, l'accesso all'URL verrà autenticato utilizzando l'id di sistema "
+"Il Download URL deve contenere un repository GIT valido. Gli amministratori "
+"possono scegliere un repository pubblico o abbonarsi a un servizio "
+"commerciale. Se la macchina dispone di una subscription Community o "
+"Enterprise, l'accesso all'URL verrà autenticato utilizzando l'LK di sistema "
 "e il token."
 
 #: ../../blacklist.rst:30
 msgid ""
-"Experienced administrators can also `setup their own blacklist server "
-"<https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-"
-"blacklist.html#setup-a-blacklist-server>`_."
+"A popular free IP blacklist is `Firehol <https://github.com/firehol"
+"/blocklist-ipsets>`_. Experienced administrators can also `setup their own "
+"IP blacklist server <https://docs.nethserver.org/projects/nethserver-"
+"devel/en/latest/nethserver-blacklist.html#setup-a-blacklist-server>`_."
 msgstr ""
-"Gli amministratori esperti possono anche `configurare il proprio server di "
-"blacklist <https://docs.nethserver.org/projects/nethserver-devel/en/latest"
-"/nethserver-blacklist.html#setup-a-blacklist-server>`_."
+"Una nota blacklist di IP gratuita è `Firehol <https://github.com/firehol"
+"/blocklist-ipsets>`_.Gli amministratori esperti possono anche `configurare "
+"il proprio server di blacklist <https://docs.nethserver.org/projects"
+"/nethserver-devel/en/latest/nethserver-blacklist.html#setup-a-blacklist-"
+"server>`_."
 
-#: ../../blacklist.rst:33
+#: ../../blacklist.rst:32
+msgid ""
+"An example of DNS blacklist is available at `dns-community-blacklist "
+"<https://github.com/NethServer/dns-community-blacklist>`_."
+msgstr ""
+"Un esempio di blacklist DNS è disponibile `qui "
+"<https://github.com/NethServer/dns-community-blacklist>`_."
+
+#: ../../blacklist.rst:34
+msgid ""
+"If :ref:`proxy-section` is enabled, in any mode, :guilabel:`DNS blacklist` "
+"will not work for proxied hosts."
+msgstr ""
+"Se il :ref:`proxy-section` è abilitato, in qualsiasi modalità, la "
+":guilabel:`blacklist DNS` non funzionerà per gli host proxati."
+
+#: ../../blacklist.rst:37
 msgid "Whitelist"
 msgstr "Whitelist"
 
-#: ../../blacklist.rst:35
+#: ../../blacklist.rst:39
 msgid ""
-"In case of a false positive, a host or a CIDR can be added to the local "
-":guilabel:`Whitelist`. If the firewall module is installed, the whitelist "
-"will also accept host and CIDR firewall objects."
+"In case of a false positive, an IP address or a CIDR subnet can be added to "
+"the local :guilabel:`Whitelist`. If the firewall module is installed, the "
+"whitelist will also accept host and CIDR firewall objects."
 msgstr ""
-"In caso di falso positivo, è possibile aggiungere un host o un CIDR alla "
-":guilabel:`whitelist` locale. Se è installato il modulo firewall, la "
-"Whitelist accetterà anche oggetti firewall di tipo host e CIDR."
+"In caso di falso positivo, è possibile aggiungere un indirizzo IP o una rete"
+" CIDR alla :guilabel:`Whitelist` locale. Se è installato il modulo firewall,"
+" la Whitelist accetterà anche oggetti firewall di tipo host e CIDR."
 
-#: ../../blacklist.rst:38
+#: ../../blacklist.rst:42
 msgid ""
 "Hosts should be added to the whitelist only for a limited period of time. As"
-" a best pratice, when a false positive is found, please report it to the "
+" a best practice, when a false positive is found, please report it to the "
 "blacklist maintainer."
 msgstr ""
 "Gli host dovrebbero essere aggiunti alla whitelist solo per un periodo di "
 "tempo limitato. Come best practice, quando viene trovato un falso positivo, "
 "si invita a segnalarlo al manutentore della blacklist."
 
-#: ../../blacklist.rst:42
+#: ../../blacklist.rst:46
 msgid "Incident response"
 msgstr "Incident response"
 
-#: ../../blacklist.rst:44
+#: ../../blacklist.rst:48
 msgid ""
-"The :guilabel:`Analysis` page displays most recent attacks which can be "
-"filtered by source, destination, protocol and port. Using the "
-":guilabel:`Check IP address` section, administrators can also check if a "
-"given IP has been blacklisted by an enabled category."
+"The :guilabel:`Analysis` page displays most recent attacks and DNS requests "
+"which can be easily filtered by source, destination and other attributes. "
+"Using the :guilabel:`Check IP address or domain` section, administrators can"
+" also check if a given IP or domain has been blacklisted by enabled "
+"categories."
 msgstr ""
-"La pagina :guilabel:`Analisi` mostra gli attacchi più recenti, che possono "
-"essere filtrati per sorgente, destinazione, protocollo e porta. Usando la "
-"sezione :guilabel:`Controlla indirizzo IP`, gli amministratori possono anche"
-" verificare se un determinato IP sia stato inserito nella blacklist da una "
-"categoria abilitata."
+"La pagina :guilabel:`Analisi` mostra gli attacchi e le richieste DNS più "
+"recenti, che possono essere filtrati per sorgente, destinazione e altri "
+"attributi. Usando la sezione :guilabel:`Controlla indirizzo IP o dominio`, "
+"gli amministratori possono anche verificare se un determinato IP o dominio "
+"sia stato inserito nella blacklist da una delle categorie abilitate."
 
-#: ../../blacklist.rst:47
+#: ../../blacklist.rst:51
 msgid ""
 "For advanced log analysis with regular expressions support, use the "
 ":guilabel:`Logs` page."
 msgstr ""
 "Per un'analisi avanzata dei log con supporto delle espressioni regolari, "
 "usare la pagina :guilabel:`Log`."
+
+#: ../../blacklist.rst:54
+msgid "Statistics"
+msgstr "Statistiche"
+
+#: ../../blacklist.rst:56
+msgid ""
+"The :guilabel:`Dashboard` page provides an overview on current status of IP "
+"and DNS blacklists and displays graphical information about blocked attacks."
+msgstr ""
+"La pagina :guilabel:`Dashboard` offre una panoramica dello stato corrente "
+"delle blacklist IP e DNS e visualizza informazioni grafiche sugli attacchi "
+"bloccati."
+
+#: ../../blacklist.rst:58
+msgid "IP blacklist dashboard provides:"
+msgstr "La dashboard della blacklist IP fornisce:"
+
+#: ../../blacklist.rst:60 ../../blacklist.rst:66
+msgid "Today's total number of threats blocked"
+msgstr "Numero totale di minacce bloccate nella giornata"
+
+#: ../../blacklist.rst:61
+msgid "Today's most blocked source hosts"
+msgstr "Gli host di origine maggiormente bloccati nella giornata"
+
+#: ../../blacklist.rst:62
+msgid "Today's most blocked destination hosts"
+msgstr "Gli host di destinazione maggiormente bloccati nella giornata"
+
+#: ../../blacklist.rst:64
+msgid "DNS blacklist dashboard provides:"
+msgstr "La dashboard della blacklist DNS fornisce:"
+
+#: ../../blacklist.rst:67
+msgid "Today's total number of DNS requests"
+msgstr "Numero totale di richieste DNS della giornata"
+
+#: ../../blacklist.rst:68
+msgid "Today's threats percentage"
+msgstr "Percentuale delle minacce della giornata"
+
+#: ../../blacklist.rst:69
+msgid "Top clients performing most DNS requests"
+msgstr "Lista dei client che eseguono il maggior numero di richieste DNS"
+
+#: ../../blacklist.rst:70
+msgid "Top blocked domains"
+msgstr "Principali domini bloccati"
+
+#: ../../blacklist.rst:71
+msgid "Top requested domains"
+msgstr "Domini più richiesti"

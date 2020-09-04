@@ -13,15 +13,16 @@
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018
 # Nicola <nicola.rauso@nethesis.it>, 2020
+# Davide Principi <davide.principi@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2018-01-12 09:13+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -383,7 +384,7 @@ msgstr "nethserver-antivirus"
 
 #: ../../hotsync.rst:243
 msgid "nethserver-backup-config"
-msgstr ""
+msgstr "nethserver-backup-config"
 
 #: ../../hotsync.rst:244
 msgid "nethserver-backup-data"
@@ -391,15 +392,15 @@ msgstr ""
 
 #: ../../hotsync.rst:245
 msgid "nethserver-base"
-msgstr ""
+msgstr "nethserver-base"
 
 #: ../../hotsync.rst:246
 msgid "nethserver-c-icap"
-msgstr ""
+msgstr "nethserver-c-icap"
 
 #: ../../hotsync.rst:247
 msgid "nethserver-cockpit"
-msgstr ""
+msgstr "nethserver-cockpit"
 
 #: ../../hotsync.rst:248
 msgid "nethserver-collectd"
@@ -411,7 +412,7 @@ msgstr "nethserver-cups"
 
 #: ../../hotsync.rst:250
 msgid "nethserver-dante"
-msgstr ""
+msgstr "nethserver-dante"
 
 #: ../../hotsync.rst:251
 msgid "nethserver-dc"
@@ -419,7 +420,7 @@ msgstr "nethserver-dc"
 
 #: ../../hotsync.rst:252
 msgid "nethserver-dedalo"
-msgstr ""
+msgstr "nethserver-dedalo"
 
 #: ../../hotsync.rst:253
 msgid "nethserver-directory"
@@ -431,23 +432,23 @@ msgstr "nethserver-dnsmasq"
 
 #: ../../hotsync.rst:255
 msgid "nethserver-duc"
-msgstr ""
+msgstr "nethserver-duc"
 
 #: ../../hotsync.rst:256
 msgid "nethserver-ejabberd"
-msgstr ""
+msgstr "nethserver-ejabberd"
 
 #: ../../hotsync.rst:257
 msgid "nethserver-evebox"
-msgstr ""
+msgstr "nethserver-evebox"
 
 #: ../../hotsync.rst:258
 msgid "nethserver-fail2ban"
-msgstr ""
+msgstr "nethserver-fail2ban"
 
 #: ../../hotsync.rst:259
 msgid "nethserver-firewall-base"
-msgstr ""
+msgstr "nethserver-firewall-base"
 
 #: ../../hotsync.rst:260
 msgid "nethserver-freepbx > 14.0.3"
@@ -455,23 +456,23 @@ msgstr "nethserver-freepbx > 14.0.3"
 
 #: ../../hotsync.rst:261
 msgid "nethserver-httpd"
-msgstr ""
+msgstr "nethserver-httpd"
 
 #: ../../hotsync.rst:262
 msgid "nethserver-hylafax"
-msgstr ""
+msgstr "nethserver-hylafax"
 
 #: ../../hotsync.rst:263
 msgid "nethserver-iaxmodem"
-msgstr ""
+msgstr "nethserver-iaxmodem"
 
 #: ../../hotsync.rst:264
 msgid "nethserver-ipsec-tunnels"
-msgstr ""
+msgstr "nethserver-ipsec-tunnels"
 
 #: ../../hotsync.rst:265
 msgid "nethserver-janus"
-msgstr ""
+msgstr "nethserver-janus"
 
 #: ../../hotsync.rst:266
 msgid "nethserver-letsencrypt"
@@ -479,15 +480,15 @@ msgstr "nethserver-letsencrypt"
 
 #: ../../hotsync.rst:267
 msgid "nethserver-lightsquid"
-msgstr ""
+msgstr "nethserver-lightsquid"
 
 #: ../../hotsync.rst:268
 msgid "nethserver-mail"
-msgstr ""
+msgstr "nethserver-mail"
 
 #: ../../hotsync.rst:269
 msgid "nethserver-mattermost"
-msgstr ""
+msgstr "nethserver-mattermost"
 
 #: ../../hotsync.rst:270
 msgid "nethserver-mysql"
@@ -495,11 +496,11 @@ msgstr "nethserver-mysql"
 
 #: ../../hotsync.rst:271
 msgid "nethserver-ndpi"
-msgstr ""
+msgstr "nethserver-ndpi"
 
 #: ../../hotsync.rst:272
 msgid "nethserver-netdata"
-msgstr ""
+msgstr "nethserver-netdata"
 
 #: ../../hotsync.rst:273
 msgid "nethserver-nextcloud"
@@ -507,19 +508,19 @@ msgstr "nethserver-nextcloud"
 
 #: ../../hotsync.rst:274
 msgid "nethserver-ntopng"
-msgstr ""
+msgstr "nethserver-ntopng"
 
 #: ../../hotsync.rst:275
 msgid "nethserver-nut"
-msgstr ""
+msgstr "nethserver-nut"
 
 #: ../../hotsync.rst:276
 msgid "nethserver-openssh"
-msgstr ""
+msgstr "nethserver-openssh"
 
 #: ../../hotsync.rst:277
 msgid "nethserver-openvpn"
-msgstr ""
+msgstr "nethserver-openvpn"
 
 #: ../../hotsync.rst:278
 msgid "nethserver-pulledpork"
@@ -527,15 +528,15 @@ msgstr "nethserver-pulledpork"
 
 #: ../../hotsync.rst:279
 msgid "nethserver-restore-data"
-msgstr ""
+msgstr "nethserver-restore-data"
 
 #: ../../hotsync.rst:280
 msgid "nethserver-roundcubemail"
-msgstr ""
+msgstr "nethserver-roundcubemail"
 
 #: ../../hotsync.rst:281
 msgid "nethserver-samba"
-msgstr ""
+msgstr "nethserver-samba"
 
 #: ../../hotsync.rst:282
 msgid "nethserver-samba-audit"
@@ -543,11 +544,11 @@ msgstr "nethserver-samba-audit"
 
 #: ../../hotsync.rst:283
 msgid "nethserver-squid"
-msgstr ""
+msgstr "nethserver-squid"
 
 #: ../../hotsync.rst:284
 msgid "nethserver-squidclamav"
-msgstr ""
+msgstr "nethserver-squidclamav"
 
 #: ../../hotsync.rst:285
 msgid "nethserver-squidguard"
@@ -559,19 +560,19 @@ msgstr "nethserver-sssd"
 
 #: ../../hotsync.rst:287
 msgid "nethserver-subscription"
-msgstr ""
+msgstr "nethserver-subscription"
 
 #: ../../hotsync.rst:288
 msgid "nethserver-suricata"
-msgstr ""
+msgstr "nethserver-suricata"
 
 #: ../../hotsync.rst:289
 msgid "nethserver-vpn-ui"
-msgstr ""
+msgstr "nethserver-vpn-ui"
 
 #: ../../hotsync.rst:290
 msgid "nethserver-vsftpd"
-msgstr ""
+msgstr "nethserver-vsftpd"
 
 #: ../../hotsync.rst:291
 msgid "nethserver-webtop5 (z-push state is not synchronized)"

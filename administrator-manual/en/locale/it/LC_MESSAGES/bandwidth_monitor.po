@@ -12,16 +12,16 @@
 # 
 # Translators:
 # Francesco Pari, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-09-02 17:30+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,70 +29,172 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../bandwidth_monitor.rst:3
+#: ../../bandwidth_monitor.rst:5
 msgid "Bandwidth monitor"
 msgstr "Monitor banda"
 
 #: ../../bandwidth_monitor.rst:7
 msgid ""
-"The configuration page of this module is available only in the old Server "
-"Manager and will not be ported to the new one."
+"**Bandwidth monitor** module allows you to analyze real-time network traffic"
+" using `ntopng <https://www.ntop.org/products/traffic-analysis/ntop/>`_ "
+"under the hood. **ntopng** is a powerful tool that evaluates the bandwidth "
+"used by individual hosts and identifies the most commonly used network "
+"protocols."
 msgstr ""
-"La pagina di configurazione di questo modulo è disponibile sono nel vecchio "
-"Server Manager e non verrà portata nel nuovo."
+"Il modulo **Monitor di Banda** consente di analizzare il traffico di rete in"
+" tempo reale utilizzando il motore di `ntopng <https://www.ntop.org/products"
+"/traffic-analysis/ntop/>`_. **ntopng** è un potente strumento che valuta la "
+"larghezza di banda utilizzata dai singoli host e identifica i protocolli di "
+"rete più comunemente utilizzati."
 
-#: ../../bandwidth_monitor.rst:11
-msgid "ntopng"
-msgstr "ntopng"
+#: ../../bandwidth_monitor.rst:14
+msgid "Dashboard"
+msgstr "Dashboard"
 
-#: ../../bandwidth_monitor.rst:13
+#: ../../bandwidth_monitor.rst:16
 msgid ""
-"ntopng is a powerful tool that allows you to analyze real-time network "
-"traffic. It allows you to evaluate the bandwidth used by individual hosts "
-"and to identify the most commonly used network protocols."
+":guilabel:`Dashboard` page provides an overview on network usage displaying "
+"traffic information on some graphical widgets."
 msgstr ""
-"ntopng è un potente strumento che permette di analizzare in tempo reale il "
-"traffico di rete. Consente di valutare la banda utilizzata dai singoli host "
-"e di individuare i protocolli di rete maggiormente usati."
+"La :guilabel:`Dashboard` fornisce una panoramica sull'uso della rete e "
+"mostra le informazioni sul traffico attraverso alcuni widget grafici."
 
-#: ../../bandwidth_monitor.rst:19
-msgid "Enable ntopng"
-msgstr "Abilita ntopng"
-
-#: ../../bandwidth_monitor.rst:18
-msgid ""
-"Enabling ntopng, all traffic passing through the network interfaces will be "
-"analyzed. It can cause a slowdown of the network and an increased in system "
-"load."
-msgstr ""
-"Abilitando ntopng, tutto il traffico passante per le interfacce di rete "
-"verrà analizzato. Può causare un rallentamento della rete e un aumento del "
-"carico di sistema."
-
-#: ../../bandwidth_monitor.rst:21
-msgid "Port"
-msgstr "Porta"
+#: ../../bandwidth_monitor.rst:20
+msgid "Status"
+msgstr "Stato"
 
 #: ../../bandwidth_monitor.rst:22
-msgid "The port where to view the ntopng web interface."
-msgstr "Porta su cui raggiungere l'interfaccia web di ntopng."
-
-#: ../../bandwidth_monitor.rst:24
-msgid "Password for 'admin' user"
-msgstr "Password per l'utente 'admin'"
-
-#: ../../bandwidth_monitor.rst:24
 msgid ""
-"Admin user password. This password is not related to the |product| admin "
-"password."
+":guilabel:`Status` section informs you whether bandwidth monitor is "
+"currently enabled and provides :guilabel:`Open bandwidth monitor app` button"
+" to access **ntopng** web interface."
 msgstr ""
-"Password dell'utente amministratore. Questa password non è legata inalcun "
-"modo alla password di admin di |product|."
-
-#: ../../bandwidth_monitor.rst:26
-msgid "Interfaces"
-msgstr "Interfacce"
+"La sezione :guilabel:`Status` indica lo stato di attivazione del monitor di "
+"banda e mostra il pulsante :guilabel:`Apri app monitor di banda` che "
+"consente accedere agevolmente all'interfaccia web **ntopng**."
 
 #: ../../bandwidth_monitor.rst:27
-msgid "Interfaces on which ntopng will listens to."
-msgstr "Interfacce su cui ntopng sarà in ascolto per eventuali richieste."
+msgid "Top local hosts"
+msgstr "Top host locali"
+
+#: ../../bandwidth_monitor.rst:29
+msgid ""
+"This table shows the list of hosts belonging to local networks that are "
+"currently generating most throughput, either downloading or uploading. This "
+"widget can help identify any hosts that are using a lot of bandwidth."
+msgstr ""
+"Questa tabella mostra in tempo reale l'elenco di host appartenenti alle reti"
+" locali che stanno generando maggior traffico, sia in download che in "
+"upload. Questo widget può aiutare a identificare gli host che utilizzano "
+"molta di banda."
+
+#: ../../bandwidth_monitor.rst:35
+msgid "Top remote hosts"
+msgstr "Top host remoti"
+
+#: ../../bandwidth_monitor.rst:37
+msgid ""
+"This table shows the list of remote hosts that are currently generating most"
+" throughput, either downloading or uploading."
+msgstr ""
+"Questa tabella mostra in tempo reale l'elenco degli host remoti che stanno "
+"generando maggior traffico, sia in download che in upload."
+
+#: ../../bandwidth_monitor.rst:42
+msgid "Traffic by interface"
+msgstr "Traffico per interfaccia"
+
+#: ../../bandwidth_monitor.rst:44
+msgid ""
+"This chart plots the throughput generated by monitored interfaces during the"
+" last 5 minutes."
+msgstr ""
+"Questo grafico traccia il throughput generato negli ultimi 5 minuti dalle "
+"interfacce monitorate."
+
+#: ../../bandwidth_monitor.rst:48
+msgid "Traffic by protocol"
+msgstr "Traffico per protocollo"
+
+#: ../../bandwidth_monitor.rst:50
+msgid ""
+"This chart plots the traffic divided by protocol during the last 5 minutes. "
+"**ntopng** tries to recognize various layer 7 protocols such as HTTP, TLS, "
+"DNS, SIP, Facebook, Spotify, Zoom, etc."
+msgstr ""
+"Questo grafico traccia il traffico degli ultimi 5 minuti diviso per "
+"protocollo. **ntopng** tenta di riconoscere vari protocolli di livello 7 "
+"come HTTP, TLS, DNS, SIP, Facebook, Spotify, Zoom, ecc."
+
+#: ../../bandwidth_monitor.rst:55
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../../bandwidth_monitor.rst:57
+msgid ""
+"In :guilabel:`Settings` page you can manage **Bandwidth monitor** "
+"configuration through the following controls:"
+msgstr ""
+"Nella pagina :guilabel:`Impostazioni` è possibile gestire la configurazione "
+"del **monitor di banda ** attraverso i seguenti controlli:"
+
+#: ../../bandwidth_monitor.rst:59
+msgid ""
+":guilabel:`Enable bandwidth monitor`: if enabled, all traffic passing "
+"through selected network interfaces will be analyzed. Depending on the "
+"capabilities of your server, it may cause a slowdown of the network and an "
+"increase in system load."
+msgstr ""
+":guilabel:`Abilita monitoraggio di banda`: se abilitato, verrà analizzato "
+"tutto il traffico che passa attraverso le interfacce di rete selezionate. A "
+"seconda delle capacità del server, potrebbe causare un rallentamento della "
+"rete e un aumento del carico del sistema."
+
+#: ../../bandwidth_monitor.rst:62
+msgid ""
+":guilabel:`Interfaces`: the network interfaces **ntopng** will listen to."
+msgstr ""
+":guilabel:`Interfacce`: le interfacce di rete sulle quali **ntopng** resterà"
+" in ascolto."
+
+#: ../../bandwidth_monitor.rst:63
+msgid ""
+":guilabel:`Web interface port`: the TCP port where **ntopng** web interface "
+"should be available. By default TCP port is **3000** and can be accessed "
+"from green zone."
+msgstr ""
+":guilabel:`Porta dell'interfaccia Web`: la porta TCP su cui sarà disponibile"
+" l'interfaccia web **ntopng**. Per impostazione predefinita, la porta TCP è "
+"la **3000** ed è possibile accedervi dalla zona green."
+
+#: ../../bandwidth_monitor.rst:65
+msgid ""
+":guilabel:`Enable authentication`: if enabled, **ntopng** web interface will"
+" require login credentials. Username is ``admin`` and default password is "
+"``admin``."
+msgstr ""
+":guilabel:`Abilita autenticazione`: se abilitato, l'interfaccia web di "
+"**ntopng** richiederà le credenziali di accesso. Il nome utente è ``admin`` "
+"e la password predefinita è ``admin``."
+
+#: ../../bandwidth_monitor.rst:68
+msgid ""
+"When **Bandwidth monitor** is enabled, **ntopng** web interface is available"
+" at: ``http://<SERVER_NAME>:<WEB_INTERFACE_PORT>``. A link to **ntopng** web"
+" interface is provided in :guilabel:`Dashboard` and :guilabel:`Settings` "
+"pages."
+msgstr ""
+"Quando il **Monitor di banda ** è abilitato, l'interfaccia web di **ntopng**"
+" è disponibile all'url: ``http://<SERVER_NAME>:<WEB_INTERFACE_PORT>``. Un "
+"link diretto all'interfaccia web di **ntopng** è presente nella "
+":guilabel:`Dashboard` e nella pagina :guilabel:`Impostazioni`."
+
+#: ../../bandwidth_monitor.rst:73
+msgid "Logs"
+msgstr "Log"
+
+#: ../../bandwidth_monitor.rst:75
+msgid ""
+"In :guilabel:`Logs` page you can examine systemd journal of **ntopng** unit."
+msgstr ""
+"Nella pagina :guilabel:`Log` è possibile esaminare il log di **ntopng**."
