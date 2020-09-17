@@ -1,8 +1,8 @@
 .. _firewall_new-section:
 
-==========================
-Firewall and gateway (new)
-==========================
+========
+Firewall
+========
 
 .. note::
 

@@ -385,37 +385,37 @@ of rules.
 
 There are 6 types of objects, 5 of them represent sources and destinations:
 
-* Host: representing local and remote computers. Example: web_server, pc_boss 
-* Groups of hosts: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
-  Example: servers, pc_segreteria 
-* CIDR Networks: You can express a CIDR network in order to simplify firewall rules.
-  
-  Example 1 : last 14 IP address of the network are assigned to servers (192.168.0.240/28).
+* **Host**: representing local and remote computers. Example: ``web_server``, ``goofy_pc``
 
-  Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (192.168.2.0/24).
+* **Groups of hosts**: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
+  Example: ``servers``, ``router``
+
+* **CIDR Networks**: You can express a CIDR network in order to simplify firewall rules.
+  
+  Example 1 : last 14 IP address of the network are assigned to servers (``192.168.0.240/28``).
+  Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (``192.168.2.0/24``).
 
 .. index:: zone
 
-* Zone: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
+* **Zone**: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
 
-.. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
+  .. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
 .. index:: time conditions
 
-* Time conditions: can be associated to firewall rules to limit their effectiveness to a given period of time.
+* **Time conditions**: can be associated to firewall rules to limit their effectiveness to a given period of time.
 
   .. note::
+    Rules which have time conditions are enforced only for new connections. 
+    Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
+    efore 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
 
-  Rules which have time conditions are enforced only for new connections. 
-  Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
-  efore 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
 
-
-* Services: a service listening on a host with at least one port and protocol. Example: ssh, https 
+* **Services**: a service listening on a host with at least one port and protocol. Example: ``ssh``, ``https``
 
 .. index:: mac address
 
-* MAC addresses: an host indentified by a MAC address. The MAC address must be bound to an existing zone.
+* **MAC addresses**: an host indentified by a MAC address. The MAC address must be bound to an existing zone.
 
   
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
