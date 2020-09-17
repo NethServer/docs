@@ -137,6 +137,17 @@ under the :menuselection:`Status` category on the left menu.
 
 .. [#DPI] Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection
 
+Rules on existing connections
+-----------------------------
+
+When a new rules is created, as default, it is applied only to new connections.
+But in some scenarios the administrator may need to apply the rule also on established connections.
+
+If the option :guilabel:`Apply to existing connections` is enabled, the rule will be applied to all connections including already established ones.
+
+.. note::
+   This option is available only inside the new Server Manager. See :ref:`firewall_new-section`.
+
 Examples
 --------
 
@@ -393,18 +404,22 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 
 * Time conditions: can be associated to firewall rules to limit their effectiveness to a given period of time.
 
-The last type of object is used to specify the type of traffic:
+  .. note::
+
+  Rules which have time conditions are enforced only for new connections. 
+  Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
+  efore 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
+
 
 * Services: a service listening on a host with at least one port and protocol. Example: ssh, https 
 
+.. index:: mac address
+
+* MAC addresses: an host indentified by a MAC address. The MAC address must be bound to an existing zone.
+
+  
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
-
-.. note::
-
-   Rules which have time conditions are enforced only for new connections. 
-   Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
-   before 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
 
 
 IP/MAC binding
