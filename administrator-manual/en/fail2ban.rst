@@ -38,8 +38,9 @@ Time span
 Ban Time
     Duration for IP to be banned for.
 
-Recidive jail is perpetual
-    When an IP goes several time in jail, the recidive jail bans it for a much longer time. If enabled, it is perpetual.
+Recidive (Extend the ban of persistent abusers)
+    * Static Ban time : Ban recidive hosts for 2 weeks, like brute force attack bots. The rule applies when an IP address has been already banned multiple times.
+    * Incremental ban time: Increase the ban time after each failure found in log. When enabling, if you set a short ban time, a valid user can be banned for a a little while but a brute force attacker will be banned for a very long time.
 
 Network
 -------
@@ -128,4 +129,3 @@ Whois
 =====
 
 If you desire to query the IP ``whois`` database and obtain the origin of the banned IP by email, you could  Install the ``whois`` rpm.
-
