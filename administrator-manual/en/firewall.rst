@@ -390,7 +390,9 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 * **Groups of hosts**: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
   Example: ``servers``, ``router``
 
-* **CIDR Networks**: You can express a CIDR network in order to simplify firewall rules.
+* **IP ranges**: a list of IP address expressed as a range. Example: ``myrange``, composed by IPs from ``192.168.1.100`` to ``192.168.1.120``
+
+* **CIDR Networks**: you can express a CIDR network in order to simplify firewall rules.
   
   Example 1 : last 14 IP address of the network are assigned to servers (``192.168.0.240/28``).
   Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (``192.168.2.0/24``).
