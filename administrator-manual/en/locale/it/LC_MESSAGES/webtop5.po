@@ -11,20 +11,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Nicola <nicola.rauso@nethesis.it>, 2019
 # Luca Gasparini <luca.gasparini@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 17:30+0200\n"
+"POT-Creation-Date: 2020-09-18 11:46+0200\n"
 "PO-Revision-Date: 2017-03-08 14:48+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1600,6 +1600,11 @@ msgid ""
 "automatically set for all users who have not configured their personal "
 "mailcard.:"
 msgstr ""
+"Accedendo le impostazioni dell'utente dalla pagina di amministrazione di "
+"WebTop (:menuselection:`Domains --> NethServer --> Utenti --> Click destro "
+"sull'utente` ) è inoltre possibile impostare una mailcard generale per il "
+"dominio che verrà impostata automaticamente per tutti gli utenti che non "
+"hanno configurato la propria mailcard personale:"
 
 #: ../../webtop5.rst:670
 msgid "Furthermore, it will also be possible to modify personal information:"
