@@ -4,9 +4,9 @@
 Fail2ban
 ========
 
-Fail2ban scans log files (e.g. :file:`/var/log/apache/error_log`) and bans IPs that show the malicious signs – too many password failures, seeking for exploits, etc. Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time, although any arbitrary other action (e.g. sending an email) could also be configured. Out of the box Fail2Ban comes with filters for various services (Apache, Dovecot, Ssh, Postfix, etc).
+Fail2ban scans log files (e.g. :file:`/var/log/apache/error_log`) and bans IPs that show the malicious signs – too many password failures, seeking for exploits, etc. Generally Fail2ban is then used to update firewall rules to reject the IP addresses for a specified amount of time, although any arbitrary other action (e.g. sending an email) could also be configured. Out of the box Fail2ban comes with filters for various services (Apache, Dovecot, Ssh, Postfix, etc).
 
-Fail2Ban is able to reduce the rate of incorrect authentications attempts however, it cannot eliminate the risk that weak authentication presents. To improve the security, open the access to service only for secure networks using the firewall.
+Fail2ban is able to reduce the rate of incorrect authentications attempts however, it cannot eliminate the risk that weak authentication presents. To improve the security, open the access to service only for secure networks using the firewall.
 
 Installation
 ============
@@ -35,11 +35,14 @@ Number of attempts
 Time span
     The counter is set to zero if no match is found within "findtime" seconds.
 
-Ban Time
+Ban time
     Duration for IP to be banned for.
 
-Recidive jail is perpetual
-    When an IP goes several time in jail, the recidive jail bans it for a much longer time. If enabled, it is perpetual.
+Recidive ban
+    Extend the ban of persistent abusers. Recidive ban can have 2 different behaviors:
+
+    * *Static ban time*: ban recidive hosts for 2 weeks, like brute force attack bots. The rule applies when an IP address has been already banned multiple times.
+    * *Incremental ban time*: increase the ban time after each failure found in log. When enabled, if you set a short ban time, a valid user can be banned for a a little while but a brute force attacker will be banned for a very long time.
 
 Network
 -------
@@ -87,7 +90,7 @@ To see a specific jail : ::
 
   fail2ban-client status sshd
 
-To see which logfiles are monitored for a jail: ::
+To see which log files are monitored for a jail: ::
 
   fail2ban-client get nginx-http-auth logpath
 
@@ -128,4 +131,3 @@ Whois
 =====
 
 If you desire to query the IP ``whois`` database and obtain the origin of the banned IP by email, you could  Install the ``whois`` rpm.
-
