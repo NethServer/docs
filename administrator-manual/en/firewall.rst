@@ -6,7 +6,7 @@ Firewall and gateway
 
 .. note:: A new Server Manager based on Cockpit is available. See :ref:`firewall_new-section`.
 
-|product| can act as :index:`firewall` and :index:`gateway` inside the network where is installed.
+|product| can act as :index:`firewall` and :index:`gateway` inside the network where it is installed.
 All traffic between computers on the local network and the Internet passes through the server that decides how to 
 route packets and what rules to apply.
  
@@ -61,7 +61,7 @@ Rules
 
 :index:`Rules` apply to all traffic passing through the firewall.
 When a network packet moves from one zone to another, the system looks among configured rules. 
-If the packet match a rule, the rule is applied.
+If the packet matches a rule, the rule is applied.
 
 .. note:: Rule's order is very important. The system always applies the first rule that matches.
 
@@ -87,12 +87,12 @@ Available actions are:
 REJECT vs DROP
 --------------
 
-As a general rule, you should use :index:`REJECT` when you want to inform the source host that the port to which it 
+As a general rule, you should use :index:`REJECT` when you want to inform the source host that the port which it 
 is trying to access is closed. 
-Usually the rules on the LAN side can use REJECT. 
+Usually, the rules on the LAN side can use REJECT.
 
-For connections from the Internet, it is recommended to use :index:`DROP`, in order to minimize the information disclosure to any 
-attackers.
+For connections from the Internet, it is recommended to use :index:`DROP`, in order to minimize the information disclosed to any 
+attacker.
 
 Log
 ---
@@ -120,7 +120,7 @@ such rules have some limitations:
 - `reject` action is not supported, use `drop` to block traffic
 - `any` and `firewall` can't be used as source or destination
 - `route to provider X` action is not supported: the identification of the protocol
-  often begins after the connection has been already established, so routing decision can't be changed
+  often begins after the connection has been already established, so the routing decision can't be changed
 
 Even if DPI can identify traffic to/from specific web sites such as Facebook,
 it is better suited to block or shape protocols like VPN, FTP, etc.
@@ -140,8 +140,8 @@ under the :menuselection:`Status` category on the left menu.
 Rules on existing connections
 -----------------------------
 
-When a new rules is created, as default, it is applied only to new connections.
-But in some scenarios the administrator may need to apply the rule also on established connections.
+When a new rule is created, as default, it is applied only to new connections.
+But in some scenarios, the administrator may need to apply the rule also on established connections.
 
 If the option :guilabel:`Apply to existing connections` is enabled, the rule will be applied to all connections including already established ones.
 
@@ -173,10 +173,10 @@ Multi WAN
 =========
 
 The term :dfn:`WAN` (Wide Area Network) refers to a public network outside the server, usually connected to the Internet. 
-A :dfn:`provider` is the company who actually manage the :index:`WAN` link.
+A :dfn:`provider` is the company that actually manages the :index:`WAN` link.
 
 The system supports up to 15 WAN connections. 
-If the server has two or more configured red cards, it is required to correctly fill :guilabel:`Link weight`, 
+If the server has two or more configured red interfaces, it is required to correctly fill :guilabel:`Link weight`, 
 :guilabel:`Inbound bandwidth` and :guilabel:`Outbound bandwidth` fields from the :guilabel:`Network` page. 
 
 Each provider represents a WAN connection and is associated with a network adapter. 
@@ -197,7 +197,7 @@ The administrator can configure the sensitivity of the monitoring through the fo
 * Interval in seconds between sent packets
 
 The :guilabel:`Firewall rules` page allows to route network packets to
-a   given   WAN   provider,   if    some   criteria   are   met.   See
+a given WAN provider, if some criteria are met. See
 :ref:`firewall-rules-section`.
 
 
@@ -220,7 +220,7 @@ Port forward
 ============
 
 The firewall blocks requests from public networks to private ones. 
-For example, if web server is running inside the LAN, only computers on the local network can access the service on the green zone. 
+For example, if a web server is running inside the LAN, only computers on the local network can access the service in the green zone. 
 Any request made by a user outside the local network is blocked. 
 
 To allow any external user access to the web server you must create a :dfn:`port forward`.
@@ -234,7 +234,7 @@ When you create a port forward, you must specify at least the following paramete
 * The source port
 * The destination port, which can be different from the origin port
 * The address of the internal host to which the traffic should be redirected
-* It's possible to specify a port range using a colon as separator in the source port field (eg: 1000:2000), in this case the field destination port must be left void
+* It's possible to specify a port range using a colon as the separator in the source port field (eg: 1000:2000), in this case, the destination port field must be left empty
 
 Example
 -------
@@ -252,7 +252,7 @@ If you want to make the web server available directly from public networks, you 
 * destination port: 80
 * host address: 192.168.1.10
 
-All incoming traffic on firewall's red interfaces on port 80, will be redirected to port 80 on Server1.
+All incoming traffic on the firewall's red interfaces on port 80, will be redirected to port 80 on Server1.
 
 In case you want to make accessible from outside the SSH server on port 2222, you will have to create a port forward like this:
 
@@ -260,7 +260,7 @@ In case you want to make accessible from outside the SSH server on port 2222, yo
 * destination port: 22
 * host address: 192.168.1.10
 
-All incoming traffic on firewall's red interfaces on port 2222, will be redirected to port 22 on Server1.
+All incoming traffic on the firewall's red interfaces on port 2222, will be redirected to port 22 on Server1.
  
 In case you want to make accessible from outside the server on the whole port range between 5000 and 6000, you will have to create a port forward like this:
 
@@ -268,14 +268,14 @@ In case you want to make accessible from outside the server on the whole port ra
 * destination port: 
 * host address: 192.168.1.10
 
-All incoming traffic on firewall's red interfaces on port range between 5000 and 6000 will be redirected to same ports on Server1.
+All incoming traffic on the firewall's red interfaces on the port range between 5000 and 6000 will be redirected to the same ports on Server1.
 
 Limiting access
 ---------------
 
-You can restrict access to port forward only from some IP address or networks using the field :guilabel:`Allow only from`.
+You can restrict access to port forward only from some IP addresses or networks using the field :guilabel:`Allow only from`.
 
-This configuration is useful when services should be available only from trusted IP or networks.
+This configuration is useful when services should be available only from trusted IPs or networks.
 Some possible values:
 
 * ``10.2.10.4``: enable port forward for traffic coming from 10.2.10.4 IP
@@ -303,7 +303,7 @@ If you need to route all traffic to the internal host (not recommended!) use a p
 Example
 -------
 
-In our network we have an host called ``example_host`` with IP ``192.168.5.122``. We have also associated a public IP address ``89.95.145.226`` as an alias of ``eth0`` interface (``RED``).
+In our network we have a host called ``example_host`` with IP ``192.168.5.122``. We have also associated a public IP address ``89.95.145.226`` as an alias of ``eth0`` interface (``RED``).
 
 We want to map our internal host (``example_host`` - ``192.168.5.122``) with public IP ``89.95.145.226``.
 
@@ -314,8 +314,8 @@ In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` (read-o
 Traffic shaping
 ===============
 
-:index:`Traffic shaping` allows to apply priority rules on network traffic through the firewall. 
-In this way it is possible to optimize the transmission, check the latency and tune 
+:index:`Traffic shaping` allows applying priority rules on network traffic through the firewall. 
+In this way, it is possible to optimize the transmission, control the latency and tune 
 the available bandwidth. 
 
 To enable traffic shaping it is necessary to know the exact amount of available download and upload bandwidth.
@@ -333,7 +333,7 @@ enabled for that interface.
    In case of congestion by the provider, there is nothing to do in order to improve performance.
 
 
-Configuration of traffic shaping is composed by 2 steps:
+Configuration of traffic shaping is composed of 2 steps:
 
 - creation of traffic shaping classes
 - assignment of network traffic to a specific class
@@ -351,7 +351,7 @@ Each class can have also a maximum rate. If set, the class can exceed its commit
 A class will exceed its committed rate only if there is spare bandwidth available.
 
 Traffic shaping classes can be defined under :guilabel:`Traffic shaping` page.
-When creating a new class, fill the following fields:
+When creating a new class, fill in the following fields:
 
 * :guilabel:`Class name`: a representative name
 * :guilabel:`Min download (%)`: minimum reserved download bandwidth, if empty no download reservation will be created
@@ -370,7 +370,7 @@ The system always tries to prevent traffic starvation under high network load.
 
 Classes will get spare bandwidth proportionally to their committed rate.
 So if class A has 1Mbit committed rate and class B has 2Mbit committed rate, class B will get twice the spare bandwidth of class A.
-In all cases all spare bandwidth will be given to them.
+In all cases, all spare bandwidth will be given to them.
 
 
 For more info, see [#]_ .
@@ -390,16 +390,16 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 * **Groups of hosts**: representing homogeneous groups of computers. Hosts in a host group should always be reachable using the same interface.
   Example: ``servers``, ``router``
 
-* **IP ranges**: a list of IP address expressed as a range. Example: ``myrange``, composed by IPs from ``192.168.1.100`` to ``192.168.1.120``
+* **IP ranges**: a list of IP addresses expressed as a range. Example: ``myrange``, composed by IPs from ``192.168.1.100`` to ``192.168.1.120``
 
 * **CIDR Networks**: you can express a CIDR network in order to simplify firewall rules.
   
-  Example 1 : last 14 IP address of the network are assigned to servers (``192.168.0.240/28``).
+  Example 1 : last 14 IP addresses of the network are assigned to servers (``192.168.0.240/28``).
   Example 2 : you have multiple green interfaces but you want to create firewall rules only for one green (``192.168.2.0/24``).
 
 .. index:: zone
 
-* **Zone**: representing networks of hosts, they must be expressed in CIDR notation. Their usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
+* **Zone**: representing networks of hosts, they must be expressed in CIDR notation. Their intended usage is for defining a part of a network with different firewall rules from those of the nominal interface. They are used for very specific needs.
 
   .. note:: By default, all hosts belonging to a zone are not allowed to do any type of traffic. It's necessary to create all the rules on the firewall in order to obtain the desired behavior.
 
@@ -410,16 +410,16 @@ There are 6 types of objects, 5 of them represent sources and destinations:
   .. note::
     Rules which have time conditions are enforced only for new connections. 
     Example: if you are blocking HTTP connections from 09:00 to 18:00, connections established 
-    efore 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
+    before 09:00 will be allowed until closed. Any new connection after 09:00 will be dropped.
 
 
 * **Services**: a service listening on a host with at least one port and protocol. Example: ``ssh``, ``https``
 
 .. index:: mac address
 
-* **MAC addresses**: an host indentified by a MAC address. The MAC address must be bound to an existing zone.
+* **MAC addresses**: a host identified by a MAC address. The MAC address must be bound to an existing zone.
 
-  
+
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
 
@@ -438,11 +438,11 @@ To enable traffic only from well-known hosts, follow these steps:
 1. Create a DHCP reservation for a host
 2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
 3. Select :guilabel:`MAC validation (IP/MAC binding)`
-4. Choose :guilabel:`Block traffic` as policy to apply to unregistered hosts
+4. Choose :guilabel:`Block traffic` as the policy to apply to unregistered hosts
 
 
 .. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
-   otherwise no hosts will be able to manage the server using the web interface or SSH.
+   otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
 .. [#]
    FireQOS tutorial:
