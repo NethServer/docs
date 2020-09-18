@@ -52,8 +52,6 @@ Traffic is allowed from left to right, blocked from right to left.
 
 You can create rules between zones to change default policies from :guilabel:`Firewall rules` page.
 
-.. note::  Traffic from local network to the server on SSH port (default 22) and Server Manager port (default 980) is **always** permitted.
-
 .. _firewall-rules-section:
 
 Rules
@@ -82,7 +80,7 @@ Available actions are:
 * :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
 * :dfn:`Priority`: mark the traffic as high/low priority. See :ref:`traffic-shaping-section`.
 
-.. note:: The firewall will not generate rules for blue and orange zones, if at least a red interface is configured.
+.. note:: If no red interface has been configured, the firewall will not generate rules for blue and orange zones.
 
 REJECT vs DROP
 --------------
