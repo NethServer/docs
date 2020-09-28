@@ -11,7 +11,7 @@ methods:
 
 * :ref:`backup <upgrade_from_backup-section>` (see also :ref:`disaster-recovery-section`)
 * :ref:`rsync <upgrade_with_rsync-section>`
-* :ref:`upgrade-tool <upgrade_with_tool-section>` (beta)
+* :ref:`upgrade-tool <upgrade_with_tool-section>`
 
 .. warning::
 
@@ -380,8 +380,8 @@ At the end of ``rsync-upgrade`` run the following steps:
 
 .. _upgrade_with_tool-section:
 
-Upgrade with Upgrade tool (beta)
-================================
+Upgrade with Upgrade tool
+=========================
 
 The Upgrade tool module make it possible an **in-place upgrade** of |product| from 
 version 6 to version 7 with an automated procedure.
