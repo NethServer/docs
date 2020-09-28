@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-09-28 15:50+0200\n"
 "PO-Revision-Date: 2017-03-21 10:46+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -49,7 +49,7 @@ msgid ":ref:`rsync <upgrade_with_rsync-section>`"
 msgstr ""
 
 #: ../../upgrade.rst:14
-msgid ":ref:`upgrade-tool <upgrade_with_tool-section>` (beta)"
+msgid ":ref:`upgrade-tool <upgrade_with_tool-section>`"
 msgstr ""
 
 #: ../../upgrade.rst:18
@@ -658,7 +658,7 @@ msgid ""
 msgstr ""
 
 #: ../../upgrade.rst:384
-msgid "Upgrade with Upgrade tool (beta)"
+msgid "Upgrade with Upgrade tool"
 msgstr ""
 
 #: ../../upgrade.rst:386
