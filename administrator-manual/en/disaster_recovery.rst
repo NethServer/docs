@@ -19,6 +19,14 @@ Other restored configurations:
    installation, i.e., avoid restoring a configuration backup from a 7.4.1708 installation on a new 7.6.1810 system,
    as it may lead to unexpected results.
 
+.. only:: nscom
+
+   .. note::
+
+       Third-party repositories will not be restored by disaster recovery procedure.
+       If the original machine had some third-party repository enabled, remember to install them before
+       proceeding with the restore.
+
 New Server Manager
 ------------------
 
