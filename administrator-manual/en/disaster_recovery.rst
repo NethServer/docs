@@ -24,7 +24,7 @@ Other restored configurations:
    .. note::
 
        Third-party repositories are not restored by the disaster recovery procedure.
-       If the original machine has some third-party repository enabled, remember to install it before
+       If the original machine has some third-party repositories enabled, remember to install them before
        proceeding with the restore.
 
 New Server Manager
