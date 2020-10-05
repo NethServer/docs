@@ -72,6 +72,7 @@ Administrator Manual
    web_server
    firewall2
    mail
+   shared_folder
 
 .. toctree::
    :maxdepth: 1
@@ -95,7 +96,6 @@ Administrator Manual
    suricata
    proxy_pass
    virtual_hosts
-   shared_folder
    bandwidth_monitor
    statistics
    vpn
