@@ -212,6 +212,9 @@ Samba audit is a module that keeps track of all users activities on shared folde
 Auditing is disabled by default and must be explicitly enabled for each folder.
 
 Actions are logged to a file during the the day and are moved to a browseable database overnight.
+By default, to avoid the database overloading, read actions like access to files and directories are saved only inside :file:`/var/log/smbaudit.log`.
+To change this behavior and store read actions inside the database, access the :guilabel:`Settings` page and enable the :guilabel:`Enable auditing of read actions`.
 
-The report web interface is available from the old Server Manager from the :guilabel:`Applications` page,
-while the new Server Manager (Cockpit) integrates a new interface inside the :guilabel:`File server` application.
+The auditing report is available under the :guilabel:`Audit` page.
+
+The same report is also available from the old Server Manager inside the :guilabel:`Applications` page.
