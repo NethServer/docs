@@ -1,31 +1,38 @@
 .. _firewall-section:
 
-=====================
-Firewall and gateway
-=====================
-
-.. note:: A new Server Manager based on Cockpit is available. See :ref:`firewall_new-section`.
+========
+Firewall
+========
 
 |product| can act as :index:`firewall` and :index:`gateway` inside the network where it is installed.
 All traffic between computers on the local network and the Internet passes through the server that decides how to 
 route packets and what rules to apply.
- 
-Main features:
+Firewall mode is enabled only if the system has at least one network interface configured with red role.
 
-* Advanced network configuration (bridge, bonds, alias, etc)
-* Multi WAN support (up to 15)
+The Firewall application can be installed from :ref:`software-center-section` and includes:
+ 
+* Multi WAN support up to 15 connections
 * Firewall rules management
 * Traffic shaping (QoS)
 * Port forwarding
 * Routing rules to divert traffic on a specific WAN
 * Intrusion Prevention System (IPS)
 * Deep packet inspection (DPI)
+* Smart search to quickly find existing rules or objects
+* Real time charts
 
+Real time charts display traffic and service statistics collected by `netdata <https://www.netdata.cloud/>`_.
+To avoid performance penalty on slow hardware, netdata is not part of the firewall application and can be installed from :ref:`software-center-section`.
 
-Firewall and gateway modes are enabled only if:
+.. _apply_revert-section:
 
-* the `nethserver-firewall-base` package is installed
-* at least there is one network interface configured with red role
+Apply and revert
+================
+
+Every time the firewall configuration has been changed, modifications are not applied immediately but saved in a temporary store.
+For the changes to take effect, click on the :guilabel:`Apply` button at the top right corner of the page.
+
+As long as the new rules created have not been applied, you can revert all changes clicking the :guilabel:`Revert` button at the top right corner of the page.
 
 .. _policy-section:
 
@@ -39,10 +46,13 @@ When a network packet passes through a firewall zone, the system evaluates a lis
 traffic should be blocked or allowed. 
 :dfn:`Policies` are the default rules to be applied when the network traffic does not match any existing criteria.
 
-The firewall implements two default policies editable from the page :menuselection:`Firewall rules` -> :guilabel:`Configure`:
+The firewall implements two default policies:
 
 * :dfn:`Allowed`: all traffic from green to red is allowed
 * :dfn:`Blocked`: all traffic from green to red network is blocked. Specific traffic must be allowed with custom rules.
+
+To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option from the :guilabel:`Settings` page.
+Policies can be changed also by creating specific rules between zones from :guilabel:`Rules` page.
 
 Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: ::
 
@@ -50,7 +60,8 @@ Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: 
 
 Traffic is allowed from left to right, blocked from right to left.
 
-You can create rules between zones to change default policies from :guilabel:`Firewall rules` page.
+To display the list of active policies click on the :guilabel:`Policies` button inside the :guilabel:`Rules` page.
+
 
 .. _firewall-rules-section:
 
@@ -68,8 +79,8 @@ A rule consists of five main parts:
 * Action
 * Source 
 * Destination
-* Service
-* Time condition
+* Service (optional)
+* Time condition (optional)
 
 
 Available actions are:
@@ -77,8 +88,23 @@ Available actions are:
 * :dfn:`ACCEPT`: accept the network traffic
 * :dfn:`REJECT`: block the traffic and notify the sender host 
 * :dfn:`DROP`: block the traffic, packets are dropped and no notification is sent to the sender host
-* :dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref:`multi-wan-section`.
-* :dfn:`Priority`: mark the traffic as high/low priority. See :ref:`traffic-shaping-section`.
+
+Source and destination fields accept built-in roles, :ref:`firewall_objects-section` and raw IPv4 addresses or CIDR.
+Such raw addresses can be later converted to firewall objects using the :guilabel:`Create Host` and
+:guilabel:`Create CIDR subnet` actions which will appear next to the address itself.
+  
+If :ref:`vpn-section` application is installed, there are also two extra zones available:
+
+* *ivpn*: all traffic from IPSec VPNs
+* *ovpn*: all traffic from OpenVPN VPNs
+
+The configuration of firewall rules is split into two different pages:
+
+* **Rules**: manage rules applied only to the network traffic traversing the firewall.
+* **Local rules**: manage rules applied only to the network traffic generated from the firewall, 
+  or directed to the firewall itself.
+
+When creating new rules, only the most common fields are shown. To show other less common parameters click the :guilabel:`Advanced` label.
 
 .. note:: If no red interface has been configured, the firewall will not generate rules for blue and orange zones.
 
@@ -97,11 +123,12 @@ Log
 
 When a rule matches the ongoing traffic, it's possible to register the event on a log file by checking the option from the web interface.
 :index:`Firewall log` is saved in :file:`/var/log/firewall.log` file.
+The log can be inspected from the command line or using the :guilabel:`Logs` page.
 
 Deep Packet Inspection (DPI)
 ----------------------------
 
-Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering technique.
+Deep Packet Inspection (`DPI <https://en.wikipedia.org/wiki/Deep_packet_inspection>`_) is an advanced packet filtering technique.
 
 When the :index:`DPI` module is active, new items for the :guilabel:`Service`
 field are available in the :guilabel:`Edit rule` form. Those items are
@@ -133,8 +160,6 @@ which originates from the firewall itself, like HTTP traffic from the web proxy.
 The complete list of DPI protocols, along with counters for matched traffic, is available inside the :guilabel:`DPI` page
 under the :menuselection:`Status` category on the left menu.
 
-.. [#DPI] Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection
-
 Rules on existing connections
 -----------------------------
 
@@ -143,8 +168,6 @@ But in some scenarios, the administrator may need to apply the rule also on esta
 
 If the option :guilabel:`Apply to existing connections` is enabled, the rule will be applied to all connections including already established ones.
 
-.. note::
-   This option is available only inside the new Server Manager. See :ref:`firewall_new-section`.
 
 Examples
 --------
@@ -165,22 +188,25 @@ Allow guest's network to access all the services listening on Server1:
 * Destination: Server1 
 * Service: -
 
-.. _multi-wan-section:
+.. _wan-section:
 
-Multi WAN
-=========
+WAN
+===
 
 The term :dfn:`WAN` (Wide Area Network) refers to a public network outside the server, usually connected to the Internet. 
 A :dfn:`provider` is the company that actually manages the :index:`WAN` link.
 
-The system supports up to 15 WAN connections. 
-If the server has two or more configured red interfaces, it is required to correctly fill :guilabel:`Link weight`, 
-:guilabel:`Inbound bandwidth` and :guilabel:`Outbound bandwidth` fields from the :guilabel:`Network` page. 
+All WAN network interfaces are labeled with the red role and are listed on the top of the page, just below bandwidth usage charts.
+Rules can be created under the :guilabel:`Rules` section on the same page.
+
+If the server has two or more configured red interfaces, it is required to correctly fill, 
+:guilabel:`Download bandwidth` and :guilabel:`Upload bandwidth` fields from the :guilabel:`Network` page.
+Download and upload bandwidth can be automatically calculated using :guilabel:`Speedtest` button.
 
 Each provider represents a WAN connection and is associated with a network adapter. 
-Each provider defines a :dfn:`weight`: higher the :index:`weight`, higher the priority of the network card associated with the provider. 
+Each provider defines a :dfn:`weight`: to an higher the :index:`weight` correspond an higher priority of the network card associated with the provider. 
 
-The system can use WAN connections in two modes (button  :guilabel:`Configure` on page :menuselection:`Multi WAN`): 
+The system can use WAN connections in two modes: 
 
 * :dfn:`Balance`: all providers are used simultaneously according to their weight 
 * :dfn:`Active backup`: providers are used one at a fly from the one with the highest weight. If the provider you are using loses its connection, all traffic will be diverted to the next provider.
@@ -194,9 +220,10 @@ The administrator can configure the sensitivity of the monitoring through the fo
 * Number of consecutive lost packets
 * Interval in seconds between sent packets
 
-The :guilabel:`Firewall rules` page allows to route network packets to
-a given WAN provider, if some criteria are met. See
-:ref:`firewall-rules-section`.
+WAN mode and link monitoring options click on :guilabel:`Configure` button.
+
+The network traffic can be routed to specific WANs by creating rules inside the :guilabel:`Rules` section on this page.
+After creating or editing rules, make sure to :ref:`apply <apply_revert-section>` the changes.
 
 
 Example
@@ -231,8 +258,15 @@ When you create a port forward, you must specify at least the following paramete
 
 * The source port
 * The destination port, which can be different from the origin port
+* The network protocol like TCP, UDP, TCP & UDP, AH, ESP or GRE
 * The address of the internal host to which the traffic should be redirected
 * It's possible to specify a port range using a colon as the separator in the source port field (eg: 1000:2000), in this case, the destination port field must be left empty
+
+Port forwards are grouped by destination host and support raw IP addresses along with firewall objects.
+
+By default, all port forwards are available only for hosts inside the WAN.
+Check the :guilabel:`Enable hairpin NAT` option under the :guilabel:`Settings` page to make all port forwards available also from local networks.
+
 
 Example
 -------
@@ -271,29 +305,26 @@ All incoming traffic on the firewall's red interfaces on the port range between 
 Limiting access
 ---------------
 
-You can restrict access to port forward only from some IP addresses or networks using the field :guilabel:`Allow only from`.
+By default, the field access to port forward is granted to anyone.
+You can restrict access to port forward only from some IP addresses or networks by adding entries to :guilabel:`Restrict access to` field.
+This configuration is useful when services should be available only from trusted IPs or networks. 
 
-This configuration is useful when services should be available only from trusted IPs or networks.
-Some possible values:
+Example of valid entries:
 
 * ``10.2.10.4``: enable port forward for traffic coming from 10.2.10.4 IP
-* ``10.2.10.4,10.2.10.5``: enable port forward for traffic coming from 10.2.10.4 and 10.2.10.5 IPs
 * ``10.2.10.0/24``: enable port forward only for traffic coming from 10.2.10.0/24 network
-* ``!10.2.10.4``: enable port forward  for all IPs except 10.2.10.4
-* ``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for 192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9
 
 .. _snat-section:
 
 sNAT 1:1
 ========
 
-One-to-one NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
-
+One-to-one source NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
 If you have a bunch of public IP addresses and if you want to associate one of these to a specific network host, :index:`NAT 1:1` is the way.
+SNAT is available only if there is at least one IP alias configured on red network interfaces.
 
-This feature only applies to traffic from the network specific host to internet.
-
-It doesn't affect in any way the traffic from internet toward the Alias IP, if you need to route some specific traffic to the internal host use the port forward as usual.
+This feature only applies to network traffic from a host inside the local network to the public Internet.
+It doesn't affect in any way the traffic from internet toward the alias IP, if you need to route some specific traffic to the internal host use the port forward as usual.
 
 If you need to route all traffic to the internal host (not recommended!) use a port forward with protocol TCP & UDP and source port 1:65535.
 
@@ -326,15 +357,16 @@ enabled for that interface.
 
    Be sure to specify an accurate estimate of the bandwidth on network interfaces.
    To pick an appropriate setting, please do not trust the nominal value,
-   but use online tools to test the real provider speed.
+   but use the :guilabel:`Speedtest` button or online tools to test the real provider speed.
 
    In case of congestion by the provider, there is nothing to do in order to improve performance.
 
 
+Traffic shaping classes are used to commit bandwidth for specific network traffic.
 Configuration of traffic shaping is composed of 2 steps:
 
-- creation of traffic shaping classes
-- assignment of network traffic to a specific class
+* creation of traffic shaping classes
+* assignment of network traffic to a specific class
 
 Classes
 -------
@@ -349,20 +381,32 @@ Each class can have also a maximum rate. If set, the class can exceed its commit
 A class will exceed its committed rate only if there is spare bandwidth available.
 
 Traffic shaping classes can be defined under :guilabel:`Traffic shaping` page.
-When creating a new class, fill in the following fields:
+When creating a new class, fill the following fields.
 
 * :guilabel:`Class name`: a representative name
-* :guilabel:`Min download (%)`: minimum reserved download bandwidth, if empty no download reservation will be created
-* :guilabel:`Max download (%)`: maximum allowed download bandwidth, if empty no upper limit will be set
-* :guilabel:`Min upload (%)`:  minimum reserved upload bandwidth, if empty no upload reservation will be created
-* :guilabel:`Max upload (%)`: maximum allowed download bandwidth, if empty no upper limit will be created
 * :guilabel:`Description`: optional description for the class
+
+Limits under :guilabel:`Download bandwidth limits` section:
+
+  * :guilabel:`Min`: minimum reserved download bandwidth, if empty no download reservation will be created
+  * :guilabel:`Max`: maximum allowed download bandwidth, if empty no upper limit will be set
+
+Limits under :guilabel:`Upload bandwidth limits` section:
+
+  * :guilabel:`Min`:  minimum reserved upload bandwidth, if empty no upload reservation will be created
+  * :guilabel:`Max`: maximum allowed download bandwidth, if empty no upper limit will be created
+
+
+For each class the bandwidth can be specified using the percentage of available network bandwidth or
+with absolutes values expressed in kbps.
+As default, a traffic shaping class is applied to all red network interfaces.
+Such behavior can be changed by selecting an existing red interfaces under the :guilabel:`Bind to` menu
+inside the :guilabel:`Advanced` section.
 
 The system provides two pre-configured classes:
 
 - :guilabel:`high`: generic high priority traffic, can be assigned to something like SSH
 - :guilabel:`low`: low priority traffic, can be assigned to something like peer to peer file exchange
-
 
 The system always tries to prevent traffic starvation under high network load.
 
@@ -370,8 +414,11 @@ Classes will get spare bandwidth proportionally to their committed rate.
 So if class A has 1Mbit committed rate and class B has 2Mbit committed rate, class B will get twice the spare bandwidth of class A.
 In all cases, all spare bandwidth will be given to them.
 
+Network traffic can be shaped by creating rules under the :guilabel:`Rules` section in this page.
+After creating or editing rules, make sure to :ref:`apply <apply_revert-section>` the changes.
 
-For more info, see [#]_ .
+For more info, see `FireQOS tutorial <https://github.com/firehol/firehol/wiki/FireQOS-Tutorial>`_.
+
 
 .. _firewall_objects-section:
 
@@ -422,6 +469,8 @@ When creating rules, you can use the records defined in :ref:`dns-section` and :
 In addition, each network interface with an associated role is automatically listed among the available zones.
 
 
+.. _firewall_mac_binding-section:
+
 IP/MAC binding
 ==============
 
@@ -442,6 +491,14 @@ To enable traffic only from well-known hosts, follow these steps:
 .. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
    otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
-.. [#]
-   FireQOS tutorial:
-   https://github.com/firehol/firehol/wiki/FireQOS-Tutorial
+
+.. _firewall_connections-section:
+
+Connections
+===========
+
+This page keeps track of all active connections.
+Connections can be filter by :guilabel:`Protocol` and :guilabel:`State`.
+The list of connections is not refreshed in real time. To list new connections click the :guilabel:`Refresh` button.
+
+The administrator can delete a single connection or flush the whole connection tracking table using :guilabel:`Delete all connections` button.
