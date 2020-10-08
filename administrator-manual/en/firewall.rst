@@ -204,7 +204,7 @@ If the server has two or more configured red interfaces, it is required to corre
 Download and upload bandwidth can be automatically calculated using the :guilabel:`Speedtest` button.
 
 Each provider represents a WAN connection and is associated with a network adapter. 
-Each provider defines a :dfn:`weight`: to an higher the :index:`weight` correspond an higher priority of the network card associated with the provider. 
+Each provider defines a :dfn:`weight`: the higher the weight, the higher the priority of the network card associated with the provider. 
 
 The system can use WAN connections in two modes: 
 
