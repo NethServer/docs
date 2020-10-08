@@ -316,7 +316,7 @@ Example of valid entries:
 
 .. _snat-section:
 
-sNAT 1:1
+SNAT 1:1
 ========
 
 One-to-one :index:`source NAT` (:index:`SNAT`) is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
