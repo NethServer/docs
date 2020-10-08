@@ -319,7 +319,7 @@ Example of valid entries:
 sNAT 1:1
 ========
 
-One-to-one source NAT is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
+One-to-one :index:`source NAT` (:index:`SNAT`) is a way to make systems behind a firewall and configured with private IP addresses appear to have public IP addresses.
 If you have a bunch of public IP addresses and if you want to associate one of these to a specific network host, :index:`NAT 1:1` is the way.
 SNAT is available only if there is at least one IP alias configured on red network interfaces.
 
