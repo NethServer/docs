@@ -32,7 +32,7 @@ Apply and revert
 Every time the firewall configuration has been changed, modifications are not applied immediately but saved in a temporary store.
 For the changes to take effect, click on the :guilabel:`Apply` button at the top right corner of the page.
 
-As long as the new rules created have not been applied, you can revert all changes clicking the :guilabel:`Revert` button at the top right corner of the page.
+As long as the new rules created have not been applied, you can revert all changes by clicking the :guilabel:`Revert` button at the top right corner of the page.
 
 .. _policy-section:
 
