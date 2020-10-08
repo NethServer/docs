@@ -324,7 +324,7 @@ If you have a bunch of public IP addresses and if you want to associate one of t
 SNAT is available only if there is at least one IP alias configured on red network interfaces.
 
 This feature only applies to network traffic from a host inside the local network to the public Internet.
-It doesn't affect in any way the traffic from internet toward the alias IP, if you need to route some specific traffic to the internal host use the port forward as usual.
+It does not affect in any way the traffic from the Internet toward the alias IP. If you need to route some specific traffic to the internal host use the port forward as usual.
 
 If you need to route all traffic to the internal host (not recommended!) use a port forward with protocol TCP & UDP and source port 1:65535.
 
