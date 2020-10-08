@@ -52,7 +52,7 @@ The firewall implements two default policies:
 * :dfn:`Blocked`: all traffic from green to red network is blocked. Specific traffic must be allowed with custom rules.
 
 To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option from the :guilabel:`Settings` page.
-Policies can be changed also by creating specific rules between zones from :guilabel:`Rules` page.
+Policies can be changed also by creating specific rules between zones from the :guilabel:`Rules` page.
 
 Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: ::
 
