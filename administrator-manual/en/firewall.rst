@@ -223,7 +223,7 @@ The administrator can configure the sensitivity of the monitoring through the fo
 WAN mode and link monitoring options click on :guilabel:`Configure` button.
 
 The network traffic can be routed to specific WANs by creating rules inside the :guilabel:`Rules` section on this page.
-After creating or editing rules, make sure to :ref:`apply <apply_revert-section>` the changes.
+After creating or editing rules, make sure to apply the changes. See :ref:`<apply_revert-section>` for details.
 
 
 Example
