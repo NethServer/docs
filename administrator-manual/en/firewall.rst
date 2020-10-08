@@ -201,7 +201,7 @@ Rules can be created under the :guilabel:`Rules` section on the same page.
 
 If the server has two or more configured red interfaces, it is required to correctly fill, 
 :guilabel:`Download bandwidth` and :guilabel:`Upload bandwidth` fields from the :guilabel:`Network` page.
-Download and upload bandwidth can be automatically calculated using :guilabel:`Speedtest` button.
+Download and upload bandwidth can be automatically calculated using the :guilabel:`Speedtest` button.
 
 Each provider represents a WAN connection and is associated with a network adapter. 
 Each provider defines a :dfn:`weight`: to an higher the :index:`weight` correspond an higher priority of the network card associated with the provider. 
