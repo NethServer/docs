@@ -21,8 +21,8 @@ The Firewall application can be installed from :ref:`software-center-section` an
 * Smart search to quickly find existing rules or objects
 * Real time charts
 
-Real time charts display traffic and service statistics collected by `netdata <https://www.netdata.cloud/>`_.
-To avoid performance penalty on slow hardware, netdata is not part of the firewall application and can be installed from :ref:`software-center-section`.
+Real time charts display traffic and service statistics collected by `Netdata <https://www.netdata.cloud/>`_.
+To avoid performance penalty on slow hardware, Netdata is not part of the firewall application and can be installed from :ref:`software-center-section`.
 
 .. _apply_revert-section:
 
