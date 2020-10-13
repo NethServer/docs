@@ -16,7 +16,6 @@ The Firewall application can be installed from :ref:`software-center-section` an
 * Traffic shaping (QoS)
 * Port forwarding
 * Routing rules to divert traffic on a specific WAN
-* Intrusion Prevention System (IPS)
 * Deep packet inspection (DPI)
 * Smart search to quickly find existing rules or objects
 * Real time charts
