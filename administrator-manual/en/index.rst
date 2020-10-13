@@ -70,7 +70,7 @@ Administrator Manual
    :caption: Applications - New Server Manager
 
    web_server
-   firewall2
+   firewall
    mail
    shared_folder
 
@@ -90,7 +90,6 @@ Administrator Manual
    ups
    report
    fax_server
-   firewall
    web_proxy
    content_filter
    suricata
