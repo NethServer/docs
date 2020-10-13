@@ -11,17 +11,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Davide Principi <davide.principi@nethesis.it>, 2018
 # Nicola <nicola.rauso@nethesis.it>, 2019
+# Davide Principi <davide.principi@nethesis.it>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2020-09-28 15:50+0200\n"
 "PO-Revision-Date: 2017-03-21 10:46+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
+"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,8 +54,8 @@ msgid ":ref:`rsync <upgrade_with_rsync-section>`"
 msgstr ":ref:`rsync <upgrade_with_rsync-section>`"
 
 #: ../../upgrade.rst:14
-msgid ":ref:`upgrade-tool <upgrade_with_tool-section>` (beta)"
-msgstr ":ref:`upgrade-tool <upgrade_with_tool-section>` (beta)"
+msgid ":ref:`upgrade-tool <upgrade_with_tool-section>`"
+msgstr ":ref:`upgrade-tool <upgrade_with_tool-section>`"
 
 #: ../../upgrade.rst:18
 msgid ""
@@ -799,8 +799,8 @@ msgstr ""
 "data."
 
 #: ../../upgrade.rst:384
-msgid "Upgrade with Upgrade tool (beta)"
-msgstr "Upgrade tramite Upgrade tool (**beta**)"
+msgid "Upgrade with Upgrade tool"
+msgstr "Upgrade tramite Upgrade tool"
 
 #: ../../upgrade.rst:386
 msgid ""

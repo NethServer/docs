@@ -70,8 +70,9 @@ Administrator Manual
    :caption: Applications - New Server Manager
 
    web_server
-   firewall2
+   firewall
    mail
+   shared_folder
 
 .. toctree::
    :maxdepth: 1
@@ -89,13 +90,11 @@ Administrator Manual
    ups
    report
    fax_server
-   firewall
    web_proxy
    content_filter
    suricata
    proxy_pass
    virtual_hosts
-   shared_folder
    bandwidth_monitor
    statistics
    vpn
