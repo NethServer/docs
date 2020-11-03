@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+    - ISO release 7.9.2009 "final" replaces any previous ISO
 
-    - This release is based on `CentOS 7 (2003) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2009) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,11 +24,17 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+    - ISO release 7.9.2009 "final" replaces any previous ISO
 
-    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2009) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+Major changes on 2020-11-XX
+---------------------------
+
+* ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
+
 
 Major changes on 2020-05-05
 ---------------------------
