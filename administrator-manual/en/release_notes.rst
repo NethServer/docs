@@ -35,7 +35,7 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
-* New installations of Nextcloud honor the Active Directory accounts provider StartTLS setting.
+* New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
   to upgrade an existing installation to the new behavior, if its remote AD accounts provider
   supports StartTLS. Run the following commands ::
