@@ -35,6 +35,16 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
+* New installations of Nextcloud honor the Active Directory accounts provider StartTLS setting.
+  As old installations ignore that setting and always send clear-text passwords, it is recommended
+  to upgrade an existing installation to the new behavior, if its remote AD accounts provider
+  supports StartTLS. Run the following commands ::
+
+      config setprop nextcloud HonorAdStartTls enabled
+      signal-event nethserver-sssd-save
+
+  Then ensure the :guilabel:`STARTTLS` checkbox is enabled in :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
+
 
 Major changes on 2020-05-05
 ---------------------------
