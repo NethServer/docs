@@ -37,13 +37,13 @@ Major changes on 2020-11-XX
 
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
-  to upgrade an existing installation to the new behavior, if its remote AD accounts provider
-  supports StartTLS. Run the following commands ::
+  to upgrade them to the new behavior. Make sure the remote AD accounts provider
+  supports StartTLS, then run the following commands ::
 
       config setprop nextcloud HonorAdStartTls enabled
       signal-event nethserver-sssd-save
 
-  Then ensure the :guilabel:`STARTTLS` checkbox is enabled in :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
+  Finally check that the :guilabel:`STARTTLS` option is enabled in :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
 
 
 Major changes on 2020-05-05
