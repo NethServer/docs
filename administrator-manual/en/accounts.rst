@@ -320,19 +320,25 @@ Some applications require an additional configuration step. See also :ref:`dedic
 
 .. _ad-dedicated-service-account:
 
-LDAP account for additional modules
------------------------------------
+LDAP account for additional applications
+----------------------------------------
 
-.. warning::    Some additional modules, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*
-                require read-only access to AD LDAP services. To be fully operational they
-                require an additional account to perform simple LDAP binds.
+Some additional applications, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*,
+require read-only access to LDAP services. To be fully operational they
+require a dedicated user account to perform simple LDAP binds.
                 
-                Create a **dedicated user account** in AD, and set a complex *non-expiring*
-                password for it.
+1. Create a dedicated user account in the remote AD or LDAP provider,
+   and set a complex and *non-expiring* password for it.
                 
-Once |product| is successfully bound to a **remote AD or LDAP account provider**, specify the **dedicated user account**
-credentials in :guilabel:`Users & Groups > Account provider > Edit provider > Authentication credentials for LDAP applications`.
+2. Once |product| is successfully bound to a remote AD or LDAP account provider, specify the dedicated user account
+   credentials in :guilabel:`Users & Groups > Account provider > Edit provider > Authentication credentials for LDAP applications`.
 
+If the remote account provider supports TLS, it is recommended to enable the :guilabel:`StartTLS` option or use the ``ldaps://``
+URI scheme in the :guilabel:`Service URI` input field to avoid sending clear-text passwords over the network.
+
+.. warning::
+
+  The |product| AD accounts provider supports TLS. MS-Windows AD might require additional setup to enable TLS.
 
 Users
 =====
