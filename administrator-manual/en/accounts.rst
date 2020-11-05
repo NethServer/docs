@@ -226,29 +226,6 @@ Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 .. [#MsMacSpoofing] https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
-Local accounts provider uninstall
----------------------------------
-
-Both LDAP and AD local accounts provider can be uninstalled from
-:guilabel:`Users & Groups > Account provider > Change provider`.
-
-When the local accounts provider DB is uninstalled, any user, group and computer
-account is erased. 
-
-* A list of users and groups in TSV format is dumped to
-  :file:`/var/lib/nethserver/backup/users.tsv` and
-  :file:`/var/lib/nethserver/backup/groups.tsv`. See also
-  :ref:`import-users_section`.
-
-* Existing files owned by users and groups must be removed manually. This is
-  the list of system directories containing users and groups data: ::
-
-    /var/lib/nethserver/home
-    /var/lib/nethserver/vmail
-    /var/lib/nethserver/ibay
-    /var/lib/nethserver/nextcloud
-
-
 .. _join-existing-ad-section:
 
 Join an existing Active Directory domain
@@ -346,6 +323,28 @@ On the other hand, if |product| is bound to a remote accounts provider follow th
 .. warning::
 
   The |product| AD accounts provider supports TLS. MS-Windows AD might require additional setup to enable TLS.
+
+.. _changing-account-provider-section:
+
+Changing account provider
+-------------------------
+
+The configured account provider can be removed by root from
+:guilabel:`Users & Groups > Account provider > Change provider`.
+
+When the account provider has been removed, existing files owned
+by users and groups must be removed manually. This is
+the list of system directories containing users and groups data: ::
+
+    /var/lib/nethserver/home
+    /var/lib/nethserver/vmail
+    /var/lib/nethserver/ibay
+    /var/lib/nethserver/nextcloud
+
+Furthermore, if the account provider is local any user, group and computer
+account is erased.  A list of users and groups in TSV format is dumped to
+:file:`/var/lib/nethserver/backup/users.tsv` and :file:`/var/lib/nethserver/backup/groups.tsv`.
+See also :ref:`import-users_section`.
 
 Users
 =====
