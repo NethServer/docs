@@ -132,9 +132,8 @@ builtin support for Posix ACLs and no special configuration is required. For
 other filesystems (i.e. EXT4) enable the ACLs as explained in :ref:`Shared
 folders requirements <shared_folders_requirements-section>`.
 
-At the end of the Active Directory configuration procedure,  the |product| host
-machine is automatically configured to join the Active Directory domain. Go back to 
-the :guilabel:`Users & groups` page to see the default accounts.
+At the end of the procedure, the |product| host machine automatically joins 
+the new Active Directory domain. 
 
 .. index::
     pair: active directory; change IP
@@ -228,7 +227,7 @@ Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 
 
 Local accounts provider uninstall
---------------------------------------
+---------------------------------
 
 Both LDAP and AD local accounts provider can be uninstalled from
 :guilabel:`Users & Groups > Account provider > Change provider`.
@@ -344,9 +343,9 @@ Users
 =====
 
 If a remote AD or LDAP account provider was configured, the :guilabel:`Users & Groups` page
-can only show lists. It is not possible to modify or delete users and groups from the Server Manager.
+shows read-only lists. It is not possible to modify or delete users and groups from the Server Manager.
 
-On the other hand if a local AD or LDAP account provider was installed, the :guilabel:`Users & Groups` page
+On the other hand, if a local AD or LDAP account provider was installed, the :guilabel:`Users & Groups` page
 allows to create, modify and delete users and groups.
 
 A newly created user remains locked until it has set a password.
