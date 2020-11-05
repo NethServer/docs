@@ -47,6 +47,16 @@ Major changes on 2020-11-XX
   :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
   See also :ref:`dedicated-service-account`.
 
+* Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
+  automatically by the nethserver-mattermost upgrade procedure if no other service requires it.
+
+  1. Ensure the old service is stopped and disabled: ::
+
+      systemctl status rh-postgresql94-postgresql
+
+  2. PostgreSQL 9.4 can be uninstalled with the following command: ::
+
+      yum remove nethserver-postgresql94
 
 Major changes on 2020-05-05
 ---------------------------
