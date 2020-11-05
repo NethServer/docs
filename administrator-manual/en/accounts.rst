@@ -342,7 +342,7 @@ the list of system directories containing users and groups data: ::
     /var/lib/nethserver/nextcloud
 
 Furthermore, if the account provider is local any user, group and computer
-account is erased.  A list of users and groups in TSV (Tab Separated Value) format
+account is erased.  A list of users and groups in TSV (Tab Separated Values) format
 is dumped to :file:`/var/lib/nethserver/backup/users.tsv` and :file:`/var/lib/nethserver/backup/groups.tsv`.
 See also :ref:`import-users_section`.
 
