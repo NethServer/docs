@@ -301,15 +301,14 @@ LDAP account for additional applications
 ----------------------------------------
 
 Some additional applications, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*,
-require read-only access to LDAP services. To be fully operational they
-require a dedicated user account to perform simple LDAP binds.
+require a read-only and dedicated user account to perform simple LDAP binds.
 
 For this purpose, the builtin ``ldapservice`` account is automatically created
 in local account providers with limited privileges. Its :guilabel:`Bind password` and full
 :guilabel:`Bind DN` are shown under :guilabel:`Users & Groups > Account provider > [Details]`.
 It is recommended to use those credentials to connect external systems to the account provider.
 
-On the other hand, if |product| is bound to a remote accounts provider follow these steps:
+On the other hand, if |product| is bound to a remote account provider follow these steps:
                 
 1. Create a dedicated user account in the remote AD or LDAP provider, then
    set a complex and *non-expiring* password for it. As said above, if the remote provider
@@ -343,8 +342,8 @@ the list of system directories containing users and groups data: ::
     /var/lib/nethserver/nextcloud
 
 Furthermore, if the account provider is local any user, group and computer
-account is erased.  A list of users and groups in TSV format is dumped to
-:file:`/var/lib/nethserver/backup/users.tsv` and :file:`/var/lib/nethserver/backup/groups.tsv`.
+account is erased.  A list of users and groups in TSV (Tab Separated Value) format
+is dumped to :file:`/var/lib/nethserver/backup/users.tsv` and :file:`/var/lib/nethserver/backup/groups.tsv`.
 See also :ref:`import-users_section`.
 
 Users
