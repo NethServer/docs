@@ -458,8 +458,7 @@ access to all configuration pages within the Server Manager.  It is initially
 
 .. tip::
 
-    To enable the *admin* account set a password.
-    Also remember to enable the shell if the admin user must access the new Server Manager.
+    To enable the *admin* account, just set its password
 
 Where applicable, the *admin* account is granted special privileges on some
 specific services, such as joining a workstation to an Active Directory domain.
