@@ -19,8 +19,9 @@ Supported provider types are:
 * Local Samba 4 Active Directory Domain Controller
 * Remote Active Directory (both Microsoft and Samba)
 
-The root user can configure any type of accounts provider from the
-:guilabel:`Users & Groups` page.
+Only the root user can configure an account provider from the
+:guilabel:`Users & Groups` page. Configuration of the account provider
+cannot be delegated.
 
 Be aware of the following rule about account providers:
 
