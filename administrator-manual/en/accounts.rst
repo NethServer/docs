@@ -325,15 +325,23 @@ LDAP account for additional applications
 Some additional applications, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*,
 require read-only access to LDAP services. To be fully operational they
 require a dedicated user account to perform simple LDAP binds.
+
+For this purpose, the builtin ``ldapservice`` account is automatically created
+in local account providers with limited privileges. Its :guilabel:`Bind password` and full
+:guilabel:`Bind DN` are shown under :guilabel:`Users & Groups > Account provider > [Details]`.
+It is recommended to use those credentials to connect external systems to the account provider.
+
+On the other hand, if |product| is bound to a remote accounts provider follow these steps:
                 
-1. Create a dedicated user account in the remote AD or LDAP provider,
-   and set a complex and *non-expiring* password for it.
+1. Create a dedicated user account in the remote AD or LDAP provider, then
+   set a complex and *non-expiring* password for it. As said above, if the remote provider
+   is a |product| too, it already provides ``ldapservice`` for this purpose.
                 
 2. Once |product| is successfully bound to a remote AD or LDAP account provider, specify the dedicated user account
    credentials in :guilabel:`Users & Groups > Account provider > Edit provider > Authentication credentials for LDAP applications`.
 
-If the remote account provider supports TLS, it is recommended to enable the :guilabel:`StartTLS` option or use the ``ldaps://``
-URI scheme in the :guilabel:`Service URI` input field to avoid sending clear-text passwords over the network.
+3. If the remote account provider supports TLS, it is recommended to enable the :guilabel:`StartTLS` option or use the ``ldaps://``
+   URI scheme in the :guilabel:`Service URI` input field to avoid sending clear-text passwords over the network.
 
 .. warning::
 
