@@ -423,6 +423,12 @@ A precompiled wizard will open:
    Remember to fill in the User name and Password fields related to access to the Nextcloud resource,
    otherwise it will not be possible to use the public link to the shared files
 
+.. note::
+
+   If NextCloud is configured with a custom virtual host (eg **mycloud.domain.xxx**) the :guilabel:`Path` must be changed in this way **"/remote.php/webdav"**
+   (eliminating **/nextcloud**) and in the :guilabel:`Host` name it is necessary to enter the name of the custom virtual host.
+   Also remember to include the name used as a custom virtual host in the server aliases.
+
 Proceed with the Next button until the Wizard is complete.
 
 Use the personal Cloud to send and receive documents
