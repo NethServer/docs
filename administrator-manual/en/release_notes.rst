@@ -43,7 +43,9 @@ Major changes on 2020-11-XX
       config setprop nextcloud HonorAdStartTls enabled
       signal-event nethserver-sssd-save
 
-  Finally check that the :guilabel:`STARTTLS` option is enabled in :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
+  Finally check that the :guilabel:`StartTLS` option is enabled in
+  :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
+  See also :ref:`dedicated-service-account`.
 
 
 Major changes on 2020-05-05
