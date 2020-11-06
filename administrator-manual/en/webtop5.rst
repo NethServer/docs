@@ -425,8 +425,7 @@ A precompiled wizard will open:
 
 .. note::
 
-   If NextCloud is configured with a custom virtual host (eg **mycloud.domain.xxx**) the :guilabel:`Path` must be changed in this way **"/remote.php/webdav"**
-   (eliminating **/nextcloud**) and in the :guilabel:`Host` name it is necessary to enter the name of the custom virtual host.
+If Nextcloud has been configured with a custom virtual host (eg. ``nextcloud.mydomain.com``) the :guilabel:`Path` must be changed from `/nextcloud/remote.php/webdav` to `/remote.php/webdav`, please note that `/nextcloud` prefix has been removed. Also make sure to enter the name of the custom virtual host inside the :guilabel:`Host` (eg. ``nextcloud.mydomain.com``).
    Finally, remember to configure the virtual host name as server alias: access Server Manager Dashboard, click on the server FQDN and add a new alias inside the dialog.
 
 Proceed with the Next button until the Wizard is complete.
