@@ -279,30 +279,38 @@ The shell and the processes will run with the user privileges.
 Role delegation
 ===============
 
-On complex environments, the *root* user can :index:`delegate` the access of some section
-to specific groups of local users.
+In complex environments, the *root* user can :index:`delegate` the access of some Server Manager
+pages to specific groups of users.
 
-A local user can be delegated to access:
+The *admin* user and the *domains admins* group are implicitly delegated to all pages.
+See also :ref:`admin-account-section` for more information.
 
-* one or more pages of the *System* section
+Other groups can be delegated to access:
+
+* one or more pages under the :guilabel:`System` section
 * one or more installed applications
-* one or more main sections between *Subscription*, *Software Center*
+* the :guilabel:`Subscription` page
+* the :guilabel:`Software Center` page
 
-Role delegation is based on local groups, each user belonging to the group will be delegated.
-Users inside the *domains admins* are automatically delegated to all panels.
+To create a new delegation, go to the :guilabel:`System > User & Groups > List > [Groups]`
+section then select the :guilabel:`Delegations` action of an existing group.
+Pick one or more items from the :guilabel:`System views` and :guilabel:`Applications` menus.
 
-To create a new delegation, access the :guilabel:`User & Groups` page under the group section,
-then edit an existing group or create a new one.
-Select one or more items from the :guilabel:`System views` and :guilabel:`Applications` menus.
+The following pages are implicitly added to the delegated set:
 
-Even if a user has been delegated, it must be explicitly granted the shell access before
-being able to log into the Server Manager.
+* :guilabel:`Dashboard`
+* :guilabel:`Applications`
+* :guilabel:`Terminal`
 
-The following pages are always accessible to all users:
+.. note::
 
-* dashboard
-* applications
-* terminal
+   For |product| up to version 7.7:
+
+   Even if a user has been delegated, it must be explicitly granted the shell access before
+   being able to log into the Server Manager.
+
+   See :ref:`relnotes-ns78` for more information.
+
 
 .. _2fa-section:
 
