@@ -330,11 +330,10 @@ as explained in :ref:`user-settings-page`. Thereafter they have to follow these 
 3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
 4. if the verification code is correct, click on the :guilabel:`Save` button
 
-Two-factor authentication can be enabled for:
+Two-factor authentication can be enabled for the following core applications:
 
 - the new Server Manager
 - SSH when using username and password (access with public key will never require 2FA)
-- OpenVPN (see :ref:`ovpn-section` for details)
 
 
 Recovery codes
