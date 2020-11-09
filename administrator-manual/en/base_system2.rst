@@ -187,7 +187,7 @@ This setting was added since |product| 7.8, to select how the user's shell is co
 If the :guilabel:`Override the shell of users` option is enabled, the old user's :guilabel:`Shell`
 setting under the :guilabel:`Users & Groups` page is hidden and it is considered always enabled.
 
-This is required by some features introduced starting from |produc| 7.8, like the new Server Manager based
+This is required by some features introduced starting from |product| 7.8, like the new Server Manager based
 on Cockpit, the :guilabel:`User settings page` and the fine grained SSH and SFTP permissions.
 See :ref:`relnotes-78` for details.
 
