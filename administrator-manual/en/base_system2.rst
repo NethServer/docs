@@ -112,11 +112,16 @@ administrative group (``Domain Admins``).
 It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
 while administrators are always granted access to SSH and SFTP.
 
-SSH and SFTP permissions are available once the :guilabel:`System > Settings >
-Shell policy > Override the shell of users` has been enabled.
-If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
-option can access the Server Manager, and delegation is not required any more.
+.. note::
 
+    For |product| up to version 7.7:
+
+    SSH and SFTP permissions are available once the :guilabel:`System > Settings >
+    Shell policy > Override the shell of users` has been enabled.
+    If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
+    option can access the Server Manager, and delegation is not required any more.
+
+    See :ref:`relnotes-ns78` for more information.
 
 .. _settings-section:
 

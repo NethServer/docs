@@ -30,6 +30,8 @@ Release notes |version|
 
     - CentOS 7 will receive security updates until 2024-06-30
 
+.. _relnotes-ns78:
+
 Major changes on 2020-05-05
 ---------------------------
 
