@@ -182,9 +182,15 @@ The settings page also includes a panel to let users change their password, incl
 Shell policy
 ^^^^^^^^^^^^
 
-This setting can be used to enable or disable the shell that is needed to use new Server Manager
-and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
-and it is considered always enabled.
+This setting was added since |product| 7.8, to select how the user's shell is configured.
+
+If the :guilabel:`Override the shell of users` option is enabled, the old user's :guilabel:`Shell`
+setting under the :guilabel:`Users & Groups` page is hidden and it is considered always enabled.
+
+This is required by some features introduced starting from |produc| 7.8, like the new Server Manager based
+on Cockpit, the :guilabel:`User settings page` and the fine grained SSH and SFTP permissions.
+See :ref:`relnotes-78` for details.
+
 
 .. _user-settings-section:
 
