@@ -58,6 +58,8 @@ Major changes on 2020-11-XX
 
       yum remove nethserver-postgresql94
 
+.. _relnotes-ns78:
+
 Major changes on 2020-05-05
 ---------------------------
 
