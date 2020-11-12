@@ -255,6 +255,15 @@ EveBox
 
 It can be accessed from the Server Manager under the :guilabel:`Applications` page.
 
+Restrict access
+---------------
+
+As default EveBox is accessible also from public networks.
+To restrict the access only from local and trusted networks use: ::
+
+  config setprop cgp PublicAccess disabled
+  signal-event nethserver-evebox-update
+
 
 .. [#]
    Categories documentation source:
