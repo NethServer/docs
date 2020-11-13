@@ -35,6 +35,15 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
+* As default, users belonging to the ``wheel`` group can now access the systems using SSH.
+  This behavior can be changed using the ``AllowLocalGroups`` property.
+  It accepts a comma separated list of group names in ``/etc/groups`` that are granted full SSH and SFTP access.
+
+  To restore previous behavior, run the following commands: ::
+
+    config setprop openssh AllowLocalGroups ''
+    signal-event nethserver-openssh-save
+
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
   to upgrade them to the new behavior. Make sure the remote AD accounts provider
