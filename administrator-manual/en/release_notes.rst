@@ -43,7 +43,7 @@ Major changes on 2020-11-XX
   Access to the above applications can be restricted, see respective manual pages for :ref:`CGP <cgp_restict_access-section>`, 
   :ref:`Rspamd <rspamd-web-interface-section>` and :ref:`Evebox <evebox_restrict_access-section>`.
 
-* As default, users belonging to the ``wheel`` group can now access the systems using SSH.
+* On new installations, users belonging to the ``wheel`` group can now access the systems using SSH.
   This behavior can be changed using the ``AllowLocalGroups`` property.
   It accepts a comma separated list of group names in ``/etc/groups`` that are granted full SSH and SFTP access.
 
@@ -51,6 +51,9 @@ Major changes on 2020-11-XX
 
     config setprop openssh AllowLocalGroups ''
     signal-event nethserver-openssh-save
+
+* On new installations, weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
+  options inside the :menuselection:`System -> `SSH` page.
 
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
