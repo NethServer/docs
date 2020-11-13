@@ -35,6 +35,11 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
+* The old Server Manager (namely NethGUI) is not available by default on new installations.
+  To configure the system access the new Server Manager on port ``9090``.
+
+  Old Server Manager can be still installed from :guilabel:`Software Center`.
+
 * Sice NethServer 7.8.1908 CGP (Collectd Graph Panel), EveBox and Rspamd UI where available only on HTTPS port 980,
   under the old Server Manager Apache instance named ``httpd-admin``.
   These applications are now available also on port 443 and will be accessible even if the old Server Manager has
