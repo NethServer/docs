@@ -45,14 +45,6 @@ When a network packet passes through a firewall zone, the system evaluates a lis
 traffic should be blocked or allowed. 
 :dfn:`Policies` are the default rules to be applied when the network traffic does not match any existing criteria.
 
-The firewall implements two default policies:
-
-* :dfn:`Allowed`: all traffic from green to red is allowed
-* :dfn:`Blocked`: all traffic from green to red network is blocked. Specific traffic must be allowed with custom rules.
-
-To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option from the :guilabel:`Settings` page.
-Policies can be changed also by creating specific rules between zones from the :guilabel:`Rules` page.
-
 Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: ::
 
  GREEN -> BLUE -> ORANGE -> RED
@@ -60,6 +52,26 @@ Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: 
 Traffic is allowed from left to right, blocked from right to left.
 
 To display the list of active policies click on the :guilabel:`Policies` button inside the :guilabel:`Rules` page.
+
+Policies can be changed from :guilabel:`Settings` page (default policy for green zones) and from :guilabel:`Rules` page creating very specific rules between zones.
+
+.. _firewall-settings-section:
+
+Settings
+======
+In this section you can change standard firewall behaviour.
+
+Traffic to Internet (red interface)
+-----------------------------------
+
+The default firewall policy allows all traffic from green to red interfaces.
+To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option.
+If disabled all traffic from green to red network will be blocked. Specific traffic will be allowed with custom rules.
+
+Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels
+----------------------------------------------------------------------
+
+
 
 
 .. _firewall-rules-section:
