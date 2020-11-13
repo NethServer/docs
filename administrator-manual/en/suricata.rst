@@ -255,6 +255,8 @@ EveBox
 
 It can be accessed from the Server Manager under the :guilabel:`Applications` page.
 
+.. _evebox_restrict_access-section:
+
 Restrict access
 ---------------
 

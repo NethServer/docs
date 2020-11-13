@@ -39,6 +39,8 @@ Example: ::
  config setprop collectd PingHosts www.google.com,www.nethserver.org
  signal-event nethserver-collectd-update
 
+.. _cgp_restict_access-section:
+
 Restrict access
 ===============
 

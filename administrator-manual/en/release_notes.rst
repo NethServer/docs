@@ -35,6 +35,14 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
+* Sice NethServer 7.8.1908 CGP (Collectd Graph Panel), EveBox and Rspamd UI where available only on HTTPS port 980,
+  under the old Server Manager Apache instance named ``httpd-admin``.
+  These applications are now available also on port 443 and will be accessible even if the old Server Manager has
+  not been installed.
+
+  Access to the above applications can be restricted, see respective manual pages for :ref:`CGP <cgp_restict_access-section>`, 
+  :ref:`Rspamd <rspamd-web-interface-section>` and :ref:`Evebox <evebox_restrict_access-section>`.
+
 * As default, users belonging to the ``wheel`` group can now access the systems using SSH.
   This behavior can be changed using the ``AllowLocalGroups`` property.
   It accepts a comma separated list of group names in ``/etc/groups`` that are granted full SSH and SFTP access.
