@@ -53,7 +53,7 @@ Traffic is allowed from left to right, blocked from right to left.
 
 To display the list of active policies click on the :guilabel:`Policies` button inside the :guilabel:`Rules` page.
 
-Policies can be changed from :guilabel:`Settings` page (default policy for green zones) and from :guilabel:`Rules` page creating very specific rules between zones.
+Policies can be changed from :guilabel:`Rules` page to create specific rules between zones and from :guilabel:`Settings` page (to define the default policy for green zones).
 
 .. _firewall-settings-section:
 
@@ -66,12 +66,51 @@ Traffic to Internet (red interface)
 
 The default firewall policy allows all traffic from green to red interfaces.
 To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option.
-If disabled all traffic from green to red network will be blocked. Specific traffic will be allowed with custom rules.
+If disabled all traffic from green to red network is blocked. Specific traffic can be allowed creating rules from :guilabel:`Rules` page.
 
 Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels
 ----------------------------------------------------------------------
 
+By default traffic between different VPN tunnels is not allowed, but sometimes you would need to allow it (e.g. a RoadWarrior client must reach a remote resource behind an IPsec tunnel).
+Just enable this option will allow traffic to pass between VPN tunnels, if you need to allow only specific inter-vpn traffic enable this flag and create specific block rules from the :guilabel:`Rules` page.
 
+Ping from Internet
+------------------
+
+Allows NethServer to answer icmp requests from internet.
+
+Port forward - Hairpin NAT
+--------------------------
+
+Enable hairpin NAT on active port forwarding so that from local zones you can reach the publicly exposed servers by pointing directly to the public ip and not the private ip.
+This functionality requires NethServer to have a public IP address on the red interface.
+Whenever possible it is recommended to reach the local servers using their local ip and not the public ip, please use a split dns to correctly resolve the name inside the LAN.
+
+Application Level Gateway Enable SIP-ALG
+----------------------------------------
+
+ALG allows SIP and H.323 protocols to operate through NAT. When enabled, ALG will inspect and rewrite Voice over Internet Protocol (VoIP) network packets and open required ports. 
+ALG is enabled by default, but if you're if you're experiencing audio and call problems with your PBX or VoIP client try to disable it.
+
+IP/MAC binding
+--------------
+
+The firewall can use the list of DHCP reservations to strictly check all traffic generated from hosts inside local networks.
+It's not needed for the dhcp service to be enabled, we just need to create reservations thanks to which an ip address is associated with a MAC address.
+When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
+The common use is to allow traffic only from known hosts and block all other traffic. 
+In this case, hosts without a reservation will not be able to access the firewall nor the external network.
+
+To enable traffic only from well-known hosts, follow these steps:
+
+1. Create a DHCP reservation for a host
+2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
+3. Select :guilabel:`MAC validation (IP/MAC binding)`
+4. Choose :guilabel:`Block traffic` as the policy to apply to unregistered hosts
+
+
+.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
+   otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
 
 .. _firewall-rules-section:
@@ -479,28 +518,6 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
 
-
-.. _firewall_mac_binding-section:
-
-IP/MAC binding
-==============
-
-When the system is acting as DHCP server, the firewall can use the list of DHCP reservations to strictly check
-all traffic generated from hosts inside local networks.
-When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
-The common use is to allow traffic only from known hosts and block all other traffic. 
-In this case, hosts without a reservation will not be able to access the firewall nor the external network.
-
-To enable traffic only from well-known hosts, follow these steps:
-
-1. Create a DHCP reservation for a host
-2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
-3. Select :guilabel:`MAC validation (IP/MAC binding)`
-4. Choose :guilabel:`Block traffic` as the policy to apply to unregistered hosts
-
-
-.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
-   otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
 
 .. _firewall_connections-section:
