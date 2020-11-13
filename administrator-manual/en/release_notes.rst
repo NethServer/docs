@@ -47,6 +47,10 @@ Major changes on 2020-11-XX
   :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
   See also :ref:`dedicated-service-account`.
 
+  To prevent errors during the upgrade to Nextcloud, the ``mail`` and ``theming`` have been disabled.
+  After the upgrade, both applications should be manually updated and re-enabled by accessing 
+  Nextcloud administration interface.
+
 * Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
   automatically by the nethserver-mattermost upgrade procedure if no other service requires it.
 
