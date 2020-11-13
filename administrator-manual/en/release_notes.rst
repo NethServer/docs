@@ -40,7 +40,7 @@ Major changes on 2020-11-XX
 
   Old Server Manager can be still installed from :guilabel:`Software Center`.
 
-* Sice NethServer 7.8.1908 CGP (Collectd Graph Panel), EveBox and Rspamd UI where available only on HTTPS port 980,
+* Since |product| 7.8.1908 CGP (Collectd Graph Panel), EveBox and Rspamd UI were available only on HTTPS port 980,
   under the old Server Manager Apache instance named ``httpd-admin``.
   These applications are now available also on port 443 and will be accessible even if the old Server Manager has
   not been installed.
