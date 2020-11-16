@@ -53,50 +53,70 @@ Traffic is allowed from left to right, blocked from right to left.
 
 To display the list of active policies click on the :guilabel:`Policies` button inside the :guilabel:`Rules` page.
 
-Policies can be changed from :guilabel:`Rules` page to create specific rules between zones and from :guilabel:`Settings` page (to define the default policy for green zones).
+Policies can be changed by creating specific rules between zones from the :guilabel:`Rules` page or by accessing
+the :ref:`traffic_to_internet` section inside the :guilabel:`Settings` page.
 
-.. _firewall-settings-section:
+.. _firewall_settings-section:
 
 Settings
-======
-In this section you can change standard firewall behaviour.
+========
 
-Traffic to Internet (red interface)
------------------------------------
+In this section you can change standard firewall behavior.
 
-The default firewall policy allows all traffic from green to red interfaces.
+.. _traffic_to_internet-section:
+
+Traffic to Internet
+-------------------
+
+The default firewall policy allows all traffic from green to red interfaces (Internet).
 To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option.
 If disabled all traffic from green to red network is blocked. Specific traffic can be allowed creating rules from :guilabel:`Rules` page.
 
-Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels
-----------------------------------------------------------------------
+Traffic between VPNs
+--------------------
 
-By default traffic between different VPN tunnels is not allowed, but sometimes you would need to allow it (e.g. a RoadWarrior client must reach a remote resource behind an IPsec tunnel).
-Just enable this option will allow traffic to pass between VPN tunnels, if you need to allow only specific inter-vpn traffic enable this flag and create specific block rules from the :guilabel:`Rules` page.
+By default traffic between different VPN tunnels is not allowed, but sometimes you would need to allow it like when a OpenVPN roadwarrior client should
+reach a remote resource behind an IPsec tunnel.
+To permit traffic between VPNs, just enable the :guilabel:`Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels` option.
+Extra block rules can be created from :guilabel:`Rules` page to customize the network access between VPN zones.
 
 Ping from Internet
 ------------------
 
-Allows NethServer to answer icmp requests from internet.
+Allows |product| to answer ICMP requests from red interfaces (Internet).
 
-Port forward - Hairpin NAT
---------------------------
+.. _hairpin-section:
 
-Enable hairpin NAT on active port forwarding so that from local zones you can reach the publicly exposed servers by pointing directly to the public ip and not the private ip.
-This functionality requires NethServer to have a public IP address on the red interface.
-Whenever possible it is recommended to reach the local servers using their local ip and not the public ip, please use a split dns to correctly resolve the name inside the LAN.
+Hairpin NAT
+-----------
 
-Application Level Gateway Enable SIP-ALG
-----------------------------------------
+By default, all port forwards are available only for hosts inside the WAN.
+When Hairpin NAT is active, hosts on the local zones will be able to reach forwarded ports using both public and private firewall IP addresses.
+
+Whenever possible it is recommended to avoid enabling this option and correctly configure split DNS to resolve service names inside the LAN.
+
+If hair-pinning is still required, check the :guilabel:`Enable hairpin NAT` option.
+
+.. note::
+
+  This functionality requires |product| to have a public IP address on the red interface.
+
+
+Application Level Gateway (ALG)
+-------------------------------
 
 ALG allows SIP and H.323 protocols to operate through NAT. When enabled, ALG will inspect and rewrite Voice over Internet Protocol (VoIP) network packets and open required ports. 
 ALG is enabled by default, but if you're if you're experiencing audio and call problems with your PBX or VoIP client try to disable it.
+
+.. _firewall_mac_binding-section:
 
 IP/MAC binding
 --------------
 
 The firewall can use the list of DHCP reservations to strictly check all traffic generated from hosts inside local networks.
-It's not needed for the dhcp service to be enabled, we just need to create reservations thanks to which an ip address is associated with a MAC address.
+DHCP server should could be disabled but the administrator must still create reservations to associate the IP with a MAC address.
+See :ref:`dhcp-section` for more details.
+
 When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
 The common use is to allow traffic only from known hosts and block all other traffic. 
 In this case, hosts without a reservation will not be able to access the firewall nor the external network.
@@ -314,9 +334,7 @@ When you create a port forward, you must specify at least the following paramete
 
 Port forwards are grouped by destination host and support raw IP addresses along with firewall objects.
 
-By default, all port forwards are available only for hosts inside the WAN.
-Check the :guilabel:`Enable hairpin NAT` option under the :guilabel:`Settings` page to make all port forwards available also from local networks.
-
+By default, all port forwards are available only for hosts inside the WAN, see :ref:`hairpin-section` to change such behavior.
 
 Example
 -------
