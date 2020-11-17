@@ -70,6 +70,10 @@ Major changes on 2020-11-XX
   After each upgrade, both applications should be manually updated and re-enabled by accessing
   Nextcloud administration interface.
 
+* Netdata is now installed by default to serve charts for the Server Manager.
+  Some plugins have been disabled to reduce resource usage.
+  To re-enable such plugins see `netdata configuration <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-netdata.html>`_ .
+
 * Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
   automatically by the nethserver-mattermost upgrade procedure if no other service requires it.
 
