@@ -86,7 +86,7 @@ Enable hairpin NAT on active port forwarding so that from local zones you can re
 This functionality requires NethServer to have a public IP address on the red interface.
 Whenever possible it is recommended to reach the local servers using their local ip and not the public ip, please use a split dns to correctly resolve the name inside the LAN.
 
-Application Level Gateway Enable SIP-ALG
+Application Level Gateway - Enable SIP-ALG
 ----------------------------------------
 
 Application-level gateway is a security component that augments a firewall or NAT employed in a computer network.
