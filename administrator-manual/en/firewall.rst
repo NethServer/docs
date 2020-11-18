@@ -105,8 +105,13 @@ If hair-pinning is still required, check the :guilabel:`Enable hairpin NAT` opti
 Application Level Gateway (ALG)
 -------------------------------
 
-ALG allows SIP and H.323 protocols to operate through NAT. When enabled, ALG will inspect and rewrite Voice over Internet Protocol (VoIP) network packets and open required ports. 
-ALG is enabled by default, but if you're if you're experiencing audio and call problems with your PBX or VoIP client try to disable it.
+Application-level gateway is a security component that augments a firewall or NAT employed in a computer network.
+ALG is enabled by default on NethSecurity, it supports many application protocols (like FTP, SIP and so on), allowing them to operate through NAT.
+ALG inspect and rewrite specific network packets and automatically opens required ports.
+
+**Enable SIP-ALG**
+
+Since some PBXs may not work properly in the presence of ALG on SIP and H.323 protocols, if you're experiencing audio and call problems with your PBX or VoIP client try to disable SIP-ALG and H.323-ALG.
 
 .. _firewall_mac_binding-section:
 
