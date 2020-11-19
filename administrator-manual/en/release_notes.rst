@@ -52,7 +52,7 @@ Major changes on 2020-11-XX
   Note that users created by the Anaconda ISO installer can be members of ``wheel``. See :ref:`ssh-section` for details.
 
 * On new installations, SSH weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
-  options inside the :menuselection:`System -> SSH` page.
+  option inside the :menuselection:`System -> SSH` page.
 
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
