@@ -107,7 +107,7 @@ Application Level Gateway (ALG)
 
 Application level gateway is a security component that augments a firewall or NAT employed in a computer network.
 ALG is enabled by default on NethSecurity, it supports many application protocols (like FTP, SIP and so on), allowing them to operate through NAT.
-ALG inspect and rewrite specific network packets and automatically opens required ports.
+ALG inspects and rewrites specific network packets and automatically opens required ports.
 
 **Enable SIP-ALG**
 
