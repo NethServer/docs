@@ -106,12 +106,14 @@ Application Level Gateway (ALG)
 -------------------------------
 
 Application level gateway is a security component that augments a firewall or NAT employed in a computer network.
-ALG is enabled by default on NethSecurity, it supports many application protocols (like FTP, SIP and so on), allowing them to operate through NAT.
+ALG is enabled by default on |product|, it supports many application protocols (like FTP, SIP and so on), allowing them to operate through NAT.
 ALG inspects and rewrites specific network packets and automatically opens required ports.
 
 **Enable SIP-ALG**
 
-Since some PBXs may not work properly in the presence of ALG on SIP and H.323 protocols, if you're experiencing audio and call problems with your PBX or VoIP client try to disable SIP-ALG and H.323-ALG.
+Some PBXs may not work properly with SIP-ALG and H.323-ALG, if you're experiencing audio and call problems with your PBX or your VoIP client try to disable them.
+To disable the SIP-ALG and H.323-ALG modules untick the checkbox.
+
 
 .. _firewall_mac_binding-section:
 
