@@ -45,20 +45,14 @@ Major changes on 2020-11-XX
   These applications are now available also on port 443 and will be accessible even if the old Server Manager has
   not been installed.
 
-  Access to the above applications can be restricted, see respective manual pages for :ref:`CGP <cgp_restict_access-section>`, 
+  Access to the above applications can be restricted: see the respective manual pages for :ref:`CGP <cgp_restict_access-section>`,
   :ref:`Rspamd <rspamd-web-interface-section>` and :ref:`Evebox <evebox_restrict_access-section>`.
 
-* On new installations, users belonging to the ``wheel`` group can now access the systems using SSH.
-  This behavior can be changed using the ``AllowLocalGroups`` property.
-  It accepts a comma separated list of group names in ``/etc/groups`` that are granted full SSH and SFTP access.
+* On new installations, users belonging to the ``wheel`` group are now granted SSH and SFTP access.
+  Note that users created by the Anaconda ISO installer can be members of ``wheel``. See :ref:`ssh-section` for details.
 
-  To restore previous behavior, run the following commands: ::
-
-    config setprop openssh AllowLocalGroups ''
-    signal-event nethserver-openssh-save
-
-* On new installations, weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
-  options inside the :menuselection:`System -> `SSH` page.
+* On new installations, SSH weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
+  options inside the :menuselection:`System -> SSH` page.
 
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
