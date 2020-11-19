@@ -114,8 +114,8 @@ By default, SSH and SFTP access is granted to the following groups of administra
 * ``root``
 * ``wheel``
 
-When an account provider is configured, ``domain admins``
-(see :ref:`admin-account-section` for details) is granted too.
+When an account provider is configured, the access is granted to ``domain admins``, too.
+See :ref:`admin-account-section` for details.
 
 It is possible to grant access to normal users and groups with the
 guilabel:`Allow SSH/SFTP access` selector.
