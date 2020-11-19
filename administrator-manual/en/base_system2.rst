@@ -106,8 +106,8 @@ SSH
 ---
 
 The :menuselection:`System > SSH` page displays the number of current SSH connections. From this
-section the administrator can change the OpenSSH listening port, disable weak ciphers, root
-login and password authentication.
+section the administrator can change the OpenSSH listening port and disable weak ciphers, root
+login, and password authentication.
 
 By default, SSH and SFTP access is granted to the following groups of administrators:
 
