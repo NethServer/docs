@@ -35,7 +35,7 @@ Major changes on 2020-11-XX
 
 * ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
 
-* The old Server Manager (namely NethGUI) is not available by default on new installations.
+* The old Server Manager (namely Nethgui) is not available by default on new installations.
   To configure the system access the new Server Manager on port ``9090``.
 
   Old Server Manager can be still installed from :guilabel:`Software Center`.
