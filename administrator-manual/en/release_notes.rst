@@ -92,7 +92,7 @@ Major changes on 2020-11-XX
   If the system needs DAHDI software for special telephony related hardware, install it from :guilabel:`Software Center`
   by selecting the ``DAHDI drivers and tools`` module.
 
-  On updated machines where DAHDI is not required, these packages can be removed with following command: ::
+  On updated machines where DAHDI is not required, these packages can be removed with the following command: ::
 
       yum remove dahdi-tools-libs dahdi-linux kmod-dahdi-linux dahdi-firmware
 
