@@ -112,6 +112,10 @@ administrative group (``Domain Admins``).
 It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
 while administrators are always granted access to SSH and SFTP.
 
+You can harden SSH by restricting the usage of weak ciphers, algorythms and macs, 
+the SSH client of old operating systems could not connect anymore. Big files transfer can be slower with the strong encryption. 
+The host key will change at the service restart and the client must accept it again.
+
 .. note::
 
     For |product| up to version 7.7:
