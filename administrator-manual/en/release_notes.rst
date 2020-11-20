@@ -74,6 +74,9 @@ Major changes on 2020-11-XX
   Some plugins have been disabled to reduce resource usage.
   To re-enable such plugins see `netdata configuration <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-netdata.html>`_ .
 
+* Machines running a kernel older than ``3.10.0-1160.6.1.el7``, should be rebooted after installing ``nethserver-ndpi`` to enable
+  ``xt_ndpi`` kernel module.
+
 * Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
   automatically by the nethserver-mattermost upgrade procedure if no other service requires it.
 
