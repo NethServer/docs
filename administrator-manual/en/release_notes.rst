@@ -88,6 +88,14 @@ Major changes on 2020-11-XX
 
       yum remove nethserver-postgresql94
 
+* DAHDI tools and kernel module are no more installed by default as part of ``nethserver-freepbx`` package.
+  If the system needs DAHDI software for special telephony related hardware, install it from :guilabel:`Software Center`
+  by selecting the ``DAHDI drivers and tools`` module.
+
+  On updated machines where DAHDI is not required, these packages can be removed with following command: ::
+
+      yum remove dahdi-tools-libs dahdi-linux kmod-dahdi-linux dahdi-firmware
+
 .. _relnotes-ns78:
 
 Major changes on 2020-05-05
