@@ -54,6 +54,9 @@ Major changes on 2020-11-XX
 * On new installations, SSH weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
   option inside the :menuselection:`System -> SSH` page.
 
+  On updated machine where OpenSSH package is older than ``nethserver-openssh-1.6.0-1.ns7``, the strong cipher
+  option will be enabled and clients will need to accept again the server fingerprint.
+
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
   to upgrade them to the new behavior. Make sure the remote AD accounts provider
