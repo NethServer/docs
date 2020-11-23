@@ -102,18 +102,16 @@ If hair-pinning is still required, check the :guilabel:`Enable hairpin NAT` opti
   This functionality requires |product| to have a public IP address on the red interface.
 
 
-Application Level Gateway (ALG)
+Application Layer Gateway (ALG)
 -------------------------------
 
-Application level gateway is a security component that augments a firewall or NAT employed in a computer network.
-ALG is enabled by default on |product|, it supports many application protocols (like FTP, SIP and so on), allowing them to operate through NAT.
-ALG inspects and rewrites specific network packets and automatically opens required ports.
+Application layer gateways handle dynamic firewall rules for certain protocols.
+Many ALGs are enabled by default on |product|, to allow some protocols (such as FTP, SIP, etc) to operate through NAT.
+ALGs inspect and rewrite specific network packets and automatically open required ports.
 
-**Enable SIP-ALG**
+**Enable SIP-ALG and H.323-ALG**
 
-Some PBXs may not work properly with SIP-ALG and H.323-ALG, if you're experiencing audio and call problems with your PBX or your VoIP client try to disable them.
-To disable the SIP-ALG and H.323-ALG modules untick the checkbox.
-
+Some PBXs may not work properly with SIP-ALG and H.323-ALG. In case of audio and call problems with your PBX or your VoIP client try to disable them.
 
 .. _firewall_mac_binding-section:
 
