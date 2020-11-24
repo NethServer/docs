@@ -40,13 +40,8 @@ Major changes on 2020-11-XX
 
   Old Server Manager can be still installed from :guilabel:`Software Center`.
 
-* Until |product| 7.8.1908, CGP (Collectd Graph Panel), EveBox and Rspamd UI were available only on HTTPS port 980,
-  under the old Server Manager Apache instance named ``httpd-admin``.
-  These applications are now available also on port 443 and will be accessible even if the old Server Manager has
-  not been installed.
-
-  Access to the above applications can be restricted: see the respective manual pages for :ref:`CGP <cgp_restict_access-section>`,
-  :ref:`Rspamd <rspamd-web-interface-section>` and :ref:`EveBox <evebox_restrict_access-section>`.
+* CGP (Collectd Graph Panel), EveBox and Rspamd UI are still available on HTTPS port 980,
+  even if the old Server Manager has not been installed.
 
 * On new installations, users belonging to the ``wheel`` group are now granted SSH and SFTP access.
   Note that users created by the Anaconda ISO installer can be members of ``wheel``. See :ref:`ssh-section` for details.

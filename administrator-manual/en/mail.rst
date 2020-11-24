@@ -319,14 +319,9 @@ Rspamd web interface
 The antispam component is implemented by Rspamd [#RSPAMD]_ which provides its
 administrative web interface at ::
 
-  https://<HOST_IP>/rspamd
+  https://<HOST_IP>:980/rspamd
 
 For more information on Rspamd, please read the :ref:`rspamd-section` page.
-
-To restict access only from trusted networks, use: ::
-
-  config setprop rspamd PublicAccess disabled
-  signal-event nethserver-mail-filter-update
 
 .. only:: nscom
 
