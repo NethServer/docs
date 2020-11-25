@@ -40,7 +40,7 @@ Major changes on 2020-11-XX
 
   Old Server Manager can be still installed from :guilabel:`Software Center`.
 
-* CGP (Collectd Graph Panel), EveBox and Rspamd UI are still available on HTTPS port 980,
+* CGP (Collectd Graph Panel), EveBox, Rspamd UI, Lightsquid and Ntopng are still available on HTTPS port 980,
   even if the old Server Manager has not been installed.
 
 * On new installations, users belonging to the ``wheel`` group are now granted SSH and SFTP access.
