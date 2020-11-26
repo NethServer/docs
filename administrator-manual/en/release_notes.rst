@@ -49,6 +49,8 @@ Major changes on 2020-11-XX
 * On new installations, SSH weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
   option inside the :menuselection:`System -> SSH` page.
 
+* Default TLS policy is ``2020-05-10``. TLS 1.1, TLS 1.0, SSL v3, and SSL v2 are disabled. See :ref:`tlspolicy-section` for details.
+
 * New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
   As old installations ignore that setting and always send clear-text passwords, it is recommended
   to upgrade them to the new behavior. Make sure the remote AD accounts provider
