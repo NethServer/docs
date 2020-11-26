@@ -11,7 +11,7 @@ See also the `ISO releases`_ on Developer's manual.
 7.9.2009
 --------
 
-* 2020-11-XX `final <rel79_>`_
+* 2020-11-26 `final <rel79_>`_
 
 .. _rel79: https://github.com/NethServer/dev/milestone/27?closed=1
 
