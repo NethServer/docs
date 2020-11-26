@@ -19,8 +19,9 @@ Supported provider types are:
 * Local Samba 4 Active Directory Domain Controller
 * Remote Active Directory (both Microsoft and Samba)
 
-The root user can configure any type of accounts provider from the
-:guilabel:`Accounts provider` page.
+Only the root user can configure an account provider from the
+:guilabel:`Users & Groups` page. Configuration of the account provider
+cannot be delegated.
 
 Be aware of the following rule about account providers:
 
@@ -29,8 +30,7 @@ Be aware of the following rule about account providers:
 
 Remote providers    
     After |product| has been bound to a remote account provider the
-    :guilabel:`User and groups` page shows the domain accounts in *read-only*
-    mode.
+    :guilabel:`User & groups` page shows a *read-only* list of domain accounts.
 
 Local providers
     After installing a local provider (either Samba 4 or OpenLDAP), the administrator
@@ -49,10 +49,10 @@ Choosing the right account provider
 Besides choosing to bind a remote provider or install a local one, the
 administrator has to decide which backend type suits his needs.
 
-The *File server* module of |product|, which enables the :guilabel:`Shared
+The *File server* application of |product|, which enables the :guilabel:`File server > Shared
 folders` page, can authenticate SMB/CIFS clients only if |product| is bound to an
-Active Directory domain.  The LDAP providers allow access to :guilabel:`Shared
-folders` only in *guest mode*.  See :ref:`shared_folders-section`.
+Active Directory domain.  The LDAP providers allow access to shared
+folders only in *guest mode*.  See :ref:`shared_folders-section`.
 
 On the other hand, the local OpenLDAP provider is more easy to install and
 configure.
@@ -67,8 +67,8 @@ OpenLDAP local provider installation
 ------------------------------------
 
 To install and configure an OpenLDAP local accounts provider, go to page
-:guilabel:`Accounts provider > LDAP > Install locally`. The system needs a
-working internet connection to download additional packages.
+:guilabel:`Users & Groups > [Configure the account provider] > LDAP > Install local LDAP`. 
+The system needs a working internet connection to download additional packages.
 
 At the end of the installation the package is automatically configured and the
 administrator will be able to manage users and groups from the :guilabel:`User
@@ -104,9 +104,9 @@ Therefore the additional IP address must satisfy three conditions:
    bridge interface automatically, if it is missing
 
 To install a local Active Directory accounts provider, go to page
-:guilabel:`Accounts provider > Active Directory > Create a new domain`.
+:guilabel:`Users & Groups > [Configure the account provider] > Active Directory > Create domain and become DC`.
 
-The :guilabel:`DNS domain name` defines the DNS suffix of the new domain.
+The :guilabel:`Domain name` defines the DNS suffix of the new domain.
 |product| acts as an authoritative DNS server for that domain. See also
 :ref:`dns-and-ad-domain`.
 
@@ -114,14 +114,14 @@ The :guilabel:`NetBIOS domain name` (also known as "domain short name", "NT
 domain name") is the alternative Active Directory domain identifier, compatible
 with older clients. See also :ref:`smb-access-section`.
 
-The :guilabel:`Domain Controller IP address` field must be filled with the
+The :guilabel:`DC IP address` field must be filled with the
 **additional IP address** explained above.
 
 When all fields are filled, press the :guilabel:`Create domain` button.
 
 .. warning::
 
-    The Active Directory :guilabel:`DNS domain name` and  :guilabel:`NetBIOS
+    The Active Directory :guilabel:`Domain name` and  :guilabel:`NetBIOS
     domain name` values cannot be changed once that the domain has been created
 
 The Active Directory configuration procedure might require some time to run.
@@ -133,17 +133,16 @@ builtin support for Posix ACLs and no special configuration is required. For
 other filesystems (i.e. EXT4) enable the ACLs as explained in :ref:`Shared
 folders requirements <shared_folders_requirements-section>`.
 
-At the end of the Active Directory configuration procedure,  the |product| host
-machine is automatically configured to join the Active Directory domain. Go to 
-the page :guilabel:`User and groups` to see the default accounts.
+At the end of the procedure, the |product| host machine automatically joins 
+the new Active Directory domain. 
 
 .. index::
     pair: active directory; change IP
 
 .. _nsdc-change-ip:
 
-The previously assigned IP address can be changed from :guilabel:`Accounts
-provider > Change IP`.
+The previously assigned IP address can be changed from 
+:guilabel:`Users & Groups > Account provider > [Details] > Active Directory IP`.
 
 .. warning::
 
@@ -154,7 +153,7 @@ provider > Change IP`.
 .. index::
   pair: active directory; default accounts
 
-After installing Samba Active Directory, the :guilabel:`Users and groups` page
+After installing Samba Active Directory, the :guilabel:`Users & groups` page
 has two default entries; both are disabled: :dfn:`administrator` and
 :dfn:`admin`. "Administrator" is the default Active Directory privileged account
 and is not required by |product|; it is safe to keep it disabled. "admin" is
@@ -228,28 +227,6 @@ Configure MAC Address Spoofing for Virtual Network Adapters [#MsMacSpoofing]_
 .. [#MsMacSpoofing] https://technet.microsoft.com/en-us/library/ff458341.aspx
 
 
-Local accounts provider uninstall
---------------------------------------
-
-Both LDAP and AD local accounts provider can be uninstalled from the
-:guilabel:`Accounts provider > Uninstall` page. 
-
-When the local accounts provider DB is uninstalled, any user, group and computer
-account is erased. 
-
-* A list of users and groups in TSV format is dumped to
-  :file:`/var/lib/nethserver/backup/users.tsv` and
-  :file:`/var/lib/nethserver/backup/groups.tsv`. See also
-  :ref:`import-users_section`.
-
-* Existing files owned by users and groups must be removed manually. This is
-  the list of system directories containing users and groups data: ::
-
-    /var/lib/nethserver/home
-    /var/lib/nethserver/vmail
-    /var/lib/nethserver/ibay
-
-
 .. _join-existing-ad-section:
 
 Join an existing Active Directory domain
@@ -270,92 +247,141 @@ Joining an Active Directory domain has the following pre-requisite:
    page.
  
 After the prerequisite is fulfilled, proceed to the page
-:guilabel:`Accounts provider > Active Directory > Join a domain`.
+:guilabel:`Users & Groups > [Configure the account provider] > Active Directory > Join existing Domain Controller`.
 
-* Enter the :guilabel:`DNS domain name` of the AD domain. The
-  NetBIOS domain name (domain short name) is probed automatically.
+* Enter the :guilabel:`Domain name` of the AD domain. 
+  Press the :guilabel:`Check` button 
 
-* Fill the :guilabel:`AD DNS server` field. Usually it is the
-  IP address of an AD domain controller.
+* If required, fill the :guilabel:`AD DNS server` field. Usually it is the
+  IP address of an AD domain controller. Press :guilabel:`Check` again.
 
-* Provide the :guilabel:`User name` and :guilabel:`Password` of an AD account
+* Provide the :guilabel:`Username` and :guilabel:`Password` of an AD account
   with the privilege of joining a computer to the domain. Remember that the
-  default *administrator* account could be disabled!
+  default *administrator* account could be disabled! Press :guilabel:`Check` again.
 
-.. index::
-     pair: service; account
+* If the credentials are valid complete the procedure by pressing :guilabel:`Next`.
 
-.. _ad-dedicated-service-account:
-
-.. warning::    Some additional modules, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*
-                require read-only access to AD LDAP services. To be fully operational they
-                require an additional account to perform simple LDAP binds.
-                
-                Create a **dedicated user account** in AD, and set a complex *non-expiring*
-                password for it.
-                
-Once |product| has successfully joined AD, specify the **dedicated user account**
-credentials in :guilabel:`Accounts provider > Authentication credentials for LDAP applications`.
+Some applications require an additional configuration step. See also :ref:`dedicated-service-account`.
 
 .. _bind-remote-ldap-section:
 
 Bind to a remote LDAP server
 ----------------------------
 
-To configure a remote LDAP accounts provider, go to page :guilabel:`Accounts
-provider > LDAP > Bind remotely`.
+To configure a remote LDAP accounts provider, go to page :guilabel:`Users & Groups
+> Configure the account provider > LDAP > Bind remote LDAP`.
 
-Type the LDAP server IP address in the field :guilabel:`Host name or IP`. If
+Type the LDAP server IP address in the field :guilabel:`Hostname or IP`. If
 the LDAP service runs on a non-standard TCP port, specify it in :guilabel:`TCP
-port`.
+port`. Press the :guilabel:`Check` button to proceed.
 
 Then an LDAP *rootDSE* query is sent to the specified host and a form is filled
 with returned data.  Check the values are correct then press the
-:guilabel:`Save` button to confirm.
+:guilabel:`Check` button again.
 
-If the LDAP server requires authentication, fill in the fields under
-:guilabel:`Authenticated bind`. Enable either ``ldaps://`` or STARTTLS to 
-encrypt the connection.
+If the LDAP server requires authentication, set :guilabel:`Bind Type` to :guilabel:`Authenticated`.
+Set either ``ldaps://`` in :guilabel:`Service URI` or enable :guilabel:`StartTLS` to encrypt the connection.
 
 .. tip::
 
     If the remote LDAP server is also a |product| installation and
     it is in the LAN (green) network, select :guilabel:`Anonymous bind`
-    
+
+Some applications require an additional configuration step. See also :ref:`dedicated-service-account`.
+
+
+.. index::
+     pair: service; account
+
+.. _dedicated-service-account:
+
+.. _ad-dedicated-service-account:
+
+LDAP account for additional applications
+----------------------------------------
+
+Some additional applications, like *Nextcloud*, *WebTop*, *Roundcube*, *Ejabberd*,
+require a read-only and dedicated user account to perform simple LDAP binds.
+
+For this purpose, the builtin ``ldapservice`` account is automatically created
+in local account providers with limited privileges. Its :guilabel:`Bind password` and full
+:guilabel:`Bind DN` are shown under :guilabel:`Users & Groups > Account provider > [Details]`.
+It is recommended to use those credentials to connect external systems to the account provider.
+
+On the other hand, if |product| is bound to a remote account provider follow these steps:
+                
+1. Create a dedicated user account in the remote AD or LDAP provider, then
+   set a complex and *non-expiring* password for it. As said above, if the remote provider
+   is a |product| too, it already provides ``ldapservice`` for this purpose.
+                
+2. Once |product| is successfully bound to a remote AD or LDAP account provider, specify the dedicated user account
+   credentials in :guilabel:`Users & Groups > Account provider > Edit provider > Authentication credentials for LDAP applications`.
+
+3. If the remote account provider supports TLS, it is recommended to enable the :guilabel:`StartTLS` option or use the ``ldaps://``
+   URI scheme in the :guilabel:`Service URI` input field to avoid sending clear-text passwords over the network.
+
+.. warning::
+
+  The |product| AD accounts provider supports TLS. MS-Windows AD might require additional setup to enable TLS.
+
+.. _changing-account-provider-section:
+
+Changing account provider
+-------------------------
+
+The configured account provider can be removed by root from
+:guilabel:`Users & Groups > Account provider > Change provider`.
+
+When the account provider has been removed, existing files owned
+by users and groups must be removed manually. This is
+the list of system directories containing users and groups data: ::
+
+    /var/lib/nethserver/home
+    /var/lib/nethserver/vmail
+    /var/lib/nethserver/ibay
+    /var/lib/nethserver/nextcloud
+
+Furthermore, if the account provider is local any user, group and computer
+account is erased.  A list of users and groups in TSV (Tab Separated Values) format
+is dumped to :file:`/var/lib/nethserver/backup/users.tsv` and :file:`/var/lib/nethserver/backup/groups.tsv`.
+See also :ref:`import-users_section`.
 
 Users
 =====
 
-A newly created user account remains locked until it has set a password.
+If a remote AD or LDAP account provider was configured, the :guilabel:`Users & Groups` page
+shows read-only lists. It is not possible to modify or delete users and groups from the Server Manager.
+
+On the other hand, if a local AD or LDAP account provider was installed, the :guilabel:`Users & Groups` page
+allows to create, modify and delete users and groups.
+
+A newly created user remains locked until it has set a password.
 Disabled users are denied to access system services.
 
-When creating a user, following fields are mandatory:
+When creating a user, the following fields are mandatory:
 
 * User name
 * Full name (name and surname)
 
-A user can be added to one or more group from the :guilabel:`Users` page or from the :guilabel:`Groups` one.
+A user can be added to one or more groups.
 
 Sometimes you need to block user access to services without deleting the
 account. The safest approach is:
 
-- lock the user using the :guilabel:`Lock` action
-- (optionally) change the user's password with a random one
+1. (optionally) change the user's password with a random one
+2. lock the user using the :guilabel:`Lock` action
 
+.. note::
 
-.. note:: When a user is deleted, the home directory and personal mail box will be also deleted.
+    When a user is deleted with a local account provider, the home directory and personal mail box are deleted too.
 
 .. index:: password
 
 Changing the password
 ---------------------
 
-If there wasn't given an initial password during user creation, the user account is disabled.
-To enable it, set a password using the :guilabel:`Change password` button.
-
-When a user is enabled, the user can access the Server Manager and change
-his/her own password by going to the :guilabel:`user@domain.com` label on the
-upper right corner of the screen and clicking on :guilabel:`Profile`.
+Users can change their password from the ``/user-settings`` web page. 
+To enable it see :ref:`user-settings-section`.
 
 If the system is bound to an Active Directory account provider, users can change
 their password also using the Windows tools.  In this case you can not set passwords
@@ -367,7 +393,7 @@ according to the :ref:`configured policies <password-management-section>`.
 Credentials for services
 ------------------------
 
-The user's credentials are the **user name** and his **password**.  Credentials
+The user's credentials are the **user name** and their **password**.  Credentials
 are required to access the services installed on the system.
 
 The user name can be issued in two forms: *long* (default) and *short*.  The
@@ -389,7 +415,7 @@ To access a shared folder, see also :ref:`smb-access-section`.
 User home directories
 ---------------------
 
-User home directories are stored inside :file:`/var/lib/nethserver/home` directory,
+User home directories are stored inside the :file:`/var/lib/nethserver/home` directory,
 in order to simplify the deployment of a single-growing partition system.
 
 The administrator can still restore the well-known :file:`/home` path using the bind mount: ::
@@ -404,17 +430,18 @@ Groups
 ======
 
 A group of users can be granted some permission, such as authorize
-access over a :ref:`shared folder <shared_folders-section>`. The granted
+:ref:`access to SSH <ssh-section>` or over a :ref:`shared folder <shared_folders-section>`. The granted
 permission is propagated to all group members.
 
-Two special groups can be created.  Members of these groups are granted access
-to the panels of the Server Manager:
+The root user can delegate some Server Manager pages to a group, 
+with the :guilabel:`Delegations` action of :guilabel:`Users & Groups > List > [Groups]`.
 
-* :dfn:`domain admins`: members of this group have the same permissions as the
-  *root* user from the Server Manager.
+See also 
 
-* :dfn:`managers`: members of this group are granted access to the *Management*
-  section of the Server Manager.
+* :ref:`admin-account-section`, for permissions of the ``domain admins`` group.
+
+* :ref:`delegation-section`
+
 
 .. index: admin
 
@@ -430,8 +457,7 @@ access to all configuration pages within the Server Manager.  It is initially
 
 .. tip::
 
-    To enable the *admin* account set a password.
-    Also remember to enable the shell if the admin user must access the new Server Manager.
+    To enable the *admin* account, just set its password
 
 Where applicable, the *admin* account is granted special privileges on some
 specific services, such as joining a workstation to an Active Directory domain.
@@ -451,9 +477,9 @@ configured to rely on it with the following commands: ::
 Password management
 ===================
 
-The system provides the ability to set constraints on password :dfn:`complexity` and :dfn:`expiration`.
+The system provides the ability to set constraints on password :dfn:`complexity` and :dfn:`expiration` for local account providers.
 
-Password policies can be changed from web interface.
+Password policies can be changed from the :guilabel:`Users & Groups` page of the Server Manager.
 
 Complexity
 -----------
@@ -488,15 +514,15 @@ Expiration
 The :index:`password expiration` is **NOT** enabled by default.
 
 Each time a user changes his password, the date of the password change is 
-recorded and, if :guilabel:`Password expiration for users` option is enabled, 
-the password is considered expired when the :guilabel:`Maximum Password Age`
+recorded and, if the :guilabel:`Force periodic password change` option is enabled, 
+the password is considered expired when the :guilabel:`Maximum password age`
 has elapsed.
 
 For example, given that
 
 - last password was set in January, 
-- in October the :guilabel:`Maximum Password Age` is set to ``180 days`` 
-  and :guilabel:`Password expiration for users` is enabled
+- in October the :guilabel:`Maximum password age` is set to ``180 days`` 
+  and :guilabel:`Force periodic password change` is enabled
 
 thus the password is **immediately considered expired** (January + 180 days = June!).
 

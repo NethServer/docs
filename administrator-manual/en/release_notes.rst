@@ -8,9 +8,9 @@ Release notes |version|
 
 .. only:: nscom
 
-    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+    - ISO release 7.9.2009 "final" replaces any previous ISO
 
-    - This release is based on `CentOS 7 (2003) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2009) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
     
@@ -24,11 +24,76 @@ Release notes |version|
 
 .. only:: nsent
 
-    - ISO release 7.8.2003 "final" replaces any previous ISO 7.7.1908
+    - ISO release 7.9.2009 "final" replaces any previous ISO
 
-    - This release is based on `CentOS 7 (1908) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
+    - This release is based on `CentOS 7 (2009) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
+
+Major changes on 2020-11-26
+---------------------------
+
+* ISO release 7.9.2009 "final" replaces any previous ISO 7.8.2003
+
+* The old Server Manager (namely Nethgui) is not available by default on new installations.
+  To configure the system access the new Server Manager on port ``9090``.
+
+  Old Server Manager can be still installed from :guilabel:`Software Center`.
+
+* CGP (Collectd Graph Panel), EveBox, Rspamd UI, Lightsquid and Ntopng are still available on HTTPS port 980,
+  even if the old Server Manager has not been installed.
+
+* On new installations, users belonging to the ``wheel`` group are now granted SSH and SFTP access.
+  Note that users created by the Anaconda ISO installer can be members of ``wheel``. See :ref:`ssh-section` for details.
+
+* On new installations, SSH weak ciphers are now disabled by default. To enable weak ciphers uncheck the :guilabel:`Disable weak ciphers`
+  option inside the :menuselection:`System -> SSH` page.
+
+* Default TLS policy is ``2020-05-10``. TLS 1.1, TLS 1.0, SSL v3, and SSL v2 are disabled. See :ref:`tlspolicy-section` for details.
+
+* New installations of Nextcloud honor the StartTLS setting of the Active Directory accounts provider.
+  As old installations ignore that setting and always send clear-text passwords, it is recommended
+  to upgrade them to the new behavior. Make sure the remote AD accounts provider
+  supports StartTLS, then run the following commands ::
+
+      config setprop nextcloud HonorAdStartTls enabled
+      signal-event nethserver-sssd-save
+
+  Finally check that the :guilabel:`StartTLS` option is enabled in
+  :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
+  See also :ref:`dedicated-service-account`.
+
+* To prevent errors during Nextcloud upgrades, the ``mail`` and ``theming`` have been disabled.
+  After each upgrade, both applications should be manually updated and re-enabled by accessing
+  Nextcloud administration interface.
+
+* Netdata is now installed by default to serve charts for the Server Manager.
+  Some plugins have been disabled to reduce resource usage.
+  To enable those plugins see `netdata configuration <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-netdata.html>`_ .
+
+* After ``nethserver-ndpi`` installation a reboot is needed if the running kernel version 
+  is less than ``3.10.0-1160.6.1.el7``.
+
+* Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
+  automatically by the nethserver-mattermost upgrade procedure if no other service requires it.
+
+  1. Ensure the old service is stopped and disabled: ::
+
+      systemctl status rh-postgresql94-postgresql
+
+  2. PostgreSQL 9.4 can be uninstalled with the following command: ::
+
+      yum remove nethserver-postgresql94
+
+* DAHDI tools and kernel module are no longer installed by default as part of ``nethserver-freepbx`` package.
+  If the system needs DAHDI software for special telephony related hardware, install it from :guilabel:`Software Center`
+  by selecting the ``DAHDI drivers and tools`` module.
+
+  On updated machines where DAHDI is not required, these packages can be removed with the following command: ::
+
+      yum remove dahdi-tools-libs dahdi-linux kmod-dahdi-linux dahdi-firmware
+
+.. _relnotes-ns78:
 
 Major changes on 2020-05-05
 ---------------------------

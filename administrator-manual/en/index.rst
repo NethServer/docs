@@ -69,16 +69,19 @@ Administrator Manual
    :maxdepth: 1
    :caption: Applications - New Server Manager
 
+   backup
    web_server
+   web_proxy
    firewall
    mail
    shared_folder
+   blacklist
+   sandbox
 
 .. toctree::
    :maxdepth: 1
    :caption: Modules
 
-   backup
    disaster_recovery
    backup_customization
    backup_legacy
@@ -90,7 +93,6 @@ Administrator Manual
    ups
    report
    fax_server
-   web_proxy
    content_filter
    suricata
    proxy_pass
@@ -113,8 +115,6 @@ Administrator Manual
    fail2ban
    rspamd
    antivirus
-   blacklist
-   sandbox
 
 .. toctree::
    :hidden:

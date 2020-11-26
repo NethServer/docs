@@ -17,6 +17,10 @@ HotSync
 
    For a correct restore, it's suggested to configure HotSync on two identical servers or two servers with same network cards number, name and position. If the master and slave servers differ, the restore procedure may behave unexpectedly (see :ref:`hostync-troubleshooting-section`).
 
+.. hint::
+
+   If you have configured slave host before release 2.2.0, update to a newer one on master and slave with *yum update -y nethserver-hotsync --enablerepo=nethforge* or from Software Center.
+   After that, on slave host, launch *signal-event nethserver-hotsync-save* or do it from Cockpit HotSync interface by pressing Save button.
 
 HotSync aims to reduce downtime in case of failure, syncing your |product| with another one, that will be manually activated in case of master server failure.
 

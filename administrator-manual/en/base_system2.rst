@@ -98,25 +98,52 @@ The :index:`storage` section configures and monitors disks.
 The administrator can mount new local or remote disks, manage RAID arrays and LVM volumes.
 
 
+.. index: SFTP
+
 .. _ssh-section:
 
 SSH
 ---
 
-The :index:`SSH` page displays the number of current SSH connections. From this
-section the administrator can change the OpenSSH listening port, disable root
-login and password authentication.
+The :menuselection:`System > SSH` page displays the number of current SSH connections. From this
+section the administrator can change the OpenSSH listening port and disable weak ciphers, root
+login, and password authentication.
 
-By default, SSH access is limited to ``root`` user and all users inside the designated
-administrative group (``Domain Admins``).
-It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
-while administrators are always granted access to SSH and SFTP.
+By default, SSH and SFTP access is granted to the following groups of administrators:
 
-SSH and SFTP permissions are available once the :guilabel:`System > Settings >
-Shell policy > Override the shell of users` has been enabled.
-If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
-option can access the Server Manager, and delegation is not required any more.
+* ``root``
+* ``wheel``
 
+When an account provider is configured, the access is granted to ``domain admins``, too.
+See :ref:`admin-account-section` for details.
+
+It is possible to grant access to normal users and groups with the
+:guilabel:`Allow SSH/SFTP access` selector.
+
+The administrator can harden SSH by restricting the usage of weak ciphers, algorythms and macs.
+After enabling the :guilabel:`Disable weak ciphers` option, the host key will change and clients
+will have to accept the new one.
+Also, note that big files transfer can be slower with the strong encryption and very old SSH clients
+may not be able to connect to the server.
+
+.. note::
+
+    For |product| up to version 7.7:
+
+    The :guilabel:`Allow SSH/SFTP access` selector is available once the :guilabel:`Override the shell of users`
+    option has been enabled in :menuselection:`System > Settings > Shell policy`.
+    If that option is disabled, only users the with :guilabel:`Shell`
+    option can access the Server Manager, and delegation is not required any more.
+
+    See :ref:`relnotes-ns78` for more information.
+
+Access of the ``wheel`` group can be revoked with the following commands: ::
+
+    config setprop sshd AllowLocalGroups ''
+    signal-event nethserver-openssh-save
+
+The ``AllowLocalGroups`` property accepts a comma separated list of ``/etc/groups`` names and can be
+adjusted according to the actual needs (e.g. ``wheel,srvadmins``).
 
 .. _settings-section:
 
@@ -177,9 +204,17 @@ The settings page also includes a panel to let users change their password, incl
 Shell policy
 ^^^^^^^^^^^^
 
-This setting can be used to enable or disable the shell that is needed to use new Server Manager
-and the SSH service. If this option is enabled the user's shell setting under the :guilabel:`Users and Groups` page is ignored
-and it is considered always enabled.
+This setting was added since |product| 7.8, to select how the user's shell is configured.
+
+If the :guilabel:`Override the shell of users` option is enabled, the old user's :guilabel:`Shell`
+setting under the :guilabel:`Users & Groups` page is hidden and it is considered always enabled.
+
+This is required by some features introduced starting from |product| 7.8, like the new Server Manager based
+on Cockpit, the :guilabel:`User settings page` and the fine grained SSH and SFTP permissions.
+See :ref:`relnotes-78` for details.
+
+
+.. _user-settings-section:
 
 User settings page
 ^^^^^^^^^^^^^^^^^^
@@ -266,30 +301,38 @@ The shell and the processes will run with the user privileges.
 Role delegation
 ===============
 
-On complex environments, the *root* user can :index:`delegate` the access of some section
-to specific groups of local users.
+In complex environments, the *root* user can :index:`delegate` the access of some Server Manager
+pages to specific groups of users.
 
-A local user can be delegated to access:
+The *admin* user and the *domains admins* group are implicitly delegated to all pages.
+See also :ref:`admin-account-section` for more information.
 
-* one or more pages of the *System* section
+Other groups can be delegated to access:
+
+* one or more pages under the :guilabel:`System` section
 * one or more installed applications
-* one or more main sections between *Subscription*, *Software Center*
+* the :guilabel:`Subscription` page
+* the :guilabel:`Software Center` page
 
-Role delegation is based on local groups, each user belonging to the group will be delegated.
-Users inside the *domains admins* are automatically delegated to all panels.
+To create a new delegation, go to the :guilabel:`System > User & Groups > List > [Groups]`
+section then select the :guilabel:`Delegations` action of an existing group.
+Pick one or more items from the :guilabel:`System views` and :guilabel:`Applications` menus.
 
-To create a new delegation, access the :guilabel:`User & Groups` page under the group section,
-then edit an existing group or create a new one.
-Select one or more items from the :guilabel:`System views` and :guilabel:`Applications` menus.
+The following pages are implicitly added to the delegated set:
 
-Even if a user has been delegated, it must be explicitly granted the shell access before
-being able to log into the Server Manager.
+* :guilabel:`Dashboard`
+* :guilabel:`Applications`
+* :guilabel:`Terminal`
 
-The following pages are always accessible to all users:
+.. note::
 
-* dashboard
-* applications
-* terminal
+   For |product| up to version 7.7:
+
+   Even if a user has been delegated, it must be explicitly granted the shell access before
+   being able to log into the Server Manager.
+
+   See :ref:`relnotes-ns78` for more information.
+
 
 .. _2fa-section:
 
@@ -300,15 +343,16 @@ Two-factor authentication (2FA) can be used to add an extra layer of security re
 First, users will enter user name and password, then they will be required to provide a temporary verification code
 generated by an application running on their smartphone.
 
-2FA is disabled by default. Each user can enable it by accessing the :guilabel:`Two-factor authentication` section
-under :guilabel:`Settings` page, then following these steps:
+2FA is disabled by default. Users can enable it by themselves, accessing the :guilabel:`Two-factor authentication`
+section under their :guilabel:`System > Settings` page or by pointing the web browser to the ``/user-settings`` URL
+as explained in :ref:`user-settings-page`. Thereafter they have to follow these steps:
 
 1. download and install the preferred 2FA application inside the smartphone
 2. scan the QR code with the 2FA application
 3. generate a new code and copy it inside :guilabel:`Verification code` field, than click :guilabel:`Check code`
 4. if the verification code is correct, click on the :guilabel:`Save` button
 
-Two-factor authentication can be enabled for:
+Two-factor authentication can be enabled for the following core applications:
 
 - the new Server Manager
 - SSH when using username and password (access with public key will never require 2FA)

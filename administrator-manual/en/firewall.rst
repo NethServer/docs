@@ -45,14 +45,6 @@ When a network packet passes through a firewall zone, the system evaluates a lis
 traffic should be blocked or allowed. 
 :dfn:`Policies` are the default rules to be applied when the network traffic does not match any existing criteria.
 
-The firewall implements two default policies:
-
-* :dfn:`Allowed`: all traffic from green to red is allowed
-* :dfn:`Blocked`: all traffic from green to red network is blocked. Specific traffic must be allowed with custom rules.
-
-To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option from the :guilabel:`Settings` page.
-Policies can be changed also by creating specific rules between zones from the :guilabel:`Rules` page.
-
 Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: ::
 
  GREEN -> BLUE -> ORANGE -> RED
@@ -60,6 +52,90 @@ Firewall :index:`policies` allow inter-zone traffic accordingly to this schema: 
 Traffic is allowed from left to right, blocked from right to left.
 
 To display the list of active policies click on the :guilabel:`Policies` button inside the :guilabel:`Rules` page.
+
+Policies can be changed by creating specific rules between zones from the :guilabel:`Rules` page or by accessing
+the :ref:`traffic_to_internet` section inside the :guilabel:`Settings` page.
+
+.. _firewall_settings-section:
+
+Settings
+========
+
+In this section you can change standard firewall behavior.
+
+.. _traffic_to_internet-section:
+
+Traffic to Internet
+-------------------
+
+The default firewall policy allows all traffic from green to red interfaces (Internet).
+To change the default policy for Internet access, enable or disable the :guilabel:`Traffic to Internet (red interface)` option.
+If disabled all traffic from green to red network is blocked. Specific traffic can be allowed creating rules from :guilabel:`Rules` page.
+
+Traffic between VPNs
+--------------------
+
+By default traffic between different VPN tunnels is not allowed, but sometimes you would need to allow it like when a OpenVPN roadwarrior client should
+reach a remote resource behind an IPsec tunnel.
+To permit traffic between VPNs, just enable the :guilabel:`Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels` option.
+Extra block rules can be created from :guilabel:`Rules` page to customize the network access between VPN zones.
+
+Ping from Internet
+------------------
+
+Allows |product| to answer ICMP requests from red interfaces (Internet).
+
+.. _hairpin-section:
+
+Hairpin NAT
+-----------
+
+By default, all port forwards are available only for hosts inside the WAN.
+When Hairpin NAT is active, hosts on the local zones will be able to reach forwarded ports using both public and private firewall IP addresses.
+
+Whenever possible it is recommended to avoid enabling this option and correctly configure split DNS to resolve service names inside the LAN.
+
+If hair-pinning is still required, check the :guilabel:`Enable hairpin NAT` option.
+
+.. note::
+
+  This functionality requires |product| to have a public IP address on the red interface.
+
+
+Application Layer Gateway (ALG)
+-------------------------------
+
+Application layer gateways handle dynamic firewall rules for certain protocols.
+Many ALGs are enabled by default on |product|, to allow some protocols (such as FTP, SIP, etc) to operate through NAT.
+ALGs inspect and rewrite specific network packets and automatically open required ports.
+
+**Enable SIP-ALG and H.323-ALG**
+
+Some PBXs may not work properly with SIP-ALG and H.323-ALG. In case of audio and call problems with your PBX or your VoIP client try to disable them.
+
+.. _firewall_mac_binding-section:
+
+IP/MAC binding
+--------------
+
+The firewall can use the list of DHCP reservations to strictly check all traffic generated from hosts inside local networks.
+DHCP server should could be disabled but the administrator must still create reservations to associate the IP with a MAC address.
+See :ref:`dhcp-section` for more details.
+
+When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
+The common use is to allow traffic only from known hosts and block all other traffic. 
+In this case, hosts without a reservation will not be able to access the firewall nor the external network.
+
+To enable traffic only from well-known hosts, follow these steps:
+
+1. Create a DHCP reservation for a host
+2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
+3. Select :guilabel:`MAC validation (IP/MAC binding)`
+4. Choose :guilabel:`Block traffic` as the policy to apply to unregistered hosts
+
+
+.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
+   otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
 
 .. _firewall-rules-section:
@@ -263,9 +339,7 @@ When you create a port forward, you must specify at least the following paramete
 
 Port forwards are grouped by destination host and support raw IP addresses along with firewall objects.
 
-By default, all port forwards are available only for hosts inside the WAN.
-Check the :guilabel:`Enable hairpin NAT` option under the :guilabel:`Settings` page to make all port forwards available also from local networks.
-
+By default, all port forwards are available only for hosts inside the WAN, see :ref:`hairpin-section` to change such behavior.
 
 Example
 -------
@@ -467,28 +541,6 @@ There are 6 types of objects, 5 of them represent sources and destinations:
 When creating rules, you can use the records defined in :ref:`dns-section` and :ref:`dhcp-section` like host objects.
 In addition, each network interface with an associated role is automatically listed among the available zones.
 
-
-.. _firewall_mac_binding-section:
-
-IP/MAC binding
-==============
-
-When the system is acting as DHCP server, the firewall can use the list of DHCP reservations to strictly check
-all traffic generated from hosts inside local networks.
-When :index:`IP/MAC binding` is enabled, the administrator will choose what policy will be applied to hosts without a DHCP reservation.
-The common use is to allow traffic only from known hosts and block all other traffic. 
-In this case, hosts without a reservation will not be able to access the firewall nor the external network.
-
-To enable traffic only from well-known hosts, follow these steps:
-
-1. Create a DHCP reservation for a host
-2. Go to :menuselection:`Firewall rules` page and select from :guilabel:`Configure` from the button menu
-3. Select :guilabel:`MAC validation (IP/MAC binding)`
-4. Choose :guilabel:`Block traffic` as the policy to apply to unregistered hosts
-
-
-.. note:: Remember to create at least one DHCP reservation before enabling the IP/MAC binding mode,
-   otherwise, no hosts will be able to manage the server using the web interface or SSH.
 
 
 .. _firewall_connections-section:
