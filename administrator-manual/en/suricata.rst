@@ -255,7 +255,6 @@ EveBox
 
 It can be accessed from the Server Manager under the :guilabel:`Applications` page.
 
-
 .. [#]
    Categories documentation source:
    `proofpoint <https://www.proofpoint.com>`_ - `ETPro Category Descriptions <http://tools.emergingthreats.net/docs/ETPro%20Rule%20Categories.pdf>`_

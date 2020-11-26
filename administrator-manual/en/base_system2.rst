@@ -98,19 +98,27 @@ The :index:`storage` section configures and monitors disks.
 The administrator can mount new local or remote disks, manage RAID arrays and LVM volumes.
 
 
+.. index: SFTP
+
 .. _ssh-section:
 
 SSH
 ---
 
-The :index:`SSH` page displays the number of current SSH connections. From this
-section the administrator can change the OpenSSH listening port, disable root
-login and password authentication.
+The :menuselection:`System > SSH` page displays the number of current SSH connections. From this
+section the administrator can change the OpenSSH listening port and disable weak ciphers, root
+login, and password authentication.
 
-By default, SSH access is limited to ``root`` user and all users inside the designated
-administrative group (``Domain Admins``).
-It is possible to selectively grant SSH and :index:`SFTP` access to some groups,
-while administrators are always granted access to SSH and SFTP.
+By default, SSH and SFTP access is granted to the following groups of administrators:
+
+* ``root``
+* ``wheel``
+
+When an account provider is configured, the access is granted to ``domain admins``, too.
+See :ref:`admin-account-section` for details.
+
+It is possible to grant access to normal users and groups with the
+:guilabel:`Allow SSH/SFTP access` selector.
 
 The administrator can harden SSH by restricting the usage of weak ciphers, algorythms and macs.
 After enabling the :guilabel:`Disable weak ciphers` option, the host key will change and clients
@@ -122,12 +130,20 @@ may not be able to connect to the server.
 
     For |product| up to version 7.7:
 
-    SSH and SFTP permissions are available once the :guilabel:`System > Settings >
-    Shell policy > Override the shell of users` has been enabled.
-    If :guilabel:`Override the shell of users` is disabled, only users with :guilabel:`Shell`
+    The :guilabel:`Allow SSH/SFTP access` selector is available once the :guilabel:`Override the shell of users`
+    option has been enabled in :menuselection:`System > Settings > Shell policy`.
+    If that option is disabled, only users the with :guilabel:`Shell`
     option can access the Server Manager, and delegation is not required any more.
 
     See :ref:`relnotes-ns78` for more information.
+
+Access of the ``wheel`` group can be revoked with the following commands: ::
+
+    config setprop sshd AllowLocalGroups ''
+    signal-event nethserver-openssh-save
+
+The ``AllowLocalGroups`` property accepts a comma separated list of ``/etc/groups`` names and can be
+adjusted according to the actual needs (e.g. ``wheel,srvadmins``).
 
 .. _settings-section:
 
