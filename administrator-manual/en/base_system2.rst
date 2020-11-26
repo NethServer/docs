@@ -124,7 +124,7 @@ It is possible to grant access to normal users and groups with the
 
     For |product| up to version 7.7:
 
-    The :guilabel:`Allow SSH/SFTP access` selector is available once the :guialbel:``Override the shell of users`
+    The :guilabel:`Allow SSH/SFTP access` selector is available once the :guilabel:`Override the shell of users`
     option has been enabled in :menuselection:`System > Settings > Shell policy`.
     If that option is disabled, only users the with :guilabel:`Shell`
     option can access the Server Manager, and delegation is not required any more.
