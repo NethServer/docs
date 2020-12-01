@@ -18,6 +18,10 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
+.. warning::
+
+   On November 30, 2020 |product| 6 entered the End-Of-Life (EOL) phase.
+   See the `instructions </en/v7/upgrade.html>`_ to upgrade to |product| 7.
 
 Release notes |release|
 -----------------------
