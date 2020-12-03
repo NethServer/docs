@@ -837,6 +837,10 @@ Proceed as follows:
 
 5. the next login will show the new logo on the login page
 
+.. note::
+
+  The custom logo will be shown on the login page ONLY if the server's FQDN is used in the URL (or the public URL if modified)
+
 Change the public URL
 =====================
 
