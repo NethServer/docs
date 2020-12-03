@@ -839,7 +839,8 @@ Proceed as follows:
 
 .. note::
 
-  The custom logo will be shown on the login page ONLY if the server's FQDN is used in the URL (or the public URL if modified)
+  Custom logo will be shown only when accesing Webtop using  its public URL.
+  The default public URL is the server FQDN, but it could be changed as described in the section below
 
 Change the public URL
 =====================
