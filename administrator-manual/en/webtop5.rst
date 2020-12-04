@@ -840,7 +840,7 @@ Proceed as follows:
 .. note::
 
   Custom logo will be shown only when accesing Webtop using  its public URL.
-  The default public URL is the server FQDN, but it could be changed as described in the section below
+  The default public URL is the server FQDN, but it could be changed as described in the section below.
 
 Change the public URL
 =====================
