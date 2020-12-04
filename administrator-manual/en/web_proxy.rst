@@ -131,6 +131,17 @@ Install ``nethserver-lightsquid`` package to generate :index:`web proxy stats`.
 LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day, summarizing browsing habits of the proxy's users.
 Lightsquid web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
 
+Cleanup old reports
+-------------------
+
+LightSquid reports are saved as directories of text files inside ``/var/lightsquid/``.
+Since all reports are kept forever, the size of the directory can greatly grow during the years.
+
+To cleanup all reports older than 1 year, execute the following:
+::
+
+  find /var/lightsquid/  -maxdepth 1 -mindepth 1 -type d -name '????????' -mtime +360 -delete
+
 Cache
 =====
 
