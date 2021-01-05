@@ -53,7 +53,7 @@ If the system administrator still needs bulk user creation, he/she can rely on `
 
 The command will:
 
-- create a default team named as the Company from :ref:`organization_contacts-section`
+- create a default team named as the Company from :guilabel:`Organization details` page
 - read all users from local or remote Account Providers and create them inside Mattermost
 
 Please note that:

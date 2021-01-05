@@ -28,7 +28,7 @@ Be aware of the following rule about account providers:
    Once |product| has been bound to an account provider the FQDN cannot be
    changed any more
 
-Remote providers    
+Remote providers
     After |product| has been bound to a remote account provider the
     :guilabel:`User & groups` page shows a *read-only* list of domain accounts.
 
@@ -67,7 +67,7 @@ OpenLDAP local provider installation
 ------------------------------------
 
 To install and configure an OpenLDAP local accounts provider, go to page
-:guilabel:`Users & Groups > [Configure the account provider] > LDAP > Install local LDAP`. 
+:guilabel:`Users & Groups > [Configure the account provider] > LDAP > Install local LDAP`.
 The system needs a working internet connection to download additional packages.
 
 At the end of the installation the package is automatically configured and the
@@ -77,8 +77,8 @@ and groups` page.
 See :ref:`admin-account-section` section for more details about default
 administrative user and group.
 
-.. warning:: The |product| OpenLDAP account provider does not fully support the 
-             user password expiration. Refer to :ref:`effects-of-expired-password` 
+.. warning:: The |product| OpenLDAP account provider does not fully support the
+             user password expiration. Refer to :ref:`effects-of-expired-password`
              for more information
 
 .. _ad-local-accounts-provider-section:
@@ -133,15 +133,15 @@ builtin support for Posix ACLs and no special configuration is required. For
 other filesystems (i.e. EXT4) enable the ACLs as explained in :ref:`Shared
 folders requirements <shared_folders_requirements-section>`.
 
-At the end of the procedure, the |product| host machine automatically joins 
-the new Active Directory domain. 
+At the end of the procedure, the |product| host machine automatically joins
+the new Active Directory domain.
 
 .. index::
     pair: active directory; change IP
 
 .. _nsdc-change-ip:
 
-The previously assigned IP address can be changed from 
+The previously assigned IP address can be changed from
 :guilabel:`Users & Groups > Account provider > [Details] > Active Directory IP`.
 
 .. warning::
@@ -166,7 +166,7 @@ section for more details.
 DNS and AD domain
 ~~~~~~~~~~~~~~~~~
 
-An Active Directory domain requires a reserved DNS domain to work. It is a good 
+An Active Directory domain requires a reserved DNS domain to work. It is a good
 choice to allocate a subdomain of the public DNS domain for it. The AD subdomain
 can be accessible only from LAN (green) networks.
 
@@ -245,12 +245,12 @@ Joining an Active Directory domain has the following pre-requisite:
    network is less than 5 minutes. Configure the network clients to align their
    clocks to a common time source.  For |product| go to :guilabel:`Date and time`
    page.
- 
+
 After the prerequisite is fulfilled, proceed to the page
 :guilabel:`Users & Groups > [Configure the account provider] > Active Directory > Join existing Domain Controller`.
 
-* Enter the :guilabel:`Domain name` of the AD domain. 
-  Press the :guilabel:`Check` button 
+* Enter the :guilabel:`Domain name` of the AD domain.
+  Press the :guilabel:`Check` button
 
 * If required, fill the :guilabel:`AD DNS server` field. Usually it is the
   IP address of an AD domain controller. Press :guilabel:`Check` again.
@@ -309,11 +309,11 @@ in local account providers with limited privileges. Its :guilabel:`Bind password
 It is recommended to use those credentials to connect external systems to the account provider.
 
 On the other hand, if |product| is bound to a remote account provider follow these steps:
-                
+
 1. Create a dedicated user account in the remote AD or LDAP provider, then
    set a complex and *non-expiring* password for it. As said above, if the remote provider
    is a |product| too, it already provides ``ldapservice`` for this purpose.
-                
+
 2. Once |product| is successfully bound to a remote AD or LDAP account provider, specify the dedicated user account
    credentials in :guilabel:`Users & Groups > Account provider > Edit provider > Authentication credentials for LDAP applications`.
 
@@ -380,13 +380,13 @@ account. The safest approach is:
 Changing the password
 ---------------------
 
-Users can change their password from the ``/user-settings`` web page. 
-To enable it see :ref:`user-settings-section`.
+Users can change their password from the ``/user-settings`` web page.
+To enable it see :ref:`user_settings-section`.
 
 If the system is bound to an Active Directory account provider, users can change
 their password also using the Windows tools.  In this case you can not set passwords
 shorter than 6 *characters* regardless of the server policies. Windows performs
-preliminary checks and sends the password to the server where it is evaluated 
+preliminary checks and sends the password to the server where it is evaluated
 according to the :ref:`configured policies <password-management-section>`.
 
 
@@ -433,10 +433,10 @@ A group of users can be granted some permission, such as authorize
 :ref:`access to SSH <ssh-section>` or over a :ref:`shared folder <shared_folders-section>`. The granted
 permission is propagated to all group members.
 
-The root user can delegate some Server Manager pages to a group, 
+The root user can delegate some Server Manager pages to a group,
 with the :guilabel:`Delegations` action of :guilabel:`Users & Groups > List > [Groups]`.
 
-See also 
+See also
 
 * :ref:`admin-account-section`, for permissions of the ``domain admins`` group.
 
@@ -513,15 +513,15 @@ Expiration
 
 The :index:`password expiration` is **NOT** enabled by default.
 
-Each time a user changes his password, the date of the password change is 
-recorded and, if the :guilabel:`Force periodic password change` option is enabled, 
+Each time a user changes his password, the date of the password change is
+recorded and, if the :guilabel:`Force periodic password change` option is enabled,
 the password is considered expired when the :guilabel:`Maximum password age`
 has elapsed.
 
 For example, given that
 
-- last password was set in January, 
-- in October the :guilabel:`Maximum password age` is set to ``180 days`` 
+- last password was set in January,
+- in October the :guilabel:`Maximum password age` is set to ``180 days``
   and :guilabel:`Force periodic password change` is enabled
 
 thus the password is **immediately considered expired** (January + 180 days = June!).
@@ -537,12 +537,12 @@ The effects of an expired password depend on the configured accounts provider.
 
 When a password is expired
 
-* with ``Active Directory`` (both local and remote) a user **cannot authenticate** himself 
+* with ``Active Directory`` (both local and remote) a user **cannot authenticate** himself
   **with any service**;
-* with a |product| ``LDAP`` accounts provider (both local and remote) **some services ignore 
+* with a |product| ``LDAP`` accounts provider (both local and remote) **some services ignore
   the password expiration** and grant access in any case.
 
-Examples of services that do not fully support the password expiration with |product| LDAP 
+Examples of services that do not fully support the password expiration with |product| LDAP
 accounts provider:
 
 .. only:: nscom
@@ -649,4 +649,3 @@ For example, if the user’s file is /root/users.tsv, execute following command:
 Alternative separator character: ::
 
   delete_users users.tsv ','
-

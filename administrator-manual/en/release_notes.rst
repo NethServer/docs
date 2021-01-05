@@ -13,7 +13,7 @@ Release notes |version|
     - This release is based on `CentOS 7 (2009) <https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7>`_
 
     - CentOS 7 will receive security updates until 2024-06-30
-    
+
     - :ref:`nscom-releases-section`
 
     - List of `changes <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20closed%3A2017-10-07T23%3A59%3A59Z..2024-06-30>`_
@@ -71,7 +71,7 @@ Major changes on 2020-11-26
   Some plugins have been disabled to reduce resource usage.
   To enable those plugins see `netdata configuration <https://docs.nethserver.org/projects/nethserver-devel/en/latest/nethserver-netdata.html>`_ .
 
-* After ``nethserver-ndpi`` installation a reboot is needed if the running kernel version 
+* After ``nethserver-ndpi`` installation a reboot is needed if the running kernel version
   is less than ``3.10.0-1160.6.1.el7``.
 
 * Mattermost DB was upgraded to PostgreSQL 12. The PostgreSQL 9.4 instance is stopped and disabled
@@ -141,7 +141,7 @@ Major changes on 2019-10-07
 * The new Server Manager implementation based on Cockpit reached Beta stage and
   is available by default on new installations. Existing systems can add the new
   Server Manager module from the Software Center page.  See also
-  :ref:`access2-section`.
+  :ref:`access-section`.
 
 * The :guilabel:`Software updates origin` (locked/unlocked) feature was removed
   from the "Software Center" page. |product| can be upgraded manually
@@ -190,12 +190,12 @@ Major changes on 2018-12-17
 
 * The Zeroconf network protocol is now disabled by default
 
-* By default, Evebox events are retained for 30 days. The new default is 
+* By default, Evebox events are retained for 30 days. The new default is
   applied to upgraded systems as a bug fix
-  
+
 * NDPI module has been updated to version 2.4 which no longer recognize some old protocols.
   See :ref:`dpw_ndpi24` for the list of removed protocols
-  
+
 * SMTP server can be directly accessed from trusted networks
 
 * PPPoE connections use rp-pppoe plugin by default to improve network speed
@@ -255,14 +255,14 @@ Major changes on 2017-10-26
   instance automatically (`#5356 <https://github.com/NethServer/dev/issues/5356>`_)
   Latest Samba DC version is 4.6.8
 
-* The Software center page warns when a new upstream release is available 
+* The Software center page warns when a new upstream release is available
   (`#5355 <https://github.com/NethServer/dev/issues/5355>`_)
-  
+
 * Added FreePBX 14 module
-  
+
 * Squid has been patched for a smoother web navigation experience when using SSL transparent proxy
 
-* Ntopng 3 replaces Bandwidthd, the Server Manager has a new "top talkers" 
+* Ntopng 3 replaces Bandwidthd, the Server Manager has a new "top talkers"
   page which tracks hosts network usage
 
 * Suricata can be configured with multiple categories rules
@@ -294,7 +294,7 @@ Major changes on 2017-07-31
 
 * OpenvPN: improve net2net tunnels
 
-* WebTop 5.0.7 
+* WebTop 5.0.7
 
 * Backup data: basic WebDAV support for backups and storage stats
 

@@ -37,7 +37,7 @@ Administrator Manual
    :caption: Installation
 
    installation
-   access2
+   access
    registration
 
 .. only:: nscom
@@ -51,8 +51,8 @@ Administrator Manual
    :maxdepth: 2
    :caption: Configuration
 
+   base_system
    packages
-   base_system2
    accounts
    dns
    dhcp
@@ -157,6 +157,9 @@ Administrator Manual
    :caption: Old Server Manager
    :glob:
 
+   base_system_legacy
+   packages_legacy
+   pop3_proxy.rst
    ui/*
 
 

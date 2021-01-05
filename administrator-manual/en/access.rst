@@ -1,32 +1,20 @@
-.. index::
-   single: Server Manager
-   single: web interface
-
 .. _access-section:
 
-================================
-Accessing the old Server Manager
-================================
-
-.. note:: A new Server Manager based on Cockpit is available. See :ref:`access2-section`.
+============================
+Accessing the Server Manager
+============================
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
-``https://a.b.c.d:980`` or ``https://server_name:980`` where *a.b.c.d* and *server_name* respectively are the server IP address and name 
+``https://a.b.c.d:9090`` or ``https://server_name:9090`` where *a.b.c.d* and *server_name* respectively are the server IP address and name 
 configured during installation.
 
-If the web server module is installed, you can also access the web interface using this address ``https://server_name/server-manager``.
-
-The Server Manager uses self-signed SSL certificates.
-You should explicitly accept them the first time you access the server.
-The connection is safe and encrypted.
+Since the Server Manager uses a self-signed SSL certificate as default, the first time you access the server
+you should explicitly accept the certificate.
+Despite the warning, the connection is safe and encrypted, but you are advised to configure a valid certificate, later.
 
 Login
 =====
-
-The login page allows selecting an alternative language among those already
-installed on the system. After logging in, go to the
-:ref:`software-center-section` page to install additional languages.
 
 The login page will give you a trusted access to the web interface. Log in
 as **root** and type the password chosen during |product| installation.
@@ -36,59 +24,51 @@ as **root** and type the password chosen during |product| installation.
     The *unattended* install procedure sets the root password to the default
     ``Nethesis,1234``.
 
-.. _first-configuration-wizard-section:
 
-First configuration wizard
-==========================
+Besides root, all users with a :ref:`delegated<delegation-section>` panel can access the Server Manager.
 
-The first time **root** logs in, the *First configuration wizard* procedure is
-displayed.
+The web interface language is automatically chosen depending on your browser configuration.
+If you wish to change the language, go to your user name
+on the upper right corner of the screen and select :guilabel:`Display Language`.
 
-If the root password is still at the default value, a password change is required.
 
-It is possible to restore a **configuration backup**. Refer to
-:ref:`disaster-recovery-section` for more information.
+Login to remote servers
+-----------------------
 
-Otherwise the wizard procedure helps on setting up:
+The login page allows access the local machine (default) or a remote one.
+To access a remote server, first make sure the server is accessible using SSH.
+Then click on :guilabel:`Other options` and enter the host name (or IP address) of 
+the remote server inside the :guilabel:`Connect to` field.
 
-* Host name
-* :ref:`Date and time zone <date-time-section>`
-* SSH port
-* :ref:`Smarthost configuration <smarthost-configuration>`
-* :ref:`Usage statistics <phonehome-section>`
+The Server Manager will try to access the remote machine using SSH on port 22.
+If the remote server use a different port, you can specify it with the ``host:port`` syntax
+(eg. ``a.b.c.d:222``).
+
+
+Hints
+=====
+
+After login, the system is ready to be used but you're advised to review the list of
+hints which will guide you to correctly configure the machine.
+Hints are shown as yellow markers with a number over the left menu items.
+
+As best practice you should at least:
+
+* change the default root password
+* set the correct date and time
 
 Change the current password
 ===========================
 
-You can change the root password from the web interface by going to the
-:guilabel:`root@host.domain.com` label on the upper right corner of the screen
-and clicking on :guilabel:`Profile`.
+All users with access to the Server Manager can change their own password from the
+:guilabel:`Settings` menu.
 
+Users without shell access should use the old Server Manager. See :ref:`access-section`.
 
 Logout
 ======
 
-Terminate the current Server Manager session by going to the
-:guilabel:`root@host.domain.com` label on the upper right corner of the screen
-and by clicking on :guilabel:`Logout`.
+Terminate the current Server Manager session by going to your user name
+on the upper right corner of the screen and by clicking on :guilabel:`Log Out`.
 
-.. _session-timeouts-section:
 
-Session timeouts
-================
-
-By default (starting from |product| 7.5.1804), a Server Manager session
-terminates after **60 minutes of inactivity** (idle timeout) and **expires
-8 hours after the login** (session life time).
-
-The following shell command sets 2 hours of idle timeout, and 16 hours of
-maximum session life time. Time is expressed in seconds: ::
-    
-    config setprop httpd-admin MaxSessionIdleTime 7200 MaxSessionLifeTime 57600
-
-To disable the timeouts ::
-    
-    config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
-
-The new timeout values will affect new sessions. They do not change any active
-session.
