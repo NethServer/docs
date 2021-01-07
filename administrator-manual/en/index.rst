@@ -67,7 +67,7 @@ Administrator Manual
 
 .. toctree::
    :maxdepth: 1
-   :caption: Applications - New Server Manager
+   :caption: Applications
 
    backup
    web_server
@@ -116,10 +116,6 @@ Administrator Manual
    rspamd
    antivirus
 
-.. toctree::
-   :hidden:
-
-   mail2
 
 .. only:: nscom
 
@@ -146,6 +142,7 @@ Administrator Manual
 
    migration
    upgrade
+   mail2
    license
    nscom_releases
    issue_trackers
