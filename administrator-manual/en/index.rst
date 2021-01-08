@@ -73,6 +73,7 @@ Administrator Manual
    web_server
    web_proxy
    firewall
+   bandwidth_monitor
    mail
    webmail
    shared_folder
@@ -97,7 +98,6 @@ Administrator Manual
    suricata
    proxy_pass
    virtual_hosts
-   bandwidth_monitor
    statistics
    vpn
    ftp
