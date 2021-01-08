@@ -1,26 +1,23 @@
 .. _legacy_server_manager-section:
 
-=====================
-Legacy Server Manager
-=====================
+======================
+The old Server Manager
+======================
 
-.. note:: A new Server Manager based on Cockpit is available. See :ref:`base_system-section`.
-
-This chapter describes all available modules at the end of installation. All
-modules outside this section must be installed from the
-:ref:`software-center-section` page.
+This chapter describes the :dfn:`old Server Manager` web interface. Since |product| 7.9 it must be
+installed from the :ref:`software-center-section` page as it is not picked up any more by the installation
+procedure.
 
 .. _access_legacy-section:
 
-Accessing the old Server Manager
-================================
+Getting started
+===============
 
-|product| can be configured using the :dfn:`Server Manager` web interface.
-You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL)
+You need a web browser like Mozilla Firefox or Google Chrome to access the old Server Manager web interface using the address (URL)
 ``https://a.b.c.d:980`` or ``https://server_name:980`` where *a.b.c.d* and *server_name* respectively are the server IP address and name
 configured during installation.
 
-If the web server module is installed, you can also access the web interface using this address ``https://server_name/server-manager``.
+If the *Web server* module is installed, you can also access the web interface using the address ``https://server_name/server-manager``.
 
 The Server Manager uses self-signed SSL certificates.
 You should explicitly accept them the first time you access the server.
@@ -30,8 +27,8 @@ Login
 -----
 
 The login page allows selecting an alternative language among those already
-installed on the system. After logging in, go to the
-:ref:`software-center-section` page to install additional languages.
+installed on the system. After logging in, additional language packs can
+be installed from the :menuselection:`Software center` page under the :guilabel:`Languages` category.
 
 The login page will give you a trusted access to the web interface. Log in
 as **root** and type the password chosen during |product| installation.
@@ -40,27 +37,6 @@ as **root** and type the password chosen during |product| installation.
 
     The *unattended* install procedure sets the root password to the default
     ``Nethesis,1234``.
-
-.. _first-configuration-wizard-section:
-
-First configuration wizard
---------------------------
-
-The first time **root** logs in, the *First configuration wizard* procedure is
-displayed.
-
-If the root password is still at the default value, a password change is required.
-
-It is possible to restore a **configuration backup**. Refer to
-:ref:`disaster-recovery-section` for more information.
-
-Otherwise the wizard procedure helps on setting up:
-
-* Host name
-* :ref:`Date and time zone <date-time_legacy-section>`
-* SSH port
-* :ref:`Smarthost configuration <smarthost-configuration>`
-* :ref:`Usage statistics <phonehome-section>`
 
 Change the current password
 ---------------------------
