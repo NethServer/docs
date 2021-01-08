@@ -68,7 +68,7 @@ or overridden with a custom configuration file. To this end,
 
 .. _`PHP-FPM documentation`: https://www.php.net/manual/en/install.fpm.configuration.php
 
-.. _webserver-vhosts-section:
+.. _virtual_hosts-section:
 
 Virtual hosts
 =============
