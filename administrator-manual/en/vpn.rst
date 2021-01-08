@@ -13,8 +13,6 @@ The system supports two types of VPNs:
 
 2. :index:`net2net` or :index:`tunnel`: connect two remote networks
 
-Roadwarrior OpenVPN, IPSec tunnel and OpenVPN tunnels are part of the VPN application in the new Server Manager.
-
 By default, the network traffic between VPNs is blocked by the firewall. 
 To allow such traffic go to the :ref:`firewall-section` application and enable the :guilabel:`Allowed` field under
 :guilabel:`Settings > Traffic between OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels`.
