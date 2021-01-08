@@ -94,7 +94,6 @@ Administrator Manual
 
    webtop5
    suricata
-   proxy_pass
    virtual_hosts
    vpn
    ftp
