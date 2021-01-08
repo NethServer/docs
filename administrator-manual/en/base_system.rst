@@ -8,6 +8,12 @@ This chapter describes the :dfn:`old Server Manager` web interface. Since |produ
 installed from the :ref:`software-center-section` page as it is not picked up any more by the installation
 procedure.
 
+.. warning::
+
+   New features of |product| are not available in this web interface. Backward compatibility may break
+   at any time. It is recommended to use the new Server Manager. See :ref:`access-section`
+   and :ref:`base_system-section`.
+
 .. _access_legacy-section:
 
 Getting started
