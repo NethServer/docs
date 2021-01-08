@@ -78,12 +78,10 @@ Hotspot Unit on |product|
 
 After that just choose the ethernet interface where the hotspot will be active.
 
-If you have the proxy web active a specific flag in the hotspot unit page will allow you to forward all the hotspot traffic (http and httpas protocols) to the web proxy for logging purposes (Be aware of the privacy implications!).
+If you have the proxy web active a specific flag in the hotspot unit page will allow you to forward all the hotspot traffic (HTTP and HTTPS protocols) 
+to the web proxy for logging purposes. Please be aware that this configuration has privacy implications.
 
-
-* connect an AP to the hostpot interface.
-
-
+Finally connect an Access Point (AP) to the hostpot interface.
 
 
 Access Point Configuration
