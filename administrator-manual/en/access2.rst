@@ -51,7 +51,7 @@ Administrator users, with access to the Server Manager, can change their own pas
 Normal users, without access to the Server Manager, can use the :ref:`user_settings-section`.
 
 If the Old Server Manager is installed, all users can access it to change
-their own password. See :ref:`access_legacy-section`.
+their own password. See :ref:`legacy_server_manager-section`.
 
 Logout
 ======
