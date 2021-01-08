@@ -31,19 +31,6 @@ The web interface language is automatically chosen depending on your browser con
 If you wish to change the language, go to your user name
 on the upper right corner of the screen and select :guilabel:`Display Language`.
 
-
-Login to remote servers
------------------------
-
-The login page allows access the local machine (default) or a remote one.
-To access a remote server, first make sure the server is accessible using SSH.
-Then click on :guilabel:`Other options` and enter the host name (or IP address) of 
-the remote server inside the :guilabel:`Connect to` field.
-
-The Server Manager will try to access the remote machine using SSH on port 22.
-If the remote server use a different port, you can specify it with the ``host:port`` syntax
-(eg. ``a.b.c.d:222``).
-
 Hints
 =====
 
