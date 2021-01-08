@@ -23,7 +23,7 @@ Installation
 The installation can be done through the |product| web interface.
 After the installation:
 
-* open the URL https://your_nethserver_ip/nextcloud
+* click on **Nextcloud** application title inside the *Applications* page or open the URL https://your_nethserver_ip/nextcloud
 * use **admin/Nethesis,1234** as default credentials
 * change the default password
 
@@ -54,6 +54,7 @@ Custom virtual host
 -------------------
 
 Sometimes it's better to reserve a full virtual host for accessing Nextcloud like ``nextcloud.nethserver.org``.
+To configure the virtualhost, enable the :guilabel:`Use a virtual host for Nextcloud` option and fill the :guilabel:`Virtual host name` field.
 
 Please note that after the configuration of a custom virtual host, Nextcloud will no longer be accessible from the default URL ``https://your_nethserver_ip/nextcloud``.
 

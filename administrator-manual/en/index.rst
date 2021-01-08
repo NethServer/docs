@@ -76,6 +76,7 @@ Administrator Manual
    mail
    webmail
    shared_folder
+   nextcloud
    chat
    blacklist
    sandbox
@@ -100,7 +101,6 @@ Administrator Manual
    bandwidth_monitor
    statistics
    vpn
-   nextcloud
    ftp
    phone_home
    snmp
