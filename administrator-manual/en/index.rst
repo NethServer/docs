@@ -84,6 +84,7 @@ Administrator Manual
    antivirus
    ups
    team_chat
+   freepbx
    statistics
    report
 
@@ -105,7 +106,6 @@ Administrator Manual
    weekly_report
    hotspot
    dedalo
-   freepbx
    fail2ban
    rspamd
 
