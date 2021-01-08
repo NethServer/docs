@@ -44,7 +44,6 @@ The Server Manager will try to access the remote machine using SSH on port 22.
 If the remote server use a different port, you can specify it with the ``host:port`` syntax
 (eg. ``a.b.c.d:222``).
 
-
 Hints
 =====
 
@@ -60,10 +59,11 @@ As best practice you should at least:
 Change the current password
 ===========================
 
-All users with access to the Server Manager can change their own password from the
-:guilabel:`Settings` menu.
+Users can change their own password using :ref:`user_settings-section`.
 
-Users without shell access should use the old Server Manager. See :ref:`access-section`.
+If :guilabel:`Shell Policy` options is not enabled,
+users without shell access can still use the old Server Manager to change
+their own password. See :ref:`access_legacy-section`.
 
 Logout
 ======
