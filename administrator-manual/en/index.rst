@@ -87,6 +87,7 @@ Administrator Manual
    ups
    team_chat
    freepbx
+   dedalo
    statistics
    report
 
@@ -100,8 +101,6 @@ Administrator Manual
    nethcti_intro
    phonebook-mysql
    weekly_report
-   hotspot
-   dedalo
    fail2ban
    rspamd
 
@@ -150,6 +149,7 @@ Administrator Manual
    pop3_proxy
    snmp
    fax_server
+   hotspot
    ui/*
 
 
