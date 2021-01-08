@@ -4,10 +4,6 @@
 Antivirus
 =========
 
-.. note::
-
-  The configuration page of this module is available only in the new Server Manager.
-
 ClamAV is the open source antivirus engine of |product|. The server runs two different ClamAV instances:
 one for scanning received mail (see :ref:`email-section`) and the other one for analyzing HTTP web traffic (see :ref:`web_content_filter-section`).
 

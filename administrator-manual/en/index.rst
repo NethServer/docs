@@ -80,6 +80,7 @@ Administrator Manual
    chat
    blacklist
    sandbox
+   antivirus
    ups
 
 .. toctree::
@@ -114,7 +115,6 @@ Administrator Manual
    virtual_machines
    fail2ban
    rspamd
-   antivirus
 
 
 .. only:: nscom
