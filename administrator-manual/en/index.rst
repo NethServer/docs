@@ -74,6 +74,7 @@ Administrator Manual
    web_proxy
    firewall
    mail
+   webmail
    shared_folder
    blacklist
    sandbox
@@ -85,7 +86,6 @@ Administrator Manual
    disaster_recovery
    backup_customization
    backup_legacy
-   webmail
    webtop5
    pop3_connector
    chat
