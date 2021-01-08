@@ -102,7 +102,6 @@ Administrator Manual
    vpn
    ftp
    phone_home
-   snmp
    nethvoice_intro
    nethcti_intro
    phonebook-mysql
@@ -155,6 +154,7 @@ Administrator Manual
    base_system
    backup_legacy
    pop3_proxy
+   snmp
    ui/*
 
 
