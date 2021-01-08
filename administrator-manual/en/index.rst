@@ -88,10 +88,8 @@ Administrator Manual
 
 .. toctree::
    :maxdepth: 1
-   :caption: Modules
+   :caption: Other modules
 
-   disaster_recovery
-   backup_customization
    webtop5
    content_filter
    suricata
@@ -108,10 +106,17 @@ Administrator Manual
    hotspot
    dedalo
    freepbx
-   virtual_machines
    fail2ban
    rspamd
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Best practices
+
+   disaster_recovery
+   backup_customization
+   virtual_machines
+   third_party
 
 .. only:: nscom
 
@@ -126,12 +131,6 @@ Administrator Manual
        hotsync
        mssql
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Best practices
-
-   third_party
-   
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
