@@ -84,6 +84,7 @@ Administrator Manual
    antivirus
    ups
    team_chat
+   statistics
    report
 
 .. toctree::
@@ -95,7 +96,6 @@ Administrator Manual
    suricata
    proxy_pass
    virtual_hosts
-   statistics
    vpn
    ftp
    phone_home
