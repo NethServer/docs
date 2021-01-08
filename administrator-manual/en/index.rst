@@ -76,6 +76,7 @@ Administrator Manual
    mail
    webmail
    shared_folder
+   chat
    blacklist
    sandbox
 
@@ -88,7 +89,6 @@ Administrator Manual
    backup_legacy
    webtop5
    pop3_connector
-   chat
    team_chat
    ups
    report
