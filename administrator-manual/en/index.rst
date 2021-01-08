@@ -73,6 +73,7 @@ Administrator Manual
    web_server
    web_proxy
    firewall
+   fail2ban
    vpn
    suricata
    bandwidth_monitor
@@ -101,7 +102,6 @@ Administrator Manual
    nethcti_intro
    phonebook-mysql
    weekly_report
-   fail2ban
    rspamd
 
 .. toctree::
