@@ -155,7 +155,6 @@ Administrator Manual
    :glob:
 
    base_system
-   packages_legacy
    pop3_proxy.rst
    ui/*
 

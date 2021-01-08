@@ -118,12 +118,6 @@ source_file = _build/locale/packages.pot
 source_lang = en
 type = PO
 
-[docs-v7.packages_legacy]
-file_filter = locale/<lang>/LC_MESSAGES/packages_legacy.po
-source_file = _build/locale/packages_legacy.pot
-source_lang = en
-type = PO
-
 
 [docs-v7.vpn]
 file_filter = locale/<lang>/LC_MESSAGES/vpn.po
