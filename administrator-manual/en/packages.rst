@@ -5,8 +5,6 @@
 Software center
 ===============
 
-.. note:: For the old Server Manager see :ref:`software_center_legacy-section`.
-
 |product| is highly modular: at the end of the installation a bare minimum set
 of features like *network configuration* and *backup* are installed. The
 :guilabel:`Software Center` page allows the administrator to select and
