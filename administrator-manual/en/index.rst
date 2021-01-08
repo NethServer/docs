@@ -82,6 +82,7 @@ Administrator Manual
    sandbox
    antivirus
    ups
+   team_chat
    report
 
 .. toctree::
@@ -91,7 +92,6 @@ Administrator Manual
    disaster_recovery
    backup_customization
    webtop5
-   team_chat
    fax_server
    content_filter
    suricata
