@@ -96,7 +96,6 @@ Administrator Manual
    suricata
    virtual_hosts
    vpn
-   ftp
    phone_home
    nethvoice_intro
    nethcti_intro
