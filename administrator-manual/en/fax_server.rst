@@ -4,9 +4,7 @@ Fax server
 
 .. note::
 
-  The configuration page of this module is available only in the old Server Manager
-  and will not be ported to the new one.
-
+  The configuration page of this module is available only in the old Server Manager.
 
 The :index:`fax` server allows you to send and receive faxes via a modem
 connected directly to a server port or through a :index:`virtual modem`. 

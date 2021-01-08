@@ -93,7 +93,6 @@ Administrator Manual
    disaster_recovery
    backup_customization
    webtop5
-   fax_server
    content_filter
    suricata
    proxy_pass
@@ -155,6 +154,7 @@ Administrator Manual
    backup_legacy
    pop3_proxy
    snmp
+   fax_server
    ui/*
 
 
