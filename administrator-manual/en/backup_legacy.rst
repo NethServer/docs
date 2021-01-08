@@ -4,8 +4,6 @@
 Legacy backup
 =============
 
-.. note:: A new backup module is available inside the new Server Manager. See :ref:`backup-section`.
-
 |product| handles two kinds of backups: configuration backup and data backup.
 See :ref:`backup-section` for more details.
 

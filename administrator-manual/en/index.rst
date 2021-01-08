@@ -90,7 +90,6 @@ Administrator Manual
 
    disaster_recovery
    backup_customization
-   backup_legacy
    webtop5
    team_chat
    fax_server
