@@ -92,7 +92,6 @@ Administrator Manual
    backup_customization
    backup_legacy
    webtop5
-   pop3_connector
    team_chat
    fax_server
    content_filter
