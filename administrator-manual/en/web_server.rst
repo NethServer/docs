@@ -284,6 +284,7 @@ Regardless the rule type, the following settings are also available:
   application to work properly.
 
 
+.. _ftp-section:
 
 FTP server
 ==========
@@ -309,6 +310,39 @@ known as *jailing*.
 When a virtual host is created, a random FTP user name is assigned to it. It is
 possible to upload the virtual host file contents with FTP. Refer to
 :ref:`configuring-web-app` for more information.
+
+System users
+------------
+
+.. warning:: 
+   This configuration is highly discouraged.
+   Also note that when enabled, the integration with the web server will break.
+
+After enabling system users, all virtual users will be disabled.
+All configuration must be done using the command line.
+
+Enable system users: ::
+
+  config setprop vsftpd UserType system
+  signal-event nethserver-vsftpd-save
+
+Given a user name *goofy*, first make sure the user has Remote shell access.
+Then, enable the FTP access: ::
+
+  db accounts setprop goofy FTPAccess enabled
+  signal-event user-modify goofy
+  signal-event nethserver-vsftpd-save
+
+To disable an already enabled user: ::
+
+  db accounts setprop goofy FTPAccess disabled
+  signal-event nethserver-vsftpd-save
+
+If not explicitly disabled, all system users are chrooted. To disable a chroot for a system user: ::
+
+  db accounts setprop goofy FTPChroot disabled
+  signal-event nethserver-vsftpd-save
+
 
 
 .. rubric:: References
