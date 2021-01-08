@@ -73,6 +73,7 @@ Administrator Manual
    web_server
    web_proxy
    firewall
+   suricata
    bandwidth_monitor
    mail
    webmail
@@ -93,7 +94,6 @@ Administrator Manual
    :caption: Other modules
 
    webtop5
-   suricata
    vpn
    phone_home
    nethvoice_intro

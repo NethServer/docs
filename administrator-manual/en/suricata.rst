@@ -26,6 +26,10 @@ Rule categories
 
 Suricata is configured to use free rules from https://rules.emergingthreats.net/. [#]_
 
+Selecting the correct rule set is always a trade-off between security and performance.
+|product| provides a safe default rule set that can be used in most common scenarios.
+To use such rule set just click on on the :guilabel:`Set default configuration` button.
+
 Rules are divided into categories listed below.
 
 ActiveX
