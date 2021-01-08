@@ -82,6 +82,7 @@ Administrator Manual
    sandbox
    antivirus
    ups
+   report
 
 .. toctree::
    :maxdepth: 1
@@ -93,7 +94,6 @@ Administrator Manual
    webtop5
    pop3_connector
    team_chat
-   report
    fax_server
    content_filter
    suricata
