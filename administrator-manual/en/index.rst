@@ -94,7 +94,6 @@ Administrator Manual
 
    webtop5
    suricata
-   virtual_hosts
    vpn
    phone_home
    nethvoice_intro
