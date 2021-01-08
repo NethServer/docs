@@ -79,6 +79,7 @@ Administrator Manual
    chat
    blacklist
    sandbox
+   ups
 
 .. toctree::
    :maxdepth: 1
@@ -90,7 +91,6 @@ Administrator Manual
    webtop5
    pop3_connector
    team_chat
-   ups
    report
    fax_server
    content_filter
