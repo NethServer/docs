@@ -93,7 +93,6 @@ Administrator Manual
    :caption: Other modules
 
    webtop5
-   content_filter
    suricata
    proxy_pass
    virtual_hosts
