@@ -59,10 +59,11 @@ As best practice you should at least:
 Change the current password
 ===========================
 
-Users can change their own password using :ref:`user_settings-section`.
+Administrator users, with access to the Server Manager, can change their own password from the
+:guilabel:`Settings` page.
+Normal users, without access to the Server Manager, can use the :ref:`user_settings-section`.
 
-If :guilabel:`Shell Policy` options is not enabled,
-users without shell access can still use the old Server Manager to change
+If the Old Server Manager is installed, all users can access it to change
 their own password. See :ref:`access_legacy-section`.
 
 Logout
