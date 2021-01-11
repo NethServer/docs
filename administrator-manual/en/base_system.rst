@@ -202,7 +202,7 @@ A remote system can connect to a :index:`network service`, which is a software
 running on |product| itself.
 
 Each service has a list of "open" ports on which it answers to connections.
-Connections can be accepted from selected zones. Finer grained control of
+Connections can be accepted from selected zones. More fine-grained control of
 access to network services can be configured from the Firewall rules page.
 
 
