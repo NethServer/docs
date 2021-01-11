@@ -11,7 +11,7 @@ Fail2ban is able to reduce the rate of incorrect authentications attempts howeve
 Configuration
 =============
 
-Access the *Applications* and click on the :guilabel:`Settings` button of **Fail2ban** application.
+Access :menuselection:`Applications > fail2ban` and click on the :guilabel:`Settings` button of **Fail2ban** application.
 The configuration is split into two pages:
 
 - :guilabel:`Settings`: general configuration options

@@ -23,7 +23,7 @@ If your server is using a Let's Encrypt certificate as default, make also sure t
 
 How to configure:
 
-1. Click on :guilabel:`Settings` button of **Mattermost** application inside the *Applications* page
+1. Click on :guilabel:`Settings` button of :menuselection:`Applications > Mattermost`
 2. Check :guilabel:`Enable Mattermost Team Edition`, then enter a valid FQDN inside :guilabel:`Virtual host name` field (eg. ``chat.nethserver.org``)
 3. Open the entered host name inside the browser, eg: ``https://chat.nethserver.org``.
    At first access, a wizard will create the administrator user

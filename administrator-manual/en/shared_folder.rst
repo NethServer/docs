@@ -217,4 +217,4 @@ To change this behavior and store read actions inside the database, access the :
 
 The auditing report is available under the :guilabel:`Audit` page.
 
-The same report is also available from the old Server Manager inside the :guilabel:`Applications` page.
+The same report is also available from the old Server Manager inside the :menuselection:`Applications` page.

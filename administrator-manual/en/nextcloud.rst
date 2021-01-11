@@ -23,7 +23,7 @@ Installation
 The installation can be done through the |product| web interface.
 After the installation:
 
-* click on **Nextcloud** application title inside the *Applications* page or open the URL https://your_nethserver_ip/nextcloud
+* click on :menuselection:`Nextcloud` application title inside the :menuselection:`Applications` page or open the URL https://your_nethserver_ip/nextcloud
 * use **admin/Nethesis,1234** as default credentials
 * change the default password
 
