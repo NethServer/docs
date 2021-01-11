@@ -71,24 +71,29 @@ Administrator Manual
 
    backup
    web_server
-   web_proxy
-   firewall
-   fail2ban
-   vpn
-   suricata
-   bandwidth_monitor
+
    mail
    webmail
    shared_folder
    nextcloud
-   chat
-   blacklist
-   sandbox
-   antivirus
-   ups
    team_chat
-   freepbx
+   chat
+
+   antivirus
+   sandbox
+
+   firewall
+   web_proxy
+   fail2ban
+   vpn
+   suricata
+   blacklist
+   bandwidth_monitor
    dedalo
+
+   freepbx
+
+   ups
    statistics
    report
 
