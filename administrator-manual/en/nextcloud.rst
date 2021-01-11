@@ -23,7 +23,7 @@ Installation
 The installation can be done through the |product| web interface.
 After the installation:
 
-* click on :menuselection:`Nextcloud` application title inside the :menuselection:`Applications` page or open the URL https://your_nethserver_ip/nextcloud
+* click on the :menuselection:`Applications > Nextcloud` item title or open the URL ``https://your_nethserver_ip/nextcloud``
 * use **admin/Nethesis,1234** as default credentials
 * change the default password
 
@@ -101,5 +101,4 @@ To enable built-in ONLYOFFICE integration, access Nextcloud with the ``admin`` u
 - Verify the :guilabel:`Document Editing Service address` already contains the public address of your Nextcloud server
 
 .. note:: Installation of full ONLYOFFICE server is not supported on |product|.
-
 
