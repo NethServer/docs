@@ -100,8 +100,6 @@ Administrator Manual
    phone_home
    nethvoice_intro
    nethcti_intro
-   phonebook-mysql
-   weekly_report
    rspamd
 
 .. toctree::
@@ -150,6 +148,8 @@ Administrator Manual
    snmp
    fax_server
    hotspot
+   phonebook-mysql
+   weekly_report
    ui/*
 
 
