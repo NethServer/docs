@@ -23,8 +23,24 @@ All system users can access the chat using their own credentials.
                 a dedicated user account in AD is required by the module to be fully
                 operational! See :ref:`join-existing-ad-section`.
 
+Configuration
+=============
+
+All configuration options are available from *Configuration* page inside the **ejabberd** application.
+Main options are:
+
+* enable and disable ejabberd daemon
+* enable built-in web administration interface
+
+Under the *Advanced options* section, the administrator can also configure:
+
+- S2S federation
+- message archive
+- file upload to exchange data among clients using URL
+- file transfer speed
+
 Server to server (S2S)
-======================
+----------------------
 
 The XMPP system is federated by nature. If :index:`S2S` is enabled, users with accounts on one server
 can communicate with users on remote servers.
@@ -33,8 +49,35 @@ S2S allows for servers communicating seamlessly with each other, forming a globa
 For this purpose, the SRV DNS record must be configured for your domain (https://wiki.xmpp.org/web/SRV_Records#XMPP_SRV_records)
 and the server must have a valid SSL/TLS certificate.
 
-Client
-======
+Message Archive Management
+--------------------------
+
+Message Archive Management (mod_mam) implements Message Archive Management as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_.
+When enabled, all messages will be stored inside the server and compatible XMPP clients can use it to store their chat history on the server.
+
+The database can store a maximum of 2GB of messages, archived messages can be purged automatically.
+To configure message retention policy, set :guilabel:`Clean messages older than X days` option.
+
+.. note::
+
+   If enabled, this module will store every message sent between users.
+   This behavior will affect the privacy of your users.
+
+
+Administrators
+==============
+
+All users within the group ``jabberadmins`` are considered administrators of the chat server. 
+
+The group ``jabberadmins`` must be created and configured from the :ref:`groups-section` page.
+
+Administrators can: 
+
+* Send broadcast messages 
+* Check the status of connected users 
+
+Clients
+=======
 
 Jabber clients are available for all desktop and mobile platforms. 
 
@@ -56,40 +99,3 @@ Also, the certificate should contain two sub-domains ``pubsub.*`` and ``conferen
 This certificate can be obtained for free with Let's Encrypt (see :ref:`server_certificate-section`).
 
 
-Administrators
-==============
-
-All users within the group ``jabberadmins`` are considered administrators of the chat server. 
-
-The group ``jabberadmins`` must be created and configured from the :ref:`groups-section` page.
-
-Administrators can: 
-
-* Send broadcast messages 
-* Check the status of connected users 
-
-
-Message Archive Management
-==========================
-
-Message Archive Management (mod_mam) implements Message Archive Management as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_.
-When enabled, all messages will be stored inside the server and compatible XMPP clients can use it to store their chat history on the server.
-
-The database can store a maximum of 2GB of messages, archived messages can be purged automatically.
-To configure message retention policy, set :guilabel:`Clean messages older than X days` option.
-
-.. note::
-
-   If enabled, this module will store every message sent between users.
-   This behavior will affect the privacy of your users.
-
-
-Other options
-=============
-
-From the new Server Manager the administrator can configure all the options described above.
-
-Other available options:
-
-- upload and dowload transfer speed
-- enable/disable the administrator web interface

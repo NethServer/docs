@@ -6,83 +6,65 @@ Fail2ban
 
 Fail2ban scans log files (e.g. :file:`/var/log/apache/error_log`) and bans IPs that show the malicious signs – too many password failures, seeking for exploits, etc. Generally Fail2ban is then used to update firewall rules to reject the IP addresses for a specified amount of time, although any arbitrary other action (e.g. sending an email) could also be configured. Out of the box Fail2ban comes with filters for various services (Apache, Dovecot, Ssh, Postfix, etc).
 
-Fail2ban is able to reduce the rate of incorrect authentications attempts however, it cannot eliminate the risk that weak authentication presents. To improve the security, open the access to service only for secure networks using the firewall.
+Fail2ban is able to reduce the rate of incorrect authentications attempts however, it cannot eliminate the risk that weak authentication presents. To improve the security, open the access to service only for secure networks using the firewall or :ref:`services-section`.
 
-Installation
-============
+Configuration
+=============
 
-Install from the Software Center or use the command line: ::
+Access :menuselection:`Applications > fail2ban` and click on the :guilabel:`Settings` button of **Fail2ban** application.
+The configuration is split into two pages:
 
-  yum install nethserver-fail2ban
-
-
-Settings
-========
-
-Fail2ban is configurable in the security category of the server-manager. Most of settings can be changed in the :guilabel:`Configuration` tab, only really advanced settings must be configured by the terminal.
-
-Jails
------
+- :guilabel:`Settings`: general configuration options
+- :guilabel:`Jails`: manage available jails
 
 A jail is enabled and start to protect a service when you install a new module, the relevant jail (if existing) is automatically activated after the package installation.
-
-
 All jails can be disabled individually in the Jails settings.
 
-Number of attempts
-    Number of matches (i.e. value of the counter) which triggers ban action on the IP.
+Available settings are:
 
-Time span
-    The counter is set to zero if no match is found within "findtime" seconds.
+* :guilabel:`IP Whitelist`: IPs listed in the text area will be never banned by fail2ban (one IP per line).
 
-Ban time
-    Duration for IP to be banned for.
-
-Recidive ban
-    Extend the ban of persistent abusers. Recidive ban can have 2 different behaviors:
+* :guilabel:`Recidive ban`: extend the ban of persistent abusers. Recidive ban can have 2 different behaviors:
 
     * *Static ban time*: ban recidive hosts for 2 weeks, like brute force attack bots. The rule applies when an IP address has been already banned multiple times.
     * *Incremental ban time*: increase the ban time after each failure found in log. When enabled, if you set a short ban time, a valid user can be banned for a a little while but a brute force attacker will be banned for a very long time.
 
-Network
--------
+* :guilabel:`Allow bans on the LAN`: by default the failed attempts from your Local Network are ignored, except when you enabled the option.
+  :ref:`trusted_networks-section` are considered part of the LAN.
 
-Allow bans on the LAN
-    By default the failed attempts from your Local Network are ignored, except when you enabled the option.
+* :guilabel:`Logging Level`: increase or decrease the log level
+
+* :guilabel:`Number of attempts`: number of matches (i.e. value of the counter) which triggers ban action on the IP.
+
+* :guilabel:`Time span`: the counter is set to zero if no match is found within "findtime" seconds.
+
+* :guilabel:`Ban time`: duration for IP to be banned for.
 
 
-IP/Network Whitelisting
-    IP listed in the text area will be never banned by fail2ban (one IP per line). Network could be allowed in the Trusted-Network panel.
 
-Email
------
+.. rubric:: Mail notifications
 
-Send email notifications
-    Enable to send administrative emails.
+Mail notification are disabled by default.
+To enable them, click on the :guilabel:`Email notifications` button, then add
+one ore more mail address using the :guilabel:`Add an email` button and filling the :guilabel:`Notify to` field.
+Existing mail addresses can be removed by clicking on the :guilabel:`-` button.
 
-Administrators emails
-    List of email addresses of administrators (one address per line).
-
-Notify jail start/stop events
-    Send email notifications when a jail is started or stopped.
+To receive also notification when a jail is enabled or disabled, check the :guilabel:`Notify jail start/stop events` option.
 
 Unban IP
 ========
 
-IPs are banned when they are found several times in log, during a specific find time. They are stored in a database to be banned again each time your restart the server or the service. To unban an IP you can use the :guilabel:`Unban IP` tab in the status category of the server-manager.
+IPs are banned when they are found several times in log, during a specific find time.
+They are stored in a database to be banned again each time the server is restarted.
+List of current bans is available inside the :guilabel:`Unban` page.
+To unban an IP just click on the corresponding :guilabel:`Unban` button.
 
-Statistics
-==========
+Command line tools
+==================
 
-The :guilabel:`Ban statistics` tab is available in the status category of the server-manager, it gives you the total number of bans per jail as well as the total of all bans.
+.. rubric:: fail2ban-client
 
-Tools
-=====
-
-Fail2ban-client
----------------
-
-Fail2ban-client is part of the fail2ban rpm, it gives the state of fail2ban and all available jails: ::
+``fail2ban-client`` gives the state of fail2ban and all available jails: ::
 
   fail2ban-client status
 
@@ -94,19 +76,17 @@ To see which log files are monitored for a jail: ::
 
   fail2ban-client get nginx-http-auth logpath
 
-Fail2ban-listban
-----------------
+.. rubric:: fail2ban-listban
 
-Fail2ban-listban counts the IPs currently and totally banned in all activated jails, at the end it shows the IPs which are still banned by shorewall. ::
+``fail2ban-listban`` counts the IPs currently and totally banned in all activated jails, at the end it shows the IPs which are still banned by shorewall. ::
 
   fail2ban-listban
 
-Fail2ban-regex
---------------
+.. rubric:: fail2ban-regex
 
-Fail2ban-regex is a tool which is used to test the regex on you logs, it is a part of fail2ban software. Only one filter is allowed per jail, but it is possible to specify several actions, on separate lines.
+``fail2ban-regex`` is a tool which is used to test the regex on you logs, it is a part of fail2ban software. Only one filter is allowed per jail, but it is possible to specify several actions, on separate lines.
 
-The documentation is `readable at the fail2ban project <http://fail2ban.readthedocs.io/en/latest/filters.html>`_. 
+The documentation is `available at the fail2ban project <http://fail2ban.readthedocs.io/en/latest/filters.html>`_. 
 
 ::
 
@@ -116,10 +96,9 @@ You can also test custom regex directly: ::
 
   fail2ban-regex /var/log/secure '^%(__prefix_line)s(?:error: PAM: )?[aA]uthentication (?:failure|error) for .* from <HOST>( via \S+)?\s*$'
 
-Fail2ban-unban
---------------
+.. rubric:: fail2ban-unban
 
-Fail2ban-unban is used to unban an IP when the ban must be removed manually. ::
+``fail2ban-unban`` is used to unban an IP when the ban must be removed manually. ::
 
   fail2ban-unban <IP>
 
@@ -127,7 +106,6 @@ You can use also the built-in command with fail2ban-client: ::
 
   fail2ban-client set <JAIL> unbanip <IP>
 
-Whois
-=====
+.. rubric:: Whois
 
 If you desire to query the IP ``whois`` database and obtain the origin of the banned IP by email, you could  Install the ``whois`` rpm.

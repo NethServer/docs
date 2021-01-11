@@ -39,4 +39,6 @@ If the UPS is connected to a port that is not listed in the web interface, you c
 UPS statistics
 ==============
 
-If the statistics module (collectd) is installed and running, the module will automatically collect statistic data about UPS status.
+Realtime status is available from the **UPS** application dashboard.
+
+Also, if the statistics module (collectd) is installed and running, the module will automatically collect statistic data about UPS status.

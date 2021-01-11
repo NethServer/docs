@@ -68,7 +68,7 @@ or overridden with a custom configuration file. To this end,
 
 .. _`PHP-FPM documentation`: https://www.php.net/manual/en/install.fpm.configuration.php
 
-.. _webserver-vhosts-section:
+.. _virtual_hosts-section:
 
 Virtual hosts
 =============
@@ -180,6 +180,8 @@ Deleting a virtual host
 The :guilabel:`Delete` action removes the virtual host configuration and erases
 the web root directory. This operation is not reversible.
 
+.. _proxy_pass-section:
+
 Reverse proxy
 =============
 
@@ -201,9 +203,54 @@ in either:
 If the rule matches, the request is forwarded to another web server, defined by
 the :guilabel:`Destination URL` field.
 
+Web site name proxy pass
+------------------------
+
+Scenario for a named proxy pass:
+
+* |product| is the firewall of your LAN with public name ``http://fw.myfirstdomain.org``
+* You have a domain ``http://mydomain.com`` pointing to the public IP for |product|
+* You would like ``http://mydomain.com`` to forward to the internal server
+  (internal IP: 192.168.2.100)
+
+In this scenario, create a new record by clicking :guilabel:`Create a reverse proxy` button.
+Fill the :guilabel:`Name` field with ``mydomain.com`` and the :guilabel:`Destination URL` with
+``http://192.168.2.100``.
+
+Resource path proxy pass
+------------------------
+
+Scenario for path-based proxy pass:
+
+* |product| is the firewall of your LAN
+* You have a domain ``http://mydomain.com``
+* You would like ``http://mydomain.com/mysite`` to forward to the internal server
+  (internal IP: 192.168.2.100)
+
+In this scenario, create a new record by clicking :guilabel:`Create a reverse proxy` button.
+Fill the :guilabel:`Name` field with ``/mysite`` and the :guilabel:`Destination URL` with
+``http://192.168.2.100``.
+
+Extra options
+-------------
+
+If only encrypted connections are allowed, enable the :guilabel:`Require SSL
+encrypted connection`.
+
+Only clients from certain networks can be allowed to connect, by specifying  a
+comma-separated list of CIDR networks under the :guilabel:`Access from CIDR
+networks`  field.
+
+Options available only for named proxy pass:
+
+* Enable or disable forwarding of ``Host`` header
+* Enable or disable WebSocket forwarding
+* Accept invalid target SSL certificate: use this option only if 
+  the target has a self-signed certificate
+
 
 Advanced reverse proxy settings
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When the reverse proxy rule matches a **web site name** it is possible to assign
 it a dedicated certificate, choosing one from the :guilabel:`SSL/TLS
@@ -220,30 +267,31 @@ path**. In this case only the default certificate can be used.
 
 Regardless the rule type, the following settings are also available:
 
-    * :guilabel:`Access from CIDR networks`: restricts the access from the given
-      list of CIDR networks. Only web clients connecting from those networks
-      are allowed to open the web site.
+* :guilabel:`Access from CIDR networks`: restricts the access from the given
+  list of CIDR networks. Only web clients connecting from those networks
+  are allowed to open the web site.
 
-    * :guilabel:`Require SSL encrypted connection`: if enabled, any `http://`
-      request is redirected to `https://`.
+* :guilabel:`Require SSL encrypted connection`: if enabled, any `http://`
+  request is redirected to `https://`.
 
-    * :guilabel:`Accept invalid SSL certificate from target`: if the destination
-      URL starts with `https://` and an invalid certificate is returned,
-      enabling this option ignores the certificate validation error.
+* :guilabel:`Accept invalid SSL certificate from target`: if the destination
+  URL starts with `https://` and an invalid certificate is returned,
+  enabling this option ignores the certificate validation error.
 
-    * :guilabel:`Forward HTTP "Host" header to target`: if enabled, a HTTP
-      `Host` header containing the original request host name is forwarded to
-      the destination URL. This could be required by the destination server
-      application to work properly.
+* :guilabel:`Forward HTTP "Host" header to target`: if enabled, a HTTP
+  `Host` header containing the original request host name is forwarded to
+  the destination URL. This could be required by the destination server
+  application to work properly.
 
 
+.. _ftp-section:
 
 FTP server
 ==========
 
 .. warning::
 
-    The FTP protocol is unsecure. Passwords and file data are sent in clear text
+    The FTP protocol is insecure. Passwords and file data are sent in clear text
     over the network.
 
 The File Transfer Protocol is a standard network protocol used for the transfer
@@ -262,6 +310,39 @@ known as *jailing*.
 When a virtual host is created, a random FTP user name is assigned to it. It is
 possible to upload the virtual host file contents with FTP. Refer to
 :ref:`configuring-web-app` for more information.
+
+System users
+------------
+
+.. warning:: 
+   This configuration is highly discouraged.
+   Also note that when enabled, the integration with the web server will break.
+
+After enabling system users, all virtual users will be disabled.
+All configuration must be done using the command line.
+
+Enable system users: ::
+
+  config setprop vsftpd UserType system
+  signal-event nethserver-vsftpd-save
+
+Given a user name *goofy*, first make sure the user has Remote shell access.
+Then, enable the FTP access: ::
+
+  db accounts setprop goofy FTPAccess enabled
+  signal-event user-modify goofy
+  signal-event nethserver-vsftpd-save
+
+To disable an already enabled user: ::
+
+  db accounts setprop goofy FTPAccess disabled
+  signal-event nethserver-vsftpd-save
+
+If not explicitly disabled, all system users are chrooted. To disable a chroot for a system user: ::
+
+  db accounts setprop goofy FTPChroot disabled
+  signal-event nethserver-vsftpd-save
+
 
 
 .. rubric:: References

@@ -4,10 +4,6 @@
 Report
 ======
 
-.. note::
-
-  The configuration page of this module is available only in the new Server Manager.
-
 This module manages the configuration of `Dante
 <https://github.com/nethesis/dante/>`_.
 

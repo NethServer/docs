@@ -71,51 +71,50 @@ Administrator Manual
 
    backup
    web_server
-   web_proxy
-   firewall
+
    mail
+   webmail
    shared_folder
-   blacklist
+   nextcloud
+   team_chat
+   chat
+
+   antivirus
    sandbox
+
+   firewall
+   web_proxy
+   fail2ban
+   vpn
+   suricata
+   blacklist
+   bandwidth_monitor
+   dedalo
+
+   freepbx
+
+   ups
+   statistics
+   report
 
 .. toctree::
    :maxdepth: 1
-   :caption: Modules
+   :caption: Other modules
+
+   webtop5
+   phone_home
+   nethvoice_intro
+   nethcti_intro
+   rspamd
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Best practices
 
    disaster_recovery
    backup_customization
-   backup_legacy
-   webmail
-   webtop5
-   pop3_connector
-   chat
-   team_chat
-   ups
-   report
-   fax_server
-   content_filter
-   suricata
-   proxy_pass
-   virtual_hosts
-   bandwidth_monitor
-   statistics
-   vpn
-   nextcloud
-   ftp
-   phone_home
-   snmp
-   nethvoice_intro
-   nethcti_intro
-   phonebook-mysql
-   weekly_report
-   hotspot
-   dedalo
-   freepbx
    virtual_machines
-   fail2ban
-   rspamd
-   antivirus
-
+   third_party
 
 .. only:: nscom
 
@@ -130,12 +129,6 @@ Administrator Manual
        hotsync
        mssql
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Best practices
-
-   third_party
-   
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
@@ -157,6 +150,11 @@ Administrator Manual
    base_system
    backup_legacy
    pop3_proxy
+   snmp
+   fax_server
+   hotspot
+   phonebook-mysql
+   weekly_report
    ui/*
 
 
