@@ -85,8 +85,7 @@ Please, follow below steps:
 .. only:: nscom
 
   1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the
-     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>`
-     procedure to complete the basic server configuration
+     Server Manager and complete the basic server configuration
 
   2. Ensure that |product| is able to access the internet and resolve public names correctly
 
@@ -109,8 +108,7 @@ Please, follow below steps:
 .. only:: nsent
 
   1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the
-     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>`
-     procedure to complete the basic server configuration
+     Server Manager and complete the basic server configuration
 
   2. Ensure that |product| is able to access the internet and resolve public names correctly
 
