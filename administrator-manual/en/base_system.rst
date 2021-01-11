@@ -5,8 +5,8 @@ The old Server Manager
 ======================
 
 This chapter describes the :dfn:`old Server Manager` web interface. Since |product| 7.9 it must be
-installed from the :ref:`software-center-section` page as it is not picked up any more by the installation
-procedure.
+installed from the :ref:`software-center-section` page as it is not included in the default
+installation procedure.
 
 .. warning::
 
