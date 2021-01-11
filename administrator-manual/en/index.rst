@@ -155,7 +155,8 @@ Administrator Manual
    :glob:
 
    base_system
-   pop3_proxy.rst
+   backup_legacy
+   pop3_proxy
    ui/*
 
 
