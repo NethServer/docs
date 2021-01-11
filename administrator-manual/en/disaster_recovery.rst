@@ -15,7 +15,7 @@ Other restored configurations:
 * SSL certificates
 
 .. warning:: Do not restore a configuration backup from an old minor version into a newer version.
-   The backup should come from a |product| having the same operating system version of the new 
+   The backup should come from a |product| having the same operating system version of the new
    installation, i.e., avoid restoring a configuration backup from a 7.4.1708 installation on a new 7.6.1810 system,
    as it may lead to unexpected results.
 
@@ -32,8 +32,8 @@ New Server Manager
 
 Please, follow below steps:
 
-1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
-   new Server Manager and make sure the machine is able to access the internet and resolve public names correctly 
+1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the
+   new Server Manager and make sure the machine is able to access the internet and resolve public names correctly
 
 2.
 
@@ -55,10 +55,10 @@ Please, follow below steps:
 
    For NethServer Enterprise, all cloud backups will be automatically downloaded and ready
    to be restored directly from the :guilabel:`From backup` field.
-  
+
 5. Map network interface names from the backup to the running system.
    This step is required only if :guilabel:`Restore network configuration` option is enabled.
-   
+
 6. Click the :guilabel:`Restore` to start the restore process.
 
    .. note::
@@ -84,9 +84,8 @@ Please, follow below steps:
 
 .. only:: nscom
 
-  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
-     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>` 
-     procedure to complete the basic server configuration
+  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the
+     Server Manager and complete the basic server configuration
 
   2. Ensure that |product| is able to access the internet and resolve public names correctly
 
@@ -108,9 +107,8 @@ Please, follow below steps:
 
 .. only:: nsent
 
-  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the 
-     Server Manager and follow the :ref:`first configuration wizard <first-configuration-wizard-section>` 
-     procedure to complete the basic server configuration
+  1. Install the new machine (refer to :ref:`installation <installation-manual>` section), access the
+     Server Manager and complete the basic server configuration
 
   2. Ensure that |product| is able to access the internet and resolve public names correctly
 
@@ -138,8 +136,8 @@ Please note that the disaster recovery should be always performed from a local m
 .. note:: The root/admin password is not restored.
 
 .. _restore-roles-section:
-   
-Restore network roles 
+
+Restore network roles
 ^^^^^^^^^^^^^^^^^^^^^
 
 If a role configuration points to a missing network interface, the
@@ -181,7 +179,7 @@ connectivity and login again on the Server Manager.
 Skip network restore
 --------------------
 
-Network configuration is restored by default, but sometimes it is necessary to restore an 
+Network configuration is restored by default, but sometimes it is necessary to restore an
 installation on a different hardware without migrating the network configuration.
 This is a common scenario when moving a virtual machine from a VPS provider to another.
 
@@ -239,7 +237,7 @@ At the end of restore the firewall will:
 The administrator can access the Server Manager to create missing zones and roles.
 Finally, all previously disabled rules can be manually enabled again.
 
-See :ref:`firewall_new-section`.
+See :ref:`firewall-section`.
 
 Web proxy
 ^^^^^^^^^
