@@ -582,12 +582,53 @@ and :guilabel:`Make public` action buttons block the possibility of an address
 to receive messages from the outside. Still an *internal* address can be used to
 exchange messages with other accounts of the system.
 
-.. _email-connectors:
+.. _pop3_connector-section:
 
 Connectors
 ==========
 
-The :guilabel:`Email > Connectors` page is described in :ref:`pop3_connector-section`.
+The :index:`POP3/IMAP connector` is accessible under the :guilabel:`Email > Connectors` page.
+
+Configured external accounts will be checked regularly and retrieved
+messages will be delivered to local users.
+
+It is not recommended to use the POP3 connector as the primary method
+for managing email.  Mail delivery can be affected by disk space and
+connectivity problems of the provider's server. Also, the spam filter will
+be less effective due to the original email envelope information becoming lost.
+
+POP3/IMAP accounts are configured from :guilabel:`POP3 connector >
+Accounts` page. Each account can be specified:
+
+* the email address (as unique account identifier)
+* the protocol (IMAP/POP3/IMAP with SSL/POP3 with SSL)
+* the remote server address
+* the account credentials
+* the local user account where to deliver messages
+* if a message has to be deleted from the remote server after delivery
+* antispam and antivirus checks
+
+.. note:: It is allowed to associate more than one external accounts to a local
+          one.  Deleting an account will *not* delete already
+          delivered messages.
+
+After the account configuration has been completed, the account is automatically
+checked for new mail.
+
+.. index::
+   pair: Getmail; software
+
+The underneath implementation is based on `Getmail <http://pyropus.ca/software/getmail/>`_.
+After fetching mail messages from the POP3/IMAP provider Getmail applies all required filters (SPAM and virus) prior
+to delivering the mail locally.
+All messages are filtered according to the :ref:`configured rules <email_filter>`.
+
+All operations are logged in :file:`/var/log/maillog`.
+
+.. warning:: If an account was selected for delivery and has been subsequently deleted
+             the configuration becomes inconsistent. If this should happen
+             then existing account configuration in :guilabel:`POP3 connector` page
+             must be disabled or deleted.
 
 .. _email_imap_synchronization:
 

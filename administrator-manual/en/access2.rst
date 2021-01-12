@@ -1,10 +1,8 @@
-.. _access2-section:
+.. _access-section:
 
 ============================
 Accessing the Server Manager
 ============================
-
-.. note:: Documentation about the old Server Manager is available :ref:`here <access-section>`.
 
 |product| can be configured using the :dfn:`Server Manager` web interface. 
 You need a web browser like Mozilla Firefox or Google Chrome to access the web interface using the address (URL) 
@@ -33,20 +31,6 @@ The web interface language is automatically chosen depending on your browser con
 If you wish to change the language, go to your user name
 on the upper right corner of the screen and select :guilabel:`Display Language`.
 
-
-Login to remote servers
------------------------
-
-The login page allows access the local machine (default) or a remote one.
-To access a remote server, first make sure the server is accessible using SSH.
-Then click on :guilabel:`Other options` and enter the host name (or IP address) of 
-the remote server inside the :guilabel:`Connect to` field.
-
-The Server Manager will try to access the remote machine using SSH on port 22.
-If the remote server use a different port, you can specify it with the ``host:port`` syntax
-(eg. ``a.b.c.d:222``).
-
-
 Hints
 =====
 
@@ -62,10 +46,12 @@ As best practice you should at least:
 Change the current password
 ===========================
 
-All users with access to the Server Manager can change their own password from the
-:guilabel:`Settings` menu.
+Administrator users, with access to the Server Manager, can change their own password from the
+:guilabel:`Settings` page.
+Normal users, without access to the Server Manager, can use the :ref:`user_settings-section`.
 
-Users without shell access should use the old Server Manager. See :ref:`access-section`.
+If the Old Server Manager is installed, all users can access it to change
+their own password. See :ref:`legacy_server_manager-section`.
 
 Logout
 ======

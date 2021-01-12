@@ -11,7 +11,8 @@ Roundcube's main features are:
 * Shared folders support
 * Plugins
 
-The webmail is available at the following URLs:
+The webmail is accessible directly from *Applicatons* page, just click on the :guilabel:`Open` button.
+It is available at the following URLs:
 
 * http://_server_/webmail
 * http://_server_/roundcubemail

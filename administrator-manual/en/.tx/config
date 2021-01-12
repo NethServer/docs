@@ -1,12 +1,6 @@
 [main]
 host = https://www.transifex.com
 
-[docs-v7.access]
-file_filter = locale/<lang>/LC_MESSAGES/access.po
-source_file = _build/locale/access.pot
-source_lang = en
-type = PO
-
 [docs-v7.access2]
 file_filter = locale/<lang>/LC_MESSAGES/access2.po
 source_file = _build/locale/access2.pot
@@ -121,12 +115,6 @@ type = PO
 [docs-v7.packages]
 file_filter = locale/<lang>/LC_MESSAGES/packages.po
 source_file = _build/locale/packages.pot
-source_lang = en
-type = PO
-
-[docs-v7.packages_legacy]
-file_filter = locale/<lang>/LC_MESSAGES/packages_legacy.po
-source_file = _build/locale/packages_legacy.pot
 source_lang = en
 type = PO
 

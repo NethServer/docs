@@ -123,13 +123,74 @@ The web interface allow the creation of rules for HTTP/S traffic to:
 - divert the source to a specific provider with automatic fail over if the provider fails
 - force the source to a specific provider without automatic fail over
 
+.. _web_content_filter-section:
+
+Content filter
+==============
+
+The :index:`content filter` analyzes all web traffic and blocks selected websites or sites containing viruses.
+Forbidden sites are selected from a list of categories, which in turn must be downloaded from external sources and stored on the system.
+
+The system allows to create an infinite number of profiles.
+A profile is composed by three parts:
+
+* **Who**: the client associated with the profile.
+  Can be a user, a group of users, a host, a group of hosts, a zone or an interface role (like green, blue, etc).
+
+* **What**: which sites can be browsed by the profiled client.
+  It's a filter created inside the :guilabel:`Filters` section.
+
+* **When**: the filter can always be enabled or valid only during certain period of times.
+  Time frames can be created inside the :guilabel:`Times` section.
+
+
+This is the recommended order for content filter configuration:
+
+1. Select a list of categories from :guilabel:`Blacklists` page and start the download
+2. Create one or more time conditions (optional)
+3. Create custom categories (optional)
+4. Create a new filter or modify the default one
+5. Create a new profile associated to a user or host, then select
+   a filter and a time frame (if enabled)
+
+If no profile matches, the system provides a default profile that is applied to all clients.
+
+Filters
+-------
+
+A filter can:
+
+* block access to categories of sites
+* block access to sites accessed using IP address (recommended)
+* filter URLs with regular expressions
+* block files with specific extensions
+* enable global blacklist and whitelist
+
+A filter can operate in two different modes:
+
+* Allow all: allow access to all sites, except those explicitly blocked
+* Block all: blocks access to all sites, except those explicitly permitted
+
+.. note:: The category list will be displayed only after the download of list selected from :guilabel:`Blacklist` page.
+
 Report
 ======
 
 Install ``nethserver-lightsquid`` package to generate :index:`web proxy stats`.
 
 LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs and generates new HTML report every day, summarizing browsing habits of the proxy's users.
-Lightsquid web interface can be found at the :guilabel:`Applications` tab inside the :guilabel:`Dashboard`.
+Lightsquid web interface can be found at the :menuselection:`Applications` tab inside the :guilabel:`Dashboard`.
+
+Cleanup old reports
+-------------------
+
+LightSquid reports are saved as directories of text files inside ``/var/lightsquid/``.
+Since all reports are kept forever, the size of the directory can greatly grow during the years.
+
+To cleanup all reports older than 1 year, execute the following:
+::
+
+  find /var/lightsquid/  -maxdepth 1 -mindepth 1 -type d -name '????????' -mtime +360 -delete
 
 Cache
 =====

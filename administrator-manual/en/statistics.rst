@@ -21,7 +21,7 @@ After installation, the system will gather following statistics:
 For each check, the web interface will display a graph containing last collected value and also minimum, maximum and average values.
 
 CGP is accessible on a random URL generated on first install, something like ``https://myserver.nethserver.org:980/02bf3f8364beea0d5f23044bf14d31d93f63e98d``.
-The URL is available from the Server Manager inside the :guilabel:`Applications` page. Click the :guilabel:`Open` button
+The URL is available from the Server Manager inside the :menuselection:`Applications` page. Click the :guilabel:`Open` button
 of :guilabel:`Collectd Charts` application.
 
 From the old Server Manager, the web interface can be accessed using the :guilabel:`Graphs` section.

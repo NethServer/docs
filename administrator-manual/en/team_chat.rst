@@ -23,7 +23,7 @@ If your server is using a Let's Encrypt certificate as default, make also sure t
 
 How to configure:
 
-1. Access :guilabel:`Team chat` page inside the Server Manager
+1. Click on :guilabel:`Settings` button of :menuselection:`Applications > Mattermost`
 2. Check :guilabel:`Enable Mattermost Team Edition`, then enter a valid FQDN inside :guilabel:`Virtual host name` field (eg. ``chat.nethserver.org``)
 3. Open the entered host name inside the browser, eg: ``https://chat.nethserver.org``.
    At first access, a wizard will create the administrator user
@@ -53,7 +53,7 @@ If the system administrator still needs bulk user creation, he/she can rely on `
 
 The command will:
 
-- create a default team named as the Company from :ref:`organization_contacts-section`
+- create a default team named as the Company from :guilabel:`Organization details` page
 - read all users from local or remote Account Providers and create them inside Mattermost
 
 Please note that:
@@ -88,4 +88,3 @@ password to command invocation.
 Example: ::
 
   mattermost-bulk-user-create Password,1234
-

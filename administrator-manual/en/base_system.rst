@@ -1,24 +1,93 @@
-.. _base_system-section:
+.. _legacy_server_manager-section:
 
-=================
-Base system (old)
-=================
+======================
+The old Server Manager
+======================
 
-.. note:: A new Server Manager based on Cockpit is available. See :ref:`base_system2-section`.
+This chapter describes the :dfn:`old Server Manager` web interface. Since |product| 7.9 it must be
+installed from the :ref:`software-center-section` page as it is not included in the default
+installation procedure.
 
-This chapter describes all available modules at the end of installation. All
-modules outside this section must be installed from the
-:ref:`software-center-section` page.
+.. warning::
 
-.. _dashboard-section:
+   New features of |product| are not available in this web interface. Backward compatibility may break
+   at any time. It is recommended to use the new Server Manager. See :ref:`access-section`
+   and :ref:`base_system-section`.
+
+.. _access_legacy-section:
+
+Getting started
+===============
+
+You need a web browser like Mozilla Firefox or Google Chrome to access the old Server Manager web interface using the address (URL)
+``https://a.b.c.d:980`` or ``https://server_name:980`` where *a.b.c.d* and *server_name* respectively are the server IP address and name
+configured during installation.
+
+If the *Web server* module is installed, you can also access the web interface using the address ``https://server_name/server-manager``.
+
+The Server Manager uses self-signed SSL certificates.
+You should explicitly accept them the first time you access the server.
+The connection is safe and encrypted.
+
+Login
+-----
+
+The login page allows selecting an alternative language among those already
+installed on the system. After logging in, additional language packs can
+be installed from the :menuselection:`Software center` page under the :guilabel:`Languages` category.
+
+The login page will give you a trusted access to the web interface. Log in
+as **root** and type the password chosen during |product| installation.
+
+.. note::
+
+    The *unattended* install procedure sets the root password to the default
+    ``Nethesis,1234``.
+
+Change the current password
+---------------------------
+
+You can change the root password from the web interface by going to the
+:guilabel:`root@host.domain.com` label on the upper right corner of the screen
+and clicking on :guilabel:`Profile`.
+
+
+Logout
+------
+
+Terminate the current Server Manager session by going to the
+:guilabel:`root@host.domain.com` label on the upper right corner of the screen
+and by clicking on :guilabel:`Logout`.
+
+.. _session-timeouts-section:
+
+Session timeouts
+----------------
+
+By default (starting from |product| 7.5.1804), a Server Manager session
+terminates after **60 minutes of inactivity** (idle timeout) and **expires
+8 hours after the login** (session life time).
+
+The following shell command sets 2 hours of idle timeout, and 16 hours of
+maximum session life time. Time is expressed in seconds: ::
+
+    config setprop httpd-admin MaxSessionIdleTime 7200 MaxSessionLifeTime 57600
+
+To disable the timeouts ::
+
+    config setprop httpd-admin MaxSessionIdleTime '' MaxSessionLifeTime ''
+
+The new timeout values will affect new sessions. They do not change any active
+session.
+
+
+.. _dashboard_legacy-section:
 
 Dashboard
 =========
 
 The :index:`Dashboard` page is the landing page after a successful login.
 The page will display the :index:`status` and configuration of the system.
-
-.. _duc-section:
 
 Disk analyzer
 -------------
@@ -41,8 +110,6 @@ Well known folders are:
    single: Network
    pair: interface; role
 
-.. _network-section:
-
 Network
 =======
 
@@ -57,8 +124,7 @@ Any network managed by the system must follow these rules:
 
 * networks must be physically separated (multiple networks can't be connected to the same switch/hub)
 * networks must be logically separated: each network must have different addresses
-* private networks, like LANs, must follow address's convention from RFC1918 document
-  See :ref:`RFC1918-section`
+* private networks, like LANs, must follow address's convention from :ref:`RFC1918 <RFC1918-section>` document
 
 .. index:: zone, role
 
@@ -75,9 +141,7 @@ See :ref:`policy-section` for more information on roles and firewall rules.
 .. note:: The server must have at least one network interface. When the server has only one interface, this interface must have green role.
 
 If the server is installed on a public VPS (Virtual Private Server), it should must be configured with a green interface.
-All critical services should be closed using :ref:`network_services-section` panel.
-
-.. _alias_IP-section:
+All critical services should be closed using :ref:`network_services_legacy-section` panel.
 
 Alias IP
 --------
@@ -90,7 +154,6 @@ Alias IP section can be found in the dropdown menu of the related network interf
 
 .. note:: Alias IPs on PPPoE interface could not work properly, due to different implementations of the service made by internet providers.
 
-.. _logical_interfaces-section:
 
 Logical interfaces
 ------------------
@@ -129,27 +192,8 @@ The use of VLAN, requires properly configured switches.
              role, thus requires the gateway functionality. See
              :ref:`firewall-section` for details.
 
-.. _RFC1918-section:
 
-Address for private networks (RFC1918)
---------------------------------------
-
-TCP/IP private networks not directly connected to Internet should use special addresses selected by
-Internet Assigned Numbers Authority (IANA).
-
-===============   ===========   =============================
-Private network   Subnet mask   IP addresses interval
-===============   ===========   =============================
-10.0.0.0          255.0.0.0     10.0.0.1 - 10.255.255.254
-172.16.0.0        255.240.0.0   172.16.0.1 - 172.31.255.254
-192.168.0.0       255.255.0.0   192.168.0.1 - 192.168.255.254
-===============   ===========   =============================
-
-
-
-
-
-.. _network_services-section:
+.. _network_services_legacy-section:
 
 Network services
 ================
@@ -158,13 +202,13 @@ A remote system can connect to a :index:`network service`, which is a software
 running on |product| itself.
 
 Each service has a list of "open" ports on which it answers to connections.
-Connections can be accepted from selected zones. Finer grained control of 
+Connections can be accepted from selected zones. More fine-grained control of
 access to network services can be configured from the Firewall rules page.
 
 
 .. index:: trusted networks
 
-.. _trusted_networks-section:
+.. _trusted_networks_legacy-section:
 
 Trusted networks
 ================
@@ -178,11 +222,11 @@ For example, hosts inside trusted networks can access to:
 * Shared folders (SAMBA)
 
 If the remote network is reachable using a router, remember to add a
-static route inside :ref:`static_routes-section` page.
+static route inside :ref:`static_routes_legacy-section` page.
 
 
 
-.. _static_routes-section:
+.. _static_routes_legacy-section:
 
 Static routes
 ==============
@@ -190,10 +234,10 @@ Static routes
 This page allow to create special :index:`static routes` which will use the specified gateway.
 These routes are usually used to connect private network.
 
-Remember to add the network to :ref:`trusted_networks-section`, if you wish to allow remote hosts to access local services.
+Remember to add the network to :ref:`trusted_networks_legacy-section`, if you wish to allow remote hosts to access local services.
 
 
-.. _organization_contacts-section:
+.. _organization_contacts_legacy-section:
 
 Organization contacts
 =====================
@@ -204,8 +248,6 @@ displayed on the old Server Manager login screen.
 
 .. index::
    pair: Certificate; SSL
-
-.. _server_certificate-section:
 
 Server certificate
 ==================
@@ -236,7 +278,7 @@ The :guilabel:`Server certificate` page also allows:
 
   1. The server must be reachable from outside at port 80. Make sure your port 80
      is open to the public Internet (you can check with sites like [#CSM]_);
-     
+    
   2. The domains that you want the certificate for must be public domain names
      associated to server own public IP. Make sure you have public DNS name
      pointing to your server (you can check with sites like [#VDNS]_).
@@ -262,7 +304,7 @@ Disable Let's Encrypt
 Let's Encrypt certificate can be disabled following these steps:
 
 1. Access the :guilabel:`Server certificate` page, set as default the self-signed certificate or an uploaded one
-2. Open the shell and execute the following commands: 
+2. Open the shell and execute the following commands:
 
    ::
 
@@ -290,7 +332,7 @@ This module allows to:
 * display a single log
 * follow the content of a log in real time
 
-.. _date-time-section:
+.. _date-time_legacy-section:
 
 Date and time
 =============
