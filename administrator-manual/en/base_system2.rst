@@ -544,6 +544,7 @@ Authentication
 ==============
 
 The Server Manager can be always accessed from the following users:
+
 - ``root``
 - members of ``domain admins`` groups
 

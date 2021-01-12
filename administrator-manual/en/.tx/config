@@ -8,13 +8,6 @@ source_lang = en
 type = PO
 
 
-[docs-v7.pop3_connector]
-file_filter = locale/<lang>/LC_MESSAGES/pop3_connector.po
-source_file = _build/locale/pop3_connector.pot
-source_lang = en
-type = PO
-
-
 [docs-v7.snmp]
 file_filter = locale/<lang>/LC_MESSAGES/snmp.po
 source_file = _build/locale/snmp.pot
@@ -39,13 +32,6 @@ type = PO
 [docs-v7.web_proxy]
 file_filter = locale/<lang>/LC_MESSAGES/web_proxy.po
 source_file = _build/locale/web_proxy.pot
-source_lang = en
-type = PO
-
-
-[docs-v7.virtual_hosts]
-file_filter = locale/<lang>/LC_MESSAGES/virtual_hosts.po
-source_file = _build/locale/virtual_hosts.pot
 source_lang = en
 type = PO
 
@@ -91,20 +77,6 @@ source_lang = en
 type = PO
 
 
-[docs-v7.proxy_pass]
-file_filter = locale/<lang>/LC_MESSAGES/proxy_pass.po
-source_file = _build/locale/proxy_pass.pot
-source_lang = en
-type = PO
-
-
-[docs-v7.ftp]
-file_filter = locale/<lang>/LC_MESSAGES/ftp.po
-source_file = _build/locale/ftp.pot
-source_lang = en
-type = PO
-
-
 [docs-v7.bandwidth_monitor]
 file_filter = locale/<lang>/LC_MESSAGES/bandwidth_monitor.po
 source_file = _build/locale/bandwidth_monitor.pot
@@ -143,13 +115,6 @@ type = PO
 [docs-v7.index]
 file_filter = locale/<lang>/LC_MESSAGES/index.po
 source_file = _build/locale/index.pot
-source_lang = en
-type = PO
-
-
-[docs-v7.content_filter]
-file_filter = locale/<lang>/LC_MESSAGES/content_filter.po
-source_file = _build/locale/content_filter.pot
 source_lang = en
 type = PO
 
