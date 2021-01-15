@@ -59,7 +59,10 @@ Please, follow below steps:
 5. Map network interface names from the backup to the running system.
    This step is required only if :guilabel:`Restore network configuration` option is enabled.
 
-6. Click the :guilabel:`Restore` to start the restore process.
+6. During disaster recovery, to obtain a machine identical to original one, it's **mandatory** to keep the option :guilabel:`Reinstall packages` **enabled**!
+   Its deactivation could introduce unexpected behavior on restored system!
+
+7. Click the :guilabel:`Restore` to start the restore process.
 
    .. note::
 
@@ -67,7 +70,7 @@ Please, follow below steps:
       you will be disconnected from the Server Manager and you will need to login again using the
       new IP address.
 
-7. Verify the system is functional and then access the :guilabel:`Backup` page.
+8. Verify the system is functional and then access the :guilabel:`Backup` page.
    To restore all files, click on :guilabel:`Restore` button under the **Data Backup** section,
    select the name of the backup and click the :guilabel:`Restore` button.
 
