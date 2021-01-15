@@ -59,7 +59,7 @@ Please, follow below steps:
 5. Map network interface names from the backup to the running system.
    This step is required only if :guilabel:`Restore network configuration` option is enabled.
 
-6. It's **mandatory** to keep the option :guilabel:`Reinstall packages` **enabled**!
+6. During disaster recovery, to obtain a machine identical to original one, it's **mandatory** to keep the option :guilabel:`Reinstall packages` **enabled**!
    Its deactivation could introduce unexpected behavior on restored system!
 
 7. Click the :guilabel:`Restore` to start the restore process.
