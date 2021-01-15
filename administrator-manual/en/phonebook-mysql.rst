@@ -2,10 +2,6 @@
 Phonebook
 =========
 
-.. note::
-
-  The configuration page of this module is available only in the old Server Manager.
-
 The |product| phonebook allows to collect contacts from multiple sources. After collecting the data, 
 the contacts will be accessible in read-only mode from many clients.
 
@@ -21,12 +17,6 @@ the command to force it: ::
 The phonebook is accessible using LDAP, only if enabled, using this base DN: ::
 
  dc=phonebook,dc=nh
-
-The web interface allows to enable the import from:
-
-- publicly shared SOGo address book (|product| 6.x only!)
-- shared contacts from |product_cti|
-- speed dial from  |product_voice|
 
 You can import contacts from other source using custom scripts inside: ::
 
@@ -101,3 +91,13 @@ Display phonebook fields: ::
 
  mysql -e "describe phonebook.phonebook"
 
+Old web interface
+-----------------
+
+The configuration page of this module is available only in the old Server Manager.
+
+The web interface allows to enable the import from:
+
+- publicly shared SOGo address book (|product| 6.x only!)
+- shared contacts from |product_cti|
+- speed dial from  |product_voice|
