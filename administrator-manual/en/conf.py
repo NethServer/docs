@@ -75,7 +75,7 @@ if tags.has('nsent'):
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
     html_theme = "sphinx_rtd_theme"
-    html_logo = 'nsent/_static/nethserver_enterprise_yellow.png'
+    html_logo = 'nsent/_static/nethesis_enterprise_dark.png'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     html_favicon = 'nsent/_static/favicon.ico' 
     html_static_path = ['nsent/_static']
@@ -114,7 +114,7 @@ if tags.has('nsent'):
         'collapse_navigation': True,
         'navigation_depth': -1,
         'logo_only': True,
-        'style_nav_header_background': '#343131',
+        'style_nav_header_background': '#ffffff',
     }
 
 elif tags.has('nscom'):
