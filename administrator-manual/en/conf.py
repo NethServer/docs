@@ -118,6 +118,7 @@ if tags.has('nsent'):
     }
 
 elif tags.has('nscom'):
+    templates_path = ['nscom/_templates']
     project = u'NethServer'
     html_title = u"%s %s" % (project, release)
     html_theme = "sphinx_rtd_theme"
