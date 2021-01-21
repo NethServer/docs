@@ -12,12 +12,7 @@
 # serve to show the default.
 
 import sys, os, datetime
-
-try:
-    import sphinx_rtd_theme
-    import sphinx_bootstrap_theme
-except ImportError:
-    pass
+import sphinx_rtd_theme
 
 copyright = u'%d, Nethesis Srl and the NethServer project contributors' % datetime.date.today().year
 
@@ -77,15 +72,15 @@ htmlhelp_basename = 'NethServer_enterprisedoc'
 
 if tags.has('nsent'):
     smartquotes = False
-    templates_path = ['nsent/_templates']
     project = u'NethServer Enterprise'
     html_title = "%s %s" % (project, release)
-    html_theme = "bootstrap"
-    html_logo = 'nsent/_static/favico_neth.png'
-    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+    html_theme = "sphinx_rtd_theme"
+    html_logo = 'nsent/_static/nethserver_enterprise_yellow.png'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     html_favicon = 'nsent/_static/favicon.ico' 
     html_static_path = ['nsent/_static']
     html_extra_path = ['nsent/robots.txt']
+    html_css_files = ['nethesis.css']
     exclude_patterns.extend([
         'webvirtmgr.rst',
         'nscom_*.rst'
@@ -115,19 +110,14 @@ if tags.has('nsent'):
        'Miscellaneous'),
     ]
     html_theme_options = {
-        'navbar_title': 'NethServer Enterprise',
-        'navbar_pagenav': True,
-        'navbar_sidebarrel': False,
-        'navbar_pagenav_name': 'Contents',
-        'navbar_class': "navbar",
-        'navbar_fixed_top': "false",
-        'source_link_position': "none",
-        'bootswatch_theme': "cerulean",
         'nosidebar': "1",
+        'collapse_navigation': True,
+        'navigation_depth': -1,
+        'logo_only': True,
+        'style_nav_header_background': '#343131',
     }
 
 elif tags.has('nscom'):
-    templates_path = ['nscom/_templates']
     project = u'NethServer'
     html_title = u"%s %s" % (project, release)
     html_theme = "sphinx_rtd_theme"
