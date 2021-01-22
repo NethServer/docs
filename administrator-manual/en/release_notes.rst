@@ -63,8 +63,8 @@ Major changes on 2020-11-26
   :guilabel:`System > Users & Groups > [Account provider] > Edit provider`.
   See also :ref:`dedicated-service-account`.
 
-* To prevent errors during Nextcloud upgrades, the ``mail`` and ``theming`` have been disabled.
-  After each upgrade, both applications should be manually updated and re-enabled by accessing
+* To prevent errors during Nextcloud upgrades, the ``mail`` application has been disabled.
+  After each upgrade, the application should be manually updated and re-enabled by accessing
   Nextcloud administration interface.
 
 * Netdata is now installed by default to serve charts for the Server Manager.
