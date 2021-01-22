@@ -20,11 +20,15 @@ Administrator Manual
 
 .. only:: nsent
 
-    .. sidebar:: Contacts
+    .. sidebar:: See also 
 
         Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
+      
+        Version 6: `docs.nethserver.org <https://docs.nethserver.org/en/v6/>`_
+
+        Italian: `docs.nethserver.org <https://docs.nethserver.org/it/v7/>`_
 
 .. toctree::
    :maxdepth: 2
