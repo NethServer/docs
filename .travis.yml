@@ -1,7 +1,7 @@
 ---
 language: python
 python:
-    - "2.7"
+    - "3.9"
 
 env:
     global:
@@ -12,7 +12,7 @@ env:
 
 install:
     - sudo apt-get install sshpass
-    - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt sphinx==1.7.4
+    - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt sphinx==3.2.1
 
 script:
     - pushd ${BUILD_DIR}/
