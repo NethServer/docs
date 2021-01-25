@@ -26,9 +26,9 @@ Administrator Manual
 
         Official site: `www.nethesis.it <http://www.nethesis.it>`_
 
-        Version 6: `docs.nethserver.org <https://docs.nethserver.org/en/v6/>`_
+        Italian `Manual <https://nethserver.docs.nethesis.it/it/v7/>`_
 
-        Italian: `docs.nethserver.org <https://docs.nethserver.org/it/v7/>`_
+        Obsolete `NethServer 6 Manual <https://nethserver.docs.nethesis.it/en/v6/>`_
 
 .. toctree::
    :maxdepth: 2
