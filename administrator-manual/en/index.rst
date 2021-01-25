@@ -162,7 +162,6 @@ Administrator Manual
    ui/*
 
 
-
 .. image:: nscom/_static/by-nc-sa_small.png
    :alt: CC by-nc-sa
    :align: right
