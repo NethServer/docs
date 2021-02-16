@@ -17,8 +17,11 @@ getting access to monitoring portal and stable update repositories.
 
 Activating a subscription will enable the stable YUM repositories, but will
 disable any other repositories you may have added. You can re-enable any other
-repositories by creating a "template-custom" for
-:file:`/etc/nethserver/eorepo.conf`.
+repository by setting the ``ExtraRepositories`` property from the command line.
+The property accepts a comma-separated list of repository names and it is case sensitive. Example: ::
+
+  config setprop subscription ExtraRepositories nethforge,repositoryB
+  signal-event software-repos-save
 
 The subscription provider may not accept support requests for the contents of
 custom repositories.
