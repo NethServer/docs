@@ -133,6 +133,7 @@ Administrator Manual
        phpVirtualBox
        hotsync
        mssql
+       savapage
 
 .. toctree::
    :maxdepth: 1
