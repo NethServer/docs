@@ -39,7 +39,7 @@ This policy restricts the TLS settings of the default Ejabberd configuration.
 It applies only to Ejabberd version 18 and greater.
 
 Ejabberd (XMPP)
-    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * See https://bettercrypto.org/
     * Disabled SSLv3 and TLSv1.0
     * Cipher server priority
     * ECC certificate
@@ -71,7 +71,7 @@ upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25
 clients. It does not support ECC certificates.
 
 Apache
-    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * See https://bettercrypto.org/
     * Cipher suite ::
         
         EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
@@ -80,7 +80,7 @@ Apache
     * Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-default`)
 
 Dovecot
-    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * See https://bettercrypto.org/
     * Cipher suite ::
         
         EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:+CAMELLIA256:+AES256:+CAMELLIA128:+AES128:+SSLv3:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!DSS:!RC4:!SEED:!ECDSA:CAMELLIA256-SHA:AES256-SHA:CAMELLIA128-SHA:AES128-SHA
@@ -88,7 +88,7 @@ Dovecot
     * Disabled SSLv2 and SSLv3
 
 Postfix
-    * See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B
+    * See https://bettercrypto.org/
     * Use TLS in outbound connections, if remote server supports it
     * Disable SSLv2 and SSLv3 on submission ports
     * Cipher suite ::
