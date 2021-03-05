@@ -1,28 +1,28 @@
 # #-#-#-#-#  freepbx.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  freepbx.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giovanni Bezicheri <inactive+pinkra@transifex.com>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# b7ecf697a9c336d7e6aaf5a07de572d0_638cd59 <35473c10b7db2d75ec2c5e09e9396b60_288646>, 2017
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2017-08-31 10:23+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,15 +34,7 @@ msgstr ""
 msgid "FreePBX"
 msgstr "FreePBX"
 
-#: ../../freepbx.rst:7
-msgid ""
-"The configuration page of this module is available only in the old Server "
-"Manager."
-msgstr ""
-"La pagina di configurazione di questo modulo è disponibile solo nel vecchio "
-"Server Manager."
-
-#: ../../freepbx.rst:9
+#: ../../freepbx.rst:5
 msgid ""
 ":index:`FreePBX` is a web-based open source GUI (graphical user interface) "
 "that controls and manages :index:`Asterisk` (PBX), an open source "
@@ -52,19 +44,19 @@ msgstr ""
 " :index:`Asterisk` (PBX), un software di comunicazione open source "
 "(https://www.freepbx.org/)."
 
-#: ../../freepbx.rst:14
+#: ../../freepbx.rst:10
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../freepbx.rst:16
+#: ../../freepbx.rst:12
 msgid ""
-"You can install FreePBX from the package manager of NethServer, the module "
+"You can install FreePBX from the package manager of |product|, the module "
 "named \"FreePBX\"."
 msgstr ""
-"E' possibile installare FreePBX dal gestore pacchetti di NethServer, il "
+"E' possibile installare FreePBX dal gestore pacchetti di |product|, il "
 "modulo si chiama \"FreePBX\"."
 
-#: ../../freepbx.rst:19
+#: ../../freepbx.rst:15
 msgid ""
 "All FreePBX configurations and data are saved inside configuration and data "
 "backup."
@@ -72,27 +64,47 @@ msgstr ""
 "Tutte le configurazioni e i dati di FreePBX sono salvati nei backup "
 "configurazione e dati."
 
-#: ../../freepbx.rst:22
-msgid "Web Access"
-msgstr "Accesso Web"
+#: ../../freepbx.rst:18
+msgid "Configuration"
+msgstr "Configurazione"
 
-#: ../../freepbx.rst:24
+#: ../../freepbx.rst:21
+msgid "External access"
+msgstr "Accesso esterno"
+
+#: ../../freepbx.rst:23
 msgid ""
-"After installed, FreePBX will be accessible at "
-"``https://ip_address/freepbx`` from green interfaces. You can also configure"
-" the access from the red interface under the \"PBX Access\" page of the "
-"|product| Server Manager."
+"As default, IAX and SIPs ports are open only for green interfaces. To open "
+"access from remote networks, just enable the :guilabel:`Allow external IAX "
+"access` and :guilabel:`Allow external SIP TLS access` options."
 msgstr ""
-"Dopo l'installazione, FreePBX è accessibile all'indirizzo "
-"``https://ip_address/freepbx`` dalle interfacce green. E' anche possibile "
-"configurare l'accesso da interfaccia red della pagina \"Accesso PBX\" nel "
-"Server Manager di |product|."
+"Per impostazione predefinita, le porte IAX e SIP sono aperte solo per "
+"interfacce green. Per aprire l'accesso da reti remote, è sufficiente "
+"abilitare  le opzioni :guilabel:`Permetti accesso esterno IAX` e "
+":guilabel:`Permetti accesso esterno SIP TLS `."
+
+#: ../../freepbx.rst:28
+msgid "Web interface access"
+msgstr "Accesso interfaccia web"
 
 #: ../../freepbx.rst:30
+msgid ""
+"After installed, FreePBX will be accessible at "
+"``https://ip_address/freepbx`` from green interfaces only. You can allow "
+"access from extra networks by clicking on :guilabel:`Create new access` "
+"button under the *Settings* page of FreePBX application."
+msgstr ""
+"Dopo l'installazione, FreePBX sarà accessibile tramite l'URL "
+"``https://ip_address/freepbx`` solo dalle interfacce green. Per consentire "
+"l'accesso da reti differenti sarà sufficiente fare clic sul pulsante "
+":guilabel:`Crea nuovo accesso` nella pagina *Impostazioni* dell'applicazione"
+" FreePBX."
+
+#: ../../freepbx.rst:36
 msgid "FwConsole"
 msgstr "FwConsole"
 
-#: ../../freepbx.rst:32
+#: ../../freepbx.rst:38
 msgid ""
 "The ``fwconsole`` is a tool that allows the user to perform some FreePBX "
 "administrative tasks (see `FreePBX wiki "
@@ -105,11 +117,11 @@ msgstr ""
 "<https://wiki.freepbx.org/pages/viewpage.action?pageId=37912685>`_). Per "
 "poterla usare con |product| è necessario utilizzare scl: ::"
 
-#: ../../freepbx.rst:40
+#: ../../freepbx.rst:46
 msgid "Advanced Documentation"
 msgstr "Documentazione avanzata"
 
-#: ../../freepbx.rst:42
+#: ../../freepbx.rst:48
 msgid ""
 "For further information you can read the FreePBX documentation at: "
 "https://wiki.freepbx.org"

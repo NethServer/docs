@@ -1,28 +1,28 @@
 # #-#-#-#-#  ui.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  ui.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Principi <davide.principi@nethesis.it>, 2018
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Nicola <nicola.rauso@nethesis.it>, 2018
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2018-01-10 14:21+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,7 +185,7 @@ msgid ""
 " Matching URLs are forwarded to the :guilabel:`Target URL`."
 msgstr ""
 "L'URL **path name** o il **virtual host name** (FQDN di un host). Un nome di"
-" percorso corrisponderà a URL come ``http://somehost /<path name>/ ... ``,  "
+" percorso corrisponderà a URL come ``http://somehost /<path name>/ ...``,  "
 "mentre un nome di un virtual host corrisponderà a un URL come ``http: "
 "//<virtual host name>/ ...``. Gli URL corrispondenti vengono inoltrati a  "
 ":guilabel:`Target URL`."

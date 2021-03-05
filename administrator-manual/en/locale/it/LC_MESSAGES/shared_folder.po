@@ -1,29 +1,29 @@
 # #-#-#-#-#  shared_folder.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  shared_folder.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
-# Filippo Carletti <filippo.carletti@gmail.com>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Filippo Carletti <filippo.carletti@gmail.com>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -456,18 +456,28 @@ msgstr ""
 #: ../../shared_folder.rst:214
 msgid ""
 "Actions are logged to a file during the the day and are moved to a "
-"browseable database overnight."
+"browseable database overnight. By default, to avoid the database "
+"overloading, read actions like access to files and directories are saved "
+"only inside :file:`/var/log/smbaudit.log`. To change this behavior and store"
+" read actions inside the database, access the :guilabel:`Settings` page and "
+"enable the :guilabel:`Enable auditing of read actions`."
 msgstr ""
-"Le azioni vengono registrate su un file durante il giorno e vengono spostate"
-" durante la notte in un database consultabile."
+"Le azioni vengono registrate in un log durante il giorno e spostate in un "
+"database nella notte. Di default, per evitare di sovraccaricare il database,"
+" le operazioni di lettura quali l'accesso a file e directory vengono salvate"
+" solo nel :file:`/var/log/smbaudit.log`. Per modificare questo comportamento"
+" e registrare le operazioni di lettura nel database, andare alla pagina "
+":guilabel:`Impostazioni` e abilitare :guilabel:`Abilita audit operazioni di "
+"lettura`."
 
-#: ../../shared_folder.rst:216
+#: ../../shared_folder.rst:218
+msgid "The auditing report is available under the :guilabel:`Audit` page."
+msgstr "Il registro di audit è disponibile nella pagina :guilabel:`Audit`."
+
+#: ../../shared_folder.rst:220
 msgid ""
-"The report web interface is available from the old Server Manager from the "
-":guilabel:`Applications` page, while the new Server Manager (Cockpit) "
-"integrates a new interface inside the :guilabel:`File server` application."
+"The same report is also available from the old Server Manager inside the "
+":menuselection:`Applications` page."
 msgstr ""
-"L'interfaccia web del report è disponibile nel vecchio Server Manager dalla "
-"pagina :guilabel:`Applicazioni`, mentre il nuovo Server Manager (Cockpit) "
-"integra una nuova interfaccia all'interno dell'applicazione :guilabel:`File "
-"server`."
+"Lo stesso report è anche disponibile nel vecchio Server Manager nella pagina"
+" :menuselection:`Applicazioni`."

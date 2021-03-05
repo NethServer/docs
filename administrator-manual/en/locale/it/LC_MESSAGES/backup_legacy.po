@@ -1,12 +1,12 @@
 # #-#-#-#-#  backup_legacy.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  backup_legacy.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2019-10-07 12:38+0000\n"
 "Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -35,25 +35,17 @@ msgstr "Legacy backup"
 
 #: ../../backup_legacy.rst:7
 msgid ""
-"A new backup module is available inside the new Server Manager. See :ref"
-":`backup-section`."
-msgstr ""
-"Un nuovo modulo di backup è disponibile nel nuovo Server Manager. Vedere "
-":ref:`backup-section`."
-
-#: ../../backup_legacy.rst:9
-msgid ""
 "|product| handles two kinds of backups: configuration backup and data "
 "backup. See :ref:`backup-section` for more details."
 msgstr ""
 "|product| gestisce due tipi di backup: il backup della configurazione e il "
 "backup dei dati. Vedere  :ref:`backup-section` per maggiori informazioni."
 
-#: ../../backup_legacy.rst:13
+#: ../../backup_legacy.rst:11
 msgid "Configuration backup"
 msgstr "Backup configurazione"
 
-#: ../../backup_legacy.rst:15
+#: ../../backup_legacy.rst:13
 msgid ""
 "From page :guilabel:`Backup (configuration)` the system configuration can be"
 " saved, downloaded, uploaded and restored again."
@@ -61,7 +53,7 @@ msgstr ""
 "Dalla pagina :guilabel:`Backup (configurazione)` è possibile salvare, "
 "scaricare, eseguire l'upload o ripristinare la configurazione del sistema"
 
-#: ../../backup_legacy.rst:18
+#: ../../backup_legacy.rst:16
 msgid ""
 "The page allows the creation of a new on-demand backup by clicking on the "
 ":guilabel:`Create backup` button. As default, the system retains the latest "
@@ -73,11 +65,11 @@ msgstr ""
 " tre backup della configurazione. La politica di conservazione può essere "
 "modificata con il pulsante :guilabel:`Configura`."
 
-#: ../../backup_legacy.rst:22
+#: ../../backup_legacy.rst:20
 msgid "Data backup"
 msgstr "Backup dati"
 
-#: ../../backup_legacy.rst:26
+#: ../../backup_legacy.rst:24
 msgid ""
 "The old Server Manager can handle only a single backup. Such configuration "
 "can be managed also from the new Server Manager by editing the backup named "
@@ -87,7 +79,7 @@ msgstr ""
 "configurazione può essere gestita anche dal nuovo Server Manager, "
 "modificando il backup denominato ``backup-data``."
 
-#: ../../backup_legacy.rst:30
+#: ../../backup_legacy.rst:28
 msgid ""
 "The data backup is performed using Duplicity engine and can be configured "
 "from :guilabel:`Backup (data)` page. :index:`Duplicity` is the well-known "
@@ -106,11 +98,11 @@ msgstr ""
 "potrebbe richiedere più di 24 ore. |product| non implementa la crittografia "
 "per il backup quando si utilizza Duplicity."
 
-#: ../../backup_legacy.rst:37
+#: ../../backup_legacy.rst:35
 msgid "Supported storage backends:"
 msgstr "Backend di archiviazione supportati:"
 
-#: ../../backup_legacy.rst:39
+#: ../../backup_legacy.rst:37
 msgid ""
 "CIFS: Windows shared folder, it's available on all NAS (Network Attached "
 "Storage). Use access credentials like: MyBindUser,domain=mydomain.com"
@@ -119,7 +111,7 @@ msgstr ""
 "Attached Storage). Utilizza credenziali di accesso come: "
 "MioUtente,domain=miodominio.com"
 
-#: ../../backup_legacy.rst:40
+#: ../../backup_legacy.rst:38
 msgid ""
 "NFS: Linux shared folder, it's available on all NAS, usually faster than "
 "CIFS"
@@ -127,7 +119,7 @@ msgstr ""
 "NFS: cartella condivisa Linux, disponibile su tutti i NAS, solitamente più "
 "veloce di CIFS"
 
-#: ../../backup_legacy.rst:41
+#: ../../backup_legacy.rst:39
 msgid ""
 "WebDAV: available on many NAS and remote servers (use a server with a valid "
 "SSL certificate as WebDAV target, otherwise the system will fail mounting "
@@ -137,11 +129,11 @@ msgstr ""
 "destinazione WebDAV un server con un certificato SSL valido, altrimenti il "
 "sistema non riuscirà a montare il filesystem)"
 
-#: ../../backup_legacy.rst:42
+#: ../../backup_legacy.rst:40
 msgid "USB: disk connected to a local USB/SATA port"
 msgstr "USB: disco collegato ad una porta USB/SATA locale"
 
-#: ../../backup_legacy.rst:45
+#: ../../backup_legacy.rst:43
 msgid ""
 "The selective restore of files can be performed only form the new Server "
 "Manager. See :ref:`selective_restore-section`."

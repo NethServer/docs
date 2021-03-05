@@ -1,29 +1,29 @@
 # #-#-#-#-#  index.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  index.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2017
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,39 +31,39 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../index.rst:29
+#: ../../index.rst:33
 msgid "Release notes"
 msgstr "Release notes"
 
-#: ../../index.rst:35
+#: ../../index.rst:39
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:50
+#: ../../index.rst:54
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../index.rst:68
-msgid "Applications - New Server Manager"
-msgstr "Applicazioni - Nuovo Server Manager"
+#: ../../index.rst:72
+msgid "Applications"
+msgstr "Applicazioni"
 
-#: ../../index.rst:75
-msgid "Modules"
-msgstr "Moduli"
+#: ../../index.rst:104
+msgid "Other modules"
+msgstr "Altri moduli"
+
+#: ../../index.rst:115
+msgid "Best practices"
+msgstr "Best practice"
 
 #: ../../index.rst:126
 msgid "NethForge modules"
 msgstr "Moduli NethForge"
 
-#: ../../index.rst:135
-msgid "Best practices"
-msgstr "Best practice"
-
-#: ../../index.rst:141
+#: ../../index.rst:137
 msgid "Appendix"
 msgstr "Appendice"
 
-#: ../../index.rst:153
+#: ../../index.rst:150
 msgid "Old Server Manager"
 msgstr "Vecchio Server Manager"
 
@@ -91,8 +91,8 @@ msgstr ""
 "devel>`_"
 
 #: ../../index.rstNone
-msgid "Contacts"
-msgstr "Contatti"
+msgid "See also"
+msgstr ""
 
 #: ../../index.rst:25
 msgid "Support: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
@@ -101,3 +101,12 @@ msgstr "Supporto: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 #: ../../index.rst:27
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sito ufficiale: `www.nethesis.it <http://www.nethesis.it>`_"
+
+#: ../../index.rst:29
+msgid "Italian `Manual <https://nethserver.docs.nethesis.it/it/v7/>`_"
+msgstr ""
+
+#: ../../index.rst:31
+msgid ""
+"Obsolete `NethServer 6 Manual <https://nethserver.docs.nethesis.it/en/v6/>`_"
+msgstr ""
