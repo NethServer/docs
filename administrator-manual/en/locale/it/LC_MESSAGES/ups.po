@@ -1,26 +1,28 @@
 # #-#-#-#-#  ups.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  ups.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,9 +121,15 @@ msgid "UPS statistics"
 msgstr "Statistiche UPS"
 
 #: ../../ups.rst:42
-msgid ""
-"If the statistics module (collectd) is installed and running, the module "
-"will automatically collect statistic data about UPS status."
+msgid "Realtime status is available from the **UPS** application dashboard."
 msgstr ""
-"Se il modulo statistiche (collectd) è installato e funzionante, il modulo "
-"raccoglierà automaticamente statistiche sullo stato dell'UPS."
+"Lo stato in tempo reale è disponibile nella dashboard dell'applicazione "
+"**UPS**."
+
+#: ../../ups.rst:44
+msgid ""
+"Also, if the statistics module (collectd) is installed and running, the "
+"module will automatically collect statistic data about UPS status."
+msgstr ""
+"Inoltre, se il modulo statistiche (collectd) è installato e funzionante, il "
+"modulo raccoglierà automaticamente statistiche sullo stato dell'UPS."

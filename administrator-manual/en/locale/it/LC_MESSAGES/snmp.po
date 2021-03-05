@@ -1,28 +1,28 @@
 # #-#-#-#-#  snmp.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  snmp.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
-# Nicola <nicola.rauso@nethesis.it>, 2018
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,12 +37,12 @@ msgstr "SNMP"
 #: ../../snmp.rst:7
 msgid ""
 "The configuration page of this module is available only in the old Server "
-"Manager and will not be ported to the new one."
+"Manager."
 msgstr ""
 "La pagina di configurazione di questo modulo è disponibile solo nel vecchio "
-"Server Manager e non verrà riportata in quello nuovo."
+"Server Manager."
 
-#: ../../snmp.rst:10
+#: ../../snmp.rst:9
 msgid ""
 "The :index:`SNMP` (Simple Network Management Protocol) protocol allows to "
 "manage and monitor devices connected to the network. The `SNMP "
@@ -55,27 +55,27 @@ msgstr ""
 "grado di rispondere a richieste specifiche riportando lo stato attuale del "
 "sistema."
 
-#: ../../snmp.rst:13
+#: ../../snmp.rst:12
 msgid "The server is disabled by default."
 msgstr "Il server è disabilitato di default."
 
-#: ../../snmp.rst:15
+#: ../../snmp.rst:14
 msgid "To enable it, you should set three main options:"
 msgstr "Per abilitarlo è necessario configurare tre parametri principali:"
 
-#: ../../snmp.rst:17
+#: ../../snmp.rst:16
 msgid "the SNMP community name"
 msgstr "il nome della comunità SNMP"
 
-#: ../../snmp.rst:18
+#: ../../snmp.rst:17
 msgid "the location name where the server is located"
 msgstr "il nome del luogo in cui risiede il server"
 
-#: ../../snmp.rst:19
+#: ../../snmp.rst:18
 msgid "the name and email address of system administrator"
 msgstr "il nome e l’indirizzo mail dell’amministratore di sistema"
 
-#: ../../snmp.rst:21
+#: ../../snmp.rst:20
 msgid ""
 "The implementation is based on the Net-SNMP project. Please refer to the "
 "official project page for more information: http://www.net-snmp.org/"

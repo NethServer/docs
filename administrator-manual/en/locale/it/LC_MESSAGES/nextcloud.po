@@ -1,29 +1,29 @@
 # #-#-#-#-#  nextcloud.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  nextcloud.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2020
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,8 +88,12 @@ msgstr ""
 "Dopo l’installazione:"
 
 #: ../../nextcloud.rst:26
-msgid "open the URL https://your_nethserver_ip/nextcloud"
-msgstr "collegarsi all'URL https://your_nethserver_ip/nextcloud"
+msgid ""
+"click on the :menuselection:`Applications > Nextcloud` item title or open "
+"the URL ``https://your_nethserver_ip/nextcloud``"
+msgstr ""
+"fare clic sul nome dell'elemento :menuselection:`Applicazioni> Nextcloud` o "
+"aprire l'URL ``https://your_nethserver_ip/nextcloud``"
 
 #: ../../nextcloud.rst:27
 msgid "use **admin/Nethesis,1234** as default credentials"
@@ -173,12 +177,16 @@ msgstr "Host virtuale personalizzato"
 #: ../../nextcloud.rst:56
 msgid ""
 "Sometimes it's better to reserve a full virtual host for accessing Nextcloud"
-" like ``nextcloud.nethserver.org``."
+" like ``nextcloud.nethserver.org``. To configure the virtualhost, enable the"
+" :guilabel:`Use a virtual host for Nextcloud` option and fill the "
+":guilabel:`Virtual host name` field."
 msgstr ""
 "In alcuni casi è opportuno riservare un virtual host completo per accedere a"
-" Nextcloud come ``nextcloud.nethserver.org``."
+" Nextcloud come ``nextcloud.nethserver.org``. Per configurare il virtual "
+"host, abilitare l'opzione :guilabel:`Usa un virtual host per Nextcloud` e "
+"compilare il campo :guilabel:`Nome virtual host`."
 
-#: ../../nextcloud.rst:58
+#: ../../nextcloud.rst:59
 msgid ""
 "Please note that after the configuration of a custom virtual host, Nextcloud"
 " will no longer be accessible from the default URL "
@@ -188,7 +196,7 @@ msgstr ""
 "personalizzato, Nextcloud non sarà più accessibile dall'URL predefinito "
 "``https://ip_del_nethserver/nextcloud``."
 
-#: ../../nextcloud.rst:60
+#: ../../nextcloud.rst:61
 msgid ""
 "If the machine is using :ref:`Let's Encrypt <server_certificate-section>`, "
 "remember to add the virtual host domain name to list of valid certificate "
@@ -198,11 +206,11 @@ msgstr ""
 " necessario ricordarsi di aggiungere il nome di dominio del virtual host "
 "dedicato all'elenco dei domini validi nel certificato."
 
-#: ../../nextcloud.rst:63
+#: ../../nextcloud.rst:64
 msgid "Trusted domains"
 msgstr "Trusted domains"
 
-#: ../../nextcloud.rst:65
+#: ../../nextcloud.rst:66
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -210,15 +218,15 @@ msgstr ""
 "I Trusted domains sono una lista di domini su cui l’utente può effettuare il"
 " login. Quelli presenti di default sono:"
 
-#: ../../nextcloud.rst:67
+#: ../../nextcloud.rst:68
 msgid "domain name"
 msgstr "nome dominio"
 
-#: ../../nextcloud.rst:68
+#: ../../nextcloud.rst:69
 msgid "IP address"
 msgstr "indirizzo IP"
 
-#: ../../nextcloud.rst:70
+#: ../../nextcloud.rst:71
 msgid ""
 "The list of trusted domains can be customized using :guilabel:`Trusted "
 "domains` field: add one domain per line."
@@ -226,11 +234,11 @@ msgstr ""
 "L'elenco dei domini fidati può essere personalizzato usando il campo "
 ":guilabel:`Domini fidati`: aggiungere un dominio per riga."
 
-#: ../../nextcloud.rst:73
+#: ../../nextcloud.rst:74
 msgid "CalDAV and CardDAV"
 msgstr "CalDAV e CardDAV"
 
-#: ../../nextcloud.rst:75
+#: ../../nextcloud.rst:76
 msgid ""
 "Some CalDAV and CardDAV clients may have problems finding the proper sync "
 "URL and need automatic service discovery. Service discovery is enabled by "
@@ -241,7 +249,7 @@ msgstr ""
 " dei servizi. Il servizio di discovery viene abilitato di default se si "
 "utilizza un virtual host personalizzato per Nextcloud."
 
-#: ../../nextcloud.rst:78
+#: ../../nextcloud.rst:79
 msgid ""
 "To enable the service discovery even if Nextcloud is running on the default "
 "URL, check the :guilabel:`Enable CalDAV and CardDAV auto-discovery` field."
@@ -250,7 +258,7 @@ msgstr ""
 "sull'URL predefinito, selezionare il campo :guilabel:`Abilita rilevamento "
 "automatico CalDAV e CardDAV`."
 
-#: ../../nextcloud.rst:81
+#: ../../nextcloud.rst:82
 msgid ""
 "When enabling DAV auto-discovery, please make sure WebTop or SOGo are *not* "
 "already installed."
@@ -258,21 +266,21 @@ msgstr ""
 "Quando si abilita l'auto-discovery DAV, assicurarsi che WebTop o SOGo *non* "
 "siano già installati."
 
-#: ../../nextcloud.rst:85
+#: ../../nextcloud.rst:86
 msgid "Collabora Online"
 msgstr "Collabora Online"
 
-#: ../../nextcloud.rst:87
+#: ../../nextcloud.rst:88
 msgid "See :ref:`Collabora Online module from NethForge <collabora-section>`."
 msgstr ""
 "Fare riferimento a :ref:`Collabora Online module da NethForge <collabora-"
 "section>`."
 
-#: ../../nextcloud.rst:91
+#: ../../nextcloud.rst:92
 msgid "ONLYOFFICE"
 msgstr "ONLYOFFICE"
 
-#: ../../nextcloud.rst:93
+#: ../../nextcloud.rst:94
 msgid ""
 "Since Nextcloud 18, ONLYOFFICE Community Document Server can be installed "
 "directly to the system without further configuration. To enable built-in "
@@ -283,18 +291,18 @@ msgstr ""
 "Per abilitare l'integrazione con ONLYOFFICE, accedere a Nextcloud con "
 "l'utente ``admin``, quindi:"
 
-#: ../../nextcloud.rst:96
+#: ../../nextcloud.rst:97
 msgid ""
 "Go to :guilabel:`Apps` page and access :guilabel:`Office & text` section"
 msgstr ""
 "Accedere pagina :guilabel:`Apps` e spostarsi nella sezione :guilabel:`Office"
 " & text`"
 
-#: ../../nextcloud.rst:97
+#: ../../nextcloud.rst:98
 msgid "Download and enable the ``ONLYOFFICE`` application"
 msgstr "Scaricare e abilitare l'applicazione ``ONLYOFFICE``"
 
-#: ../../nextcloud.rst:98
+#: ../../nextcloud.rst:99
 msgid ""
 "Download and enable the ``Community Document Server`` application.  Please "
 "be patient, download and install will take a while."
@@ -302,7 +310,7 @@ msgstr ""
 "Scaricare e abilitare l'applicazione ``Community Document Server``. Sarà "
 "necessario pazientare, il download e l'installazione richiederà del tempo."
 
-#: ../../nextcloud.rst:99
+#: ../../nextcloud.rst:100
 msgid ""
 "Go to the :guilabel:`Settings` page and access the :guilabel:`ONLYOFFICE` "
 "application under :guilabel:`Administration` section"
@@ -311,7 +319,7 @@ msgstr ""
 "dell'applicazione :guilabel:`ONLYOFFICE` nella sezione "
 ":guilabel:`Administration`"
 
-#: ../../nextcloud.rst:100
+#: ../../nextcloud.rst:101
 msgid ""
 "Verify the :guilabel:`Document Editing Service address` already contains the"
 " public address of your Nextcloud server"
@@ -319,7 +327,7 @@ msgstr ""
 "Verificare che il campo :guilabel:`Document Editing Service address` "
 "contenga già l'indirizzo pubblico del server Nextcloud"
 
-#: ../../nextcloud.rst:102
+#: ../../nextcloud.rst:103
 msgid "Installation of full ONLYOFFICE server is not supported on |product|."
 msgstr ""
 "L'installazione del server ONLYOFFICE completo non è supportata su  "

@@ -1,27 +1,27 @@
 # #-#-#-#-#  statistics.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  statistics.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Borficchia <dado.borfi@hotmail.it>, 2017
-# Filippo Carletti <filippo.carletti@gmail.com>, 2017
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2017\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,68 +37,60 @@ msgstr "Statistiche (collectd)"
 msgid ""
 ":index:`Collectd` is a daemon which collects system performance "
 ":index:`statistics` periodically and stores them in RRD files. Statistics "
-"will be displayed inside a web interface called"
+"will be displayed inside a web interface called Collectd Graph Panel (CGP)."
 msgstr ""
 ":index:`Collectd` è un software che raccoglie periodicamente "
 ":index:`statistiche` sulle performance del sistema e le salva in speciali "
-"file RRD. Le statistiche sono quindi consultabili attraverso un’interfaccia "
-"web."
+"file RRD. Le statistiche sono quindi consultabili attraverso l’interfaccia "
+"web Collectd Graph Panel (CGP)."
 
 #: ../../statistics.rst:8
-msgid "Collectd Graph Panel (CGP), package *nethserver-cgp*"
-msgstr "Collectd Graph Panel (CGP), pacchetto *nethserver-cgp*"
-
-#: ../../statistics.rst:10
-msgid "The web interface can be accessed from the :guilabel:`Graphs`."
-msgstr "L'interfaccia web è accessibile dalla pagina :guilabel:`Grafici`."
-
-#: ../../statistics.rst:12
 msgid "After installation, the system will gather following statistics:"
 msgstr ""
 "Al termine dell’installazione, il sistema collezionerà le seguenti "
 "informazioni:"
 
-#: ../../statistics.rst:14
+#: ../../statistics.rst:10
 msgid "CPU usage"
 msgstr "utilizzo CPU"
 
-#: ../../statistics.rst:15
+#: ../../statistics.rst:11
 msgid "system load"
 msgstr "carico di sistema"
 
-#: ../../statistics.rst:16
+#: ../../statistics.rst:12
 msgid "number of processes"
 msgstr "numero di processi"
 
-#: ../../statistics.rst:17
+#: ../../statistics.rst:13
 msgid "RAM memory usage"
 msgstr "utilizzo memoria RAM"
 
-#: ../../statistics.rst:18
+#: ../../statistics.rst:14
 msgid "virtual memory (swap) usage"
 msgstr "utilizzo memoria virtuale (swap)"
 
-#: ../../statistics.rst:19
+#: ../../statistics.rst:15
 msgid "system uptime"
 msgstr "tempo di accensione"
 
-#: ../../statistics.rst:20
+#: ../../statistics.rst:16
 msgid "disk space usage"
 msgstr "utilizzo spazio su disco"
 
-#: ../../statistics.rst:21
+#: ../../statistics.rst:17
 msgid "disk read and write operations"
 msgstr "operazioni di lettura e scrittura su disco"
 
-#: ../../statistics.rst:22
+#: ../../statistics.rst:18
 msgid "network interfaces"
 msgstr "interfacce di rete"
 
-#: ../../statistics.rst:23
+#: ../../statistics.rst:19
 msgid ":index:`network latency`"
 msgstr ":index:`latenza di rete`"
 
-#: ../../statistics.rst:25
+#: ../../statistics.rst:21
 msgid ""
 "For each check, the web interface will display a graph containing last "
 "collected value and also minimum, maximum and average values."
@@ -106,11 +98,35 @@ msgstr ""
 "Per ciascun controllo, l’interfaccia mostra un grafico che contiene sia "
 "l’ultimo valore raccolto, sia i valori minimi, massimi e medi."
 
-#: ../../statistics.rst:29
+#: ../../statistics.rst:23
+msgid ""
+"CGP is accessible on a random URL generated on first install, something like"
+" "
+"``https://myserver.nethserver.org:980/02bf3f8364beea0d5f23044bf14d31d93f63e98d``."
+" The URL is available from the Server Manager inside the "
+":menuselection:`Applications` page. Click the :guilabel:`Open` button of "
+":guilabel:`Collectd Charts` application."
+msgstr ""
+"CGP è accessibile tramite un URL casuale generato alla prima installazione, "
+"qualcosa simile a "
+"``https://myserver.nethserver.org:980/02bf3f8364beea0d5f23044bf14d31d93f63e98d"
+" ''. L'URL è disponibile dal Server Manager, all'interno della pagina "
+":menuelection:`Applicazioni`. Fare clic sul pulsante :guilabel:`Apri` "
+"dell'applicazione :guilabel:`Collectd Charts`."
+
+#: ../../statistics.rst:27
+msgid ""
+"From the old Server Manager, the web interface can be accessed using the "
+":guilabel:`Graphs` section."
+msgstr ""
+"Dal vecchio Server Manager, è possibile accedere all'interfaccia web "
+"utilizzando la sezione :guilabel:`Grafici`."
+
+#: ../../statistics.rst:30
 msgid "Network latency"
 msgstr "Latenza di rete"
 
-#: ../../statistics.rst:31
+#: ../../statistics.rst:32
 msgid ""
 "The :index:`ping` plugin measure the network latency. At regular intervals, "
 "it sends a ping to the configured upstream DNS. If the multi WAN module is "
@@ -120,7 +136,7 @@ msgstr ""
 "collectd invia un ping al DNS configurato. Se la multi WAN è attiva, anche "
 "tutti i provider abilitati verranno controllati."
 
-#: ../../statistics.rst:34
+#: ../../statistics.rst:35
 msgid ""
 "Additional hosts could be monitored (i.e. a web server) using a comma "
 "separated list of hosts inside the ``PingHosts`` property."
@@ -128,6 +144,6 @@ msgstr ""
 "Host aggiuntivi possono essere monitorati (es. server web) usando una lista "
 "separata da virgole all’interno della proprietà ``PingHosts``."
 
-#: ../../statistics.rst:36
+#: ../../statistics.rst:37
 msgid "Example: ::"
 msgstr "Esempio: ::"

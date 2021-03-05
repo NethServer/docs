@@ -1,12 +1,12 @@
 # #-#-#-#-#  fax_server.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  fax_server.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -16,16 +16,16 @@
 # Davide Principi <davide.principi@nethesis.it>, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2018
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,12 +40,12 @@ msgstr "Server FAX"
 #: ../../fax_server.rst:7
 msgid ""
 "The configuration page of this module is available only in the old Server "
-"Manager and will not be ported to the new one."
+"Manager."
 msgstr ""
-"La pagina di configurazione di questo modulo è disponibile sono nel vecchio "
-"Server Manager e non verrà portata nel nuovo."
+"La pagina di configurazione di questo modulo è disponibile solo nel vecchio "
+"Server Manager."
 
-#: ../../fax_server.rst:11
+#: ../../fax_server.rst:9
 msgid ""
 "The :index:`fax` server allows you to send and receive faxes via a modem "
 "connected directly to a server port or through a :index:`virtual modem`."
@@ -54,30 +54,30 @@ msgstr ""
 "modem fisico collegato direttamente al server o attraverso un :index:`modem "
 "virtuale`."
 
-#: ../../fax_server.rst:14
+#: ../../fax_server.rst:12
 msgid "The web interface allows you to configure:"
 msgstr "L’interfaccia web consente di configurare:"
 
-#: ../../fax_server.rst:16
+#: ../../fax_server.rst:14
 msgid "Area code and fax number"
 msgstr "Prefisso e numero di fax"
 
-#: ../../fax_server.rst:17
+#: ../../fax_server.rst:15
 msgid "Sender (TSI)"
 msgstr "Mittente (TSI)"
 
-#: ../../fax_server.rst:18
+#: ../../fax_server.rst:16
 msgid ""
 "A physical modem with phone line parameters and how to send/receive faxes"
 msgstr ""
 "Un modem fisico specificando i parametri della linea telefonica e la "
 "modalità di invio/ricezione"
 
-#: ../../fax_server.rst:19
+#: ../../fax_server.rst:17
 msgid "One or more :ref:`iax-modem`"
 msgstr "Uno o più :ref:`iax-modem`"
 
-#: ../../fax_server.rst:20
+#: ../../fax_server.rst:18
 msgid ""
 "Email notifications for sent and received faces, with the attached document "
 "in multiple formats (PDF, PostScript, TIFF)"
@@ -85,27 +85,27 @@ msgstr ""
 "Notifiche mail per fax inviati e ricevuti, con documento allegato in formati"
 " multipli (PDF, PostScript, TIFF)"
 
-#: ../../fax_server.rst:21
+#: ../../fax_server.rst:19
 msgid "Print received faxes"
 msgstr "Stampa dei fax ricevuti"
 
-#: ../../fax_server.rst:22
+#: ../../fax_server.rst:20
 msgid "Virtual Samba printer"
 msgstr "Stampante virtuale Samba"
 
-#: ../../fax_server.rst:23
+#: ../../fax_server.rst:21
 msgid "Daily report of sent faxes"
 msgstr "Rapporto di invio giornaliero"
 
-#: ../../fax_server.rst:24
+#: ../../fax_server.rst:22
 msgid "Sending faxes via email"
 msgstr "Invio fax via mail"
 
-#: ../../fax_server.rst:28
+#: ../../fax_server.rst:26
 msgid "Modem"
 msgstr "Modem"
 
-#: ../../fax_server.rst:30
+#: ../../fax_server.rst:28
 msgid ""
 "Although HylaFAX supports a large number of brands and models, we recommend "
 "using an external serial or USB modem."
@@ -113,7 +113,7 @@ msgstr ""
 "Sebbene HylaFAX supporti un vasto numero di marche e modelli, si consiglia "
 "di utilizzare modem esterni seriali o USB."
 
-#: ../../fax_server.rst:32
+#: ../../fax_server.rst:30
 msgid ""
 "If an internal modem blocks, you must reboot the whole server, while an "
 "external modem can be turned off separately. In addition, the majority of "
@@ -126,13 +126,13 @@ msgstr ""
 "appartiene alla cosiddetta famiglia dei winmodem, modem “software” che "
 "necessitano di un driver, solitamente disponibile solo in ambiente Windows."
 
-#: ../../fax_server.rst:37
+#: ../../fax_server.rst:35
 msgid "Also be aware that many external USB modem are also winmodem."
 msgstr ""
 "Inoltre si consiglia di fare attenzione al fatto che anche molti modem "
 "esterni USB sono winmodem."
 
-#: ../../fax_server.rst:39
+#: ../../fax_server.rst:37
 msgid ""
 "You should prefer modems in Class 1 or 1.0, especially if based on "
 "Rockwell/Conexant or Lucent/Agere chips. The system also supports modems in "
@@ -142,11 +142,11 @@ msgstr ""
 "in particolare se basati su chipset Rockwell/Conexant o Lucent/Agere. Sono "
 "supportati anche modem in classi 2, 2.0 e 2.1."
 
-#: ../../fax_server.rst:43
+#: ../../fax_server.rst:41
 msgid "Client"
 msgstr "Client"
 
-#: ../../fax_server.rst:45
+#: ../../fax_server.rst:43
 msgid ""
 "We recommend using the fax client YajHFC (http://www.yajhfc.de/) that "
 "connects directly to the server and allows:"
@@ -154,32 +154,32 @@ msgstr ""
 "Si consiglia l’utilizzo del client fax YajHFC (http://www.yajhfc.de/) che si"
 " collega direttamente al server e consente:"
 
-#: ../../fax_server.rst:47
+#: ../../fax_server.rst:45
 msgid "the use of an LDAP address book"
 msgstr "l’utilizzo di una rubrica LDAP"
 
-#: ../../fax_server.rst:48
+#: ../../fax_server.rst:46
 msgid "ability to select the modem to send"
 msgstr "possibilità di selezionare i modem per l’invio"
 
-#: ../../fax_server.rst:49
+#: ../../fax_server.rst:47
 msgid "view the status of modems"
 msgstr "visualizzare la situazione dei modem fax"
 
-#: ../../fax_server.rst:52
+#: ../../fax_server.rst:50
 msgid "Authentication"
 msgstr "Autenticazione"
 
-#: ../../fax_server.rst:54
+#: ../../fax_server.rst:52
 msgid "The system supports two authentication methods for sending faxes:"
 msgstr "Il sistema supporta due metodi di autenticazione per l’invio di fax:"
 
-#: ../../fax_server.rst:56
+#: ../../fax_server.rst:54
 msgid "Host Based: uses the IP address of the computer sending the request"
 msgstr ""
 "Host Based: utilizza l’indirizzo IP del computer che invia la richiesta"
 
-#: ../../fax_server.rst:57
+#: ../../fax_server.rst:55
 msgid ""
 "PAM: uses username and password, users must belong to the group *faxmaster*."
 " The *faxmaster* group must be explicitly created."
@@ -187,18 +187,18 @@ msgstr ""
 "PAM: utilizza nome utente e password, gli utenti devono appartenere al "
 "gruppo *faxmaster*. Il gruppo *faxmaster* deve essere creato espressamente."
 
-#: ../../fax_server.rst:60
+#: ../../fax_server.rst:58
 msgid ""
 "Also make sure to enable the :guilabel:`View faxes from clients` option."
 msgstr ""
 "Assicurarsi inoltre che sia abilitata l’opzione :guilabel:`Visualizza fax "
 "inviati dai client`."
 
-#: ../../fax_server.rst:64
+#: ../../fax_server.rst:62
 msgid "Samba virtual printer"
 msgstr "Stampante virtuale Samba"
 
-#: ../../fax_server.rst:66
+#: ../../fax_server.rst:64
 msgid ""
 "If SambaFax option is enabled, the server will create virtual printer called"
 " \"sambafax\" available to the local network."
@@ -206,7 +206,7 @@ msgstr ""
 "Attivando l’opzione SambaFax il server mette a disposizione della rete "
 "locale una stampante virtuale, denominata “sambafax”."
 
-#: ../../fax_server.rst:68
+#: ../../fax_server.rst:66
 msgid ""
 "Each client must configure the printer using the Apple LaserWriter 16/600 PS"
 " driver."
@@ -214,11 +214,11 @@ msgstr ""
 "I singoli client dovranno configurare questa stampante usando il driver "
 "Apple LaserWriter 16/600 PS."
 
-#: ../../fax_server.rst:70
+#: ../../fax_server.rst:68
 msgid "Sent documents must meet the following prerequisites:"
 msgstr "Il documento da inviare dovrà rispettare i seguenti prerequisiti:"
 
-#: ../../fax_server.rst:72
+#: ../../fax_server.rst:70
 msgid ""
 "Must contain exactly the string \"Numero Fax:\", containing the fax number, "
 "for example: ::"
@@ -226,7 +226,7 @@ msgstr ""
 "Deve contenere esattamente la stringa “Numero Fax: ”, contenente il numero "
 "fax, per esempio: ::"
 
-#: ../../fax_server.rst:76
+#: ../../fax_server.rst:74
 msgid ""
 "The string may be present in any position of the document, but on a single "
 "line"
@@ -234,13 +234,13 @@ msgstr ""
 "La stringa può essere presente in qualsiasi posizione del documento, ma su "
 "una riga singola."
 
-#: ../../fax_server.rst:77
+#: ../../fax_server.rst:75
 msgid "The string must be written in non-bitmap font (eg. Truetype)"
 msgstr ""
 "La stringa deve essere scritta con carattere non bitmap (ad esempio "
 "Truetype)"
 
-#: ../../fax_server.rst:79
+#: ../../fax_server.rst:77
 msgid ""
 "Faxes will be sent using the sending user id. This information will be "
 "displayed in the fax queue."
@@ -248,17 +248,17 @@ msgstr ""
 "I fax spediti avranno come mittente l’id dell'utente specificato. Questa "
 "informazione sarà ben visibile nella coda dei fax."
 
-#: ../../fax_server.rst:83
+#: ../../fax_server.rst:81
 msgid "Mail2Fax"
 msgstr "Mail2Fax"
 
-#: ../../fax_server.rst:86
+#: ../../fax_server.rst:84
 msgid "To enable this function, make sure that ``Email`` module is installed."
 msgstr ""
 "Per abilitare questa funzione, assicurarsi che sia installato il modulo `` "
 "Email``."
 
-#: ../../fax_server.rst:88
+#: ../../fax_server.rst:86
 msgid ""
 "All emails sent to the local network at ``sendfax@<domainname>`` will be "
 "transformed into a fax and sent to the recipient."
@@ -267,7 +267,7 @@ msgstr ""
 "``sendfax@<nomedominio>`` saranno trasformate in fax ed inviate al "
 "destinatario."
 
-#: ../../fax_server.rst:90
+#: ../../fax_server.rst:88
 msgid ""
 "The ``<domainname>`` must match a local mail domain configured for local "
 "delivery."
@@ -275,21 +275,21 @@ msgstr ""
 "Il ``<nomedominio>`` deve corrispondere ad un dominio di posta configurato "
 "per la consegna locale."
 
-#: ../../fax_server.rst:92
+#: ../../fax_server.rst:90
 msgid "The email must comply with this format:"
 msgstr "Le mail devono rispettare questo formato:"
 
-#: ../../fax_server.rst:94
+#: ../../fax_server.rst:92
 msgid "The recipient's number must be specified in the object (or subject)"
 msgstr ""
 "Il numero del destinatario deve essere specificato nel campo oggetto (o "
 "subject)"
 
-#: ../../fax_server.rst:95
+#: ../../fax_server.rst:93
 msgid "The email must be in plain text format"
 msgstr "L’email deve essere in formato solo testo"
 
-#: ../../fax_server.rst:96
+#: ../../fax_server.rst:94
 msgid ""
 "It may contain attachments such as PDF or PS which will be converted and "
 "sent with your fax"
@@ -297,7 +297,7 @@ msgstr ""
 "Può contenere allegati di tipo PDF o PS che saranno convertiti e inviati "
 "insieme al fax"
 
-#: ../../fax_server.rst:98
+#: ../../fax_server.rst:96
 msgid ""
 "This service is enabled only for clients that send mails from the green "
 "network."
@@ -305,11 +305,11 @@ msgstr ""
 "Questo servizio è abilitato solo per i client che inviano mail dalla rete "
 "green."
 
-#: ../../fax_server.rst:103
+#: ../../fax_server.rst:101
 msgid "Virtual modems"
 msgstr "Modem virtuali"
 
-#: ../../fax_server.rst:105
+#: ../../fax_server.rst:103
 msgid ""
 "Virtual modems are software modems connected to a PBX (Asterisk usually) "
 "using a IAX extension."
@@ -317,14 +317,14 @@ msgstr ""
 "I modem virtuali sono modem software che comunicano con un PBX (solitamente "
 "Asterisk) utilizzando degli interni IAX."
 
-#: ../../fax_server.rst:108
+#: ../../fax_server.rst:106
 msgid "The configuration of the virtual modems consists of two parts:"
 msgstr "La configurazione dei modem virtuali si compone di due parti:"
 
-#: ../../fax_server.rst:110
+#: ../../fax_server.rst:108
 msgid "Creation of IAX extension within the PBX"
 msgstr "Creazione dell’interno IAX all’interno del PBX"
 
-#: ../../fax_server.rst:111
+#: ../../fax_server.rst:109
 msgid "Configuration of virtual modem"
 msgstr "Configurazione del modem virtuale"
