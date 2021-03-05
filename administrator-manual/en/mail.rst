@@ -918,7 +918,7 @@ following variants:
 
 * LOGIN
 * PLAIN
-* GSSAPI (only if |product| is bound to Samba/Microsoft Active Directory)
+* :ref:`GSSAPI <kerberos_auth>` (only if |product| is bound to Samba/Microsoft Active Directory)
 
 Also the following SSL-enabled ports are available for legacy software
 that still does not support STARTTLS:
@@ -931,6 +931,31 @@ that still does not support STARTTLS:
 
     The standard SMTP port 25 is reserved for mail transfers between MTA
     servers. Mail user agents (MUA) must use the submission port.
+
+.. _kerberos-auth:
+
+Kerberos-based authentication
+=============================
+
+Mail services can authenticate users of Active Directory with the Kerberos
+single-sign-on protocol.
+
+Both local and remote Active Directory accounts provider need an additional and manual
+step to complete the GSSAPI/Kerberos setup of IMAP, POP and SMTP services.
+
+1. In |product| shell authenticate as an AD domain administrator ::
+
+     kinit some_domain_admin
+
+2. Add the service principals for the mail services to the machine account
+
+     net ads setspn add $(hostname -s) imap/$(hostname -f)
+     net ads setspn add $(hostname -s) pop/$(hostname -f)
+     net ads setspn add $(hostname -s) smtp/$(hostname -f)
+
+3. Terminate the session ::
+
+     kdestroy
 
 .. rubric:: References
 
