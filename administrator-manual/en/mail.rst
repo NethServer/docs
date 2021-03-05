@@ -918,7 +918,7 @@ following variants:
 
 * LOGIN
 * PLAIN
-* :ref:`GSSAPI <kerberos_auth>` (only if |product| is bound to Samba/Microsoft Active Directory)
+* :ref:`GSSAPI <kerberos-auth>` (only if |product| is bound to Samba/Microsoft Active Directory)
 
 Also the following SSL-enabled ports are available for legacy software
 that still does not support STARTTLS:
