@@ -947,7 +947,7 @@ step to complete the GSSAPI/Kerberos setup of IMAP, POP and SMTP services.
 
      kinit some_domain_admin
 
-2. Add the service principals for the mail services to the machine account
+2. Add the service principals for the mail services to the machine account ::
 
      net ads setspn add $(hostname -s) imap/$(hostname -f)
      net ads setspn add $(hostname -s) pop/$(hostname -f)
