@@ -302,7 +302,7 @@ There are two types of labels:
 In order to manage the "Shared" labels it is necessary to activate a specific authorization via the admin panel:
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
-- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` ‣ :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
+- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
 - click **OK** then save and exit
 
 .. note::
@@ -319,6 +319,50 @@ The type of visibility that you want to give to a label will be requested only d
 The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
 
 
+Custom fields
+=============
+
+Custom fields are only available for the Address Book, Calendar, and Tasks modules and are specific to each different module.
+
+In order to manage custom fields and its panels it is necessary to have a specific authorization, obtained through the administration panel:
+
+- go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
+- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
+- click **OK** then save and exit
+
+Users who have this authorization will find the specific button available at the top right:
+    
+.. image:: _static/webtop-cf1.png
+
+To create a new custom field it is necessary to fill in at least the **Name** field and select the **Type**:
+
+.. image:: _static/webtop-cf2.png
+
+For the **Name** field only alphanumeric characters (including - and _) are allowed. SPACES are NOT allowed.
+The **Description** field is used to add details to the field and, for this purpose, the **Label** field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
+
+For each field it is possible to enable these two options:
+
+.. image:: _static/webtop-cf3.png
+
+- **Show in search bar**: the field is added in the multiple search window (a new access will be required)
+- **Show in preview**: the field is shown in the preview window of a contact
+
+Additional specific properties, that are also customizable, are available for each type.
+
+For the **List box** type it is necessary to fill in the values to be selected:
+
+.. image:: _static/webtop-cf4.png
+
+When creating custom fields it may be very convenient to clone an already existing one, in order to build a field which is similar to the previous one, by using the **Clone** button:
+
+.. image:: _static/webtop-cf5.png
+
+.. note::
+    with the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license.
+    To purchase a PREMIUM license it is necessary to open a support ticket with our HelpDesk.
+
+
 Mail inline preview
 ===================
 
@@ -328,6 +372,7 @@ This feature can be enabled or disabled from the :guilabel:`Settings` menu, unde
 the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
+
 
 Mail archiving
 ==============
