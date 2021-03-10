@@ -362,6 +362,11 @@ When creating custom fields it may be very convenient to clone an already existi
     With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license.
     To purchase a PREMIUM license it is necessary to open a support ticket with our HelpDesk.
 
+Searches on custom fields
+-------------------------
+
+One of the best functionalities of custom fields is the possibility to perform multiple searches on all modules and fields for which the option **Show in search bar** has been activated.
+
 
 Custom panels
 =============
@@ -382,11 +387,6 @@ It is possible to assign one or more labels in order to link the panel only to t
     A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
 
 Through the "Add" button it will be possible to select which custom fields to use among those already created in the panel.
-
-Searches on custom fields
--------------------------
-
-One of the best functionalities of custom fields is the possibility to perform multiple searches on all modules and fields for which the option **Show in search bar** has been activated.
 
 
 Mail inline preview
