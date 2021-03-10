@@ -291,15 +291,33 @@ In the same way, you can always share your contacts by selecting the directory y
 Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
 
-Mail tags
-=========
+Custom cross labels
+==================
 
-You can tag each message with different colored labels.
-Just select a message, right-click and select :guilabel:`Tag`.
+There are two types of labels:
 
-You can edit existing tags or add new ones selecting :guilabel:`Manage tags`.
+- **Private**: not usable for custom fields and not visible to other users
+- **Shared**: usable for custom field panels and visible to other users
 
-Tags can be used to filter messages using the filter top bar.
+In order to manage the "Shared" labels it is necessary to activate a specific authorization via the admin panel:
+
+- go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
+- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` ‣ :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
+- click **OK** then save and exit
+
+.. note::
+    without this authorization the user can create and modify ONLY "**Private**" labels.
+    
+The management of labels can be reached from this button at the top right: 
+    
+.. image:: _static/webtop-tags1.png
+
+The same functionality can also be reached from the individual modules (Mail, Address Book, Calendar and Tasks) by right clicking -> :guilabel:`Labels` -> :guilabel:`Manage labels`.
+ 
+The type of visibility that you want to give to a label will be requested only during the creation phase and it will not be possible to modify it later (it will be necessary to delete and redo the label)
+ 
+The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
+
 
 Mail inline preview
 ===================
