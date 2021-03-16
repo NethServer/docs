@@ -105,7 +105,6 @@ Example: ::
 
 Finally, to completely disable the GeoIP use: ::
 
-  config setprop geoip status enabled
+  config setprop geoip status disabled
   signal-event nethserver-blacklist-save geoips
-
 
