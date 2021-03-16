@@ -73,17 +73,18 @@ DNS blacklist dashboard provides:
 GeoIP
 =====
 
-Threat shield integrates a limited support for GeoIP blocking.
-This feature is configurable only from command line.
-GeoIP blocking is disabled by default.
+Threat shield integrates limited support for geo-blocking.
+This feature is configurable only from the command line.
+Geo-blocking is disabled by default.
 
-To enable the GeoIP execute: ::
+To enable geo-blocking execute: ::
 
   config setprop geoip status enabled
   signal-event nethserver-blacklist-save geoips
 
-The event will download all available countries. Each country is identified by its own `ISO code <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_ composed by 2 letters.
-To list all countries, use: ::
+The event will download network addresses for all countries.
+Each country is identified by its own `ISO code <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_ composed by 2 letters.
+To list available countries, use: ::
 
   find /usr/share/nethserver-blacklist/geoips/ -type f -exec basename '{}' \; | cut -d '.' -f1
 
