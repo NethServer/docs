@@ -70,8 +70,8 @@ DNS blacklist dashboard provides:
 * Top blocked domains
 * Top requested domains
 
-GeoIP
-=====
+Geo-blocking
+============
 
 Threat shield integrates limited support for geo-blocking.
 This feature is configurable only from the command line.
