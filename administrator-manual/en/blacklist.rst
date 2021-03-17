@@ -69,3 +69,43 @@ DNS blacklist dashboard provides:
 * Top clients performing most DNS requests
 * Top blocked domains
 * Top requested domains
+
+Geo-blocking
+============
+
+Threat shield integrates limited support for geo-blocking.
+This feature is configurable only from the command line.
+Geo-blocking is disabled by default.
+
+To enable geo-blocking execute: ::
+
+  config setprop geoip status enabled
+  signal-event nethserver-blacklist-save geoips
+
+The event will download network addresses for all countries.
+Each country is identified by its own `ISO code <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_ composed by 2 letters.
+To list available countries, use: ::
+
+  find /usr/share/nethserver-blacklist/geoips/ -type f -exec basename '{}' \; | cut -d '.' -f1
+
+Choose which countries should be blocked and set the ``Categories`` accordingly. Example to block China and Russia: ::
+
+  config setprop geoip Categories cn,ru
+  signal-event nethserver-blacklist-save geoips
+
+If an IP address has been classified inside the wrong country, it's possible to allow the traffic from/to the host by adding the IP
+address to the whitelist. Example: ::
+
+  config setprop geoip Whitelist 1.2.3.4
+  signal-event nethserver-blacklist-save geoips
+
+All blocked IPs will be logged inside :file:`/var/log/firewall.log`.
+Example: ::
+
+  Mar 16 09:05:24 fw kernel: Shorewall:blacklst:DROP:IN=ppp0 OUT= MAC= SRC=1.2.3.4 DST=5.6.7.8 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=39155 DF PROTO=TCP SPT=39749 DPT=22 WINDOW=14600 RES=0x00 SYN URGP=0
+
+Finally, to completely disable the GeoIP use: ::
+
+  config setprop geoip status disabled
+  signal-event nethserver-blacklist-save geoips
+
