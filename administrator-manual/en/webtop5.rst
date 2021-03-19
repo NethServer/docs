@@ -296,8 +296,8 @@ Custom cross labels
 
 There are two types of labels:
 
-- **Private**: not usable for custom fields and not visible to other users
-- **Shared**: usable for custom field panels and visible to other users
+- **Private**: not visible to other users, also not available for custom fields
+- **Shared**: visible to all users usable, also available for custom fields
 
 In order to manage the "Shared" labels it is necessary to activate a specific authorization via the admin panel:
 
