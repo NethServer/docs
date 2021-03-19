@@ -334,7 +334,7 @@ Authorized users will find the specific button available at the top right:
     
 .. image:: _static/webtop-cf1.png
 
-To create a new custom field it is necessary to fill in at least the **Name** field and select the **Type**:
+To create a new custom field, just fill the mandatory **Name** field and select the **Type**:
 
 .. image:: _static/webtop-cf2.png
 
