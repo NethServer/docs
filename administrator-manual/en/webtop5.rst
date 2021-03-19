@@ -316,7 +316,7 @@ The same functionality can also be reached from the individual modules (Mail, Ad
  
 The type of visibility that you want to give to a label will be requested only during the creation phase and it will not be possible to modify it later (it will be necessary to delete and redo the label)
  
-The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
+Private and Shared labels can be used any module: Mail, Address Book, Calendar and Tasks.
 
 
 Custom fields
