@@ -291,36 +291,39 @@ In the same way, you can always share your contacts by selecting the directory y
 Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
 
-Custom cross labels
-==================
+Custom labels
+=============
+
+It is possible to add one or more labels to an email, a calendar event or a task.
 
 There are two types of labels:
 
-- **Private**: not visible to other users, also not available for custom fields
-- **Shared**: visible to all users usable, also available for custom fields
+- **Private**: not usable for custom fields and not visible to other users
+- **Shared**: usable for custom field panels and visible to other users
 
+The user can normally only manage Private labels.
 In order to manage the "Shared" labels it is necessary to activate a specific authorization via the admin panel:
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
 - click **OK** then save and exit
 
-.. note::
-    without this authorization the user can create and modify ONLY "**Private**" labels.
-    
+
 The management of labels can be reached from this button at the top right: 
     
 .. image:: _static/webtop-tags1.png
 
 The same functionality can also be reached from the individual modules (Mail, Address Book, Calendar and Tasks) by right clicking -> :guilabel:`Labels` -> :guilabel:`Manage labels`.
  
-The type of visibility that you want to give to a label will be requested only during the creation phase and it will not be possible to modify it later (it will be necessary to delete and redo the label)
+Visibility can be set only during label creation. To change the label visibility you need to delete the label and recreate it again.
  
-Private and Shared labels can be used any module: Mail, Address Book, Calendar and Tasks.
+The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
 
 
 Custom fields
 =============
+
+With custom fields it is possible to provide information and additional data for each contact, event or activity.
 
 Custom fields are only available for the Address Book, Calendar, and Tasks modules and are specific to each different module.
 
@@ -330,11 +333,11 @@ In order to manage custom fields and its panels it is necessary to have a specif
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
 - click **OK** then save and exit
 
-Authorized users will find the specific button available at the top right:
+Users who have this authorization will find the specific button available at the top right:
     
 .. image:: _static/webtop-cf1.png
 
-To create a new custom field, just fill the mandatory **Name** field and select the **Type**:
+To create a new custom field it is necessary to fill in at least the **Name** field and select the **Type**:
 
 .. image:: _static/webtop-cf2.png
 
@@ -354,13 +357,13 @@ For the **List box** type it is necessary to fill in the values to be selected:
 
 .. image:: _static/webtop-cf4.png
 
-When creating custom fields it may be very convenient to clone an already existing one, in order to build a field which is similar to the previous one, by using the **Clone** button:
+Using the **Clone** button you can copy the custom field to create a similar one:
 
 .. image:: _static/webtop-cf5.png
 
 .. note::
     With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license.
-    To purchase a PREMIUM license it is necessary to open a support ticket with our HelpDesk.
+    To eliminate this limit it is necessary to switch to the PREMIUM version by purchasing a dedicated license on our `NethShop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
 
 Searches on custom fields
 -------------------------
@@ -371,20 +374,16 @@ One of the best functionalities of custom fields is the possibility to perform m
 Custom panels
 =============
 
+With custom panels you can use the custom fields already created and associate them to the resources in each module (contacts, events and activities).
+
 Users with the authorization to manage custom fields can access the configuration panel using the button at the top right:
 
 .. image:: _static/webtop-panels.png
 
-With custom panels you can use the custom fields already created and associate them to the resources in each module (contacts, events and activities).
-
-Using shared labels, you can easily assign panels to specific resource categories.
-
 When creating a new panel it is mandatory to indicate the **Name** that will appear in the resource. You can also insert a **Description** and a **Title**.
 
-It is possible to assign one or more labels in order to link the panel only to those resources (contacts, events and activities) bearing the same labels.
-
-.. note::
-    A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
+Using shared labels, you can easily assign panels to specific resource categories.
+A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
 
 Through the "Add" button it will be possible to select which custom fields to use among those already created in the panel.
 
