@@ -330,7 +330,7 @@ In order to manage custom fields and its panels it is necessary to have a specif
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
 - click **OK** then save and exit
 
-Users who have this authorization will find the specific button available at the top right:
+Authorized users will find the specific button available at the top right:
     
 .. image:: _static/webtop-cf1.png
 
