@@ -327,7 +327,7 @@ With custom fields it is possible to provide information and additional data for
 
 Custom fields are only available for the Address Book, Calendar, and Tasks modules and are specific to each different module.
 
-In order to manage custom fields and its panels it is necessary to have a specific authorization, obtained through the administration panel:
+In order to manage custom fields and its panels, the user must have a specific authorization, obtained through the administration panel:
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
