@@ -306,7 +306,7 @@ In order to manage the Shared labels it is necessary to activate a specific auth
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
-- click **OK** then save and exit
+- click :guilabel:`OK` then :guilabel:`Save and exit`
 
 
 The management of labels can be reached from this button at the top right: 
@@ -342,7 +342,7 @@ To create a new custom field it is necessary to fill in at least the :guilabel:`
 .. image:: _static/webtop-cf2.png
 
 For the :guilabel:`Name` field only alphanumeric characters (including - and _) are allowed. **Spaces are not allowed**.
-The :guilabel:`Description` field is used to add details to the field and, for this purpose, the :guilable:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
+The :guilabel:`Description` field is used to add details to the field and the :guilable:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
 
 For each field it is possible to enable these two options:
 
@@ -362,8 +362,7 @@ Using the :guilabel:`Clone` button you can copy the custom field to create a sim
 .. image:: _static/webtop-cf5.png
 
 .. note::
-    With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license.
-    To eliminate this limit it is necessary to switch to the PREMIUM version by purchasing a dedicated license on our `NethShop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
+    With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license on our `NethShop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
 
 Searches on custom fields
 -------------------------
@@ -385,7 +384,7 @@ When creating a new panel it is mandatory to indicate the :guilabel:`Name` that 
 Using shared labels, you can easily assign panels to specific resource categories.
 A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
 
-Through the "Add" button it will be possible to select which custom fields to use among those already created in the panel.
+Through the :guilabel:`Add` button it will be possible to select which custom fields to use among those already created in the panel.
 
 
 Mail inline preview
