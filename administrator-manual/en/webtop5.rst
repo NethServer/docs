@@ -65,7 +65,7 @@ Access WebTop using the ``admin`` user, then open user settings by clicking on t
 
 .. image:: _static/webtop-settings.png
 
-Go to :guilabel:`Settings` then click on guilabel:`Change password`.
+Go to :guilabel:`Settings` then click on :guilabel:`Change password`.
 
 
 If you want to reset the admin password from command line, use the following commands: ::
@@ -251,7 +251,7 @@ Sharing email folders or the entire account
 ===========================================
 
 It is possible to share a single folder or the entire account with all the subfolders included.
-Select the folder to share -> right click -> "Manage sharing":
+Select the folder to share -> right click -> :guilabel:`Manage sharing`:
 
 .. image:: _static/webtop-sharing_mail_folder_1.png
 
@@ -265,7 +265,7 @@ Select the folder to share -> right click -> "Manage sharing":
 
 .. note::
 
-   If you also select "Force signature", when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
+   If you also select :guilabel:`Force signature`, when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
 
 In this case, however, it is necessary that the personalized signature of the User from which it originates has been associated to the Email address and not to the User.
 
@@ -276,7 +276,7 @@ Sharing Calendar
 ----------------
 
 You can share each personal calendar individually.
-Select the calendar to share -> right click -> "Sharing and permissions":
+Select the calendar to share -> right click -> :guilabel:`Sharing and permissions`:
 
 .. image:: _static/webtop-sharing_cal_1.png
 
@@ -302,7 +302,7 @@ There are two types of labels:
 - **Shared**: usable for custom field panels and visible to other users
 
 The user can normally only manage Private labels.
-In order to manage the "Shared" labels it is necessary to activate a specific authorization via the admin panel:
+In order to manage the Shared labels it is necessary to activate a specific authorization via the admin panel:
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
@@ -331,33 +331,33 @@ In order to manage custom fields and its panels, the user must have a specific a
 
 - go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
 - add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
-- click **OK** then save and exit
+- click :guilabel:`OK` then save and exit
 
 Users who have this authorization will find the specific button available at the top right:
     
 .. image:: _static/webtop-cf1.png
 
-To create a new custom field it is necessary to fill in at least the **Name** field and select the **Type**:
+To create a new custom field it is necessary to fill in at least the :guilabel:`Name` field and select the :guilabel:`Type`:
 
 .. image:: _static/webtop-cf2.png
 
-For the **Name** field only alphanumeric characters (including - and _) are allowed. SPACES are NOT allowed.
-The **Description** field is used to add details to the field and, for this purpose, the **Label** field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
+For the :guilabel:`Name` field only alphanumeric characters (including - and _) are allowed. **Spaces are not allowed**.
+The :guilabel:`Description` field is used to add details to the field and, for this purpose, the :guilable:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
 
 For each field it is possible to enable these two options:
 
 .. image:: _static/webtop-cf3.png
 
-- **Show in search bar**: the field is added in the multiple search window (a new access will be required)
-- **Show in preview**: the field is shown in the preview window of a contact
+- :guilabel:`Show in search bar`: the field is added in the multiple search window (a new access will be required)
+- :guilabel:`Show in preview`: the field is shown in the preview window of a contact
 
 Additional specific properties, that are also customizable, are available for each type.
 
-For the **List box** type it is necessary to fill in the values to be selected:
+For the :guilabel:`List box` type it is necessary to fill in the values to be selected:
 
 .. image:: _static/webtop-cf4.png
 
-Using the **Clone** button you can copy the custom field to create a similar one:
+Using the :guilabel:`Clone` button you can copy the custom field to create a similar one:
 
 .. image:: _static/webtop-cf5.png
 
@@ -380,7 +380,7 @@ Users with the authorization to manage custom fields can access the configuratio
 
 .. image:: _static/webtop-panels.png
 
-When creating a new panel it is mandatory to indicate the **Name** that will appear in the resource. You can also insert a **Description** and a **Title**.
+When creating a new panel it is mandatory to indicate the :guilabel:`Name` that will appear in the resource. You can also insert a :guilabel:`Description` and a :guilabel:`Title`.
 
 Using shared labels, you can easily assign panels to specific resource categories.
 A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
@@ -443,11 +443,11 @@ For example, if you want to hide the subfolder "folder1" from this list, just ri
 
 .. image:: _static/webtop-sub_imap_folder1.png
 
-It is possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
+It is possible to manage the visibility of hidden folders by selecting the :guilabel:`Manage visibility` function:
 
 .. image:: _static/webtop-sub_imap_folder2.png
 
-For example, if you want to restore the subscription of the "folder1" just hidden, just select it from the list of hidden folders
+For example, if you want to restore the subscription of the :guilabel:`folder1` just hidden, just select it from the list of hidden folders
 and click on the icon on the left:  
 
 .. image:: _static/webtop-sub_imap_folder3.png
@@ -466,7 +466,7 @@ Nextcloud integration
 
 .. note::
 
-   Before proceeding, verify that the "Nextcloud" module has been installed 
+   Before proceeding, verify that the **Nextcloud** module has been installed 
    from :guilabel:`Software Center`
 
 By default, Nextcloud integration is disabled for all users.
@@ -474,31 +474,31 @@ To enable it, use the administration panel which can be accessed using the webto
 
 For example, if you want to activate the service for all webtop users, proceed as follows:
 
-1. access the administrative panel and select "Groups":
+1. access the administrative panel and select :guilabel:`Groups`:
 
-   .. image:: _static/webtop-admin_panel_groups.png
+.. image:: _static/webtop-admin_panel_groups.png
 
 2. modify the properties of the "users" group by double clicking and select the button related to the Authorizations:
    
-   .. image:: _static/webtop-admin_panel_permission.png
+.. image:: _static/webtop-admin_panel_permission.png
 
 3. add to existing authorizations those relating to both the ``STORE_CLOUD`` and ``STORE_OTHER`` resources by selecting the items as shown below:
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_1.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_1.png
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_2.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_2.png
 
 
-   so get this:
+so get this:
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_3.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_3.png
 
 
 4. save and close.
 
 At this point from any user it will be possible to insert the Nextcloud resource (local or remote) in your personal Cloud.
 
-To do this, simply select the Cloud button and add a new **"Nextcloud"** resource by right clicking on **"My resources"** and then **"Add resource"** in this way:
+To do this, simply select the Cloud button and add a new Nextcloud resource by right clicking on :guilabel:`My resources` and then :guilabel:`Add resource` in this way:
 
 .. image:: _static/webtop-nextcloud_1.png
 
@@ -708,8 +708,8 @@ To activate it, simply access the general settings of your user:
 
 It is possible to enable desktop notification in two modes:
 
-- **Always**: notifications will always be shown, even with the browser open
-- **Auto (in background only)**: notifications will be shown only when the browser is in the background
+- :guilabel:`Always`: notifications will always be shown, even with the browser open
+- :guilabel:`Auto (in background only)`: notifications will be shown only when the browser is in the background
 
 Once the mode is selected, a browser consent request will appear at the top left:
 
