@@ -397,7 +397,6 @@ the check box is named :guilabel:`Show quick preview on message row`.
 
 .. image:: _static/webtop-preview.png
 
-
 Mail archiving
 ==============
 
