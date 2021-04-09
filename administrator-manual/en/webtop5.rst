@@ -362,7 +362,7 @@ Using the :guilabel:`Clone` button you can copy the custom field to create a sim
 .. image:: _static/webtop-cf5.png
 
 .. note::
-    With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license on our `NethShop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
+    With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license on `Nethesis shop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
 
 Searches on custom fields
 -------------------------
