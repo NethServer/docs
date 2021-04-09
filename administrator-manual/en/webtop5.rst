@@ -367,7 +367,7 @@ Using the :guilabel:`Clone` button you can copy the custom field to create a sim
 Searches on custom fields
 -------------------------
 
-One of the best functionalities of custom fields is the possibility to perform multiple searches on all modules and fields for which the option **Show in search bar** has been activated.
+One of the best functionalities of custom fields is the possibility to perform multiple searches on all modules and fields for which the option :guilabel:`Show in search bar` has been activated.
 
 
 Custom panels
