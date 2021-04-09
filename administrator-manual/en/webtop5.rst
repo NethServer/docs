@@ -342,7 +342,7 @@ To create a new custom field it is necessary to fill in at least the :guilabel:`
 .. image:: _static/webtop-cf2.png
 
 For the :guilabel:`Name` field only alphanumeric characters (including - and _) are allowed. **Spaces are not allowed**.
-The :guilabel:`Description` field is used to add details to the field and the :guilable:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
+The :guilabel:`Description` field is used to add details to the field and the :guilabel:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
 
 For each field it is possible to enable these two options:
 
