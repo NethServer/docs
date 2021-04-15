@@ -598,8 +598,8 @@ By clicking on the :guilabel:`Save` button, the new configuration will be applie
 By default, the videoconferencing service is disabled for all users.
 To enable it, for all users it is necessary to add a specific authorization from the administration panel:
 
-* Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Groups` --> :guilabel:`Users` --> :guilabel:`Authorizations`
-* :guilabel:`Add (+)` --> :guilabel:`Services` --> :guilabel:`com.sonicle.webtop.core (WebTop)` --> :guilabel:`Resource` --> MEETING --> :guilabel:`Action` --> CREATE
+* Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
+* :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource MEETING --> Action --> CREATE`
 * Click :guilabel:`OK` then save and close
    
 The conference will be available for the users after a new login.
