@@ -975,7 +975,8 @@ Through the multiple search it is possible to quickly find the data of interest:
 
 .. image:: _static/webtop_search_access_log.png
 
-**IMPERSONATE LOGIN:**
+**Impersonate login**
+
 By default, the logins made through impersonate (admin!<user>) are not shown in the access logs table.
 In order to also add this type of access, you need to add the following key for the core service:
 
