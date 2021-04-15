@@ -981,6 +981,38 @@ In order to also add this type of access, you need to add the following key for 
    - ``key`` = ``audit.logimpersonated``
    - ``value`` = ``true``
 
+Login notification for each new device
+======================================
+
+With this feature, it is possible to receive an email that notifies you through a security alert every time a new device accesses the account for the first time.
+
+.. note::
+
+  By default, this feature is disabled for all users to avoid too many "unintentional" false positives on first login.
+  
+To activate the notification for all users it is necessary to issue these commands from the Shell: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ 
+If, in addition to the user being accessed, you also need to send these notification emails to other email addresses in BCC (for additional administrative control), it is possible to do so by indicating the recipients in the following way: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationRecipients admin1@example.com,admin2@example.com
+ 
+If you want to avoid sending the notification for all new accesses performed by one (or more) network subnets, you can do this through a white list, as you can see in the example below: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationNetWhitelist 192.168.1.0/24,10.8.8.0/24
+ 
+To apply the changes shown in the previous commands and restart the application, please execute the final command below: ::
+
+ signal-event nethserver-webtop5-update
+ 
+.. note::
+
+  Accesses made through impersonate (admin!<user>) will never send an email notification
+
+
 Changing the logo
 =================
 
