@@ -585,6 +585,57 @@ To enable chat integration:
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
 
+Jitsi integration and support for links to third-party video calls
+==================================================================
+
+With this integration it is possible to start a new video conference and send the invitation via email, or schedule one by creating the event directly from the calendar.
+To activate the integration it is necessary to configure the Jitsi instance that you would like to use directly from the cockpit interface, in the advanced settings for WebTop:
+
+.. image:: _static/webtop_cockpit_panel_jitsi.png
+
+By clicking on the "Save" button, the new configuration will be applied and WebTop restarted.
+
+By default, the videoconferencing service is disabled for all users.
+To enable it, for all users it is necessary to add a specific authorization from the administration panel:
+
+   - Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Groups` --> :guilabel:`Users` --> :guilabel:`Authorizations`
+   - :guilabel:`Add (+)` --> :guilabel:`Services` --> :guilabel:`com.sonicle.webtop.core (WebTop)` --> :guilabel:`Resource` --> MEETING --> :guilabel:`Action` --> CREATE
+   - Click :guilabel:`OK` then save and close
+   
+The conference will be available for the users after a new login.
+
+To create a new video conference meeting, you can start from these two buttons:
+(top left)
+
+.. image:: _static/webtop_jitsi1.png
+
+(top right)
+
+.. image:: _static/webtop_jitsi2.png
+
+It is also possible to do this from a new email window or a new calendar event.
+
+For each new meeting you have to decide whether it should start immediately (instant meeting) or if it should be scheduled by invitation.
+
+There are several ways to share the new meeting link:
+
+.. image:: _static/webtop_jitsi3.png
+
+   - **Start now** allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
+   - **Send invitation** -> **Copy meeting invite**: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
+   - **Send invitation** -> **Share by email**: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
+   
+.. image:: _static/webtop_jitsi4.png
+
+   - **Send invitation** -> **Plan event**: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
+   
+If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
+
+.. image:: _static/webtop_jitsi5.png
+
+The video conferencing services that are currently supported, in addition to Jitsi, are: Google Meet, MS Teams and Zoom.
+It is possible to add additional platforms through a `global setting <https://www.sonicle.com/docs/webtop5/core.html#meeting-integration-settings>`_.
+
 Audio and video WebRTC calls with chat (Beta)
 =============================================
 
