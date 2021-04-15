@@ -589,7 +589,7 @@ Jitsi integration and support for links to third-party video calls
 ==================================================================
 
 With this integration it is possible to start a new video conference and send the invitation via email, or schedule one by creating the event directly from the calendar.
-To activate the integration it is necessary to configure the Jitsi instance that you would like to use directly from the cockpit interface, in the advanced settings for WebTop:
+To activate the integration it is necessary to configure the `Jitsi <https://jitsi.org/>`_ instance that you would like to use directly from the cockpit interface, in the advanced settings for WebTop:
 
 .. image:: _static/webtop_cockpit_panel_jitsi.png
 
