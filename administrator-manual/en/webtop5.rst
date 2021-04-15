@@ -598,9 +598,9 @@ By clicking on the :guilabel:`Save` button, the new configuration will be applie
 By default, the videoconferencing service is disabled for all users.
 To enable it, for all users it is necessary to add a specific authorization from the administration panel:
 
-   - Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Groups` --> :guilabel:`Users` --> :guilabel:`Authorizations`
-   - :guilabel:`Add (+)` --> :guilabel:`Services` --> :guilabel:`com.sonicle.webtop.core (WebTop)` --> :guilabel:`Resource` --> MEETING --> :guilabel:`Action` --> CREATE
-   - Click :guilabel:`OK` then save and close
+* Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Groups` --> :guilabel:`Users` --> :guilabel:`Authorizations`
+* :guilabel:`Add (+)` --> :guilabel:`Services` --> :guilabel:`com.sonicle.webtop.core (WebTop)` --> :guilabel:`Resource` --> MEETING --> :guilabel:`Action` --> CREATE
+* Click :guilabel:`OK` then save and close
    
 The conference will be available for the users after a new login.
 
@@ -622,13 +622,13 @@ There are several ways to share the new meeting link:
 
 .. image:: _static/webtop_jitsi3.png
 
-   - :guilabel:`Start now` allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
-   - **Send invitation** -> :guilabel:`Copy meeting invite`: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
-   - **Send invitation** -> :guilabel:`Share by email`: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
+* :guilabel:`Start now` allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
+* :guilabel:`Send invitation` -> :guilabel:`Copy meeting invite`: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
+* :guilabel:`Send invitation` -> :guilabel:`Share by email`: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
    
 .. image:: _static/webtop_jitsi4.png
 
-   - **Send invitation** -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
+* :guilabel:`Send invitation` -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
    
 If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
 
@@ -945,8 +945,8 @@ Locked settings require administration privileges.
 
 The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
-* **User name**: admin!<username>
-* **Password**: <WebTop admin password>
+* **User name**: ``admin!<username>``
+* **Password**: ``<WebTop admin password>``
 
 While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
@@ -956,13 +956,14 @@ It is also possible to make a massive change of the email domain of the selected
 User access and user session logs
 =================================
 
-The table showing the entire log of accesses and sessions for each user can be accessed from the administrator panel:
-   - Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Audit (domain)` --> :guilabel:`Access log`
+The table showing the entire log of accesses and sessions for each user is available under the administrator panel.
+Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Audit (domain)` --> :guilabel:`Access log`.
 
 For each access, the table reports the following data in columns: session ID, user name, date and time, session duration, authentication status and any login errors.
 It is possible to activate the geolocation for the access by public IP addresses detected.
 To activate this feature, you need to register an account on `ipstack <https://ipstack.com/>`_ (only this provider is currently supported) and obtain the API KEY to insert in the configuration db.
-Log in to the administration panel -> :guilabel:`Property (system)` -> :guilabel:`add` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> enter the following data in the fields :guilabel:`Key` e :guilabel:` Value` :
+
+Login to the administration panel -> :guilabel:`Property (system)` -> :guilabel:`add` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> enter the following data in the fields :guilabel:`Key` e :guilabel:`Value` :
 
    - ``geolocation.provider`` = ``ipstack``
    - ``geolocation.ipstack.apikey``  = ``<API KEY FROM PROVIDER>``
@@ -977,7 +978,7 @@ Through the multiple search it is possible to quickly find the data of interest:
 
 **Impersonate login**
 
-By default, the logins made through impersonate (admin!<user>) are not shown in the access logs table.
+By default, the logins made through impersonate (``admin!<user>``) are not shown in the access logs table.
 In order to also add this type of access, you need to add the following key for the core service:
 
    - ``key`` = ``audit.logimpersonated``
@@ -1012,7 +1013,7 @@ To apply the changes shown in the previous commands and restart the application,
  
 .. note::
 
-  Accesses made through impersonate (admin!<user>) will never send an email notification
+  Accesses made through impersonate (``admin!<user>``) will never send an email notification
 
 
 Changing the logo
