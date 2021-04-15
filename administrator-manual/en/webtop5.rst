@@ -952,6 +952,35 @@ Full administration of user settings is available directly in the administration
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
+User access and user session logs
+=================================
+
+The table showing the entire log of accesses and sessions for each user can be accessed from the administrator panel:
+   - Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Audit (domain)` --> :guilabel:`Access log`
+
+For each access, the table reports the following data in columns: session ID, user name, date and time, session duration, authentication status and any login errors.
+It is possible to activate the geolocation for the access by public IP addresses detected.
+To activate this feature, you need to register an account on `ipstack <https://ipstack.com/>`_ (only this provider is currently supported) and obtain the API KEY to insert in the configuration db.
+Log in to the administration panel -> :guilabel:`Property (system)` -> :guilabel:`add` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> enter the following data in the fields :guilabel:`Key` e :guilabel:` Value` :
+
+   - ``geolocation.provider`` = ``ipstack``
+   - ``geolocation.ipstack.apikey``  = ``<API KEY FROM PROVIDER>``
+   
+Then, after a logout and a login, to show the geolocation of the public IPs please click on the icon at the far right of the row:
+
+.. image:: _static/webtop_geologip.png
+
+Through the multiple search it is possible to quickly find the data of interest:
+
+.. image:: _static/webtop_search_access_log.png
+
+**IMPERSONATE LOGIN:**
+By default, the logins made through impersonate (admin!<user>) are not shown in the access logs table.
+In order to also add this type of access, you need to add the following key for the core service:
+
+   - ``key`` = ``audit.logimpersonated``
+   - ``value`` = ``true``
+
 Changing the logo
 =================
 
