@@ -593,7 +593,7 @@ To activate the integration it is necessary to configure the Jitsi instance that
 
 .. image:: _static/webtop_cockpit_panel_jitsi.png
 
-By clicking on the "Save" button, the new configuration will be applied and WebTop restarted.
+By clicking on the :guilabel:`Save` button, the new configuration will be applied and WebTop restarted.
 
 By default, the videoconferencing service is disabled for all users.
 To enable it, for all users it is necessary to add a specific authorization from the administration panel:
@@ -605,6 +605,7 @@ To enable it, for all users it is necessary to add a specific authorization from
 The conference will be available for the users after a new login.
 
 To create a new video conference meeting, you can start from these two buttons:
+
 (top left)
 
 .. image:: _static/webtop_jitsi1.png
@@ -621,13 +622,13 @@ There are several ways to share the new meeting link:
 
 .. image:: _static/webtop_jitsi3.png
 
-   - **Start now** allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
-   - **Send invitation** -> **Copy meeting invite**: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
-   - **Send invitation** -> **Share by email**: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
+   - :guilabel:`Start now` allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
+   - **Send invitation** -> :guilabel:`Copy meeting invite`: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
+   - **Send invitation** -> :guilabel:`Share by email`: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
    
 .. image:: _static/webtop_jitsi4.png
 
-   - **Send invitation** -> **Plan event**: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
+   - **Send invitation** -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
    
 If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
 
