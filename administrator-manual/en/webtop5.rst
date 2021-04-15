@@ -585,6 +585,58 @@ To enable chat integration:
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
 
+Jitsi integration and support for links to third-party video calls
+==================================================================
+
+With this integration it is possible to start a new video conference and send the invitation via email, or schedule one by creating the event directly from the calendar.
+To activate the integration it is necessary to configure the `Jitsi <https://jitsi.org/>`_ instance that you would like to use directly from the cockpit interface, in the advanced settings for WebTop:
+
+.. image:: _static/webtop_cockpit_panel_jitsi.png
+
+By clicking on the :guilabel:`Save` button, the new configuration will be applied and WebTop restarted.
+
+By default, the videoconferencing service is disabled for all users.
+To enable it, for all users it is necessary to add a specific authorization from the administration panel:
+
+* Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
+* :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource MEETING --> Action --> CREATE`
+* Click :guilabel:`OK` then save and close
+   
+The conference will be available for the users after a new login.
+
+To create a new video conference meeting, you can start from these two buttons:
+
+(top left)
+
+.. image:: _static/webtop_jitsi1.png
+
+(top right)
+
+.. image:: _static/webtop_jitsi2.png
+
+It is also possible to do this from a new email window or a new calendar event.
+
+For each new meeting you have to decide whether it should start immediately (instant meeting) or if it should be scheduled by invitation.
+
+There are several ways to share the new meeting link:
+
+.. image:: _static/webtop_jitsi3.png
+
+* :guilabel:`Start now` allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
+* :guilabel:`Send invitation` -> :guilabel:`Copy meeting invite`: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
+* :guilabel:`Send invitation` -> :guilabel:`Share by email`: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
+   
+.. image:: _static/webtop_jitsi4.png
+
+* :guilabel:`Send invitation` -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
+   
+If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
+
+.. image:: _static/webtop_jitsi5.png
+
+The video conferencing services that are currently supported, in addition to Jitsi, are: Google Meet, MS Teams and Zoom.
+It is possible to add additional platforms through a `global setting <https://www.sonicle.com/docs/webtop5/core.html#meeting-integration-settings>`_.
+
 Audio and video WebRTC calls with chat (Beta)
 =============================================
 
@@ -893,13 +945,76 @@ Locked settings require administration privileges.
 
 The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
-* **User name**: admin!<username>
-* **Password**: <WebTop admin password>
+* **User name**: ``admin!<username>``
+* **Password**: ``<WebTop admin password>``
 
 While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
+
+User access and user session logs
+=================================
+
+The table showing the entire log of accesses and sessions for each user is available under the administrator panel.
+Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Audit (domain)` --> :guilabel:`Access log`.
+
+For each access, the table reports the following data in columns: session ID, user name, date and time, session duration, authentication status and any login errors.
+It is possible to activate the geolocation for the access by public IP addresses detected.
+To activate this feature, you need to register an account on `ipstack <https://ipstack.com/>`_ (only this provider is currently supported) and obtain the API KEY to insert in the configuration db.
+
+Login to the administration panel -> :guilabel:`Property (system)` -> :guilabel:`add` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> enter the following data in the fields :guilabel:`Key` e :guilabel:`Value` :
+
+   - ``geolocation.provider`` = ``ipstack``
+   - ``geolocation.ipstack.apikey``  = ``<API KEY FROM PROVIDER>``
+   
+Then, after a logout and a login, to show the geolocation of the public IPs please click on the icon at the far right of the row:
+
+.. image:: _static/webtop_geologip.png
+
+Through the multiple search it is possible to quickly find the data of interest:
+
+.. image:: _static/webtop_search_access_log.png
+
+**Impersonate login**
+
+By default, the logins made through impersonate (``admin!<user>``) are not shown in the access logs table.
+In order to also add this type of access, you need to add the following key for the core service:
+
+   - ``key`` = ``audit.logimpersonated``
+   - ``value`` = ``true``
+
+Login notification for each new device
+======================================
+
+With this feature, it is possible to receive an email that notifies you through a security alert every time a new device accesses the account for the first time.
+
+.. note::
+
+  By default, this feature is disabled for all users to avoid too many "unintentional" false positives on first login.
+  
+To activate the notification for all users it is necessary to issue these commands from the Shell: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ 
+If, in addition to the user being accessed, you also need to send these notification emails to other email addresses in BCC (for additional administrative control), it is possible to do so by indicating the recipients in the following way: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationRecipients admin1@example.com,admin2@example.com
+ 
+If you want to avoid sending the notification for all new accesses performed by one (or more) network subnets, you can do this through a white list, as you can see in the example below: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationNetWhitelist 192.168.1.0/24,10.8.8.0/24
+ 
+To apply the changes shown in the previous commands and restart the application, please execute the final command below: ::
+
+ signal-event nethserver-webtop5-update
+ 
+.. note::
+
+  Accesses made through impersonate (``admin!<user>``) will never send an email notification
+
 
 Changing the logo
 =================
