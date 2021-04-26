@@ -63,3 +63,18 @@ Admin user
 After installation, admin dashboard can be enabled with ``loolconfig set-admin-password`` and accessible at: ::
 
   https://collabora.yourdomain.com/loleaflet/dist/admin/admin.html
+
+
+CODE repository
+===============
+
+Collabora Online comes from the CODE edition (Collabora Office development edition). To list the available packages: ::
+
+  yum list available --disablerepo=* enablerepo=collaboraoffice
+
+you can update or install directly from the CODE repository: ::
+
+  yum update --enablerepo=collaboraoffice
+  yum install collaboraofficebasis6.4-fr collaboraoffice6.4-dict-fr --enablerepo=collaboraoffice
+
+The repository is disabled by default to avoid breaking updates.

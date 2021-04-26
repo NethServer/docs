@@ -65,7 +65,7 @@ Access WebTop using the ``admin`` user, then open user settings by clicking on t
 
 .. image:: _static/webtop-settings.png
 
-Go to :guilabel:`Settings` then click on guilabel:`Change password`.
+Go to :guilabel:`Settings` then click on :guilabel:`Change password`.
 
 
 If you want to reset the admin password from command line, use the following commands: ::
@@ -251,7 +251,7 @@ Sharing email folders or the entire account
 ===========================================
 
 It is possible to share a single folder or the entire account with all the subfolders included.
-Select the folder to share -> right click -> "Manage sharing":
+Select the folder to share -> right click -> :guilabel:`Manage sharing`:
 
 .. image:: _static/webtop-sharing_mail_folder_1.png
 
@@ -265,7 +265,7 @@ Select the folder to share -> right click -> "Manage sharing":
 
 .. note::
 
-   If you also select "Force signature", when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
+   If you also select :guilabel:`Force signature`, when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
 
 In this case, however, it is necessary that the personalized signature of the User from which it originates has been associated to the Email address and not to the User.
 
@@ -276,7 +276,7 @@ Sharing Calendar
 ----------------
 
 You can share each personal calendar individually.
-Select the calendar to share -> right click -> "Sharing and permissions":
+Select the calendar to share -> right click -> :guilabel:`Sharing and permissions`:
 
 .. image:: _static/webtop-sharing_cal_1.png
 
@@ -291,15 +291,101 @@ In the same way, you can always share your contacts by selecting the directory y
 Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
 
-Mail tags
-=========
+Custom labels
+=============
 
-You can tag each message with different colored labels.
-Just select a message, right-click and select :guilabel:`Tag`.
+It is possible to add one or more labels to an email, a calendar event or a task.
 
-You can edit existing tags or add new ones selecting :guilabel:`Manage tags`.
+There are two types of labels:
 
-Tags can be used to filter messages using the filter top bar.
+- **Private**: not usable for custom fields and not visible to other users
+- **Shared**: usable for custom field panels and visible to other users
+
+The user can normally only manage Private labels.
+In order to manage the Shared labels it is necessary to activate a specific authorization via the admin panel:
+
+- go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
+- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`TAGS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
+- click :guilabel:`OK` then :guilabel:`Save and exit`
+
+
+The management of labels can be reached from this button at the top right: 
+    
+.. image:: _static/webtop-tags1.png
+
+The same functionality can also be reached from the individual modules (Mail, Address Book, Calendar and Tasks) by right clicking -> :guilabel:`Labels` -> :guilabel:`Manage labels`.
+ 
+Visibility can be set only during label creation. To change the label visibility you need to delete the label and recreate it again.
+ 
+The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
+
+
+Custom fields
+=============
+
+With custom fields it is possible to provide information and additional data for each contact, event or activity.
+
+Custom fields are only available for the Address Book, Calendar, and Tasks modules and are specific to each different module.
+
+In order to manage custom fields and its panels, the user must have a specific authorization, obtained through the administration panel:
+
+- go to  Administration menu, then choose :guilabel:`Domains` -> :guilabel:`NethServer` -> :guilabel:`Groups` -> :guilabel:`Users` -> :guilabel:`Authorization`
+- add (+) -> :guilabel:`Services` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> :guilabel:`Resource` -> :guilabel:`CUSTOM_FIELDS` -> :guilabel:`Action` -> :guilabel:`MANAGE`
+- click :guilabel:`OK` then save and exit
+
+Users who have this authorization will find the specific button available at the top right:
+    
+.. image:: _static/webtop-cf1.png
+
+To create a new custom field it is necessary to fill in at least the :guilabel:`Name` field and select the :guilabel:`Type`:
+
+.. image:: _static/webtop-cf2.png
+
+For the :guilabel:`Name` field only alphanumeric characters (including ``-`` and ``_``) are allowed. **Spaces are not allowed**.
+The :guilabel:`Description` field is used to add details to the field and the :guilabel:`Label` field represents the label that will be shown in correspondence with the field within the panel in which it will be used.
+
+For each field it is possible to enable these two options:
+
+.. image:: _static/webtop-cf3.png
+
+- :guilabel:`Show in search bar`: the field is added in the multiple search window (a new access will be required)
+- :guilabel:`Show in preview`: the field is shown in the preview window of a contact
+
+Additional specific properties, that are also customizable, are available for each type.
+
+For the :guilabel:`List box` type it is necessary to fill in the values to be selected:
+
+.. image:: _static/webtop-cf4.png
+
+Using the :guilabel:`Clone` button you can copy the custom field to create a similar one:
+
+.. image:: _static/webtop-cf5.png
+
+.. note::
+    With the **FREE version**, installed by default, it is possible to create up to a **maximum of 3 custom fields** for each different module (3 in Address Book + 3 in Calendar + 3 in Activities). To remove this limit it is necessary to upgrade to the **PREMIUM version** by purchasing a dedicated license on `Nethesis shop <https://nethshop.nethesis.it/product/campi-custom-webtop/>`_
+
+Searches on custom fields
+-------------------------
+
+One of the best functionalities of custom fields is the possibility to perform multiple searches on all modules and fields for which the option :guilabel:`Show in search bar` has been activated.
+
+
+Custom panels
+=============
+
+With custom panels you can use the custom fields already created and associate them to the resources in each module (contacts, events and activities).
+
+Users with the authorization to manage custom fields can access the configuration panel using the button at the top right:
+
+.. image:: _static/webtop-panels.png
+
+When creating a new panel it is mandatory to indicate the :guilabel:`Name` that will appear in the resource. You can also insert a :guilabel:`Description` and a :guilabel:`Title`.
+
+Using shared labels, you can easily assign panels to specific resource categories.
+A panel without any associated label will be assigned to every available resource (all contacts, all events or all activities).
+
+Through the :guilabel:`Add` button it will be possible to select which custom fields to use among those already created in the panel.
+
 
 Mail inline preview
 ===================
@@ -355,11 +441,11 @@ For example, if you want to hide the subfolder "folder1" from this list, just ri
 
 .. image:: _static/webtop-sub_imap_folder1.png
 
-It is possible to manage the visibility of hidden folders by selecting the "Manage visibility" function:
+It is possible to manage the visibility of hidden folders by selecting the :guilabel:`Manage visibility` function:
 
 .. image:: _static/webtop-sub_imap_folder2.png
 
-For example, if you want to restore the subscription of the "folder1" just hidden, just select it from the list of hidden folders
+For example, if you want to restore the subscription of the :guilabel:`folder1` just hidden, just select it from the list of hidden folders
 and click on the icon on the left:  
 
 .. image:: _static/webtop-sub_imap_folder3.png
@@ -378,7 +464,7 @@ Nextcloud integration
 
 .. note::
 
-   Before proceeding, verify that the "Nextcloud" module has been installed 
+   Before proceeding, verify that the **Nextcloud** module has been installed 
    from :guilabel:`Software Center`
 
 By default, Nextcloud integration is disabled for all users.
@@ -386,31 +472,31 @@ To enable it, use the administration panel which can be accessed using the webto
 
 For example, if you want to activate the service for all webtop users, proceed as follows:
 
-1. access the administrative panel and select "Groups":
+1. access the administrative panel and select :guilabel:`Groups`:
 
-   .. image:: _static/webtop-admin_panel_groups.png
+.. image:: _static/webtop-admin_panel_groups.png
 
 2. modify the properties of the "users" group by double clicking and select the button related to the Authorizations:
    
-   .. image:: _static/webtop-admin_panel_permission.png
+.. image:: _static/webtop-admin_panel_permission.png
 
 3. add to existing authorizations those relating to both the ``STORE_CLOUD`` and ``STORE_OTHER`` resources by selecting the items as shown below:
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_1.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_1.png
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_2.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_2.png
 
 
-   so get this:
+so get this:
 
-   .. image:: _static/webtop-admin_panel_nextcloud_auth_3.png
+.. image:: _static/webtop-admin_panel_nextcloud_auth_3.png
 
 
 4. save and close.
 
 At this point from any user it will be possible to insert the Nextcloud resource (local or remote) in your personal Cloud.
 
-To do this, simply select the Cloud button and add a new **"Nextcloud"** resource by right clicking on **"My resources"** and then **"Add resource"** in this way:
+To do this, simply select the Cloud button and add a new Nextcloud resource by right clicking on :guilabel:`My resources` and then :guilabel:`Add resource` in this way:
 
 .. image:: _static/webtop-nextcloud_1.png
 
@@ -498,6 +584,58 @@ To enable chat integration:
    - Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
    - :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource --> WEBCHAT --> Action --> ACCESS`
    - Click :guilabel:`OK` then save and close
+
+Jitsi integration and support for links to third-party video calls
+==================================================================
+
+With this integration it is possible to start a new video conference and send the invitation via email, or schedule one by creating the event directly from the calendar.
+To activate the integration it is necessary to configure the `Jitsi <https://jitsi.org/>`_ instance that you would like to use directly from the cockpit interface, in the advanced settings for WebTop:
+
+.. image:: _static/webtop_cockpit_panel_jitsi.png
+
+By clicking on the :guilabel:`Save` button, the new configuration will be applied and WebTop restarted.
+
+By default, the videoconferencing service is disabled for all users.
+To enable it, for all users it is necessary to add a specific authorization from the administration panel:
+
+* Access the :guilabel:`Administration` menu, then :menuselection:`Domains --> NethServer --> Groups --> Users --> Authorizations`
+* :menuselection:`Add (+) --> Services --> com.sonicle.webtop.core (WebTop) --> Resource MEETING --> Action --> CREATE`
+* Click :guilabel:`OK` then save and close
+   
+The conference will be available for the users after a new login.
+
+To create a new video conference meeting, you can start from these two buttons:
+
+(top left)
+
+.. image:: _static/webtop_jitsi1.png
+
+(top right)
+
+.. image:: _static/webtop_jitsi2.png
+
+It is also possible to do this from a new email window or a new calendar event.
+
+For each new meeting you have to decide whether it should start immediately (instant meeting) or if it should be scheduled by invitation.
+
+There are several ways to share the new meeting link:
+
+.. image:: _static/webtop_jitsi3.png
+
+* :guilabel:`Start now` allows you to immediately access the newly created meeting room and copy the link via the button available next to the URL
+* :guilabel:`Send invitation` -> :guilabel:`Copy meeting invite`: in this case an invitation message, which also includes the meeting link, will be copied (e.g: To join the meeting on Jitsi Meet, click this link: …)
+* :guilabel:`Send invitation` -> :guilabel:`Share by email`: you will be asked if you would like to change the subject and date of the meeting, which will then be inserted in the newly generated email:
+   
+.. image:: _static/webtop_jitsi4.png
+
+* :guilabel:`Send invitation` -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
+   
+If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
+
+.. image:: _static/webtop_jitsi5.png
+
+The video conferencing services that are currently supported, in addition to Jitsi, are: Google Meet, MS Teams and Zoom.
+It is possible to add additional platforms through a `global setting <https://www.sonicle.com/docs/webtop5/core.html#meeting-integration-settings>`_.
 
 Audio and video WebRTC calls with chat (Beta)
 =============================================
@@ -620,8 +758,8 @@ To activate it, simply access the general settings of your user:
 
 It is possible to enable desktop notification in two modes:
 
-- **Always**: notifications will always be shown, even with the browser open
-- **Auto (in background only)**: notifications will be shown only when the browser is in the background
+- :guilabel:`Always`: notifications will always be shown, even with the browser open
+- :guilabel:`Auto (in background only)`: notifications will be shown only when the browser is in the background
 
 Once the mode is selected, a browser consent request will appear at the top left:
 
@@ -807,13 +945,76 @@ Locked settings require administration privileges.
 
 The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
 
-* **User name**: admin!<username>
-* **Password**: <WebTop admin password>
+* **User name**: ``admin!<username>``
+* **Password**: ``<WebTop admin password>``
 
 While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
 Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
 
 It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
+
+User access and user session logs
+=================================
+
+The table showing the entire log of accesses and sessions for each user is available under the administrator panel.
+Access the :guilabel:`Administration` menu, then :guilabel:`Domains` --> :guilabel:`NethServer` --> :guilabel:`Audit (domain)` --> :guilabel:`Access log`.
+
+For each access, the table reports the following data in columns: session ID, user name, date and time, session duration, authentication status and any login errors.
+It is possible to activate the geolocation for the access by public IP addresses detected.
+To activate this feature, you need to register an account on `ipstack <https://ipstack.com/>`_ (only this provider is currently supported) and obtain the API KEY to insert in the configuration db.
+
+Login to the administration panel -> :guilabel:`Property (system)` -> :guilabel:`add` -> :guilabel:`com.sonicle.webtop.core (WebTop)` -> enter the following data in the fields :guilabel:`Key` e :guilabel:`Value` :
+
+   - ``geolocation.provider`` = ``ipstack``
+   - ``geolocation.ipstack.apikey``  = ``<API KEY FROM PROVIDER>``
+   
+Then, after a logout and a login, to show the geolocation of the public IPs please click on the icon at the far right of the row:
+
+.. image:: _static/webtop_geologip.png
+
+Through the multiple search it is possible to quickly find the data of interest:
+
+.. image:: _static/webtop_search_access_log.png
+
+**Impersonate login**
+
+By default, the logins made through impersonate (``admin!<user>``) are not shown in the access logs table.
+In order to also add this type of access, you need to add the following key for the core service:
+
+   - ``key`` = ``audit.logimpersonated``
+   - ``value`` = ``true``
+
+Login notification for each new device
+======================================
+
+With this feature, it is possible to receive an email that notifies you through a security alert every time a new device accesses the account for the first time.
+
+.. note::
+
+  By default, this feature is disabled for all users to avoid too many "unintentional" false positives on first login.
+  
+To activate the notification for all users it is necessary to issue these commands from the Shell: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ 
+If, in addition to the user being accessed, you also need to send these notification emails to other email addresses in BCC (for additional administrative control), it is possible to do so by indicating the recipients in the following way: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationRecipients admin1@example.com,admin2@example.com
+ 
+If you want to avoid sending the notification for all new accesses performed by one (or more) network subnets, you can do this through a white list, as you can see in the example below: ::
+
+ config setprop webtop KnownDeviceVerification enabled
+ config setprop webtop KnownDeviceVerificationNetWhitelist 192.168.1.0/24,10.8.8.0/24
+ 
+To apply the changes shown in the previous commands and restart the application, please execute the final command below: ::
+
+ signal-event nethserver-webtop5-update
+ 
+.. note::
+
+  Accesses made through impersonate (``admin!<user>``) will never send an email notification
+
 
 Changing the logo
 =================
