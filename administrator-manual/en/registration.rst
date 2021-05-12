@@ -30,7 +30,7 @@ Therefore, do not hand over the password :dfn:`root` end user.
 
 Operation Center
 ================
-￼
+
 The :dfn:`system id` uniquely identify the server and it is reported inside the details page of each server.
 There are also two special buttons :guilabel:`Free key` and :guilabel:`Delete server`.		
 
