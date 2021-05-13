@@ -76,8 +76,8 @@ h5 {
     padding-left: 25px;
     padding-right: 25px;
 }
-ul, ol {
-    list-style-type: square;
+ul, ol, li{
+    list-style-type: square !important;
     margin-bottom: 15px;
 }
 ul ul {
