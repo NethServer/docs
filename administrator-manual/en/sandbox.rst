@@ -9,7 +9,8 @@ Yomi mail sandbox
 Yomi sandbox is an automated malware analysis system provided by `Yoroi <http://yoroi.company/>`_.
 
 Every mail message received or sent by the server is analyzed by the mail filter.
-If the message contains attachments, each attachment is sent to the sandbox.
+If the message contains attachments of MIME type used to deliver malware the attached file
+is uploaded to the sandbox for analysis.
 Yomi analyzes the behavior of the file when executed inside a realistic but isolated environment
 and return a confidence score.
 
