@@ -27,6 +27,8 @@ Other restored configurations:
        If the original machine has some third-party repositories enabled, remember to install them before
        proceeding with the restore.
 
+.. note:: The root password is not restored.
+
 New Server Manager
 ------------------
 
@@ -135,8 +137,6 @@ Please, follow below steps:
 
 
 Please note that the disaster recovery should be always performed from a local media (eg. NFS or USB) to speed up the process.
-
-.. note:: The root/admin password is not restored.
 
 .. _restore-roles-section:
 
