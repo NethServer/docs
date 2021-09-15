@@ -283,6 +283,13 @@ Regardless the rule type, the following settings are also available:
   the destination URL. This could be required by the destination server
   application to work properly.
 
+* `Allow encoded slashes`: Some web applications needs to use encoded path separators (``%2F`` for ``/``) in the URLs. 
+  Such URLs are accepted, but encoded slashes are not decoded but left in their encoded state. 
+  This options is disabled by default and must be enabled manually per proxypass.
+::
+
+ db proxypass setprop sub.domain.com AllowEncodedSlashes enabled
+ signal-event  nethserver-httpd-save
 
 .. _ftp-section:
 
