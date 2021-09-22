@@ -5,7 +5,8 @@ Public issue trackers
 
 List of public issue trackers related to |product|.
 
-- |product| 7: https://github.com/NethServer/dev/issues
+- NethServer: https://github.com/NethServer/dev/issues
+- Nethesis: https://github.com/nethesis/dev/issues
 - CentOS: https://bugs.centos.org/
 - Red Hat: https://bugzilla.redhat.com
 
