@@ -105,7 +105,7 @@ put it in :file:`/var/lib/tftpboot` directory.
 .. note:: To disable TFTP type the following commands in a root's
           console: ::
 	    
-	     config setprop dhcp tftp-status disabled
+	     config setprop dnsmasq tftp-status disabled
 	     signal-event nethserver-dnsmasq-save
 
 For instance, we now configure a client to boot CentOS from the
