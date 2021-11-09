@@ -56,6 +56,21 @@ To get the list, just execute: ::
 
  ls /usr/share/roundcubemail/plugins
 
+Skins
+=====
+
+A list of bundled skins can be found inside ``/usr/share/roundcubemail/skins`` directory.
+To get the list, just execute: ::
+
+ ls /usr/share/roundcubemail/skins
+
+The default skin is ``larry``. If you want to set the ``elastic`` skin as the default skin: ::
+
+ config setprop roundcubemail skin elastic
+ signal-event nethserver-roundcubemail-update
+
+Please note that each user can override the default skin in the settings > preferences > User Interface of roundcubemail
+
 Access
 ======
 

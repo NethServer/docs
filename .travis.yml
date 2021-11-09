@@ -12,7 +12,7 @@ env:
 
 install:
     - sudo apt-get install sshpass
-    - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt sphinx==3.2.1
+    - pip install -r ${BUILD_DIR}/nscom/requirements.txt -r ${BUILD_DIR}/nsent/requirements.txt
 
 script:
     - pushd ${BUILD_DIR}/
