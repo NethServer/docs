@@ -1,12 +1,12 @@
 # #-#-#-#-#  shared_folder.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  shared_folder.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -348,12 +348,19 @@ msgstr ""
 #: ../../shared_folder.rst:214
 msgid ""
 "Actions are logged to a file during the the day and are moved to a "
-"browseable database overnight."
+"browseable database overnight. By default, to avoid the database "
+"overloading, read actions like access to files and directories are saved "
+"only inside :file:`/var/log/smbaudit.log`. To change this behavior and store"
+" read actions inside the database, access the :guilabel:`Settings` page and "
+"enable the :guilabel:`Enable auditing of read actions`."
 msgstr ""
 
-#: ../../shared_folder.rst:216
+#: ../../shared_folder.rst:218
+msgid "The auditing report is available under the :guilabel:`Audit` page."
+msgstr ""
+
+#: ../../shared_folder.rst:220
 msgid ""
-"The report web interface is available from the old Server Manager from the "
-":guilabel:`Applications` page, while the new Server Manager (Cockpit) "
-"integrates a new interface inside the :guilabel:`File server` application."
+"The same report is also available from the old Server Manager inside the "
+":menuselection:`Applications` page."
 msgstr ""

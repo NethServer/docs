@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Francesco Pari, 2017
+# 23207dac865a8c5d793cea0690373b68_288982a, 2017
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Davide Principi <davide.principi@nethesis.it>, 2017
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019

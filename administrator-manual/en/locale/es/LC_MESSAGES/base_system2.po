@@ -1,12 +1,12 @@
 # #-#-#-#-#  base_system2.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  base_system2.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2019-10-08 08:11+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -30,243 +30,857 @@ msgstr ""
 
 #: ../../base_system2.rst:7
 msgid ""
-"Documentation about the old Server Manager is available :ref:`here "
-"<base_system-section>`."
-msgstr ""
-
-#: ../../base_system2.rst:9
-msgid ""
 "This chapter describes all available modules at the end of installation. All"
 " modules outside this section can be installed from the :ref:`software-"
 "center-section` page."
 msgstr ""
 
-#: ../../base_system2.rst:12
+#: ../../base_system2.rst:10
 msgid "The default installation includes the following main modules:"
 msgstr ""
 
-#: ../../base_system2.rst:14
+#: ../../base_system2.rst:12
 msgid ":ref:`system-section`"
 msgstr ""
 
-#: ../../base_system2.rst:15
+#: ../../base_system2.rst:13
 msgid ":ref:`applications-section`"
 msgstr ""
 
-#: ../../base_system2.rst:16
+#: ../../base_system2.rst:14
 msgid ":ref:`software-center-section`"
 msgstr ""
 
-#: ../../base_system2.rst:17
-msgid ":ref:`terminal-section`"
+#: ../../base_system2.rst:15
+msgid ":ref:`Terminal <terminal-section>`"
 msgstr ""
 
-#: ../../base_system2.rst:21
+#: ../../base_system2.rst:19
 msgid ":ref:`subscription-section`"
 msgstr ""
 
-#: ../../base_system2.rst:25
+#: ../../base_system2.rst:23
 msgid ":ref:`registration-section`"
 msgstr ""
 
-#: ../../base_system2.rst:27
+#: ../../base_system2.rst:25
 msgid ""
 "While the *root* user can see all configuration pages, access of each "
 "section and application may be also delegated to specific users. See :ref"
-":`delegation-section`."
+":`authentication-section`."
 msgstr ""
 
-#: ../../base_system2.rst:31
-msgid ""
-"Many Server Manager applications use netdata to display useful charts. Since"
-" netdata is not installed by default, you can install it from :ref"
-":`software-center-section`."
-msgstr ""
-
-#: ../../base_system2.rst:37
+#: ../../base_system2.rst:32
 msgid "System"
 msgstr ""
 
-#: ../../base_system2.rst:39
+#: ../../base_system2.rst:33
 msgid ""
 "The :index:`System` page is the landing section after a successful login. "
 "The page will display the :index:`status` and configuration of the system."
 msgstr ""
 
-#: ../../base_system2.rst:42
+#: ../../base_system2.rst:36
 msgid "From the system dashboard, the administrator can:"
 msgstr ""
 
-#: ../../base_system2.rst:44
+#: ../../base_system2.rst:38
 msgid "change the machine FQDN and server :ref:`dns_alias-section`"
 msgstr ""
 
-#: ../../base_system2.rst:45
+#: ../../base_system2.rst:39
 msgid "set upstream :ref:`dns-section` servers"
 msgstr ""
 
-#: ../../base_system2.rst:46
-msgid "configure :ref:`date-time-section`"
+#: ../../base_system2.rst:40
+msgid "configure date time and NTP servers"
 msgstr ""
 
-#: ../../base_system2.rst:47
+#: ../../base_system2.rst:41
 msgid "customize the organization details"
 msgstr ""
 
-#: ../../base_system2.rst:49
+#: ../../base_system2.rst:43
 msgid "The basic system includes also:"
 msgstr ""
 
-#: ../../base_system2.rst:51
-msgid ":ref:`network2-section`"
+#: ../../base_system2.rst:45
+msgid ":ref:`network-section`"
 msgstr ""
 
-#: ../../base_system2.rst:52
+#: ../../base_system2.rst:46
 msgid ":ref:`services-section`"
 msgstr ""
 
-#: ../../base_system2.rst:53
+#: ../../base_system2.rst:47
 msgid ":ref:`backup-section`"
 msgstr ""
 
-#: ../../base_system2.rst:54
+#: ../../base_system2.rst:48
 msgid ":ref:`server_certificate-section`"
 msgstr ""
 
-#: ../../base_system2.rst:55
+#: ../../base_system2.rst:49
 msgid ":ref:`users_and_groups-section`"
 msgstr ""
 
-#: ../../base_system2.rst:56
+#: ../../base_system2.rst:50
 msgid ":ref:`tlspolicy-section`"
 msgstr ""
 
-#: ../../base_system2.rst:57
+#: ../../base_system2.rst:51
 msgid ":ref:`dhcp-section`"
 msgstr ""
 
-#: ../../base_system2.rst:58
+#: ../../base_system2.rst:52
 msgid ":ref:`dns-section`"
 msgstr ""
 
-#: ../../base_system2.rst:59
+#: ../../base_system2.rst:53
 msgid ":ref:`ssh-section`"
 msgstr ""
 
-#: ../../base_system2.rst:60
+#: ../../base_system2.rst:54
 msgid ":ref:`storage-section`"
 msgstr ""
 
-#: ../../base_system2.rst:61
+#: ../../base_system2.rst:55
 msgid ":ref:`trusted_networks-section`"
 msgstr ""
 
-#: ../../base_system2.rst:62
+#: ../../base_system2.rst:56
 msgid ":ref:`duc-section`"
 msgstr ""
 
-#: ../../base_system2.rst:63
+#: ../../base_system2.rst:57
 msgid ":ref:`settings-section`"
 msgstr ""
 
-#: ../../base_system2.rst:64
+#: ../../base_system2.rst:58
 msgid ":ref:`logs-section`"
 msgstr ""
 
-#: ../../base_system2.rst:69
+#: ../../base_system2.rst:63
+msgid "Terminal"
+msgstr ""
+
+#: ../../base_system2.rst:64
+msgid ""
+"Execute a standard shell inside a terminal directly accessible from the "
+"browser. The shell and the processes will run with the user privileges."
+msgstr ""
+
+#: ../../base_system2.rst:70
 msgid "Network"
 msgstr ""
 
-#: ../../base_system2.rst:71
+#: ../../base_system2.rst:72
 msgid ""
-"Besides all features available in the old Server Manager (see :ref:`network-"
-"section`), this page allows to:"
-msgstr ""
-
-#: ../../base_system2.rst:74
-msgid ""
-"check network status with integrated diagnostic tools like ping, trace route"
-" and name lookup"
+"The :guilabel:`Network` page configures how the server is connected to the "
+"local network (LAN) and/or other networks (i.e. Internet)."
 msgstr ""
 
 #: ../../base_system2.rst:75
 msgid ""
-"create a logical network interface without a role: such an interface can be "
-"used later in other modules like Dedalo hotspot"
+"If the server has firewall and gateway functionality, it will handle extra "
+"networks with special functions like DMZ (DeMilitarized Zone) and guests "
+"network."
+msgstr ""
+
+#: ../../base_system2.rst:78
+msgid ""
+"|product| supports an unlimited number of network interfaces. Any network "
+"managed by the system must follow these rules:"
 msgstr ""
 
 #: ../../base_system2.rst:81
-msgid "Services"
+msgid ""
+"networks must be physically separated (multiple networks can't be connected "
+"to the same switch/hub)"
+msgstr ""
+
+#: ../../base_system2.rst:82
+msgid ""
+"networks must be logically separated: each network must have different "
+"addresses"
 msgstr ""
 
 #: ../../base_system2.rst:83
 msgid ""
-"A remote system can connect to a :index:`network service`, which is a "
-"software running on |product| itself."
+"private networks, like LANs, must follow address's convention from "
+":ref:`RFC1918 <RFC1918-section>` document"
 msgstr ""
 
-#: ../../base_system2.rst:86
+#: ../../base_system2.rst:87
 msgid ""
-"Each service can have a list of \"open\" ports accepting local or remote "
-"connections. To control which zones or hosts can access a network service, "
-"see :ref:`firewall-section`."
+"Every network interface has a specific *role* which determines its behavior."
+" All roles are identified by colors. Each role corresponds to a well-known "
+"*zone* with special network traffic rules:"
 msgstr ""
 
-#: ../../base_system2.rst:89
+#: ../../base_system2.rst:90
 msgid ""
-"Existing services can be started and stopped directly from the "
-":guilabel:`Services` page."
+"*green*: local network (green role/zone). Hosts on this network can access "
+"any other configured network"
+msgstr ""
+
+#: ../../base_system2.rst:91
+msgid ""
+"*blue*: guests network (blue role/zone). Hosts on this network can access "
+"orange and red networks, but can't access the green network"
+msgstr ""
+
+#: ../../base_system2.rst:92
+msgid ""
+"*orange*: DMZ network (orange role/zone).  Hosts on this network can access "
+"red network, but can't access to blue and green networks"
+msgstr ""
+
+#: ../../base_system2.rst:93
+msgid ""
+"*red*: public network (red role/zone). Hosts on this network can access only"
+" the server itself"
 msgstr ""
 
 #: ../../base_system2.rst:95
-msgid "Storage"
+msgid ""
+"See :ref:`policy-section` for more information on roles and firewall rules."
 msgstr ""
 
 #: ../../base_system2.rst:97
+msgid ""
+"The server must have at least one network interface. When the server has "
+"only one interface, this interface must have green role."
+msgstr ""
+
+#: ../../base_system2.rst:99
+msgid ""
+"If the server is installed on a public VPS (Virtual Private Server), it "
+"should must be configured with a green interface. All critical services "
+"should be closed using :ref:`services-section` panel."
+msgstr ""
+
+#: ../../base_system2.rst:102
+msgid ""
+"A role can be removed from an existing network interface by clicking on the "
+"tree-dots menu :guilabel:`⋮`, then select :guilabel:`Release role` action."
+msgstr ""
+
+#: ../../base_system2.rst:108
+msgid "Addresses for private networks (RFC1918)"
+msgstr ""
+
+#: ../../base_system2.rst:109
+msgid ""
+"TCP/IP private networks not directly connected to Internet should use "
+"special addresses selected by Internet Assigned Numbers Authority (IANA)."
+msgstr ""
+
+#: ../../base_system2.rst:113
+msgid "Private network"
+msgstr ""
+
+#: ../../base_system2.rst:113
+msgid "Subnet mask"
+msgstr ""
+
+#: ../../base_system2.rst:113
+msgid "IP addresses interval"
+msgstr ""
+
+#: ../../base_system2.rst:115
+msgid "10.0.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:115
+msgid "255.0.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:115
+msgid "10.0.0.1 - 10.255.255.254"
+msgstr ""
+
+#: ../../base_system2.rst:116
+msgid "172.16.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:116
+msgid "255.240.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:116
+msgid "172.16.0.1 - 172.31.255.254"
+msgstr ""
+
+#: ../../base_system2.rst:117
+msgid "192.168.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:117
+msgid "255.255.0.0"
+msgstr ""
+
+#: ../../base_system2.rst:117
+msgid "192.168.0.1 - 192.168.255.254"
+msgstr ""
+
+#: ../../base_system2.rst:123
+msgid "IP aliasing"
+msgstr ""
+
+#: ../../base_system2.rst:125
+msgid ""
+"Use IP aliasing to assign more IP addresses to the same network interface."
+msgstr ""
+
+#: ../../base_system2.rst:127
+msgid ""
+"The most common use is with a red interface: when the ISP provides a pool of"
+" public IP addresses (within the same subnet) you can add some (or all) of "
+"them to the same red interface and manage them individually (e.g. in the "
+"port forward configuration)."
+msgstr ""
+
+#: ../../base_system2.rst:129
+msgid ""
+"To add an alias, click the tree-dots menu :guilabel:`⋮` on right corner of "
+"the existing network interface, then select :guilabel:`Create alias` item."
+msgstr ""
+
+#: ../../base_system2.rst:131
+msgid ""
+"IP aliases on PPPoE interface could not work properly, due to different "
+"implementations of internet providers."
+msgstr ""
+
+#: ../../base_system2.rst:136
+msgid "Logical interfaces"
+msgstr ""
+
+#: ../../base_system2.rst:138
+msgid ""
+"Click on the :guilabel:`Add logical interface` button to create a new "
+"virtual network device. As first step, select a role for the network "
+"interface. You can also create a logical interface without a role to use it "
+"later with modules like :ref:`dedalo-section`."
+msgstr ""
+
+#: ../../base_system2.rst:142
+msgid "Supported logical interfaces are:"
+msgstr ""
+
+#: ../../base_system2.rst:144
+msgid ""
+":index:`bond`: arrange two or more network interfaces (provides load "
+"balancing and fault tolerance)"
+msgstr ""
+
+#: ../../base_system2.rst:145
+msgid ""
+":index:`bridge`: connect two different networks (it's often used for bridged"
+" VPN and virtual machine)"
+msgstr ""
+
+#: ../../base_system2.rst:146
+msgid ""
+":index:`VLAN` (Virtual Local Area Network): create two or more logically "
+"separated networks using a single interface"
+msgstr ""
+
+#: ../../base_system2.rst:148
+msgid ""
+"**Bonds** allow you to aggregate bandwidth or tolerate link faults. Bonds "
+"can be configured in multiple modes."
+msgstr ""
+
+#: ../../base_system2.rst:150
+msgid "Modes providing load balancing and fault tolerance:"
+msgstr ""
+
+#: ../../base_system2.rst:152
+msgid "Balance Round Robin (recommended)"
+msgstr ""
+
+#: ../../base_system2.rst:153
+msgid "Balance XOR"
+msgstr ""
+
+#: ../../base_system2.rst:154
+msgid ""
+"802.3ad (LACP): it requires support at driver level and a switch with IEEE "
+"802.3ad Dynamic link aggregation mode enabled"
+msgstr ""
+
+#: ../../base_system2.rst:155
+msgid "Balance TLB: it requires support at driver level"
+msgstr ""
+
+#: ../../base_system2.rst:156
+msgid "Balance ALB"
+msgstr ""
+
+#: ../../base_system2.rst:158
+msgid "Modes providing fault tolerance only:"
+msgstr ""
+
+#: ../../base_system2.rst:160
+msgid "Active backup (recommended)"
+msgstr ""
+
+#: ../../base_system2.rst:161
+msgid "Broadcast policy"
+msgstr ""
+
+#: ../../base_system2.rst:163
+msgid ""
+"A **bridge** has the function to connect different network segments, for "
+"example by allowing virtual machines, or client connected using a VPN, to "
+"access to the local network (green)."
+msgstr ""
+
+#: ../../base_system2.rst:166
+msgid ""
+"When it is not possible to physically separate two different networks, you "
+"can use a tagged **VLAN**. The traffic of the two networks can be "
+"transmitted on the same cable, but it will be handled as if it were sent and"
+" received on separate network cards. The use of VLAN, requires properly "
+"configured switches."
+msgstr ""
+
+#: ../../base_system2.rst:172
+msgid "PPPoE"
+msgstr ""
+
+#: ../../base_system2.rst:174
+msgid ""
+":index:`PPPoE` (Point-to-Point Protocol over Ethernet) connects the server "
+"to Internet through a DSL modem. To create a new PPPoE connection, make sure"
+" to have an unassigned Ethernet network interface."
+msgstr ""
+
+#: ../../base_system2.rst:177
+msgid ""
+"First, click on the :guilabel:`Configure` button on the unassigned network "
+"device, than select the :guilabel:`WAN (red)` role and click "
+":guilabel:`Next`. Finally select PPPoE as interface type and fill all "
+"required fields like :guilabel:`Username` and :guilabel:`Password`."
+msgstr ""
+
+#: ../../base_system2.rst:185
+msgid "Static routes"
+msgstr ""
+
+#: ../../base_system2.rst:187
+msgid ""
+"A static route is a rule that specifies how to route some network traffic "
+"that must not go through the default gateway."
+msgstr ""
+
+#: ../../base_system2.rst:189
+msgid ""
+"To add a static routes, click the tree-dots menu :guilabel:`⋮` on right "
+"corner of an existing network interface, then select :guilabel:`Create "
+"route` item. The route must be specified using the CIDR format inside the "
+":guilabel:`Network address` field, like ``10.0.0.0/24``. Static routes are "
+"added below the interface name."
+msgstr ""
+
+#: ../../base_system2.rst:193
+msgid ""
+"To remove and existing static route, click on the interface name then click "
+"on the :guilabel:`Delete` button."
+msgstr ""
+
+#: ../../base_system2.rst:195
+msgid ""
+"Remember to add the network to :ref:`trusted_networks-section`, if you wish "
+"to allow remote hosts to access local services."
+msgstr ""
+
+#: ../../base_system2.rst:200
+msgid "Diagnostic tools"
+msgstr ""
+
+#: ../../base_system2.rst:202
+msgid ""
+"Diagnostic tools can be used to troubleshoot network problems. As starting "
+"point, use the :guilabel:`Routing info` button to see current routing rules."
+msgstr ""
+
+#: ../../base_system2.rst:205
+msgid ""
+"Extra diagnostic tools can be accessed by clicking on the tree-dots menu "
+":guilabel:`⋮` just on right of the routing information button. Available "
+"tools are:"
+msgstr ""
+
+#: ../../base_system2.rst:208
+msgid "Ping: send ICMP packets to a specific host"
+msgstr ""
+
+#: ../../base_system2.rst:209
+msgid "DNS lookup: perform a DNS query on a custom DNS server"
+msgstr ""
+
+#: ../../base_system2.rst:210
+msgid "Traceroute:  print the route packets trace to a target network host"
+msgstr ""
+
+#: ../../base_system2.rst:215
+msgid "Services"
+msgstr ""
+
+#: ../../base_system2.rst:217
+msgid ""
+"The page contains a detailed list of all running services. Each service has "
+"the following fields:"
+msgstr ""
+
+#: ../../base_system2.rst:220
+msgid "**Name**: systemd service name"
+msgstr ""
+
+#: ../../base_system2.rst:221
+msgid "**Description**: optional description of service purpose"
+msgstr ""
+
+#: ../../base_system2.rst:222
+msgid ""
+"**Enabled**: it indicates if a service is marked to be automatically started"
+" by the system, usually at boot"
+msgstr ""
+
+#: ../../base_system2.rst:223
+msgid ""
+"**Running**: it indicates if the service is actually running, regardless of "
+"its enabled/disabled state"
+msgstr ""
+
+#: ../../base_system2.rst:224
+msgid ""
+"**Details**: inspect all service options by clicking the :guilabel:`View` "
+"link"
+msgstr ""
+
+#: ../../base_system2.rst:226
+msgid ""
+"A :index:`network service` is a service which has network access and can "
+"list TCP/UDP ports to accept local or remote connections. Specific fields "
+"for network services are:"
+msgstr ""
+
+#: ../../base_system2.rst:230
+msgid ""
+"**Access**: it can be one ore more network role (like red, green, etc) or a "
+"firewall zone"
+msgstr ""
+
+#: ../../base_system2.rst:231
+msgid "**Ports**: list of TCP and/or UDP ports"
+msgstr ""
+
+#: ../../base_system2.rst:233
+msgid ""
+"Existing services can be started and stopped directly from the buttons under"
+" the **Action** field. Extra actions are available by clicking the tree-dots"
+" menu :guilabel:`⋮`."
+msgstr ""
+
+#: ../../base_system2.rst:237
+msgid "Adding new services"
+msgstr ""
+
+#: ../../base_system2.rst:239
+msgid ""
+"All |product| modules automatically configure their own network services."
+msgstr ""
+
+#: ../../base_system2.rst:241
+msgid ""
+"Access to custom network services is denied by default. To overcome this "
+"limitation, the administrator can create a new network service by clicking "
+"on the :guilabel:`Add network service` button."
+msgstr ""
+
+#: ../../base_system2.rst:248
+msgid "Certificates"
+msgstr ""
+
+#: ../../base_system2.rst:250
+msgid ""
+"The :guilabel:`Certificates` page shows the currently installed X.509 "
+"certificates, and the default one provided by system services for TLS/SSL "
+"encrypted communications."
+msgstr ""
+
+#: ../../base_system2.rst:254
+msgid ""
+"|product| checks the certificates validity and sends an email to the root "
+"user if a certificate is near to expire and can't be automatically renewed."
+msgstr ""
+
+#: ../../base_system2.rst:257
+msgid ""
+"The :guilabel:`Set as default` button, available under the the tree-dots "
+"menu :guilabel:`⋮`, allows choosing the default certificate. When a new "
+"certificate is chosen, all services using TLS/SSL are restarted and network "
+"clients will be required to accept the new certificate."
+msgstr ""
+
+#: ../../base_system2.rst:262
+msgid ""
+"When |product| is installed a default RSA self-signed certificate is "
+"generated. It should be edited by inserting proper values before configuring"
+" the network clients to use it. When the self-signed certificate is due to "
+"expire a new one is automatically generated from the same RSA key and with "
+"the same attributes."
+msgstr ""
+
+#: ../../base_system2.rst:267
+msgid "The :guilabel:`Server certificate` page also allows:"
+msgstr ""
+
+#: ../../base_system2.rst:269
+msgid ""
+"uploading an existing certificate and private RSA/ECC key. Optionally a "
+"certificate chain file can be specified, too. All files must be PEM-encoded."
+msgstr ""
+
+#: ../../base_system2.rst:272
+msgid ""
+"requesting a new `Let's Encrypt <https://letsencrypt.org/>`_ certificate.  "
+"This is possible if the following requirements are met:"
+msgstr ""
+
+#: ../../base_system2.rst:275
+msgid ""
+"The server must be reachable from outside at port 80. Make sure your port 80"
+" is open to the public Internet (you can check with sites like `CSM "
+"<http://www.canyouseeme.org/>`_);"
+msgstr ""
+
+#: ../../base_system2.rst:278
+msgid ""
+"The domains that you want the certificate for must be public domain names "
+"associated to server own public IP. Make sure you have public DNS name "
+"pointing to your server (you can check with sites like `VDNS "
+"<http://viewdns.info/>`_)."
+msgstr ""
+
+#: ../../base_system2.rst:282
+msgid "Wild card certificates (i.e. ``*.nethserver.org``) are not supported."
+msgstr ""
+
+#: ../../base_system2.rst:284
+msgid ""
+"The :guilabel:`Notification email` will be used by Let's Encrypt to send "
+"notifications about the certificate."
+msgstr ""
+
+#: ../../base_system2.rst:287
+msgid ""
+"The Let's Encrypt certificate is automatically renewed 30 days before "
+"expiration date."
+msgstr ""
+
+#: ../../base_system2.rst:290
+msgid ""
+"To avoid problems while importing the certificate in Internet Explorer, the "
+"Common Name (CN) field should match the server FQDN."
+msgstr ""
+
+#: ../../base_system2.rst:294
+msgid "Delete a certificate"
+msgstr ""
+
+#: ../../base_system2.rst:296
+msgid ""
+"Unused certificated can be deleted by clicking the by clicking the "
+":guilabel:`Delete` button under the tree-dots menu :guilabel:`⋮`."
+msgstr ""
+
+#: ../../base_system2.rst:299
+msgid "The builtin certificate can't be deleted."
+msgstr ""
+
+#: ../../base_system2.rst:304
+msgid "Storage"
+msgstr ""
+
+#: ../../base_system2.rst:306
 msgid ""
 "The :index:`storage` section configures and monitors disks. The "
 "administrator can mount new local or remote disks, manage RAID arrays and "
 "LVM volumes."
 msgstr ""
 
-#: ../../base_system2.rst:104
+#: ../../base_system2.rst:315
+msgid "Trusted networks"
+msgstr ""
+
+#: ../../base_system2.rst:317
+msgid ""
+"Trusted networks are special networks (local, VPNs or remote) allowed to "
+"access special server's services."
+msgstr ""
+
+#: ../../base_system2.rst:320
+msgid "For example, hosts inside trusted networks can access to:"
+msgstr ""
+
+#: ../../base_system2.rst:322 ../../base_system2.rst:426
+msgid "Server Manager"
+msgstr ""
+
+#: ../../base_system2.rst:323
+msgid "Shared folders (SAMBA)"
+msgstr ""
+
+#: ../../base_system2.rst:325
+msgid ""
+"New trusted networks can be added using the :guilabel:`Add network` button."
+msgstr ""
+
+#: ../../base_system2.rst:327
+msgid ""
+"If the remote network is reachable using a router, remember to add a static "
+"route inside :ref:`static_routes-section` page."
+msgstr ""
+
+#: ../../base_system2.rst:336
 msgid "SSH"
 msgstr ""
 
-#: ../../base_system2.rst:106
+#: ../../base_system2.rst:338
 msgid ""
-"The :index:`SSH` page displays the number of current SSH connections. From "
-"this section the administrator can change the OpenSSH listening port, "
-"disable root login and password authentication."
+"The :menuselection:`System > SSH` page displays the number of current SSH "
+"connections. From this section the administrator can change the OpenSSH "
+"listening port and disable weak ciphers, root login, and password "
+"authentication."
 msgstr ""
 
-#: ../../base_system2.rst:110
+#: ../../base_system2.rst:342
 msgid ""
-"It is possible to selectively grant SSH and :index:`SFTP` access to some "
-"groups, while administrators are always granted access to SSH and SFTP."
+"By default, SSH and SFTP access is granted to the following groups of "
+"administrators:"
 msgstr ""
 
-#: ../../base_system2.rst:113
-msgid ""
-"SSH and SFTP permissions are available once the :guilabel:`System > Settings"
-" > Shell policy > Override the shell of users` has been enabled."
+#: ../../base_system2.rst:344 ../../base_system2.rst:548
+msgid "``root``"
 msgstr ""
 
-#: ../../base_system2.rst:120
+#: ../../base_system2.rst:345
+msgid "``wheel``"
+msgstr ""
+
+#: ../../base_system2.rst:347
+msgid ""
+"When an account provider is configured, the access is granted to ``domain "
+"admins``, too. See :ref:`admin-account-section` for details."
+msgstr ""
+
+#: ../../base_system2.rst:350
+msgid ""
+"It is possible to grant access to normal users and groups with the "
+":guilabel:`Allow SSH/SFTP access` selector."
+msgstr ""
+
+#: ../../base_system2.rst:353
+msgid ""
+"The administrator can harden SSH by restricting the usage of weak ciphers, "
+"algorithms and macs. After enabling the :guilabel:`Disable weak ciphers` "
+"option, the host key will change and clients will have to accept the new "
+"one. Also, note that big files transfer can be slower with the strong "
+"encryption and very old SSH clients may not be able to connect to the "
+"server."
+msgstr ""
+
+#: ../../base_system2.rst:361 ../../base_system2.rst:581
+msgid "For |product| up to version 7.7:"
+msgstr ""
+
+#: ../../base_system2.rst:363
+msgid ""
+"The :guilabel:`Allow SSH/SFTP access` selector is available once the "
+":guilabel:`Override the shell of users` option has been enabled in "
+":menuselection:`System > Settings > Shell policy`. If that option is "
+"disabled, only users the with :guilabel:`Shell` option can access the Server"
+" Manager, and delegation is not required any more."
+msgstr ""
+
+#: ../../base_system2.rst:368 ../../base_system2.rst:586
+msgid "See :ref:`relnotes-ns78` for more information."
+msgstr ""
+
+#: ../../base_system2.rst:370
+msgid ""
+"Access of the ``wheel`` group can be revoked with the following commands: ::"
+msgstr ""
+
+#: ../../base_system2.rst:375
+msgid ""
+"The ``AllowLocalGroups`` property accepts a comma separated list of "
+"``/etc/groups`` names and can be adjusted according to the actual needs "
+"(e.g. ``wheel,srvadmins``)."
+msgstr ""
+
+#: ../../base_system2.rst:381
+msgid "Disk analyzer"
+msgstr ""
+
+#: ../../base_system2.rst:383
+msgid ""
+"This tool is used to visualize :index:`disk usage` in a simple and nice "
+"graph in which you can interact with, click, and double click to navigate in"
+" the directories tree."
+msgstr ""
+
+#: ../../base_system2.rst:385
+msgid ""
+"The chart is updated overnight. Click  the :guilabel:`Update now` in order "
+"to index the file system and update the chart. Please note that this process"
+" can take several minutes depending on the occupied disk space."
+msgstr ""
+
+#: ../../base_system2.rst:389
+msgid "Well known folders are:"
+msgstr ""
+
+#: ../../base_system2.rst:391
+msgid "Shared folders: :file:`/var/lib/nethserver/ibay`"
+msgstr ""
+
+#: ../../base_system2.rst:392
+msgid "User home directories: :file:`/var/lib/nethserver/home`"
+msgstr ""
+
+#: ../../base_system2.rst:393
+msgid "Mail: :file:`/var/lib/nethserver/vmail`"
+msgstr ""
+
+#: ../../base_system2.rst:394
+msgid "Faxes: :file:`/var/lib/nethserver/fax`"
+msgstr ""
+
+#: ../../base_system2.rst:395
+msgid "MySQL databases: :file:`/var/lib/mysql`"
+msgstr ""
+
+#: ../../base_system2.rst:400
 msgid "Settings"
 msgstr ""
 
-#: ../../base_system2.rst:122
+#: ../../base_system2.rst:402
 msgid ""
 "The :index:`settings` page allows the configuration of some options which "
 "could impact multiple system applications."
 msgstr ""
 
-#: ../../base_system2.rst:125
+#: ../../base_system2.rst:407
 msgid "Smart host"
 msgstr ""
 
-#: ../../base_system2.rst:127
+#: ../../base_system2.rst:409
 msgid ""
 "Many system applications, like cron, can generate mail notification. If the "
 "server can't directly deliver those mails, the administrator can configure a"
@@ -274,18 +888,18 @@ msgid ""
 "delivered to the configured server."
 msgstr ""
 
-#: ../../base_system2.rst:133
+#: ../../base_system2.rst:415
 msgid "Email notifications"
 msgstr ""
 
-#: ../../base_system2.rst:135
+#: ../../base_system2.rst:417
 msgid ""
 "As default, notifications are sent to the local root maildir. The "
 "administrator can change the root forward address adding one or more mail "
 "address to the :guilabel:`Destination` field."
 msgstr ""
 
-#: ../../base_system2.rst:138
+#: ../../base_system2.rst:420
 msgid ""
 "It's also a good practice to set a custom :guilabel:`Sender address`: "
 "messages from the root user (like cron notifications) will be sent using the"
@@ -294,22 +908,18 @@ msgid ""
 " using ``root@<fqdn>`` as sender address."
 msgstr ""
 
-#: ../../base_system2.rst:144
-msgid "Server Manager"
-msgstr ""
-
-#: ../../base_system2.rst:146
+#: ../../base_system2.rst:428
 msgid ""
 "As default, access to the Server Manager is granted from all firewall zones."
 " From this section the administrator can restrict the access to the Server "
 "Manager only to a list of trusted IP addresses."
 msgstr ""
 
-#: ../../base_system2.rst:151
+#: ../../base_system2.rst:433
 msgid "Log files"
 msgstr ""
 
-#: ../../base_system2.rst:153
+#: ../../base_system2.rst:435
 msgid ""
 "All log files are managed by :index:`logrotate`. Logrotate is designed to "
 "ease administration of a large numbers of log files. It allows automatic "
@@ -317,51 +927,64 @@ msgid ""
 "handled daily, weekly, monthly."
 msgstr ""
 
-#: ../../base_system2.rst:156
+#: ../../base_system2.rst:438
 msgid ""
 "The administrator can set logrotate defaults from this page. The "
 "configuration will apply to all applications. But please note that some "
 "applications can override such configuration to meet specific needs."
 msgstr ""
 
-#: ../../base_system2.rst:160
+#: ../../base_system2.rst:442
 msgid "Configuration hints"
 msgstr ""
 
-#: ../../base_system2.rst:162
+#: ../../base_system2.rst:444
 msgid ""
 "Most Server Manager pages can display some configuration hints to help guide"
 " the administrator on a better system configuration. Hints are just "
 "suggestions and can be disabled from this menu."
 msgstr ""
 
-#: ../../base_system2.rst:167
+#: ../../base_system2.rst:449
 msgid "Password change"
 msgstr ""
 
-#: ../../base_system2.rst:169
+#: ../../base_system2.rst:451
 msgid ""
 "The settings page also includes a panel to let users change their password, "
 "including the root user."
 msgstr ""
 
-#: ../../base_system2.rst:172
+#: ../../base_system2.rst:454
 msgid "Shell policy"
 msgstr ""
 
-#: ../../base_system2.rst:174
+#: ../../base_system2.rst:456
 msgid ""
-"This setting can be used to enable or disable the shell that is needed to "
-"use new Server Manager and the SSH service. If this option is enabled the "
-"user's shell setting under the :guilabel:`Users and Groups` page is ignored "
-"and it is considered always enabled."
+"This setting was added since |product| 7.8, to select how the user's shell "
+"is configured."
 msgstr ""
 
-#: ../../base_system2.rst:179
+#: ../../base_system2.rst:458
+msgid ""
+"If the :guilabel:`Override the shell of users` option is enabled, the old "
+"user's :guilabel:`Shell` setting under the :guilabel:`Users & Groups` page "
+"is hidden and it is considered always enabled."
+msgstr ""
+
+#: ../../base_system2.rst:461
+msgid ""
+"This is required by some features introduced starting from |product| 7.8, "
+"like the new Server Manager based on Cockpit, the :guilabel:`User settings "
+"page` and the fine grained SSH and SFTP permissions. See :ref:`relnotes-"
+"ns78` for details."
+msgstr ""
+
+#: ../../base_system2.rst:469
 msgid "User settings page"
 msgstr ""
 
-#: ../../base_system2.rst:181
+#: ../../base_system2.rst:471
 msgid ""
 "When the :guilabel:`Enable user settings page` options is enabled, users can"
 " change their password and other settings on a web page outside Cockpit (on "
@@ -369,25 +992,25 @@ msgid ""
 "be enabled only if :guilabel:`Shell Policy` is enabled as well."
 msgstr ""
 
-#: ../../base_system2.rst:185
+#: ../../base_system2.rst:475
 msgid "The access to the page can be limited only from Trusted Networks."
 msgstr ""
 
-#: ../../base_system2.rst:190
+#: ../../base_system2.rst:480
 msgid "Logs"
 msgstr ""
 
-#: ../../base_system2.rst:192
+#: ../../base_system2.rst:482
 msgid ""
 "The system provides an indexed log named journal. Journal can be browsed "
 "from this page: messages can be filtered by service, severity and date."
 msgstr ""
 
-#: ../../base_system2.rst:198
+#: ../../base_system2.rst:489
 msgid "Applications"
 msgstr ""
 
-#: ../../base_system2.rst:200
+#: ../../base_system2.rst:491
 msgid ""
 "The :guilabel:`Applications` page lists all installed applications. An "
 ":index:`application` is a Server Manager module usually composed by multiple"
@@ -396,32 +1019,32 @@ msgid ""
 "open the application."
 msgstr ""
 
-#: ../../base_system2.rst:205
+#: ../../base_system2.rst:496
 msgid ""
 "There are also simpler applications which include only a link to an external"
 " web pages. To access such applications click on the :guilabel:`Open` "
 "button."
 msgstr ""
 
-#: ../../base_system2.rst:209
+#: ../../base_system2.rst:500
 msgid "Shortcuts"
 msgstr ""
 
-#: ../../base_system2.rst:211
+#: ../../base_system2.rst:502
 msgid ""
 "The administrator can add shortcuts to applications which are frequently "
 "used. Applications with a shortcut, will be linked to the left menu."
 msgstr ""
 
-#: ../../base_system2.rst:214 ../../base_system2.rst:228
+#: ../../base_system2.rst:505 ../../base_system2.rst:519
 msgid "Only *root* user has access to this feature."
 msgstr ""
 
-#: ../../base_system2.rst:219
+#: ../../base_system2.rst:510
 msgid "Add to home page"
 msgstr ""
 
-#: ../../base_system2.rst:221
+#: ../../base_system2.rst:512
 msgid ""
 ":index:`Launcher` is an application of the new Server Manager available to "
 "all users on HTTPS and HTTP ports. The launcher is accessible on the server "
@@ -430,119 +1053,124 @@ msgid ""
 ":file:`/var/www/html`)"
 msgstr ""
 
-#: ../../base_system2.rst:225
+#: ../../base_system2.rst:516
 msgid ""
 "Installed applications can be added to the launcher by clicking on the "
 ":guilabel:`Add to home page` button. All users will be able to access the "
 "public link of the application."
 msgstr ""
 
-#: ../../base_system2.rst:233
+#: ../../base_system2.rst:524
 msgid "Launcher"
 msgstr ""
 
-#: ../../base_system2.rst:235
+#: ../../base_system2.rst:526
 msgid "See :ref:`launcher-section`."
 msgstr ""
 
-#: ../../base_system2.rst:238
+#: ../../base_system2.rst:529
 msgid "Removing applications"
 msgstr ""
 
-#: ../../base_system2.rst:240
+#: ../../base_system2.rst:531
 msgid ""
 "To remove an installed module click :guilabel:`Remove` button on the "
 "corresponding application."
 msgstr ""
 
-#: ../../base_system2.rst:244
+#: ../../base_system2.rst:535
 msgid ""
 "When removing a module other modules could be removed, too! Read carefully "
 "the list of affected packages to avoid removing required features."
 msgstr ""
 
-#: ../../base_system2.rst:247
+#: ../../base_system2.rst:538
 msgid "This feature is not available in |product| Enterprise."
 msgstr ""
 
-#: ../../base_system2.rst:253
-msgid "Terminal"
+#: ../../base_system2.rst:544
+msgid "Authentication"
 msgstr ""
 
-#: ../../base_system2.rst:255
-msgid ""
-"Execute a standard shell inside a terminal directly accessible from the "
-"browser. The shell and the processes will run with the user privileges."
+#: ../../base_system2.rst:546
+msgid "The Server Manager can be always accessed from the following users:"
 msgstr ""
 
-#: ../../base_system2.rst:261
+#: ../../base_system2.rst:549
+msgid "members of ``domain admins`` groups"
+msgstr ""
+
+#: ../../base_system2.rst:554
 msgid "Role delegation"
 msgstr ""
 
-#: ../../base_system2.rst:263
+#: ../../base_system2.rst:556
 msgid ""
-"On complex environments, the *root* user can :index:`delegate` the access of"
-" some section to specific groups of local users."
+"In complex environments, the *root* user can :index:`delegate` the access of"
+" some Server Manager pages to specific groups of users."
 msgstr ""
 
-#: ../../base_system2.rst:266
-msgid "A local user can be delegated to access:"
+#: ../../base_system2.rst:559
+msgid ""
+"The *admin* user and the *domains admins* group are implicitly delegated to "
+"all pages. See also :ref:`admin-account-section` for more information."
 msgstr ""
 
-#: ../../base_system2.rst:268
-msgid "one or more pages of the *System* section"
+#: ../../base_system2.rst:562
+msgid "Other groups can be delegated to access:"
 msgstr ""
 
-#: ../../base_system2.rst:269
+#: ../../base_system2.rst:564
+msgid "one or more pages under the :guilabel:`System` section"
+msgstr ""
+
+#: ../../base_system2.rst:565
 msgid "one or more installed applications"
 msgstr ""
 
-#: ../../base_system2.rst:270
-msgid "one or more main sections between *Subscription*, *Software Center*"
+#: ../../base_system2.rst:566
+msgid "the :guilabel:`Subscription` page"
 msgstr ""
 
-#: ../../base_system2.rst:272
+#: ../../base_system2.rst:567
+msgid "the :guilabel:`Software Center` page"
+msgstr ""
+
+#: ../../base_system2.rst:569
 msgid ""
-"Role delegation is based on local groups, each user belonging to the group "
-"will be delegated. Users inside the *domains admins* are automatically "
-"delegated to all panels."
+"To create a new delegation, go to the :guilabel:`System > User & Groups > "
+"List > [Groups]` section then select the :guilabel:`Delegations` action of "
+"an existing group. Pick one or more items from the :guilabel:`System views` "
+"and :guilabel:`Applications` menus."
 msgstr ""
 
-#: ../../base_system2.rst:275
-msgid ""
-"To create a new delegation, access the :guilabel:`User & Groups` page under "
-"the group section, then edit an existing group or create a new one. Select "
-"one or more items from the :guilabel:`System views` and "
-":guilabel:`Applications` menus."
+#: ../../base_system2.rst:573
+msgid "The following pages are implicitly added to the delegated set:"
 msgstr ""
 
-#: ../../base_system2.rst:279
+#: ../../base_system2.rst:575
+msgid ":guilabel:`Dashboard`"
+msgstr ""
+
+#: ../../base_system2.rst:576
+msgid ":guilabel:`Applications`"
+msgstr ""
+
+#: ../../base_system2.rst:577
+msgid ":guilabel:`Terminal`"
+msgstr ""
+
+#: ../../base_system2.rst:583
 msgid ""
 "Even if a user has been delegated, it must be explicitly granted the shell "
 "access before being able to log into the Server Manager."
 msgstr ""
 
-#: ../../base_system2.rst:282
-msgid "The following pages are always accessible to all users:"
-msgstr ""
-
-#: ../../base_system2.rst:284
-msgid "dashboard"
-msgstr ""
-
-#: ../../base_system2.rst:285
-msgid "applications"
-msgstr ""
-
-#: ../../base_system2.rst:286
-msgid "terminal"
-msgstr ""
-
-#: ../../base_system2.rst:291
+#: ../../base_system2.rst:592
 msgid "Two-factor authentication (2FA)"
 msgstr ""
 
-#: ../../base_system2.rst:293
+#: ../../base_system2.rst:594
 msgid ""
 "Two-factor authentication (2FA) can be used to add an extra layer of "
 "security required to access the new Server Manager. First, users will enter "
@@ -550,118 +1178,122 @@ msgid ""
 "verification code generated by an application running on their smartphone."
 msgstr ""
 
-#: ../../base_system2.rst:297
+#: ../../base_system2.rst:598
 msgid ""
-"2FA is disabled by default. Each user can enable it by accessing the "
-":guilabel:`Two-factor authentication` section under :guilabel:`Settings` "
-"page, then following these steps:"
+"2FA is disabled by default. Users can enable it by themselves, accessing the"
+" :guilabel:`Two-factor authentication` section under their :guilabel:`System"
+" > Settings` page or by pointing the web browser to the ``/user-settings`` "
+"URL as explained in :ref:`user_settings-section`. Thereafter they have to "
+"follow these steps:"
 msgstr ""
 
-#: ../../base_system2.rst:300
+#: ../../base_system2.rst:602
 msgid ""
 "download and install the preferred 2FA application inside the smartphone"
 msgstr ""
 
-#: ../../base_system2.rst:301
+#: ../../base_system2.rst:603
 msgid "scan the QR code with the 2FA application"
 msgstr ""
 
-#: ../../base_system2.rst:302
+#: ../../base_system2.rst:604
 msgid ""
 "generate a new code and copy it inside :guilabel:`Verification code` field, "
 "than click :guilabel:`Check code`"
 msgstr ""
 
-#: ../../base_system2.rst:303
+#: ../../base_system2.rst:605
 msgid ""
 "if the verification code is correct, click on the :guilabel:`Save` button"
 msgstr ""
 
-#: ../../base_system2.rst:305
-msgid "Two-factor authentication can be enabled for:"
+#: ../../base_system2.rst:607
+msgid ""
+"Two-factor authentication can be enabled for the following core "
+"applications:"
 msgstr ""
 
-#: ../../base_system2.rst:307
+#: ../../base_system2.rst:609
 msgid "the new Server Manager"
 msgstr ""
 
-#: ../../base_system2.rst:308
+#: ../../base_system2.rst:610
 msgid ""
 "SSH when using username and password (access with public key will never "
 "require 2FA)"
 msgstr ""
 
-#: ../../base_system2.rst:312
+#: ../../base_system2.rst:614
 msgid "Recovery codes"
 msgstr ""
 
-#: ../../base_system2.rst:314
+#: ../../base_system2.rst:616
 msgid ""
 "Recovery codes can be used instead of temporary codes if the user cannot "
 "access the 2FA application on the smartphone. Each recovery code is a one-"
 "time password and can be used only once."
 msgstr ""
 
-#: ../../base_system2.rst:317
+#: ../../base_system2.rst:619
 msgid ""
 "To generate new recovery codes, disable 2FA, then re-enable it by "
 "registering the application again following the above steps."
 msgstr ""
 
-#: ../../base_system2.rst:320
+#: ../../base_system2.rst:622
 msgid "Smartphone applications"
 msgstr ""
 
-#: ../../base_system2.rst:322
+#: ../../base_system2.rst:624
 msgid "There are several commercial and open source 2FA applications:"
 msgstr ""
 
-#: ../../base_system2.rst:324
+#: ../../base_system2.rst:626
 msgid "Available for both Android and iOS:"
 msgstr ""
 
-#: ../../base_system2.rst:326
+#: ../../base_system2.rst:628
 msgid ""
 "`FreeOTP <https://freeotp.github.io/>`_: available for both Android and iOS"
 msgstr ""
 
-#: ../../base_system2.rst:327
+#: ../../base_system2.rst:629
 msgid ""
 "`Authenticator <https://mattrubin.me/authenticator/>`_: available on iOS "
 "only"
 msgstr ""
 
-#: ../../base_system2.rst:328
+#: ../../base_system2.rst:630
 msgid ""
 "`andOTP <https://github.com/andOTP/andOTP>`_: available for both Android and"
 " iOS https://github.com/andOTP/andOTP"
 msgstr ""
 
-#: ../../base_system2.rst:331
+#: ../../base_system2.rst:633
 msgid "Emergency recovery"
 msgstr ""
 
-#: ../../base_system2.rst:333
+#: ../../base_system2.rst:635
 msgid ""
 "In case of emergency, 2FA can be disabled accessing the server from a "
 "physical console like a keyboard and a monitor, a serial cable or a VNC-like"
 " connection for virtual machines:"
 msgstr ""
 
-#: ../../base_system2.rst:336
+#: ../../base_system2.rst:638
 msgid "access the system with user name and password"
 msgstr ""
 
-#: ../../base_system2.rst:337
+#: ../../base_system2.rst:639
 msgid "execute: ::"
 msgstr ""
 
-#: ../../base_system2.rst:342
+#: ../../base_system2.rst:644
 msgid ""
 "Eventually, the root user can retrieve recovery codes for a user. Use the "
 "following command and replace ``<user>`` with the actual user name : ::"
 msgstr ""
 
-#: ../../base_system2.rst:347
+#: ../../base_system2.rst:649
 msgid "Example for user ``goofy``: ::"
 msgstr ""

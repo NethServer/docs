@@ -1,12 +1,12 @@
 # #-#-#-#-#  web_server.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  web_server.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2020-01-20 09:54+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -304,11 +304,11 @@ msgid ""
 "erases the web root directory. This operation is not reversible."
 msgstr ""
 
-#: ../../web_server.rst:184
+#: ../../web_server.rst:186
 msgid "Reverse proxy"
 msgstr ""
 
-#: ../../web_server.rst:186
+#: ../../web_server.rst:188
 msgid ""
 "As alternative to a virtual host, which stores static files or a PHP web "
 "application under a local web root directory, it is possible to forward web "
@@ -316,73 +316,170 @@ msgid ""
 "behavior can be configured from the :guilabel:`Reverse proxy` page."
 msgstr ""
 
-#: ../../web_server.rst:191
+#: ../../web_server.rst:193
 msgid ""
 "Each reverse proxy item is actually a rule that can match an incoming web "
 "request. Depending on the rule :guilabel:`Name` field value, the match can "
 "occur in either:"
 msgstr ""
 
-#: ../../web_server.rst:195
+#: ../../web_server.rst:197
 msgid ""
 "the requested **web site name**, if :guilabel:`Name` starts with any "
 "character, but the slash ``/``, or"
 msgstr ""
 
-#: ../../web_server.rst:198
+#: ../../web_server.rst:200
 msgid ""
 "the requested **resource path**, if :guilabel:`Name` starts with a slash "
 "``/`` character."
 msgstr ""
 
-#: ../../web_server.rst:201
+#: ../../web_server.rst:203
 msgid ""
 "If the rule matches, the request is forwarded to another web server, defined"
 " by the :guilabel:`Destination URL` field."
 msgstr ""
 
-#: ../../web_server.rst:206
+#: ../../web_server.rst:207
+msgid "Web site name proxy pass"
+msgstr ""
+
+#: ../../web_server.rst:209
+msgid "Scenario for a named proxy pass:"
+msgstr ""
+
+#: ../../web_server.rst:211
+msgid ""
+"|product| is the firewall of your LAN with public name "
+"``http://fw.myfirstdomain.org``"
+msgstr ""
+
+#: ../../web_server.rst:212
+msgid ""
+"You have a domain ``http://mydomain.com`` pointing to the public IP for "
+"|product|"
+msgstr ""
+
+#: ../../web_server.rst:213
+msgid ""
+"You would like ``http://mydomain.com`` to forward to the internal server "
+"(internal IP: 192.168.2.100)"
+msgstr ""
+
+#: ../../web_server.rst:216
+msgid ""
+"In this scenario, create a new record by clicking :guilabel:`Create a "
+"reverse proxy` button. Fill the :guilabel:`Name` field with ``mydomain.com``"
+" and the :guilabel:`Destination URL` with ``http://192.168.2.100``."
+msgstr ""
+
+#: ../../web_server.rst:221
+msgid "Resource path proxy pass"
+msgstr ""
+
+#: ../../web_server.rst:223
+msgid "Scenario for path-based proxy pass:"
+msgstr ""
+
+#: ../../web_server.rst:225
+msgid "|product| is the firewall of your LAN"
+msgstr ""
+
+#: ../../web_server.rst:226
+msgid "You have a domain ``http://mydomain.com``"
+msgstr ""
+
+#: ../../web_server.rst:227
+msgid ""
+"You would like ``http://mydomain.com/mysite`` to forward to the internal "
+"server (internal IP: 192.168.2.100)"
+msgstr ""
+
+#: ../../web_server.rst:230
+msgid ""
+"In this scenario, create a new record by clicking :guilabel:`Create a "
+"reverse proxy` button. Fill the :guilabel:`Name` field with ``/mysite`` and "
+"the :guilabel:`Destination URL` with ``http://192.168.2.100``."
+msgstr ""
+
+#: ../../web_server.rst:235
+msgid "Extra options"
+msgstr ""
+
+#: ../../web_server.rst:237
+msgid ""
+"If only encrypted connections are allowed, enable the :guilabel:`Require SSL"
+" encrypted connection`."
+msgstr ""
+
+#: ../../web_server.rst:240
+msgid ""
+"Only clients from certain networks can be allowed to connect, by specifying"
+"  a comma-separated list of CIDR networks under the :guilabel:`Access from "
+"CIDR networks`  field."
+msgstr ""
+
+#: ../../web_server.rst:244
+msgid "Options available only for named proxy pass:"
+msgstr ""
+
+#: ../../web_server.rst:246
+msgid "Enable or disable forwarding of ``Host`` header"
+msgstr ""
+
+#: ../../web_server.rst:247
+msgid "Enable or disable WebSocket forwarding"
+msgstr ""
+
+#: ../../web_server.rst:248
+msgid ""
+"Accept invalid target SSL certificate: use this option only if the target "
+"has a self-signed certificate"
+msgstr ""
+
+#: ../../web_server.rst:253
 msgid "Advanced reverse proxy settings"
 msgstr ""
 
-#: ../../web_server.rst:208
+#: ../../web_server.rst:255
 msgid ""
 "When the reverse proxy rule matches a **web site name** it is possible to "
 "assign it a dedicated certificate, choosing one from the :guilabel:`SSL/TLS "
 "certificate` list."
 msgstr ""
 
-#: ../../web_server.rst:218
+#: ../../web_server.rst:265
 msgid ""
 "It is not possible to select the certificate if the rule matches a "
 "**resource path**. In this case only the default certificate can be used."
 msgstr ""
 
-#: ../../web_server.rst:221
+#: ../../web_server.rst:268
 msgid "Regardless the rule type, the following settings are also available:"
 msgstr ""
 
-#: ../../web_server.rst:223
+#: ../../web_server.rst:270
 msgid ""
 ":guilabel:`Access from CIDR networks`: restricts the access from the given "
 "list of CIDR networks. Only web clients connecting from those networks are "
 "allowed to open the web site."
 msgstr ""
 
-#: ../../web_server.rst:227
+#: ../../web_server.rst:274
 msgid ""
 ":guilabel:`Require SSL encrypted connection`: if enabled, any `http://` "
 "request is redirected to `https://`."
 msgstr ""
 
-#: ../../web_server.rst:230
+#: ../../web_server.rst:277
 msgid ""
 ":guilabel:`Accept invalid SSL certificate from target`: if the destination "
 "URL starts with `https://` and an invalid certificate is returned, enabling "
 "this option ignores the certificate validation error."
 msgstr ""
 
-#: ../../web_server.rst:234
+#: ../../web_server.rst:281
 msgid ""
 ":guilabel:`Forward HTTP \"Host\" header to target`: if enabled, a HTTP "
 "`Host` header containing the original request host name is forwarded to the "
@@ -390,17 +487,17 @@ msgid ""
 "application to work properly."
 msgstr ""
 
-#: ../../web_server.rst:242
+#: ../../web_server.rst:290
 msgid "FTP server"
 msgstr ""
 
-#: ../../web_server.rst:246
+#: ../../web_server.rst:294
 msgid ""
-"The FTP protocol is unsecure. Passwords and file data are sent in clear text"
+"The FTP protocol is insecure. Passwords and file data are sent in clear text"
 " over the network."
 msgstr ""
 
-#: ../../web_server.rst:249
+#: ../../web_server.rst:297
 msgid ""
 "The File Transfer Protocol is a standard network protocol used for the "
 "transfer of computer files between a client and server [#FTPWIKI]_. The "
@@ -408,7 +505,7 @@ msgid ""
 "accounts limited to the FTP service only."
 msgstr ""
 
-#: ../../web_server.rst:257
+#: ../../web_server.rst:305
 msgid ""
 "Users of the FTP service can be restricted to access their own home "
 "directory by enabling :guilabel:`Chroot user on home directory`. When this "
@@ -416,24 +513,60 @@ msgid ""
 "configuration is also known as *jailing*."
 msgstr ""
 
-#: ../../web_server.rst:262
+#: ../../web_server.rst:310
 msgid ""
 "When a virtual host is created, a random FTP user name is assigned to it. It"
 " is possible to upload the virtual host file contents with FTP. Refer to "
 ":ref:`configuring-web-app` for more information."
 msgstr ""
 
-#: ../../web_server.rst:268
+#: ../../web_server.rst:315
+msgid "System users"
+msgstr ""
+
+#: ../../web_server.rst:318
+msgid ""
+"This configuration is highly discouraged. Also note that when enabled, the "
+"integration with the web server will break."
+msgstr ""
+
+#: ../../web_server.rst:321
+msgid ""
+"After enabling system users, all virtual users will be disabled. All "
+"configuration must be done using the command line."
+msgstr ""
+
+#: ../../web_server.rst:324
+msgid "Enable system users: ::"
+msgstr ""
+
+#: ../../web_server.rst:329
+msgid ""
+"Given a user name *goofy*, first make sure the user has Remote shell access."
+" Then, enable the FTP access: ::"
+msgstr ""
+
+#: ../../web_server.rst:336
+msgid "To disable an already enabled user: ::"
+msgstr ""
+
+#: ../../web_server.rst:341
+msgid ""
+"If not explicitly disabled, all system users are chrooted. To disable a "
+"chroot for a system user: ::"
+msgstr ""
+
+#: ../../web_server.rst:349
 msgid "References"
 msgstr ""
 
-#: ../../web_server.rst:269
+#: ../../web_server.rst:350
 msgid ""
 "Apache documentation for :file:`.htaccess` files "
 "https://httpd.apache.org/docs/2.4/howto/htaccess.html"
 msgstr ""
 
-#: ../../web_server.rst:272
+#: ../../web_server.rst:353
 msgid ""
 "File Transfer Protocol https://en.wikipedia.org/wiki/File_Transfer_Protocol"
 msgstr ""

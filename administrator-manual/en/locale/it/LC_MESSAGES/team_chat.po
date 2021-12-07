@@ -1,29 +1,29 @@
 # #-#-#-#-#  team_chat.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  team_chat.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2018
 # Nicola <nicola.rauso@nethesis.it>, 2018
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Davide Principi <davide.principi@nethesis.it>, 2019
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
-"Last-Translator: Davide Principi <davide.principi@nethesis.it>, 2019\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,8 +98,12 @@ msgid "How to configure:"
 msgstr "Come configurare:"
 
 #: ../../team_chat.rst:26
-msgid "Access :guilabel:`Team chat` page inside the Server Manager"
-msgstr "Accedere alla pagina guilabel:`Team chat` del Server Manager"
+msgid ""
+"Click on :guilabel:`Settings` button of :menuselection:`Applications > "
+"Mattermost`"
+msgstr ""
+"Fare click sul pulsante :guilabel:`Impostazioni` di "
+":menuselection:`Applicazioni > Mattermost`"
 
 #: ../../team_chat.rst:27
 msgid ""
@@ -176,11 +180,11 @@ msgstr "Il comando provvederà a:"
 
 #: ../../team_chat.rst:56
 msgid ""
-"create a default team named as the Company from :ref:`organization_contacts-"
-"section`"
+"create a default team named as the Company from :guilabel:`Organization "
+"details` page"
 msgstr ""
 "creare il team di default utilizzando il nome dell'azienda definito nella "
-"sezione :ref:`organization_contacts-section`"
+"pagina :guilabel:`Organizzazione` page"
 
 #: ../../team_chat.rst:57
 msgid ""

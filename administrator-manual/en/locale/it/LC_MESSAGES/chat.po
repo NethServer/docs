@@ -11,7 +11,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Francesco Pari, 2017
+# 23207dac865a8c5d793cea0690373b68_288982a, 2017
 # Nicola <nicola.rauso@nethesis.it>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # 

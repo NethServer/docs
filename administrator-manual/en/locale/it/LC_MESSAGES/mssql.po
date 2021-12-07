@@ -1,27 +1,28 @@
 # #-#-#-#-#  mssql.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  mssql.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Davide Principi <davide.principi@nethesis.it>, 2020
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
+# cotosso <cotosso@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 11:46+0200\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2020-04-07 13:42+0000\n"
-"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020\n"
+"Last-Translator: cotosso <cotosso@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,13 +36,16 @@ msgstr ""
 
 #: ../../mssql.rst:7
 msgid "This package is not supported in NethServer Enterprise"
-msgstr ""
+msgstr "Questo pacchetto non è supportato in NethServer Enterprise"
 
 #: ../../mssql.rst:10
 msgid ""
 "With this package you can install Microsoft SQL Server on NethServer: it "
 "will automatically configure Microsoft repository and default configuration."
 msgstr ""
+"Con questo pacchetto puoi installare Microsoft SQL Server su NethServer: "
+"configurerà automaticamente il repository Microsoft e la configurazione di "
+"default."
 
 #: ../../mssql.rst:14
 msgid "Installation"
@@ -89,7 +93,7 @@ msgstr ""
 
 #: ../../mssql.rst:46
 msgid "You can do this also from command line: ::"
-msgstr ""
+msgstr "Puoi farlo anche dalla riga di comando: ::"
 
 #: ../../mssql.rst:52
 msgid "Instead, if you want to configure a product key use these commands: ::"
@@ -123,6 +127,9 @@ msgid ""
 "Otherwise NethServer will not able to load correct informations and perform "
 "backup-data."
 msgstr ""
+"Non modificare la password SA da SQL Server, ma utilizza l'interfaccia "
+"Cockpit. In caso contrario NethServer non sarà in grado di caricare le "
+"informazioni corrette ed eseguire il backup dei dati."
 
 #: ../../mssql.rst:83
 msgid "Backup and restore"

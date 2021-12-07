@@ -1,12 +1,12 @@
 # #-#-#-#-#  chat.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  chat.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:31+0000\n"
 "Last-Translator: Jose G. Jimenez S. <josegjimenez@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -96,10 +96,49 @@ msgstr ""
 "operativo. Ver :ref:`join-existing-ad-section`."
 
 #: ../../chat.rst:27
-msgid "Server to server (S2S)"
+msgid "Configuration"
 msgstr ""
 
 #: ../../chat.rst:29
+msgid ""
+"All configuration options are available from *Configuration* page inside the"
+" **ejabberd** application. Main options are:"
+msgstr ""
+
+#: ../../chat.rst:32
+msgid "enable and disable ejabberd daemon"
+msgstr ""
+
+#: ../../chat.rst:33
+msgid "enable built-in web administration interface"
+msgstr ""
+
+#: ../../chat.rst:35
+msgid ""
+"Under the *Advanced options* section, the administrator can also configure:"
+msgstr ""
+
+#: ../../chat.rst:37
+msgid "S2S federation"
+msgstr ""
+
+#: ../../chat.rst:38
+msgid "message archive"
+msgstr ""
+
+#: ../../chat.rst:39
+msgid "file upload to exchange data among clients using URL"
+msgstr ""
+
+#: ../../chat.rst:40
+msgid "file transfer speed"
+msgstr ""
+
+#: ../../chat.rst:43
+msgid "Server to server (S2S)"
+msgstr ""
+
+#: ../../chat.rst:45
 msgid ""
 "The XMPP system is federated by nature. If :index:`S2S` is enabled, users "
 "with accounts on one server can communicate with users on remote servers. "
@@ -107,40 +146,95 @@ msgid ""
 "global 'federated' IM network."
 msgstr ""
 
-#: ../../chat.rst:33
+#: ../../chat.rst:49
 msgid ""
 "For this purpose, the SRV DNS record must be configured for your domain "
 "(https://wiki.xmpp.org/web/SRV_Records#XMPP_SRV_records) and the server must"
 " have a valid SSL/TLS certificate."
 msgstr ""
 
-#: ../../chat.rst:37
-msgid "Client"
-msgstr "Cliente"
+#: ../../chat.rst:53
+msgid "Message Archive Management"
+msgstr ""
 
-#: ../../chat.rst:39
+#: ../../chat.rst:55
+msgid ""
+"Message Archive Management (mod_mam) implements Message Archive Management "
+"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
+" enabled, all messages will be stored inside the server and compatible XMPP "
+"clients can use it to store their chat history on the server."
+msgstr ""
+
+#: ../../chat.rst:58
+msgid ""
+"The database can store a maximum of 2GB of messages, archived messages can "
+"be purged automatically. To configure message retention policy, set "
+":guilabel:`Clean messages older than X days` option."
+msgstr ""
+
+#: ../../chat.rst:63
+msgid ""
+"If enabled, this module will store every message sent between users. This "
+"behavior will affect the privacy of your users."
+msgstr ""
+
+#: ../../chat.rst:68
+msgid "Administrators"
+msgstr "Administradores"
+
+#: ../../chat.rst:70
+msgid ""
+"All users within the group ``jabberadmins`` are considered administrators of"
+" the chat server."
+msgstr ""
+"Todos los usuarios dentro del grupo ``jabberadmins`` son considerados "
+"administradores del servidor de chat."
+
+#: ../../chat.rst:72
+msgid ""
+"The group ``jabberadmins`` must be created and configured from the :ref"
+":`groups-section` page."
+msgstr ""
+
+#: ../../chat.rst:74
+msgid "Administrators can:"
+msgstr "Los administradores pueden:"
+
+#: ../../chat.rst:76
+msgid "Send broadcast messages"
+msgstr "Enviar mensajes de difusión"
+
+#: ../../chat.rst:77
+msgid "Check the status of connected users"
+msgstr "Compruebe el estatus de los usuarios conectados"
+
+#: ../../chat.rst:80
+msgid "Clients"
+msgstr ""
+
+#: ../../chat.rst:82
 msgid "Jabber clients are available for all desktop and mobile platforms."
 msgstr ""
 "Los clientes Jabber están disponibles para todas las plataformas de "
 "escritorio y móviles."
 
-#: ../../chat.rst:41
+#: ../../chat.rst:84
 msgid "Some widespread clients:"
 msgstr "Algunos clientes comunes:"
 
-#: ../../chat.rst:43
+#: ../../chat.rst:86
 msgid "Pidgin is available for Windows and Linux"
 msgstr "Pidgin está disponible para Windows y Linux"
 
-#: ../../chat.rst:44
+#: ../../chat.rst:87
 msgid "Adium for Mac OS X"
 msgstr "Adium para Mac OS X"
 
-#: ../../chat.rst:45
+#: ../../chat.rst:88
 msgid "BeejibelIM for Android and iOS, Xabber only for Android"
 msgstr "BeejibelIM para Android e iOS, Xabber sólo para Android"
 
-#: ../../chat.rst:47
+#: ../../chat.rst:90
 msgid ""
 "When you configure the client, make sure TLS (or SSL) is enabled. Enter the "
 "user name and the domain of the machine."
@@ -148,7 +242,7 @@ msgstr ""
 "Cuando configure el cliente, asegúrese de que TLS (o SSL) esté habilitado. "
 "Introduzca el nombre de usuario y el dominio de la máquina."
 
-#: ../../chat.rst:50
+#: ../../chat.rst:93
 msgid ""
 "If |product| is also the DNS server of the network, the client should "
 "automatically find the server's address through special pre-configured DNS "
@@ -159,88 +253,11 @@ msgstr ""
 "especiales preconfigurados. De lo contrario, especifique la dirección del "
 "servidor en las opciones avanzadas."
 
-#: ../../chat.rst:53
+#: ../../chat.rst:96
 msgid ""
 "With TLS capabilities, strictly configured servers or clients could reject "
 "connections with your Ejabberd server if the SSL/TLS certificate doesn't "
 "match the domain name. Also, the certificate should contain two sub-domains "
 "``pubsub.*`` and ``conference.*``. This certificate can be obtained for free"
 " with Let's Encrypt (see :ref:`server_certificate-section`)."
-msgstr ""
-
-#: ../../chat.rst:60
-msgid "Administrators"
-msgstr "Administradores"
-
-#: ../../chat.rst:62
-msgid ""
-"All users within the group ``jabberadmins`` are considered administrators of"
-" the chat server."
-msgstr ""
-"Todos los usuarios dentro del grupo ``jabberadmins`` son considerados "
-"administradores del servidor de chat."
-
-#: ../../chat.rst:64
-msgid ""
-"The group ``jabberadmins`` must be created and configured from the :ref"
-":`groups-section` page."
-msgstr ""
-
-#: ../../chat.rst:66
-msgid "Administrators can:"
-msgstr "Los administradores pueden:"
-
-#: ../../chat.rst:68
-msgid "Send broadcast messages"
-msgstr "Enviar mensajes de difusión"
-
-#: ../../chat.rst:69
-msgid "Check the status of connected users"
-msgstr "Compruebe el estatus de los usuarios conectados"
-
-#: ../../chat.rst:73
-msgid "Message Archive Management"
-msgstr ""
-
-#: ../../chat.rst:75
-msgid ""
-"Message Archive Management (mod_mam) implements Message Archive Management "
-"as described in `XEP-0313 <http://xmpp.org/extensions/xep-0313.html>`_. When"
-" enabled, all messages will be stored inside the server and compatible XMPP "
-"clients can use it to store their chat history on the server."
-msgstr ""
-
-#: ../../chat.rst:78
-msgid ""
-"The database can store a maximum of 2GB of messages, archived messages can "
-"be purged automatically. To configure message retention policy, set "
-":guilabel:`Clean messages older than X days` option."
-msgstr ""
-
-#: ../../chat.rst:83
-msgid ""
-"If enabled, this module will store every message sent between users. This "
-"behavior will affect the privacy of your users."
-msgstr ""
-
-#: ../../chat.rst:88
-msgid "Other options"
-msgstr ""
-
-#: ../../chat.rst:90
-msgid ""
-"From the new Server Manager the administrator can configure all the options "
-"described above."
-msgstr ""
-
-#: ../../chat.rst:92
-msgid "Other available options:"
-msgstr ""
-
-#: ../../chat.rst:94
-msgid "upload and dowload transfer speed"
-msgstr ""
-
-#: ../../chat.rst:95
-msgid "enable/disable the administrator web interface"
 msgstr ""

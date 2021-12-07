@@ -1,12 +1,12 @@
 # #-#-#-#-#  vpn.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  vpn.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -58,15 +58,17 @@ msgstr ":index:`net2net` o :index:`tunel`: conecta dos redes remotas"
 
 #: ../../vpn.rst:16
 msgid ""
-"Roadwarrior OpenVPN, IPSec tunnel and OpenVPN tunnels are now part of the "
-"VPN application in the new Server Manager."
+"By default, the network traffic between VPNs is blocked by the firewall. To "
+"allow such traffic go to the :ref:`firewall-section` application and enable "
+"the :guilabel:`Allowed` field under :guilabel:`Settings > Traffic between "
+"OpenVPN roadwarrior, OpenVPN tunnels and IPSec tunnels`."
 msgstr ""
 
-#: ../../vpn.rst:21
+#: ../../vpn.rst:23
 msgid "OpenVPN"
 msgstr "OpenVPN"
 
-#: ../../vpn.rst:23
+#: ../../vpn.rst:25
 msgid ""
 "OpenVPN lets you easily create VPN connections, It brings with numerous "
 "advantages including:"
@@ -74,7 +76,7 @@ msgstr ""
 "OpenVPN le permite crear fácilmente conexiones VPN, que trae con numerosas "
 "ventajas, incluyendo:"
 
-#: ../../vpn.rst:26
+#: ../../vpn.rst:28
 msgid ""
 "Availability of clients for various operating systems: Windows, Linux, "
 "Apple, Android, iOS"
@@ -82,26 +84,26 @@ msgstr ""
 "Disponibilidad de clientes para varios sistemas operativos: Windows, Linux, "
 "Apple, Android, iOS"
 
-#: ../../vpn.rst:27
+#: ../../vpn.rst:29
 msgid ""
 "Multiple NAT traversal, you do not need a dedicated static IP on the "
 "firewall"
 msgstr ""
 "Múltiple NAT traversal, no necesita una IP estática dedicada en el firewall"
 
-#: ../../vpn.rst:28
+#: ../../vpn.rst:30
 msgid "High stability"
 msgstr "Alta estabilidad"
 
-#: ../../vpn.rst:29
+#: ../../vpn.rst:31
 msgid "Simple configuration"
 msgstr "Configuración sencilla"
 
-#: ../../vpn.rst:34
+#: ../../vpn.rst:36
 msgid "Roadwarrior"
 msgstr "Roadwarrior / guerrero"
 
-#: ../../vpn.rst:36
+#: ../../vpn.rst:38
 msgid ""
 "The OpenVPN server in roadwarrior mode allows connection of multiple "
 "clients."
@@ -109,27 +111,27 @@ msgstr ""
 "El servidor OpenVPN en modo roadwarrior - o modo guerrero - permite la "
 "conexión de varios clientes."
 
-#: ../../vpn.rst:38
+#: ../../vpn.rst:40
 msgid "Supported authentication methods are:"
 msgstr "Los métodos de autenticación admitidos son:"
 
-#: ../../vpn.rst:40
+#: ../../vpn.rst:42
 msgid "System user and password"
 msgstr "Usuario y contraseña del sistema"
 
-#: ../../vpn.rst:41
+#: ../../vpn.rst:43
 msgid "Certificate"
 msgstr "Certificado"
 
-#: ../../vpn.rst:42
+#: ../../vpn.rst:44
 msgid "System user name, password and certificate"
 msgstr ""
 
-#: ../../vpn.rst:43
+#: ../../vpn.rst:45
 msgid "System user name, One Time Password (OTP) and certificate"
 msgstr ""
 
-#: ../../vpn.rst:45
+#: ../../vpn.rst:47
 msgid ""
 "The server can operate in two modes: :index:`routed` or :index:`bridged`. "
 "You should choose bridged mode only if the tunnel must carry non-IP traffic."
@@ -138,11 +140,11 @@ msgstr ""
 ":index:`puenteado`. Usted debe elegir el modo puente solo si el túnel debe "
 "llevar tráfico no-IP."
 
-#: ../../vpn.rst:48
+#: ../../vpn.rst:50
 msgid "To allow a client to establish a VPN:"
 msgstr "Para permitir que un cliente establezca una VPN:"
 
-#: ../../vpn.rst:50
+#: ../../vpn.rst:52
 msgid ""
 "Create a new account: it is recommended to use a dedicated VPN account with "
 "certificate, avoiding the need to create a system user."
@@ -150,25 +152,25 @@ msgstr ""
 "Crear una nueva cuenta: se recomienda utilizar una cuenta VPN dedicada con "
 "certificado, evitando la necesidad de crear un usuario del sistema."
 
-#: ../../vpn.rst:53
+#: ../../vpn.rst:55
 msgid ""
 "On the other hand, it's mandatory to choose a system account if you want to "
 "use authentication with user name and password or with one time password "
 "(2FA)."
 msgstr ""
 
-#: ../../vpn.rst:56
+#: ../../vpn.rst:58
 msgid ""
 "Download the file containing the configuration and certificates. As an "
 "alternative, the file can be sent to the user by mail (available only on the"
 " new Server Manager)."
 msgstr ""
 
-#: ../../vpn.rst:59
+#: ../../vpn.rst:61
 msgid "Import the file into the client and start the VPN."
 msgstr "Importe el archivo en el cliente e inicie la VPN."
 
-#: ../../vpn.rst:63
+#: ../../vpn.rst:65
 msgid ""
 "When using OTP-based authentication, users will be required to enable "
 ":ref:`2FA <2fa-section>` before accessing the VPN. Also make sure users will"
@@ -177,230 +179,230 @@ msgid ""
 "VPN client can be seen as a login failure by  :ref:`fail2ban-section`."
 msgstr ""
 
-#: ../../vpn.rst:68
+#: ../../vpn.rst:70
 msgid "Accounting"
 msgstr ""
 
-#: ../../vpn.rst:70
+#: ../../vpn.rst:72
 msgid ""
 "Every time a client connects to the OpenVPN server, the access is logged "
 "inside an accounting database. Access statistics are available from the new "
 "Server Manager. For each user, statistics include:"
 msgstr ""
 
-#: ../../vpn.rst:73
+#: ../../vpn.rst:75
 msgid "client name"
 msgstr ""
 
-#: ../../vpn.rst:74
+#: ../../vpn.rst:76
 msgid "virtual IP address"
 msgstr ""
 
-#: ../../vpn.rst:75
+#: ../../vpn.rst:77
 msgid "real IP address"
 msgstr ""
 
-#: ../../vpn.rst:76
+#: ../../vpn.rst:78
 msgid "time of connection"
 msgstr ""
 
-#: ../../vpn.rst:77
+#: ../../vpn.rst:79
 msgid "time of disconnection"
 msgstr ""
 
-#: ../../vpn.rst:78
+#: ../../vpn.rst:80
 msgid "transferred bytes"
 msgstr ""
 
-#: ../../vpn.rst:83 ../../vpn.rst:183
+#: ../../vpn.rst:85 ../../vpn.rst:185
 msgid "Tunnel (net2net)"
 msgstr "Túnel (net2net)"
 
-#: ../../vpn.rst:85
+#: ../../vpn.rst:87
 msgid ""
 "When creating an OpenVPN net2net connection, a server will have the master "
 "role. All other servers are considered as slaves (clients)."
 msgstr ""
 
-#: ../../vpn.rst:88
+#: ../../vpn.rst:90
 msgid ""
 "A client can be connected to another |product| or any other firewall which "
 "uses OpenVPN."
 msgstr ""
 
-#: ../../vpn.rst:90
+#: ../../vpn.rst:92
 msgid ""
 "All tunnels use OpenVPN routed mode, but there are two kind of topologies: "
 "*subnet* and *p2p* (Point to Point)"
 msgstr ""
 
-#: ../../vpn.rst:92
+#: ../../vpn.rst:94
 msgid "**Topology: subnet**"
 msgstr ""
 
-#: ../../vpn.rst:94
+#: ../../vpn.rst:96
 msgid ""
 "This is the recommended topology. In :index:`subnet topology`, the server "
 "will accept connections and will act as DHCP server for every connected "
 "clients."
 msgstr ""
 
-#: ../../vpn.rst:97
+#: ../../vpn.rst:99
 msgid "In this scenario"
 msgstr ""
 
-#: ../../vpn.rst:99
+#: ../../vpn.rst:101
 msgid "the server will authenticate clients using TLS certificates"
 msgstr ""
 
-#: ../../vpn.rst:100
+#: ../../vpn.rst:102
 msgid "the server can push local routes to remote clients"
 msgstr ""
 
-#: ../../vpn.rst:101
+#: ../../vpn.rst:103
 msgid ""
 "the client will be able to authenticate with TLS certificates or user name "
 "and password"
 msgstr ""
 
-#: ../../vpn.rst:103
+#: ../../vpn.rst:105
 msgid "**Topology: P2P**"
 msgstr ""
 
-#: ../../vpn.rst:105
+#: ../../vpn.rst:107
 msgid ""
 "In :index:`p2p topology`, the administrator must configure one server for "
 "each client."
 msgstr ""
 
-#: ../../vpn.rst:107
+#: ../../vpn.rst:109
 msgid "In this scenario:"
 msgstr ""
 
-#: ../../vpn.rst:109
+#: ../../vpn.rst:111
 msgid ""
 "the only supported authentication method is the PSK (Pre-Shared Key). Please"
 " make sure to exchange the PSK using a secure channel (like SSH or HTTPS)"
 msgstr ""
 
-#: ../../vpn.rst:111
+#: ../../vpn.rst:113
 msgid "the administrator must select an IP for both end points"
 msgstr ""
 
-#: ../../vpn.rst:112
+#: ../../vpn.rst:114
 msgid "routes to remote networks must be configured on each end point"
 msgstr ""
 
-#: ../../vpn.rst:116
+#: ../../vpn.rst:118
 msgid "To configure a tunnel, proceed as follow:"
 msgstr ""
 
-#: ../../vpn.rst:118
+#: ../../vpn.rst:120
 msgid ""
 "Access the tunnel server and open the :guilabel:`OpenVPN tunnels` page, move"
 " to :guilabel:`Tunnel servers` tab and click on :guilabel:`Create new` "
 "button"
 msgstr ""
 
-#: ../../vpn.rst:121
+#: ../../vpn.rst:123
 msgid "Insert all required fields, but please note:"
 msgstr ""
 
-#: ../../vpn.rst:123
+#: ../../vpn.rst:125
 msgid ""
 ":guilabel:`Public IPs and/or public FQDN`, it's a list of public IP "
 "addresses or host names which will be used by clients to connect to the "
 "server over the public Internet"
 msgstr ""
 
-#: ../../vpn.rst:125
+#: ../../vpn.rst:127
 msgid ""
 ":guilabel:`Local networks`, it's a list of local networks which will be "
 "accessible from the remote server. If topology is set to p2p, the same list "
 "will be reported inside the client :guilabel:`Remote networks` field"
 msgstr ""
 
-#: ../../vpn.rst:127
+#: ../../vpn.rst:129
 msgid ""
 ":guilabel:`Remote networks`, it's a list of networks behind the remote "
 "server which will be accessible from hosts in the local network"
 msgstr ""
 
-#: ../../vpn.rst:130
+#: ../../vpn.rst:132
 msgid ""
 "After the configuration is saved, click on the :guilabel:`Download` action "
 "and select :guilabel:`Client configuration`"
 msgstr ""
 
-#: ../../vpn.rst:132
+#: ../../vpn.rst:134
 msgid ""
 "Access the tunnel client, open the :guilabel:`OpenVPN tunnels` page, move to"
 " :guilabel:`Tunnel clients` tab, click on :guilabel:`Upload` button"
 msgstr ""
 
-#: ../../vpn.rst:136
+#: ../../vpn.rst:138
 msgid "Advanced features"
 msgstr ""
 
-#: ../../vpn.rst:138
+#: ../../vpn.rst:140
 msgid "The web interface allows the configuration of advanced features like:"
 msgstr ""
 
-#: ../../vpn.rst:140
+#: ../../vpn.rst:142
 msgid ""
 "on the client, multiple addresses can be specified inside the "
 ":guilabel:`Remote hosts` field for redundancy; the OpenVPN client will try "
 "to connect to each host in the given order"
 msgstr ""
 
-#: ../../vpn.rst:141
+#: ../../vpn.rst:143
 msgid ""
 ":index:`WAN priority`: if the client has multiple WAN (red interfaces), the "
 "option allows to select the order in which the WAN will be used to connect "
 "to the remote server"
 msgstr ""
 
-#: ../../vpn.rst:143
+#: ../../vpn.rst:145
 msgid ""
 "protocol: please bear in mind that OpenVPN is designed to operate optimally "
 "over UDP, but TCP capability is provided for situations where UDP cannot be "
 "used"
 msgstr ""
 
-#: ../../vpn.rst:144
+#: ../../vpn.rst:146
 msgid ""
 "cipher: the cryptographic algorithm used to encrypt all the traffic. If not "
 "explicitly selected, the server and client will try to negotiate the best "
 "cipher available on both sides"
 msgstr ""
 
-#: ../../vpn.rst:146
+#: ../../vpn.rst:148
 msgid ""
 "LZO compression: enabled by default, can be disabled when using legacy "
 "servers or clients"
 msgstr ""
 
-#: ../../vpn.rst:150
+#: ../../vpn.rst:152
 msgid "Legacy mode"
 msgstr ""
 
-#: ../../vpn.rst:152
+#: ../../vpn.rst:154
 msgid "Tunnels can still be created also using Roadwarriors accounts."
 msgstr ""
 
-#: ../../vpn.rst:154
+#: ../../vpn.rst:156
 msgid "Steps to be performed on the master server:"
 msgstr "Pasos a realizar en el servidor maestro:"
 
-#: ../../vpn.rst:156
+#: ../../vpn.rst:158
 msgid "Enable roadwarrior server"
 msgstr "Habilitar servidor roadwarrior"
 
-#: ../../vpn.rst:158
+#: ../../vpn.rst:160
 msgid "Create a VPN-only account for each slave"
 msgstr "Cree una cuenta VPN solo para cada esclavo"
 
-#: ../../vpn.rst:160
+#: ../../vpn.rst:162
 msgid ""
 "During the account creation remember to specify the remote network "
 "configured behind the slave"
@@ -408,11 +410,11 @@ msgstr ""
 "Durante la creación de la cuenta, recuerde especificar la red remota "
 "configurada detrás del esclavo"
 
-#: ../../vpn.rst:162
+#: ../../vpn.rst:164
 msgid "Steps to be performed on the slave:"
 msgstr "Pasos a realizar en el esclavo:"
 
-#: ../../vpn.rst:164
+#: ../../vpn.rst:166
 msgid ""
 "Create a client from the :guilabel:`Client` page, specifying the connection "
 "data to the master server."
@@ -420,7 +422,7 @@ msgstr ""
 "Crear un cliente desde la página: guilabel: `Cliente`, especificando los "
 "datos de conexión al servidor maestro."
 
-#: ../../vpn.rst:166
+#: ../../vpn.rst:168
 msgid ""
 "Copy and paste the content of downloaded certificates from the master "
 "configuration page."
@@ -428,11 +430,11 @@ msgstr ""
 "Copie y pegue el contenido de los certificados descargados desde la página "
 "de configuración principal."
 
-#: ../../vpn.rst:172
+#: ../../vpn.rst:174
 msgid "IPsec"
 msgstr ""
 
-#: ../../vpn.rst:174
+#: ../../vpn.rst:176
 msgid ""
 ":index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN "
 "tunnels, it's typically used to create net to net tunnels and it's supported"
@@ -441,46 +443,46 @@ msgid ""
 "tunnels between 2 |product|."
 msgstr ""
 
-#: ../../vpn.rst:179
+#: ../../vpn.rst:181
 msgid ""
 "IPSec is not designed to connect single hosts but for net2net configuration,"
 " this implies two gateways on both ends (at least one red and one green "
 "interface)."
 msgstr ""
 
-#: ../../vpn.rst:185
+#: ../../vpn.rst:187
 msgid ""
 "IPsec is extremely reliable and compatible with many devices. In fact, it is"
 " an obvious choice when you need to create net2net connections between "
 "firewalls of different manufacturers."
 msgstr ""
 
-#: ../../vpn.rst:189
+#: ../../vpn.rst:191
 msgid ""
 "Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered "
 "peers."
 msgstr ""
 
-#: ../../vpn.rst:191
+#: ../../vpn.rst:193
 msgid ""
 "If you are creating a tunnel between two |product|, given the firewalls A "
 "and B:"
 msgstr ""
 
-#: ../../vpn.rst:193
+#: ../../vpn.rst:195
 msgid ""
 "Configure the server A and specify the remote address and LAN of server B. "
 "If the :guilabel:`Remote IP` field is set to the special value ``%any``, the"
 " server waits for connections from the other endpoint."
 msgstr ""
 
-#: ../../vpn.rst:197
+#: ../../vpn.rst:199
 msgid ""
 "Configure the second firewall B by mirroring the configuration from A inside"
 " the remote section. The special value ``%any`` is allowed in one side only!"
 msgstr ""
 
-#: ../../vpn.rst:200
+#: ../../vpn.rst:202
 msgid ""
 "If an endpoint is behind a NAT, the values for :guilabel:`Local identifier` "
 "and :guilabel:`Remote identifier` fields must be set to custom unique names "

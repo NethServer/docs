@@ -1,12 +1,12 @@
 # #-#-#-#-#  ups.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  ups.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -122,9 +122,11 @@ msgid "UPS statistics"
 msgstr "Estadísticas del UPS"
 
 #: ../../ups.rst:42
-msgid ""
-"If the statistics module (collectd) is installed and running, the module "
-"will automatically collect statistic data about UPS status."
+msgid "Realtime status is available from the **UPS** application dashboard."
 msgstr ""
-"Si el módulo estadístico (collectd) está instalado y funcionando, el módulo "
-"recopilará automáticamente datos estadísticos sobre el estado del UPS."
+
+#: ../../ups.rst:44
+msgid ""
+"Also, if the statistics module (collectd) is installed and running, the "
+"module will automatically collect statistic data about UPS status."
+msgstr ""
