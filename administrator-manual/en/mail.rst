@@ -419,6 +419,13 @@ A group mailbox has no disk space for it. When a message is sent to a group mail
 a copy of it is delivered to the group members, according to their delivery and forward
 preferences.
 
+.. warning::
+
+    If the system is bound to an :ref:`Active Directory account provider <account-providers>`
+    the group mailbox works only if the group type is *Security group*.  If the group type is
+    *Distribution group* it does not work.
+    
+
 Public mailboxes
 ----------------
 
