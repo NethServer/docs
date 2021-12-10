@@ -34,7 +34,7 @@ HTTPS with a valid certificate.
 
 To configure Collobora Online, execute: ::
 
-  config setprop loolwsd VirtualHost collabora.yourdomain.com
+  config setprop coolwsd VirtualHost collabora.yourdomain.com
   signal-event nethserver-collabora-update
 
 After virtual host configuration, obtain a valid HTTPS certificate via Let's Encrypt
@@ -52,7 +52,7 @@ is present when the virtual host is configured, otherwise you can enable with: :
 If your instance of Nextcloud is not installed in the same server of Collabora Online,
 you must set the host name of Nextcloud in the prop ``AllowWopiHost``: ::
 
-  config setprop loolwsd AllowWopiHost nextcloud-office.yourdomain.com
+  config setprop coolwsd AllowWopiHost nextcloud-office.yourdomain.com
   signal-event nethserver-collabora-update
 
 And manually configure the Nextcloud `richdocuments app <https://github.com/nextcloud/richdocuments#nextcloud-app>`_.
@@ -60,9 +60,9 @@ And manually configure the Nextcloud `richdocuments app <https://github.com/next
 Admin user
 ==========
 
-After installation, admin dashboard can be enabled with ``loolconfig set-admin-password`` and accessible at: ::
+After installation, admin dashboard can be enabled with ``coolconfig set-admin-password`` and accessible at: ::
 
-  https://collabora.yourdomain.com/loleaflet/dist/admin/admin.html
+  https://collabora.yourdomain.com/browser/dist/admin/admin.html
 
 
 CODE repository
@@ -78,3 +78,5 @@ you can update or install directly from the CODE repository: ::
   yum install collaboraofficebasis6.4-fr collaboraoffice6.4-dict-fr --enablerepo=collaboraoffice
 
 The repository is disabled by default to avoid breaking updates.
+
+In some cases a remote Nextcloud instance needs to be rebooted after an update of Collabora Online.
