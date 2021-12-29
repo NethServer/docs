@@ -389,6 +389,20 @@ shorter than 6 *characters* regardless of the server policies. Windows performs
 preliminary checks and sends the password to the server where it is evaluated
 according to the :ref:`configured policies <password-management-section>`.
 
+Check password script for AD
+-----------------------------------
+
+To use a more flexible password check to for example force a special character, a script ``/var/lib/machines/nsdc/usr/local/sbin/checkpassword.pl`` is included.
+
+To enable it, edit ``/var/lib/machines/nsdc/etc/samba/smb.conf`` and add ::
+
+    check password script = /usr/local/sbin/checkpassword.pl
+
+to the global section. Restart samba on the NSDC container: ::
+
+    systemctl -M nsdc restart samba
+
+The checks in the script can be adapted by editing the variables on top of the script.
 
 Credentials for services
 ------------------------
