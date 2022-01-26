@@ -33,7 +33,7 @@ For example, given a server with IP address *192.168.1.1* and name *mail.mydomai
    .. note::
 
        You can find a more recent version of roundcubemail in NethForge, you must remove first ``nethserver-roundcubemail`` and 
-       install ``nethserver-roundcubemail-next`` from NethForge. We migrate the database to rh-mariadb105 SCL and we use PHP 7.3 SCL.
+       install ``nethserver-roundcubemail-next`` from NethForge.
        
        The event to use in the command line becomes ``nethserver-roundcubemail-next-update``
 
