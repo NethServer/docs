@@ -104,3 +104,8 @@ If you want remove Roundcube, run the following command on the server command li
    yum autoremove nethserver-roundcubemail
 
 
+.. only:: nscom
+
+   If you want remove ``nethserver-roundcubemail-next``, run the following command on the server command line. ::
+
+    yum autoremove nethserver-roundcubemail-next
