@@ -28,6 +28,16 @@ For example, given a server with IP address *192.168.1.1* and name *mail.mydomai
                 a dedicated user account in AD is required by the module to be fully
                 operational! See :ref:`join-existing-ad-section`.
 
+.. only:: nscom
+
+   .. note::
+
+       You can find a more recent version of roundcubemail in NethForge, you must remove first ``nethserver-roundcubemail`` and 
+       install ``nethserver-roundcubemail-next`` from NethForge.
+       
+       The event to use in the command line becomes ``nethserver-roundcubemail-next-update``
+
+
 Plugins
 =======
 
@@ -94,3 +104,8 @@ If you want remove Roundcube, run the following command on the server command li
    yum autoremove nethserver-roundcubemail
 
 
+.. only:: nscom
+
+   If you want remove ``nethserver-roundcubemail-next``, run the following command on the server command line. ::
+
+    yum autoremove nethserver-roundcubemail-next
