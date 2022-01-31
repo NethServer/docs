@@ -1,17 +1,16 @@
 # #-#-#-#-#  firewall.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  firewall.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# FabLab MZY <fablabmzy@gmail.com>, 2017
 # Adrián Prado Castro <adrian.prado@gmail.com>, 2017
 # Jon M., 2017
 # 
@@ -20,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 11:46+0200\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -31,77 +30,88 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../firewall.rst:5
-msgid "Firewall and gateway"
-msgstr "Firewall y gateway / Cortafuego y Puerta de enlace"
-
-#: ../../firewall.rst:7
-msgid ""
-"A new Server Manager based on Cockpit is available. See :ref:`firewall_new-"
-"section`."
+msgid "Firewall"
 msgstr ""
 
-#: ../../firewall.rst:9
+#: ../../firewall.rst:7
 msgid ""
 "|product| can act as :index:`firewall` and :index:`gateway` inside the "
 "network where it is installed. All traffic between computers on the local "
 "network and the Internet passes through the server that decides how to route"
-" packets and what rules to apply."
+" packets and what rules to apply. Firewall mode is enabled only if the "
+"system has at least one network interface configured with red role."
 msgstr ""
 
-#: ../../firewall.rst:13
-msgid "Main features:"
-msgstr "Principales características:"
+#: ../../firewall.rst:12
+msgid ""
+"The Firewall application can be installed from :ref:`software-center-"
+"section` and includes:"
+msgstr ""
+
+#: ../../firewall.rst:14
+msgid "Multi WAN support up to 15 connections"
+msgstr ""
 
 #: ../../firewall.rst:15
-msgid "Advanced network configuration (bridge, bonds, alias, etc)"
-msgstr "Configuración de red avanzada (puente, enlaces, alias, etc.)"
-
-#: ../../firewall.rst:16
-msgid "Multi WAN support (up to 15)"
-msgstr "Soporte multi WAN (hasta 15)"
-
-#: ../../firewall.rst:17
 msgid "Firewall rules management"
 msgstr "Gestión de reglas de firewall"
 
-#: ../../firewall.rst:18
+#: ../../firewall.rst:16
 msgid "Traffic shaping (QoS)"
 msgstr "Conformación del tráfico (QoS)"
 
-#: ../../firewall.rst:19
+#: ../../firewall.rst:17
 msgid "Port forwarding"
 msgstr "Reenvío de puertos"
 
-#: ../../firewall.rst:20
+#: ../../firewall.rst:18
 msgid "Routing rules to divert traffic on a specific WAN"
 msgstr "Reglas de enrutamiento para desviar tráfico en una WAN específica"
 
-#: ../../firewall.rst:21
-msgid "Intrusion Prevention System (IPS)"
-msgstr ""
-"Sistema de prevención de intrusiones (IPS, Intrusion Prevention System)"
-
-#: ../../firewall.rst:22
+#: ../../firewall.rst:19
 msgid "Deep packet inspection (DPI)"
 msgstr "Inspección profunda de paquetes (DPI, Deep Packet Inspection)"
 
-#: ../../firewall.rst:25
-msgid "Firewall and gateway modes are enabled only if:"
-msgstr "Los modos de firewall y gateway sólo están habilitados si:"
+#: ../../firewall.rst:20
+msgid "Smart search to quickly find existing rules or objects"
+msgstr ""
 
-#: ../../firewall.rst:27
-msgid "the `nethserver-firewall-base` package is installed"
-msgstr "El paquete `nethserver-firewall-base` está instalado"
+#: ../../firewall.rst:21
+msgid "Real time charts"
+msgstr ""
 
-#: ../../firewall.rst:28
-msgid "at least there is one network interface configured with red role"
-msgstr "Al menos hay una interfaz de red configurada con rol rojo"
+#: ../../firewall.rst:23
+msgid ""
+"Real time charts display traffic and service statistics collected by "
+"`Netdata <https://www.netdata.cloud/>`_. To avoid performance penalty on "
+"slow hardware, Netdata is not part of the firewall application and can be "
+"installed from :ref:`software-center-section`."
+msgstr ""
 
-#: ../../firewall.rst:33
+#: ../../firewall.rst:29
+msgid "Apply and revert"
+msgstr ""
+
+#: ../../firewall.rst:31
+msgid ""
+"Every time the firewall configuration has been changed, modifications are "
+"not applied immediately but saved in a temporary store. For the changes to "
+"take effect, click on the :guilabel:`Apply` button at the top right corner "
+"of the page."
+msgstr ""
+
+#: ../../firewall.rst:34
+msgid ""
+"As long as the new rules created have not been applied, you can revert all "
+"changes by clicking the :guilabel:`Revert` button at the top right corner of"
+" the page."
+msgstr ""
+
+#: ../../firewall.rst:39
 msgid "Policy"
 msgstr "Política"
 
-#: ../../firewall.rst:35
+#: ../../firewall.rst:41
 msgid ""
 "Each interface is identified with a color indicating its role within the "
 "system. See :ref:`network-section`."
@@ -109,7 +119,7 @@ msgstr ""
 "Cada interfaz se identifica con un color que indica su función dentro del "
 "sistema. Véase :ref:`red-sección`."
 
-#: ../../firewall.rst:38
+#: ../../firewall.rst:44
 msgid ""
 "When a network packet passes through a firewall zone, the system evaluates a"
 " list of rules to decide whether traffic should be blocked or allowed. "
@@ -122,27 +132,7 @@ msgstr ""
 "se aplicarán cuando el tráfico de red no coincide con los criterios "
 "existentes."
 
-#: ../../firewall.rst:42
-msgid ""
-"The firewall implements two default policies editable from the page "
-":menuselection:`Firewall rules` -> :guilabel:`Configure`:"
-msgstr ""
-"El cortafuego implementa dos políticas predeterminadas editables desde la "
-"página :menuselection:`Reglas de firewall` -> :guilabel:` Configurar`:"
-
-#: ../../firewall.rst:44
-msgid ":dfn:`Allowed`: all traffic from green to red is allowed"
-msgstr ":dfn: `Permitido`: se permite todo el tráfico de verde a rojo"
-
-#: ../../firewall.rst:45
-msgid ""
-":dfn:`Blocked`: all traffic from green to red network is blocked. Specific "
-"traffic must be allowed with custom rules."
-msgstr ""
-":dfn:`Bloqueado`: todo el tráfico de la red verde a la red roja está "
-"bloqueado. Se debe permitir tráfico específico con reglas personalizadas."
-
-#: ../../firewall.rst:47
+#: ../../firewall.rst:48
 msgid ""
 "Firewall :index:`policies` allow inter-zone traffic accordingly to this "
 "schema: ::"
@@ -150,32 +140,189 @@ msgstr ""
 "Las :index:`políticas` de firewall permiten el tráfico entre zonas según "
 "este esquema: ::"
 
-#: ../../firewall.rst:51
+#: ../../firewall.rst:52
 msgid "Traffic is allowed from left to right, blocked from right to left."
 msgstr ""
 "El tráfico se permite de izquierda a derecha, bloqueado de derecha a "
 "izquierda."
 
-#: ../../firewall.rst:53
+#: ../../firewall.rst:54
 msgid ""
-"You can create rules between zones to change default policies from "
-":guilabel:`Firewall rules` page."
+"To display the list of active policies click on the :guilabel:`Policies` "
+"button inside the :guilabel:`Rules` page."
 msgstr ""
-"Puede crear reglas entre zonas para cambiar las políticas predeterminadas de"
-" la página :guilabel:`Reglas de firewall`."
 
-#: ../../firewall.rst:58
+#: ../../firewall.rst:56
+msgid ""
+"Policies can be changed by creating specific rules between zones from the "
+":guilabel:`Rules` page or by accessing the :ref:`traffic_to_internet-"
+"section` section inside the :guilabel:`Settings` page."
+msgstr ""
+
+#: ../../firewall.rst:62
+msgid "Settings"
+msgstr ""
+
+#: ../../firewall.rst:64
+msgid "In this section you can change standard firewall behavior."
+msgstr ""
+
+#: ../../firewall.rst:69
+msgid "Traffic to Internet"
+msgstr ""
+
+#: ../../firewall.rst:71
+msgid ""
+"The default firewall policy allows all traffic from green to red interfaces "
+"(Internet). To change the default policy for Internet access, enable or "
+"disable the :guilabel:`Traffic to Internet (red interface)` option. If "
+"disabled all traffic from green to red network is blocked. Specific traffic "
+"can be allowed creating rules from :guilabel:`Rules` page."
+msgstr ""
+
+#: ../../firewall.rst:76
+msgid "Traffic between VPNs"
+msgstr ""
+
+#: ../../firewall.rst:78
+msgid ""
+"By default traffic between different VPN tunnels is not allowed, but "
+"sometimes you would need to allow it like when a OpenVPN roadwarrior client "
+"should reach a remote resource behind an IPsec tunnel. To permit traffic "
+"between VPNs, just enable the :guilabel:`Traffic between OpenVPN "
+"roadwarrior, OpenVPN tunnels and IPSec tunnels` option. Extra block rules "
+"can be created from :guilabel:`Rules` page to customize the network access "
+"between VPN zones."
+msgstr ""
+
+#: ../../firewall.rst:84
+msgid "Ping from Internet"
+msgstr ""
+
+#: ../../firewall.rst:86
+msgid ""
+"Allows |product| to answer ICMP requests from red interfaces (Internet)."
+msgstr ""
+
+#: ../../firewall.rst:91
+msgid "Hairpin NAT"
+msgstr ""
+
+#: ../../firewall.rst:93
+msgid ""
+"By default, all port forwards are available only for hosts inside the WAN. "
+"When Hairpin NAT is active, hosts on the local zones will be able to reach "
+"forwarded ports using both public and private firewall IP addresses."
+msgstr ""
+
+#: ../../firewall.rst:96
+msgid ""
+"Whenever possible it is recommended to avoid enabling this option and "
+"correctly configure split DNS to resolve service names inside the LAN."
+msgstr ""
+
+#: ../../firewall.rst:98
+msgid ""
+"If hair-pinning is still required, check the :guilabel:`Enable hairpin NAT` "
+"option."
+msgstr ""
+
+#: ../../firewall.rst:102
+msgid ""
+"This functionality requires |product| to have a public IP address on the red"
+" interface."
+msgstr ""
+
+#: ../../firewall.rst:106
+msgid "Application Layer Gateway (ALG)"
+msgstr ""
+
+#: ../../firewall.rst:108
+msgid ""
+"Application layer gateways handle dynamic firewall rules for certain "
+"protocols. Many ALGs are enabled by default on |product|, to allow some "
+"protocols (such as FTP, SIP, etc) to operate through NAT. ALGs inspect and "
+"rewrite specific network packets and automatically open required ports."
+msgstr ""
+
+#: ../../firewall.rst:112
+msgid "**Enable SIP-ALG and H.323-ALG**"
+msgstr ""
+
+#: ../../firewall.rst:114
+msgid ""
+"Some PBXs may not work properly with SIP-ALG and H.323-ALG. In case of audio"
+" and call problems with your PBX or your VoIP client try to disable them."
+msgstr ""
+
+#: ../../firewall.rst:119
+msgid "IP/MAC binding"
+msgstr "Enlace IP/MAC"
+
+#: ../../firewall.rst:121
+msgid ""
+"The firewall can use the list of DHCP reservations to strictly check all "
+"traffic generated from hosts inside local networks. DHCP server should could"
+" be disabled but the administrator must still create reservations to "
+"associate the IP with a MAC address. See :ref:`dhcp-section` for more "
+"details."
+msgstr ""
+
+#: ../../firewall.rst:125
+msgid ""
+"When :index:`IP/MAC binding` is enabled, the administrator will choose what "
+"policy will be applied to hosts without a DHCP reservation. The common use "
+"is to allow traffic only from known hosts and block all other traffic. In "
+"this case, hosts without a reservation will not be able to access the "
+"firewall nor the external network."
+msgstr ""
+
+#: ../../firewall.rst:129
+msgid "To enable traffic only from well-known hosts, follow these steps:"
+msgstr ""
+"Para habilitar el tráfico sólo desde hosts bien conocidos, siga estos pasos:"
+
+#: ../../firewall.rst:131
+msgid "Create a DHCP reservation for a host"
+msgstr "Crear una reserva DHCP para un host"
+
+#: ../../firewall.rst:132
+msgid ""
+"Go to :menuselection:`Firewall rules` page and select from "
+":guilabel:`Configure` from the button menu"
+msgstr ""
+"Vaya a la página :menuselection:`Reglas firewall` y seleccione "
+":guilabel:`Configurar` en el menú de botones"
+
+#: ../../firewall.rst:133
+msgid "Select :guilabel:`MAC validation (IP/MAC binding)`"
+msgstr "Seleccione :guilabel:`Validación MAC (enlace IP/MAC)`"
+
+#: ../../firewall.rst:134
+msgid ""
+"Choose :guilabel:`Block traffic` as the policy to apply to unregistered "
+"hosts"
+msgstr ""
+
+#: ../../firewall.rst:137
+msgid ""
+"Remember to create at least one DHCP reservation before enabling the IP/MAC "
+"binding mode, otherwise, no hosts will be able to manage the server using "
+"the web interface or SSH."
+msgstr ""
+
+#: ../../firewall.rst:144
 msgid "Rules"
 msgstr "Reglas"
 
-#: ../../firewall.rst:60
+#: ../../firewall.rst:146
 msgid ""
 ":index:`Rules` apply to all traffic passing through the firewall. When a "
 "network packet moves from one zone to another, the system looks among "
 "configured rules. If the packet matches a rule, the rule is applied."
 msgstr ""
 
-#: ../../firewall.rst:64
+#: ../../firewall.rst:150
 msgid ""
 "Rule's order is very important. The system always applies the first rule "
 "that matches."
@@ -183,43 +330,43 @@ msgstr ""
 "El orden de la regla es muy importante. El sistema siempre aplica la primera"
 " regla que coincide."
 
-#: ../../firewall.rst:66
+#: ../../firewall.rst:152
 msgid "A rule consists of five main parts:"
 msgstr ""
 
-#: ../../firewall.rst:68
+#: ../../firewall.rst:154
 msgid "Action"
 msgstr "Acción"
 
-#: ../../firewall.rst:69
+#: ../../firewall.rst:155
 msgid "Source"
 msgstr "Fuente"
 
-#: ../../firewall.rst:70
+#: ../../firewall.rst:156
 msgid "Destination"
 msgstr "Destino"
 
-#: ../../firewall.rst:71
-msgid "Service"
-msgstr "Servicio"
+#: ../../firewall.rst:157
+msgid "Service (optional)"
+msgstr ""
 
-#: ../../firewall.rst:72
-msgid "Time condition"
-msgstr "Condición de tiempo"
+#: ../../firewall.rst:158
+msgid "Time condition (optional)"
+msgstr ""
 
-#: ../../firewall.rst:75
+#: ../../firewall.rst:161
 msgid "Available actions are:"
 msgstr "Las acciones disponibles son:"
 
-#: ../../firewall.rst:77
+#: ../../firewall.rst:163
 msgid ":dfn:`ACCEPT`: accept the network traffic"
 msgstr ":dfn:`ACCEPT`: acepta el tráfico de red"
 
-#: ../../firewall.rst:78
+#: ../../firewall.rst:164
 msgid ":dfn:`REJECT`: block the traffic and notify the sender host"
 msgstr ":dfn:`REJECT`: bloquea el tráfico y notifica al host remitente"
 
-#: ../../firewall.rst:79
+#: ../../firewall.rst:165
 msgid ""
 ":dfn:`DROP`: block the traffic, packets are dropped and no notification is "
 "sent to the sender host"
@@ -227,68 +374,99 @@ msgstr ""
 ":dfn:`DROP`: bloquea el tráfico, los paquetes se eliminan y no se envía "
 "ninguna notificación al host del remitente"
 
-#: ../../firewall.rst:80
+#: ../../firewall.rst:167
 msgid ""
-":dfn:`ROUTE`: route the traffic to the specified WAN provider. See :ref"
-":`multi-wan-section`."
-msgstr ""
-":dfn:`ROUTE`: enruta el tráfico al proveedor de WAN especificado. Véase :ref"
-":`multi-wan-section`."
-
-#: ../../firewall.rst:81
-msgid ""
-":dfn:`Priority`: mark the traffic as high/low priority. See :ref:`traffic-"
-"shaping-section`."
+"Source and destination fields accept built-in roles, :ref:`firewall_objects-"
+"section` and raw IPv4 addresses or CIDR. Such raw addresses can be later "
+"converted to firewall objects using the :guilabel:`Create Host` and "
+":guilabel:`Create CIDR subnet` actions which will appear next to the address"
+" itself."
 msgstr ""
 
-#: ../../firewall.rst:83
+#: ../../firewall.rst:171
+msgid ""
+"If :ref:`vpn-section` application is installed, there are also two extra "
+"zones available:"
+msgstr ""
+
+#: ../../firewall.rst:173
+msgid "*ivpn*: all traffic from IPSec VPNs"
+msgstr ""
+
+#: ../../firewall.rst:174
+msgid "*ovpn*: all traffic from OpenVPN VPNs"
+msgstr ""
+
+#: ../../firewall.rst:176
+msgid "The configuration of firewall rules is split into two different pages:"
+msgstr ""
+
+#: ../../firewall.rst:178
+msgid ""
+"**Rules**: manage rules applied only to the network traffic traversing the "
+"firewall."
+msgstr ""
+
+#: ../../firewall.rst:179
+msgid ""
+"**Local rules**: manage rules applied only to the network traffic generated "
+"from the firewall, or directed to the firewall itself."
+msgstr ""
+
+#: ../../firewall.rst:182
+msgid ""
+"When creating new rules, only the most common fields are shown. To show "
+"other less common parameters click the :guilabel:`Advanced` label."
+msgstr ""
+
+#: ../../firewall.rst:184
 msgid ""
 "If no red interface has been configured, the firewall will not generate "
 "rules for blue and orange zones."
 msgstr ""
 
-#: ../../firewall.rst:86
+#: ../../firewall.rst:187
 msgid "REJECT vs DROP"
 msgstr "REJECT vs DROP"
 
-#: ../../firewall.rst:88
+#: ../../firewall.rst:189
 msgid ""
 "As a general rule, you should use :index:`REJECT` when you want to inform "
 "the source host that the port which it is trying to access is closed. "
 "Usually, the rules on the LAN side can use REJECT."
 msgstr ""
 
-#: ../../firewall.rst:92
+#: ../../firewall.rst:193
 msgid ""
 "For connections from the Internet, it is recommended to use :index:`DROP`, "
 "in order to minimize the information disclosed to any attacker."
 msgstr ""
 
-#: ../../firewall.rst:96
+#: ../../firewall.rst:197
 msgid "Log"
 msgstr "Registro"
 
-#: ../../firewall.rst:98
+#: ../../firewall.rst:199
 msgid ""
 "When a rule matches the ongoing traffic, it's possible to register the event"
 " on a log file by checking the option from the web interface. "
-":index:`Firewall log` is saved in :file:`/var/log/firewall.log` file."
+":index:`Firewall log` is saved in :file:`/var/log/firewall.log` file. The "
+"log can be inspected from the command line or using the :guilabel:`Logs` "
+"page."
 msgstr ""
-"Cuando una regla coincide con el tráfico en curso, es posible registrar el "
-"evento en un archivo de registro marcando la opción de la interfaz web. El "
-":index:`registro de firewall` se guarda en :file:`/var/log/firewall.log`."
 
-#: ../../firewall.rst:102
+#: ../../firewall.rst:204
 msgid "Deep Packet Inspection (DPI)"
 msgstr "Inspección profunda de paquetes (DPI, Deep Packet Inspection)"
 
-#: ../../firewall.rst:104
+#: ../../firewall.rst:206
 msgid ""
-"Deep Packet Inspection (DPI) [#DPI]_ is an advanced packet filtering "
-"technique."
+"Deep Packet Inspection (`DPI "
+"<https://en.wikipedia.org/wiki/Deep_packet_inspection>`_) is an advanced "
+"packet filtering technique."
 msgstr ""
 
-#: ../../firewall.rst:106
+#: ../../firewall.rst:208
 msgid ""
 "When the :index:`DPI` module is active, new items for the "
 ":guilabel:`Service` field are available in the :guilabel:`Edit rule` form. "
@@ -296,7 +474,7 @@ msgid ""
 "and *service object* items."
 msgstr ""
 
-#: ../../firewall.rst:111
+#: ../../firewall.rst:213
 msgid ""
 "The DPI module uses the `nDPI library <https://www.ntop.org/products/deep-"
 "packet-inspection/ndpi/>`_ which can identify around 250 types of network "
@@ -304,35 +482,35 @@ msgid ""
 "(eg. Netflix, Spotify)."
 msgstr ""
 
-#: ../../firewall.rst:115
+#: ../../firewall.rst:217
 msgid ""
 "Firewall rules using DPI services are generated inside the mangle table, for"
 " this reason such rules have some limitations:"
 msgstr ""
 
-#: ../../firewall.rst:118
+#: ../../firewall.rst:220
 msgid "`reject` action is not supported, use `drop` to block traffic"
 msgstr ""
 
-#: ../../firewall.rst:119
+#: ../../firewall.rst:221
 msgid "`any` and `firewall` can't be used as source or destination"
 msgstr ""
 
-#: ../../firewall.rst:120
+#: ../../firewall.rst:222
 msgid ""
 "`route to provider X` action is not supported: the identification of the "
 "protocol often begins after the connection has been already established, so "
 "the routing decision can't be changed"
 msgstr ""
 
-#: ../../firewall.rst:123
+#: ../../firewall.rst:225
 msgid ""
 "Even if DPI can identify traffic to/from specific web sites such as "
 "Facebook, it is better suited to block or shape protocols like VPN, FTP, "
 "etc. Web site access should be regulated using :ref:`proxy-section`."
 msgstr ""
 
-#: ../../firewall.rst:127
+#: ../../firewall.rst:229
 msgid ""
 "Note that some DPI protocols (such as Amazon) can match large `CDNs "
 "<https://it.wikipedia.org/wiki/Content_Delivery_Network>`_, so please do not"
@@ -340,138 +518,125 @@ msgid ""
 "thousands of sites."
 msgstr ""
 
-#: ../../firewall.rst:130
+#: ../../firewall.rst:232
 msgid ""
 "DPI markers are automatically applied also to the traffic which originates "
 "from the firewall itself, like HTTP traffic from the web proxy."
 msgstr ""
 
-#: ../../firewall.rst:133
+#: ../../firewall.rst:235
 msgid ""
 "The complete list of DPI protocols, along with counters for matched traffic,"
 " is available inside the :guilabel:`DPI` page under the "
 ":menuselection:`Status` category on the left menu."
 msgstr ""
 
-#: ../../firewall.rst:136
-msgid ""
-"Deep Packet Inspection https://en.wikipedia.org/wiki/Deep_packet_inspection"
-msgstr ""
-"Inspección profunda de paquete, Deep Packet Inspection "
-"https://es.wikipedia.org/wiki/Inspección_profunda_de_paquete"
-
-#: ../../firewall.rst:139
+#: ../../firewall.rst:239
 msgid "Rules on existing connections"
 msgstr ""
 
-#: ../../firewall.rst:141
+#: ../../firewall.rst:241
 msgid ""
 "When a new rule is created, as default, it is applied only to new "
 "connections. But in some scenarios, the administrator may need to apply the "
 "rule also on established connections."
 msgstr ""
 
-#: ../../firewall.rst:144
+#: ../../firewall.rst:244
 msgid ""
 "If the option :guilabel:`Apply to existing connections` is enabled, the rule"
 " will be applied to all connections including already established ones."
 msgstr ""
 
-#: ../../firewall.rst:147
-msgid ""
-"This option is available only inside the new Server Manager. See :ref"
-":`firewall_new-section`."
-msgstr ""
-
-#: ../../firewall.rst:150
+#: ../../firewall.rst:248
 msgid "Examples"
 msgstr "Ejemplos"
 
-#: ../../firewall.rst:152
+#: ../../firewall.rst:250
 msgid "Below there are some examples of rules."
 msgstr "A continuación hay algunos ejemplos de reglas."
 
-#: ../../firewall.rst:154
+#: ../../firewall.rst:252
 msgid "Block all DNS traffic from the LAN to the Internet:"
 msgstr "Bloquear todo el tráfico de DNS de la LAN a Internet:"
 
-#: ../../firewall.rst:156
+#: ../../firewall.rst:254
 msgid "Action: REJECT"
 msgstr "Acción: REJECT"
 
-#: ../../firewall.rst:157
+#: ../../firewall.rst:255
 msgid "Source: green"
 msgstr "Fuente: verde"
 
-#: ../../firewall.rst:158
+#: ../../firewall.rst:256
 msgid "Destination: red"
 msgstr "Destino: rojo"
 
-#: ../../firewall.rst:159
+#: ../../firewall.rst:257
 msgid "Service: DNS (UDP port 53)"
 msgstr "Servicio: DNS (puerto UDP 53)"
 
-#: ../../firewall.rst:161
+#: ../../firewall.rst:259
 msgid "Allow guest's network to access all the services listening on Server1:"
 msgstr ""
 "Permitir que la red de invitados tenga acceso a todos los servicios que "
 "escuchan en Servidor1"
 
-#: ../../firewall.rst:163
+#: ../../firewall.rst:261
 msgid "Action: ACCEPT"
 msgstr "Acción: ACCEPT"
 
-#: ../../firewall.rst:164
+#: ../../firewall.rst:262
 msgid "Source: blue"
 msgstr "Fuente: azul"
 
-#: ../../firewall.rst:165
+#: ../../firewall.rst:263
 msgid "Destination: Server1"
 msgstr "Destino: Servidor1"
 
-#: ../../firewall.rst:166
+#: ../../firewall.rst:264
 msgid "Service: -"
 msgstr "Servicio: -"
 
-#: ../../firewall.rst:171
-msgid "Multi WAN"
-msgstr "Multi WAN"
+#: ../../firewall.rst:269
+msgid "WAN"
+msgstr ""
 
-#: ../../firewall.rst:173
+#: ../../firewall.rst:271
 msgid ""
 "The term :dfn:`WAN` (Wide Area Network) refers to a public network outside "
 "the server, usually connected to the Internet. A :dfn:`provider` is the "
 "company that actually manages the :index:`WAN` link."
 msgstr ""
 
-#: ../../firewall.rst:176
+#: ../../firewall.rst:274
 msgid ""
-"The system supports up to 15 WAN connections. If the server has two or more "
-"configured red interfaces, it is required to correctly fill :guilabel:`Link "
-"weight`, :guilabel:`Inbound bandwidth` and :guilabel:`Outbound bandwidth` "
-"fields from the :guilabel:`Network` page."
+"All WAN network interfaces are labeled with the red role and are listed on "
+"the top of the page, just below bandwidth usage charts. Rules can be created"
+" under the :guilabel:`Rules` section on the same page."
 msgstr ""
 
-#: ../../firewall.rst:180
+#: ../../firewall.rst:277
+msgid ""
+"If the server has two or more configured red interfaces, it is required to "
+"correctly fill, :guilabel:`Download bandwidth` and :guilabel:`Upload "
+"bandwidth` fields from the :guilabel:`Network` page. Download and upload "
+"bandwidth can be automatically calculated using the :guilabel:`Speedtest` "
+"button."
+msgstr ""
+
+#: ../../firewall.rst:281
 msgid ""
 "Each provider represents a WAN connection and is associated with a network "
-"adapter. Each provider defines a :dfn:`weight`: higher the :index:`weight`, "
+"adapter. Each provider defines a :dfn:`weight`: the higher the weight, the "
 "higher the priority of the network card associated with the provider."
 msgstr ""
-"Cada proveedor representa una conexión WAN y está asociado con un adaptador "
-"de red. Cada proveedor define un :dfn:`peso`: mientras mayor es el "
-":index:`peso`, mayor es la prioridad de la tarjeta de red asociada con el "
-"proveedor."
 
-#: ../../firewall.rst:183
-msgid ""
-"The system can use WAN connections in two modes (button  "
-":guilabel:`Configure` on page :menuselection:`Multi WAN`):"
+#: ../../firewall.rst:284
+msgid "The system can use WAN connections in two modes:"
 msgstr ""
-"El sistema puede utilizar conexiones WAN en dos modos (botón "
-":guilabel:`Configurar` en la página :menuselection:`Multi WAN`):"
 
-#: ../../firewall.rst:185
+#: ../../firewall.rst:286
 msgid ""
 ":dfn:`Balance`: all providers are used simultaneously according to their "
 "weight"
@@ -479,7 +644,7 @@ msgstr ""
 ":dfn:`Balance`: todos los proveedores se utilizan simultáneamente según su "
 "peso"
 
-#: ../../firewall.rst:186
+#: ../../firewall.rst:287
 msgid ""
 ":dfn:`Active backup`: providers are used one at a fly from the one with the "
 "highest weight. If the provider you are using loses its connection, all "
@@ -489,7 +654,7 @@ msgstr ""
 "vuelo con el que tiene el peso más alto. Si el proveedor que está utilizando"
 " pierde su conexión, todo el tráfico se desviará al proveedor siguiente."
 
-#: ../../firewall.rst:188
+#: ../../firewall.rst:289
 msgid ""
 "To determine the status of a provider, the system sends an ICMP packet "
 "(ping) at regular intervals. If the number of dropped packets exceeds a "
@@ -499,7 +664,7 @@ msgstr ""
 "(ping) a intervalos regulares. Si el número de paquetes perdidos excede un "
 "determinado umbral, el proveedor está deshabilitado."
 
-#: ../../firewall.rst:191
+#: ../../firewall.rst:292
 msgid ""
 "The administrator can configure the sensitivity of the monitoring through "
 "the following parameters:"
@@ -507,42 +672,49 @@ msgstr ""
 "El administrador puede configurar la sensibilidad de la supervisión mediante"
 " los siguientes parámetros:"
 
-#: ../../firewall.rst:193
+#: ../../firewall.rst:294
 msgid "Percentage of lost packets"
 msgstr "Porcentaje de paquetes perdidos"
 
-#: ../../firewall.rst:194
+#: ../../firewall.rst:295
 msgid "Number of consecutive lost packets"
 msgstr "Número de paquetes perdidos consecutivos"
 
-#: ../../firewall.rst:195
+#: ../../firewall.rst:296
 msgid "Interval in seconds between sent packets"
 msgstr "Intervalo en segundos entre paquetes enviados"
 
-#: ../../firewall.rst:197
+#: ../../firewall.rst:298
 msgid ""
-"The :guilabel:`Firewall rules` page allows to route network packets to a "
-"given WAN provider, if some criteria are met. See :ref:`firewall-rules-"
-"section`."
+"To change WAN mode and link monitoring options click on "
+":guilabel:`Configure` button."
 msgstr ""
 
-#: ../../firewall.rst:203 ../../firewall.rst:238 ../../firewall.rst:302
+#: ../../firewall.rst:300
+msgid ""
+"The network traffic can be routed to specific WANs by creating rules inside "
+"the :guilabel:`Rules` section on this page. After creating or editing rules,"
+" make sure to apply the changes. See :ref:`apply_revert-section` for "
+"details."
+msgstr ""
+
+#: ../../firewall.rst:305 ../../firewall.rst:345 ../../firewall.rst:406
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../../firewall.rst:205
+#: ../../firewall.rst:307
 msgid "Given two configured providers:"
 msgstr "Dados dos proveedores configurados:"
 
-#: ../../firewall.rst:207
+#: ../../firewall.rst:309
 msgid "Provider1: network interface eth1, weight 100"
 msgstr "Proveedor1: interfaz de red eth1, peso 100"
 
-#: ../../firewall.rst:208
+#: ../../firewall.rst:310
 msgid "Provider2: network interface eth0, weight 50"
 msgstr "Proveedor2: interfaz de red eth0, peso 50"
 
-#: ../../firewall.rst:210
+#: ../../firewall.rst:312
 msgid ""
 "If balanced mode is selected, the server will route a double number of "
 "connections on Provider1 over Provider2."
@@ -550,7 +722,7 @@ msgstr ""
 "Si se selecciona el modo equilibrado, el servidor encaminará un número doble"
 " de conexiones en Proveedor1 sobre Proveedor2."
 
-#: ../../firewall.rst:212
+#: ../../firewall.rst:314
 msgid ""
 "If active backup mode is selected, the server will route all connections on "
 "Provider1; only if Provider1 becomes unavailable the connections will be "
@@ -560,11 +732,11 @@ msgstr ""
 "todas las conexiones en Proveedor1; Sólo si Proveedor1 se vuelve inasequible"
 " las conexiones se redirigirán a Proveedor2."
 
-#: ../../firewall.rst:218
+#: ../../firewall.rst:320
 msgid "Port forward"
 msgstr "Reenviar puerto"
 
-#: ../../firewall.rst:220
+#: ../../firewall.rst:322
 msgid ""
 "The firewall blocks requests from public networks to private ones. For "
 "example, if a web server is running inside the LAN, only computers on the "
@@ -572,7 +744,7 @@ msgid ""
 "a user outside the local network is blocked."
 msgstr ""
 
-#: ../../firewall.rst:224
+#: ../../firewall.rst:326
 msgid ""
 "To allow any external user access to the web server you must create a "
 ":dfn:`port forward`. A :index:`port forward` is a rule that allows limited "
@@ -582,7 +754,7 @@ msgstr ""
 "crear una :dfn:`remisión de puerto`. Una :index:`remisión de puerto` es una "
 "regla que permite un acceso limitado a los recursos desde fuera de la LAN."
 
-#: ../../firewall.rst:227
+#: ../../firewall.rst:329
 msgid ""
 "When you configure the server, you must choose the listening ports. The "
 "traffic from red interfaces will be redirected to selected ports. In the "
@@ -594,7 +766,7 @@ msgstr ""
 "caso de un servidor web, los puertos de escucha son generalmente el puerto "
 "80 (HTTP) y 443 (HTTPS)."
 
-#: ../../firewall.rst:230
+#: ../../firewall.rst:332
 msgid ""
 "When you create a port forward, you must specify at least the following "
 "parameters:"
@@ -602,47 +774,63 @@ msgstr ""
 "Cuando cree un puerto hacia adelante, debe especificar al menos los "
 "siguientes parámetros:"
 
-#: ../../firewall.rst:232
+#: ../../firewall.rst:334
 msgid "The source port"
 msgstr "El puerto fuente"
 
-#: ../../firewall.rst:233
+#: ../../firewall.rst:335
 msgid "The destination port, which can be different from the origin port"
 msgstr "El puerto de destino, que puede ser diferente del puerto de origen"
 
-#: ../../firewall.rst:234
+#: ../../firewall.rst:336
+msgid "The network protocol like TCP, UDP, TCP & UDP, AH, ESP or GRE"
+msgstr ""
+
+#: ../../firewall.rst:337
 msgid ""
 "The address of the internal host to which the traffic should be redirected"
 msgstr "La dirección del host interno al que se debe redirigir el tráfico"
 
-#: ../../firewall.rst:235
+#: ../../firewall.rst:338
 msgid ""
 "It's possible to specify a port range using a colon as the separator in the "
 "source port field (eg: 1000:2000), in this case, the destination port field "
 "must be left empty"
 msgstr ""
 
-#: ../../firewall.rst:240
+#: ../../firewall.rst:340
+msgid ""
+"Port forwards are grouped by destination host and support raw IP addresses "
+"along with firewall objects."
+msgstr ""
+
+#: ../../firewall.rst:342
+msgid ""
+"By default, all port forwards are available only for hosts inside the WAN, "
+"see :ref:`hairpin-section` to change such behavior."
+msgstr ""
+
+#: ../../firewall.rst:347
 msgid "Given the following scenario:"
 msgstr "Dado el siguiente escenario:"
 
-#: ../../firewall.rst:242
+#: ../../firewall.rst:349
 msgid "Internal server with IP 192.168.1.10, named Server1"
 msgstr "Servidor interno con IP 192.168.1.10, denominado Servidor1"
 
-#: ../../firewall.rst:243
+#: ../../firewall.rst:350
 msgid "Web server listening on port 80 on Server1"
 msgstr "Servidor Web escuchando en el puerto 80 en Servidor1"
 
-#: ../../firewall.rst:244
+#: ../../firewall.rst:351
 msgid "SSH server listening on port 22 on Server1"
 msgstr "Servidor SSH escuchando en el puerto 22 en Servidor1"
 
-#: ../../firewall.rst:245
+#: ../../firewall.rst:352
 msgid "Other services in the port range between 5000 and 6000  on Server1"
 msgstr ""
 
-#: ../../firewall.rst:247
+#: ../../firewall.rst:354
 msgid ""
 "If you want to make the web server available directly from public networks, "
 "you must create a rule like this:"
@@ -650,25 +838,25 @@ msgstr ""
 "Si desea que el servidor web esté disponible directamente desde redes "
 "públicas, debe crear una regla como esta:"
 
-#: ../../firewall.rst:249
+#: ../../firewall.rst:356
 msgid "origin port: 80"
 msgstr "puerto de origen: 80"
 
-#: ../../firewall.rst:250
+#: ../../firewall.rst:357
 msgid "destination port: 80"
 msgstr "puerto de destino: 80"
 
-#: ../../firewall.rst:251 ../../firewall.rst:259 ../../firewall.rst:267
+#: ../../firewall.rst:358 ../../firewall.rst:366 ../../firewall.rst:374
 msgid "host address: 192.168.1.10"
 msgstr "Dirección del host: 192.168.1.10"
 
-#: ../../firewall.rst:253
+#: ../../firewall.rst:360
 msgid ""
 "All incoming traffic on the firewall's red interfaces on port 80, will be "
 "redirected to port 80 on Server1."
 msgstr ""
 
-#: ../../firewall.rst:255
+#: ../../firewall.rst:362
 msgid ""
 "In case you want to make accessible from outside the SSH server on port "
 "2222, you will have to create a port forward like this:"
@@ -676,73 +864,66 @@ msgstr ""
 "En caso de que quiera hacer accesible desde fuera del servidor SSH en el "
 "puerto 2222, tendrá que crear un puerto hacia adelante de esta manera:"
 
-#: ../../firewall.rst:257
+#: ../../firewall.rst:364
 msgid "origin port: 2222"
 msgstr "puerto de origen: 2222"
 
-#: ../../firewall.rst:258
+#: ../../firewall.rst:365
 msgid "destination port: 22"
 msgstr "puerto de destino: 22"
 
-#: ../../firewall.rst:261
+#: ../../firewall.rst:368
 msgid ""
 "All incoming traffic on the firewall's red interfaces on port 2222, will be "
 "redirected to port 22 on Server1."
 msgstr ""
 
-#: ../../firewall.rst:263
+#: ../../firewall.rst:370
 msgid ""
 "In case you want to make accessible from outside the server on the whole "
 "port range between 5000 and 6000, you will have to create a port forward "
 "like this:"
 msgstr ""
 
-#: ../../firewall.rst:265
+#: ../../firewall.rst:372
 msgid "origin port: 5000:6000"
 msgstr "Puerto de origen: 5000:6000"
 
-#: ../../firewall.rst:266
+#: ../../firewall.rst:373
 msgid "destination port:"
 msgstr "puerto de destino:"
 
-#: ../../firewall.rst:269
+#: ../../firewall.rst:376
 msgid ""
 "All incoming traffic on the firewall's red interfaces on the port range "
 "between 5000 and 6000 will be redirected to the same ports on Server1."
 msgstr ""
 
-#: ../../firewall.rst:272
+#: ../../firewall.rst:379
 msgid "Limiting access"
 msgstr "Limitar el acceso"
 
-#: ../../firewall.rst:274
+#: ../../firewall.rst:381
 msgid ""
-"You can restrict access to port forward only from some IP addresses or "
-"networks using the field :guilabel:`Allow only from`."
+"By default, the field access to port forward is granted to anyone. You can "
+"restrict access to port forward only from some IP addresses or networks by "
+"adding entries to :guilabel:`Restrict access to` field. This configuration "
+"is useful when services should be available only from trusted IPs or "
+"networks."
 msgstr ""
 
-#: ../../firewall.rst:276
-msgid ""
-"This configuration is useful when services should be available only from "
-"trusted IPs or networks. Some possible values:"
+#: ../../firewall.rst:385
+msgid "Example of valid entries:"
 msgstr ""
 
-#: ../../firewall.rst:279
+#: ../../firewall.rst:387
 msgid ""
 "``10.2.10.4``: enable port forward for traffic coming from 10.2.10.4 IP"
 msgstr ""
 "``10.2.10.4``: habilitar el puerto hacia adelante para el tráfico procedente"
 " de la IP 10.2.10.4"
 
-#: ../../firewall.rst:280
-msgid ""
-"``10.2.10.4,10.2.10.5``: enable port forward for traffic coming from "
-"10.2.10.4 and 10.2.10.5 IPs"
-msgstr ""
-"``10.2.10.4,10.2.10.5``: habilitar el puerto hacia adelante para el tráfico "
-"procedente de las IPs 10.2.10.4 y 10.2.10.5"
-
-#: ../../firewall.rst:281
+#: ../../firewall.rst:388
 msgid ""
 "``10.2.10.0/24``: enable port forward only for traffic coming from "
 "10.2.10.0/24 network"
@@ -750,60 +931,29 @@ msgstr ""
 "``10.2.10.0/24``: habilita el reenvío del puerto sólo para el tráfico "
 "procedente de la red 10.2.10.0/24"
 
-#: ../../firewall.rst:282
-msgid "``!10.2.10.4``: enable port forward  for all IPs except 10.2.10.4"
+#: ../../firewall.rst:393
+msgid "SNAT 1:1"
 msgstr ""
-"``!10.2.10.4``: habilita el reenvío de puertos para todas las IP excepto "
-"10.2.10.4"
 
-#: ../../firewall.rst:283
+#: ../../firewall.rst:395
 msgid ""
-"``192.168.1.0/24!192.168.1.3,192.168.1.9``: enable port forward for "
-"192.168.1.0/24 network, except for hosts 192.168.1.3 and 192.168.1.9"
+"One-to-one :index:`source NAT` (:index:`SNAT`) is a way to make systems "
+"behind a firewall and configured with private IP addresses appear to have "
+"public IP addresses. If you have a bunch of public IP addresses and if you "
+"want to associate one of these to a specific network host, :index:`NAT 1:1` "
+"is the way. SNAT is available only if there is at least one IP alias "
+"configured on red network interfaces."
 msgstr ""
-"``192.168.1.0/24!192.168.1.3,192.168.1.9``: habilita el reenvío de puertos "
-"para la red 192.168.1.0/24, excepto los hosts 192.168.1.3 y 192.168.1.9"
 
-#: ../../firewall.rst:288
-msgid "sNAT 1:1"
-msgstr "sNAT 1:1"
-
-#: ../../firewall.rst:290
+#: ../../firewall.rst:399
 msgid ""
-"One-to-one NAT is a way to make systems behind a firewall and configured "
-"with private IP addresses appear to have public IP addresses."
+"This feature only applies to network traffic from a host inside the local "
+"network to the public Internet. It does not affect in any way the traffic "
+"from the Internet toward the alias IP. If you need to route some specific "
+"traffic to the internal host use the port forward as usual."
 msgstr ""
-"NAT uno a uno es una forma de hacer que los sistemas detrás de un "
-"cortafuegos y configurado con direcciones IP privadas parecieran tener "
-"direcciones IP públicas."
 
-#: ../../firewall.rst:292
-msgid ""
-"If you have a bunch of public IP addresses and if you want to associate one "
-"of these to a specific network host, :index:`NAT 1:1` is the way."
-msgstr ""
-"Si tiene un montón de direcciones IP públicas y si desea asociar una de "
-"ellas a un host de red específico, :index:`NAT 1:1` es el camino."
-
-#: ../../firewall.rst:294
-msgid ""
-"This feature only applies to traffic from the network specific host to "
-"internet."
-msgstr ""
-"Esta característica sólo se aplica al tráfico hacia internet desde un host "
-"específico"
-
-#: ../../firewall.rst:296
-msgid ""
-"It doesn't affect in any way the traffic from internet toward the Alias IP, "
-"if you need to route some specific traffic to the internal host use the port"
-" forward as usual."
-msgstr ""
-"No afecta de ningún modo al tráfico específico desde internet hacia el alias"
-" IP, pero, si necesitas enrutar tráfico hacia un host específico de la red "
-"interna, utiliza el reenvío de puertos, como de siempre."
-
-#: ../../firewall.rst:298
+#: ../../firewall.rst:402
 msgid ""
 "If you need to route all traffic to the internal host (not recommended!) use"
 " a port forward with protocol TCP & UDP and source port 1:65535."
@@ -812,14 +962,14 @@ msgstr ""
 "recomendado), utiliza un reenvío de puertos con protocolos TCP/UDP y puerto "
 "de entrada 1:65535"
 
-#: ../../firewall.rst:304
+#: ../../firewall.rst:408
 msgid ""
 "In our network we have a host called ``example_host`` with IP "
 "``192.168.5.122``. We have also associated a public IP address "
 "``89.95.145.226`` as an alias of ``eth0`` interface (``RED``)."
 msgstr ""
 
-#: ../../firewall.rst:306
+#: ../../firewall.rst:410
 msgid ""
 "We want to map our internal host (``example_host`` - ``192.168.5.122``) with"
 " public IP ``89.95.145.226``."
@@ -827,7 +977,7 @@ msgstr ""
 "Queremos mapear nuestro host interno (``example_host`` - ``192.168.5.122``) "
 "con IP pública ``89.95.145.226``."
 
-#: ../../firewall.rst:308
+#: ../../firewall.rst:412
 msgid ""
 "In the :guilabel:`NAT 1:1` panel, we choose for the IP ``89.95.145.226`` "
 "(read-only field) the specific host (``example_host``) from the combo-box. "
@@ -838,66 +988,69 @@ msgstr ""
 "combinado. Hemos configurado correctamente el NAT de uno a uno para nuestro "
 "host."
 
-#: ../../firewall.rst:313
+#: ../../firewall.rst:417
 msgid "Traffic shaping"
 msgstr "Conformación del tráfico"
 
-#: ../../firewall.rst:315
+#: ../../firewall.rst:419
 msgid ""
 ":index:`Traffic shaping` allows applying priority rules on network traffic "
 "through the firewall. In this way, it is possible to optimize the "
 "transmission, control the latency and tune the available bandwidth."
 msgstr ""
 
-#: ../../firewall.rst:319
+#: ../../firewall.rst:423
 msgid ""
 "To enable traffic shaping it is necessary to know the exact amount of "
 "available download and upload bandwidth. Access the :guilabel:`Network` page"
 " and carefully set bandwidth values."
 msgstr ""
 
-#: ../../firewall.rst:322
+#: ../../firewall.rst:426
 msgid ""
 "If download and upload bandwidth are not set for a red interface, traffic "
 "shaping rules will not be enabled for that interface."
 msgstr ""
 
-#: ../../firewall.rst:327
+#: ../../firewall.rst:431
 msgid ""
 "Be sure to specify an accurate estimate of the bandwidth on network "
 "interfaces. To pick an appropriate setting, please do not trust the nominal "
-"value, but use online tools to test the real provider speed."
+"value, but use the :guilabel:`Speedtest` button or online tools to test the "
+"real provider speed."
 msgstr ""
 
-#: ../../firewall.rst:331
+#: ../../firewall.rst:435
 msgid ""
 "In case of congestion by the provider, there is nothing to do in order to "
 "improve performance."
 msgstr ""
 
-#: ../../firewall.rst:334
-msgid "Configuration of traffic shaping is composed of 2 steps:"
+#: ../../firewall.rst:438
+msgid ""
+"Traffic shaping classes are used to commit bandwidth for specific network "
+"traffic. Configuration of traffic shaping is composed of 2 steps:"
 msgstr ""
 
-#: ../../firewall.rst:336
+#: ../../firewall.rst:441
 msgid "creation of traffic shaping classes"
 msgstr ""
 
-#: ../../firewall.rst:337
+#: ../../firewall.rst:442
 msgid "assignment of network traffic to a specific class"
 msgstr ""
 
-#: ../../firewall.rst:340
+#: ../../firewall.rst:445
 msgid "Classes"
 msgstr ""
 
-#: ../../firewall.rst:342
+#: ../../firewall.rst:447
 msgid ""
 "Traffic shaping is achieved by controlling how bandwidth is allocated to "
 "classes."
 msgstr ""
 
-#: ../../firewall.rst:344
+#: ../../firewall.rst:449
 msgid ""
 "Each class can have a reserved rate. A reserved rate is the bandwidth a "
 "class will get only when it needs it. The spare bandwidth is the sum of not "
@@ -905,74 +1058,91 @@ msgid ""
 "currently used by the class itself."
 msgstr ""
 
-#: ../../firewall.rst:348
+#: ../../firewall.rst:453
 msgid ""
 "Each class can have also a maximum rate. If set, the class can exceed its "
 "committed rate, up to the maximum rate. A class will exceed its committed "
 "rate only if there is spare bandwidth available."
 msgstr ""
 
-#: ../../firewall.rst:351
+#: ../../firewall.rst:456
 msgid ""
 "Traffic shaping classes can be defined under :guilabel:`Traffic shaping` "
-"page. When creating a new class, fill in the following fields:"
+"page. When creating a new class, fill the following fields."
 msgstr ""
 
-#: ../../firewall.rst:354
+#: ../../firewall.rst:459
 msgid ":guilabel:`Class name`: a representative name"
 msgstr ""
 
-#: ../../firewall.rst:355
-msgid ""
-":guilabel:`Min download (%)`: minimum reserved download bandwidth, if empty "
-"no download reservation will be created"
-msgstr ""
-
-#: ../../firewall.rst:356
-msgid ""
-":guilabel:`Max download (%)`: maximum allowed download bandwidth, if empty "
-"no upper limit will be set"
-msgstr ""
-
-#: ../../firewall.rst:357
-msgid ""
-":guilabel:`Min upload (%)`:  minimum reserved upload bandwidth, if empty no "
-"upload reservation will be created"
-msgstr ""
-
-#: ../../firewall.rst:358
-msgid ""
-":guilabel:`Max upload (%)`: maximum allowed download bandwidth, if empty no "
-"upper limit will be created"
-msgstr ""
-
-#: ../../firewall.rst:359
+#: ../../firewall.rst:460
 msgid ":guilabel:`Description`: optional description for the class"
 msgstr ""
 
-#: ../../firewall.rst:361
+#: ../../firewall.rst:462
+msgid "Limits under :guilabel:`Download bandwidth limits` section:"
+msgstr ""
+
+#: ../../firewall.rst:464
+msgid ""
+":guilabel:`Min`: minimum reserved download bandwidth, if empty no download "
+"reservation will be created"
+msgstr ""
+
+#: ../../firewall.rst:465
+msgid ""
+":guilabel:`Max`: maximum allowed download bandwidth, if empty no upper limit"
+" will be set"
+msgstr ""
+
+#: ../../firewall.rst:467
+msgid "Limits under :guilabel:`Upload bandwidth limits` section:"
+msgstr ""
+
+#: ../../firewall.rst:469
+msgid ""
+":guilabel:`Min`:  minimum reserved upload bandwidth, if empty no upload "
+"reservation will be created"
+msgstr ""
+
+#: ../../firewall.rst:470
+msgid ""
+":guilabel:`Max`: maximum allowed download bandwidth, if empty no upper limit"
+" will be created"
+msgstr ""
+
+#: ../../firewall.rst:473
+msgid ""
+"For each class the bandwidth can be specified using the percentage of "
+"available network bandwidth or with absolutes values expressed in kbps. As "
+"default, a traffic shaping class is applied to all red network interfaces. "
+"Such behavior can be changed by selecting an existing red interfaces under "
+"the :guilabel:`Bind to` menu inside the :guilabel:`Advanced` section."
+msgstr ""
+
+#: ../../firewall.rst:479
 msgid "The system provides two pre-configured classes:"
 msgstr ""
 
-#: ../../firewall.rst:363
+#: ../../firewall.rst:481
 msgid ""
 ":guilabel:`high`: generic high priority traffic, can be assigned to "
 "something like SSH"
 msgstr ""
 
-#: ../../firewall.rst:364
+#: ../../firewall.rst:482
 msgid ""
 ":guilabel:`low`: low priority traffic, can be assigned to something like "
 "peer to peer file exchange"
 msgstr ""
 
-#: ../../firewall.rst:367
+#: ../../firewall.rst:484
 msgid ""
 "The system always tries to prevent traffic starvation under high network "
 "load."
 msgstr ""
 
-#: ../../firewall.rst:369
+#: ../../firewall.rst:486
 msgid ""
 "Classes will get spare bandwidth proportionally to their committed rate. So "
 "if class A has 1Mbit committed rate and class B has 2Mbit committed rate, "
@@ -980,15 +1150,24 @@ msgid ""
 "spare bandwidth will be given to them."
 msgstr ""
 
-#: ../../firewall.rst:374
-msgid "For more info, see [#]_ ."
+#: ../../firewall.rst:490
+msgid ""
+"Network traffic can be shaped by creating rules under the :guilabel:`Rules` "
+"section in this page. After creating or editing rules, make sure to "
+":ref:`apply <apply_revert-section>` the changes."
 msgstr ""
 
-#: ../../firewall.rst:379
+#: ../../firewall.rst:493
+msgid ""
+"For more info, see `FireQOS tutorial "
+"<https://github.com/firehol/firehol/wiki/FireQOS-Tutorial>`_."
+msgstr ""
+
+#: ../../firewall.rst:499
 msgid "Firewall objects"
 msgstr "Objetos del cortafuego"
 
-#: ../../firewall.rst:381
+#: ../../firewall.rst:501
 msgid ""
 ":index:`Firewall objects` are representations of network components and are "
 "useful to simplify the creation of rules."
@@ -996,44 +1175,44 @@ msgstr ""
 "Los :index:`Objetos del cortafuego` son representaciones de componentes de "
 "red y son útiles para simplificar la creación de reglas."
 
-#: ../../firewall.rst:384
+#: ../../firewall.rst:504
 msgid ""
 "There are 6 types of objects, 5 of them represent sources and destinations:"
 msgstr "Hay 6 tipos de objetos, 5 de ellos representan fuentes y destinos:"
 
-#: ../../firewall.rst:386
+#: ../../firewall.rst:506
 msgid ""
 "**Host**: representing local and remote computers. Example: ``web_server``, "
 "``goofy_pc``"
 msgstr ""
 
-#: ../../firewall.rst:388
+#: ../../firewall.rst:508
 msgid ""
 "**Groups of hosts**: representing homogeneous groups of computers. Hosts in "
 "a host group should always be reachable using the same interface. Example: "
 "``servers``, ``router``"
 msgstr ""
 
-#: ../../firewall.rst:391
+#: ../../firewall.rst:511
 msgid ""
 "**IP ranges**: a list of IP addresses expressed as a range. Example: "
 "``myrange``, composed by IPs from ``192.168.1.100`` to ``192.168.1.120``"
 msgstr ""
 
-#: ../../firewall.rst:393
+#: ../../firewall.rst:513
 msgid ""
 "**CIDR Networks**: you can express a CIDR network in order to simplify "
 "firewall rules."
 msgstr ""
 
-#: ../../firewall.rst:395
+#: ../../firewall.rst:515
 msgid ""
 "Example 1 : last 14 IP addresses of the network are assigned to servers "
 "(``192.168.0.240/28``). Example 2 : you have multiple green interfaces but "
 "you want to create firewall rules only for one green (``192.168.2.0/24``)."
 msgstr ""
 
-#: ../../firewall.rst:400
+#: ../../firewall.rst:520
 msgid ""
 "**Zone**: representing networks of hosts, they must be expressed in CIDR "
 "notation. Their intended usage is for defining a part of a network with "
@@ -1041,7 +1220,7 @@ msgid ""
 "for very specific needs."
 msgstr ""
 
-#: ../../firewall.rst:402
+#: ../../firewall.rst:522
 msgid ""
 "By default, all hosts belonging to a zone are not allowed to do any type of "
 "traffic. It's necessary to create all the rules on the firewall in order to "
@@ -1051,13 +1230,13 @@ msgstr ""
 " realizar ningún tipo de tráfico. Es necesario crear todas las reglas en el "
 "cortafuegos para obtener el comportamiento deseado."
 
-#: ../../firewall.rst:406
+#: ../../firewall.rst:526
 msgid ""
 "**Time conditions**: can be associated to firewall rules to limit their "
 "effectiveness to a given period of time."
 msgstr ""
 
-#: ../../firewall.rst:409
+#: ../../firewall.rst:529
 msgid ""
 "Rules which have time conditions are enforced only for new connections. "
 "Example: if you are blocking HTTP connections from 09:00 to 18:00, "
@@ -1069,19 +1248,19 @@ msgstr ""
 "las conexiones establecidas antes de las 09:00 serán permitidas hasta que se"
 " cierre. Cualquier nueva conexión después de las 09:00 será eliminada."
 
-#: ../../firewall.rst:414
+#: ../../firewall.rst:534
 msgid ""
 "**Services**: a service listening on a host with at least one port and "
 "protocol. Example: ``ssh``, ``https``"
 msgstr ""
 
-#: ../../firewall.rst:418
+#: ../../firewall.rst:538
 msgid ""
 "**MAC addresses**: a host identified by a MAC address. The MAC address must "
 "be bound to an existing zone."
 msgstr ""
 
-#: ../../firewall.rst:421
+#: ../../firewall.rst:541
 msgid ""
 "When creating rules, you can use the records defined in :ref:`dns-section` "
 "and :ref:`dhcp-section` like host objects. In addition, each network "
@@ -1093,64 +1272,20 @@ msgstr ""
 "red con un rol asociado se lista automáticamente entre las zonas "
 "disponibles."
 
-#: ../../firewall.rst:426
-msgid "IP/MAC binding"
-msgstr "Enlace IP/MAC"
-
-#: ../../firewall.rst:428
-msgid ""
-"When the system is acting as DHCP server, the firewall can use the list of "
-"DHCP reservations to strictly check all traffic generated from hosts inside "
-"local networks. When :index:`IP/MAC binding` is enabled, the administrator "
-"will choose what policy will be applied to hosts without a DHCP reservation."
-" The common use is to allow traffic only from known hosts and block all "
-"other traffic. In this case, hosts without a reservation will not be able to"
-" access the firewall nor the external network."
-msgstr ""
-"Cuando el sistema actúa como servidor DHCP, el cortafuego puede utilizar la "
-"lista de reservas de DHCP para verificar estrictamente todo el tráfico "
-"generado desde los hosts dentro de las redes locales. Cuando :index:`Enlace "
-"IP/MAC` está habilitado, el administrador elegirá qué política se aplicará a"
-" los hosts sin una reserva de DHCP. El uso común es permitir el tráfico "
-"solamente desde los anfitriones conocidos y bloquear todo el otro tráfico. "
-"En este caso, los hosts sin reserva no podrán acceder al cortafuego ni a la "
-"red externa."
-
-#: ../../firewall.rst:434
-msgid "To enable traffic only from well-known hosts, follow these steps:"
-msgstr ""
-"Para habilitar el tráfico sólo desde hosts bien conocidos, siga estos pasos:"
-
-#: ../../firewall.rst:436
-msgid "Create a DHCP reservation for a host"
-msgstr "Crear una reserva DHCP para un host"
-
-#: ../../firewall.rst:437
-msgid ""
-"Go to :menuselection:`Firewall rules` page and select from "
-":guilabel:`Configure` from the button menu"
-msgstr ""
-"Vaya a la página :menuselection:`Reglas firewall` y seleccione "
-":guilabel:`Configurar` en el menú de botones"
-
-#: ../../firewall.rst:438
-msgid "Select :guilabel:`MAC validation (IP/MAC binding)`"
-msgstr "Seleccione :guilabel:`Validación MAC (enlace IP/MAC)`"
-
-#: ../../firewall.rst:439
-msgid ""
-"Choose :guilabel:`Block traffic` as the policy to apply to unregistered "
-"hosts"
+#: ../../firewall.rst:549
+msgid "Connections"
 msgstr ""
 
-#: ../../firewall.rst:442
+#: ../../firewall.rst:551
 msgid ""
-"Remember to create at least one DHCP reservation before enabling the IP/MAC "
-"binding mode, otherwise, no hosts will be able to manage the server using "
-"the web interface or SSH."
+"This page keeps track of all active connections. Connections can be filter "
+"by :guilabel:`Protocol` and :guilabel:`State`. The list of connections is "
+"not refreshed in real time. To list new connections click the "
+":guilabel:`Refresh` button."
 msgstr ""
 
-#: ../../firewall.rst:446
+#: ../../firewall.rst:555
 msgid ""
-"FireQOS tutorial: https://github.com/firehol/firehol/wiki/FireQOS-Tutorial"
+"The administrator can delete a single connection or flush the whole "
+"connection tracking table using :guilabel:`Delete all connections` button."
 msgstr ""

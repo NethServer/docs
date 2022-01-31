@@ -1,12 +1,12 @@
 # #-#-#-#-#  tlspolicy.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  tlspolicy.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -66,115 +66,141 @@ msgid "The following sections describe each policy identifier."
 msgstr "Las siguientes secciones describen cada identificador de política."
 
 #: ../../tlspolicy.rst:21
-msgid "Policy 2018-10-01"
+msgid "Policy 2020-05-10"
 msgstr ""
 
 #: ../../tlspolicy.rst:23
+msgid ""
+"This policy disables the TLS protocol versions 1.0 and 1.1. It applies to "
+"the following services:"
+msgstr ""
+
+#: ../../tlspolicy.rst:25
+msgid "Apache (httpd, httpd-admin)"
+msgstr ""
+
+#: ../../tlspolicy.rst:26
+msgid "Ejabberd"
+msgstr ""
+
+#: ../../tlspolicy.rst:27
+msgid "Cockpit"
+msgstr ""
+
+#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:64
+msgid "Slapd (openldap-servers)"
+msgstr ""
+
+#: ../../tlspolicy.rst:29 ../../tlspolicy.rst:57 ../../tlspolicy.rst:100
+msgid "Postfix"
+msgstr "Postfix"
+
+#: ../../tlspolicy.rst:30 ../../tlspolicy.rst:56 ../../tlspolicy.rst:88
+msgid "Dovecot"
+msgstr "Dovecot"
+
+#: ../../tlspolicy.rst:32
+msgid "Reference: https://access.redhat.com/articles/1462183"
+msgstr ""
+
+#: ../../tlspolicy.rst:36
+msgid "Policy 2018-10-01"
+msgstr ""
+
+#: ../../tlspolicy.rst:38
 msgid ""
 "This policy restricts the TLS settings of the default Ejabberd "
 "configuration. It applies only to Ejabberd version 18 and greater."
 msgstr ""
 
-#: ../../tlspolicy.rst:33
+#: ../../tlspolicy.rst:48
 msgid "Ejabberd (XMPP)"
 msgstr ""
 
-#: ../../tlspolicy.rst:27 ../../tlspolicy.rst:59 ../../tlspolicy.rst:68
-#: ../../tlspolicy.rst:76
+#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:74 ../../tlspolicy.rst:83
+#: ../../tlspolicy.rst:91
 msgid ""
 "See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 msgstr ""
 "Ver https://bettercrypto.org/static/applied-crypto-hardening.pdf categoría B"
 
-#: ../../tlspolicy.rst:28 ../../tlspolicy.rst:46
+#: ../../tlspolicy.rst:43 ../../tlspolicy.rst:61
 msgid "Disabled SSLv3 and TLSv1.0"
 msgstr ""
 
-#: ../../tlspolicy.rst:29
+#: ../../tlspolicy.rst:44
 msgid "Cipher server priority"
 msgstr ""
 
-#: ../../tlspolicy.rst:30
+#: ../../tlspolicy.rst:45
 msgid "ECC certificate"
 msgstr ""
 
-#: ../../tlspolicy.rst:31
+#: ../../tlspolicy.rst:46
 msgid "Ciphers suite ::"
 msgstr ""
 
-#: ../../tlspolicy.rst:36
+#: ../../tlspolicy.rst:51
 msgid "Policy 2018-06-21"
 msgstr ""
 
-#: ../../tlspolicy.rst:38
+#: ../../tlspolicy.rst:53
 msgid ""
 "This policy extends ``2018-03-30`` by adding the support for ECC "
 "certificates to"
 msgstr ""
 
-#: ../../tlspolicy.rst:40 ../../tlspolicy.rst:65
+#: ../../tlspolicy.rst:55 ../../tlspolicy.rst:80
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../tlspolicy.rst:41 ../../tlspolicy.rst:73
-msgid "Dovecot"
-msgstr "Dovecot"
-
-#: ../../tlspolicy.rst:42 ../../tlspolicy.rst:85
-msgid "Postfix"
-msgstr "Postfix"
-
-#: ../../tlspolicy.rst:49
-msgid "Slapd (openldap-servers)"
-msgstr ""
-
-#: ../../tlspolicy.rst:45
+#: ../../tlspolicy.rst:60
 msgid "Reference https://access.redhat.com/articles/1474813"
 msgstr ""
 
-#: ../../tlspolicy.rst:47 ../../tlspolicy.rst:60 ../../tlspolicy.rst:69
-#: ../../tlspolicy.rst:79
+#: ../../tlspolicy.rst:62 ../../tlspolicy.rst:75 ../../tlspolicy.rst:84
+#: ../../tlspolicy.rst:94
 msgid "Cipher suite ::"
 msgstr "Suite de cifrado ::"
 
-#: ../../tlspolicy.rst:52
+#: ../../tlspolicy.rst:67
 msgid "Policy 2018-03-30"
 msgstr "Política 2018-03-30"
 
-#: ../../tlspolicy.rst:54
+#: ../../tlspolicy.rst:69
 msgid ""
 "The goal of this policy is to harden the cipher set provided by the default "
 "upstream policy.  It is not compatible with IE 8 XP and Java 6u45 and 7u25 "
 "clients. It does not support ECC certificates."
 msgstr ""
 
-#: ../../tlspolicy.rst:64 ../../tlspolicy.rst:73
+#: ../../tlspolicy.rst:79 ../../tlspolicy.rst:88
 msgid "Disabled SSLv2 and SSLv3"
 msgstr "Deshabilitados SSLv2 y SSLv3"
 
-#: ../../tlspolicy.rst:65
+#: ../../tlspolicy.rst:80
 msgid ""
 "Ignore ``httpd/SSLCipherSuite`` property settings (see :ref:`tlspolicy-"
 "default`)"
 msgstr ""
 
-#: ../../tlspolicy.rst:77
+#: ../../tlspolicy.rst:92
 msgid "Use TLS in outbound connections, if remote server supports it"
 msgstr "Use TLS en las conexiones de salida, si el servidor remoto lo admite"
 
-#: ../../tlspolicy.rst:78
+#: ../../tlspolicy.rst:93
 msgid "Disable SSLv2 and SSLv3 on submission ports"
 msgstr "Deshabilitar SSLv2 y SSLv3 en los puertos de envío"
 
-#: ../../tlspolicy.rst:83
+#: ../../tlspolicy.rst:98
 msgid "Exclude ciphers ::"
 msgstr "Excluir cifrados ::"
 
-#: ../../tlspolicy.rst:90
+#: ../../tlspolicy.rst:105
 msgid "Default upstream policy"
 msgstr "Política de subida predeterminada"
 
-#: ../../tlspolicy.rst:92
+#: ../../tlspolicy.rst:107
 msgid ""
 "The goal of this policy is retaining upstream settings. This is the original"
 " goal since |product| 7."
@@ -182,7 +208,7 @@ msgstr ""
 "El objetivo de esta política es mantener la configuración del caudal de "
 "subida. Este es el objetivo original desde |product| 7."
 
-#: ../../tlspolicy.rst:95
+#: ../../tlspolicy.rst:110
 msgid ""
 "This policy allows to customize ``httpd`` (Apache) with a given cipher list,"
 " by issuing the following  commands: ::"

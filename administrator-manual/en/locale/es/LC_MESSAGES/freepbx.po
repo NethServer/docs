@@ -1,12 +1,12 @@
 # #-#-#-#-#  freepbx.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  freepbx.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2017-08-31 10:23+0000\n"
 "Last-Translator: Jon M., 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -32,13 +32,7 @@ msgstr ""
 msgid "FreePBX"
 msgstr "FreePBX"
 
-#: ../../freepbx.rst:7
-msgid ""
-"The configuration page of this module is available only in the old Server "
-"Manager."
-msgstr ""
-
-#: ../../freepbx.rst:9
+#: ../../freepbx.rst:5
 msgid ""
 ":index:`FreePBX` is a web-based open source GUI (graphical user interface) "
 "that controls and manages :index:`Asterisk` (PBX), an open source "
@@ -48,19 +42,17 @@ msgstr ""
 "basado en web, que controla y administra :index:`Asterisk` (PBX), un "
 "servidor de comunicaciones Open Source (https://www.freepbx.org/)."
 
-#: ../../freepbx.rst:14
+#: ../../freepbx.rst:10
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../freepbx.rst:16
+#: ../../freepbx.rst:12
 msgid ""
-"You can install FreePBX from the package manager of NethServer, the module "
+"You can install FreePBX from the package manager of |product|, the module "
 "named \"FreePBX\"."
 msgstr ""
-"Puedes instalar FreePBX desde el Centro de Software de NethServer, marcando "
-"el módulo llamado \"FreePBX\"."
 
-#: ../../freepbx.rst:19
+#: ../../freepbx.rst:15
 msgid ""
 "All FreePBX configurations and data are saved inside configuration and data "
 "backup."
@@ -68,27 +60,38 @@ msgstr ""
 "Todos los datos y configuraciones de FreePBX se guardan en la copia de "
 "seguridad de datos y configuración."
 
-#: ../../freepbx.rst:22
-msgid "Web Access"
-msgstr "Acceso Web"
-
-#: ../../freepbx.rst:24
-msgid ""
-"After installed, FreePBX will be accessible at "
-"``https://ip_address/freepbx`` from green interfaces. You can also configure"
-" the access from the red interface under the \"PBX Access\" page of the "
-"|product| Server Manager."
+#: ../../freepbx.rst:18
+msgid "Configuration"
 msgstr ""
-"Después de ser instalado, puedes acceder a FreePBX en "
-"``https://ip_address/freepbx`` desde redes verdes. También puedes configurar"
-" el acceso desde redes rojas desde la página \"PBX Access\" desde el Panel "
-"de Control de |product|."
+
+#: ../../freepbx.rst:21
+msgid "External access"
+msgstr ""
+
+#: ../../freepbx.rst:23
+msgid ""
+"As default, IAX and SIPs ports are open only for green interfaces. To open "
+"access from remote networks, just enable the :guilabel:`Allow external IAX "
+"access` and :guilabel:`Allow external SIP TLS access` options."
+msgstr ""
+
+#: ../../freepbx.rst:28
+msgid "Web interface access"
+msgstr ""
 
 #: ../../freepbx.rst:30
+msgid ""
+"After installed, FreePBX will be accessible at "
+"``https://ip_address/freepbx`` from green interfaces only. You can allow "
+"access from extra networks by clicking on :guilabel:`Create new access` "
+"button under the *Settings* page of FreePBX application."
+msgstr ""
+
+#: ../../freepbx.rst:36
 msgid "FwConsole"
 msgstr "FwConsole"
 
-#: ../../freepbx.rst:32
+#: ../../freepbx.rst:38
 msgid ""
 "The ``fwconsole`` is a tool that allows the user to perform some FreePBX "
 "administrative tasks (see `FreePBX wiki "
@@ -101,11 +104,11 @@ msgstr ""
 "<https://wiki.freepbx.org/pages/viewpage.action?pageId=37912685>`_). Para "
 "usarlo con |producto| tienes que usarlo junto con scl: ::"
 
-#: ../../freepbx.rst:40
+#: ../../freepbx.rst:46
 msgid "Advanced Documentation"
 msgstr "Documentación avanzada"
 
-#: ../../freepbx.rst:42
+#: ../../freepbx.rst:48
 msgid ""
 "For further information you can read the FreePBX documentation at: "
 "https://wiki.freepbx.org"

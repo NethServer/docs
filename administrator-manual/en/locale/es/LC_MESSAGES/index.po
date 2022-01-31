@@ -1,12 +1,12 @@
 # #-#-#-#-#  index.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  index.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -29,39 +29,39 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../index.rst:29
+#: ../../index.rst:33
 msgid "Release notes"
 msgstr ""
 
-#: ../../index.rst:35
+#: ../../index.rst:39
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../index.rst:50
+#: ../../index.rst:54
 msgid "Configuration"
 msgstr "Configuración"
 
-#: ../../index.rst:68
-msgid "Applications - New Server Manager"
+#: ../../index.rst:72
+msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:75
-msgid "Modules"
-msgstr "Módulos"
+#: ../../index.rst:104
+msgid "Other modules"
+msgstr ""
+
+#: ../../index.rst:115
+msgid "Best practices"
+msgstr "Mejores prácticas"
 
 #: ../../index.rst:126
 msgid "NethForge modules"
 msgstr "Módulos NethForge"
 
-#: ../../index.rst:135
-msgid "Best practices"
-msgstr "Mejores prácticas"
-
-#: ../../index.rst:141
+#: ../../index.rst:137
 msgid "Appendix"
 msgstr "Apéndice"
 
-#: ../../index.rst:153
+#: ../../index.rst:150
 msgid "Old Server Manager"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 "devel>`_"
 
 #: ../../index.rstNone
-msgid "Contacts"
+msgid "See also"
 msgstr ""
 
 #: ../../index.rst:25
@@ -99,3 +99,12 @@ msgstr "Soporte: `helpdesk.nethesis.it <http://helpdesk.nethesis.it>`_"
 #: ../../index.rst:27
 msgid "Official site: `www.nethesis.it <http://www.nethesis.it>`_"
 msgstr "Sitio oficial: `www.nethesis.it <http://www.nethesis.it>`_"
+
+#: ../../index.rst:29
+msgid "Italian `Manual <https://nethserver.docs.nethesis.it/it/v7/>`_"
+msgstr ""
+
+#: ../../index.rst:31
+msgid ""
+"Obsolete `NethServer 6 Manual <https://nethserver.docs.nethesis.it/en/v6/>`_"
+msgstr ""

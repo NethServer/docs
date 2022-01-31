@@ -1,12 +1,12 @@
 # #-#-#-#-#  report.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  report.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2019-07-26 08:16+0000\n"
 "Last-Translator: Martin Abeleira <mabeleira@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -32,19 +32,13 @@ msgstr ""
 msgid "Report"
 msgstr "Reporte"
 
-#: ../../report.rst:9
-msgid ""
-"The configuration page of this module is available only in the new Server "
-"Manager."
-msgstr ""
-
-#: ../../report.rst:11
+#: ../../report.rst:7
 msgid ""
 "This module manages the configuration of `Dante "
 "<https://github.com/nethesis/dante/>`_."
 msgstr ""
 
-#: ../../report.rst:14
+#: ../../report.rst:10
 msgid ""
 "Dante collects data from logs, databases and services, aggregates and "
 "displays them on a report structured as a customizable dashboard. The report"
@@ -55,11 +49,11 @@ msgstr ""
 "reporte puede ser enviado por correo electronico, con configuracion para "
 "enviarlos periodicidad y distintos receptores."
 
-#: ../../report.rst:18
+#: ../../report.rst:14
 msgid "Dashboard"
 msgstr "Tablero"
 
-#: ../../report.rst:20
+#: ../../report.rst:16
 msgid ""
 "The *Dashboard* page is composed by a set of widgets, each showing a piece "
 "of information on the system. The user can customize the layout of the "
@@ -70,15 +64,15 @@ msgstr ""
 "personalizar la dispocision del tablero agregando, y removiendo, "
 "decimiencionado y arrastrando y tirando herramientas."
 
-#: ../../report.rst:23
+#: ../../report.rst:19
 msgid "The types of widgets currently supported are:"
 msgstr "El tipo de herramientas soportados actualmente son:"
 
-#: ../../report.rst:25
+#: ../../report.rst:21
 msgid "**Chart**: pie, bar, line or area charts"
 msgstr "**Chart**: torta, barras, linea o graficas de area."
 
-#: ../../report.rst:26
+#: ../../report.rst:22
 msgid ""
 "**Counter**: a card that displays an aggregated numerical value and a trend "
 "on a time interval"
@@ -86,21 +80,21 @@ msgstr ""
 "**Counter**: una tarjeta que muestra un valor sumarizado y una tendencia en "
 "un intervalo de tiempo."
 
-#: ../../report.rst:27
+#: ../../report.rst:23
 msgid "**Table**: a table with optional row and column headers"
 msgstr "**Table**: una tabla con opciones de filas y columnas"
 
-#: ../../report.rst:28
+#: ../../report.rst:24
 msgid "**Ranking**: a list of the top N items, ordered by their value"
 msgstr ""
 "**Ranking**:  una lista de los N items mejor posicionados, ordenados por su "
 "valor."
 
-#: ../../report.rst:29
+#: ../../report.rst:25
 msgid "**Label**: a text showing a piece of information"
 msgstr "**Label**: un texto mostrando una pieza de informacion"
 
-#: ../../report.rst:30
+#: ../../report.rst:26
 msgid ""
 "**Title**: a simple text typed by the user to organize the layout of the "
 "dashboard"
@@ -108,19 +102,19 @@ msgstr ""
 "**Title**:  un texto simple escrito por el usuario para organizar la "
 "distribucion del tablero."
 
-#: ../../report.rst:33
+#: ../../report.rst:29
 msgid "Settings"
 msgstr "Configuracion"
 
-#: ../../report.rst:35
+#: ../../report.rst:31
 msgid "The *Settings* page manages the configuration of the module."
 msgstr "La pagina de  *Settings* administra toda la configuracion del modulo."
 
-#: ../../report.rst:38
+#: ../../report.rst:34
 msgid "Host configuration"
 msgstr "Configuracion de equipo"
 
-#: ../../report.rst:40
+#: ../../report.rst:36
 msgid ""
 "**Public host**: this is the hostname where the report is hosted. It must be"
 " a name that can be resolved from the internet"
@@ -128,29 +122,29 @@ msgstr ""
 "**Public host**:  este el nombre del equipo donde el reporte esta alojado. "
 "Debe ser un nombre que se pueda resolver de internet."
 
-#: ../../report.rst:41
+#: ../../report.rst:37
 msgid ""
 "**Final url**: this field displays the public URL where the report is hosted"
 msgstr ""
 "**Final url**: este campo muesta la URL publica donde el reporte esta "
 "publicado"
 
-#: ../../report.rst:44
+#: ../../report.rst:40
 msgid "Report configuration"
 msgstr "Configuracion de Reportes"
 
-#: ../../report.rst:46
+#: ../../report.rst:42
 msgid ""
 "**Theme**: the themes available for the dashboard are *light* and *dark*"
 msgstr ""
 "**Theme**: los temas que estan disponibles para el tablero son *light* y "
 "*dark*"
 
-#: ../../report.rst:47
+#: ../../report.rst:43
 msgid "**Palette**: there are 9 color palettes to choose from"
 msgstr "**Palette**: hay una paleta de 9 colores para elegir"
 
-#: ../../report.rst:48
+#: ../../report.rst:44
 msgid ""
 "**Interval**: time interval on which the data are aggregated. It can be "
 "*Week*, *Month* or *Six-months*"
@@ -158,11 +152,11 @@ msgstr ""
 "**Interval**: tiempo del intervalo en el cual los datos son consolidados. "
 "Puede ser *Week*, *Month* o *Six-months*"
 
-#: ../../report.rst:49
+#: ../../report.rst:45
 msgid "**Language**: language used to display the report"
 msgstr "**Language**: Idioma con el que se va mostrar el reporte"
 
-#: ../../report.rst:50
+#: ../../report.rst:46
 msgid ""
 "**Anonymization**: boolean flag that controls the anonymization of sensible "
 "data in the report"
@@ -170,13 +164,13 @@ msgstr ""
 "**Anonymization**:  bandera booleana que controla la anonimizacion de la "
 "informacion sensible en el reporte"
 
-#: ../../report.rst:51
+#: ../../report.rst:47
 msgid "**Max Entries**: maximum number of items to display on ranking widgets"
 msgstr ""
 "**Max Entries**:  numero maximo de items a deplegar en la clasificacion de "
 "herramientas."
 
-#: ../../report.rst:52
+#: ../../report.rst:48
 msgid ""
 "**Addresses**: configuration of report e-mail recipients and scheduling of "
 "e-mail dispatch"
@@ -184,17 +178,17 @@ msgstr ""
 "**Addresses**: configuracion de los e-mails que recibiran el reporte, y el "
 "calendario de envio de los mismos."
 
-#: ../../report.rst:55
+#: ../../report.rst:51
 msgid "Test mail"
 msgstr "Probar mail"
 
-#: ../../report.rst:57
+#: ../../report.rst:53
 msgid "**Address**: e-mail recipient of the test e-mail containing the report"
 msgstr ""
 "**Address**: direccion de e-mail del correo de pruebas conteniendo el "
 "reporte."
 
-#: ../../report.rst:58
+#: ../../report.rst:54
 msgid ""
 "**Include configured addresses**: boolean flag to control whether the test "
 "e-mail should be sent to the addresses configured in *Report configuration* "

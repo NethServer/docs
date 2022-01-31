@@ -1,12 +1,12 @@
 # #-#-#-#-#  web_proxy.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  web_proxy.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -252,11 +252,11 @@ msgstr ""
 msgid "These bypass rules are also configured inside the WPAD file."
 msgstr ""
 
-#: ../../web_proxy.rst:106
+#: ../../web_proxy.rst:108
 msgid "Priority and divert rules"
 msgstr ""
 
-#: ../../web_proxy.rst:108
+#: ../../web_proxy.rst:110
 msgid ""
 "Firewall rules for routing traffic to a specific provider, or "
 "decrease/increase priority, are applied only to network traffic which "
@@ -264,81 +264,215 @@ msgid ""
 "the proxy because the traffic is generated from the gateway itself."
 msgstr ""
 
-#: ../../web_proxy.rst:111
+#: ../../web_proxy.rst:113
 msgid ""
 "In a scenario where the web proxy is enabled in transparent mode and the "
 "firewall contains a rule to lower the priority for a given host, the rule "
 "applies only to non-HTTP services like SSH."
 msgstr ""
 
-#: ../../web_proxy.rst:114
+#: ../../web_proxy.rst:116
 msgid ""
 "The :guilabel:`Rules` tab allows the creation of priority and divert rules "
 "also for the traffic intercepted by the proxy."
 msgstr ""
 
-#: ../../web_proxy.rst:117
+#: ../../web_proxy.rst:119
 msgid "The web interface allow the creation of rules for HTTP/S traffic to:"
 msgstr ""
 
-#: ../../web_proxy.rst:119
+#: ../../web_proxy.rst:121
 msgid "raise the priority of an host or network"
 msgstr ""
 
-#: ../../web_proxy.rst:120
+#: ../../web_proxy.rst:122
 msgid "lower the priority of an host or network"
 msgstr ""
 
-#: ../../web_proxy.rst:121
+#: ../../web_proxy.rst:123
 msgid ""
 "divert the source to a specific provider with automatic fail over if the "
 "provider fails"
 msgstr ""
 
-#: ../../web_proxy.rst:122
+#: ../../web_proxy.rst:124
 msgid "force the source to a specific provider without automatic fail over"
 msgstr ""
 
-#: ../../web_proxy.rst:125
+#: ../../web_proxy.rst:129
+msgid "Content filter"
+msgstr ""
+
+#: ../../web_proxy.rst:131
+msgid ""
+"The :index:`content filter` analyzes all web traffic and blocks selected "
+"websites or sites containing viruses. Forbidden sites are selected from a "
+"list of categories, which in turn must be downloaded from external sources "
+"and stored on the system."
+msgstr ""
+
+#: ../../web_proxy.rst:134
+msgid ""
+"The system allows to create an infinite number of profiles. A profile is "
+"composed by three parts:"
+msgstr ""
+
+#: ../../web_proxy.rst:137
+msgid ""
+"**Who**: the client associated with the profile. Can be a user, a group of "
+"users, a host, a group of hosts, a zone or an interface role (like green, "
+"blue, etc)."
+msgstr ""
+
+#: ../../web_proxy.rst:140
+msgid ""
+"**What**: which sites can be browsed by the profiled client. It's a filter "
+"created inside the :guilabel:`Filters` section."
+msgstr ""
+
+#: ../../web_proxy.rst:143
+msgid ""
+"**When**: the filter can always be enabled or valid only during certain "
+"period of times. Time frames can be created inside the :guilabel:`Times` "
+"section."
+msgstr ""
+
+#: ../../web_proxy.rst:147
+msgid "This is the recommended order for content filter configuration:"
+msgstr ""
+
+#: ../../web_proxy.rst:149
+msgid ""
+"Select a list of categories from :guilabel:`Blacklists` page and start the "
+"download"
+msgstr ""
+
+#: ../../web_proxy.rst:150
+msgid "Create one or more time conditions (optional)"
+msgstr ""
+
+#: ../../web_proxy.rst:151
+msgid "Create custom categories (optional)"
+msgstr ""
+
+#: ../../web_proxy.rst:152
+msgid "Create a new filter or modify the default one"
+msgstr ""
+
+#: ../../web_proxy.rst:153
+msgid ""
+"Create a new profile associated to a user or host, then select a filter and "
+"a time frame (if enabled)"
+msgstr ""
+
+#: ../../web_proxy.rst:156
+msgid ""
+"If no profile matches, the system provides a default profile that is applied"
+" to all clients."
+msgstr ""
+
+#: ../../web_proxy.rst:159
+msgid "Filters"
+msgstr ""
+
+#: ../../web_proxy.rst:161
+msgid "A filter can:"
+msgstr ""
+
+#: ../../web_proxy.rst:163
+msgid "block access to categories of sites"
+msgstr ""
+
+#: ../../web_proxy.rst:164
+msgid "block access to sites accessed using IP address (recommended)"
+msgstr ""
+
+#: ../../web_proxy.rst:165
+msgid "filter URLs with regular expressions"
+msgstr ""
+
+#: ../../web_proxy.rst:166
+msgid "block files with specific extensions"
+msgstr ""
+
+#: ../../web_proxy.rst:167
+msgid "enable global blacklist and whitelist"
+msgstr ""
+
+#: ../../web_proxy.rst:169
+msgid "A filter can operate in two different modes:"
+msgstr ""
+
+#: ../../web_proxy.rst:171
+msgid "Allow all: allow access to all sites, except those explicitly blocked"
+msgstr ""
+
+#: ../../web_proxy.rst:172
+msgid ""
+"Block all: blocks access to all sites, except those explicitly permitted"
+msgstr ""
+
+#: ../../web_proxy.rst:174
+msgid ""
+"The category list will be displayed only after the download of list selected"
+" from :guilabel:`Blacklist` page."
+msgstr ""
+
+#: ../../web_proxy.rst:177
 msgid "Report"
 msgstr "Reporte"
 
-#: ../../web_proxy.rst:127
+#: ../../web_proxy.rst:179
 msgid ""
 "Install ``nethserver-lightsquid`` package to generate :index:`web proxy "
 "stats`."
 msgstr ""
 
-#: ../../web_proxy.rst:129
+#: ../../web_proxy.rst:181
 msgid ""
 "LightSquid is a lite and fast log analyzer for Squid proxy, it parses logs "
 "and generates new HTML report every day, summarizing browsing habits of the "
 "proxy's users. Lightsquid web interface can be found at the "
-":guilabel:`Applications` tab inside the :guilabel:`Dashboard`."
+":menuselection:`Applications` tab inside the :guilabel:`Dashboard`."
 msgstr ""
 
-#: ../../web_proxy.rst:133
+#: ../../web_proxy.rst:185
+msgid "Cleanup old reports"
+msgstr ""
+
+#: ../../web_proxy.rst:187
+msgid ""
+"LightSquid reports are saved as directories of text files inside "
+"``/var/lightsquid/``. Since all reports are kept forever, the size of the "
+"directory can greatly grow during the years."
+msgstr ""
+
+#: ../../web_proxy.rst:190
+msgid "To cleanup all reports older than 1 year, execute the following: ::"
+msgstr ""
+
+#: ../../web_proxy.rst:196
 msgid "Cache"
 msgstr "Cache"
 
-#: ../../web_proxy.rst:135
+#: ../../web_proxy.rst:198
 msgid ""
 "Under tab :guilabel:`Cache` there is a form to configure cache parameters:"
 msgstr ""
 "En la pestaña :guilabel:`Cache` hay un formulario para configurar los "
 "parámetros del caché:"
 
-#: ../../web_proxy.rst:137
+#: ../../web_proxy.rst:200
 msgid "The cache can be enabled or disabled (*disabled* by default)"
 msgstr "El caché puede ser activado o desactivado (*desactivado* por defecto)"
 
-#: ../../web_proxy.rst:138
+#: ../../web_proxy.rst:201
 msgid "**Disk cache size**: maximum value of squid cache on disk (in MB)"
 msgstr ""
 "**Tamaño de caché de disco**: valor máximo de caché de squid en disco (en "
 "MB)"
 
-#: ../../web_proxy.rst:139
+#: ../../web_proxy.rst:202
 msgid ""
 "**Min object size**: can be left at 0 to cache everything, but may be raised"
 " if small objects are not desired in the cache (in kB)"
@@ -347,7 +481,7 @@ msgstr ""
 "todo, pero puede ser elevado si no se desean objetos pequeños en la caché "
 "(en kB)"
 
-#: ../../web_proxy.rst:140
+#: ../../web_proxy.rst:203
 msgid ""
 "**Max object size**: objects larger than this setting will not be saved on "
 "disk. If speed is more desirable than saving bandwidth, this should be set "
@@ -357,17 +491,17 @@ msgstr ""
 "guardarán en el disco. Si la velocidad es más deseable que ahorrar ancho de "
 "banda, esto debería establecerse en un valor bajo (en kB)"
 
-#: ../../web_proxy.rst:142
+#: ../../web_proxy.rst:205
 msgid ""
 "The button :guilabel:`Empty cache` also works if squid is disabled, it might"
 " be useful to free space on disk."
 msgstr ""
 
-#: ../../web_proxy.rst:145
+#: ../../web_proxy.rst:208
 msgid "Sites without cache"
 msgstr "Sitios sin caché"
 
-#: ../../web_proxy.rst:147
+#: ../../web_proxy.rst:210
 msgid ""
 "Sometime the proxy can't correctly handle some bad crafted sites. To exclude"
 " one or more domain from the cache, use the ``NoCache`` property."
@@ -376,15 +510,15 @@ msgstr ""
 "diseñados. Para excluir uno o varios dominios de la caché, utilice la "
 "propiedad ``NoCache``."
 
-#: ../../web_proxy.rst:150
+#: ../../web_proxy.rst:213
 msgid "Example: ::"
 msgstr "Ejemplo: ::"
 
-#: ../../web_proxy.rst:156
+#: ../../web_proxy.rst:219
 msgid "Safe ports"
 msgstr "Puertos seguros"
 
-#: ../../web_proxy.rst:158
+#: ../../web_proxy.rst:221
 msgid ""
 "Safe ports are a list of ports accessible using the proxy. If a port is not "
 "inside the safe port list, the proxy will refuse to contact the server. For "
@@ -397,7 +531,7 @@ msgstr ""
 "HTTP que se ejecuta en el puerto 1234, no se puede acceder al servidor "
 "mediante el proxy."
 
-#: ../../web_proxy.rst:162
+#: ../../web_proxy.rst:225
 msgid ""
 "The ``SafePorts`` property is a comma-separated list of ports. Listed ports "
 "will be added to the default list of safe ports."
@@ -405,15 +539,15 @@ msgstr ""
 "La propiedad ``SafePorts`` es una lista de puertos separados por comas. Los "
 "puertos listados se agregarán a la lista predeterminada de puertos seguros."
 
-#: ../../web_proxy.rst:165
+#: ../../web_proxy.rst:228
 msgid "Eg. Access extra ports 446 and 1234: ::"
 msgstr "P.ej. Acceda a puertos adicionales 446 y 1234: ::"
 
-#: ../../web_proxy.rst:172
+#: ../../web_proxy.rst:235
 msgid "Logs"
 msgstr ""
 
-#: ../../web_proxy.rst:174
+#: ../../web_proxy.rst:237
 msgid ""
 "Squid logs are kept for 5 weeks in compressed format, to control disk space "
 "usage. Web proxy logs are verbose to help troubleshoot problems. Web "
@@ -421,7 +555,7 @@ msgid ""
 "Lightsquid."
 msgstr ""
 
-#: ../../web_proxy.rst:177
+#: ../../web_proxy.rst:240
 msgid ""
 "In environments where logs need to be preserved for more than 5 weeks, you "
 "could manually edit the logrotate configuration "

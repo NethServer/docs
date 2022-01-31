@@ -1,12 +1,12 @@
 # #-#-#-#-#  statistics.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  statistics.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -36,66 +36,55 @@ msgstr "Estadísticas (collectd)"
 msgid ""
 ":index:`Collectd` is a daemon which collects system performance "
 ":index:`statistics` periodically and stores them in RRD files. Statistics "
-"will be displayed inside a web interface called"
+"will be displayed inside a web interface called Collectd Graph Panel (CGP)."
 msgstr ""
-":index:`Collectd` es un demonio que recopila el rendimiento del sistema "
-":index:`estadísticas` periódicamente y los almacena en archivos RRD. Las "
-"estadísticas se mostrarán dentro de una interfaz web llamada"
 
 #: ../../statistics.rst:8
-msgid "Collectd Graph Panel (CGP), package *nethserver-cgp*"
-msgstr "Panel de gráficos Collectd (CGP), paquete *nethserver-cgp*"
-
-#: ../../statistics.rst:10
-msgid "The web interface can be accessed from the :guilabel:`Graphs`."
-msgstr "La interfaz web se puede acceder desde :guilabel:`Gráficos`."
-
-#: ../../statistics.rst:12
 msgid "After installation, the system will gather following statistics:"
 msgstr ""
 "Después de la instalación, el sistema reunirá las siguientes estadísticas:"
 
-#: ../../statistics.rst:14
+#: ../../statistics.rst:10
 msgid "CPU usage"
 msgstr "uso de CPU"
 
-#: ../../statistics.rst:15
+#: ../../statistics.rst:11
 msgid "system load"
 msgstr "carga del sistema"
 
-#: ../../statistics.rst:16
+#: ../../statistics.rst:12
 msgid "number of processes"
 msgstr "número de procesos"
 
-#: ../../statistics.rst:17
+#: ../../statistics.rst:13
 msgid "RAM memory usage"
 msgstr "Uso de la memoria RAM"
 
-#: ../../statistics.rst:18
+#: ../../statistics.rst:14
 msgid "virtual memory (swap) usage"
 msgstr "uso de memoria virtual (swap)"
 
-#: ../../statistics.rst:19
+#: ../../statistics.rst:15
 msgid "system uptime"
 msgstr "tiempo de actividad del sistema"
 
-#: ../../statistics.rst:20
+#: ../../statistics.rst:16
 msgid "disk space usage"
 msgstr "uso del espacio en disco"
 
-#: ../../statistics.rst:21
+#: ../../statistics.rst:17
 msgid "disk read and write operations"
 msgstr "operaciones de lectura y escritura de disco"
 
-#: ../../statistics.rst:22
+#: ../../statistics.rst:18
 msgid "network interfaces"
 msgstr "interfaces de red"
 
-#: ../../statistics.rst:23
+#: ../../statistics.rst:19
 msgid ":index:`network latency`"
 msgstr ":index:`latencia de la red`"
 
-#: ../../statistics.rst:25
+#: ../../statistics.rst:21
 msgid ""
 "For each check, the web interface will display a graph containing last "
 "collected value and also minimum, maximum and average values."
@@ -103,11 +92,27 @@ msgstr ""
 "Para cada comprobación, la interfaz web mostrará un gráfico que contiene el "
 "último valor recopilado y también valores mínimos, máximos y medios."
 
-#: ../../statistics.rst:29
+#: ../../statistics.rst:23
+msgid ""
+"CGP is accessible on a random URL generated on first install, something like"
+" "
+"``https://myserver.nethserver.org:980/02bf3f8364beea0d5f23044bf14d31d93f63e98d``."
+" The URL is available from the Server Manager inside the "
+":menuselection:`Applications` page. Click the :guilabel:`Open` button of "
+":guilabel:`Collectd Charts` application."
+msgstr ""
+
+#: ../../statistics.rst:27
+msgid ""
+"From the old Server Manager, the web interface can be accessed using the "
+":guilabel:`Graphs` section."
+msgstr ""
+
+#: ../../statistics.rst:30
 msgid "Network latency"
 msgstr "Latencia de conexion"
 
-#: ../../statistics.rst:31
+#: ../../statistics.rst:32
 msgid ""
 "The :index:`ping` plugin measure the network latency. At regular intervals, "
 "it sends a ping to the configured upstream DNS. If the multi WAN module is "
@@ -118,7 +123,7 @@ msgstr ""
 "múltiple está configurado, también se comprueba cualquier proveedor "
 "habilitado."
 
-#: ../../statistics.rst:34
+#: ../../statistics.rst:35
 msgid ""
 "Additional hosts could be monitored (i.e. a web server) using a comma "
 "separated list of hosts inside the ``PingHosts`` property."
@@ -127,6 +132,6 @@ msgstr ""
 "usando una lista de hosts separados por comas dentro de la propiedad "
 "``PingHosts``."
 
-#: ../../statistics.rst:36
+#: ../../statistics.rst:37
 msgid "Example: ::"
 msgstr "Ejemplo: ::"

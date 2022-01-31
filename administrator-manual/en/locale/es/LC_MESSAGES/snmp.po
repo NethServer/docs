@@ -1,12 +1,12 @@
 # #-#-#-#-#  snmp.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  snmp.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Adrián Prado Castro <adrian.prado@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -35,10 +35,10 @@ msgstr "SNMP"
 #: ../../snmp.rst:7
 msgid ""
 "The configuration page of this module is available only in the old Server "
-"Manager and will not be ported to the new one."
+"Manager."
 msgstr ""
 
-#: ../../snmp.rst:10
+#: ../../snmp.rst:9
 msgid ""
 "The :index:`SNMP` (Simple Network Management Protocol) protocol allows to "
 "manage and monitor devices connected to the network. The `SNMP "
@@ -46,27 +46,27 @@ msgid ""
 "can reply to specific queries about current system status."
 msgstr ""
 
-#: ../../snmp.rst:13
+#: ../../snmp.rst:12
 msgid "The server is disabled by default."
 msgstr "El servidor está deshabilitado de manera predeterminada"
 
-#: ../../snmp.rst:15
+#: ../../snmp.rst:14
 msgid "To enable it, you should set three main options:"
 msgstr ""
 
-#: ../../snmp.rst:17
+#: ../../snmp.rst:16
 msgid "the SNMP community name"
 msgstr "el nombre de la comunidad SNMP"
 
-#: ../../snmp.rst:18
+#: ../../snmp.rst:17
 msgid "the location name where the server is located"
 msgstr "El nombre de la ubicación donde se encuentra el servidor"
 
-#: ../../snmp.rst:19
+#: ../../snmp.rst:18
 msgid "the name and email address of system administrator"
 msgstr ""
 
-#: ../../snmp.rst:21
+#: ../../snmp.rst:20
 msgid ""
 "The implementation is based on the Net-SNMP project. Please refer to the "
 "official project page for more information: http://www.net-snmp.org/"

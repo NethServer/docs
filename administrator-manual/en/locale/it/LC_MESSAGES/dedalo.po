@@ -1,26 +1,27 @@
 # #-#-#-#-#  dedalo.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  dedalo.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Nicola <nicola.rauso@nethesis.it>, 2018
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2018-09-25 10:11+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2018\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,11 +29,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../dedalo.rst:3
+#: ../../dedalo.rst:5
 msgid "Hotspot (Dedalo)"
 msgstr "Hotspot (Dedalo)"
 
-#: ../../dedalo.rst:5
+#: ../../dedalo.rst:7
 msgid ""
 "Hotspot main goal is to provide internet connectivity via wi-fi to casual "
 "users. Users are sent to a captive portal from which they can access the "
@@ -47,15 +48,15 @@ msgstr ""
 " responsabilità e il prezzo dell'accesso a internet in luoghi pubblici, come"
 " punti internet, hotel e fiere."
 
-#: ../../dedalo.rst:9
+#: ../../dedalo.rst:11
 msgid "Main features:"
 msgstr "Funzioni principali:"
 
-#: ../../dedalo.rst:11
+#: ../../dedalo.rst:13
 msgid "network isolation between corporate and guests"
 msgstr "Separazione rete aziendale e rete ospiti"
 
-#: ../../dedalo.rst:12
+#: ../../dedalo.rst:14
 msgid ""
 "guests can authenticate themselves using social login (Facebook, Instagram, "
 "Linkedin) as well as sms or email login"
@@ -63,35 +64,35 @@ msgstr ""
 "gli ospiti possono autenticarsi utilizzando l'accesso social (Facebook, "
 "Instagram, Linkedin) così come gli sms od una e-mail"
 
-#: ../../dedalo.rst:13
+#: ../../dedalo.rst:15
 msgid "paid service based on vouchers"
 msgstr "servizio a pagamento basato su voucher"
 
-#: ../../dedalo.rst:14
+#: ../../dedalo.rst:16
 msgid "hotspot manager with different accesses type (admin, customer, desk)"
 msgstr ""
 "hotspot manager con livelli di accesso diversi (amministratore, cliente, "
 "desk)"
 
-#: ../../dedalo.rst:15
+#: ../../dedalo.rst:17
 msgid "bandwidth Limit for each user"
 msgstr "limitazione di banda per ciascun utente"
 
-#: ../../dedalo.rst:16
+#: ../../dedalo.rst:18
 msgid "export account list and connections report (not yet implemented)"
 msgstr ""
 "Esportazione elenco account e report delle connessioni (non ancora "
 "implementato)"
 
-#: ../../dedalo.rst:19
+#: ../../dedalo.rst:21
 msgid "How it works?"
 msgstr "Come funziona?"
 
-#: ../../dedalo.rst:20
+#: ../../dedalo.rst:22
 msgid "The implementation is based on 2 components:"
 msgstr "L'implementazione è basata su 2 componenti:"
 
-#: ../../dedalo.rst:22
+#: ../../dedalo.rst:24
 msgid ""
 "a remote hotspot manager with a Web GUI running on a cloud server that "
 "allows you to:"
@@ -99,7 +100,7 @@ msgstr ""
 "un hotspot manager remoto con una Web GUI in esecuzione su un server cloud "
 "che consente di:"
 
-#: ../../dedalo.rst:24
+#: ../../dedalo.rst:26
 msgid ""
 "create a hotspot instance: usually each instance is referred to a specific "
 "location (e.g. Art Cafè, Ritz Hotel and so on)"
@@ -107,19 +108,19 @@ msgstr ""
 "creare un'istanza hotspot: in genere ogni istanza viene indirizzata a una "
 "posizione specifica (ad esempio Art Cafè, Ritz Hotel e così via)"
 
-#: ../../dedalo.rst:25
+#: ../../dedalo.rst:27
 msgid "edit the captive portal page"
 msgstr "modificare la pagina del captive portal"
 
-#: ../../dedalo.rst:26
+#: ../../dedalo.rst:28
 msgid "choose what type of login to use"
 msgstr "scegliere il tipo di login da utilizzare"
 
-#: ../../dedalo.rst:27
+#: ../../dedalo.rst:29
 msgid "see session and users logged"
 msgstr "vedere le sessioni e gli utenti collegati"
 
-#: ../../dedalo.rst:29
+#: ../../dedalo.rst:31
 msgid ""
 "a client part (dedalo) installed in |product| physically connected to the "
 "Access Points network : it assigns IP addresses to the clients of the Wi-Fi "
@@ -129,7 +130,7 @@ msgstr ""
 "alla rete di access point: consente di assegnare gli indirizzi IP ai client "
 "della rete Wi-Fi e li reindirizza al captive portal per l'autenticazione."
 
-#: ../../dedalo.rst:31
+#: ../../dedalo.rst:33
 msgid ""
 "For more detailed information please refer to "
 "https://nethesis.github.io/icaro/docs/components/ ."
@@ -137,11 +138,11 @@ msgstr ""
 "Per informazioni più dettagliate, consultare "
 "https://nethesis.github.io/icaro/docs/components/."
 
-#: ../../dedalo.rst:35
+#: ../../dedalo.rst:37
 msgid "How to install it"
 msgstr "Installazione"
 
-#: ../../dedalo.rst:37
+#: ../../dedalo.rst:39
 msgid ""
 "install the server component: "
 "https://nethesis.github.io/icaro/docs/provisioning/ This procedure uses "
@@ -154,7 +155,7 @@ msgstr ""
 " utilizzare un altro provider cloud, il file Vagrant andrà modificato di "
 "conseguenza."
 
-#: ../../dedalo.rst:40
+#: ../../dedalo.rst:42
 msgid ""
 "configure the server in order to make it possibile to login: "
 "https://nethesis.github.io/icaro/docs/configuration/"
@@ -162,7 +163,7 @@ msgstr ""
 "configurare il server in modo da rendere possibile l'accesso: "
 "https://nethesis.github.io/icaro/docs/configuration/"
 
-#: ../../dedalo.rst:42
+#: ../../dedalo.rst:44
 msgid ""
 "install the client component in your |product|: "
 "https://nethesis.github.io/icaro/docs/client_installation/"
@@ -170,14 +171,14 @@ msgstr ""
 "installare il componente client nel proprio |product|: "
 "https://nethesis.github.io/icaro/docs/client_installation/"
 
-#: ../../dedalo.rst:44
+#: ../../dedalo.rst:46
 msgid ""
 "please remind that the installation requires at least 3 ethernet interfaces:"
 msgstr ""
 "è importante ricordare che per l'installazione sono necessarie almeno 3 "
 "interfacce Ethernet:"
 
-#: ../../dedalo.rst:46
+#: ../../dedalo.rst:48
 msgid ""
 "1 for normal LAN clients, marked with green role (you need it even if "
 "unused, it can be a VLAN)"
@@ -185,28 +186,28 @@ msgstr ""
 "1 per i client LAN, contrassegnata con il ruolo green (necessaria anche se "
 "non utilizzata, può essere una VLAN)"
 
-#: ../../dedalo.rst:47
+#: ../../dedalo.rst:49
 msgid "1 (or more) for Internet connection, marked with red role"
 msgstr ""
 "1 (o più) per la connessione Internet, contrassegnato con il ruolo red"
 
-#: ../../dedalo.rst:48
+#: ../../dedalo.rst:50
 msgid "1 one for the Dedalo, marked with hotspot role"
 msgstr "1 per Dedalo, con il ruolo hotspot"
 
-#: ../../dedalo.rst:54
+#: ../../dedalo.rst:56
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../dedalo.rst:58
+#: ../../dedalo.rst:60
 msgid "Hotspot manager interface"
 msgstr "Interfaccia hotspot manager"
 
-#: ../../dedalo.rst:60
+#: ../../dedalo.rst:62
 msgid "go to the hotspot manager"
 msgstr "accedere all'hotspot manager"
 
-#: ../../dedalo.rst:61
+#: ../../dedalo.rst:63
 msgid ""
 "go to the *Managers* section and create a new *Manager* of type *Reseller* "
 "or *Customer*. More info about *Roles* here : "
@@ -216,43 +217,43 @@ msgstr ""
 "*Rivenditore* o *Cliente*. Maggiori informazioni su possibili *Ruoli* sono "
 "disponibili qui: https://nethesis.github.io/icaro/docs/manager/."
 
-#: ../../dedalo.rst:62
+#: ../../dedalo.rst:64
 msgid "do logout and login with the new manager just created"
 msgstr "eseguire il logout e accedere con il nuovo manager appena creato"
 
-#: ../../dedalo.rst:63
+#: ../../dedalo.rst:65
 msgid "go in the *Hotspot* section and create a new hotspot instance"
 msgstr "spostarsi nella sezione *Hotspot* e creare una nuova istanza hotspot"
 
-#: ../../dedalo.rst:64
+#: ../../dedalo.rst:66
 msgid "click on the hotspot name and configure the captive portal"
 msgstr "fare clic sul nome dell'hotspot e configurare il captive portal"
 
-#: ../../dedalo.rst:68
+#: ../../dedalo.rst:70
 msgid "Hotspot Unit on |product|"
 msgstr "Unità Hotspot su |product|"
 
-#: ../../dedalo.rst:70
+#: ../../dedalo.rst:72
 msgid "go to the section *Hotspot Unit* on |product|"
 msgstr "spostarsi nella sezione *Unità Hotspot* su |product|"
 
-#: ../../dedalo.rst:71
+#: ../../dedalo.rst:73
 msgid "edit the parameters in the `Hotspot unit registration` page:"
 msgstr "modificare i parametri nella pagina `Registrazione unità hotspot`:"
 
-#: ../../dedalo.rst:73
+#: ../../dedalo.rst:75
 msgid "``Host name`` : Public name of the Hotspot Manager"
 msgstr "``Nome host``: nome pubblico dell'Hotspot Manager"
 
-#: ../../dedalo.rst:74
+#: ../../dedalo.rst:76
 msgid "``User name`` : user of a working account (reseller or customer)"
 msgstr "``Nome utente``: account utente funzionante (rivenditore o cliente)"
 
-#: ../../dedalo.rst:75
+#: ../../dedalo.rst:77
 msgid "``Password`` : password"
 msgstr "``Password`` : password"
 
-#: ../../dedalo.rst:77
+#: ../../dedalo.rst:79
 msgid ""
 "After that just choose the ethernet interface where the hotspot will be "
 "active."
@@ -260,21 +261,21 @@ msgstr ""
 "Successivamente, scegliere l'interfaccia ethernet su cui l'hotspot sarà "
 "attivato."
 
-#: ../../dedalo.rst:79
+#: ../../dedalo.rst:81
 msgid ""
 "If you have the proxy web active a specific flag in the hotspot unit page "
-"will allow you to forward all the hotspot traffic (http and httpas "
-"protocols) to the web proxy for logging purposes (Be aware of the privacy "
-"implications!)."
+"will allow you to forward all the hotspot traffic (HTTP and HTTPS protocols)"
+" to the web proxy for logging purposes. Please be aware that this "
+"configuration has privacy implications."
 msgstr ""
 "Se il proxy web è attivo, un flag specifico nella pagina dell'unità hotspot "
-"consentirà di inoltrare tutto il traffico hotspot (protocolli http e http) "
+"consentirà di inoltrare tutto il traffico hotspot (protocolli HTTP e HTTPs) "
 "al proxy web per scopi di registrazione (attenzione alle implicazioni sulla "
 "privacy!)."
 
-#: ../../dedalo.rst:82
-msgid "connect an AP to the hostpot interface."
-msgstr "connettere un AP all'interfaccia hotspot."
+#: ../../dedalo.rst:84
+msgid "Finally connect an Access Point (AP) to the hostpot interface."
+msgstr "Infine collegare un Access Point (AP) all'interfaccia hotspot."
 
 #: ../../dedalo.rst:88
 msgid "Access Point Configuration"

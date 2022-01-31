@@ -1,12 +1,12 @@
 # #-#-#-#-#  antivirus.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  antivirus.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2020-04-27 14:33+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
@@ -30,44 +30,48 @@ msgstr ""
 
 #: ../../antivirus.rst:5
 msgid "Antivirus"
-msgstr ""
+msgstr "Antivirus"
 
-#: ../../antivirus.rst:9
-msgid ""
-"The configuration page of this module is available only in the new Server "
-"Manager."
-msgstr ""
-"La pagina di configurazione di questo modulo è disponibile sono nel nuovo "
-"Server Manager."
-
-#: ../../antivirus.rst:11
+#: ../../antivirus.rst:7
 msgid ""
 "ClamAV is the open source antivirus engine of |product|. The server runs two"
 " different ClamAV instances: one for scanning received mail (see :ref"
 ":`email-section`) and the other one for analyzing HTTP web traffic (see :ref"
 ":`web_content_filter-section`)."
 msgstr ""
+"ClamAV è il motore antivirus open source utilizzato da |product|. Il server "
+"esegue due diverse istanze di ClamAV: una per la scansione della posta "
+"ricevuta (vedi :ref:`email-section`) e l'altra per l'analisi del traffico "
+"web HTTP (vedi :ref:`web_content_filter-section`)."
 
-#: ../../antivirus.rst:14
+#: ../../antivirus.rst:10
 msgid ""
 "The antivirus engine can be configured from the new Server Manager. Since "
 "virus signatures are downloaded about once per hour, changes to the "
 "configuration will take effect on next automatic signatures download."
 msgstr ""
+"Il motore antivirus può essere configurato dal nuovo Server Manager. Poiché "
+"le firme dei virus vengono scaricate circa una volta all'ora, le modifiche "
+"alla configurazione avranno effetto al successivo download automatico delle "
+"firme."
 
-#: ../../antivirus.rst:18
+#: ../../antivirus.rst:14
 msgid "Available options:"
-msgstr ""
+msgstr "Opzioni disponibili:"
 
-#: ../../antivirus.rst:20
+#: ../../antivirus.rst:16
 msgid ""
 ":guilabel:`ClamAV official signatures`: enable or disable official "
 "signatures. These signatures detect many old threats but are not very "
 "effective against the latest malware. Usage of official signatures is "
 "discouraged on machines with less than 4GB of RAM."
 msgstr ""
+":guilabel:`Firme ufficiali ClamAV`: abilita o disabilita le firme ufficiali."
+" Queste firme rilevano molte vecchie minacce ma non sono molto efficaci "
+"contro i malware più recenti. L'uso di firme ufficiali è sconsigliato su "
+"macchine con meno di 4 GB di RAM."
 
-#: ../../antivirus.rst:24
+#: ../../antivirus.rst:20
 msgid ""
 ":guilabel:`Third-party signatures rating`: choose the rating of unofficial "
 "signatures downloaded from multiple verified sources like `SaneSecurity "
@@ -75,3 +79,8 @@ msgid ""
 "also a higher probability of false positives. Recommended ratings are "
 "``Low`` and ``Medium``."
 msgstr ""
+":guilabel:`Valutazione delle firme di terze parti`: imposta la valutazione "
+"delle firme non ufficiali scaricate da più fonti verificate come "
+"`SaneSecurity <https://sanesecurity.com>`_. Un rating più elevato significa "
+"un maggior numero di minacce bloccate ma anche una maggiore probabilità di "
+"falsi positivi. Le valutazioni consigliate sono ``Bassa`` e ``Media``."

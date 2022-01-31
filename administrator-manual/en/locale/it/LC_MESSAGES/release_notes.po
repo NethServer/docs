@@ -180,6 +180,10 @@ msgid ""
 "been disabled. After each upgrade, the application should be manually "
 "updated and re-enabled by accessing Nextcloud administration interface."
 msgstr ""
+"Per evitare errori durante gli aggiornamenti di Nextcloud, l'app ``mail`` "
+"viene forzatamente disabilitata. Dopo ogni aggiornamento, l'applicazione "
+"deve essere aggiornata manualmente e riattivata accedendo all'interfaccia di"
+" amministrazione di Nextcloud."
 
 #: ../../release_notes.rst:70
 msgid ""

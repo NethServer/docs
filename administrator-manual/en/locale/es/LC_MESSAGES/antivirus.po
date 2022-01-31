@@ -1,12 +1,12 @@
 # #-#-#-#-#  antivirus.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  antivirus.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 15:54+0200\n"
+"POT-Creation-Date: 2021-02-11 09:13+0100\n"
 "PO-Revision-Date: 2020-04-27 14:33+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
 "MIME-Version: 1.0\n"
@@ -28,13 +28,7 @@ msgstr ""
 msgid "Antivirus"
 msgstr ""
 
-#: ../../antivirus.rst:9
-msgid ""
-"The configuration page of this module is available only in the new Server "
-"Manager."
-msgstr ""
-
-#: ../../antivirus.rst:11
+#: ../../antivirus.rst:7
 msgid ""
 "ClamAV is the open source antivirus engine of |product|. The server runs two"
 " different ClamAV instances: one for scanning received mail (see :ref"
@@ -42,18 +36,18 @@ msgid ""
 ":`web_content_filter-section`)."
 msgstr ""
 
-#: ../../antivirus.rst:14
+#: ../../antivirus.rst:10
 msgid ""
 "The antivirus engine can be configured from the new Server Manager. Since "
 "virus signatures are downloaded about once per hour, changes to the "
 "configuration will take effect on next automatic signatures download."
 msgstr ""
 
-#: ../../antivirus.rst:18
+#: ../../antivirus.rst:14
 msgid "Available options:"
 msgstr ""
 
-#: ../../antivirus.rst:20
+#: ../../antivirus.rst:16
 msgid ""
 ":guilabel:`ClamAV official signatures`: enable or disable official "
 "signatures. These signatures detect many old threats but are not very "
@@ -61,7 +55,7 @@ msgid ""
 "discouraged on machines with less than 4GB of RAM."
 msgstr ""
 
-#: ../../antivirus.rst:24
+#: ../../antivirus.rst:20
 msgid ""
 ":guilabel:`Third-party signatures rating`: choose the rating of unofficial "
 "signatures downloaded from multiple verified sources like `SaneSecurity "

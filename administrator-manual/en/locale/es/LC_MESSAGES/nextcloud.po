@@ -1,12 +1,12 @@
 # #-#-#-#-#  nextcloud.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  nextcloud.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-19 17:26+0100\n"
+"POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
 "Last-Translator: Jon M., 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/nethserver/teams/35834/es/)\n"
@@ -83,7 +83,9 @@ msgstr ""
 "Después de la instalación:"
 
 #: ../../nextcloud.rst:26
-msgid "open the URL https://your_nethserver_ip/nextcloud"
+msgid ""
+"click on the :menuselection:`Applications > Nextcloud` item title or open "
+"the URL ``https://your_nethserver_ip/nextcloud``"
 msgstr ""
 
 #: ../../nextcloud.rst:27
@@ -150,28 +152,30 @@ msgstr ""
 #: ../../nextcloud.rst:56
 msgid ""
 "Sometimes it's better to reserve a full virtual host for accessing Nextcloud"
-" like ``nextcloud.nethserver.org``."
+" like ``nextcloud.nethserver.org``. To configure the virtualhost, enable the"
+" :guilabel:`Use a virtual host for Nextcloud` option and fill the "
+":guilabel:`Virtual host name` field."
 msgstr ""
 
-#: ../../nextcloud.rst:58
+#: ../../nextcloud.rst:59
 msgid ""
 "Please note that after the configuration of a custom virtual host, Nextcloud"
 " will no longer be accessible from the default URL "
 "``https://your_nethserver_ip/nextcloud``."
 msgstr ""
 
-#: ../../nextcloud.rst:60
+#: ../../nextcloud.rst:61
 msgid ""
 "If the machine is using :ref:`Let's Encrypt <server_certificate-section>`, "
 "remember to add the virtual host domain name to list of valid certificate "
 "domains."
 msgstr ""
 
-#: ../../nextcloud.rst:63
+#: ../../nextcloud.rst:64
 msgid "Trusted domains"
 msgstr ""
 
-#: ../../nextcloud.rst:65
+#: ../../nextcloud.rst:66
 msgid ""
 "Trusted domains are a list of domains that users can log into. Default "
 "trusted domains are:"
@@ -179,89 +183,89 @@ msgstr ""
 "Los dominios de confianza son una lista de dominios en los que los usuarios "
 "pueden iniciar sesión. Los dominios de confianza predeterminados son:"
 
-#: ../../nextcloud.rst:67
+#: ../../nextcloud.rst:68
 msgid "domain name"
 msgstr "nombre de dominio"
 
-#: ../../nextcloud.rst:68
+#: ../../nextcloud.rst:69
 msgid "IP address"
 msgstr ""
 
-#: ../../nextcloud.rst:70
+#: ../../nextcloud.rst:71
 msgid ""
 "The list of trusted domains can be customized using :guilabel:`Trusted "
 "domains` field: add one domain per line."
 msgstr ""
 
-#: ../../nextcloud.rst:73
+#: ../../nextcloud.rst:74
 msgid "CalDAV and CardDAV"
 msgstr ""
 
-#: ../../nextcloud.rst:75
+#: ../../nextcloud.rst:76
 msgid ""
 "Some CalDAV and CardDAV clients may have problems finding the proper sync "
 "URL and need automatic service discovery. Service discovery is enabled by "
 "default if a custom virtual host for Nextcloud has been configured."
 msgstr ""
 
-#: ../../nextcloud.rst:78
+#: ../../nextcloud.rst:79
 msgid ""
 "To enable the service discovery even if Nextcloud is running on the default "
 "URL, check the :guilabel:`Enable CalDAV and CardDAV auto-discovery` field."
 msgstr ""
 
-#: ../../nextcloud.rst:81
+#: ../../nextcloud.rst:82
 msgid ""
 "When enabling DAV auto-discovery, please make sure WebTop or SOGo are *not* "
 "already installed."
 msgstr ""
 
-#: ../../nextcloud.rst:85
+#: ../../nextcloud.rst:86
 msgid "Collabora Online"
 msgstr ""
 
-#: ../../nextcloud.rst:87
+#: ../../nextcloud.rst:88
 msgid "See :ref:`Collabora Online module from NethForge <collabora-section>`."
 msgstr ""
 
-#: ../../nextcloud.rst:91
+#: ../../nextcloud.rst:92
 msgid "ONLYOFFICE"
 msgstr ""
 
-#: ../../nextcloud.rst:93
+#: ../../nextcloud.rst:94
 msgid ""
 "Since Nextcloud 18, ONLYOFFICE Community Document Server can be installed "
 "directly to the system without further configuration. To enable built-in "
 "ONLYOFFICE integration, access Nextcloud with the ``admin`` user then:"
 msgstr ""
 
-#: ../../nextcloud.rst:96
+#: ../../nextcloud.rst:97
 msgid ""
 "Go to :guilabel:`Apps` page and access :guilabel:`Office & text` section"
 msgstr ""
 
-#: ../../nextcloud.rst:97
+#: ../../nextcloud.rst:98
 msgid "Download and enable the ``ONLYOFFICE`` application"
 msgstr ""
 
-#: ../../nextcloud.rst:98
+#: ../../nextcloud.rst:99
 msgid ""
 "Download and enable the ``Community Document Server`` application.  Please "
 "be patient, download and install will take a while."
 msgstr ""
 
-#: ../../nextcloud.rst:99
+#: ../../nextcloud.rst:100
 msgid ""
 "Go to the :guilabel:`Settings` page and access the :guilabel:`ONLYOFFICE` "
 "application under :guilabel:`Administration` section"
 msgstr ""
 
-#: ../../nextcloud.rst:100
+#: ../../nextcloud.rst:101
 msgid ""
 "Verify the :guilabel:`Document Editing Service address` already contains the"
 " public address of your Nextcloud server"
 msgstr ""
 
-#: ../../nextcloud.rst:102
+#: ../../nextcloud.rst:103
 msgid "Installation of full ONLYOFFICE server is not supported on |product|."
 msgstr ""
