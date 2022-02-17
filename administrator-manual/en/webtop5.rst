@@ -862,6 +862,25 @@ It is possible to associate the new identity with a folder in your account or of
 
 Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
 
+External IMAP accounts (Beta)
+=============================
+
+External IMAP accounts can be accessed in read-only mode.
+Each user can have maximum 3 external accounts.
+
+To enable the feature:
+
+1. Access the administration panel, then selected :guilabel:`Properties (system)`
+2. Click on :guilabel:`Add` button and selected :guilabel:`com.sonicle.webtop.mail`
+3. Create a new key named ``external-account.enabled`` with value ``true``
+4. Give a specific authorization to the user by setting:
+
+   - Service: ``com.sonicle.webtop-mail``
+   - Resource: ``EXTERNAL_ACCOUNT_SETTINGS``
+   - Action: ``CHANGE``
+
+Users can now configure personal external accounts by accessing the :guilabel:`Settings` section.
+
 Subscribing remote resources
 ============================
 
