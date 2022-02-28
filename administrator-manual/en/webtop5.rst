@@ -637,55 +637,6 @@ If an event contains a link to a third-party videoconference, the buttons that w
 The video conferencing services that are currently supported, in addition to Jitsi, are: Google Meet, MS Teams and Zoom.
 It is possible to add additional platforms through a `global setting <https://www.sonicle.com/docs/webtop5/core.html#meeting-integration-settings>`_.
 
-Audio and video WebRTC calls with chat (Beta)
-=============================================
-
-.. warning::
-   This feature is currently released in Beta.
-   When the final version will be released it is likely that the configurations previously made will be reset.
-
-Configuration is currently only possible via the WebTop administration panel.
-The settings to be inserted are documented inside `webrtc settings section <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_.
-In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown inside `xmpp settings <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_.
-
-From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
-
-``webrtc.ice.servers`` : defines the list of ICE servers as JSON arrays
-
-``xmpp.bosh.url`` : specifies the XMPP URL that can be accessed via the BOSH protocol
-
-
-For the key field ``webrtc.ice.servers`` as "Value" insert the content in json format that shows the values of these variables:
-
-``url`` : URL ice server
-
-``username`` : server username (optional)
-
-``credential`` : server password (optional)
-
-For example: ::
-
- [
-  {
-    'url': 'stun:stun.l.google.com:19302'
-  }, {
-    'url': 'stun:stun.mystunserver.com:19302'
-  }, {
-    'url': 'turn:myturnserver.com:80?transport=tcp',
-    'username': 'my_turn_username',
-    'credential': 'my_turn_password'
-  }
- ]
-
-For the key field ``xmpp.bosh.url`` as "Value" enter this type of URL: ``https://<public_server_name>/http-bind``
-
-With these configurations, every user authorized to use the **WEBCHAT** service can perform audio and video calls with other users that are available on the same chat server through the buttons available on the chat window.
-
-.. note::
-
-   If the buttons are grayed out, the requirements for activating the call are not satisfied.
-   For example: XMPP BOSH URL unreachable or ICE server unreachable.
-
 
 Send SMS from contacts
 ======================
