@@ -409,8 +409,6 @@ By default, the mail page will display a preview of the content of latest receiv
 This feature can be enabled or disabled from the :guilabel:`Settings` menu, under the :guilabel:`Mail` tab,
 the check box is named :guilabel:`Show quick preview on message row`.
 
-.. image:: _static/webtop-preview.png
-
 Mail archiving
 ==============
 
