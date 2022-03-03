@@ -1221,31 +1221,6 @@ Known limitations:
 Troubleshooting
 ===============
 
-After login a "mail account authentication error" is displayed
---------------------------------------------------------------
-
-If an entire mail account is shared among different users, a Dovecot connection limit can be reached.
-This is the displayed error:
-
-.. image:: _static/webtop-dovecot_error.png
-
-In ``/var/log/imap`` there are lines like the following: ::
-
-  xxxxxx dovecot: imap-login: Maximum number of connections from user+IP exceeded (mail_max_userip_connections=12): user=<mail@dominio.com>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, secured, session=<zz/8iz1M1AB/AAAB>
-
-To list active IMAP connections per user, execute: ::
-
-  doveadm who
-
-
-To fix the problem, just raise the limit (eg. 50 connections for each user/IP): ::
-
-  config setprop dovecot MaxUserConnectionsPerIp 50
-  signal-event nethserver-mail-server-update
-
-At the end, logout and login again in WebTop.
-
-
 Blank page after login
 ----------------------
 
