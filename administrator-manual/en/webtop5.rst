@@ -32,7 +32,7 @@ web application and Active Sync.
 .. _webtop5_admin-section:
 
 Admin user
-----------
+==========
 
 After installation, WebTop will be accessible using the administrator user.
 The administrator user can change global settings and login as any other user,
@@ -59,7 +59,7 @@ domain part of server FQDN.
 * Login: admin@mightydomain.com
 
 Change admin password
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 Access WebTop using the ``admin`` user, then open user settings by clicking on the menu in the top-right corner.
 
@@ -77,6 +77,45 @@ Remember to replace ``<newpassword>`` with your actual new password, example: ::
 
   bash webtop-set-admin-password VeryInsecurePass
   
+Changing the logo
+=================
+
+To modify and customize the initial logo that appears on the login page of WebTop,
+you must upload the custom image file on the public images of the admin user and rename it with "login.png".
+
+Proceed as follows:
+
+1. log in with the WebTop user admin
+
+2. select the cloud service and public images:
+
+   .. image:: _static/webtop-public_images.png
+
+3. upload the image (via the Upload button at the bottom left or simply dragging with a drag & drop)
+
+4. rename the loaded image so that its name is **"login.png"** (use right click -> Rename):
+
+   .. image:: _static/webtop-login_page.png
+
+5. the next login will show the new logo on the login page
+
+.. note::
+
+  Custom logo will be shown only when accesing Webtop using  its public URL.
+  The default public URL is the server FQDN, but it could be changed as described in the section below.
+
+Change the public URL
+=====================
+
+By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
+
+If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
+
+execute these commands ::
+
+  config setprop webtop PublicUrl http://mail.publicdomain.com/webtop
+  signal-event nethserver-webtop5-update
+
 User settings management
 ========================
 Most user settings can be directly managed by the user itself via the settings menu.
@@ -979,46 +1018,6 @@ To apply the changes shown in the previous commands and restart the application,
 .. note::
 
   Accesses made through impersonate (``admin!<user>``) will never send an email notification
-
-
-Changing the logo
-=================
-
-To modify and customize the initial logo that appears on the login page of WebTop,
-you must upload the custom image file on the public images of the admin user and rename it with "login.png".
-
-Proceed as follows:
-
-1. log in with the WebTop user admin
-
-2. select the cloud service and public images:
-
-   .. image:: _static/webtop-public_images.png
-
-3. upload the image (via the Upload button at the bottom left or simply dragging with a drag & drop)
-
-4. rename the loaded image so that its name is **"login.png"** (use right click -> Rename):
-
-   .. image:: _static/webtop-login_page.png
-
-5. the next login will show the new logo on the login page
-
-.. note::
-
-  Custom logo will be shown only when accesing Webtop using  its public URL.
-  The default public URL is the server FQDN, but it could be changed as described in the section below.
-
-Change the public URL
-=====================
-
-By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
-
-If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
-
-execute these commands ::
-
-  config setprop webtop PublicUrl http://mail.publicdomain.com/webtop
-  signal-event nethserver-webtop5-update
 
 Change default limit "Maximum file size"
 ========================================
