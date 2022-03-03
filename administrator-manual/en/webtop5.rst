@@ -77,6 +77,20 @@ Remember to replace ``<newpassword>`` with your actual new password, example: ::
 
   bash webtop-set-admin-password VeryInsecurePass
   
+User settings management
+========================
+Most user settings can be directly managed by the user itself via the settings menu.
+Locked settings require administration privileges.
+
+The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
+
+* **User name**: ``admin!<username>``
+* **Password**: ``<WebTop admin password>``
+
+While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
+Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
+
+It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
 Two factor authentication (2FA)
 ===============================
@@ -907,21 +921,6 @@ To do this, right-click on the phonebook (or on the calendar), :guilabel:`Edit C
 Select the desired mode next to the synchronization button:
 
 .. image:: _static/webtop-edit_sync_google2.png
-
-User settings management
-========================
-Most user settings can be directly managed by the user itself via the settings menu.
-Locked settings require administration privileges.
-
-The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
-
-* **User name**: ``admin!<username>``
-* **Password**: ``<WebTop admin password>``
-
-While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
-Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
-
-It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
 User access and user session logs
 =================================
