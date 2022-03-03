@@ -400,6 +400,96 @@ A panel without any associated label will be assigned to every available resourc
 
 Through the :guilabel:`Add` button it will be possible to select which custom fields to use among those already created in the panel.
 
+Manage identities
+=================
+
+In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` and fill in the fields
+
+.. image:: _static/webtop_manageident1.png
+
+It is possible to associate the new identity with a folder in your account or of a shared account
+
+**Local account:**
+
+.. image:: _static/webtop_manageident2.png
+
+**Shared account:**
+
+.. image:: _static/webtop_manageident3.png
+
+Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
+
+Mailcards of user and domain
+============================
+
+One of the main features of managing signatures on WebTop is the opportunity to integrate images or custom fields profiled per user.
+
+To use the images you need to upload them to the public cloud through the WebTop admin user like this:
+
+.. image:: _static/webtop-public_images.png
+
+You can use the :guilabel:`Upload` button to load an image which is at the bottom or simply via a drag & drop.
+
+.. note::
+
+  Remember that the public images inserted in the signature are actually connected with a public link.
+  To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
+
+Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
+
+It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``public.resource.links.as.inline.attachments`` = true (default = false)
+
+
+To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
+
+.. image:: _static/webtop-edit_mailcard.png
+
+The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
+
+.. image:: _static/webtop-public_signature.png
+
+.. note::
+
+   The personal mailcard can be associated with the user or his email:
+   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
+
+By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
+
+.. image:: _static/webtop-domain_mailcard.png
+
+Furthermore, it will also be possible to modify personal information:
+
+.. image:: _static/webtop-personal_information.png
+
+that can be used within the parameterized fields within the domain mailcard editor:
+
+.. image:: _static/webtop-mailcard_editor.png
+
+In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
+
+Configure multiple mailcards for a single user
+==============================================
+
+It is possible to configure multiple mailcards (HTML signatures) for each individual user.
+
+Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
+
+.. image:: _static/webtop-sig_sig1.png
+
+To edit every single signature select :menuselection:`Settings --> Mail --> Identities` then select each individual signature and click on the :guilabel:`edit mailcard` button
+
+.. image:: _static/webtop-sig_sig2.png
+.. image:: _static/webtop-sig_sig3.png
+
+When finished, close the window and click YES:
+
+.. image:: _static/webtop-sig_sig4.png
+
+to use multiple mailcards, create a new email, and choose the signature:
+
+.. image:: _static/webtop-sig_sig5.png
 
 Mail inline preview
 ===================
@@ -732,98 +822,6 @@ If you need to enable this consent later on a different browser just click on th
 
 .. image:: _static/webtop-button_desktop_notifications.png
 
-
-Mailcards of user and domain
-============================
-
-One of the main features of managing signatures on WebTop is the opportunity to integrate images or custom fields profiled per user.
-
-To use the images you need to upload them to the public cloud through the WebTop admin user like this:
-
-.. image:: _static/webtop-public_images.png
-
-You can use the :guilabel:`Upload` button to load an image which is at the bottom or simply via a drag & drop.
-
-.. note::
-
-  Remember that the public images inserted in the signature are actually connected with a public link.
-  To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
-
-Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
-
-It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
-
-``public.resource.links.as.inline.attachments`` = true (default = false)
-
-
-To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
-
-.. image:: _static/webtop-edit_mailcard.png
-
-The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
-
-.. image:: _static/webtop-public_signature.png
-
-.. note::
-
-   The personal mailcard can be associated with the user or his email:
-   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
-
-By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
-
-.. image:: _static/webtop-domain_mailcard.png
-
-Furthermore, it will also be possible to modify personal information:
-
-.. image:: _static/webtop-personal_information.png
-
-that can be used within the parameterized fields within the domain mailcard editor:
-
-.. image:: _static/webtop-mailcard_editor.png
-
-In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
-
-Configure multiple mailcards for a single user
-==============================================
-
-It is possible to configure multiple mailcards (HTML signatures) for each individual user.
-
-Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
-
-.. image:: _static/webtop-sig_sig1.png
-
-To edit every single signature select :menuselection:`Settings --> Mail --> Identities` then select each individual signature and click on the :guilabel:`edit mailcard` button
-
-.. image:: _static/webtop-sig_sig2.png
-.. image:: _static/webtop-sig_sig3.png
-
-When finished, close the window and click YES:
-
-.. image:: _static/webtop-sig_sig4.png
-
-to use multiple mailcards, create a new email, and choose the signature:
-
-.. image:: _static/webtop-sig_sig5.png
-
-
-Manage identities
-=================
-
-In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` and fill in the fields
-
-.. image:: _static/webtop_manageident1.png
-
-It is possible to associate the new identity with a folder in your account or of a shared account
-
-**Local account:**
-
-.. image:: _static/webtop_manageident2.png
-
-**Shared account:**
-
-.. image:: _static/webtop_manageident3.png
-
-Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
 
 External IMAP accounts (Beta)
 =============================
