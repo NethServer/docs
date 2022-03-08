@@ -147,6 +147,30 @@ The web interface allows the configuration of advanced features like:
   available on both sides
 * LZO compression: enabled by default, can be disabled when using legacy servers or clients
 
+Mail notification for OpenVPN RoadWarrior
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NethServer can send an mail notification every time a user connects or disconnects itself from the OpenVPN RoadWarrior.
+
+Each email contains the following data:
+
+* the date and time
+* the event (connection / disconnection)
+* the account involved
+* the public ip from which the user connected
+* the private ip assumed once connected in vpn
+
+Email notifications can be sent to multiple recipients, emails are sent using NethServer itself as smtp server unless a smarthost is configured in :guilabel:`System > Settings` menu. 
+
+This feature is disabled by default and it's configurable only from command line.
+
+To enable the feature use the following command:
+
+``config setprop openvpn@host-to-net NotifyStatus enabled``
+
+To set email destination addresses use the following command, in case of multiple addresses use comma to separate each other: 
+
+``config setprop openvpn@host-to-net NotifyAddresses user1@nethserver.org,user2@nethserver.org``
+
 
 Legacy mode
 ^^^^^^^^^^^
