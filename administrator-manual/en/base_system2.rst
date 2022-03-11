@@ -411,6 +411,8 @@ If the server can't directly deliver those mails, the administrator can configur
 a SMTP relay.
 When the smarthost is enabled, all mail messages will be delivered to the configured server.
 
+.. _email-notification-section:
+
 Email notifications
 --------------------
 
