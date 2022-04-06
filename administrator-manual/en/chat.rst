@@ -23,6 +23,17 @@ All system users can access the chat using their own credentials.
                 a dedicated user account in AD is required by the module to be fully
                 operational! See :ref:`join-existing-ad-section`.
 
+.. only:: nscom
+.. note::
+               Nethserver-ejabberd use a version of ejabberd known as stable. 
+               System administrator and developers might need a version more recent of ejabberd, 
+               in that case you could install nethserver-ejabberd-next (NethForge Repository) and download after manually the ejabberd version 
+               you need on the `website <https://www.process-one.net/en/ejabberd/downloads/>`_. 
+               Please note that you will need to add your custom-templates or configuration files.
+               if you think that a change can be valuable to the NethServer community, 
+               please open a pull-request to the `repository <https://github.com/NethServer/nethserver-ejabberd-next>`_
+
+
 Configuration
 =============
 
