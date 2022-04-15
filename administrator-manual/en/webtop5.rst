@@ -621,8 +621,7 @@ The remaining 5 buttons allow you to obtain these other types of quick views:
 * **Not started**: shows only activities with status "To be started" and starting today (inclusive)
 * **Late**: shows only uncompleted tasks with start date up to today (inclusive) and completion date previous to the current one.
 * **Completed**: shows all activities with status completed and with any date range
-* **Not completed**: shows all activities with status other than completed and start date within 1 year.
-(for recurring tasks, only the first instance of the series still to be completed is shown)
+* **Not completed**: shows all activities with status other than completed and start date within 1 year (for recurring tasks, only the first instance of the series still to be completed is shown)
 * **All**: shows all activities in any status
 (for recurring tasks the series icon main is shown)
 
