@@ -116,6 +116,11 @@ execute these commands ::
   config setprop webtop PublicUrl http://mail.publicdomain.com/webtop
   signal-event nethserver-webtop5-update
 
+.. note::
+
+  In case of a valid SSL certificate, for example via Let's Encrypt, it is always recommended to configure the public URL with ``https`` 
+  
+
 User settings management
 ========================
 Most user settings can be directly managed by the user itself via the settings menu.
