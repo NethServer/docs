@@ -80,7 +80,7 @@ The official documentation of portainer can be found at : https://www.portainer.
 Default network
 ===============
 
-The default bridge docker0 is allowed in the firewall of |product|, any ports or the containers will be opened through shorewall. Any docker howto is supposed to be compatible.
+The default bridge docker0 is allowed in the firewall of |product|, any published port of the containers will be opened through shorewall. Any docker howto is supposed to be compatible.
 
 Example of nginx container on port ``9001``: ::
 
