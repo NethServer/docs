@@ -595,6 +595,53 @@ and click on the icon on the left:
 
 .. image:: _static/webtop-sub_imap_folder3.png
 
+How to personalise proactive security on emails
+===============================================
+
+The proactive security function on email messages allows some personalisations both on the side of the **end user** and the WebTop **admin**.
+
+For the **end user** it is possible to mark a sender as trusted when it is recognised as such by the yellow shield.
+To do so, it is possible to click directly on the shield or right click on the sender and select the :guilabel:`Mark as trusted` entry.
+
+.. note::
+
+   * this type of personalisation is only valid for the user that performed the action
+   * it is possible to mark a sender as trusted only if the shield is yellow.
+   
+For the **admin user**, it is possible to disable all or just some of the rules that are part of the PAS (ProActive Security), both at the single user level and the group of users level.
+To do so, it is necessary to add a specific authorisation (to the single user or the group of users) for the Service ``com.sonicle.webtop.mail (Mail)`` and for the ``PRO_ACTIVE_SECURITY`` resource:
+
+.. image:: _static/webtop-pas1.png
+
+Below is an explanation of every single entry available as ``Action`` :
+
+* ``DISABLED``: completely disables PAS
+* ``NO_LINK_DOMAIN_CHECK``: do not check domains different form the sender’s domain
+* ``NO_MY_DOMAIN_CHECK``: do not verify if the sender’s domain is in my domain
+* ``NO_FREQUENT_CONTACT_CHECK``: do not check if the sender is in my contacts which are saved automatically 
+* ``NO_ANY_CONTACTS_CHECK``: do not check if the sender is among one of my contacts
+* ``NO_FAKE_PATTERNS_CHECK``: do not verify the presence of false patterns in the sender (e.g. email address of the name shown is different from the sender’s email address)
+* ``NO_UNSUBSCRIBE_DIRECTIVES_CHECK``: do not check the entry for the unsubscribe directives to the mailing list (only if the spam status is green)
+* ``NO_DISPLAYNAME_CHECK``: do not compare the contact’s display name with the contact in my address book with the same email
+* ``NO_SPAM_SCORE_VISUALIZATION``: do not show/check the spam score displayed in the message header
+* ``NO_LINK_CLICK_PROMPT``: do not check the click action on links
+* ``NO_ZIP_CHECK``: do not give warning of zip attachments
+
+This way it is possible to personalise and create special profiles for some users who might not want all the actions to be active.
+
+Another global personalisation available on the admin side is the one that allows you to modify the list of **file extensions for attachments** which are considered a threat.
+As a default, these are the extensions which are considered dangerous: ``exe,bat,dll,com,cmd,bin,cab,js,jar``
+
+To modify this list it is necessary to add this global setting:
+
+* :guilabel:`Service` = ``com.sonicle.webtop.mail`` 
+* :guilabel:`Key` = ``pas.dangerous.extensions``
+
+For example, if you wanted to add the html extension among those that are considered dangerous, the value field should contain the following:
+
+* :guilabel:`Value` = ``exe,bat,dll,com,cmd,bin,cab,js,jar,html``  (Values always need to be separated by a comma)
+
+
 Export events (CSV)
 ===================
 
