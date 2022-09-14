@@ -79,6 +79,40 @@ Access statistics are available from the new Server Manager. For each user, stat
 - time of disconnection
 - transferred bytes
 
+Mail notification
+~~~~~~~~~~~~~~~~~
+
+The server can send a mail notification each time a user connects to, or disconnects from, OpenVPN roadwarrior server.
+
+Notification mails are English-only.
+Sender address can be configured from :ref:`email-notification-section`.
+This feature is disabled by default and can be enabled by command line.
+
+To enable the feature use: ::
+
+  config setprop openvpn@host-to-net NotifyStatus enabled
+  config setprop openvpn@host-to-net NotifyAddresses user1@nethserver.org,user2@nethserver.org
+
+The ``NotifyAddresses`` property can contain a comma-separated list of mail addresses.
+Notifications are sent through local Postfix installation, so mail delivery can be inspected inside :file:`/var/log/maillog`.
+
+Example of mail on user connect: ::
+
+  The user test1 established a VPN connection on Fri Mar  4 18:31:49 2022.
+
+  Public IP address:  1.2.3.4
+  Private IP address: 10.2.3.2
+
+Example of mail on user disconnect: ::
+
+  The user test1 was disconnected from VPN server.
+
+  Duration:  17 seconds
+  Sent: 	   2410 bytes
+  Received:  4099 bytes
+
+
+
 .. _ovpn_tunnel-section:
 
 Tunnel (net2net)
