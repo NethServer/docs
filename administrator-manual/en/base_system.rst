@@ -308,7 +308,7 @@ Let's Encrypt certificate can be disabled following these steps:
 
    ::
 
-     rm -rf /etc/letsencrypt/*
+     rm -rf /etc/letsencrypt/{accounts,archive,csr,keys,live,renewal}
      config setprop pki LetsEncryptDomains ''
 
 Shutdown
