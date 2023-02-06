@@ -1,0 +1,73 @@
+name: Build doc
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  schedule:
+    - cron: "0 2 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    env:
+      SSHPASS: ${{ secrets.sshpass }}
+      SSH_RSYNC: "sshpass -e ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+    defaults:
+      run:
+        working-directory: administrator-manual/en
+    strategy:
+      matrix:
+        tag:
+          - nscom
+          - nsent
+        lang:
+          - it
+          - en
+          - es
+    steps:
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name == 'schedule' }}
+        name: Checkout v7 if run by schedule
+        with:
+          ref: v7
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name != 'schedule' }}
+        name: Checkout event source branch
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip"
+      - name: Setup build environment
+        run: |
+          pip install -r ${{ matrix.tag }}/requirements.txt
+          sudo apt-get update
+          sudo apt-get -y install sshpass
+      - name: Define target dir
+        id: target-dir
+        run: |
+          export TARGET_DIR
+          if [ "${{ github.event_name == 'schedule' }}" == "true" ]; then
+            TARGET_DIR="v7"
+          else
+            TARGET_DIR=${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}
+          fi
+          echo "::set-output name=value::$TARGET_DIR"
+      - name: Build doc
+        run: |
+          sphinx-build -t ${{ matrix.tag }} \
+            -D language=${{ matrix.lang }} \
+            -b html \
+            -A current_version="${{ steps.target-dir.outputs.value }}" \
+            -d _build/doctrees/${{ matrix.lang }} \
+            . _build/webroot/${{ matrix.tag }}/${{ matrix.lang }}/"${{ steps.target-dir.outputs.value }}"
+      - name: Publish build
+        if: ${{ github.event_name != 'pull_request' && env.SSHPASS != '' }}
+        working-directory: administrator-manual/en/_build/webroot
+        run: |
+          rsync -ai \
+           --no-super \
+           --relative \
+           --delete-after \
+           -e "${{ env.SSH_RSYNC }}" \
+           ${{ matrix.tag }}/${{ matrix.lang }}/"${{ steps.target-dir.outputs.value }}" \
+           nethserver@docs1.nethserver.com:.

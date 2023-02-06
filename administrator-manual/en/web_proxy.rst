@@ -190,7 +190,7 @@ Since all reports are kept forever, the size of the directory can greatly grow d
 To cleanup all reports older than 1 year, execute the following:
 ::
 
-  find /var/lightsquid/  -maxdepth 1 -mindepth 1 -type d -name '????????' -mtime +360 -delete
+  find /var/lightsquid/  -maxdepth 1 -mindepth 1 -type d -name '????????' -mtime +360 -exec rm -rf {} \;
 
 Cache
 =====
