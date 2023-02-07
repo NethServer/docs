@@ -629,7 +629,7 @@ Available for both Android and iOS:
 
 - `FreeOTP <https://freeotp.github.io/>`_: available for both Android and iOS
 - `Authenticator <https://mattrubin.me/authenticator/>`_: available on iOS only
-- `andOTP <https://github.com/andOTP/andOTP>`_: available for both Android and iOS https://github.com/andOTP/andOTP
+- `2FAS <https://2fas.com/>`_: available for both Android and iOS
 
 Emergency recovery
 ------------------
