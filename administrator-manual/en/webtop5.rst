@@ -323,9 +323,7 @@ Select the folder to share -> right click -> :guilabel:`Manage sharing`:
 
 .. note::
 
-   If you also select :guilabel:`Force signature`, when this identity is used, the user signature from which the shared mail was received will be automatically inserted.
-
-In this case, however, it is necessary that the personalized signature of the User from which it originates has been associated to the Email address and not to the User.
+   The :guilabel:`Force mailcard` option can be used only if the mailcard has been associated to the mail address.
 
 Sharing calendars and contacts
 ==============================
@@ -490,7 +488,7 @@ To change your signature, each user can access the :menuselection:`Settings --> 
 
 .. image:: _static/webtop-edit_mailcard.png
 
-The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
+Yuu can use the uploaded image inside the mailcard with this button:
 
 .. image:: _static/webtop-public_signature.png
 
