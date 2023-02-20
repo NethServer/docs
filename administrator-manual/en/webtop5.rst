@@ -118,14 +118,15 @@ execute these commands ::
 
 .. note::
 
-  When using a valid SSL certificate - for example Let's Encrypt - it is raccomanded to configure the public URL using ``https``
+  When using a valid SSL certificate - for example Let's Encrypt - it is rrecommended to configure the public URL using ``https``
   
 User settings management
 ========================
+
 Most user settings can be directly managed by the user itself via the settings menu.
 Locked settings require administration privileges.
 
-The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
+The administrator can :index:`impersonate` users, to check existing accounts using special login credentials:
 
 * **User name**: ``admin!<username>``
 * **Password**: ``<WebTop admin password>``
@@ -315,7 +316,7 @@ Select the folder to share -> right click -> :guilabel:`Manage sharing`:
 - select the user to share the resource (1).
 - select if you want to share your identity with the user and possibly even if you force your signature (2).
 - choose the level of permissions associated with this share (3).
-- if you need to change the permission levels more granularly, select "Advanced" (4).
+- if you need to further change the permission levels, select "Advanced" (4).
 - finally, choose whether to apply sharing only to the folder from which you started, or only to the branch of subfolders or to the entire account (5).
 
 .. image:: _static/webtop-sharing_mail_folder_2.png
@@ -374,7 +375,7 @@ The same functionality can also be reached from the individual modules (Mail, Ad
  
 Visibility can be set only during label creation. To change the label visibility you need to delete the label and recreate it again.
  
-The created labels (both Private and Shared) can be used transversally on any other module (Mail, Address Book, Calendar and Tasks).
+The created labels (both Private and Shared) can be used on any other module (Mail, Address Book, Calendar and Tasks).
 
 
 Custom fields
@@ -506,7 +507,7 @@ Furthermore, it will also be possible to modify personal information:
 
 .. image:: _static/webtop-personal_information.png
 
-that can be used within the parameterized fields within the domain mailcard editor:
+that can be used within the template-based fields within the domain mailcard editor:
 
 .. image:: _static/webtop-mailcard_editor.png
 
@@ -605,8 +606,8 @@ To do so, it is possible to click directly on the shield or right click on the s
 
 .. note::
 
-   * this type of personalisation is only valid for the user that performed the action
-   * it is possible to mark a sender as trusted only if the shield is yellow.
+   This type of customization is only valid for the user that performed the action.
+   It is possible to mark a sender as trusted only if the shield is yellow.
    
 The **admin user** can disable all or just some of the rules that are part of the PAS (ProActive Security), both for single users and groups.
 To do so, it is necessary to add a specific authorization (to the single user or the group of users) for the Service ``com.sonicle.webtop.mail (Mail)`` and for the ``PRO_ACTIVE_SECURITY`` resource:
@@ -752,7 +753,7 @@ To do this, simply select the Cloud button and add a new Nextcloud resource by r
 
 .. image:: _static/webtop-nextcloud_1.png
 
-A precompiled wizard will open:
+A pre-filled wizard will open:
 
 .. image:: _static/webtop-nextcloud_2.png
 
