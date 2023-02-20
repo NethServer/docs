@@ -496,8 +496,8 @@ The public image just uploaded will be able to recall it in the HTML editor of t
 
 .. note::
 
-   The personal mailcard can be associated with the user or his email:
-   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
+   The personal mailcard can be associated with the user or the mail address.
+   Users with access to the mail address, will also be able to use the mailcard.
 
 By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
 
@@ -707,8 +707,8 @@ It is possible to **Move** or **Copy** this type of activity (right click -> :gu
 Multiple searches
 -----------------
 
-In the bar at the top there is a quick search that is executed out on all fields.
-To narrow the search field it is possible to use the multiple search which combines several keys that will be searched in various fields at the same time:
+In the bar at the top there is a quick search that is executed on all fields.
+You can also narrow the search by filling multiple search fields.
 
 .. image:: _static/webtop-task7.png
 
