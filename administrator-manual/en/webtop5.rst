@@ -32,7 +32,7 @@ web application and Active Sync.
 .. _webtop5_admin-section:
 
 Admin user
-----------
+==========
 
 After installation, WebTop will be accessible using the administrator user.
 The administrator user can change global settings and login as any other user,
@@ -59,7 +59,7 @@ domain part of server FQDN.
 * Login: admin@mightydomain.com
 
 Change admin password
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 Access WebTop using the ``admin`` user, then open user settings by clicking on the menu in the top-right corner.
 
@@ -77,6 +77,63 @@ Remember to replace ``<newpassword>`` with your actual new password, example: ::
 
   bash webtop-set-admin-password VeryInsecurePass
   
+Changing the logo
+=================
+
+To modify and customize the initial logo that appears on the login page of WebTop,
+you must upload the custom image file on the public images of the admin user and rename it with "login.png".
+
+Proceed as follows:
+
+1. log in with the WebTop user admin
+
+2. select the cloud service and public images:
+
+   .. image:: _static/webtop-public_images.png
+
+3. upload the image (via the Upload button at the bottom left or simply dragging with a drag & drop)
+
+4. rename the loaded image so that its name is **"login.png"** (use right click -> Rename):
+
+   .. image:: _static/webtop-login_page.png
+
+5. the next login will show the new logo on the login page
+
+.. note::
+
+  Custom logo will be shown only when accesing Webtop using  its public URL.
+  The default public URL is the server FQDN, but it could be changed as described in the section below.
+
+Change the public URL
+=====================
+
+By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
+
+If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
+
+execute these commands ::
+
+  config setprop webtop PublicUrl http://mail.publicdomain.com/webtop
+  signal-event nethserver-webtop5-update
+
+.. note::
+
+  When using a valid SSL certificate - for example Let's Encrypt - it is raccomanded to configure the public URL using ``https``
+  
+User settings management
+========================
+Most user settings can be directly managed by the user itself via the settings menu.
+Locked settings require administration privileges.
+
+The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
+
+* **User name**: ``admin!<username>``
+* **Password**: ``<WebTop admin password>``
+
+While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
+Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
+
+It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
 
 Two factor authentication (2FA)
 ===============================
@@ -386,6 +443,96 @@ A panel without any associated label will be assigned to every available resourc
 
 Through the :guilabel:`Add` button it will be possible to select which custom fields to use among those already created in the panel.
 
+Manage identities
+=================
+
+In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` and fill in the fields
+
+.. image:: _static/webtop_manageident1.png
+
+It is possible to associate the new identity with a folder in your account or of a shared account
+
+**Local account:**
+
+.. image:: _static/webtop_manageident2.png
+
+**Shared account:**
+
+.. image:: _static/webtop_manageident3.png
+
+Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
+
+Mailcards of user and domain
+============================
+
+One of the main features of managing signatures on WebTop is the opportunity to integrate images or custom fields profiled per user.
+
+To use the images you need to upload them to the public cloud through the WebTop admin user like this:
+
+.. image:: _static/webtop-public_images.png
+
+You can use the :guilabel:`Upload` button to load an image which is at the bottom or simply via a drag & drop.
+
+.. note::
+
+  Remember that the public images inserted in the signature are actually connected with a public link.
+  To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
+
+Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
+
+It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
+
+``public.resource.links.as.inline.attachments`` = true (default = false)
+
+
+To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
+
+.. image:: _static/webtop-edit_mailcard.png
+
+The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
+
+.. image:: _static/webtop-public_signature.png
+
+.. note::
+
+   The personal mailcard can be associated with the user or his email:
+   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
+
+By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
+
+.. image:: _static/webtop-domain_mailcard.png
+
+Furthermore, it will also be possible to modify personal information:
+
+.. image:: _static/webtop-personal_information.png
+
+that can be used within the parameterized fields within the domain mailcard editor:
+
+.. image:: _static/webtop-mailcard_editor.png
+
+In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
+
+Configure multiple mailcards for a single user
+==============================================
+
+It is possible to configure multiple mailcards (HTML signatures) for each user.
+
+Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
+
+.. image:: _static/webtop-sig_sig1.png
+
+To edit every single signature select :menuselection:`Settings --> Mail --> Identities` then select each individual signature and click on the :guilabel:`edit mailcard` button
+
+.. image:: _static/webtop-sig_sig2.png
+.. image:: _static/webtop-sig_sig3.png
+
+When finished, close the window and click YES:
+
+.. image:: _static/webtop-sig_sig4.png
+
+to use multiple mailcards, create a new email, and choose the signature:
+
+.. image:: _static/webtop-sig_sig5.png
 
 Mail inline preview
 ===================
@@ -394,8 +541,6 @@ By default, the mail page will display a preview of the content of latest receiv
 
 This feature can be enabled or disabled from the :guilabel:`Settings` menu, under the :guilabel:`Mail` tab,
 the check box is named :guilabel:`Show quick preview on message row`.
-
-.. image:: _static/webtop-preview.png
 
 Mail archiving
 ==============
@@ -450,6 +595,53 @@ and click on the icon on the left:
 
 .. image:: _static/webtop-sub_imap_folder3.png
 
+Customize proactive security on emails
+===============================================
+
+The proactive security function on email messages allows some customization both for the **end user** and the WebTop **admin**.
+
+For the **end user** it is possible to mark a sender as trusted when it is recognised as such by the yellow shield.
+To do so, it is possible to click directly on the shield or right click on the sender and select the :guilabel:`Mark as trusted` entry.
+
+.. note::
+
+   * this type of personalisation is only valid for the user that performed the action
+   * it is possible to mark a sender as trusted only if the shield is yellow.
+   
+The **admin user** can disable all or just some of the rules that are part of the PAS (ProActive Security), both for single users and groups.
+To do so, it is necessary to add a specific authorization (to the single user or the group of users) for the Service ``com.sonicle.webtop.mail (Mail)`` and for the ``PRO_ACTIVE_SECURITY`` resource:
+
+.. image:: _static/webtop-pas1.png
+
+Below is an explanation of every single entry available as ``Action`` :
+
+* ``DISABLED``: completely disables PAS
+* ``NO_LINK_DOMAIN_CHECK``: do not check domains different form the sender’s domain
+* ``NO_MY_DOMAIN_CHECK``: do not verify if the sender’s domain is in my domain
+* ``NO_FREQUENT_CONTACT_CHECK``: do not check if the sender is in my contacts which are saved automatically 
+* ``NO_ANY_CONTACTS_CHECK``: do not check if the sender is among one of my contacts
+* ``NO_FAKE_PATTERNS_CHECK``: do not verify the presence of false patterns in the sender (e.g. email address of the name shown is different from the sender’s email address)
+* ``NO_UNSUBSCRIBE_DIRECTIVES_CHECK``: do not check the entry for the unsubscribe directives to the mailing list (only if the spam status is green)
+* ``NO_DISPLAYNAME_CHECK``: do not compare the contact’s display name with the contact in my address book with the same email
+* ``NO_SPAM_SCORE_VISUALIZATION``: do not show/check the spam score displayed in the message header
+* ``NO_LINK_CLICK_PROMPT``: do not check the click action on links
+* ``NO_ZIP_CHECK``: do not give warning about zip attachments
+
+This way it is possible to customize and create special profiles for some users who might not want all the actions to be active.
+
+The administrator can also choose the list of **file extensions for attachments** which are considered a threat.
+As default, these are the extensions which are considered dangerous: ``exe,bat,dll,com,cmd,bin,cab,js,jar``
+
+To modify this list it is necessary to add this global setting:
+
+* :guilabel:`Service` = ``com.sonicle.webtop.mail`` 
+* :guilabel:`Key` = ``pas.dangerous.extensions``
+
+For example, if you wanted to add the html extension among those that are considered dangerous, the value field should contain the following:
+
+* :guilabel:`Value` = ``exe,bat,dll,com,cmd,bin,cab,js,jar,html``  (Values always need to be separated by a comma)
+
+
 Export events (CSV)
 ===================
 
@@ -458,6 +650,66 @@ To export calendars events in CSV (Comma Separated Value) format, click on the i
 .. image:: _static/webtop-export_calendar_csv.png
 
 Finally, select a time interval and click on :guilabel:`Next` to export into a CSV file.
+
+Tasks
+=====
+
+Quick view filters
+------------------
+
+In the toolbar above the grid there are 7 buttons that allow you to select the most suitable quick view.
+The first two buttons refer to today's activities or to those planned within the next 7 days:
+
+.. image:: _static/webtop-task1.png
+
+* **Today**: shows unfinished tasks without a start date or with a start date up to today (inclusive) and those completed with an end date up to today (inclusive)
+* **Next 7 days**: shows uncompleted tasks with no start date or starting up to 7 days from today and completed tasks with completion date up to now (inclusive)
+
+The remaining 5 buttons allow you to obtain these other types of quick views:
+
+.. image:: _static/webtop-task2.png
+
+* **Not started**: shows only activities with status "To be started" and starting today (inclusive)
+* **Late**: shows only uncompleted tasks with start date up to today (inclusive) and completion date previous to the current one
+* **Completed**: shows all activities with status completed and with any date range
+* **Not completed**: shows all activities with status other than completed and start date within 1 year (for recurring tasks, only the first instance of the series still to be completed is shown)
+* **All**: shows all activities in any status (for recurring tasks the series icon main is shown)
+
+Recurring tasks
+---------------
+
+It is possible to configure any type of recurrence:
+
+.. image:: _static/webtop-task3.png
+
+Editing a recurring activity can be done in two different ways:
+
+1.  on the individual task by opening it with a double click from a view other than :guilabel:`All`
+  In this case the task will be **removed** from the recurrence and its icon will become this one:
+
+.. image:: _static/webtop-task4.png
+
+2.  on the entire series with a double click from the :guilabel:`All` view or by using the following button on the single task already open:
+
+.. image:: _static/webtop-task5.png
+
+Sub-tasks
+---------
+
+On any task it is always possible to add related sub-tasks (one Master/Slave level only) simply by using the right button and selecting :guilabel:`Add sub-task`
+Within the connected tasks, both in the master and in the slave ones, a link is available at the bottom right to open the related tasks:
+
+.. image:: _static/webtop-task6.png
+
+It is possible to **Move** or **Copy** this type of activity (right click -> :guilabel:`Move/Copy`) by choosing to copy or move the sub-activities through an option active by default.
+
+Multiple searches
+-----------------
+
+In the bar at the top there is a quick search that is executed out on all fields.
+To narrow the search field it is possible to use the multiple search which combines several keys that will be searched in various fields at the same time:
+
+.. image:: _static/webtop-task7.png
 
 Nextcloud integration
 =====================
@@ -637,55 +889,6 @@ If an event contains a link to a third-party videoconference, the buttons that w
 The video conferencing services that are currently supported, in addition to Jitsi, are: Google Meet, MS Teams and Zoom.
 It is possible to add additional platforms through a `global setting <https://www.sonicle.com/docs/webtop5/core.html#meeting-integration-settings>`_.
 
-Audio and video WebRTC calls with chat (Beta)
-=============================================
-
-.. warning::
-   This feature is currently released in Beta.
-   When the final version will be released it is likely that the configurations previously made will be reset.
-
-Configuration is currently only possible via the WebTop administration panel.
-The settings to be inserted are documented inside `webrtc settings section <https://www.sonicle.com/docs/webtop5/core.html#webrtc-settings-section>`_.
-In addition to the WebRTC settings, it is also necessary to add the **XMPP BOSH** public URL as shown inside `xmpp settings <https://www.sonicle.com/docs/webtop5/core.html#xmpp-settings>`_.
-
-From web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.core (WebTop)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
-
-``webrtc.ice.servers`` : defines the list of ICE servers as JSON arrays
-
-``xmpp.bosh.url`` : specifies the XMPP URL that can be accessed via the BOSH protocol
-
-
-For the key field ``webrtc.ice.servers`` as "Value" insert the content in json format that shows the values of these variables:
-
-``url`` : URL ice server
-
-``username`` : server username (optional)
-
-``credential`` : server password (optional)
-
-For example: ::
-
- [
-  {
-    'url': 'stun:stun.l.google.com:19302'
-  }, {
-    'url': 'stun:stun.mystunserver.com:19302'
-  }, {
-    'url': 'turn:myturnserver.com:80?transport=tcp',
-    'username': 'my_turn_username',
-    'credential': 'my_turn_password'
-  }
- ]
-
-For the key field ``xmpp.bosh.url`` as "Value" enter this type of URL: ``https://<public_server_name>/http-bind``
-
-With these configurations, every user authorized to use the **WEBCHAT** service can perform audio and video calls with other users that are available on the same chat server through the buttons available on the chat window.
-
-.. note::
-
-   If the buttons are grayed out, the requirements for activating the call are not satisfied.
-   For example: XMPP BOSH URL unreachable or ICE server unreachable.
-
 
 Send SMS from contacts
 ======================
@@ -769,98 +972,6 @@ If you need to enable this consent later on a different browser just click on th
 
 .. image:: _static/webtop-button_desktop_notifications.png
 
-
-Mailcards of user and domain
-============================
-
-One of the main features of managing signatures on WebTop is the opportunity to integrate images or custom fields profiled per user.
-
-To use the images you need to upload them to the public cloud through the WebTop admin user like this:
-
-.. image:: _static/webtop-public_images.png
-
-You can use the :guilabel:`Upload` button to load an image which is at the bottom or simply via a drag & drop.
-
-.. note::
-
-  Remember that the public images inserted in the signature are actually connected with a public link.
-  To be visible to email recipients, the server must be reachable remotely on port 80 (http) and its FQDN name must be publicly resolvable.
-
-Alternatively, you can configure a global setting to turn images automatically into inline attachments instead of public internet links
-
-It is possible to do this from web interface by accessing the administration panel -> :guilabel:`Properties (system)` -> :guilabel:`Add` -> select :guilabel:`com.sonicle.webtop.mail (Mail)` and enter the data in the :guilabel:`Key` and :guilabel:`Value` fields according to the key to be configured:
-
-``public.resource.links.as.inline.attachments`` = true (default = false)
-
-
-To change your signature, each user can access the :menuselection:`Settings --> Mail --> Editing --> Edit User mailcard`:
-
-.. image:: _static/webtop-edit_mailcard.png
-
-The public image just uploaded will be able to recall it in the HTML editor of the mailcard with this button:
-
-.. image:: _static/webtop-public_signature.png
-
-.. note::
-
-   The personal mailcard can be associated with the user or his email:
-   by associating it by email it will also be possible to share the mailcard to other users with whom the identity is shared.
-
-By accessing the user settings from the WebTop administration panel ( :menuselection:`Domains --> NethServer --> Users --> Right click on user` ) it is also possible to set up a general domain mailcard that will be automatically set for all users who have not configured their personal mailcard.:
-
-.. image:: _static/webtop-domain_mailcard.png
-
-Furthermore, it will also be possible to modify personal information:
-
-.. image:: _static/webtop-personal_information.png
-
-that can be used within the parameterized fields within the domain mailcard editor:
-
-.. image:: _static/webtop-mailcard_editor.png
-
-In this way it is possible to create a single mailcard that will be automatically customized for every user who does not use his own mailcard.
-
-Configure multiple mailcards for a single user
-==============================================
-
-It is possible to configure multiple mailcards (HTML signatures) for each individual user.
-
-Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
-
-.. image:: _static/webtop-sig_sig1.png
-
-To edit every single signature select :menuselection:`Settings --> Mail --> Identities` then select each individual signature and click on the :guilabel:`edit mailcard` button
-
-.. image:: _static/webtop-sig_sig2.png
-.. image:: _static/webtop-sig_sig3.png
-
-When finished, close the window and click YES:
-
-.. image:: _static/webtop-sig_sig4.png
-
-to use multiple mailcards, create a new email, and choose the signature:
-
-.. image:: _static/webtop-sig_sig5.png
-
-
-Manage identities
-=================
-
-In :menuselection:`settings --> mail --> identities` click :guilabel:`Add` and fill in the fields
-
-.. image:: _static/webtop_manageident1.png
-
-It is possible to associate the new identity with a folder in your account or of a shared account
-
-**Local account:**
-
-.. image:: _static/webtop_manageident2.png
-
-**Shared account:**
-
-.. image:: _static/webtop_manageident3.png
-
-Otherwise the sent mails will always end up in the "Sent Items" folder of your personal account.
 
 External IMAP accounts (Beta)
 =============================
@@ -957,21 +1068,6 @@ Select the desired mode next to the synchronization button:
 
 .. image:: _static/webtop-edit_sync_google2.png
 
-User settings management
-========================
-Most user settings can be directly managed by the user itself via the settings menu.
-Locked settings require administration privileges.
-
-The administrator can :index:`impersonate` users, to check the correctness and functionalities of the account, through a specific login:
-
-* **User name**: ``admin!<username>``
-* **Password**: ``<WebTop admin password>``
-
-While impersonating you receive similar user privileges, allowing you to control exactly what the user can see.
-Full administration of user settings is available directly in the administration interface, by right clicking on a user: the settings menu will open the full user settings panel, with all options unlocked.
-
-It is also possible to make a massive change of the email domain of the selected users: select the users (Click + CTRL for multiple selection) to which you want to apply this change then right-click on :guilabel:`Bulk update email domain`.
-
 User access and user session logs
 =================================
 
@@ -1033,46 +1129,6 @@ To apply the changes shown in the previous commands and restart the application,
 .. note::
 
   Accesses made through impersonate (``admin!<user>``) will never send an email notification
-
-
-Changing the logo
-=================
-
-To modify and customize the initial logo that appears on the login page of WebTop,
-you must upload the custom image file on the public images of the admin user and rename it with "login.png".
-
-Proceed as follows:
-
-1. log in with the WebTop user admin
-
-2. select the cloud service and public images:
-
-   .. image:: _static/webtop-public_images.png
-
-3. upload the image (via the Upload button at the bottom left or simply dragging with a drag & drop)
-
-4. rename the loaded image so that its name is **"login.png"** (use right click -> Rename):
-
-   .. image:: _static/webtop-login_page.png
-
-5. the next login will show the new logo on the login page
-
-.. note::
-
-  Custom logo will be shown only when accesing Webtop using  its public URL.
-  The default public URL is the server FQDN, but it could be changed as described in the section below.
-
-Change the public URL
-=====================
-
-By default, the public WebTop URL is configured with the FQDN name set in the server-manager.
-
-If you want to change URL from this: ``http://server.domain.local/webtop`` to: ``http://mail.publicdomain.com/webtop``
-
-execute these commands ::
-
-  config setprop webtop PublicUrl http://mail.publicdomain.com/webtop
-  signal-event nethserver-webtop5-update
 
 Change default limit "Maximum file size"
 ========================================
@@ -1274,31 +1330,6 @@ Known limitations:
 
 Troubleshooting
 ===============
-
-After login a "mail account authentication error" is displayed
---------------------------------------------------------------
-
-If an entire mail account is shared among different users, a Dovecot connection limit can be reached.
-This is the displayed error:
-
-.. image:: _static/webtop-dovecot_error.png
-
-In ``/var/log/imap`` there are lines like the following: ::
-
-  xxxxxx dovecot: imap-login: Maximum number of connections from user+IP exceeded (mail_max_userip_connections=12): user=<mail@dominio.com>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, secured, session=<zz/8iz1M1AB/AAAB>
-
-To list active IMAP connections per user, execute: ::
-
-  doveadm who
-
-
-To fix the problem, just raise the limit (eg. 50 connections for each user/IP): ::
-
-  config setprop dovecot MaxUserConnectionsPerIp 50
-  signal-event nethserver-mail-server-update
-
-At the end, logout and login again in WebTop.
-
 
 Blank page after login
 ----------------------
