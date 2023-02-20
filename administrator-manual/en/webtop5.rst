@@ -101,7 +101,7 @@ Proceed as follows:
 
 .. note::
 
-  Custom logo will be shown only when accesing Webtop using  its public URL.
+  Custom logo will be shown only when accessing Webtop using  its public URL.
   The default public URL is the server FQDN, but it could be changed as described in the section below.
 
 Change the public URL
@@ -206,7 +206,7 @@ Private events are not synchronized.
 Mobile devices based on Apple iOS fully support folders / categories for calendar, contacts and activities (called reminders), including original colors.
 
 Mobile devices based on Android support only calendars and contacts (activities are not supported), 
-but using the Google Calendar application all items will have the same colour.
+but using the Google Calendar application all items will have the same color.
 
 Installing and using the `CloudCal <https://pselis.com/cloudcal/>`_ application,
 you can change the colors associated with each calendar, including shared ones.
@@ -240,7 +240,7 @@ Calendars and address books can be synchronized also through :index:`CalDAV and 
 To synchronize a calendar, pick up its ``URL`` link right-clicking on the calendar and selecting :guilabel:`Links to this calendar`,
 then use it to configure your third-party client.
 
-To synchronize an address book, pick up its ``URL`` link right-clicking on the address book and selecting :guilabel:`Links to this addressbook`,
+To synchronize an address book, pick up its ``URL`` link right-clicking on the address book and selecting :guilabel:`Links to this address book`,
 then use it to configure your third-party client.
 
 To authenticate, provide your credentials in the following form:
@@ -248,15 +248,15 @@ To authenticate, provide your credentials in the following form:
 - **User name**: enter your full user name (i.e. *goofy@nethserver.org*)
 - **Password**: enter your password
 
-Some third-party clients allow to simplify the configuration through the *autodiscovery* feature that automatically discovers the 
+Some third-party clients allow to simplify the configuration through the *auto-discovery* feature that automatically discovers the 
 synchronizable resources, as in the case of mobile devices clients (i.e. Android or iOS devices).
 
 
 .. note::
 
-   If you are using clients that do not support autodiscovery, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
+   If you are using clients that do not support auto-discovery, you need to use the full URL: ``https://<server_name>/webtop-dav/server.php``
    
-   If you are using clients that support autodiscovery use URL: ``https://<server_name>``
+   If you are using clients that support auto-discovery use URL: ``https://<server_name>``
 
 Google Android
 --------------
@@ -277,7 +277,7 @@ CalDAV/CardDAV support is built-in on iOS, so to configure it:
 - select :guilabel:`Other` -> Add :guilabel:`CalDAV` or :guilabel:`CardDAV` account;
 - insert the server name (i.e. *server.nethserver.org*), complete username (i.e. *goofy@nethserver.org*) and password.
 
-By default the syncronization ``URL`` uses the server principal name (``FQDN``), if you need to change it: ::
+By default the synchronization ``URL`` uses the server principal name (``FQDN``), if you need to change it: ::
 
  config setprop webtop DavServerUrl https://<new_name_server>/webtop-dav/server.php
  signal-event nethserver-webtop5-update
@@ -290,8 +290,8 @@ Desktop clients
 
 To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guilabel:`Cardbook` (for contacts) and :guilabel:`Lightning` (for calendars).
 
-- :guilabel:`Cardbook` add-on works fine, with easy setup and autodiscovery support.
-- :guilabel:`Lightning` add-on doesn't support autodiscovery: any calendar must be manually added.
+- :guilabel:`Cardbook` add-on works fine, with easy setup and auto-discovery support.
+- :guilabel:`Lightning` add-on doesn't support auto-discovery: any calendar must be manually added.
 
 **Outlook**
 
@@ -299,7 +299,7 @@ To use CalDAV and CardDAV on Thunderbird you need third-party add-ons like :guil
 
 .. warning::
 
-   Webtop is a **clientless groupware**: its functionalities are fully available **only using the web interface**!
+   Webtop is a **client-less groupware**: its functionalities are fully available **only using the web interface**!
 
    The use of CalDAV/CardDAV through third-party clients **cannot be considered a web interface alternative**.
 
@@ -600,7 +600,7 @@ Customize proactive security on emails
 
 The proactive security function on email messages allows some customization both for the **end user** and the WebTop **admin**.
 
-For the **end user** it is possible to mark a sender as trusted when it is recognised as such by the yellow shield.
+For the **end user** it is possible to mark a sender as trusted when it is recognized as such by the yellow shield.
 To do so, it is possible to click directly on the shield or right click on the sender and select the :guilabel:`Mark as trusted` entry.
 
 .. note::
@@ -637,7 +637,7 @@ To modify this list it is necessary to add this global setting:
 * :guilabel:`Service` = ``com.sonicle.webtop.mail`` 
 * :guilabel:`Key` = ``pas.dangerous.extensions``
 
-For example, if you wanted to add the html extension among those that are considered dangerous, the value field should contain the following:
+For example, if you wanted to add the HTML extension among those that are considered dangerous, the value field should contain the following:
 
 * :guilabel:`Value` = ``exe,bat,dll,com,cmd,bin,cab,js,jar,html``  (Values always need to be separated by a comma)
 
@@ -685,7 +685,7 @@ It is possible to configure any type of recurrence:
 Editing a recurring activity can be done in two different ways:
 
 1.  on the individual task by opening it with a double click from a view other than :guilabel:`All`
-  In this case the task will be **removed** from the recurrence and its icon will become this one:
+    In this case the task will be **removed** from the recurrence and its icon will become this one:
 
 .. image:: _static/webtop-task4.png
 
@@ -771,7 +771,7 @@ Proceed with the Next button until the Wizard is complete.
 Use the personal Cloud to send and receive documents
 ====================================================
 
-Cloud module allows you to send and receive documents throug web links.
+Cloud module allows you to send and receive documents through web links.
 
 .. note::
 
@@ -882,7 +882,7 @@ There are several ways to share the new meeting link:
 
 * :guilabel:`Send invitation` -> :guilabel:`Plan event`: also in this case you will be asked if you would like to change the subject and date/time of the meeting before creating the calendar event that will allow you to invite other participants.
    
-If an event contains a link to a third-party videoconference, the buttons that will allow you to access the meeting directly:
+If an event contains a link to a third-party video conference, the buttons that will allow you to access the meeting directly:
 
 .. image:: _static/webtop_jitsi5.png
 
@@ -893,7 +893,7 @@ It is possible to add additional platforms through a `global setting <https://ww
 Send SMS from contacts
 ======================
 
-It is possible to send SMS messages to a contact that has the mobile number in the addressbook.
+It is possible to send SMS messages to a contact that has the mobile number in the address book.
 To activate sending SMS, first you need to choose one of the two supported providers: `SMSHOSTING <https://www.smshosting.it/it>`_ or `TWILIO <https://www.twilio.com/>`_.
 
 Once registered to the service of the chosen provider, retrieve the API keys (AUTH_KEY and AUTH_SECRET) to be inserted in the WebTop configuration db.
@@ -916,7 +916,7 @@ It is possible to indicate a number (max 16 characters) or a text (max 11 charac
 
    Each user always has the possibility to overwrite the sender by customizing it as desired through its settings panel: :guilabel:`WebTop` -> :guilabel:`Switchboard VOIP and SMS` -> :guilabel:`SMS Hosting service configured` -> :guilabel:`Default sender`
    
-To send SMS from the addressbook, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
+To send SMS from the address book, right-click on a contact that has the mobile field filled in -> :guilabel:`Send SMS`
 
 Custom link buttons in launcher
 ===============================
@@ -928,7 +928,7 @@ To configure the buttons access the WebTop administration panel and select -> :g
 
 For each button, enter these three values
 
-``Name`` : tab descriptive text that appears with mouseover
+``Name`` : tab descriptive text that appears with mouse-over
 
 ``Link URL`` : URL opened in a new browser
 
@@ -1212,7 +1212,7 @@ To import events:
    
    .. image:: _static/webtop-import_calendars2.png
 
-3. Then choose if you want to delete all existings events and import new ones, or just append imported data to existing calendar events
+3. Then choose if you want to delete all existing events and import new ones, or just append imported data to existing calendar events
 
    .. image:: _static/webtop-import_calendars3.png
 
