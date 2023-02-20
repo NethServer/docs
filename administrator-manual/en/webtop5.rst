@@ -515,7 +515,7 @@ In this way it is possible to create a single mailcard that will be automaticall
 Configure multiple mailcards for a single user
 ==============================================
 
-It is possible to configure multiple mailcards (HTML signatures) for each individual user.
+It is possible to configure multiple mailcards (HTML signatures) for each user.
 
 Access the :menuselection:`Settings --> Mail --> Identities` and create multiple identities:
 
@@ -595,10 +595,10 @@ and click on the icon on the left:
 
 .. image:: _static/webtop-sub_imap_folder3.png
 
-How to personalise proactive security on emails
+Customize proactive security on emails
 ===============================================
 
-The proactive security function on email messages allows some personalisations both on the side of the **end user** and the WebTop **admin**.
+The proactive security function on email messages allows some customization both for the **end user** and the WebTop **admin**.
 
 For the **end user** it is possible to mark a sender as trusted when it is recognised as such by the yellow shield.
 To do so, it is possible to click directly on the shield or right click on the sender and select the :guilabel:`Mark as trusted` entry.
@@ -608,8 +608,8 @@ To do so, it is possible to click directly on the shield or right click on the s
    * this type of personalisation is only valid for the user that performed the action
    * it is possible to mark a sender as trusted only if the shield is yellow.
    
-For the **admin user**, it is possible to disable all or just some of the rules that are part of the PAS (ProActive Security), both at the single user level and the group of users level.
-To do so, it is necessary to add a specific authorisation (to the single user or the group of users) for the Service ``com.sonicle.webtop.mail (Mail)`` and for the ``PRO_ACTIVE_SECURITY`` resource:
+The **admin user** can disable all or just some of the rules that are part of the PAS (ProActive Security), both for single users and groups.
+To do so, it is necessary to add a specific authorization (to the single user or the group of users) for the Service ``com.sonicle.webtop.mail (Mail)`` and for the ``PRO_ACTIVE_SECURITY`` resource:
 
 .. image:: _static/webtop-pas1.png
 
@@ -625,12 +625,12 @@ Below is an explanation of every single entry available as ``Action`` :
 * ``NO_DISPLAYNAME_CHECK``: do not compare the contact’s display name with the contact in my address book with the same email
 * ``NO_SPAM_SCORE_VISUALIZATION``: do not show/check the spam score displayed in the message header
 * ``NO_LINK_CLICK_PROMPT``: do not check the click action on links
-* ``NO_ZIP_CHECK``: do not give warning of zip attachments
+* ``NO_ZIP_CHECK``: do not give warning about zip attachments
 
-This way it is possible to personalise and create special profiles for some users who might not want all the actions to be active.
+This way it is possible to customize and create special profiles for some users who might not want all the actions to be active.
 
-Another global personalisation available on the admin side is the one that allows you to modify the list of **file extensions for attachments** which are considered a threat.
-As a default, these are the extensions which are considered dangerous: ``exe,bat,dll,com,cmd,bin,cab,js,jar``
+The administrator can also choose the list of **file extensions for attachments** which are considered a threat.
+As default, these are the extensions which are considered dangerous: ``exe,bat,dll,com,cmd,bin,cab,js,jar``
 
 To modify this list it is necessary to add this global setting:
 
@@ -670,7 +670,7 @@ The remaining 5 buttons allow you to obtain these other types of quick views:
 .. image:: _static/webtop-task2.png
 
 * **Not started**: shows only activities with status "To be started" and starting today (inclusive)
-* **Late**: shows only uncompleted tasks with start date up to today (inclusive) and completion date previous to the current one.
+* **Late**: shows only uncompleted tasks with start date up to today (inclusive) and completion date previous to the current one
 * **Completed**: shows all activities with status completed and with any date range
 * **Not completed**: shows all activities with status other than completed and start date within 1 year (for recurring tasks, only the first instance of the series still to be completed is shown)
 * **All**: shows all activities in any status (for recurring tasks the series icon main is shown)
@@ -685,7 +685,7 @@ It is possible to configure any type of recurrence:
 Editing a recurring activity can be done in two different ways:
 
 1.  on the individual task by opening it with a double click from a view other than :guilabel:`All`
-In this case the task will be **removed** from the recurrence and its icon will become this one:
+  In this case the task will be **removed** from the recurrence and its icon will become this one:
 
 .. image:: _static/webtop-task4.png
 
@@ -706,7 +706,7 @@ It is possible to **Move** or **Copy** this type of activity (right click -> :gu
 Multiple searches
 -----------------
 
-In the bar at the top there is a quick search that is carried out on all fields.
+In the bar at the top there is a quick search that is executed out on all fields.
 To narrow the search field it is possible to use the multiple search which combines several keys that will be searched in various fields at the same time:
 
 .. image:: _static/webtop-task7.png
