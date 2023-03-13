@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../base_system.rst:5
 msgid "The old Server Manager"
@@ -59,8 +59,8 @@ msgstr ""
 "Le nuove funzionalità di |product| non sono disponibili su questa "
 "interfaccia web. La compatibilità delle funzionalità con con questa versione"
 " dell'interfaccia potrebbe interrompersi in qualsiasi momento. Si consiglia "
-"di utilizzare il nuovo Server Manager. Fare riferimento alle sezioni :ref"
-":`access-section` e :ref:`base_system-section`."
+"di utilizzare il nuovo Server Manager. Fare riferimento alle sezioni "
+":ref:`access-section` e :ref:`base_system-section`."
 
 #: ../../base_system.rst:20
 msgid "Getting started"
@@ -375,8 +375,8 @@ msgid ""
 msgstr ""
 "In caso di installazione su VPS (Virtual Private Server) pubblico, il server"
 " deve essere configurato con una schede di rete green. Si consiglia quindi "
-"di chiudere le porte dei servizi critici usando il pannello :ref"
-":`network_services_legacy-section`."
+"di chiudere le porte dei servizi critici usando il pannello "
+":ref:`network_services_legacy-section`."
 
 #: ../../base_system.rst:147
 msgid "Alias IP"

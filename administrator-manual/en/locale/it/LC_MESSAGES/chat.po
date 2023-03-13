@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../chat.rst:5
 msgid "Chat"
@@ -217,8 +217,8 @@ msgstr ""
 
 #: ../../chat.rst:72
 msgid ""
-"The group ``jabberadmins`` must be created and configured from the :ref"
-":`groups-section` page."
+"The group ``jabberadmins`` must be created and configured from the "
+":ref:`groups-section` page."
 msgstr ""
 "Il gruppo ``jabberadmins`` deve essere creato e configurato dalla pagina "
 ":ref:`groups-section`."

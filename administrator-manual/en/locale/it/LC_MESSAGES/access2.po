@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../access2.rst:5
 msgid "Accessing the Server Manager"
@@ -141,8 +141,8 @@ msgid ""
 msgstr ""
 "Gli utenti amministratori, con accesso al Server Manager, possono modificare"
 " la propria password dalla pagina :guilabel:`Impostazioni`. Gli utenti non "
-"privilegiati, senza accesso al Server Manager, possono usare la :ref"
-":`user_settings-section`."
+"privilegiati, senza accesso al Server Manager, possono usare la "
+":ref:`user_settings-section`."
 
 #: ../../access2.rst:53
 msgid ""

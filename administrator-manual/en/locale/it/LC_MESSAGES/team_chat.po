@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../team_chat.rst:5
 msgid "Team chat (Mattermost)"
@@ -78,12 +78,12 @@ msgstr ""
 #: ../../team_chat.rst:18
 msgid ""
 "If your server is using a Let's Encrypt certificate as default, make also "
-"sure to have a corresponding public DNS record. See :ref"
-":`server_certificate-section` for more info."
+"sure to have a corresponding public DNS record. See "
+":ref:`server_certificate-section` for more info."
 msgstr ""
 "Se il server utilizza il certificato Let's Encrypt come predefinito, "
-"assicurarsi anche di avere un record DNS pubblico corrispondente. Vedi :ref"
-":`server_certificate-section` per maggiori informazioni."
+"assicurarsi anche di avere un record DNS pubblico corrispondente. Vedi "
+":ref:`server_certificate-section` per maggiori informazioni."
 
 #: ../../team_chat.rst:22
 msgid ""

@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../disaster_recovery.rst:4
 msgid "Disaster recovery"
@@ -118,8 +118,8 @@ msgstr ""
 
 #: ../../disaster_recovery.rst:46
 msgid ""
-"If the machine has a Community subscription entitlement, please follow :ref"
-":`subscription-section`, otherwise you can skip this step"
+"If the machine has a Community subscription entitlement, please follow "
+":ref:`subscription-section`, otherwise you can skip this step"
 msgstr ""
 "Se la macchina ha una subscription Community, seguire le indicazioni della "
 "sezione :ref:`subscription-section`, altrimenti ignorare questo passaggio"
@@ -265,8 +265,8 @@ msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
 msgstr ""
-"Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi :ref"
-":`restore-roles-section`"
+"Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi "
+":ref:`restore-roles-section`"
 
 #: ../../disaster_recovery.rst:102 ../../disaster_recovery.rst:128
 msgid "Verify the system is functional"
@@ -607,8 +607,8 @@ msgstr ""
 #: ../../disaster_recovery.rst:269
 msgid "See also OpenVPN :ref:`ovpn_roadwarrior-section`."
 msgstr ""
-"Per maggiori informazioni fare riferimento alla sezione :ref"
-":`ovpn_roadwarrior-section` della pagina OpenVPN"
+"Per maggiori informazioni fare riferimento alla sezione "
+":ref:`ovpn_roadwarrior-section` della pagina OpenVPN"
 
 #: ../../disaster_recovery.rst:272
 msgid "IPSec tunnels"
@@ -642,8 +642,8 @@ msgid ""
 msgstr ""
 "L'hotspot Dedalo sarà disabilitato se il sistema non ha un'interfaccia di "
 "rete configurata con il ruolo ``hotspot``. Se Dedalo verrà disabilitato, "
-"sarà possibile riconfigurarlo seguendo le indicazioni del capitolo :ref"
-":`dedalo-section`."
+"sarà possibile riconfigurarlo seguendo le indicazioni del capitolo "
+":ref:`dedalo-section`."
 
 #: ../../disaster_recovery.rst:286
 msgid "ntopng"

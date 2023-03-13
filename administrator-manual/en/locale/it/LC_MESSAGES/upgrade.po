@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../upgrade.rst:7
 msgid "Upgrade from |product| 6"
@@ -383,9 +383,9 @@ msgstr "TLS policy"
 
 #: ../../upgrade.rst:170
 msgid ""
-"In |product| |version| the services configuration can adhere to :ref"
-":`tlspolicy-section`.  Before upgrading, the network clients must be checked"
-" against the available policy identifiers."
+"In |product| |version| the services configuration can adhere to "
+":ref:`tlspolicy-section`.  Before upgrading, the network clients must be "
+"checked against the available policy identifiers."
 msgstr ""
 "La configurazione dei servizi di |product| |version| può aderire a diverse "
 ":ref:`tlspolicy-section`. Prima dell'aggiornamento, è necessario verificare "

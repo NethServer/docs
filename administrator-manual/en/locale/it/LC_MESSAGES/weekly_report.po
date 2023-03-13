@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../weekly_report.rst:4
 msgid "Weekly report"
@@ -36,8 +36,8 @@ msgstr ""
 
 #: ../../weekly_report.rst:13
 msgid ""
-"This module has been deprecated and it has been replaced by new :ref"
-":`report-section`"
+"This module has been deprecated and it has been replaced by new "
+":ref:`report-section`"
 msgstr ""
 "Questo modulo è deprecato ed è stato sostituito dal nuovo :ref:`report-"
 "section`"
