@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../bandwidth_monitor.rst:5
 msgid "Bandwidth monitor"
@@ -42,10 +42,10 @@ msgid ""
 "protocols."
 msgstr ""
 "Il modulo **Monitor di Banda** consente di analizzare il traffico di rete in"
-" tempo reale utilizzando il motore di `ntopng <https://www.ntop.org/products"
-"/traffic-analysis/ntop/>`_. **ntopng** è un potente strumento che valuta la "
-"larghezza di banda utilizzata dai singoli host e identifica i protocolli di "
-"rete più comunemente utilizzati."
+" tempo reale utilizzando il motore di `ntopng "
+"<https://www.ntop.org/products/traffic-analysis/ntop/>`_. **ntopng** è un "
+"potente strumento che valuta la larghezza di banda utilizzata dai singoli "
+"host e identifica i protocolli di rete più comunemente utilizzati."
 
 #: ../../bandwidth_monitor.rst:14
 msgid "Dashboard"

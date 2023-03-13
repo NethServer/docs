@@ -12,11 +12,11 @@
 # 
 # Translators:
 # 23207dac865a8c5d793cea0690373b68_288982a, 2017
-# Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # cotosso <cotosso@gmail.com>, 2020
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # Nicola <nicola.rauso@nethesis.it>, 2021
+# Filippo Carletti <filippo.carletti@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -25,13 +25,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-05 15:49+0100\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
+"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../firewall.rst:5
 msgid "Firewall"
@@ -47,9 +47,9 @@ msgid ""
 msgstr ""
 "| product| può agire da : index: `firewall` e: index:` gateway` all'interno "
 "della rete in cui è installato. Tutto il traffico tra i computer della rete "
-"locale  e Internet passa attraverso il server che decide come instradare i "
+"locale e Internet passa attraverso il server che decide come instradare i "
 "pacchetti e quali regole applicare. La modalità firewall è abilitata solo se"
-" il sistema ha almeno un'interfaccia di rete configurata con il ruolo rosso."
+" il sistema ha almeno un'interfaccia di rete configurata con il ruolo red."
 
 #: ../../firewall.rst:12
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../firewall.rst:14
 msgid "Multi WAN support up to 15 connections"
-msgstr "Supporto WAN multiple fino a 15 collegamenti"
+msgstr "Supporto WAN multiple (fino a 15 connessioni)"
 
 #: ../../firewall.rst:15
 msgid "Firewall rules management"
@@ -173,7 +173,7 @@ msgid ""
 "To display the list of active policies click on the :guilabel:`Policies` "
 "button inside the :guilabel:`Rules` page."
 msgstr ""
-"Per visualizzare  la lista di policy attive cliccare sul pulsante "
+"Per visualizzare la lista di policy attive cliccare sul pulsante "
 ":guilabel:`Policy` nella pagina :guilabel:`Regole`."
 
 #: ../../firewall.rst:56
@@ -183,8 +183,8 @@ msgid ""
 "section` section inside the :guilabel:`Settings` page."
 msgstr ""
 "Le policy possono essere modificate creando regole specifiche tra le zone "
-"dalla pagina :guilabel:`Regole` o accedendo alla sezione :ref"
-":`traffic_to_internet-section` all'interno della pagina "
+"dalla pagina :guilabel:`Regole` o accedendo alla sezione "
+":ref:`traffic_to_internet-section` all'interno della pagina "
 ":guilabel:`Impostazioni`."
 
 #: ../../firewall.rst:62
@@ -476,11 +476,11 @@ msgid ""
 ":guilabel:`Create CIDR subnet` actions which will appear next to the address"
 " itself."
 msgstr ""
-"I campi sorgente e destinazione accettano ruoli predefiniti, :ref"
-":`firewall_objects-section` e indirizzi IPv4 o reti in notazione CIDR. Tali "
-"indirizzi possono essere successivamente convertiti in oggetti firewall "
-"utilizzando le azioni :guilabel:`Crea Host` e :guilabel:`Crea rete CIDR` che"
-" appariranno accanto all'indirizzo IP."
+"I campi sorgente e destinazione accettano ruoli predefiniti, "
+":ref:`firewall_objects-section` e indirizzi IPv4 o reti in notazione CIDR. "
+"Tali indirizzi possono essere successivamente convertiti in oggetti firewall"
+" utilizzando le azioni :guilabel:`Crea Host` e :guilabel:`Crea rete CIDR` "
+"che appariranno accanto all'indirizzo IP."
 
 #: ../../firewall.rst:171
 msgid ""
@@ -492,7 +492,7 @@ msgstr ""
 
 #: ../../firewall.rst:173
 msgid "*ivpn*: all traffic from IPSec VPNs"
-msgstr "*ivpn*: tutto il traffico proveniente da VPN IPSec"
+msgstr "*ivpn*: tutto il traffico proveniente da VPN IPsec"
 
 #: ../../firewall.rst:174
 msgid "*ovpn*: all traffic from OpenVPN VPNs"
@@ -609,10 +609,11 @@ msgid ""
 "traffic split in network protocols (eg. OpenVPN, DNS) and web applications "
 "(eg. Netflix, Spotify)."
 msgstr ""
-"Il modulo DPI utilizza la libreria `nDPI <https://www.ntop.org/products"
-"/deep-packet-inspection/ndpi/>` _ in grado di identificare oltre 250 tipi di"
-" traffico di rete suddiviso in protocolli di rete (ad esempio OpenVPN, DNS) "
-"e applicazioni Web (ad esempio, Netflix, Spotify)."
+"Il modulo DPI utilizza la libreria `nDPI "
+"<https://www.ntop.org/products/deep-packet-inspection/ndpi/>` _ in grado di "
+"identificare oltre 250 tipi di traffico di rete suddiviso in protocolli di "
+"rete (ad esempio OpenVPN, DNS) e applicazioni Web (ad esempio, Netflix, "
+"Spotify)."
 
 #: ../../firewall.rst:217
 msgid ""
@@ -653,8 +654,8 @@ msgid ""
 msgstr ""
 "Anche se DPI può identificare il traffico da/per specifici siti web come "
 "Facebook, è più adatto per bloccare o priorizzare protocolli come VPN, FTP, "
-"ecc. L'accesso ai siti Web deve essere disciplinato utilizzando il :ref"
-":`proxy-section`."
+"ecc. L'accesso ai siti Web deve essere disciplinato utilizzando il "
+":ref:`proxy-section`."
 
 #: ../../firewall.rst:229
 msgid ""
@@ -663,7 +664,7 @@ msgid ""
 " block such protocols using DPI rules unless you want to prevent access to "
 "thousands of sites."
 msgstr ""
-"E' opportuno sottolineare che alcuni protocolli DPI (come Amazon) possono "
+"È opportuno sottolineare che alcuni protocolli DPI (come Amazon) possono "
 "corrispondere a grandi `CDN "
 "<https://it.wikipedia.org/wiki/Content_Delivery_Network>`_, quindi è "
 "opportuno non bloccare tali protocolli usando le regole DPI a meno che non "
@@ -698,7 +699,7 @@ msgid ""
 "rule also on established connections."
 msgstr ""
 "Per default, quando una nuova regola viene creata, si applica solo alle "
-"nuove connessioni. Ma in alcuni scenari, l'amministratore può aver la "
+"nuove connessioni. Ma in alcuni scenari, l'amministratore può avere la "
 "necessità di applicare la regola anche sulle connessioni esistenti."
 
 #: ../../firewall.rst:244
@@ -782,7 +783,7 @@ msgid ""
 " under the :guilabel:`Rules` section on the same page."
 msgstr ""
 "Tutte le interfacce WAN sono marcate con il ruolo red ed elencate in cima "
-"alla pagina, subito sotto i grafici di utilizzo banda.Le regole possono "
+"alla pagina, subito sotto i grafici di utilizzo banda. Le regole possono "
 "essere create nella sezione :guilabel:`Regole` all'interno della stessa "
 "pagina."
 
@@ -975,7 +976,7 @@ msgstr ""
 
 #: ../../firewall.rst:336
 msgid "The network protocol like TCP, UDP, TCP & UDP, AH, ESP or GRE"
-msgstr "Il protocollo di rete come TCP, UDP, TCP & UDP, AH, ESP o GRE"
+msgstr "il protocollo di rete come TCP, UDP, TCP & UDP, AH, ESP o GRE"
 
 #: ../../firewall.rst:337
 msgid ""
@@ -1006,8 +1007,8 @@ msgid ""
 "see :ref:`hairpin-section` to change such behavior."
 msgstr ""
 "Per impostazione predefinita, tutti i port forward sono disponibili solo per"
-" le richieste che arrivano dalla WAN, fare riferimento alla sezione :ref"
-":`hairpin-section` per modificare tale comportamento."
+" le richieste che arrivano dalla WAN, fare riferimento alla sezione "
+":ref:`hairpin-section` per modificare tale comportamento."
 
 #: ../../firewall.rst:347
 msgid "Given the following scenario:"
@@ -1227,7 +1228,7 @@ msgid ""
 "through the firewall. In this way, it is possible to optimize the "
 "transmission, control the latency and tune the available bandwidth."
 msgstr ""
-"La :index:`gestione banda` (:index:`traffic shaping`) permette di applicare "
+"La :index:`gestione banda` (:index:`Traffic shaping`) permette di applicare "
 "regole di priorità sul traffico che attraversa il firewall. In tal modo è "
 "possibile ottimizzare la trasmissione, controllare la latenza e sfruttare al"
 " meglio la banda disponibile."
@@ -1239,8 +1240,8 @@ msgid ""
 " and carefully set bandwidth values."
 msgstr ""
 "Per abilitare il traffic shaping è necessario conoscere l'esatta quantità di"
-" banda disponibile in download  e upload. Accedi alla pagina guilabel "
-":guilabel:`Network` e imposta attentamente i valori di larghezza di banda."
+" banda disponibile in download e upload. Accedere alla pagina guilabel "
+":guilabel:`Network` e impostare attentamente i valori di larghezza di banda."
 
 #: ../../firewall.rst:426
 msgid ""
@@ -1258,8 +1259,8 @@ msgid ""
 "value, but use the :guilabel:`Speedtest` button or online tools to test the "
 "real provider speed."
 msgstr ""
-"Assicurarsi di specificare una stima accurata della banda sulle interfacce "
-"RED.Spesso il valore nominale non è corretto, utilizzare il pulsante "
+"Assicurarsi di specificare una stima accurata della banda sulle interfacce. "
+"Spesso il valore nominale non è corretto, utilizzare il pulsante "
 ":guilabel:`Speedtest` o gli strumenti disponibili online per stimare "
 "correttamente la velocità della connessione."
 
@@ -1282,7 +1283,7 @@ msgstr ""
 
 #: ../../firewall.rst:441
 msgid "creation of traffic shaping classes"
-msgstr "Creazione di classi per gestione della banda"
+msgstr "creazione di classi per gestione della banda"
 
 #: ../../firewall.rst:442
 msgid "assignment of network traffic to a specific class"
@@ -1319,9 +1320,9 @@ msgid ""
 "committed rate, up to the maximum rate. A class will exceed its committed "
 "rate only if there is spare bandwidth available."
 msgstr ""
-"Ogni classe può avere anche una banda massima. Se impostato, la classe può "
-"superare la  banda stabilita,fino al banda massima. Una classe supererà la "
-"sua banda riservata solo se è disponibile abbastanza banda."
+"Ogni classe può avere anche una banda massima. Se impostata, la classe può "
+"superare la banda stabilita, fino alla banda massima. Una classe supererà la"
+" sua banda riservata solo se è disponibile abbastanza banda."
 
 #: ../../firewall.rst:456
 msgid ""
@@ -1329,8 +1330,8 @@ msgid ""
 "page. When creating a new class, fill the following fields."
 msgstr ""
 "Le classi di traffic shaping possono essere definite nella pagina "
-":guilabel:`Gestione Banda`. Quando crei una nuova classe, compila i seguenti"
-" campi:"
+":guilabel:`Gestione Banda`. Quando si crea una nuova classe, compilare i "
+"seguenti campi:"
 
 #: ../../firewall.rst:459
 msgid ":guilabel:`Class name`: a representative name"
@@ -1338,11 +1339,11 @@ msgstr ":guilabel:`Class name`: un nome rappresentativo"
 
 #: ../../firewall.rst:460
 msgid ":guilabel:`Description`: optional description for the class"
-msgstr ": guilabel:`Description`: descrizione facoltativa per la classe"
+msgstr ":guilabel:`Description`: descrizione facoltativa per la classe"
 
 #: ../../firewall.rst:462
 msgid "Limits under :guilabel:`Download bandwidth limits` section:"
-msgstr "Limiti nella sezione: guilabel: `Limiti di banda per il download`:"
+msgstr "Limiti nella sezione :guilabel: `Limiti di banda per il download`:"
 
 #: ../../firewall.rst:464
 msgid ""
@@ -1362,7 +1363,7 @@ msgstr ""
 
 #: ../../firewall.rst:467
 msgid "Limits under :guilabel:`Upload bandwidth limits` section:"
-msgstr "Limiti nella sezione: guilabel: `Limiti di banda per l'upload`:"
+msgstr "Limiti nella sezione :guilabel: `Limiti di banda per l'upload`:"
 
 #: ../../firewall.rst:469
 msgid ""
@@ -1391,10 +1392,10 @@ msgstr ""
 "Per ogni classe la larghezza di banda può essere specificata utilizzando la "
 "percentuale di larghezza di banda di rete disponibile o con valori assoluti "
 "espressi in kbps. Per impostazione predefinita, una classe di traffic "
-"shaping viene applicata a tutte le interfacce di rete rosse. Tale "
+"shaping viene applicata a tutte le interfacce di rete red. Tale "
 "comportamento può essere modificato selezionando un'interfaccia rossa "
-"esistente nel menu: guilabel: `Associa a` all'interno della sezione: "
-"guilabel: ʻAvanzate`."
+"esistente nel menu :guilabel: `Associa a` all'interno della sezione "
+":guilabel: ʻAvanzate`."
 
 #: ../../firewall.rst:479
 msgid "The system provides two pre-configured classes:"
@@ -1406,7 +1407,7 @@ msgid ""
 "something like SSH"
 msgstr ""
 ":guilabel:`high`: traffico ad alta priorità generico, può essere assegnato "
-"tipo ad  SSH"
+"ad  SSH"
 
 #: ../../firewall.rst:482
 msgid ""
@@ -1421,8 +1422,8 @@ msgid ""
 "The system always tries to prevent traffic starvation under high network "
 "load."
 msgstr ""
-"Il sistema cerca sempre di previnire la saturazione della banda quando ci "
-"sta un carico di rete elevato."
+"Il sistema cerca sempre di prevenire il blocco del traffico in caso di "
+"carico di rete elevato."
 
 #: ../../firewall.rst:486
 msgid ""
@@ -1432,10 +1433,10 @@ msgid ""
 "spare bandwidth will be given to them."
 msgstr ""
 "Le classi ricevono la banda non allocata in proporzione alla loro banda "
-"minima . Per esempio, se una la classe A ha 1Mbit di banda minima e la "
-"classe B ha 2Mbit, allora la classe B riceverà il doppio della banda non "
-"allocata rispetto alla classe A. In ogni caso, tutta la banda non allocata "
-"verrà utilizzata dalle classi."
+"minima. Per esempio, se una la classe A ha 1Mbit di banda minima e la classe"
+" B ha 2Mbit, allora la classe B riceverà il doppio della banda non allocata "
+"rispetto alla classe A. In ogni caso, tutta la banda non allocata verrà "
+"utilizzata dalle classi."
 
 #: ../../firewall.rst:490
 msgid ""
@@ -1452,8 +1453,8 @@ msgid ""
 "For more info, see `FireQOS tutorial "
 "<https://github.com/firehol/firehol/wiki/FireQOS-Tutorial>`_."
 msgstr ""
-"Per maggiori informazioni FireQOS tutorial: "
-"https://github.com/firehol/firehol/wiki/FireQOS-Tutorial"
+"Per maggiori informazioni, vedere `FireQOS tutorial: "
+"https://github.com/firehol/firehol/wiki/FireQOS-Tutorial>`_."
 
 #: ../../firewall.rst:499
 msgid "Firewall objects"

@@ -32,7 +32,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../packages.rst:6
 msgid "Software center"
@@ -95,8 +95,8 @@ msgid ""
 "Once a module has been installed, it is listed under the :ref:`applications-"
 "section` page."
 msgstr ""
-"Una volta che un modulo è stato installato, è elencato nella sezione :ref"
-":`applications-section`."
+"Una volta che un modulo è stato installato, è elencato nella sezione "
+":ref:`applications-section`."
 
 #: ../../packages.rst:37
 msgid "Software updates"

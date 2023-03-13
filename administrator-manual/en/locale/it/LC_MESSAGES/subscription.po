@@ -1,35 +1,35 @@
 # #-#-#-#-#  subscription.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  subscription.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Nicola <nicola.rauso@nethesis.it>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
+# Nicola <nicola.rauso@nethesis.it>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:53+0100\n"
+"POT-Creation-Date: 2021-02-17 15:28+0100\n"
 "PO-Revision-Date: 2018-03-29 09:26+0000\n"
-"Last-Translator: Filippo Carletti <filippo.carletti@gmail.com>, 2019\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../subscription.rst:5
 msgid "Subscription"
@@ -61,15 +61,18 @@ msgstr ""
 msgid ""
 "Activating a subscription will enable the stable YUM repositories, but will "
 "disable any other repositories you may have added. You can re-enable any "
-"other repositories by creating a \"template-custom\" for "
-":file:`/etc/nethserver/eorepo.conf`."
+"other repository by setting the ``ExtraRepositories`` property from the "
+"command line. The property accepts a comma-separated list of repository "
+"names and it is case sensitive. Example: ::"
 msgstr ""
-"L'attivazione di un abbonamento abiliterà i repository YUM stabili, ma "
-"disabiliterà qualsiasi altro repository eventualmente aggiunto. Puoi "
-"riattivare qualsiasi altro repository creando un \"template-custom\" per: "
-"file: `/ etc / nethserver / eorepo.conf`."
+"L'attivazione di una subscription abiliterà i repository YUM stabili, ma "
+"disabiliterà tutti gli eventuali altri repository aggiuntivi. È possibile "
+"riattivare qualsiasi altro repository impostando la proprietà "
+"``ExtraRepositories`` tramite riga di comando. La proprietà accetta un "
+"elenco separato da virgole di nomi di repository e fa distinzione tra "
+"maiuscolo e minuscolo. Esempio: ::"
 
-#: ../../subscription.rst:23
+#: ../../subscription.rst:26
 msgid ""
 "The subscription provider may not accept support requests for the contents "
 "of custom repositories."
@@ -77,40 +80,40 @@ msgstr ""
 "Il fornitore dell'abbonamento potrebbe non accettare richieste di supporto "
 "per i contenuti dei repository personalizzati."
 
-#: ../../subscription.rst:30
+#: ../../subscription.rst:33
 msgid "Registering the system"
 msgstr "Registrando il sistema"
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:35
 msgid ""
 "Access :guilabel:`Subscription` page from the old or new Server Manager"
 msgstr ""
 "Accedere alla pagina :guilabel:`Subscription` dal vecchio o dal nuovo Server"
 " Manager"
 
-#: ../../subscription.rst:33
+#: ../../subscription.rst:36
 msgid "Click on :guilabel:`Subscribe`"
 msgstr "Cliccare su :guilabel:`Sottoscrivi`"
 
-#: ../../subscription.rst:34
+#: ../../subscription.rst:37
 msgid ""
 "Login or register to https://my.nethserver.com to obtain a registration code"
 msgstr ""
 "Accedere o registrarsi su https://my.nethserver.com per ottenere un codice "
 "di registrazione"
 
-#: ../../subscription.rst:35
+#: ../../subscription.rst:38
 msgid ""
 "Copy and paste the code inside the :guilabel:`Registration token` field"
 msgstr ""
 "Copiare e incollare il codice all'interno del campo :guilabel:`Registrazione"
 " token`"
 
-#: ../../subscription.rst:36
+#: ../../subscription.rst:39
 msgid "Click on :guilabel:`Register now` button"
 msgstr "Cliccare su bottone :guilabel:`Registra ora`"
 
-#: ../../subscription.rst:38
+#: ../../subscription.rst:41
 msgid ""
 "At the end, the subscription plan name and validity are reported inside the "
 "page. Monitoring and access to stable repositories are automatically "
@@ -120,19 +123,19 @@ msgstr ""
 "sottoscritto saranno riportati all'interno della pagina. Il monitoraggio e "
 "l'accesso ai repository stabili saranno automaticamente abilitati."
 
-#: ../../subscription.rst:41
+#: ../../subscription.rst:44
 msgid "Dartagnan documentation: https://nethesis.github.io/dartagnan/"
 msgstr "Documentazione Dartagnan: https://nethesis.github.io/dartagnan/"
 
-#: ../../subscription.rst:42
+#: ../../subscription.rst:45
 msgid "Nethesis official site: http://www.nethesis.it"
 msgstr "Sito ufficiale Nethesis: http://www.nethesis.it"
 
-#: ../../subscription.rst:45
+#: ../../subscription.rst:48
 msgid "Removing a subscription"
 msgstr "Rimozione di una subscription"
 
-#: ../../subscription.rst:47
+#: ../../subscription.rst:50
 msgid ""
 "When the subscription expires, or at the end of a trial period, use the "
 "following command to revert any modification to repositories and access the "
@@ -142,7 +145,7 @@ msgstr ""
 "utilizzare il seguente comando per annullare qualsiasi modifica ai "
 "repository e accedere a quelli della community: ::"
 
-#: ../../subscription.rst:53
+#: ../../subscription.rst:56
 msgid ""
 "If you have installed the `new server manager` AKA `cockpit`, you can "
 "unsubscribe the machine in the `Subscription` page, clicking on "
@@ -152,7 +155,7 @@ msgstr ""
 "è possibile rimuovere la licenza della macchina dalla pagina `Subscription`."
 " cliccando sul pulsante **Unsubscribe**."
 
-#: ../../subscription.rst:55
+#: ../../subscription.rst:58
 msgid ""
 "Refer to :ref:`software-updates-section` for more information about the "
 "community updates origin."
