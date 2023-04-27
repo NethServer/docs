@@ -349,8 +349,8 @@ Select the recipient user of the share (or Group), and enable permissions for bo
 Resource calendars
 ==================
 
-With impersonal resource calendars it is possible to manage reservations exclusively for company resources such as company cars, meeting rooms and shared equipment in general.
-The reservation of a resource takes place during the creation of a calendar event by adding among the guests the necessary resources for that specific time period, being able to immediately evaluate their real availability based on the other reservations already made.
+Through the resource calendars it is possible to reserve company cars, meeting rooms and other shared equipment in an exclusive way.
+To book a resource, you have to create an event and add the resource among the guests, verifying that the resource is available for the required time span.
 
 Creating a new resource
 -----------------------
