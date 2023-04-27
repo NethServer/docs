@@ -355,7 +355,7 @@ To book a resource, you have to create an event and add the resource among the g
 Creating a new resource
 -----------------------
 
-It is necessary to create a dedicated account for each resource into the account provider of Nethserver.
+It is necessary to create a dedicated account for each resource into the account provider of |product|.
 
 .. note::
 
