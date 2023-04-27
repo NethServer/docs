@@ -355,21 +355,21 @@ To book a resource, you have to create an event and add the resource among the g
 Creating a new resource
 -----------------------
 
-Before creating a new resource in the WebTop admin panel it is necessary to create a specific user (in the configured user base) which will be dedicated to the resource.
+It is necessary to create a dedicated account for each resource into the account provider of Nethserver.
 
 .. note::
 
-   If the newly created user is not used for other purposes, it is advisable to block it and to make his built-in email address only available for internal use
+   If the newly created user is not used for other purposes, it is advisable to block it and to make the built-in email address only available for internal use
 
 Once the account has been created, you can access the WebTop admin panel to create the new resource and fill in the required fields:
 
 :guilabel:`Name:` name of the resource which must coincide with the user created on the account provider
 
-:guilabel:`Display Name:` description of the resource that will be displayed as a calendar
+:guilabel:`Display Name:` description of the resource that will be displayed as calendar
 
 :guilabel:`Type:` choose the type of resource between Room and Equipment
 
-:guilabel:`Available Resource:` if not selected, the resource will not be available and bookable by the users
+:guilabel:`Available Resource:` select to make the resource available
 
 :guilabel:`Email:` leave as suggested (resource@domain.ext)
 
@@ -383,7 +383,7 @@ Finishing with the :guilabel:`Save & Close` button, the resource will be created
 Booking a resource
 ------------------
 
-Users who will have permission to book a resource will be able to do so by creating a calendar event and adding the resource among the guests using the "Add Resource" button
+Users who will have permission to book a resource will be able to do so by creating a calendar event and adding the resource among the guests using the :guilabel:`Add Resource` button
 
 With the :guilabel:`Show availability` button, a table with the busy and free time intervals of the added resources is shown.
 
@@ -394,7 +394,7 @@ It is possible to modify the time-span resolution shown in the table using this 
 Change reservation of a resource
 --------------------------------
 
-Each user can modify (delete or move) a reservation only if they are the owner of the event through which the resource was reserved.
+Only the event owner can change the resource reservation.
 The user defined as :guilabel:`Manager` of the resource has the permission to modify (delete or move) reservations made by other users as well.
 
 
