@@ -383,7 +383,7 @@ Finishing with the :guilabel:`Save & Close` button, the resource will be created
 Booking a resource
 ------------------
 
-Users who will have permission to book a resource will be able to do so by creating a calendar event and adding the resource among the guests using the :guilabel:`Add Resource` button
+Users who will have permission to book a resource will be able to do so by creating a calendar event and adding the resource among the guests using the :guilabel:`Add Resource` button.
 
 With the :guilabel:`Show availability` button, a table with the busy and free time intervals of the added resources is shown.
 
