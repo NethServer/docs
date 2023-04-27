@@ -346,6 +346,57 @@ Sharing Contacts
 In the same way, you can always share your contacts by selecting the directory you want to share -> right click -> "Sharing and permissions".
 Select the recipient user of the share (or Group), and enable permissions for both the folder and the individual items.
 
+Resource calendars
+==================
+
+Through the resource calendars it is possible to reserve company cars, meeting rooms and other shared equipment in an exclusive way.
+To book a resource, you have to create an event and add the resource among the guests, verifying that the resource is available for the required time span.
+
+Creating a new resource
+-----------------------
+
+It is necessary to create a dedicated account for each resource into the account provider of |product|.
+
+.. note::
+
+   If the newly created user is not used for other purposes, it is advisable to block it and to make the built-in email address only available for internal use
+
+Once the account has been created, you can access the WebTop admin panel to create the new resource and fill in the required fields:
+
+:guilabel:`Name:` name of the resource which must coincide with the user created on the account provider
+
+:guilabel:`Display Name:` description of the resource that will be displayed as calendar
+
+:guilabel:`Type:` choose the type of resource between Room and Equipment
+
+:guilabel:`Available Resource:` select to make the resource available
+
+:guilabel:`Email:` leave as suggested (resource@domain.ext)
+
+:guilabel:`Permissions:` add the users or groups who will be able to book the resource
+(for example, in order to allow all users to use the resource, add the "users" group)
+
+:guilabel:`Manager:` indicate whether to assign a "manager" user (or group) who will be able to delete or move reservations made by other users on this resource
+
+Finishing with the :guilabel:`Save & Close` button, the resource will be created and automatically added to the shared calendars of the users specified in the permissions.
+
+Booking a resource
+------------------
+
+Users who will have permission to book a resource will be able to do so by creating a calendar event and adding the resource among the guests using the :guilabel:`Add Resource` button.
+
+With the :guilabel:`Show availability` button, a table with the busy and free time intervals of the added resources is shown.
+
+It is possible to modify the time-span resolution shown in the table using this key:
+
+.. image:: _static/webtop-resource_cal.png
+
+Change reservation of a resource
+--------------------------------
+
+Only the event owner can change the resource reservation.
+The user defined as :guilabel:`Manager` of the resource has the permission to modify (delete or move) reservations made by other users as well.
+
 
 Custom labels
 =============
