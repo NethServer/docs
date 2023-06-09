@@ -64,6 +64,8 @@ Then the server can filter requested URLs using the web filter and return back t
 
 .. note:: There is no need to install any certificate into the clients,
    just enabling the SSL proxy is enough.
+.. note:: If the web proxy is enabled on the blue network this allows you to reach the green devices via the http or https protocols.
+   If you want to avoid this behavior, simply create a bypass by destination by entering the CIDR of the green network as explained below.
 
 Bypass
 ======
