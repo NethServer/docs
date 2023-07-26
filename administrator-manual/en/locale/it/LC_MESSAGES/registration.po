@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -13,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-05 15:49+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2017-02-16 16:46+0000\n"
 "Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -111,15 +111,12 @@ msgstr ""
 msgid "Operation Center"
 msgstr "Operation Center"
 
-#: ../../registration.rst:33
+#: ../../registration.rst:34
 msgid ""
-"￼ The :dfn:`system id` uniquely identify the server and it is reported "
-"inside the details page of each server. There are also two special buttons "
+"The :dfn:`system id` uniquely identify the server and it is reported inside "
+"the details page of each server. There are also two special buttons "
 ":guilabel:`Free key` and :guilabel:`Delete server`."
 msgstr ""
-"￼ Il :dfn:`system id` identifica in modo univoco il server e viene riportato"
-" all'interno della pagina dei dettagli di ciascun server. Ci sono anche due "
-"pulsanti speciali :guilabel:`Libera chiave` ed :guilabel:`Elimina server`."
 
 #: ../../registration.rst:37
 msgid ""

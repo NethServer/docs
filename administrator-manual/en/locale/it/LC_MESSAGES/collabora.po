@@ -1,12 +1,12 @@
 # #-#-#-#-#  collabora.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  collabora.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -18,10 +18,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 09:13+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2019-01-29 08:15+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2019\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -128,8 +128,30 @@ msgstr "Utente admin"
 
 #: ../../collabora.rst:63
 msgid ""
-"After installation, admin dashboard can be enabled with ``loolconfig set-"
+"After installation, admin dashboard can be enabled with ``coolconfig set-"
 "admin-password`` and accessible at: ::"
 msgstr ""
-"Al termine dell'installazione, la dashboard di amministrazione può essere "
-"abilitata con ``loolconfig set-admin-password`` e accessibile al url: ::"
+
+#: ../../collabora.rst:69
+msgid "CODE repository"
+msgstr ""
+
+#: ../../collabora.rst:71
+msgid ""
+"Collabora Online comes from the CODE edition (Collabora Office development "
+"edition). To list the available packages: ::"
+msgstr ""
+
+#: ../../collabora.rst:75
+msgid "you can update or install directly from the CODE repository: ::"
+msgstr ""
+
+#: ../../collabora.rst:80
+msgid "The repository is disabled by default to avoid breaking updates."
+msgstr ""
+
+#: ../../collabora.rst:82
+msgid ""
+"In some cases a remote Nextcloud instance needs to be rebooted after an "
+"update of Collabora Online."
+msgstr ""
