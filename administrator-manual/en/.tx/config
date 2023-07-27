@@ -265,12 +265,6 @@ source_file = _build/locale/snmp.pot
 source_lang = en
 type        = PO
 
-[o:nethserver:p:docs-v7:r:sphinx]
-file_filter = locale/<lang>/LC_MESSAGES/sphinx.po
-source_file = _build/locale/sphinx.pot
-source_lang = en
-type        = PO
-
 [o:nethserver:p:docs-v7:r:statistics]
 file_filter = locale/<lang>/LC_MESSAGES/statistics.po
 source_file = _build/locale/statistics.pot

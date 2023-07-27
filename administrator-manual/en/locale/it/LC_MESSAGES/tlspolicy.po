@@ -1,12 +1,12 @@
 # #-#-#-#-#  tlspolicy.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  tlspolicy.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -20,10 +20,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 09:13+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2018-04-06 09:32+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -127,10 +127,8 @@ msgstr "Ejabberd (XMPP)"
 
 #: ../../tlspolicy.rst:42 ../../tlspolicy.rst:74 ../../tlspolicy.rst:83
 #: ../../tlspolicy.rst:91
-msgid ""
-"See https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
+msgid "See https://bettercrypto.org/"
 msgstr ""
-"Vedi https://bettercrypto.org/static/applied-crypto-hardening.pdf category B"
 
 #: ../../tlspolicy.rst:43 ../../tlspolicy.rst:61
 msgid "Disabled SSLv3 and TLSv1.0"

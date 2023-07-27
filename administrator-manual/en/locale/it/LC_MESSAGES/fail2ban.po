@@ -1,29 +1,29 @@
 # #-#-#-#-#  fail2ban.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  fail2ban.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # cotosso <cotosso@gmail.com>, 2021
 # Nicola <nicola.rauso@nethesis.it>, 2021
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 09:13+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2018-12-10 13:30+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -77,9 +77,9 @@ msgid ""
 ":guilabel:`Settings` button of **Fail2ban** application. The configuration "
 "is split into two pages:"
 msgstr ""
-"Accedere a :menuelection:`Applicazioni > fail2ban` e fare clic sul pulsante "
-":guilabel:`Impostazioni` dell'applicazione **Fail2ban**. La configurazione è"
-" suddivisa in due pagine:"
+"Accedere a :menuselection:`Applicazioni > fail2ban` e fare clic sul pulsante"
+" :guilabel:`Impostazioni` dell'applicazione **Fail2ban**. La configurazione "
+"è suddivisa in due pagine:"
 
 #: ../../fail2ban.rst:17
 msgid ":guilabel:`Settings`: general configuration options"

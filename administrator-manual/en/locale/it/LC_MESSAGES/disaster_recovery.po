@@ -1,12 +1,12 @@
 # #-#-#-#-#  disaster_recovery.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  disaster_recovery.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -20,10 +20,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-05 15:49+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2019-10-10 08:59+0000\n"
 "Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,15 +89,19 @@ msgstr ""
 "parti abilitati, ricordarsi di installarli prima di procedere con il "
 "ripristino."
 
-#: ../../disaster_recovery.rst:31
+#: ../../disaster_recovery.rst:30
+msgid "The root password is not restored."
+msgstr ""
+
+#: ../../disaster_recovery.rst:33
 msgid "New Server Manager"
 msgstr "Nuovo Server Manager"
 
-#: ../../disaster_recovery.rst:33 ../../disaster_recovery.rst:86
+#: ../../disaster_recovery.rst:35 ../../disaster_recovery.rst:88
 msgid "Please, follow below steps:"
 msgstr "Si prega di seguire i seguenti passi:"
 
-#: ../../disaster_recovery.rst:35
+#: ../../disaster_recovery.rst:37
 msgid ""
 "Install the new machine (refer to :ref:`installation <installation-manual>` "
 "section), access the new Server Manager and make sure the machine is able to"
@@ -108,7 +112,7 @@ msgstr ""
 "Manager e assicurarsi che la macchina sia in grado di accedere a Internet e "
 "risolvere correttamente i nomi pubblici"
 
-#: ../../disaster_recovery.rst:42
+#: ../../disaster_recovery.rst:44
 msgid ""
 "Activate NethServer Enterprise following the :ref:`registration "
 "<registration-section>` procedure"
@@ -116,7 +120,7 @@ msgstr ""
 "Attivare NethServer Enterprise seguendo la procedura di :ref:`registrazione "
 "<registration-section>`"
 
-#: ../../disaster_recovery.rst:46
+#: ../../disaster_recovery.rst:48
 msgid ""
 "If the machine has a Community subscription entitlement, please follow "
 ":ref:`subscription-section`, otherwise you can skip this step"
@@ -124,7 +128,7 @@ msgstr ""
 "Se la macchina ha una subscription Community, seguire le indicazioni della "
 "sezione :ref:`subscription-section`, altrimenti ignorare questo passaggio"
 
-#: ../../disaster_recovery.rst:50
+#: ../../disaster_recovery.rst:52
 msgid ""
 "Install all the available core updates from the :ref:`software-updates-"
 "section`"
@@ -132,7 +136,7 @@ msgstr ""
 "Installare tutti gli aggiornamenti core disponibili da :ref:`software-"
 "updates-section`"
 
-#: ../../disaster_recovery.rst:52
+#: ../../disaster_recovery.rst:54
 msgid ""
 "Access the :guilabel:`Backup` page and click on the :guilabel:`Restore` "
 "button under the **Configuration Backup** section, then upload the "
@@ -143,7 +147,7 @@ msgstr ""
 "caricare il backup della configurazione o scaricarlo direttamente da un un "
 "URL HTTP/S."
 
-#: ../../disaster_recovery.rst:56
+#: ../../disaster_recovery.rst:58
 msgid ""
 "For NethServer Enterprise, all cloud backups will be automatically "
 "downloaded and ready to be restored directly from the :guilabel:`From "
@@ -153,7 +157,7 @@ msgstr ""
 "automaticamente scaricati e resi disponibili per essere selezionati tramite "
 "il campo :guilabel:`Dal backup`."
 
-#: ../../disaster_recovery.rst:59
+#: ../../disaster_recovery.rst:61
 msgid ""
 "Map network interface names from the backup to the running system. This step"
 " is required only if :guilabel:`Restore network configuration` option is "
@@ -163,7 +167,7 @@ msgstr ""
 " Questo passaggio è necessario solo se l'opzione :guilabel:`Ripristina "
 "configurazione di rete` è abilitata."
 
-#: ../../disaster_recovery.rst:62
+#: ../../disaster_recovery.rst:64
 msgid ""
 "During disaster recovery, to obtain a machine identical to original one, "
 "it's **mandatory** to keep the option :guilabel:`Reinstall packages` "
@@ -175,13 +179,13 @@ msgstr ""
 "pacchetti` **abilitata**! La sua disattivazione potrebbe introdurre "
 "comportamenti imprevisti sul sistema ripristinato!"
 
-#: ../../disaster_recovery.rst:65
+#: ../../disaster_recovery.rst:67
 msgid "Click the :guilabel:`Restore` to start the restore process."
 msgstr ""
 "Preme il pulsante :guilabel:`Ripristina` per iniziare il processo di "
 "ripristino."
 
-#: ../../disaster_recovery.rst:69
+#: ../../disaster_recovery.rst:71
 msgid ""
 "If you're connected to a network interface that will change the IP address "
 "during the restore, you will be disconnected from the Server Manager and you"
@@ -191,7 +195,7 @@ msgstr ""
 " il ripristino, si verrà disconnessi dal Server Manager e sarà necessario "
 "ricollegarsi usando il nuovo indirizzo IP."
 
-#: ../../disaster_recovery.rst:73
+#: ../../disaster_recovery.rst:75
 msgid ""
 "Verify the system is functional and then access the :guilabel:`Backup` page."
 " To restore all files, click on :guilabel:`Restore` button under the **Data "
@@ -203,7 +207,7 @@ msgstr ""
 ":guilabel:`Ripristina` nella sezione **Backup dati**, selezionare il nome "
 "del backup e fare click sul pulsante :guilabel:`Ripristina`."
 
-#: ../../disaster_recovery.rst:77
+#: ../../disaster_recovery.rst:79
 msgid ""
 "Please bear in mind that the restore process can last from minutes to hours "
 "depending on the storage backend speed."
@@ -211,7 +215,7 @@ msgstr ""
 "Si tenga presente che il processo di ripristino può durare da pochi minuti a"
 " diverse ore "
 
-#: ../../disaster_recovery.rst:80
+#: ../../disaster_recovery.rst:82
 msgid ""
 "If the :guilabel:`Restore network configuration` was not enabled, further "
 "steps may be required to restore all applications. See :ref:`skip-network-"
@@ -222,11 +226,11 @@ msgstr ""
 "applicazioni. Fare riferimento alla sezione :ref:`skip-network-restore-"
 "section` per maggiori dettagli."
 
-#: ../../disaster_recovery.rst:84
+#: ../../disaster_recovery.rst:86
 msgid "Old Server Manager"
 msgstr "Vecchio Server Manager"
 
-#: ../../disaster_recovery.rst:90 ../../disaster_recovery.rst:113
+#: ../../disaster_recovery.rst:92 ../../disaster_recovery.rst:115
 msgid ""
 "Install the new machine (refer to :ref:`installation <installation-manual>` "
 "section), access the Server Manager and complete the basic server "
@@ -236,7 +240,7 @@ msgstr ""
 ":ref:`installation <installation-manual>`), accedere al Server Manager e "
 "completare la configurazione di base del sistema"
 
-#: ../../disaster_recovery.rst:93 ../../disaster_recovery.rst:116
+#: ../../disaster_recovery.rst:95 ../../disaster_recovery.rst:118
 msgid ""
 "Ensure that |product| is able to access the internet and resolve public "
 "names correctly"
@@ -244,7 +248,7 @@ msgstr ""
 "Assicurarsi che |product| sia in grado di accedere ad internet e risolvere "
 "correttamente i nomi con il DNS pubblico"
 
-#: ../../disaster_recovery.rst:95 ../../disaster_recovery.rst:120
+#: ../../disaster_recovery.rst:97 ../../disaster_recovery.rst:122
 msgid ""
 "Install all the available core updates in the :ref:`Software Center "
 "<software-updates-section>`"
@@ -252,7 +256,7 @@ msgstr ""
 "Installare tutti gli aggiornamenti core disponibili dal :ref:`Software "
 "Center <software-updates-section>`"
 
-#: ../../disaster_recovery.rst:97
+#: ../../disaster_recovery.rst:99
 msgid ""
 "Restore the configuration backup using the :guilabel:`Backup "
 "(configuration)` panel"
@@ -260,7 +264,7 @@ msgstr ""
 "Ripristinare il backup della configurazione utilizzando il pannello "
 ":guilabel:`Backup (configurazione)`"
 
-#: ../../disaster_recovery.rst:99 ../../disaster_recovery.rst:125
+#: ../../disaster_recovery.rst:101 ../../disaster_recovery.rst:127
 msgid ""
 "If a warning message requires it, reconfigure the network roles assignment. "
 "See :ref:`restore-roles-section` below."
@@ -268,20 +272,20 @@ msgstr ""
 "Se un avviso lo richiede, riconfigurare le interfacce di rete. Vedi "
 ":ref:`restore-roles-section`"
 
-#: ../../disaster_recovery.rst:102 ../../disaster_recovery.rst:128
+#: ../../disaster_recovery.rst:104 ../../disaster_recovery.rst:130
 msgid "Verify the system is functional"
 msgstr "Verificare che la macchina sia funzionante"
 
-#: ../../disaster_recovery.rst:104 ../../disaster_recovery.rst:130
+#: ../../disaster_recovery.rst:106 ../../disaster_recovery.rst:132
 msgid "Restore data backup executing on the console ::"
 msgstr "Ripristinare il backup dei dati eseguendo dalla console ::"
 
-#: ../../disaster_recovery.rst:108 ../../disaster_recovery.rst:134
+#: ../../disaster_recovery.rst:110 ../../disaster_recovery.rst:136
 msgid ""
 "where ``name`` is the name of the data backup you want to restore from."
 msgstr "in cui ``name`` è il nome del backup che si desidera ripristinare."
 
-#: ../../disaster_recovery.rst:118
+#: ../../disaster_recovery.rst:120
 msgid ""
 "Activate |product| following the :ref:`registration <registration-section>` "
 "procedure"
@@ -289,7 +293,7 @@ msgstr ""
 "Attivare |product| seguendo la procedura di :ref:`registrazione "
 "<registration-section>`"
 
-#: ../../disaster_recovery.rst:122
+#: ../../disaster_recovery.rst:124
 msgid ""
 "Restore the configuration backup using the :guilabel:`Backup "
 "(configuration)` panel which allows to use cloud backups or local archives"
@@ -298,19 +302,13 @@ msgstr ""
 ":guilabel:`Backup (configurazione)` che consente di selezionare backup su "
 "cloud o archivi locali"
 
-#: ../../disaster_recovery.rst:137
+#: ../../disaster_recovery.rst:139
 msgid ""
 "Please note that the disaster recovery should be always performed from a "
 "local media (eg. NFS or USB) to speed up the process."
 msgstr ""
 "Si noti che il disater recovery dovrebbe essere sempre eseguito da un "
 "supporto locale (ad esempio NFS o USB) per velocizzare il processo."
-
-#: ../../disaster_recovery.rst:139
-msgid "The root/admin password is not restored."
-msgstr ""
-"La password di root/admin non viene ripristinata, verrà mantenuta quella "
-"impostata nel nuovo sistema."
 
 #: ../../disaster_recovery.rst:144
 msgid "Restore network roles"
