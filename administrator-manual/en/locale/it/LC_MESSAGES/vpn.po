@@ -1,12 +1,12 @@
 # #-#-#-#-#  vpn.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  vpn.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -14,18 +14,18 @@
 # Filippo Carletti <filippo.carletti@gmail.com>, 2017
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2019
-# Nicola <nicola.rauso@nethesis.it>, 2020
 # cotosso <cotosso@gmail.com>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-05 15:49+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2017-02-06 15:30+0000\n"
-"Last-Translator: cotosso <cotosso@gmail.com>, 2020\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -240,11 +240,57 @@ msgstr "orario della disconnessione"
 msgid "transferred bytes"
 msgstr "byte trasmessi"
 
-#: ../../vpn.rst:85 ../../vpn.rst:185
+#: ../../vpn.rst:83
+msgid "Mail notification"
+msgstr "Notifica e-mail"
+
+#: ../../vpn.rst:85
+msgid ""
+"The server can send a mail notification each time a user connects to, or "
+"disconnects from, OpenVPN roadwarrior server."
+msgstr ""
+"Il server può inviare una notifica e-mail ogni volta che un utente si "
+"connette o si disconnette dal server OpenVPN roadwarrior."
+
+#: ../../vpn.rst:87
+msgid ""
+"Notification mails are English-only. Sender address can be configured from "
+":ref:`email-notification-section`. This feature is disabled by default and "
+"can be enabled by command line."
+msgstr ""
+"Le e-mail di notifica sono solo in inglese. L'indirizzo del mittente può "
+"essere configurato da :ref:`sezione-notifica-e-mail`. Questa funzione è "
+"disabilitata per impostazione predefinita e può essere abilitata da riga di "
+"comando."
+
+#: ../../vpn.rst:91
+msgid "To enable the feature use: ::"
+msgstr "Per abilitare l'uso della funzione: ::"
+
+#: ../../vpn.rst:96
+msgid ""
+"The ``NotifyAddresses`` property can contain a comma-separated list of mail "
+"addresses. Notifications are sent through local Postfix installation, so "
+"mail delivery can be inspected inside :file:`/var/log/maillog`."
+msgstr ""
+"La prop ``NotifyAddresses`` può contenere un elenco di indirizzi di posta "
+"separati da virgole. Le notifiche vengono inviate tramite l'installazione "
+"locale di Postfix, quindi lo stato di consegna dei messaggi può essere "
+"controllato in :file:`/var/log/maillog`."
+
+#: ../../vpn.rst:99
+msgid "Example of mail on user connect: ::"
+msgstr "Esempio di e-mail in caso di connessione utente: ::"
+
+#: ../../vpn.rst:106
+msgid "Example of mail on user disconnect: ::"
+msgstr "Esempio di e-mail in caso di disconnessione utente: ::"
+
+#: ../../vpn.rst:119 ../../vpn.rst:219
 msgid "Tunnel (net2net)"
 msgstr "Tunnel (net2net)"
 
-#: ../../vpn.rst:87
+#: ../../vpn.rst:121
 msgid ""
 "When creating an OpenVPN net2net connection, a server will have the master "
 "role. All other servers are considered as slaves (clients)."
@@ -252,7 +298,7 @@ msgstr ""
 "Quando si crea una connessione OpenVPN net2net, un server ricopre il ruolo "
 "di master. Tutti gli altri server sono considerati slave (client)."
 
-#: ../../vpn.rst:90
+#: ../../vpn.rst:124
 msgid ""
 "A client can be connected to another |product| or any other firewall which "
 "uses OpenVPN."
@@ -260,7 +306,7 @@ msgstr ""
 "Un client può essere collegato ad un altro |product| od ad un qualsiasi "
 "altro firewall che utilizzi OpenVPN."
 
-#: ../../vpn.rst:92
+#: ../../vpn.rst:126
 msgid ""
 "All tunnels use OpenVPN routed mode, but there are two kind of topologies: "
 "*subnet* and *p2p* (Point to Point)"
@@ -268,11 +314,11 @@ msgstr ""
 "Tutti i tunnel utilizzano OpenVPN in modalità routed, ma esistono due tipi "
 "di topologie: *subnet* e *p2p* (Point to Point)"
 
-#: ../../vpn.rst:94
+#: ../../vpn.rst:128
 msgid "**Topology: subnet**"
 msgstr "**Topologia: subnet**"
 
-#: ../../vpn.rst:96
+#: ../../vpn.rst:130
 msgid ""
 "This is the recommended topology. In :index:`subnet topology`, the server "
 "will accept connections and will act as DHCP server for every connected "
@@ -282,21 +328,21 @@ msgstr ""
 "server accetterà le connessioni e agirà come server DHCP per ogni client "
 "connesso."
 
-#: ../../vpn.rst:99
+#: ../../vpn.rst:133
 msgid "In this scenario"
 msgstr "In questo scenario"
 
-#: ../../vpn.rst:101
+#: ../../vpn.rst:135
 msgid "the server will authenticate clients using TLS certificates"
 msgstr ""
 "il server gestisce l'autenticazione dei client utilizzando certificati TLS"
 
-#: ../../vpn.rst:102
+#: ../../vpn.rst:136
 msgid "the server can push local routes to remote clients"
 msgstr ""
 "il server può eseguire il push delle rotte locali verso i client remoti"
 
-#: ../../vpn.rst:103
+#: ../../vpn.rst:137
 msgid ""
 "the client will be able to authenticate with TLS certificates or user name "
 "and password"
@@ -304,11 +350,11 @@ msgstr ""
 "il client si possono autenticare con certificati TLS o tramite nome utente e"
 " password"
 
-#: ../../vpn.rst:105
+#: ../../vpn.rst:139
 msgid "**Topology: P2P**"
 msgstr "**Topologia: P2P**"
 
-#: ../../vpn.rst:107
+#: ../../vpn.rst:141
 msgid ""
 "In :index:`p2p topology`, the administrator must configure one server for "
 "each client."
@@ -316,11 +362,11 @@ msgstr ""
 "Nella :index:`topologia p2p`, l'amministratore deve configurare un server "
 "per ciascun client."
 
-#: ../../vpn.rst:109
+#: ../../vpn.rst:143
 msgid "In this scenario:"
 msgstr "In questo scenario:"
 
-#: ../../vpn.rst:111
+#: ../../vpn.rst:145
 msgid ""
 "the only supported authentication method is the PSK (Pre-Shared Key). Please"
 " make sure to exchange the PSK using a secure channel (like SSH or HTTPS)"
@@ -329,20 +375,20 @@ msgstr ""
 "consiglia di utilizzare un canale sicuro (come SSH o HTTPS) per scambiare la"
 " PSK"
 
-#: ../../vpn.rst:113
+#: ../../vpn.rst:147
 msgid "the administrator must select an IP for both end points"
 msgstr "l'amministratore deve selezionare un IP per entrambi gli end point"
 
-#: ../../vpn.rst:114
+#: ../../vpn.rst:148
 msgid "routes to remote networks must be configured on each end point"
 msgstr ""
 "le rotte per le reti remote devono essere configurate su ogni end point"
 
-#: ../../vpn.rst:118
+#: ../../vpn.rst:152
 msgid "To configure a tunnel, proceed as follow:"
 msgstr "Per configurare un tunnel procedere come segue:"
 
-#: ../../vpn.rst:120
+#: ../../vpn.rst:154
 msgid ""
 "Access the tunnel server and open the :guilabel:`OpenVPN tunnels` page, move"
 " to :guilabel:`Tunnel servers` tab and click on :guilabel:`Create new` "
@@ -352,11 +398,11 @@ msgstr ""
 "tunnels`, spostarsi nella scheda :guilabel:`Tunnel servers` e cliccare sul "
 "bottone :guilabel:`Create new`"
 
-#: ../../vpn.rst:123
+#: ../../vpn.rst:157
 msgid "Insert all required fields, but please note:"
 msgstr "Valorizzare i campi richiesti ponendo attenzione al fatto che:"
 
-#: ../../vpn.rst:125
+#: ../../vpn.rst:159
 msgid ""
 ":guilabel:`Public IPs and/or public FQDN`, it's a list of public IP "
 "addresses or host names which will be used by clients to connect to the "
@@ -366,7 +412,7 @@ msgstr ""
 "nomi host che verranno usati dai client per collegarsi al server attraverso "
 "Internet"
 
-#: ../../vpn.rst:127
+#: ../../vpn.rst:161
 msgid ""
 ":guilabel:`Local networks`, it's a list of local networks which will be "
 "accessible from the remote server. If topology is set to p2p, the same list "
@@ -377,7 +423,7 @@ msgstr ""
 "lista sarà utilizzata per valorizzare il campo :guilabel:`Remote networks` "
 "del client"
 
-#: ../../vpn.rst:129
+#: ../../vpn.rst:163
 msgid ""
 ":guilabel:`Remote networks`, it's a list of networks behind the remote "
 "server which will be accessible from hosts in the local network"
@@ -385,7 +431,7 @@ msgstr ""
 ":guilabel:`Remote networks` è una lista di reti remote che si trovano dietro"
 " al server remoto e che saranno accessibili dagli host della rete locale"
 
-#: ../../vpn.rst:132
+#: ../../vpn.rst:166
 msgid ""
 "After the configuration is saved, click on the :guilabel:`Download` action "
 "and select :guilabel:`Client configuration`"
@@ -393,7 +439,7 @@ msgstr ""
 "Dopo aver salvato la configurazione, cliccare sull'azione "
 ":guilabel:`Download` e selezionare :guilabel:`Configurazione client`"
 
-#: ../../vpn.rst:134
+#: ../../vpn.rst:168
 msgid ""
 "Access the tunnel client, open the :guilabel:`OpenVPN tunnels` page, move to"
 " :guilabel:`Tunnel clients` tab, click on :guilabel:`Upload` button"
@@ -402,16 +448,16 @@ msgstr ""
 " spostarsi sulla scheda :guilabel:`Tunnel clients` e cliccare sul bottone "
 ":guilabel:`Upload`"
 
-#: ../../vpn.rst:138
+#: ../../vpn.rst:172
 msgid "Advanced features"
 msgstr "Funzionalità avanzate"
 
-#: ../../vpn.rst:140
+#: ../../vpn.rst:174
 msgid "The web interface allows the configuration of advanced features like:"
 msgstr ""
 "L’interfaccia web consente di configurare funzionalità avanzate quali:"
 
-#: ../../vpn.rst:142
+#: ../../vpn.rst:176
 msgid ""
 "on the client, multiple addresses can be specified inside the "
 ":guilabel:`Remote hosts` field for redundancy; the OpenVPN client will try "
@@ -421,7 +467,7 @@ msgstr ""
 "indirizzi multipli per ridondanza; il client OpenVPN tenterà di connettersi "
 "a ciascun host rispettando l'ordine di inserimento"
 
-#: ../../vpn.rst:143
+#: ../../vpn.rst:177
 msgid ""
 ":index:`WAN priority`: if the client has multiple WAN (red interfaces), the "
 "option allows to select the order in which the WAN will be used to connect "
@@ -431,7 +477,7 @@ msgstr ""
 "consente di selezionare l'ordine in cui le WAN saranno utilizzate per "
 "connettersi al server remoto."
 
-#: ../../vpn.rst:145
+#: ../../vpn.rst:179
 msgid ""
 "protocol: please bear in mind that OpenVPN is designed to operate optimally "
 "over UDP, but TCP capability is provided for situations where UDP cannot be "
@@ -441,7 +487,7 @@ msgstr ""
 "in modo ottimale in UDP, ma è possibile utilizzare TCP nelle situazioni in "
 "cui non è possibile fare ricorso ad UDP"
 
-#: ../../vpn.rst:146
+#: ../../vpn.rst:180
 msgid ""
 "cipher: the cryptographic algorithm used to encrypt all the traffic. If not "
 "explicitly selected, the server and client will try to negotiate the best "
@@ -452,7 +498,7 @@ msgstr ""
 "cercheranno di negoziare la migliore cifratura disponibile su entrambi i "
 "lati"
 
-#: ../../vpn.rst:148
+#: ../../vpn.rst:182
 msgid ""
 "LZO compression: enabled by default, can be disabled when using legacy "
 "servers or clients"
@@ -460,28 +506,28 @@ msgstr ""
 "compressione LZO: abilitata di default, può essere disabilitata quando si "
 "utilizzano server or client legacy"
 
-#: ../../vpn.rst:152
+#: ../../vpn.rst:186
 msgid "Legacy mode"
 msgstr "Modalità legacy"
 
-#: ../../vpn.rst:154
+#: ../../vpn.rst:188
 msgid "Tunnels can still be created also using Roadwarriors accounts."
 msgstr ""
 "I tunnel possono ancora essere creati utilzzando gli account roadwarrior."
 
-#: ../../vpn.rst:156
+#: ../../vpn.rst:190
 msgid "Steps to be performed on the master server:"
 msgstr "I passi da eseguire sul server master sono:"
 
-#: ../../vpn.rst:158
+#: ../../vpn.rst:192
 msgid "Enable roadwarrior server"
 msgstr "Abilitare il server roadwarrior"
 
-#: ../../vpn.rst:160
+#: ../../vpn.rst:194
 msgid "Create a VPN-only account for each slave"
 msgstr "Creare un account solo VPN per ciascun slave che dovrà collegarsi"
 
-#: ../../vpn.rst:162
+#: ../../vpn.rst:196
 msgid ""
 "During the account creation remember to specify the remote network "
 "configured behind the slave"
@@ -489,11 +535,11 @@ msgstr ""
 "Durante la creazione dell'account ricordarsi di specificare la rete remota "
 "configurata dietro allo slave"
 
-#: ../../vpn.rst:164
+#: ../../vpn.rst:198
 msgid "Steps to be performed on the slave:"
 msgstr "I passi da eseguire sullo slave sono:"
 
-#: ../../vpn.rst:166
+#: ../../vpn.rst:200
 msgid ""
 "Create a client from the :guilabel:`Client` page, specifying the connection "
 "data to the master server."
@@ -501,7 +547,7 @@ msgstr ""
 "Creare un client dalla pagina :guilabel:`Client` specificando i dati di "
 "collegamento al server master"
 
-#: ../../vpn.rst:168
+#: ../../vpn.rst:202
 msgid ""
 "Copy and paste the content of downloaded certificates from the master "
 "configuration page."
@@ -509,11 +555,11 @@ msgstr ""
 "Copiare e incollare il contenuto dei certificati scaricati dalla pagina di "
 "configurazione del master"
 
-#: ../../vpn.rst:174
+#: ../../vpn.rst:208
 msgid "IPsec"
 msgstr "IPsec"
 
-#: ../../vpn.rst:176
+#: ../../vpn.rst:210
 msgid ""
 ":index:`IPsec` (IP Security) protocol is the 'de facto' standard in VPN "
 "tunnels, it's typically used to create net to net tunnels and it's supported"
@@ -527,7 +573,7 @@ msgstr ""
 "protocollo per creare tunnel VPN tra un |product| ed un dispositivo di un "
 "altro produttore nonché tunnel VPN tra 2 |product|."
 
-#: ../../vpn.rst:181
+#: ../../vpn.rst:215
 msgid ""
 "IPSec is not designed to connect single hosts but for net2net configuration,"
 " this implies two gateways on both ends (at least one red and one green "
@@ -537,7 +583,7 @@ msgstr ""
 "net2net, questo implica due gateway su entrambe le estremità (almeno "
 "un'interfaccia RED e una GREEN)."
 
-#: ../../vpn.rst:187
+#: ../../vpn.rst:221
 msgid ""
 "IPsec is extremely reliable and compatible with many devices. In fact, it is"
 " an obvious choice when you need to create net2net connections between "
@@ -547,7 +593,7 @@ msgstr ""
 "Infatti, è una scelta ovvia quando è necessario creare collegamenti net2net "
 "tra firewall di diversi produttori."
 
-#: ../../vpn.rst:191
+#: ../../vpn.rst:225
 msgid ""
 "Unlike OpenVPN configuration, in an IPsec tunnel, firewalls are considered "
 "peers."
@@ -555,13 +601,13 @@ msgstr ""
 "A differenza della configurazione OpenVPN, in un tunnel IPsec, i firewall "
 "sono considerati nodi pari livello."
 
-#: ../../vpn.rst:193
+#: ../../vpn.rst:227
 msgid ""
 "If you are creating a tunnel between two |product|, given the firewalls A "
 "and B:"
 msgstr "Se si sta creando un tunnel tra due |product|, dati A e B i firewall:"
 
-#: ../../vpn.rst:195
+#: ../../vpn.rst:229
 msgid ""
 "Configure the server A and specify the remote address and LAN of server B. "
 "If the :guilabel:`Remote IP` field is set to the special value ``%any``, the"
@@ -571,7 +617,7 @@ msgstr ""
 " B. Se il campo :guilabel:`Remote IP` è valorizzato con ``% any``, il server"
 " rimane in attesa della connessione dell'altro endpoint."
 
-#: ../../vpn.rst:199
+#: ../../vpn.rst:233
 msgid ""
 "Configure the second firewall B by mirroring the configuration from A inside"
 " the remote section. The special value ``%any`` is allowed in one side only!"
@@ -580,7 +626,7 @@ msgstr ""
 "all'interno della sezione remota. Il valore speciale ``%any`` è consentito "
 "in un solo lato!"
 
-#: ../../vpn.rst:202
+#: ../../vpn.rst:236
 msgid ""
 "If an endpoint is behind a NAT, the values for :guilabel:`Local identifier` "
 "and :guilabel:`Remote identifier` fields must be set to custom unique names "
