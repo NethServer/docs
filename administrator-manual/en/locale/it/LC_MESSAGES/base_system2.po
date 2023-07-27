@@ -11,8 +11,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2021
 # Nicola <nicola.rauso@nethesis.it>, 2021
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2019-10-08 08:11+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
+"Last-Translator: Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1016,7 +1016,7 @@ msgid ""
 msgstr ""
 "Il selettore :guilabel:`Consenti accesso SSH/SFTP` è disponibile una volta "
 "che l'opzione :guilabel:`Ignora la shell degli utenti` è stata abilitata "
-"nella sezione :menuelection:`Sistema > Impostazioni > Policy shell`. Se "
+"nella sezione :menuselection:`Sistema > Impostazioni > Policy shell`. Se "
 "questa opzione è disabilitata, solo gli utenti con l'opzione "
 ":guilabel:`Shell` abilitata possono accedere a Server Manager, e la delega "
 "non è più richiesta."
