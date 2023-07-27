@@ -12,10 +12,10 @@
 # 
 # Translators:
 # Youssef Mehni <mehniyoussef@gmail.com>, 2018
-# Luca Gasparini <luca.gasparini@nethesis.it>, 2019
 # Filippo Carletti <filippo.carletti@gmail.com>, 2019
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
 # Nicola <nicola.rauso@nethesis.it>, 2021
+# Luca Gasparini <luca.gasparini@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -24,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2017-03-08 14:48+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2021\n"
+"Last-Translator: Luca Gasparini <luca.gasparini@nethesis.it>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -174,6 +174,8 @@ msgstr ""
 #: ../../webtop5.rst:68
 msgid "Go to :guilabel:`Settings` then click on :guilabel:`Change password`."
 msgstr ""
+"Selezionare :guilabel:`Impostazioni` quindi cliccare sul tasto  "
+"guilabel:`Cambia password`."
 
 #: ../../webtop5.rst:71
 msgid ""
@@ -244,6 +246,9 @@ msgid ""
 "The default public URL is the server FQDN, but it could be changed as "
 "described in the section below."
 msgstr ""
+"Il logo personalizzato verrà mostrato solo quando si accede a Webtop "
+"utilizzando il suo URL pubblico. L'URL pubblico predefinito è l'FQDN del "
+"server, ma potrebbe essere modificato come descritto nella sezione seguente."
 
 #: ../../webtop5.rst:108
 msgid "Change the public URL"
@@ -274,6 +279,8 @@ msgid ""
 "When using a valid SSL certificate - for example Let's Encrypt - it is "
 "rrecommended to configure the public URL using ``https``"
 msgstr ""
+"Quando si utilizza un certificato SSL valido, ad esempio Let's Encrypt, si "
+"consiglia di configurare l'URL pubblico utilizzando ``https``"
 
 #: ../../webtop5.rst:124
 msgid "User settings management"
@@ -293,14 +300,16 @@ msgid ""
 "The administrator can :index:`impersonate` users, to check existing accounts"
 " using special login credentials:"
 msgstr ""
+"L'amministratore può impersonare gli utenti, per controllare gli account "
+"esistenti utilizzando speciali credenziali di accesso:"
 
 #: ../../webtop5.rst:131
 msgid "**User name**: ``admin!<username>``"
-msgstr ""
+msgstr "**User name**: ``admin!<username>``"
 
 #: ../../webtop5.rst:132
 msgid "**Password**: ``<WebTop admin password>``"
-msgstr ""
+msgstr "**Password**: ``<WebTop admin password>``"
 
 #: ../../webtop5.rst:134
 msgid ""
@@ -516,6 +525,9 @@ msgid ""
 "(activities are not supported), but using the Google Calendar application "
 "all items will have the same color."
 msgstr ""
+"I dispositivi mobili basati su Android supportano solo calendari e contatti "
+"(le attività non sono supportate), ma utilizzando l'applicazione Google "
+"Calendar tutti gli elementi avranno lo stesso colore."
 
 #: ../../webtop5.rst:212
 msgid ""
@@ -550,7 +562,7 @@ msgstr ""
 
 #: ../../webtop5.rst:0
 msgid "Multiple synchronization"
-msgstr ""
+msgstr "Sincronizzazione multipla"
 
 #: ../../webtop5.rst:226
 msgid ""
@@ -606,6 +618,9 @@ msgid ""
 "the address book and selecting :guilabel:`Links to this address book`, then "
 "use it to configure your third-party client."
 msgstr ""
+"Per sincronizzare una rubrica, copiare il suo link ``URL`` cliccando con il "
+"tasto destro sulla rubrica e selezionando :guilabel:`Link a questa rubrica`,"
+" quindi usarlo per configurare il client di terze parti."
 
 #: ../../webtop5.rst:247
 msgid "To authenticate, provide your credentials in the following form:"
@@ -624,18 +639,26 @@ msgid ""
 "resources, as in the case of mobile devices clients (i.e. Android or iOS "
 "devices)."
 msgstr ""
+"Alcuni client di terze parti consentono di semplificare la configurazione "
+"tramite la funzione di *autodiscovery* che rileva automaticamente le risorse"
+" sincronizzabili, come nel caso dei client di dispositivi mobili (ad esempio"
+" dispositivi Android o iOS)."
 
 #: ../../webtop5.rst:258
 msgid ""
 "If you are using clients that do not support auto-discovery, you need to use"
 " the full URL: ``https://<server_name>/webtop-dav/server.php``"
 msgstr ""
+"Se si utilizzano client che non supportano l'autodiscovery, è necessario "
+"utilizzare l'URL completo: ``https://<server_name>/webtop-dav/server.php``"
 
 #: ../../webtop5.rst:260
 msgid ""
 "If you are using clients that support auto-discovery use URL: "
 "``https://<server_name>``"
 msgstr ""
+"Se si utilizzano client che supportano l'autodiscovery, utilizzare l'URL: "
+"``https://<server_name>``"
 
 #: ../../webtop5.rst:265
 msgid ""
@@ -702,6 +725,8 @@ msgid ""
 "By default the synchronization ``URL`` uses the server principal name "
 "(``FQDN``), if you need to change it: ::"
 msgstr ""
+"Per impostazione predefinita, l'``URL`` di sincronizzazione utilizza il nome"
+" principale del server (``FQDN``), se fosse necessario modificarlo: ::"
 
 #: ../../webtop5.rst:288
 msgid "Desktop clients"
@@ -726,6 +751,8 @@ msgid ""
 ":guilabel:`Cardbook` add-on works fine, with easy setup and auto-discovery "
 "support."
 msgstr ""
+"L'add-on :guilabel:`Cardbook` funziona bene, il setup è semplice e supporta "
+"l'autodiscovery."
 
 #: ../../webtop5.rst:295
 msgid ""

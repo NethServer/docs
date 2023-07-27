@@ -1,27 +1,27 @@
 # #-#-#-#-#  blacklist.pot (NethServer 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # #-#-#-#-#  blacklist.pot (NethServer Enterprise 7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Nethesis Srl and the NethServer project contributors
+# Copyright (C) 2023, Nethesis Srl and the NethServer project contributors
 # This file is distributed under the same license as the NethServer Enterprise package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nicola <nicola.rauso@nethesis.it>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NethServer Enterprise 7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-11 09:13+0100\n"
+"POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2020-03-10 09:33+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
-"Language-Team: Italian (https://www.transifex.com/nethserver/teams/35834/it/)\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -234,3 +234,64 @@ msgstr "Principali domini bloccati"
 #: ../../blacklist.rst:71
 msgid "Top requested domains"
 msgstr "Domini più richiesti"
+
+#: ../../blacklist.rst:74
+msgid "Geo-blocking"
+msgstr "Geo-blocking"
+
+#: ../../blacklist.rst:76
+msgid ""
+"Threat shield integrates limited support for geo-blocking. This feature is "
+"configurable only from the command line. Geo-blocking is disabled by "
+"default."
+msgstr ""
+"Threat shield integra un supporto limitato per il blocco geografico. Questa "
+"funzione è configurabile solo dalla riga di comando. Il blocco geografico è "
+"disabilitato per impostazione predefinita."
+
+#: ../../blacklist.rst:80
+msgid "To enable geo-blocking execute: ::"
+msgstr "Per abilitare il blocco geografico impartire i seguenti comandi: ::"
+
+#: ../../blacklist.rst:85
+msgid ""
+"The event will download network addresses for all countries. Each country is"
+" identified by its own `ISO code "
+"<https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_ composed by"
+" 2 letters. To list available countries, use: ::"
+msgstr ""
+"L'evento scaricherà gli indirizzi di rete per tutti i paesi. Ogni paese è "
+"identificato dal proprio `codice ISO "
+"<https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_ composto da"
+" 2 lettere. Per l'elenco dei paesi disponibili, utilizzare: ::"
+
+#: ../../blacklist.rst:91
+msgid ""
+"Choose which countries should be blocked and set the ``Categories`` "
+"accordingly. Example to block China and Russia: ::"
+msgstr ""
+"Scegliere quali paesi devono essere bloccati e impostare le ``Categorie`` di"
+" conseguenza. Ad esempio per bloccare Cina e Russia: ::"
+
+#: ../../blacklist.rst:96
+msgid ""
+"If an IP address has been classified inside the wrong country, it's possible"
+" to allow the traffic from/to the host by adding the IP address to the "
+"whitelist. Example: ::"
+msgstr ""
+"Se un indirizzo IP è stato classificato all'interno del paese sbagliato, è "
+"possibile consentire il traffico da/verso l'host aggiungendo l'indirizzo IP "
+"alla whitelist. Esempio: ::"
+
+#: ../../blacklist.rst:102
+msgid ""
+"All blocked IPs will be logged inside :file:`/var/log/firewall.log`. "
+"Example: ::"
+msgstr ""
+"Tutti gli IP bloccati verranno registrati all'interno di "
+":file:`/var/log/firewall.log`. Esempio: ::"
+
+#: ../../blacklist.rst:107
+msgid "Finally, to completely disable the GeoIP use: ::"
+msgstr ""
+"Infine, per disabilitare completamente GeoIP eseguire i seguenti comandi: ::"
