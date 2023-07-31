@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2020
-# Nicola <nicola.rauso@nethesis.it>, 2020
+# Nicola <nicola.rauso@nethesis.it>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-26 16:30+0200\n"
 "PO-Revision-Date: 2020-04-07 13:43+0000\n"
-"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2020\n"
+"Last-Translator: Nicola <nicola.rauso@nethesis.it>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/nethserver/teams/35834/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +51,12 @@ msgid ""
 "analyzes the behavior of the file when executed inside a realistic but "
 "isolated environment and return a confidence score."
 msgstr ""
+"Ogni messaggio di posta ricevuto o inviato dal server viene analizzato dal "
+"filtro di posta. Se il messaggio contiene allegati con MIME type utilizzati "
+"per inviare malware, il file allegato viene caricato nella sandbox per "
+"l'analisi. Yomi analizza il comportamento del file quando viene eseguito "
+"all'interno di un ambiente realistico ma isolato e restituisce un punteggio "
+"di confidenza."
 
 #: ../../sandbox.rst:17
 msgid ""
