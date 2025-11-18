@@ -18,6 +18,13 @@ NethServer Documentation
          <a href="https://docs.nethserver.org/projects/ns8/en/latest/" class="btn-primary">View Documentation →</a>
        </div>
 
+       <div class="version-card current">
+        <div class="version-badge">Current</div>
+        <h2>NethSecurity</h2>
+        <p>Firewall and security gateway solution</p>
+        <a href="https://docs.nethsecurity.org/en/latest/" class="btn-primary">View Documentation →</a>
+       </div>
+
        <div class="version-card archive">
          <div class="version-badge archive-badge">Archive</div>
          <h2>NethServer 7</h2>
