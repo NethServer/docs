@@ -13,7 +13,9 @@ author = 'The NethServer project team'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx_copybutton'
+]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -23,18 +25,14 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 
-# Theme options for a splash page
+# Theme options
 html_theme_options = {
-    'description': 'Administrator\'s manual for all NethServer versions',
-    'page_width': '980px',
-    'sidebar_width': '0px',
-    'body_max_width': '100%',
-    'show_powered_by': False,
-    'show_related': False,
-    'fixed_sidebar': False,
+    "repository_url": "https://github.com/NethServer/docs",
+    "use_repository_button": True,
+    "use_download_button": False,
 }
 
 # Custom CSS for splash page styling

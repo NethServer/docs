@@ -1,28 +1,24 @@
-/* Splash Page Styling */
+/* Splash Page Styling with Light/Dark Theme Support */
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+/* Override theme background for splash page */
+html[data-theme="light"] body,
+html[data-theme="light"] .bd-container {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    margin: 0;
-    padding: 0;
 }
 
-div.document {
-    background: transparent;
-    margin: 0;
-    padding: 0;
+html[data-theme="dark"] body,
+html[data-theme="dark"] .bd-container {
+    background: linear-gradient(135deg, #4a5f99 0%, #563a72 100%);
 }
 
-div.documentwrapper {
-    float: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-div.body {
+.bd-main .bd-content {
     background: transparent;
     padding: 40px 20px;
+}
+
+article.bd-article {
+    background: transparent;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -37,7 +33,7 @@ div.body {
 }
 
 .splash-header h1 {
-    color: white;
+    color: var(--pst-color-on-background, white);
     font-size: 3.5em;
     margin: 0 0 20px 0;
     font-weight: 700;
@@ -45,7 +41,7 @@ div.body {
 }
 
 .splash-subtitle {
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--pst-color-on-background, rgba(255, 255, 255, 0.95));
     font-size: 1.3em;
     margin: 0;
     font-weight: 300;
@@ -60,7 +56,7 @@ div.body {
 }
 
 .version-card {
-    background: white;
+    background: var(--pst-color-surface, white);
     border-radius: 12px;
     padding: 40px 30px;
     width: 300px;
@@ -99,14 +95,14 @@ div.body {
 }
 
 .version-card h2 {
-    color: #333;
+    color: var(--pst-color-text-base, #333);
     font-size: 2em;
     margin: 20px 0 15px 0;
     font-weight: 600;
 }
 
 .version-card p {
-    color: #666;
+    color: var(--pst-color-text-muted, #666);
     font-size: 1.05em;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -135,31 +131,27 @@ div.body {
 }
 
 .btn-secondary {
-    background: #f0f0f0;
-    color: #333;
+    background: var(--pst-color-secondary, #f0f0f0);
+    color: var(--pst-color-text-base, #333);
 }
 
 .btn-secondary:hover {
-    background: #e0e0e0;
+    background: var(--pst-color-secondary-highlight, #e0e0e0);
     transform: scale(1.05);
     text-decoration: none;
 }
 
-/* Hide default sphinx elements */
-.related {
-    display: none;
-}
-
-div.footer {
+/* Footer styling */
+.bd-footer {
     background: transparent;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--pst-color-on-background, rgba(255, 255, 255, 0.8));
     text-align: center;
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-div.footer a {
-    color: white;
+.bd-footer a {
+    color: var(--pst-color-on-background, white);
 }
 
 /* Responsive design */
