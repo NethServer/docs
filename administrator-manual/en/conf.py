@@ -25,3 +25,24 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+# Theme options for a splash page
+html_theme_options = {
+    'description': 'Administrator\'s manual for all NethServer versions',
+    'page_width': '980px',
+    'sidebar_width': '0px',
+    'body_max_width': '100%',
+    'show_powered_by': False,
+    'show_related': False,
+    'fixed_sidebar': False,
+}
+
+# Custom CSS for splash page styling
+html_css_files = [
+    'custom.css',
+]
+
+# Remove sidebar for a cleaner splash page
+html_sidebars = {
+    '**': []
+}
