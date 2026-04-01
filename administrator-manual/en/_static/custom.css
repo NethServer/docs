@@ -1,0 +1,176 @@
+/* Splash Page Styling with Light/Dark Theme Support */
+
+/* Override theme background for splash page */
+html[data-theme="light"] body,
+html[data-theme="light"] .bd-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .bd-container {
+    background: linear-gradient(135deg, #4a5f99 0%, #563a72 100%);
+}
+
+.bd-main .bd-content {
+    background: transparent;
+    padding: 40px 20px;
+}
+
+article.bd-article {
+    background: transparent;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.splash-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.splash-header {
+    margin-bottom: 60px;
+}
+
+.splash-header h1 {
+    color: var(--pst-color-on-background, white);
+    font-size: 3.5em;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.splash-subtitle {
+    color: var(--pst-color-on-background, rgba(255, 255, 255, 0.95));
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: 300;
+}
+
+.version-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.version-card {
+    background: var(--pst-color-surface, white);
+    border-radius: 12px;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.version-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.version-card.current {
+    border-top: 4px solid #4CAF50;
+}
+
+.version-card.archive {
+    border-top: 4px solid #9E9E9E;
+}
+
+.version-badge {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.version-badge.archive-badge {
+    background: #9E9E9E;
+}
+
+.version-card h2 {
+    color: var(--pst-color-text-base, #333);
+    font-size: 2em;
+    margin: 20px 0 15px 0;
+    font-weight: 600;
+}
+
+.version-card p {
+    color: var(--pst-color-text-muted, #666);
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    min-height: 50px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: var(--pst-color-secondary, #f0f0f0);
+    color: var(--pst-color-text-base, #333);
+}
+
+.btn-secondary:hover {
+    background: var(--pst-color-secondary-highlight, #e0e0e0);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Footer styling */
+.bd-footer {
+    background: transparent;
+    color: var(--pst-color-on-background, rgba(255, 255, 255, 0.8));
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bd-footer a {
+    color: var(--pst-color-on-background, white);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .splash-header h1 {
+        font-size: 2.5em;
+    }
+    
+    .splash-subtitle {
+        font-size: 1.1em;
+    }
+    
+    .version-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .version-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}

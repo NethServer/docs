@@ -1,21 +1,42 @@
-.. NethServer Documentation documentation master file, created by
-   sphinx-quickstart on Fri Dec 20 16:56:48 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
+============================
 NethServer Documentation
-========================
+============================
 
-Administrator's manual
+.. raw:: html
 
-- `NethServer 8`__
+   <div class="splash-container">
+     <div class="splash-header">
+       <h1>NethServer Administrator's Manual</h1>
+       <p class="splash-subtitle">Choose your NethServer version to access the documentation</p>
+     </div>
 
-  __ https://docs.nethserver.org/projects/ns8/en/latest/
+     <div class="version-cards">
+       <div class="version-card current">
+         <div class="version-badge">Current</div>
+         <h2>NethServer 8</h2>
+         <p>Latest version with modern container-based architecture</p>
+         <a href="https://docs.nethserver.org/projects/ns8/en/latest/" class="btn-primary">View Documentation →</a>
+       </div>
 
-- `NethServer 7`__ (archive)
+       <div class="version-card current">
+        <div class="version-badge">Current</div>
+        <h2>NethSecurity</h2>
+        <p>Firewall and security gateway solution</p>
+        <a href="https://docs.nethsecurity.org/en/latest/" class="btn-primary">View Documentation →</a>
+       </div>
 
-  __ https://docs.nethserver.org/en/v7/
+       <div class="version-card archive">
+         <div class="version-badge archive-badge">Archive</div>
+         <h2>NethServer 7</h2>
+         <p>Stable version based on CentOS 7</p>
+         <a href="https://docs.nethserver.org/en/v7/" class="btn-secondary">View Documentation →</a>
+       </div>
 
-- `NethServer 6`__ (archive)
-
-  __ https://docs.nethserver.org/en/v6/
+       <div class="version-card archive">
+         <div class="version-badge archive-badge">Archive</div>
+         <h2>NethServer 6</h2>
+         <p>Legacy version based on CentOS 6</p>
+         <a href="https://docs.nethserver.org/en/v6/" class="btn-secondary">View Documentation →</a>
+       </div>
+     </div>
+   </div>
